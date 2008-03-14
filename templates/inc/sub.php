@@ -8,6 +8,6 @@
           <a href="{link_webfaction}"><img src="{path='site_index'}css/images/logo-webfaction.png" width="48" height="36" alt="Webfaction" title="Gehosted von Webfaction"/></a>
         </div>
         <p>© 2006-{current_time format="%Y"}, {owner}. Die Inhalte sind unter einer <a href="{link_cc}">CreativeCommons-Lizenz</a> veröffentlicht.</p>
-        <p>Angetrieben mit <a href="{link_ee}">ExpressionEngine {app_version}</a> und gehostet von <a href="{link_mt}">(mt) Media Temple</a>. <a href="{path='information/impressum'}" rel="nofollow">Impressum</a>, <a href="{path='information/datenschutz'}" rel="nofollow">Datenschutz</a></p>
+        <p>Angetrieben mit <a href="{link_ee}">ExpressionEngine {app_version}</a> und gehostet von <a href="{link_webfaction}">Webfaction</a>. <a href="{path='information/impressum'}" rel="nofollow">Impressum</a>, <a href="{path='information/datenschutz'}" rel="nofollow">Datenschutz</a></p>
       </div>
     </div>
