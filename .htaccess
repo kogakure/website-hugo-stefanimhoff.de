@@ -1,0 +1,12 @@
+# Base Rewrite
+RewriteEngine On                   
+RewriteBase /
+
+# Redirect (Aktion www.-freies Internet :P )
+RewriteCond %{HTTP_HOST} !^kogakure\.webfactional\.com$
+RewriteCond %{REQUEST_URI} !^/robots\.txt$
+RewriteRule ^(.*)$ http://kogakure.webfactional.com/$1 [R=301,L]
+
+# Entfernt das index.php aus der URL                                   
+RewriteCond $1 !^(googleeac4fc886a6f9f8d.html|LiveSearchSiteAuth.xml|y_key_dc6ca9ea04c4d2d2.html|images|files|deusex|themes|mint|templates|js|css|favicon\.ico|robots\.txt|index\.php) [NC]
+RewriteRule ^(.*)$ /index.php/$1 [L]

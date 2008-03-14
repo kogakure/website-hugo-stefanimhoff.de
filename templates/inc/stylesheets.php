@@ -1,0 +1,4 @@
+    <link rel="stylesheet" type="text/css" charset="{charset}" media="screen,projection" title="Monitorstylesheet" href="{path='site_index'}css/screen.css" />
+    <link rel="stylesheet" type="text/css" charset="{charset}" media="print"  title="Druckstylesheet" href="{path='site_index'}css/print.css" />
+    <!--[if IE 7]><link rel="stylesheet" type="text/css" charset="{charset}" media="screen, projection" title="Internet Explorer 7"  href="{path='site_index'}css/ie7.css" /><![endif]-->
+    <!--[if IE 6]><link rel="stylesheet" type="text/css" charset="{charset}" media="screen, projection" title="Internet Explorer 6" href="{path='site_index'}css/ie6.css"  /><![endif]-->

@@ -1,0 +1,115 @@
+/* ----------------------------------*/
+/*    Internet Explorer 6 Bugfixes   */
+/* ----------------------------------*/
+
+/* Andere Position für die Sucheingabemaske */
+#subbar form input {
+  right:                10px;
+  top:                  4px;
+}
+
+#flickr-photos {
+  clear:                both;
+  width:                500px;
+}
+
+/* Knopf ausgeblendet, das IE6 kein PNG24 abbilden kann */
+#subbar .search-button {
+ display:               none;
+}
+
+/* Einrückung wegen fehlerhafter Überdeckung der Listenpunkte */
+#main ul,
+#main ol {
+  margin-left:          2em;
+}
+
+.cols-5-3 #main ul, #main #lesezeichen-delicious ul {
+  margin:               0;
+}
+
+.cols-6-2 #main .network {
+  margin-left:          0;
+}
+
+#main .projekt {
+  clear:                both;
+  height: 18em;
+}
+
+#main .projekt h2 {
+  margin-top:           0;
+}
+
+/* Fussnoten */
+#main #fussnoten {
+  list-style-position:  inside;
+  margin-left:          0;
+}
+
+/* Kommentare */
+#main #comments {
+  padding:              0;
+}
+
+#main #comments h2 {
+  margin-top:           1.6em;
+}
+
+#main #comments ol {
+  margin:               0;
+}
+
+#main #comments li {
+  width:                845px;
+}
+
+.cols-8 #content-1 {
+  margin-left:          10px;
+  padding:              0;
+  width:                845px;
+}
+
+.cols-5-3 #content-1 {
+  margin:               0;
+  padding:              0 10px;
+}
+
+.cols-5-3 #content-2 {
+  margin-left:          15px;
+  padding:              0 10px;
+}
+
+.cols-6-2 #content-1 {
+  margin:               0;
+  padding:              0 10px;
+  width:                625px;
+}
+
+.cols-6-2 #content-2 {
+  margin-left:          15px;
+  padding:              0 0 0 10px;
+  width:                195px;
+}
+
+#main #comments {
+  width:                700px;
+}
+
+#main #fussnoten {
+  width:                700px;
+}
+
+#main #comment-form #comment-rules {
+  float:                right;
+  margin:               0;
+  padding:              0;
+}
+
+#main #comment-submit {
+  margin-top:           1.6em;
+}
+
+#page-information #flickr-photos {
+  width:                190px;
+}

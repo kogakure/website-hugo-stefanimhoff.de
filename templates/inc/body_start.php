@@ -1,0 +1,1 @@
+  <body id="page-{embed:id}" class="cols-{embed:cols}">

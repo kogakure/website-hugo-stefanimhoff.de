@@ -1,0 +1,115 @@
+/* -----------------------------*/
+/*    Information & Kontakt   */
+/* -----------------------------*/
+
+.cols-6-2 h3 {
+  clear:                both;
+}
+
+.cols-6-2 #content-2 h4 {
+  color:                #000;
+  font-size:            0.8em;
+  font-weight:          bold;
+  line-height:          2.0;
+}
+
+.cols-6-2 #content-2 p {
+  font-size:            0.8em;
+  line-height:          2.0;
+  margin-bottom:        2.0em;
+}
+
+.cols-6-2 #content-2 dl {
+  font-size:            0.8em;
+  line-height:          2.0;
+}
+
+.cols-6-2 #content-2 dd {
+  margin-bottom:        2.0em;
+}
+
+.cols-6-2 #content-2 ul {
+  font-size:            0.8em;
+  line-height:          2.0;
+}
+
+/* HCard */
+
+#main #hcard h3 {
+  font-size:            1.2em;
+  line-height:          1.333;
+  margin:               0;
+}
+
+/* Networking-Links */
+
+#main ul.network {
+  line-height:          2.0;
+  list-style:           none;
+  margin-bottom:        2.0em;
+}
+
+.network .network-xing {
+  background:           url(images/xing.png) no-repeat 0 50%;
+  padding-left:         20px;
+}
+
+.network .network-linkedin {
+  background:           url(images/linkedin.png) no-repeat 0 50%;
+  padding-left:         20px;
+}
+
+.network .network-facebook {
+  background:           url(images/facebook.png) no-repeat 0 50%;
+  padding-left:         20px;
+}
+
+
+/* flickr-Fotos */
+
+#flickr-photos {
+  float:                left;
+  margin-bottom:        1.7em;
+}
+
+#main #flickr-photos h3 {
+  margin-top:           0.6em;
+}
+
+#flickr-photos img {
+  background:           #FFF;
+  border:               1px solid #999;
+  float:                left;
+  margin:               0 10px 10px 0;
+  padding:              4px;
+}
+
+/* Bücher-, Film-, Medienbereich */
+
+#medienkonsum {
+  float:                left;
+  margin-bottom:        1.7em;
+}
+
+#main #medienkonsum h3 {
+  margin-top:           0.6em;
+}
+
+#medienkonsum img {
+  background:           #FFF;
+  border:               1px solid #999;
+  float:                left;
+  margin:               0 10px 10px 0;
+  padding:              4px;
+}
+
+/* Del.icio.us Links */
+
+#lesezeichen-delicious {
+  float: left;
+}
+
+#main #lesezeichen-delicious p {
+  font-size:            1.0em;
+  margin-bottom:        1.6em;
+}

@@ -1,0 +1,126 @@
+/* -----------------------*/
+/*    Notizbuch & Notiz   */
+/* -----------------------*/
+
+/* Einzelne Notizen auf der Übersichtsseite */
+div.note {
+  border-bottom:        1px solid #CCC;
+  float:                left;
+  margin-bottom:        1.5em;
+  width:                520px;
+
+}
+
+div.sidenote {
+  border-bottom:        1px solid #CCC;
+  margin-bottom:        1.55em;
+  padding-bottom:       1.55em;
+}
+
+/* Paginate-Links */
+
+#page-notizbuch #content-1 p.paginate {
+  color:                #999;
+  float:                left;
+  font-size:            0.8em;
+  line-height:          1.6;
+  padding-bottom:       1.6em;
+}
+
+p.paginate .links {
+  float:                left;
+}
+
+p.paginate .rechts {
+  float:                right;
+}
+
+#page-notizbuch #content-1 p.page-1 {
+  display:              none;
+}
+
+/* Zusätzlicher Abstand für gleiche Höhe mit Notizen */
+#page-notizbuch #content-2 h3 {
+  margin-top:           3em;
+}
+
+#page-notizbuch h3 {
+  border-bottom:        1px solid #CCC;  
+}
+
+#page-notizbuch #content-2 h4 {
+  font-size:            1em;
+  line-height:          1.6;
+}
+
+#page-notizbuch #content-2 p {
+  display:              inline;
+  font-size:            0.8em;
+  margin-bottom:        0;
+}
+
+#main #meta-content h3 {
+  font-size:            1.1666em;
+  line-height:          1.7142;
+  margin-bottom:        0;
+  margin-top:           1.7142em;
+}
+
+#main #meta-content p {
+  margin-bottom:        2.0em;
+}
+
+/* Ränder im Notizbuch */
+#page-notiz #main h1, 
+#page-notiz #main h2, 
+#page-notiz #main h3, 
+#page-notiz #main h4, 
+#page-notiz #main h5, 
+#page-notiz #main h6, 
+#page-notiz #main p,
+#page-notiz #main .download {
+  margin-right:         220px;
+}
+
+#page-notiz #meta-content h3, 
+#page-notiz #meta-content p {
+  margin-right:         0;
+}
+
+#page-notiz #main h2 {
+  margin-bottom:        0;
+}
+
+#page-notiz #main blockquote.pullquote p {
+  font-size:            1.6em;
+  line-height:          1.0;
+  margin:               0.95em 0;
+}
+
+#main #meta-content ul {
+  margin-bottom:        2.0em;
+}
+
+/* Feeds */
+.feeds ul {
+  list-style:           none;
+}
+
+.feeds li {
+  background:           url(images/feed-icon.png) no-repeat 0 50%;
+  padding-left:         20px;
+}
+
+/* Download */
+
+.download {
+    border: 1px solid #999;
+    background: #BEBEBE;
+    margin: 1.5em 0;
+    clear: both;
+}
+
+#page-notiz #main .download p {
+    margin: 0;
+    padding: 1.5em;
+}
