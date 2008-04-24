@@ -78,12 +78,17 @@ p.paginate .rechts {
 #page-notiz #main h5, 
 #page-notiz #main h6, 
 #page-notiz #main p,
+#page-notiz #main ol,
+#page-notiz #main ul,
 #page-notiz #main .download {
   margin-right:         220px;
 }
 
 #page-notiz #meta-content h3, 
-#page-notiz #meta-content p {
+#page-notiz #meta-content p,
+#page-notiz #meta-content ol,
+#page-notiz #meta-content ul,
+#page-notiz #comments ol {
   margin-right:         0;
 }
 

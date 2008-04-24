@@ -168,7 +168,7 @@ hr {
 /* Code, Benutzereingaben, Beispiele */
 
 #main pre {
-  background:           #999;
+  background:           #000;
   margin-bottom:        1.6em;
   overflow:             auto;
   padding:              0.8em;
@@ -176,7 +176,7 @@ hr {
 }
 
 #main code {
-  color:                #000;
+  color:                #FFF;
   font-family:          "Lucida Console", monospace;
   line-height:          1.2;
 }
