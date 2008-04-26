@@ -3153,6 +3153,27 @@ class Weblog {
 				}
 			//
 			// -------------------------------------------
+			
+			/** ----------------------------------------
+            /**  Trackback RDF?
+            /** ----------------------------------------*/
+			
+			if ($TMPL->fetch_param('rdf') == "on")
+			{
+				$this->display_tb_rdf = TRUE;
+			}
+			elseif ($TMPL->fetch_param('rdf') == "off")
+			{
+				$this->display_tb_rdf = FALSE;                    	
+			}
+			elseif ($row['enable_trackbacks'] == 'y')
+			{
+				$this->display_tb_rdf = TRUE;
+			}
+			else
+			{
+				$this->display_tb_rdf = FALSE;
+			}
               
             /** ----------------------------------------
             /**  Adjust dates if needed
@@ -3708,21 +3729,7 @@ class Weblog {
 						// Custom weblog fields
 						
 						if ( isset( $this->cfields[$row['site_id']][$item] ) AND isset( $row['field_id_'.$this->cfields[$row['site_id']][$item]] ) AND $row['field_id_'.$this->cfields[$row['site_id']][$item]] != "")
-						{ 
-							if ($row['enable_trackbacks'] == 'y')
-								$this->display_tb_rdf = TRUE;
-							
-							if ($TMPL->fetch_param('rdf') != FALSE)
-							{
-								if ($TMPL->fetch_param('rdf') == "on")
-									$this->display_tb_rdf = TRUE;
-								elseif ($TMPL->fetch_param('rdf') == "off")
-									$this->display_tb_rdf = FALSE;                    	
-							}
-								
-							if ($this->display_tb_rdf == TRUE)
-								$this->TYPE->encode_email = FALSE;		
-																																	
+						{																											
 							$entry = $this->TYPE->parse_type( 
 															   $row['field_id_'.$this->cfields[$row['site_id']][$item]], 
 															   array(
@@ -4385,25 +4392,6 @@ class Weblog {
                 	}
                 	else
                 	{
-						/* This doesn't seem to belong here - Derek 
-						
-						if ($row['enable_trackbacks'] == 'y')
-							$this->display_tb_rdf = TRUE;
-						
-						if ($TMPL->fetch_param('rdf') != FALSE)
-						{
-							if ($TMPL->fetch_param('rdf') == "on")
-								$this->display_tb_rdf = TRUE;
-							elseif ($TMPL->fetch_param('rdf') == "off")
-								$this->display_tb_rdf = FALSE;                    	
-						}
-						
-						if ($this->display_tb_rdf == TRUE)
-							$this->TYPE->encode_email = FALSE;		
-						
-						* End out of place code
-						*/
-						
 						// This line of code fixes a very odd bug that happens when you place EE tags in weblog entries
 						// For some inexplicable reason, we have to convert the tag to entities before sending it to 
 						// the typography class below or else it tries to get parsed as a tag.  What is totally baffling
@@ -4490,8 +4478,7 @@ class Weblog {
 				
 				$ret_url = ($row['tb_return_url'] == '') ? $row['blog_url'] : $row['tb_return_url'];
             
-				if ($this->display_tb_rdf == TRUE)
-					$this->TYPE->encode_email = FALSE;		
+				$this->TYPE->encode_email = FALSE;		
 				
 				$tb_desc = $this->TYPE->parse_type( 
 												   $FNS->char_limiter((isset($row['field_id_'.$row['trackback_field']])) ? $row['field_id_'.$row['trackback_field']] : ''), 

@@ -432,7 +432,7 @@ class Display {
             
 			$qm = ($PREFS->ini('force_query_string') == 'y') ? '' : '?';
     
-            $r .= $this->anchor($FNS->fetch_site_index().$qm.'URL='.$link, $title, '', 1).$this->nbs(3).'|'.$this->nbs(3);
+            $r .= $this->anchor($FNS->fetch_site_index().$qm.'URL='.$link, $this->html_attribute_prep($title), '', 1).$this->nbs(3).'|'.$this->nbs(3);
     
         }
             

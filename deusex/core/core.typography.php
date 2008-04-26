@@ -787,7 +787,7 @@ class Typography {
         
         $bad_things	 = array("'",'"', ';', '[', '(', ')', '!', '*', '>', '<', "\t", "\r", "\n", 'document.cookie'); // everything else
         $bad_things2 = array('[', '(', ')', '!', '*', '>', '<', "\t", 'document.cookie'); // style,title attributes
-        $exceptions	 = array('http://', 'https://', 'irc://', 'feed://', 'ftp://', 'ftps://', 'mailto:');
+        $exceptions	 = array('http://', 'https://', 'irc://', 'feed://', 'ftp://', 'ftps://', 'mailto:', '/');
         $allowed	 = array('rel', 'title', 'class', 'style', 'target');
         
         if (preg_match_all("/\[url(.*?)\](.*?)\[\/url\]/i", $str, $matches))
@@ -927,7 +927,7 @@ class Typography {
 		
 		// [quote author="Brett" date="11231189803874"]...[/quote]
 		
-		if (preg_match_all("/\[quote\s+(.*?)\]/si", $str, $matches))
+		if (preg_match_all('/\[quote\s+(author=".*?"\s+date=".*?")\]/si', $str, $matches))
 		{
 			for ($i = 0; $i < count($matches['1']); $i++)
 			{			
@@ -1565,12 +1565,12 @@ class Typography {
         
         if (preg_match_all("/\<pre\>.+?\<\/pre\>/si", $str, $matches))
         {
-			for($i=0; $i < count($matches['0']); $i++)
+			foreach($matches[0] as $match)
 			{
-				$pretags[$i] = $matches['0'][$i];
-				
-				$str = preg_replace("/\<pre\>.+?\<\/pre\>/si", $i.$pt, $str, 1);
-			}        
+				$hash = md5($match);
+				$pretags[$hash] = $match;
+				$str = str_replace($match, $hash, $str);
+			}
         }
         
         // ----------------------------------------
@@ -1654,6 +1654,9 @@ class Typography {
                         
                         "$nl$nl<pre>"           => "\n</p>\n<pre>",
                         "</pre>$nl$nl"          => "</pre>\n<p>\n",
+
+                        "$nl$nl<div>"           => "\n</p>\n<div>",
+                        "</div>$nl$nl"          => "</div>\n<p>\n",
                             
                         "$nl$nl"                => "\n</p>\n<p>\n",
                         
@@ -1676,11 +1679,9 @@ class Typography {
         /**  Put <pre> tags back into string
         /** ----------------------------------------*/
         
-        $i = 0;
         foreach ($pretags as $key => $val)
         {
-			$str = str_replace($i.$pt, $pretags[$i], $str);
-			$i++;
+			$str = str_replace($key, $val, $str);
         }
         
 		/** ----------------------------------------

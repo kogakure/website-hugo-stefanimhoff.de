@@ -3509,32 +3509,25 @@ EOT;
 					}
 					else
 					{
-						if ($custom_date > 0)
+						$custom_date = $LOC->offset_entry_dst($custom_date, $IN->GBL('dst_enabled', 'POST'));
+						
+						$_POST['field_id_'.$row['field_id']] = $custom_date;
+						
+						if ( ! isset($_POST['field_offset_'.$row['field_id']]))
 						{
-							$custom_date = $LOC->offset_entry_dst($custom_date, $IN->GBL('dst_enabled', 'POST'));
-							
-							$_POST['field_id_'.$row['field_id']] = $custom_date;
-							
-							if ( ! isset($_POST['field_offset_'.$row['field_id']]))
+							$_POST['field_dt_'.$row['field_id']] = '';
+						}
+						else
+						{
+							if ($_POST['field_offset_'.$row['field_id']] == 'y')
 							{
 								$_POST['field_dt_'.$row['field_id']] = '';
 							}
 							else
 							{
-								if ($_POST['field_offset_'.$row['field_id']] == 'y')
-								{
-									$_POST['field_dt_'.$row['field_id']] = '';
-								}
-								else
-								{
-									$_POST['field_dt_'.$row['field_id']] = $SESS->userdata('timezone');
-								}
+								$_POST['field_dt_'.$row['field_id']] = $SESS->userdata('timezone');
 							}
-						}
-						else
-						{
-							$_POST['field_id_'.$row['field_id']] = 0;
-						}					
+						}				
 					}
                 }           
             }
@@ -6339,7 +6332,7 @@ EOT;
         }
         elseif (isset($_GET['keywords'])) 
         {
-        	$keywords = $REGX->keyword_clean(urldecode($_GET['keywords']));
+        	$keywords = $REGX->keyword_clean(base64_decode($_GET['keywords']));
         }
         else
         {
@@ -6513,7 +6506,7 @@ EOT;
 
 		if ($keywords != '')
 		{
-			$pageurl .= AMP.'keywords='.urlencode($keywords);
+			$pageurl .= AMP.'keywords='.base64_encode($keywords);
 
 			if ($search_in == 'trackbacks' OR $search_in == 'comments')
 			{
@@ -6747,7 +6740,7 @@ EOT;
         	
         	if ($keywords == '')
         	{
-        		$pageurl .= AMP.'keywords='.urlencode($keywords).AMP.'search_in='.$search_in;
+        		$pageurl .= AMP.'keywords='.base64_encode($keywords).AMP.'search_in='.$search_in;
         	}
         	
         	$pagination_links = $DSP->pager($pageurl, $total_count, $perpage, $rownum, 'rownum');
@@ -6765,7 +6758,7 @@ EOT;
         	
         	if ($keywords == '')
         	{
-        		$pageurl .= AMP.'keywords='.urlencode($keywords).AMP.'search_in='.$search_in;
+        		$pageurl .= AMP.'keywords='.base64_encode($keywords).AMP.'search_in='.$search_in;
         	}
         	
         	$pagination_links = $DSP->pager($pageurl, $total_count, $perpage, $rownum, 'rownum');
@@ -12539,10 +12532,14 @@ EOT;
 			$FNS->redirect($url);
         	exit;   
         }
-        else
+        elseif ($comment_id != FALSE)
         {
         	$this->view_comments($weblog_id, $entry_id, $message);
         }
+		else
+		{
+			$this->view_trackbacks($weblog_id, $entry_id, $message);
+		}
     }
     /* END */
     

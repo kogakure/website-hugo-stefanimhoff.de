@@ -4444,7 +4444,7 @@ class Wiki {
 		/** ----------------------------------------*/
 		
 		$keywords = ($IN->GBL('keywords') !== FALSE) ? $IN->GBL('keywords') : $keywords;
-		$keywords = $REGX->keyword_clean($keywords);
+		$keywords = $REGX->encode_ee_tags($REGX->keyword_clean($keywords), TRUE);
 		
 		if ($keywords == '')
 		{

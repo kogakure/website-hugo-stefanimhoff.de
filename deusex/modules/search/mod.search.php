@@ -598,7 +598,7 @@ class Search {
 			{
 				if (sizeof($terms) > 1 && isset($_POST['where']) && $_POST['where'] == 'all' && ! isset($_POST['exact_keyword']) && sizeof($fields) > 0)
 				{
-					$concat_fields = "CONCAT_WS(' ', exp_weblog_data.field_id_".implode(', exp_weblog_data.field_id_', $fields).')'; 
+					$concat_fields = "CAST(CONCAT_WS(' ', exp_weblog_data.field_id_".implode(', exp_weblog_data.field_id_', $fields).') AS CHAR)';
 					
 					$mysql_function	= (substr($terms['0'], 0,1) == '-') ? 'NOT LIKE' : 'LIKE';    
 					$search_term	= (substr($terms['0'], 0,1) == '-') ? $DB->escape_str(substr($terms['0'], 1)) : $DB->escape_str($terms['0']);
@@ -900,7 +900,7 @@ class Search {
 
 		if ($query->num_rows == 1)
 		{
-			return $REGX->xml_convert($query->row['keywords']);
+			return $REGX->encode_ee_tags($REGX->xml_convert($query->row['keywords']));
 		}
 		else
 		{
@@ -1144,8 +1144,6 @@ class Search {
 		
 		$i = 0;
 		
-		$path_count = ( ! preg_match_all("/".LD.'path.*?'.RD."/", $TMPL->tagdata, $matches)) ? 0 : sizeof($matches['0']);
-        
         foreach ($query->result as $row)
         {
 			if (isset($row['field_id_'.$row['search_excerpt']]) AND $row['field_id_'.$row['search_excerpt']])
@@ -1176,12 +1174,7 @@ class Search {
 						
 			$path = $FNS->remove_double_slashes($REGX->prep_query_string($url).'/'.$row['url_title'].'/');
 			$idpath = $FNS->remove_double_slashes($REGX->prep_query_string($url).'/'.$row['entry_id'].'/');
-			
-			if ($path_count > 0)
-			{
-				$output = preg_replace("/".LD.'path.*?'.RD."/", $path, $output, $path_count);
-			}
-			
+						
 			$switch = ($i++ % 2) ? $switch1 : $switch2;
 			$output = preg_replace("/".LD.'switch'.RD."/", $switch, $output, sizeof(explode(LD.'switch'.RD, $TMPL->tagdata)) - 1);
 			$output = preg_replace("/".LD.'auto_path'.RD."/", $path, $output, sizeof(explode(LD.'auto_path'.RD, $TMPL->tagdata)) - 1);

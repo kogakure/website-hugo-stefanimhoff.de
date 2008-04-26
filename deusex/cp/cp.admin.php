@@ -1142,6 +1142,12 @@ function showHideMenu(objValue)
 				
 			$f_data = $this->config_data();
 			
+			// don't show or edit the CP URL from masked CPs
+			if (defined('MASKED_CP') && MASKED_CP === TRUE)
+			{
+				unset($f_data['general_cfg']['cp_url']);
+			}
+			
 			if ( ! file_exists(PATH_CORE.'core.sites.php'))
 			{
 				unset($f_data['general_cfg']['multiple_sites_enabled']);	

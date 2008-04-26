@@ -2558,7 +2558,7 @@ class Functions {
 		// as efficient as possible?  It also gives me a chance to catch some
 		// user error mistakes.
 
-		if (preg_match_all("/".preg_quote(LD)."((if:else)*if)\s*(.*?)".preg_quote(RD)."/", $str, $matches))
+		if (preg_match_all("/".preg_quote(LD)."((if:else)*if)\s+(.*?)".preg_quote(RD)."/", $str, $matches))
 		{
 			// PROTECT QUOTED TEXT
 			//  That which is in quotes should be protected and ignored as it will screw

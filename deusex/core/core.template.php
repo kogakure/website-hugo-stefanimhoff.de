@@ -2537,8 +2537,7 @@ class Template {
         		$sql = "SELECT t.template_name, tg.group_name, t.edit_date FROM exp_templates t, exp_template_groups tg
         				WHERE  t.group_id = tg.group_id
         				AND    t.template_type = 'css'
-        				AND    t.site_id = '".$DB->escape_str($PREFS->ini('site_id'))."'
-        				AND    (";
+        				AND    t.site_id = '".$DB->escape_str($PREFS->ini('site_id'))."'";
         	
         		foreach($css_matches[1] as $css_match)
         		{
@@ -2549,8 +2548,8 @@ class Template {
         				$css_parts[] = "(t.template_name = '".$DB->escape_str($ex[1])."' AND tg.group_name = '".$DB->escape_str($ex[0])."')";
         			}
         		}
-        	
-        		$css_query = $DB->query($sql.implode(' OR ', $css_parts) .')');
+				
+				$css_query = ( ! isset($css_parts)) ? $DB->query($sql) : $DB->query($sql.' AND ('.implode(' OR ', $css_parts) .')');
         		
         		if ($css_query->num_rows > 0)
         		{
@@ -2933,7 +2932,7 @@ class Template {
 		/** ------------------------------------*/
 		
 		$str = str_replace(array(LD.'/if'.RD, LD.'if:else'.RD), array('<?php endif; ?'.'>','<?php else : ?'.'>'), $str);
-		$str = preg_replace("/".preg_quote(LD)."((if:(else))*if)\s*(.*?)".preg_quote(RD)."/s", '<?php \\3if(\\4) : ?'.'>', $str);
+		$str = preg_replace("/".preg_quote(LD)."((if:(else))*if)\s+(.*?)".preg_quote(RD)."/s", '<?php \\3if(\\4) : ?'.'>', $str);
 		$str = $this->parse_template_php($str);
 		
 		/** ------------------------------------

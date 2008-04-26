@@ -412,9 +412,11 @@ class Messages_send extends Messages {
 	
 	function _remove_attachment($id)
 	{
-		global $IN, $DB;
+		global $IN, $DB, $SESS;
 	
-		$query = $DB->query("SELECT attachment_location FROM exp_message_attachments WHERE attachment_id = '{$id}'");
+		$query = $DB->query("SELECT attachment_location FROM exp_message_attachments
+							WHERE attachment_id = '".$DB->escape_str($id)."'
+							AND sender_id = '".$SESS->userdata['member_id']."'");
 
 		if ($query->num_rows == 0)
 		{

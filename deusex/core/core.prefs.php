@@ -240,7 +240,6 @@ class Preferences {
 								'include_seconds',
 								'cookie_domain',
 								'cookie_path',
-								'cookie_prefix',
 								'user_session_type',
 								'admin_session_type',
 								'allow_username_change',

@@ -862,18 +862,18 @@ EOT;
 							$field_fmt  = $row['field_fmt'];
 						break;
 				}
-				
+
 										
 				/** --------------------------------
 				/**  Textarea field types
 				/** --------------------------------*/
-			
+
 				if ($row['field_type'] == 'textarea' AND $textarea != '')
 				{               									
 					$temp_chunk = str_replace(LD.'temp_textarea'.RD, $textarea, $temp_chunk);
 				}
 				if ($row['field_type'] == 'text' AND $textinput != '')
-				{               									
+				{								
 					$temp_chunk = str_replace(LD.'temp_textinput'.RD, $textinput, $temp_chunk);
 				}
 				if ($row['field_type'] == 'rel')
@@ -1052,7 +1052,7 @@ EOT;
 					$temp_chunk = str_replace(LD.'temp_required'.RD, '', $temp_chunk);
 				}
 				
-				$temp_chunk = str_replace(LD.'field_data'.RD, $field_data, $temp_chunk);
+				$temp_chunk = str_replace(LD.'field_data'.RD, $REGX->form_prep($field_data), $temp_chunk);
 				$temp_chunk = str_replace(LD.'temp_date'.RD, '', $temp_chunk);
 				$temp_chunk = str_replace(LD.'temp_textarea'.RD, '', $temp_chunk);
 				$temp_chunk = str_replace(LD.'temp_relationship'.RD, '', $temp_chunk);

@@ -46,7 +46,7 @@ class Style {
 			   preg_match("#^(http:\/\/|www\.)#i", $stylesheet)
             )
             exit;
-                        
+        
 		$ex =  explode("/", $stylesheet);
 			
 		if (count($ex) != 2)
@@ -69,7 +69,9 @@ class Style {
 			exit;
 		}
 		
-		if (function_exists('getallheaders') && isset($version) && $version == $query->row['edit_date'])
+		$saved_as_file = ($PREFS->ini('save_tmpl_files') == 'y' AND $PREFS->ini('tmpl_file_basepath') != '' AND $query->row['save_template_file'] == 'y') ? TRUE : FALSE;
+
+		if ($saved_as_file === FALSE && function_exists('getallheaders') && isset($version) && $version == $query->row['edit_date'])
 		{
 			$request = @getallheaders();
 			
@@ -100,7 +102,7 @@ class Style {
 		/**  Retreive template file if necessary
 		/** -----------------------------------------*/
 		
-		if ($PREFS->ini('save_tmpl_files') == 'y' AND $PREFS->ini('tmpl_file_basepath') != '' AND $query->row['save_template_file'] == 'y')
+		if ($saved_as_file === TRUE)
 		{
 			$basepath = $PREFS->ini('tmpl_file_basepath', 1);
 							

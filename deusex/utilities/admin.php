@@ -33,6 +33,8 @@ $self = ( ! isset($pathinfo['basename'])) ? 'index'.$ext : $pathinfo['basename']
 unset($system_path);
 unset($config_file);
 
+define('MASKED_CP', TRUE);
+
 require 'path'.$ext;
 
 if ( ! ereg("/$", $system_path)) $system_path .= '/';

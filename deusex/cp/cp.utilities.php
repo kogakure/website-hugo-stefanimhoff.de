@@ -1110,7 +1110,13 @@ class Utilities {
 		// Get the remote file
 		$c = curl_init($file);
 		curl_setopt($c, CURLOPT_RETURNTRANSFER, 1);
-		curl_setopt($c, CURLOPT_FOLLOWLOCATION, 1);
+		
+		// prevent a PHP warning on certain servers
+		if (! ini_get('safe_mode') && ! ini_get('open_basedir'))
+		{
+		    curl_setopt($c, CURLOPT_FOLLOWLOCATION, 1);
+		}
+		
 		$code = curl_exec($c);
 		curl_close($c);
 	    

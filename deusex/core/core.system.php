@@ -160,7 +160,7 @@
 // ----------------------------------------------
 
     define('APP_NAME'	,	'ExpressionEngine');
-    define('APP_BUILD'	,	'20080225');   
+    define('APP_BUILD'	,	'20080319');   
     define('CONFIG_FILE',	$config_file); 
     define('PATH_CACHE'	,	$system_path.'cache/'); 
     define('PATH_LANG'	,	$system_path.'language/'); 

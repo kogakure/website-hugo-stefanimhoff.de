@@ -112,10 +112,10 @@ class Upload {
 		}
         
 		$this->file_temp = $_FILES['userfile']['tmp_name'];		
-		$this->file_name = $_FILES['userfile']['name'];
+		$this->file_name = $this->_prep_filename($_FILES['userfile']['name']);
 		$this->file_size = $_FILES['userfile']['size'];		
 		$this->file_type = preg_replace("/^(.+?);.*$/", "\\1", $_FILES['userfile']['type']);
-
+			
         /** -------------------------------------
         /**  Determine if the file is an image
         /** -------------------------------------*/
@@ -659,6 +659,41 @@ class Upload {
 	}
 	/* END */
 
+	/** -------------------------------------
+    /**  Prep Filename
+    /**  Prevents possible script execution from Apache's handling of files multiple extensions
+    /**  http://httpd.apache.org/docs/1.3/mod/mod_mime.html#multipleext
+    /** -------------------------------------*/
+    
+	function _prep_filename($filename)
+	{
+		if (strpos($filename, '.') === FALSE)
+		{
+			return $filename;
+		}
+		
+		$parts		= explode('.', $filename);
+		$ext		= array_pop($parts);
+		$filename	= array_shift($parts);
+				
+		foreach ($parts as $part)
+		{
+			if (! in_array(strtolower($part), $this->allowed_mimes))
+			{
+				$filename .= '.'.$part.'_';
+			}
+			else
+			{
+				$filename .= '.'.$part;
+			}
+		}
+		
+		$filename .= '.'.$ext;
+		
+		return $filename;
+	}
+	/* END */
+	
 }
 // END CLASS
 ?>
