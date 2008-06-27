@@ -1041,9 +1041,7 @@ class Functions {
     function clear_caching($which, $sub_dir = '', $relationships=FALSE)
     {
         global $IN, $DB;
-        
-        @set_time_limit(20);
-    
+            
         $actions = array('page', 'tag', 'db', 'sql', 'relationships', 'all');
         
         if ( ! in_array($which, $actions))
@@ -1166,7 +1164,7 @@ class Functions {
             {
 				if ($all_sites === TRUE)
             	{
-            		$result = $DB->query("SELECT exp_weblogs.weblog_id FROM exp_weblog_member_groups 
+            		$result = $DB->query("SELECT exp_weblog_member_groups.weblog_id FROM exp_weblog_member_groups 
 										  WHERE exp_weblog_member_groups.group_id = '".$DB->escape_str($SESS->userdata['group_id'])."'");
 				}
 				else
@@ -1755,31 +1753,36 @@ class Functions {
 		}
 		
 		/** -----------------------------------
-		/**  Remove old images	
+		/**  Remove old images
+		/**  Add a bit of randomness so we aren't processing these
+		/**  files on every single page load	
 		/** -----------------------------------*/
 		
-		$old = time() - $expiration;
-		$DB->query("DELETE FROM exp_captcha WHERE date < ".$old);		
-		
-		list($usec, $sec) = explode(" ", microtime());
-		$now = ((float)$usec + (float)$sec);
-				
-        $current_dir = @opendir($img_path);
-        
-        while($filename = @readdir($current_dir))
-        {        
-			if ($filename != "." and $filename != ".." and $filename != "index.html")
-            {
-            	$name = str_replace(".jpg", "", $filename);
-            
-				if (($name + $expiration) < $now)
-				{
-					@unlink($img_path.$filename);
-				}
-            }
-        }
-        
-        @closedir($current_dir);
+		if ((mt_rand() % 100) < $SESS->gc_probability)
+		{
+			$old = time() - $expiration;
+			$DB->query("DELETE FROM exp_captcha WHERE date < ".$old);		
+
+			list($usec, $sec) = explode(" ", microtime());
+			$now = ((float)$usec + (float)$sec);
+
+	        $current_dir = @opendir($img_path);
+
+	        while($filename = @readdir($current_dir))
+	        {        
+				if ($filename != "." and $filename != ".." and $filename != "index.html")
+	            {
+	            	$name = str_replace(".jpg", "", $filename);
+
+					if (($name + $expiration) < $now)
+					{
+						@unlink($img_path.$filename);
+					}
+	            }
+	        }
+
+	        @closedir($current_dir);			
+		}
 	
 		/** -----------------------------------
 		/**  Fetch and insert word
@@ -2654,8 +2657,8 @@ class Functions {
 					}
 					
 					$data[$key] = '"'.
-								  str_replace(array("'", '"', '(', ')', '$', '{', '}', "\n", "\r"), 
-											  array('&#39;', '&#34;', '&#40;', '&#41;', '&#36;', '', '', '', ''), 
+								  str_replace(array("'", '"', '(', ')', '$', '{', '}', "\n", "\r", '\\'), 
+											  array('&#39;', '&#34;', '&#40;', '&#41;', '&#36;', '', '', '', '', '&#92;'), 
 											  (strlen($data[$key]) > 100) ? substr(htmlspecialchars($data[$key]), 0, 100) : $data[$key]
 											  ).
 								  '"';

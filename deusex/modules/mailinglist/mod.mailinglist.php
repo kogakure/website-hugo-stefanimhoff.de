@@ -179,7 +179,7 @@ class Mailinglist {
 				}
 			}
 			
-			// Kill duplicate emails from authorizatin queue.  This prevents an error if a user
+			// Kill duplicate emails from authorization queue.  This prevents an error if a user
 			// signs up but never activates their email, then signs up again.
 			
 			$DB->query("DELETE FROM exp_mailing_list_queue WHERE email = '".$DB->escape_str($email)."'");

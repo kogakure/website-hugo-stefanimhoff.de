@@ -349,7 +349,7 @@ $L = array(
 "Banning Preferences Updated",
 
 "ip_address_banning" =>
-"Banned IP Adddress",
+"Banned IP Address",
 
 "ip_banning_instructions" =>
 "Place each IP address on a separate line",
@@ -358,7 +358,7 @@ $L = array(
 "Use wildcards for partial IP addresses. Example:  123.345.*",
   
 "email_address_banning" =>
-"Banned Email Adddress",
+"Banned Email Address",
 
 "email_banning_instructions" =>
 "Place each email address on a separate line",

@@ -415,8 +415,11 @@ class Localize {
             }
             else
             {
-            	// Unless specified, seconds get set to zero.
-				$sec = '00';
+	        	// Unless specified, seconds get set to zero.
+				// $sec = '00'; 
+				// The above doesn't make sense to me, and can cause entries submitted within the same
+				// minute to have identical timestamps, so I'm reverting to an older behavior - D'Jones
+				$sec = date('s');				
             }
             
             if (isset($split['2']))

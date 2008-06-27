@@ -1155,7 +1155,7 @@ class Home {
         	require PATH_PI.'pi.magpie'.EXT;
         }
 		
-        $feed = fetch_rss('http://expressionengine.com/feeds/atom/full/');
+        $feed = fetch_rss('http://expressionengine.com/feeds/rss/cpnews/');
 
 		$i = 0;
 		
@@ -1200,11 +1200,11 @@ function showHide(el)
 			for ($i = 0; $i < $total, $i < 3; $i++)
 			{
 				$title = $feed->items[$i]['title'];
-				
+
 				$date = $LOC->set_human_time($LOC->set_gmt(strtotime(preg_replace("/(20[10][0-9]\-[0-9]{2}\-[0-9]{2})T([0-9]{2}:[0-9]{2}:[0-9]{2})Z/", 
 																				 '\\1 \\2 UTC',
-																				 $feed->items[$i]['published']))));
-				$content = $feed->items[$i]['atom_content'];
+																				 $feed->items[$i]['pubdate']))));
+				$content = $feed->items[$i]['description'];
 				$link = $feed->items[$i]['link'];
 				
 				if ( ! class_exists('Typography'))
@@ -1233,7 +1233,7 @@ function showHide(el)
 			
 			$r .= $DSP->table_qrow( ($j++ %2) ? 'tableCellOne' : 'tableCellTwo',
 									array(
-											$DSP->qdiv('itemWrapper', $DSP->qspan('defaultBold', $DSP->anchor($FNS->fetch_site_index().$qm.'URL=http://expressionengine.com/blog/', 'More News...', "onclick='window.open(this.href); return false;'")))
+											$DSP->qdiv('itemWrapper', $DSP->qspan('defaultBold', $DSP->anchor($FNS->fetch_site_index().$qm.'URL=http://expressionengine.com/blog/',  $LANG->line('more_news'), "onclick='window.open(this.href); return false;'")))
 											)
 									);
 		}

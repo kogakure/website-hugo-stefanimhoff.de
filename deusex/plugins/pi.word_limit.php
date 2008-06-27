@@ -2,15 +2,15 @@
 
 /*
 =====================================================
- ExpressionEngine - by pMachine
+ ExpressionEngine - by EllisLab
 -----------------------------------------------------
- http://www.pmachine.com/
+ http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 pMachine, Inc.
+ Copyright (c) 2003-2008 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
- http://www.pmachine.com/license/
+ http://expressionengine.com/docs/license.html
 =====================================================
  File: pi.word_limit.php
 -----------------------------------------------------
@@ -24,7 +24,7 @@ $plugin_info = array(
 						'pi_name'			=> 'Word Limiter',
 						'pi_version'			=> '1.0',
 						'pi_author'			=> 'Rick Ellis',
-						'pi_author_url'		=> 'http://www.pmachine.com/',
+						'pi_author_url'		=> 'http://expressionengine.com/',
 						'pi_description'		=> 'Permits you to limit the number of words in some text',
 						'pi_usage'			=> Word_limit::usage()
 					);

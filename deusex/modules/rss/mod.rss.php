@@ -264,8 +264,7 @@ class Rss {
 
         	if ($last_update <= $modify_tstamp)
 	       	{
-       			@header("HTTP/1.0 304 Not Modified");
-				@header('HTTP/1.1 304 Not Modified');
+				$OUT->http_status_header(304);
 				@exit;
        		}
        		else
@@ -544,7 +543,7 @@ class Rss {
 			
 				$TMPL->tagdata = $TMPL->swap_var_single($val, $blog_url, $TMPL->tagdata);
 			}			
-    	    }
+		}
     	     	    
         if (count($chunks) > 0)
         {        	

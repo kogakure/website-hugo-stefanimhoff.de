@@ -73,7 +73,8 @@ class Template {
     
     var $site_ids			= array();		// Site IDs for the Sites Request for a Tag
     var $sites				= array();		// Array of sites with site_id as key and site_name as value, used to determine site_ids for tag, above.
-    
+    var $site_prefs_cache	= array();		// Array of cached site prefs, to allow fetching of another site's template files
+
     var $reverse_related_data = array();	//  A multi-dimensional array containing any reverse related tags
    
     var $t_cache_path    	= 'tag_cache/';	 // Location of the tag cache file
@@ -397,11 +398,11 @@ class Template {
 			$this->process_sub_templates($this->template); 	
 			return;
         }
-		
+
         // Remove whitespace from variables.
         // This helps prevent errors, particularly if PHP is used in a template
-        $this->template = preg_replace("/".LD."\s*(\S+)\s*".RD."/", LD."\\1".RD, $this->template);
-		
+        $this->template = preg_replace("/".LD."\s*(\S+)\s*".RD."/U", LD."\\1".RD, $this->template);
+
 		/** -------------------------------------
 		/**  Parse Input Stage PHP
 		/** -------------------------------------*/
@@ -771,7 +772,7 @@ class Template {
 					{
 						if (strncmp($key, 'search:', 7) == 0)
 						{
-							$search_fields[substr($key, 7)] = $val;
+							$search_fields[substr($key, 7)] = str_replace(SLASH, '/', $val);
 						}
 					}					
 				}
@@ -1963,6 +1964,9 @@ class Template {
 				}
 				else
 				{
+					// ahh we're okay then, on with the caching!
+					$this->disable_caching = FALSE;
+					
 					$template = $IN->fetch_uri_segment(1);
 					
 					if ($IN->fetch_uri_segment(2))
@@ -2304,28 +2308,53 @@ class Template {
             }            
         }
         
-        /** -----------------------------------------
+		/** -----------------------------------------
         /**  Retreive template file if necessary
         /** -----------------------------------------*/
         
-        if ($PREFS->ini('save_tmpl_files') == 'y' AND $PREFS->ini('tmpl_file_basepath') != '' AND $query->row['save_template_file'] == 'y')
+        if ($query->row['save_template_file'] == 'y')
         {
-        	$this->log_item("Retrieving Template from File");
+        	$site_switch = FALSE;
         	
-			$basepath = $PREFS->ini('tmpl_file_basepath');
+        	if ($PREFS->ini('site_id') != $site_id)
+        	{
+        		$site_switch = $PREFS->core_ini;
+        		
+        		if (isset($this->site_prefs_cache[$site_id]))
+        		{
+        			$PREFS->core_ini = $this->site_prefs_cache[$site_id];
+        		}
+        		else
+        		{
+        			$PREFS->site_prefs('', $site_id);
+					$this->site_prefs_cache[$site_id] = $PREFS->core_ini;
+        		}
+        	}
+
+        	if ($PREFS->ini('save_tmpl_files') == 'y' AND $PREFS->ini('tmpl_file_basepath') != '')
+        	{
+				$this->log_item("Retrieving Template from File");
+				
+				$basepath = $PREFS->ini('tmpl_file_basepath');
+				
+				if ( ! ereg("/$", $basepath)) $basepath .= '/';
+										
+				$basepath .= $query->row['group_name'].'/'.$query->row['template_name'].'.php';
+				
+				if ($fp = @fopen($basepath, 'rb'))
+				{
+					flock($fp, LOCK_SH);
+					
+					$query->row['template_data'] = (filesize($basepath) == 0) ? '' : fread($fp, filesize($basepath)); 
+					
+					flock($fp, LOCK_UN);
+					fclose($fp); 
+				}
+			}
 			
-			if ( ! ereg("/$", $basepath)) $basepath .= '/';
-									
-			$basepath .= $query->row['group_name'].'/'.$query->row['template_name'].'.php';
-			
-			if ($fp = @fopen($basepath, 'rb'))
+			if ($site_switch !== FALSE)
 			{
-				flock($fp, LOCK_SH);
-				
-				$query->row['template_data'] = (filesize($basepath) == 0) ? '' : fread($fp, filesize($basepath)); 
-				
-				flock($fp, LOCK_UN);
-				fclose($fp); 
+				$PREFS->core_ini = $site_switch;
 			}
         }
         

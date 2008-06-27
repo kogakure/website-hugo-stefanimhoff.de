@@ -905,7 +905,7 @@ EOTJS;
 			}
 									
 			$email = new EEmail;    
-			$email->wordwrap  = FALSE;  // We word wrap later
+			$email->wordwrap  = ($wordwrap == 'y') ? TRUE : FALSE;
 			$email->mailtype  = $mailtype;
 			$email->priority  = $priority;
                         
@@ -941,12 +941,7 @@ EOTJS;
 				// Make a copy so we don't mess up the original
 				$msg = $message;
 				$msg_alt = $plaintext_alt;
-				
-				if ($wordwrap == 'y' AND $mailtype != 'html')
-				{
-					$msg = $this->word_wrap($msg);
-				}
-								
+												
 				if (substr($key, 0, 1) == 'l')
 				{
 					$msg = $this->parse_template($list_templates[$list_id], $msg, $action_id, substr($key, 1), $mailtype);
@@ -1050,6 +1045,7 @@ EOTJS;
 		else
 		{
 			$list_title = '';
+			$temp = $template;
 		}
 
 		$qs = ($PREFS->ini('force_query_string') == 'y') ? '' : '?';        
@@ -1301,7 +1297,7 @@ EOTJS;
         require PATH_CORE.'core.email'.EXT;
         
         $email = new EEmail;    
-        $email->wordwrap  = FALSE;
+        $email->wordwrap  = ($wordwrap == 'y') ? TRUE : FALSE;
         $email->mailtype  = $mailtype;
         $email->priority  = $priority;
         
@@ -1340,12 +1336,7 @@ EOTJS;
 			// Make a copy so we don't mess up the original
 			$msg = $message;
 			$msg_alt = $plaintext_alt;
-			
-			if ($wordwrap == 'y' AND $mailtype != 'html')
-			{
-				$msg = $this->word_wrap($msg);
-			}
-			
+						
 			if (substr($key, 0, 1) == 'l')
 			{
 				$msg = $this->parse_template($list_templates[$list_id], $msg, $action_id, substr($key, 1), $mailtype);
@@ -1736,7 +1727,8 @@ EOTJS;
  
 
 	/** -------------------------------------
-	/**  Word wrap
+	/**  Word wrap - DEPRECATED 1.6.3
+	/**  use EEmail::word_wrap()
 	/** -------------------------------------*/
 	 
 	function word_wrap($str, $chars = '')

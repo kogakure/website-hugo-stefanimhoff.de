@@ -123,6 +123,15 @@ class EEmail {
         $this->smtp_auth = ( ! $this->smtp_user AND ! $this->smtp_pass) ? FALSE : TRUE;	
         
 		$this->debug = ($PREFS->ini('email_debug') == 'y') ? TRUE : FALSE;
+		
+		/* -------------------------------------------
+		/*	Hidden Configuration Variables
+		/*	- email_newline => Default newline.
+		/*  - email_crlf => CRLF used in quoted-printable encoding
+        /* -------------------------------------------*/
+		
+		$this->newline = ($PREFS->ini('email_newline') !== FALSE) ? $PREFS->ini('email_newline') : $this->newline;
+		$this->crlf = ($PREFS->ini('email_crlf') !== FALSE) ? $PREFS->ini('email_crlf') : $this->crlf;
 	}
 	/* END */
 
@@ -864,7 +873,8 @@ class EEmail {
 							
 				if ($this->send_multipart === FALSE)
 				{
-					$hdr .= "Content-Type: text/html;". $this->newline;
+					$hdr .= "Content-Type: text/html; charset=" . $this->charset . $this->newline;
+					$hdr .= "Content-Transfer-Encoding: quoted-printable";
 				}
 				else
 				{
@@ -1272,8 +1282,9 @@ class EEmail {
 		
 		
 		// $this->send_data($this->header_str . $this->newline . $this->finalbody);
-
-		$this->send_data($this->header_str . $this->finalbody);
+		
+		// perform dot transformation on any lines that begin with a dot
+		$this->send_data($this->header_str . preg_replace('/^\./m', '..$1', $this->finalbody));
 		
 		$this->send_data('.');
 

@@ -742,6 +742,12 @@ class Utilities {
     /**  Plugin Manager
     /** -------------------------------------------*/
 
+	// Helper function used to sort plugins
+	function _plugin_title_sorter($a, $b)
+	{
+		return strnatcasecmp($a['title'], $b['title']);
+	}
+
 	function plugin_manager($message = '')
 	{
         global $DSP, $IN, $PREFS, $LANG, $FNS;
@@ -751,7 +757,7 @@ class Utilities {
 			return $DSP->no_access_message('PclZip Library does not appear to be installed.  It is required.');
 		}     
      
-		$is_writable = (is_writable(PATH_PI)) ? TRUE : FALSE;
+		$is_writable = (is_writable(PATH_PI) && $PREFS->ini('demo_date') == FALSE) ? TRUE : FALSE;
         
         $plugins = array();
 		$info 	= array();
@@ -776,8 +782,8 @@ class Utilities {
 			
 			closedir($fp); 
         } 	
-          		
-  		if ( in_array('magpie', $plugins) )
+
+  		if ( in_array('magpie', $plugins) && $PREFS->ini('demo_date') == FALSE)
       		$r = '<div style="float: left; width: 69%; margin-right: 2%;">';
       	else
       		$r = '<div style="float: left; width: 100%;">';
@@ -868,7 +874,7 @@ class Utilities {
         /** -------------------------------------------*/
         
         // Do we have the Magpie plugin so we can parse the EE plugin RSS feed?
-        if (in_array('magpie', $plugins))
+        if (in_array('magpie', $plugins) && $PREFS->ini('demo_date') == FALSE)
         {
         	$request = 'http://expressionengine.com/feeds/pluginlist/';
     		
@@ -920,7 +926,7 @@ class Utilities {
 				
 				if ($sortby == 'alpha')
 				{
-					sort($plugins->items);
+					usort($plugins->items, array('Utilities', '_plugin_title_sorter'));
 					$extra = AMP.'sortby=alpha';
 					$link = $DSP->anchor($base, $LANG->line('plugin_by_date'));
 					$title = $LANG->line('plugins').$DSP->qspan('defaultSmall', $LANG->line('plugin_by_letter').' : '.$link);
@@ -1085,8 +1091,13 @@ class Utilities {
 	
 	function plugin_install()
 	{		
-        global $IN, $DSP, $LANG;
+        global $IN, $DSP, $LANG, $PREFS;
         
+		if ($PREFS->ini('demo_date') != FALSE)
+		{
+            return $DSP->no_access_message();
+		}
+		
 		if ( ! @include_once(PATH_LIB.'pclzip.lib.php'))
 		{
 			return $DSP->error_message($LANG->line('plugin_zlib_missing'));
@@ -1195,8 +1206,13 @@ class Utilities {
     
     function plugin_remove_confirm()
     {
-        global $IN, $DSP, $LANG;
+        global $IN, $DSP, $LANG, $PREFS;
 
+		if ($PREFS->ini('demo_date') != FALSE)
+		{
+            return $DSP->no_access_message();
+		}
+		
         $r  = $DSP->form_open(array('action' => 'C=admin'.AMP.'M=utilities'.AMP.'P=plugin_remove'));
         
         $i = 0;
@@ -1237,8 +1253,13 @@ class Utilities {
     
     function plugin_remove()
     {
-        global $IN, $DSP, $LANG;
+        global $IN, $DSP, $LANG, $PREFS;
         
+		if ($PREFS->ini('demo_date') != FALSE)
+		{
+            return $DSP->no_access_message();
+		}
+		
         $deleted = $IN->GBL('deleted');
         $message = '';
         $style = '';
@@ -1828,7 +1849,7 @@ class Utilities {
 				}
 			}
                         
-            $qtypes = array('INSERT', 'UPDATE', 'DELETE', 'ALTER', 'CREATE', 'DROP');
+            $qtypes = array('INSERT', 'UPDATE', 'DELETE', 'ALTER', 'CREATE', 'DROP', 'TRUNCATE');
 
             $write = FALSE;
             
@@ -3947,7 +3968,7 @@ class Utilities {
 		/**  Fetch the comment IDs
 		/** ---------------------------------------*/
 		
-		$sql = "SELECT comment_id FROM exp_comments WHERE ".$blogs;
+		$sql = "SELECT comment_id, entry_id FROM exp_comments WHERE ".$blogs;
 
 		if ($days_ago != '')
 		{
@@ -3965,13 +3986,15 @@ class Utilities {
 		foreach ($query->result as $row)
 		{
 			$id = $row['comment_id'];
+			$entry_id = $row['entry_id'];
+			
 			$DB->query("DELETE FROM exp_comments WHERE comment_id = '$id'");
 			$total++;
 			
-            $res = $DB->query("SELECT MAX(comment_date) AS max_date FROM exp_comments WHERE status = 'o' AND entry_id = '{$id}'");
+            $res = $DB->query("SELECT MAX(comment_date) AS max_date FROM exp_comments WHERE status = 'o' AND entry_id = '{$entry_id}'");
             $comment_date  = ($res->num_rows == 0 OR ! is_numeric($res->row['max_date'])) ? 0 : $res->row['max_date'];
-			$res = $DB->query("SELECT COUNT(*) AS count FROM exp_comments WHERE entry_id = '{$id}' AND status = 'o'");
-            $DB->query("UPDATE exp_weblog_titles SET comment_total = '".($res->row['count'])."', recent_comment_date = '$comment_date' WHERE entry_id = '{$id}'");			
+			$res = $DB->query("SELECT COUNT(*) AS count FROM exp_comments WHERE entry_id = '{$entry_id}' AND status = 'o'");
+            $DB->query("UPDATE exp_weblog_titles SET comment_total = '".($res->row['count'])."', recent_comment_date = '$comment_date' WHERE entry_id = '{$entry_id}'");			
         }
         
         // Update global stats
@@ -4766,8 +4789,8 @@ class Utilities {
         $DSP->title = $LANG->line('utilities');        
         $DSP->crumb = $DSP->anchor(BASE.AMP.'C=admin'.AMP.'area=utilities', $LANG->line('utilities')).
 			 		  $DSP->crumb_item($DSP->anchor(BASE.AMP.'C=admin'.AMP.'M=utilities'.AMP.'P=recount_stats', $LANG->line('recount_stats'))).
-			 		  $DSP->crumb_item($recount_batch_total);
-
+			 		  $DSP->crumb_item($LANG->line('set_recount_prefs'));
+					  
         $r = $DSP->qdiv('tableHeading', $LANG->line('set_recount_prefs')); 
         
         if ($IN->GBL('U'))
@@ -4775,7 +4798,10 @@ class Utilities {
             $r .= $DSP->qdiv('box', $DSP->qdiv('success', $LANG->line('preference_updated')));
         }
         
-        $r .= $DSP->form_open(array('action' => 'C=admin'.AMP.'M=utilities'.AMP.'P=set_recount_prefs'));
+        $r .= $DSP->form_open(
+								array('action' => 'C=admin'.AMP.'M=utilities'.AMP.'P=set_recount_prefs'),
+								array('return_location' => BASE.AMP.'C=admin'.AMP.'M=utilities'.AMP.'P=recount_prefs'.AMP.'U=1')
+							);
         
         $r .= $DSP->div('box');
         
@@ -4816,7 +4842,7 @@ class Utilities {
             return Utilities::recount_preferences_form();
         }
         
-        $this->update_config_file(array('recount_batch_total' => $total), BASE.AMP.'C=admin'.AMP.'M=utilities'.AMP.'P=recount_prefs'.AMP.'U=1');
+        $this->update_config_prefs(array('recount_batch_total' => $total));
     }
     /* END */
 

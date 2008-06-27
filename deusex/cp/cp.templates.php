@@ -215,7 +215,7 @@ function showHideTemplate(htmlObj)
     	/**  Retrieve Valid Template Groups and Templates
     	/** -------------------------------------*/
               
-        if (sizeof($SESS->userdata['assigned_template_groups']) == 0 AND $DSP->allowed_group('can_admin_templates') == FALSE)
+        if ($SESS->userdata['group_id'] != 1 && (sizeof($SESS->userdata['assigned_template_groups']) == 0 OR $DSP->allowed_group('can_admin_templates') == FALSE))
         {
         	$r .= $DSP->qdiv('', $LANG->line('no_templates_assigned'));
         	return $DSP->body = $r;
@@ -234,7 +234,7 @@ function showHideTemplate(htmlObj)
 		{
 			$sql .= " AND is_user_blog = 'n'";
 		}
-		
+
 		if ($SESS->userdata['group_id'] != 1)
 		{
 			$sql .= " AND t.group_id IN (";
@@ -584,7 +584,7 @@ function showHideTemplate(htmlObj)
     	/**  Determine Valid Template Groups and Templates
     	/** -------------------------------------*/
               
-        if (sizeof($SESS->userdata['assigned_template_groups']) == 0 AND $DSP->allowed_group('can_admin_templates') == FALSE)
+        if ($SESS->userdata['group_id'] != 1 && (sizeof($SESS->userdata['assigned_template_groups']) == 0 OR $DSP->allowed_group('can_admin_templates') == FALSE))
         {
         	return $DSP->no_access_message();
         }
@@ -1274,7 +1274,7 @@ function showHideTemplate(htmlObj)
         if ( ! ereg("/$", $sitepath))
             $sitepath .= '/';
               
-        if (sizeof($SESS->userdata['assigned_template_groups']) == 0 AND $DSP->allowed_group('can_admin_templates') == FALSE)
+        if ($SESS->userdata['group_id'] != 1 && (sizeof($SESS->userdata['assigned_template_groups']) == 0 OR $DSP->allowed_group('can_admin_templates') == FALSE))
         {
         	$r .= $DSP->qdiv('', $LANG->line('no_templates_assigned'));
         	return $DSP->body = $r;

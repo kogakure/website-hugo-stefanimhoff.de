@@ -101,11 +101,14 @@ class File_Browser {
 			
 				$skip = FALSE;
 				
+				// ignore the file if the name sans extension ends in the string to be shunned
 				if (sizeof($ignore) > 0)
 				{
 					foreach ($this->ignore as $shun)
 					{
-						if (strpos($file, $shun) !== FALSE)
+						$name = array_shift($temp = explode('.', $file));
+						
+						if (substr($name, - strlen($shun)) == $shun)
 						{
 							$skip = TRUE;
 							continue;

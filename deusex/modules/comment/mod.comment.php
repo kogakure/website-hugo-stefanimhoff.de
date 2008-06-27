@@ -192,11 +192,14 @@ class Comment {
 			{ 
 				$sql .= "AND exp_weblogs.is_user_blog = 'n' ";
 			
-				if ($weblog = $TMPL->fetch_param('weblog'))
+				if ($weblog = $TMPL->fetch_param('weblog') OR $TMPL->fetch_param('site'))
 				{
 					$xql = "SELECT weblog_id FROM exp_weblogs WHERE site_id IN ('".implode("','", $TMPL->site_ids)."') ";
 				
-					$xql .= $FNS->sql_andor_string($weblog, 'blog_name');
+					if ($weblog !== FALSE)
+					{
+						$xql .= $FNS->sql_andor_string($weblog, 'blog_name');
+					}
 					
 					$query = $DB->query($xql);
 				
@@ -251,12 +254,15 @@ class Comment {
 			}
 			else
 			{			
-				if ($weblog = $TMPL->fetch_param('weblog'))
+				if ($weblog = $TMPL->fetch_param('weblog') OR $TMPL->fetch_param('site'))
 				{
 					$xql = "SELECT weblog_id FROM exp_weblogs WHERE site_id IN ('".implode("','", $TMPL->site_ids)."') ";
 				
-					$xql .= $FNS->sql_andor_string($weblog, 'blog_name');      
-						
+					if ($weblog !== FALSE)
+					{
+						$xql .= $FNS->sql_andor_string($weblog, 'blog_name');
+					}
+
 					$query = $DB->query($xql);
 					
 					if ($query->num_rows == 0)
@@ -2831,10 +2837,6 @@ class Comment {
 					{
 						$title	 = $email_tit;
 						$message = $email_msg;
-						
-						// Deprecate the {name} variable at some point
-						$title	 = str_replace('{name}', $val['2'], $title);
-						$message = str_replace('{name}', $val['2'], $message);
 
 						$title	 = str_replace('{name_of_recipient}', $val['2'], $title);
 						$message = str_replace('{name_of_recipient}', $val['2'], $message);

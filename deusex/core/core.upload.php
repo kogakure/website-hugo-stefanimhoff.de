@@ -292,14 +292,11 @@ class Upload {
 		
 			return FALSE;
  		}
-		
-		/** -------------------------------------
-        /**  Permissions
-        /** -------------------------------------*/
-        
-        // Bug fix. Some servers don't honor the upload folder's file permissions
-        
-		@chmod($this->new_name, 0777);
+
+    	// Legacy fix required to allow FTP users access to uploaded files in certain
+		// server environments removed 6/5/08 - D'Jones
+		// @chmod($this->new_name, 0777);
+
 		
 		/** -------------------------------------
         /**  MySQL Timeout Check?
@@ -379,7 +376,7 @@ class Upload {
 			return FALSE;
         }
         
-		$this->upload_path = $path;
+        $this->upload_path = rtrim($path, '/').'/';
 		
 		return TRUE;
     }

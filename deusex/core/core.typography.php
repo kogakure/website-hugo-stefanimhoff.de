@@ -1081,9 +1081,17 @@ class Typography {
         $str = ' '.$str;
         
         foreach ($this->smiley_array as $key => $val)
-        {        
-            $str = preg_replace("|([\s\.\,\>])".preg_quote($key)."|is", "\\1<img src=\"".$this->emoticon_path.$this->smiley_array[$key]['0']."\" width=\"".$this->smiley_array[$key]['1']."\" height=\"".$this->smiley_array[$key]['2']."\" alt=\"".$this->smiley_array[$key]['3']."\" style=\"border:0;\" />", $str);
-        }
+		{
+			if (strpos($str, $key) !== FALSE)
+			{
+				$img = "<img src=\"".$this->emoticon_path.$this->smiley_array[$key]['0']."\" width=\"".$this->smiley_array[$key]['1']."\" height=\"".$this->smiley_array[$key]['2']."\" alt=\"".$this->smiley_array[$key]['3']."\" style=\"border:0;\" />";
+			
+				foreach(array(' ', "\t", "\n", "\r", '.', ',', '>') as $char)
+				{
+					$str = str_replace($char.$key, $char.$img, $str);
+				}
+			}
+		}
         
         return ltrim($str);
     }

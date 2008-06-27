@@ -696,7 +696,10 @@ class Weblog {
 						$stati[] = 'closed';
 					}
 				}
-
+				
+				// lower case to match MySQL's case-insensitivity
+				$stati = array_map('strtolower', $stati);
+				
 				$r = 1;  // Fixes a problem when a sorting key occurs twice
 				
 				foreach($entry_data[$entry_id] as $relating_data)
@@ -705,16 +708,16 @@ class Weblog {
 					{
 						if (isset($stati) && isset($relating_data['query']->row[$order]))
 						{
-							if ($status_state == 'negative' && ! in_array($relating_data['query']->row['status'], $stati))
+							if ($status_state == 'negative' && ! in_array(strtolower($relating_data['query']->row['status']), $stati))
 							{
 								$new[$relating_data['query']->row[$order].'_'.$r] = $relating_data;
 							}
-							elseif($status_state == 'positive' && in_array($relating_data['query']->row['status'], $stati))
+							elseif($status_state == 'positive' && in_array(strtolower($relating_data['query']->row['status']), $stati))
 							{
 								$new[$relating_data['query']->row[$order].'_'.$r] = $relating_data;
 							}
 						}
-						elseif ($relating_data['query']->row['status'] == 'open')
+						elseif (strtolower($relating_data['query']->row['status']) == 'open')
 						{
 							$new[$relating_data['query']->row[$order].'_'.$r] = $relating_data;
 						}
@@ -1335,7 +1338,7 @@ class Weblog {
 						// contain a '/'.  So we'll try to get the category the correct way first, and if
 						// it fails, we'll try the whole $qstring
 						
-						$cut_qstring = array_shift(explode('/', $qstring));
+						$cut_qstring = array_shift($temp = explode('/', $qstring));
 						
 						$result = $DB->query("SELECT cat_id FROM exp_categories 
 											  WHERE cat_url_title='".$DB->escape_str($cut_qstring)."' 
@@ -1389,7 +1392,7 @@ class Weblog {
 				/**  Parse URL title
 				/** --------------------------------------*/
 
-				if ($cat_id == '' AND $year == '')
+				if (($cat_id == '' AND $year == '') OR $TMPL->fetch_param('require_entry') == 'yes')
 				{
 					if (strstr($qstring, '/'))
 					{
@@ -2595,7 +2598,8 @@ class Weblog {
 				
 				if ($sort_array[$key] == 'asc' || $sort_array[$key] == 'desc')
 				{
-					$end .= " ".$sort_array[$key];
+					// keep entries with the same timestamp in the correct order
+					$end .= " {$sort_array[$key]}, t.entry_id {$sort_array[$key]}";
 				}
 			}
 		}
@@ -5391,49 +5395,48 @@ class Weblog {
 			$sql = "SELECT DISTINCT (c.cat_id), c.cat_name, c.cat_url_title, c.cat_description, c.cat_image, c.parent_id {$field_sqla}
 					FROM (exp_categories AS c";
 					
-			if ($TMPL->fetch_param('show_empty') != 'no' AND $weblog_id != '')
-			{
-				$sql .= ", exp_category_posts ";
-			}
-
 			$sql .= ") {$field_sqlb}";
 			
 			if ($TMPL->fetch_param('show_empty') == 'no')
 			{
 				$sql .= " LEFT JOIN exp_category_posts ON c.cat_id = exp_category_posts.cat_id ";
-			}
 	
-			if ($weblog_id != '')
-			{
-				$sql .= " LEFT JOIN exp_weblog_titles ON exp_category_posts.entry_id = exp_weblog_titles.entry_id ";
+				if ($weblog_id != '')
+				{
+					$sql .= " LEFT JOIN exp_weblog_titles ON exp_category_posts.entry_id = exp_weblog_titles.entry_id ";
+				}
 			}
 	
 			$sql .= " WHERE c.group_id IN ('".str_replace('|', "','", $DB->escape_str($group_id))."') ";
-			
-			if ($weblog_id != '')
-			{
-				$sql .= "AND exp_weblog_titles.weblog_id = '".$weblog_id."' ";
-			}
-			else
-			{
-				$sql .= " AND exp_weblog_titles.site_id IN ('".implode("','", $TMPL->site_ids)."') ";
-			}
 
-	        if ($status = $TMPL->fetch_param('status'))
-	        {
-				$status = str_replace('Open',   'open',   $status);
-				$status = str_replace('Closed', 'closed', $status);
-
-	            $sql .= $FNS->sql_andor_string($status, 'exp_weblog_titles.status');
-	        }
-	        else
-	        {
-	            $sql .= "AND exp_weblog_titles.status = 'open' ";
-	        }
-	
 			if ($TMPL->fetch_param('show_empty') == 'no')
 			{
-				$sql .= "AND exp_category_posts.cat_id IS NOT NULL ";
+				
+				if ($weblog_id != '')
+				{
+					$sql .= "AND exp_weblog_titles.weblog_id = '".$weblog_id."' ";
+				}
+				else
+				{
+					$sql .= " AND exp_weblog_titles.site_id IN ('".implode("','", $TMPL->site_ids)."') ";
+				}
+	
+				if ($status = $TMPL->fetch_param('status'))
+				{
+					$status = str_replace('Open',   'open',   $status);
+					$status = str_replace('Closed', 'closed', $status);
+	
+					$sql .= $FNS->sql_andor_string($status, 'exp_weblog_titles.status');
+				}
+				else
+				{
+					$sql .= "AND exp_weblog_titles.status = 'open' ";
+				}
+		
+				if ($TMPL->fetch_param('show_empty') == 'no')
+				{
+					$sql .= "AND exp_category_posts.cat_id IS NOT NULL ";
+				}
 			}
 			
 			if ($TMPL->fetch_param('show') !== FALSE)
@@ -6595,11 +6598,13 @@ class Weblog {
 		// constrain by date depending on whether this is a 'next' or 'prev' tag
 		if ($which == 'next')
 		{
-			$sql .= ' AND t.entry_date > '.$SESS->cache['weblog']['single_entry_date'].' ';
+			$sql .= ' AND t.entry_date >= '.$SESS->cache['weblog']['single_entry_date'].
+					' AND t.entry_id > '.$SESS->cache['weblog']['single_entry_id'].' ';
 		}
 		else
 		{
-			$sql .= ' AND t.entry_date < '.$SESS->cache['weblog']['single_entry_date'].' ';
+			$sql .= ' AND t.entry_date <= '.$SESS->cache['weblog']['single_entry_date'].
+					' AND t.entry_id < '.$SESS->cache['weblog']['single_entry_id'].' ';
 		}
 		
 	    if ($TMPL->fetch_param('show_expired') != 'yes')
@@ -6717,7 +6722,7 @@ class Weblog {
 			}
 	    }
 
-		$sql .= " ORDER BY t.entry_date {$sort} LIMIT 1";
+		$sql .= " ORDER BY t.entry_date {$sort}, t.entry_id {$sort} LIMIT 1";
 
 		$query = $DB->query($sql);
 

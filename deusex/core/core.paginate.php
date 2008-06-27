@@ -167,7 +167,7 @@ class Paginate {
         if  ($this->cur_page > $this->max_links)
         {
         	$first_link = ($this->first_url == '') ? $path : $this->first_url;
-            $output .= $this->first_div_o.'<a href="'.$first_link.'">'.$this->first_page.$this->prefix.$this->suffix.'</a>'.$this->first_div_c;
+            $output .= $this->first_div_o.'<a href="'.$first_link.$this->suffix.'">'.$this->first_page.'</a>'.$this->first_div_c;
         }
         
 		/** ----------------------------------------

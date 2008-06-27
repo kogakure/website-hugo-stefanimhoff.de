@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2007 EllisLab, Inc.
+ Copyright (c) 2003 - 2008 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -39,7 +39,7 @@ $plugin_info = array(
 						'pi_name'			=> 'Randomizer',
 						'pi_version'			=> '1.0',
 						'pi_author'			=> 'Rick Ellis',
-						'pi_author_url'		=> 'http://www.pmachine.com/',
+						'pi_author_url'		=> 'http://expressionengine.com/',
 						'pi_description'		=> 'Allows you to show random text, such as quotes, on your site.',
 						'pi_usage'			=> Randomizer::usage()
 					);

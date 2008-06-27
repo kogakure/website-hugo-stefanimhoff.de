@@ -2,15 +2,15 @@
 
 /*
 =====================================================
- ExpressionEngine - by pMachine
+ ExpressionEngine - by EllisLab
 -----------------------------------------------------
- http://www.pmachine.com/
+ http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2004 pMachine, Inc.
+ Copyright (c) 2004-2008 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
- http://www.pmachine.com/license/
+ http://expressionengine.com/docs/license.html
 =====================================================
  File: pi.magpie.php
 -----------------------------------------------------
@@ -22,9 +22,9 @@
 
 $plugin_info = array(
 						'pi_name'			=> 'Magpie RSS Parser',
-						'pi_version'		=> '1.3.3',
+						'pi_version'		=> '1.3.4',
 						'pi_author'			=> 'Paul Burdick',
-						'pi_author_url'		=> 'http://www.pmachine.com/',
+						'pi_author_url'		=> 'http://expressionengine.com/',
 						'pi_description'	=> 'Retrieves and Parses RSS/Atom Feeds',
 						'pi_usage'			=> Magpie::usage()
 					);
@@ -121,7 +121,7 @@ Class Magpie {
         		foreach($this->RSS->items as $item)
         		{
         			$i++;
-        			if ($i < $offset) continue;
+        			if ($i <= $offset) continue;
         			
         			$temp_data = $matches['1'];
         			
@@ -199,7 +199,7 @@ Class Magpie {
 		$channel_variables = array('title', 'link', 'modified', 'generator',
 								   'copyright', 'description', 'language',
 								   'pubdate', 'lastbuilddate', 'generator',
-								   'tagline', 'creator', 'date', 'rights' );
+								   'tagline', 'creator', 'date', 'rights');
 								   
 		$image_variables = array('title','url', 'link','description', 'width', 'height');
 		
@@ -290,16 +290,18 @@ STEP ONE:
 Insert plugin tag into your template.  Set parameters and variables.
 
 PARAMETERS: 
-The tag has three parameters:
+The tag has four parameters:
 
 1. url - The URL of the RSS or Atom feed.
 
 2. limit - Number of items to display from feed. 
 
-3. refresh - How often to refresh the cache file in minutes.  The plugin default is to refresh the cached file every three hours.
+3. offset - Skip a certain number of items in the display of the feed.
+
+4. refresh - How often to refresh the cache file in minutes.  The plugin default is to refresh the cached file every three hours.
 
 
-Example opening tag:  {exp:magpie url="http://www.pmachine.com/news.rss" limit="8" refresh="720"}
+Example opening tag:  {exp:magpie url="http://expressionengine.com/feeds/rss/full/" limit="8" refresh="720"}
 
 SINGLE VARIABLES:
 
@@ -355,7 +357,7 @@ summary - [ATOM/RSS-1.0/RSS-2.0]
 
 EXAMPLE:
 
-{exp:magpie url="http://www.pmachine.com/news.xml" limit="10" refresh="720"}
+{exp:magpie url="http://expressionengine.com/feeds/rss/full/" limit="10" refresh="720"}
 <ul>
 {items}
 <li><a href="{link}">{title}</a></li>
@@ -381,7 +383,7 @@ Modified the code so that one can put 'magpie:' as a prefix on all plugin variab
 which allows the embedding of this plugin in a {exp:weblog:entries} tag and using 
 that tag's variables in this plugin's parameter (url="" parameter, specifically).
 
-{exp:magpie url="http://www.pmachine.com/news.xml" limit="10" refresh="720"}
+{exp:magpie url="http://expressionengine.com/feeds/rss/full/" limit="10" refresh="720"}
 <ul>
 {magpie:items}
 <li><a href="{magpie:link}">{magpie:title}</a></li>
@@ -432,6 +434,11 @@ Version 1.3.3
 The Snoopy library that is included with the Magpie plugin by default was causing
 problems with the Snoopy library included in the Third Party Linklist module, so
 the name was changed to eliminate the conflict.
+
+***************************
+Version 1.3.4
+***************************
+The offset="" parameter was undocumented and had a bug.  Fixed.
 
 
 	<?php
@@ -1231,7 +1238,7 @@ define('MAGPIE_VERSION', '0.61');
 
 $MAGPIE_ERROR = "";
 
-function fetch_rss ($url) {
+function fetch_rss ($url, $cache_age = '') {
 	// initialize constants
 	init();
 	
@@ -1260,7 +1267,7 @@ function fetch_rss ($url) {
 		// 3. if cached obj fails freshness check, fetch remote
 		// 4. if remote fails, return stale object, or error
 		
-		$cache = new RSSCache( MAGPIE_CACHE_DIR, MAGPIE_CACHE_AGE );
+		$cache = new RSSCache( MAGPIE_CACHE_DIR, ($cache_age != '') ? $cache_age : MAGPIE_CACHE_AGE );
 		
 		if (MAGPIE_DEBUG and $cache->ERROR) {
 			debug($cache->ERROR, E_USER_WARNING);
@@ -2207,6 +2214,7 @@ class M_Snoopy
 	
 	function _httprequest($url,$fp,$URI,$http_method,$content_type="",$body="")
 	{
+		$cookie_headers = '';
 		if($this->passcookies && $this->_redirectaddr)
 			$this->setcookies();
 			
@@ -2216,25 +2224,14 @@ class M_Snoopy
 		$headers = $http_method." ".$url." ".$this->_httpversion."\r\n";		
 		if(!empty($this->agent))
 			$headers .= "User-Agent: ".$this->agent."\r\n";
-		if(!empty($this->host) && !isset($this->rawheaders['Host']))
-			$headers .= "Host: ".$this->host."\r\n";
+		if(!empty($this->host) && !isset($this->rawheaders['Host'])) {
+			$headers .= "Host: ".$this->host;
+			if(!empty($this->port) && $this->port != 80)
+				$headers .= ":".$this->port;
+			$headers .= "\r\n";
+		}
 		if(!empty($this->accept))
 			$headers .= "Accept: ".$this->accept."\r\n";
-		
-		if($this->use_gzip) {
-			// make sure PHP was built with --with-zlib
-			// and we can handle gzipp'ed data
-			if ( function_exists(gzinflate) ) {
-			   $headers .= "Accept-encoding: gzip\r\n";
-			}
-			else {
-			   trigger_error(
-			   	"use_gzip is on, but PHP was built without zlib support.".
-				"  Requesting file(s) without gzip encoding.", 
-				E_USER_NOTICE);
-			}
-		}
-		
 		if(!empty($this->referer))
 			$headers .= "Referer: ".$this->referer."\r\n";
 		if(!empty($this->cookies))
@@ -2267,7 +2264,12 @@ class M_Snoopy
 		if(!empty($body))	
 			$headers .= "Content-length: ".strlen($body)."\r\n";
 		if(!empty($this->user) || !empty($this->pass))	
-			$headers .= "Authorization: BASIC ".base64_encode($this->user.":".$this->pass)."\r\n";
+			$headers .= "Authorization: Basic ".base64_encode($this->user.":".$this->pass)."\r\n";
+		
+		//add proxy auth headers
+		if(!empty($this->proxy_user))	
+			$headers .= 'Proxy-Authorization: ' . 'Basic ' . base64_encode($this->proxy_user . ':' . $this->proxy_pass)."\r\n";
+
 
 		$headers .= "\r\n";
 		
@@ -2280,9 +2282,6 @@ class M_Snoopy
 		
 		$this->_redirectaddr = false;
 		unset($this->headers);
-		
-		// content was returned gzip encoded?
-		$is_gzipped = false;
 						
 		while($currentHeader = fgets($fp,$this->_maxlinelen))
 		{
@@ -2292,15 +2291,14 @@ class M_Snoopy
 				return false;
 			}
 				
-		//	if($currentHeader == "\r\n")
-			if(preg_match("/^\r?\n$/", $currentHeader) )
-			      break;
+			if($currentHeader == "\r\n")
+				break;
 						
 			// if a header begins with Location: or URI:, set the redirect
 			if(preg_match("/^(Location:|URI:)/i",$currentHeader))
 			{
 				// get URL portion of the redirect
-				preg_match("/^(Location:|URI:)\s+(.*)/",chop($currentHeader),$matches);
+				preg_match("/^(Location:|URI:)[ ]+(.*)/i",chop($currentHeader),$matches);
 				// look for :// in the Location header to see if hostname is included
 				if(!preg_match("|\:\/\/|",$matches[2]))
 				{
@@ -2324,31 +2322,19 @@ class M_Snoopy
                 }				
 				$this->response_code = $currentHeader;
 			}
-			
-			if (preg_match("/Content-Encoding: gzip/", $currentHeader) ) {
-				$is_gzipped = true;
-			}
-			
+				
 			$this->headers[] = $currentHeader;
 		}
 
-		# $results = fread($fp, $this->maxlength);
-		$results = "";
-		while ( $data = fread($fp, $this->maxlength) ) {
-		    $results .= $data;
-		    if (
-		        strlen($results) > $this->maxlength ) {
-		        break;
-		    }
-		}
-		
-		// gunzip
-		if ( $is_gzipped ) {
-			// per http://www.php.net/manual/en/function.gzencode.php
-			$results = substr($results, 10);
-			$results = gzinflate($results);
-		}
-		
+		$results = '';
+		do {
+    		$_data = fread($fp, $this->maxlength);
+    		if (strlen($_data) == 0) {
+        		break;
+    		}
+    		$results .= $_data;
+		} while(true);
+
 		if ($this->read_timeout > 0 && $this->_check_timeout($fp))
 		{
 			$this->status=-100;
@@ -2357,7 +2343,8 @@ class M_Snoopy
 		
 		// check if there is a a redirect meta tag
 		
-		if(preg_match("'<meta[\s]*http-equiv[^>]*?content[\s]*=[\s]*[\"\']?\d+;[\s]+URL[\s]*=[\s]*([^\"\']*?)[\"\']?".">'i",$results,$match))
+		if(preg_match("'<meta[\s]*http-equiv[^>]*?content[\s]*=[\s]*[\"\']?\d+;[\s]*URL[\s]*=[\s]*([^\"\']*?)[\"\']?>'i",$results,$match))
+
 		{
 			$this->_redirectaddr = $this->_expandlinks($match[1],$URI);	
 		}
@@ -2403,7 +2390,10 @@ class M_Snoopy
 		if(!empty($this->agent))
 			$headers[] = "User-Agent: ".$this->agent;
 		if(!empty($this->host))
-			$headers[] = "Host: ".$this->host;
+			if(!empty($this->port))
+				$headers[] = "Host: ".$this->host.":".$this->port;
+			else
+				$headers[] = "Host: ".$this->host;
 		if(!empty($this->accept))
 			$headers[] = "Accept: ".$this->accept;
 		if(!empty($this->referer))
@@ -2440,8 +2430,10 @@ class M_Snoopy
 		if(!empty($this->user) || !empty($this->pass))	
 			$headers[] = "Authorization: BASIC ".base64_encode($this->user.":".$this->pass);
 			
-		for($curr_header = 0; $curr_header < count($headers); $curr_header++)
-			$cmdline_params .= " -H \"".$headers[$curr_header]."\"";
+		for($curr_header = 0; $curr_header < count($headers); $curr_header++) {
+			$safer_header = strtr( $headers[$curr_header], "\"", " " );
+			$cmdline_params .= " -H \"".$safer_header."\"";
+		}
 		
 		if(!empty($body))
 			$cmdline_params .= " -d \"$body\"";
@@ -2449,11 +2441,10 @@ class M_Snoopy
 		if($this->read_timeout > 0)
 			$cmdline_params .= " -m ".$this->read_timeout;
 		
-		$headerfile = uniqid(time());
-		
-		# accept self-signed certs
-		$cmdline_params .= " -k";
-		exec($this->curl_path." -D \"/tmp/$headerfile\"".$cmdline_params." ".$URI,$results,$return);
+		$headerfile = tempnam($temp_dir, "sno");
+
+		$safer_URI = strtr( $URI, "\"", " " ); // strip quotes from the URI to avoid shell access
+		exec($this->curl_path." -D \"$headerfile\"".$cmdline_params." \"".$safer_URI."\"",$results,$return);
 		
 		if($return)
 		{
@@ -2464,7 +2455,7 @@ class M_Snoopy
 			
 		$results = implode("\r\n",$results);
 		
-		$result_headers = file("/tmp/$headerfile");
+		$result_headers = file("$headerfile");
 						
 		$this->_redirectaddr = false;
 		unset($this->headers);
@@ -2476,7 +2467,7 @@ class M_Snoopy
 			if(preg_match("/^(Location: |URI: )/i",$result_headers[$currentHeader]))
 			{
 				// get URL portion of the redirect
-				preg_match("/^(Location: |URI:)(.*)/",chop($result_headers[$currentHeader]),$matches);
+				preg_match("/^(Location: |URI:)\s+(.*)/",chop($result_headers[$currentHeader]),$matches);
 				// look for :// in the Location header to see if hostname is included
 				if(!preg_match("|\:\/\/|",$matches[2]))
 				{
@@ -2491,21 +2482,22 @@ class M_Snoopy
 				else
 					$this->_redirectaddr = $matches[2];
 			}
-		
+				
 			if(preg_match("|^HTTP/|",$result_headers[$currentHeader]))
 			{
-			    $this->response_code = $result_headers[$currentHeader];
-			    if(preg_match("|^HTTP/[^\s]*\s(.*?)\s|",$this->response_code, $match))
-			    {
-				$this->status= $match[1];
-                	    }
+                if(preg_match("|^HTTP/[^\s]*\s(.*?)\s|",$result_headers[$currentHeader], $status))
+				{
+					$this->status= $status[1];
+                }				
+				$this->response_code = $result_headers[$currentHeader];
 			}
+
 			$this->headers[] = $result_headers[$currentHeader];
 		}
 
 		// check if there is a a redirect meta tag
 		
-		if(preg_match("'<meta[\s]*http-equiv[^>]*?content[\s]*=[\s]*[\"\']?\d+;[\s]+URL[\s]*=[\s]*([^\"\']*?)[\"\']?".">'i",$results,$match))
+		if(preg_match("'<meta[\s]*http-equiv[^>]*?content[\s]*=[\s]*[\"\']?\d+;[\s]*URL[\s]*=[\s]*([^\"\']*?)[\"\']?>'i",$results,$match))
 		{
 			$this->_redirectaddr = $this->_expandlinks($match[1],$URI);	
 		}
@@ -2524,7 +2516,7 @@ class M_Snoopy
 		else
 			$this->results = $results;
 
-		unlink("/tmp/$headerfile");
+		unlink("$headerfile");
 		
 		return true;
 	}

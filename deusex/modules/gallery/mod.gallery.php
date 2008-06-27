@@ -342,6 +342,9 @@ class Gallery {
 		
 			$tagdata = str_replace(LD.'category_name'.RD, $row['cat_name'], $tagdata);
 			$tagdata = str_replace(LD.'category_description'.RD, $row['cat_description'], $tagdata);
+			$tagdata = str_replace(LD.'category_id'.RD, $row['cat_id'], $tagdata);
+			
+			// deprecated, never documented, keeping it in just in case, though
 			$tagdata = str_replace(LD.'cat_id'.RD, $row['cat_id'], $tagdata);
 	
 			if ($cat_path != '')

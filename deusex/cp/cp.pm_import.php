@@ -1979,8 +1979,6 @@ EOT;
     {
         global $IN, $DSP, $DB, $LANG, $PREFS, $FNS, $LOC, $REGX;
         
-        @set_time_limit(0);
-        
         // The pMachine weblog name
         
         $weblog = $IN->GBL('id', 'GP');
@@ -2660,8 +2658,6 @@ EOT;
     function import_forum()
     {
         global $IN, $DSP, $DB, $LANG, $PREFS, $FNS, $LOC, $REGX;
-        
-        @set_time_limit(0);
         
         // The pMachine weblog name
         

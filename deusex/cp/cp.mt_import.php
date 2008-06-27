@@ -1158,7 +1158,7 @@ class MT_Import {
 					continue;
 				}
 				
-				// EXTENDED BODY
+				// EXTRA FIELD
 				preg_match("/EXTRA FIELD\-(\d+?):(.*)/", $sections[$i], $meta_info);
 				if (isset($meta_info['2']))
 				{
@@ -1418,6 +1418,14 @@ class MT_Import {
 			    	
 			    		$DB->query($DB->insert_string('exp_categories', $insert_array));       
 			    		$primary_cat_ids[$name] = $DB->insert_id;
+
+						// Create category_field_data
+			    		$insert_array = array('cat_id'	 		=> $primary_cat_ids[$name],
+			    	                          'site_id'			=> $site_id,
+											  'group_id'  		=> $weblog_cat_id
+			    	                          );
+			    	
+			    		$DB->query($DB->insert_string('exp_category_field_data', $insert_array));
 			    	}
 			    	else
 			    	{
@@ -1479,7 +1487,16 @@ class MT_Import {
 			    	
 			    			$sql = $DB->insert_string('exp_categories', $insert_array);   
 			    			$DB->query($sql);  
-			    			$regular_cat_ids[$DB->insert_id] = array($cat,$pid);
+							$cat_insert_id = $DB->insert_id;
+			    			$regular_cat_ids[$cat_insert_id] = array($cat,$pid);
+							
+							// Create category_field_data
+				    		$insert_array = array('cat_id'	 		=> $cat_insert_id,
+				    	                          'site_id'			=> $site_id,
+												  'group_id'  		=> $weblog_cat_id
+			    		                          );
+			    	
+			    			$DB->query($DB->insert_string('exp_category_field_data', $insert_array));
 			    		}
 			    		else
 			    		{
@@ -1962,8 +1979,6 @@ class MT_Import {
 					$trackbacks_entered++;
 				}
 			}
-			
-			@set_time_limit('20');
 		}
 		// END of importing entries 
 		

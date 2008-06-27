@@ -3480,7 +3480,7 @@ EOT;
                 $_POST['m_field_order'] = $total; 
             }
             
-            unset($_POST['$m_field_id']);
+            unset($_POST['m_field_id']);
                     
             $DB->query($DB->insert_string('exp_member_fields', $_POST));
                                     
@@ -4346,7 +4346,7 @@ EOT;
 					
 					$class = ($i % 2) ? 'tableCellOne' : 'tableCellTwo'; $i++;
 					$r .= $DSP->table_row(array(
-												array('text' => $DSP->anchor(BASE.AMP.'C=edit'.AMP.'M=edit_comment'.AMP.'weblog_id='.$row['weblog_id'].AMP.'entry_id='.$row['entry_id'].AMP.'comment_id='.$row['comment_id'].AMP.'current_page=0', '<b>'.substr($row['comment'], 0, 45).'...</b>'), 'class' => $class),
+												array('text' => $DSP->anchor(BASE.AMP.'C=edit'.AMP.'M=edit_comment'.AMP.'weblog_id='.$row['weblog_id'].AMP.'entry_id='.$row['entry_id'].AMP.'comment_id='.$row['comment_id'].AMP.'current_page=0', '<b>'.substr(strip_tags($row['comment']), 0, 45).'...</b>'), 'class' => $class),
 												array('text' => $author, 'class' => $class),
 												array('text' => $DSP->mailto($row['email'], $row['email']), 'class' => $class),
 												array('text' => $row['ip_address'], 'class' => $class)

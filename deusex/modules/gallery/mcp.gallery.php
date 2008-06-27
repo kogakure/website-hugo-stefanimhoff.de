@@ -4830,6 +4830,29 @@ EOT;
 		
 									
 		$r = '';
+		$r .= <<<EOT
+<script type="text/javascript">
+<!--
+
+	function showhide_tablerow()
+	{
+		var arg_length = arguments.length;
+		for(i=0; i< arg_length; i++)
+		{
+			if (document.getElementById(arguments[i]).style.display == "none")
+			{
+				document.getElementById(arguments[i]).style.display = "";
+			}
+			else
+			{
+				document.getElementById(arguments[i]).style.display = "none";
+			}
+		}
+	}
+
+//-->
+</script>
+EOT;
 		
 		$max_exceeded = $LANG->line('gallery_max_size');		
 		$max_exceeded = str_replace("%s", $this->max_size, $max_exceeded);
@@ -5069,7 +5092,7 @@ EOT;
 		// Show/hide link
 
         $DSP->right_crumb($LANG->line('show_hide'), '', 'onclick="showhide_chunk();return false;"');
-		$DSP->body_props = " onLoad=\"switch_wm_type();\"";
+		$DSP->body_props = " onLoad=\"switch_wm_type();" . (($gallery_wm_use_font == 'y') ? '' : "showhide_tablerow('wm_font_size_cell1','wm_font_size_cell2');") ."\"";
 
 
 		
@@ -5529,11 +5552,13 @@ EOT;
 									array(
 											'text'	=> $DSP->qdiv('defaultBold', $LANG->line('gallery_wm_font_size')),
 											'class'	=> $style,
+											'id' => 'wm_font_size_cell1',
 											'width'	=> '50%'
 										),
 									array(
 											'text'	=> $DSP->input_text('gallery_wm_font_size', $gallery_wm_font_size, '6', '4', 'input', '40px'),
 											'class'	=> $style,
+											'id' => 'wm_font_size_cell2',
 											'width'	=> '50%'
 										)
 									)
@@ -5553,7 +5578,7 @@ EOT;
 									array(
 											'text'	=> $DSP->input_text('gallery_wm_text_color', $gallery_wm_text_color, '10', '7', 'input', '65px').NBS."<a href=\"\" onclick=\"javascript:color_launch('gallery_wm_text_color'); return false;\"><img src='".PATH_CP_IMG."colorbox.gif' width='16' height='16' border='0' title='Open Color Browser' /></a>",
 											'class'	=> $style,
-											'width'	=> '50%'
+											'width'	=> '50%',
 										)
 									)
 							);

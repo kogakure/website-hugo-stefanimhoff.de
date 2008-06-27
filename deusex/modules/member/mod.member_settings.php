@@ -226,13 +226,13 @@ class Member_settings extends Member {
 		
 			if ($rank_stars != '' AND $rank_query->num_rows > 0)
 			{
-				$num_stars = 0;
+				$num_stars = NULL;
 				$rank_title = '';
 				
 				$i = 1;
 				foreach ($rank_query->result as $rank)
 				{				
-					if ($num_stars == 0)
+					if ($num_stars == NULL)
 					{
 						$num_stars	= $rank['rank_stars'];
 						$rank_title	= $rank['rank_title']; 

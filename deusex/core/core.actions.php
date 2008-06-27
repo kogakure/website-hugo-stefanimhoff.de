@@ -67,8 +67,7 @@ class Action {
         // rather than doing a lookup in the actions table.
             
         $specials = array(
-                            'trackback' 		=> array('Trackback_CP', 'receive_trackback'),
-							'Praclarush_Taonas'	=> array('Moblog', 'cto_of_death')
+                            'trackback' 		=> array('Trackback_CP', 'receive_trackback')
                          );
         
         

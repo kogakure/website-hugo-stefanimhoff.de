@@ -623,7 +623,12 @@ class Member_auth extends Member {
 										'RET'	=> $ret,
 										'FROM'	=> ($this->in_forum == TRUE) ? 'forum' : ''
 									  );            
-            
+
+		if ($this->in_forum === TRUE)
+		{
+			$data['hidden_fields']['board_id'] = $this->board_id;
+		}
+		
 		$this->_set_page_title($LANG->line('mbr_forgotten_password'));
             
 		return $this->_var_swap($this->_load_element('forgot_form'), 

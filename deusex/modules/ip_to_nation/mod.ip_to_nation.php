@@ -64,7 +64,7 @@ class Ip_to_nation {
 		}
 		else
 		{
-			$this->return_data = '<img src="'.$TMPL->fetch_param('image_url').'flag_'.$query->row['country'].'.gif" width="18" height="12" border="0" alt="'.$country.'" title="'.$country.'" />';
+			$this->return_data = '<img src="'.$TMPL->fetch_param('image_url').'flag_'.$query->row['country'].'.gif" width="18" height="12" alt="'.$country.'" title="'.$country.'" />';
 		}       
 		
 		return $this->return_data;

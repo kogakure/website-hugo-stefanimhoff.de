@@ -547,7 +547,7 @@ EOT;
 						$i =0;
 						foreach ($val as $v)
 						{
-							$hidden_fields['category['.($i++).']'] = $val;
+							$hidden_fields['category['.($i++).']'] = $v;
 						}
 					}            
 				}
@@ -1561,8 +1561,6 @@ EOT;
                 $this->category_subtree_form($key, $cat_array, $depth=1, $action, $default, $selected);
             }
         }
-        
-        $this->categories[] = '</select>';
     }
     /* END */
     

@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2007 EllisLab, Inc.
+ Copyright (c) 2003 - 2008 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -27,7 +27,7 @@
 
 $plugin_info = array(
 						'pi_name'			=> 'XML Encode',
-						'pi_version'		=> '1.1.1',
+						'pi_version'		=> '1.2',
 						'pi_author'			=> 'Rick Ellis',
 						'pi_author_url'		=> 'http://expressionengine.com/',
 						'pi_description'	=> 'XML Encoding plugin.',
@@ -48,12 +48,14 @@ class Xml_encode {
     {
         global $TMPL, $REGX;
         
+		$protect_all = ($TMPL->fetch_param('protect_entities') === 'yes') ? TRUE : FALSE;
+		
         $this->return_data = '';
         
         if ($str == '')
         	$str = $TMPL->tagdata;
                 
-        $str = $REGX->xml_convert(strip_tags($str));
+        $str = $REGX->xml_convert(strip_tags($str), $protect_all);
         $this->return_data = trim(str_replace(array('&#47;', '&nbsp;'), array("/", '&#160;'), $str));
     }
     /* END */
@@ -81,6 +83,17 @@ text you want processed
 
 Note: Because quotes are converted into &quot; by this plugin, you cannot use
 ExpressionEngine conditionals inside of this plugin tag.
+
+If you have existing entities in the text that you do not wish to be converted, you may use
+the parameter protect_entities="yes", e.g.:
+
+{exp:xml_encode}Text &amp; Entities{/exp:xml_encode}
+
+results in: Text &amp;amp; Entities
+
+{exp:xml_encode protect_entities="yes"}Text &amp; Entities{/exp:xml_encode}
+
+results in: Text &amp; Entities
 <?php
 $buffer = ob_get_contents();
 	

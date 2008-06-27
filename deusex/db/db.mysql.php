@@ -260,11 +260,18 @@ class DB {
         if ($this->prefix != $this->exp_prefix)
         { 
            $sql = preg_replace("/(\W)".$this->exp_prefix."(\S+?)/", "\\1".$this->prefix."\\2", $sql);
+
+			// If the custom prefix includes 'exp_' the above can sometimes cause partial doubling.
+			// This is a quick fix to prevent this from causing errors in 1.x.
+			if (strncmp($this->prefix, 'exp_', 4) == 0)
+			{
+				$sql = str_replace($this->prefix.str_replace('exp_', '', $this->prefix), $this->prefix, $sql);
+			}
         }
         
         /**
-        /**	The Cache Cannot be enabled until AFTER the Input class is insantiated.
-        */
+         *	The Cache Cannot be enabled until AFTER the Input class is insantiated.
+         */
         if ($this->enable_cache == TRUE && $this->cache_enabled == FALSE && isset($GLOBALS['IN']) && is_object($GLOBALS['IN']))
         {
         	$this->enable_cache();

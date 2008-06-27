@@ -535,7 +535,7 @@ class Wiki {
 						
 						'{path:image_url}'			=> $image_url,
 						'{text_format}'				=> ucwords(str_replace('_', ' ', $this->text_format)),
-						'{/exp:'					=> '{'.SLASH.'exp:'  // Primarily for XMl Encode in the feeds, but many other possiblities too
+						'{/'						=> '{'.SLASH  // Primarily for XMl Encode in the feeds, but many other possiblities too
 					);
 					
 		/** -------------------------------------

@@ -489,15 +489,26 @@ class Search {
         /** ----------------------------------------------
         /**  Add status declaration to the query
         /** ----------------------------------------------*/
-        
-		$sql .= "\nAND exp_weblog_titles.status != 'closed' ";
-        
+                
         if (($status = $IN->GBL('status')) !== FALSE)
         {
 			$status = str_replace('Open',   'open',   $status);
 			$status = str_replace('Closed', 'closed', $status);
         
             $sql .= $FNS->sql_andor_string($status, 'exp_weblog_titles.status');
+			
+			// add exclusion for closed unless it was explicitly used
+			if (strncasecmp($status, 'not ', 4) == 0)
+			{
+				$status = trim(substr($status, 3));
+			}
+			
+			$stati = explode('|', $status);
+			
+			if (! in_array('closed', $stati))
+			{
+				$sql .= "\nAND exp_weblog_titles.status != 'closed' ";				
+			}
         }
         else
         {
@@ -598,7 +609,15 @@ class Search {
 			{
 				if (sizeof($terms) > 1 && isset($_POST['where']) && $_POST['where'] == 'all' && ! isset($_POST['exact_keyword']) && sizeof($fields) > 0)
 				{
-					$concat_fields = "CAST(CONCAT_WS(' ', exp_weblog_data.field_id_".implode(', exp_weblog_data.field_id_', $fields).') AS CHAR)';
+					// force case insensitivity, but only on 4.0.2 or higher
+					if (version_compare(mysql_get_server_info(), '4.0.2', '>=') !== FALSE)
+					{
+						$concat_fields = "CAST(CONCAT_WS(' ', exp_weblog_data.field_id_".implode(', exp_weblog_data.field_id_', $fields).') AS CHAR)';						
+					}
+					else
+					{
+						$concat_fields = "CONCAT_WS(' ', exp_weblog_data.field_id_".implode(', exp_weblog_data.field_id_', $fields).')';
+					}
 					
 					$mysql_function	= (substr($terms['0'], 0,1) == '-') ? 'NOT LIKE' : 'LIKE';    
 					$search_term	= (substr($terms['0'], 0,1) == '-') ? $DB->escape_str(substr($terms['0'], 1)) : $DB->escape_str($terms['0']);
@@ -625,7 +644,7 @@ class Search {
 					{					
 						if (sizeof($terms) == 1 && isset($_POST['where']) && $_POST['where'] == 'word')
 						{
-							$sql .= "\nOR (exp_weblog_data.field_id_".$val." LIKE '".$DB->escape_str($terms['0'])." %' OR exp_weblog_data.field_id_".$val." LIKE '% ".$DB->escape_str($terms['0'])." %' OR exp_weblog_data.field_id_".$val." = '".$DB->escape_str($terms['0'])."') ";
+							$sql .= "\nOR (exp_weblog_data.field_id_".$val." LIKE '".$DB->escape_str($terms['0'])." %' OR exp_weblog_data.field_id_".$val." LIKE '% ".$DB->escape_str($terms['0'])." %' OR exp_weblog_data.field_id_".$val." LIKE '%\t".$DB->escape_str($terms['0'])." %' OR exp_weblog_data.field_id_".$val." = '".$DB->escape_str($terms['0'])."') ";
 						}
 						elseif ( ! isset($_POST['exact_keyword']))
 						{

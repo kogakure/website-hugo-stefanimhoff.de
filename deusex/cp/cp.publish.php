@@ -456,7 +456,7 @@ class Publish {
         //  If $which = "edit", we are editing an already existing entry.
         //  If $which = 'save', like a preview, but also an edit.
         // --------------------------------------------------------------------              
-                
+
         if ($which == 'edit')
         {
             if ( ! $entry_id = $IN->GBL('entry_id', 'GET'))
@@ -504,7 +504,7 @@ class Publish {
                 $$key = $val;
             }
         }
-        
+
         /** ---------------------------------------------
         /**  Assign page title based on type of request
         /** ---------------------------------------------*/
@@ -1306,6 +1306,9 @@ EOT;
                 {
               		$$key = $val;
               	}
+				
+				// we need to unset this or it will cause the forum tab to not display the existing connection
+				unset($forum_topic_id);
             }
             
             $r .= '<fieldset class="previewBox"><legend class="previewItemTitle">&nbsp;'.$LANG->line('quick_save').'&nbsp;</legend></fieldset>';
@@ -1709,8 +1712,8 @@ EOT;
 			$loc_comment_expiration_date = ($comment_expiration_date == '' || $comment_expiration_date == 0) ? '' : $LOC->set_human_time($comment_expiration_date);
 		
 			$cal_entry_date = ($LOC->set_localized_time($entry_date) * 1000);
-			$cal_expir_date = (($expiration_date == '' || $expiration_date == 0) ? $LOC->set_localized_time() * 1000 : $expiration_date * 1000);
-			$cal_com_expir_date = (($comment_expiration_date == '' || $comment_expiration_date == 0) ? $LOC->set_localized_time() * 1000: $comment_expiration_date * 1000);
+			$cal_expir_date = ($expiration_date == '' || $expiration_date == 0) ? $LOC->set_localized_time() * 1000 : $LOC->set_localized_time($expiration_date) * 1000;
+			$cal_com_expir_date = ($comment_expiration_date == '' || $comment_expiration_date == 0) ? $LOC->set_localized_time() * 1000: $LOC->set_localized_time($comment_expiration_date) * 1000;
 		}
 		else
 		{
@@ -1797,7 +1800,14 @@ EOT;
 				
 								
 				$date .= $DSP->qdiv('itemWrapper', BR.$DSP->input_text('entry_date', $loc_entry_date, '18', '23', 'input', '150px', ' onkeyup="update_calendar(\'entry_date\', this.value);" '));			
-	
+
+				// depending on timezone's, local settings and localization prefs, its possible for js to misinterpret the day, but the humanized
+				// time is correct, so we activate the humanized time to sync the calendar
+				$cal_id = 'entry_date';
+				$date .= '<script type="text/javascript">
+						update_calendar("'.$cal_id.'", document.getElementById("'.$cal_id.'").value);
+						</script>';
+
 				$date .= $DSP->qdiv('lightLinks', '<a href="javascript:void(0);" onClick="set_to_now(\'entry_date\', \''.$LOC->set_human_time($LOC->now).'\', \''.($LOC->set_localized_time() * 1000).'\')" >'.$LANG->line('today').'</a>');
 				
 				$date .= $DSP->div_c();
@@ -1829,7 +1839,14 @@ EOT;
 				
 								
 				$date .= $DSP->qdiv('itemWrapper', BR.$DSP->input_text('expiration_date', $loc_expiration_date, '18', '23', 'input', '150px', ' onkeyup="update_calendar(\'expiration_date\', this.value);" '));			
-	
+
+				// depending on timezone's, local settings and localization prefs, its possible for js to misinterpret the day, but the humanized
+				// time is correct, so we activate the humanized time to sync the calendar
+				$cal_id = 'expiration_date';
+				$date .= '<script type="text/javascript">
+						update_calendar("'.$cal_id.'", document.getElementById("'.$cal_id.'").value);
+						</script>';
+
 				$date .= $DSP->div('lightLinks');
 				$date .= '<a href="javascript:void(0);" onClick="set_to_now(\'expiration_date\', \''.$LOC->set_human_time($LOC->now).'\', \''.($LOC->set_localized_time() * 1000).'\')" >'.$LANG->line('today').'</a>'.NBS.NBS.'|'.NBS.NBS;
 				$date .= '<a href="javascript:void(0);" onClick="clear_field(\'expiration_date\')" >'.$LANG->line('clear').'</a>';
@@ -1868,6 +1885,13 @@ EOT;
 							</script>';
 			
 					$date .= $DSP->qdiv('itemWrapper', BR.$DSP->input_text('comment_expiration_date', $loc_comment_expiration_date, '18', '23', 'input', '150px', ' onkeyup="update_calendar(\'comment_expiration_date\', this.value);" '));			
+
+				// depending on timezone's, local settings and localization prefs, its possible for js to misinterpret the day, but the humanized
+				// time is correct, so we activate the humanized time to sync the calendar
+				$cal_id = 'comment_expiration_date';
+				$date .= '<script type="text/javascript">
+						update_calendar("'.$cal_id.'", document.getElementById("'.$cal_id.'").value);
+						</script>';
 	
 					$date .= $DSP->div('lightLinks');
 					$date .= '<a href="javascript:void(0);" onClick="set_to_now(\'comment_expiration_date\', \''.$LOC->set_human_time($LOC->now).'\', \''.($LOC->set_localized_time() * 1000).'\')" >'.$LANG->line('today').'</a>'.NBS.NBS.'|'.NBS.NBS;
@@ -3822,7 +3846,7 @@ EOT;
 			{
 				foreach ($query->result as $row)
 				{
-					$valid_statuses[$row['status_id']] = $row['status'];
+					$valid_statuses[$row['status_id']] = strtolower($row['status']); // lower case to match MySQL's case-insensitivity
 				}
 			}
 			
@@ -3837,13 +3861,13 @@ EOT;
 			{
 				foreach ($query->result as $row)
 				{
-					$disallowed_statuses[$row['status_id']] = $row['status'];
+					$disallowed_statuses[$row['status_id']] = strtolower($row['status']); // lower case to match MySQL's case-insensitivity
 				}
-				
+
 				$valid_statuses = array_diff_assoc($valid_statuses, $disallowed_statuses);
 			}
 			
-			if (! in_array($status, $valid_statuses))
+			if (! in_array(strtolower($status), $valid_statuses))
 			{
 				// if there are no valid statuses, set to closed
 				$status = 'closed';
@@ -4135,7 +4159,7 @@ EOT;
 				{
 					$title = $this->_convert_forum_tags($IN->GBL('forum_title'));
 					$body = $this->_convert_forum_tags(str_replace('{permalink}', 
-																	$FNS->remove_double_slashes($blog_url.'/'.$url_title.'/'), 
+																	$FNS->remove_double_slashes($comment_url.'/'.$url_title.'/'), 
 																	$IN->GBL('forum_body')));
 																	
 					$DB->query($DB->insert_string('exp_forum_topics',  
@@ -4410,7 +4434,7 @@ EOT;
 		{
 			$title = $this->_convert_forum_tags($IN->GBL('forum_title'));
 			$body = $this->_convert_forum_tags(str_replace('{permalink}', 
-															$FNS->remove_double_slashes($blog_url.'/'.$url_title.'/'), 
+															$FNS->remove_double_slashes($comment_url.'/'.$url_title.'/'), 
 															$IN->GBL('forum_body')));
 			
 			$DB->query("UPDATE exp_forum_topics SET title = '{$title}', body = '{$body}' WHERE topic_id = '{$topic_id}' ");	
@@ -10859,7 +10883,7 @@ EOT;
 													AMP.'M=view_entries'.
 													AMP.'search_in=comments'.
 													AMP.'order=desc'.
-													AMP.'keywords=mid:'.$row['author_id'], 
+													AMP.'keywords='.base64_encode('mid:'.$row['author_id']), 
 												$row['name']);
 				}
 				
@@ -10910,7 +10934,7 @@ EOT;
                  								AMP.'M=view_entries'.
                  								AMP.'search_in=comments'.
                  								AMP.'order=desc'.
-                 								AMP.'keywords=ip:'.str_replace('.','_',$row['ip_address']), 
+                 								AMP.'keywords='.base64_encode('ip:'.str_replace('.','_',$row['ip_address'])), 
                  							$row['ip_address']);
                  							
 				$r .= 	$DSP->td('tableCellTwo')
@@ -10944,7 +10968,7 @@ EOT;
                  								AMP.'M=view_entries'.
                  								AMP.'search_in=trackbacks'.
                  								AMP.'order=desc'.
-                 								AMP.'keywords=ip:'.str_replace('.','_',$row['trackback_ip']), 
+                 								AMP.'keywords='.base64_encode('ip:'.str_replace('.','_',$row['trackback_ip'])), 
                  							$row['trackback_ip']);
             
             	$r .= $DSP->tr()
