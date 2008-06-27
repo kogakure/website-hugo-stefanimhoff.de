@@ -176,6 +176,12 @@ hr {
 }
 
 #main code {
+  color:                #999;
+  font-family:          "Lucida Console", monospace;
+  line-height:          1.2;
+}
+
+#main pre code {
   color:                #FFF;
   font-family:          "Lucida Console", monospace;
   line-height:          1.2;

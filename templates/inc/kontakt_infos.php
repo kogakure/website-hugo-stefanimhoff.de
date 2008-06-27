@@ -24,6 +24,4 @@
 
 <ul class="network">
   <li class="network-xing" ><a href="{link_xing}">XING</a></li>
-  <li class="network-linkedin"><a href="{link_linkedin}">LinkedIn</a></li>
-  <li class="network-facebook"><a href="{link_facebook}">Facebook</a></li>
 </ul>

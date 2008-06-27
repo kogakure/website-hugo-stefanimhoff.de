@@ -28,6 +28,6 @@
 {/if}
         </div>
         <a href="{path='site_index'}information/"><img src="{path='site_index'}images/fotos/stefanimhoff.jpg" width="75" height="75" alt="Portaitfoto von {owner}" title="{owner}" /></a>
-        <p>Ich bin {owner}, Gründer des Ninjutsu-Magazins <a href="http://kogakure.de/" title='kogakure.de - Ninja, Ninjutsu und Kampfkunst'>kogakure.de</a>, Designer, Kampfkünstler und Hobbyphilosoph. Ich wohne in Hamburg und interessiere mich für Webstandards, Informationsarchitektur, Apple, Design, Bücher, Asien, 3D-Design, und noch ein paar andere Dinge. <a href="{path='information'}">Mehr Informationen »</a></p>
+        <p>Ich bin {owner}, Gründer des Ninjutsu-Magazins <a href="http://kogakure.de/" title='kogakure.de - Ninja, Ninjutsu und Kampfkunst'>kogakure.de</a>, Designer, Kampfkünstler und Hobbyphilosoph. Ich wohne in Hamburg und interessiere mich für Webstandards, Django, Git, Informationsarchitektur, Apple, Design, Bücher, Asien, 3D-Design, und noch ein paar andere Dinge. <a href="{path='information'}">Mehr Informationen »</a></p>
       </div>
     </div>
