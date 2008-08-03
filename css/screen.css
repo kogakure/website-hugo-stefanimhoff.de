@@ -179,6 +179,10 @@ hr {
     width:              505px;
 }
 
+#page-notizbuch #main pre {
+    width:              505px;
+}
+
 #main code {
   color:                #999;
   font-family:          "Lucida Console", monospace;
