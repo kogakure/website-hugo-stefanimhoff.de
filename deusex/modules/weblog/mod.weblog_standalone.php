@@ -196,26 +196,11 @@ class Weblog_standalone extends Weblog {
 
 		if ($weblog_id == '')
 		{			
-			if ($SESS->userdata['weblog_id'] != 0)
-			{
-				$weblog_id = $SESS->userdata['weblog_id'];
-			}
-			elseif (sizeof($assigned_weblogs) == 1)
-			{
-				$weblog_id = $assigned_weblogs['0'];
-			}
-			else
-			{
-				$query = $DB->query("SELECT weblog_id from exp_weblogs WHERE site_id IN ('".implode("','", $TMPL->site_ids)."') AND blog_name = '".$DB->escape_str($weblog)."' AND is_user_blog = 'n'");
+			$query = $DB->query("SELECT weblog_id from exp_weblogs WHERE site_id IN ('".implode("','", $TMPL->site_ids)."') AND blog_name = '".$DB->escape_str($weblog)."' AND is_user_blog = 'n'");
 	
-				if ($query->num_rows == 1)
-				{
-					$weblog_id = $query->row['weblog_id'];
-				}
-				else
-				{
-					return $TMPL->no_results();
-				}
+			if ($query->num_rows == 1)
+			{
+				$weblog_id = $query->row['weblog_id'];
 			}
 		}
 		
@@ -371,15 +356,6 @@ class Weblog_standalone extends Weblog {
 			
 			NewText = NewText.toLowerCase();
 			var separator = "{$word_separator}";
-			
-			if (separator != "_")
-			{
-				NewText = NewText.replace(/\_/g, separator);
-			}
-			else
-			{
-				NewText = NewText.replace(/\-/g, separator);
-			}
 	
 			// Foreign Character Attempt
 			
@@ -398,19 +374,16 @@ class Weblog_standalone extends Weblog {
 				}
 			}
     
+			var multiReg = new RegExp(separator + '{2,}', 'g');
+			
 			NewText = NewTextTemp;
 			
 			NewText = NewText.replace('/<(.*?)>/g', '');
-			NewText = NewText.replace('/\&#\d+\;/g', '');
-			NewText = NewText.replace('/\&\#\d+?\;/g', '');
-			NewText = NewText.replace('/\&\S+?\;/g','');
-			NewText = NewText.replace(/['\"\?\.\!*\$\#@%;:,=\(\)\[\]]/g,'');
 			NewText = NewText.replace(/\s+/g, separator);
 			NewText = NewText.replace(/\//g, separator);
-			NewText = NewText.replace(/[^a-z0-9-_]/g,'');
+			NewText = NewText.replace(/[^a-z0-9\-\._]/g,'');
 			NewText = NewText.replace(/\+/g, separator);
-			NewText = NewText.replace(/[-_]+/g, separator);
-			NewText = NewText.replace(/\&/g,'');
+			NewText = NewText.replace(multiReg, separator);
 			NewText = NewText.replace(/-$/g,'');
 			NewText = NewText.replace(/_$/g,'');
 			NewText = NewText.replace(/^_/g,'');
@@ -661,12 +634,20 @@ EOT;
 		$query = $DB->query("SELECT * FROM  exp_weblog_fields WHERE group_id = '$field_group' $these ORDER BY field_order");
 		
 		$fields = array();
+		$date_fields = array();
+		$cond = array();
 		
 		if ($which == 'preview')
 		{
 			foreach ($query->result as $row)
 			{
 				$fields['field_id_'.$row['field_id']] = $row['field_name'];
+				$cond[$row['field_name']] = '';
+				
+				if ($row['field_type'] == 'date')
+				{
+					$date_fields[$row['field_name']] = $row['field_id'];
+				}
 			}
 		}
 
@@ -707,18 +688,28 @@ EOT;
 						if (strstr($key, 'field_id'))
 						{
 							$expl = explode('field_id_', $key);
-																					
-							$txt_fmt = ( ! isset($_POST['field_ft_'.$expl['1']])) ? 'xhtml' : $_POST['field_ft_'.$expl['1']];
-						
-							$temp = $TYPE->parse_type( stripslashes($val), 
-													 array(
+							
+							if (in_array($expl['1'], $date_fields))
+							{
+								$temp_date = $LOC->convert_human_date_to_gmt($_POST['field_id_'.$expl['1']]);
+								$temp = $_POST['field_id_'.$expl['1']];								
+								$cond[$fields['field_id_'.$expl['1']]] =  $temp_date;
+							}
+							else
+							{
+								$cond[$fields['field_id_'.$expl['1']]] =  $_POST['field_id_'.$expl['1']];
+
+								$txt_fmt = ( ! isset($_POST['field_ft_'.$expl['1']])) ? 'xhtml' : $_POST['field_ft_'.$expl['1']];
+
+								$temp = $TYPE->parse_type( stripslashes($val),
+													 		array(
 																'text_format'   => $txt_fmt,
 																'html_format'   => $weblog_html_formatting,
 																'auto_links'    => $weblog_allow_img_urls,
 																'allow_img_url' => $weblog_auto_link_urls
-														   )
-													);
-							
+														   		)
+														);
+							}
 							
 							if (isset($fields[$key]))
 							{
@@ -731,6 +722,7 @@ EOT;
 				}
 
 				$match['1'] = str_replace(LD.'display_custom_fields'.RD, $str, $match['1']);
+				$match['1'] = $FNS->prep_conditionals($match['1'], $cond);					
 				$tagdata = str_replace ($match['0'], $match['1'], $tagdata);
 			}
 		}

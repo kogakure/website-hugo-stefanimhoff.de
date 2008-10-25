@@ -976,6 +976,7 @@ function showHideMenu(objValue)
 										 ),
 
 			'template_cfg' 		=>	array(
+											'strict_urls' 				=> array('r', array('y' => 'yes', 'n' => 'no')),
 											'site_404'					=> array('f', 'site_404'),
 											'save_tmpl_revisions' 		=> array('r', array('y' => 'yes', 'n' => 'no')),
 											'max_tmpl_revisions'		=> '',
@@ -1080,7 +1081,8 @@ function showHideMenu(objValue)
 						'banishment_url'			=> array('banishment_url_exp'),
 						'banishment_message'		=> array('banishment_message_exp'),
 						'enable_search_log'			=> array('enable_search_log_exp'),
-						'mailinglist_notify_emails'	=> array('separate_emails')
+						'mailinglist_notify_emails'	=> array('separate_emails'),
+						'strict_urls'				=> array('strict_urls_info')
 					);
 	}
 	/* END */
@@ -1775,7 +1777,27 @@ function showHideMenu(objValue)
 
 			$_POST['censored_words'] = preg_replace("#\s+#", "", $_POST['censored_words']);
 		}
+
+		// Category trigger matches template != biscuit  (biscuits, Robin? Okay! --Derek)
 		
+		if (isset($_POST['reserved_category_word']) AND $_POST['reserved_category_word'] != $PREFS->ini('reserved_category_word'))
+		{
+			$query = $DB->query("SELECT template_id, template_name, group_name
+								FROM exp_templates t
+								LEFT JOIN exp_template_groups g ON t.group_id = g.group_id 
+								WHERE (template_name = '".$DB->escape_str($_POST['reserved_category_word'])."'
+								OR group_name = '".$DB->escape_str($_POST['reserved_category_word'])."')
+								AND t.site_id = '".$DB->escape_str($PREFS->ini('site_id'))."' LIMIT 1");
+			
+			if ($query->num_rows > 0)
+			{
+				$msg  = $DSP->qdiv('itemWrapper', $LANG->line('category_trigger_duplication'));
+				$msg .= $DSP->qdiv('highlight', htmlentities($_POST['reserved_category_word']));
+				
+				return $DSP->error_message($msg);
+			}
+		}
+				
 		/** ----------------------------------------
 		/**  Do path checks if needed
 		/** ----------------------------------------*/

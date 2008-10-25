@@ -176,21 +176,28 @@ class Preferences {
 				$i = 0;
 				
 				$parts = parse_url($base);
-				
+
 				if (isset($parts['host']))
 				{
-					$host_parts = explode('.', $parts['host']);
-					
-					if (sizeof($host_parts) > 1)
+					if ($REGX->valid_ip($parts['host']) === TRUE)
 					{
-						// unless the TLD is one of the seven special ones, a cookie domain must have a minimum of
-						// 3 periods.  ".example.com" is allowed but ".example.us" for instance, is not.
-						// reference: http://wp.netscape.com/newsref/std/cookie_spec.html
-						$max_parts = (in_array(strtolower(substr($parts['host'], -3)), $this->special_tlds)) ? 2 : 3;
-	
-						while(sizeof($host_parts) > 0 && $i < $max_parts)
+						 $this->cp_cookie_domain = $parts['host'];
+					}
+					else
+					{
+						$host_parts = explode('.', $parts['host']);
+						
+						if (count($host_parts) > 1)
 						{
-							$this->cp_cookie_domain = '.'.array_pop($host_parts).$this->cp_cookie_domain; ++$i;
+							// unless the TLD is one of the seven special ones, a cookie domain must have a minimum of
+							// 3 periods.  ".example.com" is allowed but ".example.us" for instance, is not.
+							// reference: http://wp.netscape.com/newsref/std/cookie_spec.html
+							$max_parts = (in_array(strtolower(substr($parts['host'], -3)), $this->special_tlds)) ? 2 : 3;
+		
+							while(count($host_parts) > 0 && $i < $max_parts)
+							{
+								$this->cp_cookie_domain = '.'.array_pop($host_parts).$this->cp_cookie_domain; ++$i;
+							}
 						}
 					}
 				}
@@ -362,7 +369,8 @@ class Preferences {
 								'memberlist_sort_order',
 								'memberlist_row_limit');
 								
-		$template_default = array('site_404',
+		$template_default = array('strict_urls',
+								  'site_404',
 								  'save_tmpl_revisions',
 								  'max_tmpl_revisions',
 								  'save_tmpl_files',

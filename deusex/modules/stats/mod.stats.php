@@ -211,12 +211,13 @@ class Stats {
 					{
 						$temp = preg_replace("/".LD."name.*?".RD."/", $v['0'].'*', $temp);
 					}
+					elseif ($SESS->userdata('member_id') == $k)
+					{
+						$temp = preg_replace("/".LD."name.*?".RD."/", $v['0'].'*', $temp);
+					}
 					else
 					{
-						if ($SESS->userdata('member_id') == $k)
-						{
-							$temp = preg_replace("/".LD."name.*?".RD."/", $v['0'].'*', $temp);
-						}
+						continue;
 					}
 				}
 				else

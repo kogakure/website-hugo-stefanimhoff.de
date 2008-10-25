@@ -1529,6 +1529,37 @@ class Member {
 			
 			$DB->query("DELETE FROM exp_forum_posts  WHERE author_id = '{$id}'");
 			$DB->query("DELETE FROM exp_forum_polls  WHERE author_id = '{$id}'");
+
+			// Kill any attachments
+			$query = $DB->query("SELECT attachment_id, filehash, extension, board_id FROM exp_forum_attachments WHERE member_id = '{$id}'");
+			
+			if ($query->num_rows > 0)
+			{
+				// Grab the upload path
+				$res = $DB->query('SELECT board_id, board_upload_path FROM exp_forum_boards');
+			
+				$paths = array();
+				foreach ($res->result as $row)
+				{
+					$paths[$row['board_id']] = $row['board_upload_path'];
+				}
+			
+				foreach ($query->result as $row)
+				{
+					if ( ! isset($paths[$row['board_id']]))
+					{
+						continue;
+					}
+					
+					$file  = $paths[$row['board_id']].$row['filehash'].$row['extension'];
+					$thumb = $paths[$row['board_id']].$row['filehash'].'_t'.$row['extension'];
+				
+					@unlink($file);
+					@unlink($thumb);					
+			
+					$DB->query("DELETE FROM exp_forum_attachments WHERE attachment_id = '{$row['attachment_id']}'");
+				}				
+			}
 						
 			// Update the forum stats			
 			$query = $DB->query("SELECT forum_id FROM exp_forums WHERE forum_is_cat = 'n'");
@@ -2057,7 +2088,7 @@ class Member {
             if (in_array($smileys[$key]['0'], $dups))
             	continue;
             
-            $r .= "<td class='tableCellOne' align='center'><a href=\"#\" onClick=\"return add_smiley('".$key."');\"><img src=\"".$path.$smileys[$key]['0']."\" width=\"".$smileys[$key]['1']."\" height=\"".$smileys[$key]['2']."\" alt=\"".$smileys[$key]['3']."\" border=\"0\" /></a></td>\n";
+            $r .= "<td class='tableCellOne' align='center'><a href=\"#\" onclick=\"return add_smiley('".$key."');\"><img src=\"".$path.$smileys[$key]['0']."\" width=\"".$smileys[$key]['1']."\" height=\"".$smileys[$key]['2']."\" alt=\"".$smileys[$key]['3']."\" border=\"0\" /></a></td>\n";
 
 			$dups[] = $smileys[$key]['0'];
 
@@ -2092,7 +2123,7 @@ class Member {
 
 	function _convert_special_chars($str)
 	{
-		return str_replace(array('<', '>', '{', '}', '\'', '"', '?'), array('&lt;', '&gt;', '&#123;', '&#125;', '&apos;', '&quot;', '&#63;'), $str);
+		return str_replace(array('<', '>', '{', '}', '\'', '"', '?'), array('&lt;', '&gt;', '&#123;', '&#125;', '&#39;', '&quot;', '&#63;'), $str);
 	}
 	/* END */
 

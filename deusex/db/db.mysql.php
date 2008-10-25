@@ -632,8 +632,12 @@ class DB {
     		
     		return $str;
     	}
-    
-    	if (function_exists('mysql_escape_string'))
+
+		if (function_exists('mysql_real_escape_string') AND is_resource($this->conn_id))
+		{
+			return mysql_real_escape_string(stripslashes($str), $this->conn_id);
+		}
+		elseif (function_exists('mysql_escape_string'))
     	{
 			return mysql_escape_string(stripslashes($str));
 		}

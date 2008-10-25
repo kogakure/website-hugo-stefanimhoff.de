@@ -102,6 +102,7 @@ class Communicate {
 							'bcc'			=> '',
 							'subject' 		=> '',
 							'message'		=> '',
+							'plaintext_alt'	=> '',
 							'priority'		=>  3,
 							'mailtype'		=> $PREFS->ini('mail_format'),
 							'word_wrap'		=> $PREFS->ini('word_wrap')
@@ -299,9 +300,9 @@ EOTJS;
 
 		$r .= $DSP->tr().
 			  $DSP->td('', '', 2).
-			  $DSP->div('tableCellTwoBold', '', 'plaintext_field', '', ($PREFS->ini('mail_format') == 'html') ? '' : "style='display:none;'").
+			  $DSP->div('tableCellTwoBold', '', 'plaintext_field', '', ($mailtype == 'html') ? '' : "style='display:none;'").
               $DSP->qdiv('tableCellTwoBold', $LANG->line('plaintext_alt', 'plaintext_alt')).
-              $DSP->qdiv('', $DSP->input_textarea('plaintext_alt', $message, 8, 'textarea', '96%')).              
+              $DSP->qdiv('', $DSP->input_textarea('plaintext_alt', $plaintext_alt, 8, 'textarea', '96%')).              
 			  $DSP->td_c().
               $DSP->tr_c().
 			  $DSP->table_c();

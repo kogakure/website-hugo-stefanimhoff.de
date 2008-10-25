@@ -2878,7 +2878,7 @@ function showHideTemplate(htmlObj)
         
         $user_blog = ($SESS->userdata['tmpl_group_id'] == 0) ? FALSE : TRUE;
         
-        $query = $DB->query("SELECT group_id, template_name, save_template_file, template_data, template_notes, template_type FROM exp_templates WHERE template_id = '$template_id'");
+        $query = $DB->query("SELECT group_id, template_name, save_template_file, template_data, template_notes, template_type, edit_date, last_author_id FROM exp_templates WHERE template_id = '$template_id'");
         
         $group_id = $query->row['group_id'];
         $template_type = $query->row['template_type'];
@@ -2897,6 +2897,31 @@ function showHideTemplate(htmlObj)
         $template_notes 	= $query->row['template_notes']; 
         $save_template_file	= $query->row['save_template_file']; 
         
+		    
+		if ($PREFS->ini('time_format') == 'us')
+		{
+			$datestr = '%m/%d/%y %h:%i %a';
+		}
+		else
+		{
+			$datestr = '%Y-%m-%d %H:%i';
+		}
+
+		$edit_date = $LOC->decode_date($datestr, $query->row['edit_date'], TRUE);
+		
+		$mquery = $DB->query("SELECT screen_name FROM exp_members WHERE member_id = ".$query->row['last_author_id']);
+
+		if ($mquery->num_rows == 0)
+		{
+			// this feature was added in 1.6.5, so existing templates following that update will have a member_id of '0'
+			// and will not have a known value until the template is edited again.
+			$last_author = '';
+		}
+		else
+		{
+			$last_author = $mquery->row['screen_name'];
+		}
+
 		/* -------------------------------------
 		/*  'edit_template_start' hook.
 		/*  - Allows complete takeover of the template editor
@@ -2969,7 +2994,7 @@ function showHideTemplate(htmlObj)
         }
         else
         {
-        	$sitepath .= $template_group.'/'.$template_name.'/';
+        	$sitepath .= $template_group.(($template_name == 'index') ? '/' : '/'.$template_name.'/');
     	}
     	
         $DSP->title  = $LANG->line('edit_template').' | '.$template_name;        
@@ -3069,7 +3094,9 @@ function showHideTemplate(htmlObj)
         $r .= $DSP->table('', '', '', '100%')
              .$DSP->tr()
              .$DSP->td('tableHeading')
-             .$LANG->line('template_name').NBS.NBS.$template_group.'/'.$template_name
+             .$LANG->line('template_name').NBS.NBS.$template_group.'/'.$template_name.NBS.NBS
+			 .'('.$LANG->line('last_edit').NBS.$edit_date
+			 .(($last_author != '') ? NBS.$LANG->line('by').NBS.$last_author : '').')'
              .$DSP->td_c();
              
         $r .= $DSP->td('tableHeading')
@@ -3077,17 +3104,17 @@ function showHideTemplate(htmlObj)
              
         if ($user_blog == FALSE)
         {             
-             $r .= "<select name='revision_history' class='select' onChange='flipButtonText(this.options[this.selectedIndex].value);'>"
+             $r .= "<select name='revision_history' class='select' onchange='flipButtonText(this.options[this.selectedIndex].value);'>"
                  .NL
                  .$DSP->input_select_option('', $LANG->line('revision_history'));
                  
-            $query = $DB->query("SELECT tracker_id, item_date FROM exp_revision_tracker WHERE item_table = 'exp_templates' AND item_field = 'template_data' AND item_id = '".$DB->escape_str($template_id)."' ORDER BY tracker_id DESC");
+            $query = $DB->query("SELECT tracker_id, item_date, screen_name FROM exp_revision_tracker LEFT JOIN exp_members ON exp_members.member_id = exp_revision_tracker.item_author_id WHERE item_table = 'exp_templates' AND item_field = 'template_data' AND item_id = '".$DB->escape_str($template_id)."' ORDER BY tracker_id DESC");
     
             if ($query->num_rows > 0)
             {             
                 foreach ($query->result as $row)
                 {
-                    $r .= $DSP->input_select_option($row['tracker_id'], $LOC->set_human_time($row['item_date']));
+                    $r .= $DSP->input_select_option($row['tracker_id'], $LOC->set_human_time($row['item_date']).' ('.$row['screen_name'].')');
                 }  
                  
                 $r .= $DSP->input_select_option('clear', $LANG->line('clear_revision_history'));  
@@ -3117,7 +3144,7 @@ function showHideTemplate(htmlObj)
 		$expand		= '<img src="'.PATH_CP_IMG.'expand.gif" border="0"  width="10" height="10" alt="Expand" />';
 		$collapse	= '<img src="'.PATH_CP_IMG.'collapse.gif" border="0"  width="10" height="10" alt="Collapse" />';
 		
-		$js = ' onclick="showhide_notes();return false;" onMouseover="navTabOn(\'noteopen\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onMouseout="navTabOff(\'noteopen\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';
+		$js = ' onclick="showhide_notes();return false;" onmouseover="navTabOn(\'noteopen\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onmouseout="navTabOff(\'noteopen\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';
 		
 		$r .= '<div id="noteslink" style="display: block; padding:0; margin: 0;">';
 		$r .= "<div class='tableHeadingAlt' id='noteopen' ".$js.">";
@@ -3125,7 +3152,7 @@ function showHideTemplate(htmlObj)
 		$r .= $DSP->div_c();
 		$r .= $DSP->div_c();
 
-		$js = ' onclick="showhide_notes();return false;" onMouseover="navTabOn(\'noteclose\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onMouseout="navTabOff(\'noteclose\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';
+		$js = ' onclick="showhide_notes();return false;" onmouseover="navTabOn(\'noteclose\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onmouseout="navTabOff(\'noteclose\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';
 
 		$r .= '<div id="notes" style="display: none; padding:0; margin: 0;">';
 		$r .= "<div class='tableHeadingAlt' id='noteclose' ".$js.">";
@@ -3261,7 +3288,8 @@ EOT;
 								'template_group'	=> $query->row['group_name'],
 								'template_name'		=> $query->row['template_name'],
 								'template_data'		=> $_POST['template_data'],
-								'edit_date'			=> $LOC->now
+								'edit_date'			=> $LOC->now,
+								'last_author_id'	=> $SESS->userdata['member_id']
 								);
 								
 				$save_result = $this->update_template_file($tdata);
@@ -3292,12 +3320,13 @@ EOT;
         if ($IN->GBL('save_history', 'POST') == 'y')
         {
             $data = array(
-                            'tracker_id' => '',
-                            'item_id'    => $template_id,
-                            'item_table' => 'exp_templates',
-                            'item_field' => 'template_data',
-                            'item_data'  => $_POST['template_data'],
-                            'item_date'  => $LOC->now
+                            'tracker_id' 		=> '',
+                            'item_id'    		=> $template_id,
+                            'item_table'		=> 'exp_templates',
+                            'item_field'		=> 'template_data',
+                            'item_data'			=> $_POST['template_data'],
+                            'item_date'  		=> $LOC->now,
+							'item_author_id'	=> $SESS->userdata['member_id']
                          );
     
             $DB->query($DB->insert_string('exp_revision_tracker', $data));
@@ -3307,7 +3336,7 @@ EOT;
 		/**  Save Template
 		/** -------------------------------*/
 
-        $DB->query($DB->update_string('exp_templates', array('template_data' => $_POST['template_data'], 'edit_date' => $LOC->now, 'save_template_file' => $save_template_file, 'template_notes' => $_POST['template_notes']), "template_id = '$template_id'")); 
+        $DB->query($DB->update_string('exp_templates', array('template_data' => $_POST['template_data'], 'edit_date' => $LOC->now, 'last_author_id' => $SESS->userdata['member_id'], 'save_template_file' => $save_template_file, 'template_notes' => $_POST['template_notes']), "template_id = '$template_id'")); 
         
         if (is_numeric($_POST['columns']))
         {  
@@ -3349,7 +3378,7 @@ EOT;
 		
 		if (($tgpref = $IN->GBL('tgpref')) AND is_numeric($tgpref) AND isset($_POST['return']))
 		{
-			$FNS->redirect(BASE.AMP.'C=templates');
+			$FNS->redirect(BASE.AMP.'C=templates'.AMP.'tgpref='.$tgpref);
         	exit;
 		}
 		else

@@ -101,9 +101,9 @@ class js_calendar {
 			str += '<div id="cal' + this.id + '">';
 			str += '<table class="calendar" cellspacing="0" cellpadding="0" border="0" align="<?php echo $align; ?>">';
 			str += '<tr>';
-			str += '<td class="calnavleft" onClick="change_month(-1, \'' + this.id + '\')">&lt;&lt;<\/td>';
+			str += '<td class="calnavleft" onclick="change_month(-1, \'' + this.id + '\')">&lt;&lt;<\/td>';
 			str += '<td colspan="5" class="calheading">' + months[this.month] + ' ' + this.year + '<\/td>';
-			str += '<td class="calnavright" onClick="change_month(1, \'' + this.id + '\')">&gt;&gt;<\/td>';
+			str += '<td class="calnavright" onclick="change_month(1, \'' + this.id + '\')">&gt;&gt;<\/td>';
 			str += '<\/tr>';
 			
 			//	Day Names
@@ -133,7 +133,7 @@ class js_calendar {
 				}
 				else if (displayNum == selDate && this.highlight == true) // Selected date
 				{
-					str += '<td id="' + this.id +'selected" class="caldayselected" onClick="set_date(this,\'' + this.id + '\')">' + displayNum + '<\/td>';
+					str += '<td id="' + this.id +'selected" class="caldayselected" onclick="set_date(this,\'' + this.id + '\')">' + displayNum + '<\/td>';
 				}
 				else if (displayNum > this.total_days())
 				{
@@ -141,7 +141,7 @@ class js_calendar {
 				}
 				else  // Unselected days
 				{
-					str += '<td id="" class="caldaycells" onClick="set_date(this,\'' + this.id + '\'); return false;"  onMouseOver="javascript:cell_highlight(this,\'' + displayNum + '\',\'' + this.id + '\');" onMouseOut="javascript:cell_reset(this,\'' + displayNum + '\',\'' + this.id + '\');" >' + displayNum + '<\/td>';
+					str += '<td id="" class="caldaycells" onclick="set_date(this,\'' + this.id + '\'); return false;"  onmouseOver="javascript:cell_highlight(this,\'' + displayNum + '\',\'' + this.id + '\');" onmouseOut="javascript:cell_reset(this,\'' + displayNum + '\',\'' + this.id + '\');" >' + displayNum + '<\/td>';
 				}
 				
 				if (j % 7 == 6)
@@ -807,7 +807,7 @@ function resetBoard()
 </script>
 </head>
 <body>
-<center><table><td><table style="border: 1px solid #000;" cellpadding="10" cellspacing="10"><tr><td style="border: 1px solid #000; width:14px;" onclick="yourChoice('A')" id="A">&nbsp;</div></td><td style="border: 1px solid #000; width:14px;" onclick="yourChoice('B')" id="B">&nbsp;</div></td><td style="border: 1px solid #000; width:14px;" onclick="yourChoice('C')" id="C">&nbsp;</div></td></tr><tr><td style="border: 1px solid #000; width:14px;" onclick="yourChoice('D')" id="D">&nbsp;</div></td><td style="border: 1px solid #000; width:14px;" onclick="yourChoice('E')" id="E">&nbsp;</div></td><td style="border: 1px solid #000; width:14px;" onclick="yourChoice('F')" id="F">&nbsp;</div></td></tr><tr><td style="border: 1px solid #000; width:14px;" onclick="yourChoice('G')" id="G">&nbsp;</div></td><td style="border: 1px solid #000; width:14px;" onclick="yourChoice('H')" id="H">&nbsp;</div></td><td style="border: 1px solid #000; width:14px;" onclick="yourChoice('I')" id="I">&nbsp;</div></td></tr></table></td><td><table><tr><td><input type=text size=5 id="you"></td><td>You</td></tr><tr><td><input type=text size=5 id="computer"></td><td>Computer</td></tr><tr><td><input type=text size=5 id="ties"></td><td>Ties</td></tr></table></td></table><input type=button value="Play Again" onClick="resetBoard();"><p><a href='javascript:history.go(-1)'>&#171; Back</a></p></center></body></html>
+<center><table><td><table style="border: 1px solid #000;" cellpadding="10" cellspacing="10"><tr><td style="border: 1px solid #000; width:14px;" onclick="yourChoice('A')" id="A">&nbsp;</div></td><td style="border: 1px solid #000; width:14px;" onclick="yourChoice('B')" id="B">&nbsp;</div></td><td style="border: 1px solid #000; width:14px;" onclick="yourChoice('C')" id="C">&nbsp;</div></td></tr><tr><td style="border: 1px solid #000; width:14px;" onclick="yourChoice('D')" id="D">&nbsp;</div></td><td style="border: 1px solid #000; width:14px;" onclick="yourChoice('E')" id="E">&nbsp;</div></td><td style="border: 1px solid #000; width:14px;" onclick="yourChoice('F')" id="F">&nbsp;</div></td></tr><tr><td style="border: 1px solid #000; width:14px;" onclick="yourChoice('G')" id="G">&nbsp;</div></td><td style="border: 1px solid #000; width:14px;" onclick="yourChoice('H')" id="H">&nbsp;</div></td><td style="border: 1px solid #000; width:14px;" onclick="yourChoice('I')" id="I">&nbsp;</div></td></tr></table></td><td><table><tr><td><input type=text size=5 id="you"></td><td>You</td></tr><tr><td><input type=text size=5 id="computer"></td><td>Computer</td></tr><tr><td><input type=text size=5 id="ties"></td><td>Ties</td></tr></table></td></table><input type=button value="Play Again" onclick="resetBoard();"><p><a href='javascript:history.go(-1)'>&#171; Back</a></p></center></body></html>
 		<?php
 		$r = ob_get_contents();
 		ob_end_clean(); 

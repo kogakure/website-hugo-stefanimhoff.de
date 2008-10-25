@@ -1094,14 +1094,20 @@ class Functions {
         
         while($filename = @readdir($current_dir))
         {        
-            if (@is_dir($path.'/'.$filename) and ($filename != "." and $filename != ".."))
-            {
-                $this->delete_directory($path.'/'.$filename, TRUE);
-            }
-            elseif($filename != "." and $filename != "..")
-            {
-                @unlink($path.'/'.$filename);
-            }
+			if ($filename != "." AND $filename != "..")
+			{
+				if (@is_dir($path.'/'.$filename))
+				{
+					if (substr($filename, 0, 1) != '.')
+					{
+            	    	$this->delete_directory($path.'/'.$filename, TRUE);
+            	    }
+				}
+				else
+				{
+              	  @unlink($path.'/'.$filename);
+				}
+			}
         }
         
         @closedir($current_dir);
@@ -1758,13 +1764,13 @@ class Functions {
 		/**  files on every single page load	
 		/** -----------------------------------*/
 		
+		list($usec, $sec) = explode(" ", microtime());
+		$now = ((float)$usec + (float)$sec);
+		
 		if ((mt_rand() % 100) < $SESS->gc_probability)
 		{
 			$old = time() - $expiration;
-			$DB->query("DELETE FROM exp_captcha WHERE date < ".$old);		
-
-			list($usec, $sec) = explode(" ", microtime());
-			$now = ((float)$usec + (float)$sec);
+			$DB->query("DELETE FROM exp_captcha WHERE date < ".$old);
 
 	        $current_dir = @opendir($img_path);
 
@@ -2795,7 +2801,7 @@ class Functions {
 	/**  File name security
 	/** -------------------------------------*/
 	
-	function filename_security($str)
+	function filename_security($str, $length = NULL)
 	{
 		$bad = array(
 						"../",
@@ -2833,10 +2839,18 @@ class Functions {
 						"%3d"		// =
         			);
         			
-        return stripslashes(str_replace($bad, '', $str));   
+
+		$str =  stripslashes(str_replace($bad, '', $str));
+               
+        if ($length !== NULL)
+        {
+        	$str = $this->limit_file_name_size($str, $length);
+        }
+		
+		return $str;
 	}
 	/* END */
-	
+
 	
 	/** ----------------------------------------
     /**  Fetch file upload paths

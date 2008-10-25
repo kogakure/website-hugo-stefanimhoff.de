@@ -69,13 +69,6 @@ class Regex {
 
     function valid_ip($ip)
     {
-    	//  IP is only digits and periods
-    	
-    	if (preg_match("/[^0-9\.]/", $ip))
-    	{
-    		return FALSE;
-    	}
-    
 		$ip_segments = explode('.', $ip);
 		
 		// Always 4 segments needed
@@ -83,8 +76,8 @@ class Regex {
 		{
 			return FALSE;
 		}
-		// IP cannot start with 0
-		if (substr($ip_segments[0], 0, 1) == '0')
+		// IP can not start with 0
+		if ($ip_segments[0][0] == '0')
 		{
 			return FALSE;
 		}
@@ -93,7 +86,7 @@ class Regex {
 		{
 			// IP segments must be digits and can not be 
 			// longer than 3 digits or greater then 255
-			if ($segment > 255 OR strlen($segment) > 3)
+			if ($segment == '' OR preg_match("/[^0-9]/", $segment) OR $segment > 255 OR strlen($segment) > 3)
 			{
 				return FALSE;
 			}
@@ -232,6 +225,7 @@ class Regex {
 				$str = preg_replace("/\{(\/){0,1}exp:(.+?)\}/", "&#123;\\1exp:\\2&#125;", $str);
 				$str = preg_replace("/\{embed=(.+?)\}/", "&#123;embed=\\1&#125;", $str);
 				$str = preg_replace("/\{path:(.+?)\}/", "&#123;path:\\1&#125;", $str);
+				$str = preg_replace("/\{redirect=(.+?)\}/", "&#123;redirect=\\1&#125;", $str);
 			}
 		}
 		
@@ -268,7 +262,7 @@ class Regex {
         }
         
         $str = str_replace(array("&","<",">","\"", "'", "-"),
-        				   array("&amp;", "&lt;", "&gt;", "&quot;", "&apos;", "&#45;"),
+        				   array("&amp;", "&lt;", "&gt;", "&quot;", "&#39;", "&#45;"),
         				   $str);
             
         $str = preg_replace("/$temp(\d+);/","&#\\1;",$str);
@@ -392,7 +386,7 @@ class Regex {
 		
 		if ($all)
 		{
-			$str = str_replace(array("&amp;", "&lt;", "&gt;", "&quot;", "&apos;", "&#45;"),
+			$str = str_replace(array("&amp;", "&lt;", "&gt;", "&quot;", "&#39;", "&#45;"),
 							   array("&","<",">","\"", "'", "-"),
 	        				   $str);
 		}
@@ -594,7 +588,7 @@ class Regex {
 	function xss_clean($str, $is_image = FALSE)
 	{	
 		global $PREFS;
-		
+
 		/* ----------------------------------
 		/*  Every so often an array will be sent to this function,
 		/*  and so we simply go through the array, clean, and return
@@ -611,7 +605,7 @@ class Regex {
 		}
 		
 		$charset = strtoupper($PREFS->ini('charset'));
-
+				
 		/*
 		 * Remove Invisible Characters
 		 */
@@ -632,7 +626,7 @@ class Regex {
 		 * the conversion of entities to ASCII later.
 		 *
 		 */
-		$str = preg_replace('#(&\#?[0-9a-z]+)[\x00-\x20]*;?#i', "\\1;", $str);
+		$str = preg_replace('#(&\#?[0-9a-z]{2,})[\x00-\x20]*;?#i', "\\1;", $str);
 		
 		/*
 		 * Validate UTF16 two byte encoding (x00) 
@@ -766,12 +760,12 @@ class Regex {
 	
 			if (preg_match("/<a/i", $str))
 			{
-				$str = preg_replace_callback("#<a\s*([^>]*?)(>|$)#si", array($this, '_js_link_removal'), $str);
+				$str = preg_replace_callback("#<a\s+([^>]*?)(>|$)#si", array($this, '_js_link_removal'), $str);
 			}
 	
 			if (preg_match("/<img/i", $str))
 			{
-				$str = preg_replace_callback("#<img\s*([^>]*?)(>|$)#si", array($this, '_js_img_removal'), $str);
+				$str = preg_replace_callback("#<img\s+([^>]*?)(\s?/?>|$)#si", array($this, '_js_img_removal'), $str);
 			}
 	
 			if (preg_match("/script/i", $str) OR preg_match("/xss/i", $str))
@@ -791,7 +785,7 @@ class Regex {
 		 * but it's unlkely to be a problem.
 		 *
 		 */
-		$event_handlers = array('on\w*','xmlns');
+		$event_handlers = array('[^a-z_\-]on\w*','xmlns');
 
 		if ($is_image === TRUE)
 		{
@@ -802,7 +796,7 @@ class Regex {
 			unset($event_handlers[array_search('xmlns', $event_handlers)]);
 		}
 		
-		$str = preg_replace("#<([^><]+)(".implode('|', $event_handlers).")(\s*=\s*[^><]*)([><]*)#i", "<\\1\\4", $str);
+		$str = preg_replace("#<([^><]+?)(".implode('|', $event_handlers).")(\s*=\s*[^><]*)([><]*)#i", "<\\1\\4", $str);
 	
 		/*
 		 * Sanitize naughty HTML elements
@@ -814,7 +808,7 @@ class Regex {
 		 * Becomes: &lt;blink&gt;
 		 *
 		 */		
-		$naughty = 'alert|applet|audio|basefont|base|behavior|bgsound|blink|body|embed|expression|form|frameset|frame|head|html|ilayer|iframe|input|layer|link|meta|object|plaintext|style|script|textarea|title|video|xml|xss';
+		$naughty = 'alert|applet|audio|basefont|base|behavior|bgsound|blink|body|embed|expression|form|frameset|frame|head|html|ilayer|iframe|input|isindex|layer|link|meta|object|plaintext|style|script|textarea|title|video|xml|xss';
 		$str = preg_replace_callback('#<(/*\s*)('.$naughty.')([^><]*)([><]*)#is', array($this, '_sanitize_naughty_html'), $str);
 				
 		/*
@@ -882,17 +876,17 @@ class Regex {
 	function _remove_invisible_characters($str)
 	{
 		static $non_displayables;
-		
+	
 		if ( ! isset($non_displayables))
 		{
-			// every control character except newline (10), carriage return (13), and horizontal tab (09),
-			// both as a URL encoded character (::shakes fist at IE and WebKit::), and the actual character
+			// every control character except newline (dec 10), carriage return (dec 13), and horizontal tab (dec 09),
 			$non_displayables = array(
-										'/%0[0-8]/', '/[\x00-\x08]/',			// 00-08
-										'/%11/', '/\x0b/', '/%12/', '/\x0c/',	// 11, 12
-										'/%1[4-9]/', '/%2[0-9]/', '/%3[0-1]/',	// url encoded 14-31
-										'/[\x0e-\x1f]/');						// 14-31
-			
+										'/%0[0-8bcef]/',			// url encoded 00-08, 11, 12, 14, 15
+										'/%1[0-9a-f]/',				// url encoded 16-31
+										'/[\x00-\x08]/',			// 00-08
+										'/\x0b/', '/\x0c/',			// 11, 12
+										'/[\x0e-\x1f]/'				// 14-31
+									);
 		}
 
 		do
@@ -967,8 +961,10 @@ class Regex {
 	function _filter_attributes($str)
 	{
 		$out = '';
-
-		if (preg_match_all('#\s*[a-z\-]+\s*=\s*(\042|\047)([^\\1]*?)\\1#is', $str, $matches))
+		
+		// EE 1.x adds slashes to all input, so there's a good chance we'll encounter attr=\"foo\" which
+		// we account for with by optionally matching on the octal of a backslash (\134) before the quote
+		if (preg_match_all('#\s*[a-z\-]+\s*=\s*(\134)?(\042|\047)([^\\2]*?)\\2#is', $str, $matches))
 		{
 			foreach ($matches[0] as $match)
 			{
@@ -1003,47 +999,24 @@ class Regex {
 		
 		$str = preg_replace_callback('/(.)/', array($this, "convert_accented_characters"), $str);
 		
-		$str = strip_tags(strtolower($str));
-		$str = preg_replace('/\&#\d+\;/', "", $str);
+		$str = strip_tags($str);
 		
-		// Use dash as separator		
-
-		if ($PREFS->ini('word_separator') == 'dash')
-		{
-			$trans = array(
-							"_"									=> '-',
-							"\&\#\d+?\;"                        => '',
-							"\&\S+?\;"                          => '',
-							"['\"\?\.\!*\$\#@%;:,\_=\(\)\[\]]"  => '',
-							"\s+"                               => '-',
-							"\/"                                => '-',
-							"[^a-z0-9-_]"						=> '',
-							"-+"                                => '-',
-							"\&"                                => '',
-							"-$"                                => '',
-							"^-"                                => ''
-						   );
-		}
-		else // Use underscore as separator
-		{
-			$trans = array(
-							"-"									=> '_',
-							"\&\#\d+?\;"                        => '',
-							"\&\S+?\;"                          => '',
-							"['\"\?\.\!*\$\#@%;:,\-=\(\)\[\]]"  => '',
-							"\s+"                               => '_',
-							"\/"                                => '_',
-							"[^a-z0-9-_]"						=> '',
-							"_+"                                => '_',
-							"\&"                                => '',
-							"_$"                                => '',
-							"^_"                                => ''
-						   );
-		}
+		// Use dash or underscore as separator		
+		$replace = ($PREFS->ini('word_separator') == 'dash') ? '-' : '_';
+		
+		$trans = array(
+						'&\#\d+?;'				=> '',
+						'&\S+?;'				=> '',
+						'\s+'					=> $replace,
+						'[^a-z0-9\-\._]'		=> '',
+						$replace.'+'			=> $replace,
+						$replace.'$'			=> $replace,
+						'^'.$replace			=> $replace
+					  );
 					   
 		foreach ($trans as $key => $val)
 		{
-			$str = preg_replace("#".$key."#", $val, $str);
+			$str = preg_replace("#".$key."#i", $val, $str);
 		} 
 		
 		$str = trim(stripslashes($str));

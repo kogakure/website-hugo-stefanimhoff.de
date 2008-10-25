@@ -477,7 +477,7 @@ class Weblog_calendar extends Weblog {
 										'id_path'						=> 'a',
 										'base_fields' 					=> 'a',
 										'comment_tb_total'				=> 's',
-										'day_path'						=> 's',
+										'day_path'						=> 'a',
 										'comment_auto_path'				=> 's',
 										'comment_entry_id_auto_path'	=> 's',
 										'comment_url_title_auto_path'	=> 's'
@@ -633,9 +633,8 @@ class Weblog_calendar extends Weblog {
 								$path = $y.'/'.$m.'/'.$d;
 							}
 							
-							$if_entries = str_replace(LD.$key.RD, LD.'day_path'.RD, $if_entries);
-						
-							$day_path = $FNS->create_url($path, 1);
+							$if_entries = str_replace(LD.$key.RD, LD.'day_path'.$val.RD, $if_entries);
+							$day_path[$key] = $FNS->create_url($path, 1);
 						}
 						
 					}
@@ -694,7 +693,10 @@ class Weblog_calendar extends Weblog {
 					{					
 						$out .= str_replace($if_entries_m, $this->var_replace($if_entries, $data[$day], $entries), $row_chunk);
 						
-						$out = str_replace(LD.'day_path'.RD, $data[$day]['0']['10'], $out);
+						foreach($day_path as $k => $v)
+						{
+							$out = str_replace(LD.'day_path'.$k.RD, $data[$day]['0']['10'][$k], $out);
+						}
 					}
 					else
 					{
@@ -759,7 +761,6 @@ class Weblog_calendar extends Weblog {
 										 LD.'url_title'.RD,
 										 LD.'author'.RD,
 										 LD.'comment_tb_total'.RD,
-										 LD.'day_path'.RD,
 										 LD.'comment_auto_path'.RD,
 										 LD.'comment_url_title_auto_path'.RD,
 										 LD.'comment_entry_id_auto_path'.RD),
@@ -767,7 +768,6 @@ class Weblog_calendar extends Weblog {
 										  $val['1'],
 										  $val['5'],
 										  $val['9'],
-										  $val['10'],
 										  $val['11'],
 										  $val['12'],
 										  $val['13']),
@@ -809,6 +809,12 @@ class Weblog_calendar extends Weblog {
 					$str = str_replace(LD.$k.RD, $v, $str);
 				}
 			
+				// Day path
+				foreach ($val['10'] as $k => $v)
+				{
+					$str = str_replace(LD.$k.RD, $v, $str);
+				}
+				
 				$temp .= $str;
 			}
 			

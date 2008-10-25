@@ -57,7 +57,7 @@ ob_start();
 <td align="right">
 	
 <form>
-<select name="URL" onChange="window.location=this.options[this.selectedIndex].value">
+<select name="URL" onchange="window.location=this.options[this.selectedIndex].value">
 <option value=" ">Category Jump Navigation</option>	
 
 {exp:gallery:category_list gallery="{gallery_name}"}

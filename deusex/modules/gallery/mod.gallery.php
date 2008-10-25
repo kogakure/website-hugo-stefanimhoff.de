@@ -668,7 +668,7 @@ class Gallery {
 		
 		$sort  = $TMPL->fetch_param('sort');
 				
-		if ($sort == FALSE AND $sort != 'asc' AND $sort != 'desc')
+		if ($sort === FALSE OR ($sort != 'asc' AND $sort != 'desc'))
 		{
 			$sort = 'desc';
 		}
@@ -1977,6 +1977,7 @@ class Gallery {
 		$t_current_page		= '';
 		$total_pages		= 1;
 		$search_link		= '';
+		$total_rows 		= 0;
 		
         $dynamic = ($TMPL->fetch_param('dynamic') == 'off') ? FALSE : TRUE;
 
@@ -2167,6 +2168,8 @@ class Gallery {
         	return $TMPL->no_results();
 		}
 		
+		$total_rows = $query->num_rows;
+		
         /** ---------------------------------
         /**  Do we need pagination?
         /** ---------------------------------*/
@@ -2341,21 +2344,62 @@ class Gallery {
 		}
         
         
-        
+		
+		/** ----------------------------------------
+        /**  Protected Variables for Cleanup Routine
+        /** ----------------------------------------*/
+		
+		// Since comments do not necessarily require registration, and since
+		// you are allowed to put member variables in comments, we need to kill
+		// left-over unparsed junk.  The $member_vars array is all of those
+		// member related variables that should be removed.
+		
+		$member_vars = array('location', 'interests', 'aol_im', 'yahoo_im', 'msn_im', 'icq', 
+							 'signature', 'sig_img_filename', 'sig_img_width', 'sig_img_height', 
+							 'avatar_filename', 'avatar_width', 'avatar_height', 
+							 'photo_filename', 'photo_width', 'photo_height');
+							 
+		$member_cond_vars = array();
+		
+		foreach($member_vars as $var)
+		{
+			$member_cond_vars[$var] = '';
+		}
+                
         
         /** ----------------------------------------
         /**  Start the processing loop
         /** ----------------------------------------*/
         
         $item_count = 0;
-        $total_results = sizeof($query->result);
+        $relative_count = 0;
+        $absolute_count = ($current_page == '') ? 0 : $current_page;
+        $total_results  = sizeof($query->result);
+        
         
         foreach ($query->result as $key => $row)
         {        			
-			$row['count'] 			= $key+1;
-			$row['total_results']	= $total_results;
 			
-            $tagdata = $TMPL->tagdata;     
+        	if ( ! is_array($row))
+        		continue;
+        		
+        	$relative_count++;
+        	$absolute_count++;
+        	$row['count']			= $relative_count;
+            $row['absolute_count']	= $absolute_count;
+            $row['total_comments']	= $total_rows;
+            $row['total_results']	= $total_results;
+        
+        	// This lets the {if location} variable work
+        	
+			if (isset($row['author_id']))
+			{
+				if ($row['author_id'] == 0)
+					$row['location'] = $row['c_location'];
+			}
+			
+            $tagdata = $TMPL->tagdata;
+  
             
             /** ----------------------------------------
 			/**  Conditionals
@@ -2368,10 +2412,15 @@ class Gallery {
 			$cond['signature_image']	= ($row['sig_img_filename'] == '' OR $PREFS->ini('enable_signatures') == 'n' OR $SESS->userdata('display_signatures') == 'n') ? 'FALSE' : 'TRUE';
 			$cond['avatar']				= ($row['avatar_filename'] == '' OR $PREFS->ini('enable_avatars') == 'n' OR $SESS->userdata('display_avatars') == 'n') ? 'FALSE' : 'TRUE';
 			$cond['photo']				= ($row['photo_filename'] == '' OR $PREFS->ini('enable_photos') == 'n' OR $SESS->userdata('display_photos') == 'n') ? 'FALSE' : 'TRUE';
+			$cond['is_ignored']			= ( ! isset($row['member_id']) OR ! in_array($row['member_id'], $SESS->userdata['ignore_list'])) ? 'FALSE' : 'TRUE';
 			
-			foreach($mfields as $key => $value)
+			if ( isset($mfields) && is_array($mfields) && sizeof($mfields) > 0)
 			{
-				$cond[$key] = $row['m_field_id_'.$value];
+				foreach($mfields as $key => $value)
+				{
+					if (isset($row['m_field_id_'.$value]))
+						$cond[$key] = $row['m_field_id_'.$value];
+				}
 			}
 			
 			$tagdata = $FNS->prep_conditionals($tagdata, $cond);
@@ -2668,7 +2717,7 @@ class Gallery {
                 /**  parse basic fields
                 /** ----------------------------------------*/
                  
-                if (isset($row[$val]))
+                if (isset($row[$val]) && $val != 'member_id')
                 {                    
                     $tagdata = $TMPL->swap_var_single($val, $row[$val], $tagdata);
                 }
@@ -2677,22 +2726,30 @@ class Gallery {
                 /**  parse custom member fields
                 /** ----------------------------------------*/
                                 
-                if ( isset( $mfields[$val] ) AND isset( $row['m_field_id_'.$mfields[$val]] ) )
+                if ( isset($mfields[$val]))
                 {
-                    $tagdata = $TMPL->swap_var_single(
+                	// Since comments do not necessarily require registration, and since
+					// you are allowed to put custom member variables in comments, 
+					// we delete them if no such row exists
+					
+                	$return_val = (isset($row['m_field_id_'.$mfields[$val]])) ? $row['m_field_id_'.$mfields[$val]] : '';
+                
+                	$tagdata = $TMPL->swap_var_single(
                                                         $val, 
-                                                        $row['m_field_id_'.$mfields[$val]], 
+                                                        $return_val, 
                                                         $tagdata
                                                       );
                 }
                 
-                /** ----------------------------------------
-				/**  Clean up left over variables
+				/** ----------------------------------------
+				/**  Clean up left over member variables
 				/** ----------------------------------------*/
 				
-				$tagdata = $TMPL->swap_var_single($key, "", $tagdata);
-                
-            }
+				if (in_array($val, $member_vars))
+				{
+					$tagdata = str_replace(LD.$val.RD, '', $tagdata);
+				}
+			}
             
             /** ----------------------------------------
 			/**  Add Anchor
@@ -3046,7 +3103,7 @@ class Gallery {
 
     function comment_preview()
     {
-        global $IN, $TMPL, $FNS, $DB, $SESS, $REGX;
+        global $IN, $TMPL, $FNS, $DB, $LOC, $SESS, $REGX;
                 
         $entry_id = (isset($_POST['entry_id'])) ? $_POST['entry_id'] : $IN->QSTR;
         

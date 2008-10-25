@@ -234,7 +234,8 @@ class Trackback {
                 
         $sql = "SELECT exp_weblog_titles.entry_id, exp_weblog_titles.allow_trackbacks, exp_weblogs.trackback_use_captcha
 				FROM exp_weblog_titles, exp_weblogs 
-				WHERE exp_weblog_titles.weblog_id = exp_weblogs.weblog_id 
+				WHERE exp_weblog_titles.site_id IN ('".implode("','", $TMPL->site_ids)."')
+				AND exp_weblog_titles.weblog_id = exp_weblogs.weblog_id 
 				AND (expiration_date = 0 || expiration_date > ".$timestamp.") 
 				AND status != 'closed' AND ";
         

@@ -829,6 +829,9 @@ $L = array(
 "xhtml" =>
 "xhtml",
 
+'site_id_mismatch' =>
+'You are not logged into the correct Site to perform this action',
+
 "no_field_name" =>
 "You must submit a field name",
 

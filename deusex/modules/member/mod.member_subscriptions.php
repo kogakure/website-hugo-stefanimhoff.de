@@ -74,10 +74,22 @@ class Member_subscriptions extends Member {
 		{
 			$blog_subscriptions	= TRUE;
 			
+			$temp_ids = array();
+					
 			foreach ($query->result as $row)
 			{
-				$result_ids[$total_count.'b'] = $row['entry_id'];
-				$total_count++;
+				$temp_ids[] = $row['entry_id'];
+			}
+			
+			// and now grab the most recent activity for each subscription for ordering later
+			$query = $DB->query("SELECT entry_id, recent_comment_date FROM exp_weblog_titles WHERE entry_id IN (".implode(',', $temp_ids).")");
+			
+			if ($query->num_rows > 0)
+			{
+				foreach ($query->result as $row)
+				{
+					$result_ids[$row['recent_comment_date'].'b'] = $row['entry_id'];
+				}
 			}
 		}
 		
@@ -95,10 +107,22 @@ class Member_subscriptions extends Member {
 			{
 				$galery_subscriptions = TRUE;
 				
+				$temp_ids = array();
+				
 				foreach ($query->result as $row)
 				{
-					$result_ids[$total_count.'g'] = $row['entry_id'];
-					$total_count++;
+					$temp_ids[] = $row['entry_id'];
+				}
+				
+				// and now grab the most recent activity for each subscription for ordering later
+				$query = $DB->query("SELECT entry_id, recent_comment_date FROM exp_gallery_entries WHERE entry_id IN (".implode(',', $temp_ids).")");
+
+				if ($query->num_rows > 0)
+				{
+					foreach ($query->result as $row)
+					{
+						$result_ids[$row['recent_comment_date'].'g'] = $row['entry_id'];
+					}
 				}
 			}
 		}
@@ -117,11 +141,23 @@ class Member_subscriptions extends Member {
 			{
 				$forum_subscriptions = TRUE;
 				
+				$temp_ids = array();
+				
 				foreach ($query->result as $row)
 				{
-					$result_ids[$total_count.'f'] = $row['topic_id'];
-					$total_count++;
+					$temp_ids[] = $row['topic_id'];
 				}
+				
+				// and now grab the most recent activity for each subscription for ordering later
+				$query = $DB->query("SELECT topic_id, last_post_date FROM exp_forum_topics WHERE topic_id IN (".implode(',', $temp_ids).")");
+
+				if ($query->num_rows > 0)
+				{
+					foreach ($query->result as $row)
+					{
+						$result_ids[$row['last_post_date'].'f'] = $row['topic_id'];
+					}
+				}				
 			}
 		}
 		
@@ -136,10 +172,12 @@ class Member_subscriptions extends Member {
 											
 			return $this->_var_swap($this->_load_element('subscriptions_form'), $swap);
 		}
-		
-		// Sort the array
-		ksort($result_ids);
-				
+
+		// Sort the array for newest activity first
+		// we'll end up doing this twice, one to determine what entries
+		// belong on the page for pagination, then again for the data queries
+		krsort($result_ids);
+	
         /** ---------------------------------
         /**  Do we need pagination?
         /** ---------------------------------*/
@@ -196,8 +234,8 @@ class Member_subscriptions extends Member {
 		if ($blog_subscriptions	== TRUE)
 		{
 			$sql = "SELECT
-					exp_weblog_titles.title, exp_weblog_titles.url_title, exp_weblog_titles.weblog_id, exp_weblog_titles.entry_id,
-					exp_weblogs.comment_url, exp_weblogs.blog_url	
+					exp_weblog_titles.title, exp_weblog_titles.url_title, exp_weblog_titles.weblog_id, exp_weblog_titles.entry_id,  exp_weblog_titles.recent_comment_date,
+					exp_weblogs.comment_url, exp_weblogs.blog_url
 					FROM exp_weblog_titles
 					LEFT JOIN exp_weblogs ON exp_weblog_titles.weblog_id = exp_weblogs.weblog_id 
 					WHERE entry_id IN (";
@@ -222,7 +260,7 @@ class Member_subscriptions extends Member {
 				{
 					foreach ($query->result as $row)
 					{																
-						$result_data[] = array(
+						$result_data[$row['recent_comment_date']] = array(
 												'path'	=> $FNS->remove_double_slashes($REGX->prep_query_string(($row['comment_url'] != '') ? $row['comment_url'] : $row['blog_url']).'/'.$row['url_title'].'/'),
 												'title'	=> str_replace(array('<', '>', '{', '}', '\'', '"', '?'), array('&lt;', '&gt;', '&#123;', '&#125;', '&#146;', '&quot;', '&#63;'), $row['title']),
 												'id'	=> 'b'.$row['entry_id'],
@@ -240,7 +278,7 @@ class Member_subscriptions extends Member {
 		if ($galery_subscriptions == TRUE)
 		{
 			$sql = "SELECT
-					exp_gallery_entries.title, exp_gallery_entries.entry_id, exp_gallery_entries.gallery_id,
+					exp_gallery_entries.title, exp_gallery_entries.entry_id, exp_gallery_entries.gallery_id, exp_gallery_entries.recent_comment_date,
 					exp_galleries.gallery_comment_url
 					FROM exp_gallery_entries
 					LEFT JOIN exp_galleries ON exp_gallery_entries.gallery_id = exp_galleries.gallery_id 
@@ -266,7 +304,7 @@ class Member_subscriptions extends Member {
 				{
 					foreach ($query->result as $row)
 					{																
-						$result_data[] = array(
+						$result_data[$row['recent_comment_date']] = array(
 												'path'	=> $FNS->remove_double_slashes($REGX->prep_query_string($row['gallery_comment_url'] ).'/'.$row['entry_id'].'/'),
 												'title'	=> str_replace(array('<', '>', '{', '}', '\'', '"', '?'), array('&lt;', '&gt;', '&#123;', '&#125;', '&#146;', '&quot;', '&#63;'), $row['title']),
 												'id'	=> 'g'.$row['entry_id'],
@@ -284,7 +322,7 @@ class Member_subscriptions extends Member {
 
 		if ($forum_subscriptions == TRUE)
 		{
-			$sql = "SELECT title, topic_id, board_forum_url FROM exp_forum_topics, exp_forum_boards
+			$sql = "SELECT title, topic_id, board_forum_url, last_post_date FROM exp_forum_topics, exp_forum_boards
 					WHERE exp_forum_topics.board_id = exp_forum_boards.board_id
 					AND topic_id IN (";
 					
@@ -308,7 +346,7 @@ class Member_subscriptions extends Member {
 				{
 					foreach ($query->result as $row)
 					{																
-						$result_data[] = array(
+						$result_data[$row['last_post_date']] = array(
 												'path'	=> $FNS->remove_double_slashes($REGX->prep_query_string($row['board_forum_url'] ).'/viewthread/'.$row['topic_id'].'/'),
 												'title'	=> str_replace(array('<', '>', '{', '}', '\'', '"', '?'), array('&lt;', '&gt;', '&#123;', '&#125;', '&#146;', '&quot;', '&#63;'), $row['title']),
 												'id'	=> 'f'.$row['topic_id'],
@@ -318,7 +356,9 @@ class Member_subscriptions extends Member {
 				}
 			}
 		}
-	
+		
+		// sort the data results
+		krsort($result_data);
 	
 		// Build the result table...
 
@@ -329,8 +369,7 @@ class Member_subscriptions extends Member {
 										'lang:unsubscribe'  =>	$LANG->line('unsubscribe')
 									 )
 							);
-
-
+		
 		$i = 0;
 		foreach ($result_data as $val)
 		{
@@ -386,7 +425,7 @@ class Member_subscriptions extends Member {
             			break;
             		case "g"	: $DB->query("UPDATE exp_gallery_comments SET notify = 'n' WHERE entry_id = '".substr($val, 1)."' AND email = '".$DB->escape_str($SESS->userdata('email'))."'");
             			break;
-            		case "f"	: $DB->query("DELETE FROM exp_forum_subscriptions WHERE topic_id = '".substr($val, 1)."'");
+					case "f"	: $DB->query("DELETE FROM exp_forum_subscriptions WHERE topic_id = '".substr($val, 1)."' AND member_id = '{$SESS->userdata['member_id']}'");
             			break;
             	}
             }        

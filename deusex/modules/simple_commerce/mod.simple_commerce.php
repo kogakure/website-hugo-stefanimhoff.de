@@ -145,7 +145,7 @@ class Simple_commerce {
 		if ($this->encrypt !== TRUE)
 		{
 			$query->row['item_name'] = str_replace(	array("&","<",">","\"", "'", "-"),
-        				   							array("&amp;", "&lt;", "&gt;", "&quot;", "&apos;", "&#45;"),
+        				   							array("&amp;", "&lt;", "&gt;", "&quot;", "&#39;", "&#45;"),
         				   							$query->row['item_name']);
         }
 		

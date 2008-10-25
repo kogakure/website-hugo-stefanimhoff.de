@@ -119,7 +119,12 @@ class Output {
             @header("Last-Modified: ".gmdate("D, d M Y H:i:s")." GMT");
             @header("Pragma: no-cache");
         }
-        
+    
+        if ($this->out_type == 'html')
+        {        
+			@header("Content-Type: text/html; charset=".$PREFS->ini('charset'));
+		}    
+
         /** -----------------------------------
         /**  Generate 404 headers
         /** -----------------------------------*/

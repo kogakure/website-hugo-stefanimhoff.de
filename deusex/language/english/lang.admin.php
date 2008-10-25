@@ -6,6 +6,12 @@ $L = array(
 //  Member List Config 
 // ---------------------------
 
+"strict_urls" =>
+"Enable Strict URLs",
+
+"strict_urls_info" =>
+"This feature enforces stricter rules for your URLs, and interacts with the 404 feature below.  Plese see user guide for info.",
+
 "xss_clean_uploads" =>
 "Apply XSS Filtering to uploaded files?",
 
@@ -525,6 +531,9 @@ $L = array(
 "output_cfg" =>
 "Output and Debugging Preferences",
 
+"category_trigger_duplication" =>
+"A template or template group with this name already exists.",
+
 "invalid_path" =>
 "The following path you submitted is not valid:",
 
@@ -790,7 +799,7 @@ $L = array(
 "404 Page",
 
 "site_404_exp" =>
-"Determines which template should be displayed when someone tries to access an invalid URL. Note: If you choose \"None\", your default weblog will be shown when an invalid URL is requested.",
+"Determines which template should be displayed when someone tries to access an invalid URL.",
 
 "save_tmpl_files" =>
 "Allow Templates to be Saved as Files?",

@@ -503,7 +503,7 @@ class Wiki {
 		
 		
 		$link = $this->create_url($this->current_namespace, $this->topic);
-		
+
 		$data = array(	'{charset}' 				=> $PREFS->ini('charset'),
 						'{wiki_name}'				=> $this->label_name,
 						'{title}'					=> $REGX->xml_convert($this->prep_title($this->title)),
@@ -578,7 +578,7 @@ class Wiki {
 		/** ----------------------------------------
 		/**  Cleanup
 		/** ----------------------------------------*/
-		
+
 		$this->return_data = $this->_deny_if('redirected', $this->return_data);
 		$this->return_data = $this->_deny_if('redirect_page', $this->return_data);
 			
@@ -662,7 +662,7 @@ class Wiki {
 		
 		if ($PREFS->ini('word_separator') == 'dash')
 		{
-			return str_replace(array('_', '-', $this->cats_separator), array(' ', ' ', $this->cats_display_separator), $str);
+			return str_replace(array('-', $this->cats_separator), array(' ', $this->cats_display_separator), $str);
 		}
 		else
 		{
@@ -705,28 +705,15 @@ class Wiki {
 			$trans["#[^a-z0-9\-\_@&\'\"!\.:\+\xA1-\xFF\s]#i"] = '';
 		}
 		
-		if ($PREFS->ini('word_separator') == 'dash')
-		{
-			$trans = array_merge($trans, array(
-												"#_#"						=> '-', // all underscores to dash
-												"#['\"\?*\$,=\(\)\[\]]#"	=> '',  // Stuff we do not want
-												"#\s+#"						=> '-',
-												"#\-+#"						=> '-',
-												"#\-$#"						=> '',
-												"#^\-#"						=> ''
-											   ));
-		}
-		else
-		{
-			$trans = array_merge($trans, array(
-												"#['\"\?*\$,=\(\)\[\]]#"	=> '',
-												"#\s+#"						=> '_',
-												"#_+#"						=> '_',
-												"#_$#"						=> '',
-												"#^_#"						=> '',
-												"#\-+#"						=> '-',
-											   ));
-		}
+		// Use dash or underscore as separator		
+		$replace = ($PREFS->ini('word_separator') == 'dash') ? '-' : '_';
+		
+		$trans = array_merge($trans, array(
+											'/\s+/'					=> $replace,
+											"/{$replace}+/"			=> $replace,
+											"/{$replace}$/"			=> $replace,
+											"/^{$replace}/"			=> $replace
+										   ));
 
 		return preg_replace(array_keys($trans), array_values($trans), urldecode($str));
 	}
@@ -772,7 +759,7 @@ class Wiki {
 		global $DB;
 		
 		$title = $this->valid_title($title);
-		
+
 		$xsql = " AND page_namespace = '' ";
 		
 		// In the beginning, these are the same thing
@@ -3342,11 +3329,13 @@ class Wiki {
 			
 			$parameters['backspace'] = '';
 			$parameters['limit']	 = 100;
-		
+			$parameters['paginate']  = 'bottom';
+			
 			if (trim($match['1']) != '' && ($params = $FNS->assign_parameters($match['1'])) !== FALSE)
 			{
 				$parameters['backspace'] = (isset($params['backspace']) && is_numeric($params['backspace'])) ? $params['backspace'] : $parameters['backspace'];
 				$parameters['limit']	 = (isset($params['limit'])) ? $params['limit'] : $parameters['limit'];
+				$parameters['paginate']	 = (isset($params['paginate'])) ? $params['paginate'] : $parameters['paginate'];
 			}
 			
 			if (preg_match("|".LD."if\s+no_results".RD."(.*?)".LD."\/if".RD."|s",$match['2'], $block))
@@ -3397,6 +3386,24 @@ class Wiki {
 					if ($this->paginate === TRUE)
 					{
 						preg_match("/\{wiki:category_articles(.*?)\}(.*?)\{\/wiki:category_articles\}/s", $this->return_data, $match);
+						
+						if (preg_match("|".LD."if\s+no_results".RD."(.*?)".LD."\/if".RD."|s",$match['2'], $block))
+						{
+							$no_results = $block['1'];
+							$match['2'] = str_replace($block['0'],'', $match['2']);
+						}
+
+						if (preg_match("|".LD."header".RD."(.*?)".LD."\/header".RD."|s",$match['2'], $block))
+						{
+							$header = $block['1'];
+							$match['2'] = str_replace($block['0'],'', $match['2']);
+						}
+
+						if (preg_match("|".LD."footer".RD."(.*?)".LD."\/footer".RD."|s",$match['2'], $block))
+						{
+							$footer = $block['1'];
+							$match['2'] = str_replace($block['0'],'', $match['2']);
+						}
 					}
 					else
 					{

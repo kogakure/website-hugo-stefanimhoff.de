@@ -55,7 +55,7 @@ class File_Browser {
         // Files with these prefixes we will automatically assume are not images
         $this->skippable = array('mp2', 'mp3', 'm4a', 'm4p', 'asf', 'mov', 
         						'mpeg', 'mpg', 'wav', 'wma', 'wmv', 'aif', 
-        						'aiff', 'movie', 'dvi', 'pdf', 'avi', 'flv', 'm4v');
+        						'aiff', 'movie', 'dvi', 'pdf', 'avi', 'flv', 'swf', 'm4v');
         
         
     }
@@ -215,7 +215,12 @@ class File_Browser {
     function set_upload_path($path)
     {
 		global $DSP, $LANG;
-    
+
+		if (substr($path, -1) != '/' AND substr($path, -1) != '\\')
+		{
+			$path .= '/';
+		}
+		
         if ( ! @is_dir($path))
         {
 			if ($this->show_errors == FALSE)

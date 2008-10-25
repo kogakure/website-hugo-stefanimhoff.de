@@ -327,7 +327,7 @@ class MyAccount {
 		
 		
 		$DSP->body  .= '<div id="menu_profile_h" style="display: '.(($prof_state == TRUE) ? 'none' : 'block').'; padding:0; margin: 0;">';			
-		$js = ' onclick="showhide_menu(\'menu_profile\');return false;" onMouseover="navTabOn(\'prof\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onMouseout="navTabOff(\'prof\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';
+		$js = ' onclick="showhide_menu(\'menu_profile\');return false;" onmouseover="navTabOn(\'prof\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onmouseout="navTabOff(\'prof\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';
 		$DSP->body .= $DSP->div();
 		$DSP->body .= "<div class='tableHeadingAlt' id='prof' ".$js.">";
 		$DSP->body .= $expand.$LANG->line('personal_settings');
@@ -337,7 +337,7 @@ class MyAccount {
 		 
 		$DSP->body .= '<div id="menu_profile_b" style="display: '.(($prof_state == TRUE) ? 'block' : 'none').'; padding:0; margin: 0;">';
 		
-		$js = ' onclick="showhide_menu(\'menu_profile\');return false;" onMouseover="navTabOn(\'prof2\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onMouseout="navTabOff(\'prof2\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';
+		$js = ' onclick="showhide_menu(\'menu_profile\');return false;" onmouseover="navTabOn(\'prof2\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onmouseout="navTabOff(\'prof2\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';
 		$DSP->body .= $DSP->div();
 		$DSP->body .= "<div class='tableHeadingAlt' id='prof2' ".$js.">";
 		$DSP->body .= $collapse.$LANG->line('personal_settings');
@@ -364,7 +364,7 @@ class MyAccount {
 		$sub_state = (in_array($IN->GBL('M'), array('subscriptions')) OR in_array($IN->GBL('M'), array('ignore_list'))) ? TRUE : FALSE;
 		
 		$DSP->body  .= '<div id="menu_sub_h" style="display: '.(($sub_state == TRUE) ? 'none' : 'block').'; padding:0; margin: 0;">';			
-		$js = ' onclick="showhide_menu(\'menu_sub\');return false;" onMouseover="navTabOn(\'sub\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onMouseout="navTabOff(\'sub\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';
+		$js = ' onclick="showhide_menu(\'menu_sub\');return false;" onmouseover="navTabOn(\'sub\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onmouseout="navTabOff(\'sub\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';
 		$DSP->body .= $DSP->div();
 		$DSP->body .= "<div class='tableHeadingAlt' id='sub' ".$js.">";
 		$DSP->body .= $expand.$LANG->line('utilities');
@@ -374,7 +374,7 @@ class MyAccount {
 		 
 		$DSP->body .= '<div id="menu_sub_b" style="display: '.(($sub_state == TRUE) ? 'block' : 'none').'; padding:0; margin: 0;">';
 		
-		$js = ' onclick="showhide_menu(\'menu_sub\');return false;" onMouseover="navTabOn(\'sub2\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onMouseout="navTabOff(\'sub2\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';
+		$js = ' onclick="showhide_menu(\'menu_sub\');return false;" onmouseover="navTabOn(\'sub2\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onmouseout="navTabOff(\'sub2\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';
 		$DSP->body .= $DSP->div();
 		$DSP->body .= "<div class='tableHeadingAlt' id='sub2' ".$js.">";
 		$DSP->body .= $collapse.$LANG->line('utilities');
@@ -408,7 +408,7 @@ class MyAccount {
 		$cp_state = (in_array($IN->GBL('M'), array('homepage', 'set_homepage_order', 'theme', 'tab_manager'))) ? TRUE : FALSE;
 		
 		$DSP->body  .= '<div id="menu_cp_h" style="display: '.(($cp_state == TRUE) ? 'none' : 'block').'; padding:0; margin: 0;">';			
-		$js = ' onclick="showhide_menu(\'menu_cp\');return false;" onMouseover="navTabOn(\'mcp\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onMouseout="navTabOff(\'mcp\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';
+		$js = ' onclick="showhide_menu(\'menu_cp\');return false;" onmouseover="navTabOn(\'mcp\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onmouseout="navTabOff(\'mcp\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';
 		$DSP->body .= $DSP->div();
 		$DSP->body .= "<div class='tableHeadingAlt' id='mcp' ".$js.">";
 		$DSP->body .= $expand.$LANG->line('customize_cp');
@@ -418,7 +418,7 @@ class MyAccount {
 		 
 		$DSP->body .= '<div id="menu_cp_b" style="display: '.(($cp_state == TRUE) ? 'block' : 'none').'; padding:0; margin: 0;">';
 		
-		$js = ' onclick="showhide_menu(\'menu_cp\');return false;" onMouseover="navTabOn(\'mcp2\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onMouseout="navTabOff(\'mcp2\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';
+		$js = ' onclick="showhide_menu(\'menu_cp\');return false;" onmouseover="navTabOn(\'mcp2\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onmouseout="navTabOff(\'mcp2\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';
 		$DSP->body .= $DSP->div();
 		$DSP->body .= "<div class='tableHeadingAlt' id='mcp2' ".$js.">";
 		$DSP->body .= $collapse.$LANG->line('customize_cp');
@@ -436,7 +436,7 @@ class MyAccount {
 			$blog_state = (in_array($IN->GBL('M'), array('pingservers', 'htmlbuttons', 'bookmarklet', 'bookmarklet_fields', 'create_bookmarklet'))) ? TRUE : FALSE;
 				
 			$DSP->body  .= '<div id="menu_blog_h" style="display: '.(($blog_state == TRUE) ? 'none' : 'block').'; padding:0; margin: 0;">';			
-			$js = ' onclick="showhide_menu(\'menu_blog\');return false;" onMouseover="navTabOn(\'blog\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onMouseout="navTabOff(\'blog\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';
+			$js = ' onclick="showhide_menu(\'menu_blog\');return false;" onmouseover="navTabOn(\'blog\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onmouseout="navTabOff(\'blog\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';
 			$DSP->body .= $DSP->div();
 			$DSP->body .= "<div class='tableHeadingAlt' id='blog' ".$js.">";
 			$DSP->body .= $expand.$LANG->line('weblog_preferences');
@@ -446,7 +446,7 @@ class MyAccount {
 			 
 			$DSP->body .= '<div id="menu_blog_b" style="display: '.(($blog_state == TRUE) ? 'block' : 'none').'; padding:0; margin: 0;">';
 			
-			$js = ' onclick="showhide_menu(\'menu_blog\');return false;" onMouseover="navTabOn(\'blog2\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onMouseout="navTabOff(\'blog2\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';
+			$js = ' onclick="showhide_menu(\'menu_blog\');return false;" onmouseover="navTabOn(\'blog2\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onmouseout="navTabOff(\'blog2\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';
 			$DSP->body .= $DSP->div();
 			$DSP->body .= "<div class='tableHeadingAlt' id='blog2' ".$js.">";
 			$DSP->body .= $collapse.$LANG->line('weblog_preferences');
@@ -463,7 +463,7 @@ class MyAccount {
 		$ex_state = (in_array($IN->GBL('M'), array('quicklinks', 'notepad'))) ? TRUE : FALSE;
 								
 		$DSP->body  .= '<div id="menu_ex_h" style="display: '.(($ex_state == TRUE) ? 'none' : 'block').'; padding:0; margin: 0;">';			
-		$js = ' onclick="showhide_menu(\'menu_ex\');return false;" onMouseover="navTabOn(\'exx\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onMouseout="navTabOff(\'exx\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';
+		$js = ' onclick="showhide_menu(\'menu_ex\');return false;" onmouseover="navTabOn(\'exx\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onmouseout="navTabOff(\'exx\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';
 		$DSP->body .= $DSP->div();
 		$DSP->body .= "<div class='tableHeadingAlt' id='exx' ".$js.">";
 		$DSP->body .= $expand.$LANG->line('extras');
@@ -473,7 +473,7 @@ class MyAccount {
 		 
 		$DSP->body .= '<div id="menu_ex_b" style="display: '.(($ex_state == TRUE) ? 'block' : 'none').'; padding:0; margin: 0;">';
 		
-		$js = ' onclick="showhide_menu(\'menu_ex\');return false;" onMouseover="navTabOn(\'exx2\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onMouseout="navTabOff(\'exx2\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';
+		$js = ' onclick="showhide_menu(\'menu_ex\');return false;" onmouseover="navTabOn(\'exx2\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onmouseout="navTabOff(\'exx2\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';
 		$DSP->body .= $DSP->div();
 		$DSP->body .= "<div class='tableHeadingAlt' id='exx2' ".$js.">";
 		$DSP->body .= $collapse.$LANG->line('extras');
@@ -490,7 +490,7 @@ class MyAccount {
         {			
 			$ad_state = (in_array($IN->GBL('M'), array('administration'))) ? TRUE : FALSE;
 			$DSP->body  .= '<div id="menu_ad_h" style="display: '.(($ad_state == TRUE) ? 'none' : 'block').'; padding:0; margin: 0;">';			
-			$js = ' onclick="showhide_menu(\'menu_ad\');return false;" onMouseover="navTabOn(\'adx\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onMouseout="navTabOff(\'adx\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';
+			$js = ' onclick="showhide_menu(\'menu_ad\');return false;" onmouseover="navTabOn(\'adx\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onmouseout="navTabOff(\'adx\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';
 			$DSP->body .= $DSP->div();
 			$DSP->body .= "<div class='tableHeadingAlt' id='adx' ".$js.">";
 			$DSP->body .= $expand.$LANG->line('administrative_options');
@@ -500,7 +500,7 @@ class MyAccount {
 			 
 			$DSP->body .= '<div id="menu_ad_b" style="display: '.(($ad_state == TRUE) ? 'block' : 'none').'; padding:0; margin: 0;">';
 			
-			$js = ' onclick="showhide_menu(\'menu_ad\');return false;" onMouseover="navTabOn(\'adx2\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onMouseout="navTabOff(\'adx2\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';
+			$js = ' onclick="showhide_menu(\'menu_ad\');return false;" onmouseover="navTabOn(\'adx2\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onmouseout="navTabOff(\'adx2\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';
 			$DSP->body .= $DSP->div();
 			$DSP->body .= "<div class='tableHeadingAlt' id='adx2' ".$js.">";
 			$DSP->body .= $collapse.$LANG->line('administrative_options');
@@ -1452,7 +1452,7 @@ class MyAccount {
 									 	'enable_log'		=> TRUE,
 										'username'			=> $_POST['username'],
 										'cur_username'		=> $_POST['current_username'],
-										'screen_name'		=> $_POST['screen_name'],
+										'screen_name'		=> stripslashes($_POST['screen_name']),
 										'cur_screen_name'	=> $_POST['current_screen_name'],
 										'password'			=> $_POST['password'],
 									 	'password_confirm'	=> $_POST['password_confirm'],
@@ -1518,7 +1518,7 @@ class MyAccount {
 
         $DB->query($DB->update_string('exp_members', $data, "member_id = '".$DB->escape_str($id)."'"));   
 
-		if ($_POST['current_username'] != $_POST['username'])
+		if ($_POST['current_screen_name'] != $_POST['screen_name'])
 		{  
             $query = $DB->query("SELECT screen_name FROM exp_members WHERE member_id = '".$DB->escape_str($id)."'");
 
@@ -3474,7 +3474,7 @@ class MyAccount {
 								$edit_image 	= 'edit_signature';
 								$enable_pref	= 'sig_allow_img_upload';
 								$not_enabled	= 'sig_img_not_enabled';
-								$remove			= 'remove_sig_img';
+								$remove			= 'remove_sig_image';
 								$removed		= 'sig_img_removed';
 								$updated		= 'signature_updated';
 				break;		

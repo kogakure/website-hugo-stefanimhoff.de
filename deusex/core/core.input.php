@@ -134,6 +134,15 @@ class Input {
         
         if (is_array($_COOKIE) AND count($_COOKIE) > 0)
         {
+			// Also get rid of specially treated cookies that might be set by a server
+			// or silly application, that are of no use to a CI application anyway
+			// but that when present will trip our 'Disallowed Key Characters' alarm
+			// http://www.ietf.org/rfc/rfc2109.txt
+			// note that the key names below are single quoted strings, and are not PHP variables
+			unset($_COOKIE['$Version']);
+			unset($_COOKIE['$Path']);
+			unset($_COOKIE['$Domain']);
+			
             foreach($_COOKIE as $key => $val)
             {              
                 $_COOKIE[$this->clean_input_keys($key)] = $REGX->xss_clean($this->clean_input_data($val));

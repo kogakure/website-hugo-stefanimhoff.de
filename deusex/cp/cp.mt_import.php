@@ -306,7 +306,7 @@ class MT_Import {
 		$r .= $DSP->qdiv('itemWrapper', $LANG->line('field_blurb'));
             
 		// Had to write this out since function did not allow addition of JS
-		$r .= "\n".'<select name="weblog_id" class="select" onChange="changemenu(this.selectedIndex);">'."\n";
+		$r .= "\n".'<select name="weblog_id" class="select" onchange="changemenu(this.selectedIndex);">'."\n";
             
 		$r .= $w;
     

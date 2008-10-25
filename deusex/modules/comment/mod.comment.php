@@ -99,8 +99,15 @@ class Comment {
 		$t_current_page		= '';
 		$total_pages		= 1;
 				
-        $dynamic = ($TMPL->fetch_param('dynamic') == 'off') ? FALSE : TRUE;
-        
+		if ($TMPL->fetch_param('dynamic') == 'off' && $TMPL->fetch_param('entry_id') === FALSE && $TMPL->fetch_param('url_title') === FALSE)
+		{
+			$dynamic = FALSE;
+		}
+		else
+		{
+			$dynamic = TRUE;
+		}
+    
         /** ----------------------------------------------
         /**  Do we allow dynamic POST variables to set parameters?
         /** ----------------------------------------------*/
@@ -1479,7 +1486,8 @@ class Comment {
         
         if ($query->row['allow_comments'] == 'n' || $query->row['comment_system_enabled'] == 'n')
         {
-            return false;
+			$LANG->fetch_language_file('comment');
+			return $LANG->line('cmt_commenting_has_expired');
         }
         
         /** ----------------------------------------

@@ -800,7 +800,7 @@ class Messages {
 			$pm_state = ($IN->GBL('M') == 'messages') ? TRUE : FALSE;
 			
 			$this->menu  .= '<div id="menu_pm_h" style="display: '.(($pm_state == TRUE) ? 'none' : 'block').'; padding:0; margin: 0;">';			
-			$js = ' onclick="showhide_menu(\'menu_pm\');return false;" onMouseover="navTabOn(\'pmx\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onMouseout="navTabOff(\'pmx\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';
+			$js = ' onclick="showhide_menu(\'menu_pm\');return false;" onmouseover="navTabOn(\'pmx\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onmouseout="navTabOff(\'pmx\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';
 			$this->menu .= $DSP->div();
 			$this->menu .= "<div class='tableHeadingAlt' id='pmx' ".$js.">";
 			$this->menu .= $expand.$LANG->line('private_messages');
@@ -810,7 +810,7 @@ class Messages {
 			 
 			$this->menu .= '<div id="menu_pm_b" style="display: '.(($pm_state == TRUE) ? 'block' : 'none').'; padding:0; margin: 0;">';
 			
-			$js = ' onclick="showhide_menu(\'menu_pm\');return false;" onMouseover="navTabOn(\'pmx2\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onMouseout="navTabOff(\'pmx2\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';
+			$js = ' onclick="showhide_menu(\'menu_pm\');return false;" onmouseover="navTabOn(\'pmx2\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onmouseout="navTabOff(\'pmx2\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';
 			$this->menu .= $DSP->div();
 			$this->menu .= "<div class='tableHeadingAlt' id='pmx2' ".$js.">";
 			$this->menu .= $collapse.$LANG->line('private_messages');
@@ -4474,7 +4474,7 @@ function PopupWindow_isClicked(e) {
 	return false;
 	}
 	
-// Check an onMouseDown event to see if we should hide
+// Check an onmouseDown event to see if we should hide
 function PopupWindow_hideIfNotClicked(e) {
 	if (this.autoHideEnabled && !this.isClicked(e)) {
 		this.hidePopup();

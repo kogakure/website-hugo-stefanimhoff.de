@@ -144,15 +144,6 @@
 			exit('Invalid URI');
     	}
     }
-       
-// ----------------------------------------------
-//  Turn off script execution time limit
-// ----------------------------------------------
-
-    if (function_exists("set_time_limit") == TRUE AND @ini_get("safe_mode") == 0)
-    {
-        @set_time_limit(0);
-    }
 
 
 // ----------------------------------------------
@@ -160,7 +151,7 @@
 // ----------------------------------------------
 
     define('APP_NAME'	,	'ExpressionEngine');
-    define('APP_BUILD'	,	'20080626');   
+    define('APP_BUILD'	,	'20081024');   
     define('CONFIG_FILE',	$config_file); 
     define('PATH_CACHE'	,	$system_path.'cache/'); 
     define('PATH_LANG'	,	$system_path.'language/'); 
@@ -252,7 +243,25 @@
 	{
 		define('REQ', 'PAGE');
 	}
-	
+
+
+// ----------------------------------------------
+//  Set a liberal script execution time limit for the CP
+// ----------------------------------------------
+
+	if (function_exists("set_time_limit") == TRUE AND @ini_get("safe_mode") == 0)
+	{
+		if (REQ == 'CP')
+		{
+			@set_time_limit(300);	
+		}
+		else
+		{
+			@set_time_limit(90);
+		}
+	}
+
+
 // ----------------------------------------------
 // Set configuration exceptions
 // ----------------------------------------------    
@@ -327,25 +336,16 @@
                       );
 
     $DB = new DB($db_config);
-        
-    // $DB->enable_cache
-    // Connect to DB and turn off caching if it's a CP or ACTION request
-    // The DB is connected to automatically on PAGE requests
-    
-    if (REQ == 'CP' OR REQ == 'ACTION')
-    {
-    	$error = '';
-    
-		if ( ! $DB->db_connect(0))
-		{
-			exit("Database Error:  Unable to connect to your database. Your database appears to be turned off or the database connection settings in your config file are not correct. Please contact your hosting provider if the problem persists.");
-		}
+
+	if ( ! $DB->db_connect(0))
+	{
+		exit("Database Error:  Unable to connect to your database. Your database appears to be turned off or the database connection settings in your config file are not correct. Please contact your hosting provider if the problem persists.");
+	}
 		
-		if ( ! $DB->select_db())
-		{
-			exit("Database Error:  Unable to select your database");
-		}
-    }
+	if ( ! $DB->select_db())
+	{
+		exit("Database Error:  Unable to select your database");
+	}
     
 // ----------------------------------------------
 //  Instantiate the regular expressions class
@@ -366,6 +366,7 @@
     $DB->enable_cache = ($PREFS->ini('enable_db_caching') == 'y') ? TRUE : FALSE;
     $DB->debug 		  = ($PREFS->ini('debug') != 0) ? 1 : 0;
     
+    // Turn off caching if it's a CP or ACTION request
     if (REQ == 'CP' OR REQ == 'ACTION')
     {
     	$DB->enable_cache = FALSE;

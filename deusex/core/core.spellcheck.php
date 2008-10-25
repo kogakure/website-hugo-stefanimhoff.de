@@ -925,7 +925,7 @@ class Spellcheck {
 			return false;
 			}
 			
-		// Check an onMouseDown event to see if we should hide
+		// Check an onmouseDown event to see if we should hide
 		function SP_PopupWindow_hideIfNotClicked(e) {
 			if (this.autoHideEnabled && !this.isClicked(e)) {
 				this.hidePopup();
@@ -1186,7 +1186,9 @@ EOT;
 		{
 			$content = str_replace('&', ' ', stripslashes($content));
 			
-			$payload = 	'<spellrequest textalreadyclipped="0" ignoredups="1" ignoredigits="1" ignoreallcaps="0"><text>'
+			// Google has silently changed the service internally, setting ignoredups="1" now causes results to
+			// always return as spelled correctly.  -- changed 8/20/08 d.j.
+			$payload = 	'<spellrequest textalreadyclipped="0" ignoredups="0" ignoredigits="1" ignoreallcaps="0"><text>'
 						.	$content
 						.'</text></spellrequest>';
 			

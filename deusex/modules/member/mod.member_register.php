@@ -358,7 +358,7 @@ class Member_register extends Member {
 									 	'enable_log'		=> FALSE,
 										'username'			=> $_POST['username'],
 										'cur_username'		=> '',
-										'screen_name'		=> $_POST['screen_name'],
+										'screen_name'		=> stripslashes($_POST['screen_name']),
 										'cur_screen_name'	=> '',
 										'password'			=> $_POST['password'],
 									 	'password_confirm'	=> $_POST['password_confirm'],

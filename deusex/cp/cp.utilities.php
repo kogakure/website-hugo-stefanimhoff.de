@@ -167,7 +167,7 @@ class Utilities {
         		}
         		
         		/** ------------------------------------
-				/**  Differnet Output depending on current status
+				/**  Different Output depending on current status
 				/** ------------------------------------*/
 				
 				if ($PREFS->ini('allow_extensions') == 'y' && isset($extensions_installed[$extension_name]))
@@ -392,7 +392,7 @@ class Utilities {
        	
        	if ( ! class_exists(ucfirst($IN->GBL('name'))))
      	{
-     		include(PATH_EXT.'ext.'.$IN->GBL('name').EXT);
+     		include(PATH_EXT.'ext.'.strtolower($IN->GBL('name')).EXT);
 		}
 		
 		// Ok, I admit that we should be able to simply unset the 'name' value
@@ -1453,7 +1453,7 @@ class Utilities {
 		
         $DSP->title = $LANG->line('utilities');
         $DSP->crumb = $DSP->anchor(BASE.AMP.'C=admin'.AMP.'area=utilities', $LANG->line('utilities')).
-					  $DSP->crumb_item($LANG->line('utilities'));
+					  $DSP->crumb_item($LANG->line('sql_manager'));
                                 
         $DSP->body = $DSP->qdiv('tableHeading', $LANG->line('sql_manager'));
               
@@ -2525,6 +2525,7 @@ class Utilities {
         
         $DSP->title = $LANG->line('view_database');
         $DSP->crumb = $DSP->anchor(BASE.AMP.'C=admin'.AMP.'area=utilities', $LANG->line('utilities')).
+					  $DSP->crumb_item($DSP->anchor(BASE.AMP.'C=admin'.AMP.'M=utilities'.AMP.'P=sql_manager', $LANG->line('sql_manager'))).
 					  $DSP->crumb_item($LANG->line('view_database'));
         $DSP->body  = $r;
     }
@@ -2693,7 +2694,7 @@ class Utilities {
 
         $DSP->title = $LANG->line('utilities').$DSP->crumb_item($title);
         $DSP->crumb = $DSP->anchor(BASE.AMP.'C=admin'.AMP.'area=utilities', $LANG->line('utilities')).
-					  $DSP->crumb_item($LANG->line('utilities')).
+					  $DSP->crumb_item($DSP->anchor(BASE.AMP.'C=admin'.AMP.'M=utilities'.AMP.'P=sql_manager', $LANG->line('sql_manager'))).
 					  $DSP->crumb_item($title);
         $DSP->body  = $r;                                                  
     }
@@ -2716,6 +2717,7 @@ class Utilities {
         
         $DSP->title = $LANG->line('utilities');
         $DSP->crumb = $DSP->anchor(BASE.AMP.'C=admin'.AMP.'area=utilities', $LANG->line('utilities')).
+					  $DSP->crumb_item($DSP->anchor(BASE.AMP.'C=admin'.AMP.'M=utilities'.AMP.'P=sql_manager', $LANG->line('sql_manager'))).
 					  $DSP->crumb_item($LANG->line('sql_query'));                             
                                       
 		                                      
@@ -5165,7 +5167,7 @@ EOT;
             $line = str_replace("%x", $total_done, $line);
             $line = str_replace("%y", $to, $line);
             
-            $link = "<a href='".BASE.AMP.'C=admin'.AMP.'M=utilities'.AMP.'P=do_recount'.AMP.'TBL='.$table.AMP.'T='.$total_done."'  onClick='standby();'><b>".$line."</b></a>";
+            $link = "<a href='".BASE.AMP.'C=admin'.AMP.'M=utilities'.AMP.'P=do_recount'.AMP.'TBL='.$table.AMP.'T='.$total_done."'  onclick='standby();'><b>".$line."</b></a>";
 			$r .= '<div id="batchlink" style="display: block; padding:0; margin:0;">';
             $r .= $DSP->qdiv('itemWrapper', BR.$link); 
 			$r .= $DSP->div_c();

@@ -617,7 +617,7 @@ class Member_images extends Member {
 								$edit_image 	= 'edit_signature';
 								$enable_pref	= 'sig_allow_img_upload';
 								$not_enabled	= 'sig_img_not_enabled';
-								$remove			= 'remove_sig_img';
+								$remove			= 'remove_sig_image';
 								$removed		= 'sig_img_removed';
 								$updated		= 'signature_updated';
 				break;		

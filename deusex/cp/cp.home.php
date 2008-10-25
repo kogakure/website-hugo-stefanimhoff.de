@@ -347,22 +347,23 @@ class Home {
     {  
 		global $DB, $DSP, $LANG, $FNS, $SESS, $PREFS;
 		    	
-        $sql = "SELECT DISTINCT 
+        $sql = "SELECT 
                        exp_weblog_titles.weblog_id, 
 					   exp_weblog_titles.author_id,
                        exp_weblog_titles.entry_id,         
                        exp_weblog_titles.title, 
                        exp_weblog_titles.comment_total, 
                        exp_weblog_titles.trackback_total
-                FROM   exp_weblog_titles, exp_weblogs";
+                FROM   exp_weblog_titles, exp_weblogs
+				WHERE  exp_weblogs.weblog_id = exp_weblog_titles.weblog_id";
                                 
         if ($SESS->userdata['weblog_id'] != 0)
         {        
-        	$sql .= " WHERE exp_weblog_titles.weblog_id = '".$SESS->userdata['weblog_id']."'"; 
+        	$sql .= " AND exp_weblog_titles.weblog_id = '".$SESS->userdata['weblog_id']."'"; 
         }
         else
         {
-            $sql .= " WHERE is_user_blog = 'n' AND exp_weblog_titles.site_id = '".$DB->escape_str($PREFS->ini('site_id'))."'";
+            $sql .= " AND is_user_blog = 'n' AND exp_weblog_titles.site_id = '".$DB->escape_str($PREFS->ini('site_id'))."'";
 				
 			if ($SESS->userdata['group_id'] != 1)
             { 
@@ -481,22 +482,23 @@ class Home {
     {  
     	global $DB, $DSP, $LANG, $SESS, $FNS, $LOC, $PREFS;
     	    	
-        $sql = "SELECT DISTINCT 
+        $sql = "SELECT 
                        exp_weblog_titles.weblog_id, 
                        exp_weblog_titles.author_id,
                        exp_weblog_titles.entry_id,         
                        exp_weblog_titles.title, 
                        exp_weblog_titles.recent_comment_date,
                        exp_weblog_titles.recent_trackback_date
-                FROM   exp_weblog_titles, exp_weblogs";
+                FROM   exp_weblog_titles, exp_weblogs
+				WHERE  exp_weblogs.weblog_id = exp_weblog_titles.weblog_id";
                         
         if ($SESS->userdata['weblog_id'] != 0)
         {        
-        		$sql .= " WHERE exp_weblog_titles.weblog_id = '".$SESS->userdata['weblog_id']."' AND exp_weblog_titles.site_id = '".$DB->escape_str($PREFS->ini('site_id')) ."' "; 
+        		$sql .= " AND exp_weblog_titles.weblog_id = '".$SESS->userdata['weblog_id']."' AND exp_weblog_titles.site_id = '".$DB->escape_str($PREFS->ini('site_id')) ."' "; 
         }
         else
         {
-            $sql .= " WHERE is_user_blog = 'n' AND exp_weblog_titles.site_id = '".$DB->escape_str($PREFS->ini('site_id')) ."' ";
+            $sql .= " AND is_user_blog = 'n' AND exp_weblog_titles.site_id = '".$DB->escape_str($PREFS->ini('site_id')) ."' ";
 				
 			if ($SESS->userdata['group_id'] != 1)
 			{        

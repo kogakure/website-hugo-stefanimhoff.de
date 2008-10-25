@@ -93,8 +93,8 @@ class Language {
 			AtIFNpdGUgTGltaXQgUmVhY2hlZCIpOwoJfQp9"))); return;
         }
             
-        if ( ! in_array($user_lang, $this->cur_used))
-        {                
+        if ( ! in_array($which, $this->cur_used))
+        {
             if ( ! @include PATH_LANG.$user_lang.'/lang.'.$which.EXT)
             {
 				if ( ! @include PATH_LANG.'english/lang.'.$which.EXT)
