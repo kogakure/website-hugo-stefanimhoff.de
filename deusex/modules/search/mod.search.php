@@ -390,56 +390,122 @@ class Search {
 			}
         }
 
+        /** ----------------------------------------------
+        /**  Limit to a specific member? We do this now
+        /**  as there's a potential for this to bring the
+        /**  search to an end if it's not a valid member
+        /** ----------------------------------------------*/
+        
+		$member_array	= array();
+		$member_ids		= '';
+		
+        if (isset($_GET['mbr']) AND is_numeric($_GET['mbr']))
+        {
+			$query = $DB->query("SELECT member_id FROM exp_members WHERE member_id = '".$DB->escape_str($_GET['mbr'])."'");
+			
+			if ($query->num_rows != 1)
+			{
+				return FALSE;
+			}
+			else
+			{
+				$member_array[] = $query->row['member_id'];
+			}
+        }
+        else
+        {
+			if (isset($_POST['member_name']) AND $_POST['member_name'] != '')
+			{
+				$sql = "SELECT member_id FROM exp_members WHERE screen_name ";
+				
+				if (isset($_POST['exact_match']) AND $_POST['exact_match'] == 'y')
+				{
+					$sql .= " = '".$DB->escape_str($_POST['member_name'])."' ";
+				}
+				else
+				{
+					$sql .= " LIKE '%".$DB->escape_str($_POST['member_name'])."%' ";
+				}
+				
+				$query = $DB->query($sql);
+			
+				if ($query->num_rows == 0)
+				{
+					return FALSE;
+				}
+				else
+				{
+					foreach ($query->result as $row)
+					{
+						$member_array[] = $row['member_id'];
+					}
+				}
+			}
+		}
+
+		// and turn it into a string now so we only implode once
+		if (count($member_array) > 0)
+		{
+			$member_ids = ' IN ('.implode(',', $member_array).') ';
+		}
+		
+		unset($member_array);
+		
+		
 		/** ---------------------------------------
 		/**  Fetch the searchable field names
 		/** ---------------------------------------*/
 				
 		$fields = array();
-				
-		$xql = "SELECT DISTINCT(field_group) FROM exp_weblogs WHERE site_id = '".$DB->escape_str($PREFS->ini('site_id'))."' AND ";
 		
-		if (USER_BLOG !== FALSE)
-		{        
-			$xql .= "weblog_id = '".UB_BLOG_ID."' ";
-		}
-		else
+		// no need to do this unless there are keywords to search
+		if (trim($this->keywords) != '')
 		{
-			$xql .= "is_user_blog = 'n' ";
-		}
-		
-		if ($id_query != '')
-		{
-			$xql .= $id_query.' ';
-			$xql = str_replace('exp_weblog_titles.', '', $xql);
-		}
-					
-		$query = $DB->query($xql);
-		
-		if ($query->num_rows > 0)
-		{
-			$fql = "SELECT field_id, field_name, field_search FROM exp_weblog_fields WHERE (";
-		
-			foreach ($query->result as $row)
-			{
-				$fql .= " group_id = '".$row['field_group']."' OR";	
+			$xql = "SELECT DISTINCT(field_group) FROM exp_weblogs WHERE site_id = '".$DB->escape_str($PREFS->ini('site_id'))."' AND ";
+
+			if (USER_BLOG !== FALSE)
+			{        
+				$xql .= "weblog_id = '".UB_BLOG_ID."' ";
 			}
-			
-			$fql = substr($fql, 0, -2).')';  
-							
-			$query = $DB->query($fql);
-			
+			else
+			{
+				$xql .= "is_user_blog = 'n' ";
+			}
+
+			if ($id_query != '')
+			{
+				$xql .= $id_query.' ';
+				$xql = str_replace('exp_weblog_titles.', '', $xql);
+			}
+
+			$query = $DB->query($xql);
+
 			if ($query->num_rows > 0)
 			{
+				$fql = "SELECT field_id, field_name, field_search FROM exp_weblog_fields WHERE (";
+
 				foreach ($query->result as $row)
 				{
-					if ($row['field_search'] == 'y')
-					{
-						$fields[] = $row['field_id'];
-					}
-					
-					$this->fields[$row['field_name']] = array($row['field_id'], $row['field_search']);
+					$fql .= " group_id = '".$row['field_group']."' OR";	
 				}
-			}
+
+				$fql = substr($fql, 0, -2).')';  
+
+				$query = $DB->query($fql);
+
+				if ($query->num_rows > 0)
+				{
+					foreach ($query->result as $row)
+					{
+						if ($row['field_search'] == 'y')
+						{
+							$fields[] = $row['field_id'];
+						}
+
+						$this->fields[$row['field_name']] = array($row['field_id'], $row['field_search']);
+					}
+				}
+			}	
 		}
 				
 		/** ---------------------------------------
@@ -452,7 +518,6 @@ class Search {
 				FROM exp_weblog_titles
 				LEFT JOIN exp_weblogs ON exp_weblog_titles.weblog_id = exp_weblogs.weblog_id 
 				LEFT JOIN exp_weblog_data ON exp_weblog_titles.entry_id = exp_weblog_data.entry_id 
-				LEFT JOIN exp_members ON exp_members.member_id = exp_weblog_titles.author_id 
 				LEFT JOIN exp_comments ON exp_weblog_titles.entry_id = exp_comments.entry_id
 				LEFT JOIN exp_category_posts ON exp_weblog_titles.entry_id = exp_category_posts.entry_id
 				LEFT JOIN exp_categories ON exp_category_posts.cat_id = exp_categories.cat_id
@@ -572,17 +637,27 @@ class Search {
 			/** ----------------------------------*/
 			
 			if (sizeof($terms) == 1 && isset($_POST['where']) && $_POST['where'] == 'word') // Exact word match
-			{
-				$sql .= "(exp_weblog_titles.title = '".$DB->escape_str($terms['0'])."' OR exp_weblog_titles.title LIKE '".$DB->escape_str($terms['0'])." %' OR exp_weblog_titles.title LIKE '% ".$DB->escape_str($terms['0'])." %') ";
+			{				
+				$sql .= "((exp_weblog_titles.title = '".$DB->escape_str($terms['0'])."' OR exp_weblog_titles.title LIKE '".$DB->escape_str($terms['0'])." %' OR exp_weblog_titles.title LIKE '% ".$DB->escape_str($terms['0'])." %') ";
+				
+				// and close up the member clause
+				if ($member_ids != '')
+				{
+					$sql .= " AND (exp_weblog_titles.author_id {$member_ids})) \n";
+				}
+				else
+				{
+					$sql .= ") \n";
+				}
 			}			
 			elseif ( ! isset($_POST['exact_keyword']))  // Any terms, all terms
-			{ 
+			{				
 				$mysql_function	= (substr($terms['0'], 0,1) == '-') ? 'NOT LIKE' : 'LIKE';    
 				$search_term	= (substr($terms['0'], 0,1) == '-') ? $DB->escape_str(substr($terms['0'], 1)) : $DB->escape_str($terms['0']);
 				
-				// We have two parentheses in the beginning in case
-				// there are any NOT LIKE's being used
-				$sql .= "\n((exp_weblog_titles.title $mysql_function '%".$DB->escape_str($search_term)."%' ";
+				// We have three parentheses in the beginning in case
+				// there are any NOT LIKE's being used and to allow for a member clause
+				$sql .= "\n(((exp_weblog_titles.title $mysql_function '%".$DB->escape_str($search_term)."%' ";
     			
 				for ($i=1; $i < sizeof($terms); $i++) 
 				{
@@ -593,13 +668,32 @@ class Search {
 					$sql .= "$mysql_criteria exp_weblog_titles.title $mysql_function '%".$DB->escape_str($search_term)."%' ";
 				}
 				
-				$sql .= ")) \n";
+				$sql .= ")) ";
+				
+				// and close up the member clause
+				if ($member_ids != '')
+				{
+					$sql .= " AND (exp_weblog_titles.author_id {$member_ids})) \n";
+				}
+				else
+				{
+					$sql .= ") \n";
+				}
 			}
 			else // exact phrase match
-			{    			
-				$sql .= "exp_weblog_titles.title LIKE '%".$DB->escape_str((sizeof($terms) == 1) ? $terms[0] : $this->keywords)."%' ";
+			{					
+				$sql .= "(exp_weblog_titles.title LIKE '%".$DB->escape_str((sizeof($terms) == 1) ? $terms[0] : $this->keywords)."%' ";
+				
+				// and close up the member clause
+				if ($member_ids != '')
+				{
+					$sql .= " AND (exp_weblog_titles.author_id {$member_ids})) \n";
+				}
+				else
+				{
+					$sql .= ") \n";
+				}
 			}
-			
 			
 			/** ----------------------------------
 			/**  Search in Searchable Fields
@@ -623,9 +717,9 @@ class Search {
 					$search_term	= (substr($terms['0'], 0,1) == '-') ? $DB->escape_str(substr($terms['0'], 1)) : $DB->escape_str($terms['0']);
 							
 					// Since Title is always required in a search we use OR
-					// And then two parentheses just like above in case
-					// there are any NOT LIKE's being used
-					$sql .= "\nOR (($concat_fields $mysql_function '%".$DB->escape_str($search_term)."%' ";
+					// And then three parentheses just like above in case
+					// there are any NOT LIKE's being used and to allow for a member clause
+					$sql .= "\nOR ((($concat_fields $mysql_function '%".$DB->escape_str($search_term)."%' ";
     				
 					for ($i=1; $i < sizeof($terms); $i++) 
 					{
@@ -636,7 +730,17 @@ class Search {
 						$sql .= "$mysql_criteria $concat_fields $mysql_function '%".$DB->escape_str($search_term)."%' ";
 					}
 							
-					$sql .= ")) \n";
+					$sql .= ")) ";
+									
+					// and close up the member clause
+					if ($member_ids != '')
+					{
+						$sql .= " AND (exp_weblog_titles.author_id {$member_ids})) \n";
+					}
+					else
+					{
+						$sql .= ") \n";
+					}
 				}
 				else
 				{
@@ -644,7 +748,17 @@ class Search {
 					{					
 						if (sizeof($terms) == 1 && isset($_POST['where']) && $_POST['where'] == 'word')
 						{
-							$sql .= "\nOR (exp_weblog_data.field_id_".$val." LIKE '".$DB->escape_str($terms['0'])." %' OR exp_weblog_data.field_id_".$val." LIKE '% ".$DB->escape_str($terms['0'])." %' OR exp_weblog_data.field_id_".$val." LIKE '%\t".$DB->escape_str($terms['0'])." %' OR exp_weblog_data.field_id_".$val." = '".$DB->escape_str($terms['0'])."') ";
+							$sql .= "\nOR ((exp_weblog_data.field_id_".$val." LIKE '".$DB->escape_str($terms['0'])." %' OR exp_weblog_data.field_id_".$val." LIKE '% ".$DB->escape_str($terms['0'])." %' OR exp_weblog_data.field_id_".$val." LIKE '%\t".$DB->escape_str($terms['0'])." %' OR exp_weblog_data.field_id_".$val." = '".$DB->escape_str($terms['0'])."') ";
+														
+							// and close up the member clause
+							if ($member_ids != '')
+							{
+								$sql .= " AND (exp_weblog_titles.author_id {$member_ids})) ";
+							}
+							else
+							{
+								$sql .= ") ";
+							}
 						}
 						elseif ( ! isset($_POST['exact_keyword']))
 						{
@@ -652,9 +766,9 @@ class Search {
 							$search_term	= (substr($terms['0'], 0,1) == '-') ? $DB->escape_str(substr($terms['0'], 1)) : $DB->escape_str($terms['0']);
 							
 							// Since Title is always required in a search we use OR
-							// And then two parentheses just like above in case
-							// there are any NOT LIKE's being used
-							$sql .= "\nOR ((exp_weblog_data.field_id_".$val." $mysql_function '%".$DB->escape_str($search_term)."%' ";
+							// And then three parentheses just like above in case
+							// there are any NOT LIKE's being used and to allow for a member clause
+							$sql .= "\nOR (((exp_weblog_data.field_id_".$val." $mysql_function '%".$DB->escape_str($search_term)."%' ";
     				
 							for ($i=1; $i < sizeof($terms); $i++) 
 							{
@@ -665,11 +779,33 @@ class Search {
 								$sql .= "$mysql_criteria exp_weblog_data.field_id_".$val." $mysql_function '%".$DB->escape_str($search_term)."%' ";
 							}
 							
-							$sql .= ")) \n";
+							$sql .= ")) ";
+							
+							// and close up the member clause
+							if ($member_ids != '')
+							{
+								$sql .= " AND (exp_weblog_titles.author_id {$member_ids})) \n";
+							}
+							else
+							{
+								// close up the extra parenthesis
+								$sql .= ") \n";
+							}
 						}
 						else
 						{
-							$sql .= "\nOR exp_weblog_data.field_id_".$val." LIKE '%".$DB->escape_str((sizeof($terms) == 1) ? $terms[0] : $this->keywords)."%' ";
+							$sql .= "\nOR (exp_weblog_data.field_id_".$val." LIKE '%".$DB->escape_str((sizeof($terms) == 1) ? $terms[0] : $this->keywords)."%' ";
+							
+							// and close up the member clause
+							if ($member_ids != '')
+							{
+								$sql .= " AND (exp_weblog_titles.author_id {$member_ids})) \n";
+							}
+							else
+							{
+								// close up the extra parenthesis
+								$sql .= ") \n";
+							}
 						}
 					}
 				}
@@ -683,16 +819,27 @@ class Search {
 			{
 				if (sizeof($terms) == 1 && isset($_POST['where']) && $_POST['where'] == 'word')
 				{
-					$sql .= " OR exp_comments.comment LIKE '% ".$DB->escape_str($terms['0'])." %' ";
+					$sql .= " OR (exp_comments.comment LIKE '% ".$DB->escape_str($terms['0'])." %' ";
+					
+					// and close up the member clause
+					if ($member_ids != '')
+					{
+						$sql .= " AND (exp_comments.author_id {$member_ids})) \n";
+					}
+					else
+					{
+						// close up the extra parenthesis
+						$sql .= ") \n";
+					}
 				}
 				elseif ( ! isset($_POST['exact_keyword']))
 				{
 					$mysql_function	= (substr($terms['0'], 0,1) == '-') ? 'NOT LIKE' : 'LIKE';    
 					$search_term	= (substr($terms['0'], 0,1) == '-') ? $DB->escape_str(substr($terms['0'], 1)) : $DB->escape_str($terms['0']);
 					
-					// We have two parentheses in the beginning in case
-					// there are any NOT LIKE's being used
-					$sql .= "\nOR ((exp_comments.comment $mysql_function '%".$DB->escape_str($search_term)."%' ";
+					// We have three parentheses in the beginning in case
+					// there are any NOT LIKE's being used and to allow a member clause
+					$sql .= "\nOR (((exp_comments.comment $mysql_function '%".$DB->escape_str($search_term)."%' ";
 					
 					for ($i=1; $i < sizeof($terms); $i++) 
 					{
@@ -703,42 +850,57 @@ class Search {
 						$sql .= "$mysql_criteria exp_comments.comment $mysql_function '%".$DB->escape_str($search_term)."%' ";
 					}
 				
-					$sql .= ")) \n";
+					$sql .= ")) ";
+					
+					// and close up the member clause
+					if ($member_ids != '')
+					{
+						$sql .= " AND (exp_comments.author_id {$member_ids})) \n";
+					}
+					else
+					{
+						// close up the extra parenthesis
+						$sql .= ") \n";
+					}
 				}
 				else
 				{
-					$sql .= " OR (exp_comments.comment LIKE '%".$DB->escape_str((sizeof($terms) == 1) ? $terms[0] : $this->keywords)."%') ";
+					$sql .= " OR ((exp_comments.comment LIKE '%".$DB->escape_str((sizeof($terms) == 1) ? $terms[0] : $this->keywords)."%') ";
+					
+					// and close up the member clause
+					if ($member_ids != '')
+					{
+						$sql .= " AND (exp_comments.author_id {$member_ids})) \n";
+					}
+					else
+					{
+						// close up the extra parenthesis
+						$sql .= ") \n";
+					}
 				}
 			}
 			
 			// So it ends
 			$sql .= ") \n";
 		}
-		
-		//exit($sql);
-        
-        /** ----------------------------------------------
-        /**  Limit query to a specific member
-        /** ----------------------------------------------*/
-        
-        if (isset($_GET['mbr']) AND is_numeric($_GET['mbr']))
-        {
-			$sql .= " AND exp_members.member_id = '".$DB->escape_str($_GET['mbr'])."' ";
-        }
-        else
-        {
-			if (isset($_POST['member_name']) AND $_POST['member_name'] != '')
+		else
+		{
+			// there are no keywords at all.  Do we still need a member search?
+			if ($member_ids != '')
 			{
-				if (isset($_POST['exact_match']) AND $_POST['exact_match'] == 'y')
+				
+				$sql .= "AND (exp_weblog_titles.author_id {$member_ids} ";
+				
+				// searching comments too?
+				if (isset($_POST['search_in']) AND $_POST['search_in'] == 'everywhere')
 				{
-					$sql .= " AND exp_members.screen_name = '".$DB->escape_str($_POST['member_name'])."' ";
+					$sql .= " OR exp_comments.author_id {$member_ids}";
 				}
-				else
-				{
-					$sql .= " AND exp_members.screen_name LIKE '%".$DB->escape_str($_POST['member_name'])."%' ";
-				}
+				
+				$sql .= ")";
 			}
 		}
+		//exit($sql);
 		
         /** ----------------------------------------------
         /**  Limit query to a specific weblog
@@ -1549,7 +1711,7 @@ class Search {
         
         $res  = $FNS->form_declaration($data);
         
-        $res .= $this->search_js_switcher($nested);
+        $res .= $this->search_js_switcher($nested, $data['id']);
         
         $res .= stripslashes($tagdata);
         
@@ -1565,7 +1727,7 @@ class Search {
     /**  JavaScript weblog/category switch code
     /** ----------------------------------------*/
 
-	function search_js_switcher($nested='n')
+	function search_js_switcher($nested='n', $id='searchform')
 	{
 		global $LANG;
 		        		
@@ -1591,9 +1753,9 @@ function changemenu(index)
 	{
 		theSearchForm = document.searchform;
 	}
-	else if (document.getElementById('searchform'))
+	else if (document.getElementById('<?php echo $id; ?>'))
 	{
-		theSearchForm = document.getElementById('searchform');
+		theSearchForm = document.getElementById('<?php echo $id; ?>');
 	}
 	
 	if (theSearchForm.elements['weblog_id'])

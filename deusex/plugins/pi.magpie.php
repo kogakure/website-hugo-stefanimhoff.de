@@ -22,7 +22,7 @@
 
 $plugin_info = array(
 						'pi_name'			=> 'Magpie RSS Parser',
-						'pi_version'		=> '1.3.4',
+						'pi_version'		=> '1.4',
 						'pi_author'			=> 'Paul Burdick',
 						'pi_author_url'		=> 'http://expressionengine.com/',
 						'pi_description'	=> 'Retrieves and Parses RSS/Atom Feeds',
@@ -440,6 +440,10 @@ Version 1.3.4
 ***************************
 The offset="" parameter was undocumented and had a bug.  Fixed.
 
+***************************
+Version 1.4
+***************************
+Updated the Snoopy library to version 1.2.4
 
 	<?php
 	$buffer = ob_get_contents();
@@ -1812,8 +1816,8 @@ class RSSCache {
 
 Snoopy - the PHP net client
 Author: Monte Ohrt <monte@ispi.net>
-Copyright (c): 1999-2000 ispi, all rights reserved
-Version: 1.0
+Copyright (c): 1999-2008 New Digital Group, all rights reserved
+Version: 1.2.4
 
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Lesser General Public
@@ -1830,16 +1834,10 @@ Version: 1.0
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 You may contact the author of Snoopy by e-mail at:
-monte@ispi.net
-
-Or, write to:
-Monte Ohrt
-CTO, ispi
-237 S. 70th suite 220
-Lincoln, NE 68510
+monte@ohrt.com
 
 The latest version of Snoopy can be obtained from:
-http://snoopy.sourceforge.com
+http://snoopy.sourceforge.net/
 
 *************************************************/
 
@@ -1853,7 +1851,10 @@ class M_Snoopy
 	var $port			=	80;					// port we are connecting to
 	var $proxy_host		=	"";					// proxy host to use
 	var $proxy_port		=	"";					// proxy port to use
-	var $agent			=	"Snoopy v1.0";		// agent we masquerade as
+	var $proxy_user		=	"";					// proxy user to use
+	var $proxy_pass		=	"";					// proxy password to use
+	
+	var $agent			=	"Snoopy v1.2.4";	// agent we masquerade as
 	var	$referer		=	"";					// referer info to pass
 	var $cookies		=	array();			// array of cookies to pass
 												// $cookies["username"]="joe";
@@ -1866,7 +1867,7 @@ class M_Snoopy
 	var $maxframes		=	0;					// frame content depth maximum. 0 = disallow
 	var $expandlinks	=	true;				// expand links to fully qualified URLs.
 												// this only applies to fetchlinks()
-												// or submitlinks()
+												// submitlinks(), and submittext()
 	var $passcookies	=	true;				// pass set cookies back through redirects
 												// NOTE: this currently does not respect
 												// dates, domains or paths.
@@ -1888,8 +1889,12 @@ class M_Snoopy
 												// set to 0 to disallow timeouts
 	var $timed_out		=	false;				// if a read operation timed out
 	var	$status			=	0;					// http request status
-	
-	var	$curl_path		=	"/usr/bin/curl";
+
+	var $temp_dir		=	"/tmp";				// temporary directory that the webserver
+												// has permission to write to.
+												// under Windows, this should be C:\temp
+
+	var	$curl_path		=	"/usr/local/bin/curl";
 												// Snoopy will use cURL for fetching
 												// SSL content if a full system path to
 												// the cURL binary is supplied here.
@@ -1900,9 +1905,6 @@ class M_Snoopy
 												// library functions built into php,
 												// as these functions are not stable
 												// as of this Snoopy release.
-	
-	// send Accept-encoding: gzip?
-	var $use_gzip		= true;	
 	
 	/**** Private variables ****/	
 	
@@ -1919,7 +1921,7 @@ class M_Snoopy
 	var $_framedepth	=	0;					// increments on frame depth
 	
 	var $_isproxy		=	false;				// set if using a proxy server
-	var $_fp_timeout	=	5;					// timeout for socket connection
+	var $_fp_timeout	=	30;					// timeout for socket connection
 
 /*======================================================================*\
 	Function:	fetch
@@ -1939,8 +1941,12 @@ class M_Snoopy
 			$this->user = $URI_PARTS["user"];
 		if (!empty($URI_PARTS["pass"]))
 			$this->pass = $URI_PARTS["pass"];
+		if (empty($URI_PARTS["query"]))
+			$URI_PARTS["query"] = '';
+		if (empty($URI_PARTS["path"]))
+			$URI_PARTS["path"] = '';
 				
-		switch($URI_PARTS["scheme"])
+		switch(strtolower($URI_PARTS["scheme"]))
 		{
 			case "http":
 				$this->host = $URI_PARTS["host"];
@@ -1955,7 +1961,7 @@ class M_Snoopy
 					}
 					else
 					{
-						$path = $URI_PARTS["path"].(isset($URI_PARTS["query"]) ? "?".$URI_PARTS["query"] : "");
+						$path = $URI_PARTS["path"].($URI_PARTS["query"] ? "?".$URI_PARTS["query"] : "");
 						// no proxy, send only the path
 						$this->_httprequest($path, $fp, $URI, $this->_httpmethod);
 					}
@@ -2002,10 +2008,11 @@ class M_Snoopy
 				return true;					
 				break;
 			case "https":
-				if(!$this->curl_path || (!is_executable($this->curl_path))) {
-					$this->error = "Bad curl ($this->curl_path), can't fetch HTTPS \n";
+				if(!$this->curl_path)
 					return false;
-				}
+				if(function_exists("is_executable"))
+				    if (!is_executable($this->curl_path))
+				        return false;
 				$this->host = $URI_PARTS["host"];
 				if(!empty($URI_PARTS["port"]))
 					$this->port = $URI_PARTS["port"];
@@ -2064,8 +2071,6 @@ class M_Snoopy
 		return true;
 	}
 
-
-
 /*======================================================================*\
 	Private functions
 \*======================================================================*/
@@ -2080,7 +2085,7 @@ class M_Snoopy
 
 	function _striplinks($document)
 	{	
-		preg_match_all("'<\s*a\s+.*href\s*=\s*			# find <a href=
+		preg_match_all("'<\s*a\s.*?href\s*=\s*			# find <a href=
 						([\"\'])?					# find single or double quote
 						(?(1) (.*?)\\1 | ([^\s\>]+))		# if quote found, match up to next matching
 													# quote, otherwise match up to next space
@@ -2139,19 +2144,30 @@ class M_Snoopy
 		// so, list your entities one by one here. I included some of the
 		// more common ones.
 								
-		$search = array("'<script[^>]*?".">.*?</script>'si",	// strip out javascript
-						"'<[\/\!]*?[^<>]*?".">'si",			// strip out html tags
+		$search = array("'<script[^>]*?>.*?</script>'si",	// strip out javascript
+						"'<[\/\!]*?[^<>]*?>'si",			// strip out html tags
 						"'([\r\n])[\s]+'",					// strip out white space
-						"'&(quote|#34);'i",					// replace html entities
-						"'&(amp|#38);'i",
-						"'&(lt|#60);'i",
-						"'&(gt|#62);'i",
-						"'&(nbsp|#160);'i",
+						"'&(quot|#34|#034|#x22);'i",		// replace html entities
+						"'&(amp|#38|#038|#x26);'i",			// added hexadecimal values
+						"'&(lt|#60|#060|#x3c);'i",
+						"'&(gt|#62|#062|#x3e);'i",
+						"'&(nbsp|#160|#xa0);'i",
 						"'&(iexcl|#161);'i",
 						"'&(cent|#162);'i",
 						"'&(pound|#163);'i",
-						"'&(copy|#169);'i"
-						);				
+						"'&(copy|#169);'i",
+						"'&(reg|#174);'i",
+						"'&(deg|#176);'i",
+						"'&(#39|#039|#x27);'",
+						"'&(euro|#8364);'i",				// europe
+						"'&a(uml|UML);'",					// german
+						"'&o(uml|UML);'",
+						"'&u(uml|UML);'",
+						"'&A(uml|UML);'",
+						"'&O(uml|UML);'",
+						"'&U(uml|UML);'",
+						"'&szlig;'i",
+						);
 		$replace = array(	"",
 							"",
 							"\\1",
@@ -2163,7 +2179,19 @@ class M_Snoopy
 							chr(161),
 							chr(162),
 							chr(163),
-							chr(169));
+							chr(169),
+							chr(174),
+							chr(176),
+							chr(39),
+							chr(128),
+							"ä",
+							"ö",
+							"ü",
+							"Ä",
+							"Ö",
+							"Ü",
+							"ß",
+						);
 					
 		$text = preg_replace($search,$replace,$document);
 								
@@ -2184,14 +2212,20 @@ class M_Snoopy
 		preg_match("/^[^\?]+/",$URI,$match);
 
 		$match = preg_replace("|/[^\/\.]+\.[^\/\.]+$|","",$match[0]);
+		$match = preg_replace("|/$|","",$match);
+		$match_part = parse_url($match);
+		$match_root =
+		$match_part["scheme"]."://".$match_part["host"];
 				
 		$search = array( 	"|^http://".preg_quote($this->host)."|i",
-							"|^(?!http://)(\/)?(?!mailto:)|i",
+							"|^(\/)|i",
+							"|^(?!http://)(?!mailto:)|i",
 							"|/\./|",
 							"|/[^\/]+/\.\./|"
 						);
 						
 		$replace = array(	"",
+							$match_root."/",
 							$match."/",
 							"/",
 							"/"
@@ -2226,7 +2260,7 @@ class M_Snoopy
 			$headers .= "User-Agent: ".$this->agent."\r\n";
 		if(!empty($this->host) && !isset($this->rawheaders['Host'])) {
 			$headers .= "Host: ".$this->host;
-			if(!empty($this->port) && $this->port != 80)
+			if(!empty($this->port))
 				$headers .= ":".$this->port;
 			$headers .= "\r\n";
 		}
@@ -2376,7 +2410,7 @@ class M_Snoopy
 \*======================================================================*/
 	
 	function _httpsrequest($url,$URI,$http_method,$content_type="",$body="")
-	{
+	{  
 		if($this->passcookies && $this->_redirectaddr)
 			$this->setcookies();
 
@@ -2443,8 +2477,7 @@ class M_Snoopy
 		
 		$headerfile = tempnam($temp_dir, "sno");
 
-		$safer_URI = strtr( $URI, "\"", " " ); // strip quotes from the URI to avoid shell access
-		exec($this->curl_path." -D \"$headerfile\"".$cmdline_params." \"".$safer_URI."\"",$results,$return);
+		exec($this->curl_path." -k -D \"$headerfile\"".$cmdline_params." \"".escapeshellcmd($URI)."\"",$results,$return);
 		
 		if($return)
 		{
@@ -2482,15 +2515,9 @@ class M_Snoopy
 				else
 					$this->_redirectaddr = $matches[2];
 			}
-				
+		
 			if(preg_match("|^HTTP/|",$result_headers[$currentHeader]))
-			{
-                if(preg_match("|^HTTP/[^\s]*\s(.*?)\s|",$result_headers[$currentHeader], $status))
-				{
-					$this->status= $status[1];
-                }				
 				$this->response_code = $result_headers[$currentHeader];
-			}
 
 			$this->headers[] = $result_headers[$currentHeader];
 		}
@@ -2530,8 +2557,8 @@ class M_Snoopy
 	{
 		for($x=0; $x<count($this->headers); $x++)
 		{
-		if(preg_match("/^set-cookie:[\s]+([^=]+)=([^;]+)/i", $this->headers[$x],$match))
-			$this->cookies[$match[1]] = $match[2];
+		if(preg_match('/^set-cookie:[\s]+([^=]+)=([^;]+)/i', $this->headers[$x],$match))
+			$this->cookies[$match[1]] = urldecode($match[2]);
 		}
 	}
 
@@ -2565,6 +2592,7 @@ class M_Snoopy
 		if(!empty($this->proxy_host) && !empty($this->proxy_port))
 			{
 				$this->_isproxy = true;
+				
 				$host = $this->proxy_host;
 				$port = $this->proxy_port;
 			}
@@ -2630,6 +2658,7 @@ class M_Snoopy
 	{
 		settype($formvars, "array");
 		settype($formfiles, "array");
+		$postdata = '';
 
 		if (count($formvars) == 0 && count($formfiles) == 0)
 			return;

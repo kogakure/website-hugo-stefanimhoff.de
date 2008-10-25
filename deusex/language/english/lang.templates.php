@@ -159,6 +159,9 @@ $L = array(
 "template_name" =>
 "Template Name",
 
+'last_edit' =>
+"Last Edit:",
+
 "template_management" =>
 "Template Management",
 

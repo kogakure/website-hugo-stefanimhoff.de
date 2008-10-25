@@ -36,6 +36,7 @@ class Upload {
     var $max_size		= 0;
     var $max_width		= 0;
     var $max_height		= 0;
+	var $max_filename	= 0;
     var $remove_spaces	= 1;
     var $allowed_types	= "img";  // img or all
     var $file_temp		= "";
@@ -173,9 +174,15 @@ class Upload {
             $this->file_name = preg_replace("/\s+/", "_", $this->file_name);
         }
         
+        // sanitize file name
         $this->file_name = $FNS->filename_security($this->file_name);
-        
-        
+ 
+		// Truncate the file name if it's too long
+		if ($this->max_filename > 0)
+		{
+			$this->file_name = $this->limit_filename_length($this->file_name, $this->max_filename);
+		}
+       
         /** -------------------------------------
         /**  Does file already exist?
         /** -------------------------------------*/
@@ -189,8 +196,14 @@ class Upload {
         if ($this->new_name != '')
         {
         	$this->new_name = $FNS->filename_security($this->new_name);
-        	
-        	if (sizeof(explode('.', $this->new_name)) == 1 OR (array_pop(explode('.', $this->file_name)) != array_pop(explode('.', $this->new_name))))
+   
+			// Truncate the file name if it's too long
+			if ($this->max_filename > 0)
+			{
+				$this->new_name = $this->limit_filename_length($this->new_name, $this->max_filename);
+			}
+   
+        	if (sizeof(explode('.', $this->new_name)) == 1 OR (array_pop(explode('.', strtolower($this->file_name))) != array_pop(explode('.', $this->new_name))))
         	{
         		$this->error_msg = 'invalid_filetype';
 			
@@ -398,6 +411,15 @@ class Upload {
     }
     /* END */
 
+	
+    /** -------------------------------------
+    /**  Set maximum file name length
+    /** -------------------------------------*/
+	function set_max_filename($n)
+	{
+		$this->max_filename = ((int) $n < 0) ? 0: (int) $n;
+	}
+    /* END */
 
     /** -------------------------------------
     /**  Set maximum width
@@ -600,17 +622,50 @@ class Upload {
 			return FALSE;
 		}
 		
-		/*
-		 * Allocate a bit more memory for the XSS Cleaning check as for large images it
-		 * has a habit of using it up rather quickly, alas.
-		 */
+		// Allocate a bit more memory for the XSS Cleaning check as for large images it
+		// has a habit of using it up rather quickly, alas.
 		
 		if (function_exists('memory_get_usage') && memory_get_usage() && ini_get('memory_limit') != '')
 		{
 			$current = ini_get('memory_limit') * 1024 * 1024;
-			ini_set('memory_limit', ceil(filesize($this->new_name) + $current)); // When an integer is used, the value is measured in bytes. - PHP.net
+
+			// There was a bug/behavioural change in PHP 5.2, where numbers over one million get output
+			// into scientific notation.  number_format() ensures this number is an integer
+			// http://bugs.php.net/bug.php?id=43053
+			
+			$new_memory = number_format(ceil(filesize($this->new_name) + $current), 0, '.', '');
+			
+			ini_set('memory_limit', $new_memory); // When an integer is used, the value is measured in bytes. - PHP.net
         }
-		
+
+		// If the file being uploaded is an image, then we should have no problem with XSS attacks (in theory), but
+		// IE can be fooled into mime-type detecting a malformed image as an html file, thus executing an XSS attack on anyone
+		// using IE who looks at the image.  It does this by inspecting the first 255 bytes of an image.  To get around this
+		// EE will itself look at the first 255 bytes of an image to determine its relative safety.  This can save a lot of
+		// processor power and time if it is actually a clean image, as it will be in nearly all instances _except_ an 
+		// attempted XSS attack.
+
+		if (function_exists('getimagesize') && @getimagesize($this->new_name) !== FALSE)
+		{
+
+	        if (($file = @fopen($this->new_name, 'rb')) === FALSE) // "b" to force binary
+	        {
+				return FALSE; // Couldn't open the file, return FALSE
+	        }
+
+	        $opening_bytes = fread($file, 256);
+	        fclose($file);
+
+			// These are known to throw IE into mime-type detection chaos
+			// <a, <body, <head, <html, <img, <plaintext, <pre, <script, <table, <title
+			// title is basically just in SVG, but we filter it anyhow
+
+			if ( ! preg_match('/<(a|body|head|html|img|plaintext|pre|script|table|title)[\s>]/i', $opening_bytes))
+			{
+				return TRUE; // its an image, no "triggers" detected in the first 256 bytes, we're good
+			}
+		}
+
 		if (($data = @file_get_contents($this->new_name)) === FALSE)
 		{
 			return FALSE;
@@ -618,10 +673,8 @@ class Upload {
 		
 		return $REGX->xss_clean($data, TRUE);
 		
-		/** -------------------------------------
-		/**  Old Code, No Longer Used.  If the XSS Clean (Image) check fails, we simply kill the file 
-		/**  instead of saving the modified contents, which still has the "naughty" file on the server.
-		/** -------------------------------------*/
+		//  Old Code, No Longer Used.  If the XSS Clean (Image) check fails, we simply kill the file 
+		//  instead of saving the modified contents, which still has the "naughty" file on the server.
 		
 		if ( ! $fp = @fopen($this->new_name, 'r+b'))
 		{

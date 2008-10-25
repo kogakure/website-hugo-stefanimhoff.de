@@ -191,12 +191,33 @@ function taginsert(item, tagOpen, tagClose, type)
 			result = tagOpen + data + tagClose;		
 		}
 	}
-
-	// Is this a Windows user?  
 	
-	// If so, add tags around selection
+	// one branch for Firefox/Safari/Opera, another for IE
+	if (window.getSelection && (theSelection = window.getSelection()) != false)
+	{
+		theSelection = window.getSelection();
 
-	if (document.selection) 
+		var selLength = theField.textLength;
+		var selStart = theField.selectionStart;
+		var selEnd = theField.selectionEnd;
+		if (selEnd <= 2 && typeof(selLength) != 'undefined')
+			selEnd = selLength;
+
+		var s1 = (theField.value).substring(0,selStart);
+		var s2 = (theField.value).substring(selStart, selEnd)
+		var s3 = (theField.value).substring(selEnd, selLength);
+
+		s2 = (result == false) ? tagOpen + theSelection + tagClose : result;
+		
+		theSelection = '';
+	
+		theField.value = s1+s2+s3;
+		theField.blur();
+		theField.focus();
+		
+		return;
+	}
+	else if (document.selection) 
 	{
 		theSelection = document.selection.createRange().text;
 		

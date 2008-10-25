@@ -383,7 +383,7 @@ EOT;
 			$url = ($url == '') ? $val : $url;
 
 			$div = ($page == $key) ? 'altTabSelected' : 'altTabs';
-			$linko = '<div class="'.$div.'" id="'.$key.'"  onClick="navjump(\''.$url.'\');" onmouseover="styleswitch(\''.$key.'\');" onmouseout="stylereset(\''.$key.'\');">'.$title.'</div>';
+			$linko = '<div class="'.$div.'" id="'.$key.'"  onclick="navjump(\''.$url.'\');" onmouseover="styleswitch(\''.$key.'\');" onmouseout="stylereset(\''.$key.'\');">'.$title.'</div>';
 			
 			$nav[] = array('text' => $DSP->anchor($url, $linko));
 		}
@@ -945,7 +945,7 @@ EOT;
 		$loc_entry_date = $LOC->set_human_time($entry_date);
 		$cal_entry_date = ($LOC->set_localized_time($entry_date) * 1000);
 		
-		$cal_img = '<a href="javascript:void(0);" onClick="showhide_item(\'calendarentry_date\');"><img src="'.PATH_CP_IMG.'calendar.gif" border="0"  width="16" height="16" alt="'.$LANG->line('calendar').'" /></a>';
+		$cal_img = '<a href="javascript:void(0);" onclick="showhide_item(\'calendarentry_date\');"><img src="'.PATH_CP_IMG.'calendar.gif" border="0"  width="16" height="16" alt="'.$LANG->line('calendar').'" /></a>';
 		
 		/** --------------------------------
 		/**  JavaScript Calendar
@@ -1288,13 +1288,13 @@ EOT;
 						
 		$loc = BASE.AMP.'C=modules'.AMP.'M=gallery'.AMP.'P=batch_entries'.AMP.'gallery_id='.$this->gallery_id.AMP.'filter_by=';		
 
-		$fltr  = "<select class='select' onchange='window.open(this.options[this.selectedIndex].value, \"_top\");' >\n";
+		$fltr  = "<select class='select' name='filter_by' onchange='window.open(\"".$loc."\"+this.options[this.selectedIndex].value, \"_top\");' >\n";
 		
-		$fltr .= $DSP->input_select_option($loc,		$LANG->line('gallery_filter_title'), ($filter_by === FALSE) ? 1 : 0);
-		$fltr .= $DSP->input_select_option($loc.'0', $LANG->line('gallery_filter_any'),   ($filter_by == '0') ? 1 : 0);
-		$fltr .= $DSP->input_select_option($loc.'1', $LANG->line('gallery_filter_today'), ($filter_by == 1) ? 1 : 0);
-		$fltr .= $DSP->input_select_option($loc.'7', $LANG->line('gallery_filter_week'),  ($filter_by == 7) ? 1 : 0);		
-		$fltr .= $DSP->input_select_option($loc.'30',$LANG->line('gallery_filter_month'), ($filter_by == 30) ? 1 : 0);		
+		$fltr .= $DSP->input_select_option('',	$LANG->line('gallery_filter_title'), ($filter_by === FALSE) ? 1 : 0);
+		$fltr .= $DSP->input_select_option('0', $LANG->line('gallery_filter_any'),   ($filter_by == '0') ? 1 : 0);
+		$fltr .= $DSP->input_select_option('1', $LANG->line('gallery_filter_today'), ($filter_by == 1) ? 1 : 0);
+		$fltr .= $DSP->input_select_option('7', $LANG->line('gallery_filter_week'),  ($filter_by == 7) ? 1 : 0);		
+		$fltr .= $DSP->input_select_option('30',$LANG->line('gallery_filter_month'), ($filter_by == 30) ? 1 : 0);		
 		$fltr .= $DSP->input_select_footer();
 		
 		/** ------------------------------------
@@ -1783,7 +1783,6 @@ EOT;
         if ($serverfile == FALSE)
         {	
 			require PATH_CORE.'core.upload'.EXT;
-			
 			$UP = new Upload();
 							
 			if ($UP->set_upload_path($upload_path) !== TRUE)
@@ -1803,7 +1802,10 @@ EOT;
 			$image_name = $UP->file_name;
 			
 			if ($UP->file_exists == TRUE)
-			{        
+			{ 
+				// Truncate the file name if needed
+				$image_name = $UP->limit_filename_length($image_name, 100);
+
 				$image_name = $this->rename_file($UP->upload_path, $UP->file_name);
 				  
 				if ( ! $UP->file_overwrite($UP->file_name, $image_name))
@@ -1829,6 +1831,12 @@ EOT;
 			
 			// filename security and whitespace removal
 			$image_name = preg_replace("/\s+/", "_", $FNS->filename_security($image_name));
+
+			require PATH_CORE.'core.upload'.EXT;
+			$UP = new Upload();
+			
+			// Truncate the file name if needed
+			$image_name = $UP->limit_filename_length($image_name, 100);
 			
 			$src = $src.$serverfile;
 			$dst	 = $upload_path.$image_name;
@@ -2072,7 +2080,7 @@ EOT;
 			$allow_c = ( ! isset($_POST['allow_comments'])) ? 'n' : 'y';
 			$apply_w = ( ! isset($_POST['apply_watermark'])) ? 'n' : 'y';
 			
-			$loc = BASE.AMP.'C=modules'.AMP.'M=gallery'.AMP.'P=batch_entries'.AMP.'gallery_id='.$this->gallery_id.AMP.'row='.$row.AMP.'action=insert'.AMP.'deft_cat='.$_POST['cat_id'].AMP.'status='.$_POST['status'].AMP.'allow_comments='.$allow_c.AMP.'apply_watermark='.$apply_w;
+			$loc = BASE.AMP.'C=modules'.AMP.'M=gallery'.AMP.'P=batch_entries'.AMP.'gallery_id='.$this->gallery_id.AMP.'row='.$row.AMP.'action=insert'.AMP.'deft_cat='.$_POST['cat_id'].AMP.'status='.$_POST['status'].AMP.'allow_comments='.$allow_c.AMP.'apply_watermark='.$apply_w.AMP.'filter_by='.$_POST['filter_by'];
      	}
      	else
      	{
@@ -5092,7 +5100,7 @@ EOT;
 		// Show/hide link
 
         $DSP->right_crumb($LANG->line('show_hide'), '', 'onclick="showhide_chunk();return false;"');
-		$DSP->body_props = " onLoad=\"switch_wm_type();" . (($gallery_wm_use_font == 'y') ? '' : "showhide_tablerow('wm_font_size_cell1','wm_font_size_cell2');") ."\"";
+		$DSP->body_props = " onload=\"switch_wm_type();" . (($gallery_wm_use_font == 'y') ? '' : "showhide_tablerow('wm_font_size_cell1','wm_font_size_cell2');") ."\"";
 
 
 		
@@ -5109,8 +5117,8 @@ EOT;
 											'id'			=> 'custom_fields1',
 											'colspan'		=> 4,
 											'onclick'		=> 'showhide_pref("gallery_custom_field_prefs");return false;',
-											'onMouseover'	=> 'navTabOn("custom_fields1", "tableHeadingAlt", "tableHeadingAltHover");',
-											'onMouseout'	=> 'navTabOff("custom_fields1", "tableHeadingAlt", "tableHeadingAltHover");'
+											'onmouseover'	=> 'navTabOn("custom_fields1", "tableHeadingAlt", "tableHeadingAltHover");',
+											'onmouseout'	=> 'navTabOff("custom_fields1", "tableHeadingAlt", "tableHeadingAltHover");'
 										)
 									)
 							);
@@ -5127,8 +5135,8 @@ EOT;
 											'id'			=> 'custom_fields2',
 											'colspan'		=> 4,
 											'onclick'		=> 'showhide_pref("gallery_custom_field_prefs");return false;',
-											'onMouseover'	=> 'navTabOn("custom_fields2", "tableHeadingAlt", "tableHeadingAltHover");',
-											'onMouseout'	=> 'navTabOff("custom_fields2", "tableHeadingAlt", "tableHeadingAltHover");'
+											'onmouseover'	=> 'navTabOn("custom_fields2", "tableHeadingAlt", "tableHeadingAltHover");',
+											'onmouseout'	=> 'navTabOff("custom_fields2", "tableHeadingAlt", "tableHeadingAltHover");'
 										)
 									)
 							);
@@ -5218,7 +5226,7 @@ EOT;
 										)
 								);
 	
-			$type = '<select name="gallery_cf_'.$cfval.'_type" class="select" onChange="customFieldType(\'cf_'.$cfval.'\', this.options[this.selectedIndex].value);">';
+			$type = '<select name="gallery_cf_'.$cfval.'_type" class="select" onchange="customFieldType(\'cf_'.$cfval.'\', this.options[this.selectedIndex].value);">';
 			$type .= $DSP->input_select_option('i', $LANG->line('input'), (($$field_type == 'i') ? 1 : 0));
 			$type .= $DSP->input_select_option('t', $LANG->line('textarea'), (($$field_type == 't') ? 1 : 0));
 			$type .= $DSP->input_select_option('s', $LANG->line('select'), (($$field_type == 's') ? 1 : 0));
@@ -5282,8 +5290,8 @@ EOT;
 											'id'			=> 'gallery_watermark_prefs1',
 											'colspan'		=> 4,
 											'onclick'		=> 'showhide_pref("gallery_watermark_prefs");return false;',
-											'onMouseover'	=> 'navTabOn("gallery_watermark_prefs1", "tableHeadingAlt", "tableHeadingAltHover");',
-											'onMouseout'	=> 'navTabOff("gallery_watermark_prefs1", "tableHeadingAlt", "tableHeadingAltHover");'
+											'onmouseover'	=> 'navTabOn("gallery_watermark_prefs1", "tableHeadingAlt", "tableHeadingAltHover");',
+											'onmouseout'	=> 'navTabOff("gallery_watermark_prefs1", "tableHeadingAlt", "tableHeadingAltHover");'
 										)
 									)
 							);
@@ -5302,8 +5310,8 @@ EOT;
 											'id'			=> 'gallery_watermark_prefs2',
 											'colspan'		=> 4,
 											'onclick'		=> 'showhide_pref("gallery_watermark_prefs");return false;',
-											'onMouseover'	=> 'navTabOn("gallery_watermark_prefs2", "tableHeadingAlt", "tableHeadingAltHover");',
-											'onMouseout'	=> 'navTabOff("gallery_watermark_prefs2", "tableHeadingAlt", "tableHeadingAltHover");'
+											'onmouseover'	=> 'navTabOn("gallery_watermark_prefs2", "tableHeadingAlt", "tableHeadingAltHover");',
+											'onmouseout'	=> 'navTabOff("gallery_watermark_prefs2", "tableHeadingAlt", "tableHeadingAltHover");'
 										)
 									)
 							);
@@ -5317,17 +5325,17 @@ EOT;
 											'width'		=> '25%'
 										),
 									array(
-											'text'		=> $DSP->qdiv('galleryPrefHeading', $DSP->input_radio('gallery_wm_type', 'n', ($gallery_wm_type == 'n') ? 1 : '', 'onClick="switch_wm_type();"').NBS.$DSP->qspan('defaultBold', $LANG->line('none'))),
+											'text'		=> $DSP->qdiv('galleryPrefHeading', $DSP->input_radio('gallery_wm_type', 'n', ($gallery_wm_type == 'n') ? 1 : '', 'onclick="switch_wm_type();"').NBS.$DSP->qspan('defaultBold', $LANG->line('none'))),
 											'class'		=> $style,
 											'width'		=> '25%'
 										),
 									array(
-											'text'		=> $DSP->qdiv('galleryPrefHeading', $DSP->input_radio('gallery_wm_type', 't', ($gallery_wm_type == 't') ? 1 : '', 'onClick="switch_wm_type();"').NBS.$DSP->qspan('defaultBold', $LANG->line('text'))),
+											'text'		=> $DSP->qdiv('galleryPrefHeading', $DSP->input_radio('gallery_wm_type', 't', ($gallery_wm_type == 't') ? 1 : '', 'onclick="switch_wm_type();"').NBS.$DSP->qspan('defaultBold', $LANG->line('text'))),
 											'class'		=> $style,
 											'width'		=> '25%'
 										),
 									array(
-											'text'		=> $DSP->qdiv('galleryPrefHeading', $DSP->input_radio('gallery_wm_type', 'g', ($gallery_wm_type == 'g') ? 1 : '', 'onClick="switch_wm_type();"').NBS.$DSP->qspan('defaultBold', $LANG->line('graphic'))),
+											'text'		=> $DSP->qdiv('galleryPrefHeading', $DSP->input_radio('gallery_wm_type', 'g', ($gallery_wm_type == 'g') ? 1 : '', 'onclick="switch_wm_type();"').NBS.$DSP->qspan('defaultBold', $LANG->line('graphic'))),
 											'class'		=> $style,
 											'width'		=> '25%'
 										)
@@ -5861,8 +5869,8 @@ EOT;
 												'id'			=> $m_key.'1',
 												'colspan'		=> 2,
 												'onclick'		=> 'showhide_pref("'.$m_key.'");return false;',
-												'onMouseover'	=> 'navTabOn("'.$m_key.'1", "tableHeadingAlt", "tableHeadingAltHover");',
-												'onMouseout'	=> 'navTabOff("'.$m_key.'1", "tableHeadingAlt", "tableHeadingAltHover");'
+												'onmouseover'	=> 'navTabOn("'.$m_key.'1", "tableHeadingAlt", "tableHeadingAltHover");',
+												'onmouseout'	=> 'navTabOff("'.$m_key.'1", "tableHeadingAlt", "tableHeadingAltHover");'
 											)
 										)
 								);
@@ -5881,8 +5889,8 @@ EOT;
 												'id'			=> $m_key.'2',
 												'colspan'		=> 2,
 												'onclick'		=> 'showhide_pref("'.$m_key.'");return false;',
-												'onMouseover'	=> 'navTabOn("'.$m_key.'2", "tableHeadingAlt", "tableHeadingAltHover");',
-												'onMouseout'	=> 'navTabOff("'.$m_key.'2", "tableHeadingAlt", "tableHeadingAltHover");'
+												'onmouseover'	=> 'navTabOn("'.$m_key.'2", "tableHeadingAlt", "tableHeadingAltHover");',
+												'onmouseout'	=> 'navTabOff("'.$m_key.'2", "tableHeadingAlt", "tableHeadingAltHover");'
 											)
 										)
 								);
@@ -6035,7 +6043,7 @@ EOT;
 				$DSP->body .= $DSP->tr();
 			}
 		
-			$DSP->body .= "<td style='background-color:".$val.";width:24px;border:1px solid #333;' border='0' onmouseover=\"this.style.cursor='pointer'\" onClick=\"colorchange('".$val."');\">&nbsp;<br />&nbsp;</td>";
+			$DSP->body .= "<td style='background-color:".$val.";width:24px;border:1px solid #333;' border='0' onmouseover=\"this.style.cursor='pointer'\" onclick=\"colorchange('".$val."');\">&nbsp;<br />&nbsp;</td>";
 		
 			$i++;
 			
@@ -6604,27 +6612,27 @@ EOT;
 				
 			<fieldset class='galleryTools' id="image_cropping" name="image_cropping">
 								
-			<legend class="highlight"><input type="checkbox" name="enable_cropping" value="y" onClick="enableCropping();" /> <?php echo $LANG->line('gallery_enable_cropping');?></legend>
+			<legend class="highlight"><input type="checkbox" name="enable_cropping" value="y" onclick="enableCropping();" /> <?php echo $LANG->line('gallery_enable_cropping');?></legend>
 			
 			<table cellpadding="3" cellspacing="3" border="0">
 			 <tr>
 				<td valign="top">
 					<?php echo $LANG->line('gallery_width'); ?><br />
-					<input type="text" class="galleryToolsInputOff" name="crop_width" value="<?php echo $scaled_width; ?>" id="thumbwidth" size="6" maxlength="4" onBlur="if(window.dd && dd.elements) dd.elements.overtop.resizeTo(document.forms[0].crop_width.value, document.forms[0].crop_height.value);return false;" disabled /> 
+					<input type="text" class="galleryToolsInputOff" name="crop_width" value="<?php echo $scaled_width; ?>" id="thumbwidth" size="6" maxlength="4" onblur="if(window.dd && dd.elements) dd.elements.overtop.resizeTo(document.forms[0].crop_width.value, document.forms[0].crop_height.value);return false;" disabled /> 
 				</td>
 				<td>
 					<?php echo $LANG->line('gallery_height'); ?><br />
-					<input type="text" class="galleryToolsInputOff" name="crop_height" id="thumbheight" value="<?php echo $scaled_height; ?>" size="6"  onBlur="if(window.dd && dd.elements) dd.elements.overtop.resizeTo(document.forms[0].crop_width.value, document.forms[0].crop_height.value);return false;" disabled />
+					<input type="text" class="galleryToolsInputOff" name="crop_height" id="thumbheight" value="<?php echo $scaled_height; ?>" size="6"  onblur="if(window.dd && dd.elements) dd.elements.overtop.resizeTo(document.forms[0].crop_width.value, document.forms[0].crop_height.value);return false;" disabled />
 				</td>
 			 </tr>
 			<tr>
 				<td>
 					<?php echo $LANG->line('gallery_top'); ?><br />
-					<input type="text" class="galleryToolsInputOff" name="top" value="10" id="thumbtop" size="6" maxlength="4" onBlur="setCoordinants(document.forms[0].top.value, document.forms[0].left.value);return false;" disabled /> 
+					<input type="text" class="galleryToolsInputOff" name="top" value="10" id="thumbtop" size="6" maxlength="4" onblur="setCoordinants(document.forms[0].top.value, document.forms[0].left.value);return false;" disabled /> 
 				</td>
 				<td>
 					<?php echo $LANG->line('gallery_left'); ?><br />
-					<input type="text" class="galleryToolsInputOff" name="left" id="thumbleft" value="10" size="6" maxlength="4" onBlur="setCoordinants(document.forms[0].top.value, document.forms[0].left.value);return false;" disabled />
+					<input type="text" class="galleryToolsInputOff" name="left" id="thumbleft" value="10" size="6" maxlength="4" onblur="setCoordinants(document.forms[0].top.value, document.forms[0].left.value);return false;" disabled />
 				</td>
 			 </tr>
 			</table>
@@ -6632,10 +6640,10 @@ EOT;
 			<div class="itemWrapper">
 			<div class="itemWrapper"><div class="leftPad"><?php echo $LANG->line('gallery_43_aspect_ratio');?></div></div>
 			<div class="leftPad">
-			<input type="checkbox" name="constrain_4" onClick="constrain4();" checked="checked" disabled /> 4:3&nbsp;
-			<input type="checkbox" name="constrain_3" onClick="constrain3();" disabled /> 3:2 &nbsp;
-			<input type="checkbox" name="constrain_1" onClick="constrain1();" disabled /> 1:1 &nbsp;
-			<input type="checkbox" name="constrain_0" onClick="constrain0();" disabled /> <?php echo $LANG->line('gallery_none'); ?>
+			<input type="checkbox" name="constrain_4" onclick="constrain4();" checked="checked" disabled /> 4:3&nbsp;
+			<input type="checkbox" name="constrain_3" onclick="constrain3();" disabled /> 3:2 &nbsp;
+			<input type="checkbox" name="constrain_1" onclick="constrain1();" disabled /> 1:1 &nbsp;
+			<input type="checkbox" name="constrain_0" onclick="constrain0();" disabled /> <?php echo $LANG->line('gallery_none'); ?>
 			</div>
 			</div>
 			</fieldset>
@@ -6645,22 +6653,22 @@ EOT;
 			
 			<fieldset class='galleryTools' id="image_resizing" name="image_resizing">
 								
-			<legend class="highlight"><input type="checkbox" name="enable_resizing" value="y" onClick="enableResizing();" /> <?php echo $LANG->line('gallery_enable_resizing');?></legend>
+			<legend class="highlight"><input type="checkbox" name="enable_resizing" value="y" onclick="enableResizing();" /> <?php echo $LANG->line('gallery_enable_resizing');?></legend>
 	
 			<table cellpadding="3" cellspacing="3" border="0">
 			 <tr>
 				<td>
 					<?php echo $LANG->line('gallery_resize_width'); ?><br />
-					<input type="text"  class="galleryToolsInputOff" name="resize_width" id="resize_width" value="<?php echo $IM->src_width; ?>" size="6" maxlength="4" onchange="change_resize_value(this.form, 'w', this.name);" onBlur="if(window.dd && dd.elements) dd.elements.picture.resizeTo(document.forms[0].resize_width.value, document.forms[0].resize_height.value);dd.elements.imagebg.resizeTo(dd.elements.imagebg.defw, dd.elements.picture.h+10);return false;" disabled /> 
+					<input type="text"  class="galleryToolsInputOff" name="resize_width" id="resize_width" value="<?php echo $IM->src_width; ?>" size="6" maxlength="4" onchange="change_resize_value(this.form, 'w', this.name);" onblur="if(window.dd && dd.elements) dd.elements.picture.resizeTo(document.forms[0].resize_width.value, document.forms[0].resize_height.value);dd.elements.imagebg.resizeTo(dd.elements.imagebg.defw, dd.elements.picture.h+10);return false;" disabled /> 
 				</td>
 				<td>
 					<?php echo $LANG->line('gallery_resize_height'); ?><br />
-					<input type="text"  class="galleryToolsInputOff" name="resize_height" id="resize_height"  value="<?php echo $IM->src_height; ?>" size="6" maxlength="4" onchange="change_resize_value(this.form, 'h', this.name);"  onBlur="if(window.dd && dd.elements) dd.elements.picture.resizeTo(document.forms[0].resize_width.value, document.forms[0].resize_height.value);dd.elements.imagebg.resizeTo(dd.elements.imagebg.defw, dd.elements.picture.h+10);return false;" disabled />
+					<input type="text"  class="galleryToolsInputOff" name="resize_height" id="resize_height"  value="<?php echo $IM->src_height; ?>" size="6" maxlength="4" onchange="change_resize_value(this.form, 'h', this.name);"  onblur="if(window.dd && dd.elements) dd.elements.picture.resizeTo(document.forms[0].resize_width.value, document.forms[0].resize_height.value);dd.elements.imagebg.resizeTo(dd.elements.imagebg.defw, dd.elements.picture.h+10);return false;" disabled />
 				</td>
 			 </tr>
 			</table>
 			
-			<div class="itemWrapper"><input type="checkbox"  name="constrain" value="y" onClick="constrainResize(this.value);" checked="checked" disabled /> <?php echo $LANG->line('gallery_constrain');?></div>
+			<div class="itemWrapper"><input type="checkbox"  name="constrain" value="y" onclick="constrainResize(this.value);" checked="checked" disabled /> <?php echo $LANG->line('gallery_constrain');?></div>
 			
 			</fieldset>
 		
@@ -6669,7 +6677,7 @@ EOT;
 		
 			<fieldset class='galleryTools' id="image_rotating" name="image_rotating">
 								
-			<legend class="highlight"><input type="checkbox" name="enable_rotation" value="y" onClick="enableRotation();" /> <?php echo $LANG->line('gallery_enable_rotation');?></legend>
+			<legend class="highlight"><input type="checkbox" name="enable_rotation" value="y" onclick="enableRotation();" /> <?php echo $LANG->line('gallery_enable_rotation');?></legend>
 	
 			<table cellpadding="3" cellspacing="3" border="0">
 			 <tr>

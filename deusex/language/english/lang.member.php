@@ -725,7 +725,7 @@ content associated with your account will also be deleted.',
 "Email Recipient:",
 
 "mbr_email_not_accepted" =>
-"This member does not currenty accept email.",
+"This member does not currently accept email.",
 
 "mbr_missing_fields" =>
 "All fields are required",

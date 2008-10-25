@@ -457,14 +457,14 @@ class PM_Import {
         	$menu_m1 = 'block';
         }
         
-		$js = ' onclick="showhide_step(\'member\');return false;" onMouseover="navTabOn(\'sto\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onMouseout="navTabOff(\'sto\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';
+		$js = ' onclick="showhide_step(\'member\');return false;" onmouseover="navTabOn(\'sto\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onmouseout="navTabOff(\'sto\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';
 		$r .= '<div id="member_on" style="display: '.$menu_m1.'; padding:0; margin: 0;">';
 		$r .= "<div class='tableHeadingAlt' id='sto' ".$js.">";
 		$r .= $expand.NBS.NBS.$LANG->line('step_one').NBS.'-'.NBS.$LANG->line('import_members');		
         $r .= $DSP->div_c();
         $r .= $DSP->div_c();
 
-		$js = ' onclick="showhide_step(\'member\');return false;" onMouseover="navTabOn(\'stc\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onMouseout="navTabOff(\'stc\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';         
+		$js = ' onclick="showhide_step(\'member\');return false;" onmouseover="navTabOn(\'stc\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onmouseout="navTabOff(\'stc\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';         
 		$r .= '<div id="member_off" style="display: '.$menu_m2.'; padding:0; margin: 0;">';
 		$r .= "<div class='tableHeadingAlt' id='stc' ".$js.">";
 		$r .= $collapse.NBS.NBS.$LANG->line('step_one').NBS.'-'.NBS.$LANG->line('import_members');		
@@ -534,14 +534,14 @@ class PM_Import {
 				$menu_m1 = 'block';
 			}
         
-			$js = ' onclick="showhide_step(\'forum\');return false;" onMouseover="navTabOn(\'fmo\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onMouseout="navTabOff(\'fmo\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';
+			$js = ' onclick="showhide_step(\'forum\');return false;" onmouseover="navTabOn(\'fmo\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onmouseout="navTabOff(\'fmo\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';
 			$r .= '<div id="forum_on" style="display: '.$menu_m1.'; padding:0; margin: 0;">';
 			$r .= "<div class='tableHeadingAlt' id='fmo' ".$js.">";
 			$r .= $expand.NBS.NBS.$LANG->line('step_two').NBS.'-'.NBS.$LANG->line('import_forum_posts');		
 			$r .= $DSP->div_c();
 			$r .= $DSP->div_c();
 	
-			$js = ' onclick="showhide_step(\'forum\');return false;" onMouseover="navTabOn(\'fmc\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onMouseout="navTabOff(\'fmc\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';         
+			$js = ' onclick="showhide_step(\'forum\');return false;" onmouseover="navTabOn(\'fmc\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onmouseout="navTabOff(\'fmc\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';         
 			$r .= '<div id="forum_off" style="display: '.$menu_m2.'; padding:0; margin: 0;">';
 			$r .= "<div class='tableHeadingAlt' id='fmc' ".$js.">";
 			$r .= $collapse.NBS.NBS.$LANG->line('step_two').NBS.'-'.NBS.$LANG->line('import_forum_posts');		
@@ -639,14 +639,14 @@ class PM_Import {
 
 		$step = ($this->forum_exists === FALSE) ? $LANG->line('step_two') : $LANG->line('step_three');
         
-		$js = ' onclick="showhide_step(\'weblog\');return false;" onMouseover="navTabOn(\'wbo\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onMouseout="navTabOff(\'wbo\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';
+		$js = ' onclick="showhide_step(\'weblog\');return false;" onmouseover="navTabOn(\'wbo\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onmouseout="navTabOff(\'wbo\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';
 		$r .= '<div id="weblog_on" style="display: '.$menu_m1.'; padding:0; margin: 0;">';
 		$r .= "<div class='tableHeadingAlt' id='wbo' ".$js.">";
 		$r .= $expand.NBS.NBS.$step.NBS.'-'.NBS.$LANG->line('import_weblog_entries');		
         $r .= $DSP->div_c();
         $r .= $DSP->div_c();
 
-		$js = ' onclick="showhide_step(\'weblog\');return false;" onMouseover="navTabOn(\'wbc\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onMouseout="navTabOff(\'wbc\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';         
+		$js = ' onclick="showhide_step(\'weblog\');return false;" onmouseover="navTabOn(\'wbc\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onmouseout="navTabOff(\'wbc\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';         
 		$r .= '<div id="weblog_off" style="display: '.$menu_m2.'; padding:0; margin: 0;">';
 		$r .= "<div class='tableHeadingAlt' id='wbc' ".$js.">";
 		$r .= $collapse.NBS.NBS.$step.NBS.'-'.NBS.$LANG->line('import_weblog_entries');		
@@ -741,14 +741,14 @@ class PM_Import {
         
 		$step = ($this->forum_exists === FALSE) ? $LANG->line('step_three') : $LANG->line('step_four');
         
-		$js = ' onclick="showhide_step(\'mail\');return false;" onMouseover="navTabOn(\'mlo\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onMouseout="navTabOff(\'mlo\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';
+		$js = ' onclick="showhide_step(\'mail\');return false;" onmouseover="navTabOn(\'mlo\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onmouseout="navTabOff(\'mlo\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';
 		$r .= '<div id="mail_on" style="display: '.$menu_m1.'; padding:0; margin: 0;">';
 		$r .= "<div class='tableHeadingAlt' id='mlo' ".$js.">";
 		$r .= $expand.NBS.NBS.$step.NBS.'-'.NBS.$LANG->line('import_mailinglist');		
         $r .= $DSP->div_c();
         $r .= $DSP->div_c();
 
-		$js = ' onclick="showhide_step(\'mail\');return false;" onMouseover="navTabOn(\'mlc\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onMouseout="navTabOff(\'mlc\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';         
+		$js = ' onclick="showhide_step(\'mail\');return false;" onmouseover="navTabOn(\'mlc\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onmouseout="navTabOff(\'mlc\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';         
 		$r .= '<div id="mail_off" style="display: '.$menu_m2.'; padding:0; margin: 0;">';
 		$r .= "<div class='tableHeadingAlt' id='mlc' ".$js.">";
 		$r .= $collapse.NBS.NBS.$step.NBS.'-'.NBS.$LANG->line('import_mailinglist');		
@@ -811,14 +811,14 @@ class PM_Import {
         
 		$step = ($this->forum_exists === FALSE) ? $LANG->line('step_four') : $LANG->line('step_five');
 
-		$js = ' onclick="showhide_step(\'rec\');return false;" onMouseover="navTabOn(\'rco\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onMouseout="navTabOff(\'rco\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';
+		$js = ' onclick="showhide_step(\'rec\');return false;" onmouseover="navTabOn(\'rco\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onmouseout="navTabOff(\'rco\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';
 		$r .= '<div id="rec_on" style="display: block; padding:0; margin: 0;">';
 		$r .= "<div class='tableHeadingAlt' id='rco' ".$js.">";
 		$r .= $expand.NBS.NBS.$step.NBS.'-'.NBS.$LANG->line('recalculate_statistics');		
         $r .= $DSP->div_c();
         $r .= $DSP->div_c();
 
-		$js = ' onclick="showhide_step(\'rec\');return false;" onMouseover="navTabOn(\'rcc\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onMouseout="navTabOff(\'rcc\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';         
+		$js = ' onclick="showhide_step(\'rec\');return false;" onmouseover="navTabOn(\'rcc\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onmouseout="navTabOff(\'rcc\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';         
 		$r .= '<div id="rec_off" style="display: none; padding:0; margin: 0;">';
 		$r .= "<div class='tableHeadingAlt' id='rcc' ".$js.">";
 		$r .= $collapse.NBS.NBS.$step.NBS.'-'.NBS.$LANG->line('recalculate_statistics');		
@@ -837,14 +837,14 @@ class PM_Import {
         
 		$step = ($this->forum_exists === FALSE) ? $LANG->line('step_five') : $LANG->line('step_six');
 
-		$js = ' onclick="showhide_step(\'clear\');return false;" onMouseover="navTabOn(\'clo\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onMouseout="navTabOff(\'clc\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';
+		$js = ' onclick="showhide_step(\'clear\');return false;" onmouseover="navTabOn(\'clo\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onmouseout="navTabOff(\'clc\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';
 		$r .= '<div id="clear_on" style="display: block; padding:0; margin: 0;">';
 		$r .= "<div class='tableHeadingAlt' id='clo' ".$js.">";
 		$r .= $expand.NBS.NBS.$step.NBS.'-'.NBS.$LANG->line('clear_preferences');		
         $r .= $DSP->div_c();
         $r .= $DSP->div_c();
 
-		$js = ' onclick="showhide_step(\'clear\');return false;" onMouseover="navTabOn(\'clc\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onMouseout="navTabOff(\'clc\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';         
+		$js = ' onclick="showhide_step(\'clear\');return false;" onmouseover="navTabOn(\'clc\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" onmouseout="navTabOff(\'clc\', \'tableHeadingAlt\', \'tableHeadingAltHover\');" ';         
 		$r .= '<div id="clear_off" style="display: none; padding:0; margin: 0;">';
 		$r .= "<div class='tableHeadingAlt' id='clc' ".$js.">";
 		$r .= $collapse.NBS.NBS.$step.NBS.'-'.NBS.$LANG->line('clear_preferences');		
@@ -1108,7 +1108,7 @@ EOT;
             $line = str_replace("%x", $from, $line);
             $line = str_replace("%y", $to, $line);
        
-            $link = "<a href='".BASE.AMP.'C=admin'.AMP.'M=utilities'.AMP.'P=pm_import'.AMP.'F=import_mailinglist'.AMP.'id=1'."'  onClick='standby();'><b>".$line."</b></a>";
+            $link = "<a href='".BASE.AMP.'C=admin'.AMP.'M=utilities'.AMP.'P=pm_import'.AMP.'F=import_mailinglist'.AMP.'id=1'."'  onclick='standby();'><b>".$line."</b></a>";
             $r .= $DSP->qdiv('itemWrapperTop', $DSP->heading($link, 5)); 
 			$r .= $DSP->div_c();
             
@@ -1521,7 +1521,7 @@ EOT;
             $line = str_replace("%x", $from, $line);
             $line = str_replace("%y", $to, $line);
             
-            $link = "<a href='".BASE.AMP.'C=admin'.AMP.'M=utilities'.AMP.'P=pm_import'.AMP.'F=import_members'.AMP.'id=1'."'  onClick='standby();'><b>".$line."</b></a>";
+            $link = "<a href='".BASE.AMP.'C=admin'.AMP.'M=utilities'.AMP.'P=pm_import'.AMP.'F=import_members'.AMP.'id=1'."'  onclick='standby();'><b>".$line."</b></a>";
             
             $r .= $DSP->qdiv('itemWrapperTop', $DSP->heading($link, 5)); 
 			$r .= $DSP->div_c();
@@ -2192,6 +2192,7 @@ EOT;
 						$row[$key] = preg_replace("/%%dir\[\d+\]%%/", $upload_id, $row[$key]);
                     
                         $cust_fields[$val] = $row[$key];
+						$cust_fields[str_replace('field_id', 'field_ft', $val)] = 'xhtml';
                     }
                 }
 
@@ -2423,7 +2424,7 @@ EOT;
             $line = str_replace("%x", $from, $line);
             $line = str_replace("%y", $to, $line);
             
-            $link = "<a href='".BASE.AMP.'C=admin'.AMP.'M=utilities'.AMP.'P=pm_import'.AMP.'F=import_weblog'.AMP.'id='.$weblog.AMP.'z=1'."'  onClick='standby();'><b>".$line."</b></a>";
+            $link = "<a href='".BASE.AMP.'C=admin'.AMP.'M=utilities'.AMP.'P=pm_import'.AMP.'F=import_weblog'.AMP.'id='.$weblog.AMP.'z=1'."'  onclick='standby();'><b>".$line."</b></a>";
 
             $r .= $DSP->qdiv('itemWrapperTop', $DSP->heading($link, 5)); 
 			$r .= $DSP->div_c();
@@ -2635,7 +2636,7 @@ EOT;
 		
 		$r .= '<div id="batchlink" style="display: block; padding:0; margin:0;">';
 		 
-		$link = "<a href='".BASE.AMP.'C=admin'.AMP.'M=utilities'.AMP.'P=pm_import'.AMP.'F=import_forum'.AMP.'id='.$weblog.AMP.'z=1'."'  onClick='standby();'><b>".$line."</b></a>";
+		$link = "<a href='".BASE.AMP.'C=admin'.AMP.'M=utilities'.AMP.'P=pm_import'.AMP.'F=import_forum'.AMP.'id='.$weblog.AMP.'z=1'."'  onclick='standby();'><b>".$line."</b></a>";
 		
 		$r .= $DSP->qdiv('itemWrapperTop', $DSP->heading($link, 5)); 
 		$r .= $DSP->div_c();

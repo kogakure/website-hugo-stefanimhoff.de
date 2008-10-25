@@ -287,7 +287,7 @@ class Members {
               $DSP->table_qcell('tableHeadingAlt', $LANG->line('join_date')).
               $DSP->table_qcell('tableHeadingAlt', $LANG->line('last_visit')).
               $DSP->table_qcell('tableHeadingAlt', $LANG->line('member_group')).
-              $DSP->table_qcell('tableHeadingAlt', $DSP->input_checkbox('toggleflag', '', '', "onclick=\"toggle(this);\"").NBS.$LANG->line('delete')).
+              $DSP->table_qcell('tableHeadingAlt', $DSP->input_checkbox('toggleflag', '', '', "onclick=\"toggle(this);\"")).
               $DSP->tr_c();
                 
         // Loop through the query result and write each table row 
@@ -1048,6 +1048,37 @@ class Members {
 			
 			$DB->query("DELETE FROM exp_forum_posts  WHERE ".$IDS); 
 			$DB->query("DELETE FROM exp_forum_polls  WHERE ".$IDS); 
+
+			// Kill any attachments
+			$query = $DB->query("SELECT attachment_id, filehash, extension, board_id FROM exp_forum_attachments WHERE ".$IDS);
+			
+			if ($query->num_rows > 0)
+			{
+				// Grab the upload path
+				$res = $DB->query('SELECT board_id, board_upload_path FROM exp_forum_boards');
+			
+				$paths = array();
+				foreach ($res->result as $row)
+				{
+					$paths[$row['board_id']] = $row['board_upload_path'];
+				}
+			
+				foreach ($query->result as $row)
+				{
+					if ( ! isset($paths[$row['board_id']]))
+					{
+						continue;
+					}
+					
+					$file  = $paths[$row['board_id']].$row['filehash'].$row['extension'];
+					$thumb = $paths[$row['board_id']].$row['filehash'].'_t'.$row['extension'];
+				
+					@unlink($file);
+					@unlink($thumb);					
+			
+					$DB->query("DELETE FROM exp_forum_attachments WHERE attachment_id = '{$row['attachment_id']}'");
+				}				
+			}		
 			
 			// Update the forum stats			
 			$query = $DB->query("SELECT forum_id FROM exp_forums WHERE forum_is_cat = 'n'");
@@ -1557,87 +1588,112 @@ class Members {
         /**  Fetch the names and IDs of all weblogs
         /** ----------------------------------------------------*/
         
-        $query = $DB->query("SELECT weblog_id, site_id, blog_title FROM exp_weblogs WHERE is_user_blog = 'n' ORDER BY blog_title");
-        
-        $res   = $DB->query("SELECT weblog_id FROM exp_weblog_member_groups WHERE group_id = '".$DB->escape_str($group_id)."' ");
-
         $blog_names = array();
         $blog_ids   = array();
+
+        $query = $DB->query("SELECT weblog_id, site_id, blog_title FROM exp_weblogs WHERE is_user_blog = 'n' ORDER BY blog_title");
         
-        if ($res->num_rows > 0)
-        {
-            foreach ($res->result as $row)
-            {
-                $blog_ids[$row['weblog_id']] = TRUE;
-            }
+        if ($id == 1)
+        {        
+        	foreach($query->result as $row)
+        	{
+        	    $blog_names['weblog_id_'.$row['weblog_id']] = $row['blog_title'];
+        	    $group_data[$row['site_id']]['weblog_id_'.$row['weblog_id']] = 'y';            
+        	}
         }
-                                
-        foreach($query->result as $row)
+        else
         {
-            $status = (isset($blog_ids[$row['weblog_id']])) ? 'y' : 'n';
+        	$res   = $DB->query("SELECT weblog_id FROM exp_weblog_member_groups WHERE group_id = '".$DB->escape_str($id)."' ");
         
-            $blog_names['weblog_id_'.$row['weblog_id']] = $row['blog_title'];
-        
-            $group_data[$row['site_id']]['weblog_id_'.$row['weblog_id']] = $status;            
+        	if ($res->num_rows > 0)
+        	{
+        	    foreach ($res->result as $row)
+        	    {
+        	        $blog_ids[$row['weblog_id']] = TRUE;
+        	    }
+        	}
+                                
+        	foreach($query->result as $row)
+        	{
+        	    $status = (isset($blog_ids[$row['weblog_id']])) ? 'y' : 'n';
+        	    $blog_names['weblog_id_'.$row['weblog_id']] = $row['blog_title'];
+        	    $group_data[$row['site_id']]['weblog_id_'.$row['weblog_id']] = $status;            
+        	}
         }
         
         /** ----------------------------------------------------
         /**  Fetch the names and IDs of all modules
         /** ----------------------------------------------------*/
         
-        $query = $DB->query("SELECT module_id, module_name FROM exp_modules WHERE has_cp_backend = 'y' ORDER BY module_name");
-        
-        $res   = $DB->query("SELECT module_id FROM exp_module_member_groups WHERE group_id = '".$DB->escape_str($group_id)."' ");
-
         $module_names = array();
         $module_ids   = array();
 
-        if ($res->num_rows > 0)
+        $query = $DB->query("SELECT module_id, module_name FROM exp_modules WHERE has_cp_backend = 'y' ORDER BY module_name");
+        
+        if ($id == 1)
         {
-            foreach ($res->result as $row)
-            {
-                $module_ids[$row['module_id']] = TRUE;
-            }
+    	    foreach($query->result as $row)
+    	    {
+    	        $module_names['module_id_'.$row['module_id']] = $row['module_name'];
+    	        $group_data['module_id_'.$row['module_id']] = 'y';            
+    	    }
         }
+        else
+        {
+        	$res   = $DB->query("SELECT module_id FROM exp_module_member_groups WHERE group_id = '".$DB->escape_str($id)."' ");
+
+	        if ($res->num_rows > 0)
+    	    {
+    	        foreach ($res->result as $row)
+    	        {
+    	            $module_ids[$row['module_id']] = TRUE;
+    	        }
+    	    }
                         
-        foreach($query->result as $row)
-        {
-            $status = (isset($module_ids[$row['module_id']])) ? 'y' : 'n';
-                
-            $module_names['module_id_'.$row['module_id']] = $row['module_name'];
-        
-            $group_data['module_id_'.$row['module_id']] = $status;            
+    	    foreach($query->result as $row)
+    	    {
+    	        $status = (isset($module_ids[$row['module_id']])) ? 'y' : 'n';
+    	        $module_names['module_id_'.$row['module_id']] = $row['module_name'];
+    	        $group_data['module_id_'.$row['module_id']] = $status;            
+    	    }
         }
-        
         
         /** ----------------------------------------------------
         /**  Fetch the names and IDs of all template groups
         /** ----------------------------------------------------*/
         
-        $query = $DB->query("SELECT group_id, group_name, site_id FROM exp_template_groups WHERE is_user_blog = 'n' ORDER BY group_name");
-        
-        $res   = $DB->query("SELECT template_group_id FROM exp_template_member_groups WHERE group_id = '".$DB->escape_str($group_id)."' ");
-
         $template_names = array();
         $template_ids   = array();
+        
+        $query = $DB->query("SELECT group_id, group_name, site_id FROM exp_template_groups WHERE is_user_blog = 'n' ORDER BY group_name");
+        
+        if ($id == 1)
+        {
+	        foreach($query->result as $row)
+	        {
+	            $template_names['template_id_'.$row['group_id']] = $row['group_name'];
+	            $group_data[$row['site_id']]['template_id_'.$row['group_id']] = 'y';            
+	        }
+        }
+        else
+        {
+	        $res   = $DB->query("SELECT template_group_id FROM exp_template_member_groups WHERE group_id = '".$DB->escape_str($id)."' ");
 
-        if ($res->num_rows > 0)
-        {
-            foreach ($res->result as $row)
-            {
-                $template_ids[$row['template_group_id']] = TRUE;
-            }
-        }
+	        if ($res->num_rows > 0)
+	        {
+	            foreach ($res->result as $row)
+	            {
+	                $template_ids[$row['template_group_id']] = TRUE;
+	            }
+	        }
                         
-        foreach($query->result as $row)
-        {
-            $status = (isset($template_ids[$row['group_id']])) ? 'y' : 'n';
-                
-            $template_names['template_id_'.$row['group_id']] = $row['group_name'];
-        
-            $group_data[$row['site_id']]['template_id_'.$row['group_id']] = $status;            
-        }
-        
+	        foreach($query->result as $row)
+	        {
+	            $status = (isset($template_ids[$row['group_id']])) ? 'y' : 'n';
+	            $template_names['template_id_'.$row['group_id']] = $row['group_name'];
+	            $group_data[$row['site_id']]['template_id_'.$row['group_id']] = $status;            
+	        }
+    	}
         
         /** ----------------------------------------------------
         /**  Assign clusters of member groups
@@ -2460,7 +2516,7 @@ class Members {
         	$DB->query("UPDATE exp_members SET group_id = '{$new_group}' WHERE group_id = '{$group_id}'");
         }
 
-        $DB->query("DELETE FROM exp_member_groups WHERE site_id = '".$DB->escape_str($PREFS->ini('site_id'))."' AND group_id = '{$group_id}'");
+        $DB->query("DELETE FROM exp_member_groups WHERE group_id = '{$group_id}'");
         
         return $this->member_group_manager($DSP->qdiv('success', $LANG->line('member_group_deleted')));
     }    
@@ -2481,7 +2537,7 @@ class Members {
             return $DSP->no_access_message();
         }
         
-        $DSP->body_props = " onLoad=\"document.forms[0].username.focus();\"";
+        $DSP->body_props = " onload=\"document.forms[0].username.focus();\"";
         
         $title = $LANG->line('register_member');
         
@@ -2648,7 +2704,7 @@ class Members {
 									 	'enable_log'		=> TRUE,
 										'username'			=> $_POST['username'],
 										'cur_username'		=> '',
-										'screen_name'		=> $_POST['screen_name'],
+										'screen_name'		=> stripslashes($_POST['screen_name']),
 										'cur_screen_name'	=> '',
 										'password'			=> $_POST['password'],
 									 	'password_confirm'	=> $_POST['password_confirm'],
@@ -3185,7 +3241,7 @@ EOT;
         /**  Create the pull-down menu
         /** ---------------------------------*/
 
-        $typemenu = "<select name='m_field_type' class='select' onChange='showhide_element(this.options[this.selectedIndex].value);' >".NL;
+        $typemenu = "<select name='m_field_type' class='select' onchange='showhide_element(this.options[this.selectedIndex].value);' >".NL;
 		$typemenu .= $DSP->input_select_option('text', 		$LANG->line('text_input'),	$sel_1)
 					.$DSP->input_select_option('textarea', 	$LANG->line('textarea'),  	$sel_2)
 					.$DSP->input_select_option('select', 	$LANG->line('select_list'), $sel_3)
@@ -3927,7 +3983,7 @@ EOT;
               $DSP->table_qcell('tableHeadingAlt', $LANG->line('ip_address')).
               $DSP->table_qcell('tableHeadingAlt', $LANG->line('join_date')).
               $DSP->table_qcell('tableHeadingAlt', $LANG->line('member_group')).
-              $DSP->table_qcell('tableHeadingAlt', $DSP->input_checkbox('toggleflag', '', '', "onclick=\"toggle(this);\"").NBS.$LANG->line('delete')).
+              $DSP->table_qcell('tableHeadingAlt', $DSP->input_checkbox('toggleflag', '', '', "onclick=\"toggle(this);\"")).
               $DSP->tr_c();
         
                
@@ -4972,7 +5028,7 @@ EOT;
 												$LANG->line('from'), 
 												$LANG->line('to'), 
 												$LANG->line('date'),
-												$DSP->input_checkbox('toggleflag', '', '', "onclick=\"toggle(this);\"").NBS.$LANG->line('delete').NBS.NBS
+												$DSP->input_checkbox('toggleflag', '', '', "onclick=\"toggle(this);\"").NBS.NBS
 											  )
 											).
               $DSP->tr_c();

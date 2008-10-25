@@ -27,6 +27,7 @@ if ( ! defined('EXT'))
 
 class Localize {
   
+  var $server_now			= '';  // Local server time
   var $now 					= '';  // Local server time as GMT  
   var $ctz 					=  0;  // Current user's timezone setting
   var $zones				= array();
@@ -51,9 +52,10 @@ class Localize {
     // Fetch the current local server time and convert it to GMT
 
     function Localize()
-    {    
-        $this->now		= $this->set_gmt(); 
-        $this->zones	= $this->zones();
+    {
+		$this->server_now 	= time();
+        $this->now			= $this->set_gmt($this->server_now); 
+        $this->zones		= $this->zones();
     }
     /* END */
     
@@ -72,12 +74,12 @@ class Localize {
         }
             
         $time =  mktime( gmdate("H", $now),
-                         gmdate("i", $now),
-                         gmdate("s", $now),
-                         gmdate("m", $now),
-                         gmdate("d", $now),
-                         gmdate("Y", $now),
-                         -1	// this must be explicitly set or some FreeBSD servers behave erratically
+						 gmdate("i", $now),
+						 gmdate("s", $now),
+						 gmdate("m", $now),
+						 gmdate("d", $now),
+						 gmdate("Y", $now),
+						 -1	// this must be explicitly set or some FreeBSD servers behave erratically
                        );   
 
         // mktime() has a bug that causes it to fail during the DST "spring forward gap"
@@ -285,7 +287,7 @@ class Localize {
                 
         // Grab local time
         
-        $time = time();
+        $time = $this->server_now;
         
         // Determine the number of seconds between the local time and GMT
         
@@ -390,8 +392,8 @@ class Localize {
             $datestr = trim($datestr);
             
             $datestr = preg_replace("/\040+/", "\040", $datestr);
-
-            if ( ! ereg("^[0-9]{2,4}\-[0-9]{1,2}\-[0-9]{1,2}\040[0-9]{1,2}:[0-9]{1,2}.*$", $datestr))
+			
+			if ( ! preg_match('/^[0-9]{2,4}\-[0-9]{1,2}\-[0-9]{1,2}\s[0-9]{1,2}:[0-9]{1,2}(?::[0-9]{1,2})?(?:\s[AP]M)?$/i', $datestr))
             {
                 return $LANG->line('invalid_date_formatting');
             }
@@ -409,6 +411,9 @@ class Localize {
             $hour = (strlen($ex['0']) == 1) ? '0'.$ex['0'] : $ex['0'];
             $min  = (strlen($ex['1']) == 1) ? '0'.$ex['1'] : $ex['1'];
 
+			// I'll explain later
+			$fib_seconds = FALSE;
+			
             if (isset($ex['2']) AND ereg("[0-9]{1,2}", $ex['2']))
             {
                 $sec  = (strlen($ex['2']) == 1) ? '0'.$ex['2'] : $ex['2'];
@@ -419,7 +424,16 @@ class Localize {
 				// $sec = '00'; 
 				// The above doesn't make sense to me, and can cause entries submitted within the same
 				// minute to have identical timestamps, so I'm reverting to an older behavior - D'Jones
-				$sec = date('s');				
+				// *********************************************************************************************
+				// I now see what Paul was initially avoiding.  So, here's the dealio and how we'll address it:
+				// Since the seconds were not specified, we're going to fib and roll back one second, otherwise
+				// the submitted entry will be considered to not be < $LOC->now and will not be displayed on
+				// the page request that creates it, a common scenario when submitting entries via a SAEF.
+				// So we'll set a flag, and adjust the time by one second after the timestamp is generated.
+				// If we do it here, we'd have to step backwards through minutes and hours and days etc. to
+				// check if each needs to roll back, for dates like January 1, 1990 12:00:00
+				$sec = date('s', $this->now);
+				$fib_seconds = TRUE;
             }
             
             if (isset($split['2']))
@@ -442,7 +456,13 @@ class Localize {
         }
                 
         $time = $this->set_gmt(mktime($hour, $min, $sec, $month, $day, $year));
-
+		
+		// Are we fibbing?
+		if ($fib_seconds === TRUE)
+		{
+			$time = $time - 1;
+		}
+		
         // Offset the time by one hour if the user is submitting a date
         // in the future or past so that it is no longer in the same
         // Daylight saving time.
@@ -684,20 +704,20 @@ class Localize {
     function localize_month($month = '')
     {    
         $months = array(
-                            '01' => array('Jan', 'January'),
-                            '02' => array('Feb', 'February'),
-                            '03' => array('Mar', 'March'),
-                            '04' => array('Apr', 'April'),
-                            '05' => array('May', 'May_l'),
-                            '06' => array('Jun', 'June'),
-                            '07' => array('Jul', 'July'),
-                            '08' => array('Aug', 'August'),
-                            '09' => array('Sep', 'September'),
-                            '10' => array('Oct', 'October'),
-                            '11' => array('Nov', 'November'),
-                            '12' => array('Dec', 'December')
-                        );
-                        
+						    '01' => array('Jan', 'January'),
+						    '02' => array('Feb', 'February'),
+						    '03' => array('Mar', 'March'),
+						    '04' => array('Apr', 'April'),
+						    '05' => array('May', 'May_l'),
+						    '06' => array('Jun', 'June'),
+						    '07' => array('Jul', 'July'),
+						    '08' => array('Aug', 'August'),
+						    '09' => array('Sep', 'September'),
+						    '10' => array('Oct', 'October'),
+						    '11' => array('Nov', 'November'),
+						    '12' => array('Dec', 'December')
+						);
+						
         if (isset($months[$month]))
         {
             return $months[$month];
@@ -885,38 +905,48 @@ class Localize {
         // Note: Don't change the order of these even though 
         // some items appear to be in the wrong order
             
-        return array( 
-                        'UM12' => -12,
-                        'UM11' => -11,
-                        'UM10' => -10,
-                        'UM9'  => -9,
-                        'UM8'  => -8,
-                        'UM7'  => -7,
-                        'UM6'  => -6,
-                        'UM5'  => -5,
-                        'UM4'  => -4,
-                        'UM25' => -2.5,
-                        'UM3'  => -3,
-                        'UM2'  => -2,
-                        'UM1'  => -1,
-                        'UTC'  => 0,
-                        'UP1'  => +1,
-                        'UP2'  => +2,
-                        'UP3'  => +3,
-                        'UP25' => +2.5,
-                        'UP4'  => +4,
-                        'UP35' => +3.5,
-                        'UP5'  => +5,
-                        'UP45' => +4.5,
-                        'UP6'  => +6,
-                        'UP7'  => +7,
-                        'UP8'  => +8,
-                        'UP9'  => +9,
-                        'UP85' => +8.5,
-                        'UP10' => +10,
-                        'UP11' => +11,
-                        'UP12' => +12                    
-                     );
+		return array( 
+					'UM12'		=> -12,
+					'UM11'		=> -11,
+					'UM10'		=> -10,
+					'UM95'		=> -9.5,
+					'UM9'		=> -9,
+					'UM8'		=> -8,
+					'UM7'		=> -7,
+					'UM6'		=> -6,
+					'UM5'		=> -5,
+					'UM45'		=> -4.5,
+					'UM4'		=> -4,
+					'UM35'		=> -3.5,
+					'UM3'		=> -3,
+					'UM2'		=> -2,
+					'UM1'		=> -1,
+					'UTC'		=> 0,
+					'UP1'		=> +1,
+					'UP2'		=> +2,
+					'UP3'		=> +3,
+					'UP35'		=> +3.5,
+					'UP4'		=> +4,
+					'UP45'		=> +4.5,
+					'UP5'		=> +5,
+					'UP55'		=> +5.5,
+					'UP575'		=> +5.75,
+					'UP6'		=> +6,
+					'UP65'		=> +6.5,
+					'UP7'		=> +7,
+					'UP8'		=> +8,
+					'UP875'		=> +8.75,
+					'UP9'		=> +9,
+					'UP95'		=> +9.5,
+					'UP10'		=> +10,
+					'UP105'		=> +10.5,
+					'UP11'		=> +11,
+					'UP115'		=> +11.5,
+					'UP12'		=> +12,
+					'UP1275'	=> +12.75,
+					'UP13'		=> +13,
+					'UP14'		=> +14
+			);
     }
     /* END */
 
@@ -930,37 +960,47 @@ class Localize {
     {
         global $PREFS, $SESS;
         
-        $zones = array( 
-                        'UM12' => array('MHT',	'MHT'),
-                        'UM11' => array('AKST', 'AKDT'),
-                        'UM10' => array('HAW',	'HAW'),
-                        'UM9'  => array('ALA',	'ALA'),
-                        'UM8'  => array('PST',	'PDT'),
-                        'UM7'  => array('MST', 	'MDT'),
-                        'UM6'  => array('CST', 	'CDT'),
-                        'UM5'  => array('EST', 	'EDT'),
-                        'UM4'  => array('AST', 	'ADT'),
-                        'UM25' => array('NST', 	'NDT'),
-                        'UM3'  => array('ADT', 	'ADT'),
-                        'UM2'  => array('MAST', 'MAST'),
-                        'UM1'  => array('AZOT', 'AZOT'),
-                        'UTC'  => array('GMT', 	'GMT'),
-                        'UP1'  => array('MET', 	'MET'),
-                        'UP2'  => array('EET', 	'EET'),
-                        'UP3'  => array('BT', 	'BT'),
-                        'UP25' => array('IRT', 	'IRT'),
-                        'UP4'  => array('ZP4', 	'ZP4'),
-                        'UP35' => array('AFT', 	'AFT'),
-                        'UP5'  => array('ZP5', 	'ZP5'),
-                        'UP45' => array('IST', 	'IDT'),
-                        'UP6'  => array('ZP6', 	'ZP6'),
-                        'UP7'  => array('WAST', 'WADT'),
-                        'UP8'  => array('CCT', 	'CCT'),
-                        'UP9'  => array('JST', 	'JDT'),
-                        'UP85' => array('CST', 	'CDT'),
-                        'UP10' => array('EAST', 'EAST'),
-                        'UP11' => array('MAGT', 'MAGT'),
-                        'UP12' => array('IDLE', 'IDLE')        
+        $zones = array(
+						'UM12'	=> array('',	''),
+						'UM11'	=> array('SST',	'SST'),
+						'UM10'	=> array('HST',	'HST'),
+						'UM95'	=> array('MART','MART'),
+						'UM9'	=> array('AKST','AKDT'),					
+						'UM8'	=> array('PST',	'PDT'),
+						'UM7'	=> array('MST',	'MDT'),
+						'UM6'	=> array('CST',	'CDT'),
+						'UM5'	=> array('EST',	'EDT'),
+						'UM45'	=> array('VET',	'VET'),
+						'UM4'	=> array('AST',	'ADT'),
+						'UM35'	=> array('NST',	'NDT'),
+						'UM3'	=> array('ADT',	'ADT'),
+						'UM2'	=> array('MAST','MAST'),
+						'UM1'	=> array('AZOT','AZOT'),
+						'UTC'	=> array('GMT',	'GMT'),
+						'UP1'	=> array('MET',	'MET'),
+						'UP2'	=> array('EET',	'EET'),
+						'UP3'	=> array('BT', 	'BT'),
+						'UP35'	=> array('IRT',	'IRT'),
+						'UP4'	=> array('ZP4',	'ZP4'),
+						'UP45'	=> array('AFT',	'AFT'),
+						'UP5'	=> array('ZP5',	'ZP5'),
+						'UP55'	=> array('IST',	'IDT'),
+						'UP575'	=> array('NPT',	'NPT'),
+						'UP6'	=> array('ZP6',	'ZP6'),
+						'UP65'	=> array('BURT','BURT'),
+						'UP7'	=> array('WAST','WADT'),
+						'UP8'	=> array('WST','WDT'),
+						'UP875'	=> array('CWST','CWDT'),
+						'UP9'	=> array('JST',	'JDT'),
+						'UP95'	=> array('CST',	'CDT'),
+						'UP10'	=> array('AEST','AEDT'),
+						'UP105'	=> array('LHST','LHST'),
+						'UP11'	=> array('MAGT','MAGT'),
+						'UP115'	=> array('NFT',	'NFT'),
+						'UP12'	=> array('NZST','NZDT'),
+						'UP1275'=> array('CHAST','CHAST'),
+						'UP13'	=> array('PHOT','PHOT'),
+						'UP14'	=> array('LINT','LINT')
                      ); 
     
         

@@ -690,7 +690,7 @@ EOT;
 
 			// duplicating preferences?
 			if ($dupe_id !== FALSE AND is_numeric($dupe_id))
-			{			
+			{
 				$wquery = $DB->query("SELECT * FROM exp_weblogs WHERE weblog_id = '".$DB->escape_str($dupe_id)."'");
 
 				if ($wquery->num_rows == 1)
@@ -736,6 +736,27 @@ EOT;
 									break;
 								case 'deft_category':
 									if (! isset($_POST['cat_group']) OR count(array_diff(explode('|', $_POST['cat_group']), explode('|', $wquery->row['cat_group']))) == 0)
+									{
+										$_POST[$key] = $val;
+									}
+									break;
+								case 'blog_url':
+								case 'comment_url':
+								case 'search_results_url':
+								case 'tb_return_url':
+								case 'ping_return_url':
+								case 'rss_url':
+									if ($create_templates != 'no')
+									{
+										if ( ! isset($old_group_name))
+										{
+											$gquery = $DB->query("SELECT group_name FROM exp_template_groups WHERE group_id = '".$DB->escape_str($old_group_id)."'");
+											$old_group_name = $gquery->row['group_name'];
+										}
+										
+										$_POST[$key] = str_replace("/{$old_group_name}/", "/{$group_name}/", $val);
+									}
+									else
 									{
 										$_POST[$key] = $val;
 									}
@@ -855,7 +876,8 @@ EOT;
 				
 							$temp = preg_replace("#assign_variable:master_weblog_name=\".+?\"#", 'assign_variable:master_weblog_name="'.$_POST['blog_name'].'"', $temp);
 							$temp = preg_replace("#assign_variable:master_weblog_name=\'.+?\'#", "assign_variable:master_weblog_name='".$_POST['blog_name']."'", $temp);
-				
+							$temp = preg_replace('#assign_variable:my_template_group=(\042|\047)([^\\1]*?)\\1#', "assign_variable:my_template_group=\\1{$group_name}\\1", $temp);
+							
 							$temp = preg_replace("#".$old_group_name."/(.+?)#", $group_name."/\\1", $temp);
 				
 							$data = array(
@@ -3330,7 +3352,7 @@ function showHideMenu(objValue)
         /**  Create the pull-down menu
         /** ---------------------------------*/
 
-        $typemenu = "<select name='field_type' class='select' onChange='showhide_element(this.options[this.selectedIndex].value);' >".NL;
+        $typemenu = "<select name='field_type' class='select' onchange='showhide_element(this.options[this.selectedIndex].value);' >".NL;
 		$typemenu .= $DSP->input_select_option('text', 		$LANG->line('text_input'),	$sel_1)
 					.$DSP->input_select_option('textarea', 	$LANG->line('textarea'),  	$sel_2)
 					.$DSP->input_select_option('select', 	$LANG->line('select_list'), $sel_3);
@@ -3432,7 +3454,7 @@ function showHideMenu(objValue)
 
 
 		if ($field_name != '')
-        	$typemenu = "<select name='field_default_fmt' class='select' onChange='format_update_block(this.options[this.selectedIndex].value, \"".$field_default_fmt."\");' >".NL;
+        	$typemenu = "<select name='field_default_fmt' class='select' onchange='format_update_block(this.options[this.selectedIndex].value, \"".$field_default_fmt."\");' >".NL;
 		else
 			$typemenu  = $DSP->input_select_header('field_default_fmt');
 
@@ -4674,7 +4696,7 @@ function showHideMenu(objValue)
         if ($IN->GBL('Z') == 1)
         {
 			$url = BASE.AMP.'C=admin'.AMP.'M=blog_admin'.AMP.'P=edit_category'.AMP.'group_id='.$group_id.$zurl;
-			$js = ' onClick="navjump(\''.$url.'\');"  onMouseover="navCrumbOn();" onMouseout="navCrumbOff();" ';
+			$js = ' onclick="navjump(\''.$url.'\');"  onmouseover="navCrumbOn();" onmouseout="navCrumbOff();" ';
 			$r .= $DSP->anchor($url, '<div class="crumblinksR" style="width:300px;margin-left:auto;" id="rcrumb" '.$js.'>'.$DSP->qdiv('itemWrapper', $LANG->line('new_category')).'</div>');        
 		}
         
@@ -5161,15 +5183,6 @@ function showHideMenu(objValue)
 
 			var separator = "{$word_separator}";
 
-			if (separator != "_")
-			{
-				NewText = NewText.replace(/\_/g, separator);
-			}
-			else
-			{
-				NewText = NewText.replace(/\-/g, separator);
-			}
-
 			// Foreign Character Attempt
 
 			var NewTextTemp = '';
@@ -5187,19 +5200,16 @@ function showHideMenu(objValue)
 				}
 			}
 
+			var multiReg = new RegExp(separator + '{2,}', 'g');
+			
 			NewText = NewTextTemp;
-
+			
 			NewText = NewText.replace('/<(.*?)>/g', '');
-			NewText = NewText.replace('/\&#\d+\;/g', '');
-			NewText = NewText.replace('/\&\#\d+?\;/g', '');
-			NewText = NewText.replace('/\&\S+?\;/g','');
-			NewText = NewText.replace(/['\"\?\.\!*\$\#@%;:,=\(\)\[\]]/g,'');
 			NewText = NewText.replace(/\s+/g, separator);
 			NewText = NewText.replace(/\//g, separator);
-			NewText = NewText.replace(/[^a-z0-9-_]/g,'');
+			NewText = NewText.replace(/[^a-z0-9\-\._]/g,'');
 			NewText = NewText.replace(/\+/g, separator);
-			NewText = NewText.replace(/[-_]+/g, separator);
-			NewText = NewText.replace(/\&/g,'');
+			NewText = NewText.replace(multiReg, separator);
 			NewText = NewText.replace(/-$/g,'');
 			NewText = NewText.replace(/_$/g,'');
 			NewText = NewText.replace(/^_/g,'');
@@ -7642,6 +7652,7 @@ SCRIPPITYDOO;
         $r .= $DSP->form_open(array('action' => 'C=admin'.AMP.'M=blog_admin'.AMP.'P=update_weblog_fields', 'name' => 'field_form'));
         $r .= $DSP->input_hidden('group_id', $group_id);
         $r .= $DSP->input_hidden('field_id', $field_id);
+		$r .= $DSP->input_hidden('site_id', $PREFS->ini('site_id'));
         
         $title = ($type == 'edit') ? 'edit_field' : 'create_new_custom_field';
                 
@@ -7716,7 +7727,7 @@ SCRIPPITYDOO;
         /**  Create the pull-down menu
         /** ---------------------------------*/
 
-        $typemenu = "<select name='field_type' class='select' onChange='showhide_element(this.options[this.selectedIndex].value);' >".NL;
+        $typemenu = "<select name='field_type' class='select' onchange='showhide_element(this.options[this.selectedIndex].value);' >".NL;
 		$typemenu .= $DSP->input_select_option('text', 		$LANG->line('text_input'),	$sel_1)
 					.$DSP->input_select_option('textarea', 	$LANG->line('textarea'),  	$sel_2)
 					.$DSP->input_select_option('select', 	$LANG->line('select_list'), $sel_3)
@@ -7745,8 +7756,8 @@ SCRIPPITYDOO;
 			$field_pre_populate = 'n';
 					
 		$typemenu .= '<div id="pre_populate" style="display: '.$select_opt_js.'; padding:0; margin:5px 0 0 0;">';		
-		$typemenu .= $DSP->qdiv('default',$DSP->input_radio('field_pre_populate', 'n', ($field_pre_populate == 'n') ? 1 : 0, " onClick=\"pre_populate('n');\"").' '.$LANG->line('field_populate_manually'));
-		$typemenu .= $DSP->qdiv('default',$DSP->input_radio('field_pre_populate', 'y', ($field_pre_populate == 'y') ? 1 : 0, " onClick=\"pre_populate('y');\"").' '.$LANG->line('field_populate_from_blog'));
+		$typemenu .= $DSP->qdiv('default',$DSP->input_radio('field_pre_populate', 'n', ($field_pre_populate == 'n') ? 1 : 0, " onclick=\"pre_populate('n');\"").' '.$LANG->line('field_populate_manually'));
+		$typemenu .= $DSP->qdiv('default',$DSP->input_radio('field_pre_populate', 'y', ($field_pre_populate == 'y') ? 1 : 0, " onclick=\"pre_populate('y');\"").' '.$LANG->line('field_populate_from_blog'));
 		$typemenu .= $DSP->div_c();
 		
         /** ---------------------------------
@@ -7757,8 +7768,8 @@ SCRIPPITYDOO;
 			$field_related_to = 'blog';
 		
 		$typemenu .= '<div id="relationship_type" style="display: '.$rel_type_js.'; padding:0; margin:5px 0 0 0;">';		
-		$typemenu .= $DSP->qdiv('default',$DSP->input_radio('field_related_to', 'blog', ($field_related_to == 'blog') ? 1 : 0, " onClick=\"relationship_type('blog');\"").' '.$LANG->line('related_to_blog'));
-		$typemenu .= $DSP->qdiv('default',$DSP->input_radio('field_related_to', 'gallery', ($field_related_to == 'gallery') ? 1 : 0, " onClick=\"relationship_type('gallery');\"").' '.$LANG->line('related_to_gallery'));
+		$typemenu .= $DSP->qdiv('default',$DSP->input_radio('field_related_to', 'blog', ($field_related_to == 'blog') ? 1 : 0, " onclick=\"relationship_type('blog');\"").' '.$LANG->line('related_to_blog'));
+		$typemenu .= $DSP->qdiv('default',$DSP->input_radio('field_related_to', 'gallery', ($field_related_to == 'gallery') ? 1 : 0, " onclick=\"relationship_type('gallery');\"").' '.$LANG->line('related_to_gallery'));
 		$typemenu .= $DSP->div_c();
 		
 		
@@ -7802,7 +7813,7 @@ SCRIPPITYDOO;
 
 		// Create the drop-down menu		
 		$typopts .= $DSP->qdiv('itemWrapper', $DSP->qdiv('defaultBold', $LANG->line('select_weblog_for_field')));
-        $typopts .= "<select name='field_pre_populate_id' class='select' onChange='validate(this.options[this.selectedIndex].value);' >".NL;
+        $typopts .= "<select name='field_pre_populate_id' class='select' onchange='validate(this.options[this.selectedIndex].value);' >".NL;
 		
 		foreach ($query->result as $row)
 		{
@@ -8006,7 +8017,7 @@ SCRIPPITYDOO;
 
 
 		if ($field_id != '')
-        	$typemenu = "<select name='field_fmt' class='select' onChange='format_update_block(this.options[this.selectedIndex].value, \"".$field_fmt."\");' >".NL;
+        	$typemenu = "<select name='field_fmt' class='select' onchange='format_update_block(this.options[this.selectedIndex].value, \"".$field_fmt."\");' >".NL;
 		else
 			$typemenu  = $DSP->input_select_header('field_fmt');
 							
@@ -8234,11 +8245,18 @@ SCRIPPITYDOO;
         {
         	return FALSE;
         }
-                
+				
         // Check for required fields
 
         $error = array();
         
+		// little check in case they switched sites in MSM after leaving a window open.
+		// otherwise the landing page will be extremely confusing
+		if ( ! isset($_POST['site_id']) OR $_POST['site_id'] != $PREFS->ini('site_id'))
+		{
+			$error[] = $LANG->line('site_id_mismatch');
+		}
+		
         if ($_POST['field_name'] == '')
         {
             $error[] = $LANG->line('no_field_name');
@@ -8387,23 +8405,20 @@ SCRIPPITYDOO;
 				{
 					case 'date'	:
 						$DB->query("ALTER TABLE exp_weblog_data CHANGE COLUMN field_id_".$DB->escape_str($_POST['field_id'])." field_id_".$DB->escape_str($_POST['field_id'])." int(10) NOT NULL");		
-						$DB->query("ALTER table exp_weblog_data CHANGE COLUMN field_ft_".$DB->escape_str($_POST['field_id'])." field_ft_".$DB->escape_str($_POST['field_id'])." varchar(40) NOT NULL default 'none'");
+						$DB->query("ALTER table exp_weblog_data CHANGE COLUMN field_ft_".$DB->escape_str($_POST['field_id'])." field_ft_".$DB->escape_str($_POST['field_id'])." tinytext NULL");
 						$DB->query("ALTER TABLE exp_weblog_data ADD COLUMN field_dt_".$DB->escape_str($_POST['field_id'])." varchar(8) NOT NULL AFTER field_ft_".$DB->escape_str($_POST['field_id']).""); 
 					break;
 					case 'rel'	:
 						$DB->query("ALTER TABLE exp_weblog_data CHANGE COLUMN field_id_".$DB->escape_str($_POST['field_id'])." field_id_".$DB->escape_str($_POST['field_id'])." int(10) NOT NULL");		
-						$DB->query("ALTER table exp_weblog_data CHANGE COLUMN field_ft_".$DB->escape_str($_POST['field_id'])." field_ft_".$DB->escape_str($_POST['field_id'])." varchar(40) NOT NULL default 'none'");
+						$DB->query("ALTER table exp_weblog_data CHANGE COLUMN field_ft_".$DB->escape_str($_POST['field_id'])." field_ft_".$DB->escape_str($_POST['field_id'])." tinytext NULL");
 					break;
 					default		:
 						$DB->query("ALTER TABLE exp_weblog_data CHANGE COLUMN field_id_".$DB->escape_str($_POST['field_id'])." field_id_".$DB->escape_str($_POST['field_id'])." text NOT NULL");		
-						$DB->query("ALTER table exp_weblog_data CHANGE COLUMN field_ft_".$DB->escape_str($_POST['field_id'])." field_ft_".$DB->escape_str($_POST['field_id'])." varchar(40) NOT NULL default 'none'");
+						$DB->query("ALTER table exp_weblog_data CHANGE COLUMN field_ft_".$DB->escape_str($_POST['field_id'])." field_ft_".$DB->escape_str($_POST['field_id'])." tinytext NULL");
 					break;
 				}
 			}
-			
-			// ALTER the data format column to ensure the default formatting value matches submission
-			$DB->query("ALTER TABLE exp_weblog_data CHANGE COLUMN field_ft_".$DB->escape_str($_POST['field_id']).' field_ft_'.$DB->escape_str($_POST['field_id'])." VARCHAR(40) NOT NULL DEFAULT '".$DB->escape_str($_POST['field_fmt'])."'");
-			
+						
 			$DB->query($DB->update_string('exp_weblog_fields', $_POST, 'field_id='.$DB->escape_str($_POST['field_id']).' AND group_id='.$group_id));              
         }
         else
@@ -8415,8 +8430,6 @@ SCRIPPITYDOO;
                 $query = $DB->query("SELECT count(*) AS count FROM exp_weblog_fields WHERE group_id = '".$DB->escape_str($group_id)."'");            
                 $_POST['field_order'] = $query->row['count'] + 1; 
             }
-            
-            $_POST['site_id'] = $PREFS->ini('site_id');
                     
             $DB->query($DB->insert_string('exp_weblog_fields', $_POST));
             
@@ -8425,7 +8438,7 @@ SCRIPPITYDOO;
 			if ($_POST['field_type'] == 'date' OR $_POST['field_type'] == 'rel')
 			{
 				$DB->query("ALTER TABLE exp_weblog_data ADD COLUMN field_id_".$insert_id." int(10) NOT NULL");				
-				$DB->query("ALTER TABLE exp_weblog_data ADD COLUMN field_ft_".$insert_id." varchar(40) NOT NULL default 'none'");   
+				$DB->query("ALTER TABLE exp_weblog_data ADD COLUMN field_ft_".$insert_id." tinytext NULL");   
 				
 				if ($_POST['field_type'] == 'date')
 					$DB->query("ALTER TABLE exp_weblog_data ADD COLUMN field_dt_".$insert_id." varchar(8) NOT NULL");   
@@ -8433,7 +8446,7 @@ SCRIPPITYDOO;
             else
             {
 				$DB->query("ALTER TABLE exp_weblog_data ADD COLUMN field_id_".$insert_id." text NOT NULL");
-				$DB->query("ALTER TABLE exp_weblog_data ADD COLUMN field_ft_".$insert_id." varchar(40) NOT NULL default '".$DB->escape_str($_POST['field_fmt'])."'");
+				$DB->query("ALTER TABLE exp_weblog_data ADD COLUMN field_ft_".$insert_id." tinytext NULL");
 				$DB->query("UPDATE exp_weblog_data SET field_ft_".$insert_id." = '".$DB->escape_str($_POST['field_fmt'])."'");
             }            
       		   
@@ -9600,6 +9613,11 @@ SCRIPPITYDOO;
         {
             $error[] = $LANG->line('no_upload_dir_url');
         }
+
+		if (substr($_POST['server_path'], -1) != '/' AND substr($_POST['server_path'], -1) != '\\')
+		{
+			$_POST['server_path'] .= '/';
+		}
         
 		if ( ! ereg("/$", $_POST['url'] )) $_POST['url']  .= '/';
           

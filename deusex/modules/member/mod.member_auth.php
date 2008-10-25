@@ -185,7 +185,7 @@ class Member_auth extends Member {
 			}
         	
 			// Current site in list.  Original login site.
-			if ($IN->GBL('cur', 'GET') === false || $IN->GBL('orig', 'GET') === false)
+			if ($IN->GBL('cur', 'GET') === FALSE OR $IN->GBL('orig', 'GET') === FALSE OR $IN->GBL('orig_site_id', 'GET') === FALSE)
 			{
 				return $OUT->show_user_error('general', array($LANG->line('not_authorized')));
 			}
@@ -246,7 +246,22 @@ class Member_auth extends Member {
 								'redirect'	=> $sites[$IN->GBL('orig', 'GET')],
 								'link'		=> array($sites[$IN->GBL('orig', 'GET')], $LANG->line('back'))
 								 );
-			
+
+				// Pull preferences for the original site
+
+				if (is_numeric($IN->GBL('orig_site_id', 'GET')))
+				{
+					$query = $DB->query("SELECT site_name, site_id FROM exp_sites WHERE site_id = '".$DB->escape_str($IN->GBL('orig_site_id', 'GET'))."'");
+					
+					if ($query->num_rows == 1)
+					{
+						$final_site_name = $query->row['site_name'];
+						$final_site_id = $query->row['site_id'];
+
+						$PREFS->site_prefs($final_site_name, $final_site_id);	
+					}
+				}
+				
 				$OUT->show_message($data);
 			}
 			else
@@ -254,7 +269,7 @@ class Member_auth extends Member {
 				// Next Site
 				
 				$next_url = $sites[$next].'?ACT='.$FNS->fetch_action_id('Member', 'member_login').
-							'&multi='.$IN->GBL('multi', 'GET').'&cur='.$next.'&orig='.$IN->GBL('orig');
+							'&multi='.$IN->GBL('multi', 'GET').'&cur='.$next.'&orig='.$IN->GBL('orig').'&orig_site_id='.$IN->GBL('orig_site_id', 'GET');
 							
 				return $FNS->redirect($next_url);
 			}        	
@@ -484,7 +499,7 @@ class Member_auth extends Member {
 				$next = ($orig == '0') ? '1' : '0';
 			
 				$next_url = $sites[$next].'?ACT='.$FNS->fetch_action_id('Member', 'member_login').
-							'&multi='.$SESS->userdata['session_id'].'&cur='.$next.'&orig='.$orig;
+							'&multi='.$SESS->userdata['session_id'].'&cur='.$next.'&orig='.$orig.'&orig_site_id='.$PREFS->ini('site_id');
 							
 				return $FNS->redirect($next_url);
 			}		

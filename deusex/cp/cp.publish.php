@@ -526,7 +526,30 @@ class Publish {
         /** ---------------------------------------------*/
         
         $DSP->crumb = $DSP->title.$DSP->crumb_item($blog_title);
-                
+
+		$activate_calendars = '"';
+
+		if ($show_date_menu == 'y')
+		{
+		// Setup some onload items
+		
+			$activate_calendars = 'activate_calendars();" ';			
+			$DSP->extra_header .= '<script type="text/javascript">
+			// depending on timezones, local settings and localization prefs, its possible for js to misinterpret the day, 
+			// but the humanized time is correct, so we activate the humanized time to sync the calendar
+		
+			function activate_calendars() {
+				update_calendar(\'entry_date\', document.getElementById(\'entry_date\').value);
+				update_calendar(\'expiration_date\', document.getElementById(\'expiration_date\').value);';
+				if ($comment_system_enabled == 'y')
+				{				
+					$DSP->extra_header .= 	"\n".'update_calendar(\'comment_expiration_date\', document.getElementById(\'comment_expiration_date\').value);';
+				}
+			$DSP->extra_header .= "\n".'}
+			</script>';
+		}
+
+
 		/* -------------------------------------
 		/*  Publish Page Title Focus
 		/*  
@@ -538,12 +561,14 @@ class Publish {
 		
 		if ($which != 'edit' && $PREFS->ini('publish_page_title_focus') !== 'n')
 		{
-	        $DSP->body_props .= ' onload="document.forms[0].title.focus();set_catlink();" ';			
+	        $load_events = 'document.forms[0].title.focus();set_catlink();';			
 		}
 		else
 		{
-			$DSP->body_props .= ' onload="set_catlink();" ';
+			$load_events = 'set_catlink();';
 		}
+	
+		$DSP->body_props .= ' onload="'.$load_events.$activate_calendars;
 		
         
         // -------------------------------------------
@@ -810,16 +835,7 @@ class Publish {
 			
 			NewText = NewText.toLowerCase();
 			var separator = "{$word_separator}";
-			
-			if (separator != "_")
-			{
-				NewText = NewText.replace(/\_/g, separator);
-			}
-			else
-			{
-				NewText = NewText.replace(/\-/g, separator);
-			}
-	
+				
 			// Foreign Character Attempt
 			
 			var NewTextTemp = '';
@@ -836,20 +852,17 @@ class Publish {
 					{$foreign_replace}
 				}
 			}
-    
+    		
+			var multiReg = new RegExp(separator + '{2,}', 'g');
+			
 			NewText = NewTextTemp;
 			
 			NewText = NewText.replace('/<(.*?)>/g', '');
-			NewText = NewText.replace('/\&#\d+\;/g', '');
-			NewText = NewText.replace('/\&\#\d+?\;/g', '');
-			NewText = NewText.replace('/\&\S+?\;/g','');
-			NewText = NewText.replace(/['\"\?\.\!*\$\#@%;:,=\(\)\[\]]/g,'');
 			NewText = NewText.replace(/\s+/g, separator);
 			NewText = NewText.replace(/\//g, separator);
-			NewText = NewText.replace(/[^a-z0-9-_]/g,'');
+			NewText = NewText.replace(/[^a-z0-9\-\._]/g,'');
 			NewText = NewText.replace(/\+/g, separator);
-			NewText = NewText.replace(/[-_]+/g, separator);
-			NewText = NewText.replace(/\&/g,'');
+			NewText = NewText.replace(multiReg, separator);
 			NewText = NewText.replace(/-$/g,'');
 			NewText = NewText.replace(/_$/g,'');
 			NewText = NewText.replace(/^_/g,'');
@@ -1483,7 +1496,8 @@ EOT;
 			$menu_author .= $DSP->input_select_option($author_id, $author);
 	
 			// Next we'll gather all the authors that are allowed to be in this list
-						  
+			/*
+			// OLD VERSION OF THE QUERY... not so good
 			$ss = "SELECT exp_members.member_id, exp_members.group_id, exp_members.username, exp_members.screen_name, exp_members.weblog_id,
 				exp_member_groups.*
 				FROM exp_members, exp_member_groups
@@ -1492,7 +1506,16 @@ EOT;
 				AND exp_members.group_id = exp_member_groups.group_id
 				AND exp_member_groups.site_id = '".$DB->escape_str($PREFS->ini('site_id'))."'
 				ORDER BY screen_name asc, username asc";                         
-													
+			*/
+			
+			$ss = "SELECT exp_members.member_id, exp_members.group_id, exp_members.username, exp_members.screen_name, exp_members.weblog_id
+				FROM exp_members
+				LEFT JOIN exp_member_groups on exp_member_groups.group_id = exp_members.group_id
+				WHERE exp_members.member_id != '$author_id' 
+				AND (exp_members.in_authorlist = 'y' OR exp_member_groups.include_in_authorlist = 'y')
+				AND exp_member_groups.site_id = '".$DB->escape_str($PREFS->ini('site_id'))."'
+				ORDER BY screen_name asc, username asc";                         
+			
 			$query = $DB->query($ss);
 			
 			if ($query->num_rows > 0)
@@ -1801,13 +1824,6 @@ EOT;
 								
 				$date .= $DSP->qdiv('itemWrapper', BR.$DSP->input_text('entry_date', $loc_entry_date, '18', '23', 'input', '150px', ' onkeyup="update_calendar(\'entry_date\', this.value);" '));			
 
-				// depending on timezone's, local settings and localization prefs, its possible for js to misinterpret the day, but the humanized
-				// time is correct, so we activate the humanized time to sync the calendar
-				$cal_id = 'entry_date';
-				$date .= '<script type="text/javascript">
-						update_calendar("'.$cal_id.'", document.getElementById("'.$cal_id.'").value);
-						</script>';
-
 				$date .= $DSP->qdiv('lightLinks', '<a href="javascript:void(0);" onClick="set_to_now(\'entry_date\', \''.$LOC->set_human_time($LOC->now).'\', \''.($LOC->set_localized_time() * 1000).'\')" >'.$LANG->line('today').'</a>');
 				
 				$date .= $DSP->div_c();
@@ -1839,13 +1855,6 @@ EOT;
 				
 								
 				$date .= $DSP->qdiv('itemWrapper', BR.$DSP->input_text('expiration_date', $loc_expiration_date, '18', '23', 'input', '150px', ' onkeyup="update_calendar(\'expiration_date\', this.value);" '));			
-
-				// depending on timezone's, local settings and localization prefs, its possible for js to misinterpret the day, but the humanized
-				// time is correct, so we activate the humanized time to sync the calendar
-				$cal_id = 'expiration_date';
-				$date .= '<script type="text/javascript">
-						update_calendar("'.$cal_id.'", document.getElementById("'.$cal_id.'").value);
-						</script>';
 
 				$date .= $DSP->div('lightLinks');
 				$date .= '<a href="javascript:void(0);" onClick="set_to_now(\'expiration_date\', \''.$LOC->set_human_time($LOC->now).'\', \''.($LOC->set_localized_time() * 1000).'\')" >'.$LANG->line('today').'</a>'.NBS.NBS.'|'.NBS.NBS;
@@ -1886,13 +1895,6 @@ EOT;
 			
 					$date .= $DSP->qdiv('itemWrapper', BR.$DSP->input_text('comment_expiration_date', $loc_comment_expiration_date, '18', '23', 'input', '150px', ' onkeyup="update_calendar(\'comment_expiration_date\', this.value);" '));			
 
-				// depending on timezone's, local settings and localization prefs, its possible for js to misinterpret the day, but the humanized
-				// time is correct, so we activate the humanized time to sync the calendar
-				$cal_id = 'comment_expiration_date';
-				$date .= '<script type="text/javascript">
-						update_calendar("'.$cal_id.'", document.getElementById("'.$cal_id.'").value);
-						</script>';
-	
 					$date .= $DSP->div('lightLinks');
 					$date .= '<a href="javascript:void(0);" onClick="set_to_now(\'comment_expiration_date\', \''.$LOC->set_human_time($LOC->now).'\', \''.($LOC->set_localized_time() * 1000).'\')" >'.$LANG->line('today').'</a>'.NBS.NBS.'|'.NBS.NBS;
 					$date .= '<a href="javascript:void(0);" onClick="clear_field(\'comment_expiration_date\')" >'.$LANG->line('clear').'</a>';
@@ -2655,7 +2657,7 @@ EOT;
 		
 		if ($show_button_cluster == 'y')
 		{		
-        	$r .= $this->html_formatting_buttons('', $field_group, FALSE);
+        	$r .= $this->html_formatting_buttons('', $field_group, FALSE, $weblog_allow_img_urls);
 		}
 		else
 		{
@@ -3657,6 +3659,7 @@ EOT;
 			
 			if (is_numeric($url_title))
 			{
+				$this->url_title_error = TRUE;
 				$error[] = $LANG->line('url_title_is_numeric');
 			}
             
@@ -3676,7 +3679,14 @@ EOT;
 	                $msg .= $DSP->qdiv('itemWrapper', $val);  
 	            }
 				
-				return $this->new_entry_form('preview', $msg);	
+				if ($cp_call == TRUE)
+				{
+					return $this->new_entry_form('preview', $msg);
+				}
+				else
+				{
+					return $OUT->show_user_error('general', $error);
+				}
 			}
 			
             /** ---------------------------------
@@ -3708,6 +3718,7 @@ EOT;
 				 // Safety
 				 if ($i >= 50)
 				 {
+					$this->url_title_error = TRUE;
 					$error[] = $LANG->line('url_title_not_unique');
 					
 					break;
@@ -3721,6 +3732,7 @@ EOT;
 		
 		if ($url_title == 'index')
 		{
+			$this->url_title_error = TRUE;
 			$error[] = $LANG->line('url_title_is_index');
 		}
 		
@@ -4324,7 +4336,8 @@ EOT;
             {
 				if (strstr($key, 'field_offset_'))
 				{
-					unset($_POST[$key]);
+					// removed the unset in 1.6.5 as the localization was being lost on quicksave
+					// unset($_POST[$key]);
 					continue;
 				}
             
@@ -5187,7 +5200,7 @@ EOT;
     // This function and the next display the HTML formatting buttons
     //---------------------------------------------------------------
     
-    function default_buttons($close = true)
+    function default_buttons($close = TRUE, $allow_img_urls = 'y')
     {
         global $DSP, $LANG, $PREFS;
 
@@ -5204,10 +5217,15 @@ EOT;
 		/*	  Useful because most browsers no longer need it and Admins might want it gone
         /* -------------------------------------------*/
 						
-		if ( ! $close OR $PREFS->ini('remove_close_all_button') === 'y') 
+		if ($close !== TRUE OR $PREFS->ini('remove_close_all_button') === 'y') 
 		{
 			unset($buttons['close_all']);
-		} 
+		}
+		
+		if ($allow_img_urls != 'y')
+		{
+			unset($buttons['image']);
+		}
 		   
 		$r = '';
 		$i = 0;
@@ -5243,7 +5261,7 @@ EOT;
     // This function and the above display the HTML formatting buttons
     //---------------------------------------------------------------
 
-    function html_formatting_buttons($member_id = '', $field_group, $extra_js = TRUE)
+    function html_formatting_buttons($member_id = '', $field_group, $extra_js = TRUE, $weblog_allow_img_urls = 'y')
     {
         global $DSP, $IN, $SESS, $DB, $LANG, $PREFS;
         
@@ -5321,7 +5339,7 @@ EOT;
         {
             $r  .= $DSP->table('buttonMargin', '0', '', '').
                    $DSP->tr().
-                   $this->default_buttons(0).
+                   $this->default_buttons(FALSE, $weblog_allow_img_urls).
                    $DSP->tr_c().
                    $DSP->table_c();
         }
@@ -5342,15 +5360,8 @@ EOT;
                 foreach ($groups as $row)
                 {
                     $accesskey = ($row['accesskey'] != '') ? "accesskey=\"".trim($row['accesskey'])."\" " : "";
-                                                                               
-                    if ($row['tag_close'])
-                    {                        
-                        $jsfunc = $accesskey."onclick='taginsert(this, \"".htmlspecialchars(addslashes($row['tag_open']))."\", \"".htmlspecialchars(addslashes($row['tag_close']))."\")'";
-                    }
-                    else
-                    {                
-                        $jsfunc = $accesskey."onclick='singleinsert(\"".htmlspecialchars(addslashes($row['tag_open']))."\")'";
-                    }
+
+                    $jsfunc = $accesskey."onclick='taginsert(this, \"".htmlspecialchars(addslashes($row['tag_open']))."\", \"".htmlspecialchars(addslashes($row['tag_close']))."\")'";
                     
                     $jsvars[] = 'button_'.$i;
                     
@@ -5380,7 +5391,7 @@ EOT;
                     
                 if ($rows == 1 || ($rows == 2 AND $n == 0))
                 {
-                    $r .= $this->default_buttons();                
+                    $r .= $this->default_buttons(TRUE, $weblog_allow_img_urls);                
                 }
                           
                 $r .=              
@@ -5527,24 +5538,7 @@ EOT;
 				}            
             }	
         }
-        
-        // Insert single tag
-        
-        function singleinsert(tagOpen)
-        {
-            if ( ! selField)
-            {
-                alert(no_cursor);
-                return false;
-            }
                 
-            eval("document.getElementById('entryform')." + selField + ".value += tagOpen");	
-            
-            curField = eval("document.getElementById('entryform')." + selField);
-            curField.blur();
-            curField.focus();	
-        }
-        
         // Prompted tags
         
         function promptTag(which)
@@ -5614,7 +5608,9 @@ EOT;
                 	var Title = Name;
                 }
             
-                var Link = '<a href="' + URL + '" title="' + Title + '">' + Name + '<'+'/a>';
+				Title = Title.replace(/\"/g, '&quot;');
+
+               var Link = '<a href="' + URL + '" title="' + Title + '">' + Name + '<'+'/a>';
             }
             
             
@@ -6579,7 +6575,7 @@ EOT;
 				
 				if ($query->num_rows > 0)
 				{
-					$fql = "SELECT field_id FROM exp_weblog_fields WHERE group_id IN (";
+					$fql = "SELECT field_id, field_type FROM exp_weblog_fields WHERE group_id IN (";
 				
 					foreach ($query->result as $row)
 					{
@@ -6594,7 +6590,10 @@ EOT;
 					{
 						foreach ($query->result as $row)
 						{
-							$fields[] = $row['field_id'];
+							if ($row['field_type'] == 'text' OR $row['field_type'] == 'textarea' OR $row['field_type'] == 'select')
+							{
+								$fields[] = $row['field_id'];
+							}
 						}
 					}
 				}
@@ -8522,7 +8521,7 @@ EOT;
         $field_group = $query->row['field_group'];
         
     
-        $query = $DB->query("SELECT field_id, field_type FROM exp_weblog_fields WHERE group_id = '$field_group' AND field_type != 'select' ORDER BY field_order");
+        $query = $DB->query("SELECT field_id, field_type FROM exp_weblog_fields WHERE group_id = '$field_group' ORDER BY field_order");
         
         $fields = array();
         
@@ -9248,12 +9247,12 @@ EOT;
        
         $FP->set_upload_path($query->row['server_path']);
         $directory_url 		= $query->row['url'];
-        $pre_format 		= $query->row['pre_format'];
-        $post_format 		= $query->row['post_format'];
-        $properties 		= ($query->row['properties']  != '') ? " ".$query->row['properties'] : "";
-        $file_pre_format 	= $query->row['file_pre_format'];
-        $file_post_format 	= $query->row['file_post_format'];
-        $file_properties 	= ($query->row['file_properties']  != '') ? " ".$query->row['file_properties'] : "";
+        $pre_format 		= addslashes($query->row['pre_format']);
+        $post_format 		= addslashes($query->row['post_format']);
+        $properties 		= ($query->row['properties']  != '') ? " ".addslashes($query->row['properties']) : "";
+        $file_pre_format 	= addslashes($query->row['file_pre_format']);
+        $file_post_format 	= addslashes($query->row['file_post_format']);
+        $file_properties 	= ($query->row['file_properties']  != '') ? " ".addslashes($query->row['file_properties']) : "";
         
         $FP->create_filelist();
         
@@ -9841,18 +9840,21 @@ EOT;
         
         if ($data['is_image'] == 1)
         {
-       		$properties = ($query->row['properties']  != '') ? " ".$query->row['properties'] : "";
+       		$properties = ($query->row['properties']  != '') ? " ".addslashes($query->row['properties']) : "";
         }
         else
         {
-        	$properties = ($query->row['file_properties']  != '') ? " ".$query->row['file_properties'] : "";
+        	$properties = ($query->row['file_properties']  != '') ? " ".addslashes($query->row['file_properties']) : "";
         }
-        
-        $props = ($data['is_image'] == 1) ? $query->row['pre_format'] : $query->row['file_pre_format'];
-        
+                
         $popup_link = '';
         $popup_thumb = '';
-        $file_url = '{filedir_'.$data['id'].'}'.$data['file_name'];
+		$pre_format = addslashes($query->row['pre_format']);
+		$post_format = addslashes($query->row['post_format']);
+		$file_pre_format = addslashes($query->row['file_pre_format']);
+		$file_post_format = addslashes($query->row['file_post_format']);
+		$file_url = '{filedir_'.$data['id'].'}'.$data['file_name'];
+		$props = ($data['is_image'] == 1) ? $pre_format : $file_pre_format;
                         
         if ($data['is_image'] == 1)
         {        
@@ -9888,8 +9890,8 @@ EOT;
             
 			$eh = "onclick=\"window.open(\'{filedir_".$data['id']."}".$filename."\',\'popup\',\'".$wh."scrollbars=no,resizable=yes,toolbar=no,directories=no,location=no,menubar=no,status=no,left=0,top=0\'); return false\"";
             
-            $popup_link = $props."<a href=\"{filedir_".$data['id']."}".$filename."\" $eh>".$filename."</a>".$query->row['post_format'];
-            $popup_thumb = $props."<a href=\"{filedir_".$data['id']."}".$filename."\" $eh>".$imgsrc."</a>".$query->row['post_format'];
+            $popup_link = $props."<a href=\"{filedir_".$data['id']."}".$filename."\" $eh>".$filename."</a>".$post_format;
+            $popup_thumb = $props."<a href=\"{filedir_".$data['id']."}".$filename."\" $eh>".$imgsrc."</a>".$post_format;
         
         	$props .= $imgsrc;
         }
@@ -9898,7 +9900,7 @@ EOT;
             $props .= '<a href="'.$file_url.'"'.$properties.'>'.$data['file_name'].'</a>';
         }
         
-        $props .= ($data['is_image'] == 1) ? $query->row['post_format'] : $query->row['file_post_format'];
+        $props .= ($data['is_image'] == 1) ? $post_format : $file_post_format;
         
         
         $query = $DB->query("SELECT field_id, field_label FROM exp_weblog_fields WHERE group_id = '".$data['field_group']."' AND field_type NOT IN ('date', 'rel', 'select') ORDER BY field_order");
@@ -10226,7 +10228,7 @@ EOT;
             if (in_array($this->smileys[$key]['0'], $dups))
             	continue;
             
-            $r .= "<td><a href=\"#\" onClick=\"return add_smiley('".$key."', '".$field_id."');\"><img src=\"".$path.$this->smileys[$key]['0']."\" width=\"".$this->smileys[$key]['1']."\" height=\"".$this->smileys[$key]['2']."\" title=\"".$this->smileys[$key]['3']."\" alt=\"".$this->smileys[$key]['3']."\" border=\"0\" /></a></td>\n";
+            $r .= "<td><a href=\"#\" onclick=\"return add_smiley('".$key."', '".$field_id."');\"><img src=\"".$path.$this->smileys[$key]['0']."\" width=\"".$this->smileys[$key]['1']."\" height=\"".$this->smileys[$key]['2']."\" title=\"".$this->smileys[$key]['3']."\" alt=\"".$this->smileys[$key]['3']."\" border=\"0\" /></a></td>\n";
 
 			$dups[] = $this->smileys[$key]['0'];
 
@@ -12721,7 +12723,7 @@ EOT;
             if (in_array($smileys[$key]['0'], $dups))
             	continue;
             
-            $r .= "<td><a href=\"#\" onClick=\"return add_smiley('".$key."');\"><img src=\"".$path.$smileys[$key]['0']."\" width=\"".$smileys[$key]['1']."\" height=\"".$smileys[$key]['2']."\" alt=\"".$smileys[$key]['3']."\" border=\"0\" /></a></td>\n";
+            $r .= "<td><a href=\"#\" onclick=\"return add_smiley('".$key."');\"><img src=\"".$path.$smileys[$key]['0']."\" width=\"".$smileys[$key]['1']."\" height=\"".$smileys[$key]['2']."\" alt=\"".$smileys[$key]['3']."\" border=\"0\" /></a></td>\n";
 
 			$dups[] = $smileys[$key]['0'];
 

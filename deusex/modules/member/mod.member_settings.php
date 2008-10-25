@@ -1450,7 +1450,7 @@ class Member_settings extends Member {
 									 	'enable_log'		=> FALSE,
 										'username'			=> $_POST['username'],
 										'cur_username'		=> $query->row['username'],
-										'screen_name'		=> $_POST['screen_name'],
+										'screen_name'		=> stripslashes($_POST['screen_name']),
 										'cur_screen_name'	=> $query->row['screen_name'],
 										'password'			=> $_POST['password'],
 									 	'password_confirm'	=> $_POST['password_confirm'],

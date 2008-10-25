@@ -86,6 +86,8 @@ class Template {
     var $log				= array();		// Log of Template processing
     var $start_microtime	= 0;			// For Logging (= microtime())
     
+    var $strict_urls		= FALSE;		// Whether to make URLs operate strictly or not.  This is set via a template global pref
+    
     var $realm				= 'ExpressionEngine Template';  // Localize?
 
     var $marker = '0o93H7pQ09L8X1t49cHY01Z5j4TT91fGfr'; // Temporary marker used as a place-holder for template data
@@ -306,15 +308,24 @@ class Template {
 			}
 		}
 		
+		// cleanup of leftover/undeclared embed variables
+		// don't worry with undeclared embed: vars in conditionals as the conditionals processor will handle that adequately
+		if (strpos($this->template, LD.'embed:') !== FALSE)
+		{
+			$this->template = preg_replace('/'.LD.'embed:(.+?)'.RD.'/', '', $this->template);
+		}
+		
 		/** --------------------------------------------------
         /**  Parse 'Site' variables
         /** --------------------------------------------------*/
 
 		$this->log_item("Parsing Site Variables");
-		
-        $this->template = str_replace(LD.'site_id'.RD, stripslashes($PREFS->ini('site_id')), $this->template);
-        $this->template = str_replace(LD.'site_label'.RD, stripslashes($PREFS->ini('site_label')), $this->template);
-        $this->template = str_replace(LD.'site_short_name'.RD, stripslashes($PREFS->ini('site_short_name')), $this->template);
+
+		// load site variables into the global_vars array
+		foreach (array('site_id', 'site_label', 'site_short_name') as $site_var)
+		{
+			$this->global_vars[$site_var] = stripslashes($PREFS->ini($site_var));
+		}
 		
 		/** -------------------------------------
         /**  Parse manual variables
@@ -1662,227 +1673,8 @@ class Template {
     /* END */
 
 
-
     /** -------------------------------------
     /**  Parse Template URI Data
-    /** -------------------------------------*/
-    
-    // OLD VERSION - DEPRECATE THIS
-
-    function parse_template_uri_old()
-    {
-        global $PREFS, $LANG, $OUT, $DB, $LOC, $IN, $REGX;
-        
-        $template_group = '';
-        $template 		= 'index';
-        
-        $show_default = TRUE;     
-        
-        /** -------------------------------------
-        /**  Do we have URI data to parse?
-        /** -------------------------------------*/
-                        
-        if ($IN->fetch_uri_segment(1))
-        {     
-            $show_default = FALSE;
-        
-            /** ---------------------------------------------------------------
-            /**  Build an array map of template group names and templates names
-            /** ---------------------------------------------------------------*/
-            
-            // We use the map in order to determine what we should show
-        
-            $sql = "SELECT exp_template_groups.group_name, 
-                           exp_template_groups.is_site_default, 
-                           exp_templates.template_name
-                    FROM   exp_template_groups, exp_templates
-                    WHERE  exp_template_groups.group_id = exp_templates.group_id
-                    AND    exp_template_groups.site_id = '".$DB->escape_str($PREFS->ini('site_id'))."' ";
-                    
-                
-            /** -----------------------------------------
-            /**  Adjust the query if we have a user blog
-            /** -----------------------------------------*/
-            
-            if (USER_BLOG === FALSE)
-            {
-                $sql .= " AND exp_template_groups.is_user_blog = 'n' ";
-            }
-            else
-            {
-                $sql .= " AND exp_template_groups.group_id = '".$DB->escape_str(UB_TMP_GRP)."' ";
-            }     
-                    
-            $sql .= "ORDER BY exp_template_groups.group_name, exp_templates.template_name";
-            
-
-            /** -----------------------------------------
-            /**  Run query
-            /** -----------------------------------------*/
-    
-            $query = $DB->query($sql);
-            
-            if ($query->num_rows == 0)
-            {
-                return false;
-            }
-                        
-            /** -----------------------------------------
-            /**  Fill an array with the group names
-            /** -----------------------------------------*/
-                                            
-            $groups = array();
-            
-            $temp = '';
-            
-            $site_default = '';
-            
-            foreach($query->result as $row)
-            {
-                if ($temp != $row['group_name'])
-                {            
-                    $groups[$row['group_name']] = '';
-                }
-                                                         
-                if ($IN->fetch_uri_segment(1) == $row['group_name'])
-                {
-                    $template_group = $row['group_name'];
-                }
-                
-                if (USER_BLOG === FALSE)
-                {
-                    if ($row['is_site_default'] == 'y')
-                    {
-                        $site_default = $row['group_name'];
-                    }
-                }
-                else
-                {
-                    $template_group = $row['group_name'];
-                }
-                
-                $temp = $row['group_name'];            
-            }
-
-            // If the template group does not correlate to a valid one there's a chance
-            // that it's a spider.  If so, we'll disable caching to avoid the cache files
-            // getting out of control.
-			
-			if ($template_group == "")
-			{				
-				$this->disable_caching = TRUE;				
-			}
-			
-			
-			if ($PREFS->ini('site_404') == '' AND $template_group == "")
-			{
-				$template_group = $site_default;
-			}
-
-            if ($template_group != '')
-            {
-				$show_default = FALSE;
-            }
-                   
-            /** -----------------------------------------
-            /**  Fill an array with template names
-            /** -----------------------------------------*/
-            
-            $templates = array();
-            
-            foreach ($groups as $key => $val)
-            {
-                $temp = array();
-            
-                foreach ($query->result as $row)
-                {    
-                    if ($key == $row['group_name'])
-                    {
-                        $temp[$row['template_name']] = $row['template_name'];
-                    }              
-                }
-                        
-                $templates[$key] = $temp;
-            }
-                    
-            /** -----------------------------------------
-            /**  Determine what template we should show
-            /** -----------------------------------------*/
-            
-            // Compare the arrays against the URI string in order to determine 
-            // what template we should display. And while were at it, determine which 
-            // segment(s) contain any query data and assign those to the $IN-QSTR variable 
-            // so that the various tag parsing classes can access it.
-            // We face a challenge becuase ExpressionEngine does not use query strings.
-            // URLs are segment driven, making it trickier to parse URIs
-        
-            if ( ! isset( $templates[$IN->fetch_uri_segment(1)] ))
-            {
-                if (isset( $templates[$template_group][$IN->fetch_uri_segment(1)] ))
-                {
-                    $template = $templates[$template_group][$IN->fetch_uri_segment(1)];
-                    
-                    if ($IN->fetch_uri_segment(2))
-                    {
-                        $IN->QSTR = preg_replace("#".'/'.$IN->fetch_uri_segment(1)."/#", '', $IN->URI);
-                    }
-                }
-                else
-                { 
-                   $IN->QSTR = $IN->URI;
-                }
-            }
-            else
-            {
-                $template_group = $IN->fetch_uri_segment(1);
-                
-                if ( ! $IN->fetch_uri_segment(2))
-                {
-                    $template = 'index';
-                }
-                else
-                {
-                    if ( ! isset( $templates[$template_group][$IN->fetch_uri_segment(2)] ))
-                    { 
-						$template = 'index';
-                       
-                        if ( ! $IN->fetch_uri_segment(3) )
-                        {
-                            $IN->QSTR = $IN->fetch_uri_segment(2);
-                        }
-                        else
-                        {
-                           $IN->QSTR = '/'.preg_replace("#".'/'.$IN->fetch_uri_segment(1)."/#", '', $IN->URI);
-                        }
-                    }
-                    else
-                    {
-                        $template = $IN->fetch_uri_segment(2);
-                        
-                        if ( ! $IN->fetch_uri_segment(3) AND $IN->fetch_uri_segment(2) != 'index')
-                        {
-                            $IN->QSTR = $IN->fetch_uri_segment(2);
-                        }
-                        else
-                        {
-                            $IN->QSTR = preg_replace("#".'/'.$IN->fetch_uri_segment(1).'/'.$IN->fetch_uri_segment(2)."#", '', $IN->URI);
-                        }
-                    }
-                }
-            }
-        
-            $IN->QSTR = $REGX->trim_slashes($IN->QSTR);        
-        }
-  
-       return $this->fetch_template($template_group, $template, $show_default);
-    }
-    /* END */
-
-
-
-
-    /** -------------------------------------
-    /**  NEW -- Parse Template URI Data
     /** -------------------------------------*/
 
     function parse_template_uri()
@@ -1890,148 +1682,173 @@ class Template {
         global $PREFS, $LANG, $OUT, $DB, $LOC, $IN, $REGX;
         
         $this->log_item("Parsing Template URI");
-                        
-        // -------------------------------------
-        //  Do we even have URI data to parse?
-        //  Did someone remove the template group and it is only the pagination?
-        // -------------------------------------
         
-        // No?  We'll just show the default template
-                        
+        // Does the first segment exist?  No?  Show the default template   
         if ($IN->fetch_uri_segment(1) === FALSE)
         {     
-        	$this->log_item("Site Index Determined");
 			return $this->fetch_template('', 'index', TRUE);
         }
-        elseif(sizeof($IN->SEGS) == 1 && preg_match("#^(P\d+)$#", $IN->fetch_uri_segment(1), $match))
-        { 
-        	$this->log_item("Site Index Determined");
+        // Is only the pagination showing in the URI?
+        elseif(count($IN->SEGS) == 1 && preg_match("#^(P\d+)$#", $IN->fetch_uri_segment(1), $match))
+        {
         	$IN->QSTR = $match['1'];
         	return $this->fetch_template('', 'index', TRUE);
         }
         
-        $template_group = '';
-        $template 		= 'index';
-        $show_default	= FALSE;
-        
-		/** -----------------------------------------
-		/**  Determine what template we should show
-		/** -----------------------------------------*/
-		
-		// While were at it we'll determine which segment(s) contain any query data 
-		// and assign those to the $IN-QSTR variable so that the various tag parsing classes can access it.
+        // Set the strict urls pref
+        if ($PREFS->ini('strict_urls') !== FALSE)
+        {
+        	$this->strict_urls = ($PREFS->ini('strict_urls') == 'y') ? TRUE : FALSE;
+        }
+
+        // At this point we know that we have at least one segment in the URI, so  
+		// let's try to determine what template group/template we should show
 		
 		// Is the first segment the name of a template group?
-	
 		$query = $DB->query("SELECT group_id FROM exp_template_groups WHERE group_name = '".$DB->escape_str($IN->fetch_uri_segment(1))."' AND site_id = '".$DB->escape_str($PREFS->ini('site_id'))."'");
 	
-		// No?
-		if ($query->num_rows == 0)
+		// Template group found!
+		if ($query->num_rows == 1)
 		{
-			$this->disable_caching = TRUE;				
-			
-			// If we're not using the 404 feature we need to fetch the name of the default template group
-			if ($PREFS->ini('site_404') == '')
-			{
-				$show_default = TRUE;
-			
-				// Grab the default group
-				$query = $DB->query("SELECT group_name, group_id FROM exp_template_groups WHERE is_site_default = 'y' AND site_id = '".$DB->escape_str($PREFS->ini('site_id'))."'");
-	
-				// No result?  Bail out...
-				// There's really nothing else to do here.  We don't have a valid template group in the URL
-				// and the admin doesn't have a template group defined as the site default so we're stuck.
-				if ($query->num_rows == 0)
-				{
-					$this->log_item("404 Page Returned");
-					
-					header("Status: 404 Not Found");
-					echo "Status: 404 Not Found";
-					exit;
-				}
-	
-				$group_id 			= $query->row['group_id'];
-				$template_group	= $query->row['group_name'];
-				
-				// Is the first segment the name of a template?			
-				$query = $DB->query("SELECT COUNT(*) AS count FROM exp_templates WHERE group_id = '{$group_id}' AND template_name = '".$DB->escape_str($IN->fetch_uri_segment(1))."'");
-			
-				// Nope? Use the default "index" template
-				if ($query->row['count'] == 0)
-				{ 
-					$IN->QSTR = $IN->URI;
-					$template = 'index';
-				}
-				else
-				{
-					// ahh we're okay then, on with the caching!
-					$this->disable_caching = FALSE;
-					
-					$template = $IN->fetch_uri_segment(1);
-					
-					if ($IN->fetch_uri_segment(2))
-					{
-						$IN->QSTR = preg_replace("#".'/'.$IN->fetch_uri_segment(1)."/#", '', $IN->URI);
-					}			
-				}
-			}
-		}
-		else
-		{
+			// Set the name of our template group
+			$template_group = $IN->fetch_uri_segment(1);
+
+			// Set the group_id so we can use it in the next query
 			$group_id = $query->row['group_id'];
 		
-			$template_group = $IN->fetch_uri_segment(1);
-			
-			if ( ! $IN->fetch_uri_segment(2))
+			// Does the second segment of the URI exist? If so...
+			if ($IN->fetch_uri_segment(2) !== FALSE)
 			{
-				$template = 'index';
-			}
-			else
-			{
-				// Is the second segment the name of a template?
+				// Is the second segment the name of a valid template?
 				$query = $DB->query("SELECT COUNT(*) AS count FROM exp_templates WHERE group_id = '{$group_id}' AND template_name = '".$DB->escape_str($IN->fetch_uri_segment(2))."'");
 			
-				// No?
-				if ($query->row['count'] == 0)
+				// We have a template name!
+				if ($query->row['count'] == 1)
 				{
-					$template = 'index';
-				   
-					if ( ! $IN->fetch_uri_segment(3) )
-					{
-						$IN->QSTR = $IN->fetch_uri_segment(2);
-					}
-					else
-					{
-					   $IN->QSTR = '/'.preg_replace("#".'/'.$IN->fetch_uri_segment(1)."/#", '', $IN->URI);
-					}
-				}
-				else
-				{ 
+					// Assign the template name
 					$template = $IN->fetch_uri_segment(2);
 					
-					if ( ! $IN->fetch_uri_segment(3) AND $IN->fetch_uri_segment(2) != 'index')
-					{
-						// This seems to be causing a problem:
-						// $IN->QSTR = $IN->fetch_uri_segment(2);
-						
-						// So we'll make it empty instead:
-						$IN->QSTR = "";
-					}
-					else
-					{
-						$IN->QSTR = preg_replace("#".'/'.$IN->fetch_uri_segment(1).'/'.$IN->fetch_uri_segment(2)."#", '', $IN->URI);
-					}
+					// Re-assign the query string variable in the Input class so the various tags can show the correct data
+					$IN->QSTR = ( ! $IN->fetch_uri_segment(3) AND $IN->fetch_uri_segment(2) != 'index') ? '' : $REGX->trim_slashes(preg_replace("#".'/'.$IN->fetch_uri_segment(1).'/'.$IN->fetch_uri_segment(2)."#", '', $IN->URI));
+				}
+				else // A valid template was not found
+				{				
+					// Set the template to index		
+					$template = 'index';
+				   
+					// Re-assign the query string variable in the Input class so the various tags can show the correct data
+					$IN->QSTR = ( ! $IN->fetch_uri_segment(3)) ? $IN->fetch_uri_segment(2) : $REGX->trim_slashes(preg_replace("#".'/'.$IN->fetch_uri_segment(1)."/#", '', $IN->URI));
 				}
 			}
+			// The second segment of the URL does not exist
+			else
+			{
+				// Set the template as "index"
+				$template = 'index';
+			}
 		}
+		// The first segment in the URL does NOT correlate to a valid template group.  Oh my!
+		else 
+		{
+			// If we are enforcing strict URLs we need to show a 404
+			if ($this->strict_urls == TRUE)
+			{
+				if ($PREFS->ini('site_404'))
+				{
+					$this->log_item("Template group and template not found, showing 404 page");
+					return $this->fetch_template('', '', FALSE);
+				}
+				else
+				{
+					return $this->_404();
+				}
+			}
 			
-		$IN->QSTR = $REGX->trim_slashes($IN->QSTR);   
+			// We we are not enforcing strict URLs, so Let's fetch the the name of the default template group
+			$result = $DB->query("SELECT group_name, group_id FROM exp_template_groups WHERE is_site_default = 'y' AND site_id = '".$DB->escape_str($PREFS->ini('site_id'))."'");
+
+			// No result?  Bail out...
+			// There's really nothing else to do here.  We don't have a valid template group in the URL
+			// and the admin doesn't have a template group defined as the site default.
+			if ($result->num_rows == 0)
+			{
+				// Turn off caching 
+				$this->disable_caching = TRUE;
+
+				// Show the user-specified 404
+				if ($PREFS->ini('site_404'))
+				{
+					$this->log_item("Template group and template not found, showing 404 page");
+					return $this->fetch_template('', '', FALSE);
+				}
+				else
+				{
+					// Show the default 404
+					return $this->_404();
+				}
+			}
+			
+			// Since the first URI segment isn't a template group name, could it be the name of a template in the default group?			
+			$query = $DB->query("SELECT COUNT(*) AS count FROM exp_templates WHERE group_id = '".$result->row['group_id']."' AND template_name = '".$DB->escape_str($IN->fetch_uri_segment(1))."'");
 		
-		$this->log_item("Determined Template: {$template_group}/{$template}");
-	                              
-       return $this->fetch_template($template_group, $template, $show_default);
+			// We found a valid template!
+			if ($query->row['count'] == 1)
+			{ 
+				// Set the template group name from the prior query result (we use the default template group name)
+				$template_group	= $result->row['group_name'];
+
+				// Set the template name
+				$template = $IN->fetch_uri_segment(1);				
+
+				// Re-assign the query string variable in the Input class so the various tags can show the correct data
+				if ($IN->fetch_uri_segment(2))
+				{
+					$IN->QSTR = $REGX->trim_slashes(preg_replace("#".'/'.$IN->fetch_uri_segment(1)."/#", '', $IN->URI));
+				}			
+			}
+			// A valid template was not found.  At this point we do not have either a valid template group or a valid template name in the URL
+			else
+			{
+				// Turn off caching 
+				$this->disable_caching = TRUE;
+
+				// is 404 preference set, we wet our group/template names as blank.
+				// The fetch_template() function below will fetch the 404 and show it
+				if ($PREFS->ini('site_404'))
+				{
+					$template_group = '';
+					$template = '';
+					$this->log_item("Template group and template not found, showing 404 page");
+				}
+				else
+				// No 404 preference is set so we will show the index template from the default template group
+				{
+					$IN->QSTR = $IN->URI;
+					$template_group	= $result->row['group_name'];
+					$template = 'index';
+					$this->log_item("Showing index. Template not found: ".$IN->fetch_uri_segment(1));
+				}
+			}		
+		}
+
+		// Fetch the template!
+       return $this->fetch_template($template_group, $template, FALSE);
     }
-    /* END */
+   // END
+
+    /** -----------------------------------------
+    /**  404 page
+    /** -----------------------------------------*/
+
+	function _404()
+	{
+		global $OUT;
+		$this->log_item("404 Page Returned");
+		$OUT->http_status_header(404);
+		echo '<html><head><title>404 Page Not Found</title></head><body><h1>Status: 404 Page Not Found</h1></body></html>';
+		exit;	
+	}
+
 
     /** -----------------------------------------
     /**  Fetch the requested template
@@ -2512,7 +2329,42 @@ class Template {
         $charset 	= '';
         $lang		= '';
 		$user_vars	= array('member_id', 'group_id', 'group_description', 'group_title', 'member_group', 'username', 'screen_name', 'email', 'ip_address', 'location', 'total_entries', 'total_comments', 'private_messages', 'total_forum_posts', 'total_forum_topics', 'total_forum_replies');            
-                
+        
+        /** --------------------------------------------------
+        /**  Redirect - if we have one of these, no need to go further
+        /** --------------------------------------------------*/
+     	
+		if (strpos($str, LD.'redirect') !== FALSE)
+		{
+			if (preg_match("/".LD."redirect\s*=\s*(\042|\047)([^\\1]*?)\\1".RD."/si", $str, $match))
+			{
+				if ($match['2'] == "404")
+				{
+					$template = explode('/', $PREFS->ini('site_404'));
+
+					if (isset($template['1']))
+					{
+						$this->log_item('Processing "'.$template['0'].'/'.$template['1'].'" Template as 404 Page');
+						$this->template_type = "404";
+						$this->process_template($template['0'], $template['1']);
+						$this->cease_processing = TRUE;
+						// the resulting template will not have globals parsed unless we do this
+						return $this->parse_globals($this->final_template);
+					}
+					else
+					{
+						$this->log_item('404 redirect requested, but no 404 page is specified in the Global Template Preferences');
+						return $this->_404();
+					}
+				}
+				else
+				{
+					// $FNS->redirect() exit;s on its own
+					$FNS->redirect($FNS->create_url($FNS->extract_path("=".str_replace("&#47;", "/", $match['2']))));
+				}
+			}
+		}
+		
         /** --------------------------------------------------
         /**  Restore XML declaration if it was encoded
         /** --------------------------------------------------*/
@@ -2624,7 +2476,7 @@ class Template {
 								($PREFS->ini('encode_removed_text') !== FALSE) ? $PREFS->ini('encode_removed_text') : '', 
 								$str);
 		}
-				
+		
         /** --------------------------------------------------
         /**  Path variable: {path=group/template}
         /** --------------------------------------------------*/

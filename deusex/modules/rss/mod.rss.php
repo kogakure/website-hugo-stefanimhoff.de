@@ -27,7 +27,9 @@ if ( ! defined('EXT'))
 
 
 class Rss {
-
+	
+	var $debug = FALSE;
+	
     /** -------------------------------------
     /**  RSS feed
     /** -------------------------------------*/
@@ -42,7 +44,12 @@ class Rss {
         global $DB, $LOC, $LANG, $TMPL, $FNS, $OUT, $PREFS;
         
         $TMPL->encode_email = FALSE;
-        
+ 
+		if ($TMPL->fetch_param('debug') == 'yes')
+		{
+			$this->debug = TRUE;
+		}
+		     
         if (USER_BLOG !== FALSE)
         {
             $weblog = USER_BLOG;
@@ -52,8 +59,7 @@ class Rss {
             if ( ! $weblog = $TMPL->fetch_param('weblog'))
             {
             	$LANG->fetch_language_file('rss');
-                $OUT->fatal_error($LANG->line('rss_invalid_weblog'));
-                exit;
+                return $this->_empty_feed($LANG->line('no_weblog_specified'));
             }
         } 
         
@@ -99,8 +105,7 @@ class Rss {
 			if ($query->num_rows == 0)
 			{
             	$LANG->fetch_language_file('rss');
-                $OUT->fatal_error($LANG->line('rss_invalid_weblog'));
-                exit;
+                return $this->_empty_feed($LANG->line('rss_invalid_weblog'));
 			}
 			
 			if ($query->num_rows == 1)
@@ -195,8 +200,7 @@ class Rss {
         if ($query->num_rows == 0)
         {
 			$LANG->fetch_language_file('rss');
-			$OUT->fatal_error($LANG->line('rss_invalid_weblog'));
-			exit;
+			return $this->_empty_feed($LANG->line('no_matching_entries'));
         }
         
         $entry_id = $query->row['entry_id'];
@@ -571,7 +575,81 @@ class Rss {
         return $TMPL->tagdata;  
     }
     /* END */
+
+	/** -------------------------------------
+	/**  Empty feed handler
+	/** -------------------------------------*/
     
+	function _empty_feed($error = '')
+	{
+		global $FNS, $TMPL;
+		
+		if ($error != '')
+		{
+			$TMPL->log_item($error);
+		}
+		
+		$empty_feed = '';
+
+		if (preg_match("/".LD."if empty_feed".RD."(.*?)".LD.SLASH."if".RD."/s", $TMPL->tagdata, $match)) 
+		{
+			if (stristr($match['1'], LD.'if'))
+			{
+				$match['0'] = $FNS->full_tag($match['0'], $TMPL->tagdata, LD.'if', LD.SLASH."if".RD);
+			}
+			
+			$empty_feed = substr($match['0'], strlen(LD."if empty_feed".RD), -strlen(LD.SLASH."if".RD));
+			
+			$empty_feed = str_replace(LD.'error'.RD, $error, $empty_feed);
+		}
+		
+		if ($empty_feed == '')
+		{
+			$empty_feed = $this->_default_empty_feed($error);
+		}
+		
+		return $empty_feed;
+	}
+	/* END */
+
+	/** -------------------------------------
+	/**  Default empty feed
+	/** -------------------------------------*/
+	
+	function _default_empty_feed($error = '')
+	{
+		global $LANG, $LOC, $PREFS;
+		
+		$LANG->fetch_language_file('rss');
+		
+		$encoding	= $PREFS->ini('charset');
+		$title		= $PREFS->ini('site_name');
+		$link		= $PREFS->ini('site_url');
+		$version	= APP_VER;
+		$pubdate	= date('D, d M Y H:i:s', $LOC->now).' GMT';
+		$content	= ($this->debug === TRUE && $error != '') ? $error : $LANG->line('empty_feed');
+		
+		return <<<HUMPTYDANCE
+<?xml version="1.0" encoding="{$encoding}"?>
+<rss version="2.0">
+	<channel>
+	<title>{$title}</title>
+	<link>{$link}</link>
+	<description></description>
+	<docs>http://www.rssboard.org/rss-specification</docs>
+	<generator>ExpressionEngine v{$version} http://expressionengine.com/</generator>
+	
+	<item>
+		<title>{$content}</title>
+		<description>{$content}</description>
+		<pubDate>{$pubdate}</pubDate>
+	</item>
+	</channel>
+</rss>		
+HUMPTYDANCE;
+	}
+	/* END */
+	
 }
 // END CLASS
 ?>

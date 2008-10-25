@@ -324,7 +324,7 @@ class EEmail {
 		
 		if ($this->mailtype == 'html')
 		{
-			$this->plaintext_body = ($alt == '') ? stripslashes($body) : $alt;
+			$this->plaintext_body = ($alt == '') ? $this->prep_quoted_printable(stripslashes($body)) : $this->prep_quoted_printable($alt);
 			$this->body = $this->prep_quoted_printable($body);
 		}
 		
@@ -712,7 +712,10 @@ class EEmail {
 
 		// Standardize newlines
 		$str = preg_replace("/\r\n|\r/", "\n", $str);
-
+		
+		// kill nulls
+		$str = preg_replace('/\x00+/', '', $str);
+		
 		// We are intentionally wrapping so mail servers will encode characters
 		// properly and MUAs will behave, so {unwrap} must go!
 		$str = str_replace(array('{unwrap}', '{/unwrap}'), '', $str);
@@ -740,7 +743,7 @@ class EEmail {
 				// Convert spaces and tabs but only if it's the end of the line
 				if ($i == ($length - 1))
 				{
-					$char = ($ascii == '32' OR $ascii == '9') ? $escape.sprintf('%02s', dechex($char)) : $char;
+					$char = ($ascii == '32' OR $ascii == '9') ? $escape.sprintf('%02s', dechex($ascii)) : $char;
 				}
 
 				// encode = signs
@@ -883,7 +886,7 @@ class EEmail {
 					$hdr .= "--" . $this->alt_boundary . $this->newline;
 					
 					$hdr .= "Content-Type: text/plain; charset=" . $this->charset . $this->newline;
-					$hdr .= "Content-Transfer-Encoding: " . $this->get_encoding() . $this->newline . $this->newline;
+					$hdr .= "Content-Transfer-Encoding: quoted-printable" . $this->newline . $this->newline;
 					$hdr .= $this->strip_html() . $this->newline . $this->newline . "--" . $this->alt_boundary . $this->newline;
 				
 					$hdr .= "Content-Type: text/html; charset=" . $this->charset . $this->newline;
@@ -946,7 +949,7 @@ class EEmail {
 				$hdr .= "--" . $this->alt_boundary . $this->newline;
 				
 				$hdr .= "Content-Type: text/plain; charset=" . $this->charset . $this->newline;
-				$hdr .= "Content-Transfer-Encoding: " . $this->get_encoding() . $this->newline . $this->newline;
+				$hdr .= "Content-Transfer-Encoding: quoted-printable" . $this->newline . $this->newline;
 				$hdr .= $this->strip_html() . $this->newline . $this->newline . "--" . $this->alt_boundary . $this->newline;
 	
 				$hdr .= "Content-Type: text/html; charset=" . $this->charset . $this->newline;

@@ -63,7 +63,7 @@ class Login {
     {
         global $LANG, $DSP, $PREFS, $IN;
         
-        $DSP->body_props = " onLoad=\"document.forms[0].username.focus();\"";
+        $DSP->body_props = " onload=\"document.forms[0].username.focus();\"";
 
         $qstr = '';
 

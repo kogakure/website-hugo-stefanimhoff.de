@@ -27,36 +27,46 @@ if ( ! defined('EXT'))
 
 class Typography {
 
-    var $single_line_pgfs		= TRUE;		// Whether to treat single lines as paragraphs in auto-xhtml
-    var $allow_js_img_anchors	= FALSE;	// Whether to allow JavaScript submitted within <a href> and <img> tags
-    var $text_format    		= 'xhtml';  // xhtml, br, none, or lite
-    var $html_format    		= 'safe';   // safe, all, none
-    var $auto_links     		= 'y'; 
-    var $allow_img_url  		= 'n';
-    var $parse_images   		= FALSE;
-    var $encode_email   		= TRUE;
-	var $encode_type			= 'javascript'; // javascript or noscript
-    var $use_span_tags  		= TRUE;
-    var $popup_links    		= FALSE;
-    var $bounce					= '';
-    var $smiley_array        	= FALSE;
-    var $parse_smileys			= TRUE;
-    var $highlight_code			= TRUE;
-    var $convert_curly			= TRUE;		// Convert Curly Brackets Into Entities
-    var $emoticon_path  		= '';
-    var $site_index				= '';
-    var $word_censor    		= FALSE;
-    var $censored_words 		= array();
-    var $censored_replace		= '';
-    var $file_paths     		= array();
-    var $text_fmt_types			= array('xhtml', 'br', 'none', 'lite');
-    var $text_fmt_plugins		= array();
-    var $html_fmt_types			= array('safe', 'all', 'none');
-    var $yes_no_syntax			= array('y', 'n');
-    var $code_chunks			= array();
-    var $code_counter			= 0;
-	var $http_hidden 			= 'ed9f01a60cc1ac21bf6f1684e5a3be23f38a51b9'; // hash to protect URLs in [url] pMcode
-    
+    var $single_line_pgfs			= TRUE;		// Whether to treat single lines as paragraphs in auto-xhtml
+    var $text_format    			= 'xhtml';  // xhtml, br, none, or lite
+    var $html_format    			= 'safe';   // safe, all, none
+    var $auto_links     			= 'y'; 
+    var $allow_img_url  			= 'n';
+    var $parse_images   			= FALSE;
+    var $encode_email   			= TRUE;
+	var $encode_type				= 'javascript'; // javascript or noscript
+    var $use_span_tags  			= TRUE;
+    var $popup_links    			= FALSE;
+    var $bounce						= '';
+    var $smiley_array        		= FALSE;
+    var $parse_smileys				= TRUE;
+    var $highlight_code				= TRUE;
+    var $convert_curly				= TRUE;		// Convert Curly Brackets Into Entities
+    var $emoticon_path  			= '';
+    var $site_index					= '';
+    var $word_censor    			= FALSE;
+    var $censored_words 			= array();
+    var $censored_replace			= '';
+    var $file_paths     			= array();
+    var $text_fmt_types				= array('xhtml', 'br', 'none', 'lite');
+    var $text_fmt_plugins			= array();
+    var $html_fmt_types				= array('safe', 'all', 'none');
+    var $yes_no_syntax				= array('y', 'n');
+    var $code_chunks				= array();
+    var $code_counter				= 0;
+	var $http_hidden 				= 'ed9f01a60cc1ac21bf6f1684e5a3be23f38a51b9'; // hash to protect URLs in [url] pMcode
+ 	
+	// Block level elements that should not be wrapped inside <p> tags
+	var $block_elements = 'address|blockquote|div|dl|fieldset|form|h\d|hr|noscript|object|ol|p|pre|script|table|ul';
+	
+	// Elements that should not have <p> and <br /> tags within them.
+	var $skip_elements	= 'p|pre|ol|ul|dl|object|table';
+	
+	// Tags we want the parser to completely ignore when splitting the string.
+	var $inline_elements = 'a|abbr|acronym|b|bdo|br|button|cite|code|del|dfn|em|i|img|ins|input|label|map|kbd|samp|select|span|strong|sub|sup|textarea|var';
+	
+	// whether or not to protect quotes within { curly braces }
+	var $protect_braced_quotes = FALSE;
     
     /** -------------------------------------
     /**  Allowed tags
@@ -64,7 +74,7 @@ class Typography {
     
     // Note: The decoding array is associative, allowing more precise mapping
            
-    var $safe_encode = array('b', 'i', 'u', 'em', 'strike', 'strong', 'pre', 'code', 'blockquote');
+    var $safe_encode = array('b', 'i', 'u', 'em', 'strike', 'strong', 'pre', 'code', 'blockquote', 'abbr');
     
     var $safe_decode = array(
                                 'b'             => 'b', 
@@ -77,7 +87,8 @@ class Typography {
                                 'code'          => 'code', 
                                 'blockquote'    => 'blockquote',
                                 'quote'         => 'blockquote',
-                                'QUOTE'         => 'blockquote'
+                                'QUOTE'         => 'blockquote',
+								'abbr'			=> 'abbr'
                              );
     
 
@@ -89,7 +100,9 @@ class Typography {
     function Typography($parse_images = TRUE, $allow_headings = TRUE)
     {
         global $PREFS, $FNS;
-                
+
+    	$this->protect_braced_quotes = TRUE;
+
         if ($parse_images == TRUE)
         {
             $this->file_paths = $FNS->fetch_file_paths();
@@ -412,7 +425,7 @@ class Typography {
 		
 		if (REQ == 'CP' && $IN->GBL('M', 'GET') != 'send_email')
 		{
-			$str = preg_replace("#<a(.*?)href=(\042|\047)([^\\2]*?)\\2(.*?)\>(.*?)</a>#si", "[url=\"\\3\"\\1\\4]\\5[/url]", $str);
+			$str = preg_replace("#<a\s+(.*?)href=(\042|\047)([^\\2]*?)\\2(.*?)\>(.*?)</a>#si", "[url=\"\\3\"\\1\\4]\\5[/url]", $str);
 		}
 		
         /** -------------------------------------
@@ -429,9 +442,9 @@ class Typography {
         {
             case 'none';
                 break;
-            case 'xhtml'	: $str = $this->xhtml_typography($str);
+            case 'xhtml'	: $str = $this->auto_typography($str);
                 break;
-            case 'lite'		: $str = $this->light_xhtml_typography($str);  // Used with weblog entry titles
+            case 'lite'		: $str = $this->format_characters($str);  // Used with weblog entry titles
                 break;
             case 'br'		: $str = $this->nl2br_except_pre($str);
                 break;
@@ -577,17 +590,17 @@ class Typography {
         // This prevents cross-site scripting hacks.
         
      	$js = array(   
-						'onBlur',
-						'onChange',
-						'onClick',
-						'onFocus',
-						'onLoad',
-						'onMouseOver',
+						'onblur',
+						'onchange',
+						'onclick',
+						'onfocus',
+						'onload',
+						'onmouseOver',
 						'onmouseup',
 						'onmousedown',
-						'onSelect',
-						'onSubmit',
-						'onUnload',
+						'onselect',
+						'onsubmit',
+						'onunload',
 						'onkeypress',
 						'onkeydown',
 						'onkeyup',
@@ -621,7 +634,7 @@ class Typography {
         // Old method would only convert links that had href= as the first tag attribute
 		// $str = preg_replace("#<a\s+href=[\"'](\S+?)[\"'](.*?)\>(.*?)</a>#si", "[url=\"\\1\"\\2]\\3[/url]", $str);
 		        
-		$str = preg_replace("#<a(.*?)href=(\042|\047)([^\\2]*?)\\2(.*?)\>(.*?)</a>#si", "[url=\"\\3\"\\1\\4]\\5[/url]", $str);
+		$str = preg_replace("#<a\s+(.*?)href=(\042|\047)([^\\2]*?)\\2(.*?)\>(.*?)</a>#si", "[url=\"\\3\"\\1\\4]\\5[/url]", $str);
 
         // Convert image tags pMcode
 
@@ -1176,38 +1189,32 @@ class Typography {
 				
 			
 			// The highlight_string function requires that the text be surrounded
-			// by PHP tags.  Since we don't know if A) the submitted text has PHP tags,
-			// or B) whether the PHP tags enclose the entire string, we will add our
-			// own PHP tags around the string along with some markers to make replacement easier later
-
-			$temp = '<?php //tempstart'."\n".$temp.'//tempend ?>'; // <?
+			// by PHP tags, which we will remove later
+			$temp = '<?php '.$temp.' ?>'; // <?
 			
-			// All the magic happens here, baby!
-
+			// All the magic happens here, baby!	
 			$temp = highlight_string($temp, TRUE);
 
 			// Prior to PHP 5, the highligh function used icky <font> tags
 			// so we'll replace them with <span> tags.
 			
-			if (abs(phpversion()) < 5)
+			if (abs(PHP_VERSION) < 5)
 			{
 				$temp = str_replace(array('<font ', '</font>'), array('<span ', '</span>'), $temp);
 				$temp = preg_replace('#color="(.*?)"#', 'style="color: \\1"', $temp);
 			}
 			
 			// Remove our artificially added PHP, and the syntax highlighting that came with it
-			
-			$temp = preg_replace("#\<code\>.+?//tempstart\<br />\</span\>#is", "<code>\n", $temp);
-			$temp = preg_replace("#\<code\>.+?//tempstart\<br />#is", "<code>\n", $temp);
-			$temp = preg_replace("#//tempend.+#is", "</span>\n</code>", $temp);
-			$temp = preg_replace("#\<span style=\"color: \#FF8000\"\></span>\n</code>#is", "\n</code>", $temp);
+			$temp = preg_replace('/<span style="color: #([A-Z0-9]+)">&lt;\?php(&nbsp;| )/i', '<span style="color: #$1">', $temp);
+			$temp = preg_replace('/(<span style="color: #[A-Z0-9]+">.*?)\?&gt;<\/span>\n<\/span>\n<\/code>/is', "$1</span>\n</span>\n</code>", $temp);
+			$temp = preg_replace('/<span style="color: #[A-Z0-9]+"\><\/span>/i', '', $temp);
 			
 			// Replace our markers back to PHP tags.
 
 			$temp = str_replace(array('phptagopen', 'phptagclose', 'braceopen', 'braceclose', 'bracketopen', 'bracketeclose', 'backslashtmp', 'parenthesisopen', 'parenthesisclose', 'scriptclose'), 
 									  array('&lt;?', '?&gt;', '&#123;', '&#125;', '&#91;', '&#93;', '\\', '&#40;', '&#41;', '&lt;/script&gt;'), 
 									  $temp); //<?
-	
+
 			// Cache the code chunk and insert a marker into the original string.
 			// we do this so that the auth_xhtml function which gets called later
 			// doesn't process our new code chunk
@@ -1265,576 +1272,277 @@ class Typography {
 	}
     /* END */
 
+	// --------------------------------------------------------------------
 
-    /** -------------------------------------------
-    /**  Auto XHTML Typography - light version
-    /** -------------------------------------------*/
-    
-    // We use this for weblog entry titles.  It allows us to 
-    // format only the various characters without adding <p> tags
-    
-    function light_xhtml_typography($str)
-    {            
-		$str = ' '.$str.' ';
-        
-        $table = array(
-        
-                        ">\"'"					=> ">&#8220;&#8216;",
-                        "'\""					=> "&#8216;&#8220;",
-                        "\"' "					=> "&#8221;&#8217; ",
-                        "\"'\n"					=> "&#8221;&#8217;\n",
+	/**
+	 * Old version - use auto_typography() now
+	 */	
+	function xhtml_typography($str)
+	{
+		return $this->auto_typography($str);
+	}
 
-                        "\"' "                  => "&#8221;&#8217; ",
-                        "\"'"                   => "&#8220;&#8216;",
+	// --------------------------------------------------------------------
 
-                        " \""                   => " &#8220;",
-                        " '"                    => " &#8216;",
-                        "'"                     => "&#8217;",
-
-                        "\n\""                =>  "\n&#8220;",
-                        "\n&#8217;"           =>  "\n&#8216;",
-                        "&#8216;\""             => "&#8216;&#8220;",
-                    
-                        "\" "                   => "&#8221; ",
-                        "\"\n"                 => "&#8221;\n",
-                        "\"."                   => "&#8221;.",
-                        "\","                   => "&#8221;,",
-                        "\";"                   => "&#8221;;",
-                        "\":"                   => "&#8221;:",
-                        "\"!"                   => "&#8221;!",
-                        "\"?"                   => "&#8221;?",
-                        
-                        " -- "                  => "&#8212;",
-                        "..."                    => "&#8230;",
-                    
-                        ".  "                   => ".&nbsp; ",
-                        "?  "                   => "?&nbsp; ",
-                        "!  "                   => "!&nbsp; ",
-                        ":  "                   => ":&nbsp; ",
-                        "& "                    => "&amp; "
-        );
-        
-        
-        
-        foreach ($table as $key => $val)
-        {
-            $str = str_replace($key, $val, $str);
-        }
-        
-        return substr(substr($str, 0, -1), 1);
-    }
-    /* END */
-
-
-
-    /** -------------------------------------
-    /**  Auto XHTML Typography
-    /** -------------------------------------*/
-    
-    // This function makes text into typographically correct.
-	// - It turns double spaces into paragraphs.
-	// - It adds line breaks where there are single spaces.
-	// - It turns single and double quotes into curly quotes.
-	// - It turns three dots into ellipsis.
-	// - It turns double dashes into em-dashes.
-	// Most of this function, however, deals with all the of exceptions to the rules.
-	// For example, we don't want quotes within tags to be converted to curly quotes.
-	// Or we don't want <blockquote> tags to be surrounded by paragraph tags.
-
-    function xhtml_typography($str)
-    {    
-        if ($str == '')
-            return; 
-       	
-       	// To make identifying certain things easier we'll add
-       	// a tab to the front of the text and a space at
-       	// the end.  These will be removed later.
-		$str = "\t".$str.' ';
-		
-		/** -------------------------------------
-		/**  Convert ampersands to entities
-		/** -------------------------------------*/
-                    
-        $str = $this->convert_ampersands($str);   
-				
-		/** -------------------------------------
-        /**  Format <blockquote>, <code>, <div>, <span>
-        /** -------------------------------------*/
-				
-		// In order to prevent mismatched paragraphs later on we'll do a little formatting
-				
-		foreach(array('blockquote', 'code', 'div', 'span') as $element)
+	/**
+	 * Auto Typography
+	 *
+	 * This function converts text, making it typographically correct:
+	 * 	- Converts double spaces into paragraphs.
+	 * 	- Converts single line breaks into <br /> tags
+	 * 	- Converts single and double quotes into correctly facing curly quote entities.
+	 * 	- Converts three dots into ellipsis.
+	 * 	- Converts double dashes into em-dashes.
+	 *  - Converts two spaces into entities
+	 *
+	 * @access	public
+	 * @param	string
+	 * @param	bool	whether to reduce more then two consecutive newlines to two
+	 * @return	string
+	 */
+	function auto_typography($str, $reduce_linebreaks = FALSE)
+	{
+		if ($str == '')
 		{
-			if (preg_match_all("/\<".$element."([^>]*)>(.+?)\<\/".$element."\>/si", $str, $matches))
-			{
-				for ($i = 0; $i < count($matches['1']); $i++)
-				{			
-					$bq = $matches['2'][$i];
-					$p	= '';
-					$pc	= '';
-					
-					/*
-					XHTML Strict requires that all <blockquote> tags have their
-					content surrounded by another block element.  How annoying is that?
-					*/
-					
-					if ($element == 'blockquote')
-					{
-						if (substr(trim($bq), 0, 1) != '<' OR ! preg_match("/^<(p|div|pre|h[1-6]|[ou]l).*?>/", trim($bq)))
-						{
-							// Series of <blockquote>'s in a row.  Put the <p> at the end of them
-							if (strncasecmp($bq, '<blockquote', strlen('<blockquote')) === 0)
-							{
-								while(preg_match("/^<".$element."([^>]+)>/", $bq, $bmatch))
-								{
-									$bq = substr($bq, strlen($bmatch[0]));
-									$p .= $bmatch[0];
-								}
-								
-								$p .= '<p>';
-							}
-							else
-							{
-								$p = '<p>';
-							}
-						}
-						
-						if (substr(trim($bq), -1) != '>' OR ! preg_match("/<\/(p|div|pre|h[1-6]|[ou]l).*?>$/", trim($bq)))
-						{
-							$pc = '</p>';
-						}
-					}
-					
-					if (preg_match("/\n\n/", $bq))
-					{
-						// Either <span>'s or Forum Quotes
-						if ($element == 'span' OR ($element == 'blockquote' && (stristr($matches['1'][$i], 'date=') OR stristr($matches['1'][$i], 'author='))))
-						{
-							$bq = str_replace("\n\n", "\n<br />", $bq);
-						}
-						else
-						{
-							$p	= '<p>';
-							$pc	= '</p>';
-						}
-					}
-				
-					$str = str_replace($matches['0'][$i], '<'.$element.$matches['1'][$i].'>'.$p.$bq.$pc.'</'.$element.'>', $str);
-				}        
-			}
-		}
-		
-		if (strpos($str, '</blockquote>') !== FALSE)
-		{
-			$str = preg_replace("/([^>])(<\/blockquote>)/", "\\1</p>\\2", $str);
-		}
-		
-		/** ----------------------------------------
-        /**  We need to prevent headings from being wrapped in <p> tags
-        /** ----------------------------------------*/
-
-		foreach(array('h1', 'h2', 'h3', 'h4', 'h5', 'h6') as $element)
-		{
-			$str = preg_replace("/\<(".$element.")(.*?)\>(.+?)\<\/".$element."\>/si", 
-								"</p><\\1\\2>\\3</\\1><p>",
-								$str);
-			/*
-			// This caused problems when the same match was used multiple times in a string, rare but it happened
-			if (preg_match_all("/\<".$element."(.*?)\>(.+?)\<\/".$element."\>/si", $str, $matches))
-			{
-				for ($i = 0; $i < count($matches['1']); $i++)
-				{							
-					$str = str_replace($matches['0'][$i], '</p><'.$element.$matches['1'][$i].'>'.$matches['2'][$i]."</".$element."><p>", $str);
-				}        
-			}
-			*/
+			return '';
 		}
 
-		/** ----------------------------------------
-        /**  Define temporary markers
-        /** ----------------------------------------*/
-				
-        $nl = 'N848Ff5f9a66a5ffb627cdbDce6N';
-        $dq = 'D5ffbFR627fTs3ks0097RHGH5w2D';
-        $sq = 'S5GEf899adfqekrFR62700WWde4S';
-        $el = 'E57Uhr5IImB03YQwe3X4X50kryuE';
-        $pt = 'Y573Bdd7I4DWddQwe3X48dkwiueH';
-	
-		/** ----------------------------------------
-        /**  Convert elipsis to a temporary marker
-        /** ----------------------------------------*/
-
-		$str = preg_replace("#([^\.\s])\.\.\.(\s|<br />|</p>)#", "\\1$el\\2", $str);
-
-		/** ----------------------------------------
-        /**  Convert quotes within words with marker
-        /** ----------------------------------------*/
-
-        $str = preg_replace("/(\S+)\"(\S+?)\"/", "\\1$dq\\2$dq", $str);    
-        
-		/** ----------------------------------------
-        /**  Replace all newlines with markers
-        /** ----------------------------------------*/
-        
-        $str = preg_replace("/(\015\012)|(\015)|(\012)/",$nl, $str);
-        
-		/** ----------------------------------------
-        /**  Replace quotes within tags
-        /** ----------------------------------------*/
-
-        // We don't want the auto typography feature to affect the quotes 
-        // that appear inside tags so we'll replace all single and double 
-        // quotes within tags with temporary markers.
-        
-		if ($this->allow_js_img_anchors == TRUE)
+		// Standardize Newlines to make matching easier
+		if (strpos($str, "\r") !== FALSE)
 		{
-			$js_greater = '389avaEgjke9eCAJw9j';
-			$js_lesser  = '9090anvaERJAK9hjfaj';
+			$str = str_replace(array("\r\n", "\r"), "\n", $str);			
+		}
 			
-			$js = array(   
-							'onBlur',
-							'onChange',
-							'onClick',
-							'onFocus',
-							'onLoad',
-							'onMouseOver',
-							'onmouseup',
-							'onmousedown',
-							'onSelect',
-							'onSubmit',
-							'onUnload',
-							'onkeypress',
-							'onkeydown',
-							'onkeyup',
-							'onresize'
-						);
-			
-			
-			foreach ($js as $val)
-			{
-				if (preg_match_all("/<img src\s*=.+?".$val."\s*\=\"(.+?)\".*?\>/i", $str, $matches))
-				{
-					for ($i = 0; $i < count($matches['1']); $i++)
-					{
-						$temp[$i] = str_replace(array('<','>'), array($js_lesser,$js_greater), $matches['1'][$i]);
-						$str = str_replace($matches['1'][$i], $temp[$i], $str);
-					}			
-				}
-				
-				if (preg_match_all("/<a href\s*=.+?".$val."\s*\=\"(.+?)\".*?\>/i", $str, $matches))
-				{
-					for ($i = 0; $i < count($matches['1']); $i++)
-					{
-						$temp[$i] = str_replace(array('<','>'), array($js_lesser,$js_greater), $matches['1'][$i]);
-						$str = str_replace($matches['1'][$i], $temp[$i], $str);
-					}
-				}
-			}
- 		}       
+		// Reduce line breaks.  If there are more than two consecutive linebreaks
+		// we'll compress them down to a maximum of two since there's no benefit to more.
+		if ($reduce_linebreaks === TRUE)
+		{
+			$str = preg_replace("/\n\n+/", "\n\n", $str);
+		}   
 
-        if (preg_match_all("/\<.+?\>/si", $str, $matches))
-        {
+		// Convert quotes within tags to temporary markers. We don't want quotes converted 
+		// within tags so we'll temporarily convert them to {@DQ} and {@SQ}
+		if (preg_match_all("#\<.+?>#si", $str, $matches))
+		{
 			for ($i = 0; $i < count($matches['0']); $i++)
 			{
-				$temp[$i] = preg_replace("/\"/", $dq, $matches['0'][$i]);
-				$temp[$i] = str_replace("'", $sq, $temp[$i]);
-				$str = str_replace($matches['0'][$i], $temp[$i], $str);
+				$str = str_replace($matches['0'][$i],
+									str_replace(array("'",'"'), array('{@SQ}', '{@DQ}'), $matches['0'][$i]),
+									$str);
 			}
 		}
 		
-		if ($this->allow_js_img_anchors == TRUE)
+		if ($this->protect_braced_quotes === TRUE)
 		{
-			$str = str_replace(array($js_lesser, $js_greater), array('<','>'), $str); 
-		}		
-        
-		/** ----------------------------------------
-        /**  Replace quotes within PHP
-        /** ----------------------------------------*/
-        
-        // We also need to prevent curly quotes from appearing within PHP code examples.
-        // Since we turn PHP tags into entities by default, we'll run the above 
-        // code again, only looking for PHP tags
-        
-        if (preg_match_all("/&lt;\?.+?\?&gt;/si", $str, $matches))
-        {
-			for($i = 0; $i < count($matches['0']); $i++)
+			if (preg_match_all("#\{.+?}#si", $str, $matches))
 			{
-				$temp[$i] = preg_replace("/\"/", $dq, $matches['0'][$i]);
-				$temp[$i] = str_replace("'", $sq, $temp[$i]);
-				$str = str_replace($matches['0'][$i], $temp[$i], $str);
-			}
+				for ($i = 0; $i < count($matches['0']); $i++)
+				{
+					$str = str_replace($matches['0'][$i],
+										str_replace(array("'",'"'), array('{@SQ}', '{@DQ}'), $matches['0'][$i]),
+										$str);
+				}
+			}			
 		}
 		
-		/** ----------------------------------------
-        /**  Replace <pre> tags with temporary marker
-        /** ----------------------------------------*/
-                
-        $pretags = array();
-        
-        if (preg_match_all("/\<pre\>.+?\<\/pre\>/si", $str, $matches))
-        {
-			foreach($matches[0] as $match)
+		// Convert "ignore" tags to temporary marker.  The parser splits out the string at every tag 
+		// it encounters.  Certain inline tags, like image tags, links, span tags, etc. will be 
+		// adversely affected if they are split out so we'll convert the opening bracket < temporarily to: {@TAG}
+		$str = preg_replace("#<(/*)(".$this->inline_elements.")([ >])#i", "{@TAG}\\1\\2\\3", $str);
+
+		// Split the string at every tag.  This expression creates an array with this prototype:
+		// 
+		// 	[array]
+		// 	{
+		// 		[0] = <opening tag>
+		// 		[1] = Content...
+		// 		[2] = <closing tag>
+		// 		Etc...
+		// 	}	
+		$chunks = preg_split('/(<(?:[^<>]+(?:"[^"]*"|\'[^\']*\')?)+>)/', $str, -1, PREG_SPLIT_DELIM_CAPTURE|PREG_SPLIT_NO_EMPTY);
+		
+		// Build our finalized string.  We cycle through the array, skipping tags, and processing the contained text	
+		$str = '';
+		$process = TRUE;
+		$paragraph = FALSE;
+		foreach ($chunks as $chunk)
+		{
+			// Are we dealing with a tag? If so, we'll skip the processing for this cycle.
+			// Well also set the "process" flag which allows us to skip <pre> tags and a few other things.
+			if (preg_match("#<(/*)(".$this->block_elements.").*?\>#", $chunk, $match))
 			{
-				$hash = md5($match);
-				$pretags[$hash] = $match;
-				$str = str_replace($match, $hash, $str);
+				if (preg_match("#".$this->skip_elements."#", $match[2]))
+				{
+					$process =  ($match[1] == '/') ? TRUE : FALSE;
+				}
+				
+				$str .= $chunk;
+				continue;
 			}
-        }
-        
-        // ----------------------------------------
-        //  Some people put their text immediately after
-        //  the closing blockquote tag, so I have saved them
-        //  from themselves and added a line break. - Paul
-		// ----------------------------------------
+				
+			if ($process == FALSE)
+			{
+				$str .= $chunk;
+				continue;
+			}
+			
+			//  Convert Newlines into <p> and <br /> tags
+			$str .= $this->_format_newlines($chunk);
+		}
 
-		$str = preg_replace("/(\<\/blockquote\>)([a-z])/i", "\\1".$nl."\\2", $str); 
-
-		/** ----------------------------------------
-        /**  Define the translation table
-        /** ----------------------------------------*/
+		// is the whole of the content inside a block level element?
+		if ( ! preg_match("/^<(?:".$this->block_elements.")/i", $str, $match))
+		{
+			$str = "<p>{$str}</p>";
+		}
 		
-		// Closing tag with a quote following should have a closing quote
+		// Convert quotes, elipsis, and em-dashes
+		$str = $this->format_characters($str);
+	
+		// Final clean up
+		$table = array(
 		
-		$str = preg_replace("#(<\/[a-z]+>)(\"|$dq)#", "\\1&#8221;", $str);
-		
-        // Note: The order is very important so don't change it.
-            
-        $table = array(
-        
-                        ">$dq'"					=> ">&#8220;&#8216;",
-                        "'$dq<"					=> "&#8217;&#8221;<",
-                        ">$dq"					=> ">&#8220;",
-                        "$dq<"					=> "&#8221;<",
-                        "'$dq"					=> "&#8216;&#8220;",
-                        "$dq' "					=> "&#8221;&#8217; ",
-                        "$dq'$nl"				=> "&#8221;&#8217;$nl",
-                        "$dq'<"					=> "&#8221;&#8217;<",
+						// If the user submitted their own paragraph tags within the text
+						// we will retain them instead of using our tags.
+						'/(<p.*?>)<p>/'		=> '$1', // <?php BBEdit syntax coloring bug fix
 						
-						"</em>'"				=> "</em>&#8217;",	// allows <em>Title</em>'s to use apostrophes
-                        ">'"					=> ">&#8216;",
-                        "'<"					=> "&#8217;<",
+						// Reduce multiple instances of opening/closing paragraph tags to a single one
+						'#(</p>)+#'			=> '</p>',
+						'/(<p><p>)+/'		=> '<p>',
+						
+						// Clean up stray paragraph tags that appear before block level elements
+						'#<p></p><('.$this->block_elements.')#'	=> '<$1',
+			
+						// Replace the temporary markers we added earlier
+						'/\{@TAG\}/'		=> '<',
+						'/\{@DQ\}/'			=> '"',
+						'/\{@SQ\}/'			=> "'"
 
-                        "\"' "                  => "&#8221;&#8217; ",
-                        "\"'"                   => "&#8220;&#8216;",
-                        
-                        ">\""					=> ">&#8220;",
-                        "\"<"					=> "&#8221;<",
-                        " \""                   => " &#8220;",
-						"\t\""					=> "\t&#8220;",
-                        " '"                    => " &#8216;",
-						"\t'"                    => "\t&#8216;",
-                        "'"                     => "&#8217;",
+						);
+	
+		// Do we need to reduce empty lines?
+		if ($reduce_linebreaks === TRUE)
+		{
+			$table['#<p>\n*</p>#'] = '';
+		}
+		else
+		{
+			// If we have empty paragraph tags we add a non-breaking space
+			// otherwise most browsers won't treat them as true paragraphs
+			$table['#<p></p>#'] = '<p>&nbsp;</p>';
+		}
+	
+		return preg_replace(array_keys($table), $table, $str);
 
-                        $nl."\""                =>  $nl."&#8220;",
-                        $nl."&#8217;"           =>  $nl."&#8216;",
-                        "&#8216;\""             => "&#8216;&#8220;",
-                    
-                        "\" "                   => "&#8221; ",
-                        "\"$nl"                 => "&#8221;".$nl,
-                        "\"."                   => "&#8221;.",
-                        "\","                   => "&#8221;,",
-                        "\";"                   => "&#8221;;",
-                        "\":"                   => "&#8221;:",
-                        "\"!"                   => "&#8221;!",
-                        "\"?"                   => "&#8221;?",
-                        
-                        " -- "                  => "&#8212;",
-                        $el                     => "&#8230;",
-                    
-                        ".  "                   => ".&nbsp; ",
-                        "?  "                   => "?&nbsp; ",
-                        "!  "                   => "!&nbsp; ",
-                        ":  "                   => ":&nbsp; ",
-                        
-                        "$nl$nl<blockquote"     => "\n</p>\n<blockquote",
-                        "</blockquote>$nl$nl"   => "</blockquote>\n<p>\n",
-                        
-						"</li>$nl$nl"           => "</li>$nl",
-                        
-                        "$nl$nl<ul"            => "\n</p>\n<ul",
-                        "</ul>$nl$nl"           => "</ul>\n<p>\n",
-                        
-                        "$nl$nl<ol"            => "\n</p>\n<ol",
-                        "</ol>$nl$nl"           => "</ol>\n<p>\n",
-                        
-                        "$nl$nl<code>"          => "\n</p>\n<code>",
-                        "</code>$nl$nl"         => "</code>\n<p>\n",
-                        
-                        "$nl$nl<pre>"           => "\n</p>\n<pre>",
-                        "</pre>$nl$nl"          => "</pre>\n<p>\n",
+	}
+	
+	// --------------------------------------------------------------------
 
-                        "$nl$nl<div>"           => "\n</p>\n<div>",
-                        "</div>$nl$nl"          => "</div>\n<p>\n",
-                            
-                        "$nl$nl"                => "\n</p>\n<p>\n",
-                        
-                        "</p>$nl<p>"      		=> "</p>\n<p>",
-                        
-                        "</blockquote>$nl"      => "</blockquote>\n<p>\n",
-                        
-                        "$nl<li>"               => "\n<li>",
-                        "$nl</ol>"              => "\n</ol>",
-                        "$nl</ul>"              => "\n</ul>"
-        );
-        
-		/** ----------------------------------------
-        /**  Do search/replace
-        /** ----------------------------------------*/
-        
-        $str = str_replace(array_keys($table), array_values($table), $str);
-        
-		/** ----------------------------------------
-        /**  Put <pre> tags back into string
-        /** ----------------------------------------*/
-        
-        foreach ($pretags as $key => $val)
-        {
-			$str = str_replace($key, $val, $str);
-        }
-        
-		/** ----------------------------------------
-        /**  Convert elipsis back into string
-        /** ----------------------------------------*/
-        
-        $str = str_replace($el, "&#8230;", $str);
-       
-		/** ----------------------------------------
-        /**  Convert newlines to <br /> tags 
-        /** ----------------------------------------*/
+	/**
+	 * Format Characters
+	 *
+	 * This function mainly converts double and single quotes
+	 * to curly entities, but it also converts em-dashes,
+	 * double spaces, and ampersands
+	 */
+	function format_characters($str)
+	{
+		static $table;
 		
-		// ...except within <pre> tags
-        
-        $newstr = '';
-        $ex = explode("pre>", $str);
-        $ct = count($ex);
-        
-        for ($i = 0; $i < $ct; $i++)
-        {
-            if (($i % 2) == 0)
-            {
-                $newstr .= str_replace($nl, "\n<br />\n", $ex[$i]);
-            }
-            else
-            { 
-                $newstr .= $ex[$i];
-            }
-        
-            if ($ct -1 != $i) 
-            {
-                $newstr .= "pre>";
-            }
-        }
-        
-		/** ----------------------------------------
-        /**  Put newlines back
-        /** ----------------------------------------*/
-        
-        $str = str_replace($nl, "\n", $newstr);
-        
-		/** ----------------------------------------
-        /**  Clean up the spaces we added at the beginning
-        /** ----------------------------------------*/
+		if ( ! isset($table))
+		{
+	        $table = array(					
+							// nested smart quotes, opening and closing
+							// note that rules for grammar (English) allow only for two levels deep
+							// and that single quotes are _supposed_ to always be on the outside
+							// but we'll accommodate both
+							'/(^|\W|\s)\'"/'				=> '$1&#8216;&#8220;',
+							'/\'"(\s|\W|$)/'				=> '&#8217;&#8221;$1',
+							'/(^|\W|\s)"\'/'				=> '$1&#8220;&#8216;',
+							'/"\'(\s|\W|$)/'				=> '&#8221;&#8217;$1',
+
+							// single quote smart quotes
+							'/\'(\s|\W|$)/'					=> '&#8217;$1',
+							'/(^|\W|\s)\'/'					=> '$1&#8216;',
+
+							// double quote smart quotes
+							'/"(\s|\W|$)/'					=> '&#8221;$1',
+							'/(^|\W|\s)"/'					=> '$1&#8220;',
+
+							// apostrophes
+							"/(\w)'(\w)/"       	    	=> '$1&#8217;$2',
+
+							// Em dash and ellipses dots
+							'/\s?\-\-\s?/'					=> '&#8212;',
+							'/(\w)\.{3}/'					=> '$1&#8230;',
+
+							// double space after sentences
+							'/(\W)  /'						=> '$1&nbsp; ',
+
+							// ampersands, if not a character entity
+							'/&(?!#?[a-zA-Z0-9]{2,};)/'		=> '&amp;'
+	        			);			
+		}	
+
+		return preg_replace(array_keys($table), $table, $str);
+	}
+	
+	// --------------------------------------------------------------------
+
+	/**
+	 * Old version - use format_characters() now
+	 */	
+	function light_xhtml_typography($str)
+	{
+		return $this->format_characters($str);
+	}
+	
+	// --------------------------------------------------------------------
+
+	/**
+	 * Format Newlines
+	 *
+	 * Converts newline characters into either <p> tags or <br />
+	 *
+	 */	
+	function _format_newlines($str)
+	{
+		if ($str == '')
+		{
+			return $str;
+		}
+
+		if (strpos($str, "\n") === FALSE)
+		{
+			return $str;
+		}
 		
-        $str = substr(substr($str,1), 0, -1);
-        
-		/** ----------------------------------------
-        /**  Add outer opening/closing <p> tags
-        /** ----------------------------------------*/
-        
-        // We only add an opening <p> tag if the first
-        // thing in an entry is not a <blockquote>, <pre>, <code>, etc.	
-            
-        if (substr($str, 0, 5) != "<bloc"  AND
-            substr($str, 0, 4) != "<pre"   AND
-            substr($str, 0, 5) != "<code"  AND
-            substr($str, 0, 4) != "<div"   AND
-            substr($str, 0, 2) != "<h"     AND
-            substr($str, 0, 3) != "<ol"    AND
-            substr($str, 0, 3) != "<ul"	   AND
-            substr($str, 0, 3) != "<h1"	   AND
-            substr($str, 0, 3) != "<h2"	   AND
-            substr($str, 0, 3) != "<h3"	   AND
-            substr($str, 0, 3) != "<h4"	   AND
-            substr($str, 0, 3) != "<h5"	   AND
-            substr(trim($str), 0, 2) != "<p")
-        {
-			$str = '<p>'.$str;        
-        }
-        
-        if (substr($str, -4) == "</p>")
-            $str = substr($str, 0, -4);  
-        
-        // Add the closing </p> tag at the end of the entry
-        // but only if the last thing is not a </blockquote> </pre> etc.
-        
-        if (substr($str, -6) != "quote>" AND
-            substr($str, -4) != "pre>"   AND
-            substr($str, -5) != "code>"  AND
-            substr($str, -4) != "div>"   AND
-            substr($str, -3) != "ol>"    AND
-            substr($str, -3) != "ul>"	 AND
-            substr($str, -3) != "h1>"	 AND
-            substr($str, -3) != "h2>"	 AND
-            substr($str, -3) != "h3>"	 AND
-            substr($str, -3) != "h4>"	 AND
-            substr($str, -3) != "h5>")
-        {
-			$str = $str."\n</p>";        
-        }
-
-		/** ----------------------------------------
-        /**  Deal with duplicate <p> tags
-        /** ----------------------------------------*/
-    
-    	// Since we artificially close <p> tags just before any heading (<h3>) in order for them 
-    	// not to get wrapped in <p> tags this creates a couple anomalies which we'll correct
-        
-		$str = preg_replace("/\<p\>\s*?\<\/p\>/si", "", $str);
-		$str = preg_replace("/\<p\>\s*?\<p(.*?)\>/si", "<p\\1>", $str);
-		$str = preg_replace("/<p([^>]*)>\s*?\<br \/\>/si", "<p\\1>", $str);
-        
-		/** ----------------------------------------
-        /**  Clean up stray paragraph tags.
-        /** ----------------------------------------*/
-       
-		// This loop makes sure we have matching
-		// opening/closing <p> tags
+		// Convert two consecutive newlines to paragraphs
+		$str = str_replace("\n\n", "</p>\n\n<p>", $str);
 		
-        $newstr = '';
-        $copy = explode("</p>", $str);
-        
-        for ($i = 0;  $i < count($copy); $i++)
-        {
-            if (preg_match("|<p(.*?)>|", $copy[$i]))
-            {
-                $newstr .= $copy[$i]."</p>";
-            }
-            else
-                $newstr .= $copy[$i];
-        }
-        
-        $str = $newstr;
-         
-		/** ----------------------------------------
-        /**  Add quotes back to tags
-        /** ----------------------------------------*/
-            
-        $str = str_replace(array($dq, $sq), array('"', "'"), $str);
-                
-        // And we're done.  Phew... that was a chore.
-            
-        return $str;
-    }
-    /* END */
+		// Convert single spaces to <br /> tags
+		$str = preg_replace("/([^\n])(\n)([^\n])/", "\\1<br />\\2\\3", $str);
+		
+		// Wrap the whole enchilada in enclosing paragraphs
+		if ($str != "\n")
+		{
+			$str =  '<p>'.$str.'</p>';
+		}
 
-
+		// Remove empty paragraphs if they are on the first line, as this
+		// is a potential unintended consequence of the previous code
+		$str = preg_replace("/<p><\/p>(.*)/", "\\1", $str, 1);
+		
+		return $str;
+	}
+	
     /** -------------------------------------
     /**  Encode Email Address
     /** -------------------------------------*/
 
     function encode_email($email, $title = '', $anchor = TRUE)
     {
-		global $TMPL, $LANG;
+		global $FNS, $TMPL, $LANG;
 	
 		if (is_object($TMPL) AND isset($TMPL->encode_email) AND $TMPL->encode_email == FALSE)
 		{
@@ -1900,11 +1608,15 @@ class Typography {
        }
         
         $bit = array_reverse($bit);
+		$span_id = 'eeEncEmail_'.$FNS->random('alpha', 10);
         ob_start();
         
-?><script type="text/javascript">
+?>
+<span id='<?php echo $span_id; ?>'></span>
+<script type="text/javascript">
 //<![CDATA[
 var l=new Array();
+var output = '';
 <?php
     
     $i = 0;
@@ -1915,9 +1627,10 @@ var l=new Array();
 ?>
 
 for (var i = l.length-1; i >= 0; i=i-1){ 
-if (l[i].substring(0, 1) == ' ') document.write("&#"+unescape(l[i].substring(1))+";"); 
-else document.write(unescape(l[i]));
+if (l[i].substring(0, 1) == ' ') output += "&#"+unescape(l[i].substring(1))+";"; 
+else output += unescape(l[i]);
 }
+document.getElementById('<?php echo $span_id; ?>').innerHTML = output;
 //]]>
 </script><?php
 

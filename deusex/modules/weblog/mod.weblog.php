@@ -57,7 +57,7 @@ class Weblog {
 	var $tb_captcha_hash		= '';
 	var $cat_request			= FALSE;
 	var $enable					= array();	// modified by various tags with disable= parameter
-    
+
     // These are used with the nested category trees
     
     var $category_list  		= array();
@@ -684,6 +684,8 @@ class Weblog {
 					}
 				}
 				
+				$stati = array();
+				
 				if (isset($params['status']) && trim($params['status']) != '')
 				{	
 					$stati	= explode('|', trim($params['status']));
@@ -701,12 +703,12 @@ class Weblog {
 				$stati = array_map('strtolower', $stati);
 				
 				$r = 1;  // Fixes a problem when a sorting key occurs twice
-				
+
 				foreach($entry_data[$entry_id] as $relating_data)
 				{
 					if ( ! isset($params['weblog']) OR in_array($relating_data['query']->row['weblog_id'], $allowed))
 					{
-						if (isset($stati) && isset($relating_data['query']->row[$order]))
+						if (isset($stati) && ! empty($stati) && isset($relating_data['query']->row[$order]))
 						{
 							if ($status_state == 'negative' && ! in_array(strtolower($relating_data['query']->row['status']), $stati))
 							{
@@ -945,22 +947,10 @@ class Weblog {
 			return;
 		}
 		
-        // We'll first limit the query to only the field groups available
-        // to the specific blog(s) for this account
-        
-        $sql = "SELECT field_id, field_type, field_name, exp_weblog_fields.site_id 
-        		FROM exp_weblog_fields, exp_weblogs
-        		WHERE exp_weblogs.field_group = exp_weblog_fields.group_id";
-        
-        if (USER_BLOG !== FALSE)
-        {
-            $sql .= " AND group_id = '".$DB->escape_str(UB_FIELD_GRP)."'";
-        }
-        else
-        {
-        	$sql .= " AND exp_weblogs.is_user_blog = 'n'";
-        }
-                
+        // Gotta catch 'em all!
+        $sql = "SELECT field_id, field_type, field_name, site_id 
+        		FROM exp_weblog_fields";
+                        
         $query = $DB->query($sql);
                 
         foreach ($query->result as $row)
@@ -1022,7 +1012,7 @@ class Weblog {
 			{
 				foreach ($query->result as $row)
 				{
-					$this->catfields[$row['field_name']] = $row['field_id'];
+					$this->catfields[] = array('field_name' => $row['field_name'], 'field_id' => $row['field_id']);
 				}
 			}
 			
@@ -1455,7 +1445,47 @@ class Weblog {
         
 		if ($TMPL->fetch_param('show_pages') !== FALSE && in_array($TMPL->fetch_param('show_pages'), array('only', 'no')) && ($pages = $PREFS->ini('site_pages')) !== FALSE)
 		{
-			$entry_id = (($TMPL->fetch_param('show_pages') == 'no') ? 'not ' : '').implode('|', array_flip($pages['uris']));
+			// consider entry_id
+			if ($TMPL->fetch_param('entry_id') !== FALSE)
+			{
+				$not = FALSE;
+
+				if (strncmp($entry_id, 'not', 3) == 0)
+				{
+					$not = TRUE;
+					$entry_id = trim(substr($entry_id, 3));
+				}
+
+				$ids = explode('|', $entry_id);
+
+				if ($TMPL->fetch_param('show_pages') == 'only')
+				{
+					if ($not === TRUE)
+					{
+						$entry_id = implode('|', array_diff(array_flip($pages['uris']), explode('|', $ids)));
+					}
+					else
+					{
+						$entry_id = implode('|',array_diff($ids, array_diff($ids, array_flip($pages['uris']))));
+					}
+				}
+				else
+				{
+					if ($not === TRUE)
+					{
+						$entry_id = "not {$entry_id}|".implode('|', array_flip($pages['uris']));
+					}
+					else
+					{
+						$entry_id = implode('|',array_diff($ids, array_flip($pages['uris'])));
+					}
+				}
+				echo $entry_id;
+			}
+			else
+			{
+				$entry_id = (($TMPL->fetch_param('show_pages') == 'no') ? 'not ' : '').implode('|', array_flip($pages['uris']));
+			}
 		}	
 
         /** ----------------------------------------------
@@ -1497,7 +1527,7 @@ class Weblog {
 		/**  Validate Results for Later Processing
 		/** -------------------------------------*/
 					
-		$base_orders = array('random', 'date', 'title', 'url_title', 'edit_date', 'comment_total', 'username', 'screen_name', 'most_recent_comment', 'expiration_date',
+		$base_orders = array('random', 'entry_id', 'date', 'title', 'url_title', 'edit_date', 'comment_total', 'username', 'screen_name', 'most_recent_comment', 'expiration_date',
 							 'view_count_one', 'view_count_two', 'view_count_three', 'view_count_four');
 				
 		foreach($order_array as $key => $order)
@@ -1576,6 +1606,27 @@ class Weblog {
 			}
 		}
 		
+		// fixed entry id ordering
+		if (($fixed_order = $TMPL->fetch_param('fixed_order')) === FALSE OR preg_match('/[^0-9\|]/', $fixed_order))
+		{
+			$fixed_order = FALSE;
+		}
+		else
+		{
+			// MySQL will not order the entries correctly unless the results are constrained
+			// to matching rows only, so we force the entry_id as well
+			$entry_id = $fixed_order;
+			$fixed_order = preg_split('/\|/', $fixed_order, -1, PREG_SPLIT_NO_EMPTY);
+			
+			// some peeps might want to be able to 'flip' it
+			// the default sort order is 'desc' but in this context 'desc' has a stronger "reversing"
+			// connotation, so we look not at the sort array, but the tag parameter itself, to see the user's intent
+			if ($sort == 'desc')
+			{
+				$fixed_order = array_reverse($fixed_order);
+			}
+		}
+
         /** ----------------------------------------------
         /**  Build the master SQL query
         /** ----------------------------------------------*/
@@ -2138,9 +2189,7 @@ class Weblog {
 				
 						if ($distinct != FALSE)
 						{
-							/** 
-								A Rough Attempt to Get the Localized Offset Added On
-							*/
+							// A Rough Attempt to Get the Localized Offset Added On
 							
 							$offset = $LOC->set_localized_offset();
 							$dst_on = (date("I", $LOC->now) === 1) ? TRUE : FALSE;
@@ -2475,133 +2524,156 @@ class Weblog {
         // need to use this in two places
         
         $end = 'ORDER BY ';
-		
-		if (FALSE === $order_array['0'])
+
+		if ($fixed_order !== FALSE)
 		{
-			if ($sticky == 'off')
-			{
-				$end .= "t.entry_date";
-			}
-			else
-			{
-				$end .= "t.sticky desc, t.entry_date";
-			}
-			
-			if ($sort_array['0'] == 'asc' || $sort_array['0'] == 'desc')
-			{
-				$end .= " ".$sort_array['0'];
-			}
+			$end .= 'FIELD(t.entry_id, '.implode(',', $fixed_order).') ';
 		}
 		else
 		{
-			if ($sticky != 'off')
+			// Used to eliminate sort issues with duplicated fields below
+			$entry_id_sort = $sort_array[0];		
+
+			if (FALSE === $order_array['0'])
 			{
-				$end .= "t.sticky desc, ";
-			}
-			
-			foreach($order_array as $key => $order)
-			{
-				if (in_array($order, array('view_count_one', 'view_count_two', 'view_count_three', 'view_count_four')))
+				if ($sticky == 'off')
 				{
-					$view_ct = substr($order, 10);
-					$order	 = "view_count";
+					$end .= "t.entry_date";
 				}
-				
-				if ($key > 0) $end .= ", ";
-			
-				switch ($order)
+				else
 				{
-					case 'date' : 
-						$end .= "t.entry_date";
-					break;
-					
-					case 'edit_date' : 
-						$end .= "t.edit_date";
-					break;
-					
-					case 'expiration_date' : 
-						$end .= "t.expiration_date";
-					break;
-					
-					case 'title' : 
-						$end .= "t.title";
-					break;
-					
-					case 'url_title' : 
-						$end .= "t.url_title";
-					break;
-					
-					case 'view_count' : 
-						$vc = $order.$view_ct;
-					
-						$end .= " t.{$vc} ".$sort_array[$key];
-						
-						if (sizeof($order_array)-1 == $key)
-						{
-							$end .= ", t.entry_date ".$sort_array[$key];
-						}
-						
-						$sort_array[$key] = FALSE;
-					break;
-					
-					case 'comment_total' : 
-						$end .= "t.comment_total ".$sort_array[$key];
-						
-						if (sizeof($order_array)-1 == $key)
-						{
-							$end .= ", t.entry_date ".$sort_array[$key];
-						}
-						
-						$sort_array[$key] = FALSE;
-					break;
-					
-					case 'most_recent_comment' : 
-						$end .= "t.recent_comment_date ".$sort_array[$key];
-						
-						if (sizeof($order_array)-1 == $key)
-						{
-							$end .= ", t.entry_date ".$sort_array[$key];
-						}
-						
-						$sort_array[$key] = FALSE;
-					break;
-					
-					case 'username' : 
-						$end .= "m.username";
-					break;
-					
-					case 'screen_name' : 
-						$end .= "m.screen_name";
-					break;
-					
-					case 'custom_field' :
-					
-						if (strpos($corder[$key], '|'))
-						{
-							$end .= "CONCAT(wd.field_id_".implode(", wd.field_id_", explode('|', $corder[$key])).")";
-						}
-						else
-						{
-							$end .= "wd.field_id_".$corder[$key];
-						}
-					break;
-					
-					case 'random' : 
-							$end = "ORDER BY rand()";  
+					$end .= "t.sticky desc, t.entry_date";
+				}
+
+				if ($sort_array['0'] == 'asc' || $sort_array['0'] == 'desc')
+				{
+					$end .= " ".$sort_array['0'];
+				}
+			}
+			else
+			{
+				if ($sticky != 'off')
+				{
+					$end .= "t.sticky desc, ";
+				}
+
+				foreach($order_array as $key => $order)
+				{
+					if (in_array($order, array('view_count_one', 'view_count_two', 'view_count_three', 'view_count_four')))
+					{
+						$view_ct = substr($order, 10);
+						$order	 = "view_count";
+					}
+
+					if ($key > 0) $end .= ", ";
+
+					switch ($order)
+					{
+						case 'entry_id' :
+							$end .= "t.entry_id";
+						break;
+
+						case 'date' : 
+							$end .= "t.entry_date";
+						break;
+
+						case 'edit_date' : 
+							$end .= "t.edit_date";
+						break;
+
+						case 'expiration_date' : 
+							$end .= "t.expiration_date";
+						break;
+
+						case 'title' : 
+							$end .= "t.title";
+						break;
+
+						case 'url_title' : 
+							$end .= "t.url_title";
+						break;
+
+						case 'view_count' : 
+							$vc = $order.$view_ct;
+
+							$end .= " t.{$vc} ".$sort_array[$key];
+
+							if (sizeof($order_array)-1 == $key)
+							{
+								$end .= ", t.entry_date ".$sort_array[$key];
+							}
+
 							$sort_array[$key] = FALSE;
-					break;
-					
-					default       : 
-						$end .= "t.entry_date";
-					break;
-				}
-				
-				if ($sort_array[$key] == 'asc' || $sort_array[$key] == 'desc')
-				{
-					// keep entries with the same timestamp in the correct order
-					$end .= " {$sort_array[$key]}, t.entry_id {$sort_array[$key]}";
+						break;
+
+						case 'comment_total' : 
+							$end .= "t.comment_total ".$sort_array[$key];
+
+							if (sizeof($order_array)-1 == $key)
+							{
+								$end .= ", t.entry_date ".$sort_array[$key];
+							}
+
+							$sort_array[$key] = FALSE;
+						break;
+
+						case 'most_recent_comment' : 
+							$end .= "t.recent_comment_date ".$sort_array[$key];
+
+							if (sizeof($order_array)-1 == $key)
+							{
+								$end .= ", t.entry_date ".$sort_array[$key];
+							}
+
+							$sort_array[$key] = FALSE;
+						break;
+
+						case 'username' : 
+							$end .= "m.username";
+						break;
+
+						case 'screen_name' : 
+							$end .= "m.screen_name";
+						break;
+
+						case 'custom_field' :
+
+							if (strpos($corder[$key], '|'))
+							{
+								$end .= "CONCAT(wd.field_id_".implode(", wd.field_id_", explode('|', $corder[$key])).")";
+							}
+							else
+							{
+								$end .= "wd.field_id_".$corder[$key];
+							}
+						break;
+
+						case 'random' : 
+								$end = "ORDER BY rand()";  
+								$sort_array[$key] = FALSE;
+						break;
+
+						default       : 
+							$end .= "t.entry_date";
+						break;
+					}
+
+					if ($sort_array[$key] == 'asc' || $sort_array[$key] == 'desc')
+					{
+						// keep entries with the same timestamp in the correct order
+						$end .= " {$sort_array[$key]}";
+					}
 				}
 			}
+
+			// In the event of a sorted field containing identical information as another
+			// entry (title, entry_date, etc), they will sort on the order they were entered
+			// into ExpressionEngine, with the first "sort" parameter taking precedence. 
+			// If no sort parameter is set, entries will descend by entry id.
+			if ( ! in_array('entry_id', $order_array))
+			{
+				$end .= ", t.entry_id ".$entry_id_sort;			
+			}	
 		}
 
 		/** ----------------------------------------
@@ -2643,7 +2715,7 @@ class Weblog {
 				$this->pager_sql = $sql_a.$sql_b.$sql;
 				$query = $DB->query($this->pager_sql);
 				$total = $query->num_rows;
-								
+												
 				// Adjust for offset
 				if ($total >= $offset)
 					$total = $total - $offset;
@@ -2657,6 +2729,7 @@ class Weblog {
 				$query = $DB->query($this->pager_sql);
 				
 				$total = $query->num_rows;
+				
 				$this->create_pagination($total, $query);
 				
 				if ($PREFS->ini('enable_sql_caching') == 'y')
@@ -3134,11 +3207,11 @@ class Weblog {
         
             $tagdata = $TMPL->tagdata;
             
-            $row['count']			= $count+1;
-            $row['page_uri']		= '';
-            $row['page_url']		= '';
-            $row['total_results']	= $total_results;
-            $row['absolute_count']	= $this->p_page + $row['count'];
+			$row['count']				= $count+1;
+			$row['page_uri']			= '';
+			$row['page_url']			= '';
+			$row['total_results']		= $total_results;
+			$row['absolute_count']		= $this->p_page + $row['count'];
             
             if ($site_pages !== FALSE && isset($site_pages['uris'][$row['entry_id']]))
             {
@@ -3406,11 +3479,11 @@ class Weblog {
 
 								// add custom fields for conditionals prep
 
-								foreach ($this->catfields as $ck => $cv)
+								foreach ($this->catfields as $cv)
 								{
-									$cat_vars[$ck] = ( ! isset($v['field_id_'.$cv])) ? '' : $v['field_id_'.$cv];
+									$cat_vars[$cv['field_name']] = ( ! isset($v['field_id_'.$cv['field_id']])) ? '' : $v['field_id_'.$cv['field_id']];
 								}
-																
+														
 								$temp = $FNS->prep_conditionals($temp, $cat_vars);
 								
 								$temp = str_replace(array(LD."category_id".RD,
@@ -3427,31 +3500,39 @@ class Weblog {
 														  (isset($v['4'])) ? $v['4'] : ''
 														  ),
 													$temp);
-								
+													
+										
 								// parse custom fields
-
-								foreach($this->catfields as $name => $id)
+								$temp2 = array();
+								$int = 0;
+								foreach($this->catfields as $cv2)
 								{
-									if (isset($v['field_id_'.$id]))
+									$temp2[$int] = $temp;
+									
+									if (isset($v['field_id_'.$cv2['field_id']]) AND $v['field_id_'.$cv2['field_id']] != '')
 									{
-										$field_content = $this->TYPE->parse_type($v['field_id_'.$id],
+										$field_content = $this->TYPE->parse_type($v['field_id_'.$cv2['field_id']],
 																					array(
-																						  'text_format'		=> $v['field_ft_'.$id],
+																						  'text_format'		=> $v['field_ft_'.$cv2['field_id']],
 																						  'html_format'		=> $v['field_html_formatting'],
 																						  'auto_links'		=> 'n',
 																						  'allow_img_url'	=> 'y'
 																						)
 																				);								
-										$temp = str_replace(LD.$name.RD, $field_content, $temp);	
+										$temp2[$int] = str_replace(LD.$cv2['field_name'].RD, $field_content, $temp2[$int]);											
 									}
 									else
 									{
 										// garbage collection
-										$temp = str_replace(LD.$name.RD, '', $temp);
+										$temp2[$int] = str_replace(LD.$cv2['field_name'].RD, '', $temp2[$int]);
 									}
+									
+									$temp2[$int] = $FNS->remove_double_slashes($temp2[$int]);
+									
+									$int++;
 								}
 												
-								$cats .= $FNS->remove_double_slashes($temp);
+								$cats .= implode('', $temp2);
 
 								if ($cat_limit !== FALSE && $cat_limit == ++$i)
 								{
@@ -4264,7 +4345,7 @@ class Weblog {
                 if ($key == 'title')
                 {                      
                 	$row['title'] = str_replace(array('{', '}'), array('&#123;', '&#125;'), $row['title']);
-                    $tagdata = $TMPL->swap_var_single($val,  $this->TYPE->light_xhtml_typography($row['title']), $tagdata);
+                    $tagdata = $TMPL->swap_var_single($val,  $this->TYPE->format_characters($row['title']), $tagdata);
                 }
                     
                 /** ----------------------------------------
@@ -4412,8 +4493,16 @@ class Weblog {
 																	  )
 															  );
                      	}
-                     	
-                    $tagdata = $TMPL->swap_var_single($val, $entry, $tagdata);                
+
+					// prevent accidental parsing of other weblog variables in custom field data
+					if (strpos($entry, '{') !== FALSE)
+					{
+	                    $tagdata = $TMPL->swap_var_single($val, str_replace(array('{', '}'), array('60ba4b2daa4ed4', 'c2b7df6201fdd3'), $entry), $tagdata);
+					}
+					else
+					{
+	                    $tagdata = $TMPL->swap_var_single($val, $entry, $tagdata);
+					}
                 }
                 
                 /** ----------------------------------------
@@ -4441,7 +4530,11 @@ class Weblog {
             }
             // END SINGLE VARIABLES 
                
-               
+			// do we need to replace any curly braces that we protected in custom fields?
+			if (strpos($tagdata, '60ba4b2daa4ed4') !== FALSE)
+			{
+				$tagdata = str_replace(array('60ba4b2daa4ed4', 'c2b7df6201fdd3'), array('{', '}'), $tagdata);
+			}
                
             /** ----------------------------------------
             /**  Compile trackback data
@@ -4825,7 +4918,7 @@ class Weblog {
 				{
 					foreach ($query->result as $row)
 					{
-						$this->catfields[$row['field_name']] = $row['field_id'];
+						$this->catfields[] = array('field_name' => $row['field_name'], 'field_id' => $row['field_id']);
 					}
 				}
 
@@ -5037,9 +5130,9 @@ class Weblog {
 
 				// add custom fields for conditionals prep
 
-				foreach ($this->catfields as $k => $v)
+				foreach ($this->catfields as $v)
 				{
-					$cat_vars[$k] = ( ! isset($val['field_id_'.$v])) ? '' : $val['field_id_'.$v];
+					$cat_vars[$v['field_name']] = ( ! isset($val['field_id_'.$v['field_id']])) ? '' : $val['field_id_'.$v['field_id']];
 				}
 				
 				$cat_vars['count'] = ++$this->category_count;
@@ -5073,24 +5166,24 @@ class Weblog {
 				
 				// parse custom fields
 				
-				foreach($this->catfields as $name => $id)
+				foreach($this->catfields as $cv)
 				{
-					if (isset($val['field_id_'.$id]))
+					if (isset($val['field_id_'.$cv['field_id']]) AND $val['field_id_'.$cv['field_id']] != '')
 					{
-						$field_content = $this->TYPE->parse_type($val['field_id_'.$id],
+						$field_content = $this->TYPE->parse_type($val['field_id_'.$cv['field_id']],
 																	array(
-																		  'text_format'		=> $val['field_ft_'.$id],
+																		  'text_format'		=> $val['field_ft_'.$cv['field_id']],
 																		  'html_format'		=> $val['field_html_formatting'],
 																		  'auto_links'		=> 'n',
 																		  'allow_img_url'	=> 'y'
 																		)
 																);								
-						$chunk = str_replace(LD.$name.RD, $field_content, $chunk);	
+						$chunk = str_replace(LD.$cv['field_name'].RD, $field_content, $chunk);	
 					}
 					else
 					{
 						// garbage collection
-						$chunk = str_replace(LD.$name.RD, '', $chunk);
+						$chunk = str_replace(LD.$cv['field_name'].RD, '', $chunk);
 					}
 				}
 
@@ -5378,7 +5471,7 @@ class Weblog {
 				{
 					foreach ($query->result as $row)
 					{
-						$this->catfields[$row['field_name']] = $row['field_id'];
+						$this->catfields[] = array('field_name' => $row['field_name'], 'field_id' => $row['field_id']);
 					}
 				}
 
@@ -5476,9 +5569,9 @@ class Weblog {
 										  'category_image'			=> $row['cat_image'],
 										  'category_id'				=> $row['cat_id']);
 
-						foreach ($this->catfields as $k => $v)
+						foreach ($this->catfields as $v)
 						{
-							$cat_vars[$k] = ( ! isset($row['field_id_'.$v])) ? '' : $row['field_id_'.$v];
+							$cat_vars[$v['field_name']] = ( ! isset($row['field_id_'.$v['field_id']])) ? '' : $row['field_id_'.$v['field_id']];
 						}
 										
 						$chunk = $FNS->prep_conditionals($chunk, $cat_vars);
@@ -5503,24 +5596,24 @@ class Weblog {
 						
 						// parse custom fields
 
-						foreach($this->catfields as $name => $id)
+						foreach($this->catfields as $cfv)
 						{
-							if (isset($row['field_id_'.$id]))
+							if (isset($row['field_id_'.$cfv['field_id']]) AND $row['field_id_'.$cfv['field_id']] != '')
 							{
-								$field_content = $this->TYPE->parse_type($row['field_id_'.$id],
+								$field_content = $this->TYPE->parse_type($row['field_id_'.$cfv['field_id']],
 																			array(
-																				  'text_format'		=> $row['field_ft_'.$id],
+																				  'text_format'		=> $row['field_ft_'.$cfv['field_id']],
 																				  'html_format'		=> $row['field_html_formatting'],
 																				  'auto_links'		=> 'n',
 																				  'allow_img_url'	=> 'y'
 																				)
 																		);								
-								$chunk = str_replace(LD.$name.RD, $field_content, $chunk);	
+								$chunk = str_replace(LD.$cfv['field_name'].RD, $field_content, $chunk);	
 							}
 							else
 							{
 								// garbage collection
-								$chunk = str_replace(LD.$name.RD, '', $chunk);
+								$chunk = str_replace(LD.$cfv['field_name'].RD, '', $chunk);
 							}
 						}
 					
@@ -5635,7 +5728,7 @@ class Weblog {
 			{
 				foreach ($query->result as $row)
 				{
-					$this->catfields[$row['field_name']] = $row['field_id'];
+					$this->catfields[] = array('field_name' => $row['field_name'], 'field_id' => $row['field_id']);
 				}
 			}
 			
@@ -5869,9 +5962,9 @@ class Weblog {
 				
 				// add custom fields for conditionals prep
 				
-				foreach ($this->catfields as $k => $v)
+				foreach ($this->catfields as $v)
 				{
-					$cat_vars[$k] = ( ! isset($val['field_id_'.$v])) ? '' : $val['field_id_'.$v];
+					$cat_vars[$v['field_name']] = ( ! isset($val['field_id_'.$v['field_id']])) ? '' : $val['field_id_'.$v['field_id']];
 				}
 				
 				$cat_vars['count'] = ++$this->category_count;
@@ -5905,24 +5998,24 @@ class Weblog {
             	
 				// parse custom fields
 
-				foreach($this->catfields as $name => $id)
+				foreach($this->catfields as $cval)
 				{
-					if (isset($val['field_id_'.$id]))
+					if (isset($val['field_id_'.$cval['field_id']]) AND $val['field_id_'.$cval['field_id']] != '')
 					{
-						$field_content = $this->TYPE->parse_type($val['field_id_'.$id],
+						$field_content = $this->TYPE->parse_type($val['field_id_'.$cval['field_id']],
 																	array(
-																		  'text_format'		=> $val['field_ft_'.$id],
+																		  'text_format'		=> $val['field_ft_'.$cval['field_id']],
 																		  'html_format'		=> $val['field_html_formatting'],
 																		  'auto_links'		=> 'n',
 																		  'allow_img_url'	=> 'y'
 																		)
 																);								
-						$chunk = str_replace(LD.$name.RD, $field_content, $chunk);	
+						$chunk = str_replace(LD.$cval['field_name'].RD, $field_content, $chunk);	
 					}
 					else
 					{
 						// garbage collection
-						$chunk = str_replace(LD.$name.RD, '', $chunk);
+						$chunk = str_replace(LD.$cval['field_name'].RD, '', $chunk);
 					}
 				}
 				
@@ -6045,9 +6138,9 @@ class Weblog {
 			
 				// add custom fields for conditionals prep
 
-				foreach ($this->catfields as $k => $v)
+				foreach ($this->catfields as $v)
 				{
-					$cat_vars[$k] = ( ! isset($val['field_id_'.$v])) ? '' : $val['field_id_'.$v];
+					$cat_vars[$v['field_name']] = ( ! isset($val['field_id_'.$v['field_id']])) ? '' : $val['field_id_'.$v['field_id']];
 				}
 				
 				$cat_vars['count'] = ++$this->category_count;
@@ -6081,24 +6174,24 @@ class Weblog {
 				
 				// parse custom fields
 
-				foreach($this->catfields as $name => $id)
+				foreach($this->catfields as $ccv)
 				{
-					if (isset($val['field_id_'.$id]))
+					if (isset($val['field_id_'.$ccv['field_id']]) AND $val['field_id_'.$ccv['field_id']] != '')
 					{
-						$field_content = $this->TYPE->parse_type($val['field_id_'.$id],
+						$field_content = $this->TYPE->parse_type($val['field_id_'.$ccv['field_id']],
 																	array(
-																		  'text_format'		=> $val['field_ft_'.$id],
+																		  'text_format'		=> $val['field_ft_'.$ccv['field_id']],
 																		  'html_format'		=> $val['field_html_formatting'],
 																		  'auto_links'		=> 'n',
 																		  'allow_img_url'	=> 'y'
 																		)
 																);								
-						$chunk = str_replace(LD.$name.RD, $field_content, $chunk);	
+						$chunk = str_replace(LD.$ccv['field_name'].RD, $field_content, $chunk);	
 					}
 					else
 					{
 						// garbage collection
-						$chunk = str_replace(LD.$name.RD, '', $chunk);
+						$chunk = str_replace(LD.$ccv['field_name'].RD, '', $chunk);
 					}
 				}
 				
@@ -6347,7 +6440,7 @@ class Weblog {
 
 		if ( ! preg_match("#(^|\/)C(\d+)#", $qstring, $match))
 		{					
-			return '';
+			return $TMPL->no_results();
 		}
 
 		// fetch category field names and id's
@@ -6359,7 +6452,7 @@ class Weblog {
 			
 			if ($gquery->num_rows == 0)
 			{
-				return '';
+				return $TMPL->no_results();
 			}
 			
 			$query = $DB->query("SELECT field_id, field_name
@@ -6371,7 +6464,7 @@ class Weblog {
 			{
 				foreach ($query->result as $row)
 				{
-					$this->catfields[$row['field_name']] = $row['field_id'];
+					$this->catfields[] = array('field_name' => $row['field_name'], 'field_id' => $row['field_id']);
 				}
 			}
 
@@ -6385,14 +6478,14 @@ class Weblog {
 			$field_sqlb = '';
 		}
 						
-		$query = $DB->query("SELECT c.cat_name, c.cat_description, c.cat_image {$field_sqla}
+		$query = $DB->query("SELECT c.cat_name, c.cat_url_title, c.cat_description, c.cat_image {$field_sqla}
 							FROM exp_categories AS c
 							{$field_sqlb}
 							WHERE c.cat_id = '".$DB->escape_str($match['2'])."'");
 		
 		if ($query->num_rows == 0)
 		{
-			return '';
+			return $TMPL->no_results();
 		}
 
 		$cat_vars = array('category_name'			=> $query->row['cat_name'],
@@ -6402,19 +6495,21 @@ class Weblog {
 
 		// add custom fields for conditionals prep
 
-		foreach ($this->catfields as $k => $v)
+		foreach ($this->catfields as $v)
 		{
-			$cat_vars[$k] = ( ! isset($query->row['field_id_'.$v])) ? '' : $query->row['field_id_'.$v];
+			$cat_vars[$v['field_name']] = ( ! isset($query->row['field_id_'.$v['field_id']])) ? '' : $query->row['field_id_'.$v['field_id']];
 		}
 		
 		$TMPL->tagdata = $FNS->prep_conditionals($TMPL->tagdata, $cat_vars);
 				
 		$TMPL->tagdata = str_replace( array(LD.'category_id'.RD,
 											LD.'category_name'.RD,
+											LD.'category_url_title'.RD,
 											LD.'category_image'.RD,
 											LD.'category_description'.RD),
 							 	 	  array($match['2'],
 											$query->row['cat_name'],
+											$query->row['cat_url_title'],
 											$query->row['cat_image'],
 											$query->row['cat_description']),
 							  		  $TMPL->tagdata);
@@ -6431,24 +6526,24 @@ class Weblog {
 						
 		// parse custom fields
 
-		foreach($this->catfields as $name => $id)
+		foreach($this->catfields as $ccv)
 		{
-			if (isset($query->row['field_id_'.$id]))
+			if (isset($query->row['field_id_'.$ccv['field_id']]) AND $query->row['field_id_'.$ccv['field_id']] != '')
 			{
-				$field_content = $this->TYPE->parse_type($query->row['field_id_'.$id],
+				$field_content = $this->TYPE->parse_type($query->row['field_id_'.$ccv['field_id']],
 															array(
-																  'text_format'		=> $query->row['field_ft_'.$id],
+																  'text_format'		=> $query->row['field_ft_'.$ccv['field_id']],
 																  'html_format'		=> $query->row['field_html_formatting'],
 																  'auto_links'		=> 'n',
 																  'allow_img_url'	=> 'y'
 																)
 														);								
-				$TMPL->tagdata = str_replace(LD.$name.RD, $field_content, $TMPL->tagdata);	
+				$TMPL->tagdata = str_replace(LD.$ccv['field_name'].RD, $field_content, $TMPL->tagdata);	
 			}
 			else
 			{
 				// garbage collection
-				$TMPL->tagdata = str_replace(LD.$name.RD, '', $TMPL->tagdata);
+				$TMPL->tagdata = str_replace(LD.$ccv['field_name'].RD, '', $TMPL->tagdata);
 			}
 		}
 		
@@ -6481,41 +6576,33 @@ class Weblog {
 		// Don't repeat our work if we already know the single entry page details
 		if (! isset($SESS->cache['weblog']['single_entry_id']) OR ! isset($SESS->cache['weblog']['single_entry_date']))
 		{
-			// Find the entry ID of the current entry if necessary
-			if (($entry_id = $TMPL->fetch_param('entry_id')) != FALSE)
+			// no query string?  Nothing to do...
+			if (($qstring = $this->QSTR) == '')
 			{
-				$qstring = $entry_id;
+				return;
 			}
-			else
-			{
-				// no query string?  Nothing to do...
-				if (($qstring = $this->QSTR) == '')
-				{
-					return;
-				}
 
-				/** --------------------------------------
-				/**  Remove page number 
-				/** --------------------------------------*/
+			/** --------------------------------------
+			/**  Remove page number 
+			/** --------------------------------------*/
 
-				if (preg_match("#/P\d+#", $qstring, $match))
-				{			
-					$qstring = $FNS->remove_double_slashes(str_replace($match['0'], '', $qstring));
-				}
+			if (preg_match("#/P\d+#", $qstring, $match))
+			{			
+				$qstring = $FNS->remove_double_slashes(str_replace($match['0'], '', $qstring));
+			}
 
-				/** --------------------------------------
-				/**  Remove "N" 
-				/** --------------------------------------*/
+			/** --------------------------------------
+			/**  Remove "N" 
+			/** --------------------------------------*/
 
-				if (preg_match("#/N(\d+)#", $qstring, $match))
-				{	
-					$qstring = $FNS->remove_double_slashes(str_replace($match['0'], '', $qstring));
-				}
+			if (preg_match("#/N(\d+)#", $qstring, $match))
+			{	
+				$qstring = $FNS->remove_double_slashes(str_replace($match['0'], '', $qstring));
+			}
 
-				if (strpos($qstring, '/') !== FALSE)
-				{	
-					$qstring = substr($qstring, 0, strpos($qstring, '/'));
-				}				
+			if (strpos($qstring, '/') !== FALSE)
+			{	
+				$qstring = substr($qstring, 0, strpos($qstring, '/'));
 			}
 
 			/** ---------------------------------------
@@ -6566,6 +6653,14 @@ class Weblog {
 		/**  Find the next / prev entry
 		/** ---------------------------------------*/
 
+		$ids = '';
+	
+		// Get included or excluded entry ids from entry_id parameter
+		if (($entry_id = $TMPL->fetch_param('entry_id')) != FALSE)
+		{
+			$ids = $FNS->sql_andor_string($entry_id, 't.entry_id').' ';
+		}
+	
 		$sql = 'SELECT t.entry_id, t.title, t.url_title
 				FROM (exp_weblog_titles AS t)
 				LEFT JOIN exp_weblogs AS w ON w.weblog_id = t.weblog_id ';
@@ -6586,7 +6681,7 @@ class Weblog {
 					 INNER JOIN exp_categories ON exp_category_posts.cat_id = exp_categories.cat_id ';
 		}
 		
-		$sql .= ' WHERE t.entry_id != '.$SESS->cache['weblog']['single_entry_id'].' ';
+		$sql .= ' WHERE t.entry_id != '.$SESS->cache['weblog']['single_entry_id'].' '.$ids;
 		
 		$timestamp = ($TMPL->cache_timestamp != '') ? $LOC->set_gmt($TMPL->cache_timestamp) : $LOC->now;
 
@@ -6598,13 +6693,13 @@ class Weblog {
 		// constrain by date depending on whether this is a 'next' or 'prev' tag
 		if ($which == 'next')
 		{
-			$sql .= ' AND t.entry_date >= '.$SESS->cache['weblog']['single_entry_date'].
-					' AND t.entry_id > '.$SESS->cache['weblog']['single_entry_id'].' ';
+			$sql .= ' AND t.entry_date >= '.$SESS->cache['weblog']['single_entry_date'].' ';
+			$sql .= ' AND IF (t.entry_date = '.$SESS->cache['weblog']['single_entry_date'].', t.entry_id > '.$SESS->cache['weblog']['single_entry_id'].', 1) ';
 		}
 		else
 		{
-			$sql .= ' AND t.entry_date <= '.$SESS->cache['weblog']['single_entry_date'].
-					' AND t.entry_id < '.$SESS->cache['weblog']['single_entry_id'].' ';
+			$sql .= ' AND t.entry_date <= '.$SESS->cache['weblog']['single_entry_date'].' ';
+			$sql .= ' AND IF (t.entry_date = '.$SESS->cache['weblog']['single_entry_date'].', t.entry_id < '.$SESS->cache['weblog']['single_entry_id'].', 1) ';
 		}
 		
 	    if ($TMPL->fetch_param('show_expired') != 'yes')
@@ -7207,7 +7302,7 @@ class Weblog {
 		$this->entry_id 	= '';
 		$qstring 			= '';  
 		
-		if ($TMPL->fetch_param('custom_fields') !== FALSE && $TMPL->fetch_param('custom_fields') == 'on')
+		if ($this->enable['custom_fields'] == TRUE && $TMPL->fetch_param('custom_fields') == 'on')
         {
         	$this->fetch_custom_weblog_fields();
         }
