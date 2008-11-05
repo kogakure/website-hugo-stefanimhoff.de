@@ -12,53 +12,37 @@
 
     {if member_id == '1'}
 
-        {exp:weblog:entries weblog="notes" require_entry="yes" status="open|vorschau" limit="1" rdf="off" disable="member_data|trackbacks"}
-          <h2><a href="{title_permalink='notiz'}">{title}</a> <a class="edit-entry" href="{path=site_index}deusex/index.php?C=edit&amp;M=edit_entry&amp;weblog_id={weblog_id}&amp;entry_id={entry_id}"><img src="{path=site_index}css/images/edit.png" alt="Bearbeiten" title="Bearbeiten" /></a></h2>
-          <p><small class="datetime">{entry_date format="%d.%m.%Y"} {if comment_total == 0}{if:elseif comment_total == 1}– {comment_total} <a href="#comments">Kommentar</a>{if:else}– {comment_total} <a href="#comments">Kommentare</a>{/if}</small></p>
+        {exp:weblog:entries weblog="notes" require_entry="yes" status="open|vorschau" limit="1" rdf="off" disable="member_data|trackbacks" dynamic="off" url_title="{segment_2}"}
+            <h2><a href="{title_permalink='notiz'}">{title}</a> <a class="edit-entry" href="{path=site_index}deusex/index.php?C=edit&amp;M=edit_entry&amp;weblog_id={weblog_id}&amp;entry_id={entry_id}"><img src="{path=site_index}css/images/edit.png" alt="Bearbeiten" title="Bearbeiten" /></a></h2>
+            <p><small class="datetime">{entry_date format="%d.%m.%Y"} {if comment_total == 0}{if:elseif comment_total == 1}– {comment_total} <a href="#comments">Kommentar</a>{if:else}– {comment_total} <a href="#comments">Kommentare</a>{/if}</small></p>
 
-          <div id="meta-content">
-            {if notes_summary}
-              <h3>Zusammenfassung</h3>
-              {notes_summary}
-            {/if}
+            <div id="meta-content">
+                {if notes_summary}
+                <h3>Zusammenfassung</h3>
+                {notes_summary}
+                {/if}
 
-            {exp:query sql="SELECT count(entry_id) AS cat_count FROM exp_category_posts WHERE entry_id='{entry_id}'"}
-              {if {cat_count} == 1 }
-                <h3>Schlagwort</h3>
-                <ul>
-              {if:elseif {cat_count} > 1}
-                <h3>Schlagworte</h3>
-                <ul>
-              {/if}
-              {categories}
-                <li><a href="{path='main/index'}">{category_description}</a></li>
-              {/categories}
-              {if {cat_count} > 0}
-                </ul>
-              {/if}
-            {/exp:query}
+                {if links_mentioned}
+                <h3>Links in der Notiz</h3>
+                {links_mentioned}
+                {/if}
 
-            {if links_mentioned}
-              <h3>Links in der Notiz</h3>
-              {links_mentioned}
-            {/if}
-
-            {if related_note_1}
-              {if related_note_2 == FALSE}<h3>Ähnliche Notiz</h3>{/if}
-              {if related_note_2}<h3>Ähnliche Notizen</h3>{/if}
-              <ul>
-              {related_entries id="related_note_1"}
-                <li><a href="{title_permalink="notiz"}" title="Die Notiz „{title}“ lesen">{title}</a></li>
-              {/related_entries}
-              {related_entries id="related_note_2"}
-                <li><a href="{title_permalink="notiz"}" title="Die Notiz „{title}“ lesen">{title}</a></li>
-              {/related_entries}
-              {related_entries id="related_note_3"}
-                <li><a href="{title_permalink="notiz"}" title="Die Notiz „{title}“ lesen">{title}</a></li>
-              {/related_entries}
-              </ul>
-            {/if}
-            {/exp:weblog:entries}
+                {if related_note_1}
+                    {if related_note_2 == FALSE}<h3>Ähnliche Notiz</h3>{/if}
+                    {if related_note_2}<h3>Ähnliche Notizen</h3>{/if}
+                    <ul>
+                        {related_entries id="related_note_1"}
+                        <li><a href="{title_permalink="notiz"}" title="Die Notiz „{title}“ lesen">{title}</a></li>
+                        {/related_entries}
+                        {related_entries id="related_note_2"}
+                        <li><a href="{title_permalink="notiz"}" title="Die Notiz „{title}“ lesen">{title}</a></li>
+                        {/related_entries}
+                        {related_entries id="related_note_3"}
+                        <li><a href="{title_permalink="notiz"}" title="Die Notiz „{title}“ lesen">{title}</a></li>
+                        {/related_entries}
+                    </ul>
+                {/if}
+        {/exp:weblog:entries}
 
           </div> <!-- meta-content -->
 
@@ -92,22 +76,6 @@
               <h3>Zusammenfassung</h3>
               {notes_summary}
             {/if}
-
-            {exp:query sql="SELECT count(entry_id) AS cat_count FROM exp_category_posts WHERE entry_id='{entry_id}'"}
-              {if {cat_count} == 1 }
-                <h3>Schlagwort</h3>
-                <ul>
-              {if:elseif {cat_count} > 1}
-                <h3>Schlagworte</h3>
-                <ul>
-              {/if}
-              {categories}
-              <li><a href="{path='main/index'}">{category_description}</a></li>
-              {/categories}
-              {if {cat_count} > 0}
-                </ul>
-              {/if}
-            {/exp:query}
 
             {if links_mentioned}
               <h3>Links in der Notiz</h3>

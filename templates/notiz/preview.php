@@ -19,22 +19,6 @@
                 {notes_summary}
               {/if}
 
-              {exp:query sql="SELECT count(entry_id) AS cat_count FROM exp_category_posts WHERE entry_id='{entry_id}'"}
-                {if {cat_count} == 1 }
-                  <h3>Schlagwort</h3>
-                  <ul>
-                {if:elseif {cat_count} > 1}
-                  <h3>Schlagworte</h3>
-                  <ul>
-                {/if}
-                {categories}
-                <li><a href="{path='main/index'}">{exp:replace find="-|ae|Ae|oe|Oe|ue|Ue|ss|und" replace="SPACE|ä|Ä|ö|Ö|ü|Ü|ß|&" multiple="yes"}{category_name}{/exp:replace}</a></li>
-                {/categories}
-                {if {cat_count} > 0}
-                  </ul>
-                {/if}
-              {/exp:query}
-
               {if links_mentioned}
                 <h3>Links in der Notiz</h3>
                 {links_mentioned}
