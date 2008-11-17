@@ -198,7 +198,7 @@ class Paginate {
 			{
 				if ($this->cur_page == $loop)
 				{
-					$output .= $this->cur_div_o.'<b>'.$loop.'</b>'.$this->cur_div_c; // Current page
+					$output .= $this->cur_div_o.'<strong>'.$loop.'</strong>'.$this->cur_div_c; // Current page
 				}
 				else
 				{

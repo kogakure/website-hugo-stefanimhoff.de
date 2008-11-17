@@ -144,7 +144,7 @@ class Weblog {
 		{			
 			foreach (explode('|', $TMPL->fetch_param('dynamic_parameters')) as $var)
 			{			
-				if (isset($_POST[$var]) AND in_array($var, array('weblog', 'entry_id', 'category', 'orderby', 'sort', 'sticky', 'show_future_entries', 'show_expired', 'entry_id_from', 'entry_id_to', 'not_entry_id', 'start_on', 'stop_before', 'year', 'month', 'day', 'display_by', 'limit', 'username', 'status', 'group_id', 'cat_limit', 'month_limit', 'offset')))
+				if (isset($_POST[$var]) AND in_array($var, array('weblog', 'entry_id', 'category', 'orderby', 'sort', 'sticky', 'show_future_entries', 'show_expired', 'entry_id_from', 'entry_id_to', 'not_entry_id', 'start_on', 'stop_before', 'year', 'month', 'day', 'display_by', 'limit', 'username', 'status', 'group_id', 'cat_limit', 'month_limit', 'offset', 'author_id')))
 				{
 					$tag .= $var.'="'.$_POST[$var].'"';
 				}
@@ -1146,7 +1146,7 @@ class Weblog {
 		{			
 			foreach (explode('|', $TMPL->fetch_param('dynamic_parameters')) as $var)
 			{			
-				if (isset($_POST[$var]) AND in_array($var, array('weblog', 'entry_id', 'category', 'orderby', 'sort', 'sticky', 'show_future_entries', 'show_expired', 'entry_id_from', 'entry_id_to', 'not_entry_id', 'start_on', 'stop_before', 'year', 'month', 'day', 'display_by', 'limit', 'username', 'status', 'group_id', 'cat_limit', 'month_limit', 'offset')))
+				if (isset($_POST[$var]) AND in_array($var, array('weblog', 'entry_id', 'category', 'orderby', 'sort', 'sticky', 'show_future_entries', 'show_expired', 'entry_id_from', 'entry_id_to', 'not_entry_id', 'start_on', 'stop_before', 'year', 'month', 'day', 'display_by', 'limit', 'username', 'status', 'group_id', 'cat_limit', 'month_limit', 'offset', 'author_id')))
 				{
 					$TMPL->tagparams[$var] = $_POST[$var];
 				}
@@ -1697,7 +1697,7 @@ class Weblog {
         
         if ($TMPL->fetch_param('show_expired') != 'yes')
         {        
-			$sql .= " AND (t.expiration_date = 0 || t.expiration_date > ".$timestamp.") ";
+			$sql .= " AND (t.expiration_date = 0 OR t.expiration_date > ".$timestamp.") ";
         }
         
         /** ----------------------------------------------
@@ -3500,15 +3500,9 @@ class Weblog {
 														  (isset($v['4'])) ? $v['4'] : ''
 														  ),
 													$temp);
-													
-										
-								// parse custom fields
-								$temp2 = array();
-								$int = 0;
+
 								foreach($this->catfields as $cv2)
 								{
-									$temp2[$int] = $temp;
-									
 									if (isset($v['field_id_'.$cv2['field_id']]) AND $v['field_id_'.$cv2['field_id']] != '')
 									{
 										$field_content = $this->TYPE->parse_type($v['field_id_'.$cv2['field_id']],
@@ -3519,20 +3513,18 @@ class Weblog {
 																						  'allow_img_url'	=> 'y'
 																						)
 																				);								
-										$temp2[$int] = str_replace(LD.$cv2['field_name'].RD, $field_content, $temp2[$int]);											
+										$temp = str_replace(LD.$cv2['field_name'].RD, $field_content, $temp);											
 									}
 									else
 									{
 										// garbage collection
-										$temp2[$int] = str_replace(LD.$cv2['field_name'].RD, '', $temp2[$int]);
+										$temp = str_replace(LD.$cv2['field_name'].RD, '', $temp);
 									}
-									
-									$temp2[$int] = $FNS->remove_double_slashes($temp2[$int]);
-									
-									$int++;
+
+									$temp = $FNS->remove_double_slashes($temp);
 								}
-												
-								$cats .= implode('', $temp2);
+
+								$cats .= $temp;
 
 								if ($cat_limit !== FALSE && $cat_limit == ++$i)
 								{
@@ -4986,7 +4978,7 @@ class Weblog {
 				
 				if ($TMPL->fetch_param('show_expired') != 'yes')
 				{        
-					$sql .= " AND (exp_weblog_titles.expiration_date = 0 || exp_weblog_titles.expiration_date > ".$timestamp.") ";
+					$sql .= " AND (exp_weblog_titles.expiration_date = 0 OR exp_weblog_titles.expiration_date > ".$timestamp.") ";
 				}		
 				
 				if ($parent_only === TRUE)
@@ -5288,7 +5280,7 @@ class Weblog {
         
         if ($TMPL->fetch_param('show_expired') != 'yes')
         {
-			$sql .= "AND (exp_weblog_titles.expiration_date = 0 || exp_weblog_titles.expiration_date > ".$timestamp.") ";
+			$sql .= "AND (exp_weblog_titles.expiration_date = 0 OR exp_weblog_titles.expiration_date > ".$timestamp.") ";
         }
         		        
 		$sql .= "AND exp_weblog_titles.status != 'closed' ";
@@ -5818,7 +5810,7 @@ class Weblog {
 			
 			if ($TMPL->fetch_param('show_expired') != 'yes')
 			{        
-				$sql .= " AND (exp_weblog_titles.expiration_date = 0 || exp_weblog_titles.expiration_date > ".$timestamp.") ";
+				$sql .= " AND (exp_weblog_titles.expiration_date = 0 OR exp_weblog_titles.expiration_date > ".$timestamp.") ";
 			}
 			
 			if ($parent_only === TRUE)
@@ -6918,7 +6910,7 @@ class Weblog {
         
         if ($TMPL->fetch_param('show_expired') != 'yes')
         {
-			$sql .= " AND (exp_weblog_titles.expiration_date = 0 || exp_weblog_titles.expiration_date > ".$timestamp.") ";
+			$sql .= " AND (exp_weblog_titles.expiration_date = 0 OR exp_weblog_titles.expiration_date > ".$timestamp.") ";
         }
         
         /** ----------------------------------------------

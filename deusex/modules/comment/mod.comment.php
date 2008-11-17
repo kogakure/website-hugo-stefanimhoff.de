@@ -1884,7 +1884,39 @@ class Comment {
 			}
 		}
 		
+        /** ----------------------------------------
+        /**  Set defaults based on member data as needed
+        /** ----------------------------------------*/		
 		
+		if (isset($_POST['name']) AND $_POST['name'] != '')
+		{
+			$name = stripslashes($IN->GBL('name', 'POST'));
+		}
+		elseif ($SESS->userdata['screen_name'] != '')
+		{
+			$name = $SESS->userdata['screen_name'];
+		}
+		else
+		{
+			$name = '';
+		}
+
+		foreach (array('email', 'url', 'location') as $v)
+		{
+			if (isset($_POST[$v]) AND $_POST[$v] != '')
+			{
+				${$v} = stripslashes($IN->GBL($v, 'POST'));
+			}
+			elseif ($SESS->userdata[$v] != '')
+			{
+				${$v} = $SESS->userdata[$v];
+			}
+			else
+			{
+				${$v} = '';
+			}		
+		}
+				
 		/** ----------------------------------------
 		/**  Conditionals
 		/** ----------------------------------------*/
@@ -1892,6 +1924,10 @@ class Comment {
 		$cond = $_POST; // Sanitized on input and also in prep_conditionals, so no real worries here
 		$cond['logged_in']			= ($SESS->userdata('member_id') == 0) ? 'FALSE' : 'TRUE';
 		$cond['logged_out']			= ($SESS->userdata('member_id') != 0) ? 'FALSE' : 'TRUE';
+		$cond['name']				= $name;	
+		$cond['email']				= $email;		
+		$cond['url']				= ($url == 'http://') ? '' : $url;
+		$cond['location']			= $location;
 		
 		$tagdata = $FNS->prep_conditionals($tagdata, $cond);
 		
@@ -1905,19 +1941,6 @@ class Comment {
 			/** ----------------------------------------
 			/**  {name}
 			/** ----------------------------------------*/
-			
-			if (isset($_POST['name']) AND $_POST['name'] != '')
-			{
-				$name = stripslashes($IN->GBL('name', 'POST'));
-			}
-			elseif ($SESS->userdata['screen_name'] != '')
-			{
-				$name = $SESS->userdata['screen_name'];
-			}
-			else
-			{
-				$name = '';
-			}
 
 			if ($key == 'name')
 			{
@@ -1927,41 +1950,15 @@ class Comment {
 			/** ----------------------------------------
 			/**  {email}
 			/** ----------------------------------------*/
-			
-			if (isset($_POST['email']) AND $_POST['email'] != '')
-			{
-				$email = stripslashes($IN->GBL('email', 'POST'));
-			}
-			elseif ($SESS->userdata['email'] != '')
-			{
-				$email = $SESS->userdata['email'];
-			}
-			else
-			{
-				$email = '';
-			}
-			
+						
 			if ($key == 'email')
-			{						
+			{
                 $tagdata = $TMPL->swap_var_single($key, $email, $tagdata);                
 			}
         
 			/** ----------------------------------------
 			/**  {url}
 			/** ----------------------------------------*/
-			
-			if (isset($_POST['url']) AND $_POST['url'] != '')
-			{
-				$url = stripslashes($IN->GBL('url', 'POST'));
-			}
-			elseif ($SESS->userdata['url'] != '')
-			{
-				$url = $SESS->userdata['url'];
-			}
-			else
-			{
-				$url = '';
-			}
 			
 			if ($key == 'url')
 			{
@@ -1973,20 +1970,7 @@ class Comment {
 			/** ----------------------------------------*/
 			
 			if ($key == 'location')
-			{						
-				if (isset($_POST['location']) AND $_POST['location'] != '')
-				{
-					$location = stripslashes($IN->GBL('location', 'POST'));
-				}
-				elseif ($SESS->userdata['location'] != '')
-				{
-					$location = $SESS->userdata['location'];
-				}
-				else
-				{
-					$location = '';
-				}
-
+			{
                 $tagdata = $TMPL->swap_var_single($key, $location, $tagdata);                
 			}
                         

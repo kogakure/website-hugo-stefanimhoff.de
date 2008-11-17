@@ -489,7 +489,7 @@ class MT_Import {
 		
 		$PA = new PublishAdmin;
 		$plugins = $PA->fetch_plugins();
-		
+		$LANG->fetch_language_file('publish_ad');		
             
 		$r .= $DSP->div('itemWrapper').
 			  $DSP->qdiv('itemTitle', $LANG->line('format_select'));
@@ -502,10 +502,14 @@ class MT_Import {
         {        
         	$name = ucwords(str_replace('_', ' ', $val));
         		
-        	if ($name == 'Br')
-        	{
-        		$name = $LANG->line('auto_br');
-        	}
+			if ($name == 'Br')
+			{
+				$name = $LANG->line('auto_br');
+			}
+			elseif ($name == 'Xhtml')
+			{
+				$name = $LANG->line('xhtml');
+			}
         	
         	$r .= $DSP->input_select_option($val,$name)."\n";        	
        	}
@@ -918,7 +922,8 @@ class MT_Import {
 		
 		$PA = new PublishAdmin;
 		$plugins = $PA->fetch_plugins();
-        
+        $LANG->fetch_language_file('publish_ad');
+
         /** --------------------------------------
         /**  MT IMPORT BEGINS
         /** --------------------------------------*/
@@ -1098,10 +1103,14 @@ class MT_Import {
         					
         					$name = ucwords(str_replace('_', ' ', $val));
         			
-        					if ($name == 'Br')
-        					{
-        						$name = $LANG->line('auto_br');
-        					}
+							if ($name == 'Br')
+							{
+								$name = $LANG->line('auto_br');
+							}
+							elseif ($name == 'Xhtml')
+							{
+								$name = $LANG->line('xhtml');
+							}
         					
         					if ($temp_format == $val)
         					{

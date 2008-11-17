@@ -325,9 +325,13 @@ EOTJS;
 		{
 			$name = ucwords(str_replace('_', ' ', $val));
 
-        	if ($name == 'Br')
+			if ($name == 'Br')
 			{
 				$name = $LANG->line('auto_br');
+			}
+			elseif ($name == 'Xhtml')
+			{
+				$name = $LANG->line('xhtml');
 			}
 
 			$r .= $DSP->input_select_option($val, $name);

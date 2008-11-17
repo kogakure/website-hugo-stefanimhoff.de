@@ -2801,7 +2801,8 @@ class Member {
         /**  Default Member Data
         /** ----------------------------------------*/
         
-		$query = $DB->query("SELECT m.member_id, m.group_id, m.username, m.screen_name, m.email, m.signature, 
+		$query = $DB->query("SELECT m.member_id, m.group_id, m.username, m.screen_name, m.email, m.signature,
+									m.sig_img_filename, m.sig_img_width, m.sig_img_height,
 									m.avatar_filename, m.avatar_width, m.avatar_height, 
 									m.photo_filename, m.photo_width, m.photo_height, 
 									m.url, m.location, m.occupation, m.interests, 
@@ -2861,6 +2862,25 @@ class Member {
 		}		
 
 		/** ----------------------------------------
+		/**  Is there a signature image?
+		/** ----------------------------------------*/
+						
+		if ($PREFS->ini('enable_signatures') == 'y' AND $query->row['sig_img_filename'] != '')
+		{
+			$sig_img_path	= $PREFS->ini('sig_img_url', 1).$query->row['sig_img_filename'];
+			$sig_img_width	= $query->row['sig_img_width'];
+			$sig_img_height	= $query->row['sig_img_height'];
+			$sig_img_image	= 'TRUE';
+		}
+		else
+		{
+			$sig_img_path	= '';
+			$sig_img_width	= '';
+			$sig_img_height	= '';
+			$sig_img		= 'FALSE';
+		}
+		
+		/** ----------------------------------------
 		/**  Parse variables
 		/** ----------------------------------------*/
 		
@@ -2876,16 +2896,21 @@ class Member {
 		}
 		
 		$more_fields = array(
-							'send_private_message'	=> $this->_member_path('messages/pm/'.$member_id),
-							'search_path'			=> $search_path,
-							'avatar_url'			=> $avatar_path,
-							'avatar_filename'		=> $query->row['avatar_filename'],
-							'avatar_width'			=> $avatar_width,
-							'avatar_height'			=> $avatar_height,
-							'photo_url'				=> $photo_path,
-							'photo_filename'		=> $query->row['photo_filename'],
-							'photo_width'			=> $photo_width,
-							'photo_height'			=> $photo_height,);
+							'send_private_message'		=> $this->_member_path('messages/pm/'.$member_id),
+							'search_path'				=> $search_path,
+							'avatar_url'				=> $avatar_path,
+							'avatar_filename'			=> $query->row['avatar_filename'],
+							'avatar_width'				=> $avatar_width,
+							'avatar_height'				=> $avatar_height,
+							'photo_url'					=> $photo_path,
+							'photo_filename'			=> $query->row['photo_filename'],
+							'photo_width'				=> $photo_width,
+							'photo_height'				=> $photo_height,
+							'signature_image_url'		=> $sig_img_path,
+							'signature_image_filename'	=> $query->row['sig_img_filename'],
+							'signature_image_width'		=> $sig_img_width,
+							'signature_image_height'	=> $sig_img_height					
+							);
 		
 		$default_fields = array_merge($default_fields, $more_fields);
 					
@@ -2916,7 +2941,23 @@ class Member {
         
         	return $TMPL->tagdata;
         }
+
+        /** ----------------------------------------
+        /**  Do some prep for conditionals
+        /** ----------------------------------------*/	
 		
+		$cond = $default_fields;
+		
+        $date_fields = array('join_date', 'last_visit', 'last_activity', 'last_entry_date', 'last_comment_date', 'last_forum_post_date');
+        
+        foreach ($date_fields as $v)
+        {
+        	if (isset($default_fields[$v]) && $default_fields[$v] == 0)
+        	{
+        		$cond[$v] = FALSE;
+        	}
+        }
+
 		if ( ! class_exists('Typography'))
 		{
 			require PATH_CORE.'core.typography'.EXT;
@@ -2926,10 +2967,16 @@ class Member {
 		    
         foreach ($query->result as $row)
         {
-        	$cond = array('avatar'	=> $avatar,
-						  'photo'	=> $photo);
-        	
-        	foreach($fields as $key =>  $value)
+			$cond['avatar']					= $avatar;
+			$cond['photo']					= $photo;
+			$cond['signature_image']		= $sig_img;	
+			$cond['birthday']       		= (($default_fields['bday_m'] != '' && $default_fields['bday_m'] != 0)
+												OR ($default_fields['bday_y'] != '' && $default_fields['bday_y'] != 0) 
+												OR ($default_fields['bday_d'] != '' && $default_fields['bday_d'] != 0)) ? TRUE : FALSE;
+			$cond['total_forum_replies']	= $default_fields['total_forum_posts'];
+			$cond['total_forum_posts']		= $default_fields['total_forum_topics'] + $default_fields['total_forum_posts'];
+					  
+	       	foreach($fields as $key =>  $value)
         	{
         		if (substr($key, 0, 7) == 'mfield_');
         	
@@ -3049,7 +3096,7 @@ class Member {
 				{
 					$birthday = '';
 					
-					if ($default_fields['bday_m'] != '' AND $default_fields['bday_m'] != 0)
+					if ($default_fields['bday_m'] != '' && $default_fields['bday_m'] != 0)
 					{
 						$month = (strlen($default_fields['bday_m']) == 1) ? '0'.$default_fields['bday_m'] : $default_fields['bday_m'];
 								
@@ -3057,13 +3104,13 @@ class Member {
 					
 						$birthday .= $LANG->line($m['1']);
 						
-						if ($default_fields['bday_d'] != '' AND $default_fields['bday_d'] != 0)
+						if ($default_fields['bday_d'] != '' && $default_fields['bday_d'] != 0)
 						{
 							$birthday .= ' '.$default_fields['bday_d'];
 						}
 					}
 			
-					if ($default_fields['bday_y'] != '' AND $default_fields['bday_y'] != 0)
+					if ($default_fields['bday_y'] != '' && $default_fields['bday_y'] != 0)
 					{
 						if ($birthday != '')
 						{
@@ -3127,7 +3174,25 @@ class Member {
 						  
 					$TMPL->tagdata = $this->_var_swap_single($key, $bio, $TMPL->tagdata);
 				}
+
+				/** ----------------------
+				/**  {signature}
+				/** ----------------------*/
 				
+				if ($key == 'signature')
+				{
+					$signature = $TYPE->parse_type($default_fields[$val], 
+																	array(
+																			'text_format'   => 'xhtml',
+																			'html_format'   => 'safe',
+																			'auto_links'    => 'y',
+																			'allow_img_url' => $PREFS->ini('sig_allow_img_hotlink')
+																	   )
+																);
+						  
+					$TMPL->tagdata = $this->_var_swap_single($key, $signature, $TMPL->tagdata);
+				}
+								
 				// Special condideration for {total_forum_replies}, and
 				// {total_forum_posts} whose meanings do not match the
 				// database field names

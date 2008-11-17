@@ -548,7 +548,7 @@ class Search {
         
         if ( ! isset($_POST['show_expired']) OR $_POST['show_expired'] != 'yes')
         {
-        	$sql .= "\nAND (exp_weblog_titles.expiration_date = 0 || exp_weblog_titles.expiration_date > ".$LOC->now.") ";
+        	$sql .= "\nAND (exp_weblog_titles.expiration_date = 0 OR exp_weblog_titles.expiration_date > ".$LOC->now.") ";
         }
         
         /** ----------------------------------------------
@@ -1579,7 +1579,7 @@ class Search {
         
         $query = $DB->query($sql);
         
-        if ($query->result > 0)
+        if ($query->num_rows > 0)
         {
         	$categories = array();
         	

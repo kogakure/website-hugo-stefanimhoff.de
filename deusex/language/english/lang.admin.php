@@ -10,7 +10,7 @@ $L = array(
 "Enable Strict URLs",
 
 "strict_urls_info" =>
-"This feature enforces stricter rules for your URLs, and interacts with the 404 feature below.  Plese see user guide for info.",
+"This feature enforces stricter rules for your URLs, and interacts with the 404 feature below.  Please see user guide for info.",
 
 "xss_clean_uploads" =>
 "Apply XSS Filtering to uploaded files?",

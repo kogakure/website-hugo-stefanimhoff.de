@@ -1387,16 +1387,20 @@ function showHideMenu(objValue)
         $selected = '';
             
         $r .= $DSP->input_select_option('', $LANG->line('none'), $selected);
-        
-        $query = $DB->query("SELECT cat_id, cat_name FROM  exp_categories WHERE group_id = '".$DB->escape_str($cat_group)."' ORDER BY cat_name");
-        
+ 
+		$cats = implode("','", $DB->escape_str(explode('|', $cat_group)));
+        $query = $DB->query("SELECT CONCAT(g.group_name, ': ', c.cat_name) as display_name, c.cat_id, c.cat_name, g.group_name
+							FROM  exp_categories c, exp_category_groups g
+							WHERE g.group_id = c.group_id
+							AND c.group_id IN ('{$cats}') ORDER BY display_name");
+
         if ($query->num_rows > 0)
         {
             foreach ($query->result as $row)
             {
                 $selected = ($deft_category == $row['cat_id']) ? 1 : '';
                                     
-                $r .= $DSP->input_select_option($row['cat_id'], $row['cat_name'], $selected);
+                $r .= $DSP->input_select_option($row['cat_id'], $row['display_name'], $selected);
             }
         }
         
@@ -3468,8 +3472,14 @@ function showHideMenu(objValue)
 		{
 			$name = ucwords(str_replace('_', ' ', $val));
 
-        	if ($name == 'Br')
-        		$name = $LANG->line('auto_br');
+			if ($name == 'Br')
+			{
+				$name = $LANG->line('auto_br');
+			}
+			elseif ($name == 'Xhtml')
+			{
+				$name = $LANG->line('xhtml');
+			}
 			
 			$selected = ($field_default_fmt == $val) ? 1 : '';
 
@@ -5214,6 +5224,7 @@ function showHideMenu(objValue)
 			NewText = NewText.replace(/_$/g,'');
 			NewText = NewText.replace(/^_/g,'');
 			NewText = NewText.replace(/^-/g,'');
+			NewText = NewText.replace(/\.+$/g,'');
 
 			document.getElementById("cat_url_title").value = NewText;			
 	
@@ -5312,8 +5323,14 @@ SCRIPPITYDOO;
 					{
 						$name = ucwords(str_replace('_', ' ', $val));
 
-			        	if ($name == 'Br')
-			        		$name = $LANG->line('auto_br');
+						if ($name == 'Br')
+						{
+							$name = $LANG->line('auto_br');
+						}
+						elseif ($name == 'Xhtml')
+						{
+							$name = $LANG->line('xhtml');
+						}
 
 						$selected = ($field_fmt == $val) ? 1 : '';
 
@@ -8042,7 +8059,13 @@ SCRIPPITYDOO;
 				$fmtname = ucwords(str_replace('_', ' ', $row['field_fmt']));
 					
 				if ($fmtname == 'Br')
-					$fmtname = $LANG->line('auto_br');        		
+				{
+					$fmtname = $LANG->line('auto_br');
+				}
+				elseif ($fmtname == 'Xhtml')
+				{
+					$fmtname = $LANG->line('xhtml');
+				}       		
 					
 				$sel = ($field_fmt == $row['field_fmt']) ? 1 : '';
 			
@@ -8761,8 +8784,14 @@ SCRIPPITYDOO;
         {        
         	$name = ucwords(str_replace('_', ' ', $val));
         		
-        	if ($name == 'Br')
-        		$name = $LANG->line('auto_br');
+			if ($name == 'Br')
+			{
+				$name = $LANG->line('auto_br');
+			}
+			elseif ($name == 'Xhtml')
+			{
+				$name = $LANG->line('xhtml');
+			}
         
             $style = ($i % 2) ? 'tableCellOne' : 'tableCellTwo'; $i++;
         

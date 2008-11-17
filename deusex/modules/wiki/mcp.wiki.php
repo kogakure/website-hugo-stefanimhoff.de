@@ -569,17 +569,23 @@ DOH;
     function text_format_options($value='')
     {
     	global $DSP, $LANG;
-    	
+
     	$list = $this->fetch_plugins();
     	
     	$r = $DSP->input_select_header('wiki_text_format');
-
+		
 		foreach($list as $val)
 		{
 			$name = ucwords(str_replace('_', ' ', $val));
         		
-        	if ($name == 'Br')
-        		$name = $LANG->line('auto_br');
+			if ($name == 'Br')
+			{
+				$name = $LANG->line('auto_br');
+			}
+			elseif ($name == 'Xhtml')
+			{
+				$name = $LANG->line('xhtml');
+			}
 		
 			$selected = ($value == $val) ? 1 : '';
 				

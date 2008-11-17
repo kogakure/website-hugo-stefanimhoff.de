@@ -140,7 +140,7 @@ class Rss {
         
         if ($TMPL->fetch_param('show_expired') != 'yes')
         {        
-			$sql .= " AND (exp_weblog_titles.expiration_date = 0 || exp_weblog_titles.expiration_date > ".$timestamp.") ";
+			$sql .= " AND (exp_weblog_titles.expiration_date = 0 OR exp_weblog_titles.expiration_date > ".$timestamp.") ";
         }
  
         /** ----------------------------------------------

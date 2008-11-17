@@ -168,12 +168,22 @@ class EEmail {
 
 		if ($this->validate)
 			$this->validate_email($this->str_to_array($from));
-			
-		if ($name != '' && substr($name, 0, 1) != '"')
+		
+		// prepare the display name
+		if ($name != '')
 		{
-			$name = '"'.$name.'"';
+			// only use Q encoding if there are characters that would require it
+			if ( ! preg_match('/[\200-\377]/', $name))
+			{
+				// add slashes for non-printing characters, slashes, and double quotes, and surround it in double quotes
+				$name = '"'.addcslashes($name, '\0..\37\177"\\').'"';
+			}
+			else
+			{
+				$name = $this->prep_q_encoding($name, TRUE);
+			}
 		}
-	
+
 		$this->add_header('From', $name.' <'.$from.'>');
 		$this->add_header('Return-Path', '<'.$from.'>');
 	}
@@ -292,10 +302,8 @@ class EEmail {
 	 
 	function subject($subject)
 	{
-		$subject = preg_replace("/(\r\n)|(\r)|(\n)/", "", $subject);
-		$subject = preg_replace("/(\t)/", " ", $subject);
-		
-		$this->add_header('Subject', trim($subject));		
+		$subject = $this->prep_q_encoding($subject);
+		$this->add_header('Subject', $subject);
 	}
 	/* END */
 
@@ -739,7 +747,7 @@ class EEmail {
 				// Grab the next character
 				$char = substr($line, $i, 1);
 				$ascii = ord($char);
-
+				
 				// Convert spaces and tabs but only if it's the end of the line
 				if ($i == ($length - 1))
 				{
@@ -773,8 +781,72 @@ class EEmail {
 
 		return $output;
 	}
+	/* END */
+	
+	
+	function prep_q_encoding($str, $from = FALSE)
+	{
+		global $PREFS;
+		
+		$str = str_replace(array("\r", "\n"), array('', ''), $str);
 
+		// Line length must not exceed 76 characters, so we adjust for
+		// a space, 7 extra characters =??Q??=, and the charset that we will add to each line
+		$limit = 75 - 7 - strlen($PREFS->ini('charset'));
 
+		// these special characters must be converted too
+		$convert = array('_', '=', '?');
+		
+		if ($from === TRUE)
+		{
+			$convert[] = ',';
+			$convert[] = ';';
+		}
+		
+		$output = '';
+		$temp = '';
+		
+		for ($i = 0, $length = strlen($str); $i < $length; $i++)
+		{
+			// Grab the next character
+			$char = substr($str, $i, 1);
+			$ascii = ord($char);
+			
+			// convert ALL non-printable ASCII characters and our specials
+			if ($ascii < 32 OR $ascii > 126 OR in_array($char, $convert))
+			{
+				$char = '='.dechex($ascii);
+			}
+			
+			// handle regular spaces a bit more compactly than =20
+			if ($ascii == 32)
+			{
+				$char = '_';
+			}
+			
+			// If we're at the character limit, add the line to the output,
+			// reset our temp variable, and keep on chuggin'
+			if ((strlen($temp) + strlen($char)) >= $limit)
+			{
+				$output .= $temp.$this->crlf;
+				$temp = '';
+			}
+
+			// Add the character to our temporary line
+			$temp .= $char;
+		}
+		
+		$str = $output.$temp;
+		
+		// wrap each line with the shebang, charset, and transfer encoding
+		// the preceding space on successive lines is required for header "folding"
+		$str = trim(preg_replace('/^(.*)$/m', ' =?'.$PREFS->ini('charset').'?Q?$1?=', $str));
+
+		return $str;
+	}
+	/* END */
+	
+	
 	/** -------------------------------------
 	/**  Assign file attachments
 	/** -------------------------------------*/
@@ -849,14 +921,14 @@ class EEmail {
 		$this->write_header_string();
 		
 		$hdr = ($this->get_protocol() == 'mail') ? $this->newline : '';
-			
+
 		switch ($this->get_content_type())
 		{
 			case 'plain' :
 							
 				$hdr .= "Content-Type: text/plain; charset=" . $this->charset . $this->newline;
 				$hdr .= "Content-Transfer-Encoding: " . $this->get_encoding();
-				
+
 				if ($this->get_protocol() == 'mail')
 				{
 					$this->header_str .= $hdr;
@@ -1192,7 +1264,7 @@ class EEmail {
 	/** -------------------------------------*/
 
 	function send_with_mail()
-	{	
+	{
 		if ($this->safe_mode == TRUE)
 		{
 			if ( ! mail($this->recipients, $this->subject, $this->finalbody, $this->header_str))
@@ -1202,7 +1274,7 @@ class EEmail {
 		}
 		else
 		{
-			if ( ! mail($this->recipients, $this->subject, $this->finalbody, $this->header_str, "-f".$this->clean_email($this->headers['From'])))
+			if ( ! mail($this->recipients, $this->subject, $this->finalbody, $this->header_str, "-f ".$this->clean_email($this->headers['From'])))
 				return false;
 			else
 				return true;

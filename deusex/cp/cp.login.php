@@ -104,7 +104,7 @@ class Login {
 		
 		if ($PREFS->ini('admin_session_type') == 'c')
 		{
-			$r .= $DSP->qdiv('itemWrapper', $DSP->qdiv('default', $DSP->input_checkbox('remember_me', '1').$LANG->line('remember_me')));
+			$r .= $DSP->qdiv('itemWrapper', $DSP->qdiv('default', $DSP->input_checkbox('remember_me', '1', '', ' id="remember_me"').$LANG->line('remember_me', 'remember_me')));
 		}
 
 		$r .= $DSP->qdiv('itemWrapper', $DSP->input_submit($LANG->line('submit')));
@@ -724,7 +724,7 @@ class Login {
         
         $time = time() - (60*60*24);
         
-        $DB->query("DELETE FROM exp_reset_password WHERE date < $time || member_id = '".$DB->escape_str($member_id)."'");
+        $DB->query("DELETE FROM exp_reset_password WHERE date < $time OR member_id = '".$DB->escape_str($member_id)."'");
         
         // Create a new DB record with the temporary reset code
         
@@ -833,7 +833,7 @@ class Login {
         
         // Kill old data from the reset_password field
         
-        $DB->query("DELETE FROM exp_reset_password WHERE date < $time || member_id = '".$DB->escape_str($member_id)."'");
+        $DB->query("DELETE FROM exp_reset_password WHERE date < $time OR member_id = '".$DB->escape_str($member_id)."'");
                 
                 
         // Buid the email message

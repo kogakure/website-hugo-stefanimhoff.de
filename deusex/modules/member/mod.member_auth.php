@@ -707,7 +707,7 @@ class Member_auth extends Member {
         
         $time = time() - (60*60*24);
         
-        $DB->query("DELETE FROM exp_reset_password WHERE date < $time || member_id = '$member_id'");
+        $DB->query("DELETE FROM exp_reset_password WHERE date < $time OR member_id = '$member_id'");
         
         // Create a new DB record with the temporary reset code
         
@@ -846,7 +846,7 @@ class Member_auth extends Member {
         
         // Kill old data from the reset_password field
         
-        $DB->query("DELETE FROM exp_reset_password WHERE date < $time || member_id = '$member_id'");
+        $DB->query("DELETE FROM exp_reset_password WHERE date < $time OR member_id = '$member_id'");
                 
         // Buid the email message   
         

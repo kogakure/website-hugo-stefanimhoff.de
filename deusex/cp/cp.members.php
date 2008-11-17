@@ -1050,7 +1050,7 @@ class Members {
 			$DB->query("DELETE FROM exp_forum_polls  WHERE ".$IDS); 
 
 			// Kill any attachments
-			$query = $DB->query("SELECT attachment_id, filehash, extension, board_id FROM exp_forum_attachments WHERE ".$IDS);
+			$query = $DB->query("SELECT attachment_id, filehash, extension, board_id FROM exp_forum_attachments WHERE ".str_replace('author_id', 'member_id', $IDS));
 			
 			if ($query->num_rows > 0)
 			{
@@ -4868,7 +4868,7 @@ EOT;
 					}
 				}
 				
-            	if ($_POST['action'] == 'activate')
+            	if (isset($_POST['action']) && $_POST['action'] == 'activate')
             	{
 					$DB->query("UPDATE exp_members SET group_id = '$group_id' WHERE member_id = '".$DB->escape_str($val)."'");
 				}

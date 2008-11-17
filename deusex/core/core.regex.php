@@ -1011,7 +1011,8 @@ class Regex {
 						'[^a-z0-9\-\._]'		=> '',
 						$replace.'+'			=> $replace,
 						$replace.'$'			=> $replace,
-						'^'.$replace			=> $replace
+						'^'.$replace			=> $replace,
+						'\.+$'					=> ''
 					  );
 					   
 		foreach ($trans as $key => $val)

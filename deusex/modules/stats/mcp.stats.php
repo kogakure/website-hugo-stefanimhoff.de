@@ -309,11 +309,11 @@ class Stats_CP {
 		
 		$blog_ids = $this->fetch_weblog_ids();
 		
-        $query = $DB->query("SELECT COUNT(*) AS count FROM exp_weblog_titles WHERE ".$blog_ids." AND entry_date < ".$LOC->now." AND (expiration_date = 0 || expiration_date > ".$LOC->now.") AND status != 'closed'");
+        $query = $DB->query("SELECT COUNT(*) AS count FROM exp_weblog_titles WHERE ".$blog_ids." AND entry_date < ".$LOC->now." AND (expiration_date = 0 OR expiration_date > ".$LOC->now.") AND status != 'closed'");
         
         $total = $query->row['count'];
         
-        $query = $DB->query("SELECT MAX(entry_date) as max_date FROM exp_weblog_titles WHERE ".$blog_ids." AND entry_date < ".$LOC->now." AND (expiration_date = 0 || expiration_date > ".$LOC->now.") AND status != 'closed'");
+        $query = $DB->query("SELECT MAX(entry_date) as max_date FROM exp_weblog_titles WHERE ".$blog_ids." AND entry_date < ".$LOC->now." AND (expiration_date = 0 OR expiration_date > ".$LOC->now.") AND status != 'closed'");
         
         $date = ($query->num_rows == 0 OR ! is_numeric($query->row['max_date'])) ? 0 : $query->row['max_date'];
                                 
@@ -328,11 +328,11 @@ class Stats_CP {
             
             $site_id = $query->row['site_id'];
             
-            $query = $DB->query("SELECT COUNT(*) AS count FROM exp_weblog_titles WHERE weblog_id = '$weblog_id' AND entry_date < ".$LOC->now." AND (expiration_date = 0 || expiration_date > ".$LOC->now.") AND status != 'closed'");
+            $query = $DB->query("SELECT COUNT(*) AS count FROM exp_weblog_titles WHERE weblog_id = '$weblog_id' AND entry_date < ".$LOC->now." AND (expiration_date = 0 OR expiration_date > ".$LOC->now.") AND status != 'closed'");
             
             $total = $query->row['count'];
             
-            $query = $DB->query("SELECT MAX(entry_date) AS max_date FROM exp_weblog_titles WHERE weblog_id = '$weblog_id' AND entry_date < ".$LOC->now." AND (expiration_date = 0 || expiration_date > ".$LOC->now.") AND status != 'closed'");
+            $query = $DB->query("SELECT MAX(entry_date) AS max_date FROM exp_weblog_titles WHERE weblog_id = '$weblog_id' AND entry_date < ".$LOC->now." AND (expiration_date = 0 OR expiration_date > ".$LOC->now.") AND status != 'closed'");
             
             $date = ($query->num_rows == 0 OR ! is_numeric($query->row['max_date'])) ? 0 : $query->row['max_date'];
                                 

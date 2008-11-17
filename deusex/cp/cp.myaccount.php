@@ -1453,7 +1453,7 @@ class MyAccount {
 										'username'			=> $_POST['username'],
 										'cur_username'		=> $_POST['current_username'],
 										'screen_name'		=> stripslashes($_POST['screen_name']),
-										'cur_screen_name'	=> $_POST['current_screen_name'],
+										'cur_screen_name'	=> stripslashes($_POST['current_screen_name']),
 										'password'			=> $_POST['password'],
 									 	'password_confirm'	=> $_POST['password_confirm'],
 									 	'cur_password'		=> $_POST['current_password']
@@ -1462,7 +1462,7 @@ class MyAccount {
 														
 		$VAL->validate_screen_name();
 
-        if ($PREFS->ini('allow_username_change') == 'y')
+        if ($PREFS->ini('allow_username_change') == 'y' OR $SESS->userdata['group_id'] == 1)
         {
 			$VAL->validate_username();
         }
