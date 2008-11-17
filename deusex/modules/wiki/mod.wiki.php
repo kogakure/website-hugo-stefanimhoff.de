@@ -5780,11 +5780,11 @@ class Wiki {
 							{
 								$link = trim(substr($matches['1'][$i], 0, $pipe_pos));
 								$dsp_title[$i] = trim(substr($matches['1'][$i], $pipe_pos + 1));
-								$regular[$i] = $DB->escape_str($this->valid_title($REGX->xss_clean(strip_tags($link))));
+								$regular[$i] = $this->valid_title($REGX->xss_clean(strip_tags($link)));
 							}
 							else
 							{
-								$regular[$i] = $DB->escape_str($this->valid_title($matches['1'][$i]));								
+								$regular[$i] = $this->valid_title($matches['1'][$i]);								
 							}
 						break;
 					}
@@ -5795,11 +5795,11 @@ class Wiki {
 					{
 						$link = trim(substr($matches['1'][$i], 0, $pipe_pos));
 						$dsp_title[$i] = trim(substr($matches['1'][$i], $pipe_pos + 1));
-						$regular[$i] = $DB->escape_str($this->valid_title($REGX->xss_clean(strip_tags($link))));
+						$regular[$i] = $this->valid_title($REGX->xss_clean(strip_tags($link)));
 					}
 					else
 					{
-						$regular[$i] = $DB->escape_str($this->valid_title($REGX->xss_clean(strip_tags($matches['1'][$i]))));
+						$regular[$i] = $this->valid_title($REGX->xss_clean(strip_tags($matches['1'][$i])));
 					}
 				}
 			}
@@ -5826,9 +5826,9 @@ class Wiki {
 										)
 										AND
 										(
-											CONCAT_WS(':', wn.namespace_label, wp.page_name) IN ('" . implode("','", $regular) . "')
+											CONCAT_WS(':', wn.namespace_label, wp.page_name) IN ('" . implode("','", $DB->escape_str($regular)) . "')
 											OR
-											wp.page_name IN ('" . implode("','", $regular) . "')
+											wp.page_name IN ('" . implode("','", $DB->escape_str($regular)) . "')
 										)
 										");
 
@@ -5845,10 +5845,10 @@ class Wiki {
 				{
 					$display = (isset($dsp_title[$key])) ? $dsp_title[$key] : $title;
 					$css = (in_array($title, $exists)) ? '' : 'class="noArticle"';
-					$matches['1'][$key] = '[url="'.$FNS->create_url($this->base_path).$title.'/" '.$css.' title="'.$title.'"]'.$this->prep_title($display).'[/url]';
+					$matches['1'][$key] = '[url="'.$FNS->create_url($this->base_path).urlencode($title).'/" '.$css.' title="'.$REGX->form_prep($title).'"]'.$this->prep_title($display).'[/url]';
 				}
 			}
-			
+
 			$str = str_replace($matches['0'], $matches['1'], $str);
 		}
 		

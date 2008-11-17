@@ -653,8 +653,22 @@ class Publish {
 		// Even though we don't need this query until laters we'll run the 
 		// query here so that we can show previews in the proper order. 
         
-        $field_query = $DB->query("SELECT * FROM  exp_weblog_fields WHERE group_id = '$field_group' ORDER BY field_order");
-                
+		// -------------------------------------------
+		// 'publish_form_field_query' hook.
+		//  - Allows control over the field query, controlling what fields will be displayed
+		//
+			if (isset($EXT->extensions['publish_form_field_query']))
+			{
+				$field_query = $EXT->call_extension('publish_form_field_query', $this, $field_group);
+			}
+			else
+			{
+				$field_query = $DB->query("SELECT * FROM  exp_weblog_fields WHERE group_id = '$field_group' ORDER BY field_order");
+			}
+		//
+		// -------------------------------------------
+        
+
         /** ----------------------------------------------
         /**  Javascript stuff
         /** ---------------------------------------------*/
@@ -867,6 +881,7 @@ class Publish {
 			NewText = NewText.replace(/_$/g,'');
 			NewText = NewText.replace(/^_/g,'');
 			NewText = NewText.replace(/^-/g,'');
+			NewText = NewText.replace(/\.+$/g,'');
 			
 			if (document.getElementById("url_title"))
 			{
@@ -3635,7 +3650,7 @@ EOT;
             
             if ( ! $url_title)
             {
-                $url_title = $title;
+                $url_title = strtolower($title);
             }
             
 			// Kill all the extraneous characters.  
@@ -4999,7 +5014,9 @@ EOT;
     function text_formatting_buttons($id, $default = 'xhtml')
     {
         global $DB, $DSP, $LANG;
-        
+
+		$LANG->fetch_language_file('publish_ad');
+    
 		if ($default == '')
 			$default = 'xhtml';
 			
@@ -5030,10 +5047,15 @@ EOT;
 			{
         		$name = ucwords(str_replace('_', ' ', $row['field_fmt']));
         		
-        		if ($name == 'Br')
-        			$name = htmlspecialchars('<br />');
-        			
-        			
+				if ($name == 'Br')
+				{
+					$name = $LANG->line('auto_br');
+				}
+				elseif ($name == 'Xhtml')
+				{
+					$name = $LANG->line('xhtml');
+				}
+	
         		$sel = ($default == $row['field_fmt']) ? 1 : 0;
         			
 				$r .= $DSP->input_select_option($row['field_fmt'], $name, $sel);			
@@ -6192,7 +6214,7 @@ EOT;
 				
 				$categories = array();
 				
-				if ($query->result > 0)
+				if ($query->num_rows > 0)
 				{
 					foreach ($query->result as $row)
 					{			
@@ -7389,7 +7411,7 @@ EOT;
 		
 		$categories = array();
 		
-		if ($query->result > 0)
+		if ($query->num_rows > 0)
 		{
 			foreach ($query->result as $row)
 			{			

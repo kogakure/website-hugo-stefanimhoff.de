@@ -2801,7 +2801,7 @@ class Functions {
 	/**  File name security
 	/** -------------------------------------*/
 	
-	function filename_security($str, $length = NULL)
+	function filename_security($str)
 	{
 		$bad = array(
 						"../",
@@ -2841,11 +2841,6 @@ class Functions {
         			
 
 		$str =  stripslashes(str_replace($bad, '', $str));
-               
-        if ($length !== NULL)
-        {
-        	$str = $this->limit_file_name_size($str, $length);
-        }
 		
 		return $str;
 	}

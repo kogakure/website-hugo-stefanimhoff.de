@@ -144,7 +144,11 @@ over the API, so setting to 'None' will prevent any file uploads via weblog edit
 'do_not_set_status' =>
 "Do Not Set Status (Client decides)",
 
+'auto_br' =>
+'Auto &lt;br /&gt;',
 
+'xhtml' =>
+'XHTML',
 
 /* END */
 ''=>''

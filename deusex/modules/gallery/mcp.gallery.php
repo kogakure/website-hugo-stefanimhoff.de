@@ -39,9 +39,11 @@ class Gallery_CP {
     var	$horizontal_nav	= TRUE;
 	var $timeout		= '';
 	var $gallery_id		= '';
-    var $reserved_names = array('act', 'css', 'trackback');
+    var $reserved_names	= array('act', 'css', 'trackback');
 
-
+	// scope the Upload class so when instantiated all methods can access it
+	var $UP				= '';
+	
     /** -------------------------------
     /**  Constructor
     /** -------------------------------*/
@@ -96,7 +98,7 @@ class Gallery_CP {
 		// The "gallery_id" variable is required either as a GET or POST 
 		// variable for every single page request, except these:
 		
-		$exceptions = array('create_new_gallery', 'gallery_prefs_form', 'prefs_submission_handler');
+		$exceptions = array('create_new_gallery', 'gallery_prefs_form', 'prefs_submission_handler', 'new_gallery_step_two', 'color_picker');
         
         if ($IN->GBL('P') AND ! in_array($IN->GBL('P'), $exceptions))
         {
@@ -121,6 +123,11 @@ class Gallery_CP {
 			{
 				return $DSP->no_access_message();
 			}			
+		}
+		
+		if ($this->gallery_id == FALSE && ($IN->GBL('P') && ! in_array($IN->GBL('P'), $exceptions)))
+		{
+			return $this->main_menu();
 		}
 		
 		/** -------------------------------
@@ -1783,34 +1790,35 @@ EOT;
         if ($serverfile == FALSE)
         {	
 			require PATH_CORE.'core.upload'.EXT;
-			$UP = new Upload();
+			$this->UP = new Upload();
 							
-			if ($UP->set_upload_path($upload_path) !== TRUE)
+			if ($this->UP->set_upload_path($upload_path) !== TRUE)
 			{
-				return $UP->show_error();
+				return $this->UP->show_error();
 			}
 			
-			$UP->set_max_width(0);
-			$UP->set_max_height(0);
-			$UP->set_max_filesize(0);								 
+			$this->UP->set_max_width(0);
+			$this->UP->set_max_height(0);
+			$this->UP->set_max_filesize(0);
+			$this->UP->set_max_filename(100);
         
-			if ( ! $UP->upload_file())
+			if ( ! $this->UP->upload_file())
 			{
-				return $UP->show_error();
+				return $this->UP->show_error();
 			}
 			
-			$image_name = $UP->file_name;
+			$image_name = $this->UP->file_name;
 			
-			if ($UP->file_exists == TRUE)
+			if ($this->UP->file_exists == TRUE)
 			{ 
 				// Truncate the file name if needed
-				$image_name = $UP->limit_filename_length($image_name, 100);
+				$image_name = $this->UP->limit_filename_length($image_name, 100);
 
-				$image_name = $this->rename_file($UP->upload_path, $UP->file_name);
+				$image_name = $this->rename_file($this->UP->upload_path, $this->UP->file_name);
 				  
-				if ( ! $UP->file_overwrite($UP->file_name, $image_name))
+				if ( ! $this->UP->file_overwrite($this->UP->file_name, $image_name))
 				{
-					return $UP->show_error();
+					return $this->UP->show_error();
 				}
 			}
 		}
@@ -1833,10 +1841,10 @@ EOT;
 			$image_name = preg_replace("/\s+/", "_", $FNS->filename_security($image_name));
 
 			require PATH_CORE.'core.upload'.EXT;
-			$UP = new Upload();
+			$this->UP = new Upload();
 			
 			// Truncate the file name if needed
-			$image_name = $UP->limit_filename_length($image_name, 100);
+			$image_name = $this->UP->limit_filename_length($image_name, 100);
 			
 			$src = $src.$serverfile;
 			$dst	 = $upload_path.$image_name;
@@ -3161,7 +3169,7 @@ EOT;
     // times as necessary until a filename is clear.
     
 	function rename_file($path, $name, $i = 0)
-	{
+	{	
 		if (file_exists($path.$name))
 		{	
 			$xy = explode(".", $name);
@@ -3169,18 +3177,32 @@ EOT;
 			
 			$name = str_replace('.'.$ext, '', $name);
 					
-			if (eregi($i."$", $name))
+			if (substr($name, - strlen($i)) == $i)	
 			{
 				$name = substr($name, 0, -strlen($i));
-			}	
+			}
 			
-			$i = $i+1;
+			$i++;
 
 			$name .= $i.'.'.$ext;
 
 			return $this->rename_file($path, $name, $i);
 		}
 		
+		if (strlen($name) > 100)
+        {
+			if ( ! isset($ext))
+			{
+				$xy = explode(".", $name);
+				$ext = end($xy);
+			}
+			
+            $name = $this->UP->limit_filename_length($name, 100-strlen($i));
+            $name = str_replace('.'.$ext, $i.'.'.$ext, $name);
+            
+            return $this->rename_file($path, $name, $i);            
+        }
+
 		return $name;
 	}
 	/* END */
@@ -5739,46 +5761,53 @@ EOT;
 		// END --------			
 		// -------------------------------------------------------------------------------		
 
+		// Check for validity of watermark testing
 		
-		/** -----------------------------
-		/**  Watermark Text
-		/** -----------------------------*/
+		$tst = '';
+		
+		if ($this->gallery_id != FALSE)
+		{
+			/** -----------------------------
+			/**  Watermark Text
+			/** -----------------------------*/
 
-		$tst = $DSP->table_open(array('class' => 'tableBorderSides', 'width' => '100%'));
-		
-		$style = ($i++ % 2) ? 'tableCellOne' : 'tableCellTwo';
-		$tst .= $DSP->table_row(array(
-									array(
-											'text'	=> $DSP->qdiv('defaultBold', $LANG->line('gallery_wm_test_image_path')).$DSP->qdiv('', $LANG->line('gallery_test_explain')),
-											'class'	=> $style,
-											'width'	=> '50%'
-										),
-									array(
-											'text'	=> $DSP->input_text('gallery_wm_test_image_path', $gallery_wm_test_image_path, '40', '100', 'input', '100%'),
-											'class'	=> $style,
-											'width'	=> '50%'
-										)
-									)
-							);
-						
+			$tst = $DSP->table_open(array('class' => 'tableBorderSides', 'width' => '100%'));
 
-		/** -----------------------------
-		/**  Watermark Test Button
-		/** -----------------------------*/
-		
-		$style = ($i++ % 2) ? 'tableCellOne' : 'tableCellTwo';
-		$tst .= $DSP->table_row(array(
-									array(
-											'text'		=> $DSP->qdiv('highlight_bold', $LANG->line('watermark_test_warning')).
-														   $DSP->qdiv('itemWrapperTop', $DSP->input_submit(NBS.$LANG->line('gallery_test_now').NBS, '', "onclick='return watermark_test();'")),
-											'class'		=> $style,
-											'width'		=> '50%',
-											'colspan'	=> 2
+			$style = ($i++ % 2) ? 'tableCellOne' : 'tableCellTwo';
+			$tst .= $DSP->table_row(array(
+										array(
+												'text'	=> $DSP->qdiv('defaultBold', $LANG->line('gallery_wm_test_image_path')).$DSP->qdiv('', $LANG->line('gallery_test_explain')),
+												'class'	=> $style,
+												'width'	=> '50%'
+											),
+										array(
+												'text'	=> $DSP->input_text('gallery_wm_test_image_path', $gallery_wm_test_image_path, '40', '100', 'input', '100%'),
+												'class'	=> $style,
+												'width'	=> '50%'
+											)
 										)
-									)
-							);
-					
-		$tst .= $DSP->table_close();
+								);
+
+
+			/** -----------------------------
+			/**  Watermark Test Button
+			/** -----------------------------*/
+
+			$style = ($i++ % 2) ? 'tableCellOne' : 'tableCellTwo';
+			$tst .= $DSP->table_row(array(
+										array(
+												'text'		=> $DSP->qdiv('highlight_bold', $LANG->line('watermark_test_warning')).
+															   $DSP->qdiv('itemWrapperTop', $DSP->input_submit(NBS.$LANG->line('gallery_test_now').NBS, '', "onclick='return watermark_test();'")),
+												'class'		=> $style,
+												'width'		=> '50%',
+												'colspan'	=> 2
+											)
+										)
+								);
+
+			$tst .= $DSP->table_close();			
+		} // end check for watermark test
+
 
 
 		/** -----------------------------
@@ -5845,6 +5874,11 @@ EOT;
         $r .= $DSP->input_hidden('medium_height_orig', $gallery_medium_height);
         $r .= $DSP->input_hidden('template_group', 	 ( ! isset($template_group)) ? '' : $template_group);
         
+		if ($this->gallery_id == FALSE)
+		{
+			$r .= $DSP->input_hidden('gallery_wm_test_image_path',  $gallery_wm_test_image_path);
+		}
+		
         foreach ($menu as $m_key => $m_val)
         {
 			if ($m_key == 'gallery_watermark_prefs')

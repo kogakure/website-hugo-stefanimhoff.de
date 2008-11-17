@@ -719,17 +719,40 @@ EOT;
 				
 				if ($query->row['moblog_weblog_id'] != 0)
 				{
-					$new_array = array('none'=> $LANG->line('none'));
-					
-    				foreach($this->cat_array as $val)
+				
+    				foreach($this->cat_array as $key => $val)
 					{
-						if (is_array($val) && $val['0'] == $this->blog_array[$query->row['moblog_weblog_id']]['1'])
+						if (is_array($val) AND ! in_array($val['0'], explode('|', $this->blog_array[$query->row['moblog_weblog_id']]['1'])))
 						{
-							$new_array[$val['1']] = (str_replace("!-!","&nbsp;",$val['2']));
+							unset($this->cat_array[$key]);
 						}
 					}
 					
-					$form_data['cat_id[]'] = array('ms', $new_array);				
+					if (count($this->cat_array > 0))
+					{
+						$new_array = array('all'=> $LANG->line('all'));
+					}
+					
+					$new_array = array('none'=> $LANG->line('none'));					
+					$i=0;
+					
+            		foreach ($this->cat_array as $ckey => $cat)
+            		{
+		            	if ($ckey-1 < 0 OR ! isset($this->cat_array[$ckey-1]))
+    		        	{
+        		    		$new_array['NULL_'.$i] = '-------';
+            			}
+            			
+            			$new_array[$cat['1']] = (str_replace("!-!","&nbsp;",$cat['2']));
+
+		            	if (isset($this->cat_array[$ckey+1]) && $this->cat_array[$ckey+1]['0'] != $cat['0'])
+    		        	{
+        		    		$new_array['NULL_'.$i] = '-------';
+            			}
+            			$i++;
+					}
+					
+					$form_data['cat_id[]'] = array('ms', $new_array);
 					$new_array = array('none'=> $LANG->line('none'), 'open' => "open", 'closed' => "closed" );
 										
     				foreach($this->status_array as $val)
@@ -936,6 +959,12 @@ EOT;
 						
 						foreach ($val['1'] as $k => $v)
 						{
+							if (substr($k, 0, 5) == 'NULL_')
+							{
+								$r .= $DSP->input_select_option('', $v);
+								continue;
+							}
+
 							if ($val['0'] == 's' || ! is_array($data[$key]))
 							{
 								$selected = ($k == $data[$key]) ? 1 : '';
@@ -1079,7 +1108,7 @@ EOT;
 
     function filtering_menus($form_name)
     { 
-        global $DSP, $LANG, $SESS, $FNS, $DB, $PREFS;
+        global $DSP, $LANG, $SESS, $FNS, $DB, $PREFS, $REGX;
      
         // In order to build our filtering options we need to gather 
         // all the weblogs, categories and custom statuses
@@ -1142,24 +1171,24 @@ EOT;
 		$sql .= " ORDER BY group_id, parent_id, cat_name";
 		
 		$query = $DB->query($sql);
-			
+					
 		if ($query->num_rows > 0)
 		{
 			foreach ($query->result as $row)
-			{
-				$categories[$row['cat_id']] = array($row['group_id'], str_replace('"','',$row['cat_name']), $row['parent_id']);
+			{			
+				$categories[] = array($row['group_id'], $row['cat_id'], $REGX->entities_to_ascii($row['cat_name']), $row['parent_id']);
 			}
-		
+
 			foreach($categories as $key => $val)
 			{
-				if (0 == $val['2']) 
+				if (0 == $val['3']) 
 				{
-					$this->cat_array[] = array($val['0'], $key, $val['1']);
-					$this->category_subtree($key, $categories, $depth=1);
+					$this->cat_array[] = array($val['0'], $val['1'], $val['2']);
+					$this->category_subtree($val['1'], $categories, $depth=1);
 				}
-			}	
-        } 
-          
+			}
+		} 
+
         /** ----------------------------- 
         /**  Entry Statuses
         /** -----------------------------*/
@@ -1360,55 +1389,39 @@ function changemenu(index)
          
             if (count($this->cat_array) > 0)
             {
-            ?>       
-            	<?php
-            	foreach ($this->cat_array as $k => $v)
-                {
-                    if (in_array($v['0'], explode('|', $val['1'])))
-                    {
-                    	$set = 'y';
-                    }
-                }
-                
-                if (isset($set))
-                {
-                ?>                
-            categories[i] = new Option("<?php echo $LANG->line('all'); ?>", "all"); i++; <?php
-                }
-                unset($set);
-                
-                ?>				
-            categories[i] = new Option("<?php echo $LANG->line('none'); ?>", "none"); i++; <?php echo "\n";
-            
-            if (stristr($val['1'], '|'))
-				{?>
-            categories[i] = new Option("-------", ""); i++; <?php echo "\n";
-				}
+            	$last_group = 0;
             
                 foreach ($this->cat_array as $k => $v)
                 {
-                	//$v['2'] = str_replace('&nbsp;',' ',$v['2']);
                     if (in_array($v['0'], explode('|', $val['1'])))
                     {
-                    
+                    	if (! isset($set))
+                    	{
+            				echo 'categories[i] = new Option("'.$LANG->line('all').'", ""); i++;'; 
+                            echo 'categories[i] = new Option("'.$LANG->line('none').'", "none"); i++;'."\n";              				
+            				$set = 'y';
+            			}
+
+                    	if ($last_group == 0 OR $last_group != $v['0'])
+                    	{?>
+            categories[i] = new Option("-------", ""); i++; <?php echo "\n";
+            				$last_group = $v['0'];
+                    	}
+             
+         
             // Note: this kludgy indentation is so that the JavaScript will look nice when it's renedered on the page        
             ?>
-            categories[i] = new Option("<?php echo $v['2'];?>", "<?php echo $v['1'];?>"); i++; <?php echo "\n";
+            categories[i] = new Option("<?php echo addslashes($v['2']);?>", "<?php echo $v['1'];?>"); i++; <?php echo "\n";
                     }
-                    
-                    if (isset($this->cat_array[$k+1]) && $this->cat_array[$k+1]['0'] != $v['0'])
-                    {?>
-            categories[i] = new Option("-------", ""); i++; <?php echo "\n";
-                    }
-                    
                 }
-            }
-            else
-            {
-            ?>
-            categories[i] = new Option("<?php echo $LANG->line('none'); ?>", "none"); $i++;
-            <?php
-            }
+                if ( ! isset($set))
+                {
+                 echo 'categories[i] = new Option("'.$LANG->line('none').'", "none"); i++;'."\n"; 
+                }
+				unset($set);                
+
+			}
+			
               
             ?>
             
@@ -1633,7 +1646,7 @@ function switch_type()
     
         if ($depth == 1)	
         {
-            $depth = 2;
+            $depth = 4;
         }
         else 
         {	                            
@@ -1646,13 +1659,13 @@ function switch_type()
             
         foreach ($categories as $key => $val) 
         {
-            if ($cat_id == $val['2']) 
+            if ($cat_id == $val['3']) 
             {
-                $pre = ($depth > 2) ? " " : '';
+                $pre = ($depth > 2) ? $spcr : '';
                 
-                $this->cat_array[] = array($val['0'], $key, $pre.$indent.$spcr.$val['1']);
+              	$this->cat_array[] = array($val['0'], $val['1'], $pre.$indent.$spcr.$val['2']);
                                 
-                $this->category_subtree($key, $categories, $depth);
+                $this->category_subtree($val['1'], $categories, $depth);
             }
         }
     }

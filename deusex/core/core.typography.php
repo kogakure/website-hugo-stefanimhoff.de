@@ -63,8 +63,14 @@ class Typography {
 	var $skip_elements	= 'p|pre|ol|ul|dl|object|table';
 	
 	// Tags we want the parser to completely ignore when splitting the string.
-	var $inline_elements = 'a|abbr|acronym|b|bdo|br|button|cite|code|del|dfn|em|i|img|ins|input|label|map|kbd|samp|select|span|strong|sub|sup|textarea|var';
+	var $inline_elements = 'a|abbr|acronym|b|bdo|big|br|button|cite|code|del|dfn|em|i|img|ins|input|label|map|kbd|q|samp|select|small|span|strong|sub|sup|textarea|tt|var';
+
+	// array of block level elements that require inner content to be within another block level element
+	var $inner_block_required = array('blockquote');
 	
+	// the last block element parsed
+	var $last_block_element = '';
+		
 	// whether or not to protect quotes within { curly braces }
 	var $protect_braced_quotes = FALSE;
     
@@ -74,14 +80,14 @@ class Typography {
     
     // Note: The decoding array is associative, allowing more precise mapping
            
-    var $safe_encode = array('b', 'i', 'u', 'em', 'strike', 'strong', 'pre', 'code', 'blockquote', 'abbr');
+    var $safe_encode = array('b', 'i', 'em', 'del', 'ins', 'strong', 'pre', 'code', 'blockquote', 'abbr');
     
     var $safe_decode = array(
                                 'b'             => 'b', 
                                 'i'             => 'i',
-                                'u'             => 'u', 
-                                'em'            => 'em', 
-                                'strike'        => 'strike', 
+                                'em'            => 'em',
+								'del'			=> 'del',
+								'ins'			=> 'ins',
                                 'strong'        => 'strong', 
                                 'pre'           => 'pre', 
                                 'code'          => 'code', 
@@ -595,7 +601,7 @@ class Typography {
 						'onclick',
 						'onfocus',
 						'onload',
-						'onmouseOver',
+						'onmouseover',
 						'onmouseup',
 						'onmousedown',
 						'onselect',
@@ -755,7 +761,13 @@ class Typography {
     function decode_pmcode($str)
     {
     	global $FNS, $PREFS, $IN;
-    	        
+		
+        /** -------------------------------------
+        /**  Remap some deprecated tags with valid counterparts
+        /** -------------------------------------*/
+		
+		$str = str_replace(array('[strike]', '[/strike]', '[u]', '[/u]'), array('[del]', '[/del]', '[em]', '[/em]'), $str);
+		
         /** -------------------------------------
         /**  Decode pMcode array map
         /** -------------------------------------*/
@@ -797,7 +809,7 @@ class Typography {
         
         $qm		= ($PREFS->ini('force_query_string') == 'y') ? '' : '?';
         $bounce	= ((REQ == 'CP' && $IN->GBL('M', 'GET') != 'send_email') || $PREFS->ini('redirect_submitted_links') == 'y') ? $FNS->fetch_site_index().$qm.'URL=' : '';
-        
+
         $bad_things	 = array("'",'"', ';', '[', '(', ')', '!', '*', '>', '<', "\t", "\r", "\n", 'document.cookie'); // everything else
         $bad_things2 = array('[', '(', ')', '!', '*', '>', '<', "\t", 'document.cookie'); // style,title attributes
         $exceptions	 = array('http://', 'https://', 'irc://', 'feed://', 'ftp://', 'ftps://', 'mailto:', '/');
@@ -842,31 +854,16 @@ class Typography {
 					// remove everything but the URL up to the first space
        				$url = substr($url, 0, strpos($url, ' '));
         		}
-        		
+				
+				// get rid of opening = and surrounding quotes
+				$url = preg_replace(array('/^=(\042|\047)?/', '/(\042|\047)$/'), '', $url);
+
+				// url encode a few characters that we want to allow, in the wiki for example
+				$url = str_replace(array('"', "'", '!'), array('%22', '%27', '%21'), $url);
+
         		// Clean out naughty stuff from URL.
         		$url = ($this->html_format == 'all') ? str_replace($bad_things2, '', $url) : str_replace($bad_things, '', $url);
-        		
-        		//  Remove the possible equal sign from the beginning of the URL
-        		if (substr($url, 0, 1) == '=')
-        		{
-        			$url = substr($url, 1);
-        		}
-        		
-        		if ($this->html_format == 'all')
-				{
-					//  Remove the possible quote from the beginning of the URL
-					if (substr($url, 0, 1) == '"' OR substr($url, 0, 1) == "'")
-					{
-						$url = substr($url, 1);
-					}
-					
-					//  Remove the possible quote from the end of the URL
-					if (substr($url, -1) == '"' OR substr($url, -1) == "'")
-					{
-						$url = substr($url, 0, -1);
-					}
-        		}
-        		
+        		        		
         		$add = TRUE;
         		
         		foreach($exceptions as $exception)
@@ -1322,12 +1319,14 @@ class Typography {
 
 		// Convert quotes within tags to temporary markers. We don't want quotes converted 
 		// within tags so we'll temporarily convert them to {@DQ} and {@SQ}
+		// and we don't want double dashes converted to emdash entities, so they are marked with {@DD}
+		// likewise double spaces are converted to {@NBS} to prevent entity conversion
 		if (preg_match_all("#\<.+?>#si", $str, $matches))
 		{
-			for ($i = 0; $i < count($matches['0']); $i++)
+			for ($i = 0, $total = count($matches[0]); $i < $total; $i++)
 			{
-				$str = str_replace($matches['0'][$i],
-									str_replace(array("'",'"'), array('{@SQ}', '{@DQ}'), $matches['0'][$i]),
+				$str = str_replace($matches[0][$i],
+									str_replace(array("'",'"','--','  '), array('{@SQ}', '{@DQ}', '{@DD}', '{@NBS}'), $matches[0][$i]),
 									$str);
 			}
 		}
@@ -1336,10 +1335,10 @@ class Typography {
 		{
 			if (preg_match_all("#\{.+?}#si", $str, $matches))
 			{
-				for ($i = 0; $i < count($matches['0']); $i++)
+				for ($i = 0, $total = count($matches[0]); $i < $total; $i++)
 				{
-					$str = str_replace($matches['0'][$i],
-										str_replace(array("'",'"'), array('{@SQ}', '{@DQ}'), $matches['0'][$i]),
+					$str = str_replace($matches[0][$i],
+										str_replace(array("'",'"'), array('{@SQ}', '{@DQ}'), $matches[0][$i]),
 										$str);
 				}
 			}			
@@ -1376,16 +1375,21 @@ class Typography {
 					$process =  ($match[1] == '/') ? TRUE : FALSE;
 				}
 				
+				if ($match[1] == '')
+				{
+					$this->last_block_element = $match[2];
+				}
+
 				$str .= $chunk;
 				continue;
 			}
-				
+			
 			if ($process == FALSE)
 			{
 				$str .= $chunk;
 				continue;
 			}
-			
+
 			//  Convert Newlines into <p> and <br /> tags
 			$str .= $this->_format_newlines($chunk);
 		}
@@ -1404,19 +1408,24 @@ class Typography {
 		
 						// If the user submitted their own paragraph tags within the text
 						// we will retain them instead of using our tags.
-						'/(<p.*?>)<p>/'		=> '$1', // <?php BBEdit syntax coloring bug fix
+						'/(<p[^>*?]>)<p>/'		=> '$1', // <?php BBEdit syntax coloring bug fix
 						
 						// Reduce multiple instances of opening/closing paragraph tags to a single one
 						'#(</p>)+#'			=> '</p>',
-						'/(<p><p>)+/'		=> '<p>',
+						'/(<p>\W*<p>)+/'	=> '<p>',
 						
 						// Clean up stray paragraph tags that appear before block level elements
 						'#<p></p><('.$this->block_elements.')#'	=> '<$1',
+						
+						// Clean up stray non-breaking spaces preceeding block elements
+						'#[&nbsp; ]+<('.$this->block_elements.')#'	=> '  <$1',
 			
 						// Replace the temporary markers we added earlier
 						'/\{@TAG\}/'		=> '<',
 						'/\{@DQ\}/'			=> '"',
-						'/\{@SQ\}/'			=> "'"
+						'/\{@SQ\}/'			=> "'",
+						'/\{@DD\}/'			=> '--',
+						'/\{@NBS\}/'		=> '  '
 
 						);
 	
@@ -1462,12 +1471,12 @@ class Typography {
 							'/"\'(\s|\W|$)/'				=> '&#8221;&#8217;$1',
 
 							// single quote smart quotes
-							'/\'(\s|\W|$)/'					=> '&#8217;$1',
 							'/(^|\W|\s)\'/'					=> '$1&#8216;',
+							'/\'(\s|\W|$)/'					=> '&#8217;$1',
 
 							// double quote smart quotes
-							'/"(\s|\W|$)/'					=> '&#8221;$1',
 							'/(^|\W|\s)"/'					=> '$1&#8220;',
+							'/"(\s|\W|$)/'					=> '&#8221;$1',
 
 							// apostrophes
 							"/(\w)'(\w)/"       	    	=> '$1&#8217;$2',
@@ -1511,8 +1520,8 @@ class Typography {
 		{
 			return $str;
 		}
-
-		if (strpos($str, "\n") === FALSE)
+		
+		if (strpos($str, "\n") === FALSE  && ! in_array($this->last_block_element, $this->inner_block_required))
 		{
 			return $str;
 		}

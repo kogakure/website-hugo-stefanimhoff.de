@@ -4715,7 +4715,7 @@ class Utilities {
         
         $DSP->title = $LANG->line('utilities');        
         $DSP->crumb = $DSP->anchor(BASE.AMP.'C=admin'.AMP.'area=utilities', $LANG->line('utilities')).
-			 		  $DSP->crumb_item($LANG->line('utilities')); 
+			 		  $DSP->crumb_item($LANG->line('recount_stats')); 
 		$DSP->right_crumb($LANG->line('set_recount_prefs'), BASE.AMP.'C=admin'.AMP.'M=utilities'.AMP.'P=recount_prefs');
      
         $r = $DSP->qdiv('tableHeading', $LANG->line('recalculate'));

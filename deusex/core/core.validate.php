@@ -105,7 +105,7 @@ class Validate {
 	function validate_username()
 	{
 		global $PREFS, $LANG, $SESS, $DB;
-		
+
 		$type = $this->val_type;
 
         /** ----------------------------------
@@ -120,10 +120,8 @@ class Validate {
 		/** ----------------------------------
 		/**  Is username formatting correct?
 		/** ----------------------------------*/
-		
-		// Reserved characters:  |  "  '  !
-	
-		if (preg_match("/[\||\'|\"|\!]/", $this->username))
+
+		if (preg_match('/[\|\x7d\'"!<\x7b>]/', $this->username))
 		{
 			$this->errors[] = $LANG->line('invalid_characters_in_username');
 		}                    
@@ -210,7 +208,7 @@ class Validate {
             return $this->screen_name = $this->username;
         }
         
-		if (stristr($this->screen_name, '>') OR stristr($this->screen_name, '<')) 
+		if (preg_match('/[\x7d<\x7b>]/', $this->screen_name)) 
 		{
 			return $this->errors[] = $LANG->line('disallowed_screen_chars');
 		}

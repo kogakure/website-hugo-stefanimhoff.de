@@ -1,12 +1,6 @@
 <?php
   
 $L = array(
-	
-'load_jquery' =>
-'Load jQuery?',
-
-'load_jquery_ui' =>
-'Load jQuery UI?',
 
 'jquery_src' =>
 'jQuery URL',

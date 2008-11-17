@@ -40,6 +40,7 @@ class Metaweblog_api {
     var $weblog_id		= '1';						// Default Weblog ID
     var $site_id		= '1';						// Default Site ID
     var $blog_url		= '';						// Weblog Blog URL for Permalink
+    var $comment_url	= '';						// Comment URL for Permalink
     var $deft_category	= '';						// Default Category for Weblog
     
     var $excerpt_field	= '1';						// Default Except Field ID
@@ -991,9 +992,7 @@ class Metaweblog_api {
     	{
     		$this->parse_weblog($query->row['weblog_id']);
     	}
-    	
-    	$link = $FNS->remove_double_slashes($this->blog_url.'/'.$query->row['url_title'].'/');   
-		
+    		
 		/** ----------------------------------------
         /**  Instantiate Typography class
         /** ----------------------------------------*/
@@ -1024,7 +1023,8 @@ class Metaweblog_api {
 		foreach($query->result as $row)
 		{	
 			$convert_breaks = 'none';
-			
+			$link = $FNS->remove_double_slashes($this->comment_url.'/'.$row['url_title'].'/');  
+	    	
 			// Fields:  Textarea and Text Input Only
 			
 			$this->field_data = array('excerpt' => '', 'content' => '', 'more' => '', 'keywords' => '');
@@ -1205,7 +1205,7 @@ class Metaweblog_api {
     	/**  Perform Query
     	/** ---------------------------------------*/
     	
-    	$sql = "SELECT DISTINCT(wt.entry_id), wt.title, wt.url_title, wt.weblog_id, 
+    	$sql = "SELECT DISTINCT(wt.entry_id), wt.title, wt.weblog_id, 
     			wt.author_id, wt.entry_date
                 FROM   exp_weblog_titles wt, exp_weblog_data 
                 WHERE wt.entry_id = exp_weblog_data.entry_id ";
@@ -1225,9 +1225,7 @@ class Metaweblog_api {
 		{
 			return new XML_RPC_Response('0','805', $LANG->line('no_entries_found'));
 		}
-    	
-    	$link = $FNS->remove_double_slashes($this->blog_url.'/'.$row['url_title'].'/');   
-		
+
 		/** ---------------------------------------
     	/**  Process Output
     	/** ---------------------------------------*/
@@ -1687,7 +1685,7 @@ class Metaweblog_api {
     	$weblog_id			= trim($weblog_id);
     	$this->status		= 'open';
     	
-    	$sql				= "SELECT weblog_id, blog_url, deft_category, weblog_html_formatting, site_id FROM exp_weblogs WHERE ";
+    	$sql				= "SELECT weblog_id, blog_url, comment_url, deft_category, weblog_html_formatting, site_id FROM exp_weblogs WHERE ";
     	$this->weblog_sql	= $FNS->sql_andor_string($weblog_id, 'exp_weblogs.weblog_id');
        	$sql				= (substr($this->weblog_sql, 0, 3) == 'AND') ? $sql.substr($this->weblog_sql, 3) : $sql.$this->weblog_sql;
         $query				= $DB->query($sql);
@@ -1699,6 +1697,7 @@ class Metaweblog_api {
         
         $this->weblog_id	 = $query->row['weblog_id'];
         $this->blog_url		 = $query->row['blog_url'];
+        $this->comment_url	 = $query->row['comment_url'];
         $this->deft_category = $query->row['deft_category'];
         $this->html_format   = $query->row['weblog_html_formatting'];
         $this->site_id		 = $query->row['site_id'];
@@ -2122,10 +2121,14 @@ class Metaweblog_api {
         {        
         	$name = ucwords(str_replace('_', ' ', $val));
         		
-        	if ($name == 'Br')
-        	{
-        		$name = 'Auto BR';
-        	}
+			if ($name == 'Br')
+			{
+				$name = $LANG->line('auto_br');
+			}
+			elseif ($name == 'Xhtml')
+			{
+				$name = $LANG->line('xhtml');
+			}
         	
         	$plugin = new XML_RPC_Values(array( 'key' => new XML_RPC_Values($val,'string'),
         										'label' => new XML_RPC_Values($name,'string')

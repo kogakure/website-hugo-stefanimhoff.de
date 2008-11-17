@@ -24,7 +24,7 @@ $L = array(
 "You did not submit a valid email address",
 
 "disallowed_screen_chars" =>
-"You are not allowed to use the following characters in the screen name: <  >",
+"Screen Name contains illegal characters",
 
 "return_fo_forum" =>
 "Return to the forums",

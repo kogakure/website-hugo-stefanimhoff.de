@@ -509,6 +509,31 @@ class Upload {
     }
     /* END */
 
+	
+	/**
+	 * Limit the File Name Length
+	 *
+	 * @access	public
+	 * @param	string
+	 * @return	string
+	 */		
+	function limit_filename_length($filename, $length)
+	{
+		if (strlen($filename) < $length)
+		{
+			return $filename;
+		}
+	
+		$ext = '';
+		if (strpos($filename, '.') !== FALSE)
+		{
+			$parts		= explode('.', $filename);
+			$ext		= '.'.array_pop($parts);
+			$filename	= implode('.', $parts);
+		}
+	
+		return substr($filename, 0, ($length - strlen($ext))).$ext;
+	}
 
     /** -------------------------------------
     /**  Set image properties

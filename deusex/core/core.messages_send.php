@@ -1053,7 +1053,7 @@ class Messages_send extends Messages {
 		}
 		else
 		{
-			return $this->inbox();
+			$FNS->redirect($this->_create_path('inbox'));
 		}
     }
     /* END */

@@ -111,6 +111,9 @@ $L = array(
 'auto_br' =>
 'Auto &lt;br /&gt;',
 
+'xhtml' =>
+'XHTML',
+
 "priority" =>
 "Priority",
 

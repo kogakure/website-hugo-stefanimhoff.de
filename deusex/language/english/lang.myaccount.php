@@ -6,7 +6,7 @@ $L = array(
 "Delete Member",
 
 "disallowed_screen_chars" =>
-"You are not allowed to use the following characters in your screen name: <  >",
+"Screen Name contains illegal characters",
 
 "notify_of_pm" =>
 "Notify me via email when someone sends me a private message",

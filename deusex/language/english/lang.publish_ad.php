@@ -827,7 +827,7 @@ $L = array(
 "Auto &lt;br /&gt;",
 
 "xhtml" =>
-"xhtml",
+"XHTML",
 
 'site_id_mismatch' =>
 'You are not logged into the correct Site to perform this action',
