@@ -24,4 +24,6 @@
 
 <ul class="network">
   <li class="network-xing" ><a href="{link_xing}">XING</a></li>
+  <li class="network-twitter" ><a href="{link_twitter}">Twitter</a></li>
+  <li class="network-readernaut" ><a href="{link_readernaut}">Readernaut</a></li>
 </ul>
