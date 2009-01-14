@@ -22,7 +22,7 @@
               <div id="aktuelle-notiz">
                 {exp:weblog:entries weblog="notes" limit="1" orderby="date" sort="desc" status="open|vorschau" rdf="off" disable="member_data|trackbacks"}
                   <h2><a href="{title_permalink='notiz'}">{title}</a> <a class="edit-entry" href="{path=site_index}deusex/index.php?C=edit&amp;M=edit_entry&amp;weblog_id={weblog_id}&amp;entry_id={entry_id}"><img src="{path=site_index}css/images/edit.png" alt="Bearbeiten" title="Bearbeiten" /></a></h2>
-                  {if notes_summary}{notes_summary}{if:else}{exp:char_limit total="1000"}{notes_body}{/exp:char_limit}{/if}
+                  {if notes_summary}{notes_summary}{if:else}{exp:html_strip}{exp:char_limit total="1000"}{notes_body}{/exp:char_limit}{/exp:html_strip}{/if}             
                 {/exp:weblog:entries}
               </div>
             
@@ -40,7 +40,7 @@
               <div id="aktuelle-notiz">
                 {exp:weblog:entries weblog="notes" limit="1" orderby="date" sort="desc" status="open" rdf="off" disable="member_data|trackbacks"}
                   <h2><a href="{title_permalink='notiz'}">{title}</a></h2>
-                  {if notes_summary}{notes_summary}{if:else}{exp:char_limit total="1000"}{notes_body}{/exp:char_limit}{/if}
+                  {if notes_summary}{notes_summary}{if:else}{exp:html_strip}{exp:char_limit total="1000"}{notes_body}{/exp:char_limit}{/exp:html_strip}{/if}
                 {/exp:weblog:entries}
               </div>
               
@@ -111,7 +111,7 @@
 
                 {exp:weblog:entries weblog="notes" orderby="date" sort="desc" limit="999"}
                   <h3><a href="{title_permalink=notiz}">{title}</a></h3>
-                  {if notes_summary}{notes_summary}{if:else}{exp:char_limit total="250"}{notes_body}{/exp:char_limit}{/if}
+                  {if notes_summary}{notes_summary}{if:else}{exp:html_strip}{exp:char_limit total="250"}{notes_body}{/exp:char_limit}{/exp:html_strip}{/if}
                 {/exp:weblog:entries}
           </div>
       {/if}
