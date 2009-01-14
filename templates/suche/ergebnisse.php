@@ -11,7 +11,11 @@
           <div id="content-1">
             {exp:search:search_results}
               <h2><a href="{auto_path}">{title}</a></h2>
-              {exp:markdown}{exp:char_limit total="300"}{notes_body}{/exp:char_limit}{/exp:markdown}
+              {exp:markdown}
+              {exp:trunchtml chars="300" ending="&nbsp;…"}
+                  {notes_body}
+              {/exp:trunchtml} 
+              {/exp:markdown}
             {/exp:search:search_results}
           </div>
 {main_close}
