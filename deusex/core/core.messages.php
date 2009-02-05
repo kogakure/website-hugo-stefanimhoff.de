@@ -1335,7 +1335,8 @@ class Messages {
 			$i++;
 			$data			= $row;
 			$message_ids[]	= $row['message_id'];
-			
+
+			$data['msg_id']	= ($row['message_read'] == 'n') ? 'u'.$row['msg_id'] : $row['msg_id'];
 			$data['buddy_list_link'] = '';
     		$data['block_list_link'] = '';
 			$data['message_date'] = $LOC->set_human_time($data['message_date']);
@@ -2135,6 +2136,14 @@ DOH;
         { 
 			if (strstr($key, 'toggle') AND ! is_array($val))
 			{
+				$unread = FALSE;
+				
+				if ($val[0] == 'u')
+				{
+					$unread = TRUE;
+					$val = substr($val, 1);					
+				}
+
 				if ($IN->GBL('daction', 'POST') == 'delete')
 				{
 					if (substr($val, 0, 1) == 'd')
@@ -2156,7 +2165,7 @@ DOH;
 						/** ----------------------------------*/
 						
 						// quick sanity check juuuuust in case
-						if ($SESS->userdata['private_messages'] > 0)
+						if ($SESS->userdata['private_messages'] > 0 && $unread === TRUE)
 						{
 							$DB->query("UPDATE exp_members SET private_messages = private_messages - 1
 										WHERE member_id = '{$this->member_id}'");

@@ -1027,8 +1027,13 @@ class Members {
 			$DB->query("DELETE FROM exp_forum_subscriptions  WHERE ".$IDS); 
 			$DB->query("DELETE FROM exp_forum_pollvotes  WHERE ".$IDS); 
 
-			$IDS = str_replace('member_id', 'author_id', $IDS);
-			 
+			$IDS = str_replace('member_id', 'admin_member_id', $IDS);
+			$DB->query("DELETE FROM exp_forum_administrators WHERE ".$IDS); 
+			
+			$IDS = str_replace('admin_member_id', 'mod_member_id', $IDS);			
+			$DB->query("DELETE FROM exp_forum_moderators WHERE ".$IDS); 
+
+			$IDS = str_replace('mod_member_id', 'author_id', $IDS);
 			$DB->query("DELETE FROM exp_forum_topics WHERE ".$IDS);
 			
 			// Snag the affected topic id's before deleting the members for the update afterwards

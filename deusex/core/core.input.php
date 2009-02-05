@@ -322,6 +322,12 @@ class Input {
 
                 for ($i = $x; $i < count($ex); $i++)
                 {
+					// nothing naughty
+					if (strpos($ex[$i], '=') !== FALSE && preg_match('#.*(\042|\047).+\s*=.*#i', $ex[$i]))
+					{
+						$ex[$i] = str_replace(array('"', "'", ' ', '='), '', $ex[$i]);
+					}
+					
                     $this->SEGS[$n] = $ex[$i];
                     
                     $uri .= $ex[$i].'/';
@@ -344,12 +350,13 @@ class Input {
                 // Reassign the full URI
                 
                 $this->URI = '/'.$uri.'/';
+
             }            
         }
     }
     /* END */
     
-
+	
 
     /** -----------------------------------------
     /**  Parse out the $IN->QSTR variable
@@ -383,8 +390,15 @@ class Input {
 
     function clean_input_data($str)
     {
-    	if (is_array($str))
-    		return $str;
+		if (is_array($str))
+		{
+			$new_array = array();
+			foreach ($str as $key => $val)
+			{
+				$new_array[$this->clean_input_keys($key)] = $this->clean_input_data($val);
+			}
+			return $new_array;
+		}
     
         $str = preg_replace("/(\015\012)|(\015)|(\012)/", "\n", $str); 
         

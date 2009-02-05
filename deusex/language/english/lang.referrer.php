@@ -14,8 +14,8 @@ $L = array(
 
 //----------------------------------------
 
-"referrer_preferences" =>
-"Referrer Preferences",
+'tracking_preferences' =>
+'Tracking Preferences',
 
 "referrer_ip" =>
 "Referrer IP",

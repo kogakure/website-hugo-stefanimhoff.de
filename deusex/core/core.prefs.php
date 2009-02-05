@@ -211,13 +211,33 @@ class Preferences {
 		$this->core_ini['site_short_name']	= $query->row['site_name'];
 		$this->core_ini['site_name'] 		= $query->row['site_label']; // Legacy code as 3rd Party modules likely use it
 		
+		// master tracking override?
+		if ($this->ini('disable_all_tracking') == 'y')
+		{
+			$this->disable_tracking();
+		}
+		
 		// If we just reloaded, then we reset a few things automatically
 		$DB->show_queries = ($this->ini('show_queries') == 'y') ? TRUE : FALSE;
 		$DB->enable_cache = ($this->ini('enable_db_caching') == 'y') ? TRUE : FALSE;
 	}
     /* END */
     
-    
+ 
+	/** ------------------------------------------
+	/**  Disable tracking - used on the fly by certain methods
+	/** ------------------------------------------*/
+  
+	function disable_tracking()
+	{
+		$this->core_ini['enable_online_user_tracking'] = 'n';
+		$this->core_ini['enable_hit_tracking'] = 'n';
+		$this->core_ini['enable_entry_view_tracking'] = 'n';
+		$this->core_ini['log_referrers'] = 'n';
+	}
+	/* END */
+	
+	
 	/** ------------------------------------------
     /**  Divine the Location of Prefs in the Database
     /** ------------------------------------------*/

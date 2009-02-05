@@ -632,7 +632,7 @@ class Blogger_api {
     	/**  URL Title Unique?
     	/** ---------------------------------------*/
 		
-		$url_title = $REGX->create_url_title($this->title);
+		$url_title = $REGX->create_url_title($this->title, TRUE);
 		
 		$sql = "SELECT count(*) AS count 
 				FROM exp_weblog_titles 

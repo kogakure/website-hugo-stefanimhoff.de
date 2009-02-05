@@ -1483,12 +1483,13 @@ class MyAccount {
 		
 		
         /** -------------------------------------
-        /**  Update "last post" forum info if needed
+        /**  Update "last post" and "moderator" forum info if needed
         /** -------------------------------------*/
          
         if ($_POST['current_screen_name'] != $_POST['screen_name'] AND $PREFS->ini('forum_is_installed') == "y")
         {
         	$DB->query("UPDATE exp_forums SET forum_last_post_author = '".$DB->escape_str($_POST['screen_name'])."' WHERE forum_last_post_author_id = '".$id."'");
+        	$DB->query("UPDATE exp_forum_moderators SET mod_member_name = '".$DB->escape_str($_POST['screen_name'])."' WHERE mod_member_id = '".$id."'");
         }
 
         /** -------------------------------------
@@ -3194,41 +3195,13 @@ class MyAccount {
 		}
 			
 		/** ----------------------------------------
-		/**  Define the paths
+		/**  Define the paths and get the avatars
 		/** ----------------------------------------*/
 		
-		$avatar_path = $PREFS->ini('avatar_path', TRUE).$IN->GBL('folder').'/';
-		$avatar_url  = $PREFS->ini('avatar_url', TRUE).$IN->GBL('folder').'/';
-		
-		/** ----------------------------------------
-		/**  Is this a valid avatar folder?
-		/** ----------------------------------------*/
-		
-		$extensions = array('.gif', '.jpg', '.jpeg', '.png');
+		$avatar_path = $PREFS->ini('avatar_path', TRUE).$FNS->filename_security($IN->GBL('folder')).'/';
+		$avatar_url  = $PREFS->ini('avatar_url', TRUE).$FNS->filename_security($IN->GBL('folder')).'/';
 
-		if ( ! @is_dir($avatar_path) OR ! $fp = @opendir($avatar_path))
-		{
-			return $DSP->error_message($LANG->line('avatars_not_found'));		
-		}
-		
-		/** ----------------------------------------
-		/**  Grab the image names
-		/** ----------------------------------------*/
-
-		$avatars = array();
-
-		while (FALSE !== ($file = readdir($fp))) 
-		{ 
-			if (FALSE !== ($pos = strpos($file, '.')))
-			{
-				if (in_array(substr($file, $pos), $extensions))
-				{
-					$avatars[] = $file;
-				}
-			}							
-		}
-		
-		closedir($fp); 
+		$avatars = $this->_get_avatars($avatar_path);
 		
 		/** ----------------------------------------
 		/**  Did we succeed?
@@ -3371,7 +3344,7 @@ class MyAccount {
     /** ----------------------------------------
     /**  Select Avatar From  Library
     /** ----------------------------------------*/
-	
+
 	function select_avatar()
 	{
 		global $FNS, $IN, $PREFS, $DB, $LANG, $SESS;
@@ -3395,8 +3368,18 @@ class MyAccount {
 			return $FNS->redirect(BASE.AMP.'C=myaccount'.AMP.'M=browse_avatars'.AMP.'folder='.$IN->GBL('folder'));
 		}
 		
-		$basepath 	= $PREFS->ini('avatar_path', TRUE);			
-		$avatar		= $IN->GBL('folder').'/'.$IN->GBL('avatar');
+		$folder	= $FNS->filename_security($IN->GBL('folder'));
+		$file	= $FNS->filename_security($IN->GBL('avatar'));
+
+		$basepath = $PREFS->ini('avatar_path', TRUE);		
+		$avatar	= $folder.'/'.$file;
+
+		$allowed = $this->_get_avatars($basepath.$folder);
+
+		if ( ! in_array($file, $allowed) OR $folder == 'upload')
+		{
+			return $DSP->error_message($LANG->line('avatars_not_found'));		
+		}
 
 		/** ----------------------------------------
 		/**  Fetch the avatar meta-data
@@ -3415,13 +3398,52 @@ class MyAccount {
 		/**  Update DB
 		/** ----------------------------------------*/
 		
-		$DB->query("UPDATE exp_members SET avatar_filename = '{$avatar}', avatar_width='{$width}', avatar_height='{$height}' WHERE member_id = '".$id."' ");
-
+		$DB->query($DB->update_string('exp_members', array('avatar_filename' => $avatar, 'avatar_width' => $width, 'avatar_height' => $height), array('member_id' => $SESS->userdata['member_id'])));
 	
 		return $FNS->redirect(BASE.AMP.'C=myaccount'.AMP.'M=edit_avatar'.AMP.'id='.$id.AMP.'U=1');
 	}
 	/* END */
-		
+
+	/** ----------------------------------------
+    /**  Get all Avatars from a Folder
+    /** ----------------------------------------*/
+
+	function _get_avatars($avatar_path)
+	{
+	    /** ----------------------------------------
+	    /**  Is this a valid avatar folder?
+	    /** ----------------------------------------*/
+
+	    $extensions = array('.gif', '.jpg', '.jpeg', '.png');
+
+	    if ( ! @is_dir($avatar_path) OR ! $fp = @opendir($avatar_path))
+	    {
+	        return array();
+	    }
+
+	    /** ----------------------------------------
+	    /**  Grab the image names
+	    /** ----------------------------------------*/
+
+	    $avatars = array();
+
+	    while (FALSE !== ($file = readdir($fp))) 
+	    { 
+	        if (FALSE !== ($pos = strpos($file, '.')))
+	        {
+	            if (in_array(substr($file, $pos), $extensions))
+	            {
+	                $avatars[] = $file;
+	            }
+	        }                            
+	    }
+
+	    closedir($fp);
+
+	    return $avatars;
+	}
+	/* END */
+
     /** ----------------------------------------
     /**  Upload Avatar or Profile Photo
     /** ----------------------------------------*/

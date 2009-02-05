@@ -2134,8 +2134,8 @@ class Functions {
 		// Create Rick's array
 		for ($i = 0; $i < $total_conditionals; $i++)
 		{
-			$p1 = strpos($modified_str, $LD.'if'.$i);
-			$p2 = strpos($modified_str, $LD.$slash.'if'.$i);
+			$p1 = strpos($modified_str, $LD.'if'.$i.' ');
+			$p2 = strpos($modified_str, $LD.$slash.'if'.$i.$RD);
 			$length = $p2-$p1;
 			$text_range = substr($modified_str,$p1,$length);
 			
@@ -2386,8 +2386,11 @@ class Functions {
     	if ($chunk == '') $chunk = (is_object($TMPL)) ? $TMPL->fl_tmpl : '';
     	if ($open == '')  $open  = LD;
     	if ($close == '') $close = RD;
-    
-    	if ( ! preg_match("/".preg_quote($str, '/')."(.*?)".$close."/s", $chunk, $matches))
+		
+		// Warning: preg_match() Compilation failed: regular expression is too large at offset #
+		// This error will occur if someone tries to stick over 30k-ish strings as tag parameters that also happen to include curley brackets.
+		// Instead of preventing the error, we let it take place, so the user will hopefully visit the forums seeking assistance
+		if ( ! preg_match("/".preg_quote($str, '/')."(.*?)".$close."/s", $chunk, $matches))
     	{
     		return $str;
     	}
@@ -2689,7 +2692,7 @@ class Functions {
 				$matches['s'] = str_replace($protect, '^', $matches['3']);
 				$matches['s'] = preg_replace('/"(.*?)"/s', '^', $matches['s']);
 				$matches['s'] = preg_replace("/'(.*?)'/s", '^', $matches['s']);
-				$matches['s'] = str_replace($valid, ' ', $matches['s']);
+				$matches['s'] = str_replace($valid, '  ', $matches['s']);
 				$matches['s'] = preg_replace("/(^|\s+)[0-9]+(\s|$)/", ' ', $matches['s']); // Remove unquoted numbers
 				$done = array();
 			}

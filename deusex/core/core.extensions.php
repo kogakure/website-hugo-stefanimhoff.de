@@ -248,7 +248,7 @@ class Extensions {
     	    	//  opposed to any original arguments the hook sent. In theory...
     	    	// -----------------------------------------
     	    	
-				if (is_object($TMPL))
+				if (is_object($TMPL) && method_exists($TMPL, 'log_item'))
 				{
 					$TMPL->log_item('Calling Extension Class/Method: '.$class_name.'/'.$method);
 				}

@@ -1129,7 +1129,12 @@ class Publish {
 				document.getElementById(f_on).style.display = "none";
         	}
         }
-		
+
+		// Remove the Preview from the DOM so it isn't added to submitted content
+		document.getElementById('entryform').onsubmit = function(){
+			document.getElementById('entryform').removeChild(document.getElementById('previewBox'));
+		}
+
 		-->
 		</script>
 EOT;
@@ -1170,7 +1175,7 @@ EOT;
     
     		$prv_title = ($submission_error == '') ? $preview : $DSP->qspan('alert', $LANG->line('error'));
     
-			$r .= '<fieldset class="previewBox">';
+			$r .= '<fieldset class="previewBox" id="previewBox">';
 			$r .= '<legend class="previewItemTitle">&nbsp;'.$prv_title.'&nbsp;</legend>';
                           
 			if ($submission_error == '')
@@ -1195,9 +1200,12 @@ EOT;
                     {
                     	$_POST[$k] = $v;
                     }
-                    
-                    unset($_POST[$key]);
-                }
+
+					if ($key == 'category' OR $key == 'ping')
+					{
+						unset($_POST[$key]);
+					}
+				}
                 else
                 {
 					if ($submission_error == '')
@@ -1321,7 +1329,10 @@ EOT;
                     	$_POST[$k] = $v;
                     }
                     
-                    unset($_POST[$key]);
+					if ($key == 'category' OR $key == 'ping')
+					{
+						unset($_POST[$key]);
+					}
                 }
                 else
                 {    
@@ -2607,7 +2618,7 @@ EOT;
        
 		$r .= $DSP->qdiv('itemWrapper', 
 						$DSP->qdiv('itemTitle', $DSP->required().NBS.$LANG->line('title', 'title')).
-						$DSP->input_text('title', $title, '20', '100', 'input', '100%', ($which == 'new' OR $which == 'preview') ? 'onkeyup="liveUrlTitle();"' : '', $convert_ascii)
+						$DSP->input_text('title', $title, '20', '100', 'input', '100%', (($entry_id == '') ? 'onkeyup="liveUrlTitle();"' : ''), $convert_ascii)
 						);
 
         /** --------------------------------
@@ -3471,8 +3482,16 @@ EOT;
         $entry_date = $LOC->convert_human_date_to_gmt($IN->GBL('entry_date', 'POST'));
                      
         if ( ! is_numeric($entry_date)) 
-        { 
-            $error[] = $LANG->line('invalid_date_formatting');
+        {
+			// Localize::convert_human_date_to_gmt() returns verbose errors
+			if ($entry_date !== FALSE)
+			{
+				$error[] = $entry_date.NBS.NBS.'('.$LANG->line('entry_date').')';
+			}
+			else
+			{
+				$error[] = $LANG->line('invalid_date_formatting');
+			}
         }
 
         /** ---------------------------------------------
@@ -3488,8 +3507,16 @@ EOT;
             $expiration_date = $LOC->convert_human_date_to_gmt($IN->GBL('expiration_date', 'POST'));
 
             if ( ! is_numeric($expiration_date)) 
-            { 
-            	$error[] = $LANG->line('invalid_date_formatting');
+            {
+				// Localize::convert_human_date_to_gmt() returns verbose errors
+				if ($expiration_date !== FALSE)
+				{
+					$error[] = $expiration_date.NBS.NBS.'('.$LANG->line('expiration_date').')';
+				}
+				else
+				{
+					$error[] = $LANG->line('invalid_date_formatting');
+				}
             }
         }
         
@@ -3507,7 +3534,15 @@ EOT;
 
             if ( ! is_numeric($comment_expiration_date)) 
             { 
-            	$error[] = $LANG->line('invalid_comment_date_formatting');
+				// Localize::convert_human_date_to_gmt() returns verbose errors
+				if ($comment_expiration_date !== FALSE)
+				{
+					$error[] = $comment_expiration_date.NBS.NBS.'('.$LANG->line('comment_expiration_date').')';
+				}
+				else
+				{
+					$error[] = $LANG->line('invalid_date_formatting');
+				}
             }
         }
 
@@ -3546,7 +3581,15 @@ EOT;
                 
 					if ( ! is_numeric($custom_date)) 
 					{ 
-						$error[] = $LANG->line('invalid_date_formatting');
+						// Localize::convert_human_date_to_gmt() returns verbose errors
+						if ($custom_date !== FALSE)
+						{
+							$error[] = $custom_date.NBS.NBS.'('.$row['field_label'].')';
+						}
+						else
+						{
+							$error[] = $LANG->line('invalid_date_formatting');
+						}
 					}
 					else
 					{
@@ -3650,7 +3693,7 @@ EOT;
             
             if ( ! $url_title)
             {
-                $url_title = strtolower($title);
+				$url_title = $REGX->create_url_title($title, TRUE);
             }
             
 			// Kill all the extraneous characters.  
@@ -4782,7 +4825,7 @@ EOT;
 		{
 			if (($response = $XRPC->weblogs_com_ping($row['server_url'], $row['port'], $blog_title, $ping_url, $rss_url)) !== TRUE)
 			{
-				$result[] = array($row['server_name'], $response);;
+				$result[] = array($row['server_name'], $response);
 			}
 		}		
 		
@@ -5120,46 +5163,27 @@ EOT;
         ob_start();
     
         ?>
-        <script type="text/javascript"> 
-        <!--
-    
-        function toggle(thebutton)
-        {
-            if (thebutton.checked) 
-            {
-               val = true;
-            }
-            else
-            {
-               val = false;
-            }
-                        
-            var len = document.getElementById('entryform').elements.length;
-        
-            for (var i = 0; i < len; i++) 
-            {
-                var button = document.getElementById('entryform').elements[i];
-                
-                var name_array = button.name.split("["); 
-                
-                if (name_array[0] == "ping") 
-                {
-                    button.checked = val;
-                }
-            }
-            
-            document.getElementById('entryform').toggleflag.checked = val;
-        }
-        
-        //-->
-        </script>
+		<script type="text/javascript">
+		<!--
+		function toggle(thebutton)
+		{
+			var checkbox_list = document.getElementById('pingDiv').getElementsByTagName('input');
+
+			for (i=0; i<checkbox_list.length; i++) //for (var i in checkbox_list) feels more elegant... but IE... alas
+			{
+				checkbox_list[i].checked = (thebutton.checked) ? true : false;
+			}
+		}
+		//-->
+		</script>
         <?php
     
         $r .= ob_get_contents();
                 
         ob_end_clean(); 
-        
-		
+
+		$r .= '<div id="pingDiv" class="publishPad">';
+
 		foreach($query->result as $row)
 		{
 			if (isset($_POST['preview']))
@@ -5193,7 +5217,7 @@ EOT;
 			
 			if ($show == TRUE)
 			{
-				$r .= $DSP->qdiv('publishPad', $DSP->input_checkbox('ping[]', $row['id'], $selected).' '.$row['server_name']);
+				$r .= $DSP->input_checkbox('ping[]', $row['id'], $selected).' '.$row['server_name'].'<br />';
 			}
 			else
 			{
@@ -5206,10 +5230,11 @@ EOT;
 		
 		if ($show == TRUE)
 		{
-			$r .= $DSP->qdiv('publishPad', $DSP->input_checkbox('toggleflag', '', '', "onclick=\"toggle(this);\"").$DSP->qspan('highlight_alt', $LANG->line('select_all')));
+			$r .= $DSP->input_checkbox('toggleflag', '', '', "onclick=\"toggle(this);\"").$DSP->qspan('highlight_alt', $LANG->line('select_all'));
 		}
 
-        return $r;
+		$r .= '</div>';
+		return $r;
     }        
     /* END */
     
@@ -6847,6 +6872,7 @@ EOT;
         $cql = "SELECT exp_weblogs.weblog_id, exp_weblogs.blog_name, exp_statuses.status, exp_statuses.highlight
                  FROM  exp_weblogs, exp_statuses, exp_status_groups
                  WHERE exp_status_groups.group_id = exp_weblogs.status_group
+                 AND   exp_status_groups.group_id = exp_statuses.group_id
                  AND   exp_statuses.highlight != ''
                  AND   exp_status_groups.site_id = '".$DB->escape_str($PREFS->ini('site_id'))."' ";
                  
@@ -8002,7 +8028,7 @@ function changemenu(index)
 				
 				if ($data['url_title'] == '')
 				{
-					$data['url_title'] = $data['title'];
+					$data['url_title'] = $REGX->create_url_title($data['title'], TRUE);
 				}
 				
 				// Kill all the extraneous characters.  
@@ -8071,7 +8097,15 @@ function changemenu(index)
 						 
 			if ( ! is_numeric($data['entry_date'])) 
 			{ 
-				$error[] = $LANG->line('invalid_date_formatting');
+				// Localize::convert_human_date_to_gmt() returns verbose errors
+				if ($data['entry_date'] !== FALSE)
+				{
+					$error[] = $data['entry_date'];
+				}
+				else
+				{
+					$error[] = $LANG->line('invalid_date_formatting');
+				}
 			}
 			
 			/** ---------------------------------
@@ -9647,6 +9681,7 @@ EOT;
 		function changeDimValue(f, side)
 		{
 			var max 	= (side == "h") ? <?php echo $max_w; ?>	: <?php echo $max_h; ?>;
+			var max_alt	= (side == "h") ? <?php echo $max_h; ?>	: <?php echo $max_w; ?>;			
 			var unit	= (side == "w") ? f.width_unit	: f.height_unit;
 			var orig	= (side == "w") ? f.width_orig	: f.height_orig;
 			var curr	= (side == "w") ? f.width 		: f.height;
@@ -9655,14 +9690,15 @@ EOT;
 			var t_curr	= (side == "h") ? f.width		: f.height;
 			
 			var ratio	= (unit.options[unit.selectedIndex].value == "pixels") ? curr.value/orig.value : curr.value/100;
-			
 			var res = (t_unit.value == "pixels") ? Math.floor(ratio * t_orig.value) : Math.round(ratio * 100);
-			
-			if (res > max)
+
+			var res_alt = (unit.value == "pixels") ? Math.floor(ratio * orig.value) : Math.round(ratio * 100);		
+				
+			if (res > max || res_alt > max_alt)
 			{
 				if (f.constrain.checked)
 					t_curr.value = t_orig.value;
-				
+				if (f.constrain.checked || res_alt > max_alt)
 				curr.value	 = (unit.options[unit.selectedIndex].value == "pixels") ? 
 								Math.min(curr.value, orig.value) : curr.value = Math.min(curr.value, 100);
 			}
@@ -9799,7 +9835,7 @@ EOT;
         {
 			$query = $DB->query("SELECT * FROM exp_upload_prefs WHERE id = '".$DB->escape_str($id)."'");
 	
-			$thumb_prefix = ($PREFS->ini('thumbnail_prefix') == '') ? 'thumb' : $PREFS->ini('thumbnail_prefix');;
+			$thumb_prefix = ($PREFS->ini('thumbnail_prefix') == '') ? 'thumb' : $PREFS->ini('thumbnail_prefix');
 
 			/** --------------------------------
 			/**  Invoke the Image Lib Class

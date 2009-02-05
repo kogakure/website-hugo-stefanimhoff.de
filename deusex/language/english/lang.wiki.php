@@ -125,7 +125,7 @@ referencing the namespace.  Your short name should only contain word characters 
 'wiki_deleted' =>
 "Wiki Deleted!",
 
-'wiki_deleted' =>
+'wikis_deleted' =>
 "Wikis Deleted!",
 
 'duplicate_short_name' =>

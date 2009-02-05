@@ -643,7 +643,7 @@ class Comment {
 
 				$sql = "SELECT 
 						exp_comments.comment_id, exp_comments.entry_id, exp_comments.weblog_id, exp_comments.author_id, exp_comments.name, exp_comments.email, exp_comments.url, exp_comments.location as c_location, exp_comments.ip_address, exp_comments.comment_date, exp_comments.edit_date, exp_comments.comment, exp_comments.notify,
-						exp_members.location, exp_members.interests, exp_members.aol_im, exp_members.yahoo_im, exp_members.msn_im, exp_members.icq, exp_members.group_id, exp_members.member_id, exp_members.signature, exp_members.sig_img_filename, exp_members.sig_img_width, exp_members.sig_img_height, exp_members.avatar_filename, exp_members.avatar_width, exp_members.avatar_height, exp_members.photo_filename, exp_members.photo_width, exp_members.photo_height, 
+						exp_members.location, exp_members.occupation, exp_members.interests, exp_members.aol_im, exp_members.yahoo_im, exp_members.msn_im, exp_members.icq, exp_members.group_id, exp_members.member_id, exp_members.signature, exp_members.sig_img_filename, exp_members.sig_img_width, exp_members.sig_img_height, exp_members.avatar_filename, exp_members.avatar_width, exp_members.avatar_height, exp_members.photo_filename, exp_members.photo_width, exp_members.photo_height, 
 						exp_member_data.*,
 						exp_weblog_titles.title, exp_weblog_titles.url_title, exp_weblog_titles.author_id AS entry_author_id,
 						exp_weblogs.comment_text_formatting, exp_weblogs.comment_html_formatting, exp_weblogs.comment_allow_img_urls, exp_weblogs.comment_auto_link_urls, exp_weblogs.blog_url, exp_weblogs.comment_url, exp_weblogs.blog_title 
@@ -786,7 +786,7 @@ class Comment {
 		// left-over unparsed junk.  The $member_vars array is all of those
 		// member related variables that should be removed.
 		
-		$member_vars = array('location', 'interests', 'aol_im', 'yahoo_im', 'msn_im', 'icq', 
+		$member_vars = array('location', 'occupation', 'interests', 'aol_im', 'yahoo_im', 'msn_im', 'icq', 
 							 'signature', 'sig_img_filename', 'sig_img_width', 'sig_img_height', 
 							 'avatar_filename', 'avatar_width', 'avatar_height', 
 							 'photo_filename', 'photo_width', 'photo_height');

@@ -579,9 +579,6 @@ $L = array(
 "category_groups" =>
 "Category Groups",
 
-"none" =>
-"None",
-
 "no_category_group_message" =>
 "There are currently no categories",
 

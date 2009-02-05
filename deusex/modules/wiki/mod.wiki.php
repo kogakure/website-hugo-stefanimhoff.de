@@ -200,14 +200,11 @@ class Wiki {
 			foreach($namespace_query->result as $row)
 			{
 				$this->namespaces[$row['namespace_name']] = $row['namespace_label'];
-				
-				if (isset($this->seg_parts['0']) && substr($this->seg_parts['0'], 0, strlen($row['namespace_label'].':')) == $row['namespace_label'].':')
+
+				if (isset($this->seg_parts['0']) && $this->prep_title(substr($this->seg_parts['0'], 0, strlen($row['namespace_label'].':'))) == $row['namespace_label'].':')
 				{
-					if ($row['namespace_admins'] != '')
-					{
-						$this->admins = explode('|', $row['namespace_admins']);
-						$this->users  = explode('|', $row['namespace_users']); 
-					}
+					$this->admins = explode('|', $row['namespace_admins']);
+					$this->users = explode('|', $row['namespace_users']); 
 				}
 			}
 		}
@@ -264,7 +261,7 @@ class Wiki {
 				unset($this->users[$key]);
 			}
 		}
-		
+
 		/** ----------------------------------------
     	/**  Valid Upload Directory?
     	/** ----------------------------------------*/
@@ -2242,7 +2239,7 @@ class Wiki {
     	/*  If Locked Topic, Only Admins Can Edit
     	/*  Everyone Else, No EDIT!
     	/* ----------------------------------------*/
-    	
+
     	if (isset($revision_id))
     	{
     		$this->return_data = $this->_deny_if('can_edit', $this->return_data);
@@ -2253,6 +2250,11 @@ class Wiki {
     		$this->return_data = $this->_allow_if('can_edit', $this->return_data);
 			$this->return_data = $this->_deny_if('cannot_edit', $this->return_data);
     	}
+		elseif($query->num_rows == 0)
+		{
+    		$this->return_data = $this->_deny_if('can_edit', $this->return_data);
+			$this->return_data = $this->_allow_if('cannot_edit', $this->return_data);			
+		}
     	elseif($query->row['page_locked'] != 'y' && (in_array($SESS->userdata['group_id'], $this->users) OR in_array($SESS->userdata['group_id'], $this->admins)))
     	{
     		$this->return_data = $this->_allow_if('can_edit', $this->return_data);
@@ -3649,6 +3651,11 @@ class Wiki {
 		if ( ! preg_match("/\{wiki:active_members.*?\}(.*?)\{\/wiki:active_members\}/s", $str, $match))
 		{
 			return $str;
+		}
+		
+		if (! isset($STAT->stats) OR empty($STAT->stats))
+		{
+			$STAT->load_stats();
 		}
 		
 		if (count($STAT->stats['current_names']) == 0) 		

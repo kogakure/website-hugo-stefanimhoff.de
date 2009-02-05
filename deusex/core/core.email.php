@@ -176,7 +176,7 @@ class EEmail {
 			if ( ! preg_match('/[\200-\377]/', $name))
 			{
 				// add slashes for non-printing characters, slashes, and double quotes, and surround it in double quotes
-				$name = '"'.addcslashes($name, '\0..\37\177"\\').'"';
+				$name = '"'.addcslashes($name, "\0..\37\177'\"\\").'"';
 			}
 			else
 			{
@@ -1290,22 +1290,31 @@ class EEmail {
 	function send_with_sendmail()
 	{
 		$fp = @popen($this->mailpath . " -oi -f ".$this->clean_email($this->headers['From'])." -t", 'w');
-		
-		if ( ! is_resource($fp))
-		{								
-			if ($this->get_debug())
-				$this->add_error_message("Unable to open a socket to Sendmail. Please check settings.");
-				
-			return FALSE;
-		}
-		
-		fputs($fp, $this->header_str);
-		
-		//fputs($fp, $this->newline);
-		
+
+		fputs($fp, $this->header_str);		
 		fputs($fp, $this->finalbody);
 		
-		pclose($fp) >> 8 & 0xFF;
+	    $status = pclose($fp);
+	    
+		if (version_compare(PHP_VERSION, '4.2.3') == -1)
+		{
+			$status = $status >> 8 & 0xFF;
+	    }
+		
+		if ($this->get_debug())
+		{
+			$this->add_error_message('Status: '.$status.'.');	
+		}
+
+		if ($status != 0)
+		{
+			if ($this->get_debug())
+			{
+				$this->add_error_message("Status: {$status} - Unable to open a socket to Sendmail. Please check settings.");
+			}
+
+			return FALSE;
+		}
 		
 		return TRUE;
 	}

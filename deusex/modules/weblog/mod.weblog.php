@@ -655,30 +655,39 @@ class Weblog {
 						
 						foreach($results->result as $row)
 						{
-							$this->weblogs_array[$row['blog_name']] = $row['weblog_id'];
+							$this->weblogs_array[$row['weblog_id']] = $row['blog_name'];
 						}
 					}
 					
 					$weblogs = explode('|', trim($params['weblog']));
 					$allowed = array();
 					
-					if (substr($weblogs['0'], 0, 3) == 'not ')
+					if (strncmp($weblogs[0], 'not ', 4) == 0)
 					{
 						$weblogs['0'] = trim(substr($weblogs['0'], 3));
 						$allowed	  = $this->weblogs_array;
-						
+
 						foreach($weblogs as $name)
 						{
-							unset($allowed[$name]);
+							if (in_array($name, $allowed))
+							{
+								foreach (array_keys($allowed, $name) AS $k)
+								{
+									unset($allowed[$k]);
+								}
+							}
 						}
 					}
 					else
 					{
 						foreach($weblogs as $name)
 						{
-							if (isset($this->weblogs_array[$name]))
+							if (in_array($name, $this->weblogs_array))
 							{
-								$allowed[$name] = $this->weblogs_array[$name];
+								foreach (array_keys($this->weblogs_array, $name) AS $k)
+								{
+									$allowed[$k] = $name;
+								}
 							}
 						}
 					}
@@ -706,7 +715,7 @@ class Weblog {
 
 				foreach($entry_data[$entry_id] as $relating_data)
 				{
-					if ( ! isset($params['weblog']) OR in_array($relating_data['query']->row['weblog_id'], $allowed))
+					if ( ! isset($params['weblog']) OR array_key_exists($relating_data['query']->row['weblog_id'], $allowed))
 					{
 						if (isset($stati) && ! empty($stati) && isset($relating_data['query']->row[$order]))
 						{
@@ -800,8 +809,13 @@ class Weblog {
 
 	function track_views()
 	{
-		global $DB, $TMPL;
-	
+		global $DB, $TMPL, $PREFS;
+		
+		if ($PREFS->ini('enable_entry_view_tracking') == 'n')
+		{
+			return;
+		}
+		
 		if ( ! $TMPL->fetch_param('track_views') OR $this->hit_tracking_id === FALSE OR ! in_array($TMPL->fetch_param('track_views'), array("one", "two", "three", "four")))
 		{
 			return;
@@ -1214,7 +1228,7 @@ class Weblog {
 				/** --------------------------------------*/
 				
 				// added (^|\/) to make sure this doesn't trigger with url titles like big_party_2006
-				if (preg_match("#(^|\/)(\d{4}/\d{2})#", $qstring, $match) AND $dynamic)
+				if (preg_match("#(^|\/)(\d{4}/\d{2})(\/|$)#", $qstring, $match) AND $dynamic)
 				{		
 					$ex = explode('/', $match['2']);
 					
@@ -1814,12 +1828,12 @@ class Weblog {
 			        
         if ($TMPL->fetch_param('year') || $TMPL->fetch_param('month') || $TMPL->fetch_param('day'))
         {
-            $year	= ( ! $TMPL->fetch_param('year')) 	? date('Y') : $TMPL->fetch_param('year');
-            $smonth	= ( ! $TMPL->fetch_param('month'))	? '01' : $TMPL->fetch_param('month');
-            $emonth	= ( ! $TMPL->fetch_param('month'))	? '12':  $TMPL->fetch_param('month');
-            $day	= ( ! $TMPL->fetch_param('day'))	? '' : $TMPL->fetch_param('day');
+            $year	= ( ! is_numeric($TMPL->fetch_param('year'))) 	? date('Y') : $TMPL->fetch_param('year');
+            $smonth	= ( ! is_numeric($TMPL->fetch_param('month')))	? '01' : $TMPL->fetch_param('month');
+            $emonth	= ( ! is_numeric($TMPL->fetch_param('month')))	? '12':  $TMPL->fetch_param('month');
+            $day	= ( ! is_numeric($TMPL->fetch_param('day')))	? '' : $TMPL->fetch_param('day');
             
-            if ($day != '' AND ! $TMPL->fetch_param('month'))
+            if ($day != '' && ! is_numeric($TMPL->fetch_param('month')))
             {
 				$smonth = date('m');
 				$emonth = date('m');
@@ -1894,7 +1908,7 @@ class Weblog {
             {
 				$this->display_by = $TMPL->fetch_param('display_by');
 
-                $lim = ( ! $TMPL->fetch_param('limit')) ? '1' : $TMPL->fetch_param('limit');
+                $lim = ( ! is_numeric($TMPL->fetch_param('limit'))) ? '1' : $TMPL->fetch_param('limit');
                  
                 /** -------------------------------------------
                 /**  If display_by = "month"
@@ -2683,17 +2697,17 @@ class Weblog {
 		// we need it to help create our pagination links so we'll
 		// set it here
                 
-		if ($cat_id  != '' AND $TMPL->fetch_param('cat_limit'))
+		if ($cat_id  != '' && is_numeric($TMPL->fetch_param('cat_limit')))
 		{
 			$this->p_limit = $TMPL->fetch_param('cat_limit');
 		}
-		elseif ($month != '' AND $TMPL->fetch_param('month_limit'))
+		elseif ($month != '' && is_numeric($TMPL->fetch_param('month_limit')))
 		{
 			$this->p_limit = $TMPL->fetch_param('month_limit');
 		}
 		else
 		{
-			$this->p_limit  = ( ! $TMPL->fetch_param('limit'))  ? $this->limit : $TMPL->fetch_param('limit');
+			$this->p_limit  = ( ! is_numeric($TMPL->fetch_param('limit')))  ? $this->limit : $TMPL->fetch_param('limit');
 		}
 
         /** ----------------------------------------------
@@ -2938,13 +2952,13 @@ class Weblog {
 						$cat_limit = TRUE;
 					}
 					
-					if ($cat_limit AND $TMPL->fetch_param('cat_limit'))
+					if ($cat_limit && is_numeric($TMPL->fetch_param('cat_limit')))
 					{
 						$this->p_limit = $TMPL->fetch_param('cat_limit');
 					}
 					else
 					{
-						$this->p_limit  = ( ! $TMPL->fetch_param('limit'))  ? $this->limit : $TMPL->fetch_param('limit');				
+						$this->p_limit  = ( ! is_numeric($TMPL->fetch_param('limit')))  ? $this->limit : $TMPL->fetch_param('limit');				
 					}	
 				}
 				
@@ -3195,9 +3209,22 @@ class Weblog {
         /** ----------------------------------------
         /**  Start the main processing loop
         /** ----------------------------------------*/
-        
+
+		// -------------------------------------------
+		// 'weblog_entries_query_result' hook.
+		//  - Take the whole query object, do what you wish
+		//  - added 1.6.7
+		//
+			if ($EXT->active_hook('weblog_entries_query_result') === TRUE)
+			{
+				$this->query = $EXT->call_extension('weblog_entries_query_result', $this, $this->query);
+				if ($EXT->end_script === TRUE) return $TMPL->tagdata;
+			}
+		//
+		// -------------------------------------------
+
         $tb_captcha = TRUE;
-        $total_results = sizeof($this->query->result);
+        $total_results = count($this->query->result);
         
         $site_pages = $PREFS->ini('site_pages');
 
@@ -3230,7 +3257,20 @@ class Weblog {
 				}
 			//
 			// -------------------------------------------
-			
+
+			// -------------------------------------------
+			// 'weblog_entries_row' hook.
+			//  - Take the entry data, do what you wish
+			//  - added 1.6.7
+			//
+				if ($EXT->active_hook('weblog_entries_row') === TRUE)
+				{
+					$row = $EXT->call_extension('weblog_entries_row', $this, $row);
+					if ($EXT->end_script === TRUE) return $tagdata;
+				}
+			//
+			// -------------------------------------------
+
 			/** ----------------------------------------
             /**  Trackback RDF?
             /** ----------------------------------------*/
@@ -3475,7 +3515,8 @@ class Weblog {
 												  'category_description'	=> (isset($v['4'])) ? $v['4'] : '',
 												  'category_group'			=> (isset($v['5'])) ? $v['5'] : '',												  
 												  'category_image'			=> $v['3'],
-												  'category_id'				=> $v['0']);
+												  'category_id'				=> $v['0'],
+												  'parent_id'				=> $v['1']);												
 
 								// add custom fields for conditionals prep
 
@@ -3491,13 +3532,15 @@ class Weblog {
 														  LD."category_url_title".RD,
 														  LD."category_image".RD,
 														  LD."category_group".RD,														  
-														  LD.'category_description'.RD),
+														  LD.'category_description'.RD,
+														  LD.'parent_id'.RD),														
 													array($v['0'],
 														  $v['2'],
 														  $v['6'],
 														  $v['3'],
 														  (isset($v['5'])) ? $v['5'] : '',														  
-														  (isset($v['4'])) ? $v['4'] : ''
+														  (isset($v['4'])) ? $v['4'] : '',
+														  $v['1']														
 														  ),
 													$temp);
 
@@ -5118,7 +5161,9 @@ class Weblog {
 								  'category_url_title'		=> $val['6'],
 								  'category_description'	=> $val['4'],
 								  'category_image'			=> $val['5'],
-								  'category_id'				=> $val['0']);
+								  'category_id'				=> $val['0'],
+								  'parent_id'				=> $val['1']
+								);
 
 				// add custom fields for conditionals prep
 
@@ -5136,12 +5181,14 @@ class Weblog {
 										   LD.'category_url_title'.RD,
 										   LD.'category_description'.RD,
 										   LD.'category_image'.RD,
-										   LD.'category_id'.RD),
+										   LD.'category_id'.RD,
+										   LD.'parent_id'.RD),
 									 array($val['3'],
 										   $val['6'],
 									 	   $val['4'],
 									 	   $val['5'],
-									 	   $val['0']),
+									 	   $val['0'],
+										   $val['1']),
 									$chunk);
 
 				foreach($path as $k => $v)
@@ -5559,7 +5606,9 @@ class Weblog {
 										  'category_url_title'		=> $row['cat_url_title'],
 										  'category_description'	=> $row['cat_description'],
 										  'category_image'			=> $row['cat_image'],
-										  'category_id'				=> $row['cat_id']);
+										  'category_id'				=> $row['cat_id'],										
+										  'parent_id'				=> $row['parent_id']
+										);
 
 						foreach ($this->catfields as $v)
 						{
@@ -5572,12 +5621,14 @@ class Weblog {
 													LD.'category_name'.RD,
 													LD.'category_url_title'.RD,
 													LD.'category_image'.RD,
-													LD.'category_description'.RD),
+													LD.'category_description'.RD,													
+													LD.'parent_id'.RD),
 											  array($row['cat_id'],
 											  		$row['cat_name'],
 													$row['cat_url_title'],
 											  		$row['cat_image'],
-											  		$row['cat_description']),
+											  		$row['cat_description'],
+											  		$row['parent_id']),											
 											  $chunk);
 												
 						foreach($c_path as $ckey => $cval)
@@ -5950,7 +6001,9 @@ class Weblog {
 								  'category_url_title'		=> $val['4'],
 								  'category_description'	=> $val['3'],
 								  'category_image'			=> $val['2'],
-								  'category_id'				=> $key);
+								  'category_id'				=> $key,
+								  'parent_id'				=> $val['0']
+								);
 				
 				// add custom fields for conditionals prep
 				
@@ -5968,12 +6021,14 @@ class Weblog {
 											LD.'category_name'.RD,
 											LD.'category_url_title'.RD,
 											LD.'category_image'.RD,
-											LD.'category_description'.RD),
+											LD.'category_description'.RD,											
+											LD.'parent_id'.RD),
 									  array($key,
 									  		$val['1'],
 											$val['4'],
 									  		$val['2'],
-									  		$val['3']),
+									  		$val['3'],									
+									  		$val['0']),
 									  $chunk);
             					
 				foreach($path as $pkey => $pval)
@@ -6126,7 +6181,8 @@ class Weblog {
 								  'category_url_title'		=> $val['4'],
 								  'category_description'	=> $val['3'],
 								  'category_image'			=> $val['2'],
-								  'category_id'				=> $key);
+								  'category_id'				=> $key,
+								  'parent_id'				=> $val['0']);								
 			
 				// add custom fields for conditionals prep
 
@@ -6144,12 +6200,14 @@ class Weblog {
 											LD.'category_name'.RD,
 											LD.'category_url_title'.RD,
 											LD.'category_image'.RD,
-											LD.'category_description'.RD),
+											LD.'category_description'.RD,
+											LD.'parent_id'.RD),											
 									  array($key,
 									  		$val['1'],
 											$val['4'],
 									  		$val['2'],
-									  		$val['3']),
+									  		$val['3'],
+									  		$val['0']),									
 									  $chunk);
 		
 				foreach($path as $pkey => $pval)
@@ -6470,7 +6528,7 @@ class Weblog {
 			$field_sqlb = '';
 		}
 						
-		$query = $DB->query("SELECT c.cat_name, c.cat_url_title, c.cat_description, c.cat_image {$field_sqla}
+		$query = $DB->query("SELECT c.cat_name, c.parent_id, c.cat_url_title, c.cat_description, c.cat_image {$field_sqla}
 							FROM exp_categories AS c
 							{$field_sqlb}
 							WHERE c.cat_id = '".$DB->escape_str($match['2'])."'");
@@ -6483,7 +6541,8 @@ class Weblog {
 		$cat_vars = array('category_name'			=> $query->row['cat_name'],
 						  'category_description'	=> $query->row['cat_description'],
 						  'category_image'			=> $query->row['cat_image'],
-						  'category_id'				=> $match['1']);
+						  'category_id'				=> $match['1'],
+						  'parent_id'				=> $query->row['parent_id']);
 
 		// add custom fields for conditionals prep
 
@@ -6498,12 +6557,14 @@ class Weblog {
 											LD.'category_name'.RD,
 											LD.'category_url_title'.RD,
 											LD.'category_image'.RD,
-											LD.'category_description'.RD),
+											LD.'category_description'.RD,
+											LD.'parent_id'.RD),
 							 	 	  array($match['2'],
 											$query->row['cat_name'],
 											$query->row['cat_url_title'],
 											$query->row['cat_image'],
-											$query->row['cat_description']),
+											$query->row['cat_description'],
+											$query->row['parent_id']),											
 							  		  $TMPL->tagdata);
 
 		// parse custom fields
@@ -6992,7 +7053,7 @@ class Weblog {
 				break;
 		} 
                 
-        if ($TMPL->fetch_param('limit'))
+        if (is_numeric($TMPL->fetch_param('limit')))
         {
             $sql .= " LIMIT ".$TMPL->fetch_param('limit');  
         }
@@ -7004,7 +7065,7 @@ class Weblog {
             return '';
         }
         
-        $year_limit   = ($TMPL->fetch_param('year_limit') !== FALSE) ? $TMPL->fetch_param('year_limit') : 50;
+        $year_limit   = (is_numeric($TMPL->fetch_param('year_limit'))) ? $TMPL->fetch_param('year_limit') : 50;
         $total_years  = 0;
         $current_year = '';
         
@@ -7281,7 +7342,7 @@ class Weblog {
 			}
 		}
 		
-		if ($TMPL->fetch_param('limit') == FALSE)
+		if ( ! is_numeric($TMPL->fetch_param('limit')))
 		{
 			$TMPL->tagparams['limit'] = 10;
 		}

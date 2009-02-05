@@ -1338,8 +1338,23 @@ $L = array(
 "emoticon_path" =>
 "URL to the directory containing your smileys ",
 
-"referrer_cfg" =>
-"Referrer Preferences",
+"tracking_cfg" =>
+"Tracking Preferences",
+
+'enable_online_user_tracking' =>
+'Enable Online User Tracking?',
+
+'dynamic_tracking_disabling' =>
+'Suspend ALL tracking when number of online visitors exceeds:',
+
+'dynamic_tracking_disabling_info' =>
+'Online User Tracking must be enabled to use this feature, see the user guide for details.',
+
+'enable_hit_tracking' =>
+'Enable Template Hit Tracking?',
+
+'enable_entry_view_tracking' =>
+'Enable Weblog Entry View Tracking?',
 
 "log_referrers" =>
 "Enable Referrer Tracking?",

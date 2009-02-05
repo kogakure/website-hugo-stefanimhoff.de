@@ -197,8 +197,13 @@ class Member_register extends Member {
 
                 $str .= $temp;
             }
-                        
-            $reg_form = preg_replace("/".LD."custom_fields".RD.".*?".LD."\/custom_fields".RD."/s", $str, $reg_form);
+
+			// since $str may have sequences that look like PCRE backreferences, the two choices are to escape them
+			// and use preg_replace() or to match the pattern and use str_replace().  This way happens to be faster in this case.
+			if (preg_match("/".LD."custom_fields".RD.".*?".LD."\/custom_fields".RD."/s", $reg_form, $match))
+			{
+				$reg_form = str_replace($match[0], $str, $reg_form);	
+			}
         } 
              
         
@@ -386,18 +391,16 @@ class Member_register extends Member {
         {
 			foreach ($query->result as $row)
 			{
-				if (isset($_POST['m_field_id_'.$row['m_field_id']])) 
+				if ($row['m_field_required'] == 'y' && ( ! isset($_POST['m_field_id_'.$row['m_field_id']]) OR $_POST['m_field_id_'.$row['m_field_id']] == ''))
 				{
-					if ($row['m_field_required'] == 'y' AND $_POST['m_field_id_'.$row['m_field_id']] == '')
-					{
-						$cust_errors[] = $LANG->line('mbr_field_required').'&nbsp;'.$row['m_field_label'];
-					}
-					
+					$cust_errors[] = $LANG->line('mbr_field_required').'&nbsp;'.$row['m_field_label'];
+				}
+				elseif (isset($_POST['m_field_id_'.$row['m_field_id']])) 
+				{
 					$cust_fields['m_field_id_'.$row['m_field_id']] = $REGX->xss_clean($_POST['m_field_id_'.$row['m_field_id']]);
 				}           
 			}
         }      
-        
 		
 		if ($PREFS->ini('use_membership_captcha') == 'y')
 		{

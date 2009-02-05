@@ -1381,7 +1381,7 @@ class Moblog {
 		
 		$this->post_data['subject'] = strip_tags($this->post_data['subject']);
 		
-		$url_title = $REGX->create_url_title($this->post_data['subject']);
+		$url_title = $REGX->create_url_title($this->post_data['subject'], TRUE);
 		
 		if ($url_title == '' OR is_numeric($url_title))
 		{
