@@ -34,20 +34,12 @@ class Stats {
 
 	function Stats()
 	{
-		global $TMPL, $LOC, $STAT, $SESS, $DB, $FNS, $REGX;
+		global $TMPL, $LOC, $STAT, $SESS, $DB, $FNS, $REGX, $PREFS;
 		
-	    if ( ! class_exists('Stats_CP'))
-	    {
-			include_once PATH_MOD.'stats/mcp.stats'.EXT;    
-			
-			$STAT = new Stats_CP();
-	    }
-	    
-	    if (sizeof($STAT->stats) == 0)
-	    {
-	    	$STAT->update_stats();
-	    }
-		
+		if (! isset($STAT->stats) OR empty($STAT->stats))
+		{
+			$STAT->load_stats();
+		}	
 		
         /** -----------------------------------------
         /**  Limit stats by weblog

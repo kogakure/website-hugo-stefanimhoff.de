@@ -267,6 +267,11 @@ class Typography {
             return;    
         }
         
+		if (strpos($this->inline_elements, '|u|strike') === FALSE)
+		{
+			$this->inline_elements .= '|u|strike';
+		}
+
         // -------------------------------------------
         // 'typography_parse_type_start' hook.
 		//  - Modify string prior to all other typography processing
@@ -531,12 +536,12 @@ class Typography {
         {
         	foreach ($this->code_chunks as $key => $val)
         	{
-        		if ($this->text_format == 'xhtml')
+        		if ($this->text_format == 'legacy_typography')
         		{
         			// First line takes care of the line break that might be there, which should
         			// be a line break because it is just a simple break from the [code] tag.
-        			$str = str_replace('{'.$key.'yH45k02wsSdrp}'."\n<br />", '</p>'.$val.'<p>', $str);
-        			$str = str_replace('{'.$key.'yH45k02wsSdrp}', '</p>'.$val.'<p>', $str);
+					$str = str_replace('<div class="codeblock">{'.$key.'yH45k02wsSdrp}</div>'."\n<br />", '</p><div class="codeblock">'.$val.'</div><p>', $str);
+					$str = str_replace('<div class="codeblock">{'.$key.'yH45k02wsSdrp}</div>', '</p><div class="codeblock">'.$val.'</div><p>', $str);
         		}
         		else
         		{
@@ -853,14 +858,19 @@ class Typography {
         			
 					// remove everything but the URL up to the first space
        				$url = substr($url, 0, strpos($url, ' '));
+
+					// get rid of opening = and surrounding quotes
+					$url = preg_replace(array('/^=(\042|\047)?/', '/(\042|\047)$/'), '', $url);
+
+					// url encode a few characters that we want to allow, in the wiki for example
+					$url = str_replace(array('"', "'", '!'), array('%22', '%27', '%21'), $url);
         		}
+				else
+				{
+					// get rid of opening = and surrounding quotes (again for allow all!)
+					$url = preg_replace(array('/^=(\042|\047)?/', '/(\042|\047)$/'), '', $url);	
+				}
 				
-				// get rid of opening = and surrounding quotes
-				$url = preg_replace(array('/^=(\042|\047)?/', '/(\042|\047)$/'), '', $url);
-
-				// url encode a few characters that we want to allow, in the wiki for example
-				$url = str_replace(array('"', "'", '!'), array('%22', '%27', '%21'), $url);
-
         		// Clean out naughty stuff from URL.
         		$url = ($this->html_format == 'all') ? str_replace($bad_things2, '', $url) : str_replace($bad_things, '', $url);
         		        		
@@ -1123,30 +1133,36 @@ class Typography {
         }
         
         $str = ' '.$str.' ';
-        
-        foreach ($this->censored_words as $badword)
-        {
-        	// We have entered the high ASCII range, which means it is likely
-        	// that this character is a complete word or symbol that is not 
-        	// allowed. So, instead of a preg_replace with a word boundary
-        	// we simply do a string replace for this bad word.
-        	if ((strlen($badword) == 4 OR strlen($badword) == 2) && stristr($badword, '*') === FALSE && ord($badword['0']) > 127 && ord($badword['1']) > 127)
-        	{
-        		$str = str_replace($badword, (($this->censored_replace != '') ? $this->censored_replace : '#'), $str);
-        	}
-        	else
-        	{
-        		if ($this->censored_replace != '')
-        		{
-        			$str = preg_replace("/\b(".str_replace('\*', '\w*?', preg_quote($badword)).")\b/i", $this->censored_replace, $str);
-        		}
-        		else
-        		{
-        			$str = preg_replace("/\b(".str_replace('\*', '\w*?', preg_quote($badword)).")\b/ie", "str_repeat('#', strlen('\\1'))", $str);
-        		}
-        	}
-        }
-        
+
+		// \w, \b and a few others do not match on a unicode character
+		// set for performance reasons. As a result words like über
+		// will not match on a word boundary. Instead, we'll assume that
+		// a bad word will be bookeneded by any of these characters.
+		$delim = '[-_\'\"`(){}<>\[\]|!?@#%&,.:;^~*+=\/ 0-9\n\r\t]';
+
+		foreach ($this->censored_words as $badword)
+		{
+			// We have entered the high ASCII range, which means it is likely
+			// that this character is a complete word or symbol that is not 
+			// allowed. So, instead of a preg_replace with a word boundary
+			// we simply do a string replace for this bad word.
+			if ((strlen($badword) == 4 OR strlen($badword) == 2) && stristr($badword, '*') === FALSE && ord($badword['0']) > 127 && ord($badword['1']) > 127)
+			{
+				$str = str_replace($badword, (($this->censored_replace != '') ? $this->censored_replace : '#'), $str);
+			}
+			else
+			{
+				if ($this->censored_replace != '')
+				{
+					$str = preg_replace("/({$delim})(".str_replace('\*', '\w*?', preg_quote($badword, '/')).")({$delim})/i", "\\1{$this->censored_replace}\\3", $str);
+				}
+				else
+				{
+					$str = preg_replace("/({$delim})(".str_replace('\*', '\w*?', preg_quote($badword, '/')).")({$delim})/ie", "'\\1'.str_repeat('#', strlen('\\2')).'\\3'", $str);
+				}
+			}
+		}
+
         return trim($str);
     }
     /* END */
@@ -1216,9 +1232,9 @@ class Typography {
 			// we do this so that the auth_xhtml function which gets called later
 			// doesn't process our new code chunk
 						
-			$this->code_chunks[$this->code_counter] = '<div class="codeblock">'.$temp.'</div>';
+			$this->code_chunks[$this->code_counter] = $temp;
 
-			$str = str_replace($matches['0'][$i], '{'.$this->code_counter.'yH45k02wsSdrp}', $str);
+			$str = str_replace($matches['0'][$i], '<div class="codeblock">{'.$this->code_counter.'yH45k02wsSdrp}</div>', $str);
 			
 			$this->code_counter++;
 		}        
@@ -1317,33 +1333,36 @@ class Typography {
 			$str = preg_replace("/\n\n+/", "\n\n", $str);
 		}   
 
-		// Convert quotes within tags to temporary markers. We don't want quotes converted 
-		// within tags so we'll temporarily convert them to {@DQ} and {@SQ}
-		// and we don't want double dashes converted to emdash entities, so they are marked with {@DD}
-		// likewise double spaces are converted to {@NBS} to prevent entity conversion
-		if (preg_match_all("#\<.+?>#si", $str, $matches))
+		// HTML comment tags don't conform to patterns of normal tags, so pull them out separately, only if needed
+		$html_comments = array();
+		if (strpos($str, '<!--') !== FALSE)
 		{
-			for ($i = 0, $total = count($matches[0]); $i < $total; $i++)
-			{
-				$str = str_replace($matches[0][$i],
-									str_replace(array("'",'"','--','  '), array('{@SQ}', '{@DQ}', '{@DD}', '{@NBS}'), $matches[0][$i]),
-									$str);
-			}
-		}
-		
-		if ($this->protect_braced_quotes === TRUE)
-		{
-			if (preg_match_all("#\{.+?}#si", $str, $matches))
+			if (preg_match_all("#(<!\-\-.*?\-\->)#s", $str, $matches))
 			{
 				for ($i = 0, $total = count($matches[0]); $i < $total; $i++)
 				{
-					$str = str_replace($matches[0][$i],
-										str_replace(array("'",'"'), array('{@SQ}', '{@DQ}'), $matches[0][$i]),
-										$str);
+					$html_comments[] = $matches[0][$i];
+					$str = str_replace($matches[0][$i], '{@HC'.$i.'}', $str);
 				}
-			}			
+			}
 		}
 		
+		// match and yank <pre> tags if they exist.  It's cheaper to do this separately since most content will
+		// not contain <pre> tags, and it keeps the PCRE patterns below simpler and faster
+		if (strpos($str, '<pre') !== FALSE)
+		{
+			$str = preg_replace_callback("#<pre.*?>.*?</pre>#si", array($this, '_protect_characters'), $str);
+		}
+		
+		// Convert quotes within tags to temporary markers.
+		$str = preg_replace_callback("#<.+?>#si", array($this, '_protect_characters'), $str);
+
+		// Do the same with braces if necessary
+		if ($this->protect_braced_quotes === TRUE)
+		{
+			$str = preg_replace_callback("#\{.+?\}#si", array($this, '_protect_characters'), $str);		
+		}
+				
 		// Convert "ignore" tags to temporary marker.  The parser splits out the string at every tag 
 		// it encounters.  Certain inline tags, like image tags, links, span tags, etc. will be 
 		// adversely affected if they are split out so we'll convert the opening bracket < temporarily to: {@TAG}
@@ -1364,11 +1383,16 @@ class Typography {
 		$str = '';
 		$process = TRUE;
 		$paragraph = FALSE;
+		$current_chunk = 0;
+		$total_chunks = count($chunks);
+		
 		foreach ($chunks as $chunk)
-		{
+		{ 
+			$current_chunk++;
+			
 			// Are we dealing with a tag? If so, we'll skip the processing for this cycle.
 			// Well also set the "process" flag which allows us to skip <pre> tags and a few other things.
-			if (preg_match("#<(/*)(".$this->block_elements.").*?\>#", $chunk, $match))
+			if (preg_match("#<(/*)(".$this->block_elements.").*?>#", $chunk, $match))
 			{
 				if (preg_match("#".$this->skip_elements."#", $match[2]))
 				{
@@ -1389,20 +1413,35 @@ class Typography {
 				$str .= $chunk;
 				continue;
 			}
-
+			
+			//  Force a newline to make sure end tags get processed by _format_newlines()
+			if ($current_chunk == $total_chunks)
+			{
+				$chunk .= "\n";  
+			}
+			
 			//  Convert Newlines into <p> and <br /> tags
 			$str .= $this->_format_newlines($chunk);
 		}
-
-		// is the whole of the content inside a block level element?
-		if ( ! preg_match("/^<(?:".$this->block_elements.")/i", $str, $match))
+		
+		// No opening block level tag?  Add it if needed.
+		if ( ! preg_match("/^\s*<(?:".$this->block_elements.")/i", $str))
 		{
-			$str = "<p>{$str}</p>";
+			$str = preg_replace("/^(.*?)<(".$this->block_elements.")/i", '<p>$1</p><$2', $str);
 		}
 		
-		// Convert quotes, elipsis, and em-dashes
+		// Convert quotes, elipsis, em-dashes, non-breaking spaces, and ampersands
 		$str = $this->format_characters($str);
-	
+		
+		// restore HTML comments
+		for ($i = 0, $total = count($html_comments); $i < $total; $i++)
+		{
+			// remove surrounding paragraph tags, but only if there's an opening paragraph tag
+			// otherwise HTML comments at the ends of paragraphs will have the closing tag removed
+			// if '<p>{@HC1}' then replace <p>{@HC1}</p> with the comment, else replace only {@HC1} with the comment
+			$str = preg_replace('#(?(?=<p>\{@HC'.$i.'\})<p>\{@HC'.$i.'\}(\s*</p>)|\{@HC'.$i.'\})#s', $html_comments[$i], $str);
+		}
+				
 		// Final clean up
 		$table = array(
 		
@@ -1416,10 +1455,10 @@ class Typography {
 						
 						// Clean up stray paragraph tags that appear before block level elements
 						'#<p></p><('.$this->block_elements.')#'	=> '<$1',
-						
+
 						// Clean up stray non-breaking spaces preceeding block elements
-						'#[&nbsp; ]+<('.$this->block_elements.')#'	=> '  <$1',
-			
+						'#(&nbsp;\s*)+<('.$this->block_elements.')#'	=> '  <$2',
+
 						// Replace the temporary markers we added earlier
 						'/\{@TAG\}/'		=> '<',
 						'/\{@DQ\}/'			=> '"',
@@ -1428,7 +1467,7 @@ class Typography {
 						'/\{@NBS\}/'		=> '  '
 
 						);
-	
+		
 		// Do we need to reduce empty lines?
 		if ($reduce_linebreaks === TRUE)
 		{
@@ -1440,7 +1479,7 @@ class Typography {
 			// otherwise most browsers won't treat them as true paragraphs
 			$table['#<p></p>#'] = '<p>&nbsp;</p>';
 		}
-	
+		
 		return preg_replace(array_keys($table), $table, $str);
 
 	}
@@ -1460,26 +1499,37 @@ class Typography {
 		
 		if ( ! isset($table))
 		{
-	        $table = array(					
+			$table = array(					
 							// nested smart quotes, opening and closing
 							// note that rules for grammar (English) allow only for two levels deep
 							// and that single quotes are _supposed_ to always be on the outside
 							// but we'll accommodate both
-							'/(^|\W|\s)\'"/'				=> '$1&#8216;&#8220;',
-							'/\'"(\s|\W|$)/'				=> '&#8217;&#8221;$1',
-							'/(^|\W|\s)"\'/'				=> '$1&#8220;&#8216;',
-							'/"\'(\s|\W|$)/'				=> '&#8221;&#8217;$1',
+							// Note that in all cases, whitespace is the primary determining factor
+							// on which direction to curl, with non-word characters like punctuation
+							// being a secondary factor only after whitespace is addressed.
+							'/\'"(\s|$)/'					=> '&#8217;&#8221;$1',
+							'/(^|\s|<p>)\'"/'				=> '$1&#8216;&#8220;',
+							'/\'"(\W)/'						=> '&#8217;&#8221;$1',
+							'/(\W)\'"/'						=> '$1&#8216;&#8220;',
+							'/"\'(\s|$)/'					=> '&#8221;&#8217;$1',
+							'/(^|\s|<p>)"\'/'				=> '$1&#8220;&#8216;',
+							'/"\'(\W)/'						=> '&#8221;&#8217;$1',
+							'/(\W)"\'/'						=> '$1&#8220;&#8216;',
 
 							// single quote smart quotes
-							'/(^|\W|\s)\'/'					=> '$1&#8216;',
-							'/\'(\s|\W|$)/'					=> '&#8217;$1',
+							'/\'(\s|$)/'					=> '&#8217;$1',
+							'/(^|\s|<p>)\'/'				=> '$1&#8216;',
+							'/\'(\W)/'						=> '&#8217;$1',
+							'/(\W)\'/'						=> '$1&#8216;',
 
 							// double quote smart quotes
-							'/(^|\W|\s)"/'					=> '$1&#8220;',
-							'/"(\s|\W|$)/'					=> '&#8221;$1',
+							'/"(\s|$)/'						=> '&#8221;$1',
+							'/(^|\s|<p>)"/'					=> '$1&#8220;',
+							'/"(\W)/'						=> '&#8221;$1',
+							'/(\W)"/'						=> '$1&#8220;',
 
 							// apostrophes
-							"/(\w)'(\w)/"       	    	=> '$1&#8217;$2',
+							"/(\w)'(\w)/"					=> '$1&#8217;$2',
 
 							// Em dash and ellipses dots
 							'/\s?\-\-\s?/'					=> '&#8212;',
@@ -1490,8 +1540,8 @@ class Typography {
 
 							// ampersands, if not a character entity
 							'/&(?!#?[a-zA-Z0-9]{2,};)/'		=> '&amp;'
-	        			);			
-		}	
+						);
+		}
 
 		return preg_replace(array_keys($table), $table, $str);
 	}
@@ -1544,7 +1594,28 @@ class Typography {
 		
 		return $str;
 	}
-	
+
+	// --------------------------------------------------------------------
+		
+	/**
+	 * Protect Characters
+	 *
+	 * Protects special characters from being formatted later
+	 * We don't want quotes converted within tags so we'll temporarily convert them to {@DQ} and {@SQ}
+ 	 * and we don't want double dashes converted to emdash entities, so they are marked with {@DD}
+ 	 * likewise double spaces are converted to {@NBS} to prevent entity conversion
+	 *
+	 * @access	public
+	 * @param	array
+	 * @return	string
+	 */
+	function _protect_characters($match)
+	{
+		return str_replace(array("'",'"','--','  '), array('{@SQ}', '{@DQ}', '{@DD}', '{@NBS}'), $match[0]);
+	}
+
+	// --------------------------------------------------------------------
+		
     /** -------------------------------------
     /**  Encode Email Address
     /** -------------------------------------*/
@@ -1621,8 +1692,7 @@ class Typography {
         ob_start();
         
 ?>
-<span id='<?php echo $span_id; ?>'></span>
-<script type="text/javascript">
+<span id='<?php echo $span_id."'>".$LANG->line('encoded_email'); ?></span><script type="text/javascript">
 //<![CDATA[
 var l=new Array();
 var output = '';

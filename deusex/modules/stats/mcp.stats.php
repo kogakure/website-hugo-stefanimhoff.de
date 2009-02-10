@@ -73,6 +73,18 @@ class Stats_CP {
 			
 		$query = $DB->query("SELECT * FROM exp_online_users WHERE site_id = '".$DB->escape_str($PREFS->ini('site_id'))."' AND date > $cutoff AND weblog_id = '$weblog_id' ORDER BY name");
 		
+		if ($PREFS->ini('dynamic_tracking_disabling') !== FALSE && $PREFS->ini('dynamic_tracking_disabling') != '' && $query->num_rows > $PREFS->ini('dynamic_tracking_disabling'))
+		{
+			// disable tracking!
+			$PREFS->disable_tracking();
+			
+	        if ((mt_rand() % 100) < $SESS->gc_probability) 
+	        {
+				$DB->query("DELETE FROM exp_online_users WHERE site_id = '".$DB->escape_str($PREFS->ini('site_id'))."' AND date < $cutoff AND weblog_id = '$weblog_id'");
+			}
+
+			return;
+		}
 		
 		/** -------------------------------------------
 		/**  Assign users to a multi-dimensional array
@@ -448,7 +460,141 @@ class Stats_CP {
 	/* END */
 
 
+	/** --------------------------------
+	/**  This method is called when stats are read-only
+	/** --------------------------------*/
+		
+	function load_stats()
+	{
+		global $DB, $IN, $LOC, $PREFS, $SESS, $STAT;
+		
+		$time_limit = 15; // Number of minutes to track users
+		
+		/** --------------------------------
+		/**  Fetch current user's name
+		/** --------------------------------*/
 
+        if ($SESS->userdata('member_id') != 0)
+        {
+            $name = ($SESS->userdata['screen_name'] == '') ? $SESS->userdata['username'] : $SESS->userdata['screen_name'];
+        }
+        else
+        {
+            $name = '';
+        }
+        
+        // Is user browsing anonymously?
+        
+        $anon = ( ! $IN->GBL('anon', 'COOKIE')) ? '' : 'y';
+		
+
+		/** --------------------------------
+		/**  Fetch online users
+		/** --------------------------------*/
+			
+		$cutoff = $LOC->now - ($time_limit * 60);
+			
+		$query = $DB->query("SELECT * FROM exp_online_users WHERE site_id = '".$DB->escape_str($PREFS->ini('site_id'))."' AND date > $cutoff AND weblog_id = '0' ORDER BY name");
+		
+		
+		/** -------------------------------------------
+		/**  Assign users to a multi-dimensional array
+		/** -------------------------------------------*/
+		
+		$total_logged	= 0;
+		$total_guests	= 0;
+		$total_anon	    = 0;
+		$update 		= FALSE;
+		$current_names	= array();		
+		
+		if ($query->num_rows > 0)
+		{
+            foreach ($query->result as $row)
+            {    
+            	if ($row['member_id'] == $SESS->userdata('member_id')  AND $row['ip_address'] == $IN->IP AND $row['name'] == $name)
+            	{
+            		$update = TRUE;
+            		$anon = $row['anon'];
+            	}
+            
+				if ($row['member_id'] != 0)
+				{
+					$current_names[$row['member_id']] = array($row['name'], $row['anon']);
+	
+					if ($row['anon'] != '')
+					{		
+						$total_anon++;
+					}
+					else
+					{	
+						$total_logged++;
+					}
+				}
+				else
+				{
+					$total_guests++;
+				}
+            }
+        }
+        else
+        {
+        	$total_guests++;
+        }
+                    
+		/** -------------------------------------------
+		/**  This user already counted or no?
+		/** -------------------------------------------*/
+        
+        if ($update == TRUE)
+        {
+            $total_visitors = $query->num_rows;
+        }
+        else
+        {  
+			if ($SESS->userdata('member_id') != 0)
+			{
+				$current_names[$SESS->userdata('member_id')] = array($name, $anon);
+			
+				$total_logged++;
+			}
+			else
+			{
+				$total_guests++;
+			}
+			
+            $total_visitors = $query->num_rows + 1;
+        }
+		
+		$query = $DB->query("SELECT * FROM exp_stats WHERE site_id = '".$DB->escape_str($PREFS->ini('site_id'))."' AND weblog_id = '0'");
+			
+		$STAT->stats = array(
+								'recent_member'				=> $query->row['recent_member'],
+								'recent_member_id'			=> $query->row['recent_member_id'],
+								'total_members'				=> $query->row['total_members'],
+								'total_entries'				=> $query->row['total_entries'],
+								'total_forum_topics'		=> $query->row['total_forum_topics'],
+								'total_forum_posts'			=> $query->row['total_forum_posts'] + $query->row['total_forum_topics'],
+								'total_forum_replies'		=> $query->row['total_forum_posts'],
+								'total_comments'			=> $query->row['total_comments'],
+								'total_trackbacks'			=> $query->row['total_trackbacks'],
+								'most_visitors'				=> $query->row['most_visitors'],
+								'last_entry_date'			=> $query->row['last_entry_date'],
+								'last_forum_post_date'		=> $query->row['last_forum_post_date'],
+								'last_comment_date'			=> $query->row['last_comment_date'],
+								'last_trackback_date'		=> $query->row['last_trackback_date'],
+								'last_cache_clear'		    => $query->row['last_cache_clear'],
+								'last_visitor_date'			=> $query->row['last_visitor_date'],
+								'most_visitor_date'			=> $query->row['most_visitor_date'],
+								'total_logged_in'			=> $total_logged,
+								'total_guests'				=> $total_guests,
+								'total_anon'				=> $total_anon,
+								'current_names'				=> $current_names
+							);
+		unset($query);
+	}
+	/* END */
+	
+	
     /** --------------------------------
     /**  Module installer
     /** --------------------------------*/

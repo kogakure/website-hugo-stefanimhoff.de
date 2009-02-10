@@ -3968,7 +3968,7 @@ class Gallery {
 					require PATH_CORE.'core.email'.EXT;
 				}
 				
-				$from = ($data['email'] == '') ? $PREFS->ini('webmaster_email') : $data['email'];
+				$replyto = ($data['email'] == '') ? $PREFS->ini('webmaster_email') : $data['email'];
 					 
 				$email = new EEmail;
 
@@ -3976,8 +3976,9 @@ class Gallery {
 				{	
 					$email->initialize();	
 					$email->wordwrap = true;
-					$email->from($from);	
-					$email->to($addy); 
+					$email->from($PREFS->ini('webmaster_email'), $PREFS->ini('webmaster_name'));	
+					$email->to($addy);
+					$email->reply_to($replyto);					 
 					$email->subject($email_tit);	
 					$email->message($REGX->entities_to_ascii($email_msg));		
 					$email->Send();

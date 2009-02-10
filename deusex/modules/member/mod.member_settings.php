@@ -816,7 +816,7 @@ class Member_settings extends Member {
 						
 				}
 				
-				$content = preg_replace("/{custom_profile_fields}/s", $str, $content);
+				$content = str_replace('{custom_profile_fields}', $str, $content);
 			}
 		
 		}
@@ -1480,12 +1480,13 @@ class Member_settings extends Member {
 		}		
          
         /** -------------------------------------
-        /**  Update "last post" forum info if needed
+        /**  Update "last post" and "moderator" forum info if needed
         /** -------------------------------------*/
          
         if ($query->row['screen_name'] != $_POST['screen_name'] AND $PREFS->ini('forum_is_installed') == "y" )
         {
         	$DB->query("UPDATE exp_forums SET forum_last_post_author = '".$DB->escape_str($_POST['screen_name'])."' WHERE forum_last_post_author_id = '".$SESS->userdata('member_id')."'");
+        	$DB->query("UPDATE exp_forum_moderators SET mod_member_name = '".$DB->escape_str($_POST['screen_name'])."' WHERE mod_member_id = '".$SESS->userdata('member_id')."'");
         }
                 
         /** -------------------------------------

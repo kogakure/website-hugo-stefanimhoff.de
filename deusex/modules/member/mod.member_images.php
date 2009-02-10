@@ -357,41 +357,13 @@ class Member_images extends Member {
 		}
 	
 		/** ----------------------------------------
-		/**  Define the paths
+		/**  Define the paths and get the images
 		/** ----------------------------------------*/
 		
-		$avatar_path = $PREFS->ini('avatar_path', TRUE).$this->cur_id.'/';
-		$avatar_url  = $PREFS->ini('avatar_url', TRUE).$this->cur_id.'/';
+		$avatar_path = $PREFS->ini('avatar_path', TRUE).$FNS->filename_security($this->cur_id).'/';
+		$avatar_url  = $PREFS->ini('avatar_url', TRUE).$FNS->filename_security($this->cur_id).'/';
 		
-		/** ----------------------------------------
-		/**  Is this a valid avatar folder?
-		/** ----------------------------------------*/
-		
-		$extensions = array('.gif', '.jpg', '.jpeg', '.png');
-
-		if ( ! @is_dir($avatar_path) OR ! $fp = @opendir($avatar_path))
-		{
-			return $this->_trigger_error('edit_avatar', 'avatars_not_found');
-		}
-		
-		/** ----------------------------------------
-		/**  Grab the image names
-		/** ----------------------------------------*/
-
-		$avatars = array();
-
-		while (FALSE !== ($file = readdir($fp))) 
-		{ 
-			if (FALSE !== ($pos = strpos($file, '.')))
-			{
-				if (in_array(substr($file, $pos), $extensions))
-				{
-					$avatars[] = $file;
-				}
-			}							
-		}
-		
-		closedir($fp); 
+		$avatars = $this->_get_avatars($avatar_path);
 		
 		/** ----------------------------------------
 		/**  Did we succeed?
@@ -536,8 +508,18 @@ class Member_images extends Member {
 			return $FNS->redirect($IN->GBL('referrer'));
 		}
 		
-		$basepath 	= $PREFS->ini('avatar_path', TRUE);			
-		$avatar		= $IN->GBL('folder').'/'.$IN->GBL('avatar');
+		$folder	= $FNS->filename_security($IN->GBL('folder'));
+		$file	= $FNS->filename_security($IN->GBL('avatar'));
+
+		$basepath = $PREFS->ini('avatar_path', TRUE);		
+		$avatar	= $folder.'/'.$file;
+
+		$allowed = $this->_get_avatars($basepath.$folder);
+
+		if ( ! in_array($file, $allowed) OR $folder == 'upload')
+		{
+			return $this->_trigger_error('edit_avatar', 'avatars_not_found');
+		}
 
 		/** ----------------------------------------
 		/**  Fetch the avatar meta-data
@@ -556,8 +538,7 @@ class Member_images extends Member {
 		/**  Update DB
 		/** ----------------------------------------*/
 		
-		$DB->query("UPDATE exp_members SET avatar_filename = '{$avatar}', avatar_width='{$width}', avatar_height='{$height}' WHERE member_id = '".$SESS->userdata('member_id')."' ");
-
+		$DB->query($DB->update_string('exp_members', array('avatar_filename' => $avatar, 'avatar_width' => $width, 'avatar_height' => $height), array('member_id' => $SESS->userdata['member_id'])));
 	
 		return $this->_var_swap($this->_load_element('success'),
 								array(
@@ -567,9 +548,47 @@ class Member_images extends Member {
 								);
 	}
 	/* END */
-	
-	
-	
+
+	/** ----------------------------------------
+    /**  List all Images in a Folder
+    /** ----------------------------------------*/
+
+	function _get_avatars($avatar_path)
+	{
+	    /** ----------------------------------------
+	    /**  Is this a valid avatar folder?
+	    /** ----------------------------------------*/
+
+	    $extensions = array('.gif', '.jpg', '.jpeg', '.png');
+
+	    if ( ! @is_dir($avatar_path) OR ! $fp = @opendir($avatar_path))
+	    {
+	        return array();
+	    }
+
+	    /** ----------------------------------------
+	    /**  Grab the image names
+	    /** ----------------------------------------*/
+
+	    $avatars = array();
+
+	    while (FALSE !== ($file = readdir($fp))) 
+	    { 
+	        if (FALSE !== ($pos = strpos($file, '.')))
+	        {
+	            if (in_array(substr($file, $pos), $extensions))
+	            {
+	                $avatars[] = $file;
+	            }
+	        }                            
+	    }
+
+	    closedir($fp);
+
+	    return $avatars;
+	}
+	/* END */
+
     /** ----------------------------------------
     /**  Upload Avatar or Profile Photo
     /** ----------------------------------------*/

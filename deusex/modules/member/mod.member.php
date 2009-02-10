@@ -1511,7 +1511,9 @@ class Member {
 			$DB->query("DELETE FROM exp_forum_pollvotes  WHERE member_id = '{$id}'"); 
 			 
 			$DB->query("DELETE FROM exp_forum_topics WHERE author_id = '{$id}'");
-			
+			$DB->query("DELETE FROM exp_forum_administrators WHERE admin_member_id = '{$id}'");
+			$DB->query("DELETE FROM exp_forum_moderators WHERE mod_member_id = '{$id}'");
+						
 			// Snag the affected topic id's before deleting the member for the update afterwards
 			$query = $DB->query("SELECT topic_id FROM exp_forum_posts WHERE author_id = '{$id}'");
 			

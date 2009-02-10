@@ -3463,6 +3463,12 @@ class Utilities {
 		foreach ($query->result as $row)
 		{
 			$id = $row['member_id'];
+			if ($PREFS->ini('forum_is_installed') == "y")
+			{
+				$DB->query("DELETE FROM exp_forum_administrators WHERE admin_member_id = '{$id}'");
+				$DB->query("DELETE FROM exp_forum_moderators WHERE mod_member_id = '{$id}'");			
+			}			
+			
 			$DB->query("DELETE FROM exp_members WHERE member_id = '{$id}'");
 			$DB->query("DELETE FROM exp_member_data WHERE member_id = '{$id}'");
 			$DB->query("DELETE FROM exp_member_homepage WHERE member_id = '{$id}'");

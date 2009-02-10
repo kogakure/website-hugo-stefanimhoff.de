@@ -1419,7 +1419,7 @@ class MT_Import {
 			    		// Create primary category
 			    		$insert_array = array('group_id'  		=> $weblog_cat_id,
 			    	                          'cat_name' 		=> $name,
-			    	                          'cat_url_title'	=> $REGX->create_url_title($name),
+			    	                          'cat_url_title'	=> $REGX->create_url_title($name, TRUE),
 			    	                          'cat_image' 		=> '',
 			    	                          'parent_id'   	=> '0',
 			    	                          'site_id'			=> $site_id
@@ -1488,7 +1488,7 @@ class MT_Import {
 			    			// Create category
 			    			$insert_array = array(	'group_id'		=> $weblog_cat_id,
 			    									'cat_name' 		=> $cat,
-			    									'cat_url_title' => $REGX->create_url_title($cat),
+			    									'cat_url_title' => $REGX->create_url_title($cat, TRUE),
 			    									'cat_image' 	=> '',
 			    									'parent_id'		=> $pid,
 			    									'site_id'		=> $site_id
@@ -1629,7 +1629,7 @@ class MT_Import {
 		
 			$titles[$id] = ($PREFS->ini('auto_convert_high_ascii') == 'y') ? $REGX->ascii_to_entities($titles[$id]) : $titles[$id];
        	
-			$url_title = $REGX->create_url_title($titles[$id]);
+			$url_title = $REGX->create_url_title($titles[$id], TRUE);
 
 			$results = $DB->query("SELECT count(*) AS count FROM exp_weblog_titles WHERE url_title = '".$DB->escape_str($url_title)."' AND weblog_id = '$weblog_selection'");
 		

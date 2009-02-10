@@ -114,7 +114,7 @@ class Template {
     		$this->sites[$PREFS->ini('site_id')] = $PREFS->ini('site_short_name');
     	}
     	
-    	if ($PREFS->ini('template_debugging') === 'y')
+    	if ($PREFS->ini('template_debugging') === 'y' && $this->start_microtime == 0)
     	{
     		$this->debugging = TRUE;
     		
@@ -257,6 +257,11 @@ class Template {
 		if ($PREFS->ini('smart_static_parsing') !== 'n' && $this->embed_type == 'webpage' && ! stristr($this->template, LD) && ! stristr($this->template, '<?'))
 		{
 			$this->log_item("Smart Static Parsing Triggered");
+			
+			if ($sub == FALSE)
+			{
+				$this->final_template = $this->template;
+			}
 			
 			return;
 		}
@@ -566,7 +571,7 @@ class Template {
     function process_sub_templates($template)
     {
         global $REGX, $FNS, $LANG, $PREFS, $DB;
-        
+
 		/** -------------------------------------
 		/**  Match all {embed=bla/bla} tags
 		/** -------------------------------------*/
@@ -577,7 +582,7 @@ class Template {
         {
 			return;
         }
-        
+
 		/** -------------------------------------
 		/**  Loop until we have parsed all sub-templates
 		/** -------------------------------------*/
@@ -593,16 +598,24 @@ class Template {
         $this->depth++;
         
         $this->log_item("List of Embeds: ".str_replace(array('"', "'"), '', trim(implode(',', $matches['2']))));
-        
+
+		// re-match the full tag of each if necessary before we start processing
+		// necessary evil in case template globals are used inside the embed tag,
+		// doing this within the processing loop will result in leaving unparsed
+		// embed tags e.g. {embed="foo/bar" var="{global_var}/{custom_field}"}
+		$temp = $template;
+		foreach ($matches[2] as $key => $val)
+		{
+			if (strpos($val, LD) !== FALSE)
+			{
+				$matches[0][$key] = $FNS->full_tag($matches[0][$key], $temp);
+				$matches[2][$key] = substr(str_replace($matches[1][$key], '', $matches[0][$key]), 0, -1);
+				$temp = str_replace($matches[0][$key], '', $temp);
+			}
+		}
+
         foreach($matches['2'] as $key => $val)
 		{ 
-			if (stristr($val, LD))
-			{
-				$matches['0'][$key] = $FNS->full_tag($matches['0'][$key], $template);
-				
-				$val = substr(str_replace($matches['1'][$key], '', $matches['0'][$key]), 0, -1);
-			}
-		
 			$parts = preg_split("/\s+/", $val, 2);
 			
 			$this->embed_vars = (isset($parts['1'])) ? $FNS->assign_parameters($parts['1']) : array();
@@ -613,7 +626,7 @@ class Template {
 			}
 			
 			$val = $REGX->trim_slashes($REGX->strip_quotes($parts['0']));
-			
+
 			if ( ! stristr($val, '/'))
 			{   
 				continue;
@@ -682,9 +695,9 @@ class Template {
 			{
 				$this->templates_sofar[] = $ex['0'].'/'.$ex['1'];
 			}
-			
+
 			$this->final_template = str_replace($matches['0'][$key], $this->template, $this->final_template);
-			
+
 			$this->embed_type = '';
 			
 			// Here we go again!  Wheeeeeee.....				
@@ -1032,6 +1045,7 @@ class Template {
 							while (is_int(strpos($TMPL2->tag_data[$i]['params'][$name], LD.'exp:')))
 							{
 								$TMPL = new Template();
+								$TMPL->start_microtime = $this->start_microtime;
 								$TMPL->template = $TMPL2->tag_data[$i]['params'][$name];
 								$TMPL->tag_data	= array();
 								$TMPL->var_single = array();
@@ -1073,6 +1087,7 @@ class Template {
 						while (is_int(strpos($TMPL2->tag_data[$i]['block'], LD.'exp:')))
 						{
 							$TMPL = new Template();
+							$TMPL->start_microtime = $this->start_microtime;
 							$TMPL->template = $TMPL2->tag_data[$i]['block'];
 							$TMPL->tag_data	= array();
 							$TMPL->var_single = array();
@@ -1729,7 +1744,7 @@ class Template {
 					$template = $IN->fetch_uri_segment(2);
 					
 					// Re-assign the query string variable in the Input class so the various tags can show the correct data
-					$IN->QSTR = ( ! $IN->fetch_uri_segment(3) AND $IN->fetch_uri_segment(2) != 'index') ? '' : $REGX->trim_slashes(preg_replace("#".'/'.$IN->fetch_uri_segment(1).'/'.$IN->fetch_uri_segment(2)."#", '', $IN->URI));
+					$IN->QSTR = ( ! $IN->fetch_uri_segment(3) AND $IN->fetch_uri_segment(2) != 'index') ? '' : $REGX->trim_slashes(substr($IN->URI, strlen('/'.$IN->fetch_uri_segment(1).'/'.$IN->fetch_uri_segment(2))));
 				}
 				else // A valid template was not found
 				{				
@@ -1737,7 +1752,7 @@ class Template {
 					$template = 'index';
 				   
 					// Re-assign the query string variable in the Input class so the various tags can show the correct data
-					$IN->QSTR = ( ! $IN->fetch_uri_segment(3)) ? $IN->fetch_uri_segment(2) : $REGX->trim_slashes(preg_replace("#".'/'.$IN->fetch_uri_segment(1)."/#", '', $IN->URI));
+					$IN->QSTR = ( ! $IN->fetch_uri_segment(3)) ? $IN->fetch_uri_segment(2) : $REGX->trim_slashes(substr($IN->URI, strlen('/'.$IN->fetch_uri_segment(1))));
 				}
 			}
 			// The second segment of the URL does not exist
@@ -1803,7 +1818,7 @@ class Template {
 				// Re-assign the query string variable in the Input class so the various tags can show the correct data
 				if ($IN->fetch_uri_segment(2))
 				{
-					$IN->QSTR = $REGX->trim_slashes(preg_replace("#".'/'.$IN->fetch_uri_segment(1)."/#", '', $IN->URI));
+					$IN->QSTR = $REGX->trim_slashes(substr($IN->URI, strlen('/'.$IN->fetch_uri_segment(1))));
 				}			
 			}
 			// A valid template was not found.  At this point we do not have either a valid template group or a valid template name in the URL
@@ -1823,7 +1838,7 @@ class Template {
 				else
 				// No 404 preference is set so we will show the index template from the default template group
 				{
-					$IN->QSTR = $IN->URI;
+					$IN->QSTR = $REGX->trim_slashes($IN->URI);
 					$template_group	= $result->row['group_name'];
 					$template = 'index';
 					$this->log_item("Showing index. Template not found: ".$IN->fetch_uri_segment(1));
@@ -2047,8 +2062,8 @@ class Template {
         /** -----------------------------------------
         /**  Increment hit counter
         /** -----------------------------------------*/
-        
-        if ($this->hit_lock == FALSE OR $this->hit_lock_override == TRUE)
+
+        if (($this->hit_lock == FALSE OR $this->hit_lock_override == TRUE) AND $PREFS->ini('enable_hit_tracking') != 'n')
         {
             $this->template_hits = $query->row['hits'] + 1;
             $this->hit_lock = TRUE;
@@ -2201,7 +2216,7 @@ class Template {
 	
 	function no_results()
 	{
-		global $FNS, $PREFS;
+		global $FNS, $PREFS, $OUT;
 	
         if ( ! preg_match("/".LD."redirect\s*=\s*(\042|\047)([^\\1]*?)\\1".RD."/si", $this->no_results, $match))
         {
@@ -2215,10 +2230,11 @@ class Template {
 			if ($match['2'] == "404")
 			{
 				$template = explode('/', $PREFS->ini('site_404'));
-
+				
 				if (isset($template['1']))
 				{
 					$this->log_item('Processing "'.$template['0'].'/'.$template['1'].'" Template as 404 Page');
+					$OUT->out_type = "404";
 					$this->template_type = "404";
 					$this->process_template($template['0'], $template['1']);
 					$this->cease_processing = TRUE;
@@ -2457,10 +2473,10 @@ class Template {
         if ($this->encode_email == TRUE)
         {
 			if (preg_match_all("/".LD."encode=(.+?)".RD."/i", $str, $matches))
-			{	
+			{
 				for ($j = 0; $j < count($matches['0']); $j++)
 				{	
-					$str = str_replace($matches['0'][$j], $FNS->encode_email($matches['1'][$j]), $str);
+					$str = preg_replace('/'.preg_quote($matches['0'][$j], '/').'/', $FNS->encode_email($matches['1'][$j]), $str, 1);
 				}
 			}  		
 		}

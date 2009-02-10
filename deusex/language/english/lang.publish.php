@@ -585,9 +585,6 @@ $L = array(
 "html_buttons_image_text" =>
 "Enter the image URL",
 
-"html_buttons_image_text" =>
-"Enter the image URL",
-
 "html_buttons_email_text" =>
 "Enter the email address",
 

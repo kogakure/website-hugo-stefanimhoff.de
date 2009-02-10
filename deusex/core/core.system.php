@@ -40,13 +40,9 @@
 // --------------------------------------------------
 
 	if ((bool) @ini_get('register_globals'))
-	{
-		// We need to call this discreetly before the subsequent code
-		// to prevent the $uri variable from being unset if it exists
-		unset($_GET['uri']);
-		
+	{	
 		// Would kind of be "wrong" to unset any of these GLOBALS.
-		$protected = array('_SERVER', '_GET', '_POST', '_ENV', '_FILES', '_REQUEST', '_SESSION', 'GLOBALS', 'HTTP_RAW_POST_DATA');
+		$protected = array('_SERVER', '_GET', '_POST', '_ENV', '_FILES', '_REQUEST', '_SESSION', 'GLOBALS', 'HTTP_RAW_POST_DATA', 'uri');
 		
 		foreach (array($_GET, $_POST, $_COOKIE, $_SERVER, $_FILES, $_ENV, (isset($_SESSION) && is_array($_SESSION)) ? $_SESSION : array()) as $global)
 		{
@@ -139,7 +135,7 @@
 	{
 		$uri = str_replace(array("\r", "\r\n", "\n", '%3A','%3a','%2F','%2f'), array('', '', '', ':', ':', '/', '/'), $uri);
 		
-		if (preg_match("#(;|\?|{|}|<|>|http:\/\/|https:\/\/|www\.|[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})#i", $uri))
+		if (preg_match("#(;|\?|{|}|<|>|http:\/\/|https:\/\/|www\.|\w+:/*[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})#i", $uri)) 
 		{
 			exit('Invalid URI');
     	}
@@ -151,7 +147,7 @@
 // ----------------------------------------------
 
     define('APP_NAME'	,	'ExpressionEngine');
-    define('APP_BUILD'	,	'20081114');   
+    define('APP_BUILD'	,	'20090122');   
     define('CONFIG_FILE',	$config_file); 
     define('PATH_CACHE'	,	$system_path.'cache/'); 
     define('PATH_LANG'	,	$system_path.'language/'); 
@@ -570,7 +566,7 @@
     require PATH_MOD.'stats/mcp.stats'.EXT;
     $STAT = new Stats_CP();
 
-	if (REQ == 'PAGE')
+	if (REQ == 'PAGE' && $PREFS->ini('enable_online_user_tracking') != 'n')
 	{
 		$STAT->update_stats();
 	}

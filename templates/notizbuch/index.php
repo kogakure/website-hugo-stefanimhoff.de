@@ -19,7 +19,7 @@
           <div id="notiz-{entry_id}" class="note">
             <h4><a href="{title_permalink='notiz'}">{title}</a> <a class="edit-entry" href="{path=site_index}deusex/index.php?C=edit&amp;M=edit_entry&amp;weblog_id={weblog_id}&amp;entry_id={entry_id}"><img src="{path=site_index}css/images/edit.png" alt="Bearbeiten" title="Bearbeiten" /></a></h4>
             <p><small class="datetime">{entry_date format="%d. %M %Y"} {if comment_total == 0}{if:elseif comment_total == 1}– {comment_total} <a href="{title_permalink='notiz'}#comments">Kommentar</a>{if:else}- {comment_total} <a href="{title_permalink='notiz'}#comments">Kommentare</a>{/if}</small></p>
-            {if notes_summary}{notes_summary}{if:else}{exp:char_limit total="1000"}{notes_body}{/exp:char_limit}{/if}
+            {if notes_summary}{notes_summary}{if:else}{exp:html_strip}{exp:char_limit total="1000"}{notes_body}{/exp:char_limit}{/exp:html_strip}{/if}
           </div>
 
           {paginate}
@@ -62,7 +62,7 @@
           <div id="notiz-{entry_id}" class="note">
             <h4><a href="{title_permalink='notiz'}">{title}</a></h4>
             <p><small class="datetime">{entry_date format="%d. %M %Y"} {if comment_total == 0}{if:elseif comment_total == 1}– {comment_total} <a href="{title_permalink='notiz'}#comments">Kommentar</a>{if:else}- {comment_total} <a href="{title_permalink='notiz'}#comments">Kommentare</a>{/if}</small></p>
-            {if notes_summary}{notes_summary}{if:else}{exp:char_limit total="1000"}{notes_body}{/exp:char_limit}{/if}
+            {if notes_summary}{notes_summary}{if:else}{exp:html_strip}{exp:char_limit total="1000"}{notes_body}{/exp:char_limit}{/exp:html_strip}{/if}
           </div>
   
           {paginate}

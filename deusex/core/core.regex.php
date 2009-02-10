@@ -626,7 +626,7 @@ class Regex {
 		 * the conversion of entities to ASCII later.
 		 *
 		 */
-		$str = preg_replace('#(&\#?[0-9a-z]{2,})[\x00-\x20]*;?#i', "\\1;", $str);
+		$str = preg_replace('#(&\#?[0-9a-z]{2,})([\x00-\x20])*;?#i', "\\1;\\2", $str);
 		
 		/*
 		 * Validate UTF16 two byte encoding (x00) 
@@ -980,7 +980,7 @@ class Regex {
     /**  Create URL Title
     /** -------------------------------------------------*/
 
-	function create_url_title($str)
+	function create_url_title($str, $lowercase = FALSE)
 	{
 		global $PREFS;
 		
@@ -995,6 +995,11 @@ class Regex {
 		else
 		{
 			$str = utf8_decode($str);
+		}
+		
+		if ($lowercase === TRUE)
+		{
+			$str = strtolower($str);	
 		}
 		
 		$str = preg_replace_callback('/(.)/', array($this, "convert_accented_characters"), $str);

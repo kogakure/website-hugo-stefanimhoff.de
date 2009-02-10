@@ -641,7 +641,7 @@ function showHideMenu(objValue)
 															
 															'image_cfg'	 			=> array(AMP.'M=config_mgr'.AMP.'P=image_cfg', 'image resize resizing thumbnail thumbnails GD netPBM imagemagick magick'),
 															'captcha_cfg'			=> array(AMP.'M=config_mgr'.AMP.'P=captcha_cfg', 'captcha member truetype'),
-															'referrer_cfg'	 		=> array(AMP.'M=config_mgr'.AMP.'P=referrer_cfg', 'referrer referrers'),
+															'tracking_cfg'	 		=> array(AMP.'M=config_mgr'.AMP.'P=tracking_cfg', 'referrer referrers tracking stats hit hits'),
 															'cookie_cfg'			=> array(AMP.'M=config_mgr'.AMP.'P=cookie_cfg', 'cookie cookies prefix domain site'),
 															
 															'space_3'				=> '-',
@@ -1000,9 +1000,13 @@ function showHideMenu(objValue)
 											'emoticon_path'				=> ''
 										 ),
 									
-			'referrer_cfg' 		=>	array(												
-											'log_referrers' 			=> array('r', array('y' => 'yes', 'n' => 'no')),
-											'max_referrers'				=> ''
+			'tracking_cfg' 		=>	array(
+											'enable_online_user_tracking'	=> array('r', array('y' => 'yes', 'n' => 'no'), 'y'),
+											'enable_hit_tracking'			=> array('r', array('y' => 'yes', 'n' => 'no'), 'y'),
+											'enable_entry_view_tracking'	=> array('r', array('y' => 'yes', 'n' => 'no'), 'y'),
+											'log_referrers' 				=> array('r', array('y' => 'yes', 'n' => 'no')),
+											'max_referrers'					=> '',
+											'dynamic_tracking_disabling'	=> '',
 										 )
 						);						
 	}
@@ -1082,7 +1086,8 @@ function showHideMenu(objValue)
 						'banishment_message'		=> array('banishment_message_exp'),
 						'enable_search_log'			=> array('enable_search_log_exp'),
 						'mailinglist_notify_emails'	=> array('separate_emails'),
-						'strict_urls'				=> array('strict_urls_info')
+						'strict_urls'				=> array('strict_urls_info'),
+						'dynamic_tracking_disabling'=> array('dynamic_tracking_disabling_info')
 					);
 	}
 	/* END */
@@ -1132,7 +1137,7 @@ function showHideMenu(objValue)
 											'censoring_cfg',
 											'mailinglist_cfg',
 											'emoticon_cfg',
-											'referrer_cfg',
+											'tracking_cfg',
 											'avatar_cfg',
 											'search_log_cfg'
 											)
@@ -1288,7 +1293,15 @@ function showHideMenu(objValue)
 					
 						foreach ($val['1'] as $k => $v)
 						{
-							$selected = ($k == $PREFS->ini($key)) ? 1 : '';
+							// little cheat for some values popped into a build update
+							if ($PREFS->ini($key) === FALSE)
+							{
+								$selected = (isset($val['2']) && $k == $val['2']) ? 1 : '';
+							}
+							else
+							{
+								$selected = ($k == $PREFS->ini($key)) ? 1 : '';	
+							}
 						
 							$DSP->body .= $LANG->line($v).$DSP->nbs();
 							$DSP->body .= $DSP->input_radio($key, $k, $selected).$DSP->nbs(3);
@@ -1876,7 +1889,7 @@ function showHideMenu(objValue)
 		/** ----------------------------------------
 		/**  Certain Preferences might remain in config.php
 		/** ----------------------------------------*/
-		
+
 		if (sizeof($_POST) > 0)
 		{
 			foreach ($_POST as $key => $val)
@@ -1904,7 +1917,7 @@ function showHideMenu(objValue)
 	function update_config_file($newdata = '', $return_loc = FALSE, $remove_values = array())
 	{
 		global $IN, $FNS;
-				
+
 		if ( ! is_array($newdata) && sizeof($remove_values) == 0)
 		{
 			return FALSE;
@@ -1954,11 +1967,7 @@ function showHideMenu(objValue)
 			foreach ($newdata as $key => $val)
 			{
 				$val = str_replace("\n", " ", $val);
-			
-				if (isset($conf[$key]))
-				{						
-					$conf[$key] = trim($val);	
-				}
+				$conf[$key] = trim($val);	
 			}
 		}
 		

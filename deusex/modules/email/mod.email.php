@@ -60,7 +60,7 @@ class Email {
 		global $IN, $TMPL, $REGX, $FNS, $PREFS, $SESS, $LOC, $DB;
 		
         $tagdata = $TMPL->tagdata;
-        	
+
         /** ----------------------------------------
         /**  Recipient Email Checking
         /** ----------------------------------------*/
@@ -215,7 +215,7 @@ class Email {
 										'RET'      			=> ( ! $TMPL->fetch_param('return'))  ? '' : $TMPL->fetch_param('return'),
 										'URI'      			=> ($IN->URI == '') ? 'index' : $IN->URI,
 										'recipients' 		=> base64_encode($recipients),
-										'user_recipients' 	=> ($user_recipients == 'true') ? 'y' : 'n',
+										'user_recipients' 	=> ($user_recipients == 'true') ? md5($DB->username.$DB->password.'y') : md5($DB->username.$DB->password.'n'),
 										'charset'			=> $charset,
 										'redirect'			=> ( ! $TMPL->fetch_param('redirect'))  ? '' : $TMPL->fetch_param('redirect'),
 										'replyto'			=> ( ! $TMPL->fetch_param('replyto'))  ? '' : $TMPL->fetch_param('replyto')
@@ -432,7 +432,7 @@ class Email {
    		
    		// Match values in input fields
    		preg_match_all("/<input(.*?)value=\"(.*?)\"/", $tagdata, $matches);
-   		if(sizeof($matches) > 0 && $allow_html != 'y')
+   		if(count($matches) > 0 && $allow_html != 'y')
    		{
    		     foreach($matches['2'] as $value)
    		     {
@@ -458,7 +458,7 @@ class Email {
    		
    		// Match textarea content
    		preg_match_all("/<textarea(.*?)>(.*?)<\/textarea>/", $tagdata, $matches);
-   		if (sizeof($matches) > 0 && $allow_html != 'y')
+   		if (count($matches) > 0 && $allow_html != 'y')
    		{
    			foreach($matches['2'] as $value)
    			{
@@ -504,7 +504,7 @@ class Email {
 										'RET'      			=> ( ! $TMPL->fetch_param('return'))  ? '' : $TMPL->fetch_param('return'),
 										'URI'      			=> ($IN->URI == '') ? 'index' : $IN->URI,
 										'recipients' 		=> base64_encode($recipients),
-										'user_recipients' 	=> ($user_recipients == 'true') ? 'y' : 'n',
+										'user_recipients' 	=> ($user_recipients == 'true') ? md5($DB->username.$DB->password.'y') : md5($DB->username.$DB->password.'n'),
 										'charset'			=> $charset,
 										'allow_html'		=> $allow_html,
 										'redirect'			=> ( ! $TMPL->fetch_param('redirect'))  ? '' : $TMPL->fetch_param('redirect'),
@@ -590,8 +590,7 @@ class Email {
 			    $_POST[$val] = $REGX->xss_clean(trim(stripslashes($_POST[$val])));
 			}
         }
-        
-        
+		
         /** ----------------------------------------
         /**  Clean incoming
         /** ----------------------------------------*/
@@ -746,6 +745,8 @@ class Email {
         /**  Review Recipients
         /** ----------------------------------------*/
         
+		$_POST['user_recipients'] = ($_POST['user_recipients'] == md5($DB->username.$DB->password.'y')) ? 'y' : 'n';
+
         if ($_POST['user_recipients'] == 'y' && trim($_POST['to']) != '')
         {
         	$array = $this->validate_recipients($_POST['to']);

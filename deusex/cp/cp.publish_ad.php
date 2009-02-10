@@ -284,7 +284,7 @@ EOT;
         
         $selected = '';
 
-        $g .= $DSP->input_select_option('', 'None', $selected);
+        $g .= $DSP->input_select_option('', $LANG->line('none'), $selected);
                  
         if ($query->num_rows > 0)
         {
@@ -313,7 +313,7 @@ EOT;
         
         $selected = '';
 
-        $g .= $DSP->input_select_option('', 'None', $selected);
+        $g .= $DSP->input_select_option('', $LANG->line('none'), $selected);
     
         if ($query->num_rows > 0)
         {
@@ -344,7 +344,7 @@ EOT;
         
         $selected = '';
 
-        $g .= $DSP->input_select_option('', 'None', $selected);
+        $g .= $DSP->input_select_option('', $LANG->line('none'), $selected);
         
         if ($query->num_rows > 0)
         {
@@ -2391,11 +2391,11 @@ function showHideMenu(objValue)
 					  $DSP->table_c();
         
         
-        $DSP->title = $LANG->line('weblog_prefs');
+        $DSP->title = $LANG->line('edit_weblog_prefs');
         
         $DSP->crumb = $DSP->anchor(BASE.AMP.'C=admin'.AMP.'area=weblog_administration', $LANG->line('weblog_administration')).
         			  $DSP->crumb_item($DSP->anchor(BASE.AMP.'C=admin'.AMP.'M=blog_admin'.AMP.'P=blog_list', $LANG->line('weblog_management'))).
-        			  $DSP->crumb_item($LANG->line('edit_weblog'));
+        			  $DSP->crumb_item($LANG->line('edit_weblog_prefs'));
     }
     /* END */
   
@@ -2478,7 +2478,7 @@ function showHideMenu(objValue)
         
         $selected = (empty($cat_group)) ? 1 : '';
 
-        $g .= $DSP->input_select_option('', 'None', $selected);
+        $g .= $DSP->input_select_option('', $LANG->line('none'), $selected);
 
         if ($query->num_rows > 0)
         {
@@ -2510,7 +2510,7 @@ function showHideMenu(objValue)
         
         $selected = '';
 
-        $g .= $DSP->input_select_option('', 'None', $selected);
+        $g .= $DSP->input_select_option('', $LANG->line('none'), $selected);
     
         if ($query->num_rows > 0)
         {
@@ -2541,7 +2541,7 @@ function showHideMenu(objValue)
         
         $selected = '';
 
-        $g .= $DSP->input_select_option('', 'None', $selected);
+        $g .= $DSP->input_select_option('', $LANG->line('none'), $selected);
         
         if ($query->num_rows > 0)
         {
@@ -2570,11 +2570,11 @@ function showHideMenu(objValue)
 
         $DSP->body .= $DSP->form_close();         
         
-        $DSP->title = $LANG->line('edit_weblog');
+        $DSP->title = $LANG->line('edit_group_prefs');
         
         $DSP->crumb = $DSP->anchor(BASE.AMP.'C=admin'.AMP.'area=weblog_administration', $LANG->line('weblog_administration')).
         			  $DSP->crumb_item($DSP->anchor(BASE.AMP.'C=admin'.AMP.'M=blog_admin'.AMP.'P=blog_list', $LANG->line('weblog_management'))).
-        			  $DSP->crumb_item($LANG->line('edit_weblog'));
+        			  $DSP->crumb_item($LANG->line('edit_group_prefs'));
     }
     /* END */
     
@@ -5246,7 +5246,7 @@ SCRIPPITYDOO;
 		$r .= $DSP->div('box');
         $r .= $DSP->div('itemWrapper').
               $DSP->qdiv('itemWrapper', $DSP->qdiv('defaultBold', $DSP->required().NBS.$LANG->line('category_name', 'cat_name'))).
-              $DSP->input_text('cat_name', $cat_name, '20', '100', 'input', '400px', 'onkeyup="liveUrlTitle();"', TRUE).
+              $DSP->input_text('cat_name', $cat_name, '20', '100', 'input', '400px', (( ! $cat_id) ? 'onkeyup="liveUrlTitle();"' : ''), TRUE).
               $DSP->div_c();
         
         $r .= $DSP->div('itemWrapper').
@@ -5453,7 +5453,7 @@ SCRIPPITYDOO;
 
         if ( ! $IN->GBL('cat_url_title'))
         {
-            $_POST['cat_url_title'] = $_POST['cat_name'];
+            $_POST['cat_url_title'] = $REGX->create_url_title($_POST['cat_name'], TRUE);
         }
         
 		// Kill all the extraneous characters.  

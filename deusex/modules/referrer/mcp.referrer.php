@@ -115,7 +115,7 @@ class Referrer_CP {
 		$DSP->body	.=	$DSP->tr();
 
 		$DSP->body	.=	$DSP->td('tableCellTwo');
-		$DSP->body	.=	$DSP->qdiv('defaultBold', $DSP->anchor(BASE.AMP.'C=admin'.AMP.'M=config_mgr'.AMP.'P=referrer_cfg', $LANG->line('referrer_preferences')));
+		$DSP->body	.=	$DSP->qdiv('defaultBold', $DSP->anchor(BASE.AMP.'C=admin'.AMP.'M=config_mgr'.AMP.'P=tracking_cfg', $LANG->line('tracking_preferences')));
 		$DSP->body	.=	$DSP->td_c();
 
 		$DSP->body	.=	$DSP->tr_c();

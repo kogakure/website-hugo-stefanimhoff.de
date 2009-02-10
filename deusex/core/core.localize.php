@@ -670,7 +670,9 @@ class Localize {
 
     function decode_date($datestr = '', $unixtime = '', $localize = TRUE)
     {
-        if ($datestr == '')
+		$prelocalized = FALSE;
+
+		if ($datestr == '')
             return;
             
 		if ($unixtime == 0)
@@ -682,11 +684,12 @@ class Localize {
         if ($localize === TRUE)
         {
         	$unixtime = $this->set_localized_time($unixtime);
+			$prelocalized = TRUE;
         }
 
         foreach ($matches['1'] as $val)
         {
-            $datestr = str_replace($val, $this->convert_timestamp($val, $unixtime, FALSE), $datestr);
+            $datestr = str_replace($val, $this->convert_timestamp($val, $unixtime, FALSE, $prelocalized), $datestr);
         }
                  
         return $datestr;
@@ -733,13 +736,15 @@ class Localize {
     
     // All text codes are converted to the user-specified language.
 
-    function convert_timestamp($which = '', $time = '', $localize = TRUE)
+    function convert_timestamp($which = '', $time = '', $localize = TRUE, $prelocalized = FALSE)
     {
         global $LANG, $SESS, $TMPL;
 
         if ($which == '')
             return;
-            
+
+		$localized_tz = ($prelocalized == TRUE) ? TRUE : $localize;
+   
 		$translate = (is_object($TMPL) && $TMPL->template_type == 'rss') ? FALSE : TRUE;
             
         if ($this->ctz == 0)
@@ -780,7 +785,7 @@ class Localize {
 				break;
 			case '%i': 	$var = date('i', $time);
 				break;
-			case '%I': 	$var = date('I', $time);
+			case '%I': 	$var = ($localized_tz === TRUE) ? date('I', $time) : gmdate('I', $time);
 				break;
 			case '%j': 	$var = date('j', $time);
 				break;
@@ -794,7 +799,7 @@ class Localize {
 				break;
 			case '%n': 	$var = date('n', $time);
 				break;
-			case '%O': 	$var = date('O', $time);
+			case '%O': 	$var = ($localized_tz === TRUE) ? date('O', $time) : gmdate('O', $time);
 				break;
 			case '%r': 	$var = ($translate === FALSE) ? date('D', $time).date(', d ', $time).date('M', $time).date(' Y H:i:s O', $time) : $LANG->line(date('D', $time)).date(', d ', $time).$LANG->line(date('M', $time)).date(' Y H:i:s O', $time);
 				break;
@@ -804,7 +809,7 @@ class Localize {
 				break;
 			case '%t': 	$var = date('t', $time);
 				break;
-			case '%T': 	$var = $this->ctz;
+			case '%T': 	$var = ($localized_tz === TRUE) ? $this->ctz : gmdate('T', $time);
 				break;
 			case '%U': 	$var = date('U', $time);
 				break;
@@ -816,11 +821,11 @@ class Localize {
 				break;
 			case '%Y': 	$var = date('Y', $time);
 				break;
-			case '%Q':	$var = $this->zone_offset($SESS->userdata['timezone']);
+			case '%Q':	$var = ($localized_tz === TRUE) ? $this->zone_offset($SESS->userdata['timezone']) : '+00:00';
 				break;
 			case '%z': 	$var = date('z', $time);
 				break;
-			case '%Z':	$var = date('Z', $time);
+			case '%Z':	$var = ($localized_tz === TRUE) ? date('Z', $time) : gmdate('Z', $time);
 				break;
 			default  :  $var = '';
 				break;

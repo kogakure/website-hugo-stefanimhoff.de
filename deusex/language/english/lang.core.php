@@ -57,6 +57,9 @@ $L = array(
 'dot' =>
 'dot',
 
+'encoded_email' =>
+'(JavaScript must be enabled to view this email address)',
+
 'search' =>
 "Search",
 
