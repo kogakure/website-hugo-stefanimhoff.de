@@ -135,3 +135,29 @@ p.paginate .rechts {
     padding: 1.5em;
     list-style: none;
 }
+
+/* Hinweisbox */
+
+.hinweis {
+	border: 2px solid #262626;
+	margin-right: 220px;
+	padding: 1.0em;
+	background: #ec9521;
+	margin-bottom: 1.5em;
+}
+
+#page-notiz #main .hinweis p {
+	margin: 0;
+}
+
+#page-notiz #main .hinweis a {
+	color: #fff;
+	background: #000;
+	border: 0;
+	padding: 0.2em;
+}
+
+#page-notiz #main .hinweis a:hover {
+	background: #fff;
+	color: #000;
+}
