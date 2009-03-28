@@ -1,11 +1,8 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-set(
-    fab_hosts = ['kogakure.webfactional.com'],
-    fab_user = 'kogakure',
-    project_path = '/home/kogakure/webapps/stefanimhoff',
-)
+config.fab_hosts = ['kogakure.webfactional.com']
+config.project_path = '/home/kogakure/webapps/stefanimhoff'
 
 def deploy():
     "Lokale Änderungen pushen, Änderungen pullen auf server"
