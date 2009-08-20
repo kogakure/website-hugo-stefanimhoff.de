@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -151,7 +151,7 @@ class Stats {
 		{   
 			foreach ($dates as $date)
 			{
-				if (ereg("^".$date, $key))
+				if (strncmp($date, $key, strlen($date)) == 0)
 				{
 					$TMPL->tagdata = $TMPL->swap_var_single(
 																$key, 

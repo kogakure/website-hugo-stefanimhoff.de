@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -750,12 +750,12 @@ class Gallery {
 				// Check for URL rewriting.  If so, we need to add the
 				// SELF filename to the URL
 				
-				if ( ! eregi(".php$", SELF) AND ! ereg(SELF, $basepath))
+				if ( ! preg_match("#\.php$#i", SELF) && ! stristr($base_path, SELF))
 				{
 					$basepath .= SELF.'/';
 				}
-												
-				$first_url = (ereg("\.php/$", $basepath)) ? substr($basepath, 0, -1) : $basepath;
+				
+				$first_url = (preg_match("#\.php/$#", $basepath)) ? substr($basepath, 0, -1) : $basepath;
 				
 				$PGR->first_url 		= $first_url;
 				$PGR->path			= $basepath;
@@ -1054,7 +1054,7 @@ class Gallery {
                 /**  {id_path}
                 /** ----------------------------*/
                 
-                if (ereg("^id_path", $key) )
+				if (strncmp('id_path', $key, 7) == 0)
                 {                          
 					$tagdata = $TMPL->swap_var_single(
 														$key, 
@@ -1067,7 +1067,7 @@ class Gallery {
                 /**  {category_path}
                 /** ----------------------------*/
                 
-                if (ereg("^category_path", $key) )
+                if (strncmp('category_path', $key, 13) == 0)
                 {                          
 					$tagdata = $TMPL->swap_var_single(
 														$key, 
@@ -2205,7 +2205,7 @@ class Gallery {
 
 				$basepath = $FNS->create_url($uristr, 1, 0);
 				
-				$first_url = (ereg("\.php/$", $basepath)) ? substr($basepath, 0, -1) : $basepath;
+				$first_url = (preg_match("#\.php/$#", $basepath)) ? substr($basepath, 0, -1) : $basepath;
 				
 				$PGR->first_url 	= $first_url;
 				$PGR->path			= $basepath;
@@ -2450,7 +2450,7 @@ class Gallery {
 				/**  parse {switch} variable
 				/** ----------------------------------------*/
 				
-				if (ereg("^switch", $key))
+				if (strncmp('switch', $key, 6) == 0)
 				{
 					$sparam = $FNS->assign_parameters($key);
 					
@@ -2486,7 +2486,7 @@ class Gallery {
                 /**  parse permalink
                 /** ----------------------------------------*/
                 
-                if (ereg("^permalink", $key) AND isset($row['comment_id']))
+                if (strncmp('permalink', $key, 9) == 0 && isset($row['comment_id']))
                 {                     
                         $tagdata = $TMPL->swap_var_single(
                                                             $key, 
@@ -2501,7 +2501,7 @@ class Gallery {
                 /**  parse comment_path or trackback_path
                 /** ----------------------------------------*/
                 
-                if (ereg("^entry_id_path", $key) )
+                if (strncmp('entry_id_path', $key, 13) == 0)
                 {                       
 					$tagdata = $TMPL->swap_var_single(
 														$key, 
@@ -2543,8 +2543,8 @@ class Gallery {
                 /** ----------------------------------------
                 /**  {member_search_path}
                 /** ----------------------------------------*/
-                   
-                if (ereg("^member_search_path", $key))
+                
+                if (strncmp('member_search_path', $key, 18) == 0)
                 {                   
 					$tagdata = $TMPL->swap_var_single($key, $search_link.urlencode($row['name']), $tagdata);
                 }
@@ -2789,11 +2789,11 @@ class Gallery {
 				}
 				else
 				{
-					$match['1'] = str_replace(LD.'path'.RD, $page_previous, $match['1']);
+					$match['1'] = str_replace(array(LD.'path'.RD, LD.'auto_path'.RD), $page_previous, $match['1']);
 				
 					$paginate_data = str_replace($match['0'],	$match['1'], $paginate_data);
 				}
-        		}
+        	}
         	
 			if (preg_match("/".LD."if next_page".RD."(.+?)".LD.SLASH."if".RD."/s", $paginate_data, $match))
 			{
@@ -2803,11 +2803,11 @@ class Gallery {
 				}
 				else
         			{
-					$match['1'] = str_replace(LD.'path'.RD, $page_next, $match['1']);
+					$match['1'] = str_replace(array(LD.'path'.RD, LD.'auto_path'.RD), $page_next, $match['1']);
 				
 					$paginate_data = str_replace($match['0'],	$match['1'], $paginate_data);
 				}
-        		}
+        	}
         
 			$position = ( ! $TMPL->fetch_param('paginate')) ? '' : $TMPL->fetch_param('paginate');
 			
@@ -3405,8 +3405,10 @@ class Gallery {
         
 		$preview = ( ! $IN->GBL('PRV', 'POST')) ? '' : $IN->GBL('PRV');
 
-        if ( ! ereg("/", $preview))
+        if ( ! stristr($preview, '/'))
+        {
         		$preview = '';
+        }
         else
         {
 			$ex = explode("/", $preview);
@@ -3949,10 +3951,7 @@ class Gallery {
 			
 			if ($_POST['email'] != '')
 			{
-				if (eregi($_POST['email'], $notify_address))
-				{
-					$notify_address = str_replace($_POST['email'], "", $notify_address);				
-				}
+				$notify_address = str_replace($_POST['email'], '', $notify_address);
 			}
 			
 			$notify_address = $REGX->remove_extra_commas($notify_address);

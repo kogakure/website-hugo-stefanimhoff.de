@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -239,12 +239,30 @@ class Member_auth extends Member {
 			
 			if ( ! isset($sites[$next]))
 			{
+				// Figure out return
+				if  ( ! $ret = $IN->GBL('ret', 'GET'))
+				{
+					$ret = $sites[$IN->GBL('orig', 'GET')];
+				}
+				else
+				{
+					if (strncmp($ret, 's-', 2) == 0) 
+					{
+						$ret = substr_replace($ret, 'https:', 0, 2);
+					}
+					elseif (strncmp($ret, 'n-', 2) == 0) 
+					{
+						$ret = substr_replace($ret, 'http:', 0, 2);
+					}
+				}
+
+				
 				// We're done.
 				$data = array(	'title' 	=> $LANG->line('mbr_login'),
 								'heading'	=> $LANG->line('thank_you'),
 								'content'	=> $LANG->line('mbr_you_are_logged_in'),
-								'redirect'	=> $sites[$IN->GBL('orig', 'GET')],
-								'link'		=> array($sites[$IN->GBL('orig', 'GET')], $LANG->line('back'))
+								'redirect'	=> $ret,
+								'link'		=> array($ret, $LANG->line('back'))
 								 );
 
 				// Pull preferences for the original site
@@ -269,7 +287,7 @@ class Member_auth extends Member {
 				// Next Site
 				
 				$next_url = $sites[$next].'?ACT='.$FNS->fetch_action_id('Member', 'member_login').
-							'&multi='.$IN->GBL('multi', 'GET').'&cur='.$next.'&orig='.$IN->GBL('orig').'&orig_site_id='.$IN->GBL('orig_site_id', 'GET');
+							'&multi='.$IN->GBL('multi', 'GET').'&cur='.$next.'&orig='.$IN->GBL('orig').'&orig_site_id='.$IN->GBL('orig_site_id', 'GET').'&ret='.$IN->GBL('ret', 'GET');
 							
 				return $FNS->redirect($next_url);
 			}        	
@@ -492,6 +510,20 @@ class Member_auth extends Member {
 			// Next Site
 			$sites		=  explode('|',$PREFS->ini('multi_login_sites'));
 			$current	= $FNS->fetch_site_index();
+			$ret = $FNS->remove_double_slashes($FNS->form_backtrack());
+			
+			if (strncmp($ret, 'https:', 6) == 0) 
+			{
+				$ret = '&ret=s-'.str_replace('https:', '', $ret);
+			}
+			elseif (strncmp($ret, 'http:', 5) == 0)
+			{
+				$ret = '&ret=n-'.str_replace('http:', '', $ret);
+			}
+			else
+			{
+				$ret = '';
+			}
 			
 			if (sizeof($sites) > 1 && in_array($current, $sites))
 			{
@@ -499,7 +531,7 @@ class Member_auth extends Member {
 				$next = ($orig == '0') ? '1' : '0';
 			
 				$next_url = $sites[$next].'?ACT='.$FNS->fetch_action_id('Member', 'member_login').
-							'&multi='.$SESS->userdata['session_id'].'&cur='.$next.'&orig='.$orig.'&orig_site_id='.$PREFS->ini('site_id');
+							'&multi='.$SESS->userdata['session_id'].'&cur='.$next.'&orig='.$orig.'&orig_site_id='.$PREFS->ini('site_id').$ret;
 							
 				return $FNS->redirect($next_url);
 			}		

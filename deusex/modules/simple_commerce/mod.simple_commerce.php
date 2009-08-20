@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -285,15 +285,15 @@ class Simple_commerce {
 		{     
 			$data = array();
 			
-            if (ereg("^buy_now_button", $key))
+			if ($key == 'buy_now_button')
             {
             	$data = $buy_now;
 			}
-			elseif (ereg("^add_to_cart_button", $key))
+			elseif ($key == 'add_to_cart_button')
             {
             	$data = $add_to_cart;
 			}
-			elseif (ereg("^view_cart_button", $key))
+			elseif ($key == 'view_cart_button')
             {
             	$data = $view_cart;
 			}

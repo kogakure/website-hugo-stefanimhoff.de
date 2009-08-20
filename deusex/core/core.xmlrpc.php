@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -489,7 +489,7 @@ class XML_RPC_Response
 	{
 		// return a timet in the localtime, or UTC
 		$t = 0;
-		if (ereg("([0-9]{4})([0-9]{2})([0-9]{2})T([0-9]{2}):([0-9]{2}):([0-9]{2})", $time, $regs))
+		if (preg_match("#([0-9]{4})([0-9]{2})([0-9]{2})T([0-9]{2}):([0-9]{2}):([0-9]{2})#", $time, $regs))
 		{
 			if ($utc == 1)
 				$t = gmmktime($regs[4], $regs[5], $regs[6], $regs[2], $regs[3], $regs[1]);
@@ -591,7 +591,7 @@ class XML_RPC_Message extends XML_RPC
 		/**  Check for HTTP 200 Response
 		/** -------------------------------------*/
 		
-		if(ereg("^HTTP",$data) && !ereg("^HTTP/[0-9\.]+ 200 ", $data))
+		if(preg_match("#^HTTP#",$data) && ! preg_match("#^HTTP/[0-9\.]+ 200 #", $data))
 		{
 			$errstr= substr($data, 0, strpos($data, "\n")-1);
 			$r = new XML_RPC_Response(0, $this->xmlrpcerr['http_error'], $this->xmlrpcstr['http_error']. ' (' . $errstr . ')');
@@ -907,7 +907,7 @@ class XML_RPC_Message extends XML_RPC
 				{
 					// we have a DOUBLE
 					// we must check that only 0123456789-.<space> are characters here
-					if (!ereg("^[+-]?[eE0123456789 \\t\\.]+$", $this->xh[$the_parser]['ac']))
+					if ( ! preg_match("#^[+-]?[eE0123456789 \\t\\.]+$#", $this->xh[$the_parser]['ac']))
 					{
 						$this->xh[$the_parser]['value'] = 'ERROR_NON_NUMERIC_FOUND';
 					}
@@ -920,7 +920,7 @@ class XML_RPC_Message extends XML_RPC
 				{
 					// we have an I4/INT
 					// we must check that only 0123456789-<space> are characters here
-					if (!ereg("^[+-]?[0123456789 \\t]+$", $this->xh[$the_parser]['ac']))
+					if ( ! preg_match("#^[+-]?[0123456789 \\t]+$#", $this->xh[$the_parser]['ac']))
 					{
 						$this->xh[$the_parser]['value'] = 'ERROR_NON_NUMERIC_FOUND';
 					}
@@ -973,7 +973,7 @@ class XML_RPC_Message extends XML_RPC
 				}
 			break;
 			case 'METHODNAME':
-				$this->xh[$the_parser]['method'] = ereg_replace("^[\n\r\t ]+", '', $this->xh[$the_parser]['ac']);
+				$this->xh[$the_parser]['method'] = preg_replace("#^[\n\r\t ]+#", '', $this->xh[$the_parser]['ac']);
 			break;
 			case 'PARAMS':
 			case 'FAULT':

@@ -5,7 +5,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -41,12 +41,11 @@ class Style {
     		$stylesheet = str_replace($match[0], '', $stylesheet);  // Remove version info
     	}
     
-        if ( $stylesheet == '' ||
-             ! ereg("/", $stylesheet) ||
-			   preg_match("#^(http:\/\/|www\.)#i", $stylesheet)
-            )
-            exit;
-        
+        if ( $stylesheet == '' OR strpos($stylesheet, '/') === FALSE OR preg_match("#^(http:\/\/|www\.)#i", $stylesheet))
+        {
+			exit;
+        }
+
 		$ex =  explode("/", $stylesheet);
 			
 		if (count($ex) != 2)

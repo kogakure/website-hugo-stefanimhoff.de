@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -448,7 +448,7 @@ class Member_images extends Member {
 			$avstr .= "</tr>";
 		}
 		
-		if ( ! ereg("\<\/tr\>$", $avstr))
+		if ( ! preg_match("#\<\/tr\>$#", $avstr))
 		{
 			$avstr .= "</tr>";
 		}
@@ -668,7 +668,7 @@ class Member_images extends Member {
 				
 				$DB->query("UPDATE exp_members SET avatar_filename = '', avatar_width='', avatar_height='' WHERE member_id = '".$SESS->userdata('member_id')."' ");
 			
-				if (ereg('/', $query->row['avatar_filename']))
+				if (strncmp($query->row['avatar_filename'], 'uploads/', 8) == 0)
 				{
 					@unlink($PREFS->ini('avatar_path', TRUE).$query->row['avatar_filename']);
 				}
@@ -806,7 +806,7 @@ class Member_images extends Member {
 		/**  Does the image have a file extension?
 		/** ----------------------------------------*/
 		
-		if ( ! ereg('\.', $filename))
+		if (strpos($filename, '.') === FALSE)
 		{
 			return $OUT->show_user_error('submission', $LANG->line('invalid_image_type'));
 		}
@@ -843,7 +843,7 @@ class Member_images extends Member {
 			$query = $DB->query("SELECT avatar_filename FROM exp_members WHERE member_id = '".$SESS->userdata('member_id')."'");
 			$old_filename = ($query->row['avatar_filename'] == '') ? '' : $query->row['avatar_filename'];
 			
-			if (ereg('/', $old_filename))
+			if (strpos($old_filename, '/') !== FALSE)
 			{
 				$xy = explode('/', $old_filename);
 				$old_filename =  end($xy);

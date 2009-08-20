@@ -22,6 +22,7 @@
 					'docx'	=>	'application/msword',
 					'xl'	=>	'application/excel',
 					'xls'	=>	'application/excel',
+					'flv'	=>	'video/x-flv',
 					'mov'	=>	'video/quicktime',
 					'qt'	=>	'video/quicktime',
 					'mpg'	=>	'video/mpeg',

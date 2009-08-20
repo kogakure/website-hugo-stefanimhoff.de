@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -145,12 +145,12 @@ class Query {
 				
 				$PGR = new Paginate();
 				
-				if ( ! ereg(SELF, $this->basepath) AND $PREFS->ini('site_index') != '')
+				if ( ! stristr($this->basepath, SELF) AND $PREFS->ini('site_index') != '')
 				{
 					$this->basepath .= SELF.'/';
 				}
 																	
-				$first_url = (ereg("\.php/$", $this->basepath)) ? substr($this->basepath, 0, -1) : $this->basepath;			
+				$first_url = (preg_match("#\.php/$#", $this->basepath)) ? substr($this->basepath, 0, -1) : $this->basepath;			
 				
 				$PGR->first_url 	= $first_url;
 				$PGR->path			= $this->basepath;
@@ -237,8 +237,8 @@ class Query {
                 {                    
                     $tagdata = $TMPL->swap_var_single($val, $row[$val], $tagdata);
                 }
-
-				if (ereg("^switch", $key))
+                
+                if (strncmp('switch', $key, 6) == 0)
 				{
 					$sparam = $FNS->assign_parameters($key);
 

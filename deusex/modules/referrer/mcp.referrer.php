@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -180,11 +180,11 @@ class Referrer_CP {
 			{
 				if (substr($part, 0, 1) == '-')
 				{
-					$search_sql .= "CONCAT_WS(' ', ref_from, ref_to, ref_ip, ref_agent) NOT LIKE '%".$DB->escape_str(substr($part, 1))."%' AND ";
+					$search_sql .= "CONCAT_WS(' ', ref_from, ref_to, ref_ip, ref_agent) NOT LIKE '%".$DB->escape_like_str(substr($part, 1))."%' AND ";
 				}
 				else
 				{
-					$search_sql .= "CONCAT_WS(' ', ref_from, ref_to, ref_ip, ref_agent) LIKE '%".$DB->escape_str($part)."%' AND ";
+					$search_sql .= "CONCAT_WS(' ', ref_from, ref_to, ref_ip, ref_agent) LIKE '%".$DB->escape_like_str($part)."%' AND ";
 				}
 			}
 			
@@ -389,7 +389,7 @@ EOT;
 
     function delete_confirm()
     { 
-        global $IN, $DSP, $LANG;
+        global $IN, $DSP, $LANG, $DB;
         
         if ( ! $IN->GBL('toggle', 'POST'))
         {
@@ -428,16 +428,29 @@ EOT;
         			  
         $style = ($i++ % 2) ? 'tableCellOne' : 'tableCellTwo';;
                       
+		if ($DB->table_exists('exp_blacklisted') === TRUE)
+		{
+			$add_ips = $LANG->line('add_and_blacklist_ips');
+			$add_urls = $LANG->line('add_and_blacklist_urls');
+			$add_agents = $LANG->line('add_and_blacklist_agents');						
+		}
+		else
+		{
+			$add_ips = $LANG->line('add_ips');
+			$add_urls = $LANG->line('add_urls');
+			$add_agents = $LANG->line('add_agents');				
+		}
+
         $DSP->body .= $DSP->tr().
-        			  $DSP->table_qcell('tableCellOne', $LANG->line('add_urls')).
+        			  $DSP->table_qcell('tableCellOne', $add_urls).
         			  $DSP->table_qcell('tableCellOne', $DSP->input_checkbox('add_urls', 'y')).
         			  $DSP->tr_c().
         			  $DSP->tr().
-        			  $DSP->table_qcell('tableCellTwo', $LANG->line('add_ips')).
+        			  $DSP->table_qcell('tableCellTwo', $add_ips).
         			  $DSP->table_qcell('tableCellTwo', $DSP->input_checkbox('add_ips', 'y')).
         			  $DSP->tr_c().
         			  $DSP->tr().
-        			  $DSP->table_qcell('tableCellOne', $LANG->line('add_agents')).
+        			  $DSP->table_qcell('tableCellOne', $add_agents).
         			  $DSP->table_qcell('tableCellOne', $DSP->input_checkbox('add_agents', 'y')).
         			  $DSP->tr_c();
         			  
@@ -476,6 +489,7 @@ EOT;
 
         $ids = array();
         $new = array('url'=>array(),'ip' => array(), 'agent' => array());
+		$white = array('url'=>array(),'ip' => array(), 'agent' => array());
                 
         foreach ($_POST as $key => $val)
         {        
@@ -522,91 +536,90 @@ EOT;
         			$new['ip'][] = $row['ref_ip'];
         		}
         	}
-        	
-        	        	
+ 
         	/** -----------------------------
-        	/**  Add Current Blacklisted
+        	/**  Add Current Blacklisted - but only if the table exists!
         	/** -----------------------------*/
+
+			if ($DB->table_exists('exp_blacklisted'))
+			{       	
         
-        	$query			= $DB->query("SELECT * FROM exp_blacklisted");
-        	$old['url']		= array();
-        	$old['agent']	= array();
-        	$old['ip']		= array();
+        		$query			= $DB->query("SELECT * FROM exp_blacklisted");
+        		$old['url']		= array();
+        		$old['agent']	= array();
+        		$old['ip']		= array();
         
-        	if ($query->num_rows > 0)
-        	{
-        		foreach($query->result as $row)
+        		if ($query->num_rows > 0)
         		{
-        			$old_values = explode('|',$row['blacklisted_value']);
-        			for ($i=0; $i < sizeof($old_values); $i++)
+        			foreach($query->result as $row)
         			{
-        				$old[$row['blacklisted_type']][] = $old_values[$i]; 
-        			}       	
+        				$old_values = explode('|',$row['blacklisted_value']);
+        				for ($i=0; $i < sizeof($old_values); $i++)
+        				{
+        					$old[$row['blacklisted_type']][] = $old_values[$i]; 
+        				}       	
+        			}
         		}
-        	}
         	
-        	/** -----------------------------------------
-        	/**  Check for uniqueness and sort
-        	/** -----------------------------------------*/
+        		/** -----------------------------------------
+        		/**  Check for uniqueness and sort
+        		/** -----------------------------------------*/
         
-        	$new['url'] 	= array_unique(array_merge($old['url'],$new['url']));
-        	$new['agent']	= array_unique(array_merge($old['agent'],$new['agent']));
-        	$new['ip']		= array_unique(array_merge($old['ip'],$new['ip']));
+        		$new['url'] 	= array_unique(array_merge($old['url'],$new['url']));
+        		$new['agent']	= array_unique(array_merge($old['agent'],$new['agent']));
+        		$new['ip']		= array_unique(array_merge($old['ip'],$new['ip']));
         	
-        	sort($new['url']);
-        	sort($new['agent']);
-        	sort($new['ip']);         	
+        		sort($new['url']);
+        		sort($new['agent']);
+        		sort($new['ip']);         	
         	
         	
-        	/** -----------------------------------------
-			/**  Put blacklist info back into database
-			/** -----------------------------------------*/
+        		/** -----------------------------------------
+				/**  Put blacklist info back into database
+				/** -----------------------------------------*/
 			
-			$DB->query("DELETE FROM exp_blacklisted");
+				$DB->query("DELETE FROM exp_blacklisted");
 		
-			foreach($new as $key => $value)
-			{
-				$blacklisted_value = implode('|',$value);
+				foreach($new as $key => $value)
+				{
+					$blacklisted_value = implode('|',$value);
 			
-				$data = array(	'blacklisted_type' 	=> $key,
+					$data = array(	'blacklisted_type' 	=> $key,
 								'blacklisted_value'	=> $blacklisted_value);
 								
-				$DB->query($DB->insert_string('exp_blacklisted', $data));
-			}
+					$DB->query($DB->insert_string('exp_blacklisted', $data));
+				}
 			
-			/** -----------------------------------------
-        	/**  Current Whitelisted
-        	/** -----------------------------------------*/
+				/** -----------------------------------------
+        		/**  Current Whitelisted
+        		/** -----------------------------------------*/
         
-        	$query				= $DB->query("SELECT * FROM exp_whitelisted");
-        	$white['url']		= array();
-        	$white['agent']		= array();
-        	$white['ip']		= array();
+        		$query				= $DB->query("SELECT * FROM exp_whitelisted");
         
-        	if ($query->num_rows > 0)
-        	{
-        		foreach($query->result as $row)
+        		if ($query->num_rows > 0)
         		{
-        			$white_values = explode('|',$row['whitelisted_value']);
-        			for ($i=0; $i < sizeof($white_values); $i++)
+        			foreach($query->result as $row)
         			{
-        				if (trim($white_values[$i]) != '')
+        				$white_values = explode('|',$row['whitelisted_value']);
+        				for ($i=0; $i < sizeof($white_values); $i++)
         				{
-        					$white[$row['whitelisted_type']][] = $DB->escape_str($white_values[$i]); 
-        				}
+        					if (trim($white_values[$i]) != '')
+        					{
+        						$white[$row['whitelisted_type']][] = $white_values[$i]; 
+        					}
+						}
         			}       	
         		}
-        	}
      
-        	/** ----------------------------------------------
-			/**  Using new blacklist members, clean out spam
-			/** ----------------------------------------------*/
+        		/** ----------------------------------------------
+				/**  Using new blacklist members, clean out spam
+				/** ----------------------------------------------*/
 		
-			$new['url']		= array_diff($new['url'], $old['url']);
-			$new['agent']	= array_diff($new['agent'], $old['agent']);
-        	$new['ip']		= array_diff($new['ip'], $old['ip']);
-        	
-        	
+				$new['url']		= array_diff($new['url'], $old['url']);
+				$new['agent']	= array_diff($new['agent'], $old['agent']);
+        		$new['ip']		= array_diff($new['ip'], $old['ip']);
+         	}       	
+
         	// -------------------------------------------
 			// 'delete_referrers_blacklist' hook.
 			//  - Accepts the new members for the blacklist and you can
@@ -632,30 +645,30 @@ EOT;
 					{
 						if ($value[$i] != '')
 						{
-							$sql = "DELETE FROM exp_referrers WHERE ref_{$name} LIKE '%{$value[$i]}%'";
+							$sql = "DELETE FROM exp_referrers WHERE ref_{$name} LIKE '%".$DB->escape_like_str($value[$i])."%'";
 							
 							if (sizeof($white[$key]) > 1)
 							{
-								$sql .=  " AND ref_{$name} NOT LIKE '%".implode("%' AND ref_{$name} NOT LIKE '%", $white[$key])."%'";
+								$sql .=  " AND ref_{$name} NOT LIKE '%".implode("%' AND ref_{$name} NOT LIKE '%", $DB->escape_like_str($white[$key]))."%'";
 							}
 							elseif (sizeof($white[$key]) > 0)
 							{
-								$sql .= "AND ref_{$name} NOT LIKE '%".$white[$key]['0']."%'";
+								$sql .= "AND ref_{$name} NOT LIKE '%".$DB->escape_like_str($white[$key]['0'])."%'";
 							}
 							
 							$DB->query($sql);
 							
 							if ($key == 'url' OR $key == 'ip')
 							{
-								$sql = " exp_trackbacks WHERE trackback_".$key." LIKE '%{$value[$i]}%'";
+								$sql = " exp_trackbacks WHERE trackback_".$key." LIKE '%".$DB->escape_like_str($value[$i])."%'";
 							
 								if (sizeof($white[$key]) > 1)
 								{
-									$sql .=  " AND trackback_".$key." NOT LIKE '%".implode("%' AND trackback_".$key." NOT LIKE '%", $white[$key])."%'";
+									$sql .=  " AND trackback_".$key." NOT LIKE '%".implode("%' AND trackback_".$key." NOT LIKE '%", $DB->escape_like_str($white[$key]))."%'";
 								}
 								elseif (sizeof($white[$key]) > 0)
 								{
-									$sql .= "AND trackback_".$key." NOT LIKE '%".$white[$key]['0']."%'";
+									$sql .= "AND trackback_".$key." NOT LIKE '%".$DB->escape_like_str($white[$key]['0'])."%'";
 								}
 							
 								$query = $DB->query("SELECT entry_id, weblog_id FROM".$sql);

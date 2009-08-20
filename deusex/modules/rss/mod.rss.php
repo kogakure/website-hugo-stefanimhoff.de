@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -351,7 +351,7 @@ class Rss {
 			/**  {weblog_id}
 			/** ----------------------------------------*/
 			
-			if (ereg("weblog_id", $key))
+			if ($key == 'weblog_id')
 			{                     
 				$TMPL->tagdata = $TMPL->swap_var_single(
 															$key, 
@@ -365,7 +365,7 @@ class Rss {
 			/**  {encoding}
 			/** ----------------------------------------*/
 			
-			if (ereg("encoding", $key))
+			if ($key == 'encoding')
 			{                     
 				$TMPL->tagdata = $TMPL->swap_var_single(
 															$key, 
@@ -379,7 +379,7 @@ class Rss {
 			/**  {weblog_language}
 			/** ----------------------------------------*/
 			
-			if (ereg("weblog_language", $key))
+			if ($key == 'weblog_language')
 			{                     
 				$TMPL->tagdata = $TMPL->swap_var_single(
 															$key, 
@@ -393,7 +393,7 @@ class Rss {
 			/**  {weblog_description}
 			/** ----------------------------------------*/
 			
-			if (ereg("weblog_description", $key))
+			if ($key == 'weblog_description')
 			{                     
 				$TMPL->tagdata = $TMPL->swap_var_single(
 															$key, 

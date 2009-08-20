@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -508,7 +508,7 @@ class Weblog_calendar extends Weblog {
 						/**  parse permalink
 						/** ----------------------------------------*/
 						
-						if (ereg("^permalink", $key))
+						if (strncmp('permalink', $key, 9) == 0)
 						{                     
 							if ($FNS->extract_path($key) != '' AND $FNS->extract_path($key) != 'SITE_INDEX')
 							{
@@ -526,7 +526,7 @@ class Weblog_calendar extends Weblog {
 						/**  parse title permalink
 						/** ----------------------------------------*/
 						
-						if (ereg("^title_permalink", $key) || ereg("^url_title_path", $key))
+						if (strncmp('title_permalink', $key, 15) == 0 OR strncmp('url_title_path', $key, 14) == 0)
 						{ 
 							if ($FNS->extract_path($key) != '' AND $FNS->extract_path($key) != 'SITE_INDEX')
 							{
@@ -582,7 +582,7 @@ class Weblog_calendar extends Weblog {
 						/**  profile path
 						/** ----------------------------------------*/
 						
-						if (ereg("^profile_path", $key))
+						if (strncmp('profile_path', $key, 12) == 0)
 						{                       
 							$profile_path[$key] = $FNS->create_url($FNS->extract_path($key).'/'.$row['member_id']);
 						}
@@ -591,7 +591,7 @@ class Weblog_calendar extends Weblog {
 						/**  parse comment_path or trackback_path
 						/** ----------------------------------------*/
 						
-						if (ereg("^comment_path", $key) || ereg("^trackback_path", $key) || ereg("^entry_id_path", $key) )
+						if (preg_match("#^(comment_path|trackback_path|entry_id_path)#", $key))
 						{                       
 							$id_path[$key] = $FNS->create_url($FNS->extract_path($key).'/'.$row['entry_id']);
 						}
@@ -618,7 +618,7 @@ class Weblog_calendar extends Weblog {
 						/**  {day_path}
 						/** ----------------------------------------*/
 						
-						if (ereg("^day_path", $key))
+						if (strncmp('day_path', $key, 8) == 0)
 						{               
 							$d = date('d', $LOC->set_localized_time($row['entry_date']));
 							$m = date('m', $LOC->set_localized_time($row['entry_date']));

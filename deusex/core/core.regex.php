@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -42,9 +42,10 @@ class Regex {
 									);
 	/* never allowed, regex replacement */
 	var $never_allowed_regex = array(
-										"javascript\s*:"	=> '[removed]',
-										"expression\s*\("	=> '[removed]', // CSS and IE
-										"Redirect\s+302"	=> '[removed]'
+										"javascript\s*:"			=> '[removed]',
+										"expression\s*(\(|&\#40;)"	=> '[removed]', // CSS and IE
+										"vbscript\s*:"				=> '[removed]', // IE, surprise!
+										"Redirect\s+302"			=> '[removed]'
 									);
 
 
@@ -130,7 +131,7 @@ class Regex {
 	{
 		global $PREFS;
 		
-		if (stristr($str, '.php') AND ereg("/index/$", $str))
+		if (stristr($str, '.php') AND preg_match("#\/index\/$#", $str))
 		{
 			$str = substr($str, 0, -6);
 		}
@@ -434,18 +435,9 @@ class Regex {
 
     function remove_extra_commas($str)
     {
-		$str = str_replace(",,", ",", $str);
-    
-        if (substr($str, 0, 1) == ',')
-        {
-            $str = substr($str, 1);
-        }
-       
-        if (substr($str, -1) == ',')
-        {
-            $str = substr($str, 0, -1);
-        }
-        
+		// Removes space separated commas as well as leading and trailing commas
+		$str =  implode(',', preg_split('/[\s,]+/', $str, -1,  PREG_SPLIT_NO_EMPTY));
+		        
         return $str;
     }
     /* END */
@@ -720,11 +712,11 @@ class Regex {
 		{
 			// Images have a tendency to have the PHP short opening and closing tags every so often
 			// so we skip those and only do the long opening tags.
-			$str = str_replace(array('<?php', '<?PHP'),  array('&lt;?php', '&lt;?PHP'), $str);
+			$str = preg_replace('/<\?(php)/i', "&lt;?\\1", $str);
 		}
 		else
 		{
-			$str = str_replace(array('<?php', '<?PHP', '<?', '?'.'>'),  array('&lt;?php', '&lt;?PHP', '&lt;?', '?&gt;'), $str);
+			$str = str_replace(array('<?', '?'.'>'),  array('&lt;?', '?&gt;'), $str);
 		}
 		
 		/*
@@ -968,7 +960,7 @@ class Regex {
 		{
 			foreach ($matches[0] as $match)
 			{
-				$out .= "{$match}";
+				$out .= preg_replace("#/\*.*?\*/#s", '', $match);
 			}			
 		}
 
@@ -1112,7 +1104,7 @@ class Regex {
     
     function _convert_attribute($match)
     {
-    	return str_replace(array('>', '<'), array('&gt;', '&lt;'), $match[0]);
+    	return str_replace(array('>', '<', '\\'), array('&gt;', '&lt;', '\\\\'), $match[0]);
     }
     
     /* END */

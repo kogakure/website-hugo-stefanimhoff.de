@@ -5,7 +5,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -92,17 +92,17 @@ class Throttling {
   		if ($query->num_rows == 1)
   		{
   			$this->current_data = $query->row;
-  			
+
+			$lockout = time() - $this->lockout_time;
+	
+			if ($query->row['locked_out'] == 'y' AND $query->row['last_activity'] > $lockout)
+			{
+				$this->banish();
+				exit;
+			}
+
   			if ($query->row['last_activity'] > $expire)
   			{
-  				$lockout = time() - $this->lockout_time;
-  		
-  				if ($query->row['locked_out'] == 'y' AND $query->row['last_activity'] > $lockout)
-  				{
-					$this->banish();
-					exit;
-  				}
-  		
   				if ($query->row['hits'] == $this->max_page_loads)
   				{
   					// Lock them out and banish them...
@@ -167,10 +167,10 @@ class Throttling {
 		
 		switch ($type)
 		{
-			case 'redirect' :	$loc = ( ! eregi("^http://", $PREFS->ini('banishment_url'))) ? 'http://'.$PREFS->ini('banishment_url') : $PREFS->ini('banishment_url');
-								header("location:$loc");
+			case 'redirect' :	$loc = ( ! preg_match("#^http://#i", $PREFS->ini('banishment_url'))) ? 'http://'.$PREFS->ini('banishment_url') : $PREFS->ini('banishment_url');
+								header("Location: {$loc}");
 				break;
-			case 'message'	:	echo $PREFS->ini('banishment_message');
+			case 'message'	:	echo stripslashes($PREFS->ini('banishment_message'));
 				break;
 			default			:	header("Status: 404 Not Found"); echo "Status: 404 Not Found";
 				break;

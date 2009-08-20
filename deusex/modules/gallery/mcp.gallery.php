@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -270,10 +270,10 @@ class Gallery_CP {
 			$this->prefs[$key] = $val;		
 		}
 		
-		if ( ! ereg("^[\_\-]", $this->prefs['gallery_thumb_prefix']))  
+		if ( ! preg_match("#^[\_\-]#", $this->prefs['gallery_thumb_prefix']))  
 			$this->prefs['gallery_thumb_prefix'] = "_".$this->prefs['gallery_thumb_prefix'];
 			
-		if ( ! ereg("^[\_\-]", $this->prefs['gallery_medium_prefix'])) 
+		if ( ! preg_match("#^[\_\-]#", $this->prefs['gallery_medium_prefix'])) 
 			$this->prefs['gallery_medium_prefix'] = "_".$this->prefs['gallery_medium_prefix'];
 		
 		$this->prefs['gallery_upload_path'] = $FNS->set_realpath($this->prefs['gallery_upload_path']);
@@ -665,20 +665,6 @@ EOT;
 				
 		$entry_id = ( ! $IN->GBL('entry_id')) ? FALSE : $IN->GBL('entry_id');
 		
-		/** ---------------------------------------
-		/**  Is there a default category for new entries?
-		/** ---------------------------------------*/
-		
-		if ($entry_id === FALSE)
-		{
-			$result = $DB->query("SELECT cat_id FROM exp_gallery_categories WHERE is_default = 'y' AND gallery_id = '".$this->gallery_id."'");
-
-			if ($result->num_rows == 1)
-			{
-				$cat_id = $result->row['cat_id'];
-			}			
-		}
-		
 		/** ------------------------------------
 		/**  Set Default Variables
 		/** ------------------------------------*/
@@ -702,6 +688,14 @@ EOT;
 				$val = str_replace('custom_field', 'gallery_cf', $val);
 				$$val = '';
 			}
+
+			// Is there a default category for new entries?
+			$result = $DB->query("SELECT cat_id FROM exp_gallery_categories WHERE is_default = 'y' AND gallery_id = '".$this->gallery_id."'");
+
+			if ($result->num_rows == 1)
+			{
+				$cat_id = $result->row['cat_id'];
+			}			
 		}
 		
 		if ($author_id == '')
@@ -1833,7 +1827,7 @@ EOT;
 			else
 			{
 				$x = explode("/", $serverfile);
-				$image_name = (ereg("/", $serverfile)) ? end($x) : $serverfile;	
+				$image_name = (stristr($serverfile, '/')) ? end($x) : $serverfile;	
 				$src = $FNS->remove_double_slashes($this->prefs['gallery_upload_path'].'/');
 			}
 			
@@ -2130,8 +2124,16 @@ EOT;
 				$views = $views + $row['views'];
 			}
 		}
+		
+		// Gather comment counts for inclusion in the update
 					
-		$DB->query("UPDATE exp_gallery_categories SET total_files = '{$tot}', total_views = '{$views}', recent_entry_date = '{$date}' WHERE cat_id = '".$DB->escape_str($cat_id)."'");
+		$query = $DB->query("SELECT comment_date FROM exp_gallery_comments egc, exp_gallery_entries ege WHERE egc.entry_id = ege.entry_id AND egc.status = 'o' AND ege.cat_id = '".$DB->escape_str($cat_id)."' ORDER BY egc.comment_date desc LIMIT 1");
+        $comment_date = ($query->num_rows == 0) ? 0 : $query->row['comment_date'];
+
+		$query = $DB->query("SELECT COUNT(egc.comment_id) AS count FROM exp_gallery_comments egc, exp_gallery_entries ege WHERE egc.entry_id = ege.entry_id AND ege.status = 'o' AND ege.cat_id = '".$DB->escape_str($cat_id)."'");
+        $total_comments = $query->row['count'];
+
+		$DB->query("UPDATE exp_gallery_categories SET total_files = '{$tot}', total_views = '{$views}', recent_entry_date = '{$date}', total_comments = '{$total_comments}', recent_comment_date = '{$comment_date}' WHERE cat_id = '".$DB->escape_str($cat_id)."'");
   	}
 	/* END */
 
@@ -2831,7 +2833,7 @@ EOT;
 
 	function view_files()
 	{
-        global $DSP, $IN, $DB, $LANG, $FNS, $LOC, $PREFS;
+        global $DSP, $IN, $DB, $LANG, $FNS, $LOC, $PREFS, $SESS;
   
         if ( ! $cat_id = $IN->GBL('cat_id'))
         {
@@ -2908,7 +2910,9 @@ EOT;
 			$query = $DB->query($sql);    
 		}
 		        
-        if ($PREFS->ini('time_format') == 'us')
+		$date_fmt = ($SESS->userdata['time_format'] != '') ? $SESS->userdata['time_format'] : $PREFS->ini('time_format');
+
+		if ($date_fmt == 'us')
 		{
 			$datestr = '%m/%d/%y %h:%i %a';
 		}
@@ -3626,7 +3630,7 @@ EOT;
 		unset($_POST['old_cat_name']);
 		
 		
-		if ( ! ereg("/$", $this->prefs['gallery_upload_path'])) $this->prefs['gallery_upload_path'] .= '/';
+		$this->prefs['gallery_upload_path'] = rtrim($this->prefs['gallery_upload_path'], '/').'/';
 
 		// We need to first upadate the default category
 		
@@ -4324,7 +4328,7 @@ EOT;
 					if ($file == $target)
 					{
 						$this->image_folder = $path;
-						@closedir($handle);
+						closedir($handle);
 						
 						return TRUE;
 					}
@@ -4333,7 +4337,7 @@ EOT;
 				}
 			}
 			
-			@closedir($handle);
+			closedir($handle);
 		}
 		
 		return FALSE;
@@ -4598,10 +4602,10 @@ EOT;
 				$tpath  = PATH_CP_IMG;
 				$tpath = str_replace($site_url, '', $tpath);
 				
-				if (eregi("www.", $tpath) OR eregi("http://", $tpath))
+				if (stristr($tpath, 'www.') OR stristr($tpath, 'http://'))
 				{
 					$tpath = str_replace('http://', '', $tpath);
-					$xy = explode('/', $tpath);
+					$xy = explode('/', trim($tpath, '/'));
 					$seg = current($xy);
 					$tpath = str_replace($seg, '', $tpath);
 				}
@@ -4688,7 +4692,7 @@ EOT;
 						'gallery_wm_use_font'					=> 'y',
 						'gallery_wm_font'						=> 'texb.ttf',
 						'gallery_wm_font_size'					=> 16,
-						'gallery_wm_text'						=> 'Copyright 2008',
+						'gallery_wm_text'						=> 'Copyright 2009',
 						'gallery_wm_alignment'					=> '',
 						'gallery_wm_vrt_alignment'				=> 'T',
 						'gallery_wm_hor_alignment'				=> 'L',
@@ -6113,9 +6117,9 @@ EOT;
 			
             while (false !== ($file = readdir($fp)))
             {
-                if (eregi(".ttf$", $file)) 
+                if (preg_match("#\.ttf$#i", $file)) 
                 {
-                		$name = substr($file, 0, -4);
+					$name = substr($file, 0, -4);
                 
 					$selected = ($file == $default) ? 1 : '';
 					
@@ -6222,10 +6226,7 @@ EOT;
 			if ($_POST[$key] != '' AND $_POST[$val] != '')
 			{
 				$dir  = $_POST[$val];
-				$path = $_POST[$key];
-				
-				if (ereg("/$", $path))
-					$path = substr($path, 0, -1);
+				$path = rtrim($_POST[$key], '/');
 				
 				$mpath = substr($path, 0, -strlen($dir)).$dir;
 				
@@ -6242,10 +6243,10 @@ EOT;
 		$_POST['gallery_batch_url']		= ($_POST['gallery_batch_url'] != '') ? $FNS->remove_double_slashes($_POST['gallery_batch_url'].'/') : '';
         
                 
-		if ( ! ereg("^[\_\-]", $_POST['gallery_thumb_prefix']))  
+		if ( ! preg_match("#^[\_\-]#", $_POST['gallery_thumb_prefix']))  
 			$_POST['gallery_thumb_prefix'] = "_".$_POST['gallery_thumb_prefix'];
         
-		if ( ! ereg("^[\_\-]", $_POST['gallery_medium_prefix']))  
+		if ( ! preg_match("#^[\_\-]#", $_POST['gallery_medium_prefix']))  
 			$_POST['gallery_medium_prefix'] = "_".$_POST['gallery_medium_prefix'];
 			
         
@@ -6362,7 +6363,7 @@ EOT;
         
         		foreach ($template as $key => $val)
         		{
-        			$type = (ereg("css", $key)) ? "css" : "webpage";
+        			$type = (stristr($key, 'css')) ? "css" : "webpage";
         			
         			$val = str_replace('{TMPL_template_group_name}', $template_group, $val);
         			$val = str_replace('{TMPL_gallery_name}', 		$_POST['gallery_short_name'], $val);
@@ -6499,16 +6500,9 @@ EOT;
 		$directory_url	= $FNS->remove_double_slashes($this->prefs['gallery_image_url'].'/');
 		$self_location	= BASE.AMP.'C=modules'.AMP.'M=gallery'.AMP.'P=image_toolbox'.AMP.'gallery_id='.$this->gallery_id.AMP.'menu_choice=';
 
-		if (ereg("/", $menu_choice))
-		{
-			$x = explode("/", $menu_choice);		
-			$file_name = end($x);
-		}
-		else
-		{
-			$file_name = $menu_choice;
-		}
-
+		$x = explode("/", $menu_choice);		
+		$file_name = end($x);
+		
 		$max_exceeded = str_replace("%s", $this->max_size, $LANG->line('gallery_max_size'));
 
 		/** ------------------------------------
@@ -7256,7 +7250,7 @@ EOT;
 		/** -----------------------------------*/
 						
 		$folder = '';
-		if (ereg("/", $menu_choice))
+		if (stristr($menu_choice, '/'))
 		{	
 			$xy = explode("/", $menu_choice);
 			$folder = $FNS->remove_double_slashes(str_replace(end($xy), '', $menu_choice));			
@@ -7531,7 +7525,7 @@ EOT;
         // Strip "http://" from URL string
         // to prevent a security error
         $prefix = ( ! isset($prefix) OR $prefix == '') ? 0 : $prefix;
-		if (ereg('http://', $image_url))
+		if (stristr($image_url, 'http://'))
 		{
 			$image_url = str_replace('http://', '', $image_url);
 			$prefix = 1;

@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -1222,11 +1222,9 @@ class Wiki {
 		/**  Parameters
 		/** ----------------------------------------*/
 		
-		$columns = 3;
-		
 		if (trim($match['1']) != '' && ($params = $FNS->assign_parameters($match['1'])) !== FALSE)
 		{
-			$limit = (isset($params['columns']) && is_numeric($params['columns'])) ? $params['columns'] : $limit;
+			$columns = (isset($params['columns']) && is_numeric($params['columns'])) ? $params['columns'] : 3;
 		}
 		
 		/** ----------------------------------------
@@ -1352,8 +1350,8 @@ class Wiki {
 							'{content}'				=> $row['page_content'],
 							'{count}'				=> $count);
 							
-			if ($parse_article === TRUE)
-			{					
+			if ($parse_article !== FALSE)
+			{
 				$data['{article}'] = $this->convert_curly_brackets($TYPE->parse_type( $this->wiki_syntax($row['page_content'], FALSE), 
 																  array(
 																		'text_format'   => $this->text_format,
@@ -2309,7 +2307,7 @@ class Wiki {
     	
     	$data['action']			= $FNS->create_url($this->base_path).$title.'/';
 		$data['id']				= 'edit_article_form';
-		$data['onsubmit']		= "if (is_preview) { this.action = '".$FNS->create_url($this->base_path).$title."/edit/'; }";
+		$data['onsubmit']		= "if (is_preview) { this.action = '".$FNS->create_url($this->base_path).addslashes($title)."/edit/'; }";
 		
 		$data['hidden_fields']	= array(
 										'title'		=> $title,
@@ -2364,6 +2362,7 @@ class Wiki {
 												'{content}',
 												'{preview}',
 												'{redirect_page}',
+												'{path:redirect_page}',
 												'{revision_notes}',
 												'{rename}'
 												), 
@@ -2372,6 +2371,7 @@ class Wiki {
 												$this->encode_ee_tags($REGX->form_prep($content)),
 												$preview,
 												$this->encode_ee_tags($REGX->form_prep($this->prep_title($redirect_page))),
+												$FNS->create_url($this->base_path).$this->valid_title($redirect_page).'/',
 												$this->encode_ee_tags($REGX->form_prep($revision_notes)),
 												$this->encode_ee_tags($REGX->form_prep($rename))
 												), 
@@ -3083,8 +3083,8 @@ class Wiki {
 			
 			// The last line of this query deserves some commenting.
 			// MySQL uses a POSIX regex implementation, one in particular that uses [[:>:]] to match the null
-			// string at the end of a word, i.e. the word boundary.  There is no ereg_quote(), but preg_quote()
-			// escapes all of the necessary characters.  Slashes must be added with addslashes() prior to 
+			// string at the end of a word, i.e. the word boundary.  preg_quote() escapes all of the
+			// necessary characters.  Slashes must be added with addslashes() prior to 
 			// running the string through $DB->escape_str() since it itself strips slashes before utlizing
 			// one of the MySQL escape string PHP functions to prepare the string for use in a query.
 			$query = $DB->query("SELECT p.page_name, n.namespace_label
@@ -4498,7 +4498,7 @@ class Wiki {
 			
 			if (isset($params['switch']))
 			{
-				if (ereg("\|", $params['switch']))
+				if (strpos($params['switch'], '|') !== FALSE)
 				{
 					$x = explode("|", $params['switch']);
 					
@@ -4627,21 +4627,21 @@ class Wiki {
 			/** -------------------------------------*/
 
 			$mysql_function	= (substr($terms['0'], 0,1) == '-') ? 'NOT LIKE' : 'LIKE';    
-			$search_term	= (substr($terms['0'], 0,1) == '-') ? $DB->escape_str(substr($terms['0'], 1)) : $DB->escape_str($terms['0']);
+			$search_term	= (substr($terms['0'], 0,1) == '-') ? substr($terms['0'], 1) : $terms['0'];
 			$connect		= ($mysql_function == 'LIKE') ? 'OR' : 'AND';
 
-			$sql .= "\n(r.page_content {$mysql_function} '%".$DB->escape_str($search_term)."%' ";
-			$sql .= "{$connect} p.page_name {$mysql_function} '%".$DB->escape_str($search_term)."%') ";
+			$sql .= "\n(r.page_content {$mysql_function} '%".$DB->escape_like_str($search_term)."%' ";
+			$sql .= "{$connect} p.page_name {$mysql_function} '%".$DB->escape_like_str($search_term)."%') ";
 
 			for ($i=1; $i < sizeof($terms); $i++) 
 			{
 				$mysql_criteria	= ($mysql_function == 'NOT LIKE' OR substr($terms[$i], 0,1) == '-') ? $not_and : 'AND';
 				$mysql_function	= (substr($terms[$i], 0,1) == '-') ? 'NOT LIKE' : 'LIKE';
-				$search_term	= (substr($terms[$i], 0,1) == '-') ? $DB->escape_str(substr($terms[$i], 1)) : $DB->escape_str($terms[$i]);
+				$search_term	= (substr($terms[$i], 0,1) == '-') ? substr($terms[$i], 1) : $terms[$i];
 				$connect		= ($mysql_function == 'LIKE') ? 'OR' : 'AND';
 				
-				$sql .= "{$mysql_criteria} (r.page_content {$mysql_function} '%".$DB->escape_str($search_term)."%' ";
-				$sql .= "{$connect} p.page_name {$mysql_function} '%".$DB->escape_str($search_term)."%') ";
+				$sql .= "{$mysql_criteria} (r.page_content {$mysql_function} '%".$DB->escape_like_str($search_term)."%' ";
+				$sql .= "{$connect} p.page_name {$mysql_function} '%".$DB->escape_like_str($search_term)."%') ";
 			}
 			
 			// close it up, and add our namespace clause
@@ -5007,7 +5007,7 @@ class Wiki {
 			
 			if (isset($params['switch']))
 			{
-				if (ereg("\|", $params['switch']))
+				if (strpos($params['switch'], '|') !== FALSE)
 				{
 					$x = explode("|", $params['switch']);
 					
@@ -5471,12 +5471,12 @@ class Wiki {
 				
 				$PGR = new Paginate();
 				
-				if ( ! ereg(SELF, $base_path) AND $PREFS->ini('site_index') != '')
+				if ( ! stristr($base_path, SELF) AND $PREFS->ini('site_index') != '')
 				{
 					$base_path .= SELF.'/';
 				}
 																	
-				$first_url = (ereg("\.php/$", $base_path)) ? substr($base_path, 0, -1) : $base_path;			
+				$first_url = (preg_match("#\.php/$#", $base_path)) ? substr($base_path, 0, -1) : $base_path;			
 				
 				$PGR->first_url 	= $first_url;
 				$PGR->path			= $base_path;
@@ -5631,8 +5631,8 @@ class Wiki {
 	
 	function display_attachment()
 	{
-		global $IN, $DB, $LOC;
-		
+		global $IN, $DB, $FNS, $LOC, $SESS;
+
 		if ( ! isset($this->seg_parts['0']) OR strlen($this->seg_parts['0']) != 32)
 		{
 			exit;
@@ -5684,7 +5684,11 @@ class Wiki {
 		{
 			exit;
 		}
-		
+
+		// success, so let's make remove this request from the tracker so login redirects don't go here
+		array_shift($SESS->tracker);
+		$FNS->set_cookie('tracker', serialize($SESS->tracker), '0');
+				
 		fpassthru($fp);
 		@fclose($fp);
 		exit;

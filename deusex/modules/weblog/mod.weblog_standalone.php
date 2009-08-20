@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -136,9 +136,11 @@ class Weblog_standalone extends Weblog {
         $TMPL = new Template();
         
 		$preview = ( ! $IN->GBL('PRV', 'POST')) ? '' : $IN->GBL('PRV');
-
-        if ( ! ereg("/", $preview))
-        		return FALSE;
+		
+		if (strpos($preview, '/') === FALSE)
+		{
+			return FALSE;
+		}
 
 		$ex = explode("/", $preview);
 
@@ -527,20 +529,13 @@ EOT;
 			}
 			else
 			{
-				if ( ! ereg("\|", $category_id))
+				if (strpos($category_id, '|') === FALSE)
 				{
 					$hidden_fields['category[]'] = $category_id;
 				}
 				else
-				{
-					if (ereg("^\|", $category_id))
-					{
-						$category_id = substr($category_id, 1);
-					}
-					if (ereg("\|$", $category_id))
-					{
-						$category_id = substr($category_id, 0, -1);
-					}
+				{	
+					$category_id = trim($category_id, '|');
 					
 					$i = 0;
 					foreach(explode("|", $category_id) as $val)
@@ -617,7 +612,7 @@ EOT;
 		
 		if ($TMPL->fetch_param('show_fields') !== FALSE)
 		{
-			if (ereg("^not ", $TMPL->fetch_param('show_fields')))
+			if (strncmp('not ', $TMPL->fetch_param('show_fields'), 4) == 0)
 			{
 				$these = "AND field_name NOT IN ('".str_replace('|', "','", trim(substr($TMPL->fetch_param('show_fields'), 3)))."') ";
 			}
@@ -674,8 +669,10 @@ EOT;
 				
 				$TYPE = new Typography;
 				$TYPE->convert_curly = FALSE;
+				
+				$title = $TYPE->format_characters(stripslashes($IN->GBL('title', 'POST')));
 					
-				$match['1'] = str_replace(LD.'title'.RD, stripslashes($IN->GBL('title', 'POST')), $match['1']);
+				$match['1'] = str_replace(LD.'title'.RD, $title, $match['1']);
 				
 				// We need to grab each global array index and do a little formatting
 				
@@ -1067,7 +1064,7 @@ EOT;
 				$build .= $temp_chunk;
 			}
 			
-			$tagdata = str_replace(LD.'temp_custom_fields'.RD, $build, $tagdata);
+			$tagdata = str_replace(LD.'temp_custom_fields'.RD, stripslashes($build), $tagdata);
 		}
 		
 		
@@ -1273,7 +1270,7 @@ EOT;
             
             if ($key == 'title')
             {
-                $title = ( ! isset($_POST['title'])) ? $title : $_POST['title'];
+                $title = ( ! isset($_POST['title'])) ? $title : stripslashes($_POST['title']);
 
                 $tagdata = $TMPL->swap_var_single($key, $REGX->form_prep($title), $tagdata);
             }
@@ -1413,7 +1410,7 @@ EOT;
 
             if ($key == 'trackback_urls')
             {
-                $trackback_urls = ( ! isset($_POST['trackback_urls'])) ? '' : $_POST['trackback_urls'];
+                $trackback_urls = ( ! isset($_POST['trackback_urls'])) ? '' : stripslashes($_POST['trackback_urls']);
 
                 $tagdata = $TMPL->swap_var_single($key, $trackback_urls, $tagdata);
             }
@@ -1446,7 +1443,7 @@ EOT;
  			$res .= $url_title_js;
 		}
 		
-        $res .= stripslashes($tagdata);
+        $res .= $tagdata;
         $res .= "</form>"; 
 		
 		return $res;

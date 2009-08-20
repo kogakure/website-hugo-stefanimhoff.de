@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -3465,7 +3465,7 @@ EOT;
 
         // Does field name have invalid characters?
         
-        if ( ! eregi("^[a-zA-z0-9\_\-]+$", $_POST['m_field_name'])) 
+        if ( ! preg_match("#^[a-z0-9\_\-]+$#i", $_POST['m_field_name'])) 
         {
             $error[] = $LANG->line('invalid_characters');
         }
@@ -3894,7 +3894,7 @@ EOT;
                     	}
                     	else
                     	{
-                        	$search_query[] = $key." LIKE '%".$DB->escape_str($val)."%'";
+                        	$search_query[] = $key." LIKE '%".$DB->escape_like_str($val)."%'";
                         }
                     }
                 }
@@ -4197,7 +4197,7 @@ EOT;
 		$sql_a = "SELECT COUNT(*) AS count ";
 		$sql_b = "SELECT member_id, username, screen_name, ip_address, email, join_date ";
 		$sql   = "FROM exp_members 
-				 	WHERE ip_address LIKE '%".$DB->escape_str($ip)."%'
+				 	WHERE ip_address LIKE '%".$DB->escape_like_str($ip)."%'
 					ORDER BY screen_name desc ";
 		
 		// Run the query the first time to get total for pagination
@@ -4260,7 +4260,7 @@ EOT;
 		$sql_b = "SELECT s.site_label, t.entry_id, t.weblog_id, t.title, t.ip_address, m.member_id, m.username, m.screen_name, m.email ";
 		
 		$sql = "FROM exp_weblog_titles t, exp_members m, exp_sites s
-				WHERE t.ip_address LIKE '%".$DB->escape_str($ip)."%'
+				WHERE t.ip_address LIKE '%".$DB->escape_like_str($ip)."%'
 				AND t.site_id = s.site_id
 				AND t.author_id = m.member_id
 				ORDER BY entry_id desc ";
@@ -4365,7 +4365,7 @@ EOT;
 			$sql_a = "SELECT COUNT(*) AS count ";
 			$sql_b = "SELECT comment_id, entry_id, weblog_id, author_id, comment, name, email, ip_address "; 
 			$sql = "FROM exp_comments 
-					WHERE ip_address LIKE '%".$DB->escape_str($ip)."%'
+					WHERE ip_address LIKE '%".$DB->escape_like_str($ip)."%'
 					ORDER BY comment_id desc ";
 			
 			// Run the query the first time to get total for pagination
@@ -4446,7 +4446,7 @@ EOT;
 			$sql_a = "SELECT COUNT(*) AS count ";
 			$sql_b = "SELECT e.cat_id, c.gallery_id, c.comment_id, c.entry_id, c.author_id, c.comment, c.name, c.email, c.ip_address "; 
 			$sql = "FROM exp_gallery_comments c, exp_gallery_entries e
-					WHERE ip_address LIKE '%".$DB->escape_str($ip)."%'
+					WHERE ip_address LIKE '%".$DB->escape_like_str($ip)."%'
 					AND c.entry_id = e.entry_id
 					ORDER BY c.comment_id desc ";
 			
@@ -4527,7 +4527,7 @@ EOT;
 			$sql_a = "SELECT COUNT(*) AS count ";
 			$sql_b = "SELECT f.topic_id, f.forum_id, f.title, f.ip_address, m.member_id, m.screen_name, m.email, b.board_forum_url "; 
 			$sql = "FROM exp_forum_topics f, exp_members m, exp_forum_boards b
-					WHERE f.ip_address LIKE '%".$DB->escape_str($ip)."%'
+					WHERE f.ip_address LIKE '%".$DB->escape_like_str($ip)."%'
 					AND f.board_id = b.board_id
 					AND f.author_id = m.member_id
 					ORDER BY f.topic_id desc ";
@@ -4596,7 +4596,7 @@ EOT;
 			$sql_a = "SELECT COUNT(*) AS count ";
 			$sql_b = "SELECT p.post_id, p.forum_id, p.body, p.ip_address, m.member_id, m.screen_name, m.email, b.board_forum_url "; 
 			$sql = "FROM exp_forum_posts p, exp_members m, exp_forum_boards b
-					WHERE p.ip_address LIKE '%".$DB->escape_str($ip)."%'
+					WHERE p.ip_address LIKE '%".$DB->escape_like_str($ip)."%'
 					AND p.author_id = m.member_id
 					AND p.board_id = b.board_id
 					ORDER BY p.topic_id desc ";
@@ -5501,7 +5501,7 @@ EOT;
 		$str .= '-----------------------------------------------------'."\n";
 		$str .= ' http://expressionengine.com/'."\n";
 		$str .= '-----------------------------------------------------'."\n";
-		$str .= ' Copyright (c) 2003 - 2008 EllisLab, Inc.'."\n";
+		$str .= ' Copyright (c) 2003 - 2009 EllisLab, Inc.'."\n";
 		$str .= '====================================================='."\n";
 		$str .= ' THIS IS COPYRIGHTED SOFTWARE'."\n";
 		$str .= ' PLEASE READ THE LICENSE AGREEMENT'."\n";

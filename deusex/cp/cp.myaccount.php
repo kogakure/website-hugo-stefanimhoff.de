@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -1073,16 +1073,19 @@ class MyAccount {
 
     function update_email_settings()
     {
-        global $IN, $DSP, $DB, $SESS, $PREFS, $FNS, $REGX, $LOG, $LANG;
-      
-        if (FALSE === ($id = $this->auth_id()))
-        {
-            return $DSP->no_access_message();
-        }
-        
-        /** -------------------------------------
-        /**  Validate submitted data
-        /** -------------------------------------*/
+		global $IN, $DSP, $DB, $SESS, $PREFS, $FNS, $REGX, $LOG, $LANG;
+
+		if (FALSE === ($id = $this->auth_id()))
+		{
+		    return $DSP->no_access_message();
+		}
+
+		/** -------------------------------------
+		/**  Validate submitted data
+		/** -------------------------------------*/
+
+		$query = $DB->query("SELECT email FROM exp_members WHERE member_id = '".$DB->escape_str($id)."'");  
+		$current_email = $query->row['email'];
 
 		if ( ! class_exists('Validate'))
 		{
@@ -1094,10 +1097,10 @@ class MyAccount {
 										'member_id'			=> $id,
 										'val_type'			=> 'update', // new or update
 										'fetch_lang' 		=> FALSE, 
-										'require_cpw' 		=> ($_POST['current_email'] != $_POST['email']) ? TRUE :FALSE,
+										'require_cpw' 		=> ($current_email != $_POST['email']) ? TRUE :FALSE,
 										'enable_log'		=> TRUE,
 										'email'				=> $_POST['email'],
-										'cur_email'			=> $_POST['current_email'],
+										'cur_email'			=> $current_email,
 									 	'cur_password'		=> $_POST['password']
 									 )
 							);
@@ -1682,7 +1685,7 @@ class MyAccount {
 						bulletin_board,
 						pmachine_news_feed";
 						
-		if ($SESS->userdata['group_id'] == 1)
+		if ($DSP->allowed_group('can_access_admin') === TRUE)
 		{    	
 			  $sql .= ",
 						member_search_form,
@@ -1797,12 +1800,11 @@ class MyAccount {
 						'pmachine_news_feed'
         			);
         			
-		if ($SESS->userdata['group_id'] == 1)
+		if ($DSP->allowed_group('can_access_admin') === TRUE)
 		{  
 			$opts[] = 'recent_members';
 			$opts[] = 'member_search_form';
 		}						
-						
         
         $prefs = array();
                 
@@ -1928,7 +1930,7 @@ class MyAccount {
 
     function set_homepage_prefs()
     {
-        global $DB, $SESS, $FNS, $EXT;   
+        global $DB, $SESS, $FNS, $EXT, $DSP;   
 
         if (FALSE === ($id = $this->auth_id()))
         {
@@ -1940,7 +1942,7 @@ class MyAccount {
 		unset($_POST['loc']);
 		unset($_POST['id']);
 		
-		if ($SESS->userdata['group_id'] != 1)
+		if (! $DSP->allowed_group('can_access_admin'))
 		{  
 			unset($_POST['recent_members']);
 			unset($_POST['member_search_form']);
@@ -3287,7 +3289,7 @@ class MyAccount {
 			$avstr .= "</tr>";
 		}
 		
-		if ( ! ereg("\<\/tr\>$", $avstr))
+		if ( ! preg_match("#\<\/tr\>$#i", $avstr))
 		{
 			$avstr .= "</tr>";
 		}
@@ -3526,8 +3528,8 @@ class MyAccount {
 				}
 				
 				$DB->query("UPDATE exp_members SET avatar_filename = '', avatar_width='', avatar_height='' WHERE member_id = '{$id}' ");
-			
-				if (ereg('/', $query->row['avatar_filename']))
+
+				if (strncmp($query->row['avatar_filename'], 'uploads/', 8) == 0)
 				{
 					@unlink($PREFS->ini('avatar_path', TRUE).$query->row['avatar_filename']);
 				}
@@ -3662,7 +3664,7 @@ class MyAccount {
 		/**  Does the image have a file extension?
 		/** ----------------------------------------*/
 		
-		if ( ! ereg('\.', $filename))
+		if (strpos($filename, '.') === FALSE)
 		{
 			return $OUT->show_user_error('submission', $LANG->line('invalid_image_type'));
 		}
@@ -3698,9 +3700,9 @@ class MyAccount {
 			$query = $DB->query("SELECT avatar_filename FROM exp_members WHERE member_id = '{$id}'");
 			$old_filename = ($query->row['avatar_filename'] == '') ? '' : $query->row['avatar_filename'];
 			
-			if (ereg('/', $old_filename))
+			if (strpos($old_filename, '/') !== FALSE)
 			{
-				$x = explode('/', $old_filename);
+				$x = explode('/', trim($old_filename, '/'));
 				$old_filename =  end($x);
 			}
 		}
@@ -5145,7 +5147,7 @@ EOF;
 	
 	function do_member_search()
 	{
-        global $DB, $DSP, $FNS, $LANG;
+        global $DB, $DSP, $FNS, $LANG, $PREFS;
 
        	$redirect_url = BASE.AMP."C=myaccount".AMP."M=member_search".AMP."Z=1";
        
@@ -5180,7 +5182,7 @@ EOF;
 			{
 				if ($val != '')
 				{
-					$search_query[] = $key." LIKE '%".$DB->escape_str($val)."%'";
+					$search_query[] = $key." LIKE '%".$DB->escape_like_str($val)."%'";
 				}
 			}
 		}

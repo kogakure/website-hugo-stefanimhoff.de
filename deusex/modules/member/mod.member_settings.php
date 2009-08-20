@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -478,15 +478,17 @@ class Member_settings extends Member {
 
 			if ($key == 'url')
 			{
-				if (substr($query->row['url'], 0, 4) != "http" AND ! ereg('://', $query->row['url'])) 
-					$query->row['url'] = "http://".$query->row['url']; 
+				if (substr($query->row['url'], 0, 4) != "http" AND strpos($query->row['url'], '://') === FALSE)
+				{
+					$query->row['url'] = "http://".$query->row['url'];
+				}
 			}
 		
 			/** ----------------------------------------
 			/**  "last_visit" 
 			/** ----------------------------------------*/
 			
-			if (ereg("^last_visit", $key))
+			if (strncmp('last_visit', $key, 10) == 0)
 			{			
 				$content = $this->_var_swap_single($key, ($query->row['last_activity'] > 0) ? $LOC->decode_date($val, $query->row['last_activity']) : '', $content);
 			}
@@ -495,7 +497,7 @@ class Member_settings extends Member {
 			/**  "join_date" 
 			/** ----------------------------------------*/
 			
-			if (ereg("^join_date", $key))
+			if (strncmp('join_date', $key, 9) == 0)
 			{                     
 				$content = $this->_var_swap_single($key, ($query->row['join_date'] > 0) ? $LOC->decode_date($val, $query->row['join_date']) : '', $content);
 			}
@@ -504,7 +506,7 @@ class Member_settings extends Member {
 			/**  "last_entry_date" 
 			/** ----------------------------------------*/
 			
-			if (ereg("^last_entry_date", $key))
+			if (strncmp('last_entry_date', $key, 15) == 0)
 			{                     
 				$content = $this->_var_swap_single($key, ($query->row['last_entry_date'] > 0) ? $LOC->decode_date($val, $query->row['last_entry_date']) : '', $content);
 			}
@@ -513,7 +515,7 @@ class Member_settings extends Member {
 			/**  "last_forum_post_date" 
 			/** ----------------------------------------*/
 			
-			if (ereg("^last_forum_post_date", $key))
+			if (strncmp('last_forum_post_date', $key, 20) == 0)
 			{                     
 				$content = $this->_var_swap_single($key, ($query->row['last_forum_post_date'] > 0) ? $LOC->decode_date($val, $query->row['last_forum_post_date']) : '', $content);
 			}
@@ -522,7 +524,7 @@ class Member_settings extends Member {
 			/**  parse "recent_comment" 
 			/** ----------------------------------------*/
 			
-			if (ereg("^last_comment_date", $key))
+			if (strncmp('last_comment_date', $key, 17) == 0)
 			{                     
 				$content = $this->_var_swap_single($key, ($query->row['last_comment_date'] > 0) ? $LOC->decode_date($val, $query->row['last_comment_date']) : '', $content);
 			}
@@ -613,7 +615,7 @@ class Member_settings extends Member {
 			/**  {local_time}
 			/** ----------------------*/
 			
-			if (ereg("^local_time", $key))
+			if (strncmp('local_time', $key, 10) == 0)
 			{           
 				$time = $LOC->now;
 
@@ -631,7 +633,7 @@ class Member_settings extends Member {
 			/**  {bio}
 			/** ----------------------*/
 			
-			if (ereg("^bio$", $key))
+			if ($key == 'bio')
 			{
 				$bio = $TYPE->parse_type($query->row[$val], 
 															 array(
@@ -648,12 +650,13 @@ class Member_settings extends Member {
 			// Special condideration for {total_forum_replies}, and
 			// {total_forum_posts} whose meanings do not match the
 			// database field names
-			if (ereg("^total_forum_replies", $key))
+			
+			if ($key == 'total_forum_replies')
 			{
 				$content = $this->_var_swap_single($key, $query->row['total_forum_posts'], $content);
 			}
 			
-			if (ereg("^total_forum_posts", $key))
+			if ($key == 'total_forum_posts')
 			{
 				$total_posts = $query->row['total_forum_topics'] + $query->row['total_forum_posts'];
 				$content = $this->_var_swap_single($key, $total_posts, $content);
@@ -1856,7 +1859,7 @@ class Member_settings extends Member {
         
         foreach ($_POST as $key => $val)
 		{
-			if ($key == 'XID')
+			if ($key == 'XID' OR $key == 'site_id')
 			{
 				continue;
 			}
@@ -1871,7 +1874,7 @@ class Member_settings extends Member {
 			{
 				if ($val != '')
 				{
-					$search_query[] = $key." LIKE '%".$DB->escape_str($val)."%'";
+					$search_query[] = $key." LIKE '%".$DB->escape_like_str($val)."%'";
 				}
 			}
 		}
@@ -2118,7 +2121,7 @@ UNGA;
 	{
 		global $DB, $LANG, $IN, $FNS, $PREFS;
 		
-		if ($this->cur_id == '' OR ! ereg('_', $this->cur_id))
+		if ($this->cur_id == '' OR strpos($this->cur_id, '_') === FALSE)
 		{
 			return;
 		}

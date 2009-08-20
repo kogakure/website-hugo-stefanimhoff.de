@@ -5,7 +5,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -229,8 +229,10 @@ class Image_lib {
 		
 		if ($this->thumb_prefix != '')
 		{
-			if ( ! ereg("^[\_\-]", $this->thumb_prefix))
-				$this->thumb_prefix = "_".$this->thumb_prefix;
+			if (substr($this->thumb_prefix, 0, 1) != '-' && substr($this->thumb_prefix, 0, 1) != '_')
+			{
+				$this->thumb_prefix = '_'.$this->thumb_prefix;	
+			}
 		}
 
 		/** ---------------------------------
@@ -316,7 +318,7 @@ class Image_lib {
 	{
 		$protocol = 'image_process_'.$this->resize_protocol;
 		
-		if (ereg("gd2$", $protocol))
+		if (substr($protocol, -3) == 'gd2')
 		{
 			$protocol = 'image_process_gd';
 		}
@@ -339,7 +341,7 @@ class Image_lib {
 	{
 		$protocol = 'image_process_'.$this->resize_protocol;
 		
-		if (ereg("gd2$", $protocol))
+		if (substr($protocol, -3) == 'gd2')
 		{
 			$protocol = 'image_process_gd';
 		}
@@ -545,11 +547,10 @@ class Image_lib {
 			
 			return FALSE;
     	}
-    	
     	    	
-		if ( ! eregi("convert$", $this->libpath)) 
+		if ( ! preg_match("/convert$/i", $this->libpath))
 		{
-			if ( ! eregi("/$", $this->libpath)) $this->libpath .= "/";
+			$this->libpath = rtrim($this->libpath, '/').'/';
 		
 			$this->libpath .= 'convert';
     	}
@@ -1512,26 +1513,10 @@ class Image_lib {
 
 	function explode_name($file_name)
 	{
-		$x = explode('.', $file_name);
-		$ret['ext'] = '.'.end($x);
+		$ext = strrchr($file_name, '.');
+		$name = ($ext === FALSE) ? $file_name : substr($file_name, 0, -strlen($ext));
 		
-		$name = '';
-		
-		$ct = count($x)-1;
-		
-		for ($i = 0; $i < $ct; $i++)
-		{
-			$name .= $x[$i];
-			
-			if ($i < ($ct - 1))
-			{
-				$name .= '.';
-			}
-		}
-		
-		$ret['name'] = $name;
-		
-		return $ret;
+		return array('ext' => $ext, 'name' => $name);
 	}	
 	/* END */
 	
@@ -1543,7 +1528,7 @@ class Image_lib {
 	
 	function gd_loaded()
 	{
-		if ( ! extension_loaded('gd'))
+		if ( ! extension_loaded('gd') && version_compare(PHP_VERSION, '5.3') < 0)
 		{
 			if ( ! dl('gd.so'))
 			{

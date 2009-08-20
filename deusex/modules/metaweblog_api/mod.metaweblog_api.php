@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -300,7 +300,7 @@ class Metaweblog_api {
 			
 			$sql = "SELECT count(*) AS count 
 					FROM exp_weblog_titles 
-					WHERE url_title LIKE '".$DB->escape_str($url_title)."%' 
+					WHERE url_title LIKE '".$DB->escape_like_str($url_title)."%' 
 					AND weblog_id = '{$this->weblog_id}'";
 					
 			$results = $DB->query($sql);
@@ -319,10 +319,10 @@ class Metaweblog_api {
 							'url_title'         => $url_title,
 							'ip_address'		=> $IN->IP,
 							'entry_date'        => $entry_date,
-							'edit_date'			=> date("YmdHis", $entry_date),
-							'year'              => date('Y', $entry_date),
-							'month'             => date('m', $entry_date),
-							'day'               => date('d', $entry_date),
+							'edit_date'			=> gmdate("YmdHis", $entry_date),
+							'year'              => gmdate('Y', $entry_date),
+							'month'             => gmdate('m', $entry_date),
+							'day'               => gmdate('d', $entry_date),
 							'status'            => $this->status,
 							'allow_comments'    => $deft_comments,
 							'allow_trackbacks'  => $deft_trackbacks
@@ -2077,7 +2077,7 @@ class Metaweblog_api {
 		// return a time in the localtime, or UTC
 		$t = 0;
 		
-		if (ereg("([0-9]{4})([0-9]{2})([0-9]{2})T([0-9]{2}):([0-9]{2}):([0-9]{2})", $time, $regs))
+		if (preg_match("#([0-9]{4})([0-9]{2})([0-9]{2})T([0-9]{2}):([0-9]{2}):([0-9]{2})#", $time, $regs))
 		{
 			/*
 			if ($utc === TRUE)
@@ -2158,21 +2158,19 @@ class Metaweblog_api {
         if ($fp = @opendir(PATH_PI)) 
         { 
             while (false !== ($file = readdir($fp))) 
-            { 
-				if ( eregi(EXT."$",  $file))
-				{
-					if (substr($file, 0, 3) == 'pi.')
-					{
-						$file = substr($file, 3, - strlen(EXT));
+            {
+            	if ( preg_match("/pi\.[a-z\_0-9]+?".preg_quote(EXT, '/')."$/", $file))
+            	{
+					$file = substr($file, 3, - strlen(EXT));
 					
-						if ( ! in_array($file, $exclude))
-							$filelist[] = $file;
-					}
+					if ( ! in_array($file, $exclude))
+						$filelist[] = $file;
 				}
-            } 
-        } 
-    
-        closedir($fp); 
+            }
+            
+            closedir($fp);
+        }
+        
         sort($filelist);
 		return $filelist;      
     }

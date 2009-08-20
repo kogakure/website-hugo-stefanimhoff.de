@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -103,7 +103,7 @@ class Referrer {
 					/**  parse {switch} variable
 					/** ----------------------------------------*/
 					
-					if (ereg("^switch", $key))
+					if (strncmp('switch', $key, 6) == 0)
 					{
 						$sparam = $FNS->assign_parameters($key);
 						
@@ -199,7 +199,7 @@ class Referrer {
                     /**  {ref_date}
                     /** ----------------------------------------*/
                     
-                	if (ereg("^ref_date", $key))
+                    if (strncmp('ref_date', $key, 8) == 0)
                     {
                     	if ( ! isset($row['ref_date']) || $row['ref_date'] == 0)
                     	{

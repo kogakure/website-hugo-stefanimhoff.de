@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -1640,7 +1640,7 @@ class MT_Import {
 				/**  Check for multiple instances like default title
 				/** ------------------------------------------------*/
 			
-				$results = $DB->query("SELECT count(*) AS count FROM exp_weblog_titles WHERE url_title LIKE '".$DB->escape_str($url_title)."%' AND weblog_id = '$weblog_selection'");
+				$results = $DB->query("SELECT count(*) AS count FROM exp_weblog_titles WHERE url_title LIKE '".$DB->escape_like_str($url_title)."%' AND weblog_id = '$weblog_selection'");
 				$url_title .= $results->row['count']+1;
 			}
 		
@@ -2077,7 +2077,7 @@ class MT_Import {
             $datestr = str_replace('/','-',$datestr);
             $datestr = preg_replace("/\040+/", "\040", $datestr);
 
-            if ( ! ereg("^[0-9]{1,2}\-[0-9]{1,2}\-[0-9]{2,4}\040[0-9]{1,2}:[0-9]{1,2}.*$", $datestr))
+            if ( ! preg_match("#^[0-9]{1,2}\-[0-9]{1,2}\-[0-9]{2,4}\040[0-9]{1,2}:[0-9]{1,2}.*$#", $datestr))
             {
                 return $LANG->line('invalid_date_formatting');
             }
@@ -2095,7 +2095,7 @@ class MT_Import {
             $hour = (strlen($ex['0']) == 1) ? '0'.$ex['0'] : $ex['0'];
             $min  = (strlen($ex['1']) == 1) ? '0'.$ex['1'] : $ex['1'];
 
-            if (isset($ex['2']) AND ereg("[0-9]{1,2}", $ex['2']))
+            if (isset($ex['2']) AND preg_match("#[0-9]{1,2}#", $ex['2']))
             {
                 $sec  = (strlen($ex['2']) == 1) ? '0'.$ex['2'] : $ex['2'];
             }
@@ -2174,7 +2174,7 @@ class MT_Import {
 	 
 		foreach ($conf as $key => $val)
 		{
-			if ( ! ereg("^mt_", $key))
+			if (substr($key, 0, 3) != 'mt_')
 			{
 				$newdata[$key] = $val;
 			}

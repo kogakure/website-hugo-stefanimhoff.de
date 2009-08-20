@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -88,8 +88,8 @@ class Modules {
         { 
             while (false !== ($file = readdir($fp))) 
             {
-                if ( ! eregi("^_", $file) AND ! eregi("^CVS$", $file) AND ! eregi(".php$",  $file) AND ! eregi(".html$",  $file) AND ! eregi(".DS_Store",  $file) AND ! eregi("\.",  $file))
-                {                 
+            	if ( is_dir(PATH_MOD.$file) && ! preg_match("/[^a-z\_0-9]/", $file))
+            	{               
 					$LANG->fetch_language_file(( ! isset($this->lang_overrides[$file])) ? $file : $this->lang_overrides[$file]);
                                         
                     $modules[] = ucfirst($file);
@@ -294,6 +294,9 @@ class Modules {
             $OUT->fatal_error($LANG->line('module_can_not_be_found'));
         }
         
+		// set the path to view files for this module
+		$DSP->view_path = PATH_MOD.$module.'/views/';
+		
         require $path;
         
         $MOD = new $class;
@@ -363,7 +366,7 @@ class Modules {
 
         $LANG->fetch_language_file($module);        
 
-        $line = (ereg("deinstall", $method)) ? $LANG->line('module_has_been_removed') : $LANG->line('module_has_been_installed');
+        $line = (stristr($method, 'deinstall')) ? $LANG->line('module_has_been_removed') : $LANG->line('module_has_been_installed');
 	
 		$name = ($LANG->line($module.'_module_name') == FALSE) ? ucfirst($module) : $LANG->line($module.'_module_name');
 

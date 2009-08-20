@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -73,15 +73,14 @@ class Localize {
             $now = time(); 
         }
             
-        $time =  mktime( gmdate("H", $now),
-						 gmdate("i", $now),
-						 gmdate("s", $now),
-						 gmdate("m", $now),
-						 gmdate("d", $now),
-						 gmdate("Y", $now),
-						 -1	// this must be explicitly set or some FreeBSD servers behave erratically
-                       );   
-
+        $time =  @mktime(	gmdate("H", $now),
+							gmdate("i", $now),
+							gmdate("s", $now),
+							gmdate("m", $now),
+							gmdate("d", $now),
+							gmdate("Y", $now),
+							-1	// this must be explicitly set or some FreeBSD servers behave erratically
+							);
         // mktime() has a bug that causes it to fail during the DST "spring forward gap"
         // when clocks are offset an hour forward (around April 4).  Instead of returning a valid
         // timestamp, it returns -1.  Basically, mktime() gets caught in purgatory, not 
@@ -414,7 +413,7 @@ class Localize {
 			// I'll explain later
 			$fib_seconds = FALSE;
 			
-            if (isset($ex['2']) AND ereg("[0-9]{1,2}", $ex['2']))
+            if (isset($ex['2']) AND preg_match("/[0-9]{1,2}/", $ex['2']))
             {
                 $sec  = (strlen($ex['2']) == 1) ? '0'.$ex['2'] : $ex['2'];
             }
@@ -556,7 +555,12 @@ class Localize {
 	function format_timespan($seconds = '')
 	{
 		global $LANG;
-				
+
+		// things can get really screwy if a negative number is passed, which can happen
+		// in very rare load-balanced environments when the web servers' are not in
+		// perfect sync with one another
+		$seconds = abs($seconds);
+		
 		if ($seconds == '')
 			$seconds = 1;
 

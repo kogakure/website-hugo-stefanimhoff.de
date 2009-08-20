@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -409,7 +409,7 @@ class Blacklist_CP {
         		{
         			if (trim($white_values[$i]) != '')
         			{
-        				$white[$row['whitelisted_type']][] = $DB->escape_str($white_values[$i]); 
+        				$white[$row['whitelisted_type']][] = $white_values[$i]; 
         			}
         		}       	
         	}
@@ -445,30 +445,30 @@ class Blacklist_CP {
 					{
 						$name = ($val == 'url') ? 'from' : $val; 
 						
-						$sql = "DELETE FROM exp_referrers WHERE ref_{$name} LIKE '%{$this->value}%' ";
+						$sql = "DELETE FROM exp_referrers WHERE ref_{$name} LIKE '%".$DB->escape_like_str($this->value)."%' ";
 						
 						if (sizeof($white[$val]) > 1)
 						{
-							$sql .=  " AND ref_{$name} NOT LIKE '%".implode("%' AND ref_{$name} NOT LIKE '%", $white[$val])."%'";
+							$sql .=  " AND ref_{$name} NOT LIKE '%".implode("%' AND ref_{$name} NOT LIKE '%", $DB->escape_like_str($white[$val]))."%'";
 						}
 						elseif (sizeof($white[$val]) > 0)
 						{
-							$sql .= "AND ref_{$name} NOT LIKE '%".$white[$val]['0']."%'";
+							$sql .= "AND ref_{$name} NOT LIKE '%".$DB->escape_like_str($white[$val]['0'])."%'";
 						}
 						
 						$DB->query($sql);
 						
 						if ($val == 'url' OR $val == 'ip')
 						{
-							$sql = " exp_trackbacks WHERE trackback_".$val." LIKE '%{$this->value}%'";
+							$sql = " exp_trackbacks WHERE trackback_".$val." LIKE '%".$DB->escape_like_str($this->value)."%'";
 							
 							if (sizeof($white[$val]) > 1)
 							{
-								$sql .=  " AND trackback_".$val." NOT LIKE '%".implode("%' AND trackback_".$val." NOT LIKE '%", $white[$val])."%'";
+								$sql .=  " AND trackback_".$val." NOT LIKE '%".implode("%' AND trackback_".$val." NOT LIKE '%", $DB->escape_like_str($white[$val]))."%'";
 							}
 							elseif (sizeof($white[$val]) > 0)
 							{
-								$sql .= "AND trackback_".$val." NOT LIKE '%".$white[$val]['0']."%'";
+								$sql .= "AND trackback_".$val." NOT LIKE '%".$DB->escape_like_str($white[$val]['0'])."%'";
 							}
 							
 							$query = $DB->query("SELECT entry_id, weblog_id FROM".$sql);
@@ -714,30 +714,30 @@ class Blacklist_CP {
 				{
 					if ($value[$i] != '')
 					{
-						$sql = "DELETE FROM exp_referrers WHERE ref_{$name} LIKE '%{$value[$i]}%' ";
+						$sql = "DELETE FROM exp_referrers WHERE ref_{$name} LIKE '%".$DB->escape_like_str($value[$i])."%' ";
 						
 						if (sizeof($white[$key]) > 1)
 						{
-							$sql .=  " AND ref_{$name} NOT LIKE '%".implode("%' AND ref_{$name} NOT LIKE '%", $white[$key])."%'";
+							$sql .=  " AND ref_{$name} NOT LIKE '%".implode("%' AND ref_{$name} NOT LIKE '%", $DB->escape_like_str($white[$key]))."%'";
 						}
 						elseif (sizeof($white[$key]) > 0)
 						{
-							$sql .= "AND ref_{$name} NOT LIKE '%".$white[$key]['0']."%'";
+							$sql .= "AND ref_{$name} NOT LIKE '%".$DB->escape_like_str($white[$key]['0'])."%'";
 						}					
 					
 						$DB->query($sql);
 						
 						if ($key == 'url' OR $key == 'ip')
 						{
-							$sql = " exp_trackbacks WHERE trackback_".$key." LIKE '%{$value[$i]}%'";
+							$sql = " exp_trackbacks WHERE trackback_".$key." LIKE '%".$DB->escape_like_str($value[$i])."%'";
 							
 							if (sizeof($white[$key]) > 1)
 							{
-								$sql .=  " AND trackback_".$key." NOT LIKE '%".implode("%' AND trackback_".$key." NOT LIKE '%", $white[$key])."%'";
+								$sql .=  " AND trackback_".$key." NOT LIKE '%".implode("%' AND trackback_".$key." NOT LIKE '%", $DB->escape_like_str($white[$key]))."%'";
 							}
 							elseif (sizeof($white[$key]) > 0)
 							{
-								$sql .= "AND trackback_".$key." NOT LIKE '%".$white[$key]['0']."%'";
+								$sql .= "AND trackback_".$key." NOT LIKE '%".$DB->escape_like_str($white[$key]['0'])."%'";
 							}
 							
 							$query = $DB->query("SELECT entry_id, weblog_id FROM".$sql);

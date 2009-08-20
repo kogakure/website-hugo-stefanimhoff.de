@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -336,10 +336,7 @@ class PM_Import {
         $exp_db     = $PREFS->ini('db_name');                   
         $tables     = $PREFS->ini("pm_completed_tables");
         
-        if (ereg("^\|", $tables))
-        {
-            $tables = substr($tables, 1);
-        }
+        $tables = trim($tables, '|');
         
         $ex = explode("|", $tables);
         
@@ -2954,7 +2951,7 @@ EOT;
 	 
 		foreach ($conf as $key => $val)
 		{
-			if ( ! ereg("^pm_", $key))
+			if (substr($key, 0, 3) == 'pm_')
 			{
 				$newdata[$key] = $val;
 			}

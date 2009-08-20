@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -486,7 +486,7 @@ class Member_memberlist extends Member {
 		
 		$path = '';
                 
-		if (eregi("^[0-9]{1,}\-[0-9a-z_]{1,}\-[0-9a-z]{1,}\-[0-9]{1,}\-[0-9]{1,}$", $this->cur_id))
+		if (preg_match("#^[0-9]{1,}\-[0-9a-z_]{1,}\-[0-9a-z]{1,}\-[0-9]{1,}\-[0-9]{1,}$#i", $this->cur_id))
 		{
 			$x = explode("-", $this->cur_id);
 		
@@ -786,7 +786,7 @@ class Member_memberlist extends Member {
 					/**  parse profile path
 					/** ----------------------------------------*/
 					
-					if (ereg("^profile_path", $key))
+					if (strncmp('profile_path', $key, 12) == 0)
 					{                       
 						$temp = $this->_var_swap_single($key, $FNS->create_url($FNS->extract_path($key).'/'.$row['member_id']), $temp);
 					}
@@ -795,7 +795,7 @@ class Member_memberlist extends Member {
 					/**  parse avatar path
 					/** ----------------------------------------*/
 					
-					if (ereg("^path:avatars", $key))
+					if (strncmp('path:avatars', $key, 12) == 0)
 					{                       
 						$temp = $this->_var_swap_single($key, $avatar_path, $temp);
 					}
@@ -804,7 +804,7 @@ class Member_memberlist extends Member {
 					/**  parse "last_visit" 
 					/** ----------------------------------------*/
 					
-					if (ereg("^last_visit", $key))
+					if (strncmp('last_visit', $key, 10) == 0)
 					{			
 						$temp = $this->_var_swap_single($key, ($row['last_activity'] > 0) ? $LOC->decode_date($val, $row['last_activity']) : '--', $temp);
 					}
@@ -813,7 +813,7 @@ class Member_memberlist extends Member {
 					/**  parse "join_date" 
 					/** ----------------------------------------*/
 					
-					if (ereg("^join_date", $key))
+					if (strncmp('join_date', $key, 9) == 0)
 					{        
 						$temp = $this->_var_swap_single($key, ($row['join_date'] > 0) ? $LOC->decode_date($val, $row['join_date']) : '--', $temp);
 					}
@@ -822,7 +822,7 @@ class Member_memberlist extends Member {
 					/**  parse "last_entry_date" 
 					/** ----------------------------------------*/
 					
-					if (ereg("^last_entry_date", $key))
+					if (strncmp('last_entry_date', $key, 15) == 0)
 					{                     
 						$temp = $this->_var_swap_single($key, ($row['last_entry_date'] > 0) ? $LOC->decode_date($val, $row['last_entry_date']) : '--', $temp);
 					}
@@ -831,7 +831,7 @@ class Member_memberlist extends Member {
 					/**  parse "last_comment_date" 
 					/** ----------------------------------------*/
 					
-					if (ereg("^last_comment_date", $key))
+					if (strncmp('last_comment_date', $key, 17) == 0)
 					{                     
 						$temp = $this->_var_swap_single($key, ($row['last_comment_date'] > 0) ? $LOC->decode_date($val, $row['last_comment_date']) : '--', $temp);
 					}
@@ -840,7 +840,7 @@ class Member_memberlist extends Member {
 					/**  parse "last_forum_post_date" 
 					/** ----------------------------------------*/
 					
-					if (ereg("^last_forum_post_date", $key))
+					if (strncmp('last_forum_post_date', $key, 20) == 0)
 					{                     
 						$temp = $this->_var_swap_single($key, ($row['last_forum_post_date'] > 0) ? $LOC->decode_date($val, $row['last_forum_post_date']) : '--', $temp);
 					}
@@ -1240,13 +1240,13 @@ class Member_memberlist extends Member {
 			{
 				$fields[] = $custom_fields[substr($search['0'], 11)];
 				
-				$sql .= "AND md.".$search['0']." LIKE '%".$DB->escape_str($search['1'])."%' ";
+				$sql .= "AND md.".$search['0']." LIKE '%".$DB->escape_like_str($search['1'])."%' ";
 			}
 			else
 			{
 				$fields[] = $LANG->line($search['0']);
 				
-				$sql .= "AND m.".$search['0']." LIKE '%".$DB->escape_str($search['1'])."%' ";
+				$sql .= "AND m.".$search['0']." LIKE '%".$DB->escape_like_str($search['1'])."%' ";
 			}
 			
 			$keywords[] = $search['1'];

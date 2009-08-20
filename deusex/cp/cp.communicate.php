@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -625,6 +625,8 @@ EOTJS;
 
 			$TYPE = new Typography(0); 
 			$TYPE->parse_smileys = FALSE;
+			
+			$subject = $TYPE->filter_censored_words($subject);
 
 			$message = $TYPE->parse_type($message, 
 											  array(
@@ -1089,16 +1091,10 @@ EOTJS;
 		$ct = 0;
 	
 		if ($recipients != '')
-		{        
-			if (ereg(',$', $recipients))
-				$recipients = substr($recipients, 0, -1);
-			
-			if (ereg('^,', $recipients))
-				$recipients = substr($recipients, 1);	
-	
-			$recipients = str_replace(",,", ",", $recipients);
+		{
+			$recipients = trim(str_replace(",,", ",", $recipients), ',');
 					
-			if (ereg(',', $recipients))
+			if (strpos($recipients, ',') !== FALSE)
 			{					
 				$x = explode(',', $recipients);
 									
@@ -1741,7 +1737,7 @@ EOTJS;
 		if ($chars == '')
 			$chars = ($this->wrapchars == "") ? "76" : $this->wrapchars;
 		
-		$lines = split("\n", $str);
+		$lines = explode("\n", $str);
 		
 		$output = "";
 
@@ -1751,7 +1747,7 @@ EOTJS;
 			{
 				$line = "";
 				
-				$words = split(" ", $thisline);
+				$words = explode(" ", $thisline);
 				
 				while(list(, $thisword) = each($words)) 
 				{

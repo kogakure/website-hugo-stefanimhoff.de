@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -60,7 +60,7 @@ class Typography {
 	var $block_elements = 'address|blockquote|div|dl|fieldset|form|h\d|hr|noscript|object|ol|p|pre|script|table|ul';
 	
 	// Elements that should not have <p> and <br /> tags within them.
-	var $skip_elements	= 'p|pre|ol|ul|dl|object|table';
+	var $skip_elements	= 'p|pre|ol|ul|dl|object|table|h\d';
 	
 	// Tags we want the parser to completely ignore when splitting the string.
 	var $inline_elements = 'a|abbr|acronym|b|bdo|big|br|button|cite|code|del|dfn|em|i|img|ins|input|label|map|kbd|q|samp|select|small|span|strong|sub|sup|textarea|tt|var';
@@ -207,20 +207,19 @@ class Typography {
         if ($fp = @opendir(PATH_PI)) 
         { 
             while (false !== ($file = readdir($fp))) 
-            { 
-				if ( eregi(EXT."$",  $file))
-				{
-					if (substr($file, 0, 3) == 'pi.')
+            {
+            	if ( preg_match("/pi\.[a-z\_0-9]+?".preg_quote(EXT, '/')."$/", $file))
+            	{
+					$file = substr($file, 3, - strlen(EXT));
+				
+					if ( ! in_array($file, $exclude))
 					{
-						$file = substr($file, 3, - strlen(EXT));
-					
-						if ( ! in_array($file, $exclude))
-							$filelist[] = $file;
+						$filelist[] = $file;
 					}
 				}
             } 
             
-            @closedir($fp);
+            closedir($fp);
         } 
     
         sort($filelist);
@@ -244,7 +243,7 @@ class Typography {
         
         foreach ($this->file_paths as $key => $val)
         {
-            $str = str_replace("{filedir_".$key."}", $val, $str);
+			$str = str_replace(array("{filedir_{$key}}", "&#123;filedir_{$key}&#125;"), $val, $str);
         }
 
         return $str;
@@ -536,18 +535,10 @@ class Typography {
         {
         	foreach ($this->code_chunks as $key => $val)
         	{
-        		if ($this->text_format == 'legacy_typography')
-        		{
-        			// First line takes care of the line break that might be there, which should
-        			// be a line break because it is just a simple break from the [code] tag.
-					$str = str_replace('<div class="codeblock">{'.$key.'yH45k02wsSdrp}</div>'."\n<br />", '</p><div class="codeblock">'.$val.'</div><p>', $str);
-					$str = str_replace('<div class="codeblock">{'.$key.'yH45k02wsSdrp}</div>', '</p><div class="codeblock">'.$val.'</div><p>', $str);
-        		}
-        		else
-        		{
-        			$str = str_replace('{'.$key.'yH45k02wsSdrp}', $val, $str);
-        		}
+       			$str = str_replace('{'.$key.'yH45k02wsSdrp}', $val, $str);
         	}
+
+			$this->code_chunks = array();
         }
         
         // -------------------------------------------
@@ -579,8 +570,8 @@ class Typography {
         if ( ! in_array($this->html_format, $html_options))
         {
             $this->html_format = 'safe';
-        }    
-    
+        }
+
         if ($this->html_format == 'all')
         {
             return $str;
@@ -781,6 +772,18 @@ class Typography {
         {
 			$str = str_replace(array('['.$key.']', '[/'.$key.']'),	array('<'.$val.'>', '</'.$val.'>'),	$str);
         }
+
+        /** -------------------------------------
+        /**  Decode codeblock division for code tag
+        /** -------------------------------------*/
+
+		if (count($this->code_chunks) > 0)
+		{
+			foreach ($this->code_chunks as $key => $val)
+			{
+				$str = str_replace('[div class="codeblock"]{'.$key.'yH45k02wsSdrp}[/div]', '<div class="codeblock">{'.$key.'yH45k02wsSdrp}</div>', $str);
+			}
+ 		}
         
         /** -------------------------------------
         /**  Decode color tags
@@ -1234,7 +1237,7 @@ class Typography {
 						
 			$this->code_chunks[$this->code_counter] = $temp;
 
-			$str = str_replace($matches['0'][$i], '<div class="codeblock">{'.$this->code_counter.'yH45k02wsSdrp}</div>', $str);
+			$str = str_replace($matches['0'][$i], '[div class="codeblock"]{'.$this->code_counter.'yH45k02wsSdrp}[/div]', $str);
 			
 			$this->code_counter++;
 		}        
@@ -1692,7 +1695,7 @@ class Typography {
         ob_start();
         
 ?>
-<span id='<?php echo $span_id."'>".$LANG->line('encoded_email'); ?></span><script type="text/javascript">
+<span id='<?php echo $span_id; ?>'>.<?php echo $LANG->line('encoded_email'); ?></span><script type="text/javascript">
 //<![CDATA[
 var l=new Array();
 var output = '';

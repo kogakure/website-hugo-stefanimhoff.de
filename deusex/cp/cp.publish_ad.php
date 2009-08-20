@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -906,8 +906,8 @@ EOT;
 					if ($fp = @opendir(PATH_MOD)) 
 					{ 
 						while (false !== ($file = readdir($fp))) 
-						{ 
-							if ( ! ereg("\.",  $file))
+						{
+							if (strpos($file, '.') === FALSE)
 							{
 								if ($file == 'mailinglist')
 								{
@@ -1045,8 +1045,8 @@ EOT;
             {
                 if ($array_name <> "")
                     $val = $array_name.'/'.$val;
-					
-				if (ereg(".php$", $val))
+				
+				if (substr($val, -4) == '.php')
 				{
 					if ($val != 'theme_master.php')
 					{				   
@@ -2712,13 +2712,17 @@ function showHideMenu(objValue)
 		}
 		
 		/** ---------------------------------------
-		/**  Make relationships go bye-bye
+		/**  Clear relationships and catagories
 		/** ---------------------------------------*/
 		
 		if (! empty($entries))
 		{
 			$ENTRY_IDS = implode(',', $entries);
 
+			// Clear the exp_category_posts table
+			$DB->query("DELETE FROM exp_category_posts WHERE entry_id IN ({$ENTRY_IDS})");
+
+			// Now it's relationships turn
 			$DB->query("DELETE FROM exp_relationships WHERE rel_parent_id IN ({$ENTRY_IDS})");
 
 			$child_results = $DB->query("SELECT rel_id FROM exp_relationships WHERE rel_child_id IN ({$ENTRY_IDS})");
@@ -3658,7 +3662,7 @@ function showHideMenu(objValue)
 
         // Does field name contain invalid characters?
 
-        if ( ! eregi("^[a-zA-z0-9\_\-]+$", $_POST['field_name'])) 
+        if ( ! preg_match("#^[a-z0-9\_\-]+$#i", $_POST['field_name'])) 
         {
             $error[] = $LANG->line('invalid_characters');
         }
@@ -6489,7 +6493,7 @@ SCRIPPITYDOO;
             return $this->status_manager($IN->GBL('group_id', 'POST'));
         }
         
-        if ( ! eregi( "^([-a-zA-Z0-9_\+ ])+$", $IN->GBL('status', 'POST')))
+        if ( ! preg_match( "#^([-a-z0-9_\+ ])+$#i", $IN->GBL('status', 'POST')))
         {
             return $DSP->error_message($LANG->line('invalid_status_name'));
         }
@@ -8301,7 +8305,7 @@ SCRIPPITYDOO;
         
         // Does field name contain invalide characters?
         
-        if ( ! eregi("^[a-zA-z0-9\_\-]+$", $_POST['field_name'])) 
+        if ( ! preg_match("#^[a-z0-9\_\-]+$#i", $_POST['field_name'])) 
         {
             $error[] = $LANG->line('invalid_characters');
         }
@@ -8710,21 +8714,19 @@ SCRIPPITYDOO;
         if ($fp = @opendir(PATH_PI)) 
         { 
             while (false !== ($file = readdir($fp))) 
-            { 
-				if ( eregi(EXT."$",  $file))
-				{
-					if (substr($file, 0, 3) == 'pi.')
-					{
-						$file = substr($file, 3, - strlen(EXT));
-					
-						if ( ! in_array($file, $exclude))
-							$filelist[] = $file;
-					}
+            {
+            	if ( preg_match("/pi\.[a-z\_0-9]+?".preg_quote(EXT, '/')."$/", $file))
+            	{
+					$file = substr($file, 3, - strlen(EXT));
+				
+					if ( ! in_array($file, $exclude))
+						$filelist[] = $file;
 				}
-            } 
+            }
+            
+            closedir($fp); 
         } 
     
-        closedir($fp); 
         sort($filelist);
 		return $filelist;      
     }
@@ -9647,9 +9649,8 @@ SCRIPPITYDOO;
 		{
 			$_POST['server_path'] .= '/';
 		}
-        
-		if ( ! ereg("/$", $_POST['url'] )) $_POST['url']  .= '/';
-          
+		
+		$_POST['url'] = rtrim($_POST['url'], '/').'/';
           
         // Is the name taken?
 
@@ -9657,7 +9658,7 @@ SCRIPPITYDOO;
         
         $query = $DB->query($sql);        
       
-        if (($edit == FALSE || ($edit == TRUE && $_POST['name'] != $_POST['cur_name'])) && $query->row['count'] > 0)
+        if (($edit == FALSE || ($edit == TRUE && strtolower($_POST['name']) != strtolower($_POST['cur_name']))) && $query->row['count'] > 0)
         {
             $error[] = $LANG->line('duplicate_dir_name');
         }

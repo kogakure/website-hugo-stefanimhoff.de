@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -766,11 +766,13 @@ class Utilities {
         { 
             while (false !== ($file = readdir($fp)))
             {
-                if (eregi('php', $file) && $file !== '.' && $file !== '..' &&  substr($file, 0, 3) == 'pi.') 
-                {
+            	if ( preg_match("/pi\.[a-z\_0-9]+?".preg_quote(EXT, '/')."$/", $file))
+            	{
 					if ( ! @include_once(PATH_PI.$file))
+					{
 						continue;
-                
+                	}
+                	
                     $name = str_replace('pi.', '', $file);
                 	$name = str_replace(EXT, '', $name);
                                     
@@ -1183,6 +1185,8 @@ class Utilities {
 				{
 					$message = $LANG->line('plugin_error_uncompress');
 				}
+				
+				chdir(PATH);
 			}
 			else
 			{
@@ -1507,9 +1511,11 @@ class Utilities {
 		$totsize = 0;
 		$records = 0;
 		
+		$prelen = strlen($DB->prefix);
+		
         foreach ($query->result as $val)
         {
-            if ( ! ereg("^$DB->prefix", $val['Name']))
+            if (strncmp($val['Name'], $DB->prefix, $prelen) != 0)
             {
                 continue;
             }
@@ -1557,12 +1563,12 @@ class Utilities {
 		{
             foreach ($val as $v)
             {
-				if (eregi("^uptime", $v))
+				if (preg_match("#^uptime#i", $v))
 				{
 					$uptime = $key;
 				}
 				
-				if (eregi("^questions", $v))
+				if (preg_match("#^questions#i", $v))
 				{
 					$queries = $key;
 				}
@@ -1755,7 +1761,7 @@ class Utilities {
             
             // If it's a DELETE query, require that a Super Admin be the one submitting it
             
-            if (eregi("DELETE", $sql) || eregi('ALTER', $sql) || eregi('DROP', $sql))
+            if (preg_match("#^(DELETE|ALTER|DROP)#i", trim($sql)))
             {
 				if ($SESS->userdata['group_id'] != '1')
 				{
@@ -1853,12 +1859,9 @@ class Utilities {
 
             $write = FALSE;
             
-            foreach ($qtypes as $type)
+            if (preg_match("#^(".implode('|', $qtypes).")#i", $sql))
             {
-                if (eregi("^$type", $sql))
-                {
-                    $write = TRUE;
-                }
+            	$write = TRUE;
             }
                         
             if ($write == TRUE)
@@ -2452,10 +2455,12 @@ class Utilities {
         $records = 0;
         $tables  = 0;
         $totsize = 0;
-                                
+
+       $prelen = strlen($DB->prefix);
+
         foreach ($query->result as $val)
         {
-            if ( ! ereg("^$DB->prefix", $val['Name']))
+            if (strncmp($val['Name'], $DB->prefix, $prelen) != 0)
             {
                 continue;
             }
@@ -3052,7 +3057,7 @@ class Utilities {
 			
 			$sql = substr($sql, 0, -1).')';        
         }
-        elseif(eregi('^template_', $field))
+        elseif(preg_match('#^template_#i', $field))
         {
         	$sql = "UPDATE `exp_templates` SET `template_data` = REPLACE(`template_data`, '$search', '$replace'), edit_date = '".$LOC->now."'
         			WHERE group_id = '".$DB->escape_str(substr($field,9))."'";
@@ -4998,8 +5003,11 @@ class Utilities {
 				
 				foreach ($query->result as $row)
 				{
-					$res = $DB->query("SELECT count(comment_id) AS count FROM exp_comments WHERE entry_id = '".$row['entry_id']."'");
+					$res = $DB->query("SELECT count(comment_id) AS count FROM exp_comments WHERE entry_id = '".$row['entry_id']."' AND status = 'o'");
 					$comment_total = $res->row['count'];
+					
+					$res = $DB->query("SELECT MAX(comment_date) as recent FROM exp_comments WHERE entry_id = '".$row['entry_id']."' AND status = 'o'");
+					$comment_date = $res->row['recent'];
 					
 					$res = $DB->query("SELECT count(trackback_id) AS count FROM exp_trackbacks WHERE entry_id = '".$row['entry_id']."'");
 					$trackback_total = $res->row['count'];
@@ -5007,7 +5015,7 @@ class Utilities {
 					$res = $DB->query("SELECT MAX(trackback_date) as recent FROM exp_trackbacks WHERE entry_id = '".$row['entry_id']."'");
 					$trackback_date = $res->row['recent'];
 				   
-					$DB->query($DB->update_string('exp_weblog_titles', array( 'comment_total' => $comment_total,'trackback_total' => $trackback_total, 'recent_trackback_date' => $trackback_date), "entry_id = '".$row['entry_id']."'"));   
+					$DB->query($DB->update_string('exp_weblog_titles', array( 'comment_total' => $comment_total, 'recent_comment_date' => $comment_date, 'trackback_total' => $trackback_total, 'recent_trackback_date' => $trackback_date), "entry_id = '".$row['entry_id']."'"));   
 				}
 			}
 		}
@@ -5279,14 +5287,11 @@ EOT;
             if ($fp = @opendir($source_dir)) 
             { 
                 while (false !== ($file = readdir($fp))) 
-                { 
-                    if ( eregi(".php$",  $file))
-                    {
-                    	if (substr($file, 0, 4) == 'lang')
-                    	{
-                        	$r .= $DSP->anchor(BASE.AMP.'C=admin'.AMP.'M=utilities'.AMP.'P=translate'.AMP.'F='.$file, $file);
-                        	$r .= BR;                
-                    	}
+                {
+                	if ( preg_match("/lang\.[a-z\_0-9]+?".preg_quote(EXT, '/')."$/", $file))
+                	{
+						$r .= $DSP->anchor(BASE.AMP.'C=admin'.AMP.'M=utilities'.AMP.'P=translate'.AMP.'F='.$file, $file);
+						$r .= BR;
                     }
                 } 
             } 
@@ -5354,7 +5359,7 @@ EOT;
                         
                 $r .= $DSP->qdiv('itemWrapper', BR.'<b>'.stripslashes($val).'</b>');
                 
-                $trans = str_replace("&", "&amp;", $trans);
+                $trans = str_replace(array("&", "'"), array( "&amp;", "&#39;"), $trans);
                 
                 if (strlen($trans) < 125)
                 {

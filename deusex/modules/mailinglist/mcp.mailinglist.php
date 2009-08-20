@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -656,7 +656,7 @@ EOF;
     	    					
 		foreach($emails as $addr)
 		{
-			if (ereg('\<(.*)\>', $addr, $match))
+			if (preg_match('#\<(.*)\>#', $addr, $match))
 				$addr = $match['1'];
 			
 		    if ($subscribe == TRUE)
@@ -789,7 +789,7 @@ EOF;
 				$sql .= " WHERE ";
 			}
         
-        	$sql .= "  email LIKE '%".$DB->escape_str($email)."%'";
+        	$sql .= "  email LIKE '%".$DB->escape_like_str($email)."%'";
         }
     
 		$query = $DB->query($sql);    

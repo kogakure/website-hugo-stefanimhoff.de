@@ -5,7 +5,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -205,12 +205,7 @@ class DB {
     	if ($this->enable_cache == TRUE)
         {
         	$this->cache_enabled = TRUE;
-			$this->cache_dir	 = PATH_CACHE.$this->cache_dir; 
-			
-			if ( ! ereg('/$', $this->cache_dir))
-			{
-				$this->cache_dir .= '/';
-			}
+			$this->cache_dir	 = rtrim(PATH_CACHE.$this->cache_dir, '/').'/';
 			
 			// We limit the total number of cache files in order to
 			// keep some sanity with large sites or ones that get
@@ -336,35 +331,34 @@ class DB {
         // affected rows and insert ID, and delete the existing cache file.
 
         $qtypes = array('INSERT', 'UPDATE', 'DELETE', 'CREATE', 'ALTER', 'DROP', 'REPLACE', 'GRANT', 'REVOKE', 'LOCK', 'UNLOCK', 'TRUNCATE');
-                
-        foreach ($qtypes as $type)
-        {
-            if (eregi("^$type", $sql))
-            {  
-                $this->affected_rows = mysql_affected_rows($this->conn_id);
-                
-                if ($type == 'INSERT' || $type == 'REPLACE')
-                {
-                    $this->insert_id = mysql_insert_id($this->conn_id);
-                }
-                
-                // Delete the cache file since the data in it is no longer current.
-                
-                if ($this->cache_enabled == TRUE)
-                {
-                    $this->delete_cache();
-                }
+		
+		if (preg_match("#^(".implode('|', $qtypes).")#i", $sql, $qmatches))
+		{
+			$type = $qmatches[1];
+			
+			$this->affected_rows = mysql_affected_rows($this->conn_id);
+			
+			if ($type == 'INSERT' || $type == 'REPLACE')
+			{
+				$this->insert_id = mysql_insert_id($this->conn_id);
+			}
+			
+			// Delete the cache file since the data in it is no longer current.
+			
+			if ($this->cache_enabled == TRUE)
+			{
+				$this->delete_cache();
+			}
 
-				// Bail out.  We are done
-                if ($type == 'INSERT' OR $type == 'UPDATE' OR $type == 'DELETE')
-                {
-               		return ($this->affected_rows == 0 AND $this->insert_id == 0) ? FALSE : TRUE;     
-               	}
-               	else
-               	{
-               		return TRUE;
-               	}
-            }
+			// Bail out.  We are done
+			if ($type == 'INSERT' OR $type == 'UPDATE' OR $type == 'DELETE')
+			{
+				return ($this->affected_rows == 0 AND $this->insert_id == 0) ? FALSE : TRUE;     
+			}
+			else
+			{
+				return TRUE;
+			}
         }
         
         // Fetch the field names, but only if explicitly requested
@@ -451,7 +445,8 @@ class DB {
         // mysql_list_tables() was depreciated, so we switched to using
         // this query, which should work. -Paul
         
-        $query = $this->query("SHOW TABLES FROM `{$this->database}` LIKE '{$this->exp_prefix}%'"); // We use $this->exp_prefix as query() will convert it
+		// We use $this->prefix as query() will not match the like escaped exp_prefix.
+        $query = $this->query("SHOW TABLES FROM `{$this->database}` LIKE '".$this->escape_like_str($this->prefix)."%'"); 
         
         if ($query->num_rows > 0)
         {
@@ -502,6 +497,11 @@ class DB {
 				if ( ! @mkdir($dir, 0777))
 				{
 					return;
+				}
+				
+				if ($dir == PATH_CACHE.'db_cache' && $fp = @fopen($dir.'/index.html', 'wb'))
+				{
+					fclose($fp);					
 				}
 				
 				@chmod($dir, 0777);            
@@ -608,7 +608,7 @@ class DB {
             }
         }
         
-        @closedir($current_dir);
+        closedir($current_dir);
         
         if ($del_root == TRUE)
         {
@@ -621,13 +621,13 @@ class DB {
     /**  MySQL escape string
     /** ---------------------------------------*/
 
-    function escape_str($str)    
+    function escape_str($str, $like = FALSE)    
     {    
     	if (is_array($str))
     	{
     		foreach($str as $key => $val)
     		{
-    			$str[$key] = $this->escape_str($val);
+    			$str[$key] = $this->escape_str($val, $like);
     		}
     		
     		return $str;
@@ -635,19 +635,37 @@ class DB {
 
 		if (function_exists('mysql_real_escape_string') AND is_resource($this->conn_id))
 		{
-			return mysql_real_escape_string(stripslashes($str), $this->conn_id);
+			$str =  mysql_real_escape_string(stripslashes($str), $this->conn_id);
 		}
 		elseif (function_exists('mysql_escape_string'))
     	{
-			return mysql_escape_string(stripslashes($str));
+			$str = mysql_escape_string(stripslashes($str));
 		}
 		else
 		{
-        	return addslashes(stripslashes($str));
+        	$str = addslashes(stripslashes($str));
     	}
+    	
+    	if ($like === TRUE)
+    	{
+    		$replace_characters = array('%', '_');
+			$escaped_characters = array('\\%', '\\_');
+			
+			$str = str_replace($replace_characters, $escaped_characters, $str);
+    	}
+    	
+    	return $str;
     }
     /* END */
     
+    /** ---------------------------------------    
+    /**  MySQL escape plus LIKE wildcards
+    /** ---------------------------------------*/
+
+    function escape_like_str($str)    
+    {    
+    	return $this->escape_str($str, TRUE);
+	}    
 
     /** ---------------------------------------    
     /**  Error Message

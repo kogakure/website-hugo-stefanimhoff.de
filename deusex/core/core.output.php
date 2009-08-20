@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -315,7 +315,7 @@ class Output {
 
         if ($DB->show_queries === TRUE AND isset($DB->queries))
         {
-			if ($SESS->userdata['group_id'] == 1)
+			if ($SESS->userdata['group_id'] == 1 && (REQ == 'CP' OR (is_object($TMPL) && $TMPL->template_type != 'js')))
 			{				
 				$i = 1;
 				
@@ -345,7 +345,7 @@ class Output {
 			}
         }
         
-        if (is_object($TMPL) && isset($TMPL->debugging) && $TMPL->debugging === TRUE)
+        if (is_object($TMPL) && isset($TMPL->debugging) && $TMPL->debugging === TRUE && $TMPL->template_type != 'js')
         {
         	if ($SESS->userdata['group_id'] == 1)
 			{		

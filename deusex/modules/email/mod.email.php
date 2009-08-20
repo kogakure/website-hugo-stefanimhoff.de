@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -126,7 +126,7 @@ class Email {
    			/**  parse {current_time}
    			/** ----------------------------------------*/
    			
-   			if (ereg("^current_time", $key))
+   			if (strncmp('current_time', $key, 12) == 0)
    			{
    				$now = $LOC->set_localized_time();
    				$tagdata = $TMPL->swap_var_single($key, $LOC->decode_date($val,$now), $tagdata);
@@ -205,8 +205,12 @@ class Email {
 		{
 			$init_size = mcrypt_get_iv_size(MCRYPT_RIJNDAEL_256, MCRYPT_MODE_ECB);
 			$init_vect = mcrypt_create_iv($init_size, MCRYPT_RAND);
-			
-			$recipients = mcrypt_encrypt(MCRYPT_RIJNDAEL_256, md5($PREFS->ini('system_folder')), $recipients, MCRYPT_MODE_ECB, $init_vect);
+
+			$recipients = mcrypt_encrypt(MCRYPT_RIJNDAEL_256, md5($DB->username.$DB->password), $recipients, MCRYPT_MODE_ECB, $init_vect);
+		}
+		else
+		{
+			$recipients = $recipients.md5($DB->username.$DB->password.$recipients);
 		}
 		
 		$data['id']				= 'contact_form';
@@ -494,10 +498,14 @@ class Email {
 		{
 			$init_size = mcrypt_get_iv_size(MCRYPT_RIJNDAEL_256, MCRYPT_MODE_ECB);
 			$init_vect = mcrypt_create_iv($init_size, MCRYPT_RAND);
-			
-			$recipients = mcrypt_encrypt(MCRYPT_RIJNDAEL_256, md5($PREFS->ini('system_folder')), $recipients, MCRYPT_MODE_ECB, $init_vect);
+
+			$recipients = mcrypt_encrypt(MCRYPT_RIJNDAEL_256, md5($DB->username.$DB->password), $recipients, MCRYPT_MODE_ECB, $init_vect);
 		}
-   		
+		else
+		{
+			$recipients = $recipients.md5($DB->username.$DB->password.$recipients);
+		}
+
 		$data['id'] = 'tellafriend_form';
    		$data['hidden_fields'] = array(
 										'ACT'      			=> $FNS->fetch_action_id('Email', 'send_email'),
@@ -575,15 +583,22 @@ class Email {
 					{
 						$init_size = mcrypt_get_iv_size(MCRYPT_RIJNDAEL_256, MCRYPT_MODE_ECB);
 						$init_vect = mcrypt_create_iv($init_size, MCRYPT_RAND);
-						
-						$decoded_recipients = rtrim(mcrypt_decrypt(MCRYPT_RIJNDAEL_256, md5($PREFS->ini('system_folder')), base64_decode($_POST[$val]), MCRYPT_MODE_ECB, $init_vect), "\0");
+
+						$decoded_recipients = rtrim(mcrypt_decrypt(MCRYPT_RIJNDAEL_256, md5($DB->username.$DB->password), base64_decode($_POST[$val]), MCRYPT_MODE_ECB, $init_vect), "\0");
 					}
 					else
 					{
-						$decoded_recipients = base64_decode($_POST[$val]);
+						$raw = base64_decode($_POST[$val]);
+
+						$hash = substr($raw, -32);
+						$decoded_recipients = substr($raw, 0, -32);
+
+						if ($hash != md5($DB->username.$DB->password.$decoded_recipients))
+						{
+							$decoded_recipients = '';
+						}
 					}
-			    
-			    
+
 			    	$_POST[$val] = $decoded_recipients;
 			    }
 			    

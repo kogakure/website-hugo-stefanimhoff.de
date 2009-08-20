@@ -5,7 +5,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -24,6 +24,8 @@
 
 //  DO NOT ALTER THIS FILE IN ANY WAY!!
 
+error_reporting(0);
+
 $pathinfo = pathinfo(__FILE__);
 
 $ext  = ( ! isset($pathinfo['extension'])) ? '.php' : '.'.$pathinfo['extension'];
@@ -37,7 +39,7 @@ define('MASKED_CP', TRUE);
 
 require 'path'.$ext;
 
-if ( ! ereg("/$", $system_path)) $system_path .= '/';
+$system_path = rtrim($system_path, '/').'/';
 
 require $system_path.'core/core.system'.$ext;
 

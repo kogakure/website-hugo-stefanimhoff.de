@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -925,7 +925,7 @@ class Messages {
 
     function drafts()
     {
-    	global $LANG, $DB, $OUT, $IN, $LOC;
+    	global $LANG, $DB, $OUT, $IN, $LOC, $PREFS;
     	
     	$row_count = 0;  // How many rows shown this far (i.e. offset)
     	
@@ -1053,7 +1053,19 @@ class Messages {
 		$folder_rows_template	= $this->retrieve_template('message_folder_rows');
 		$r = '';
 		$i = 0;
+		$censor = FALSE;
+        
+		if ($PREFS->ini('enable_censoring') == 'y' && $PREFS->ini('censored_words') != '')
+        {
+			if ( ! class_exists('Typography'))
+			{
+				require PATH_CORE.'core.typography'.EXT;
+			}
 		
+			$TYPE = new Typography(0); 
+			$censor = TRUE;
+		}
+				
 		$query = $DB->query($dql.$sql);
 		
 		foreach($query->result as $row)
@@ -1063,6 +1075,8 @@ class Messages {
 			$data['msg_id']		  = 'd'.$row['message_id'];
 			$data['message_date'] = $LOC->set_human_time($data['message_date']);
 			$data['style']		  = ($i % 2) ? 'tableCellTwo' : 'tableCellOne';
+			$data['message_subject']	  = ($censor === FALSE) ? $data['message_subject'] : $TYPE->filter_censored_words($data['message_subject']);
+			
 			
 			if ($this->allegiance == 'user')
     		{
@@ -1110,7 +1124,7 @@ class Messages {
 
     function view_folder($folder_id='')
     {
-    	global $LANG, $DB, $OUT, $IN, $LOC;
+    	global $LANG, $DB, $OUT, $IN, $LOC, $PREFS;
     	
     	// ---------------------------------
     	// Find Requested Folder ID
@@ -1319,6 +1333,20 @@ class Messages {
 			$sql .= " LIMIT ".$row_count.", ".$this->per_page;			
 		}
 		
+		$censor = FALSE;
+		
+        if ($PREFS->ini('enable_censoring') == 'y' && $PREFS->ini('censored_words') != '')
+        {
+			$censor = TRUE;
+		
+			if ( ! class_exists('Typography'))
+			{
+				require PATH_CORE.'core.typography'.EXT;
+			}
+		
+			$TYPE = new Typography(0); 
+		}
+
 		/** ----------------------------------------
         /**  Retrieve Folder Contents
         /** ----------------------------------------*/
@@ -1342,6 +1370,11 @@ class Messages {
 			$data['message_date'] = $LOC->set_human_time($data['message_date']);
 			$data['style']		  = ($i % 2) ? 'tableCellTwo' : 'tableCellOne';
 			
+			if ($censor == TRUE)
+			{
+				$data['message_subject'] = $TYPE->filter_censored_words($row['message_subject']);
+			}
+
 			if ($this->allegiance == 'user')
     		{
     			$data['message_url']  = $this->base_url.'view_message/'.$row['msg_id'].'/';
@@ -1801,7 +1834,7 @@ DOH;
         
         foreach ($_POST as $key => $val)
 		{
-			if ($key == 'which_field' OR $key == 'XID')
+			if ($key == 'which_field' OR $key == 'XID' OR $key == 'site_id')
 			{
 				continue;
 			}
@@ -1816,7 +1849,7 @@ DOH;
 			{
 				if ($val != '')
 				{
-					$search_query[] = $key." LIKE '%".$DB->escape_str($val)."%'";
+					$search_query[] = $key." LIKE '%".$DB->escape_like_str($val)."%'";
 				}
 			}
 		}
@@ -1967,7 +2000,7 @@ DOH;
         
         foreach ($_POST as $key => $val)
 		{
-			if ($key == 'which' OR $key == 'XID')
+			if ($key == 'which' OR $key == 'XID' OR $key == 'site_id')
 			{
 				continue;
 			}
@@ -1982,7 +2015,7 @@ DOH;
 			{
 				if ($val != '')
 				{
-					$search_query[] = $key." LIKE '%".$DB->escape_str($val)."%'";
+					$search_query[] = $key." LIKE '%".$DB->escape_like_str($val)."%'";
 				}
 			}
 		}
@@ -2133,12 +2166,12 @@ DOH;
         
         
         foreach ($_POST as $key => $val)
-        { 
+        {
 			if (strstr($key, 'toggle') AND ! is_array($val))
 			{
 				$unread = FALSE;
 				
-				if ($val[0] == 'u')
+				if ($val != '' && $val[0] == 'u')
 				{
 					$unread = TRUE;
 					$val = substr($val, 1);					
@@ -2683,15 +2716,33 @@ DOH;
     	{
     		if ($IN->GBL('daction') !== FALSE && ($IN->GBL('daction', 'POST') == 'reply' OR $IN->GBL('daction', 'POST') == 'reply_all' OR $IN->GBL('daction', 'POST') == 'forward'))
     		{
-    			$data = $this->_message_data($id, '', $this->member_id);
+   				$data = $this->_message_data($id, '', $this->member_id);
+
+				if ($PREFS->ini('enable_censoring') == 'y' && $PREFS->ini('censored_words') != '')
+       			{
+					if ( ! class_exists('Typography'))
+					{
+						require PATH_CORE.'core.typography'.EXT;
+					}
+	
+					$TYPE = new Typography(0); 
+					
+					$subject = ($data === FALSE) ? '' : $TYPE->filter_censored_words($data['subject']);
+					$body = ($data === FALSE) ? '' : $TYPE->filter_censored_words($data['body']);
+				}
+				else
+				{
+					$subject = ($data === FALSE) ? '' : $data['subject'];
+					$body = ($data === FALSE) ? '' : $data['body'];					
+				}
     			
     			$booger['hidden_fields'] = array('message_id' => $data['id'], 'forward' => 'y');
     			
     			$prefix = ($IN->GBL('daction', 'POST') == 'forward') ? 'forward_prefix' : 'reply_prefix';
     			$prefix = (substr($data['subject'], 0, strlen($LANG->line($prefix))) == $LANG->line($prefix)) ? '' : '{lang:'.$prefix.'}';
     			
-    			$this->single_parts['input']['subject']				= ($data === FALSE) ? '' : $prefix.$data['subject'];
-				$this->single_parts['input']['body']   				= ($data === FALSE) ? '' : NL.NL.NL.'[quote]'.NL.$data['body'].NL.'[/quote]';
+    			$this->single_parts['input']['subject']				= ($data === FALSE) ? '' : $prefix.$subject;
+				$this->single_parts['input']['body']   				= ($data === FALSE) ? '' : NL.NL.NL.'[quote]'.NL.$body.NL.'[/quote]';
 				$this->single_parts['input']['recipients']			= ($data === FALSE OR $IN->GBL('daction', 'POST') == 'forward') ? '' : $this->convert_recipients($data['sender_id']);
 				
 				if ($data === FALSE OR $IN->GBL('daction', 'POST') != 'reply_all')
@@ -2723,10 +2774,28 @@ DOH;
     		}
     		else
     		{
-    			$data = $this->_message_data($id, $this->member_id);
-    	
-    			$this->single_parts['input']['subject']				= ($data === FALSE) ? '' : $data['subject'];
-				$this->single_parts['input']['body']   				= ($data === FALSE) ? '' : $data['body'];
+   				$data = $this->_message_data($id, $this->member_id);
+
+				if ($PREFS->ini('enable_censoring') == 'y' && $PREFS->ini('censored_words') != '')
+       			{
+					if ( ! class_exists('Typography'))
+					{
+						require PATH_CORE.'core.typography'.EXT;
+					}
+	
+					$TYPE = new Typography(0); 
+					
+					$subject = ($data === FALSE) ? '' : $TYPE->filter_censored_words($data['subject']);
+					$body = ($data === FALSE) ? '' : $TYPE->filter_censored_words($data['body']);
+				}
+				else
+				{
+					$subject = ($data === FALSE) ? '' : $data['subject'];
+					$body = ($data === FALSE) ? '' : $data['body'];					
+				}
+ 
+    			$this->single_parts['input']['subject']				= $subject;
+				$this->single_parts['input']['body']   				= $body;
 				$this->single_parts['input']['recipients']			= ($data === FALSE) ? '' : $this->convert_recipients($data['recipients']);
 				$this->single_parts['input']['cc']					= ($data === FALSE) ? '' : $this->convert_recipients($data['cc']);
 				$this->single_parts['include']['preview_message'] 	= ($data === FALSE OR $this->hide_preview === TRUE) ? '' : $data['preview'];
@@ -3007,7 +3076,7 @@ DOH;
 
     function view_message($copy_id = '')
     {
-    	global $LANG, $DB, $LOC, $IN, $FNS, $SESS, $REGX;
+    	global $LANG, $DB, $LOC, $IN, $FNS, $SESS, $REGX, $PREFS;
     	
     	/** ----------------------------------- 
     	/**  What Private Message?
@@ -3035,6 +3104,19 @@ DOH;
     	{
     		return $this->_error_page('invalid_message');
     	}
+        
+		if ($PREFS->ini('enable_censoring') == 'y' && $PREFS->ini('censored_words') != '')
+        {
+			if ( ! class_exists('Typography'))
+			{
+				require PATH_CORE.'core.typography'.EXT;
+			}
+		
+			$TYPE = new Typography(0); 
+			$data['subject'] = $TYPE->filter_censored_words($data['subject']);
+			$data['body'] = $TYPE->filter_censored_words($data['body']);
+		}
+
     	
     	$this->single_parts['include']['subject']				= $data['subject'];
 		$this->single_parts['include']['body']   				= $data['body'];
@@ -3287,7 +3369,7 @@ DOH;
     
     function bulletin_board($message='')
     {
-   		global $LANG, $DB, $OUT, $IN, $LOC, $SESS;
+   		global $LANG, $DB, $OUT, $IN, $LOC, $SESS, $PREFS;
    		
    		$DB->query("UPDATE exp_members SET last_view_bulletins = '".$LOC->now."' WHERE member_id = '{$this->member_id}'");
    		
@@ -3418,7 +3500,20 @@ DOH;
 		$folder_rows_template = $this->retrieve_template('bulletin');
 		$i = 0;
 		$r = '';
+		$censor = FALSE;
 		
+        if ($PREFS->ini('enable_censoring') == 'y' && $PREFS->ini('censored_words') != '')
+        {
+			$censor = TRUE;
+		
+			if ( ! class_exists('Typography'))
+			{
+				require PATH_CORE.'core.typography'.EXT;
+			}
+		
+			$TYPE = new Typography(0); 
+		}
+	
 		$query = $DB->query($dql.$sql);
 		
 		if ($query->row['bulletin_date'] != $SESS->userdata['last_bulletin_date'])
@@ -3442,6 +3537,7 @@ DOH;
 				$this->single_parts['path']['delete_bulletin']	= $this->_create_path('delete_bulletin').$row['bulletin_id'].'/';
 			}
 			
+			$data['bulletin_message'] = ($censor === FALSE) ? $data['bulletin_message'] : $TYPE->filter_censored_words($data['bulletin_message']);
 			$data['bulletin_sender'] = $row['screen_name'];
 			$data['bulletin_date'] = $LOC->set_human_time($row['bulletin_date']);
 			$data['style']		   = ($i % 2) ? 'tableCellTwo' : 'tableCellOne';

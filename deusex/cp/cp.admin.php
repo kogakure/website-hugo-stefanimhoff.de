@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -1873,7 +1873,7 @@ function showHideMenu(objValue)
 				{
 					$changes = 'y';
 					
-					$prefs[$value] = str_replace('\\', '\\\\', $_POST[$value]);
+					$prefs[$value] = str_replace('\\\\', '/',  $_POST[$value]);
 					unset($_POST[$value]);
 				}
 			}
@@ -1894,7 +1894,7 @@ function showHideMenu(objValue)
 		{
 			foreach ($_POST as $key => $val)
 			{
-				$_POST[$key] = stripslashes($val);		
+				$_POST[$key] = stripslashes(str_replace('\\\\', '/', $val));		
 			}
 			
 			$this->update_config_file($_POST, $loc);
@@ -2205,7 +2205,7 @@ function showHideMenu(objValue)
 			
 		for ($i =0; $i < sizeof($filelist); $i++) 
 		{
-			if ($filelist[$i] != '.' AND $filelist[$i] != '..' AND ! ereg("\.", $filelist[$i]))
+			if ( is_dir(PATH_CP_THEME.$filelist[$i]) && ! preg_match("/[^a-z\_\-0-9]/", $filelist[$i]))
 			{			
 				$selected = ($filelist[$i] == $default) ? 1 : '';
 				

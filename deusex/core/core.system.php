@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -26,7 +26,7 @@
 //  Turn off magic quotes
 // --------------------------------------------------
 
-    set_magic_quotes_runtime(0);
+    @set_magic_quotes_runtime(0);
 
 // ----------------------------------------------
 //  Instantiate the Benchmark class
@@ -80,18 +80,18 @@
 // --------------------------------------------------
 //  Determine system path and site name
 // --------------------------------------------------
-                
+              
     if ( ! isset($system_path))
     {
         $system_path = './';
+	}
+	
+    if (@realpath($system_path) !== FALSE)
+    {
+		$system_path = rtrim(realpath($system_path), DIRECTORY_SEPARATOR).DIRECTORY_SEPARATOR;
+    } 
 
-        if (@realpath($system_path) !== FALSE)
-        {
-            $system_path = realpath($system_path).'/';
-        }
-    }    
-    
-    $system_path = str_replace("\\", "/", $system_path);    
+    //$system_path = str_replace("\\", "/", $system_path);    
              
     if ( ! isset($config_file))
     {
@@ -135,19 +135,18 @@
 	{
 		$uri = str_replace(array("\r", "\r\n", "\n", '%3A','%3a','%2F','%2f'), array('', '', '', ':', ':', '/', '/'), $uri);
 		
-		if (preg_match("#(;|\?|{|}|<|>|http:\/\/|https:\/\/|www\.|\w+:/*[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})#i", $uri)) 
+		if (preg_match("#(;|\?|{|}|<|>|http:\/\/|https:\/\/|\w+:/*[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})#i", $uri)) 
 		{
 			exit('Invalid URI');
     	}
     }
-
 
 // ----------------------------------------------
 //  Set base system constants
 // ----------------------------------------------
 
     define('APP_NAME'	,	'ExpressionEngine');
-    define('APP_BUILD'	,	'20090122');   
+    define('APP_BUILD'	,	'20090723');   
     define('CONFIG_FILE',	$config_file); 
     define('PATH_CACHE'	,	$system_path.'cache/'); 
     define('PATH_LANG'	,	$system_path.'language/'); 
@@ -524,6 +523,11 @@
 //  Instantiate the Localization class
 // ----------------------------------------------
 
+	if (function_exists('date_default_timezone_set'))
+	{
+		date_default_timezone_set(date_default_timezone_get());
+	}
+	
     require PATH_CORE.'core.localize'.EXT;    
     
     $LOC = new Localize();

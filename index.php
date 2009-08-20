@@ -5,7 +5,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2007 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -37,18 +37,18 @@ if (isset($_GET['URL']))
 	/**  URL Redirect for CP and Links in Comments
 	/** ---------------------------------*/
 
-	$_GET['URL'] = str_replace(array("\r", "\r\n", "\n", '%3A','%3a','%2F','%2f'), 
-							   array('', '', '', ':', ':', '/', '/'), 
+	$_GET['URL'] = str_replace(array("\r", "\r\n", "\n", '%3A','%3a','%2F','%2f', '%0D', '%0A', '%09', 'document.cookie'), 
+							   array('', '', '', ':', ':', '/', '/', '', '', '', ''), 
 							   $_GET['URL']);
 	
-	if (substr($_GET['URL'], 0, 4) != "http" AND ! ereg('://', $_GET['URL'])) 
+	if (substr($_GET['URL'], 0, 4) != "http" AND ! stristr($_GET['URL'], '://') AND substr($_GET['URL'], 0, 1) != '/') 
 		$_GET['URL'] = "http://".$_GET['URL']; 
 		
-	$_GET['URL'] = str_replace( array('"', "'", ')', '(', ';', '}', '{', 'script%', 'script&', '&#40', '&#41'), 
+	$_GET['URL'] = str_replace( array('"', "'", ')', '(', ';', '}', '{', 'script%', 'script&', '&#40', '&#41', '<'), 
 								'', 
 								strip_tags($_GET['URL']));
 	
-	$host = ( ! isset($_SERVER['HTTP_HOST'])) ? '' : $_SERVER['HTTP_HOST'];
+	$host = ( ! isset($_SERVER['HTTP_HOST'])) ? '' : (substr($_SERVER['HTTP_HOST'],0,4) == 'www.' ? substr($_SERVER['HTTP_HOST'], 4) : $_SERVER['HTTP_HOST']);
 	
 	if ( ! isset($_SERVER['HTTP_REFERER']) OR ! stristr($_SERVER['HTTP_REFERER'], $host))
 	{
@@ -114,7 +114,7 @@ if ( ! isset($system_path))
 	}
 }
 
-if ( ! ereg("/$", $system_path)) $system_path .= '/';
+$system_path = rtrim($system_path, '/').'/';
 
 if ( ! @include($system_path.'core/core.system'.$ext))
 {

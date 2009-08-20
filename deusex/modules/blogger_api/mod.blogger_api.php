@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -654,7 +654,7 @@ class Blogger_api {
 			
 			$sql = "SELECT count(*) AS count 
 					FROM exp_weblog_titles 
-					WHERE url_title LIKE '".$DB->escape_str($url_title)."%' 
+					WHERE url_title LIKE '".$DB->escape_like_str($url_title)."%' 
 					AND weblog_id = '{$this->weblog_id}'";
 					
 			$results = $DB->query($sql);
@@ -673,6 +673,7 @@ class Blogger_api {
 							'url_title'         => $url_title,
 							'ip_address'		=> $IN->IP,
 							'entry_date'        => $LOC->now,
+							'edit_date'			=> gmdate("YmdHis", $LOC->now),
 							'year'              => gmdate('Y', $LOC->now),
 							'month'             => gmdate('m', $LOC->now),
 							'day'               => gmdate('d', $LOC->now),

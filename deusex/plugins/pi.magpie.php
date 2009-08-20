@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2004-2008 EllisLab, Inc.
+ Copyright (c) 2004 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -698,7 +698,7 @@ class MagpieRSS {
 		// check for a namespace, and split if found
 		$ns	= false;
 		if ( strpos( $element, ':' ) ) {
-			list($ns, $el) = split( ':', $element, 2); 
+			list($ns, $el) = explode( ':', $element, 2); 
 		}
 		if ( $ns and $ns != 'rdf' ) {
 			$this->current_namespace = $ns;
@@ -1645,6 +1645,11 @@ class RSSCache {
 		if ( ! file_exists( $this->BASE_CACHE ) ) {
 			$status = @mkdir( $this->BASE_CACHE, 0755 );
 			@chmod($this->BASE_CACHE, 0777);
+			
+			if ($fp = @fopen($this->BASE_CACHE.'/index.html', 'wb'))
+			{
+				fclose($fp);				
+			}
 			
 			// if make failed 
 			if ( ! $status ) {

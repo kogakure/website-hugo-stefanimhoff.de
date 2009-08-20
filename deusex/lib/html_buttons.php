@@ -21,8 +21,8 @@ class Html_buttons {
     	global $PREFS;
     	
 		$this->buttons[] = array("<b>",	"[b]",	"[/b]", "Bold Text");
+		$this->buttons[] = array("<del>", "[del]", 	"[/del]", "Deleted Text");
 		$this->buttons[] = array("<i>",	"[i]", 	"[/i]", "Italic Text");
-		$this->buttons[] = array("<u>",	"[u]", 	"[/u]", "Underline Text");
         
     	if ($this->allow_img == TRUE)
     	{

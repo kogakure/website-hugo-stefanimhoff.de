@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -399,20 +399,17 @@ class Logger {
         /**  Retrieve List of Devils
         /** ---------------------------*/
 		
-		$expire  = time() - $time_interval;
         $lockout = time() - $lockout_time;
         
         $offset = $LOC->now - time();
         
         $query = $DB->query("SELECT COUNT(ip_address) AS count FROM exp_throttle 
-							 WHERE last_activity > '{$expire}' 
-							 AND (hits >= '{$max_page_loads}' OR (locked_out = 'y' AND last_activity > '{$lockout}'))");
+							 WHERE (hits >= '{$max_page_loads}' OR (locked_out = 'y' AND last_activity > '{$lockout}'))");
 							
 		$total = $query->row['count'];
 		
 		$query = $DB->query("SELECT ip_address, hits, locked_out, last_activity FROM exp_throttle 
-							 WHERE last_activity > '{$expire}' 
-							 AND (hits >= '{$max_page_loads}' OR (locked_out = 'y' AND last_activity > '{$lockout}'))
+							 WHERE (hits >= '{$max_page_loads}' OR (locked_out = 'y' AND last_activity > '{$lockout}'))
 							 ORDER by ip_address LIMIT $rownum, $perpage");
         
         // Build the output
@@ -520,12 +517,10 @@ class Logger {
         /**  Retrieve List of Devils
         /** ---------------------------*/
         
-        $expire  = time() - $time_interval;
         $lockout = time() - $lockout_time;
         
         $query = $DB->query("SELECT ip_address FROM exp_throttle
-							 WHERE last_activity > '{$expire}' 
-							 AND (hits >= '{$max_page_loads}' OR (locked_out = 'y' AND last_activity > '{$lockout}'))");
+							 WHERE (hits >= '{$max_page_loads}' OR (locked_out = 'y' AND last_activity > '{$lockout}'))");
         
  		if ($query->num_rows == 0)
  		{

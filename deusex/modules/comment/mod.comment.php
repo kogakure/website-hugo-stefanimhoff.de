@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -99,7 +99,7 @@ class Comment {
 		$t_current_page		= '';
 		$total_pages		= 1;
 				
-		if ($TMPL->fetch_param('dynamic') == 'off' && $TMPL->fetch_param('entry_id') === FALSE && $TMPL->fetch_param('url_title') === FALSE)
+		if ($TMPL->fetch_param('dynamic') == 'off')
 		{
 			$dynamic = FALSE;
 		}
@@ -107,6 +107,13 @@ class Comment {
 		{
 			$dynamic = TRUE;
 		}
+		
+		$force_entry = FALSE;
+		
+		if ($TMPL->fetch_param('entry_id') !== FALSE OR $TMPL->fetch_param('url_title') !== FALSE)
+		{
+			$force_entry = TRUE;
+		}		
     
         /** ----------------------------------------------
         /**  Do we allow dynamic POST variables to set parameters?
@@ -137,7 +144,8 @@ class Comment {
 			{
 				$current_page = $match['1'];	
 				$uristr  = $FNS->remove_double_slashes(str_replace($match['0'], '', $uristr));
-			}		
+			}
+			
 		}
 		else
 		{		
@@ -148,7 +156,10 @@ class Comment {
 				$uristr  = $FNS->remove_double_slashes(str_replace($match['0'], '', $uristr));
 				$qstring = $FNS->remove_double_slashes(str_replace($match['0'], '', $qstring));
 			}
-					
+		}
+		
+		if  ($dynamic == TRUE OR $force_entry == TRUE)
+		{
 			// see if entry_id or url_title parameter is set
 			if ($entry_id = $TMPL->fetch_param('entry_id'))
 			{	
@@ -355,25 +366,27 @@ class Comment {
 			// When we are only showing comments and it is not based on an entry id or url title
 			// in the URL, we can make the query much more efficient and save some work.
 		
+			$e_sql = (isset($entry_id) && $entry_id != '') ? "AND entry_id = '".$DB->escape_str($entry_id)."' ": '';
+			
 			if ($show_trackbacks === FALSE)
 			{
 				$this_page = ($current_page == '' || ($limit > 1 AND $current_page == 1)) ? 0 : $current_page;
 				$this_sort = (strtolower($sort) == 'desc') ? 'DESC' : 'ASC';
 		
 				$sql = "SELECT comment_date, comment_id FROM exp_comments 
-						WHERE status = 'o' ".$w_sql." 
+						WHERE status = 'o' ".$e_sql.$w_sql." 
 						ORDER BY ".$order_by." ".$this_sort."
 						LIMIT {$this_page}, ".$limit;
 				
 				$query = $DB->query($sql);
 				
-				$count_query = $DB->query("SELECT COUNT(*) AS count FROM exp_comments WHERE status = 'o' ".$w_sql);
+				$count_query = $DB->query("SELECT COUNT(*) AS count FROM exp_comments WHERE status = 'o' ".$e_sql.$w_sql);
 				
 				$total_rows = $count_query->row['count'];
 			}
 			else
 			{
-				$sql = "SELECT comment_date, comment_id FROM exp_comments WHERE status = 'o' ".$w_sql." ORDER BY ".$order_by;		
+				$sql = "SELECT comment_date, comment_id FROM exp_comments WHERE status = 'o' ".$e_sql.$w_sql." ORDER BY ".$order_by;		
 			}
 			
 			$query = $DB->query($sql);
@@ -554,7 +567,7 @@ class Comment {
 													
 				$basepath = $FNS->remove_double_slashes($FNS->create_url($uristr, 1, 0).'/'.$deft_tmpl);
 				
-				$first_url = (ereg("\.php/$", $basepath)) ? substr($basepath, 0, -1) : $basepath;
+				$first_url = (substr($basepath, -5) == '.php/') ? substr($basepath, 0, -1) : $basepath;
 				
 				if ($TMPL->fetch_param('paginate_base'))
 				{				
@@ -642,7 +655,7 @@ class Comment {
 				$search_link = $FNS->fetch_site_index(0, 0).$qs.'ACT='.$FNS->fetch_action_id('Search', 'do_search').'&amp;result_path='.$result_path.'&amp;mbr=';
 
 				$sql = "SELECT 
-						exp_comments.comment_id, exp_comments.entry_id, exp_comments.weblog_id, exp_comments.author_id, exp_comments.name, exp_comments.email, exp_comments.url, exp_comments.location as c_location, exp_comments.ip_address, exp_comments.comment_date, exp_comments.edit_date, exp_comments.comment, exp_comments.notify,
+						exp_comments.comment_id, exp_comments.entry_id, exp_comments.weblog_id, exp_comments.author_id, exp_comments.name, exp_comments.email, exp_comments.url, exp_comments.location as c_location, exp_comments.ip_address, exp_comments.comment_date, exp_comments.edit_date, exp_comments.comment, exp_comments.notify, exp_comments.site_id AS comment_site_id,
 						exp_members.location, exp_members.occupation, exp_members.interests, exp_members.aol_im, exp_members.yahoo_im, exp_members.msn_im, exp_members.icq, exp_members.group_id, exp_members.member_id, exp_members.signature, exp_members.sig_img_filename, exp_members.sig_img_width, exp_members.sig_img_height, exp_members.avatar_filename, exp_members.avatar_width, exp_members.avatar_height, exp_members.photo_filename, exp_members.photo_width, exp_members.photo_height, 
 						exp_member_data.*,
 						exp_weblog_titles.title, exp_weblog_titles.url_title, exp_weblog_titles.author_id AS entry_author_id,
@@ -882,7 +895,7 @@ class Comment {
 				/**  parse {switch} variable
 				/** ----------------------------------------*/
 				
-				if (ereg("^switch", $key))
+				if (strncmp($key, 'switch', 6) == 0)
 				{
 					$sparam = $FNS->assign_parameters($key);
 					
@@ -923,20 +936,20 @@ class Comment {
                 /**  parse permalink
                 /** ----------------------------------------*/
                 
-                if (ereg("^permalink", $key) AND isset($row['comment_id']))
+                if (strncmp('permalink', $key, 9) == 0 && isset($row['comment_id']))
                 {                     
-                        $tagdata = $TMPL->swap_var_single(
-                                                            $key, 
-                                                            $FNS->create_url($uristr.'#'.$row['comment_id'], 0, 0), 
-                                                            $tagdata
-                                                         );
+					$tagdata = $TMPL->swap_var_single(
+														$key, 
+														$FNS->create_url($uristr.'#'.$row['comment_id'], 0, 0), 
+														$tagdata
+													 );
                 }                
 
                 /** ----------------------------------------
                 /**  parse comment_path or trackback_path
                 /** ----------------------------------------*/
                 
-                if (ereg("^comment_path", $key) || ereg("^trackback_path", $key) || ereg("^entry_id_path", $key) )
+                if (preg_match("#^(comment_path|trackback_path|entry_id_path)#", $key))
                 {                       
 					$tagdata = $TMPL->swap_var_single(
 														$key, 
@@ -950,7 +963,7 @@ class Comment {
                 /**  parse title permalink
                 /** ----------------------------------------*/
                 
-                if (ereg("^title_permalink", $key) || ereg("^url_title_path", $key))
+                if (preg_match("#^(title_permalink|url_title_path)#", $key))
                 { 
 					$path = ($FNS->extract_path($key) != '' AND $FNS->extract_path($key) != 'SITE_INDEX') ? $FNS->extract_path($key).'/'.$row['url_title'] : $row['url_title'];
 
@@ -1020,8 +1033,8 @@ class Comment {
                 /** ----------------------------------------
                 /**  {member_search_path}
                 /** ----------------------------------------*/
-                   
-                if (ereg("^member_search_path", $key))
+                
+				if (strncmp('member_search_path', $key, 18) == 0)
                 {                   
 					$tagdata = $TMPL->swap_var_single($key, $search_link.$row['author_id'], $tagdata);
                 }
@@ -2130,8 +2143,10 @@ class Comment {
         
 		$preview = ( ! $IN->GBL('PRV', 'POST')) ? '' : $IN->GBL('PRV');
 
-        if ( ! ereg("/", $preview))
-        		$preview = '';
+		if (strpos($preview, '/') === FALSE)
+        {
+			$preview = '';
+        }
         else
         {
 			$ex = explode("/", $preview);
@@ -2732,7 +2747,7 @@ class Comment {
 			
 			if ($_POST['email'] != '')
 			{
-				if (eregi($_POST['email'], $notify_address))
+				if (strpos($notify_address, $_POST['email']) !== FALSE)
 				{
 					$notify_address = str_replace($_POST['email'], "", $notify_address);				
 				}

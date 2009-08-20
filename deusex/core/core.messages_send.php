@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -955,6 +955,15 @@ class Messages_send extends Messages {
 				$TYPE = new Typography(0); 
  				$TYPE->smileys = FALSE;
 				$TYPE->highlight_code = TRUE;
+				
+				if ($PREFS->ini('enable_censoring') == 'y' && $PREFS->ini('censored_words') != '')
+				{
+					$subject = $TYPE->filter_censored_words($REGX->xss_clean($IN->GBL('subject')));
+				}
+				else
+				{
+					$subject = $REGX->xss_clean($IN->GBL('subject'));
+				}
 
 				$body = $TYPE->parse_type(stripslashes($REGX->xss_clean($IN->GBL('body'))),
 													   array('text_format'   => 'none',
@@ -973,7 +982,7 @@ class Messages_send extends Messages {
 				
 				$swap = array(
 							  'sender_name'			=> $SESS->userdata('screen_name'),
-							  'message_subject'		=> $REGX->xss_clean($IN->GBL('subject')), 
+							  'message_subject'		=> $subject, 
 							  'message_content'		=> $body,
 							  'site_name'			=> stripslashes($PREFS->ini('site_name')),
 							  'site_url'			=> $PREFS->ini('site_url')

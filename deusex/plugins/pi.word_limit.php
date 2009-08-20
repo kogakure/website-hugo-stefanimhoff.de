@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003-2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -22,10 +22,10 @@
 
 $plugin_info = array(
 						'pi_name'			=> 'Word Limiter',
-						'pi_version'			=> '1.0',
+						'pi_version'		=> '1.0',
 						'pi_author'			=> 'Rick Ellis',
 						'pi_author_url'		=> 'http://expressionengine.com/',
-						'pi_description'		=> 'Permits you to limit the number of words in some text',
+						'pi_description'	=> 'Permits you to limit the number of words in some text',
 						'pi_usage'			=> Word_limit::usage()
 					);
 

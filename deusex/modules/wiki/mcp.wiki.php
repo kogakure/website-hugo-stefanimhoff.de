@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -642,21 +642,19 @@ DOH;
         if ($fp = @opendir(PATH_PI)) 
         { 
             while (false !== ($file = readdir($fp))) 
-            { 
-				if ( eregi(EXT."$",  $file))
-				{
-					if (substr($file, 0, 3) == 'pi.')
-					{
-						$file = substr($file, 3, - strlen(EXT));
+            {
+            	if ( preg_match("/pi\.[a-z\_0-9]+?".preg_quote(EXT, '/')."$/", $file))
+            	{
+            		$file = substr($file, 3, - strlen(EXT));
 					
-						if ( ! in_array($file, $exclude))
-							$filelist[] = $file;
-					}
+					if ( ! in_array($file, $exclude))
+						$filelist[] = $file;
 				}
-            } 
-        } 
+            }
+            
+			closedir($fp);
+		} 
     
-        closedir($fp); 
         sort($filelist);
 		return $filelist;      
     }

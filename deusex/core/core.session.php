@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -811,7 +811,7 @@ class Session {
 				return array();
 			}
 				
-			if (eregi(':', $tracker))
+			if (strpos($tracker, ':') !== FALSE)
 			{
 				$tracker_parts = explode(':', $tracker);
 				
@@ -835,7 +835,7 @@ class Session {
 		
 		// If someone is messing with the URI we won't set the cookie
 	
-		 if ( ! ereg("^[A-Za-z0-9\%\_\/\-]+$", $URI) && ! isset($_GET['ACT']))
+		 if ( ! preg_match("#^[a-z0-9\%\_\/\-]+$#i", $URI) && ! isset($_GET['ACT']))
 		 {
 			return array();
 		 }
@@ -902,27 +902,27 @@ class Session {
         {
         	if ($val == '*') continue;
         
-			if (ereg("\*$", $val))
+        	if (substr($val, -1) == '*')
 			{
 				$val = str_replace("*", "", $val);
 
-				if (ereg("^$val", $match))
+				if (preg_match("#^".preg_quote($val,'#')."#", $match))
 				{
 					return TRUE;
 				}
 			}
-			elseif (ereg("^\*", $val))
+			elseif (substr($val, 0, 1) == '*')
 			{ 
-        			$val = str_replace("*", "", $val);
+				$val = str_replace("*", "", $val);
         	
-				if (ereg("$val$", $match))
+				if (preg_match("#".preg_quote($val, '#')."$#", $match))
 				{
 					return TRUE;
 				}
 			}
 			else
 			{
-				if (ereg("^$val$", $match))
+				if (preg_match("#^".preg_quote($val, '#')."$#", $match))
 				{
 					return TRUE;
 				}

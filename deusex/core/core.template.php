@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -39,6 +39,7 @@ class Template {
     var $embed_type			=  '';			// Type of template for embedded template
     var $template_hits   	=   0;
     var $php_parse_location =  'output';	// Where in the chain the PHP gets parsed
+	var $template_edit_date	=	'';			// Template edit date
     
     var $encode_email		=  TRUE;		// Whether to use the email encoder.  This is set automatically
     var $hit_lock_override	=  FALSE;		// Set to TRUE if you want hits tracked on sub-templates
@@ -182,7 +183,7 @@ class Template {
         
 		$this->log_item("URI: ".$IN->URI);
 		$this->log_item("Path.php Template: {$template_group}/{$template}");
-        
+
         $this->process_template($template_group, $template, FALSE);
         
 		$this->log_item(" - End Template Processing - ");
@@ -370,11 +371,23 @@ class Template {
 		
 		$this->log_item("Parse Date Format String Constants");
 		
+        /** --------------------------------------------------
+        /**  Template's Last Edit time {template_edit_date format="%Y %m %d %H:%i:%s"}
+        /** --------------------------------------------------*/
+
+   		if (strpos($this->template, LD.'template_edit_date') !== FALSE && preg_match_all("/".LD."template_edit_date\s+format=([\"\'])([^\\1]*?)\\1".RD."/", $this->template, $matches))
+   		{	
+			for ($j = 0; $j < count($matches['0']); $j++)
+			{				
+				$this->template = preg_replace("/".$matches['0'][$j]."/", $LOC->decode_date($matches['2'][$j], $this->template_edit_date), $this->template, 1);				
+			}
+		}  
+
 		/** --------------------------------------------------
         /**  Current time {current_time format="%Y %m %d %H:%i:%s"}
         /** --------------------------------------------------*/
 
-   		if (preg_match_all("/".LD."current_time\s+format=([\"\'])([^\\1]*?)\\1".RD."/", $this->template, $matches))
+   		if (strpos($this->template, LD.'current_time') !== FALSE && preg_match_all("/".LD."current_time\s+format=([\"\'])([^\\1]*?)\\1".RD."/", $this->template, $matches))
    		{	
 			for ($j = 0; $j < count($matches['0']); $j++)
 			{				
@@ -1160,16 +1173,19 @@ class Template {
                 			$vars['var_single'][$mkr] = $mkr;
                 		}
                 	}
+
+                	$this->related_markers = array();
                 }
 
                 $this->var_single	= $vars['var_single'];
                 $this->var_pair		= $vars['var_pair'];
-                
-                if ($this->related_id != '')
-                {
-                	$this->var_single[$this->related_id] = $this->related_id;
-                	$this->related_id = '';
-                }
+
+                //  Redundant see above loop for related_markers - R.S.
+                //if ($this->related_id != '')
+                //{
+                //	$this->var_single[$this->related_id] = $this->related_id;
+                //	$this->related_id = '';
+                //}
                 
 				//  Assign Conditional Variables
 				
@@ -1291,7 +1307,7 @@ class Template {
                 $this->var_single = array();
                 $this->var_cond   = array();
                 $this->var_pair   = array();
-                                
+                
                 unset($return_data);
                 unset($class_name);    
                 unset($meth_name);    
@@ -1343,7 +1359,10 @@ class Template {
 				
 				$this->related_markers[] = $matches['1'][$j];
 				$vars = $FNS->assign_variables($matches['2'][$j]);
-				$this->related_id = $matches['1'][$j];
+				
+				// Depreciated as redundant.  R.S.
+				//$this->related_id = $matches['1'][$j];
+				
 				$this->related_data[$rand] = array(
 											'marker'			=> $rand,
 											'field_name'		=> $matches['1'][$j],
@@ -1657,7 +1676,12 @@ class Template {
 				{
 					return;
 				}
-				
+
+				if ($dir == $cache_base && $fp = @fopen($dir.'/index.html', 'wb'))
+				{
+					fclose($fp);					
+				}
+								
 				@chmod($dir, 0777);            
 			}
         }
@@ -2072,6 +2096,12 @@ class Template {
         }
         
         /** -----------------------------------------
+        /**  Set template edit date
+        /** -----------------------------------------*/
+
+		$this->template_edit_date = $query->row['edit_date'];
+
+        /** -----------------------------------------
         /**  Set template type for our page headers
         /** -----------------------------------------*/
 
@@ -2118,7 +2148,7 @@ class Template {
 
         foreach ($cache_override as $val)
         {
-			if (ereg("^/".$val."/", $IN->URI))
+			if (preg_match("#^/".preg_quote($val, '#')."/#", $IN->URI))
 			{
 				$query->row['cache'] = 'n';
 			}
@@ -2167,9 +2197,7 @@ class Template {
         	{
 				$this->log_item("Retrieving Template from File");
 				
-				$basepath = $PREFS->ini('tmpl_file_basepath');
-				
-				if ( ! ereg("/$", $basepath)) $basepath .= '/';
+				$basepath = rtrim($PREFS->ini('tmpl_file_basepath'), '/').'/';
 										
 				$basepath .= $query->row['group_name'].'/'.$query->row['template_name'].'.php';
 				
@@ -2189,18 +2217,6 @@ class Template {
 				$PREFS->core_ini = $site_switch;
 			}
         }
-        
-        /** --------------------------------------------------
-        /**  Template's Last Edit time {template_edit_date format="%Y %m %d %H:%i:%s"}
-        /** --------------------------------------------------*/
-
-   		if (preg_match_all("/".LD."template_edit_date\s+format=([\"\'])([^\\1]*?)\\1".RD."/", $query->row['template_data'], $matches))
-   		{	
-			for ($j = 0; $j < count($matches['0']); $j++)
-			{				
-				$query->row['template_data'] = preg_replace("/".$matches['0'][$j]."/", $LOC->decode_date($matches['2'][$j], $query->row['edit_date']), $query->row['template_data'], 1);				
-			}
-		}  
         
 		// standardize newlines
 		$query->row['template_data'] = preg_replace("/(\015\012)|(\015)|(\012)/", "\n", $query->row['template_data']); 
@@ -2296,10 +2312,10 @@ class Template {
         if (sizeof($this->modules) == 0 && $fp = @opendir(PATH_MOD)) 
         { 
             while (false !== ($file = readdir($fp))) 
-            { 
-				if ( ! ereg("\.",  $file))
-				{                            
-                	$this->modules[] = $file;
+            {
+            	if ( is_dir(PATH_MOD.$file) && ! preg_match("/[^a-z\_0-9]/", $file))
+				{
+					$this->modules[] = $file;
                 }
             } 
 			closedir($fp); 
@@ -2318,8 +2334,8 @@ class Template {
         if ($fp = @opendir(PATH_PI)) 
         { 
             while (false !== ($file = readdir($fp))) 
-            { 
-				if (eregi(EXT."$",  $file) AND substr($file, 0, 3) == 'pi.')
+            {
+            	if ( preg_match("/pi\.[a-z\_0-9]+?".preg_quote(EXT, '/')."$/", $file))
 				{                            
 					$this->plugins[] = substr($file, 3, - strlen(EXT));
 				}
@@ -2874,14 +2890,14 @@ class Template {
 			// Make sure this is for a segment conditional
 			// And that this is not an advanced conditional
 			
-			if ( ! stristr($val['3'], 'segment_') OR 
+			if ( ! preg_match('/^segment_\d+$/i', $val['3']) OR
 				sizeof(preg_split("/(\!=|==|<=|>=|<>|<|>|AND|XOR|OR|&&|\|\|)/", $val['0'])) > 2 OR
 				stristr($val['2'], 'if:else') OR
 				stristr($val['0'], 'if:else'))
 			{
 				continue;	
 			}
-				
+			
 			$cond = $FNS->prep_conditional($val['0']);
 			
 			$lcond	= substr($cond, 0, strpos($cond, ' '));

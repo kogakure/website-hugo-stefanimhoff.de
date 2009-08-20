@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -406,8 +406,8 @@ class Updated_sites {
 				/** ----------------------------------------
 				/**  parse {switch} variable
 				/** ----------------------------------------*/
-					
-				if (ereg("^switch", $key))
+				
+				if (strncmp('switch', $key, 6) == 0)
 				{
 					$sparam = $FNS->assign_parameters($key);
 					$sw = '';
@@ -440,7 +440,7 @@ class Updated_sites {
 				/**  {ping_date}
 				/** ----------------------------------------*/
 				
-				if (ereg("^ping_date", $key))
+				if (strncmp('ping_date', $key, 9) == 0)
 				{
 					if ( ! isset($row['ping_date']) || $row['ping_date'] == 0)
                     {

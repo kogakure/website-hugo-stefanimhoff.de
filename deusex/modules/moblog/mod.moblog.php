@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -296,20 +296,20 @@ class Moblog {
         	return false;
 		}		
 		
-		if (!eregi("^\+OK",fgets($this->fp, 1024)))
+		if ( ! preg_match("#^\+OK#i",fgets($this->fp, 1024)))
 		{
 			$this->message_array[] = 'invalid_server_response'; 
 			@fclose($this->fp);
         	return false;
 		}
-		if (!eregi("^\+OK",$this->pop_command("USER ".base64_decode($this->moblog_array['moblog_email_login']))))
+		if ( ! preg_match("#^\+OK#i",$this->pop_command("USER ".base64_decode($this->moblog_array['moblog_email_login']))))
 		{
 			// Windows servers something require a different line break.
 			// So, we change the line break and try again.
 			
 			$this->pop_newline = "\r\n";
 			
-			if (!eregi("^\+OK",$this->pop_command("USER ".base64_decode($this->moblog_array['moblog_email_login']))))
+			if ( ! preg_match("#^\+OK#i",$this->pop_command("USER ".base64_decode($this->moblog_array['moblog_email_login']))))
 			{
 				$this->message_array[] = 'invalid_username'; 
 				$line = $this->pop_command("QUIT");
@@ -318,7 +318,7 @@ class Moblog {
         	}
 		}
 		
-		if (!eregi("^\+OK",$this->pop_command("PASS ".base64_decode($this->moblog_array['moblog_email_password']))))
+		if ( ! preg_match("#^\+OK#i",$this->pop_command("PASS ".base64_decode($this->moblog_array['moblog_email_password']))))
 		{
 			$this->message_array[] = 'invalid_password'; 
 			$line = $this->pop_command("QUIT");
@@ -380,7 +380,7 @@ class Moblog {
 						
 				$this->email_sizes[$x['0']] = $x['1'];
             	
-			} while (!ereg("^\.\r\n",$data));
+			} while (!preg_match("#^\.\r\n#",$data));
         }
 		
 		
@@ -393,7 +393,7 @@ class Moblog {
 		
 		for ($i=1; $i <= $total; $i++) 
 		{
-			if (!eregi("^\+OK", $this->pop_command("TOP $i 0")))
+			if ( ! preg_match("#^\+OK#", $this->pop_command("TOP $i 0")))
 			{
 				$line = $this->pop_command("QUIT");
 				@fclose($this->fp);
@@ -404,7 +404,7 @@ class Moblog {
 			$valid_from = ($this->moblog_array['moblog_valid_from'] != '') ? 'n' : 'y';
 			$str = fgets($this->fp, 1024);
 			
-			while (!ereg("^\.\r\n",$str))
+			while (!preg_match("#^\.\r\n#",$str))
 			{            	
             	$str = fgets($this->fp, 1024);
             	$str = $this->iso_clean($str);
@@ -535,7 +535,7 @@ class Moblog {
         	/**  Failure does happen at times
         	/** ---------------------------------------*/
         	
-			if (!eregi("^\+OK", $this->pop_command("RETR ".$email_id)))
+			if ( ! preg_match("#^\+OK#i", $this->pop_command("RETR ".$email_id)))
 			{
 				continue;
 			}
@@ -566,7 +566,7 @@ class Moblog {
 				
 				$email_data .= $data;
             	
-			} while (!ereg("^\.\r\n",$data));
+			} while (!preg_match("#^\.\r\n#",$data));
 			
 			//echo $email_data."<br /><br />\n\n";
 			
@@ -758,7 +758,7 @@ class Moblog {
 					
 					if ($this->moblog_array['moblog_auth_delete'] == 'y')
 					{
-						if (!eregi("^\+OK",$this->pop_command("DELE {$email_id}")))
+						if ( ! preg_match("#^\+OK#i",$this->pop_command("DELE {$email_id}")))
 						{
 							$this->message_array[] = 'undeletable_email'; //.$email_id;
 							return false;
@@ -994,7 +994,7 @@ class Moblog {
 			/** -------------------------*/
 			
 			
-			if (!eregi("^\+OK",$this->pop_command("DELE {$email_id}")))
+			if ( ! preg_match("#^\+OK#",$this->pop_command("DELE {$email_id}")))
 			{
 				$this->message_array[] = 'undeletable_email'; //.$email_id;
 				return false;
@@ -1083,7 +1083,7 @@ class Moblog {
 			
 			$results = $DB->query("SELECT COUNT(*) AS count 
 							  		FROM exp_gallery_entries 
-							  		WHERE title LIKE '".$DB->escape_str($entry_title)."%' 
+							  		WHERE title LIKE '".$DB->escape_like_str($entry_title)."%' 
 							  		AND gallery_id = '".$this->gallery_prefs['gallery_id']."'");
 							  		
 			$entry_title .= ($results->row['count'] + 1);
@@ -1402,7 +1402,7 @@ class Moblog {
 			/**  Check for multiple moblog titles for default title
 			/** ------------------------------------------------*/
 			
-			$sql = "SELECT count(*) AS count FROM exp_weblog_titles WHERE url_title LIKE '".$DB->escape_str($url_title)."%' AND weblog_id = '$weblog_id'";
+			$sql = "SELECT count(*) AS count FROM exp_weblog_titles WHERE url_title LIKE '".$DB->escape_like_str($url_title)."%' AND weblog_id = '$weblog_id'";
 			$results = $DB->query($sql);
 			$url_title .= $results->row['count']+1;
 		}		
@@ -1414,6 +1414,8 @@ class Moblog {
 		{
 			$author_id = '1';
 		}
+		
+		$entry_date = $LOC->now + $this->entries_added - $this->time_offset;
     	
 		/** ---------------------------------
         /**  Build our query string
@@ -1427,10 +1429,11 @@ class Moblog {
                         'title'             => ($PREFS->ini('auto_convert_high_ascii') == 'y') ? $REGX->ascii_to_entities($this->post_data['subject']) : $this->post_data['subject'],
                         'url_title'         => $url_title,
                         'ip_address'		=> $this->post_data['ip'],
-                        'entry_date'        => ($LOC->now + $this->entries_added - $this->time_offset),
-                        'year'              => gmdate('Y', $LOC->now - $this->time_offset),
-                        'month'             => gmdate('m', $LOC->now - $this->time_offset),
-                        'day'               => gmdate('d', $LOC->now - $this->time_offset),
+                        'entry_date'        => $entry_date,
+						'edit_date'			=> gmdate("YmdHis", $entry_date),
+                        'year'              => gmdate('Y', $entry_date),
+                        'month'             => gmdate('m', $entry_date),
+                        'day'               => gmdate('d', $entry_date),
                         'sticky'            => (isset($this->post_data['sticky'])) ? $this->post_data['sticky'] : $this->sticky,
                         'status'            => ($this->post_data['status'] == 'none') ? 'open' : $this->post_data['status'],
                         'allow_comments'    => $query->row['deft_comments'],
@@ -1693,11 +1696,7 @@ class Moblog {
 							   
 			// We don't want to send a notification if the person
 			// leaving the entry is in the notification list
-		
-			if (eregi($results->row['email'], $notify_address))
-			{
-				$notify_address = str_replace($results->row['email'], "", $notify_address);				
-			}
+			$notify_address = str_replace($results->row['email'],'', $notify_address);
 			
 			$notify_address = $REGX->remove_extra_commas($notify_address);
 			
@@ -2155,7 +2154,7 @@ class Moblog {
 			}
 		}
 		
-		if ( ! ereg("/$", $this->upload_path)) $this->upload_path .= '/';
+		$this->upload_path = rtrim($this->upload_path, '/').'/';
 		$this->upload_dir_code = '{filedir_'.$this->moblog_array['moblog_upload_directory'].'}';
 		
 		/** ---------------------------
@@ -2165,7 +2164,7 @@ class Moblog {
 		foreach($email_parts as $key => $value)
 		{
 			// Skip headers and those with no content-type
-			if ($key == '0' || !eregi("Content-Type:", $value))
+			if ($key == '0' || ! preg_match("#".preg_quote('Content-Type:')."#i", $value))
 			{
 				continue;	
 			}
@@ -2854,7 +2853,7 @@ class Moblog {
 	
 	function appledouble($data)
 	{		
-		if (!eregi("boundary=",$data))
+		if ( ! preg_match("#".preg_quote('boundary=')."#i",$data))
 		{
 			return false;
 		}
@@ -2980,7 +2979,7 @@ class Moblog {
 	
 	function find_boundary($email_data)
 	{		
-		if (!eregi("boundary=",$email_data))
+		if (!preg_match("#".preg_quote('boundary=')."#i",$email_data))
 		{
 			return false;
 		}

@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -1271,8 +1271,7 @@ function showHideTemplate(htmlObj)
 		$qs = ($PREFS->ini('force_query_string') == 'y') ? '' : '?';        
 		$sitepath = $FNS->fetch_site_index(0, 0).$qs.'URL='.$FNS->fetch_site_index();
                 
-        if ( ! ereg("/$", $sitepath))
-            $sitepath .= '/';
+        $sitepath = rtrim($sitepath, '/').'/';
               
         if ($SESS->userdata['group_id'] != 1 && (sizeof($SESS->userdata['assigned_template_groups']) == 0 OR $DSP->allowed_group('can_admin_templates') == FALSE))
         {
@@ -1340,20 +1339,20 @@ function showHideTemplate(htmlObj)
 				$criteria = 'AND';
 				
 				$mysql_function	= (substr($terms['0'], 0,1) == '-') ? 'NOT LIKE' : 'LIKE';    
-				$search_term	= (substr($terms['0'], 0,1) == '-') ? $DB->escape_str(substr($terms['0'], 1)) : $DB->escape_str($terms['0']);
+				$search_term	= (substr($terms['0'], 0,1) == '-') ? substr($terms['0'], 1) : $terms['0'];
 				
 				// We have two parentheses in the beginning in case
 				// there are any NOT LIKE's being used
-				$sql .= "\nAND (t.template_data $mysql_function '%".$DB->escape_str($search_term)."%' ";
+				$sql .= "\nAND (t.template_data $mysql_function '%".$DB->escape_like_str($search_term)."%' ";
     			
 				for ($i=1; $i < sizeof($terms); $i++) 
 				{
 					if (trim($terms[$i]) == '') continue;
 					$mysql_criteria	= ($mysql_function == 'NOT LIKE' OR substr($terms[$i], 0,1) == '-') ? $not_and : $criteria;
 					$mysql_function	= (substr($terms[$i], 0,1) == '-') ? 'NOT LIKE' : 'LIKE';
-					$search_term	= (substr($terms[$i], 0,1) == '-') ? $DB->escape_str(substr($terms[$i], 1)) : $DB->escape_str($terms[$i]);
+					$search_term	= (substr($terms[$i], 0,1) == '-') ? substr($terms[$i], 1) : $terms[$i];
 					
-					$sql .= "$mysql_criteria t.template_data $mysql_function '%".$DB->escape_str($search_term)."%' ";
+					$sql .= "$mysql_criteria t.template_data $mysql_function '%".$DB->escape_like_str($search_term)."%' ";
 				}
 				
 				$sql .= ") \n";
@@ -2252,14 +2251,17 @@ function showHideTemplate(htmlObj)
             }		
             else
             {
-                if ($array_name <> "")
-                    $val = $array_name.'/'.$val;
-                    
-               if (ereg(".tpl$", $val) OR ereg(".css$", $val) OR stristr($val, '.js'))
-               {    
-                    $this->template_map[] = $val;
-               }
-            }
+				if ($array_name != '')
+				{
+					$val = $array_name.'/'.$val;
+				}
+				
+				if (preg_match("#\.(tpl|css|js)$#", $val))
+				{    
+					$this->template_map[] = $val;
+				}
+			}
+            
         }
     }
     /* END */
@@ -2370,9 +2372,7 @@ function showHideTemplate(htmlObj)
             
             if ($PREFS->ini('save_tmpl_files') == 'y' && $PREFS->ini('tmpl_file_basepath') != '' && $query->row['save_template_file'] == 'y')
             {
-            	$basepath = $PREFS->ini('tmpl_file_basepath');
-            	
-            	if ( ! ereg("/$", $basepath)) $basepath .= '/';
+            	$basepath = rtrim($PREFS->ini('tmpl_file_basepath'), '/').'/';
 									
 				$basepath .= $query->row['group_name'].'/'.$query->row['template_name'].'.php';
 				
@@ -2898,7 +2898,9 @@ function showHideTemplate(htmlObj)
         $save_template_file	= $query->row['save_template_file']; 
         
 		    
-		if ($PREFS->ini('time_format') == 'us')
+		$date_fmt = ($SESS->userdata['time_format'] != '') ? $SESS->userdata['time_format'] : $PREFS->ini('time_format');
+
+		if ($date_fmt == 'us')
 		{
 			$datestr = '%m/%d/%y %h:%i %a';
 		}
@@ -2969,9 +2971,7 @@ function showHideTemplate(htmlObj)
           
         if ($PREFS->ini('save_tmpl_files') == 'y' AND $PREFS->ini('tmpl_file_basepath') != '' AND $save_template_file == 'y')
         {
-			$basepath = $PREFS->ini('tmpl_file_basepath');
-			
-			if ( ! ereg("/$", $basepath)) $basepath .= '/';
+			$basepath = rtrim($PREFS->ini('tmpl_file_basepath'), '/').'/';
 			
 			$basepath .= $template_group.'/'.$template_name.'.php';
 		
@@ -2984,8 +2984,7 @@ function showHideTemplate(htmlObj)
 		$qs = ($PREFS->ini('force_query_string') == 'y') ? '' : '?';        
 		$sitepath = $FNS->fetch_site_index(0, 0).$qs.'URL='.$FNS->fetch_site_index();
                      
-        if ( ! ereg("/$", $sitepath))
-            $sitepath .= '/';
+		$sitepath = rtrim($sitepath, '/').'/';
         
         if ($template_type == 'css')
         {
@@ -3302,9 +3301,7 @@ EOT;
 				
 				if ($query->row['save_template_file'] == 'y')
 				{
-					$basepath = $PREFS->ini('tmpl_file_basepath');
-					
-					if ( ! ereg("/$", $basepath)) $basepath .= '/';
+					$basepath = rtrim($PREFS->ini('tmpl_file_basepath'), '/').'/';
 					
 					$basepath .= $query->row['group_name'].'/'.$query->row['template_name'].'.php';
 				
@@ -3347,16 +3344,8 @@ EOT;
                 $SESS->userdata['template_size'] = $_POST['columns'];
             }
         }
-
-        // Clear tag caching if we find the cache="yes" parameter in the template
-        
-        if (preg_match("#\s+cache=[\"']yes[\"']\s+#", stripslashes($_POST['template_data'])))
-        {
-            $FNS->clear_caching('tag');
-        }
         
         // Clear cache files
-        
         $FNS->clear_caching('all');
     
         $message = $DSP->qdiv('success', $LANG->line('template_updated'));
@@ -3754,7 +3743,7 @@ EOT;
         			$suffix = 'xml';
         			$content_type = 'application/force-download';
         		break;
-        		case 'statis' :
+        		case 'static' :
         			$suffix = 'txt';
         			$content_type = 'application/force-download';
         		break;

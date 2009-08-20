@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -220,6 +220,7 @@ class Search {
         /** ----------------------------------------*/
         
         $original_keywords = $this->keywords;
+		$mbr = ( ! isset($_GET['mbr'])) ? '' : $_GET['mbr'];
 
         $sql = $this->build_standard_query();
         
@@ -268,9 +269,6 @@ class Search {
 		// This fixes a bug that occurs when a different table prefix is used
         
         $sql = str_replace('exp_', 'MDBMPREFIX', $sql);
-				
-		
-		$mbr = ( ! isset($_GET['mbr'])) ? '' : $_GET['mbr'];
 		
 		$data = array(
 						'search_id'		=> $hash,
@@ -424,7 +422,7 @@ class Search {
 				}
 				else
 				{
-					$sql .= " LIKE '%".$DB->escape_str($_POST['member_name'])."%' ";
+					$sql .= " LIKE '%".$DB->escape_like_str($_POST['member_name'])."%' ";
 				}
 				
 				$query = $DB->query($sql);
@@ -631,14 +629,16 @@ class Search {
   			
   			$not_and = (sizeof($terms) > 2) ? ') AND (' : 'AND';
   			rsort($terms);
-  			
+			$terms_like = $DB->escape_like_str($terms);
+			$terms = $DB->escape_str($terms);
+
   			/** ----------------------------------
 			/**  Search in Title Field
 			/** ----------------------------------*/
 			
 			if (sizeof($terms) == 1 && isset($_POST['where']) && $_POST['where'] == 'word') // Exact word match
 			{				
-				$sql .= "((exp_weblog_titles.title = '".$DB->escape_str($terms['0'])."' OR exp_weblog_titles.title LIKE '".$DB->escape_str($terms['0'])." %' OR exp_weblog_titles.title LIKE '% ".$DB->escape_str($terms['0'])." %') ";
+				$sql .= "((exp_weblog_titles.title = '".$terms['0']."' OR exp_weblog_titles.title LIKE '".$terms_like['0']." %' OR exp_weblog_titles.title LIKE '% ".$terms_like['0']." %') ";
 				
 				// and close up the member clause
 				if ($member_ids != '')
@@ -653,19 +653,19 @@ class Search {
 			elseif ( ! isset($_POST['exact_keyword']))  // Any terms, all terms
 			{				
 				$mysql_function	= (substr($terms['0'], 0,1) == '-') ? 'NOT LIKE' : 'LIKE';    
-				$search_term	= (substr($terms['0'], 0,1) == '-') ? $DB->escape_str(substr($terms['0'], 1)) : $DB->escape_str($terms['0']);
+				$search_term	= (substr($terms['0'], 0,1) == '-') ? substr($terms_like['0'], 1) : $terms_like['0'];
 				
 				// We have three parentheses in the beginning in case
 				// there are any NOT LIKE's being used and to allow for a member clause
-				$sql .= "\n(((exp_weblog_titles.title $mysql_function '%".$DB->escape_str($search_term)."%' ";
+				$sql .= "\n(((exp_weblog_titles.title $mysql_function '%".$search_term."%' ";
     			
 				for ($i=1; $i < sizeof($terms); $i++) 
 				{
 					$mysql_criteria	= ($mysql_function == 'NOT LIKE' OR substr($terms[$i], 0,1) == '-') ? $not_and : $criteria;
 					$mysql_function	= (substr($terms[$i], 0,1) == '-') ? 'NOT LIKE' : 'LIKE';
-					$search_term	= (substr($terms[$i], 0,1) == '-') ? $DB->escape_str(substr($terms[$i], 1)) : $DB->escape_str($terms[$i]);
+					$search_term	= (substr($terms[$i], 0,1) == '-') ? substr($terms_like[$i], 1) : $terms_like[$i];
 					
-					$sql .= "$mysql_criteria exp_weblog_titles.title $mysql_function '%".$DB->escape_str($search_term)."%' ";
+					$sql .= "$mysql_criteria exp_weblog_titles.title $mysql_function '%".$search_term."%' ";
 				}
 				
 				$sql .= ")) ";
@@ -681,8 +681,9 @@ class Search {
 				}
 			}
 			else // exact phrase match
-			{					
-				$sql .= "(exp_weblog_titles.title LIKE '%".$DB->escape_str((sizeof($terms) == 1) ? $terms[0] : $this->keywords)."%' ";
+			{	
+				$search_term = (sizeof($terms) == 1) ? $terms_like[0] : $DB->escape_like_str($this->keywords);				
+				$sql .= "(exp_weblog_titles.title LIKE '%".$search_term."%' ";
 				
 				// and close up the member clause
 				if ($member_ids != '')
@@ -714,20 +715,20 @@ class Search {
 					}
 					
 					$mysql_function	= (substr($terms['0'], 0,1) == '-') ? 'NOT LIKE' : 'LIKE';    
-					$search_term	= (substr($terms['0'], 0,1) == '-') ? $DB->escape_str(substr($terms['0'], 1)) : $DB->escape_str($terms['0']);
+					$search_term	= (substr($terms['0'], 0,1) == '-') ? substr($terms_like['0'], 1) : $terms_like['0'];
 							
 					// Since Title is always required in a search we use OR
 					// And then three parentheses just like above in case
 					// there are any NOT LIKE's being used and to allow for a member clause
-					$sql .= "\nOR ((($concat_fields $mysql_function '%".$DB->escape_str($search_term)."%' ";
+					$sql .= "\nOR ((($concat_fields $mysql_function '%".$search_term."%' ";
     				
 					for ($i=1; $i < sizeof($terms); $i++) 
 					{
 						$mysql_criteria	= ($mysql_function == 'NOT LIKE' OR substr($terms[$i], 0,1) == '-') ? $not_and : $criteria;
 						$mysql_function	= (substr($terms[$i], 0,1) == '-') ? 'NOT LIKE' : 'LIKE';
-						$search_term	= (substr($terms[$i], 0,1) == '-') ? $DB->escape_str(substr($terms[$i], 1)) : $DB->escape_str($terms[$i]);
+						$search_term	= (substr($terms[$i], 0,1) == '-') ? substr($terms_like[$i], 1) : $terms_like[$i];
 						
-						$sql .= "$mysql_criteria $concat_fields $mysql_function '%".$DB->escape_str($search_term)."%' ";
+						$sql .= "$mysql_criteria $concat_fields $mysql_function '%".$search_term."%' ";
 					}
 							
 					$sql .= ")) ";
@@ -748,7 +749,7 @@ class Search {
 					{					
 						if (sizeof($terms) == 1 && isset($_POST['where']) && $_POST['where'] == 'word')
 						{
-							$sql .= "\nOR ((exp_weblog_data.field_id_".$val." LIKE '".$DB->escape_str($terms['0'])." %' OR exp_weblog_data.field_id_".$val." LIKE '% ".$DB->escape_str($terms['0'])." %' OR exp_weblog_data.field_id_".$val." LIKE '%\t".$DB->escape_str($terms['0'])." %' OR exp_weblog_data.field_id_".$val." = '".$DB->escape_str($terms['0'])."') ";
+							$sql .= "\nOR ((exp_weblog_data.field_id_".$val." LIKE '".$terms_like['0']." %' OR exp_weblog_data.field_id_".$val." LIKE '% ".$terms_like['0']." %' OR exp_weblog_data.field_id_".$val." LIKE '% ".$terms_like['0']."' OR exp_weblog_data.field_id_".$val." = '".$terms['0']."') ";
 														
 							// and close up the member clause
 							if ($member_ids != '')
@@ -763,20 +764,20 @@ class Search {
 						elseif ( ! isset($_POST['exact_keyword']))
 						{
 							$mysql_function	= (substr($terms['0'], 0,1) == '-') ? 'NOT LIKE' : 'LIKE';    
-							$search_term	= (substr($terms['0'], 0,1) == '-') ? $DB->escape_str(substr($terms['0'], 1)) : $DB->escape_str($terms['0']);
+							$search_term	= (substr($terms['0'], 0,1) == '-') ? substr($terms_like['0'], 1) : $terms_like['0'];
 							
 							// Since Title is always required in a search we use OR
 							// And then three parentheses just like above in case
 							// there are any NOT LIKE's being used and to allow for a member clause
-							$sql .= "\nOR (((exp_weblog_data.field_id_".$val." $mysql_function '%".$DB->escape_str($search_term)."%' ";
+							$sql .= "\nOR (((exp_weblog_data.field_id_".$val." $mysql_function '%".$search_term."%' ";
     				
 							for ($i=1; $i < sizeof($terms); $i++) 
 							{
 								$mysql_criteria	= ($mysql_function == 'NOT LIKE' OR substr($terms[$i], 0,1) == '-') ? $not_and : $criteria;
 								$mysql_function	= (substr($terms[$i], 0,1) == '-') ? 'NOT LIKE' : 'LIKE';
-								$search_term	= (substr($terms[$i], 0,1) == '-') ? $DB->escape_str(substr($terms[$i], 1)) : $DB->escape_str($terms[$i]);
+								$search_term	= (substr($terms[$i], 0,1) == '-') ? substr($terms_like[$i], 1) : $terms_like[$i];
 						
-								$sql .= "$mysql_criteria exp_weblog_data.field_id_".$val." $mysql_function '%".$DB->escape_str($search_term)."%' ";
+								$sql .= "$mysql_criteria exp_weblog_data.field_id_".$val." $mysql_function '%".$search_term."%' ";
 							}
 							
 							$sql .= ")) ";
@@ -794,7 +795,8 @@ class Search {
 						}
 						else
 						{
-							$sql .= "\nOR (exp_weblog_data.field_id_".$val." LIKE '%".$DB->escape_str((sizeof($terms) == 1) ? $terms[0] : $this->keywords)."%' ";
+							$search_term = (sizeof($terms) == 1) ? $terms_like[0] : $DB->escape_like_str($this->keywords);	
+							$sql .= "\nOR (exp_weblog_data.field_id_".$val." LIKE '%".$search_term."%' ";
 							
 							// and close up the member clause
 							if ($member_ids != '')
@@ -819,7 +821,7 @@ class Search {
 			{
 				if (sizeof($terms) == 1 && isset($_POST['where']) && $_POST['where'] == 'word')
 				{
-					$sql .= " OR (exp_comments.comment LIKE '% ".$DB->escape_str($terms['0'])." %' ";
+					$sql .= " OR (exp_comments.comment LIKE '% ".$terms_like['0']." %' ";
 					
 					// and close up the member clause
 					if ($member_ids != '')
@@ -835,19 +837,19 @@ class Search {
 				elseif ( ! isset($_POST['exact_keyword']))
 				{
 					$mysql_function	= (substr($terms['0'], 0,1) == '-') ? 'NOT LIKE' : 'LIKE';    
-					$search_term	= (substr($terms['0'], 0,1) == '-') ? $DB->escape_str(substr($terms['0'], 1)) : $DB->escape_str($terms['0']);
+					$search_term	= (substr($terms['0'], 0,1) == '-') ? substr($terms_like['0'], 1) : $terms_like['0'];
 					
 					// We have three parentheses in the beginning in case
 					// there are any NOT LIKE's being used and to allow a member clause
-					$sql .= "\nOR (((exp_comments.comment $mysql_function '%".$DB->escape_str($search_term)."%' ";
+					$sql .= "\nOR (((exp_comments.comment $mysql_function '%".$search_term."%' ";
 					
 					for ($i=1; $i < sizeof($terms); $i++) 
 					{
 						$mysql_criteria	= ($mysql_function == 'NOT LIKE' OR substr($terms[$i], 0,1) == '-') ? $not_and : $criteria;
 						$mysql_function	= (substr($terms[$i], 0,1) == '-') ? 'NOT LIKE' : 'LIKE';
-						$search_term	= (substr($terms[$i], 0,1) == '-') ? $DB->escape_str(substr($terms[$i], 1)) : $DB->escape_str($terms[$i]);
+						$search_term	= (substr($terms[$i], 0,1) == '-') ? substr($terms_like[$i], 1) : $terms_like[$i];
 					
-						$sql .= "$mysql_criteria exp_comments.comment $mysql_function '%".$DB->escape_str($search_term)."%' ";
+						$sql .= "$mysql_criteria exp_comments.comment $mysql_function '%".$search_term."%' ";
 					}
 				
 					$sql .= ")) ";
@@ -865,7 +867,8 @@ class Search {
 				}
 				else
 				{
-					$sql .= " OR ((exp_comments.comment LIKE '%".$DB->escape_str((sizeof($terms) == 1) ? $terms[0] : $this->keywords)."%') ";
+					$search_term = (sizeof($terms) == 1) ? $terms_like[0] : $DB->escape_like_str($this->keywords);	
+					$sql .= " OR ((exp_comments.comment LIKE '%".$search_term."%') ";
 					
 					// and close up the member clause
 					if ($member_ids != '')
@@ -938,7 +941,7 @@ class Search {
         /** ----------------------------------------------
         /**  Are there results?
         /** ----------------------------------------------*/
-		
+
 		$query = $DB->query($sql);
 					
 		if ($query->num_rows == 0)
@@ -1306,7 +1309,7 @@ class Search {
 		
 		if ($switch = $TMPL->fetch_param('switch'))
 		{
-			if (ereg("\|", $switch))
+			if (strpos($switch, '|') !== FALSE)
 			{
 				$x = explode("|", $switch);
 				

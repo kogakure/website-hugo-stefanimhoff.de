@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -191,6 +191,12 @@ class Weblog {
 			{
 				return FALSE;
 			}
+			
+			if ($fp = @fopen($cache_dir.'/index.html', 'wb'))
+			{
+				fclose($fp);				
+			}
+			
 			@chmod($cache_dir, 0777);            
 		}	
 		
@@ -1262,8 +1268,8 @@ class Weblog {
 				/**  Parse page number
 				/** --------------------------------------*/
 				
-				if (preg_match("#^P(\d+)|/P(\d+)#", $qstring, $match) AND $dynamic)
-				{					
+				if (preg_match("#^P(\d+)|/P(\d+)#", $qstring, $match) AND ($dynamic OR $TMPL->fetch_param('paginate')))
+				{	
 					$this->p_page = (isset($match['2'])) ? $match['2'] : $match['1'];	
 						
 					$this->basepath = $FNS->remove_double_slashes(str_replace($match['0'], '', $this->basepath));
@@ -1931,7 +1937,7 @@ class Weblog {
 						
 						$sstr = $FNS->sql_andor_string($status, 't.status');
 						
-						if ( ! eregi("'closed'", $sstr))
+						if ( ! preg_match("#\'closed\'#i", $sstr))
 						{
 							$sstr .= " AND t.status != 'closed' ";
 						}
@@ -2014,7 +2020,7 @@ class Weblog {
 						
 						$sstr = $FNS->sql_andor_string($status, 't.status');
 						
-						if ( ! eregi("'closed'", $sstr))
+						if ( ! preg_match("#\'closed\'#i", $sstr))
 						{
 							$sstr .= " AND t.status != 'closed' ";
 						}
@@ -2111,7 +2117,7 @@ class Weblog {
 						
 						$sstr = $FNS->sql_andor_string($status, 't.status');
 						
-						if ( ! eregi("'closed'", $sstr))
+						if ( ! preg_match("#\'closed\'#i", $sstr))
 						{
 							$sstr .= " AND t.status != 'closed' ";
 						}
@@ -2407,7 +2413,7 @@ class Weblog {
 			
 			$sstr = $FNS->sql_andor_string($status, 't.status');
 			
-			if ( ! eregi("'closed'", $sstr))
+			if ( ! preg_match("#\'closed\'#i", $sstr))
 			{
 				$sstr .= " AND t.status != 'closed' ";
 			}
@@ -2520,7 +2526,7 @@ class Weblog {
 							}
 							else
 							{
-								$sql .= ' wd.field_id_'.$this->cfields[$PREFS->ini('site_id')][$field_name].' '.$like.' "%'.$DB->escape_str($term).'%" '.$andor;								
+								$sql .= ' wd.field_id_'.$this->cfields[$PREFS->ini('site_id')][$field_name].' '.$like.' "%'.$DB->escape_like_str($term).'%" '.$andor;								
 							}
 						}
 						
@@ -3044,17 +3050,17 @@ class Weblog {
 				
 				$PGR = new Paginate();
 				
-				if ( ! ereg(SELF, $this->basepath) AND $PREFS->ini('site_index') != '')
+				if ( ! stristr($this->basepath, SELF) AND $PREFS->ini('site_index') != '')
 				{
 					$this->basepath .= SELF.'/';
 				}
 																	
-				$first_url = (ereg("\.php/$", $this->basepath)) ? substr($this->basepath, 0, -1) : $this->basepath;
-				
 				if ($TMPL->fetch_param('paginate_base'))
 				{				
 					$this->basepath = $FNS->create_url($REGX->trim_slashes($TMPL->fetch_param('paginate_base')));
 				}				
+
+				$first_url = (preg_match("#\.php/$#", $this->basepath)) ? substr($this->basepath, 0, -1) : $this->basepath;
 								
 				$PGR->first_url 	= $first_url;
 				$PGR->path			= $this->basepath;
@@ -3424,7 +3430,7 @@ class Weblog {
                 /**  parse categories
                 /** ----------------------------------------*/
                 
-                if (ereg("^categories", $key))
+                if (strncmp('categories', $key, 10) == 0)
                 {
                     if (isset($this->categories[$row['entry_id']]) AND is_array($this->categories[$row['entry_id']]) AND count($cat_chunk) > 0)
                     {	
@@ -3455,7 +3461,7 @@ class Weblog {
 							
 							if (isset($catval['1']['show']))
 							{
-								if (ereg("^not ", $catval['1']['show']))
+								if (strncmp('not ', $catval[1]['show'], 4) == 0)
 								{
 									$not_these = explode('|', trim(substr($catval['1']['show'], 3)));
 								}
@@ -3467,7 +3473,7 @@ class Weblog {
 								
 							if (isset($catval['1']['show_group']))
 							{
-								if (ereg("^not ", $catval['1']['show_group']))
+								if (strncmp('not ', $catval[1]['show_group'], 4) == 0)
 								{
 									$not_these_groups = explode('|', trim(substr($catval['1']['show_group'], 3)));
 								}
@@ -3597,7 +3603,7 @@ class Weblog {
                 /**  parse date heading
                 /** ----------------------------------------*/
                 
-                if (ereg("^date_heading", $key))
+                if (strncmp('date_heading', $key, 12) == 0)
                 {   
                     // Set the display preference
                     
@@ -3723,7 +3729,7 @@ class Weblog {
                 /**  parse date footer
                 /** ----------------------------------------*/
                 
-                if (ereg("^date_footer", $key))
+                if (strncmp('date_footer', $key, 11) == 0)
                 {   
                     // Set the display preference
                     
@@ -3833,7 +3839,7 @@ class Weblog {
                 
                 // Note:  This must happen first.
                 
-                if (ereg('\|', $key) AND is_array($val))
+                if (stristr($key, '|') && is_array($val))
                 {                
 					foreach($val as $item)
 					{
@@ -4047,8 +4053,8 @@ class Weblog {
                 /** ----------------------------------------
                 /**  parse profile path
                 /** ----------------------------------------*/
-                                
-                if (ereg("^profile_path", $key))
+                
+                if (strncmp('profile_path', $key, 12) == 0)
                 {
 					$tagdata = $TMPL->swap_var_single(
 														$key, 
@@ -4060,8 +4066,8 @@ class Weblog {
                 /** ----------------------------------------
                 /**  {member_search_path}
                 /** ----------------------------------------*/
-   
-                if (ereg("^member_search_path", $key))
+                
+                if (strncmp('member_search_path', $key, 18) == 0)
                 {
 					$tagdata = $TMPL->swap_var_single(
 														$key, 
@@ -4075,7 +4081,7 @@ class Weblog {
                 /**  parse comment_path or trackback_path
                 /** ----------------------------------------*/
                 
-                if (ereg("^comment_path", $key) || ereg("^trackback_path", $key) || ereg("^entry_id_path", $key) )
+                if (preg_match("#^(comment_path|trackback_path|entry_id_path)#", $key))
                 {                       
 					$tagdata = $TMPL->swap_var_single(
 														$key, 
@@ -4088,7 +4094,7 @@ class Weblog {
                 /**  parse URL title path
                 /** ----------------------------------------*/
                 
-                if (ereg("^url_title_path", $key))
+                if (strncmp('url_title_path', $key, 14) == 0)
                 { 
 					$path = ($FNS->extract_path($key) != '' AND $FNS->extract_path($key) != 'SITE_INDEX') ? $FNS->extract_path($key).'/'.$row['url_title'] : $row['url_title'];
 
@@ -4103,7 +4109,7 @@ class Weblog {
                 /**  parse title permalink
                 /** ----------------------------------------*/
                 
-                if (ereg("^title_permalink", $key))
+                if (strncmp('title_permalink', $key, 15) == 0)
                 { 
 					$path = ($FNS->extract_path($key) != '' AND $FNS->extract_path($key) != 'SITE_INDEX') ? $FNS->extract_path($key).'/'.$row['url_title'] : $row['url_title'];
 
@@ -4118,7 +4124,7 @@ class Weblog {
                 /**  parse permalink
                 /** ----------------------------------------*/
                 
-                if (ereg("^permalink", $key))
+                if (strncmp('permalink', $key, 9) == 0)
                 {                     
 					$path = ($FNS->extract_path($key) != '' AND $FNS->extract_path($key) != 'SITE_INDEX') ? $FNS->extract_path($key).'/'.$row['entry_id'] : $row['entry_id'];
                 
@@ -4236,10 +4242,7 @@ class Weblog {
 						$blog_url = substr($blog_url, $x + 1);
 					}
 					
-					if (ereg("/$", $blog_url))
-					{
-						$blog_url = substr($blog_url, 0, -1);
-					}
+					$blog_url = rtrim($blog_url, '/');
 					
                     $tagdata = $TMPL->swap_var_single($val, $blog_url, $tagdata);
                 }
@@ -4293,8 +4296,8 @@ class Weblog {
                 /**  parse {comment_tb_total}
                 /** ----------------------------------------*/
                 
-                if (ereg("^comment_tb_total$", $key))
-                {                        
+                if ($key == 'comment_tb_total')
+                {
                     $tagdata = $TMPL->swap_var_single($val, ($row['comment_total'] + $row['trackback_total']), $tagdata);
                 }
                 
@@ -5099,7 +5102,7 @@ class Weblog {
 		
 			if ($TMPL->fetch_param('show') !== FALSE)
 			{
-				if (ereg("^not ", $TMPL->fetch_param('show')))
+				if (strncmp('not ', $TMPL->fetch_param('show'), 4) == 0)
 				{
 					$not_these = explode('|', trim(substr($TMPL->fetch_param('show'), 3)));
 				}
@@ -5937,7 +5940,7 @@ class Weblog {
 		
 		if ($TMPL->fetch_param('show') !== FALSE)
 		{
-			if (ereg("^not ", $TMPL->fetch_param('show')))
+			if (strncmp('not ', $TMPL->fetch_param('show'), 4) == 0)
 			{
 				$not_these = explode('|', trim(substr($TMPL->fetch_param('show'), 3)));
 			}
@@ -6541,7 +6544,7 @@ class Weblog {
 		$cat_vars = array('category_name'			=> $query->row['cat_name'],
 						  'category_description'	=> $query->row['cat_description'],
 						  'category_image'			=> $query->row['cat_image'],
-						  'category_id'				=> $match['1'],
+						  'category_id'				=> $match['2'],
 						  'parent_id'				=> $query->row['parent_id']);
 
 		// add custom fields for conditionals prep
@@ -6766,7 +6769,7 @@ class Weblog {
 
 	        if ($blog_name = $TMPL->fetch_param('weblog'))
 	        {
-	            $sql .= $FNS->sql_andor_string($blog_name, 'blog_name', 'w');
+	            $sql .= $FNS->sql_andor_string($blog_name, 'blog_name', 'w')." ";
 	        }
 	    }
 	    else
@@ -6774,14 +6777,12 @@ class Weblog {
 			$sql .= " AND t.weblog_id = '".UB_BLOG_ID."' ";
 	    }
 
-		$sql .= " AND t.status != 'closed' ";
-
 		if ($status = $TMPL->fetch_param('status'))
 	    {
 			$status = str_replace('Open',   'open',   $status);
 			$status = str_replace('Closed', 'closed', $status);
 
-			$sql .= $FNS->sql_andor_string($status, 't.status');
+			$sql .= $FNS->sql_andor_string($status, 't.status')." ";
 		}
 		else
 		{
@@ -7029,7 +7030,7 @@ class Weblog {
 			
 			$sstr = $FNS->sql_andor_string($status, 'status');
 			
-			if ( ! eregi("'closed'", $sstr))
+			if ( ! preg_match("#\'closed\'#i", $sstr))
 			{
 				$sstr .= " AND status != 'closed' ";
 			}
@@ -7122,8 +7123,8 @@ class Weblog {
             /** ----------------------------------------*/
                         
             foreach ($TMPL->var_single as $key => $val)
-            {              
-                if (ereg("^path", $key))
+            {
+            	if (strncmp('path', $key, 4) == 0)
                 { 
                     $tagdata = $TMPL->swap_var_single(
                                                         $val, 
@@ -7270,7 +7271,7 @@ class Weblog {
 		// We allow the option of adding or subtracting cat_id's
 		$categories = ( ! $TMPL->fetch_param('category'))  ? '' : $TMPL->fetch_param('category');
 		
-		if (ereg("^not ", $categories))
+		if (strncmp('not ', $categories, 4) == 0)
 		{
 			$categories = substr($categories, 4);
 			$not_categories = explode('|',$categories);
@@ -7414,7 +7415,7 @@ class Weblog {
         
 		if ($disable = $TMPL->fetch_param('disable'))
 		{
-			if (ereg("\|", $disable))
+			if (strpos($disable, '|') !== FALSE)
 			{				
 				foreach (explode("|", $disable) as $val)
 				{

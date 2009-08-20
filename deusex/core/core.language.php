@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -46,7 +46,7 @@ class Language {
     /**  Fetch a language file
     /** -------------------------------------*/
 
-    function fetch_language_file($which = '')
+    function fetch_language_file($which = '', $package = '')
     {
         global $IN, $OUT, $LANG, $SESS, $PREFS, $FNS;
         
@@ -54,7 +54,7 @@ class Language {
         {
             return;
         }
-        
+	
         if ($SESS->userdata['language'] != '')
         {
             $user_lang = $SESS->userdata['language'];
@@ -76,8 +76,9 @@ class Language {
         }
         
         // Sec.ur.ity code.  ::sigh::
-        
-        $user_lang = $FNS->filename_security($user_lang);
+		$which = str_replace(array('lang.', EXT), '', $which);
+		$package = ($package == '') ? $FNS->filename_security($which) : $FNS->filename_security($package);
+		$user_lang = $FNS->filename_security($user_lang);
         
         if ($which == 'sites_cp')
         {
@@ -95,21 +96,38 @@ class Language {
             
         if ( ! in_array($which, $this->cur_used))
         {
-            if ( ! @include PATH_LANG.$user_lang.'/lang.'.$which.EXT)
-            {
-				if ( ! @include PATH_LANG.'english/lang.'.$which.EXT)
+			$paths = array(
+							PATH_MOD.$package.'/language/'.$user_lang.'/lang.'.$which.EXT,
+							PATH_MOD.$package.'/language/english/lang.'.$which.EXT,
+							PATH_LANG.$user_lang.'/lang.'.$which.EXT,
+							PATH_LANG.'english/lang.'.$which.EXT
+						);
+			
+			$success = FALSE;
+			
+			foreach($paths as $path)
+			{
+				if (file_exists($path) && @include $path)
 				{
-					if ($PREFS->ini('debug') >= 1)
-					{
-						$error = 'Unable to load the following language file:<br /><br />/lang.'.$which.EXT;
-				
-						return $OUT->fatal_error($error);
-					}
-					else
-						return;
+					$success = TRUE;
+					break;
 				}
-            }
-            
+			}
+			
+			if ($success !== TRUE)
+			{
+				if ($PREFS->ini('debug') >= 1)
+				{
+					$error = 'Unable to load the following language file:<br /><br />lang.'.$which.EXT;
+
+					return $OUT->fatal_error($error);
+				}
+				else
+				{
+					return;	
+				}				
+			}
+
             $this->cur_used[] = $which;
             
             if (isset($L))
@@ -157,4 +175,23 @@ class Language {
     /* END */
 }
 // END CLASS
+
+// --------------------------------------------------------------------
+
+/**
+ * Procedural gateway to $LANG->line() for use in view files
+ *
+ * @access	public
+ * @param	string
+ * @param	string
+ * @return	string
+ */
+function lang($which = '', $label = '')
+{
+	global $LANG;
+	return $LANG->line($which, $label);
+}
+
+// --------------------------------------------------------------------
+
 ?>

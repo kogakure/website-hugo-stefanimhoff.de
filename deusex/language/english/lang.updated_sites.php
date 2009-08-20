@@ -44,8 +44,11 @@ $L = array(
 'updated_sites_delete_confirm' =>
 "Delete Updated sites Configurations",
 
+'updated_site_deleted' =>
+"Updated Sites Configuration Deleted",
+
 'updated_sites_deleted' =>
-"Updated Sites Configruation Deleted",
+"Updated Sites Configurations Deleted",
 
 'metaweblogs_deleted' =>
 "Updated Sites Configurations Deleted",

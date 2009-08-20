@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -149,14 +149,18 @@ class Home {
         $this->methods = array(	
 								'recent_entries',
 								'recent_comments',
-								'recent_members',
 								'site_statistics',
-								'member_search_form',
 								'notepad',
 								'bulletin_board',
 								'pmachine_news_feed'
 							);
 								
+		if ($DSP->allowed_group('can_access_admin') === TRUE)
+		{  
+			$this->methods[] = 'recent_members';
+			$this->methods[] = 'member_search_form';
+		}						
+
         switch($IN->GBL('M'))
         {
             case 'notepad_update'		: $this->notepad_update();

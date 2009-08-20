@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -49,6 +49,9 @@ class Display {
     var $padding_tabs	= 'clear';	// on/off/clear  -  The navigation tabs have an extra cell on the left and right side to provide padding.  This determis how it should be displayed.  It interacts with this variable, which is placed in the CSS file:  {padding_tabs ="clear"}
     var $empty_menu		= FALSE;	// Is the Publish weblog menu empty?
     
+	var $view_path		= '';		// path to view files, set to the current addon's path
+	var $cached_vars	= array();	// array of cached view variables
+	
     /** -------------------------------------
     /**  Constructor
     /** -------------------------------------*/
@@ -64,10 +67,113 @@ class Display {
         
         $this->sites_nav	= (in_array($PREFS->ini('sites_tab_behavior'), array('click', 'hover', 'none'))) ? $PREFS->ini('sites_tab_behavior') : $this->sites_nav;
         $this->publish_nav	= (in_array($PREFS->ini('publish_tab_behavior'), array('click', 'hover', 'none'))) ? $PREFS->ini('publish_tab_behavior') : $this->publish_nav;
+
+		// allows views to be loaded with identical syntax to 2.x within view files, e.g. $this->load->view('foo');
+		$this->load =& $this;
     }
     /* END */
-   
-  
+
+
+    /** -------------------------------------
+    /**  Allows the use of View files to construct output
+    /** -------------------------------------*/
+
+	function view($view, $vars = array(), $return = FALSE, $path = '')
+	{
+		global $DSP, $FNS, $LANG, $LOC, $PREFS, $REGX, $SESS;
+
+		// Set the path to the requested file
+		if ($path == '')
+		{
+			$ext = pathinfo($view, PATHINFO_EXTENSION);
+			$file = ($ext == '') ? $view.EXT : $view;
+			$path = $this->view_path.$file;
+		}
+		else
+		{
+			$x = explode('/', $path);
+			$file = end($x);
+		}
+
+		if ( ! file_exists($path))
+		{
+			trigger_error('Unable to load the requested file: '.$file);
+			return FALSE;
+		}
+	
+		/*
+		 * Extract and cache variables
+		 *
+		 * You can either set variables using the dedicated $this->load_vars()
+		 * function or via the second parameter of this function. We'll merge
+		 * the two types and cache them so that views that are embedded within
+		 * other views can have access to these variables.
+		 */	
+		if (is_array($vars))
+		{
+			$this->cached_vars = array_merge($this->cached_vars, $vars);
+		}
+		extract($this->cached_vars);
+
+		/*
+		 * Buffer the output
+		 *
+		 * We buffer the output for two reasons:
+		 * 1. Speed. You get a significant speed boost.
+		 * 2. So that the final rendered template can be
+		 * post-processed by the output class.  Why do we
+		 * need post processing?  For one thing, in order to
+		 * show the elapsed page load time.  Unless we
+		 * can intercept the content right before it's sent to
+		 * the browser and then stop the timer it won't be accurate.
+		 */
+		ob_start();
+				
+		// If the PHP installation does not support short tags we'll
+		// do a little string replacement, changing the short tags
+		// to standard PHP echo statements.
+		
+		if ((bool) @ini_get('short_open_tag') === FALSE)
+		{
+			echo eval('?>'.preg_replace("/;*\s*\?>/", "; ?>", str_replace('<?=', '<?php echo ', file_get_contents($path))));
+		}
+		else
+		{
+			include($path); // include() vs include_once() allows for multiple views with the same name
+		}
+
+		// Return the file data if requested
+		if ($return === TRUE)
+		{		
+			$buffer = ob_get_contents();
+			ob_end_clean();
+			return $buffer;
+		}
+
+		/*
+		 * Flush the buffer... or buff the flusher?
+		 *
+		 * In order to permit views to be nested within
+		 * other views, we need to flush the content back out whenever
+		 * we are beyond the first level of output buffering so that
+		 * it can be seen and included properly by the first included
+		 * template and any subsequent ones. Oy!
+		 *
+		 */	
+		if (ob_get_level() > 1)
+		{
+			ob_end_flush();
+		}
+		else
+		{
+			$buffer = ob_get_contents();
+			ob_end_clean();
+			return $buffer;
+		}
+	}   
+	/* END */
+	
+	
     /** -------------------------------------
     /**  Set return data
     /** -------------------------------------*/
@@ -146,7 +252,7 @@ class Display {
         //
         	if ($EXT->active_hook('show_full_control_panel_end') === TRUE)
         	{
-        		$out = $EXT->call_extension('show_full_control_panel_end', $out);
+        		$out = $EXT->universal_call_extension('show_full_control_panel_end', $out);
         		if ($EXT->end_script === TRUE) return;
         	}
         //
@@ -385,12 +491,9 @@ class Display {
 		
         $r .= $this->fetch_quicklinks();   
 
-        $doc_path = $PREFS->ini('doc_url');
+        $doc_path = rtrim($PREFS->ini('doc_url'), '/').'/';
                 
-		if ( ! ereg("/$", $doc_path)) 
-			$doc_path .= '/';
-                
-        $r .= $this->anchor(BASE, $LANG->line('main_menu')).$this->nbs(3).'|'.$this->nbs(3)
+		$r .= $this->anchor(BASE, $LANG->line('main_menu')).$this->nbs(3).'|'.$this->nbs(3)
              ."<a href='".$doc_path."' target='_blank'>".$LANG->line('user_guide').'</a>'.$this->nbs(3).'|'.$this->nbs(3)
              .$this->anchor(BASE.AMP.'C=logout', $LANG->line('logout')).$this->nbs(3).'|'.$this->nbs(3);
              		
@@ -1473,7 +1576,7 @@ class Display {
         return
 
         "<div class='copyright'>". $logo.$this->nl(2).$this->br().$this->nl().
-         $this->anchor($FNS->fetch_site_index().$qm.'URL=http://expressionengine.com/', APP_NAME.$core." ".APP_VER)." - &#169; ".$LANG->line('copyright')." 2003 - 2008 - EllisLab, Inc.".BR.NL.
+         $this->anchor($FNS->fetch_site_index().$qm.'URL=http://expressionengine.com/', APP_NAME.$core." ".APP_VER)." - &#169; ".$LANG->line('copyright')." 2003 - 2009 - EllisLab, Inc.".BR.NL.
          $buyit.
          str_replace("%x", "{cp:elapsed_time}", $LANG->line('page_rendered')).$this->nbs(3).
          str_replace("%x", $DB->q_count, $LANG->line('queries_executed')).$extra.$this->br().
@@ -2955,14 +3058,15 @@ function shift_magic_check(whatSet, lastChecked, current)
 	{
 		$weblog_vars = array(
 								'aol_im', 'author', 'author_id', 'avatar_image_height',
-								'avatar_image_width', 'avatar_url', 'comment_auto_path',
+								'avatar_image_width', 'avatar_url', 'bday_d', 'bday_m',
+								'bday_y', 'bio', 'comment_auto_path',
 								'comment_entry_id_auto_path', 'comment_tb_total',
 								'comment_total', 'comment_url_title_path', 'count',
 								'edit_date', 'email', 'entry_date', 'entry_id',
 								'entry_id_path', 'expiration_date', 'forum_topic_id',
 								'gmt_edit_date', 'gmt_entry_date', 'icq', 'interests',
-								'ip_address', 'location', 'member_search_path', 'msn_im',
-								'occupation', 'permalink', 'photo_image_height',
+								'ip_address', 'location', 'member_search_path', 'month', 
+								'msn_im', 'occupation', 'permalink', 'photo_image_height',
 								'photo_image_width', 'photo_url', 'profile_path',
 								'recent_comment_date', 'relative_date', 'relative_url',
 								'screen_name', 'signature', 'signature_image_height',
@@ -2971,7 +3075,7 @@ function shift_magic_check(whatSet, lastChecked, current)
 								'trackback_total', 'trimmed_url', 'url',
 								'url_as_email_as_link', 'url_or_email', 'url_or_email_as_author',
 								'url_title', 'url_title_path', 'username', 'weblog',
-								'weblog_id', 'yahoo_im', 
+								'weblog_id', 'yahoo_im', 'year'
 							);
 							
 		$global_vars = array(
@@ -2985,7 +3089,7 @@ function shift_magic_check(whatSet, lastChecked, current)
 								'total_forum_posts', 'total_forum_topics', 'total_queries',
 								'username', 'webmaster_email', 'version'
 							);
-		
+
 		$orderby_vars = array(
 								'comment_total', 'date', 'edit_date', 'expiration_date',
 								'most_recent_comment', 'random', 'screen_name', 'title',

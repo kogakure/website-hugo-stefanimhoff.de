@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -72,7 +72,7 @@ class Input {
 
     function fetch_input_data()
     {
-        global $REGX;
+        global $PREFS, $REGX;
         
         /** -----------------------------------
         /**  Fetch and pre-process Global Vars
@@ -158,15 +158,30 @@ class Input {
         $RIP = (isset($_SERVER['REMOTE_ADDR']) AND $_SERVER['REMOTE_ADDR'] != "") ? $_SERVER['REMOTE_ADDR'] : FALSE;
         $FIP = (isset($_SERVER['HTTP_X_FORWARDED_FOR']) AND $_SERVER['HTTP_X_FORWARDED_FOR'] != "") ? $_SERVER['HTTP_X_FORWARDED_FOR'] : FALSE;
                     
-		if ($CIP && $RIP)	$this->IP = $CIP;	
-		elseif ($RIP)		$this->IP = $RIP;
-		elseif ($CIP)		$this->IP = $CIP;
-		elseif ($FIP)		$this->IP = $FIP;
-		
+		/* -------------------------------------------
+		/* Hidden Configuration Variable
+		/* - proxy_ips => List of proxies that may forward the ip address
+		/* -------------------------------------------*/
+
+		if ($PREFS->ini('proxy_ips') !== FALSE && $FIP && $RIP)
+		{
+			$proxies = preg_split('/[\s,]/', $PREFS->ini('proxy_ips'), -1, PREG_SPLIT_NO_EMPTY);
+			$proxies = is_array($proxies) ? $proxies : array($proxies);
+
+			$this->IP = in_array($RIP, $proxies) ? $FIP : $RIP;
+		}
+		else
+		{
+			if ($CIP && $RIP)	$this->IP = $CIP;
+			elseif ($RIP)		$this->IP = $RIP;
+			elseif ($CIP)		$this->IP = $CIP;
+			elseif ($FIP)		$this->IP = $FIP;
+		}
+
 		if (strstr($this->IP, ','))
 		{
 			$x = explode(',', $this->IP);
-			$this->IP = end($x);
+			$this->IP = trim(end($x));
 		}
 		
 		if ( ! $REGX->valid_ip($this->IP))
@@ -428,7 +443,7 @@ class Input {
 
     function clean_input_keys($str)
     {    
-		 if ( ! ereg("^[A-Za-z0-9\:\_\/\-]+$", $str))
+		 if ( ! preg_match("#^[a-z0-9\:\_\/\-]+$#i", $str))
 		 { 
 			exit('Disallowed Key Characters');
 		 }

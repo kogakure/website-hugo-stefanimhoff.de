@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2007 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -91,7 +91,7 @@ function html_header()
 {
 return <<< EOF
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="{lang}" lang="{lang}">
 <head>
 <title>{site_name} | {page_title}</title>
 <meta http-equiv="content-type" content="text/html; charset={charset}" />
@@ -310,7 +310,7 @@ EOF;
 function success()
 {
 return <<< EOF
-<div class='profileHeadingBG'><div class="tableHeading">{lang:heading}</h2></div></div>
+<div class='profileHeadingBG'><div class="tableHeading">{lang:heading}</div></div>
 <div class='tableCellOne'><div class='success'>{lang:message}</div></div>
 EOF;
 }
@@ -325,7 +325,7 @@ EOF;
 function error()
 {
 return <<< EOF
-<div class='profileHeadingBG'><div class="tableHeading">{lang:heading}</h2></div></div>
+<div class='profileHeadingBG'><div class="tableHeading">{lang:heading}</div></div>
 <div class='tableCellOne'><div class='highlight'>{lang:message}</div></div>
 EOF;
 }
@@ -3163,7 +3163,7 @@ function message_error()
     	
 <table border='0' cellspacing='0' cellpadding='0' style='width:100%'>
 <tr>
-<td class='profileHeadingBG'><div class="tableHeading">{lang:heading}</h2></td>
+<td class='profileHeadingBG'><div class="tableHeading">{lang:heading}</div></td>
 
 </tr><tr>
 
@@ -3902,7 +3902,7 @@ function message_submission_error()
 		
 <table border='0' cellspacing='0' cellpadding='0' style='width:100%'>
 <tr>
-<td class='profileHeadingBG'><div class="tableHeading">{lang:error}</h2></td>
+<td class='profileHeadingBG'><div class="tableHeading">{lang:error}</div></td>
 
 </tr><tr>
 
@@ -4168,6 +4168,7 @@ function bulletin_board()
 {if no_bulletins}
 <div class="tableCellOne">
 <span class="defaultBold">{lang:message_no_bulletins}</span>
+</div>
 {/if}
 
 

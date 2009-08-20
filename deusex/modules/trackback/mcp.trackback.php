@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -223,7 +223,7 @@ class Trackback_CP {
     {
         global $DB;
                                    
-        $query = $DB->query("SELECT count(*) as count FROM exp_weblog_titles WHERE entry_id = '$entry_id' AND sent_trackbacks LIKE '%".$DB->escape_str($url)."%'");   
+        $query = $DB->query("SELECT count(*) as count FROM exp_weblog_titles WHERE entry_id = '$entry_id' AND sent_trackbacks LIKE '%".$DB->escape_like_str($url)."%'");   
     
         if ($query->row['count'] == 0)
             return false;
@@ -294,7 +294,7 @@ class Trackback_CP {
         
         @fclose($fp);
         
-		if ( ! eregi("<error>0</error>", $response))
+		if ( ! preg_match("#<error>0<\/error>#i", $response))
 		{
 			$message = 'Unknown Error';
 			
@@ -336,13 +336,8 @@ class Trackback_CP {
 			$tb_id    = $tb_array[count($tb_array)-1];
 		}
 		else
-		{
-		    if (ereg("/$", $url))
-		    {
-		        $url = substr($url, 0, -1);
-		    }
-				
-			$tb_array = explode('/', $url);
+		{		
+			$tb_array = explode('/', trim($url, '/'));
 			$tb_id    = $tb_array[count($tb_array)-1];
 			
 			if ( ! is_numeric($tb_id))
@@ -494,10 +489,8 @@ class Trackback_CP {
 			if ($captcha == '')
 			{
 				$url = $IN->URI;
-			
-				if (ereg("/$", $url)) $url = substr($url, 0, -1);
 					
-				$url_array	= explode('/', $url);
+				$url_array	= explode('/', trim($url, '/'));
 				$captcha	= $url_array[count($url_array)-1];
 			}
 			

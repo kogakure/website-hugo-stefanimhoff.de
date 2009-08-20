@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -543,8 +543,11 @@ class Publish {
 				update_calendar(\'expiration_date\', document.getElementById(\'expiration_date\').value);';
 				if ($comment_system_enabled == 'y')
 				{				
-					$DSP->extra_header .= 	"\n".'update_calendar(\'comment_expiration_date\', document.getElementById(\'comment_expiration_date\').value);';
+					$DSP->extra_header .= "\n\t\t\t\t".'update_calendar(\'comment_expiration_date\', document.getElementById(\'comment_expiration_date\').value);';
 				}
+			$DSP->extra_header .= "\n\t\t\t\t"."current_month	= '';
+				current_year	= '';
+				last_date	= '';";
 			$DSP->extra_header .= "\n".'}
 			</script>';
 		}
@@ -1130,9 +1133,13 @@ class Publish {
         	}
         }
 
-		// Remove the Preview from the DOM so it isn't added to submitted content
-		document.getElementById('entryform').onsubmit = function(){
-			document.getElementById('entryform').removeChild(document.getElementById('previewBox'));
+        // Remove the Preview from the DOM so it isn't added to submitted content
+		document.getElementById('entryform').onsubmit = function()
+		{
+			if (document.getElementById('entryform').hasChildNodes(document.getElementById('previewBox')) == true)
+			{
+				document.getElementById('entryform').removeChild(document.getElementById('previewBox'));
+			}
 		}
 
 		-->
@@ -1180,7 +1187,7 @@ EOT;
                           
 			if ($submission_error == '')
             {
-            	$r .= $DSP->heading(stripslashes($IN->GBL('title', 'POST')));
+            	$r .= $DSP->heading($TYPE->format_characters(stripslashes($IN->GBL('title', 'POST'))));
             }
             
             // We need to grab each global array index and do a little formatting
@@ -1251,7 +1258,7 @@ EOT;
             // the custom field order since we can't guarantee that $_POST
             // data will be in the correct order
             
-            if (count($preview_build > 0))
+            if (count($preview_build) > 0)
             {
 				foreach ($field_query->result as $row)
 				{
@@ -1350,7 +1357,8 @@ EOT;
 				unset($forum_topic_id);
             }
             
-            $r .= '<fieldset class="previewBox"><legend class="previewItemTitle">&nbsp;'.$LANG->line('quick_save').'&nbsp;</legend></fieldset>';
+            $r .= '<fieldset class="previewBox" id="previewBox">';
+			$r .= '<legend class="previewItemTitle">&nbsp;'.$LANG->line('quick_save').'&nbsp;</legend></fieldset>';
         }
         // END SAVE        
 
@@ -2144,7 +2152,7 @@ EOT;
             {
                 foreach ($_POST as $key => $val)
                 {
-                    if (ereg('^TB_AUTO_', $key))
+                    if (preg_match('#^TB_AUTO_#', $key))
                     {
                         $selected_urls[] = $val;
                     }
@@ -3365,13 +3373,13 @@ EOT;
         // -------------------------------------------
                 
         /** -----------------------------
-        /**  Does entry ID exist?  And is valid?
+        /**  Does entry ID exist?  And is valid for this weblog?
         /** -----------------------------*/
         
         if (($entry_id = $IN->GBL('entry_id', 'POST')) !== FALSE && is_numeric($entry_id))
 		{
 			// we grab the author_id now as we use it later for author validation
-			$query = $DB->query("SELECT entry_id, author_id FROM exp_weblog_titles WHERE entry_id = '".$DB->escape_str($entry_id)."'");
+			$query = $DB->query("SELECT entry_id, author_id FROM exp_weblog_titles WHERE entry_id = '".$DB->escape_str($entry_id)."' AND weblog_id = '".$DB->escape_str($weblog_id)."'");
 			
 			if ($query->num_rows != 1)
 			{
@@ -3644,7 +3652,7 @@ EOT;
         {        
             foreach ($_POST as $key => $val)
             {
-                if (ereg('^TB_AUTO_', $key))
+                if (preg_match('#^TB_AUTO_#', $key))
                 {
                     $tb_auto_urls .= $val.NL;
                 }
@@ -3842,6 +3850,16 @@ EOT;
         /** ---------------------------------------*/
 
         $author_id = ( ! $IN->GBL('author_id', 'POST')) ? $SESS->userdata('member_id'): $IN->GBL('author_id', 'POST');
+		
+		if ($author_id != $SESS->userdata['member_id'] && ! $DSP->allowed_group('can_edit_other_entries'))
+		{
+			$error[] = $LANG->line('not_authorized');
+		}
+		
+		if (isset($orig_author_id) && $author_id != $orig_author_id && (! $DSP->allowed_group('can_edit_other_entries') OR ! $DSP->allowed_group('can_assign_post_authors')))
+		{
+			$error[] = $LANG->line('not_authorized');
+		}
 		
 		if ($author_id != $SESS->userdata['member_id'] && $SESS->userdata['group_id'] != 1)
 		{
@@ -4299,7 +4317,7 @@ EOT;
 				// We don't want to send a notification if the person
 				// leaving the entry is in the notification list
 			
-				if (eregi($SESS->userdata('email'), $notify_address))
+				if (stristr($notify_address, $SESS->userdata['email']))
 				{
 					$notify_address = str_replace($SESS->userdata('email'), "", $notify_address);				
 				}
@@ -6193,7 +6211,6 @@ EOT;
         	}
         }
         
-        
         $s .= $DSP->input_select_option('null', $LANG->line('filter_by_weblog'));
         
         if ($query->num_rows > 1)
@@ -6205,7 +6222,7 @@ EOT;
         
         foreach ($query->result as $row)
         {
-            if ($cat_group != '')
+            if ($weblog_id != '')
             {               
                 $selected = ($weblog_id == $row['weblog_id']) ? 'y' : '';          
             }      
@@ -6273,7 +6290,7 @@ EOT;
 					}
 				}
 			}
-			
+		
             foreach ($this->cat_array as $ckey => $cat)
             {
             	if ($ckey-1 < 0 OR ! isset($this->cat_array[$ckey-1]))
@@ -6296,20 +6313,11 @@ EOT;
         
         // Status pull-down menu
         
-        $sel_1 = '';
-        $sel_2 = '';
-        
-        if ($cat_group != '')
-        {               
-              $sel_1 = ($status == 'open')   ? 1 : '';          
-              $sel_2 = ($status == 'closed') ? 1 : '';          
-        }        
-        
         $s .= $DSP->input_select_header('status').
               $DSP->input_select_option('', $LANG->line('filter_by_status')).
               $DSP->input_select_option('all', $LANG->line('all'), ($status == 'all') ? 1 : '');
         
-        if ($cat_group != '')
+        if ($weblog_id != '')
         {     
             $rez = $DB->query("SELECT status_group FROM exp_weblogs WHERE weblog_id = '$weblog_id'");                                    
         
@@ -6327,8 +6335,8 @@ EOT;
         } 
         else
         {
-			 $s .= $DSP->input_select_option('open', $LANG->line('open'), '');
-			 $s .= $DSP->input_select_option('closed', $LANG->line('closed'), '');
+			 $s .= $DSP->input_select_option('open', $LANG->line('open'), ($status == 'open') ? 1 : '');
+			 $s .= $DSP->input_select_option('closed', $LANG->line('closed'), ($status == 'closed') ? 1 : '');
         }
         
         $s .= $DSP->input_select_footer().
@@ -6563,8 +6571,6 @@ EOT;
         		$sql .= " AND exp_weblog_titles.author_id = ".$SESS->userdata('member_id'); 
             }            
         }
-                
-        $sql .= " AND exp_weblog_titles.author_id = exp_members.member_id"; 
         
         if (is_array($extra_sql) && isset($extra_sql['where']))
         {
@@ -6589,13 +6595,13 @@ EOT;
 			{
 				if ($exact_match != 'yes')
 				{			
-					$sql .= " AND (exp_weblog_titles.title LIKE '%".$DB->escape_str($search_keywords)."%' ";
+					$sql .= " AND (exp_weblog_titles.title LIKE '%".$DB->escape_like_str($search_keywords)."%' ";
 				}
 				else
 				{	
 					$pageurl .= AMP.'exact_match=yes';
 				
-					$sql .= " AND (exp_weblog_titles.title = '".$DB->escape_str($search_keywords)."' OR exp_weblog_titles.title LIKE '".$DB->escape_str($search_keywords)." %' OR exp_weblog_titles.title LIKE '% ".$DB->escape_str($search_keywords)." %' ";
+					$sql .= " AND (exp_weblog_titles.title = '".$DB->escape_str($search_keywords)."' OR exp_weblog_titles.title LIKE '".$DB->escape_like_str($search_keywords)." %' OR exp_weblog_titles.title LIKE '% ".$DB->escape_like_str($search_keywords)." %' ";
 				}
 			}
 			
@@ -6649,11 +6655,11 @@ EOT;
 				{					
 					if ($exact_match != 'yes')
 					{
-						$sql .= " OR exp_weblog_data.field_id_".$val." LIKE '%".$DB->escape_str($search_keywords)."%' ";				
+						$sql .= " OR exp_weblog_data.field_id_".$val." LIKE '%".$DB->escape_like_str($search_keywords)."%' ";				
 					}
 					else
 					{
-						$sql .= "  OR (exp_weblog_data.field_id_".$val." LIKE '".$DB->escape_str($search_keywords)." %' OR exp_weblog_data.field_id_".$val." LIKE '% ".$DB->escape_str($search_keywords)." %' OR exp_weblog_data.field_id_".$val." = '".$DB->escape_str($search_keywords)."') ";
+						$sql .= "  OR (exp_weblog_data.field_id_".$val." LIKE '".$DB->escape_like_str($search_keywords)." %' OR exp_weblog_data.field_id_".$val." LIKE '% ".$DB->escape_like_str($search_keywords)." %' OR exp_weblog_data.field_id_".$val." = '".$DB->escape_str($search_keywords)."') ";
 					}
 				}
 			}
@@ -6673,7 +6679,7 @@ EOT;
 				}
 				else
 				{
-					$sql .= " OR (exp_comments.comment LIKE '%".$DB->escape_str($keywords)."%') "; // No ASCII conversion here!
+					$sql .= " OR (exp_comments.comment LIKE '%".$DB->escape_like_str($keywords)."%') "; // No ASCII conversion here!
 				}
 			}
 			elseif ($search_in == 'trackbacks')
@@ -6684,7 +6690,7 @@ EOT;
 				}
 				else
 				{
-					$sql .= " OR (CONCAT_WS(' ', exp_trackbacks.content, exp_trackbacks.title, exp_trackbacks.weblog_name) LIKE '%".$DB->escape_str($keywords)."%') ";  // No ASCII conversion here either!
+					$sql .= " OR (CONCAT_WS(' ', exp_trackbacks.content, exp_trackbacks.title, exp_trackbacks.weblog_name) LIKE '%".$DB->escape_like_str($keywords)."%') ";  // No ASCII conversion here either!
 				}
 			}
 			
@@ -7156,14 +7162,16 @@ EOT;
                   
             // Date
             
-            if ($PREFS->ini('time_format') == 'us')
-            {
-            	$datestr = '%m/%d/%y %h:%i %a';
-            }
-            else
-            {
-            	$datestr = '%Y-%m-%d %H:%i';
-            }
+			$date_fmt = ($SESS->userdata['time_format'] != '') ? $SESS->userdata['time_format'] : $PREFS->ini('time_format');
+
+			if ($date_fmt == 'us')
+			{
+				$datestr = '%m/%d/%y %h:%i %a';
+			}
+			else
+			{
+				$datestr = '%Y-%m-%d %H:%i';
+			}
             
 		   	if ($PREFS->ini('honor_entry_dst') == 'y') 
 		   	{ 		   		
@@ -8463,24 +8471,28 @@ EOT;
 		$query = $DB->query("SELECT cat_id FROM exp_categories 
                              WHERE group_id IN ('".implode("','", $valid_cats)."')
                              AND cat_id IN ('".implode("','", $this->cat_parents)."')");
-	
+
+		$valid_cat_ids = array();
+		
 		if ($query->num_rows > 0)
 		{
 			foreach($query->result as $row)
 			{
 				$DB->query("DELETE FROM exp_category_posts WHERE cat_id = ".$row['cat_id']." AND entry_id IN ('".$entries_string."')");
-				
-				if ($IN->GBL('type') == 'add')
-				{
-					// How brutish...
-					foreach($ids as $id)
-					{		
-				        foreach($this->cat_parents as $val)
-				        {
-				            $DB->query($DB->insert_string('exp_category_posts', array('entry_id' => $id, 'cat_id' => $val)));
-				        }						
-					}
-				}
+				$valid_cat_ids[] = $row['cat_id'];
+			}
+		}
+		
+		if ($IN->GBL('type') == 'add')
+		{
+			$insert_cats = array_intersect($this->cat_parents, $valid_cat_ids);
+			// How brutish...
+			foreach($ids as $id)
+			{		
+		        foreach($insert_cats as $val)
+		        {
+		            $DB->query($DB->insert_string('exp_category_posts', array('entry_id' => $id, 'cat_id' => $val)));
+		        }						
 			}
 		}
 		
@@ -12695,7 +12707,7 @@ EOT;
         
         $path = $PREFS->ini('emoticon_path', 1);
         
-        $query = $DB->query("SELECT field_id, field_label FROM exp_weblog_fields WHERE group_id = '".$field_group."' ORDER BY field_order");
+        $query = $DB->query("SELECT field_id, field_label FROM exp_weblog_fields WHERE group_id = '".$field_group."' AND field_type != 'rel' AND field_type != 'date' AND field_type != 'select' ORDER BY field_order");
         
         if ($query->num_rows == 0)
         {
@@ -12718,9 +12730,10 @@ EOT;
         
         foreach ($query->result as $row)
         {
+			$js_element = ($query->num_rows > 1) ? "[{$n}]" : '';
         ?>
 
-            if (form.which[<?php echo $n; ?>].checked) 
+            if (form.which<?php echo $js_element; ?>.checked) 
             {
                 opener.document.getElementById('entryform').field_id_<?php echo $row['field_id']; ?>.value += " " + smiley + " ";
                 window.close();

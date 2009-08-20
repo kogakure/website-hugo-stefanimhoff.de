@@ -53,7 +53,8 @@ color:  #339900;
 <h1>Email Test Script</h1>
 
 <?php
-
+	error_reporting(0);
+	
 	if ( ! isset($_POST['sendit']))
 	{
 		email_form();
@@ -89,9 +90,9 @@ color:  #339900;
 	?>	
 		<form method="post" action="<?php echo $action; ?>">
 		<input type="hidden" name="sendit" value="true" />
-		<p>Email Address<br /><input type="text" name="recipient" value="<?php echo $recipient; ?>" size="32" /></p>
-		<p>Email Subject<br /><input type="text" name="subject" value="<?php echo $subject; ?>"  size="32" /></p>
-		<p>Email Message<br /><textarea name="message" cols="30" rows="10" ><?php echo $message; ?></textarea></p>
+		<p>Email Address<br /><input type="text" name="recipient" value="<?php echo htmlentities($recipient); ?>" size="32" /></p>
+		<p>Email Subject<br /><input type="text" name="subject" value="<?php echo htmlentities($subject); ?>"  size="32" /></p>
+		<p>Email Message<br /><textarea name="message" cols="30" rows="10" ><?php echo htmlentities($message); ?></textarea></p>
 		<p><input type="submit" value=" Send Email " /></p>
 		</form>
 	<?php

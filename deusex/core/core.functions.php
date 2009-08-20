@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -83,8 +83,8 @@ class Functions {
         	$url .= '?';
         }        
 
-		if ($SESS->userdata('session_id') != '' AND REQ != 'CP' AND $sess_id == 1 AND 
-			$PREFS->ini('user_session_type') != 'c' AND $this->template_type == 'webpage')
+		if (is_object($SESS) && $SESS->userdata('session_id') != '' && REQ != 'CP' && $sess_id == 1 && 
+			$PREFS->ini('user_session_type') != 'c' && $this->template_type == 'webpage')
 		{ 
 			$url .= "/S=".$SESS->userdata('session_id')."/";
 		}
@@ -479,10 +479,7 @@ class Functions {
             $data['onsubmit'] = 'onsubmit="'.trim($data['onsubmit']).'"';
         }
         
-        if (ereg("\?$", $data['action']))
-        {
-        	$action = substr($data['action'], 0, -1);
-        }
+        $data['action'] = rtrim($data['action'], '?');
         
         $data['name']	= (isset($data['name']) && $data['name'] != '') ? "name='".$data['name']."' "	: '';
         $data['id']		= ($data['id'] != '') 							? "id='".$data['id']."' " 		: '';
@@ -555,7 +552,7 @@ class Functions {
 		
 		if (isset($_POST['RET']))
 		{
-			if (ereg("^-", $_POST['RET']))
+			if (substr($_POST['RET'], 0, 1) == '-')
 			{
 				$return = str_replace("-", "", $_POST['RET']);
 				
@@ -571,7 +568,7 @@ class Functions {
 			{
 				$_POST['RET'] = str_replace(SLASH, '/', $_POST['RET']);
 				
-				if (ereg("/", $_POST['RET']))
+				if (strpos($_POST['RET'], '/') !== FALSE)
 				{
 					if (stristr($_POST['RET'], 'http://') OR 
 						stristr($_POST['RET'], 'https://') OR 
@@ -732,10 +729,10 @@ class Functions {
     /** ----------------------------------------
     /**  Character limiter
     /** ----------------------------------------*/
-    
+
     function char_limiter($str, $num = 500)
     {
-        if (strlen($str) < $num) 
+        if (strlen($str) < $num)
         {
             return $str;
         }
@@ -749,16 +746,16 @@ class Functions {
 			return $str;
 		}
 		$str = trim($str);
-		                                
+		
         $out = "";
-		        
+		
         foreach (explode(" ", trim($str)) as $val)
         {
-			$out .= $val;			
-						                    	
+			$out .= $val;
+			
 			if (strlen($out) >= $num)
 			{
-				return $out.'&#8230;'; 
+				return (strlen($out) == strlen($str)) ? $out : $out.'&#8230;';
 			}
 			
 			$out .= ' ';
@@ -974,10 +971,12 @@ class Functions {
             }		
             else
             {
-                if ($array_name <> "")
+                if ($array_name != "")
+                {
                     $val = $array_name.'/'.$val;
-					
-				if (ereg(".php$", $val))
+				}
+				
+				if (substr($val, -4) == '.php')
 				{
 					if ($val != 'theme_master.php')
 					{				   
@@ -1109,9 +1108,14 @@ class Functions {
 				}
 			}
         }
+
+        closedir($current_dir);
         
-        @closedir($current_dir);
-        
+		if (substr($path, -6) == '_cache' && $fp = @fopen($path.'/index.html', 'wb'))
+		{
+			fclose($fp);			
+		}
+		        
         if ($del_root == TRUE)
         {
             @rmdir($path);
@@ -1119,7 +1123,6 @@ class Functions {
     }
     /* END */
  
-
 
     /** -----------------------------------------
     /**  Fetch allowed weblogs
@@ -1330,7 +1333,7 @@ class Functions {
 		}
 				                
         if ($test_ref != '' 
-        	&& ! eregi("^{$site_url}", $test_ref) 
+        	&& ! stristr($test_ref, $site_url)
         	&& ($domain == '' || !stristr($test_ref,$domain))
         	&& ($IN->whitelisted == 'y' OR $IN->blacklisted == 'n'))
         {
@@ -1658,11 +1661,11 @@ class Functions {
 		{
 			$p_uri = ( ! isset($_GET['id'])) ? $IN->URI : '/'.$_GET['id'].'/';
 			
-			if (ereg("^/[0-9]{1,6}\_[0-9]{1,4}\_[0-9]{1,4}\_[0-9]{1,4}.*$", $p_uri))
+			if (preg_match("#^/[0-9]{1,6}\_[0-9]{1,4}\_[0-9]{1,4}\_[0-9]{1,4}.*$#", $p_uri))
 			{
 				$pentry_id = substr($p_uri, 1, (strpos($p_uri, '_')-1));
 			}
-			elseif (ereg("^/P[0-9]{1,6}.*$", $p_uri))
+			elseif (preg_match("#^/P[0-9]{1,6}.*$#", $p_uri))
 			{	
 				$p_uri = str_replace("/", "", $p_uri);
 				$pentry_id = substr($p_uri, 1);
@@ -1787,7 +1790,7 @@ class Functions {
 	            }
 	        }
 
-	        @closedir($current_dir);			
+	        closedir($current_dir);			
 		}
 	
 		/** -----------------------------------
@@ -1963,8 +1966,8 @@ class Functions {
             $ex = explode("|", $str);
         
             if (count($ex) > 0)
-            {                
-                if (ereg("^not ", $ex['0']))
+            {
+				if (strncmp($ex[0], 'not ', 4) == 0)
                 {
                     $ex['0'] = substr($ex['0'], 3);
                     
@@ -2026,8 +2029,8 @@ class Functions {
             }
         }
         else
-        {   
-            if (ereg("^not ", $str))
+        {
+        	if (strncmp($str, 'not ', 4) == 0)
             {
                 $str = trim(substr($str, 3));
                 
@@ -2416,11 +2419,7 @@ class Functions {
         if ($str == '')
             return;
             
-        if (ereg('^\|', $str))
-            $str = substr($str, 1);
-            
-        if (ereg('\|$', $str))
-            $str = substr($str, 0, -1);
+        $str = trim($str, '|');
             
         $str = str_replace(' ', '', trim($str));        
         

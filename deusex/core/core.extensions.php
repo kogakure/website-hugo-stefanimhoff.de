@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -117,6 +117,14 @@ class Extensions {
     		$args = array($which, '');
     	}
     	
+    	if (version_compare(PHP_VERSION, '5.3') >= 0)
+		{
+			foreach ($args as $k => $v)
+			{
+				$args[$k] =& $args[$k];
+			}
+		}
+    	
     	return call_user_func_array(array(&$this, 'universal_call_extension'), $args);
     }
     
@@ -166,6 +174,14 @@ class Extensions {
 		{
 			$php4_object = FALSE;
 			$args = array_slice(func_get_args(), 1);
+		}
+		
+		if (version_compare(PHP_VERSION, '5.3') >= 0)
+		{
+			foreach($args as $k => $v)
+			{
+				$args[$k] =& $args[$k];
+			}
 		}
 		
 		/** ------------------------------------------

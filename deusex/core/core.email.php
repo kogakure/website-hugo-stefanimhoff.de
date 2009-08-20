@@ -5,7 +5,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -172,6 +172,8 @@ class EEmail {
 		// prepare the display name
 		if ($name != '')
 		{
+			$name = stripslashes($name);
+
 			// only use Q encoding if there are characters that would require it
 			if ( ! preg_match('/[\200-\377]/', $name))
 			{
@@ -359,29 +361,18 @@ class EEmail {
 	function str_to_array($email)
 	{
 		if ( ! is_array($email))
-		{	
-			if (ereg(',$', $email))
-				$email = substr($email, 0, -1);
-			
-			if (ereg('^,', $email))
-				$email = substr($email, 1);	
-					
-			if (ereg(',', $email))
-			{					
-				$x = explode(',', $email);
-				
-				$email = array();
-				
-				for ($i = 0; $i < count($x); $i ++)
-					$email[] = trim($x[$i]);
+		{
+			if (strpos($email, ',') !== FALSE)
+			{
+				$email = preg_split('/[\s,]/', $email, -1, PREG_SPLIT_NO_EMPTY);
 			}
 			else
-			{				
+			{
 				$email = trim($email);
-				
 				settype($email, "array");
 			}
 		}
+		
 		return $email;
 	}
 	/* END */
@@ -589,7 +580,7 @@ class EEmail {
 	{
 		$body = ($this->plaintext_body != '') ? $this->plaintext_body : $this->body;
 		
-		if (eregi( '\<body(.*)\</body\>', $body, $match))
+		if (preg_match('@\<body(.*)\</body\>@i', $body, $match))
 		{
 			$body = $match['1'];
 		
@@ -788,7 +779,7 @@ class EEmail {
 	{
 		global $PREFS;
 		
-		$str = str_replace(array("\r", "\n"), array('', ''), $str);
+		$str = str_replace(array("\r", "\n"), array('', ''), trim($str));
 
 		// Line length must not exceed 76 characters, so we adjust for
 		// a space, 7 extra characters =??Q??=, and the charset that we will add to each line
@@ -805,7 +796,7 @@ class EEmail {
 		
 		$output = '';
 		$temp = '';
-		
+
 		for ($i = 0, $length = strlen($str); $i < $length; $i++)
 		{
 			// Grab the next character
@@ -840,7 +831,19 @@ class EEmail {
 		
 		// wrap each line with the shebang, charset, and transfer encoding
 		// the preceding space on successive lines is required for header "folding"
+		$str = trim(str_replace($this->crlf, "\n", $str));
 		$str = trim(preg_replace('/^(.*)$/m', ' =?'.$PREFS->ini('charset').'?Q?$1?=', $str));
+
+		if ($this->get_protocol() == 'mail')
+		{
+			// mail() will replace any control character besides CRLF with a space
+			// so we need to force those line endings in that case
+			$str = trim(str_replace("\n", "\r\n", $str));			
+		}
+		else
+		{
+			$str = trim(str_replace("\n", $this->crlf, $str));			
+		}
 
 		return $str;
 	}
@@ -905,7 +908,9 @@ class EEmail {
 		}
 		
 		if ($this->get_protocol() == 'mail')
-			$this->header_str = substr($this->header_str, 0, -1);				
+		{
+			$this->header_str = rtrim($this->header_str);
+		}
 	}
 	/* END */
 
@@ -953,7 +958,7 @@ class EEmail {
 				}
 				else
 				{
-					$hdr .= "Content-Type: multipart/alternative; boundary=\"" . $this->alt_boundary . "\"" . $this->newline;
+					$hdr .= "Content-Type: multipart/alternative; boundary=\"" . $this->alt_boundary . "\"" . $this->newline . $this->newline;
 					$hdr .= $this->mime_message() . $this->newline . $this->newline;
 					$hdr .= "--" . $this->alt_boundary . $this->newline;
 					
@@ -993,7 +998,7 @@ class EEmail {
 			break;
 			case 'plain-attach' :
 	
-				$hdr .= "Content-Type: multipart/".$this->multipart."; boundary=\"" . $this->atc_boundary."\"" . $this->newline;
+				$hdr .= "Content-Type: multipart/".$this->multipart."; boundary=\"" . $this->atc_boundary."\"" . $this->newline . $this->newline;
 				$hdr .= $this->mime_message() . $this->newline . $this->newline;
 				$hdr .= "--" . $this->atc_boundary . $this->newline;
 	
@@ -1013,7 +1018,7 @@ class EEmail {
 			break;
 			case 'html-attach' :
 			
-				$hdr .= "Content-Type: multipart/".$this->multipart."; boundary=\"" . $this->atc_boundary."\"" . $this->newline;
+				$hdr .= "Content-Type: multipart/".$this->multipart."; boundary=\"" . $this->atc_boundary."\"" . $this->newline . $this->newline;
 				$hdr .= $this->mime_message() . $this->newline . $this->newline;
 				$hdr .= "--" . $this->atc_boundary . $this->newline;
 	
@@ -1290,7 +1295,13 @@ class EEmail {
 	function send_with_sendmail()
 	{
 		$fp = @popen($this->mailpath . " -oi -f ".$this->clean_email($this->headers['From'])." -t", 'w');
-
+		
+		if ($fp === FALSE OR $fp === NULL)
+		{
+			// server probably has popen disabled, so nothing we can do to get a verbose error.
+			return FALSE;
+		}
+		
 		fputs($fp, $this->header_str);		
 		fputs($fp, $this->finalbody);
 		

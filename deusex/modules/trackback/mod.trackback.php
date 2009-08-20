@@ -5,7 +5,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -116,7 +116,7 @@ class Trackback {
 				/**  parse {switch} variable
 				/** ----------------------------------------*/
 				
-				if (ereg("^switch", $key))
+				if (strncmp('switch', $key, 6) == 0)
 				{
 					$sparam = $FNS->assign_parameters($key);
 					
@@ -152,7 +152,7 @@ class Trackback {
                 /**  parse trackback date
                 /** ----------------------------------------*/
                 
-                if (ereg("^trackback_date", $key))
+                if (strncmp('trackback_date', $key, 14) == 0)
                 {
                         $tagdata = $TMPL->swap_var_single(
                                                             $key, 

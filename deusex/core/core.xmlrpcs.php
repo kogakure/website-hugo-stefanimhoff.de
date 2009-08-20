@@ -5,7 +5,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -209,7 +209,7 @@ class XML_RPC_Server extends XML_RPC
 		
 		// Check to see if it is a system call
 		// If so, load the system_methods
-		$sysCall = ereg("^system\.", $methName);
+		$sysCall = preg_match("#^system\.#", $methName);
 		$methods = $sysCall ? $this->system_methods : $this->methods;
 		
 		/** -------------------------------------
@@ -331,7 +331,7 @@ class XML_RPC_Server extends XML_RPC
 		$methName = $m->getParam(0);
 		$method_name = $methName->scalarval();
 		
-		$methods = ereg("^system\.", $method_name) ? $this->system_methods : $this->methods;
+		$methods = preg_match("#^system\.#", $method_name) ? $this->system_methods : $this->methods;
 		
 		if (isset($methods[$method_name]))
 		{
@@ -373,7 +373,7 @@ class XML_RPC_Server extends XML_RPC
 		$methName = $m->getParam(0);
 		$method_name = $methName->scalarval();
 		
-		$methods = ereg("^system\.", $method_name) ? $this->system_methods : $this->methods;
+		$methods = preg_match("#^system\.#", $method_name) ? $this->system_methods : $this->methods;
 	
 		if (isset($methods[$methName]))
 		{

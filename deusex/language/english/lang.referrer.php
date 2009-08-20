@@ -77,12 +77,21 @@ $L = array(
 "In addition to deleting these referrers you can also:",
 
 'add_urls' =>
+"Delete Other Referrers with same URL?",
+
+'add_and_blacklist_urls' =>
 "Add URLs to Blacklist and Delete Other Referrers with same URL?",
 
 'add_ips' =>
+"Delete Other Referrers with same IP?",
+
+'add_and_blacklist_ips' =>
 "Add IP Addresses to Blacklist and Delete Other Referrers with same IP?",
 
 'add_agents' =>
+"Delete Other Referrers with same User Agent?",
+
+'add_and_blacklist_agents' =>
 "Add User Agents to Blacklist and Delete Other Referrers with same User Agent?",
 
 /* END */

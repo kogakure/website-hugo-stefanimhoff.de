@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -186,7 +186,7 @@ class Member {
 		{
 			$this->request = '';
 		}
-		elseif (ereg("/", $this->request))
+		elseif (strpos($this->request, '/') !== FALSE)
 		{			
 			$xr = explode("/", $this->request);
 			$this->request = str_replace(current($xr).'/', '', $this->request);
@@ -198,7 +198,7 @@ class Member {
 		
 		$this->cur_id = '';
 
-		if (ereg("/", $this->request))
+		if (strpos($this->request, '/') !== FALSE)
 		{
 			$x = explode("/", $this->request);
 			
@@ -1673,10 +1673,7 @@ class Member {
 			$email_msg = $FNS->var_swap($LANG->line('mbr_delete_notify_message'), $swap);
 							   
 			// No notification for the user themselves, if they're in the list
-			if (eregi($SESS->userdata('email'), $notify_address))
-			{
-				$notify_address = str_replace($SESS->userdata['email'], "", $notify_address);				
-			}
+			$notify_address = str_replace($SESS->userdata['email'], '', $notify_address);
 			
 			$notify_address = $REGX->remove_extra_commas($notify_address);
 			
@@ -3010,15 +3007,17 @@ class Member {
 	
 				if ($key == 'url')
 				{
-					if (substr($default_fields['url'], 0, 4) != "http" AND ! ereg('://', $default_fields['url'])) 
-						$default_fields['url'] = "http://".$default_fields['url']; 
+					if (substr($default_fields['url'], 0, 4) != "http" AND strpos($default_fields['url'], '://') === FALSE)
+					{
+						$default_fields['url'] = "http://".$default_fields['url']; 	
+					}
 				}
 			
 				/** ----------------------------------------
 				/**  "last_visit" 
 				/** ----------------------------------------*/
 				
-				if (ereg("^last_visit", $key))
+				if (strncmp('last_visit', $key, 10) == 0)
 				{			
 					$TMPL->tagdata = $this->_var_swap_single($key, ($default_fields['last_activity'] > 0) ? $LOC->decode_date($val, $default_fields['last_activity']) : '', $TMPL->tagdata);
 				}
@@ -3027,7 +3026,7 @@ class Member {
 				/**  "join_date" 
 				/** ----------------------------------------*/
 				
-				if (ereg("^join_date", $key))
+				if (strncmp('join_date', $key, 9) == 0)
 				{                     
 					$TMPL->tagdata = $this->_var_swap_single($key, ($default_fields['join_date'] > 0) ? $LOC->decode_date($val, $default_fields['join_date']) : '', $TMPL->tagdata);
 				}
@@ -3036,7 +3035,7 @@ class Member {
 				/**  "last_entry_date" 
 				/** ----------------------------------------*/
 				
-				if (ereg("^last_entry_date", $key))
+				if (strncmp('last_entry_date', $key, 15) == 0)
 				{                     
 					$TMPL->tagdata = $this->_var_swap_single($key, ($default_fields['last_entry_date'] > 0) ? $LOC->decode_date($val, $default_fields['last_entry_date']) : '', $TMPL->tagdata);
 				}
@@ -3045,7 +3044,7 @@ class Member {
 				/**  "last_forum_post_date" 
 				/** ----------------------------------------*/
 				
-				if (ereg("^last_forum_post_date", $key))
+				if (strncmp('last_forum_post_date', $key, 20) == 0)
 				{                     
 					$TMPL->tagdata = $this->_var_swap_single($key, ($default_fields['last_forum_post_date'] > 0) ? $LOC->decode_date($val, $default_fields['last_forum_post_date']) : '', $TMPL->tagdata);
 				}
@@ -3054,7 +3053,7 @@ class Member {
 				/**  parse "recent_comment" 
 				/** ----------------------------------------*/
 				
-				if (ereg("^last_comment_date", $key))
+				if (strncmp('last_comment_date', $key, 17) == 0)
 				{                     
 					$TMPL->tagdata = $this->_var_swap_single($key, ($default_fields['last_comment_date'] > 0) ? $LOC->decode_date($val, $default_fields['last_comment_date']) : '', $TMPL->tagdata);
 				}
@@ -3145,7 +3144,7 @@ class Member {
 				/**  {local_time}
 				/** ----------------------*/
 				
-				if (ereg("^local_time", $key))
+				if (strncmp('local_time', $key, 10) == 0)
 				{           
 					$time = $LOC->now;
 	
@@ -3163,7 +3162,7 @@ class Member {
 				/**  {bio}
 				/** ----------------------*/
 				
-				if (ereg("^bio$", $key))
+				if ($key == 'bio')
 				{
 					$bio = $TYPE->parse_type($default_fields[$val], 
 																 array(
@@ -3198,12 +3197,13 @@ class Member {
 				// Special condideration for {total_forum_replies}, and
 				// {total_forum_posts} whose meanings do not match the
 				// database field names
-				if (ereg("^total_forum_replies", $key))
+				
+				if ($key == 'total_forum_replies')
 				{
 					$TMPL->tagdata = $this->_var_swap_single($key, $default_fields['total_forum_posts'], $TMPL->tagdata);
 				}
 				
-				if (ereg("^total_forum_posts", $key))
+				if ($key == 'total_forum_posts')
 				{
 					$total_posts = $default_fields['total_forum_topics'] + $default_fields['total_forum_posts'];
 					$TMPL->tagdata = $this->_var_swap_single($key, $total_posts, $TMPL->tagdata);

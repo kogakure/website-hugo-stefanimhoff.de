@@ -292,7 +292,7 @@ a:hover {
 }
 
 #pageheader {  
- background: #4C5286 url({path:image_url}header_bg.jpg) repeat-x left top;
+ background-color: #4C5286;
  border-top: 1px solid #fff;
  border-bottom: 1px solid #fff;
  padding:  20px 0 20px 0;

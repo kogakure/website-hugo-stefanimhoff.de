@@ -6,7 +6,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -149,7 +149,7 @@ class Member_register extends Member {
                 
                 // Set field width            
 
-                $width = ( ! ereg("px", $row['m_field_width'])  AND ! ereg("%", $row['m_field_width'])) ? $row['m_field_width'].'px' : $row['m_field_width'];
+                $width = ( ! stristr($row['m_field_width'], 'px')  AND strpos($row['m_field_width'], '%') === FALSE) ? $row['m_field_width'].'px' : $row['m_field_width'];
                                                                                               
 
                 //  Textarea fields

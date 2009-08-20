@@ -5,7 +5,7 @@
 -----------------------------------------------------
  http://expressionengine.com/
 -----------------------------------------------------
- Copyright (c) 2003 - 2008 EllisLab, Inc.
+ Copyright (c) 2003 - 2009 EllisLab, Inc.
 =====================================================
  THIS IS COPYRIGHTED SOFTWARE
  PLEASE READ THE LICENSE AGREEMENT
@@ -121,7 +121,7 @@ class Action {
         /**  What type of module is being requested?
         /** -----------------------------------------*/
         
-        if (ereg("_CP$", $class))
+        if (substr($class, -3) == '_CP')
         {
             $type = 'mcp'; 
             
