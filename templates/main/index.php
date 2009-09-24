@@ -85,7 +85,7 @@
             {if:else}
 
               <div id="aktuelle-arbeiten">
-                <img style="border: 0; background: transparent;" src="http://stefanimhoff.de/css/images/piratenpartei-transparent.png" alt="Piratenpartei wählen!" title="Wähle Freiheit statt Angst am 27.09.2009" />
+                <a href="http://www.ich-bin-pirat.de/" title="Wähle Freiheit statt Angst am 27.09.2009"><img style="border: 0; background: transparent;" src="http://stefanimhoff.de/css/images/piratenpartei-transparent.png" alt="Piratenpartei wählen!" /></a>
                 <h2>Vorgestelltes Projekt</h2>
                 {exp:weblog:entries weblog="projects" limit="1" orderby="date" sort="desc" status="open" rdf="off" disable="member_data|trackbacks"}
                 <a href="{path='projekte'}#pj{entry_id}"><img src="{path='site_index'}images/projekte/{url_title}_thumb.jpg" width="285" height="104" alt="{title}" /></a>
