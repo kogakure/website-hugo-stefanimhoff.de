@@ -3,7 +3,7 @@
 
 from fabric.api import env, local, run
 
-env.hosts = ['kogakure.webfactional.com']
+env.hosts = ['kogakure@kogakure.webfactional.com']
 env.path = '/home/kogakure/webapps/stefanimhoff'
 
 def deploy():
