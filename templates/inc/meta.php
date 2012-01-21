@@ -27,7 +27,7 @@
           </ul>
 {/if}
         </div>
-        <a href="{path='site_index'}information/"><img src="{path='site_index'}images/fotos/stefanimhoff.jpg" width="75" height="75" alt="Portaitfoto von {owner}" title="{owner}" /></a>
-        <p>Ich bin {owner}, Gründer des Ninjutsu-Magazins <a href="http://kogakure.de/" title='kogakure.de - Ninja, Ninjutsu und Kampfkunst'>kogakure.de</a>, Designer, Kampfkünstler und Hobbyphilosoph. Ich wohne in Hamburg und interessiere mich für Webstandards, Django, Git, Informationsarchitektur, Apple, Design, Bücher, Asien, 3D-Design, und noch ein paar andere Dinge. <a href="{path='information'}">Mehr Informationen »</a></p>
+        <a href="{path='site_index'}information/"><img src="{path='site_index'}images/fotos/stefanimhoff.jpg" width="75" height="75" alt="Portaitfoto von Stefan Imhoff" title="Stefan Imhoff" /></a>
+        <p>Ich bin Stefan Imhoff, Designer und Webentwickler, Kampfkünstler und Hobby-Philosoph. 1999 habe ich das Ninjutsu-Magazin <a href="http://kogakure.de/" title='kogakure.de - Ninja, Ninjutsu und Kampfkunst'>kogakure.de</a> entwickelt, das schon bei PRO7 (Galileo), RTL2 (Welt der Wunder) und in der P.M. erwähnt wurde. Ich wohne in Hamburg und interessiere mich für Webstandards, Zugänglichkeit von Websites, Django, Bücher, Kinofilme, CG, Apple, Design und noch zwei, drei andere Dinge. <a href="{path='information'}">Mehr Informationen »</a></p>
       </div>
     </div>

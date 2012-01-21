@@ -1,5 +1,5 @@
 {embed="inc/html_head"}
-    <title>{site_name} • Webdesigner</title>
+    <title>{site_name} • Frontend Engineer</title>
 {embed="inc/favicon"}
 {embed="inc/stylesheets"}
 {embed="inc/js"}
