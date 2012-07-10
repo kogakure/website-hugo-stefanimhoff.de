@@ -1,5 +1,5 @@
 {embed="inc/html_head"}
-    <title>{exp:weblog:entries require_entry="yes" status="open|vorschau" limit="1" rdf="off"}{title}{/exp:weblog:entries} • {exp:weblog:info weblog="notes"}{blog_title}{/exp:weblog:info} • {site_name}</title>
+    <title>{exp:weblog:entries require_entry="yes" status="open|vorschau" limit="1" rdf="off"}{title}{/exp:weblog:entries} • {site_name}</title>
 {embed="inc/favicon"}
 {embed="inc/stylesheets"}
 {embed="inc/js"}

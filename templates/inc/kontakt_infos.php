@@ -23,7 +23,7 @@
 </div>
 
 <ul class="network">
-  <li class="network-xing" ><a href="{link_xing}">XING</a></li>
-  <li class="network-twitter" ><a href="{link_twitter}">Twitter</a></li>
-  <li class="network-readernaut" ><a href="{link_readernaut}">Readernaut</a></li>
+  <li><a href="http://www.xing.com/profile/Stefan_Imhoff">XING</a></li>
+  <li><a href="http://twitter.com/kogakure">Twitter</a></li>
+  <li><a href="http://plus.google.com/104687479698350625994?rel=author"">Google+</a></li>
 </ul>

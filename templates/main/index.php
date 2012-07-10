@@ -55,12 +55,6 @@
             
             {/if}
             
-            <div id="flickr-photos">
-              <h2>Fotos auf <a href="http://flickr.com/photos/kogakure/"><span style="color: #0063DC;">flick</span><span style="color: #FF00A3;">r</span></a></h2>
-              <script type="text/javascript" src="http://www.flickr.com/badge_code.gne?nsid=25939045@N00&amp;count=10&amp;display=latest&amp;name=0&amp;size=square&amp;raw=1"></script>
-              <noscript><p><a href="http://flickr.com/photos/kogakure/">flickr.com</a></p></noscript>
-            </div>
-            
           </div> <!-- content-1 -->
           <div id="content-2">
             
@@ -76,7 +70,7 @@
               <div id="randbemerkungen">
                 <h2>Randbemerkungen</h2>
                 <ul>
-                  {exp:weblog:entries weblog="sidenotes" limit="3" orderby="date" sort="desc" status="open|vorschau" disable="member_data|trackbacks"}
+                  {exp:weblog:entries weblog="sidenotes" limit="1" orderby="date" sort="desc" status="open|vorschau" disable="member_data|trackbacks"}
                   <li><h3>{if sidenotes_link}<a href="{sidenotes_link}">{/if}{title}{if sidenotes_link}</a>{/if}</h3><small class="datetime">{entry_date format="%d. %M %Y"}</small> {sidenotes_body} <a class="edit-entry" href="{path=site_index}deusex/index.php?C=edit&amp;M=edit_entry&amp;weblog_id={weblog_id}&amp;entry_id={entry_id}"><img src="{path=site_index}css/images/edit.png" alt="Bearbeiten" title="Bearbeiten" /></a></li>
                   {/exp:weblog:entries}
                 </ul>
@@ -94,7 +88,7 @@
               <div id="randbemerkungen">
                 <h2>Randbemerkungen</h2>
                 <ul>
-                  {exp:weblog:entries weblog="sidenotes" limit="3" orderby="date" sort="desc" status="open" disable="member_data|trackbacks"}
+                  {exp:weblog:entries weblog="sidenotes" limit="1" orderby="date" sort="desc" status="open" disable="member_data|trackbacks"}
                   <li><h3>{if sidenotes_link}<a href="{sidenotes_link}">{/if}{title}{if sidenotes_link}</a>{/if}</h3><small class="datetime">{entry_date format="%d. %M %Y"}</small> {sidenotes_body}</li>
                   {/exp:weblog:entries}
                 </ul>

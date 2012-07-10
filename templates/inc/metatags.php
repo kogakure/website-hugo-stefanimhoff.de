@@ -3,8 +3,8 @@
     <meta http-equiv="X-XRDS-Location" content="http://kogakure.myopenid.com/xrds" />
     <meta name="MSSmartTagsPreventParsing" content="true" />
     <meta name="robots" content="all" />
-    <meta name="keywords" content="Stefan Imhoff, Hamburg, Webdesign, Webdesigner" />
-    <meta name="description" content="Website von Stefan Imhoff, Webdesigner aus Hamburg" />
+    <meta name="keywords" content="Stefan Imhoff, Hamburg, Frontend, Engineer" />
+    <meta name="description" content="Frontend Engineer @ XING, Designer, Martial Artist and hobby philosopher." />
     <meta name="content-language" content="{lang}" />
     <meta name="author" content="{owner}" />
     <meta name="icbm" content="{geo_lat},{geo_long}" />

@@ -18,8 +18,6 @@
           <div id="content-2">
           {embed="inc/kontakt_infos"}
           
-          {embed="inc/readernaut"}
-
   </div>
 {main_close}
 {embed="inc/meta" feeds="information"}
