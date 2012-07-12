@@ -6,7 +6,9 @@ require "stringex"
 # Config #
 ##########
 #
+public_dir   = "public"   # compiled site directory
 source_dir   = "source"   # source file directory
+stash_dir    = "_stash"   # directory to stash posts for speedy generation
 posts_dir    = "_posts"   # directory for blog files
 new_post_ext = "markdown" # default new post file extension when using the new_post task
 new_page_ext = "markdown" # default new page file extension when using the new_post task
@@ -116,4 +118,30 @@ task :new_page, :filename do |t, args|
   else
     puts "Syntax error: #{args.filename} contains unsupported characters"
   end
+end
+
+# usage rake isolate[my-post]
+desc "Move all other posts than the one currently being worked on to a temporary stash location (stash) so regenerating the site happens much quicker."
+task :isolate, :filename do |t, args|
+  stash_dir = "#{source_dir}/#{stash_dir}"
+  FileUtils.mkdir(stash_dir) unless File.exist?(stash_dir)
+  Dir.glob("#{source_dir}/#{posts_dir}/*.*") do |post|
+    FileUtils.mv post, stash_dir unless post.include?(args.filename)
+  end
+end
+
+desc "Move all stashed posts back into the posts directory, ready for site generation."
+task :integrate do
+  FileUtils.mv Dir.glob("#{source_dir}/#{stash_dir}/*.*"), "#{source_dir}/#{posts_dir}/"
+end
+
+desc "Clean out caches: .pygments-cache, .gist-cache, .sass-cache"
+task :clean do
+  rm_rf [".pygments-cache/**", ".gist-cache/**", ".sass-cache/**", "source/stylesheets/screen.css"]
+end
+
+desc "list tasks"
+task :list do
+  puts "Tasks: #{(Rake::Task.tasks - [Rake::Task[:list]]).join(', ')}"
+  puts "(type rake -T for more detail)\n\n"
 end
