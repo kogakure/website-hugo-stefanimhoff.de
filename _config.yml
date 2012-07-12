@@ -1,0 +1,19 @@
+# ----------------------- #
+#      Main Configs       #
+# ----------------------- #
+
+url: http://localhost:4000
+
+# ----------------------- #
+#    Jekyll & Plugins     #
+# ----------------------- #
+
+root: /
+permalink: /blog/:title/ # /notebook/:year/:month/:day/:title/
+source: source
+destination: public
+plugins: plugins
+code_dir: downloads/code
+category_dir: blog/kategorien
+markdown: rdiscount
+pygments: false # default python pygments have been replaced by pygments.rb
