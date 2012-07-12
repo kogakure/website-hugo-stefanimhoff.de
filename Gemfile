@@ -7,7 +7,6 @@ group :development do
   gem "rdiscount", "~> 1.6.8"
   gem "pygments.rb", "~> 0.2.13"
   gem "RedCloth", "~> 4.2.9"
-  gem "haml", "~> 3.1.6"
   gem "sass", "~> 3.2.0.alpha.247"
   gem "compass", "~> 0.12.2"
   gem "susy", "~> 1.0.rc.2"
