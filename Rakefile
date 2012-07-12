@@ -30,7 +30,7 @@ desc "Watch the site and regenerate when it changes"
 task :watch do
   raise "You need a source directory" unless File.directory?(source_dir)
   puts "## Starting to watch source with Jekyll and Compass."
-  system "compass compile --css-dir #{source_dir}/stylesheets" unless File.exists("#{source_dir}/stylesheets/screen.css")
+  system "compass compile --css-dir #{source_dir}/stylesheets" unless File.exists?("#{source_dir}/stylesheets/screen.css")
   jekyllPid = Process.spawn({"JEKYLL_ENV" => "preview"}, "jekyll --auto")
   compassPid = Process.spawn("compass watch")
 
@@ -46,7 +46,7 @@ desc "Preview the site in a web browser"
 task :preview do
   raise "You need a source directory" unless File.directory?(source_dir)
   puts "## Starting to watch source with Jekyll and Compass. Starting Rack on port #{server_port}"
-  system "compass compile --css-dir #{source_dir}/stylesheets" unless File.exists("#{source_dir}/stylesheets/screen.css")
+  system "compass compile --css-dir #{source_dir}/stylesheets" unless File.exists?("#{source_dir}/stylesheets/screen.css")
   jekyllPid = Process.spawn({"JEKYLL_ENV" => "preview"}, "jekyll --auto")
   compassPid = Process.spawn("compass watch")
   rackupPid = Process.spawn("rackup --port #{server_port}")
