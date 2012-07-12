@@ -2,11 +2,20 @@ require "rubygems"
 require "bundler/setup"
 require "stringex"
 
-# Config
-source_dir  = "source" # source file directory
-server_port = "4000"   # port for preview server eg. localhost:4000
+##########
+# Config #
+##########
+#
+source_dir   = "source"   # source file directory
+posts_dir    = "_posts"   # directory for blog files
+new_post_ext = "markdown" # default new post file extension when using the new_post task
+new_page_ext = "markdown" # default new page file extension when using the new_post task
+server_port  = "4000"     # port for preview server eg. localhost:4000
 
-# Jekyll
+##########
+# Jekyll #
+##########
+
 desc "Generate Jekyll site"
 task :generate do
   raise "You need a source directory" unless File.directory?(source_dir)
@@ -14,8 +23,6 @@ task :generate do
   system "compass compile --css-dir #{source_dir}/stylesheets"
   system "jekyll"
 end
-
-
 
 desc "Watch the site and regenerate when it changes"
 task :watch do
@@ -33,8 +40,6 @@ task :watch do
   [jekyllPid, compassPid].each { |pid| Process.wait(pid) }
 end
 
-
-
 desc "Preview the site in a web browser"
 task :preview do
   raise "You need a source directory" unless File.directory?(source_dir)
@@ -50,4 +55,65 @@ task :preview do
   }
 
   [jekyllPid, compassPid, rackupPid].each { |pid| Process.wait(pid) }
+end
+
+# usage rake new_post[my-new-post] or rake new_post['my new post'] or rake new_post (defaults to "new-post")
+desc "Begin a new post in #{source_dir}/#{posts_dir}"
+task :new_post, :title do |t, args|
+  raise "You need a source directory" unless File.directory?(source_dir)
+  mkdir_p "#{source_dir}/#{posts_dir}"
+  args.with_defaults(:title => "new-post")
+  title = args.title
+  filename = "#{source_dir}/#{posts_dir}/#{Time.now.strftime('%Y-%m-%d')}-#{title.to_url}.#{new_post_ext}"
+  if File.exists?(filename)
+    abort("rake aborted!") if ask("#{filename} already exits. Do you want to overwrite?", ['y', 'n']) == 'n'
+  end
+  puts "## Creating new post: #{filename}"
+  open(filename, "w") do |post|
+    post.puts "---"
+    post.puts "layout: post"
+    post.puts "title: \"#{title.gsub(/&/,'&amp;')}\""
+    post.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"
+    post.puts "categories: "
+    post.puts "tags: "
+    post.puts "---"
+  end
+end
+
+# usage rake new_page[my-new-page] or rake new_page[my-new-page.html] or rake new_page (defaults to "new-page.markdown")
+desc "Create a new page in #{source_dir}/(filename)/index.#{new_page_ext}"
+task :new_page, :filename do |t, args|
+  raise "You need a source directory" unless File.directory?(source_dir)
+  args.with_defaults(:filename => 'new-page')
+  page_dir = [source_dir]
+  if args.filename.downcase =~ /(^.+\/)?(.+)/
+    filename, dot, extension = $2.rpartition('.').reject(&:empty?)         # Get filename and extension
+    title = filename
+    page_dir.concat($1.downcase.sub(/^\//, '').split('/')) unless $1.nil?  # Add path to page_dir Array
+    if extension.nil?
+      page_dir << filename
+      filename = "index"
+    end
+    extension ||= new_page_ext
+    page_dir = page_dir.map! { |d| d = d.to_url }.join('/')                # Sanitize path
+    filename = filename.downcase.to_url
+
+    mkdir_p page_dir
+    file = "#{page_dir}/#{filename}.#{extension}"
+    if File.exist?(file)
+      abort("rake aborted!") if ask("#{file} already exists. Do you want to overwrite?", ['y', 'n']) == 'n'
+    end
+    puts "Creating new page: #{file}"
+    open(file, 'w') do |page|
+      page.puts "---"
+      page.puts "layout: page"
+      page.puts "title: \"#{title}\""
+      page.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"
+      page.puts "sharing: true"
+      page.puts "footer: true"
+      page.puts "---"
+    end
+  else
+    puts "Syntax error: #{args.filename} contains unsupported characters"
+  end
 end
