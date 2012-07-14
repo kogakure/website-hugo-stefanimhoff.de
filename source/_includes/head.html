@@ -1,0 +1,23 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="de"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="de"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="de"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="de"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.title }}</title>
+  {% capture description %}{% if page.description %}{{ page.description }}{% else %}{{ content | raw_content }}{% endif %}{% endcapture %}<meta name="description" content="{{ description | strip_html | condense_spaces | truncate:150 }}">
+  {% capture author %}{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}{% endcapture %}<meta name="author" content="{{ author | strip_html | condense_spaces | truncate:100 }}">
+  {% capture keywords %}{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}{% endcapture %}<meta name="keywords" content="{{ keywords | strip_html | condense_spaces | truncate:2000 }}">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="shortcut icon" href="{{ site.url }}/favicon.ico">
+  <link rel="apple-touch-icon" href="{{ site.url }}/apple-touch-icon.png">
+
+  {% capture canonical %}{{ site.url }}{% if site.permalink contains '.html' %}{{ page.url }}{% else %}{{ page.url | remove:'index.html' | strip_slash }}{% endif %}{% endcapture %}<link rel="canonical" href="{{ canonical }}">
+  <link href="{{ root_url }}/stylesheets/screen.css" rel="stylesheet">
+  <link href="{{ site.subscribe_rss }}" rel="alternate" title="{{site.title}}" type="application/atom+xml">
+</head>
