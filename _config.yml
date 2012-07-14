@@ -4,6 +4,11 @@
 
 url: http://localhost:4000  # Development URL
 # url: http://stefanimhoff.de # Live URL
+title: Stefan Imhoff
+description: Frontend Engineer @ XING, Designer, Martial Artist and hobby philosopher.
+keywords: Stefan Imhoff, Hamburg, Frontend, Engineer
+author: Stefan Imhoff
+subscribe_rss: /atom.xml
 
 # ----------------------- #
 #    Jekyll & Plugins     #
