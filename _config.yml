@@ -9,6 +9,8 @@ description: Frontend Engineer @ XING, Designer, Martial Artist and hobby philos
 keywords: Stefan Imhoff, Hamburg, Frontend, Engineer
 author: Stefan Imhoff
 subscribe_rss: /atom.xml
+date_format: "%d.%m.%Y"
+titlecase: false
 
 # ----------------------- #
 #    Jekyll & Plugins     #
@@ -23,3 +25,9 @@ code_dir: downloads/code
 category_dir: blog/kategorien
 markdown: rdiscount
 pygments: false # default python pygments have been replaced by pygments.rb
+
+# Pagination
+paginate: 5
+pagination_dir: blog
+recent_posts: 5
+excerpt_link: "Weiterlesen &rarr;"
