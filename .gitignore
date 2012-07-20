@@ -2,3 +2,4 @@
 vendor/
 .sass-cache/
 public/
+.pygments-cache
