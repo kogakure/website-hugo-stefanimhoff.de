@@ -28,6 +28,7 @@ tag_dir: tags
 tag_title_prefix: "Tags: "
 markdown: rdiscount
 pygments: false # default python pygments have been replaced by pygments.rb
+lsi: true # Related posts
 
 # Pagination
 paginate: 5
