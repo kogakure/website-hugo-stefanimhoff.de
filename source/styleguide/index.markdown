@@ -1,9 +1,7 @@
 ---
 layout: page
 title: "Styleguide"
-date: 2012-07-20 11:08
-sharing: true
-footer: true
+footer: false
 ---
 
 This document is a guide to the mark-up styles used throughout the site.
