@@ -2,6 +2,26 @@
 layout: none
 permalink: .htaccess
 ---
+
+# Base Rewrite
+RewriteEngine On
+RewriteBase /
+
+# ----------------------------------------------------------------------
+# Redirecting/Removing sites
+# ----------------------------------------------------------------------
+
+# Redirects
+Redirect 301 /notiz/das-koi-design-inspiration-und-idee/ /blog/koi-design/
+Redirect 301 /notiz/abmahnung-kogakure-zitat-karl-valentin/ /
+Redirect 301 /notiz/django-und-das-framework-ding/ /blog/django/
+
+# Redirects (Gone)
+# ErrorDocument 410 /main/404/
+Redirect Gone /notiz/glueckliche-mitarbeiter/
+Redirect Gone /notiz/musik-tipp-poets-of-the-fall/
+Redirect Gone /notiz/why-we-fight/
+
 # ----------------------------------------------------------------------
 # Better website experience for IE users
 # ----------------------------------------------------------------------
@@ -17,3 +37,5 @@ permalink: .htaccess
     Header unset X-UA-Compatible
   </FilesMatch>
 </IfModule>
+
+

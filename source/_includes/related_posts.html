@@ -1,4 +1,5 @@
 <section>
+  {% unless site.related_posts == empty %}
   <h1>Ähnliche Beiträge</h1>
   <ul class="posts">
     {% for post in site.related_posts limit:5 %}
@@ -7,4 +8,5 @@
     </li>
     {% endfor %}
   </ul>
+  {% endunless %}
 </section>
