@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Volume reparieren unter Mac OSX"
+title: "Volume reparieren unter Mac OS X"
 date: 2007-05-23 11:40
 categories:
 tags: [tutorial, macosx]

@@ -8,19 +8,49 @@ RewriteEngine On
 RewriteBase /
 
 # ----------------------------------------------------------------------
+# Append slash to URL
+# ----------------------------------------------------------------------
+
+RewriteCond %{REQUEST_FILENAME} !-f # Ignore files
+RewriteCond %{REQUEST_URI} !/$      # Ignore urls with appended slash
+RewriteCond %{REQUEST_URI} !(.*)/$  # Ignore any url with appended slash
+RewriteRule ^(.*)$ $1/ [L,R=301]    # Append slash and redirect permanent 301
+
+# ----------------------------------------------------------------------
 # Redirecting/Removing sites
 # ----------------------------------------------------------------------
 
-# Redirects
-Redirect 301 /notiz/das-koi-design-inspiration-und-idee/ /blog/koi-design/
-Redirect 301 /notiz/abmahnung-kogakure-zitat-karl-valentin/ /
-Redirect 301 /notiz/django-und-das-framework-ding/ /blog/django/
+# Redirects (Permanent)
+Redirect 301 /notiz/das-koi-design-inspiration-und-idee /blog/koi-design                                  # Der alte Titel war schlecht
+Redirect 301 /notiz/django-und-das-framework-ding /blog/django                                            # Der alte Titel war peinlich
+Redirect 301 /notiz/django-folder-fuer-mac-os-x /blog/django-folder-mac-osx                               # Titel verbessert
+Redirect 301 /notiz/blender-folder-fuer-mac-os-x-leopard /blog/blender-folder-mac-osx                     # Titel verbessert
+Redirect 301 /notiz/theme-kaijin-fuer-das-moinmoin-wiki /blog/theme-kaijin-moinmoin-wiki                  # Titel verbessert
+Redirect 301 /notiz/terminal-stoeckchen /notiz/terminal-most-used-commands                                # Der alte Titel war Blödsinn
+Redirect 301 /notiz/django-relaunch-von-kogakure-de /blog/django-relaunch-kogakure-de                     # Titel verbessert
+Redirect 301 /notiz/server-verwaltung-mit-capistrano /blog/server-verwaltung-capistrano                   # Titel verbessert
+Redirect 301 /notiz/grundlagen-von-python-django-fuer-anfaenger /blog/grundlagen-python-django-anfaenger  # Titel verbessert
+Redirect 301 /notiz/kostenlose-vektorkarten-mit-openstreetmap /blog/kostenlose-vektorkarten-openstreetmap # Titel verbessert
+Redirect 301 /notiz/django-fuer-webdesigner /blog/django-webdesigner                                      # Titel verbessert
+Redirect 301 /notiz /blog                                                                                 # Catch all with same url (should be last)
 
 # Redirects (Gone)
-# ErrorDocument 410 /main/404/
-Redirect Gone /notiz/glueckliche-mitarbeiter/
-Redirect Gone /notiz/musik-tipp-poets-of-the-fall/
-Redirect Gone /notiz/why-we-fight/
+# ErrorDocument 410 /main/404
+Redirect Gone /notiz/glueckliche-mitarbeiter
+Redirect Gone /notiz/musik-tipp-poets-of-the-fall
+Redirect Gone /notiz/why-we-fight
+Redirect Gone /notiz/meine-groesste-dummheit-vorerst
+Redirect Gone /notiz/abmahnung-kogakure-zitat-karl-valentin
+Redirect Gone /notiz/die-schatzinsel-bei-pro7
+Redirect Gone /notiz/wie-marions-kochbuch-google-manipuliert
+Redirect Gone /notiz/einfach-die-welt-veraendern
+Redirect Gone /notiz/expression-engine-2-sneak-preview
+Redirect Gone /notiz/cms-weblog-systeme-reloaded
+Redirect Gone /notiz/blender-animationsfilm-big-buck-bunny
+Redirect Gone /notiz/chris-jordan-zeigt-unsere-masslosigkeit-in-erschreckenden-bildern
+Redirect Gone /notiz/bash_profile-striptease
+Redirect Gone /notiz/platzsparend-browser-bookmark-unicode
+Redirect Gone /notiz/textmate-snippet-dummy-image-generator
 
 # ----------------------------------------------------------------------
 # Better website experience for IE users
@@ -37,5 +67,3 @@ Redirect Gone /notiz/why-we-fight/
     Header unset X-UA-Compatible
   </FilesMatch>
 </IfModule>
-
-
