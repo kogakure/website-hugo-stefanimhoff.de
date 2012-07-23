@@ -23,7 +23,7 @@ task :generate do
   raise "You need a source directory" unless File.directory?(source_dir)
   puts "## Generating site with Jekyll."
   system "compass compile --css-dir #{source_dir}/stylesheets"
-  system "jekyll --auto"
+  system "jekyll"
 end
 
 desc "Watch the site and regenerate when it changes"

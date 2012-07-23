@@ -143,17 +143,17 @@ Django nimmt für die Felder im Admin-Backend automatisch den Datenmodellnamen m
 
 In den HTML-Templates wird eine etwas andere Syntax benutzt. Zuerst muss am Anfang der Datei das Templatetag für die Internationalisierung geladen werden.
 
-Um eine einfache Zeichenkette zu markieren, benutzt man `{% trans "" %}`. Es gibt auch Möglichkeiten Variablen oder lange Blöcke zu übersetzten. Hier verweise ich der Einfachheit halber auf die Dokumentation.
+Um eine einfache Zeichenkette zu markieren, benutzt man {% raw %}`{% trans "" %}`{% endraw %}. Es gibt auch Möglichkeiten Variablen oder lange Blöcke zu übersetzten. Hier verweise ich der Einfachheit halber auf die Dokumentation.
 
     # polls/poll_list.html
 
-    {% load i18n %}
+    {% raw %}{% load i18n %}{% endraw %}
 
     ...
 
-    {% else %}
+    {% raw %}{% else %}{% raw %}
         <p>{% trans "No polls are available." %}</p>
-    {% endif %}
+    {% raw %}{% endif %}{% raw %}
 
 Die Pluralisierung funktioniert (leider) nicht mehr wie gewohnt, wenn man sie lokalisiert. Dafür muss man eine Abfrage im `{% if% }`-ähnlichen Stil einbauen und die Menge eines Objektes abfragen.
 

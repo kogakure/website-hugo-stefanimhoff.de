@@ -145,7 +145,7 @@ Django-Templates lassen keine Programmierung (Python) oder Datenbankabfragen (SQ
 Wem die [Grundfunktionen der Templatesprache](http://docs.djangoproject.com/en/dev/ref/templates/builtins/#ref-templates-builtins) nicht ausreichen, der kann [eigene Filter oder Tags](http://docs.djangoproject.com/en/dev/howto/custom-template-tags/#howto-custom-template-tags) scheiben, was oft nur wenige Zeilen Code erfordert.
 
 Ein Grundtemplate sieht in der Django-Dokumentation z. B. so aus:
-
+{% raw %}
     <html>
     <head>
         <title>{% block title %}{% endblock %}</title>
@@ -155,9 +155,9 @@ Ein Grundtemplate sieht in der Django-Dokumentation z. B. so aus:
         {% block content %}{% endblock %}
     </body>
     </html>
-
+{% endraw %}
 Das niedrigere Template, hier eine Detailseite für einen Artikel, überschreibt dann die Blöcke nach Belieben und erbt den Rest des Grundtemplates:
-
+{% raw %}
     {% extends "base.html" %}
 
     {% block title %}Articles for {{ year }}{% endblock %}
@@ -171,7 +171,7 @@ Das niedrigere Template, hier eine Detailseite für einen Artikel, überschreibt
     <p>Published {{ article.pub_date|date:"F j, Y" }}</p>
     {% endfor %}
     {% endblock %}
-
+{% endraw %}
 ### Erweitern von Django
 
 Eine Besonderheit von Django ist die Möglichkeit, das eigene Projekt mit Applikationen zu erweitern. Diese Applikationen sind mehr als nur Plugins oder Extensions, sondern Module (wie z. B. Module in ExpressionEngine). Fast alles, was in Django benutzt wird, ist eine eigene Applikation. Sogar das Admin-Interface ist ein eigenes Modul, was nach belieben benutzt oder nicht benutzt werden kann.
