@@ -14,7 +14,7 @@ Seit über einem Jahr benutze ich jetzt das [MoinMoin Wiki](http://moinmo.in/ "M
 
 Dieses Theme heißt *Kaijin* (灰塵), japanisch für „Asche und Staub“ und basiert auf dem MoinMoin Theme „modern“. Die orginale Python-Datei habe ich (bis auf die nötigen Stellen) nicht verändert.
 
-Leider gibt das Wiki an vielen Stellen keinen semantischen Code aus (so sind z.&nbsp;B. Zitate nicht als `&lt;blockquote&gt;` deklariert), und manche Elemente können ohne größere Änderungen am Python-Quellcode nicht verändert werden.
+Leider gibt das Wiki an vielen Stellen keinen semantischen Code aus (so sind z.&nbsp;B. Zitate nicht als `<blockquote>` deklariert), und manche Elemente können ohne größere Änderungen am Python-Quellcode nicht verändert werden.
 
 Das ZIP-Packet enthält die CSS-Dateien, Bilder und die python-Datei des Themes. Außerdem habe ich mir einige der Grafiken durch die [Silk-Icons von FamFam](http://www.famfamfam.com/lab/icons/silk/ "famfamfam.com: Silk Icons") ersetzt. Damit diese auch in der richtigen Größe angezeigt werden, müssen zwei weitere python-Dateien in bestimmte Ordner kopiert werden.
 
@@ -26,7 +26,7 @@ Dieses Theme ist unter einer <a rel="license" href="http://creativecommons.org/l
 
 This Theme is called *Kaijin* (灰塵), Japanese for “Ash and Dust” and is based on the MoinMoin Theme “modern”. I didn't changed the original python file (except to the needed lines).
 
-Unfortunately is there many non-semantic Code in MoinMoin (e.&nbsp;g. Blockquotes aren’t labeled as `&lt;blockquote&gt;`), and some elements can’t be changed without much effort.
+Unfortunately is there many non-semantic Code in MoinMoin (e.&nbsp;g. Blockquotes aren’t labeled as `<blockquote>`), and some elements can’t be changed without much effort.
 
 The ZIP package containes the CSS files, images and the python file of the theme. In addition I replaced some Icons with the [FamFam Silk Icons](http://www.famfamfam.com/lab/icons/silk/ "famfamfam.com: Silk Icons"). To get the correct width and height, two python files need replacement.
 

@@ -14,7 +14,7 @@ Es ist soweit! Mein erstes Django-Projekt ist online: das seit 1999 bestehende K
 
 Was ist Django? Django ist ein [Python](http://www.python.org/ "Python Programming Language -- Official Website")-Web-Framework, das schnelle, saubere Entwicklung von dynamischen Websites ermöglicht.
 
-Django wurde nach dem Jazz-Gitarristen Django Reinhardt benannt und wird [so&nbsp;ausgesprochen](http://red-bean.com/~adrian/django_pronunciation.mp3).
+Django wurde nach dem Jazz-Gitarristen Django Reinhardt benannt und wird [so ausgesprochen](http://red-bean.com/~adrian/django_pronunciation.mp3).
 
 Gegenüber anderen Web-Frameworks hat es einige Vorteile, vor allem ist es sehr „Designerfreundlich“.
 

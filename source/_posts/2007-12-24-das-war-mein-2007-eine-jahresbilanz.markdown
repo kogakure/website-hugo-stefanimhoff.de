@@ -143,7 +143,7 @@ Voller Freude warte ich auf die Neuverfilmung der „Schatzinsel“ und rege mic
 
 Ich überlege mir, ob ich zukünftig mit Markdown, Textile oder ReST als Markup-Sprache arbeiten will, und entscheide mich für [Markdown](http://daringfireball.net/projects/markdown/). Textile ist sehr Prozessoraufwendig und rendert im Test um ein riesiges Stück langsamer als Markdown. Außerdem: Bei Textile kann ich auch gleich HTML nehmen. ReST erzeugt mir zu viel Markup.
 
-Ich stelle fest, dass bislang nur Safari 3 automatisch Worte trennt, doch die Alpha-Version von Firefox 3 bringt die freudige Erkenntnis: Man kann jetzt `&amp;shy;` benutzen, um wenigstens modernen Browsern ordentliche Worttrennung zu liefern.
+Ich stelle fest, dass bislang nur Safari 3 automatisch Worte trennt, doch die Alpha-Version von Firefox 3 bringt die freudige Erkenntnis: Man kann jetzt `&shy;` benutzen, um wenigstens modernen Browsern ordentliche Worttrennung zu liefern.
 
 Ich stelle fest, dass [Symphony 2](http://sneakpeek.symphony21.com/) im Anmarsch ist und freue mich darauf.
 

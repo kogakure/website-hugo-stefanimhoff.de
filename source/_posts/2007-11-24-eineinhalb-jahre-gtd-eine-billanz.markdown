@@ -12,7 +12,7 @@ Seit genau eineinhalb Jahren benutze ich jetzt die Prinzipien des *GTD* (*Gettin
 
 <img class="border links" src="http://stefanimhoff.de/images/notizbuch/gtd-vorher.jpg" width="300" height="191" alt="GTD vorher" title="So sah die Inbox aus, bevor ich alle „losen Enden“ sortiert hatte" /> <cite>David Allen</cite> stellt in seinem Buch ein interessantes System vor, mit dem man seine täglichen Aufgaben effektiv und effizient erledigen kann.
 
-Das Buch ist auch in **Deutsch** erhältlich unter dem Titel „*[Wie&nbsp;ich&nbsp;die&nbsp;Dinge&nbsp;geregelt&nbsp;kriege](http://www.amazon.de/gp/product/3492240607?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=3492240607)*<sup><a id="fna-1" href="#fn-1">1</a></sup>“.
+Das Buch ist auch in **Deutsch** erhältlich unter dem Titel „[Wie ich die Dinge geregelt kriege](http://www.amazon.de/gp/product/3492240607?ie=UTF8&amp;tag=kogakurede-21&amp;linkCode=as2&amp;camp=1638&creative=6742&creativeASIN=3492240607)<sup><a id="fna-1" href="#fn-1">1</a></sup>“.
 
 Ich bin jedenfalls der Meinung, man *bekommt* mit Allens System wirklich den alltäglichen Wahnsinn geregelt.
 
