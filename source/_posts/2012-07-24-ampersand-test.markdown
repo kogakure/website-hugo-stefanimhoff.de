@@ -27,3 +27,10 @@ tags:
 [√] Ruby-Hash-Rockets nicht: =&gt; und =&lt;
 
 [x] Besonders tricky, ein Amp zwischen zwei Links: Packaging: <a href="http://pip-installer.org/">Pip</a> &amp; <a href="http://virtualenv.openplans.org/">Virtualenv</a>
+
+[?] In Codeblöcken soll es immer ignoriert werden: `1&1 und Peter & Paul` und <code>1&1 und Peter & Paul</code>:
+
+    echo "Hallo Welt & Universum";
+    echo 1&1 und Peter & Paul
+    
+Das war ein Codeblock.
