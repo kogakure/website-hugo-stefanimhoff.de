@@ -1,0 +1,23 @@
+---
+layout: post
+title: "Abbr Test"
+date: 2012-07-25 14:00
+categories: 
+tags: 
+---
+
+Dies testet einige Abbreviations, so sollten diese konvertiert werden:
+
+HTML, CSS, XML, NATO.
+
+Diese aber nicht:
+
+HTMLler, CSSler, XMLdings, NATObomber
+
+und auch keine kleingeschriebenen:
+
+html, css, xml
+
+Aber diese:
+
+HTML-Tags, CSS-Syntax, Simple-XML, NATO-Bomber
