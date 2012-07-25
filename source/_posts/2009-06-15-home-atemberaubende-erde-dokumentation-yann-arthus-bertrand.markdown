@@ -22,7 +22,7 @@ Der Film hat eine Spieldauer von 1 Stunde und 33 Minuten und ist grob in drei Te
 
 1. Die Entstehung der Erde, des Lebens und der Arten
 2. Die Zerstörungen und Spuren des Homo Sapiens
-3. Hoffnung & Auswege
+3. Hoffnung und Auswege
 
 Die Aufnahmen sind durchweg in atemberaubenden (oder erschreckenden) Landschaften aus der Luft gedreht und werden von einer Sprecherin besprochen. Dazu wurde wunderschöne Musik von Armand Amar komponiert. Der Komponist hat viele verschiedene Musiker aus verschiedenen Nationen eingesetzt, unter anderem die wunderbare Sängerin Gombodorj Byambajarga, den mongolischen Sänger Enkhajargal Dandarvaanchig, sowie   Trommler aus Schanghai und das Budapest Symphony Orchester aus Ungarn.
 

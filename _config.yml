@@ -13,7 +13,7 @@ date_format: "%d.%m.%Y"
 titlecase: false
 
 # ----------------------- #
-#    Jekyll & Plugins     #
+#    Jekyll/Plugins     #
 # ----------------------- #
 
 root: /

@@ -20,7 +20,7 @@ Leider ist es ja bekanntlich ein Problem, dass viele Computerspiele im Kino umge
 
 [„Max Payne“ und „Max Payne 2 – The Fall of Max Payne“](http://www.rockstargames.com/maxpayne/ "Max Payne : The Official Website") bieten fantastischen Stoff und würden fantastisches Kino Noir bieten. Der Mord an seiner Familie, die politischen Verstrickungen und der gnadenlose Rachefeldzug lassen sich gut umsetzten. Mit Sicherheit ein Film, der keine Jugendfreigabe erhalten kann.
 
-Erfreulicherweise scheint es ein unabhängiges Filmprojekt zu geben, das sich des Stoffes angenommen hat: „Max Payne – Payne & Redemption“. Auf der [offiziellen Seite](http://www.payneandredemption.com/) kann man im Weblog den Fortgang des Projektes verfolgen und auch schon erste Trailer sehen.
+Erfreulicherweise scheint es ein unabhängiges Filmprojekt zu geben, das sich des Stoffes angenommen hat: „Max Payne – Payne and Redemption“. Auf der [offiziellen Seite](http://www.payneandredemption.com/) kann man im Weblog den Fortgang des Projektes verfolgen und auch schon erste Trailer sehen.
 
 Der Film soll zum Download angeboten werden und laut Planung sogar schon 2007 fertig sein.
 
