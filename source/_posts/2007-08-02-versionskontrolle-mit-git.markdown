@@ -12,9 +12,9 @@ Vor ein paar Wochen bin ich über *Git* gestolpert, das Versionskontrollsystem v
 
 Seit fast einem Jahr arbeite ich nun mit Subversion – und bin ziemlich zufrieden. Meine Ansprüche sind aber auch nicht sehr hoch, da ich kein Software-Entwickler bin, oder riesige Mengen Code zu bewältigen habe. Bei mir gab es bislang auch noch keinen `branch` in einem meiner Projekte
 
-<abbr title="Concurrent Versions System">*CVS*</abbr> habe ich nicht kennengelernt und das scheint auch gut zu sein, bei allen grausigen Meldungen, die man über CVS hört.
+CVS habe ich nicht kennengelernt und das scheint auch gut zu sein, bei allen grausigen Meldungen, die man über CVS hört.
 
-<cite>Linus Torvalds</cite> sieht das wohl etwas anders, wie er in Googles „[Tech Talk: Linus Torvalds on git](http://youtube.com/watch?v=4XpnKHJAok8&amp;v3 "YouTube - Tech Talk: Linus Torvalds on git")“ deutlich macht:
+Linus Torvalds sieht das wohl etwas anders, wie er in Googles „[Tech Talk: Linus Torvalds on git](http://youtube.com/watch?v=4XpnKHJAok8&amp;v3 "YouTube - Tech Talk: Linus Torvalds on git")“ deutlich macht:
 
 > „I see Subversion as being the most pointless project ever started, because the slogan for Subversion for a while was: »CVS done right« […]. And if you start with that kind of slogan, there is nowhere you can go. There’s no way to do CVS right.“
 >

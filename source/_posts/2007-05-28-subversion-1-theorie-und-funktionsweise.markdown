@@ -26,7 +26,7 @@ Doch seine besondere Stärke liegt in der Teamarbeit. Wenn mehr als eine Person 
 
 Modernere Systeme setzen immerhin schon einen Speicherschutz, solange jemand die Datei bearbeitet. Dies ist jedoch nicht effizient, da in der Zwischenzeit niemand anders an der Datei arbeiten kann. Gerade bei häufigen, kleineren Änderungen ist ein Projekt auf diese Weise kaum noch zu pflegen.
 
-Denn in der Praxis werden viele Dateien oft über lange Zeit zur Bearbeitung gesperrt, und es wird vergessen, sie wieder freizugeben. Besonders ärgerlich, wenn man dringend etwas ändern muss und dies nicht kann, weil die Person z.B. krank, zu Mittag oder im Urlaub ist. Meisten hilft dann höchstens noch ein Anruf in der <abbr title="Informationstechnologie">IT</abbr>-Abteilung.
+Denn in der Praxis werden viele Dateien oft über lange Zeit zur Bearbeitung gesperrt, und es wird vergessen, sie wieder freizugeben. Besonders ärgerlich, wenn man dringend etwas ändern muss und dies nicht kann, weil die Person z.B. krank, zu Mittag oder im Urlaub ist. Meisten hilft dann höchstens noch ein Anruf in der IT-Abteilung.
 
 ### Kopieren, Ändern, Zusammenführen ###
 
