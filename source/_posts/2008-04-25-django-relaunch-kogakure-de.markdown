@@ -143,7 +143,7 @@ Um den Einstieg in Django zu erleichtern, habe ich nachfolgend eine Liste von in
 * [Doing Local Right](http://www.slideshare.net/simon/doing-local-right "Doing Local Right &raquo; SlideShare") – Folien von der @media 2007, Simon Willison
 * [Python Web Development with Django](http://itmaurer.com/clepy/htdocs/media/presentation/presentation.html "Python Web Development with Django") – Folien über Python Web-Entwicklung mit Django, Ian Maurer
 
-#### Lernen & Hilfe
+#### Lernen und Hilfe
 
 * [Google Groups Django users](http://groups.google.com/group/django-users "Django users | Google Groups") – Django Google Group, für Fragen und Antworten
 * [Django snippets](http://www.djangosnippets.org/ "Django snippets") – Nützliche Sammlung von Filtern, Tags und Code-Schnipseln

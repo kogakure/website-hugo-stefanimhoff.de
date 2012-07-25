@@ -1,7 +1,7 @@
 module Jekyll
   module AmpersandFilter
     def ampersand(input)
-      input.gsub /(&amp;|&)(?!.*">.*<\/a>)(?!amp;shy;)(?!nbsp;)(?!shy;)(?!gt;)(?!lt;)/, '<span class="amp">&amp;</span>'
+      input.gsub /(\s&amp;\s)(?!.*">)/, '<span class="amp">&nbsp;&amp;&nbsp;</span>'
     end
   end
 end

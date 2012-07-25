@@ -17,7 +17,7 @@ Den mittlerweile veralteten Artikel von 2007 ersetze ich durch eine große Liste
 ### Offizielle Website
 * [Git - Fast Version Control System](http://git-scm.com/ "Git - Fast Version Control System")
 
-### Tutorials & Dokumentationen
+### Tutorials und Dokumentationen
 * [The Git Community Book](http://book.git-scm.com/ "Git Community Book") – Das Community-Buch, online und als PDF herunterzuladen
 
 #### Kurze Anleitungen
@@ -49,7 +49,7 @@ Den mittlerweile veralteten Artikel von 2007 ersetze ich durch eine große Liste
 * [Git Cheat Sheet](http://zrusin.blogspot.com/2007/09/git-cheat-sheet.html "Zack Rusin: Git cheat sheet") – Ein nützliches Cheat Sheet
 * [Cheat Git](http://cheat.errtheblog.com/s/git/ "$ cheat git") – Ein weiteres, nützliches Cheat Sheet
 
-### Videos & Screencasts
+### Videos und Screencasts
 * [Offizielle Git-Screencasts](http://git-scm.com/videos)
 * [Google Tech Talk: Linus Torvalds on git](http://youtube.com/watch?v=4XpnKHJAok8) – Linus Torvalds präsentiert Git bei Google
 * [Google Tech Talk: Git](http://www.youtube.com/watch?v=8dhZ9BXQgc4 "YouTube - Git") – Randal Schwartz stellt Git eine Stunde lang vor
