@@ -8,23 +8,13 @@ tags:
 
 # Abbreviations
 
-Neue Features: DSL#1 und DSL#2 und HTML. Und noch mal DSL#2 und DSL#1. Und wie sieht es in einem Link aus?
-
-Ich schreibe in [HTML](http://www.google.de/webhp?sourceid=chrome-instant&ie=UTF-8#q=test&hl=de "HTML-Userguide") und [CSS](http://www.google.de/webhp?sourceid=chrome-instant&ie=UTF-8#q=test&hl=de "Guide über CSS").
-
-Außerdem: e.&nbsp;g. und etc., z.&nbsp;B., d.&nbsp;h.
-
-Dies testet einige Abbreviations, so sollten diese konvertiert werden:
-
-HTML, CSS, XML, NATO.
-
-Diese auch zum Teil:
-
-HTMLler, CSSler, XMLdings, NATObomber
-
-Diese auch:
-
-HTML-Tags, CSS-Syntax, Simple-XML, NATO-Bomber
+- Neue Features: DSL#1 und DSL#2 und HTML. Und noch mal DSL#2 und DSL#1. Und wie sieht es in einem Link aus?
+- Ich schreibe in [HTML](http://www.google.de/webhp?sourceid=chrome-instant&ie=UTF-8#q=test&hl=de "HTML-Userguide") und [CSS](http://www.google.de/webhp?sourceid=chrome-instant&ie=UTF-8#q=test&hl=de "Guide über CSS").
+- Außerdem: e.&nbsp;g. und etc., z.&nbsp;B., d.&nbsp;h.
+- HTML, CSS, XML, NATO.
+- <abbr title="test">HTML</abbr>, <abbr title="test">CSS</abbr>, CSS nicht, <abbr title="test">XML</abbr>, <abbr title="test">NATO</abbr>
+- HTMLler, CSSler, XMLdings, NATObomber
+- HTML-Tags, CSS-Syntax, Simple-XML, NATO-Bomber
 
 # Ampersand
 
