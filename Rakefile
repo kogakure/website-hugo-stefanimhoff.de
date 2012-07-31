@@ -14,6 +14,12 @@ new_post_ext = "markdown" # default new post file extension when using the new_p
 new_page_ext = "markdown" # default new page file extension when using the new_post task
 server_port  = "4000"     # port for preview server eg. localhost:4000
 
+desc "Generate StyleDocco styleguide"
+task :styleguide do
+  puts "## Generating styleguide with StyleDocco."
+  system 'styledocco --name "Styleguide" --out styleguide --preprocessor "sass --compass" sass'
+end
+
 ##########
 # Jekyll #
 ##########
