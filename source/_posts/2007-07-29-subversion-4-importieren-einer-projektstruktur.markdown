@@ -24,14 +24,14 @@ Zum Verständnis von `branches` eine kurze Erklärung (*Wen das nicht interessie
 
 ### Anlegen der Grundstruktur ###
 
-<div class="terminal">
-  <p><kbd>$ cd ~</kbd></p>
-  <p><kbd>$ cd Desktop</kbd></p>
-  <p><kbd>$ mkdir Import</kbd></p>
-  <p><kbd>$ cd Import</kbd></p>
-  <p><kbd>$ mkdir trunk</kbd></p>
-  <p><kbd>$ mkdir tags</kbd></p>
-</div>
+{% codeblock lang:sh %}
+cd ~
+cd Desktop
+mkdir Import
+cd Import
+mkdir trunk
+mkdir tags
+{% endcodeblock %}
 
 Dies erzeugt meine Grundstruktur, den Konventionen entsprechend. Der Ordner `Import` (frei gewählter Name) liegt auf dem Desktop und dient nur für den Importierungsvorgang. Danach kann er gelöscht werden. Innerhalb von `trunk` lege ich jetzt eine für mein Projekt passende Struktur an. Als Hilfe ist es wichtig zu erwähnen, dass mit Subversion nur Ordner ausgecheckt werden können, keine einzelnen Dateien. Daher ist es wichtig, die Struktur mit möglichst logischen und strukturierten Ordnern und Unterordnern anzulegen.
 
@@ -39,25 +39,24 @@ Dies erzeugt meine Grundstruktur, den Konventionen entsprechend. Der Ordner `Imp
 
 Hier ist mal eine Beispielstruktur, die ich überlicherweise verwende:
 
-<pre>
-<code>
-tags
-trunk
-  Konzept [Konzept des Projektes mit Mindmaps, Ideen etc.]
-  Preview [Screenshots für den Kunden zur Voransicht]
-  Layout [Die PSD und AI-Dateien]
-  Vorlagen [Alles, was vom Kunden kommt]
-    Fotos
-    Grafiken
-    Logos
-    Texte
-  Website [Die eigentliche Website]
-    css [Stylesheets]
-      img [Grafiken für das Design]
-    img [Grafiken/Fotos für den Content]
-    js [JavaScript-Dateien]
-</code>
-</pre>
+{% codeblock lang:sh %}
+.
+├── tags
+└── trunk
+    ├── Konzept      # Konzept des Projektes mit Mindmaps, Ideen etc.
+    ├── Layout       # Die PSD und AI-Dateien
+    ├── Preview      # Screenshots für den Kunden zur Voransicht
+    ├── Vorlagen     # Alles, was vom Kunden kommt
+    │   ├── Fotos
+    │   ├── Grafiken
+    │   ├── Logos
+    │   └── Texte
+    └── Website      # Die eigentliche Website
+        ├── css      # Stylesheets
+        │   └── img  # Grafiken für das Design
+        ├── img      # Grafiken/Fotos für den Content
+        └── js       # JavaScript-Dateien
+{% endcodeblock %}
 
 Der Vorteil bei einer tiefen Ordnerstruktur liegt darin, dass man nur das holen muss, was man gerade braucht. Will also ein Designer am Layout etwas verändern, reicht es, wenn er sich den Ordner `Layout` aus dem Repository holt.
 
@@ -67,13 +66,12 @@ Der Vorteil bei einer tiefen Ordnerstruktur liegt darin, dass man nur das holen 
 
 Dieser Stand wird jetzt in das noch leere Repository importiert.
 
-<div class="terminal">
-  <p><kbd>$ cd ~</kbd></p>
-  <p><kbd>$ cd Desktop</kbd></p>
-  <p><kbd>$ cd Import</kbd></p>
-  <p><kbd>$ svn import . file:///Users/XYZ/Subversion/meinewebsite/ \</kbd>
-  <p><kbd>-m "Import des Projektes"</kbd></p>
-</div>
+{% codeblock lang:sh %}
+cd ~
+cd Desktop
+cd Import
+svn import . file:///Users/XYZ/Subversion/meinewebsite/ -m "Import des Projektes"
+{% endcodeblock %}
 
 An der Stelle, wo `XYZ` steht muss der Name eures Benutzerordners stehen. Der Parameter `-m` ist vorgeschrieben und erwartet eine Beschreibung dessen, was man gemacht hat.
 

@@ -22,11 +22,9 @@ So kann man später beim erneuten Auschecken eines Standes einfach Bezug auf den
 
 Der einfachste Weg einen *tag* anzulegen ist den aktuellen *trunk* im Repository zu kopieren. Keine Angst, dadurch verdoppelt sich nicht der Platz, der benötigt wird.
 
-<div class="terminal">
-<p><kbd>$ svn copy file:///Users/XYZ/Subversion/meinewebsite/trunk \</kbd></p>
-<p><kbd>file:///Users/XYZ/Subversion/meinewebsite/tags/version_1.0&nbsp;\</kbd></p>
-<p><kbd>-m "Taggen der Version 1.0"</kbd></p>
-</div>
+{% codeblock lang:sh %}
+svn copy file:///Users/XYZ/Subversion/meinewebsite/trunk file:///Users/XYZ/Subversion/meinewebsite/tags/version_1.0 -m "Taggen der Version 1.0"
+{% endcodeblock %}
 
 ### Probleme beheben ###
 
@@ -38,9 +36,9 @@ Um solche Probleme zu lösen, benutzt man den Befehl `svn cleanup`.
 
 Eine wichtige Funktion in Subversion ist das Ignorieren von bestimmten Ordnern oder Dateien. Subversion nimmt keine Dateien von selbst mit ins Repository auf. Doch nach einiger Zeit kann sich eine Menge Dateien ansammeln, die man nicht mit ins Repository laden möchte (Cache-Ordner, Konfigurationsdateien, …). Diese werden mit einem „?“ angezeigt, wenn man ein `svn status` eingibt. Um nicht mehr gefragt zu werden, ob man sie hinzufügen möchte, gibt man folgenden Befehl ein:
 
-<div class="terminal">
-  <p><kbd>$ svn propedit svn:ignore .</kbd></p>
-</div>
+{% codeblock lang:sh %}
+svn propedit svn:ignore .
+{% endcodeblock %}
 
 Darauf hin sollte sich ein TextEditor öffnen, in dem man die Dateien einfügen kann, die zukünftig ignoriert werden sollen. Also angenommen man hat einen Ordner *cache* und einige Logdateien mit der Endung .log, dann gibt man in die erste Zeile `cache` und in die zweite Zeile `*.log` ein.
 
@@ -54,8 +52,8 @@ Manchmal möchte man diese jedoch nicht haben, wenn man z. B. ein fertiges Proje
 
 Für diesen Zweck exportiert man das Arbeitsverzeichnis mit diesem Befehl:
 
-<div class="terminal">
-  <p><kbd>$ svn export . ~/Desktop/export</kbd></p>
-</div>
+{% codeblock lang:language %}
+svn export . ~/Desktop/export
+{% endcodeblock %}
 
 Damit wird der Inhalt des aktuellen Ordners ins Verzeichnis *export* auf dem Desktop exportiert.

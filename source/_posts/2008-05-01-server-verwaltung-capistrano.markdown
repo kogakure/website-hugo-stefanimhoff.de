@@ -34,7 +34,9 @@ Um Capistrano zu installieren muss man zuerst [Ruby](http://www.ruby-lang.org/ "
 
 Zur Installation gibt man einfach ins Terminal folgenden Befehl ein:
 
-    sudo gem install capistrano
+{% codeblock lang:sh %}
+sudo gem install capistrano
+{% endcodeblock %}
 
 ### Einrichten von Capistrano
 
@@ -42,7 +44,9 @@ Nach einiger Zeit sollte das Gem erfolgreich installiert sein. Danach wechselt m
 
 Dort erzeugt man die nötigen Dateien mit dem Befehl:
 
-    capify .
+{% codeblock lang:sh %}
+capify .
+{% endcodeblock %}
 
 Capistrano legt im Hauptverzeichnis des Projektes eine Datei `Capfile` an. Wenn es sich um ein Ruby on Rails-Projekt handelt oder man manuell vorher einen `config`-Ordner angelegt hat, wird auch noch eine `deploy.rb` erzeugt.
 
@@ -50,7 +54,9 @@ Capistrano legt im Hauptverzeichnis des Projektes eine Datei `Capfile` an. Wenn 
 
 Capistrano kommt schon mit einer Vielzahl von Befehlen und Subbefehlen für die komplexesten Prozesse. Diese kann man sich mit dem Befehl:
 
-    cap -T
+{% codeblock lang:sh %}
+cap -T
+{% endcodeblock %}
 
 anzeigen lassen. Für meine Zwecke sind diese Befehle aber viel zu übertrieben, daher habe ich mir kurzerhand einige eigene Befehle geschrieben.
 
@@ -62,45 +68,50 @@ Der Einfachheit halber stehen alle meine Befehle direkt in der `Capfile`-Datei, 
 
 Ich habe in meiner Datei (`Capfile`) folgende Funktionen erstellt, die diverse Aufgaben für mich vereinfachen, wie z. B. das Neustarten des Webservers,  Caching-Servers oder das Aktualisieren eines Django-Projektes aus dem Repository.
 
-    set :hosts, "user@server.com"
-    set :server_path, "/home/user/apps/apache2/bin/"
-    set :project_path, "/home/user/apps/django/projekt/"
-    set :memcached_ip, "127.0.0.1"
-    set :memcached_port, "1234"
-    set :memcached_size, "20" # in MB
+{% codeblock Capfile lang:ruby %}
+set :hosts, "user@server.com"
+set :server_path, "/home/user/apps/apache2/bin/"
+set :project_path, "/home/user/apps/django/projekt/"
+set :memcached_ip, "127.0.0.1"
+set :memcached_port, "1234"
+set :memcached_size, "20" # in MB
 
-    desc "Projekt aus Git-Repository updaten, danach Server neustarten"
-    task :deploy, :hosts => "#{hosts}" do
-      run "cd #{project_path}; git pull;"
-    end
-    after "deploy", "restart_server"
+desc "Projekt aus Git-Repository updaten, danach Server neustarten"
+task :deploy, :hosts => "#{hosts}" do
+  run "cd #{project_path}; git pull;"
+end
+after "deploy", "restart_server"
 
-    desc "Apache stoppen"
-    task :stop_server, :hosts => "#{hosts}" do
-      run "#{server_path}stop;"
-    end
+desc "Apache stoppen"
+task :stop_server, :hosts => "#{hosts}" do
+  run "#{server_path}stop;"
+end
 
-    desc "Apache starten"
-    task :start_server, :hosts => "#{hosts}" do
-      run "#{server_path}start;"
-    end
+desc "Apache starten"
+task :start_server, :hosts => "#{hosts}" do
+  run "#{server_path}start;"
+end
 
-    desc "Apache neustarten"
-    task :restart_server, :hosts => "#{hosts}" do
-      run "#{server_path}stop; #{server_path}start"
-    end
+desc "Apache neustarten"
+task :restart_server, :hosts => "#{hosts}" do
+  run "#{server_path}stop; #{server_path}start"
+end
 
-    desc "Memcached neustarten"
-    task :restart_memcached, :hosts => "#{hosts}" do
-      run "kill $(pgrep -u $LOGNAME memcached); /usr/local/bin/memcached -d -l #{memcached_ip} -m #{memcached_size} -p #{memcached_port}"
-    end
-    after "restart_memcached", "restart_server"
+desc "Memcached neustarten"
+task :restart_memcached, :hosts => "#{hosts}" do
+  run "kill $(pgrep -u $LOGNAME memcached); /usr/local/bin/memcached -d -l #{memcached_ip} -m #{memcached_size} -p #{memcached_port}"
+end
+after "restart_memcached", "restart_server"
+{% endcodeblock %}
+
 
 Variablen können beliebig zugewiesen werden (mit `set :variable, "Wert"`) und dann später mit `#{variable}` wieder verwendet werden. Es sind auch alle anderen Befehle von Ruby bei Capistrano möglich, wie Schleifen, Abfragen, etc.
 
 Um z. B. jetzt mein Projekt auf dem Server mit der aktuellen Version aus dem Git-Repository upzudaten und danach den Server neuzustarten, brauche ich nur den Befehl:
 
-    cap deploy
+{% codeblock lang:sh %}
+cap deploy
+{% endcodeblock %}
 
 im Terminal eingeben, der zuerst die Änderungen mit `git pull` auscheckt und im Anschluss eine andere Funktion aufruft, die den Apache-Server beendet und danach neustartet.
 

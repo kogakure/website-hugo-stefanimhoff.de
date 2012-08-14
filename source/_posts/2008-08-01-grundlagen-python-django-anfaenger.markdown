@@ -30,7 +30,9 @@ Um ein Modul eines Drittanbieters (wie z. B. Django) zu benutzen, muss es dem Sy
 
 Um den genauen Pfad auf seinem Computer herauszubekommen, kann man im Terminal folgenden Befehl ausführen:
 
-    python -c "from distutils.sysconfig import get_python_lib; print get_python_lib()"
+{% codeblock lang:sh %}
+python -c "from distutils.sysconfig import get_python_lib; print get_python_lib()"
+{% endcodeblock %}
 
 Für diesen Befehl muss Python auf dem Rechner installiert sein.
 
@@ -48,7 +50,9 @@ Ein symbolischer Link ist ein Zeiger auf einen anderen Ordner des Computers, äh
 
 Üblich ist es, dass man sich den Quellcode von Django mit dem Versionskontrollsystem *Subversion* in einen Ordner seiner Wahl holt:
 
-    svn co http://code.djangoproject.com/svn/django/trunk/ django-trunk
+{% codeblock lang:sh %}
+svn co http://code.djangoproject.com/svn/django/trunk/ django-trunk
+{% endcodeblock %}
 
 Der neu erzeugte Ordner `django-trunk` enthält neben dem Modul `django` noch Dokumentationen, Lizenzbedingungen, Test-Programme und einiges mehr.
 
@@ -56,8 +60,10 @@ Um das System jetzt glauben zu lassen, Django wäre im Python `site-packages`-Ve
 
 Im gegebenen Beispiel liegt unser Ordner `django-trunk` auf dem Desktop (kein guter Ort im richtigen Fall!). Das `site-packages`-Verzeichnis liegt im Beispiel unter `/Library/Python/2.5/site-packages/`
 
-    cd /Library/Python/2.5/site-packages
-    ln -s ~/Desktop/django-trunk/django django
+{% codeblock lang:sh %}
+cd /Library/Python/2.5/site-packages
+ln -s ~/Desktop/django-trunk/django django
+{% endcodeblock %}
 
 Damit ist das Modul Django installiert und kann benutzt werden. Mit einem Update des Subversion-Verzeichnisses kann man seine Version von Django immer auf dem aktuellsten Stand halten, ohne neue Installationspakete herunterladen und installieren zu müssen.
 

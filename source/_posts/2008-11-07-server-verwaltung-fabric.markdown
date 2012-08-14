@@ -34,80 +34,85 @@ Es gibt lediglich vier Fabric-Befehle:
 
 Variablen deklariert man einfach so:
 
-    set(
-        project = 'domain.de',
-        project_type = 'websites',
-        svn_repos = '/var/svn/repos/online',
-        svn_url = 'svn://test1clu.admin/online',
-        svn_passwd = '/var/svn/repos/online/passwd',
-        working_dir = '$HOME/Projekte/Kunden',
-        fab_hosts = ['test1clu.admin'],
-        fab_user = 'username',
-    )
+{% codeblock Fabfile lang:python %}
+set(
+    project = 'domain.de',
+    project_type = 'websites',
+    svn_repos = '/var/svn/repos/online',
+    svn_url = 'svn://test1clu.admin/online',
+    svn_passwd = '/var/svn/repos/online/passwd',
+    working_dir = '$HOME/Projekte/Kunden',
+    fab_hosts = ['test1clu.admin'],
+    fab_user = 'username',
+)
+{% endcodeblock %}
 
 Lediglich `fab_hosts` und `fab_user` werden in diesem Beispiel von Fabric geliefert, die anderen sind frei gewählt.
 
 Später kann man dann auf die Variable mit der Syntax `$(varname)` zugreifen. Hier mein Beispielskript, dass den oben beschriebenen SVN-Workflow automatisiert:
 
-    def create():
-        """
-        Erzeugt ein leeres Subversion-Repository auf dem SVN-Server,
-        importiert die Standardstruktur und checkt das ganze im Arbeitsverzeichnis
-        wieder aus.
-        """
-        run(
-            'cd $(svn_repos)/$(project_type)/; \
-             mkdir $(project); \
-             cd $(project); \
-             svnadmin create --fs-type fsfs .; \
-             chmod -R 755 *; \
-             cd conf; \
-             echo "[general]" > svnserve.conf; \
-             echo "anon-access = read" >> svnserve.conf; \
-             echo "auth-access = write" >> svnserve.conf; \
-             echo "password-db = $(svn_passwd)" >> svnserve.conf; \
-             echo "realm = $(project)" >> svnserve.conf;'
-        )
-        local(
-            'mkdir import; \
-             cd import; \
-             mkdir trunk; \
-             mkdir tags; \
-             mkdir branches; \
-             mkdir trunk/Konzept; \
-             mkdir trunk/Layout; \
-             mkdir trunk/Preview; \
-             mkdir trunk/Screenshots; \
-             mkdir trunk/Vorlagen; \
-             mkdir trunk/Vorlagen/Fotos; \
-             mkdir trunk/Vorlagen/Grafiken; \
-             mkdir trunk/Vorlagen/Logos; \
-             mkdir trunk/Vorlagen/Texte; \
-             mkdir trunk/Website;'
-        )
-        local(
-            'cd import; \
-             svn import . $(svn_url)/$(project_type)/$(project) -m "Initial import"; \
-             cd ..; \
-             rm -rf import/;'
-        )
-        local(
-            'cd $(working_dir)/; \
-             git svn clone -s $(svn_url)/$(project_type)/$(project)'
-        )
-        local(
-            'cd $(working_dir)/$(project); \
-             mkdir Konzept; \
-             mkdir Layout; \
-             mkdir Preview; \
-             mkdir Screenshots; \
-             mkdir Vorlagen; \
-             mkdir Vorlagen/Fotos; \
-             mkdir Vorlagen/Grafiken; \
-             mkdir Vorlagen/Logos; \
-             mkdir Vorlagen/Texte; \
-             mkdir Website;'
-        )
+{% codeblock Fabfile lang:python %}
+def create():
+    """
+    Erzeugt ein leeres Subversion-Repository auf dem SVN-Server,
+    importiert die Standardstruktur und checkt das ganze im Arbeitsverzeichnis
+    wieder aus.
+    """
+    run(
+        'cd $(svn_repos)/$(project_type)/; \
+          mkdir $(project); \
+            cd $(project); \
+            svnadmin create --fs-type fsfs .; \
+            chmod -R 755 *; \
+            cd conf; \
+            echo "[general]" > svnserve.conf; \
+            echo "anon-access = read" >> svnserve.conf; \
+            echo "auth-access = write" >> svnserve.conf; \
+            echo "password-db = $(svn_passwd)" >> svnserve.conf; \
+            echo "realm = $(project)" >> svnserve.conf;'
+      )
+      local(
+          'mkdir import; \
+            cd import; \
+            mkdir trunk; \
+            mkdir tags; \
+            mkdir branches; \
+            mkdir trunk/Konzept; \
+            mkdir trunk/Layout; \
+            mkdir trunk/Preview; \
+            mkdir trunk/Screenshots; \
+            mkdir trunk/Vorlagen; \
+            mkdir trunk/Vorlagen/Fotos; \
+            mkdir trunk/Vorlagen/Grafiken; \
+            mkdir trunk/Vorlagen/Logos; \
+            mkdir trunk/Vorlagen/Texte; \
+            mkdir trunk/Website;'
+      )
+      local(
+          'cd import; \
+            svn import . $(svn_url)/$(project_type)/$(project) -m "Initial import"; \
+            cd ..; \
+            rm -rf import/;'
+      )
+      local(
+          'cd $(working_dir)/; \
+            git svn clone -s $(svn_url)/$(project_type)/$(project)'
+      )
+      local(
+          'cd $(working_dir)/$(project); \
+            mkdir Konzept; \
+            mkdir Layout; \
+            mkdir Preview; \
+            mkdir Screenshots; \
+            mkdir Vorlagen; \
+            mkdir Vorlagen/Fotos; \
+            mkdir Vorlagen/Grafiken; \
+            mkdir Vorlagen/Logos; \
+            mkdir Vorlagen/Texte; \
+            mkdir Website;'
+      )
+{% endcodeblock %}
+
 
 Um ein neues Repository anzulegen, muss ich einfach nur noch in den Einstellungen einige Pfade anpassen (meistens nur einen) und dann auf dem Terminal den Befehl `fab create` ausführen.
 

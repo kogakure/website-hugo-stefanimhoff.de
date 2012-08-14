@@ -51,39 +51,39 @@ Dann öffnet man das Programm „Terminal“ aus dem Anwendungsordner.
 
 Ich gehe davon aus, dass der Download auf dem Desktop liegt, sonst muss dies entweder noch geschehen oder der Pfad muss angepasst werden. Mit dem folgenden Befehl wechselt man auf den Desktop:
 
-<div class="terminal">
-  <p><kbd>$ cd ~/Desktop/</kbd></p>
-</div>
+{% codeblock lang:sh %}
+cd ~/Desktop/
+{% endcodeblock %}
 
 Jetzt wird die Datei entpackt, der Dateiname muss natürlich an die richtige Version angepasst werden.
 
 Dazu noch ein kleiner Tipp für Anfänger: Man muss nicht immer alles komplett tippen, es reichen ein paar Buchstaben und dann kann man einfach die Tab-Taste betätigen, was den Rest des Pfades oder Dateinamens ergänzt.
 
-<div class="terminal">
-  <p><kbd>$ tar -xzvf subversion-1.4.3.tar.gz</kbd></p>
-</div>
+{% codeblock lang:sh %}
+tar -xzvf subversion-1.4.3.tar.gz
+{% endcodeblock %}
 
 Wechsel in das Verzeichnis hinein:
 
-<div class="terminal">
-  <p><kbd>$ cd subversion-1.4.3.tar.gz</kbd></p>
-</div>
+{% codeblock lang:sh %}
+cd subversion-1.4.3.tar.gz
+{% endcodeblock %}
 
 Jetzt werden nacheinander, jeweils einem nach dem anderen,  die folgenden Befehle eingeben. Nach dem vierten Befehl muss man sein Passwort zur Authenzifizierung eingeben.
 Wenn irgendeiner der Befehle mehrere schlimm-aussehende Fehler zurückgibt, lieber eine Binärdatei nehmen und installieren ;-)
 
-<div class="terminal">
-  <p><kbd>$ ./autogen.sh</kbd></p>
-  <p><kbd>$ ./configure</kbd></p>
-  <p><kbd>$ make</kbd></p>
-  <p><kbd>$ sudo make install</kbd></p>
-  <p><kbd>$ make clean</kbd></p>
-</div>
+{% codeblock lang:sh %}
+./autogen.sh
+./configure
+make
+sudo make install
+make clean
+{% endcodeblock %}
 
 Auf dem Terminal sollte man jetzt mit dem Befehl
 
-<div class="terminal">
-  <p><kbd>$ svn --version</kbd></p>
-</div>
+{% codeblock lang:sh%}
+  svn --version
+{% endcodeblock %}
 
 eine Rückgabe erhalten, dass Subversion in der Version 1.4.3 auf dem System installiert ist.

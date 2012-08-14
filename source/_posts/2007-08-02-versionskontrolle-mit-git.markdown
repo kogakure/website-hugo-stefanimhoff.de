@@ -12,13 +12,13 @@ Vor ein paar Wochen bin ich über *Git* gestolpert, das Versionskontrollsystem v
 
 Seit fast einem Jahr arbeite ich nun mit Subversion – und bin ziemlich zufrieden. Meine Ansprüche sind aber auch nicht sehr hoch, da ich kein Software-Entwickler bin, oder riesige Mengen Code zu bewältigen habe. Bei mir gab es bislang auch noch keinen `branch` in einem meiner Projekte
 
-<abbr title="Concurrent Versions System">*CVS*</abbr> habe ich nicht kennengelernt und das scheint auch gut zu sein, bei allen grausigen Meldungen, die man über CVS hört.
+*CVS* habe ich nicht kennengelernt und das scheint auch gut zu sein, bei allen grausigen Meldungen, die man über CVS hört.
 
-<cite>Linus Torvalds</cite> sieht das wohl etwas anders, wie er in Googles „[Tech Talk: Linus Torvalds on git](http://youtube.com/watch?v=4XpnKHJAok8&amp;v3 "YouTube - Tech Talk: Linus Torvalds on git")“ deutlich macht:
+Linus Torvalds sieht das wohl etwas anders, wie er in Googles „[Tech Talk: Linus Torvalds on git](http://youtube.com/watch?v=4XpnKHJAok8&amp;v3 "YouTube - Tech Talk: Linus Torvalds on git")“ deutlich macht:
 
 > „I see Subversion as being the most pointless project ever started, because the slogan for Subversion for a while was: »CVS done right« […]. And if you start with that kind of slogan, there is nowhere you can go. There’s no way to do CVS right.“
 >
-> – <cite>Linus Torvalds</cite>
+> – Linus Torvalds
 
 Zur Namensfindung von Git (*engl.* Blödmann, Depp, Idiot) erzählt Linus Torvalds scherzhaft, dass er seine Projekte eben gerne nach sich benennt.
 
@@ -36,7 +36,7 @@ Zur Namensfindung von Git (*engl.* Blödmann, Depp, Idiot) erzählt Linus Torval
 *Git* passt besser in eine *OpenSource*-Community, weil man sich nicht über die Probleme des Zugriffs auf ein Repository beschäftigen muss.
 Gibt man zu wenigen Personen Zugriff auf sein Repository, gibt es auch wenig Entwicklung. Gibt man zu vielen Zugriff entsteht nur Müll.
 
-<cite>Linus</cite> bringt es klar auf den Punkt: <span class="quote">„Die meisten da draußen sind Schwachköpfe, und ich vertraue ihnen nicht“</span>. Trotzdem kann jeder sich eine Kopie seines Projektes ziehen, daran arbeiten und es verbessern.
+Linus bringt es klar auf den Punkt: <span class="quote">„Die meisten da draußen sind Schwachköpfe, und ich vertraue ihnen nicht“</span>. Trotzdem kann jeder sich eine Kopie seines Projektes ziehen, daran arbeiten und es verbessern.
 
 Ist seine Arbeit gut, und andere Personen finden sie auch gut, können diese die Arbeit mit der eigenen verschmelzen.
 

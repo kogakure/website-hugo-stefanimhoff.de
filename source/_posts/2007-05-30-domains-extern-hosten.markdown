@@ -30,7 +30,7 @@ Doch so ist es für die Webhoster viel profitabler: Möchte der Kunde etwas mehr
 
 Besonders schmerzhaft bemerkt man aber, dass Hosting von Domains beim Webhoster keine so gute Idee ist, wenn man wechseln will.
 
-Zumeist kommt auf den ahnungslosen eine Flut von Fachbegriffen, Faxen und Formularen zu, von Zeit zu Zeit lehnen Hoster den so genannten <abbr title="Konnectivity Koordination">KK</abbr>-Antrag<sup><a id="fna-1" href="#fn-1">1</a></sup> auch einfach erstmal ab, so das ein weiterer gestartet werden muss.
+Zumeist kommt auf den ahnungslosen eine Flut von Fachbegriffen, Faxen und Formularen zu, von Zeit zu Zeit lehnen Hoster den so genannten KK-Antrag auch einfach erstmal ab, so das ein weiterer gestartet werden muss.
 
 Der Hoster 1&1 hat eine wunderbare Spitzenleistung der Schikane für seine Kunden vorbereitet: Man muss im Kundencenter seine Domains kündigen und für den KK-Antrag freigeben. Daraufhin bekommt man eine Telefonnummer, die man anrufen muss. Der Telefonberater auf der anderen Seite ist wohl dazu angehalten, die Kündigung möglichst auszureden. Danach schaltet er manuell die nötigen Formulare frei, die man noch unterschreiben und an den Hoster faxen muss. Und das, obwohl man sich schon vorher durch private Fragen zweifelsfrei identifizieren musste.
 
@@ -40,13 +40,13 @@ Der Hoster 1&1 hat eine wunderbare Spitzenleistung der Schikane für seine Kunde
 
 * Dies kostet in den meisten Fällen keine Grundgebühr.
 * Man kann so viele Domains für Freunde, Verwandte oder Kunden kaufen, wie man möchte.
-* Man verwaltet seine „Handles“<sup><a id="fna-2" href="#fn-2">2</a></sup> selber und ist somit Admin-C, Tech-C und Zone-C.
+* Man verwaltet seine „Handles“ selber und ist somit Admin-C, Tech-C und Zone-C.
 * Der Preis ist spottbillig: Eine .de-Domain gibt es schon ab ca. 0,30 €/Monat.
 * Man muss nie wieder irgendein Fax schicken: KK-Anträge, Neubestellungen, Kündigungen von Domains – alles per Klick im Browser.
 
-Das beste ist allerdings, das der Umzug einer Domain durch ein simples Wechseln des <abbr title="Domain Name System">DNS</abbr>-Servers<sup><a id="fna-3" href="#fn-3">3</a></sup> innerhalb von wenigen Minuten vollzogen ist.
+Das beste ist allerdings, das der Umzug einer Domain durch ein simples Wechseln des DNS-Servers innerhalb von wenigen Minuten vollzogen ist.
 
-**Doch Achtung:** Man benötigt bei seinem Hoster eine eigene <abbr title="Internet Protocol">IP</abbr>-Adresse<sup><a id="fna-4" href="#fn-4">4</a></sup>, oder der Hoster muss intern die Möglichkeit geben, externe Anfragen auf das richtige Webhosting-Paket weiterzuleiten.
+**Doch Achtung:** Man benötigt bei seinem Hoster eine eigene IP-Adresse, oder der Hoster muss intern die Möglichkeit geben, externe Anfragen auf das richtige Webhosting-Paket weiterzuleiten.
 
 Mittlerweile lassen aber auch Hoster wie z.B. 1&1 extern gehostete Domains zu.
 

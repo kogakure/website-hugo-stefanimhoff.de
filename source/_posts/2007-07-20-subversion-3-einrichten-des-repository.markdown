@@ -22,26 +22,26 @@ Ich habe mich für die zweite Methode entschieden. Dies hat eine Menge Vorteile:
 
 Zuerst lege ich mir ein Verzeichnis an, das später meine Repositories enthalten wird. Dies lege ich in meinem Heimatverzeichnis an.
 
-<div class="terminal">
-    <p><kbd>$ cd ~</kbd></p>
-    <p><kbd>$ mkdir Subversion</kbd></p>
-    <p><kbd>$ cd Subversion</kbd></p>
-</div>
+{% codeblock lang:sh %}
+cd ~
+mkdir Subversion
+cd Subversion
+{% endcodeblock %}
 
 ### Repository für ein Projekt anlegen ###
 
 Im nächsten Schritt lege ich für ein Projekt meiner Wahl das Repository an, hier im für Beispiel meine Website.
 
-<div class="terminal">
-    <p><kbd>$ mkdir meinewebsite.de</kbd></p>
-    <p><kbd>$ cd meinewebsite.de</kbd></p>
-</div>
+{% codeblock lang:sh %}
+mkdir meinewebsite.de
+cd meinewebsite.de
+{% endcodeblock %}
 
 Jetzt wird mit einem Befehl das leere Repository erzeugt.
 
-<div class="terminal">
-    <p><kbd>$ svnadmin create --fs-type fsfs .</kbd></p>
-</div>
+{% codeblock lang:sh %}
+svnadmin create --fs-type fsfs .
+{% endcodeblock %}
 
 ### Anmerkungen ###
 

@@ -10,7 +10,7 @@ Bei einem Besuch in der Kunstausstellung *„[Japan und der Westen](http://www.k
 
 <!-- more -->
 
-Im Museums-Shop konnte ich das Buch „*<a href="http://www.amazon.de/gp/product/4894445786?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=4894445786">The Traditional Colors of Japan</a>*“ erstehen, das zwar auf Japanisch ist, aber neben einer vollständigen Farbpalette mit 250 Farben auch eine genaue Wertangabe von <abbr title="Red-Green-Blue">RGB</abbr>, <abbr title="Cyan-Magenta-Yellow-Key/blacK">CMYK</abbr> und anderen Informationen enthält.
+Im Museums-Shop konnte ich das Buch „*<a href="http://www.amazon.de/gp/product/4894445786?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=4894445786">The Traditional Colors of Japan</a>*“ erstehen, das zwar auf Japanisch ist, aber neben einer vollständigen Farbpalette mit 250 Farben auch eine genaue Wertangabe von RGB, CMYK und anderen Informationen enthält.
 
 <img class="rechts" src="http://stefanimhoff.de/images/notizbuch/japanische-farben.png" width="440" height="240" alt="Japanische Farben" title="Japanische Farben" />
 

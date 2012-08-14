@@ -16,14 +16,14 @@ Schneller und komfortabler geht es so:
 
 ### Neustarten im Single-User Modus ###
 
-Im Single-User Modus starten, die Tastenkombination <kbd class="key">⌘</kbd> + <kbd class="key">S</kbd> (Apfel/Command + S) während des Bootens gedrückt halten.
+Im Single-User Modus starten, die Tastenkombination <kbd>⌘</kbd> + <kbd>S</kbd> (Apfel/Command + S) während des Bootens gedrückt halten.
 
-Nach dem Booten im Single-User Modus gibt man im Terminal diese Befehle (nacheinander) ein. Jede Zeile mit <kbd class="key">↩</kbd> (Return) bestätigen und warten bis der Befehl ausgeführt wurde.
+Nach dem Booten im Single-User Modus gibt man im Terminal diese Befehle (nacheinander) ein. Jede Zeile mit <kbd>↩</kbd> (Return) bestätigen und warten bis der Befehl ausgeführt wurde.
 
-<div class="terminal">
-  <p><kbd>$ fsck -fy</kbd></p>
-  <p><kbd>$ mount -uw</kbd></p>
-  <p><kbd>$ reboot</kbd></p>
-</div>
+{% codeblock lang:sh %}
+fsck -fy
+mount -uw
+reboot
+{% endcodeblock %}
 
 Diese Befehle prüfen die Festplatte, verbinden sie wieder und starten den Rechner neu.

@@ -24,8 +24,10 @@ Um diese Funktion zu aktivieren muss man in der `settings.py` die Einstellung `D
 
 Es ist zusätzlich noch möglich Anfänge und Endungen mitzugeben, die ignoriert werden sollen: `IGNORABLE_404_ENDS`, `IGNORABLE_404_STARTS`. In einem Array folgen dann einfach die gewünschten Endungen:
 
-    IGNORABLE_404_ENDS = ('favicon.ico','.php')
-    IGNORABLE_404_STARTS = ('/cgi-bin/','/css/','/scripts/','/images/')
+{% codeblock settings.py lang:django %}
+IGNORABLE_404_ENDS = ('favicon.ico','.php')
+IGNORABLE_404_STARTS = ('/cgi-bin/','/css/','/scripts/','/images/')
+{% endcodeblock %}
 
 Benachrichtigt werden alle Empfänger, die unter der Einstellung `ADMINS` eingetragen sind.
 
@@ -41,14 +43,16 @@ In einer Diskussion mit [Martin Mahner](http://www.mahner.org/), habe ich aber d
 
 Dafür richten man in seinem VHost einfach folgende Mod_Rewrite-Direktiven ein:
 
-    # Remove WWW
-    RewriteCond %{HTTP_HOST} !^domain\.de$
-    RewriteRule ^(.*)$ http://domain.de$1 [R=301,L]
+{% codeblock lang:apacheconf %}
+# Remove WWW
+RewriteCond %{HTTP_HOST} !^domain\.de$
+RewriteRule ^(.*)$ http://domain.de$1 [R=301,L]
 
-    # Append Slash
-    RewriteCond $1 !/$
-    RewriteCond %{REQUEST_URI} !^(/sitemap(.*)\.xml$|/robots\.txt$|(.*)\.html$|(.*)\.htm$|(.*)\.jpg$|(.*)\.png$|(.*)\.gif$|(.*)\.ico$)
-    RewriteRule (.+) http://domain.de$1/ [R=301,L]
+# Append Slash
+RewriteCond $1 !/$
+RewriteCond %{REQUEST_URI} !^(/sitemap(.*)\.xml$|/robots\.txt$|(.*)\.html$|(.*)\.htm$|(.*)\.jpg$|(.*)\.png$|(.*)\.gif$|(.*)\.ico$)
+RewriteRule (.+) http://domain.de$1/ [R=301,L]
+{% endcodeblock %}
 
 Diese Direktiven entfernen das *www* und hängen ans Ende der URL einen Slash an, außer bei bestimmten zu definierenden Endungen.
 

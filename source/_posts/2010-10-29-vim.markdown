@@ -42,14 +42,16 @@ Zuerst solltest du unbedingt deine kompletten Vim-Dateien und Plugins unter Vers
 
 Ich habe mir dazu ein Repository `dotfile` mit Git angelegt, in dem sich Unterordner für `bash`, `bin`, `git`, `vim` und einige andere Programme befinden. In meinem Vim-Unterordner befinden sich eine Datei `vimrc.vim` und `gvimrc.vim`, sowie verschiedene Vim-Ordner. Dieses simple Bash-Installationsskript installiert mir auf Wunsch meine Umgebung auf einem Rechner:
 
-    #!/bin/bash
+{% codeblock lang:sh %}
+#!/bin/bash
 
-    cd vim
-    export VIM_SRC=`pwd`
-    cd
-    ln -nfs $VIM_SRC .vim
-    ln -nfs $VIM_SRC/vimrc.vim .vimrc
-    ln -nfs $VIM_SRC/gvimrc.vim .gvimrc
+cd vim
+export VIM_SRC=`pwd`
+cd
+ln -nfs $VIM_SRC .vim
+ln -nfs $VIM_SRC/vimrc.vim .vimrc
+ln -nfs $VIM_SRC/gvimrc.vim .gvimrc
+{% endcodeblock %}
 
 Dieses Skript verlinkt meine Konfigurationsdateien als symbolischen Link in das HOME-Verzeichnis, wo Vim sie erwartet.
 
@@ -61,8 +63,10 @@ Doch damit ist seit einiger Zeit Schluß. Tim Pope hat ein fantastisches Plugin 
 
 Pathogen ermöglicht es, Plugins als Bundles abzulegen, einzeln und als nettes Paket zusammengefasst. Alles was du dazu tun muss, ist [pathogen.vim](http://www.vim.org/scripts/script.php?script_id=2332) herunterzuladen und in den Vim-Ordner in einen Unterordner `autoload` (falls nicht vorhanden erstellen) abzulegen. Als nächsten Schritt legst du einen Ordner `bundle` im Vim-Ordner an und öffnest deine Datei `.vimrc`. Dort schreibst du ganz an den Anfang:
 
-    silent! call pathogen#runtime_append_all_bundles()
-    silent! call pathogen#helptags()
+{% codeblock .vimrc lang:vim %}
+silent! call pathogen#runtime_append_all_bundles()
+silent! call pathogen#helptags()
+{% endcodeblock %}
 
 Plugins werden ab jetzt nicht entpackt und kompliziert in die richtigen Unterordner verschoben, sondern einfach pro Plugin in einen eigenen Ordner unter `bundle` gestellt. Für Vim gibt es nämlich leider einige, verschiedene Möglichkeiten Erweiterungen zu installieren, einfache Skripte, automatische Installer und seit kurzem gottseidank auch Git-Checkouts.
 
@@ -70,25 +74,27 @@ Meine Empfehlung ist, komplett auf Git-Checkouts umzusteigen. Das geht seit kurz
 
 Einige Personen klonen sich die gewünschten Plugins als Submodule, ich verwende ein kleines Ruby-Skript von [Tammer Saleh](http://tammersaleh.com/posts/the-modern-vim-config-with-pathogen), mit dem ich meine Git-Repositorys aktualisiere:
 
-    #!/usr/bin/env ruby
+{% codeblock lang:ruby %}
+#!/usr/bin/env ruby
 
-    git_bundles = [
-      "git://github.com/scrooloose/nerdtree.git",
-      "git://github.com/kogakure/snipmate.vim.git",
-      "git://github.com/vim-scripts/vim-surround.git"
-      # …
-    ]
+git_bundles = [
+  "git://github.com/scrooloose/nerdtree.git",
+  "git://github.com/kogakure/snipmate.vim.git",
+  "git://github.com/vim-scripts/vim-surround.git"
+  # …
+]
 
-    require 'fileutils'
+require 'fileutils'
 
-    bundle_dir = File.expand_path('../bundle/', __FILE__)
+bundle_dir = File.expand_path('../bundle/', __FILE__)
 
-    git_bundles.each do |url|
-      dirname = File.basename(url)
-      puts "* Entpacke #{url} → #{dirname}"
-      dir = File.join(bundle_dir, dirname)
-      `cd #{dir} 2>/dev/null && git pull || git clone #{url} #{dir}
-    end
+git_bundles.each do |url|
+  dirname = File.basename(url)
+  puts "* Entpacke #{url} → #{dirname}"
+  dir = File.join(bundle_dir, dirname)
+  `cd #{dir} 2>/dev/null && git pull || git clone #{url} #{dir}
+end
+{% endcodeblock %}
 
 Dieses tolle Skript klont von verschiedenen Stellen (Github, meine eigener Server) meine Bundles oder aktualisiert sie. Der Vorteil ist, dass ich so in meinem Repository immer alles dabei habe und nicht erst durch einen Submodule-Befehl holen muss.
 
@@ -102,7 +108,9 @@ Meine Datei ist in einige Bereiche geteilt: Zuerst kommen die grundlegenden Eins
 
 Mein größtes Problem war irgendwann, dass meine Tastatur keine Tasten mehr übrig hatte, so gut wie alle Funktionstasten und fast alle anderen Tasten waren irgendwie belegt. Die Folge davon war, dass ich ständig herausfinden musste, welche Funktion, welches Plugin oder Mapping jetzt einen Konflikt erzeugt. Doch es gibt Gott sei Dank den ominösen `Leader`, eine Taste die du drücken kannst und danach eine beliebige Tastenkombination drücken kannst. Standardmäßig liegt diese Taste auf dem „\\“ und ist somit nicht gut zu erreichen, weshalb die meisten Personen sie auf das Komma legen:
 
-    let mapleader=','
+{% codeblock lang:vim %}
+let mapleader=','
+{% endcodeblock %}
 
 Durch drücken des Komma im NORMAL-Modus, gefolgt von meinen Tastaturkürzeln kann ich beliebige Befehle leicht ausführen.
 
