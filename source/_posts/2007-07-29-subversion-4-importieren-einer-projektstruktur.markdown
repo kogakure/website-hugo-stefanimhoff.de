@@ -11,7 +11,7 @@ Im nächsten Schritt erzeuge ich auf der Festplatte die Struktur meines Projekte
 <!-- more -->
 
 <div class="hinweis">
-<p>Der Inhalt dieses Artikels ist noch aktuell, doch kann ich nur dringend dazu raten, sich die fantastische Alternative zu Subversion anzusehen: <a href="http://stefanimhoff.de/notiz/versionskontrolle-mit-git/"><strong>Git</strong></a>.</p>
+<p>Der Inhalt dieses Artikels ist noch aktuell, doch kann ich nur dringend dazu raten, sich die fantastische Alternative zu Subversion anzusehen: <a href="/versionskontrolle-mit-git/"><strong>Git</strong></a>.</p>
 </div>
 
 Es wird grundsätzlich empfohlen mit den drei Ordnern `trunk`, `tags` und `branches` auf der obersten Ebene zu beginnen. Der Ordner `trunk` enthält den aktuellen Entwicklungsstand der Dateien. Der Ordner `tags` wird benutzt, um sich spezielle Stände mit sprechenden Namen zu merken (z. B. `Finale Version 1. Mai 2006`, `V1.02` etc.). Den Ordner `branches` lege ich normalerweise nicht an, dieser wird benutzt, um eine parallele Entwicklung eines Projektes zu entwickeln.
