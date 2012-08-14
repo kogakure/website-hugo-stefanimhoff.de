@@ -41,7 +41,7 @@ module Jekyll
         if num_page > 1
           newpage = Page.new(site, site.source, page_dir, page.name)
           newpage.pager = pager
-          newpage.dir = File.join(page.dir, "#{dir}page/#{num_page}")
+          newpage.dir = File.join(page.dir, "#{dir}/#{num_page}")
           site.pages << newpage
         else
           page.pager = pager
@@ -83,7 +83,7 @@ module Jekyll
     def initialize(config, page, all_posts, index_dir, pagination_dir, num_pages = nil)
       @page = page
       @per_page = config['paginate'].to_i
-      @page_dir = pagination_dir + 'page/'
+      @page_dir = pagination_dir
       @total_pages = num_pages || Pager.calculate_pages(all_posts, @per_page)
       @previous_page = nil
 
