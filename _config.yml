@@ -17,7 +17,7 @@ titlecase: false
 # ----------------------- #
 
 root: /
-permalink: /blog/:title/ # /notebook/:year/:month/:day/:title/
+permalink: /:title/ # /blog/:title/, /notebook/:year/:month/:day/:title/
 source: source
 destination: public
 plugins: plugins
@@ -31,7 +31,6 @@ pygments: false # default python pygments have been replaced by pygments.rb
 lsi: true # Related posts
 
 # Pagination
-paginate: 5
-pagination_dir: blog
+paginate: 150
 recent_posts: 5
 excerpt_link: "Weiterlesen &rarr;"
