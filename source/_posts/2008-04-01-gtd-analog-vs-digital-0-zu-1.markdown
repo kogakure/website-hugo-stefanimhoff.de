@@ -10,7 +10,7 @@ Der ultimative GTD-Test: Was ist denn nun schneller? Analoges oder digitales Not
 
 <!-- more -->
 
-<img width="250" height="250" src="/img/ipod-touch-vs-moleskine.jpg" alt="Moleskine vs. iPod touch " />
+<img width="250" height="250" src="/images/ipod-touch-vs-moleskine.jpg" alt="Moleskine vs. iPod touch " />
 Ich war mir nicht sicher, doch jetzt ist es entschieden. Digital geht schneller und hat mehr Vorteile. Hier die Details des Tests:
 
 ### Die Kandidaten

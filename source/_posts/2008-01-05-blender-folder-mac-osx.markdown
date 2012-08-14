@@ -10,7 +10,7 @@ Da mein [Django Folder-Icon](/django-folder-mac-osx/ "Django Folder für Mac OS 
 
 <!-- more -->
 
-<a href="/files/blender-leopard-folder.zip"><img src="/img/blender-leopard-folders.jpg" alt="Blender Folder" width="292" height="365" /></a>
+<a href="/files/blender-leopard-folder.zip"><img src="/images/blender-leopard-folders.jpg" alt="Blender Folder" width="292" height="365" /></a>
 
 ### Blender ###
 

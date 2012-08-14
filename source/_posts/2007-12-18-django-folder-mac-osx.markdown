@@ -10,7 +10,7 @@ Bei Wishingline gibt es zwei schöne Folder-Icons für Leopard von [Rails und Li
 
 <!-- more -->
 
-<a href="/files/django-leopard-folder.zip"><img src="/img/django-leopard-folders.jpg" alt="Django Folder" width="292" height="365" /></a> [Django](http://www.djangoproject.com/ "Django | The Web framework for perfectionists with deadlines") ist ein Web-Framework, das auf [Python](http://www.python.org/ "Python Programming Language -- Official Website") basiert. Wer es noch nicht gesehen hat, dem empfehle ich mal einen Blick darauf zu werfen.
+<a href="/files/django-leopard-folder.zip"><img src="/images/django-leopard-folders.jpg" alt="Django Folder" width="292" height="365" /></a> [Django](http://www.djangoproject.com/ "Django | The Web framework for perfectionists with deadlines") ist ein Web-Framework, das auf [Python](http://www.python.org/ "Python Programming Language -- Official Website") basiert. Wer es noch nicht gesehen hat, dem empfehle ich mal einen Blick darauf zu werfen.
 
 Die Icons sind in allen Größen von 16 Pixel bis 512 Pixel im Download vorhanden. Wer sie gebrauchen kann, kann sie gerne benutzen.
 

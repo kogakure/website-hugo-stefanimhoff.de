@@ -28,17 +28,17 @@ Detailed instructions for installations are included in the package on GitHub.
 
 ### Screenshots
 
-<img src="/img/gitweb-theme-1.png" alt="Projektübersicht" />
+<img src="/images/gitweb-theme-1.png" alt="Projektübersicht" />
 Projektübersicht/Project view
 
-<img src="/img/gitweb-theme-2.png" alt="Zusammenfassung" />
+<img src="/images/gitweb-theme-2.png" alt="Zusammenfassung" />
 Zusammenfassung/Summary
 
-<img src="/img/gitweb-theme-3.png" alt="Commit" />
+<img src="/images/gitweb-theme-3.png" alt="Commit" />
 Commit
 
-<img src="/img/gitweb-theme-4.png" alt="Diff" />
+<img src="/images/gitweb-theme-4.png" alt="Diff" />
 DIFF
 
-<img src="/img/gitweb-theme-5.png" alt="Log" />
+<img src="/images/gitweb-theme-5.png" alt="Log" />
 Log

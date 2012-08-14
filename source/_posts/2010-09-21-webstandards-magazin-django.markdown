@@ -10,7 +10,7 @@ Da lag es im Briefkasten: mein Belegexemplar der aktuellen Ausgabe 07/2010 des W
 
 <!-- more -->
 
-<a href="http://www.webstandards-magazin.de/"><img width="300" height="421" src="/img/webstandards-magazin-tools.jpg" alt="Webstandards-Magazin, Ausgabe 07/2010, Tools" /></a>
+<a href="http://www.webstandards-magazin.de/"><img width="300" height="421" src="/images/webstandards-magazin-tools.jpg" alt="Webstandards-Magazin, Ausgabe 07/2010, Tools" /></a>
 
 Drei Seiten sollte er einmal lang werden, jetzt sind es fast fünf geworden. Es war einfach nicht möglich, die ganze Faszination für Django, Codebeispiele und Grafiken auf so wenig Platz unterzubringen. Doch die Chefredakteure des [Webstandards-Magazin](http://www.webstandards-magazin.de/) Ansgar Hein und Jörg Morsbach waren sehr entgegenkommend und räumten mir mehr Platz ein. Vielen Dank noch einmal dafür! Ich bedanke mich auch recht herzlich bei den fleißigen Helfern, die meinen Artikel auf inhaltliche oder orthographische Fehler hin geprüft haben.
 
