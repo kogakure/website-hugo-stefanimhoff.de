@@ -16,7 +16,7 @@ Da mein [Django Folder-Icon](http://stefanimhoff.de/notiz/django-folder-mac-osx/
 
 [Blender](http://www.blender.org/ "blender.org") ist ein fantastisches OpenSource 3D-Programm, das kostenlos für alle üblichen Betriebssysteme erhältlich ist.
 
-Mit Blender kann man auf professionellem Niveau arbeiten. Es ist genauso gut, wie z.&nbsp;B. Autodesk Maya, und bietet neben einem fantastischen Interface Rigging, Animation, UV Unwrapping, Physics und Particle, Realtime 3D/Game Creation, Modeling, Rendering und Shading auch noch Imaging und Compositing an. Blender benutzt [Python](http://www.python.org/ "Python Programming Language -- Official Website"), um spezielle Verhaltensweisen in Blender zu programmieren.
+Mit Blender kann man auf professionellem Niveau arbeiten. Es ist genauso gut, wie z. B. Autodesk Maya, und bietet neben einem fantastischen Interface Rigging, Animation, UV Unwrapping, Physics und Particle, Realtime 3D/Game Creation, Modeling, Rendering und Shading auch noch Imaging und Compositing an. Blender benutzt [Python](http://www.python.org/ "Python Programming Language -- Official Website"), um spezielle Verhaltensweisen in Blender zu programmieren.
 
 Wer lernen möchte mit einer solchen 3D-Software zu arbeiten oder von einer der kommerziellen Lösungen wechseln möchte, dem kann ich diese Software wärmstens Empfehlen.
 

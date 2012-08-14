@@ -23,7 +23,7 @@ Außerdem suche ich viel nach [ExpressionEngine](http://expressionengine.com/), 
 
 ### Februar ###
 
-Hier war nicht so viel los, vor allem liegt das aber wohl daran, dass ich das Webprotokoll noch nicht aktiv eingeschaltet habe, sondern nur hin- und wieder mal aufgezeichnet wird, wenn ich z.&nbsp;B. in Gmail angemeldet bin.
+Hier war nicht so viel los, vor allem liegt das aber wohl daran, dass ich das Webprotokoll noch nicht aktiv eingeschaltet habe, sondern nur hin- und wieder mal aufgezeichnet wird, wenn ich z. B. in Gmail angemeldet bin.
 
 Die @media in London zieht mein Interesse an, obwohl ich – mal wieder – nicht hin <del>kann</del> <ins>darf</ins>.
 
@@ -33,21 +33,21 @@ Ich fange an alle unsere Jobs auf der Arbeit in [Subversion](http://subversion.t
 
 Im März erkundige ich mich nach den [Palmeninseln](http://www.thepalm.ae/) und der [Weltkarteninselgruppe](http://www.theworld.ae/) von Dubai. Der Scheich von Dubai investiert eine Menge, weil er weiß, dass sein Öl in wenigen Jahren ausgehen wird. Natürlich bin ich neidisch auf diese reichen Sackgesichter, die sich dort eine Parzelle kaufen können. Naja, jedenfalls im Moment noch – bis die dann in einigen Jahren weggespült werden.
 
-Bei ExpressionEngine interessieren mich u.&nbsp;a. `search_results` und `wegblog_name`, was wohl bedeutet, dass ich gerade die Suche auf meiner Seite programmiere.
+Bei ExpressionEngine interessieren mich u. a. `search_results` und `wegblog_name`, was wohl bedeutet, dass ich gerade die Suche auf meiner Seite programmiere.
 
 Zusätzlich will ich noch wissen, wie man eine Personal-Version von ExpressionEngine zu einer Core-Version downgraded. Ich hab jetzt nämlich zwei EspressionEngine-Projekte, aber nur eine Lizenz. Natürlich gibt es keine Ergebnisse bei pmachine, aber es reicht nach etwas testen aus, wenn man einige der Module löscht.
 
 ### April ###
 
-Dieser Monat ist der Kompilierungsmonat, jedenfalls installiere ich die *Apple&nbsp;Developer&nbsp;Tools*, Subversion unter Mac&nbsp;OS&nbsp;X, und suche nach verschiedenen Linux-Paketen.
+Dieser Monat ist der Kompilierungsmonat, jedenfalls installiere ich die *Apple Developer Tools*, Subversion unter Mac OS X, und suche nach verschiedenen Linux-Paketen.
 
 ExpressionEngine steht immer noch auf meinem Tagesplan, dieses Mal mit `categories`, `conditionals`, Debugging-, Geschwindigkeitsmessungs- und Statistik-Fragen.
 
 ### Mai ###
 
-Der Mai ist die heiße Phase in der Entwicklung meiner neuen Website. Das RSS Modul interessiert mich näher, Attribute, Datumsformatierungen, Conditionals, wie z.&nbsp;B. `elseif`, sowie `comment_count`.
+Der Mai ist die heiße Phase in der Entwicklung meiner neuen Website. Das RSS Modul interessiert mich näher, Attribute, Datumsformatierungen, Conditionals, wie z. B. `elseif`, sowie `comment_count`.
 
-Außerdem suche ich nach den Lyrics meiner neuen Alben von den [Poets&nbsp;of&nbsp;the&nbsp;Fall](http://poetsofthefall.com/), einer wirklich guten, finnischen Rockband.
+Außerdem suche ich nach den Lyrics meiner neuen Alben von den [Poets of the Fall](http://poetsofthefall.com/), einer wirklich guten, finnischen Rockband.
 
 ### Juni ###
 
@@ -59,11 +59,11 @@ Ich schaue den Film [Snakes and  Rubies](http://www.djangoproject.com/snakesandr
 
 Ein TextMate Bundle für Django muss her, und auch <abbr title="reStructuredText">[ReST](http://docutils.sourceforge.net/rst.html)</abbr> als Markupsprache der Djangoseite zieht mein Interesse an.
 
-Logischerweise interessiere ich mich jetzt auch für  [Python](http://www.python.org/), die Programmiersprache, auf der Django basiert. Das Buch [Dive&nbsp;Into&nbsp;Python](http://www.diveintopython.org/), das im Internet kostenlos verfügbar ist, lese ich in den nächsten Wochen komplett durch.
+Logischerweise interessiere ich mich jetzt auch für  [Python](http://www.python.org/), die Programmiersprache, auf der Django basiert. Das Buch [Dive Into Python](http://www.diveintopython.org/), das im Internet kostenlos verfügbar ist, lese ich in den nächsten Wochen komplett durch.
 
 ### Juli ###
 
-Im Juli beschäftigen mich wieder stark Django und Python: Django Filter, Statische Dateien mit Django u.&nbsp;ä.
+Im Juli beschäftigen mich wieder stark Django und Python: Django Filter, Statische Dateien mit Django u. ä.
 
 Ich schaue mir die [SQLite3](http://www.sqlite.org/)-Datenbank und ihre Syntax an, da sie für eine lokale Entwicklung geradezu optimal ist.
 
@@ -101,7 +101,7 @@ Diesen Monat beschäftige ich mich vor allem LaTeX, Bibtex und Alphadin. Ich sch
 
 Auch mit SQLite3 schaue ich mir noch näher an. Eine wirklich feine, kleine und mächtige Datenbank.
 
-Mitte September will ich von Google wissen, wo eigentlich der Experimentalfilm [A&nbsp;Scanner&nbsp;Darkly](http://wip.warnerbros.com/ascannerdarkly/) bleibt. In den U.S.A. lief er schon vor über einem Jahr. Naja, lohnt wohl wieder nicht, so was in Deutsche Kinos zu bringen. Also muss *man* sich ja wieder woanders seinen Kinoeintritt holen. Selber schuld, die Filmstudios.
+Mitte September will ich von Google wissen, wo eigentlich der Experimentalfilm [A Scanner Darkly](http://wip.warnerbros.com/ascannerdarkly/) bleibt. In den U.S.A. lief er schon vor über einem Jahr. Naja, lohnt wohl wieder nicht, so was in Deutsche Kinos zu bringen. Also muss *man* sich ja wieder woanders seinen Kinoeintritt holen. Selber schuld, die Filmstudios.
 
 Eine ISO-Prüfung im Haus führt mich zu *Dilbert* und *Dogbert*, und ich kann den Bürokratiewahn mit einem lachenden Auge in der Comic lesend überstehen.
 
@@ -173,9 +173,9 @@ Auf ARTE sehe ich einen interessanten Beitrag über die [Haddsch](http://de.wiki
 
 Ich lache mich tot, weil FileMaker ihr neues Datenbank-Produkt [Bentō](http://www.filemaker.de/bento/preview/) nennt. Die dachten wohl, das heißt Box. Das heißt aber Mittagessen ;)
 
-Durch einen Artikel auf [praegnanz.de](http://praegnanz.de/weblog/ted) erfahre ich von der [TED](http://www.ted.com/) Website, die seit dem meine absolute Lieblingsseite ist. Dort kann man sich die Vorträge der TED-Konferenz ansehen, die es seit 1984 gibt. Bei TED sprechen außergewöhnliche Menschen über Forschung, Innovationen, Medien, Religion, Philosophie und vieles mehr. Eine Eintrittskarte kostet 6.000&nbsp;$ und man kann sich nur für eine bewerben, ob man eingeladen wird, entscheidet TED. Jedenfalls habe ich mir alle 175 bislang veröffentlichten Beiträge schon mal heruntergeladen und eine Menge davon angesehen. Das ist wie ARTE hoch 10.
+Durch einen Artikel auf [praegnanz.de](http://praegnanz.de/weblog/ted) erfahre ich von der [TED](http://www.ted.com/) Website, die seit dem meine absolute Lieblingsseite ist. Dort kann man sich die Vorträge der TED-Konferenz ansehen, die es seit 1984 gibt. Bei TED sprechen außergewöhnliche Menschen über Forschung, Innovationen, Medien, Religion, Philosophie und vieles mehr. Eine Eintrittskarte kostet 6.000 $ und man kann sich nur für eine bewerben, ob man eingeladen wird, entscheidet TED. Jedenfalls habe ich mir alle 175 bislang veröffentlichten Beiträge schon mal heruntergeladen und eine Menge davon angesehen. Das ist wie ARTE hoch 10.
 
-Kurz vor Weihnachten setze ich mich 1-2 Stunden hin und gestalte in Photoshop ein Mac&nbsp;OS&nbsp;X Leopard-Icon für Django-Projekte. Dies führt zu einem unglaublichen Feedback aus der ganzen Django-Szene und lässt meine Besucherzahlen explodieren. Ich entdecke die [deutsche Community](http://www.django-de.org/) und nehme mir vor mich im neuen Jahr an der Übersetzung der englischen Dokumentation zu beteiligen.
+Kurz vor Weihnachten setze ich mich 1-2 Stunden hin und gestalte in Photoshop ein Mac OS X Leopard-Icon für Django-Projekte. Dies führt zu einem unglaublichen Feedback aus der ganzen Django-Szene und lässt meine Besucherzahlen explodieren. Ich entdecke die [deutsche Community](http://www.django-de.org/) und nehme mir vor mich im neuen Jahr an der Übersetzung der englischen Dokumentation zu beteiligen.
 
 ### Weihnachtsgrüße ###
 

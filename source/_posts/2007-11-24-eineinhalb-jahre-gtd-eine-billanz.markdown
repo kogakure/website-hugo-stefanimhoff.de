@@ -18,15 +18,15 @@ Ich bin jedenfalls der Meinung, man *bekommt* mit Allens System wirklich den all
 
 ### Die GTD-Grundlagen ###
 
-GTD nutzt so genannte „**Kontexte**“, also bestimmten Situationen/Orte, denen eine Aufgabe zugewiesen wird (Telefon, Zuhause, Besorgung o.&nbsp;ä.). Daneben gibt es noch die Zuteilung zu „**Projekten**“.
+GTD nutzt so genannte „**Kontexte**“, also bestimmten Situationen/Orte, denen eine Aufgabe zugewiesen wird (Telefon, Zuhause, Besorgung o. ä.). Daneben gibt es noch die Zuteilung zu „**Projekten**“.
 
-Aufgaben werden in Ihrem Kontext erledigt, also z.&nbsp;B. gleich mehrere Anrufe auf einmal, wenn man schon am Telefon ist.
+Aufgaben werden in Ihrem Kontext erledigt, also z. B. gleich mehrere Anrufe auf einmal, wenn man schon am Telefon ist.
 
-Bei GTD wird alles, was an „Zeug“ täglich auf den Tisch kommt, in einen „Posteingang“ (Inbox) bewegt. Dieses „Zeug“ kann vielfältig sein und aus E-Mails, Post, Sprachmemos, Notizzetteln, Scribbles etc. bestehen. Der Posteingang wird zu einem bestimmten Zeitpunkt (z.&nbsp;B. Freitag Nachmittag) geleert, wobei jede Aufgabe bearbeitet wird, und nichts unbearbeitet im Posteingang zurückbleibt.
+Bei GTD wird alles, was an „Zeug“ täglich auf den Tisch kommt, in einen „Posteingang“ (Inbox) bewegt. Dieses „Zeug“ kann vielfältig sein und aus E-Mails, Post, Sprachmemos, Notizzetteln, Scribbles etc. bestehen. Der Posteingang wird zu einem bestimmten Zeitpunkt (z. B. Freitag Nachmittag) geleert, wobei jede Aufgabe bearbeitet wird, und nichts unbearbeitet im Posteingang zurückbleibt.
 
 Je nach geschätztem Aufwand werden die Aufgaben entweder sofort erledigt (bei einer Dauer von ca. 2 Minuten), oder an eine andere Stelle verschoben. Ist die Aufgabe Teil eines mehrteiligen Prozesses, wird ein Projekt erstellt, dem die Aufgabe zugeordnet wird.
 
-„Zeug“ kann auch als Referenzmaterial für später aufgehoben werden (z.&nbsp;B. eine Broschüre).
+„Zeug“ kann auch als Referenzmaterial für später aufgehoben werden (z. B. eine Broschüre).
 
 Wird eine Aufgabe vorerst nicht erledigt, weil man keine Zeit oder noch kein aktives Interesse daran hat – sie aber für so interessant hält, dass man sie nicht gleich vernichten will, so verschiebt man sie auf eine Liste von Dingen, die man „Irgendwann/Vielleicht“ erledigt. Diese Liste kann man hin- und wieder durchsehen. Somit sind die Ideen nicht verloren, belasten aber auch nicht den Kopf.
 
@@ -37,9 +37,9 @@ Aufgaben kann man auch delegieren oder bestimmten Zeitpunkten zuweisen. Wenn man
 <img class="border rechts" src="http://stefanimhoff.de/images/notizbuch/gtd-nachher.jpg" width="300" height="191" alt="GTD nachher" title="So sah die Inbox aus, nachdem ich alle „losen Enden“ sortiert hatte" /> Auf den ersten Blick sieht GTD vielleicht kompliziert oder umständlich aus, doch hilft es ungemein, den Kopf von belastendem Grübeln freizuhalten.
 Schon nach kurzer Zeit der Umstellung habe ich mich an diese Arbeitsweise gewöhnt und schnell die Eigenschaft übernommen, jeden Gedanken **sofort zu notieren** und gemäß des GTD-Prinzips irgendwo einzuordnen. So vergesse ich nie wieder wichtige Dinge und selbst kleine Ideen verschwinden nicht gleich aus dem Kopf.
 
-Im Idealfall hat man dazu bestimmte **Arbeitswerkzeuge** dabei, die je nach Person und Lebensumständen variieren können. Ich selbst benutze eine Kombination aus Web-Applikation, Text-Dateien, [Moleskine®](http://www.moleskine.com/ "Moleskine")-Notizbuch und Post-its® an verschiedenen Orten (z.&nbsp;B. auf dem Nachttisch).
+Im Idealfall hat man dazu bestimmte **Arbeitswerkzeuge** dabei, die je nach Person und Lebensumständen variieren können. Ich selbst benutze eine Kombination aus Web-Applikation, Text-Dateien, [Moleskine®](http://www.moleskine.com/ "Moleskine")-Notizbuch und Post-its® an verschiedenen Orten (z. B. auf dem Nachttisch).
 
-Gerade für für Computerprofis gibt es zahlreiche Systeme und Programme, die GTD digital ermöglichen. Somit sollte wohl für jeden das passende Arbeitswerkzeug zu finden sein. Ganze Websites und Weblogs beschäftigen sich nur mit GTD (z.&nbsp;B. [lifehack.org](http://www.lifehack.org/ "lifehack.org: Productivity, Getting Things Done and Lifehacks Blog"), [lifehacker](http://lifehacker.com/ "Lifehacker, tips and downloads for getting things done") oder [43&nbsp;Folders](http://www.43folders.com/ "43 Folders")).
+Gerade für für Computerprofis gibt es zahlreiche Systeme und Programme, die GTD digital ermöglichen. Somit sollte wohl für jeden das passende Arbeitswerkzeug zu finden sein. Ganze Websites und Weblogs beschäftigen sich nur mit GTD (z. B. [lifehack.org](http://www.lifehack.org/ "lifehack.org: Productivity, Getting Things Done and Lifehacks Blog"), [lifehacker](http://lifehacker.com/ "Lifehacker, tips and downloads for getting things done") oder [43 Folders](http://www.43folders.com/ "43 Folders")).
 
 ### Die richtige GTD-Lösung? ###
 
@@ -78,6 +78,6 @@ Eine Besonderheit von Tracks ist, dass mit Terminen versehene Aufgaben einen Far
 
 In den Einstellungen kann festgelegt werden, nach wie vielen Tagen unangetastete Aufgaben beginnen auffällig zu werden (sie werden langsam Gelb hinterlegt). Dies ist nützlich, um Punkte im Kontext „Vielleicht-Irgendann“ zu erkennen, die gelöscht werden können.
 
-Tracks bietet Feeds für RSS, iCal und puren Text an. Die puren Text-Feeds sind sehr nützlich, um eine Liste auf ein mobiles Gerät, wie ein z.&nbsp;B. ein Mobiltelefon zu übertragen.
+Tracks bietet Feeds für RSS, iCal und puren Text an. Die puren Text-Feeds sind sehr nützlich, um eine Liste auf ein mobiles Gerät, wie ein z. B. ein Mobiltelefon zu übertragen.
 
 Gerade diese Einfachheit ist es, die Tracks so nützlich macht. Mit kleinen Tricks kann man sich bei fehlenden Features behelfen. Orte, Personen oder ähnliche Dinge schreibe ich in eckigen Klammern neben die Aufgabe. Die Integration von Textile ermöglicht es schnell Links oder Listen in den Kommentar einer Aufgabe zu schreiben.

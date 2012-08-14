@@ -42,7 +42,7 @@ Ist seine Arbeit gut, und andere Personen finden sie auch gut, können diese die
 
 ### Fazit ###
 
-*Git* ist sehr einfach und effizient zu bedienen, schon nach kurzer Zeit konnte ich damit umgehen. Man kann Git z.&nbsp;B. auch zusätzlich zu SVN oder CVS auf seinem Rechner nutzen. Das man kein zentrales Repository <del>hat</del> <ins>haben muss</ins>, ist ein echter Vorzug.
+*Git* ist sehr einfach und effizient zu bedienen, schon nach kurzer Zeit konnte ich damit umgehen. Man kann Git z. B. auch zusätzlich zu SVN oder CVS auf seinem Rechner nutzen. Das man kein zentrales Repository <del>hat</del> <ins>haben muss</ins>, ist ein echter Vorzug.
 
 Neben dem [fantastischen Vortrag](http://youtube.com/watch?v=4XpnKHJAok8&amp;v3 "YouTube - Tech Talk: Linus Torvalds on git") von Linus Torvalds auf *Google Tech Talk* gibt es auch eine [Installationsanleitung für Mac OSX Tiger/Leopard](http://wincent.com/knowledge-base/Installing_Git_1.5.2.4_on_Mac_OS_X_Leopard "Installing Git 1.5.2.4 on Mac OS X Leopard - Knowledge Base"). Auf der [offiziellen Seite von Git](http://git.or.cz/ "Git - Fast Version Control System") findet man gute Handbücher und Tutorials.
 

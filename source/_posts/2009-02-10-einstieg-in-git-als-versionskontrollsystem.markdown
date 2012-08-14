@@ -28,7 +28,7 @@ Den mittlerweile veralteten Artikel von 2007 ersetze ich durch eine große Liste
 * [Everyday Git](http://www.kernel.org/pub/software/scm/git/docs/everyday.html "Everyday GIT With 20 Commands Or So") – 20 Befehle, die für den Anfang nützlich sind
 * [SVN Crash Course](http://git-scm.com/course/svn.html "Git - Fast Version Control System") – Ein Crash Course für Personen, die SVN bereits kennen
 * [Git for the lazy](http://www.spheredev.org/wiki/Git_for_the_lazy "Git for the lazy - Spheriki")
-* [Effectively Using Git With Subversion](http://www.viget.com/extend/effectively-using-git-with-subversion/ "Effectively Using Git With Subversion | Web Development Blog: Web Development Insights, Best Practices, Tips &amp; Techniques : Viget Labs") – Eine gute Einführung, wie man Subversion (SVN) mit Git nutzt
+* [Effectively Using Git With Subversion](http://www.viget.com/extend/effectively-using-git-with-subversion/ "Effectively Using Git With Subversion | Web Development Blog: Web Development Insights, Best Practices, Tips & Techniques : Viget Labs") – Eine gute Einführung, wie man Subversion (SVN) mit Git nutzt
 * [Git Ready](http://gitready.com/ "git ready &raquo; daily tips for the noob to the guru") – Kurze Git-Tipps für Beginner, Fortgeschrittene und Profis
 * [Sei (k)ein Blödmann und nimm Git: Einführung in Versionskontrolle mit Git](http://goo.gl/Aea52) – deutschsprachige Präsentation über Git
 
