@@ -6,11 +6,11 @@ categories:
 tags: [blender, design, macosx, customize]
 ---
 
-Da mein [Django Folder-Icon](http://stefanimhoff.de/notiz/django-folder-mac-osx/ "Django Folder für Mac OS X Leopard • Notizen • Stefan Imhoff"), das ich im Dezember veröffentlicht habe, ein riesiger Erfolg war und schon unzählige Male heruntergeladen wurde, habe ich einen neuen Ordner erstellt – dieses mal für Blender.
+Da mein [Django Folder-Icon](/django-folder-mac-osx/ "Django Folder für Mac OS X Leopard • Notizen • Stefan Imhoff"), das ich im Dezember veröffentlicht habe, ein riesiger Erfolg war und schon unzählige Male heruntergeladen wurde, habe ich einen neuen Ordner erstellt – dieses mal für Blender.
 
 <!-- more -->
 
-<a href="/files/blender-leopard-folder.zip"><img class="border links" src="http://stefanimhoff.de/images/notizbuch/blender-leopard-folders.jpg" alt="Blender Folder" width="292" height="365" /></a>
+<a href="/files/blender-leopard-folder.zip"><img src="/img/blender-leopard-folders.jpg" alt="Blender Folder" width="292" height="365" /></a>
 
 ### Blender ###
 

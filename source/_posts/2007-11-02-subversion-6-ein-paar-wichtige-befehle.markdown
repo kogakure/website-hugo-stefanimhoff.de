@@ -11,7 +11,7 @@ Es gibt in Subversion noch ein paar nützliche und notwendige Befehle, die man i
 <!-- more -->
 
 <div class="hinweis">
-<p>Der Inhalt dieses Artikels ist noch aktuell, doch kann ich nur dringend dazu raten, sich die fantastische Alternative zu Subversion anzusehen: <a href="http://stefanimhoff.de/notiz/versionskontrolle-mit-git/"><strong>Git</strong></a>.</p>
+<p>Der Inhalt dieses Artikels ist noch aktuell, doch kann ich nur dringend dazu raten, sich die fantastische Alternative zu Subversion anzusehen: <a href="/versionskontrolle-mit-git/"><strong>Git</strong></a>.</p>
 </div>
 
 ### Tags anlegen ###
