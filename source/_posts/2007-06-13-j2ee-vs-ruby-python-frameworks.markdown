@@ -6,13 +6,13 @@ categories:
 tags: [django, rubyonrails, screencast]
 ---
 
-Der <abbr title="National Aeronautics and Space Administration">NASA</abbr>-Mitarbeiter <cite>Sean Kelly</cite> lässt Web-Frameworks in einem halbstündigen Match gegeneinander antreten. Ein sehr sehenswerter und inspirierender Film für alle, denen sonst die überzeugenden Argumente für moderne Web-Frameworks fehlen.
+Der NASA-Mitarbeiter Sean Kelly lässt Web-Frameworks in einem halbstündigen Match gegeneinander antreten. Ein sehr sehenswerter und inspirierender Film für alle, denen sonst die überzeugenden Argumente für moderne Web-Frameworks fehlen.
 
 <!-- more -->
 
-Brauchst du noch eine überzeugende Stimme, um deinem <abbr title="Chief Executive Officer">CEO</abbr> zu erklären, wieso du seinen Java- und <abbr title="Java Server Pages">JSP</abbr>-Dreck nicht haben willst? Wollen die Entwickler in deiner Firma einfach nicht verstehen, dass Webentwicklung schnell und einfach sein muss, um auf Wünsche <abbr title="Just In Time">JIT</abbr> reagieren zu können?
+Brauchst du noch eine überzeugende Stimme, um deinem CEO zu erklären, wieso du seinen Java- und JSP-Dreck nicht haben willst? Wollen die Entwickler in deiner Firma einfach nicht verstehen, dass Webentwicklung schnell und einfach sein muss, um auf Wünsche JIT reagieren zu können?
 
-Dann schau dir das halbstündige (36:18), sehr lustige und überzeugende Video „[*Better Web App Development*](http://oodt.jpl.nasa.gov/better-web-app.mov)“ des <abbr title="National Aeronautics and Space Administration">NASA</abbr>-Mitarbeiters <cite>Sean Kelly</cite> an.
+Dann schau dir das halbstündige (36:18), sehr lustige und überzeugende Video „[*Better Web App Development*](http://oodt.jpl.nasa.gov/better-web-app.mov)“ des NASA-Mitarbeiters Sean Kelly an.
 
 Er berichtet von seiner Arbeit in den 90ern für einen Wetterdienst. Damals waren alle Applikationen des Dienstes in C++ geschrieben. C++ ist eine sehr gute Sprache zur Anwendungsentwicklung, versagt aber völlig bei der Benutzerschnittstelle, weil der Code nach jeder Änderung neu kompiliert werden muss. So ist ein schnelles Reagieren und Interagieren mit Wünschen von Außen kaum möglich.
 

@@ -27,7 +27,7 @@ Hier war nicht so viel los, vor allem liegt das aber wohl daran, dass ich das We
 
 Die @media in London zieht mein Interesse an, obwohl ich – mal wieder – nicht hin <del>kann</del> <ins>darf</ins>.
 
-Ich fange an alle unsere Jobs auf der Arbeit in [Subversion](http://subversion.tigris.org/) Repositorys zu verschieben. Daher benötige ich eine Installationsanleitung für das gottverdammte Linux SuSE 10, weil nur dieses von unserer <abbr title="Information Technology">IT</abbr>-Abteilung für uns installiert wird. Kompilieren macht jedenfalls unter diesem System keinen Spaß, weil auch wirklich kein Standard-UNIX-Pfad stimmt.
+Ich fange an alle unsere Jobs auf der Arbeit in [Subversion](http://subversion.tigris.org/) Repositorys zu verschieben. Daher benötige ich eine Installationsanleitung für das gottverdammte Linux SuSE 10, weil nur dieses von unserer IT-Abteilung für uns installiert wird. Kompilieren macht jedenfalls unter diesem System keinen Spaß, weil auch wirklich kein Standard-UNIX-Pfad stimmt.
 
 ### März ###
 
@@ -57,7 +57,7 @@ Sonst kommt mir in diesem Monat [Django](http://www.djangoproject.com/) erneut i
 
 Ich schaue den Film [Snakes and  Rubies](http://www.djangoproject.com/snakesandrubies/) an, in dem Adrian Holovaty und David Heinermeier Hannson die Vorteile und Unterschiede von Django und [Ruby on Rails](http://rubyonrails.com/) diskutieren.
 
-Ein TextMate Bundle für Django muss her, und auch <abbr title="reStructuredText">[ReST](http://docutils.sourceforge.net/rst.html)</abbr> als Markupsprache der Djangoseite zieht mein Interesse an.
+Ein TextMate Bundle für Django muss her, und auch [ReST](http://docutils.sourceforge.net/rst.html) als Markupsprache der Djangoseite zieht mein Interesse an.
 
 Logischerweise interessiere ich mich jetzt auch für  [Python](http://www.python.org/), die Programmiersprache, auf der Django basiert. Das Buch [Dive Into Python](http://www.diveintopython.org/), das im Internet kostenlos verfügbar ist, lese ich in den nächsten Wochen komplett durch.
 
@@ -147,7 +147,7 @@ Ich stelle fest, dass bislang nur Safari 3 automatisch Worte trennt, doch die Al
 
 Ich stelle fest, dass [Symphony 2](http://sneakpeek.symphony21.com/) im Anmarsch ist und freue mich darauf.
 
-Irgendwie würde ich gerne <abbr title="American Sign Language">ASL</abbr> lernen, aber mir fehlt die Zeit.
+Irgendwie würde ich gerne ASL lernen, aber mir fehlt die Zeit.
 
 Die Idee von Amazons *Kindle* finde ich nach einigem Überlegen gar nicht so schlecht, doch ist er **A)** nicht in Deutschland verfügbar und **B)** potthässlich. Außerdem will ich als Bücherliebhaber die Dinger doch noch anfassen. Zusätzlich zum Buch für einen kleinen Aufpreis, das wär’ aber was.
 
@@ -155,7 +155,7 @@ Git setze ich jetzt flächendeckend in fast jedem noch so kleinen Projekt ein.
 
 Auf meinem Nachttisch liegt jetzt das Buch „*Der Dativ ist dem Genitiv sein Tod*“, was ich ziemlich lustig und interessant finde.
 
-Für einen Kunden recherchiere ich bei der <abbr title="Gesellschaft für Musikalische Aufführungs- und Mechanische Vervielfältigungsrechte">GEMA</abbr>, was es kostet multimediale Inhalte auf er eigenen Website zu benutzen und komme zum Schluss: Die sind megadreist. Es lebe [CC](http://creativecommons.org/)!
+Für einen Kunden recherchiere ich bei der GEMA, was es kostet multimediale Inhalte auf er eigenen Website zu benutzen und komme zum Schluss: Die sind megadreist. Es lebe [CC](http://creativecommons.org/)!
 
 Ich setze jQuery jetzt in Kundenprojekten ein, und benutze es auch gleich für GoogleMaps und SPAM-Schutz von E-Mail-Adressen.
 
