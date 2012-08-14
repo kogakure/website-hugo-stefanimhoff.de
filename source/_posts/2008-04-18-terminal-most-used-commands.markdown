@@ -10,18 +10,20 @@ Weil es grad alle machen: Ich weiß, was du letztens ins Terminal getippt hast.
 
 <!-- more -->
 
-    $ history | awk '{print $2}' | sort | uniq -c | sort -rn | head -10
+{% codeblock lang:sh %}
+history | awk '{print $2}' | sort | uniq -c | sort -rn | head -10
 
-    172   cd
-    104   ll
-     61   svn
-     41   git
-     22   gst
-     21   rm
-     11   gca
-     10   ssh
-     10   gba
-      9   gp
+172   cd
+104   ll
+ 61   svn
+ 41   git
+ 22   gst
+ 21   rm
+ 11   gca
+ 10   ssh
+ 10   gba
+  9   gp
+{% endcodeblock %}
 
 ### Legende
 

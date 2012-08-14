@@ -11,26 +11,26 @@ Die eigentliche Arbeit mit Subversion ist relativ leicht erklärt und gelernt. V
 <!-- more -->
 
 <div class="hinweis">
-<p>Der Inhalt dieses Artikels ist noch aktuell, doch kann ich nur dringend dazu raten, sich die fantastische Alternative zu Subversion anzusehen: <a href="http://stefanimhoff.de/notiz/versionskontrolle-mit-git/"><strong>Git</strong></a>.</p>
+<p>Der Inhalt dieses Artikels ist noch aktuell, doch kann ich nur dringend dazu raten, sich die fantastische Alternative zu Subversion anzusehen: <a href="/versionskontrolle-mit-git/"><strong>Git</strong></a>.</p>
 </div>
 
 Zuerst lege ich mir ein Arbeitsverzeichnis an, in dem ich künftig meine Projekte bearbeiten will, z. B. einen Ordner `Arbeit` im Heimatverzeichnis.
 
-<div class="terminal">
-  <p><kbd>$ cd ~</kbd></p>
-  <p><kbd>$ mkdir Arbeit</kbd></p>
-  <p><kbd>$ cd Arbeit</kbd></p>
-</div>
+{% codeblock lang:sh %}
+cd ~
+mkdir Arbeit
+cd Arbeit
+{% endcodeblock %}
 
 Um jetzt an einem Projekt aus dem Repository arbeiten zu können, muss man es sich in einen Arbeitsordner „auschecken“, also eine Kopie der Dateien auf seine Festplatte holen.
 
 Im Artikel „<cite>Subversion (4) – Importieren einer Projektstruktur</cite>“ hatte ich mir eine Beispielstruktur angelegt. Ich entscheide mich jetzt an der Website zu arbeiten und nur diesen Ordner und seine Unterordner auszuchecken. Natürlich könnte man genauso gut den kompletten `trunk` (die Hauptentwicklungslinie) in seinen Arbeitsordner holen.
 
-<div class="terminal">
-  <p><kbd>$ mkdir meinewebsite</kbd></p>
-  <p><kbd>$ cd meinewebsite</kbd></p>
-  <p><kbd>$ svn&nbsp;co&nbsp;file:///Users/XYZ/Subversion/meinewebsite/trunk/Website&nbsp;.</kbd></p>
-</div>
+{% codeblock lang:sh %}
+mkdir meinewebsite
+cd meinewebsite
+svn co file:///Users/XYZ/Subversion/meinewebsite/trunk/Website .
+{% endcodeblock %}
 
 So wird der Inhalt des Ordners `Website` in mein Projektvereichnis `meinewebsite` entpackt. Wenn man auch noch den Ordner `Website` darin selber haben möchte lässt man einfach den „.“ am Ende weg.
 
@@ -40,9 +40,9 @@ Der Befehl `svn status` bringt als Ergebnis, dass man die Version 1 ausgecheckt 
 
 Im ersten Schritt lege ich jetzt eine Datei in meinem Hauptverzeichnis (index.html) an und kopiere ein Testbild in den Ordner `img` (test.jpg). Der Befehl `svn status` erzeugt jetzt zwei Zeilen, die die beiden neuen Dateien anzeigen, mit jeweils einem Fragezeichen davor. Das Fragezeichen zeigt an, dass diese Dateien unbekannt sind, sich also nicht im Repository befinden. Subversion überträgt keine Dateien automatisch ins Verzeichnis, außer man markiert sie dafür. Das mache ich jetzt:
 
-<div class="terminal">
-  <p><kbd>$ svn&nbsp;add&nbsp;index.html&nbsp;img/test.jpg</kbd></p>
-</div>
+{% codeblock lang:sh %}
+svn add index.html img/test.jpg
+{% endcodeblock %}
 
 Wie gesehen kann man hier mehrere Dateien in einem Befehl hinzufügen, es funktioniert auch UNIX-Syntax, wie z. B. der „Asterisk“ (Stern) für alle Dateien. In der Ausgabe dieses Befehls sieht man jetzt ein „A“ neben der jeweiligen Datei, das steht für `Added` (hinzugefügt).
 
@@ -50,9 +50,9 @@ Wie gesehen kann man hier mehrere Dateien in einem Befehl hinzufügen, es funkti
 
 Diese Änderungen/Neueinfügungen spiele ich nun ins Repository zurück.
 
-<div class="terminal">
-  <p><kbd>$ svn&nbsp;ci&nbsp;-m&nbsp;"Dateien&nbsp;hinzugefuegt"</kbd></p>
-</div>
+{% codeblock lang:sh %}
+svn ci -m "Dateien hinzugefuegt"
+{% endcodeblock %}
 
 Die Zeichenkette nach dem Parameter `-m` ist für die Log-Datei gedacht. Hier sollte man seine Änderungen beschreiben. Wir bekommen die Meldung zurück, dass die Dateien hinzugefügt wurden und der Revisionsstand nun „2“ ist.
 
@@ -64,9 +64,9 @@ Wenn man Dateien über die normale Löschfunktion des Computers entfernt, erfäh
 
 Besser ist es also die Datei über Subversion zu löschen (das macht man aber in der Regel aus Faulheit nicht):
 
-<div class="terminal">
-  <p><kbd>$ svn&nbsp;del&nbsp;img/test.jpg</kbd></p>
-</div>
+{% codeblock lang:sh %}
+svn del img/test.jpg
+{% endcodeblock %}
 
 Das Ergebnis dieses Befehls ist ein „D“ neben der Datei, was `Deleted` (gelöscht) bedeutet. Beim nächsten Commit wird diese Datei entfernt.
 
@@ -74,8 +74,8 @@ Doch vorher führe ich noch eine Änderung an der `index.html` durch, indem ich 
 
 Mit dem Commit-Befehl spiele ich jetzt die beiden Änderungen ins Repository:
 
-<div class="terminal">
-  <p><kbd>$ svn&nbsp;ci&nbsp;-m&nbsp;"Bild&nbsp;geloescht,&nbsp;index.html&nbsp;bearbeitet"</kbd></p>
-</div>
+{% codeblock lang:sh %}
+svn ci -m "Bild geloescht, index.html bearbeitet"
+{% endcodeblock %}
 
 Im nächsten Teil der Reihe erkläre ich, wie man Dateien so markieren kann, dass sie nie ins Repository übertragen werden und wie man einige erweiterte Befehle benutzt.

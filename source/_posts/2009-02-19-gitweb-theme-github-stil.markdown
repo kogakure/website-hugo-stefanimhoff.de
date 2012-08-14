@@ -28,17 +28,17 @@ Detailed instructions for installations are included in the package on GitHub.
 
 ### Screenshots
 
-<img class="border" src="http://stefanimhoff.de/images/notizbuch/gitweb-theme-1.png" alt="Projektübersicht" />
+<img src="/img/gitweb-theme-1.png" alt="Projektübersicht" />
 Projektübersicht/Project view
 
-<img class="border" src="http://stefanimhoff.de/images/notizbuch/gitweb-theme-2.png" alt="Zusammenfassung" />
+<img src="/img/gitweb-theme-2.png" alt="Zusammenfassung" />
 Zusammenfassung/Summary
 
-<img class="border" src="http://stefanimhoff.de/images/notizbuch/gitweb-theme-3.png" alt="Commit" />
+<img src="/img/gitweb-theme-3.png" alt="Commit" />
 Commit
 
-<img class="border" src="http://stefanimhoff.de/images/notizbuch/gitweb-theme-4.png" alt="Diff" />
+<img src="/img/gitweb-theme-4.png" alt="Diff" />
 DIFF
 
-<img class="border" src="http://stefanimhoff.de/images/notizbuch/gitweb-theme-5.png" alt="Log" />
+<img src="/img/gitweb-theme-5.png" alt="Log" />
 Log

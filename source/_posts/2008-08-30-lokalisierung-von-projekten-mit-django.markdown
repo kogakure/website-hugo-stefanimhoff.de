@@ -22,78 +22,83 @@ Dieses Beispiel setzt auf dem Code für das offizielle Django-Tutorial auf und f
 
 Der Einfachheit halber lokalisiere ich nur vier dieser Dateien:
 
-    # admin.py
+{% codeblock admin.py lang:django %}
+from django.contrib import admin
 
-    from django.contrib import admin
+from models import Poll, Choice
 
-    from models import Poll, Choice
+class ChoiceInline(admin.TabularInline):
+    model = Choice
+    extra = 3
 
-    class ChoiceInline(admin.TabularInline):
-        model = Choice
-        extra = 3
+class PollAdmin(admin.ModelAdmin):
+    fieldsets = [
+        (None,               {'fields': ['question']}),
+        ('Date information', {'fields': ['pub_date'], 'classes': ['collapse']}),
+    ]
+    inlines = [ChoiceInline]
+    list_display = ('question', 'pub_date', 'was_published_today')
+    list_filter = ['pub_date']
+    search_fields = ['question']
+    date_hierarchy = 'pub_date'
 
-    class PollAdmin(admin.ModelAdmin):
-        fieldsets = [
-            (None,               {'fields': ['question']}),
-            ('Date information', {'fields': ['pub_date'], 'classes': ['collapse']}),
-        ]
-        inlines = [ChoiceInline]
-        list_display = ('question', 'pub_date', 'was_published_today')
-        list_filter = ['pub_date']
-        search_fields = ['question']
-        date_hierarchy = 'pub_date'
+admin.site.register(Poll, PollAdmin)
+admin.site.register(Choice)
+{% endcodeblock %}
 
-    admin.site.register(Poll, PollAdmin)
-    admin.site.register(Choice)
+{% codeblock models.py lang:django %}
+import datetime
+from django.db import models
 
-    # models.py
+class Poll(models.Model):
+    question = models.CharField(max_length=200, help_text='Your question. Please add an "?" to the end.')
+    pub_date = models.DateTimeField('date published')
 
-    import datetime
-    from django.db import models
+    def __unicode__(self):
+        return self.question
 
-    class Poll(models.Model):
-        question = models.CharField(max_length=200, help_text='Your question. Please add an "?" to the end.')
-        pub_date = models.DateTimeField('date published')
+    def get_absolute_url(self):
+        return self.id
 
-        def __unicode__(self):
-            return self.question
+    def was_published_today(self):
+        return self.pub_date.date() == datetime.date.today()
+    was_published_today.short_description = 'Published today?'
 
-        def get_absolute_url(self):
-            return self.id
+class Choice(models.Model):
+    poll = models.ForeignKey(Poll)
+    choice = models.CharField(max_length=200)
+    votes = models.IntegerField()
 
-        def was_published_today(self):
-            return self.pub_date.date() == datetime.date.today()
-        was_published_today.short_description = 'Published today?'
+    def __unicode__(self):
+        return self.choice
 
-    class Choice(models.Model):
-        poll = models.ForeignKey(Poll)
-        choice = models.CharField(max_length=200)
-        votes = models.IntegerField()
+{% endcodeblock %}
 
-        def __unicode__(self):
-            return self.choice
-
-    # polls/poll_list.html
-
-    {% if object_list %}
-        <ul>
-        {% for poll in object_list %}
-            <li><a href="{{ poll.get_absolute_url }}/">{{ poll.question }}</a></li>
-        {% endfor %}
-        </ul>
-    {% else %}
-        <p>No polls are available.</p>
-    {% endif %}
-
-    # polls/results.html
-
-    <h1>{{ object.question }}</h1>
-
+{% codeblock polls/poll_list lang:html %}
+{% raw %}
+{% if object_list %}
     <ul>
-    {% for choice in object.choice_set.all %}
-        <li>{{ choice.choice }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>
+    {% for poll in object_list %}
+        <li><a href="{{ poll.get_absolute_url }}/">{{ poll.question }}</a></li>
     {% endfor %}
     </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+{% endraw %}
+{% endcodeblock %}
+
+{% codeblock polls/results.html lang:html %}
+{% raw %}
+<h1>{{ object.question }}</h1>
+
+<ul>
+{% for choice in object.choice_set.all %}
+    <li>{{ choice.choice }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>
+{% endfor %}
+</ul>
+{% endraw %}
+{% endcodeblock %}
 
 ### Lokalisierung der Python-Dateien
 
@@ -101,73 +106,77 @@ In jeder Python-Datei, die lokalisierte Zeichenketten enthalten soll, muss zuers
 
 In der `admin.py` wird am Anfang das erwähnte Submodul importiert. Jetzt werden alle Zeichenketten wie unten zu sehen geändert. Dabei ist es am besten, wenn alle Zeichenketten als Unicode mit dem kleinen "u" davor markiert werden. Die Zeichenketten müssen in Klammern eingefasst werden, da "ugetttext" eine Funktion ist.
 
-    # admin.py
+{% codeblock admin.py lang:django %}
+...
+from django.utils.translation import ugettext_lazy as _
+...
 
-    ...
-    from django.utils.translation import ugettext_lazy as _
-    ...
-
-    class PollAdmin(admin.ModelAdmin):
-    fieldsets = [
-        (None,               {'fields': ['question']}),
-        (_(u'Date information'), {'fields': ['pub_date'], 'classes': ['collapse']}),
-    ]
-    ...
+class PollAdmin(admin.ModelAdmin):
+fieldsets = [
+    (None,               {'fields': ['question']}),
+    (_(u'Date information'), {'fields': ['pub_date'], 'classes': ['collapse']}),
+]
+...
+{% endcodeblock %}
 
 Django nimmt für die Felder im Admin-Backend automatisch den Datenmodellnamen mit einem Großbuchstaben als Label. Um diesen zu lokalisieren muss man ihn ausdrücklich angeben. Bei `ForeignKey`-Feldern ist es nötig den Namen mit `verbose_name` anzugeben.
 
-    # models.py
+{% codeblock models.py lang:django %}
+...
+from django.utils.translation import ugettext_lazy as _
+...
 
-    ...
-    from django.utils.translation import ugettext_lazy as _
-    ...
+class Poll(models.Model):
+question = models.CharField(_(u'Question'), max_length=200, help_text=_(u'Your question. Please add an "?" to the end.'))
+pub_date = models.DateTimeField(_(u'date published'))
 
-    class Poll(models.Model):
-    question = models.CharField(_(u'Question'), max_length=200, help_text=_(u'Your question. Please add an "?" to the end.'))
-    pub_date = models.DateTimeField(_(u'date published'))
+...
 
-    ...
+def was_published_today(self):
+    return self.pub_date.date() == datetime.date.today()
+was_published_today.short_description = _(u'Published today?')
 
-    def was_published_today(self):
-        return self.pub_date.date() == datetime.date.today()
-    was_published_today.short_description = _(u'Published today?')
+class Choice(models.Model):
+poll = models.ForeignKey(Poll, verbose_name=_(u'Poll'))
+choice = models.CharField(_(u'Choice'), max_length=200)
+votes = models.IntegerField(_(u'Votes'))
 
-    class Choice(models.Model):
-    poll = models.ForeignKey(Poll, verbose_name=_(u'Poll'))
-    choice = models.CharField(_(u'Choice'), max_length=200)
-    votes = models.IntegerField(_(u'Votes'))
-
-    ...
+...
+{% endcodeblock %}
 
 ### Lokalisierung der HTML-Templates
 
 In den HTML-Templates wird eine etwas andere Syntax benutzt. Zuerst muss am Anfang der Datei das Templatetag für die Internationalisierung geladen werden.
 
-Um eine einfache Zeichenkette zu markieren, benutzt man {% raw %}`{% trans "" %}`{% endraw %}. Es gibt auch Möglichkeiten Variablen oder lange Blöcke zu übersetzten. Hier verweise ich der Einfachheit halber auf die Dokumentation.
+Um eine einfache Zeichenkette zu markieren, benutzt man `{% raw %}{% trans "" %}{% endraw %}`. Es gibt auch Möglichkeiten Variablen oder lange Blöcke zu übersetzten. Hier verweise ich der Einfachheit halber auf die Dokumentation.
 
-    # polls/poll_list.html
+{% codeblock polls/poll_list.html lang:html %}
+{% raw %}
+{% load i18n %}
 
-    {% raw %}{% load i18n %}{% endraw %}
+...
 
-    ...
+{% else %}
+    <p>{% trans "No polls are available." %}</p>
+{% endif %}
+{% endraw %}
+{% endcodeblock %}
 
-    {% raw %}{% else %}{% raw %}
-        <p>{% trans "No polls are available." %}</p>
-    {% raw %}{% endif %}{% raw %}
+Die Pluralisierung funktioniert (leider) nicht mehr wie gewohnt, wenn man sie lokalisiert. Dafür muss man eine Abfrage im `{% raw %}{% if %}{% endraw %}`-ähnlichen Stil einbauen und die Menge eines Objektes abfragen.
 
-Die Pluralisierung funktioniert (leider) nicht mehr wie gewohnt, wenn man sie lokalisiert. Dafür muss man eine Abfrage im `{% if% }`-ähnlichen Stil einbauen und die Menge eines Objektes abfragen.
+{% codeblock polls/results.html lang:html %}
+{% raw %}
+{% load i18n %}
 
-    # polls/results.html
+...
 
-    {% load i18n %}
-
-    ...
-
-    <ul>
-    {% for choice in object.choice_set.all %}
-        <li>{{ choice.choice }} -- {{ choice.votes }} {% blocktrans count choice.votes as counter %}vote{% plural %}votes{% endblocktrans %}</li>
-    {% endfor %}
-    </ul>
+<ul>
+{% for choice in object.choice_set.all %}
+    <li>{{ choice.choice }} -- {{ choice.votes }} {% blocktrans count choice.votes as counter %}vote{% plural %}votes{% endblocktrans %}</li>
+{% endfor %}
+</ul>
+{% endraw %}
+{% endcodeblock %}
 
 ### Erzeugen der Sprachdateien
 
@@ -175,7 +184,9 @@ Um jetzt eine Übersetzung für die Applikation oder das Projekt zu erzeugen, mu
 
 Im Terminal bewegt man sich jetzt in den Projekt-Root (oder in einen Applikations-Root) und führt diesen Befehl aus:
 
-    django-admin.py makemessages -l de
+{% codeblock lang:sh %}
+django-admin.py makemessages -l de
+{% endcodeblock %}
 
 Damit wird die Sprachdatei für "Deutsch" angelegt. Diese findet man in einem Unterordner von `locale`.
 
@@ -183,7 +194,9 @@ Mit einem einfachen Texteditor oder einem `.po`-Editor kann man diese jetzt übe
 
 Wenn man damit fertig ist, führt man im Terminal diesen Befehl aus:
 
-    django-admin.py compilemessages
+{% codeblock lang:sh %}
+django-admin.py compilemessages
+{% endcodeblock %}
 
 Dadurch wird die Datei in eine `.mo`-Datei umgewandelt.
 

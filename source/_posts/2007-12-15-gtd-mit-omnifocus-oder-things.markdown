@@ -14,7 +14,7 @@ Ich hatte bis heute  [OmniFocus](http://www.omnigroup.com/applications/omnifocus
 
 Ein direkter Vergleichstest wäre aber ungerecht, da OmniFocus kurz vor der Veröffentlichung steht, Things aber erst in Alpha-Version vorliegt.
 
-Da man 50&nbsp;% Ermäßigung bekommt, wenn man OmniFocus schon jetzt bestellt, wollte ich unbedingt beide Produkte testen, bevor ich mich entscheide.
+Da man 50 % Ermäßigung bekommt, wenn man OmniFocus schon jetzt bestellt, wollte ich unbedingt beide Produkte testen, bevor ich mich entscheide.
 
 ### OmniFocus ###
 
@@ -70,13 +70,13 @@ Im Gegensatz zu OmniFocus können Projekten und Aufgaben auch mehrere Schlagwort
 
 Über eine Schlagwort-Filterleiste kann man später leicht die richtigen Aufgaben finden.
 
-Im Gegensatz zu anderen GTD-Werkzeugen hat Things eine interessante Neuerung für ein Problem gefunden, was in üblichen Werkzeugen immer lästig ist: Projekte die nie Enden. Diese kann man in so genannten *Areas* gruppieren. Sowohl Projekte als auch einzelnen Aufgaben können hier gruppiert werden. Ein mögliches Beispiel wäre z.&nbsp;B. „Wohnung verschönern“.
+Im Gegensatz zu anderen GTD-Werkzeugen hat Things eine interessante Neuerung für ein Problem gefunden, was in üblichen Werkzeugen immer lästig ist: Projekte die nie Enden. Diese kann man in so genannten *Areas* gruppieren. Sowohl Projekte als auch einzelnen Aufgaben können hier gruppiert werden. Ein mögliches Beispiel wäre z. B. „Wohnung verschönern“.
 
 Im Bereich *People* kann man Personen seines Adressbuches auswählen und sie bestimmten Projekten zuordnen, was derzeit aber noch nicht über ein Netzwerk verbunden ist.
 
 Erledigte Aufgaben und Projekte werden, sofern gewünscht in bestimmten Abständen archiviert. Dies kann man aber auch gleich manuell erledigen.
 
-Die Liste von zukünftigen Verbesserungen ist lang und lässt noch auf großes Hoffen. Wichtige Punkte, wie z.&nbsp;B. wiederkehrende Aufgaben, Integration von iCal, Mail.app oder intelligente Ordner sind schon geplant.
+Die Liste von zukünftigen Verbesserungen ist lang und lässt noch auf großes Hoffen. Wichtige Punkte, wie z. B. wiederkehrende Aufgaben, Integration von iCal, Mail.app oder intelligente Ordner sind schon geplant.
 
 
 ### Fazit ###

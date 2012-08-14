@@ -77,20 +77,23 @@ Wenn das Datenkonzept fertig gestellt ist, wird die Datenbank in einer einfach z
 
 Das folgende Beispiel (von der Django-Website) zeigt den Code von zwei Tabellen, einer „Reporter“-Tabelle und einer „Artikel“-Tabelle:
 
-    class Reporter(models.Model):
-        full_name = models.CharField(max_length=70)
+{% codeblock models.py lang:django %}
+class Reporter(models.Model):
+    full_name = models.CharField(max_length=70)
 
-        def __unicode__(self):
-            return self.full_name
+    def __unicode__(self):
+        return self.full_name
 
-    class Article(models.Model):
-        pub_date = models.DateTimeField()
-        headline = models.CharField(max_length=200)
-        content = models.TextField()
-        reporter = models.ForeignKey(Reporter)
+class Article(models.Model):
+    pub_date = models.DateTimeField()
+    headline = models.CharField(max_length=200)
+    content = models.TextField()
+    reporter = models.ForeignKey(Reporter)
 
-        def __unicode__(self):
-            return self.headline
+    def __unicode__(self):
+        return self.headline
+
+{% endcodeblock %}
 
 Mit einem kurzen Befehl wird Django im Anschluss daran mitgeteilt, dass die nötigen Tabellen in der Datenbank angelegt werden sollen. Django unterstützt eine Menge Datenbanken (SQLite3, MySQL, PostgreSQL, Oracle) von Haus aus. Weitere können durch Drittanbieter hinzugefügt werden.
 
@@ -110,13 +113,15 @@ Mit ein wenig Wissen um [Regular Expressions]( http://www.regular-expressions.in
 
 Dieses kurze Beispiel aus der Django-Dokumentation zeigt die Konfiguration einiger URLs:
 
-    from django.conf.urls.defaults import *
+{% codeblock urls.py lang:django %}
+from django.conf.urls.defaults import *
 
-    urlpatterns = patterns('',
-        (r'^articles/(\d{4})/$', 'mysite.views.year_archive'),
-        (r'^articles/(\d{4})/(\d{2})/$', 'mysite.views.month_archive'),
-        (r'^articles/(\d{4})/(\d{2})/(\d+)/$', 'mysite.views.article_detail'),
-    )
+urlpatterns = patterns('',
+    (r'^articles/(\d{4})/$', 'mysite.views.year_archive'),
+    (r'^articles/(\d{4})/(\d{2})/$', 'mysite.views.month_archive'),
+    (r'^articles/(\d{4})/(\d{2})/(\d+)/$', 'mysite.views.article_detail'),
+)
+{% endcodeblock %}
 
 Vielleicht mag dies auf den ersten Blick etwas seltsam aussehen oder nicht gleich verständlich sein, aber keine Sorge, das legt sich sehr schnell, wenn die Grundlagen von Regular Expressions verstanden sind.
 
@@ -145,33 +150,42 @@ Django-Templates lassen keine Programmierung (Python) oder Datenbankabfragen (SQ
 Wem die [Grundfunktionen der Templatesprache](http://docs.djangoproject.com/en/dev/ref/templates/builtins/#ref-templates-builtins) nicht ausreichen, der kann [eigene Filter oder Tags](http://docs.djangoproject.com/en/dev/howto/custom-template-tags/#howto-custom-template-tags) scheiben, was oft nur wenige Zeilen Code erfordert.
 
 Ein Grundtemplate sieht in der Django-Dokumentation z. B. so aus:
+
+{% codeblock base.html lang:html %}
 {% raw %}
-    <html>
-    <head>
-        <title>{% block title %}{% endblock %}</title>
-    </head>
-    <body>
-        <img src="sitelogo.gif" alt="Logo" />
-        {% block content %}{% endblock %}
-    </body>
-    </html>
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <img src="sitelogo.gif" alt="Logo" />
+    {% block content %}{% endblock %}
+</body>
+</html>
 {% endraw %}
+{% endcodeblock %}
+
+
 Das niedrigere Template, hier eine Detailseite für einen Artikel, überschreibt dann die Blöcke nach Belieben und erbt den Rest des Grundtemplates:
+
+{% codeblock article.html lang:html %}
 {% raw %}
-    {% extends "base.html" %}
+{% extends "base.html" %}
 
-    {% block title %}Articles for {{ year }}{% endblock %}
+{% block title %}Articles for {{ year }}{% endblock %}
 
-    {% block content %}
+{% block content %}
     <h1>Articles for {{ year }}</h1>
 
     {% for article in article_list %}
-    <p>{{ article.headline }}</p>
-    <p>By {{ article.reporter.full_name }}</p>
-    <p>Published {{ article.pub_date|date:"F j, Y" }}</p>
+        <p>{{ article.headline }}</p>
+        <p>By {{ article.reporter.full_name }}</p>
+        <p>Published {{ article.pub_date|date:"F j, Y" }}</p>
     {% endfor %}
-    {% endblock %}
+{% endblock %}
 {% endraw %}
+{% endcodeblock %}
+
 ### Erweitern von Django
 
 Eine Besonderheit von Django ist die Möglichkeit, das eigene Projekt mit Applikationen zu erweitern. Diese Applikationen sind mehr als nur Plugins oder Extensions, sondern Module (wie z. B. Module in ExpressionEngine). Fast alles, was in Django benutzt wird, ist eine eigene Applikation. Sogar das Admin-Interface ist ein eigenes Modul, was nach belieben benutzt oder nicht benutzt werden kann.
