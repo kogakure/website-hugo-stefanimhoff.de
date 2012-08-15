@@ -10,7 +10,7 @@ group :development do
   gem "sass", "~> 3.2.0"
   gem "haml", "~> 3.1.7"
   gem "compass", "~> 0.12.2"
-  gem "susy", "~> 1.0.rc.4"
+  gem "susy", "~> 1.0"
   gem "rubypants", "~> 0.2.0"
   gem "rb-fsevent", "~> 0.9.1"
   gem "stringex", "~> 1.4.0"
