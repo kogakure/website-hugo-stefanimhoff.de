@@ -2,8 +2,8 @@
 layout: post
 title: "Plugin-Testseite"
 date: 2012-07-25 14:00
-categories: 
-tags: 
+categories:
+tags:
 ---
 
 # Abbreviations
@@ -20,16 +20,44 @@ tags:
 
 Wenn man einen Firmennamen schreibt, sollte dies ersetzt werden:
 
-Max Mustermann & Söhne
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Peter & Söhne. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+[√] Max Mustermann & Söhne
 
 Wie sieht es mit Links aus?
 
-[Max Mustermann & Söhne](http://www.google.de/webhp?sourceid=chrome-instant&ie=UTF-8#q=test&hl=de "Max Mustermann & Söhne")
+[?] [Max Mustermann & Söhne](http://www.google.de/webhp?sourceid=chrome-instant&ie=UTF-8&q=test&hl=de "Max Mustermann & Söhne")
 
 Und was ist mit diesem bizarren Link:
 
-[Scholz](http://www.google.de/webhp?sourceid=chrome-instant&ie=UTF-8#q=test&hl=de) & [Friends](http://www.google.de/webhp?sourceid=chrome-instant&ie=UTF-8#q=test&hl=de).
+[?] [Scholz](http://www.google.de/webhp?sourceid=chrome-instant&ie=UTF-8&q=test&hl=de) & [Friends](http://www.google.de/webhp?sourceid=chrome-instant&ie=UTF-8#q=test&hl=de).
 
-Was ist, wenn es bereits im Code steht? <abbr title="Cascarding Style Sheets">CSS</abbr>
+[x] Mustermann <span class="amp">&amp;</span> Söhne
 
-Mustermann <span class="amp">&amp;</span> Söhne
+[√] Peter & der Wolf
+
+[√] Peter &amp; der Wolf
+
+[x] 1&1
+
+[√] <a href="http://google.de?test=1&lala=2&bubu=3">Peter & der Wolf</a>
+
+[√] <a href="http://google.de?test=1&amp;lala=2&amp;bubu=3">Peter & der Wolf</a>
+
+[√] Peter & der Wolf
+
+[√] Peter &amp; der Wolf
+
+[√] <a href="http://google.de?test=1&amp;lala=2&amp;bubu=3">Peter &amp; der Wolf</a>
+
+[√] Peter & der Wolf
+
+[√] Peter &amp; der Wolf
+
+[x|√] <a id="test" href="http://google.de?test=1&amp;lala=2&amp;bubu=3" title="Peter &amp; der Wolf" alt="Peter & der Wolf">Peter &amp; der Wolf</a>
+
+[√] Peter & der Wolf
+
+[√] Peter &amp; der Wolf
+
+[x|√] <a href="http://google.de?test=1&amp;lala=2&amp;bubu=3" title="Peter & der Wolf">Peter & der Wolf</a>
