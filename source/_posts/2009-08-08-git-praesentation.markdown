@@ -10,7 +10,7 @@ Auf dem 4. Treffen der Django-UserGroup Hamburg habe ich eine Präsentation übe
 
 <!-- more -->
 
-<a href="http://www.slideshare.net/kogakure/sei-kein-bldmann-und-nimm-git-1830449"><img src="/images/git-praesentation.jpg" width="605" height="300" alt="Sei (k)ein Blödmann und nimm Git!" /></a>
+<a href="http://www.slideshare.net/kogakure/sei-kein-bldmann-und-nimm-git-1830449"><img src="/img/git-praesentation.jpg" width="605" height="300" alt="Sei (k)ein Blödmann und nimm Git!" /></a>
 
 Seit ungefähr 2 Jahren benutze ich jetzt bereits das Versionskontrollsystem *Git* und bin sehr zufrieden damit. Mittlerweile konnten wir unseren Arbeitgeber ebenfalls überzeugen, Git einzusetzen und seit ca. zwei Monaten haben wir jetzt einen Git-Server.
 

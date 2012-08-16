@@ -10,7 +10,7 @@ Heute empfehle ich ein Buch, das ich vor kurzem erst beendet habe, und schon ein
 
 <!-- more -->
 
-<a href="http://www.amazon.de/gp/product/0307463745?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=19454&creativeASIN=0307463745"><img width="250" height="378" src="/images/rework.png" alt="37signals: Rework" /></a>
+<a href="http://www.amazon.de/gp/product/0307463745?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=19454&creativeASIN=0307463745"><img width="250" height="378" src="/img/rework.png" alt="37signals: Rework" /></a>
 
 Ich bin schon seit langem ein großer Anhänger der Philosophie von Einfachheit und Schlichtheit, die *37signals* mit Erfolg kultivieren. Bereits ihr erstes (kostenloses) Buch [Getting Real](http://gettingreal.37signals.com/) (auch als [Paperback-Version](http://www.amazon.de/gp/product/0578012812?ie=UTF8&amp;tag=kogakurede-21&amp;linkCode=as2&amp;camp=1638&amp;creative=19454&amp;creativeASIN=0578012812) erhältlich) habe ich mit großem Interesse gelesen.
 

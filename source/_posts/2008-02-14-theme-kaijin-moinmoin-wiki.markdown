@@ -10,7 +10,7 @@ Seit über einem Jahr benutze ich jetzt das [MoinMoin Wiki](http://moinmo.in/ "M
 
 <!-- more -->
 
-<a href="/files/moinmoin-kaijin-theme.zip"><img src="/images/moinmoin-kaijin.png" width="605" height="531" alt="MoinMoin Theme Kaijin" /></a>
+<a href="/files/moinmoin-kaijin-theme.zip"><img src="/img/moinmoin-kaijin.png" width="605" height="531" alt="MoinMoin Theme Kaijin" /></a>
 
 Dieses Theme heißt *Kaijin* (灰塵), japanisch für „Asche und Staub“ und basiert auf dem MoinMoin Theme „modern“. Die orginale Python-Datei habe ich (bis auf die nötigen Stellen) nicht verändert.
 
