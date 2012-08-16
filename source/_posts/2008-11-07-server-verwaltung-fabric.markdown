@@ -6,7 +6,7 @@ categories:
 tags: [python, deployment, server, fabric]
 ---
 
-Vor einiger Zeit habe ich meinen Workflow mit Capistrano beschrieben, und wie man damit einen Server fernwarten kann. Kürzlich bin ich auf das in Python geschriebene, viel schlankere Tool *Fabric* aufmerksam gemacht worden.
+Vor einiger Zeit habe ich meinen Workflow mit Capistrano beschrieben, und wie man damit einen Server fernwarten kann. Kürzlich bin ich auf das in Python geschriebene, viel schlankere Tool <cite>Fabric</cite> aufmerksam gemacht worden.
 
 <!-- more -->
 

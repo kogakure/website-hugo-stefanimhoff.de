@@ -39,7 +39,7 @@ Zusätzlich will ich noch wissen, wie man eine Personal-Version von ExpressionEn
 
 ### April ###
 
-Dieser Monat ist der Kompilierungsmonat, jedenfalls installiere ich die *Apple Developer Tools*, Subversion unter Mac OS X, und suche nach verschiedenen Linux-Paketen.
+Dieser Monat ist der Kompilierungsmonat, jedenfalls installiere ich die <cite>Apple Developer Tools</cite>, Subversion unter Mac OS X, und suche nach verschiedenen Linux-Paketen.
 
 ExpressionEngine steht immer noch auf meinem Tagesplan, dieses Mal mit `categories`, `conditionals`, Debugging-, Geschwindigkeitsmessungs- und Statistik-Fragen.
 
@@ -67,9 +67,9 @@ Im Juli beschäftigen mich wieder stark Django und Python: Django Filter, Statis
 
 Ich schaue mir die [SQLite3](http://www.sqlite.org/)-Datenbank und ihre Syntax an, da sie für eine lokale Entwicklung geradezu optimal ist.
 
-Irgendetwas treibt mich in diesem Monat dazu, mich nach den Glanzlichtern der Internet-Goldgräberzeit zu erkundigen. Was wurde aus *Balthaser Studios*, *Egomedia*, *Alien Arts* oder *All Media Studios*. Oder auch dem <cite>The Horus Project</cite>. Hach, irgendwie war die Flash-Ära lustig. Ein pures <q>wer hat die besseren Animationen</q>. Content? Null.
+Irgendetwas treibt mich in diesem Monat dazu, mich nach den Glanzlichtern der Internet-Goldgräberzeit zu erkundigen. Was wurde aus <cite>Balthaser Studios</cite>, <cite>Egomedia</cite>, <cite>Alien Arts</cite> oder <cite>All Media Studios</cite>. Oder auch dem <cite>The Horus Project</cite>. Hach, irgendwie war die Flash-Ära lustig. Ein pures <q>wer hat die besseren Animationen</q>. Content? Null.
 
-An Musik suche ich im Juli nach dem *Halo 3* Soundtrack und nach den Lyrics von *Sound Of Silence*.
+An Musik suche ich im Juli nach dem <cite>Halo 3</cite> Soundtrack und nach den Lyrics von <cite>Sound Of Silence</cite>.
 
 Ich erkundige mich, ob Jean-Yves Mitton, ein französischer Zeichner, mal wieder einen Band meiner Lieblings-Comicreihe [Quetzalcoatl](http://mitton.free.fr/docs/QUETZALCOATL.htm) fertiggestellt hat. Er arbeitet leider sehr langsam, dafür mit sehr hoher Qualität, im Durchschnitt schafft er nicht mal einen Band pro Jahr. Der letzte Band erscheint dann nach zehn Jahren seit dem Start der Reihe 2008.
 
@@ -79,7 +79,7 @@ Und ich suche nach dem Film [Staplerfahrer Klaus](http://youtube.com/watch?v=Ngq
 
 ### August ###
 
-Im August erkundige ich mich nach Googles PageRank, denn mittlerweile sind schon fast vier Monate vergangen, und ich habe immer noch einen PageRank von Null. Ich befürchte die böse *Google Sandbox* (zu recht, wie ich feststelle).
+Im August erkundige ich mich nach Googles PageRank, denn mittlerweile sind schon fast vier Monate vergangen, und ich habe immer noch einen PageRank von Null. Ich befürchte die böse <cite>Google Sandbox</cite> (zu recht, wie ich feststelle).
 
 In diesem Monat erkundige ich mich auch nach Django-Hostern und finde heraus, dass TextDrive jetzt [Joyent](http://www.joyent.com/) ist. Ich entscheide mich für [Webfaction](http://www.webfaction.com/?affiliate=kogakure) als neuen Webhoster.
 
@@ -91,7 +91,7 @@ Zum ersten mal in meinem Leben beschäftige ich mich im späten August mit [LaTe
 
 Auf meinem Nachttisch liegt laut Google Suche Machiavellis <cite>[Der Fürst](http://www.amazon.de/gp/product/3458344721/ref=as_li_ss_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=3458344721&linkCode=as2&tag=kogakurede-21)</cite>.
 
-In der [Autostadt Wolfsburg](http://www.autostadt.de/) eröffnet ein neues japanisches Restaurant, das *Anan*, mit extra einflogenem, japanischem Meisterkoch.
+In der [Autostadt Wolfsburg](http://www.autostadt.de/) eröffnet ein neues japanisches Restaurant, das <cite>Anan</cite>, mit extra einflogenem, japanischem Meisterkoch.
 
 Das Sommerloch geht langsam zu Ende, also erkundige ich mich, was meine Lieblingsserien so machen, und wann die Staffeln wieder starten: [Lost](http://abc.go.com/primetime/lost/), [StarGate SG-1 und StarGate Atlantis](http://stargate.mgm.com/), [Monk](http://www.usanetwork.com/series/monk/) und [Battlestar Galactica](http://www.scifi.com/battlestar/).
 
@@ -103,7 +103,7 @@ Auch mit SQLite3 schaue ich mir noch näher an. Eine wirklich feine, kleine und 
 
 Mitte September will ich von Google wissen, wo eigentlich der Experimentalfilm [A Scanner Darkly](http://wip.warnerbros.com/ascannerdarkly/) bleibt. In den U.S.A. lief er schon vor über einem Jahr. Naja, lohnt wohl wieder nicht, so was in Deutsche Kinos zu bringen. Also muss *man* sich ja wieder woanders seinen Kinoeintritt holen. Selber schuld, die Filmstudios.
 
-Eine ISO-Prüfung im Haus führt mich zu *Dilbert* und *Dogbert*, und ich kann den Bürokratiewahn mit einem lachenden Auge in der Comic lesend überstehen.
+Eine ISO-Prüfung im Haus führt mich zu <cite>Dilbert</cite> und Dogbert, und ich kann den Bürokratiewahn mit einem lachenden Auge in der Comic lesend überstehen.
 
 *Host Europe* prahlt laut damit, jetzt auch Python und Ruby anzubieten. Nach meiner Nachfrage, was mit Ruby on Rails oder Django sei, bekomme ich ein kleinlautes <q>Derzeit nicht</q>. Was soll ich dann mit den beiden Programmiersprachen?
 
@@ -113,9 +113,9 @@ Im September arbeite ich mich im Detail in die Befehlssyntax von git ein, was ab
 
 Immer noch beschäftigt mich LaTeX, es ist einfach cool, was man mit einem puren Texteditor erstellen kann.
 
-Ich setze mir ein neues Wiki auf, *DokuWiki* nervt irgendwie. Das neue Wiki heißt [MoinMoin](http://moinmo.in/) und basiert auf Python.
+Ich setze mir ein neues Wiki auf, <cite>DokuWiki</cite> nervt irgendwie. Das neue Wiki heißt [MoinMoin](http://moinmo.in/) und basiert auf Python.
 
-Ich schaue mir die *PostgreSQL*-Datenbank an, und stelle fest, das MySQL dagegen ja fast ein Kinderspielzeug ist. So ein Glück, dass Postgres die von Django favorisierte Datenbank ist.
+Ich schaue mir die <cite>PostgreSQL</cite>-Datenbank an, und stelle fest, das MySQL dagegen ja fast ein Kinderspielzeug ist. So ein Glück, dass Postgres die von Django favorisierte Datenbank ist.
 
 ActiveCollab, der OpenSource Projektmanager ist jetzt kommerziell, das Projekt wird aber von einem anderen Entwickler in der OpenSource-Lizenz als [ProjectPier](http://www.projectpier.org/) weiterentwickelt. Danke!
 
@@ -127,7 +127,7 @@ Ich lache herzlich über den [Eklat bei Kerner](http://www.welt.de/fernsehen/art
 
 Da ja bald Apples neues Betriebssystem [Leopard](http://www.apple.com/de/macosx/) erscheint, google ich schon mal nach passenden Space-Wallpapern.
 
-Diverse Suchen nach *Kuehne und Nagel Logistics* und einem *Leopard Widget* bezeugen es – Leopard ist da. FedEx versagt in meinem Fall total, so bekomme ich Leopard erst am Samstag morgen.
+Diverse Suchen nach <cite>Kuehne und Nagel Logistics</cite> und einem *Leopard Widget* bezeugen es – Leopard ist da. FedEx versagt in meinem Fall total, so bekomme ich Leopard erst am Samstag morgen.
 
 MySQL und PostgreSQL muss ich mir selber kompilieren, aber Apache 2 und PHP sind schon bei Leopard dabei. Außerdem stelle ich fest, dass mein G5 zu langsam für die neuen iChat-Videohintergründe ist. Schade.
 
@@ -149,7 +149,7 @@ Ich stelle fest, dass [Symphony 2](http://sneakpeek.symphony21.com/) im Anmarsch
 
 Irgendwie würde ich gerne ASL lernen, aber mir fehlt die Zeit.
 
-Die Idee von Amazons *Kindle* finde ich nach einigem Überlegen gar nicht so schlecht, doch ist er **A)** nicht in Deutschland verfügbar und **B)** potthässlich. Außerdem will ich als Bücherliebhaber die Dinger doch noch anfassen. Zusätzlich zum Buch für einen kleinen Aufpreis, das wär’ aber was.
+Die Idee von Amazons <cite>Kindle</cite> finde ich nach einigem Überlegen gar nicht so schlecht, doch ist er **A)** nicht in Deutschland verfügbar und **B)** potthässlich. Außerdem will ich als Bücherliebhaber die Dinger doch noch anfassen. Zusätzlich zum Buch für einen kleinen Aufpreis, das wär’ aber was.
 
 Git setze ich jetzt flächendeckend in fast jedem noch so kleinen Projekt ein.
 
@@ -165,9 +165,9 @@ Die neue Version von [CandyBar](http://www.panic.com/candybar/) kommt raus, und 
 
 Ich überlege mir von einem webbasierenden GTD-Werkzeug auf eine OS X Lösung umzusteigen und teste drei Wochen lang [Things](http://www.culturedcode.com/things/) und [OmniFocus](http://www.omnigroup.com/applications/omnifocus/) zugleich.
 
-Doch schon nach 14 Tagen steht für mich eigentlich fest: *Things* ist der Testsieger. Obwohl es derzeit noch weniger Funktionen als OmniFocus hat, fühlt es sich einfach *besser* an.
+Doch schon nach 14 Tagen steht für mich eigentlich fest: <cite>Things</cite> ist der Testsieger. Obwohl es derzeit noch weniger Funktionen als OmniFocus hat, fühlt es sich einfach *besser* an.
 
-Irgendwie kann ich es nicht lassen und kaufe mir einen [iPod touch](http://www.apple.com/de/ipodtouch/), den ich mit *Jailbreak* befreien will, was aber erstmal nicht klappt, weil Apple ein Update rausbringt, das die Sicherheitslücke schließt.
+Irgendwie kann ich es nicht lassen und kaufe mir einen [iPod touch](http://www.apple.com/de/ipodtouch/), den ich mit <cite>Jailbreak</cite> befreien will, was aber erstmal nicht klappt, weil Apple ein Update rausbringt, das die Sicherheitslücke schließt.
 
 Auf ARTE sehe ich einen interessanten Beitrag über die [Haddsch](http://de.wikipedia.org/wiki/Haddsch) - die Pilgerfahrt nach Mekka und google den genauen Verlauf nach. Diese Welt will sich mir einfach nicht erschließen. Den Teufel steinigen, auf einem Hügel sitzen und heulen, um einen Steinkasten wandern. Wem’s gefällt. Ach ja: Und ich trete aus der evangelischen Kirche aus.
 

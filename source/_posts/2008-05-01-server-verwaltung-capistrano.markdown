@@ -62,7 +62,7 @@ anzeigen lassen. Für meine Zwecke sind diese Befehle aber viel zu übertrieben,
 
 Die Befehle werden in der Programmiersprache [Ruby](http://www.ruby-lang.org/) geschrieben und können in den Dateien `Capfile`, `deploy.rb` oder in Plugin-Ordnern liegen.
 
-Der Einfachheit halber stehen alle meine Befehle direkt in der `Capfile`-Datei, zumal ich Django-Projekte habe, und daher eine andere Ordnerstruktur als bei *Ruby on Rails* vorliegt.
+Der Einfachheit halber stehen alle meine Befehle direkt in der `Capfile`-Datei, zumal ich Django-Projekte habe, und daher eine andere Ordnerstruktur als bei <cite>Ruby on Rails</cite> vorliegt.
 
 ### Beispiel-Datei
 

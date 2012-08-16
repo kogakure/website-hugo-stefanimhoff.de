@@ -12,7 +12,7 @@ Auf dem 4. Treffen der Django-UserGroup Hamburg habe ich eine Präsentation übe
 
 <a href="http://www.slideshare.net/kogakure/sei-kein-bldmann-und-nimm-git-1830449"><img src="/img/git-praesentation.jpg" width="605" height="300" alt="Sei (k)ein Blödmann und nimm Git!" /></a>
 
-Seit ungefähr 2 Jahren benutze ich jetzt bereits das Versionskontrollsystem *Git* und bin sehr zufrieden damit. Mittlerweile konnten wir unseren Arbeitgeber ebenfalls überzeugen, Git einzusetzen und seit ca. zwei Monaten haben wir jetzt einen Git-Server.
+Seit ungefähr 2 Jahren benutze ich jetzt bereits das Versionskontrollsystem <cite>Git</cite> und bin sehr zufrieden damit. Mittlerweile konnten wir unseren Arbeitgeber ebenfalls überzeugen, Git einzusetzen und seit ca. zwei Monaten haben wir jetzt einen Git-Server.
 
 Meine Abteilung ist bereits mit mehreren hundert Kundenprojekten und einigen internen Projekten auf den neuen Server umgezogen, einige vom Versionskontrollsystem Subversion, andere waren noch gar nicht in Versionskontrollsystemen erfasst.
 
