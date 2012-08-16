@@ -3,7 +3,7 @@
     {% if index %}
       <h1 class="entry-title"><a href="{{ root_url }}{{ post.url }}">{{ post.title | ampersand }}</a></h1>
     {% else %}
-      <h1 class="entry-title">{{ page.title | widont | ampersand }}</h1>
+      <h1 class="entry-title">{{ page.title | ampersand }}</h1>
     {% endif %}
     {% unless page.meta == false %}
       <p class="meta">
