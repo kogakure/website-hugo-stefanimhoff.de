@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Plugin-Testseite"
+title: "Plugin-Testseite mit mehreren Worten"
 date: 2012-07-25 14:00
 categories:
 tags:
