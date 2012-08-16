@@ -8,7 +8,7 @@
 # abbreviations in attributes or already surrounded by an abbreviation.
 #
 # If you have abbreviations with multiple meanings add `#` plus a number to
-# differenciate (DSL#1, DSL#2). During rendering this will be cut of.
+# differentiate (DSL#1, DSL#2). During rendering this will be cut of.
 #
 # For more examples how this works look into abbreviation.yml.
 #
