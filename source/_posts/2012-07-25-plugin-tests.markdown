@@ -5,6 +5,17 @@ date: 2012-07-25 14:00
 categories:
 tags:
 ---
+# I don't want all Rubypants (ellipsis and dashes are fine, though ...)
+
+This shit is only for Americans, so totally useless for Germans.
+
+[x] It transforms quotes, like "curly" or 'curly' into american ones.
+
+[x] Backticks-style quotes (<tt>``like this''</tt>) into "curly" quote
+
+[√] It will transform ellipsis like (...) into …
+
+[√] It will convert dashes like (--) or (---) into longer versions.
 
 # Widont
 
