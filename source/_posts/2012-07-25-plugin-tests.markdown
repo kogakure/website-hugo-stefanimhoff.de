@@ -5,6 +5,23 @@ date: 2012-07-25 14:00
 categories:
 tags:
 ---
+
+# Don’t break, boy
+
+Es ist z. B. kein Problem die z. T. gelieferte Ware zu stornieren. U. a. sagt man u. a., dass s. o. und u. s. w. bei uns i. d. R. abgekürzt werden, d. h. mit Punkt geschrieben.
+
+Es sind 16 px auf der Unterseite.
+
+Bitte überweisen sie 6000 $ oder 6.000 $, oder 3000 € bzw. 3.000 €, oder 1200 £ oder 1.200 £ oder 100 ¥ oder 1.00 ¥ wenn sie das lieber haben.
+
+Das Kostet 6 % der Gesamtsumme.
+
+Im Englischen misst man in inch. So sind 1 inch im Deutschen 2.56 cm gemessen.
+
+Die Personen W. B. Yeats und J. R. R. Tolkien sind Autoren
+
+Rechnen wir: 4 × 4 oder 40 × 432 oder 41 x 3234. Auch gerne mal 52 * 3 oder 33 / 11 oder 33 - 11 oder 33 + 12
+
 # I don't want all Rubypants (ellipsis and dashes are fine, though ...)
 
 This shit is only for Americans, so totally useless for Germans.
@@ -44,6 +61,7 @@ Vestibulum vestibulum fringilla sapien, ac dignissim diam pretium nec.
   </head>
   <body>
     <h1>HTML</h1>
+    <p>Das sind z. B. 16 px oder 6 %</p>
   </body>
 </html>
 {% endcodeblock %}
