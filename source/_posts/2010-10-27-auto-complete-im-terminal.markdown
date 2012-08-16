@@ -10,11 +10,11 @@ Für mich gehört ständige Verbesserung (改善, jap. Kaizen) zur täglichen Ar
 
 <!-- more -->
 
-Für mich gehört ständige Verbesserung (改善, jap. Kaizen) zur täglichen Arbeit dazu. Ich klone die Jobs meiner Kunden über Gitosis von unserem Git-Server. Um mir Schreibarbeit zu sparen habe ich mir schon vor zwei Jahren ein kleines Bash-Skript <code>gcl</code> geschrieben, das als Parameter den Namen eine Repositorys erwartet und dieses dann an die richtige Position klont und auch gleich noch den Ordner im Finder für mich öffnet.
+Für mich gehört ständige Verbesserung (改善, jap. Kaizen) zur täglichen Arbeit dazu. Ich klone die Jobs meiner Kunden über Gitosis von unserem Git-Server. Um mir Schreibarbeit zu sparen habe ich mir schon vor zwei Jahren ein kleines Bash-Skript `gcl` geschrieben, das als Parameter den Namen eine Repositorys erwartet und dieses dann an die richtige Position klont und auch gleich noch den Ordner im Finder für mich öffnet.
 
-So weit bin ich auch schon sehr zufrieden damit gewesen und glaube meine Arbeitsweise ist immer noch zehn mal so schnell, als über eine GUI. Doch was mich seit längerem schon gestört hat, ist die Tatsache, dass ich den Job-Namen als Parameter nach meinem Terminal-Befehl anhängen muss: <code>gcl domain.de</code>. Auch wenn ich recht schnell tippe, ermüdet es doch lange Domainnamen zu tippen oder sich die vielen hundert Kundenprojekte in Erinnerung zu rufen.
+So weit bin ich auch schon sehr zufrieden damit gewesen und glaube meine Arbeitsweise ist immer noch zehn mal so schnell, als über eine GUI. Doch was mich seit längerem schon gestört hat, ist die Tatsache, dass ich den Job-Namen als Parameter nach meinem Terminal-Befehl anhängen muss: `gcl domain.de`. Auch wenn ich recht schnell tippe, ermüdet es doch lange Domainnamen zu tippen oder sich die vielen hundert Kundenprojekte in Erinnerung zu rufen.
 
-Doch damit ist jetzt Schluss. Ich habe schon seit längerem eine Completion-Datei für Git im Einsatz und mich daher zu Recht gefragt, ob das nicht auch möglich sein könnte, dass ich mir meine eigene Completion schreibe. Und nach einer halben Stunde Recherche wußte ich mehr über den ominösen Terminal-Befehl <code>complete</code>.
+Doch damit ist jetzt Schluss. Ich habe schon seit längerem eine Completion-Datei für Git im Einsatz und mich daher zu Recht gefragt, ob das nicht auch möglich sein könnte, dass ich mir meine eigene Completion schreibe. Und nach einer halben Stunde Recherche wußte ich mehr über den ominösen Terminal-Befehl `complete`.
 
 Es ist möglich Auto-Complete an beliebige Befehle anzuhängen. Die Details sind sehr komplex und ich habe gerade an der Oberfläche gekratzt, aber im Prinzip ist es möglich beliebige Strings als Auto-Complete zu liefern.
 
@@ -31,11 +31,11 @@ SSH_COMPLETE=( $(cut -f1 -d' ' ~/.ssh/known_hosts |\
 complete -o default -W "${SSH_COMPLETE[*]}" ssh
 {% endcodeblock %}
 
-Dieser Befehl schneidet aus der Datei mit dem bereits besuchten Hosts vom ersten Zeichen bis zum ersten Leerzeichen die Zeichenkette aus, der eigentliche Schlüssel wird also verworfen. Dann werden alle Kommata durch Zeilenumbrüche ersetzt, was dazu dient Kombinationen aus IP und Hostname zu trennen. Anschließend werden diese sortiert und Duplikate entfernt und im letzten Schritt werden alle Zeichenketten entfernt, die nur aus Zahlen oder Punkten bestehen, also die IPs. Zurück bleibt eine Liste, in der alle Hostnamen zeilenweise stehen. Der Abschließende Befehl registriert diese Zeichenkette mit dem Befehl <code>ssh</code>. Es reicht ab jetzt aus, wenn man den Befehl tippt und dann TAB drückt, um eine Liste aller Server zu sehen, oder einige Buchstaben um die Server zu vervollständigen.
+Dieser Befehl schneidet aus der Datei mit dem bereits besuchten Hosts vom ersten Zeichen bis zum ersten Leerzeichen die Zeichenkette aus, der eigentliche Schlüssel wird also verworfen. Dann werden alle Kommata durch Zeilenumbrüche ersetzt, was dazu dient Kombinationen aus IP und Hostname zu trennen. Anschließend werden diese sortiert und Duplikate entfernt und im letzten Schritt werden alle Zeichenketten entfernt, die nur aus Zahlen oder Punkten bestehen, also die IPs. Zurück bleibt eine Liste, in der alle Hostnamen zeilenweise stehen. Der Abschließende Befehl registriert diese Zeichenkette mit dem Befehl `ssh`. Es reicht ab jetzt aus, wenn man den Befehl tippt und dann TAB drückt, um eine Liste aller Server zu sehen, oder einige Buchstaben um die Server zu vervollständigen.
 
 ### Auto-Complete für Git-Repositorys
 
-Für mich reichte das als Denkanstoß, um eine Lösung für mein Problem zu erarbeiten. Wenn man Gitosis verwendet, um seine Git-Repositorys zu verwalten, dann hat man für jede Installation von Gitosis ein Admin-Repository, dass geklont wird. Darin befinden sich die Schlüssel aller Mitarbeiter, die mit Git arbeiten und eine Konfigurations-Datei: <code>gitosis.conf</code>.
+Für mich reichte das als Denkanstoß, um eine Lösung für mein Problem zu erarbeiten. Wenn man Gitosis verwendet, um seine Git-Repositorys zu verwalten, dann hat man für jede Installation von Gitosis ein Admin-Repository, dass geklont wird. Darin befinden sich die Schlüssel aller Mitarbeiter, die mit Git arbeiten und eine Konfigurations-Datei: `gitosis.conf`.
 
 In dieser definiert man, wer an welchem Job arbeiten darf. So ungefähr könnte eine Konfigurationsdatei von Gitosis aussehen:
 
@@ -72,10 +72,10 @@ complete -o default -W "${GIT_JOBS_COMPLETE[*]}" gcl
 
 Ich suche mir alle Zeilen aus allen gitosis.conf-Dateien, die den String "writable" enthalten. Da ich mehre Gitosis-Instanzen verwalte, kann ich nicht nur in einer Datei suchen.
 
-Im nächsten Schritt schneide ich mit <code>cut</code> vom Delimiter "=" an die Zeichenkette aus, ich verwerfe also alles was vor den eigentlichen Git-Repositorys steht.
+Im nächsten Schritt schneide ich mit `cut` vom Delimiter "=" an die Zeichenkette aus, ich verwerfe also alles was vor den eigentlichen Git-Repositorys steht.
 
 Anschließend ersetze ich alle Leerzeichen durch Zeilenumbrüche. Dies ist hier möglich, da die Repository-Namen keine Leerzeichen enthalten dürfen, und daher nur zwischen den Namen Leerzeichen stehen.
 
 Als letzten Schritt sortiere ich die Git-Repository-Namen und entferne Duplikate.
 
-Die letzte Zeile registriert für meine Klon-Skript <code>gcl</code> die Zeichenkette für Auto-Complete. Wenn ich jetzt den Befehl eingebe und TAB drücke, fragt mich das Terminal, ob ich alle Jobs sehen möchte (weil es sehr viele sind, kommt diese Sicherheitsabfrage, bei geringen Anzahlen zeigt das Terminal gleich alle Ergebnisse). Oder ich tippe nach dem Befehl schon die ersten Zeichen eines Jobs und TAB vervollständigt diesen für mich.
+Die letzte Zeile registriert für meine Klon-Skript `gcl` die Zeichenkette für Auto-Complete. Wenn ich jetzt den Befehl eingebe und TAB drücke, fragt mich das Terminal, ob ich alle Jobs sehen möchte (weil es sehr viele sind, kommt diese Sicherheitsabfrage, bei geringen Anzahlen zeigt das Terminal gleich alle Ergebnisse). Oder ich tippe nach dem Befehl schon die ersten Zeichen eines Jobs und TAB vervollständigt diesen für mich.

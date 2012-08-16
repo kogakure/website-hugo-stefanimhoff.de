@@ -24,7 +24,7 @@ Dieses Theme ist unter einer <a rel="license" href="http://creativecommons.org/l
 
 **English:**
 
-This Theme is called *Kaijin* (灰塵), Japanese for “Ash and Dust” and is based on the MoinMoin Theme “modern”. I didn't changed the original python file (except to the needed lines).
+This Theme is called *Kaijin* (灰塵), Japanese for *Ash and Dust* and is based on the MoinMoin Theme <cite>modern</cite>. I didn't changed the original python file (except to the needed lines).
 
 Unfortunately is there many non-semantic Code in MoinMoin (e. g. Blockquotes aren’t labeled as `<blockquote>`), and some elements can’t be changed without much effort.
 

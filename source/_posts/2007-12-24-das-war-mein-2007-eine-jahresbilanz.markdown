@@ -71,7 +71,7 @@ Irgendetwas treibt mich in diesem Monat dazu, mich nach den Glanzlichtern der In
 
 An Musik suche ich im Juli nach dem *Halo 3* Soundtrack und nach den Lyrics von *Sound Of Silence*.
 
-Ich erkundige mich, ob <cite>Jean-Yves Mitton</cite>, ein französischer Zeichner, mal wieder einen Band meiner Lieblings-Comicreihe [Quetzalcoatl](http://mitton.free.fr/docs/QUETZALCOATL.htm) fertiggestellt hat. Er arbeitet leider sehr langsam, dafür mit sehr hoher Qualität, im Durchschnitt schafft er nicht mal einen Band pro Jahr. Der letzte Band erscheint dann nach zehn Jahren seit dem Start der Reihe 2008.
+Ich erkundige mich, ob Jean-Yves Mitton, ein französischer Zeichner, mal wieder einen Band meiner Lieblings-Comicreihe [Quetzalcoatl](http://mitton.free.fr/docs/QUETZALCOATL.htm) fertiggestellt hat. Er arbeitet leider sehr langsam, dafür mit sehr hoher Qualität, im Durchschnitt schafft er nicht mal einen Band pro Jahr. Der letzte Band erscheint dann nach zehn Jahren seit dem Start der Reihe 2008.
 
 In diesem Monat schaue ich mir im Fernsehen vermutlich [Thoughtcrimes](http://www.imdb.com/title/tt0339785/) an, einen Film, der irgendwie gar nicht so schlecht war, auch wenn die Story etwas seltsam daherkommt.
 
@@ -83,7 +83,7 @@ Im August erkundige ich mich nach Googles PageRank, denn mittlerweile sind schon
 
 In diesem Monat erkundige ich mich auch nach Django-Hostern und finde heraus, dass TextDrive jetzt [Joyent](http://www.joyent.com/) ist. Ich entscheide mich für [Webfaction](http://www.webfaction.com/?affiliate=kogakure) als neuen Webhoster.
 
-Im August entdecke ich [git](http://git.or.cz/) für mich, <cite>Linus Torvalds</cite> fantastisches Versionskontrollsystem. Git ist Subversion in vielen Punkten um Längen vorraus.
+Im August entdecke ich [git](http://git.or.cz/) für mich, Linus Torvalds fantastisches Versionskontrollsystem. Git ist Subversion in vielen Punkten um Längen vorraus.
 
 Der [Mister Wong](http://www.mister-wong.de/)-Skandal im August ist mal wieder typisch und sehr lustig. Irgendein asiatisch-amerikanischer Typ regt sich **unglaublich** über die Karikatur eines Chinesen im Logo des Bookmark-Dienstes Mister Wong auf. Faschisten, ihr alle! Hier kommt die braune Keule! Man kann sich auch künstlich aufregen… Tsssss. Jedenfalls muss ein neues Logo her. Die Community soll aushelfen.
 

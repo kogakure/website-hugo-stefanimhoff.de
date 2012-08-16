@@ -10,7 +10,7 @@ Seit genau eineinhalb Jahren benutze ich jetzt die Prinzipien des *GTD* (*Gettin
 
 <!-- more -->
 
-<img src="/img/gtd-vorher.jpg" width="300" height="191" alt="GTD vorher" title="So sah die Inbox aus, bevor ich alle losen Enden sortiert hatte" /> <cite>David Allen</cite> stellt in seinem Buch ein interessantes System vor, mit dem man seine täglichen Aufgaben effektiv und effizient erledigen kann.
+<img src="/img/gtd-vorher.jpg" width="300" height="191" alt="GTD vorher" title="So sah die Inbox aus, bevor ich alle losen Enden sortiert hatte" /> David Allen stellt in seinem Buch ein interessantes System vor, mit dem man seine täglichen Aufgaben effektiv und effizient erledigen kann.
 
 Das Buch ist auch in **Deutsch** erhältlich unter dem Titel <cite>[Wie ich die Dinge geregelt kriege](http://www.amazon.de/gp/product/3492240607/ref=as_li_ss_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=3492240607&linkCode=as2&tag=kogakurede-21)</cite>.
 
@@ -64,7 +64,7 @@ In der ganzen Zeit bin ich zeitweise auch mal zweigleisig gefahren, um ein neues
 
 ### Tracks ###
 
-[Tracks](http://www.rousette.org.uk/projects/ "Tracks") ist eine mit [Ruby on Rails](http://www.rubyonrails.org/ "Ruby on Rails") programmierte Web-Applikation, die die Prinzipien von <cite>David Allens</cite> GTD auf einfache und effiziente Weise nutzt.
+[Tracks](http://www.rousette.org.uk/projects/ "Tracks") ist eine mit [Ruby on Rails](http://www.rubyonrails.org/ "Ruby on Rails") programmierte Web-Applikation, die die Prinzipien von David Allens GTD auf einfache und effiziente Weise nutzt.
 
 Die Anwendung basiert zwar auf Ruby on Rails, erfordert aber keine Programmierkenntnisse in Ruby und läuft relativ schnell und leicht mit sqlite3. Alternativ können auch mächtigere Datenbanken benutzt werden.
 
