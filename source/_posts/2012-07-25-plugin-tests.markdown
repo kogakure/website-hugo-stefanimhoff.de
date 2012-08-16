@@ -12,7 +12,7 @@ tags:
 - Ich schreibe in [HTML](http://www.google.de/webhp?sourceid=chrome-instant&ie=UTF-8#q=test&hl=de "HTML-Userguide") und [CSS](http://www.google.de/webhp?sourceid=chrome-instant&ie=UTF-8#q=test&hl=de "Guide über CSS").
 - Außerdem: e.&nbsp;g. und etc., z.&nbsp;B., d.&nbsp;h.
 - HTML, CSS, XML, NATO.
-- <abbr title="test">HTML</abbr>, <abbr title="test">CSS</abbr>, CSS nicht, <abbr title="test">XML</abbr>, <abbr title="test">NATO</abbr>
+- <abbr title="Nicht ersetzen">HTML</abbr>, <abbr title="Nicht ersetzen">CSS</abbr> nicht, CSS ja, <abbr title="Nicht ersetzen">XML</abbr>, <abbr title="Nicht ersetzen">NATO</abbr>
 - HTMLler, CSSler, XMLdings, NATObomber
 - HTML-Tags, CSS-Syntax, Simple-XML, NATO-Bomber
 
@@ -48,13 +48,13 @@ Und was ist mit diesem bizarren Link:
 
 [√] Peter &amp; der Wolf
 
-[√] <a href="http://google.de?test=1&amp;lala=2&amp;bubu=3">Peter &amp; der Wolf</a>
+[√] <a href="http://google.de?test=1&amp;lala=2&amp;bubu=3">Peter &amp; der Wolf sind in der NATO</a>
 
 [√] Peter & der Wolf
 
 [√] Peter &amp; der Wolf
 
-[x|√] <a id="test" href="http://google.de?test=1&amp;lala=2&amp;bubu=3" title="Peter &amp; der Wolf" alt="Peter & der Wolf">Peter &amp; der Wolf</a>
+[x|√] <a id="test" href="http://google.de?test=1&amp;lala=2&amp;bubu=3" title="Peter &amp; der Wolf" alt="Peter & der Wolf mögen CSS und HTML">Peter &amp; der Wolf mögen CSS und HTML auch</a>
 
 [√] Peter & der Wolf
 

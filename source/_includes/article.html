@@ -13,5 +13,5 @@
   </header>
 {% endunless %}
 {% unless index %}
-  <div class="entry-content">{{ content | ampersand }}</div>
+  <div class="entry-content">{{ content | ampersand | abbr }}</div>
 {% endunless %}
