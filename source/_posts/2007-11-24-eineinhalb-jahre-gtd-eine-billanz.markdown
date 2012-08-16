@@ -10,31 +10,31 @@ Seit genau eineinhalb Jahren benutze ich jetzt die Prinzipien des *GTD* (*Gettin
 
 <!-- more -->
 
-<img src="/img/gtd-vorher.jpg" width="300" height="191" alt="GTD vorher" title="So sah die Inbox aus, bevor ich alle „losen Enden“ sortiert hatte" /> <cite>David Allen</cite> stellt in seinem Buch ein interessantes System vor, mit dem man seine täglichen Aufgaben effektiv und effizient erledigen kann.
+<img src="/img/gtd-vorher.jpg" width="300" height="191" alt="GTD vorher" title="So sah die Inbox aus, bevor ich alle losen Enden sortiert hatte" /> <cite>David Allen</cite> stellt in seinem Buch ein interessantes System vor, mit dem man seine täglichen Aufgaben effektiv und effizient erledigen kann.
 
-Das Buch ist auch in **Deutsch** erhältlich unter dem Titel „[Wie ich die Dinge geregelt kriege](http://www.amazon.de/gp/product/3492240607?ie=UTF8&amp;tag=kogakurede-21&amp;linkCode=as2&amp;camp=1638&creative=6742&creativeASIN=3492240607)“.
+Das Buch ist auch in **Deutsch** erhältlich unter dem Titel <cite>[Wie ich die Dinge geregelt kriege](http://www.amazon.de/gp/product/3492240607/ref=as_li_ss_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=3492240607&linkCode=as2&tag=kogakurede-21)</cite>.
 
 Ich bin jedenfalls der Meinung, man *bekommt* mit Allens System wirklich den alltäglichen Wahnsinn geregelt.
 
 ### Die GTD-Grundlagen ###
 
-GTD nutzt so genannte „**Kontexte**“, also bestimmten Situationen/Orte, denen eine Aufgabe zugewiesen wird (Telefon, Zuhause, Besorgung o. ä.). Daneben gibt es noch die Zuteilung zu „**Projekten**“.
+GTD nutzt so genannte *Kontexte*, also bestimmten Situationen/Orte, denen eine Aufgabe zugewiesen wird (Telefon, Zuhause, Besorgung o. ä.). Daneben gibt es noch die Zuteilung zu *Projekten*.
 
 Aufgaben werden in Ihrem Kontext erledigt, also z. B. gleich mehrere Anrufe auf einmal, wenn man schon am Telefon ist.
 
-Bei GTD wird alles, was an „Zeug“ täglich auf den Tisch kommt, in einen „Posteingang“ (Inbox) bewegt. Dieses „Zeug“ kann vielfältig sein und aus E-Mails, Post, Sprachmemos, Notizzetteln, Scribbles etc. bestehen. Der Posteingang wird zu einem bestimmten Zeitpunkt (z. B. Freitag Nachmittag) geleert, wobei jede Aufgabe bearbeitet wird, und nichts unbearbeitet im Posteingang zurückbleibt.
+Bei GTD wird alles, was an *Zeug* täglich auf den Tisch kommt, in einen Posteingang (Inbox) bewegt. Dieses *Zeug* kann vielfältig sein und aus E-Mails, Post, Sprachmemos, Notizzetteln, Scribbles etc. bestehen. Der Posteingang wird zu einem bestimmten Zeitpunkt (z. B. Freitag Nachmittag) geleert, wobei jede Aufgabe bearbeitet wird, und nichts unbearbeitet im Posteingang zurückbleibt.
 
 Je nach geschätztem Aufwand werden die Aufgaben entweder sofort erledigt (bei einer Dauer von ca. 2 Minuten), oder an eine andere Stelle verschoben. Ist die Aufgabe Teil eines mehrteiligen Prozesses, wird ein Projekt erstellt, dem die Aufgabe zugeordnet wird.
 
-„Zeug“ kann auch als Referenzmaterial für später aufgehoben werden (z. B. eine Broschüre).
+*Zeug* kann auch als Referenzmaterial für später aufgehoben werden (z. B. eine Broschüre).
 
-Wird eine Aufgabe vorerst nicht erledigt, weil man keine Zeit oder noch kein aktives Interesse daran hat – sie aber für so interessant hält, dass man sie nicht gleich vernichten will, so verschiebt man sie auf eine Liste von Dingen, die man „Irgendwann/Vielleicht“ erledigt. Diese Liste kann man hin- und wieder durchsehen. Somit sind die Ideen nicht verloren, belasten aber auch nicht den Kopf.
+Wird eine Aufgabe vorerst nicht erledigt, weil man keine Zeit oder noch kein aktives Interesse daran hat – sie aber für so interessant hält, dass man sie nicht gleich vernichten will, so verschiebt man sie auf eine Liste von Dingen, die man *Irgendwann/Vielleicht* erledigt. Diese Liste kann man hin- und wieder durchsehen. Somit sind die Ideen nicht verloren, belasten aber auch nicht den Kopf.
 
-Aufgaben kann man auch delegieren oder bestimmten Zeitpunkten zuweisen. Wenn man bei einer Aufgabe auf jemand anderen warten muss, weißt man sie dem Kontext „Warten auf“ zu.
+Aufgaben kann man auch delegieren oder bestimmten Zeitpunkten zuweisen. Wenn man bei einer Aufgabe auf jemand anderen warten muss, weißt man sie dem Kontext *Warten auf* zu.
 
 ### GTD im Alltag ###
 
-<img src="/img/gtd-nachher.jpg" width="300" height="191" alt="GTD nachher" title="So sah die Inbox aus, nachdem ich alle „losen Enden“ sortiert hatte" /> Auf den ersten Blick sieht GTD vielleicht kompliziert oder umständlich aus, doch hilft es ungemein, den Kopf von belastendem Grübeln freizuhalten.
+<img src="/img/gtd-nachher.jpg" width="300" height="191" alt="GTD nachher" title="So sah die Inbox aus, nachdem ich alle losen Enden sortiert hatte" /> Auf den ersten Blick sieht GTD vielleicht kompliziert oder umständlich aus, doch hilft es ungemein, den Kopf von belastendem Grübeln freizuhalten.
 Schon nach kurzer Zeit der Umstellung habe ich mich an diese Arbeitsweise gewöhnt und schnell die Eigenschaft übernommen, jeden Gedanken **sofort zu notieren** und gemäß des GTD-Prinzips irgendwo einzuordnen. So vergesse ich nie wieder wichtige Dinge und selbst kleine Ideen verschwinden nicht gleich aus dem Kopf.
 
 Im Idealfall hat man dazu bestimmte **Arbeitswerkzeuge** dabei, die je nach Person und Lebensumständen variieren können. Ich selbst benutze eine Kombination aus Web-Applikation, Text-Dateien, [Moleskine®](http://www.moleskine.com/ "Moleskine")-Notizbuch und Post-its® an verschiedenen Orten (z. B. auf dem Nachttisch).
@@ -57,7 +57,7 @@ Für mich zählen:
 
 1. **Ortsunabhängigkeit**, – da ich Angestellter bin, möchte ich von verschiedensten Orten aus meine Gedanken erfassen.
 2. **Systemunabhängigkeit** – Mittlerweile nicht mehr so wichtig, aber ich will nicht auf bestimmte Betriebsysteme angewiesen sein.
-3. Zuweisen von **Terminen** – Für mich kommt eine Trennung in Terminkalender und „*Next Actions*“ nicht in Frage.
+3. Zuweisen von **Terminen** – Für mich kommt eine Trennung in Terminkalender und *Next Actions* nicht in Frage.
 4. **Schnell und einfach** – Es muss einfach gehen, am besten ohne Maus oder mit wenigen Klicks.
 
 In der ganzen Zeit bin ich zeitweise auch mal zweigleisig gefahren, um ein neues System zu testen, mein primäres Tool nutze ich aber immer noch.
@@ -68,15 +68,15 @@ In der ganzen Zeit bin ich zeitweise auch mal zweigleisig gefahren, um ein neues
 
 Die Anwendung basiert zwar auf Ruby on Rails, erfordert aber keine Programmierkenntnisse in Ruby und läuft relativ schnell und leicht mit sqlite3. Alternativ können auch mächtigere Datenbanken benutzt werden.
 
-Tracks unterstützt „Kontexte“, „Projekte“ und „Notizen“. Das ganze Interface ist zweigeteilt, auf der linken Seite hat man eine Liste seiner Kontexte und der „Next Actions“ darin. Auf der rechten Seite befindet sich ein Link zum schnellen erstellen einer neuen Aufgabe, ein Überblick über die aktiven Projekte, die erledigten Projekte, aktive Kontexte und verborgene Kontexte (diese sind nicht auf der Startseite zu sehen).
+Tracks unterstützt *Kontexte*, *Projekte* und *Notizen*. Das ganze Interface ist zweigeteilt, auf der linken Seite hat man eine Liste seiner Kontexte und der *Next Actions* darin. Auf der rechten Seite befindet sich ein Link zum schnellen erstellen einer neuen Aufgabe, ein Überblick über die aktiven Projekte, die erledigten Projekte, aktive Kontexte und verborgene Kontexte (diese sind nicht auf der Startseite zu sehen).
 
-Eine Aufgabe benötigt einen **Titel**, optionale **Notizen** (*[Textile](http://www.textism.com/tools/textile/ "Textism: Tools: Textile")* wird unterstützt), muss einem **Kontext** zugewiesen werden (bei mir standardmäßig „Eingang“). Sie kann einem **Projekt** zugeordnet werden und kann ein **Datum** bekommen (nur Tage).
+Eine Aufgabe benötigt einen **Titel**, optionale **Notizen** (*[Textile](http://www.textism.com/tools/textile/ "Textism: Tools: Textile")* wird unterstützt), muss einem **Kontext** zugewiesen werden (bei mir standardmäßig *Eingang*). Sie kann einem **Projekt** zugeordnet werden und kann ein **Datum** bekommen (nur Tage).
 
 Die Web-Applikation benutzt Ajax, weshalb die Bedienung sehr schnell und effizient ist.
 
 Eine Besonderheit von Tracks ist, dass mit Terminen versehene Aufgaben einen Farbcode durchlaufen, von Grün über Orangetöne bis zu dunklem Rot. So kann man gleich sehen, wann eine Aufgabe erledigt werden muss.
 
-In den Einstellungen kann festgelegt werden, nach wie vielen Tagen unangetastete Aufgaben beginnen auffällig zu werden (sie werden langsam Gelb hinterlegt). Dies ist nützlich, um Punkte im Kontext „Vielleicht-Irgendann“ zu erkennen, die gelöscht werden können.
+In den Einstellungen kann festgelegt werden, nach wie vielen Tagen unangetastete Aufgaben beginnen auffällig zu werden (sie werden langsam Gelb hinterlegt). Dies ist nützlich, um Punkte im Kontext *Vielleicht-Irgendann* zu erkennen, die gelöscht werden können.
 
 Tracks bietet Feeds für RSS, iCal und puren Text an. Die puren Text-Feeds sind sehr nützlich, um eine Liste auf ein mobiles Gerät, wie ein z. B. ein Mobiltelefon zu übertragen.
 

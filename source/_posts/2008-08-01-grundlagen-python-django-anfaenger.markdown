@@ -46,7 +46,7 @@ Dort gibt man einfach den Befehl `import django` ein. Wird der Befehl ohne Fehle
 
 Da dieser Pfad meistens in den Tiefen des Systems verborgen liegt, wählen viele Entwickler eine komfortablere Methode: Symlinks (symbolische Links). Dieses funktioniert aber nur bei Unix-Systemen, also Linux und Mac OSX. Windows-Benutzer schauen hier (mal wieder) in die Röhre. Ein Grund mehr ein Unix-System zu verwenden.
 
-Ein symbolischer Link ist ein Zeiger auf einen anderen Ordner des Computers, ähnlich einer Verknüpfung, nur mit dem Unterschied, das der Rechner wirklich „denkt“, der Ordner würde an diesem Platz im System liegen – in Wirklichkeit zeigt der Ordner lediglich auf das Original.
+Ein symbolischer Link ist ein Zeiger auf einen anderen Ordner des Computers, ähnlich einer Verknüpfung, nur mit dem Unterschied, das der Rechner wirklich *denkt*, der Ordner würde an diesem Platz im System liegen – in Wirklichkeit zeigt der Ordner lediglich auf das Original.
 
 Üblich ist es, dass man sich den Quellcode von Django mit dem Versionskontrollsystem *Subversion* in einen Ordner seiner Wahl holt:
 

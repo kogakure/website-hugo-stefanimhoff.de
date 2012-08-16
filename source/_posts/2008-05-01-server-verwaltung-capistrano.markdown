@@ -10,7 +10,7 @@ Wer einen Webserver oder VirtualHost sein eigen nennt, sollte sich unbedingt Cap
 
 <!-- more -->
 
-[Capistrano](http://capify.org/ "Capistrano:  Home") ist ein sehr mächtiges [Ruby](http://www.ruby-lang.org/ "Ruby Programming Language")-Programm, das dafür gedacht ist komplexe Aufgaben des „Deployment“ zu übernehmen. Dabei können ebenso mehrere Server (Fileserver, Datenbankserver, Applikationsserver), wie auch Versionskontrollsysteme ([Subversion](http://subversion.tigris.org/ "subversion.tigris.org"), [Git](http://git.or.cz/ "Git - Fast Version Control System"), [Mercurial](http://www.selenic.com/mercurial/ "Mercurial - Mercurial"), …) einbezogen werden.
+[Capistrano](http://capify.org/ "Capistrano:  Home") ist ein sehr mächtiges [Ruby](http://www.ruby-lang.org/ "Ruby Programming Language")-Programm, das dafür gedacht ist komplexe Aufgaben des Deployment zu übernehmen. Dabei können ebenso mehrere Server (Fileserver, Datenbankserver, Applikationsserver), wie auch Versionskontrollsysteme ([Subversion](http://subversion.tigris.org/ "subversion.tigris.org"), [Git](http://git.or.cz/ "Git - Fast Version Control System"), [Mercurial](http://www.selenic.com/mercurial/ "Mercurial - Mercurial"), …) einbezogen werden.
 
 Die Fähigkeiten von Capistrano übersteigen meine Anspüche bei weitem, da ich automatische Versionierung, Tests oder automatisches Symlinken eher nicht brauche.
 

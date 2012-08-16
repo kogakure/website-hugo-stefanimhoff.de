@@ -12,7 +12,7 @@ Der NASA-Mitarbeiter Sean Kelly lässt Web-Frameworks in einem halbstündigen Ma
 
 Brauchst du noch eine überzeugende Stimme, um deinem CEO zu erklären, wieso du seinen Java- und JSP-Dreck nicht haben willst? Wollen die Entwickler in deiner Firma einfach nicht verstehen, dass Webentwicklung schnell und einfach sein muss, um auf Wünsche JIT reagieren zu können?
 
-Dann schau dir das halbstündige (36:18), sehr lustige und überzeugende Video „[*Better Web App Development*](http://oodt.jpl.nasa.gov/better-web-app.mov)“ des NASA-Mitarbeiters Sean Kelly an.
+Dann schau dir das halbstündige (36:18), sehr lustige und überzeugende Video <cite>[Better Web App Development](http://oodt.jpl.nasa.gov/better-web-app.mov)</cite> des NASA-Mitarbeiters Sean Kelly an.
 
 Er berichtet von seiner Arbeit in den 90ern für einen Wetterdienst. Damals waren alle Applikationen des Dienstes in C++ geschrieben. C++ ist eine sehr gute Sprache zur Anwendungsentwicklung, versagt aber völlig bei der Benutzerschnittstelle, weil der Code nach jeder Änderung neu kompiliert werden muss. So ist ein schnelles Reagieren und Interagieren mit Wünschen von Außen kaum möglich.
 
@@ -33,6 +33,6 @@ Die Bewertungskriterien sind unter anderem:
 * Lokalisierung/Internationalisierung
 * Spaß
 
-Im ersten Teil lässt er alle Frameworks „<code>Hallo Welt</code>“ schreiben, im zweiten Teil programmiert er eine einfache Zeitmess-Anwendung. Ohne schon zu viel zu verraten, hängen natürlich alle ruby/python-Frameworks den Java-Kram um Längen ab. Immerhin verwendet ja sogar Google python in ihren Applikationen.
+Im ersten Teil lässt er alle Frameworks `Hallo Welt` schreiben, im zweiten Teil programmiert er eine einfache Zeitmess-Anwendung. Ohne schon zu viel zu verraten, hängen natürlich alle ruby/python-Frameworks den Java-Kram um Längen ab. Immerhin verwendet ja sogar Google python in ihren Applikationen.
 
 Also – wenn’s es die NASA und Google benutzen, kann es nur gut sein ;)

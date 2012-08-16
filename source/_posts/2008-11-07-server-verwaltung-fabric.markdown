@@ -116,7 +116,7 @@ def create():
 
 Um ein neues Repository anzulegen, muss ich einfach nur noch in den Einstellungen einige Pfade anpassen (meistens nur einen) und dann auf dem Terminal den Befehl `fab create` ausführen.
 
-Es ist möglich in einer Datei unzählige Funktionen anzulegen, die verschiedene Aufgaben, wie z. B. „Server starten“, „Server stoppen“, „Datenbankdump erstellen“, „tar.gz erstellen“ o. ä. erledigen. Eine Funktion kann auch andere Funktionen aufrufen.
+Es ist möglich in einer Datei unzählige Funktionen anzulegen, die verschiedene Aufgaben, wie z. B. `Server starten`, `Server stoppen`, `Datenbankdump erstellen`, `tar.gz erstellen` o. ä. erledigen. Eine Funktion kann auch andere Funktionen aufrufen.
 
 So erledigt mein Backup-Skript eine Menge Aufgaben:
 

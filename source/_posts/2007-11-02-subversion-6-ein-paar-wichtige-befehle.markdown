@@ -34,7 +34,7 @@ Um solche Probleme zu lösen, benutzt man den Befehl `svn cleanup`.
 
 ### Ignorieren ###
 
-Eine wichtige Funktion in Subversion ist das Ignorieren von bestimmten Ordnern oder Dateien. Subversion nimmt keine Dateien von selbst mit ins Repository auf. Doch nach einiger Zeit kann sich eine Menge Dateien ansammeln, die man nicht mit ins Repository laden möchte (Cache-Ordner, Konfigurationsdateien, …). Diese werden mit einem „?“ angezeigt, wenn man ein `svn status` eingibt. Um nicht mehr gefragt zu werden, ob man sie hinzufügen möchte, gibt man folgenden Befehl ein:
+Eine wichtige Funktion in Subversion ist das Ignorieren von bestimmten Ordnern oder Dateien. Subversion nimmt keine Dateien von selbst mit ins Repository auf. Doch nach einiger Zeit kann sich eine Menge Dateien ansammeln, die man nicht mit ins Repository laden möchte (Cache-Ordner, Konfigurationsdateien, …). Diese werden mit einem `?` angezeigt, wenn man ein `svn status` eingibt. Um nicht mehr gefragt zu werden, ob man sie hinzufügen möchte, gibt man folgenden Befehl ein:
 
 {% codeblock lang:sh %}
 svn propedit svn:ignore .

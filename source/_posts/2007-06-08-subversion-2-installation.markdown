@@ -32,22 +32,22 @@ Doch das ist natürlich alles für später, hier soll ja der Umgang im Terminal 
 
 ### Installation über das Terminal ###
 
-**Anmerkung**: Ab Mac OS X 10.5 „Leopard“ ist bereits Subversion 1.4.4 von Haus aus installiert.
+**Anmerkung**: Ab Mac OS X 10.5 *Leopard* ist bereits Subversion 1.4.4 von Haus aus installiert.
 
-Um Subversion zu installieren geht man zuerst mit seinem Browser auf die Website [http://subversion.tigris.org/](http://subversion.tigris.org/ "subversion.tigris.org") und wechselt auf den Menüpunkt „Downloads“.
+Um Subversion zu installieren geht man zuerst mit seinem Browser auf die Website [http://subversion.tigris.org/](http://subversion.tigris.org/ "subversion.tigris.org") und wechselt auf den Menüpunkt *Downloads*.
 
 Untereinander, unübersichtlich sortiert (so ist das immer auf Entwicklerseiten), findet man zuerst die Links zum Quellcode und darunter die binären Pakete für die verschiedenen Plattformen.
 
 Wer etwas feige ist, kann sich jetzt eines der binären Pakete für sein System herunterladen und installieren. Alle mutigeren laden sich den Quellcode herunter.
 
-Gut versteckt, mitten im Satz <span class="quote">„The latest source release can always be found _in this directory_, […]“</span>,  findet man den Link zu den Quellcode-Paketen.
+Gut versteckt, mitten im Satz <q>The latest source release can always be found _in this directory_, […]</q>,  findet man den Link zu den Quellcode-Paketen.
 
 Die aktuelle Version zum Zeitpunkt dieser Anleitung ist `Subversion 1.4.3`.
 Genau dieses Paket lade ich als `tar.gz` auf meinen Desktop.
 
 Um Quellcode selber kompilieren zu können, müssen unter Mac OSX die Xcode Tools installiert sein, diese findet man auf der Installations-CD von Mac OSX.
 
-Dann öffnet man das Programm „Terminal“ aus dem Anwendungsordner.
+Dann öffnet man das Programm *Terminal* aus dem Anwendungsordner.
 
 Ich gehe davon aus, dass der Download auf dem Desktop liegt, sonst muss dies entweder noch geschehen oder der Pfad muss angepasst werden. Mit dem folgenden Befehl wechselt man auf den Desktop:
 

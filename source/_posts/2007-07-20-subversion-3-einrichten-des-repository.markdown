@@ -6,7 +6,7 @@ categories:
 tags: [subversion, tutorial]
 ---
 
-Um mit Subversion zu arbeiten, muss man sich zuerst ein „Repository“ (eine Ablage/Depot) erstellen, in dem das spätere Projekt liegt.
+Um mit Subversion zu arbeiten, muss man sich zuerst ein *Repository* (eine Ablage/Depot) erstellen, in dem das spätere Projekt liegt.
 
 <!-- more -->
 
@@ -45,7 +45,7 @@ svnadmin create --fs-type fsfs .
 
 ### Anmerkungen ###
 
-Der Parameter `--fs-type fsfs` sorgt dafür, dass ein Repository vom Typ „Filesystem“ erzeugt wird. Es gibt noch das „Berkeley DB“ Format, das aber in einigen Umgebungen und Netzwerken Probleme erzeugen kann. Wenn man mit tausenden Personen an einem solchen Projekt arbeitet ist es wahrscheinlich besser das Datenbankformat zu verwenden, aber nicht für sich selber oder ein paar dutzend Kollegen.
+Der Parameter `--fs-type fsfs` sorgt dafür, dass ein Repository vom Typ *Filesystem* erzeugt wird. Es gibt noch das <cite>Berkeley DB</cite> Format, das aber in einigen Umgebungen und Netzwerken Probleme erzeugen kann. Wenn man mit tausenden Personen an einem solchen Projekt arbeitet ist es wahrscheinlich besser das Datenbankformat zu verwenden, aber nicht für sich selber oder ein paar dutzend Kollegen.
 
 Der Punkt am Ende des Befehls ist übrigens wichtig, und darf nicht weggelassen werden, er sagt dem Programm wo das Repository angelegt werden soll, und zwar im aktuellen Verzeichnis (.). Hier kann man auch eine normale Pfadangabe benutzen.
 

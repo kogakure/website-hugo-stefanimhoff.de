@@ -16,7 +16,7 @@ Als zweites stand dieses Jahr das Versionskontrollsystem *Git* hoch oben auf mei
 
 ### Januar
 
-Im Januar 2008 habe ich meinen *iPod touch* gerade einige Wochen und mein mobiles Verhalten hat sich grundlegend geändert. Viel häufiger bleibt der Computer nun aus, wenn ich mal kurz etwas in Google oder Wikipedia nachschlagen will. Apple hat mit dem Spruch „The Real Internet“ wirklich nicht übertrieben, so wie andere Anbieter das immer noch tun.
+Im Januar 2008 habe ich meinen *iPod touch* gerade einige Wochen und mein mobiles Verhalten hat sich grundlegend geändert. Viel häufiger bleibt der Computer nun aus, wenn ich mal kurz etwas in Google oder Wikipedia nachschlagen will. Apple hat mit dem Spruch <q>The Real Internet</q> wirklich nicht übertrieben, so wie andere Anbieter das immer noch tun.
 
 Ich schaue mir [reStructuredText](http://docutils.sourceforge.net/rst.html "reStructuredText"), die Auszeichnungssprache für Dokumente und Anleitungen an und bin ziemlich begeistert.
 
@@ -37,7 +37,7 @@ Fixtures sind eine feine Sache, bei der man Datenbanken ins JSON- oder XML-Forma
 
 Ich schaue mir [RegularExpressions](http://www.regular-expressions.info/ "Regular-Expressions.info - Regex Tutorial, Examples and Reference - Regexp Patterns") etwas näher an, da sie bei Django die URL-Konfiguration bilden. Ist alles einfacher, als gedacht.
 
-Da Django ein Python-Framework ist, finde ich, dass es nicht schaden kann nebenbei etwas [Python](http://diveintopython.org/ "Dive Into Python") zu lernen. Eine wirklich edle und effiziente Sprache, die fast ohne Satzzeichen und Klammern auskommt, was bei mir bei PHP immer 90 % aller Fehler verursacht hat. Weniger Satzzeichen, mehr Ordnung im Code, gut zu lesen, kann sogar ein Laie lesen und verstehen. Und 5 Jahre länger als PHP ist Python auch schon auf dem Markt. PHP ist nur so erfolgreich, weil da „draufknallen auf den Server – läuft“ ausreicht. Mit Python hat man aber ein eindeutig besseres Werkzeug, das wissen auch Google und Yahoo.
+Da Django ein Python-Framework ist, finde ich, dass es nicht schaden kann nebenbei etwas [Python](http://diveintopython.org/ "Dive Into Python") zu lernen. Eine wirklich edle und effiziente Sprache, die fast ohne Satzzeichen und Klammern auskommt, was bei mir bei PHP immer 90 % aller Fehler verursacht hat. Weniger Satzzeichen, mehr Ordnung im Code, gut zu lesen, kann sogar ein Laie lesen und verstehen. Und 5 Jahre länger als PHP ist Python auch schon auf dem Markt. PHP ist nur so erfolgreich, weil da <q>draufknallen auf den Server – läuft</q> ausreicht. Mit Python hat man aber ein eindeutig besseres Werkzeug, das wissen auch Google und Yahoo.
 
 Ich setzte mir ein [MoinMoinWiki](http://moinmo.in/ "MoinMoinWiki - MoinMoin") auf, um Notizen und Wissen für mich persönlich online zu hinterlegen. Und weil die ganzen verfügbaren Themes grottenhäßlich sind, [gestalte ich mir fix selbst eines](http://github.com/kogakure/moinmoin-theme-kaijin/tree/master "kogakure's moinmoin-theme-kaijin at master &mdash; GitHub").
 
@@ -87,8 +87,8 @@ Im Juni installiere ich mir auch [Ubuntu](http://www.ubuntu.com/ "Ubuntu Home Pa
 
 Ich versuche einige Abteilungen im Hause mal dazu zu bewegen, [CVS](http://de.wikipedia.org/wiki/Concurrent_Versions_System) vielleicht langsam einzumotten. Natürlich erfolglos.
 
-**Die**: „Wir können nicht wechseln, wir dürfen unsere History nicht verlieren“.
-**Ich**: „Schon mal was von Git-CVS gehört?“
+**Die**: <q>Wir können nicht wechseln, wir dürfen unsere History nicht verlieren</q>.
+**Ich**: <q>Schon mal was von Git-CVS gehört?</q>
 
 Wir setzten ja in unserer Abteilung immerhin schon [Subversion](http://subversion.tigris.org/ "subversion.tigris.org") ein.
 
@@ -114,7 +114,7 @@ Im Juli fällt mir im Einkaufsmarkt eine schwarze Tüte mit Tiefkühlbrötchen a
 
 Ich testen [django-robots](http://code.google.com/p/django-robots/ "django-robots - Google Code") und [django-mobileadmin](http://code.google.com/p/django-mobileadmin/ "django-mobileadmin - Google Code"). Wahnsinn, was [Jannis Leidel](http://jannisleidel.com/ "Jannis Leidel") für [Django-Projekte](http://code.google.com/u/leidel/ "Google Code") entwickelt. Hast du eigentlich noch Freizeit? ;)
 
-Microsoft sorgt für Lacher mit seinem [The Mojave Experiment](http://www.mojaveexperiment.com/). In der „wissenschaftlichen“ Studie versucht Microsoft einigen US-Midwest-Landeiern zu beweisen, dass sie Windows Vista eigentlich ganz toll finden. Auf perfekten Systemen, mit perfekten Treibern führt ein Microsoft-Profi diese Landeier durch Vista und erntet so lustige Kommentare wie: „Really, this is Vista? I **LOVE** it“.
+Microsoft sorgt für Lacher mit seinem [The Mojave Experiment](http://www.mojaveexperiment.com/). In der *wissenschaftlichen* Studie versucht Microsoft einigen US-Midwest-Landeiern zu beweisen, dass sie Windows Vista eigentlich ganz toll finden. Auf perfekten Systemen, mit perfekten Treibern führt ein Microsoft-Profi diese Landeier durch Vista und erntet so lustige Kommentare wie: <q>Really, this is Vista? I **LOVE** it</q>.
 
 Mein Preis für die beste Werbung 2008 geht schon im August an Nokia für ihre Werbung [Nokia: The 4th Screen](http://www.youtube.com/watch?v=XpeNk3E36YU "YouTube - Nokia: Go Play - 4th Screen").
 

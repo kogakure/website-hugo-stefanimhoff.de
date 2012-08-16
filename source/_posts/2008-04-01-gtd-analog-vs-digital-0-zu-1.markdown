@@ -25,7 +25,7 @@ Ich war mir nicht sicher, doch jetzt ist es entschieden. Digital geht schneller 
 
 ### Aufgabe
 
-**Notiz tippen**: „*Auto Reifenwechsel*“
+**Notiz tippen**: *Auto Reifenwechsel*
 
 ### Ergebnisse
 
@@ -42,7 +42,7 @@ Ich war mir nicht sicher, doch jetzt ist es entschieden. Digital geht schneller 
 
 ## Fazit
 
-Hätte ich nicht gedacht, es heißt ja immer „*mit dem Stift geht es immer noch am schnellsten*“. Weiterer Vorteil des iPod touch: Die Notiz ist bereits digital und kann sofort in anderen GTD-Systemen weiterverwendet werden. Und er ist kleiner, ganze 3,4 cm in der Höhe und Breite. Und das Molekine empfängt keine E-Mails, spielt keine Musik und Videos. Surfen kann ich damit auch nicht. Nur um sich wie Hemingway oder Picasso zu fühlen? Nö.
+Hätte ich nicht gedacht, es heißt ja immer <q>mit dem Stift geht es immer noch am schnellsten</q>. Weiterer Vorteil des iPod touch: Die Notiz ist bereits digital und kann sofort in anderen GTD-Systemen weiterverwendet werden. Und er ist kleiner, ganze 3,4 cm in der Höhe und Breite. Und das Molekine empfängt keine E-Mails, spielt keine Musik und Videos. Surfen kann ich damit auch nicht. Nur um sich wie Hemingway oder Picasso zu fühlen? Nö.
 
 Sicher: Ein Moleskine kostet nur 10 €, ein iPod touch mindestens 279 €. Aber den kauft man ja nicht nur zum notieren.
 

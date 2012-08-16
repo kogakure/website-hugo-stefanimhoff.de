@@ -10,7 +10,7 @@ Ich bin seit fast zwei Jahren Besitzer eines AppleTV und finde das Gerät wirkli
 
 <!-- more -->
 
-Ich könnte die Filmstudios berechtigterweise fragen: „Wollt ihr mein Geld nicht“? Die Filmauswahl ist auf iTunes zwar nicht umwerfend, aber es ist einfach komfortabler, sich spät abends noch kurz einen Film zu ziehen, als in die Videothek zu fahren und sich eine DVD zu holen. Und eine DVD muss man außerdem auch noch zurückbringen. Die komfortable Suche, das leichte Ausleihen, das sind die einzigen Punkte, die bei iTunes ziehen, preislich ist es schon teurer als in der Videothek.
+Ich könnte die Filmstudios berechtigterweise fragen: <p>Wollt ihr mein Geld nicht?</q> Die Filmauswahl ist auf iTunes zwar nicht umwerfend, aber es ist einfach komfortabler, sich spät abends noch kurz einen Film zu ziehen, als in die Videothek zu fahren und sich eine DVD zu holen. Und eine DVD muss man außerdem auch noch zurückbringen. Die komfortable Suche, das leichte Ausleihen, das sind die einzigen Punkte, die bei iTunes ziehen, preislich ist es schon teurer als in der Videothek.
 
 Ich habe eine Liste mit Filmen, die ich mir gemerkt habe. Filme, die ich im Kino sehen wollte, es aber nicht geschafft hatte, oder Filme die hier nie liefen. Die Liste ist lang: über fünfzig Filme.
 

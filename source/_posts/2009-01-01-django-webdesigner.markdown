@@ -29,7 +29,7 @@ Das dieses Suchen nach den geeigneten Erweiterungen und deren Anpassung nicht op
 * die Suche nach geeigneten Lösungen für ein spezifisches Problem erfordert eine lange und mühsame Recherche im Internet
 * Erweiterungen und Plugins sind z. T. nach einem Update des Programms nicht mehr zu nutzen, wenn der Entwickler nicht mehr mit der Entwicklung des Kernsystems Schritt halten kann, oder das Interesse verliert
 * ein Webdesigner muss eine Vielzahl von CMS und deren Begrenzungen kennen, um bei spezifischen Kundenwünschen zu wissen, welches am besten mit den Wünschen des Kunden übereinstimmt, dies kann sehr anstrengend sein, weil ständig neue Systeme auf den Markt kommen
-* daher werden Kunden oft auch nach dem Motto *„one fits all“* mit nicht optimalen Lösungen abgespeist
+* daher werden Kunden oft auch nach dem Motto <q>one fits all</q> mit nicht optimalen Lösungen abgespeist
 
 ### Webframeworks
 
@@ -75,7 +75,7 @@ Es wird überlegt, welche Daten angezeigt und gespeichert werden sollen, und wie
 
 Wenn das Datenkonzept fertig gestellt ist, wird die Datenbank in einer einfach zu erlernenden Python-Syntax geschrieben. Django bietet schon eine riesige Auswahl an Feldtypen an, die für bestimmte Datentypen (z. B. URL-Feld, E-Mail-Adresse, Textbox, PLZ etc.) geeignet sind. Diese kommen von Haus aus mit der nötigen Validierung eines solchen Feldes.
 
-Das folgende Beispiel (von der Django-Website) zeigt den Code von zwei Tabellen, einer „Reporter“-Tabelle und einer „Artikel“-Tabelle:
+Das folgende Beispiel (von der Django-Website) zeigt den Code von zwei Tabellen, einer `Reporter`-Tabelle und einer `Artikel`-Tabelle:
 
 {% codeblock models.py lang:django %}
 class Reporter(models.Model):

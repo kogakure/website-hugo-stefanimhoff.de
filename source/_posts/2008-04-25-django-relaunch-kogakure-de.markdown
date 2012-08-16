@@ -16,7 +16,7 @@ Was ist Django? Django ist ein [Python](http://www.python.org/ "Python Programmi
 
 Django wurde nach dem Jazz-Gitarristen Django Reinhardt benannt und wird [so ausgesprochen](http://red-bean.com/~adrian/django_pronunciation.mp3).
 
-Gegenüber anderen Web-Frameworks hat es einige Vorteile, vor allem ist es sehr „Designerfreundlich“.
+Gegenüber anderen Web-Frameworks hat es einige Vorteile, vor allem ist es sehr *Designerfreundlich*.
 
 Obwohl Django erst in Version 0.97x ist, kann man es schon ohne Probleme in normalen Projekten einsetzten. Bis zur Version 1.0 sollen noch bestimmte API-Schnittstellen eindeutig festgelegt werden. Es ist spannend zu sehen, was für interessante Branches (Entwicklungszweige) noch in Arbeit sind und in naher Zukunft mit der Hauptentwicklungslinie verschmolzen werden.
 
@@ -169,7 +169,7 @@ Um den Einstieg in Django zu erleichtern, habe ich nachfolgend eine Liste von in
 #### Django-Websites von Designern und Entwicklern
 
 * [Adrian Holovarty](http://www.holovaty.com/ "Adrian Holovaty's Web site") – Entwickler von Django (Chicago, Illinois, US)
-* [Brian Rosner](http://oebfare.com/ "oebfare") – Co-Host bei „This Week in Django“ und Entwickler des newforms-admin Branch (Littleton, Colorado, US)
+* [Brian Rosner](http://oebfare.com/ "oebfare") – Co-Host bei <cite>This Week in Django</cite> und Entwickler des newforms-admin Branch (Littleton, Colorado, US)
 * [Bryan Veloso: Avalonstar](http://avalonstar.com/ "avalonstar:distortion") – Designer und Blogger (Seattle, Washington, US)
 * [Jacob Kaplan-Moss](http://www.jacobian.org/ "jacobian.org : i got nothing") – Entwickler von Django (Lawrence, Kansas, US)
 * [James Bennett: The B-List](http://www.b-list.org/ "The B-List: Latest entries") – Release Manager von Django (Lawrence, Kansas, US)
@@ -178,7 +178,7 @@ Um den Einstieg in Django zu erleichtern, habe ich nachfolgend eine Liste von in
 * [Jeff Croft](http://jeffcroft.com/ "JeffCroft.com: Homepage") – Designer und Python Programmierer (Seattle, Washington, US)
 * [Martin Geber](http://www.martin-geber.com/ "Martin Geber: Webdevelopment &middot; Economy &middot; Languages") – Programmierer und Blogger (Köln, Nordrhein-Westfalen)
 * [Martin Mahner](http://www.mahner.org/ "mahner.org | zu Hause bei Martin Mahner") – Webdesigner und Programmierer (Putbus, Mecklenburg-Vorpomm)
-* [Michael Trier: Empty Thoughts](http://blog.michaeltrier.com/ "Empty Thoughts - Living on the Edge") – Software Architekt, Unternehmer, Co-Host von „This Week in Django“ (Louisville, Kentucky, US)
+* [Michael Trier: Empty Thoughts](http://blog.michaeltrier.com/ "Empty Thoughts - Living on the Edge") – Software Architekt, Unternehmer, Co-Host von <cite>This Week in Django</cite> (Louisville, Kentucky, US)
 * [Nathan Borror: Playground Blues](http://www.playgroundblues.com/ "Playground Blues") – Designer (Lawrence, Kansas, US)
 * [Paul Bissex: E-Scribe](http://news.e-scribe.com/ "E-Scribe News : a programmer&#39;s blog") – Entwickler, Lehrer und Autor (Northampton, Massachusetts, US)
 * [Ross Poulton](http://www.rossp.org/ "rossp.org - Recent Updates") – Berater und Projektmanager, Entwickler von DjangoSites (Diamond Creek, Victoria, Australien)

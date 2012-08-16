@@ -46,7 +46,7 @@ Deployment mit Gunicorn war mir auch neu, im Moment ist das für mich aber auch 
 
 ### Packaging mit Pip, Virtualenv (und Virtualenvwrapper)
 
-Packaging mit Pip und Virtualenv sind wirklich sehr arbeitserleichternd. So wie Homebrew der perfekte Installer für Mac OS X ist, ist Pip der perfekte Installer für Python-Packages. Auch die Tatsache, dass man eine bestimmte Arbeitsumgebung „einfrieren“ kann und sie genau in der gleichen Weise auf einem anderen Computer oder Server wieder einrichten kann, ist wirklich ein starkes Argument für Pip.
+Packaging mit Pip und Virtualenv sind wirklich sehr arbeitserleichternd. So wie Homebrew der perfekte Installer für Mac OS X ist, ist Pip der perfekte Installer für Python-Packages. Auch die Tatsache, dass man eine bestimmte Arbeitsumgebung *einfrieren* kann und sie genau in der gleichen Weise auf einem anderen Computer oder Server wieder einrichten kann, ist wirklich ein starkes Argument für Pip.
 
 Virtualenv ist eine fantastische Lösung, um seine Projekte unabhängig von einander zu bearbeiten. Es gibt keine Konflikte mehr zwischen unterschiedlichen Versionen von Python-Packeten. Ich persönlich setze auch noch den Virtualenvwrapper ein, ein kleines Tool, das den Wechsel zwischen den Projekten noch leichter macht, und außerdem noch Hooks bietet. So kann ich meine komplette Django-Arbeitsumgebung für ein Projekt mit nur einem Befehl wieder herstellen: vom Wechseln in die richtige virtuelle Umgebung, über das Öffnen der Dateien im Mac OS X-Finder und in TextMate, bis zum Starten des Servers und Aufrufen der Website und Django-Administrationsumgebung im Browser. Und das in wenigen Sekunden.
 

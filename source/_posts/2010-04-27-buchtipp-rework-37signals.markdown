@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Buchtipp: „Rework“ von 37signals"
+title: "Buchtipp: <cite>Rework</cite> von 37signals"
 date: 2010-04-27 16:30
 categories:
 tags: [buch, 37signals, gtd, business]
@@ -22,6 +22,6 @@ Die [offizielle Website](http://37signals.com/rework/) des Buches bietet einen B
 
 *Getting Real* war noch speziell für Programmierer gedacht, die ein Projekt erfolgreich zu Ende bringen wollen – *Rework* hingegen ist für jeden Arbeitnehmer und Arbeitgeber geeignet, vom Geschäftsführer bis zum Sachbearbeiter.
 
-Mit gerade 21.000 Worten bietet das Buch wertvolle Tipps, um einen produktiven und erfüllten Arbeitstag zu bekommen. Sicher ist vieles davon nicht neu (einige Punkte fanden sich bereits in *Getting Real*), und nichts davon hat *37signals* „erfunden“ – was sie auch gar nicht für sich beanspruchen – doch bislang konnte ich so viele gute Tipps noch nirgends in solcher Kürze und Prägnanz lesen.
+Mit gerade 21.000 Worten bietet das Buch wertvolle Tipps, um einen produktiven und erfüllten Arbeitstag zu bekommen. Sicher ist vieles davon nicht neu (einige Punkte fanden sich bereits in *Getting Real*), und nichts davon hat *37signals* *erfunden* – was sie auch gar nicht für sich beanspruchen – doch bislang konnte ich so viele gute Tipps noch nirgends in solcher Kürze und Prägnanz lesen.
 
 Und für die ganz Lesefaulen gibt es sogar eine [Hörbuchversion](http://www.amazon.de/gp/product/0307704513?ie=UTF8&amp;tag=stefanimhoffde-21&amp;linkCode=as2&amp;camp=1638&amp;creative=19454&amp;creativeASIN=0307704513).

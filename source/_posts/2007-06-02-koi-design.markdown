@@ -12,13 +12,13 @@ Die Idee für das Design dieser neuen Website schwirrte schon länger in meinem 
 
 ### Irezumi – Die japanische Tätowierung ###
 
-Tätowierungen sind eine Kunst, die im wahrsten Sinne des Wortes vergänglich sind, da mit dem Träger auch das Kunstwerk verschwindet, sobald er stirbt. Dies passt aber auch gut zum Begriff der „fließenden Welt“, einem Zeichen für die Vergänglichkeit im Buddhismus. Auch im Sinnbild der Samurai, in der Kirschblüte, kann man die Vergänglichkeit des Seins nach kurzer Dauer eines perfekten Lebens sehen.
+Tätowierungen sind eine Kunst, die im wahrsten Sinne des Wortes vergänglich sind, da mit dem Träger auch das Kunstwerk verschwindet, sobald er stirbt. Dies passt aber auch gut zum Begriff der *fließenden Welt*, einem Zeichen für die Vergänglichkeit im Buddhismus. Auch im Sinnbild der Samurai, in der Kirschblüte, kann man die Vergänglichkeit des Seins nach kurzer Dauer eines perfekten Lebens sehen.
 
 Diese Kunstwerke sind extrem schmerzhaft (dutzende Bambusnadeln werden [mehrmals pro Sekunde in die Haut gestochen](http://youtube.com/watch?v=NddXHY2QUV0 "YouTube - Horiyoshi is tattooing a backpiece")), langwierig (Von einigen Monaten bis zu mehreren Jahren) und teuer (ab 20.000 €). Das ist auch der Grund, wieso ich sie zwar gerne ansehe, aber selber wohl nie eines tragen werde.
 
 Einer der besten, lebenden Künstler des Irezumi ist Horiyoshi III, dessen Werke man in einigen Bildbänden betrachten kann ([Tattoos from the Floating World: Ukiyo-e Motifs in Japanese Tattoo](http://www.amazon.de/gp/product/9074822452?ie=UTF8&amp;tag=kogakurede-21&amp;linkCode=as2&amp;camp=1638&amp;creative=6742&amp;creativeASIN=9074822452 "Amazon.de: Tattoos from the Floating World: Ukiyo-e Motifs in Japanese Tattoo, Takahiro Kitamura, Katie M. Kitamura") und [Bushido: Legacies of the Japanese Tattoo](http://www.amazon.de/gp/product/0764312014?ie=UTF8&amp;tag=kogakurede-21&amp;linkCode=as2&amp;camp=1638&amp;creative=6742&amp;creativeASIN=0764312014 "Amazon.de: Bushido: Legacies of the Japanese Tattoo, Takahiro Kitamura, Katie M. Kitamura")).
 
-<img src="/img/irezumi-oni.jpg" width="605" height="340" alt="Irezumi von Horiyoshi IV" title="Irezumi auf dem Rücken von Miho Ito. Zwar kein „typisches“ Irezumi-Motiv, trotzdem mein Favourit: Ein Oni (Dämon) zerstört religiöse Gegenstände, wie die Sutra, Pinsel und Gebetskette. Tätowiert von Horiyoshi III auf den Rücken von Miho Ito." />
+<img src="/img/irezumi-oni.jpg" width="605" height="340" alt="Irezumi von Horiyoshi IV" title="Irezumi auf dem Rücken von Miho Ito. Zwar kein typisches Irezumi-Motiv, trotzdem mein Favourit: Ein Oni (Dämon) zerstört religiöse Gegenstände, wie die Sutra, Pinsel und Gebetskette. Tätowiert von Horiyoshi III auf den Rücken von Miho Ito." />
 
 Im Irezumi werden nicht wahllos irgendwelche Dinge auf den Körper tätowiert, die Bilder haben eine tiefe Bedeutung für den Träger und erfordern Fachwissen über Religion, Geschichte und Mythen aus China und Japan. Das ist auch der Grund, weshalb man oft schlechte Kopien und pseudo-japanische Tätowierungen in westlichen Tätowierstudios angeboten bekommt. Diesen Tätowierern fehlt meist dieses Hintergrundwissen.
 
@@ -30,7 +30,7 @@ Die Verbindungen zur japanischen Kunst des [Ukiyo-e](http://de.wikipedia.org/wik
 
 ### Motive ###
 
-Neben Göttern, Fabelwesen und Dämonen ist die wichtigste Quelle für Motive die alte chinesische Novelle „Shuǐhǔ Zhuàn“ (Wasserufergeschichte), in Japan als „Suikoden“ bekannt. Sie gehört zu einem der vier klassischen Bücher der chinesischen Literatur. Die deutsche Übersetzung dieses sehr unterhaltsamen Buches heißt [Die Räuber vom Liang Schan Moor](http://www.amazon.de/gp/product/3458318917?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=3458318917 "Amazon.de: Die Räuber vom Liang Schan Moor, Franz Kuhn").
+Neben Göttern, Fabelwesen und Dämonen ist die wichtigste Quelle für Motive die alte chinesische Novelle <cite>[Shuǐhǔ Zhuàn](http://de.wikipedia.org/wiki/Die_R%C3%A4uber_vom_Liang-Schan-Moor)</cite> (Wasserufergeschichte), in Japan als <cite>Suikoden</cite> bekannt. Sie gehört zu einem der vier klassischen Bücher der chinesischen Literatur. Die deutsche Übersetzung dieses sehr unterhaltsamen Buches heißt <cite>[Die Räuber vom Liang Schan Moor](http://www.amazon.de/gp/product/3458318917?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=3458318917 "Amazon.de: Die Räuber vom Liang Schan Moor, Franz Kuhn")</cite>.
 
 ### Die Räuber vom Liang-Shan Moor ###
 

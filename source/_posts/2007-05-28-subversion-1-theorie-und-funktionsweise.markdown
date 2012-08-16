@@ -6,7 +6,7 @@ categories:
 tags: [tutorial, subversion]
 ---
 
-Dieser erste Teil der Reihe „Subversion“ beschäftigt sich mit der nötigen Theorie und Funktionsweise von Subversion.
+Dieser erste Teil der Reihe *Subversion* beschäftigt sich mit der nötigen Theorie und Funktionsweise von Subversion.
 
 <!-- more -->
 
@@ -30,7 +30,7 @@ Denn in der Praxis werden viele Dateien oft über lange Zeit zur Bearbeitung ges
 
 ### Kopieren, Ändern, Zusammenführen ###
 
-Subversion (oder auch kurz „svn“) hat hier einen komplett anderen Ansatz. Dieser führt meistens zu einer verunsicherten oder ablehnenden Reaktion, wenn man den Prozess erklärt. Doch legt sich diese Verunsicherung in der wirklichen Arbeit mit Subversion sehr schnell.
+Subversion (oder auch kurz svn“) hat hier einen komplett anderen Ansatz. Dieser führt meistens zu einer verunsicherten oder ablehnenden Reaktion, wenn man den Prozess erklärt. Doch legt sich diese Verunsicherung in der wirklichen Arbeit mit Subversion sehr schnell.
 
 Bei Subversion lädt sich jede Person, die an der Datei arbeitet eine Kopie von einer zentralen Stelle auf den eigenen Computer. Sie nimmt Änderungen vor und lädt diese zurück.
 

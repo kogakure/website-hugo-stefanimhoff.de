@@ -67,7 +67,7 @@ Im Juli beschäftigen mich wieder stark Django und Python: Django Filter, Statis
 
 Ich schaue mir die [SQLite3](http://www.sqlite.org/)-Datenbank und ihre Syntax an, da sie für eine lokale Entwicklung geradezu optimal ist.
 
-Irgendetwas treibt mich in diesem Monat dazu, mich nach den Glanzlichtern der Internet-Goldgräberzeit zu erkundigen. Was wurde aus *Balthaser Studios*, *Egomedia*, *Alien Arts* oder *All Media Studios*. Oder auch dem „*The Horus Project*“. Hach, irgendwie war die Flash-Ära lustig. Ein pures „wer hat die besseren Animationen“. Content? Null.
+Irgendetwas treibt mich in diesem Monat dazu, mich nach den Glanzlichtern der Internet-Goldgräberzeit zu erkundigen. Was wurde aus *Balthaser Studios*, *Egomedia*, *Alien Arts* oder *All Media Studios*. Oder auch dem <cite>The Horus Project</cite>. Hach, irgendwie war die Flash-Ära lustig. Ein pures <q>wer hat die besseren Animationen</q>. Content? Null.
 
 An Musik suche ich im Juli nach dem *Halo 3* Soundtrack und nach den Lyrics von *Sound Of Silence*.
 
@@ -89,7 +89,7 @@ Der [Mister Wong](http://www.mister-wong.de/)-Skandal im August ist mal wieder t
 
 Zum ersten mal in meinem Leben beschäftige ich mich im späten August mit [LaTeX](http://de.wikipedia.org/wiki/LaTeX). Einige Studenten aus unserer Firma haben mich darauf gestoßen. Muss ich können, tu ich lernen. Mein Motto ;)
 
-Auf meinem Nachttisch liegt laut Google Suche <cite>Machiavellis</cite> „Der Fürst“.
+Auf meinem Nachttisch liegt laut Google Suche Machiavellis <cite>[Der Fürst](http://www.amazon.de/gp/product/3458344721/ref=as_li_ss_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=3458344721&linkCode=as2&tag=kogakurede-21)</cite>.
 
 In der [Autostadt Wolfsburg](http://www.autostadt.de/) eröffnet ein neues japanisches Restaurant, das *Anan*, mit extra einflogenem, japanischem Meisterkoch.
 
@@ -105,7 +105,7 @@ Mitte September will ich von Google wissen, wo eigentlich der Experimentalfilm [
 
 Eine ISO-Prüfung im Haus führt mich zu *Dilbert* und *Dogbert*, und ich kann den Bürokratiewahn mit einem lachenden Auge in der Comic lesend überstehen.
 
-*Host Europe* prahlt laut damit, jetzt auch Python und Ruby anzubieten. Nach meiner Nachfrage, was mit Ruby on Rails oder Django sei, bekomme ich ein kleinlautes <span style="quote">„Derzeit nicht“</span>. Was soll ich dann mit den beiden Programmiersprachen?
+*Host Europe* prahlt laut damit, jetzt auch Python und Ruby anzubieten. Nach meiner Nachfrage, was mit Ruby on Rails oder Django sei, bekomme ich ein kleinlautes <q>Derzeit nicht</q>. Was soll ich dann mit den beiden Programmiersprachen?
 
 Im September arbeite ich mich im Detail in die Befehlssyntax von git ein, was aber schnell und unkompliziert geht. Sogar ein Laie wie ich, kann ohne Probleme *branches* erstellen und *mergen*.
 
@@ -123,11 +123,11 @@ Ich muss mir eingestehen, dass ohne JavaScript-Frameworks und Ajax-Erfahrung kei
 
 jQuery hat die coolste Syntax und kann alles, was der Kunde von heute so will.
 
-Ich lache herzlich über den [Eklat bei Kerner](http://www.welt.de/fernsehen/article1250311/Die_oeffentliche_Hinrichtung_der_Eva_Herman.html), und schaue mir an, wie die arme Frau Hermann von einer Horde wütender Nazi-Jäger zu Klump gehauen wird.  Hach. Die Psychologen nennen das den „Mitleidseffekt“, weshalb auch der Großteil der Stimmen in Foren und Kommentaren für Eva Hermann ist.
+Ich lache herzlich über den [Eklat bei Kerner](http://www.welt.de/fernsehen/article1250311/Die_oeffentliche_Hinrichtung_der_Eva_Herman.html), und schaue mir an, wie die arme Frau Hermann von einer Horde wütender Nazi-Jäger zu Klump gehauen wird.  Hach. Die Psychologen nennen das den *Mitleidseffekt*, weshalb auch der Großteil der Stimmen in Foren und Kommentaren für Eva Hermann ist.
 
 Da ja bald Apples neues Betriebssystem [Leopard](http://www.apple.com/de/macosx/) erscheint, google ich schon mal nach passenden Space-Wallpapern.
 
-Diverse Suchen nach „Kuehne und Nagel Logistics“ und einem „Leopard Wiget“ bezeugen es – Leopard ist da. FedEx versagt in meinem Fall total, so bekomme ich Leopard erst am Samstag morgen.
+Diverse Suchen nach *Kuehne und Nagel Logistics* und einem *Leopard Widget* bezeugen es – Leopard ist da. FedEx versagt in meinem Fall total, so bekomme ich Leopard erst am Samstag morgen.
 
 MySQL und PostgreSQL muss ich mir selber kompilieren, aber Apache 2 und PHP sind schon bei Leopard dabei. Außerdem stelle ich fest, dass mein G5 zu langsam für die neuen iChat-Videohintergründe ist. Schade.
 
@@ -137,9 +137,9 @@ MySQL und PostgreSQL muss ich mir selber kompilieren, aber Apache 2 und PHP sind
 
 Im November rege ich mich über Alias/Autodesk auf, und darüber, dass ich meine arschteure Maya-Lizenz unter Leopard nicht mehr weiterbenutzen kann. Ich schaue mir das geniale [Blender 3D](http://www.blender.org/) an und bereue es, Maya überhaupt gekauft zu haben.
 
-Ich werde endlich „Django-Profi“ (haha, Scherz!) und checke mir die neuste Subversion-Version aus. Mein Projekt passe ich an die neue Unicode-Syntax an.
+Ich werde endlich *Django-Profi* (haha, Scherz!) und checke mir die neuste Subversion-Version aus. Mein Projekt passe ich an die neue Unicode-Syntax an.
 
-Voller Freude warte ich auf die Neuverfilmung der „Schatzinsel“ und rege mich dann maßlos auf, wie mies die Geschichte umgesetzt wurde.
+Voller Freude warte ich auf die Neuverfilmung der <cite>Schatzinsel</cite> und rege mich dann maßlos auf, wie mies die Geschichte umgesetzt wurde.
 
 Ich überlege mir, ob ich zukünftig mit Markdown, Textile oder ReST als Markup-Sprache arbeiten will, und entscheide mich für [Markdown](http://daringfireball.net/projects/markdown/). Textile ist sehr Prozessoraufwendig und rendert im Test um ein riesiges Stück langsamer als Markdown. Außerdem: Bei Textile kann ich auch gleich HTML nehmen. ReST erzeugt mir zu viel Markup.
 
@@ -153,7 +153,7 @@ Die Idee von Amazons *Kindle* finde ich nach einigem Überlegen gar nicht so sch
 
 Git setze ich jetzt flächendeckend in fast jedem noch so kleinen Projekt ein.
 
-Auf meinem Nachttisch liegt jetzt das Buch „*Der Dativ ist dem Genitiv sein Tod*“, was ich ziemlich lustig und interessant finde.
+Auf meinem Nachttisch liegt jetzt das Buch <cite>[Der Dativ ist dem Genitiv sein Tod](http://www.amazon.de/gp/product/3462034480/ref=as_li_ss_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=3462034480&linkCode=as2&tag=kogakurede-21)</cite>, was ich ziemlich lustig und interessant finde.
 
 Für einen Kunden recherchiere ich bei der GEMA, was es kostet multimediale Inhalte auf er eigenen Website zu benutzen und komme zum Schluss: Die sind megadreist. Es lebe [CC](http://creativecommons.org/)!
 
@@ -165,7 +165,7 @@ Die neue Version von [CandyBar](http://www.panic.com/candybar/) kommt raus, und 
 
 Ich überlege mir von einem webbasierenden GTD-Werkzeug auf eine OS X Lösung umzusteigen und teste drei Wochen lang [Things](http://www.culturedcode.com/things/) und [OmniFocus](http://www.omnigroup.com/applications/omnifocus/) zugleich.
 
-Doch schon nach 14 Tagen steht für mich eigentlich fest: *Things* ist der Testsieger. Obwohl es derzeit noch weniger Funktionen als OmniFocus hat, fühlt es sich einfach „besser“ an.
+Doch schon nach 14 Tagen steht für mich eigentlich fest: *Things* ist der Testsieger. Obwohl es derzeit noch weniger Funktionen als OmniFocus hat, fühlt es sich einfach *besser* an.
 
 Irgendwie kann ich es nicht lassen und kaufe mir einen [iPod touch](http://www.apple.com/de/ipodtouch/), den ich mit *Jailbreak* befreien will, was aber erstmal nicht klappt, weil Apple ein Update rausbringt, das die Sicherheitslücke schließt.
 

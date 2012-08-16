@@ -10,7 +10,7 @@ Ich bin gestern über eine schöne Web 2.0 Anwendung gestolpert, mit der man die
 
 <!-- more -->
 
-Mit der „Lebensmittel Datenbank“ auf [fddb.info](http://fddb.info/) kann man sich (nach kostenloser Anmeldung) ein individuelles Profil anlegen, das (grob) den Verbrauch anhand von Alter, Geschlecht, Größe, Gewicht sowie Tätigkeit ermittelt.
+Mit der <cite>[Lebensmittel Datenbank](http://fddb.info/)</cite> kann man sich (nach kostenloser Anmeldung) ein individuelles Profil anlegen, das (grob) den Verbrauch anhand von Alter, Geschlecht, Größe, Gewicht sowie Tätigkeit ermittelt.
 
 Auf seinen Merkzettel schreibt man seine täglich verzehrten Nahrungsmittel, Genussmittel und Getränke. Die Anwendung zeigt einem auch gleich, wieviel Prozent des Tagesbedarfs bereits gedeckt ist. Es können sogar Notizen zu jedem Tag hinterlegt werden.
 

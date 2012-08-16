@@ -70,7 +70,7 @@ Im Gegensatz zu OmniFocus können Projekten und Aufgaben auch mehrere Schlagwort
 
 Über eine Schlagwort-Filterleiste kann man später leicht die richtigen Aufgaben finden.
 
-Im Gegensatz zu anderen GTD-Werkzeugen hat Things eine interessante Neuerung für ein Problem gefunden, was in üblichen Werkzeugen immer lästig ist: Projekte die nie Enden. Diese kann man in so genannten *Areas* gruppieren. Sowohl Projekte als auch einzelnen Aufgaben können hier gruppiert werden. Ein mögliches Beispiel wäre z. B. „Wohnung verschönern“.
+Im Gegensatz zu anderen GTD-Werkzeugen hat Things eine interessante Neuerung für ein Problem gefunden, was in üblichen Werkzeugen immer lästig ist: Projekte die nie Enden. Diese kann man in so genannten *Areas* gruppieren. Sowohl Projekte als auch einzelnen Aufgaben können hier gruppiert werden. Ein mögliches Beispiel wäre z. B. *Wohnung verschönern*.
 
 Im Bereich *People* kann man Personen seines Adressbuches auswählen und sie bestimmten Projekten zuordnen, was derzeit aber noch nicht über ein Netzwerk verbunden ist.
 
@@ -85,7 +85,7 @@ Ich habe Things und OmniFocus jetzt über einen Zeitraum von vierzehn Tagen ausg
 
 Obwohl es derzeit noch weniger Funktionen hat und auch ein Preis noch nicht feststeht, habe ich mich aus verschiedenen Gründen für Things entschieden.
 
-Die Arbeit mit Things fühlt sich einfach „besser“ an und macht mehr Spaß, die Oberfläche ist aufgeräumt und übersichtlich. Kleine Dinge, wie Animationen ähnlich auf dem iPhone sorgen für ein gutes Gefühl.
+Die Arbeit mit Things fühlt sich einfach *besser* an und macht mehr Spaß, die Oberfläche ist aufgeräumt und übersichtlich. Kleine Dinge, wie Animationen ähnlich auf dem iPhone sorgen für ein gutes Gefühl.
 
 OmniFocus kommt mit dem typischen Pillendesign daher, was ich persönlich weder schön, noch nützlich finde. Vieles ist viel zu klein, oder es muss an bestimmten Punkte gezogen werden, um etwas zu bewegen. Things nutzt die Möglichkeiten von Leopard um ein Vielfaches besser. Die Programmierer/Designer von CulturedCode haben meiner Meinung nach ein besseres Verständnis für Interface-Design.
 

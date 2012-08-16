@@ -14,9 +14,9 @@ Seit fast einem Jahr arbeite ich nun mit Subversion – und bin ziemlich zufried
 
 *CVS* habe ich nicht kennengelernt und das scheint auch gut zu sein, bei allen grausigen Meldungen, die man über CVS hört.
 
-Linus Torvalds sieht das wohl etwas anders, wie er in Googles „[Tech Talk: Linus Torvalds on git](http://youtube.com/watch?v=4XpnKHJAok8 "YouTube - Tech Talk: Linus Torvalds on git")“ deutlich macht:
+Linus Torvalds sieht das wohl etwas anders, wie er in Googles <cite>[Tech Talk: Linus Torvalds on git](http://youtube.com/watch?v=4XpnKHJAok8 "YouTube - Tech Talk: Linus Torvalds on git")</cite> deutlich macht:
 
-> „I see Subversion as being the most pointless project ever started, because the slogan for Subversion for a while was: »CVS done right« […]. And if you start with that kind of slogan, there is nowhere you can go. There’s no way to do CVS right.“
+> I see Subversion as being the most pointless project ever started, because the slogan for Subversion for a while was: <q>CVS done right</q> […]. And if you start with that kind of slogan, there is nowhere you can go. There’s no way to do CVS right.
 >
 > – Linus Torvalds
 
@@ -36,7 +36,7 @@ Zur Namensfindung von Git (*engl.* Blödmann, Depp, Idiot) erzählt Linus Torval
 *Git* passt besser in eine *OpenSource*-Community, weil man sich nicht über die Probleme des Zugriffs auf ein Repository beschäftigen muss.
 Gibt man zu wenigen Personen Zugriff auf sein Repository, gibt es auch wenig Entwicklung. Gibt man zu vielen Zugriff entsteht nur Müll.
 
-Linus bringt es klar auf den Punkt: <span class="quote">„Die meisten da draußen sind Schwachköpfe, und ich vertraue ihnen nicht“</span>. Trotzdem kann jeder sich eine Kopie seines Projektes ziehen, daran arbeiten und es verbessern.
+Linus bringt es klar auf den Punkt: <q>Die meisten da draußen sind Schwachköpfe, und ich vertraue ihnen nicht</q>. Trotzdem kann jeder sich eine Kopie seines Projektes ziehen, daran arbeiten und es verbessern.
 
 Ist seine Arbeit gut, und andere Personen finden sie auch gut, können diese die Arbeit mit der eigenen verschmelzen.
 

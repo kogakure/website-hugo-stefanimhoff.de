@@ -18,7 +18,7 @@ Die Oberfläche von ProVoc ist in verschiedenen Sprachen verfügbar, darunter au
 
 Die Vokabeln können komfortabel in Kapiteln und Lektionen abgelegt werden, mit Synonymen und Kommentaren, sowie verschiedenen Medientypen aufgebessert.
 
-So kann man auch Bild, Ton und Video in seine Vokabeln einbinden, und so z. B. die korrekte Aussprache eines Wortes gleich mit einbinden, Gebärdensprache vorführen oder Bilder verschiedener Wolkenarten hinterlegen. Aus den Beispielen der Hersteller kann man schon entnehmen, dass diese Software über das Nutzen „bloßer Vokabeln“ weit hinausgeht.
+So kann man auch Bild, Ton und Video in seine Vokabeln einbinden, und so z. B. die korrekte Aussprache eines Wortes gleich mit einbinden, Gebärdensprache vorführen oder Bilder verschiedener Wolkenarten hinterlegen. Aus den Beispielen der Hersteller kann man schon entnehmen, dass diese Software über das Nutzen *bloßer Vokabeln* weit hinausgeht.
 
 Doppelte Vokabeln lassen sich durch einen Menüpunkt leicht finden und löschen.
 

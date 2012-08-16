@@ -20,7 +20,7 @@ Zum Verständnis von `branches` eine kurze Erklärung (*Wen das nicht interessie
 
 <samp>Ein Programmierer hat eine Software entwickelt. Da er eigentlich nicht mal vor hatte diese richtig zu veröffentlichen, hat der (englischsprechende) Programmierer gar nicht daran gedacht, Mehrsprachigkeit in seine Software einzubauen. Eine andere Programmiererin bietet sich nun an, eine Mehrsprachigkeit für die Software zu programmieren. Also erzeugt sie einen Zweig (branch) der Hauptentwicklungslinie. Sie arbeitet an der Mehrsprachigkeit, bis diese fehlerfrei ist. Später werden Ihre Änderungen zurück in die Hauptentwicklungslinie (trunk) geführt. Das hört sich kompliziert an – und das ist es wohl auch.</samp>
 
-**Update**: Einen Branch wieder zu „mergen“ ist kompliziert, aber nur unter Subversion. Unter neueren Versionskontrollsystemen, wie z. B. Git, Mercurial oder Bazaar ist es im Bruchteil einer Sekunde (auch für absolute Laien) erledigt.
+**Update**: Einen Branch wieder zu *mergen* ist kompliziert, aber nur unter Subversion. Unter neueren Versionskontrollsystemen, wie z. B. Git, Mercurial oder Bazaar ist es im Bruchteil einer Sekunde (auch für absolute Laien) erledigt.
 
 ### Anlegen der Grundstruktur ###
 
