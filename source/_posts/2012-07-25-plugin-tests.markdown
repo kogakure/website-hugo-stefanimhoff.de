@@ -8,6 +8,18 @@ tags:
 
 # Abbreviations
 
+{% codeblock lang:html %}
+<html>
+  <head>
+    <title>Dies ist eine HTML-Datei</title>
+  </head>
+  <body>
+    <h1>HTML</h1>
+  </body>
+</html>
+{% endcodeblock %}
+
+
 - Neue Features: DSL#1 und DSL#2 und HTML. Und noch mal DSL#2 und DSL#1. Und wie sieht es in einem Link aus?
 - Ich schreibe in [HTML](http://www.google.de/webhp?sourceid=chrome-instant&ie=UTF-8#q=test&hl=de "HTML-Userguide") und [CSS](http://www.google.de/webhp?sourceid=chrome-instant&ie=UTF-8#q=test&hl=de "Guide über CSS").
 - Außerdem: e.&nbsp;g. und etc., z.&nbsp;B., d.&nbsp;h.
