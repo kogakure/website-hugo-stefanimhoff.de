@@ -2,7 +2,6 @@
 layout: post
 title: "J2EE versus ruby/python-Frameworks"
 date: 2007-06-13 01:34
-categories:
 tags: [django, rubyonrails, screencast]
 ---
 

@@ -2,7 +2,6 @@
 layout: post
 title: "Django für Webdesigner"
 date: 2009-01-01 11:00
-categories:
 tags: [django]
 ---
 
@@ -14,11 +13,11 @@ Für viele Webdesigner sind Webframeworks noch immer ein Buch mit sieben Siegeln
 
 Auch wenn einige Webdesigner sich möglicherweise schon mit [Ruby on Rails](http://rubyonrails.org/) oder einem PHP-Webframework beschäftigt haben, trifft dies doch wohl nur auf eine Minderheit der Webdesigner zu. Die Mehrheit arbeitet wahrscheinlich mit WordPress, Textpattern oder Typo3.
 
-### Das Berufsbild eines Webdesigners
+## Das Berufsbild eines Webdesigners
 
 Der durchschnittliche Webdesigner kennt sich meist mit den grafischen Werkzeugen, wie Photoshop, Fireworks oder Illustrator aus, beherrscht mindestens die Grundlagen von Layout, Informationsarchitektur, Typographie und Fotobearbeitung, sollte ein gutes Wissen über webstandardskonformes (X)HTML und CSS besitzen und nutzt eine Hand voll CMS, Blog- oder Shopsysteme. Die Programmierkenntnisse liegen meist irgendwo zwischen Einsteiger und einem mittlerem Level, meistens in der Programmiersprache PHP (oder seltener ASP). Dazu kommen oft noch Grundkenntnisse in SQL. Schon seltener beschäftigen sich Webdesigner mit Webservern und deren Konfiguration.
 
-### CMS mit Plugins erweitern
+## CMS mit Plugins erweitern
 
 Die üblichen CMS werden je nach Kundenwunsch bis an ihre Grenzen (oder darüber hinaus) angepasst, erweitert oder verbogen. Aufgrund mangelnder Programmierkenntnisse oder fehlendem Interesse an Programmierung werden meist Erweiterungen, Plugins und Module benutzt, die andere Webentwickler für das jeweilige System programmiert haben.
 
@@ -31,7 +30,7 @@ Das dieses Suchen nach den geeigneten Erweiterungen und deren Anpassung nicht op
 * ein Webdesigner muss eine Vielzahl von CMS und deren Begrenzungen kennen, um bei spezifischen Kundenwünschen zu wissen, welches am besten mit den Wünschen des Kunden übereinstimmt, dies kann sehr anstrengend sein, weil ständig neue Systeme auf den Markt kommen
 * daher werden Kunden oft auch nach dem Motto <q>one fits all</q> mit nicht optimalen Lösungen abgespeist
 
-### Webframeworks
+## Webframeworks
 
 Bei einem Webframework sind zwar nicht alle oben genannten Probleme verschwunden, aber viele werden abgemildert oder verschwinden ganz.
 
@@ -43,7 +42,7 @@ Hier setzt nämlich ein Webframework an, was einfach gesagt nichts weiter ist, a
 
 Es stellt Verbindungen zur Datenbank her, verschickt E-Mails, speichert und lädt Datensätze in/aus der Datenbank oder kontrolliert das Caching der Webseiten.
 
-### Warum ist Django anders?
+## Warum ist Django anders?
 
 Django ist ein [Python](http://www.python.org/)-Webframework und dennoch zeichnet es sich durch einige Unterschiede zu üblichen MVC-Webframeworks aus.
 
@@ -51,7 +50,7 @@ Django ist in einer Umgebung von Zeitungen und Online-Portalen der Nachrichtenbr
 
 Es wurde von Anfang an so konzipiert, dass es eine komfortable Eingabe der Daten für Reporter und Publizisten ermöglicht, und eine optimale Templatesprache für Webdesigner bietet. Von der Idee zur Umsetzung einer Website dürfen in diesem Marktsegment, wenn möglich, nur wenige Stunden vergehen, maximal einige Tage. Eine monatelange Entwicklung wäre für Zeitungsverlage, die immer tagesaktuell berichten, sehr ungünstig. Daher liegt der Hauptvorteil bei Django in der Geschwindigkeit, mit der Ideen umgesetzt werden können.
 
-### Ist Django denn überhaupt für Webdesigner geeignet?
+## Ist Django denn überhaupt für Webdesigner geeignet?
 
 Ich selber zähle mich zur Gruppe der durchschnittlichen Webdesigner, auch wenn mir Serverkonfiguration und Programmierung nicht fremd sind. Meine Arbeitsverteilung im Tagesgeschäft sieht ungefähr so aus:
 
@@ -67,7 +66,7 @@ Aus eigener Erfahrung kann ich sagen, dass ich als Webdesigner mit 90 % der auft
 
 Django hat eine sehr aktive Community: Ob [wöchentlicher Podcast]( http://thisweekindjango.com/), diverse Blogs von Django-Entwicklern, eine [fantastische Dokumentation](http://docs.djangoproject.com/), Tutorials, Foren/Groups oder IRC-Chat. Selbst bei Wünschen, die nicht von Haus aus zu lösen sind, und für die es noch kein Modul von Drittanbietern gibt, ist es sehr wahrscheinlich schnell eine Lösung zu finden.
 
-### Datenbank und Daten
+## Datenbank und Daten
 
 Bei Django stehen zuerst in der Entwicklung einer Website die Daten im Vordergrund, was eigentlich bei jedem Projekt in einer Konzeptionsphase überdacht werden sollte, jedoch leider oft viel zu kurz kommt.
 
@@ -97,7 +96,7 @@ class Article(models.Model):
 
 Mit einem kurzen Befehl wird Django im Anschluss daran mitgeteilt, dass die nötigen Tabellen in der Datenbank angelegt werden sollen. Django unterstützt eine Menge Datenbanken (SQLite3, MySQL, PostgreSQL, Oracle) von Haus aus. Weitere können durch Drittanbieter hinzugefügt werden.
 
-### Admin-Interface
+## Admin-Interface
 
 Durch einige wenige Zeilen und einen weiteren Datenbankbefehl wird das Admin-Interface aktiviert. Redakteure können sofort mit der Eingabe von Daten beginnen, und das sogar, wenn noch nicht ein Template der Website erstellt wurde.
 
@@ -105,7 +104,7 @@ In vielen anderen Webframeworks muss der Programmierer sich eine Eingabemaske er
 
 Schick ist es auch noch. Das Interface anzupassen ist später kein Problem und funktioniert nach den gleichen Regeln und in der gleichen Templatesprache, wie für den sichtbaren Teil der Website.
 
-### URLs
+## URLs
 
 Das URL-Design ist bei Django ein integraler Bestandteil. Es ist sogar **nötig**, sich damit zu beschäftigen. Es gibt keine Vorgaben, wie die URLs aussehen soll, kein CMS was hier Endungen erzwingt, IDs anhängt oder Teile der URL obligatorisch macht.
 
@@ -125,13 +124,13 @@ urlpatterns = patterns('',
 
 Vielleicht mag dies auf den ersten Blick etwas seltsam aussehen oder nicht gleich verständlich sein, aber keine Sorge, das legt sich sehr schnell, wenn die Grundlagen von Regular Expressions verstanden sind.
 
-### Views
+## Views
 
 Die View ist bei Django die Datei, die Daten aus der Datenbank holt, nach beliebigen Regeln sortiert und gruppiert und diese an das Template weitergibt.
 
 Alle Abfragen und Überprüfungen finden hier statt. Django bietet standardmäßig schon eine vereinfachte Möglichkeit an, Daten aus der Datenbank zu holen, und in Listenansicht oder Detailansicht anzuzeigen, sowie einige andere. Ein Großteil der üblichen Anfragen lassen sich mit diesen [Generic Views](http://docs.djangoproject.com/en/dev/ref/generic-views/) erledigen, ohne auch nur eine Zeile programmieren zu müssen.
 
-### Templates
+## Templates
 
 Die View verpackt die verarbeiteten Daten in Container (*Context*) und gibt diese an die Templates weiter. Dort werden die Daten dann nach gewünschter Logik ausgegeben.
 
@@ -186,7 +185,7 @@ Das niedrigere Template, hier eine Detailseite für einen Artikel, überschreibt
 {% endraw %}
 {% endcodeblock %}
 
-### Erweitern von Django
+## Erweitern von Django
 
 Eine Besonderheit von Django ist die Möglichkeit, das eigene Projekt mit Applikationen zu erweitern. Diese Applikationen sind mehr als nur Plugins oder Extensions, sondern Module (wie z. B. Module in ExpressionEngine). Fast alles, was in Django benutzt wird, ist eine eigene Applikation. Sogar das Admin-Interface ist ein eigenes Modul, was nach belieben benutzt oder nicht benutzt werden kann.
 
@@ -204,7 +203,7 @@ Für vieles gibt es schon fertige Applikationen, einige sind sogar Teil von Djan
 
 Außerdem ist es möglich, mehrere Webseiten mit einer Applikation zu betreiben, also z. B. nur einmal den Code für ein Forum vorzuhalten und dann für viele Kunden zu benutzen.
 
-### Hosting und Server
+## Hosting und Server
 
 Eines darf natürlich nicht verschwiegen werden: Systeme die nicht PHP benutzen, erfordern mehr Aufwand bei der Einrichtung auf dem Server. Das gilt für Ruby on Rails genauso wie für Django.
 
@@ -214,7 +213,7 @@ Daher ist es derzeit nicht denkbar, solche Systeme für den Fliesenleger von neb
 
 Ob der Fliesenleger überhaupt ein CMS benötigt, steht auf einem anderen Blatt. Und bei Websites, die mehr seitenbasierenden Inhalt haben, ist ein System wie [Typolight](http://www.typolight.org/) mit Sicherheit die bessere Wahl.
 
-### Fazit
+## Fazit
 
 Wer einen anspruchsvollen Kunden hat, der eine Website oder ein Portal aufbauen möchte, das möglichst beständig und zukunftssicher sein soll, und für den der Inhalt im Zentrum der Website steht, ist Django nur zu empfehlen.
 

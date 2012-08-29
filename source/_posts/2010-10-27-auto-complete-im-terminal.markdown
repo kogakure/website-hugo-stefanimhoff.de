@@ -2,7 +2,6 @@
 layout: post
 title: "Auto-Complete im Terminal"
 date: 2010-10-27 18:30
-categories:
 tags: [terminal]
 ---
 
@@ -18,7 +17,7 @@ Doch damit ist jetzt Schluss. Ich habe schon seit längerem eine Completion-Date
 
 Es ist möglich Auto-Complete an beliebige Befehle anzuhängen. Die Details sind sehr komplex und ich habe gerade an der Oberfläche gekratzt, aber im Prinzip ist es möglich beliebige Strings als Auto-Complete zu liefern.
 
-### Auto-Complete für SSH-Server
+## Auto-Complete für SSH-Server
 
 Mit dem Auto-Complete für die bekannten SSH-Server fing meine Recherche an, wozu ich in einem Forum einen Codeschnipsel gefunden habe:
 
@@ -33,7 +32,7 @@ complete -o default -W "${SSH_COMPLETE[*]}" ssh
 
 Dieser Befehl schneidet aus der Datei mit dem bereits besuchten Hosts vom ersten Zeichen bis zum ersten Leerzeichen die Zeichenkette aus, der eigentliche Schlüssel wird also verworfen. Dann werden alle Kommata durch Zeilenumbrüche ersetzt, was dazu dient Kombinationen aus IP und Hostname zu trennen. Anschließend werden diese sortiert und Duplikate entfernt und im letzten Schritt werden alle Zeichenketten entfernt, die nur aus Zahlen oder Punkten bestehen, also die IPs. Zurück bleibt eine Liste, in der alle Hostnamen zeilenweise stehen. Der Abschließende Befehl registriert diese Zeichenkette mit dem Befehl `ssh`. Es reicht ab jetzt aus, wenn man den Befehl tippt und dann TAB drückt, um eine Liste aller Server zu sehen, oder einige Buchstaben um die Server zu vervollständigen.
 
-### Auto-Complete für Git-Repositorys
+## Auto-Complete für Git-Repositorys
 
 Für mich reichte das als Denkanstoß, um eine Lösung für mein Problem zu erarbeiten. Wenn man Gitosis verwendet, um seine Git-Repositorys zu verwalten, dann hat man für jede Installation von Gitosis ein Admin-Repository, dass geklont wird. Darin befinden sich die Schlüssel aller Mitarbeiter, die mit Git arbeiten und eine Konfigurations-Datei: `gitosis.conf`.
 

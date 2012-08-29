@@ -2,7 +2,6 @@
 layout: post
 title: "Subversion (2) – Installation"
 date: 2007-06-08 01:00
-categories:
 tags: [subversion, tutorial]
 ---
 
@@ -14,7 +13,7 @@ Die Installation von Subversion ist relativ leicht und schnell erledigt, für di
 <p>Der Inhalt dieses Artikels ist noch aktuell, doch kann ich nur dringend dazu raten, sich die fantastische Alternative zu Subversion anzusehen: <a href="/versionskontrolle-mit-git/"><strong>Git</strong></a>.</p>
 </div>
 
-### Installationsarten, Programmoberflächen ###
+## Installationsarten, Programmoberflächen
 
 Subversion ist ein Programm, das in einer Befehlseingabebox bedient wird. Es gibt aber auch eine Vielzahl von grafischen Oberflächen, die Anfängern die Bedienung ermöglichen sollen. Jedes dieser Programme hat eine etwas andere Arbeitsweise, doch alle nutzen unter der Haube die gleichen Befehle.
 
@@ -30,7 +29,7 @@ Viele Editoren und Entwicklungsumgebungen für Programmierer und Webentwickler k
 
 Doch das ist natürlich alles für später, hier soll ja der Umgang im Terminal gelernt werden. Das sieht vielleicht etwas komplizierter aus, aber in den meisten Fällen ist man im Terminal um einiges schneller, als vorher das grafische Programm zu starten und seine Optionen anzuklicken.
 
-### Installation über das Terminal ###
+## Installation über das Terminal
 
 **Anmerkung**: Ab Mac OS X 10.5 *Leopard* ist bereits Subversion 1.4.4 von Haus aus installiert.
 

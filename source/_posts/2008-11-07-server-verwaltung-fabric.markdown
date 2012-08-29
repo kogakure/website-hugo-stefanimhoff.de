@@ -2,7 +2,6 @@
 layout: post
 title: "Server-Verwaltung mit Fabric"
 date: 2008-11-07 12:00
-categories:
 tags: [python, deployment, server, fabric]
 ---
 
@@ -19,7 +18,7 @@ Fabric erledigt für mich im Bruchteil weniger Sekunden alle lästigen Arbeiten:
 
 Um Fabric nutzen zu können benötigt man nur Python 2.5 und einige weitere Module auf dem eigenen Computer. Als Anmerkung sei noch gesagt, dass Fabric nichts auf dem Server installieren muss, und daher auch bedenkenlos auf der Arbeitsstelle eingesetzt werden kann, wo man ja überlicherweise nicht mit den Servern machen kann, was man will.
 
-### Fabfile
+## Fabfile
 
 Im Ordner eines Projektes legt man eine Textdatei mit Namen `fabfile` oder `fabfile.py` an. Der Inhalt ist in Python geschrieben und schnell erklärt:
 

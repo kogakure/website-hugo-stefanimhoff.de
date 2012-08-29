@@ -2,7 +2,6 @@
 layout: post
 title: "Traditionelle, japanische Farben für Photoshop und Illustrator"
 date: 2007-12-08 21:05
-categories:
 tags: [photoshop, illustrator, japan, farbe, download]
 ---
 

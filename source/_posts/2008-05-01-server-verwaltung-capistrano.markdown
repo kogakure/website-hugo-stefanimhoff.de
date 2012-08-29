@@ -2,7 +2,6 @@
 layout: post
 title: "Server-Verwaltung mit Capistrano"
 date: 2008-05-01 18:18
-categories:
 tags: [ruby, server, deployment, capistrano]
 ---
 
@@ -16,7 +15,7 @@ Die Fähigkeiten von Capistrano übersteigen meine Anspüche bei weitem, da ich 
 
 Trotzdem ist das Programm fantastisch und nach kurzer Einführung in die Bedienung unersetzlich.
 
-### Eine übliche Arbeitsweise mit Webapplikationen und Servern
+## Eine übliche Arbeitsweise mit Webapplikationen und Servern
 
 Die übliche Arbeitsweise einer modernen Webentwicklung beinhaltet heute Versionskontrolle.
 
@@ -28,7 +27,7 @@ Die meisten Webapplikationen benötigen danach Arbeiten am Server, wie das Neust
 
 Und genau da setzt Capistrano an.
 
-### Installation
+## Installation
 
 Um Capistrano zu installieren muss man zuerst [Ruby](http://www.ruby-lang.org/ "Ruby Programming Language") und [RubyGems](http://www.rubygems.org/ "RubyGems Manuals") auf seinem lokalen Computer installieren. Capistrano benötigt keine Installationen von Software auf den Servern.
 
@@ -38,7 +37,7 @@ Zur Installation gibt man einfach ins Terminal folgenden Befehl ein:
 sudo gem install capistrano
 {% endcodeblock %}
 
-### Einrichten von Capistrano
+## Einrichten von Capistrano
 
 Nach einiger Zeit sollte das Gem erfolgreich installiert sein. Danach wechselt man in das Verzeichnis seines lokalen Projektes.
 
@@ -50,7 +49,7 @@ capify .
 
 Capistrano legt im Hauptverzeichnis des Projektes eine Datei `Capfile` an. Wenn es sich um ein Ruby on Rails-Projekt handelt oder man manuell vorher einen `config`-Ordner angelegt hat, wird auch noch eine `deploy.rb` erzeugt.
 
-### Benutzung von Capistrano
+## Benutzung von Capistrano
 
 Capistrano kommt schon mit einer Vielzahl von Befehlen und Subbefehlen für die komplexesten Prozesse. Diese kann man sich mit dem Befehl:
 
@@ -64,7 +63,7 @@ Die Befehle werden in der Programmiersprache [Ruby](http://www.ruby-lang.org/) g
 
 Der Einfachheit halber stehen alle meine Befehle direkt in der `Capfile`-Datei, zumal ich Django-Projekte habe, und daher eine andere Ordnerstruktur als bei <cite>Ruby on Rails</cite> vorliegt.
 
-### Beispiel-Datei
+## Beispiel-Datei
 
 Ich habe in meiner Datei (`Capfile`) folgende Funktionen erstellt, die diverse Aufgaben für mich vereinfachen, wie z. B. das Neustarten des Webservers,  Caching-Servers oder das Aktualisieren eines Django-Projektes aus dem Repository.
 

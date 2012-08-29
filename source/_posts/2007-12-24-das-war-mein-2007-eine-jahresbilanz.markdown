@@ -2,8 +2,7 @@
 layout: post
 title: "Das war mein 2007 – eine Jahresbilanz"
 date: 2007-12-24 14:00
-categories:
-tags:
+tags: []
 ---
 
 Zum Jahresende will ich dieses Mal Googles [Webprotokoll](http://www.google.de/history/) als Erinnerungshilfe hinzuziehen. Dieser Dienst von Google ermöglicht es die eigenen Suchbegriffe anzusehen.
@@ -12,7 +11,7 @@ Zum Jahresende will ich dieses Mal Googles [Webprotokoll](http://www.google.de/h
 
 Ich finde es ziemlich interessant, im Nachhinein noch zu sehen, was man vor langer Zeit in Google gesucht hat, und welche Seiten man angeschaut hat.
 
-### Januar ###
+## Januar
 
 Im Januar suche ich einiges zum Thema Weltreligionen. Auf ARTE kommt ein Beitrag über die verschiedenen Religionen, was mich zur Recherche treibt.
 Ich suche nach Scientology, aber nur um zu verstehen, an was für einen hanebüchenen Scheiß die glauben.
@@ -21,7 +20,7 @@ In der Bildersuche suche ich nach einer Diskussion mit meinen Kollegen nach dem 
 
 Außerdem suche ich viel nach [ExpressionEngine](http://expressionengine.com/), da die Umsetzung meiner eigenen [Website](http://stefanimhoff.de/) im Januar voll im Gange ist. Besonders `segment_1`, `url_segments` und `conditional_variable` bestimmen diesen Monat.
 
-### Februar ###
+## Februar
 
 Hier war nicht so viel los, vor allem liegt das aber wohl daran, dass ich das Webprotokoll noch nicht aktiv eingeschaltet habe, sondern nur hin- und wieder mal aufgezeichnet wird, wenn ich z. B. in Gmail angemeldet bin.
 
@@ -29,7 +28,7 @@ Die @media in London zieht mein Interesse an, obwohl ich – mal wieder – nich
 
 Ich fange an alle unsere Jobs auf der Arbeit in [Subversion](http://subversion.tigris.org/) Repositorys zu verschieben. Daher benötige ich eine Installationsanleitung für das gottverdammte Linux SuSE 10, weil nur dieses von unserer IT-Abteilung für uns installiert wird. Kompilieren macht jedenfalls unter diesem System keinen Spaß, weil auch wirklich kein Standard-UNIX-Pfad stimmt.
 
-### März ###
+## März
 
 Im März erkundige ich mich nach den [Palmeninseln](http://www.thepalm.ae/) und der [Weltkarteninselgruppe](http://www.theworld.ae/) von Dubai. Der Scheich von Dubai investiert eine Menge, weil er weiß, dass sein Öl in wenigen Jahren ausgehen wird. Natürlich bin ich neidisch auf diese reichen Sackgesichter, die sich dort eine Parzelle kaufen können. Naja, jedenfalls im Moment noch – bis die dann in einigen Jahren weggespült werden.
 
@@ -37,19 +36,19 @@ Bei ExpressionEngine interessieren mich u. a. `search_results` und `wegblog_name
 
 Zusätzlich will ich noch wissen, wie man eine Personal-Version von ExpressionEngine zu einer Core-Version downgraded. Ich hab jetzt nämlich zwei EspressionEngine-Projekte, aber nur eine Lizenz. Natürlich gibt es keine Ergebnisse bei pmachine, aber es reicht nach etwas testen aus, wenn man einige der Module löscht.
 
-### April ###
+## April
 
 Dieser Monat ist der Kompilierungsmonat, jedenfalls installiere ich die <cite>Apple Developer Tools</cite>, Subversion unter Mac OS X, und suche nach verschiedenen Linux-Paketen.
 
 ExpressionEngine steht immer noch auf meinem Tagesplan, dieses Mal mit `categories`, `conditionals`, Debugging-, Geschwindigkeitsmessungs- und Statistik-Fragen.
 
-### Mai ###
+## Mai
 
 Der Mai ist die heiße Phase in der Entwicklung meiner neuen Website. Das RSS Modul interessiert mich näher, Attribute, Datumsformatierungen, Conditionals, wie z. B. `elseif`, sowie `comment_count`.
 
 Außerdem suche ich nach den Lyrics meiner neuen Alben von den [Poets of the Fall](http://poetsofthefall.com/), einer wirklich guten, finnischen Rockband.
 
-### Juni ###
+## Juni
 
 Im Juni lese ich das Buch [Robinson Crusoe](http://de.wikipedia.org/wiki/Robinson_Crusoe) und informiere mich mehr über die Hintergründe der Geschichte.
 
@@ -61,7 +60,7 @@ Ein TextMate Bundle für Django muss her, und auch [ReST](http://docutils.source
 
 Logischerweise interessiere ich mich jetzt auch für  [Python](http://www.python.org/), die Programmiersprache, auf der Django basiert. Das Buch [Dive Into Python](http://www.diveintopython.org/), das im Internet kostenlos verfügbar ist, lese ich in den nächsten Wochen komplett durch.
 
-### Juli ###
+## Juli
 
 Im Juli beschäftigen mich wieder stark Django und Python: Django Filter, Statische Dateien mit Django u. ä.
 
@@ -77,7 +76,7 @@ In diesem Monat schaue ich mir im Fernsehen vermutlich [Thoughtcrimes](http://ww
 
 Und ich suche nach dem Film [Staplerfahrer Klaus](http://youtube.com/watch?v=NgqeBcdbFJ4), ein Klassiker, den man einfach gesehen haben muss.
 
-### August ###
+## August
 
 Im August erkundige ich mich nach Googles PageRank, denn mittlerweile sind schon fast vier Monate vergangen, und ich habe immer noch einen PageRank von Null. Ich befürchte die böse <cite>Google Sandbox</cite> (zu recht, wie ich feststelle).
 
@@ -95,7 +94,7 @@ In der [Autostadt Wolfsburg](http://www.autostadt.de/) eröffnet ein neues japan
 
 Das Sommerloch geht langsam zu Ende, also erkundige ich mich, was meine Lieblingsserien so machen, und wann die Staffeln wieder starten: [Lost](http://abc.go.com/primetime/lost/), [StarGate SG-1 und StarGate Atlantis](http://stargate.mgm.com/), [Monk](http://www.usanetwork.com/series/monk/) und [Battlestar Galactica](http://www.scifi.com/battlestar/).
 
-### September ###
+## September
 
 Diesen Monat beschäftige ich mich vor allem LaTeX, Bibtex und Alphadin. Ich schaue mir an, wie man vernünftige Vorlagen mit LaTeX baut.
 
@@ -109,7 +108,7 @@ Eine ISO-Prüfung im Haus führt mich zu <cite>Dilbert</cite> und Dogbert, und i
 
 Im September arbeite ich mich im Detail in die Befehlssyntax von git ein, was aber schnell und unkompliziert geht. Sogar ein Laie wie ich, kann ohne Probleme *branches* erstellen und *mergen*.
 
-### Oktober ###
+## Oktober
 
 Immer noch beschäftigt mich LaTeX, es ist einfach cool, was man mit einem puren Texteditor erstellen kann.
 
@@ -133,7 +132,7 @@ MySQL und PostgreSQL muss ich mir selber kompilieren, aber Apache 2 und PHP sind
 
 [Manuela Hoffmann](http://www.surfgarden.de/blog/2007-10/die-dinge-wirklich-mal-geregelt-kriegen/) bringt mich auf [TaskPaper](http://hogbaysoftware.com/products/taskpaper) als GTD-Werkzeug, was ich zwei Wochen teste, dann aber wieder entferne, weil mir einfach noch zu viele Dinge fehlen.
 
-### November ###
+## November
 
 Im November rege ich mich über Alias/Autodesk auf, und darüber, dass ich meine arschteure Maya-Lizenz unter Leopard nicht mehr weiterbenutzen kann. Ich schaue mir das geniale [Blender 3D](http://www.blender.org/) an und bereue es, Maya überhaupt gekauft zu haben.
 
@@ -159,7 +158,7 @@ Für einen Kunden recherchiere ich bei der GEMA, was es kostet multimediale Inha
 
 Ich setze jQuery jetzt in Kundenprojekten ein, und benutze es auch gleich für GoogleMaps und SPAM-Schutz von E-Mail-Adressen.
 
-### Dezember ###
+## Dezember
 
 Die neue Version von [CandyBar](http://www.panic.com/candybar/) kommt raus, und hat jetzt gleich Pixadex integriert. Natürlich muss ich gleich Leopards Aussehen mit neuen Icons und Dock versehen.
 
@@ -177,6 +176,6 @@ Durch einen Artikel auf [praegnanz.de](http://praegnanz.de/weblog/ted) erfahre i
 
 Kurz vor Weihnachten setze ich mich 1-2 Stunden hin und gestalte in Photoshop ein Mac OS X Leopard-Icon für Django-Projekte. Dies führt zu einem unglaublichen Feedback aus der ganzen Django-Szene und lässt meine Besucherzahlen explodieren. Ich entdecke die [deutsche Community](http://www.django-de.org/) und nehme mir vor mich im neuen Jahr an der Übersetzung der englischen Dokumentation zu beteiligen.
 
-### Weihnachtsgrüße ###
+## Weihnachtsgrüße
 
 Und das war es auch schon, der Jahresrückblick 2007. Ich wünsche allen Lesern ein frohes Fest und einen guten Rutsch ins Jahr 2008.

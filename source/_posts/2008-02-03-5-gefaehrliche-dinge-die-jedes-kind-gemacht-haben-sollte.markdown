@@ -2,8 +2,7 @@
 layout: post
 title: "5 gefährliche Dinge, die jedes Kind gemacht haben sollte"
 date: 2008-02-03 12:34
-categories:
-tags:
+tags: []
 ---
 
 Ich bin gerade auf [TED](http://www.ted.com/) über den Vortrag [5 dangerous things you should let your kids do](http://www.ted.com/index.php/talks/view/id/202) von Gever Tulley gestoßen, der darin sogar 6 gefährliche Dinge vorstellt, die jedes Kind gemacht haben sollte.

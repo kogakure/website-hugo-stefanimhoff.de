@@ -2,7 +2,6 @@
 layout: post
 title: "Subversion (4) – Importieren einer Projektstruktur"
 date: 2007-07-29 13:00
-categories:
 tags: [subversion, tutorial]
 ---
 
@@ -22,7 +21,7 @@ Zum Verständnis von `branches` eine kurze Erklärung (*Wen das nicht interessie
 
 **Update**: Einen Branch wieder zu *mergen* ist kompliziert, aber nur unter Subversion. Unter neueren Versionskontrollsystemen, wie z. B. Git, Mercurial oder Bazaar ist es im Bruchteil einer Sekunde (auch für absolute Laien) erledigt.
 
-### Anlegen der Grundstruktur ###
+## Anlegen der Grundstruktur
 
 {% codeblock lang:sh %}
 cd ~
@@ -35,7 +34,7 @@ mkdir tags
 
 Dies erzeugt meine Grundstruktur, den Konventionen entsprechend. Der Ordner `Import` (frei gewählter Name) liegt auf dem Desktop und dient nur für den Importierungsvorgang. Danach kann er gelöscht werden. Innerhalb von `trunk` lege ich jetzt eine für mein Projekt passende Struktur an. Als Hilfe ist es wichtig zu erwähnen, dass mit Subversion nur Ordner ausgecheckt werden können, keine einzelnen Dateien. Daher ist es wichtig, die Struktur mit möglichst logischen und strukturierten Ordnern und Unterordnern anzulegen.
 
-### Beispielstruktur meines Projektes ###
+## Beispielstruktur meines Projektes
 
 Hier ist mal eine Beispielstruktur, die ich überlicherweise verwende:
 
@@ -62,7 +61,7 @@ Der Vorteil bei einer tiefen Ordnerstruktur liegt darin, dass man nur das holen 
 
 Überlicherweise lege ich auch schon einige Vorlagendateien (html, css) und alles, was ich schon vom Kunden habe, gleich mit in die Verzeichnisse.
 
-### Importieren der Verzeichnisstruktur ###
+## Importieren der Verzeichnisstruktur
 
 Dieser Stand wird jetzt in das noch leere Repository importiert.
 

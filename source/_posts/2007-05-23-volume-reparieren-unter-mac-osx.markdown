@@ -2,7 +2,6 @@
 layout: post
 title: "Volume reparieren unter Mac OS X"
 date: 2007-05-23 11:40
-categories:
 tags: [tutorial, macosx]
 ---
 
@@ -14,7 +13,7 @@ Wie man eine Boot-Festplatte unter Mac OSX ohne die Installations-CD repariert, 
 
 Schneller und komfortabler geht es so:
 
-### Neustarten im Single-User Modus ###
+## Neustarten im Single-User Modus
 
 Im Single-User Modus starten, die Tastenkombination <kbd>⌘</kbd> + <kbd>S</kbd> (Apfel/Command + S) während des Bootens gedrückt halten.
 

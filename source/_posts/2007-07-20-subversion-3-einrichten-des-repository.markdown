@@ -2,7 +2,6 @@
 layout: post
 title: "Subversion (3) – Einrichten des Repository"
 date: 2007-07-20 09:00
-categories:
 tags: [subversion, tutorial]
 ---
 
@@ -18,7 +17,7 @@ Hier kann man auf verschiedene Möglichkeiten arbeiten: Entweder man legt ein Re
 
 Ich habe mich für die zweite Methode entschieden. Dies hat eine Menge Vorteile: Zum einen ist die Revisionsnummer, die ein Projekt hat, auch wirklich nur durch das eine Projekt erzeugt worden, zum anderen kann man ein nicht mehr gebrauchtes Projekt leicht löschen oder archivieren. Ein Projekt aus dem Repository zu löschen bringt nämlich nichts, die Daten der alten Stände verbleiben für immer darin.
 
-### Ordner für die Repositories anlegen ###
+## Ordner für die Repositories anlegen
 
 Zuerst lege ich mir ein Verzeichnis an, das später meine Repositories enthalten wird. Dies lege ich in meinem Heimatverzeichnis an.
 
@@ -28,7 +27,7 @@ mkdir Subversion
 cd Subversion
 {% endcodeblock %}
 
-### Repository für ein Projekt anlegen ###
+## Repository für ein Projekt anlegen
 
 Im nächsten Schritt lege ich für ein Projekt meiner Wahl das Repository an, hier im für Beispiel meine Website.
 
@@ -43,7 +42,7 @@ Jetzt wird mit einem Befehl das leere Repository erzeugt.
 svnadmin create --fs-type fsfs .
 {% endcodeblock %}
 
-### Anmerkungen ###
+## Anmerkungen
 
 Der Parameter `--fs-type fsfs` sorgt dafür, dass ein Repository vom Typ *Filesystem* erzeugt wird. Es gibt noch das <cite>Berkeley DB</cite> Format, das aber in einigen Umgebungen und Netzwerken Probleme erzeugen kann. Wenn man mit tausenden Personen an einem solchen Projekt arbeitet ist es wahrscheinlich besser das Datenbankformat zu verwenden, aber nicht für sich selber oder ein paar dutzend Kollegen.
 

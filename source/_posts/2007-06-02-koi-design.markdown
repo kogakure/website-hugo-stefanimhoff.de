@@ -2,15 +2,14 @@
 layout: post
 title: "Das Koi-Design: Inspiration und Idee"
 date: 2007-06-02 02:00
-categories:
-tags:
+tags: [irezumi, japan, design, inspiration]
 ---
 
 Die Idee für das Design dieser neuen Website schwirrte schon länger in meinem Kopf herum. Nur wollte sie irgendwie nicht in die physische Welt überwechseln. Als Inspiration habe ich die Kunst der japanischen Tätowierung verwendet – Irezumi.
 
 <!-- more -->
 
-### Irezumi – Die japanische Tätowierung ###
+## Irezumi – Die japanische Tätowierung
 
 Tätowierungen sind eine Kunst, die im wahrsten Sinne des Wortes vergänglich sind, da mit dem Träger auch das Kunstwerk verschwindet, sobald er stirbt. Dies passt aber auch gut zum Begriff der *fließenden Welt*, einem Zeichen für die Vergänglichkeit im Buddhismus. Auch im Sinnbild der Samurai, in der Kirschblüte, kann man die Vergänglichkeit des Seins nach kurzer Dauer eines perfekten Lebens sehen.
 
@@ -22,17 +21,17 @@ Einer der besten, lebenden Künstler des Irezumi ist Horiyoshi III, dessen Werke
 
 Im Irezumi werden nicht wahllos irgendwelche Dinge auf den Körper tätowiert, die Bilder haben eine tiefe Bedeutung für den Träger und erfordern Fachwissen über Religion, Geschichte und Mythen aus China und Japan. Das ist auch der Grund, weshalb man oft schlechte Kopien und pseudo-japanische Tätowierungen in westlichen Tätowierstudios angeboten bekommt. Diesen Tätowierern fehlt meist dieses Hintergrundwissen.
 
-### Yakuza ###
+## Yakuza
 
 Am bekanntesten ist die Tätowierung durch ihre bedeutensten Träger – die Mitglieder der japanischen Verbrecherorganisation [Yakuza](http://de.wikipedia.org/wiki/Yakuza "Yakuza - Wikipedia") – geworden, doch werden Irezumi heute auch von Geschäftsmännern und sogar Hausfrauen getragen.
 
 Die Verbindungen zur japanischen Kunst des [Ukiyo-e](http://de.wikipedia.org/wiki/Ukiyo-e "Ukiyo-e - Wikipedia") (Holzschnitt) sind fließend und die Motive sind oft die gleichen.
 
-### Motive ###
+## Motive
 
 Neben Göttern, Fabelwesen und Dämonen ist die wichtigste Quelle für Motive die alte chinesische Novelle <cite>[Shuǐhǔ Zhuàn](http://de.wikipedia.org/wiki/Die_R%C3%A4uber_vom_Liang-Schan-Moor)</cite> (Wasserufergeschichte), in Japan als <cite>Suikoden</cite> bekannt. Sie gehört zu einem der vier klassischen Bücher der chinesischen Literatur. Die deutsche Übersetzung dieses sehr unterhaltsamen Buches heißt <cite>[Die Räuber vom Liang Schan Moor](http://www.amazon.de/gp/product/3458318917?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=3458318917 "Amazon.de: Die Räuber vom Liang Schan Moor, Franz Kuhn")</cite>.
 
-### Die Räuber vom Liang-Shan Moor ###
+## Die Räuber vom Liang-Shan Moor
 
 <img src="/img/suikoden-luta.jpg" width="605" height="340" alt="Hauptmann Lu-Ta, der Blumenmönch" title="Hauptmann Lu-Ta, der Blumenmönch. Motiv aus dem Suikoden von Kunyoshi: Hauptmann Lu-Ta, der Blumenmönch, zerschlägt einen Baum mit einem Hieb, um eine Bande von Taugenichtsen zu beeindrucken." />
 
@@ -40,7 +39,7 @@ Kurz zusammengefasst geht es um eine Räuberbande von 108 heldenhaften Männern 
 
 Das Abenteuer ist im Taschenbuchformat erhältlich und sehr unterhaltsam – auch für Kinder - obwohl die eine oder andere Stelle vielleicht ein bisschen böser und grausamer als beim Räuber Hotzenplotz ist…
 
-### Bedeutung des Motivs ###
+## Bedeutung des Motivs
 
 <img src="/img/design-koi.jpg" width="825" height="196" alt="Design: Digitales Irezumi" title="Koi beim Hinaufschwimmen der Longmen Wassefälle. Es enthält typische Elemente wie Blätter, Blüten und Wellenkämme." />
 

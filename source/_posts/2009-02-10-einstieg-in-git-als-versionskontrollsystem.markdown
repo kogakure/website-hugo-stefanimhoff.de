@@ -2,7 +2,6 @@
 layout: post
 title: "Einstieg in Git als Versionskontrollsystem"
 date: 2009-02-10 20:00
-categories:
 tags: [git, subversion]
 ---
 
@@ -14,13 +13,13 @@ Zuhause befinden sich fast nur noch Git-Repositorys auf meiner Festplatte, und i
 
 Den mittlerweile veralteten Artikel von 2007 ersetze ich durch eine große Liste hilfreicher Links zu Git:
 
-### Offizielle Website
+## Offizielle Website
 * [Git - Fast Version Control System](http://git-scm.com/ "Git - Fast Version Control System")
 
-### Tutorials und Dokumentationen
+## Tutorials und Dokumentationen
 * [The Git Community Book](http://book.git-scm.com/ "Git Community Book") – Das Community-Buch, online und als PDF herunterzuladen
 
-#### Kurze Anleitungen
+### Kurze Anleitungen
 * [tryGit](http://try.github.com/) – Git interaktiv im Browser lernen
 * [Git Immersion](http://gitimmersion.com/) – Sehr schön gestaltete Guided Tour durch die Grundlagen von Git.
 * [git – the simple guide](http://rogerdudler.github.com/git-guide/) – kurz und knapp auf einer langen Seite
@@ -32,7 +31,7 @@ Den mittlerweile veralteten Artikel von 2007 ersetze ich durch eine große Liste
 * [Git Ready](http://gitready.com/ "git ready &raquo; daily tips for the noob to the guru") – Kurze Git-Tipps für Beginner, Fortgeschrittene und Profis
 * [Sei (k)ein Blödmann und nimm Git: Einführung in Versionskontrolle mit Git](http://goo.gl/Aea52) – deutschsprachige Präsentation über Git
 
-#### Anleitungen mit mehr Detail
+### Anleitungen mit mehr Detail
 * [Git for Designers](http://hoth.entp.com/output/git_for_designers.html "Version Control for Designers") – Detailierter Anleitung für Einsteiger in Versionskontrolle
 * [Intro to Distributed Version Control (Illustrated)](http://betterexplained.com/articles/intro-to-distributed-version-control-illustrated/ "Intro to Distributed Version Control (Illustrated) | BetterExplained") – Detaillierte, illustrierte Erklärung von distributiver Versionskontrolle
 * [Git for Computer Scientists](http://eagain.net/articles/git-for-computer-scientists/ "Tv's cobweb: Git for Computer Scientists") – Eine schnelle Einführung in die technischen Details in Git
@@ -43,26 +42,26 @@ Den mittlerweile veralteten Artikel von 2007 ersetze ich durch eine große Liste
 * [An Illustrated Guide to Git on Windows](http://nathanj.github.com/gitguide/ "An Illustrated Guide to Git on Windows") – Schritt-für-Schritt-Anleitung für Windows-Nutzer
 * [vss2git](http://code.google.com/p/vss2git/) – Eine Windows-GUI, die ein existierendes Microsoft Visual SourceSafe 6.0 (VSS) Repository zu einem neuen Git-Repository exportiert.
 
-### Referenzen
+## Referenzen
 
 * [Referenze-Handbuch](http://www.kernel.org/pub/software/scm/git/docs/ "git(1)") – Ausführliche Referenz aller Befehle
 * [Git Cheat Sheet](http://zrusin.blogspot.com/2007/09/git-cheat-sheet.html "Zack Rusin: Git cheat sheet") – Ein nützliches Cheat Sheet
 * [Cheat Git](http://cheat.errtheblog.com/s/git/ "$ cheat git") – Ein weiteres, nützliches Cheat Sheet
 
-### Videos und Screencasts
+## Videos und Screencasts
 * [Offizielle Git-Screencasts](http://git-scm.com/videos)
 * [Google Tech Talk: Linus Torvalds on git](http://youtube.com/watch?v=4XpnKHJAok8) – Linus Torvalds präsentiert Git bei Google
 * [Google Tech Talk: Git](http://www.youtube.com/watch?v=8dhZ9BXQgc4 "YouTube - Git") – Randal Schwartz stellt Git eine Stunde lang vor
 * [Git Screencast](http://peepcode.com/products/git "Git | PeepCode Screencasts for Web Developers and Alpha Geeks") – 60 Minuten Screencast von Scott Chacon für $9.00 (sehr detailliert)
 * [Git the basics](http://excess.org/article/2008/07/ogre-git-tutorial/ "OGRE Git Tutorial - excess.org") – Bart Trojanowski stellt Git vor (2 Teile)
 
-### Git-Hosting
+## Git-Hosting
 * [GitHub](http://github.com/) – Kostenlose, öffentliche Repositorys bis <del>100</del> <ins>300</ins> MB, oder kommerzielle größere Angebote
 * [Gitorious](http://gitorious.org/ "Free open source project hosting - Gitorious") – Kostenlose, öffentliche Repositorys
 
-### Software
+## Software
 
-#### Mac OSX
+### Mac OSX
 * [OSX Installer für Git](http://code.google.com/p/git-osx-installer/ "git-osx-installer - Google Code") – Wem das selber kompilieren (`./configure; make; sudo make install`) zu kompliziert ist ;)
 * [OpenInGitGui](http://code.google.com/p/git-osx-installer/wiki/OpenInGitGui "OpenInGitGui - git-osx-installer - Google Code") – Ein Shortcut für den OSX Finder
 * [Git TextMate-Bundle](http://gitorious.org/projects/git-tmbundle "Git Textmate Bundle - Gitorious") – TextMate-Bundle
@@ -70,13 +69,13 @@ Den mittlerweile veralteten Artikel von 2007 ersetze ich durch eine große Liste
 * [Gity](http://macendeavor.com/gity) – Git-GUI mit vielen Funktionen im Snow Leopard Style (jetzt unter OpenSource!)
 * [GitX](http://gitx.frim.nl/ "GitX") – Schicke Git-GUI für Mac OSX
 
-#### Windows
+### Windows
 * [msysgit](http://code.google.com/p/msysgit/) – Eine Windows-Git-GUI
 * [Git Extensions](http://code.google.com/p/gitextensions/) – Eine schicke Windows-Git-GUI, mit 5 Screencasts zur Bedienung
 * [TortoiseGit](http://code.google.com/p/tortoisegit/ "tortoisegit - Google Code") – Git als Windows Explorer Shell-Erweiterung
 * [SmartGit](http://www.syntevo.com/smartgit/) – Kommerzielle Lösung für Windows, Mac OS X und Linux
 
-### Fazit ###
+## Fazit
 
 Es gibt jetzt keinen Grund mehr, **nicht** auf Git umzusteigen, und jedes lächerliche Argument gegen Git lässt sich lässig widerlegen. Zwar gibt es immer noch eine Menge Subversion-Repositorys, doch auch *die* kann man dank `git-svn` (was mit Git installiert wird) ohne Probleme <del>klonen</del> <ins>auschecken</ins> und wieder committen.
 

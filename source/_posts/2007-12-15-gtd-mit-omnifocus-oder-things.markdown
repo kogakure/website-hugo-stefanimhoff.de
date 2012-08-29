@@ -2,7 +2,6 @@
 layout: post
 title: "GTD mit OmniFocus oder Things?"
 date: 2007-12-15 19:57
-categories:
 tags: [gtd, macosx, software]
 ---
 
@@ -16,7 +15,7 @@ Ein direkter Vergleichstest wäre aber ungerecht, da OmniFocus kurz vor der Ver�
 
 Da man 50 % Ermäßigung bekommt, wenn man OmniFocus schon jetzt bestellt, wollte ich unbedingt beide Produkte testen, bevor ich mich entscheide.
 
-### OmniFocus ###
+## OmniFocus
 
 OmniFocus kommt im typischen Design daher, das man schon von OmniGraffle oder OmniOutliner gewohnt ist.
 
@@ -42,7 +41,7 @@ Auch kann der OmniFocus Inhalt mit Spotlight durchsucht werden.
 
 Das Handling kommt mir etwas klobig und holperig vor, wie aber meist in OmniGroup-Produkten.
 
-### Things ###
+## Things
 
 Things hat eine moderne, übersichtliche Oberfläche, die ganz im Leopard-Look gestaltet ist.
 
@@ -78,8 +77,7 @@ Erledigte Aufgaben und Projekte werden, sofern gewünscht in bestimmten Abständ
 
 Die Liste von zukünftigen Verbesserungen ist lang und lässt noch auf großes Hoffen. Wichtige Punkte, wie z. B. wiederkehrende Aufgaben, Integration von iCal, Mail.app oder intelligente Ordner sind schon geplant.
 
-
-### Fazit ###
+## Fazit
 
 Ich habe Things und OmniFocus jetzt über einen Zeitraum von vierzehn Tagen ausgiebig getestet und mein Kandidat steht fest: **Things**.
 

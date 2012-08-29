@@ -2,7 +2,6 @@
 layout: post
 title: "Webstandards-Magazin: Artikel über Django"
 date: 2010-09-21 09:25
-categories:
 tags: [django]
 ---
 

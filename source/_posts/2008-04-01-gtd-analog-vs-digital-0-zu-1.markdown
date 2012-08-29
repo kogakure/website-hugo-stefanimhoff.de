@@ -2,7 +2,6 @@
 layout: post
 title: "GTD: Analog vs. Digital – 0:1"
 date: 2008-04-01 17:40
-categories:
 tags: [gtd]
 ---
 
@@ -13,26 +12,26 @@ Der ultimative GTD-Test: Was ist denn nun schneller? Analoges oder digitales Not
 <img width="250" height="250" src="/img/ipod-touch-vs-moleskine.jpg" alt="Moleskine vs. iPod touch " />
 Ich war mir nicht sicher, doch jetzt ist es entschieden. Digital geht schneller und hat mehr Vorteile. Hier die Details des Tests:
 
-### Die Kandidaten
+## Die Kandidaten
 
 * **[Moleskine](http://www.moleskine.com/)** mit Kugelschreiber
 * **[iPod touch](http://www.apple.com/de/ipodtouch/)** mit Zeigefinger
 
-### Ausgangsposition
+## Ausgangsposition
 
 * **Moleskine**: Brusttasche Jacke links (Reisverschluss von oben nach unten)
 * **iPod touch**: linke Hosentasche (noch darin: Handy, Papiere, altes Taschentuch)
 
-### Aufgabe
+## Aufgabe
 
 **Notiz tippen**: *Auto Reifenwechsel*
 
-### Ergebnisse
+## Ergebnisse
 
 * **Moleskine**: 39.25 Sekunden
 * **iPod touch**: 32.45 Sekunden
 
-### Erwähnenswertes
+## Erwähnenswertes
 
 * Die Rechtschreibung wurde bei beiden eingehalten, inklusive Groß- und Kleinschreibung. Ohne wäre es beim iPod touch noch schneller gewesen
 * iPod touch startete im Menü

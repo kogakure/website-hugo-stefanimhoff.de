@@ -2,7 +2,6 @@
 layout: post
 title: "AppleTV und die Leihfilme auf iTunes"
 date: 2010-07-30 07:00
-categories:
 tags: [apple, appletv, itunes]
 ---
 

@@ -2,7 +2,6 @@
 layout: post
 title: "Blender Folder für Mac OS X"
 date: 2008-01-05 13:00
-categories:
 tags: [blender, design, macosx, customize]
 ---
 
@@ -12,7 +11,7 @@ Da mein [Django Folder-Icon](/django-folder-mac-osx/ "Django Folder für Mac OS 
 
 <a href="/files/blender-leopard-folder.zip"><img src="/img/blender-leopard-folders.jpg" alt="Blender Folder" width="292" height="365" /></a>
 
-### Blender ###
+## Blender
 
 [Blender](http://www.blender.org/ "blender.org") ist ein fantastisches OpenSource 3D-Programm, das kostenlos für alle üblichen Betriebssysteme erhältlich ist.
 
@@ -22,7 +21,7 @@ Wer lernen möchte mit einer solchen 3D-Software zu arbeiten oder von einer der 
 
 Das Blender es lässig mit den teuren Mitbewerbern aufnehmen kann, kann man in der [Showcase-Galerie](http://www.blender.org/features-gallery/gallery/images/ "blender.org") sehen oder in Projekten wie [Elephants Dream](http://orange.blender.org/ "Elephants Dream"), [Peach](http://peach.blender.org/ "Peach") oder  [Pumiferos](http://www.plumiferos.com/) bewundern.
 
-### Leopard Folder-Icon ###
+## Leopard Folder-Icon
 
 Die Icons sind in allen Größen von 16 Pixel bis 512 Pixel im Download vorhanden. Wer sie gebrauchen kann, kann sie gerne benutzen.
 

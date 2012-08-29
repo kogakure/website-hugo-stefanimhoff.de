@@ -2,7 +2,6 @@
 layout: post
 title: "Versionskontrolle mit Git"
 date: 2007-08-02 17:53
-categories:
 tags: [git, subversion]
 ---
 
@@ -22,7 +21,7 @@ Linus Torvalds sieht das wohl etwas anders, wie er in Googles <cite>[Tech Talk: 
 
 Zur Namensfindung von Git (*engl.* Blödmann, Depp, Idiot) erzählt Linus Torvalds scherzhaft, dass er seine Projekte eben gerne nach sich benennt.
 
-### Vorzüge von Git ###
+## Vorzüge von Git
 
 *Git* hat einige interessante Vorzüge:
 
@@ -40,7 +39,7 @@ Linus bringt es klar auf den Punkt: <q>Die meisten da draußen sind Schwachköpf
 
 Ist seine Arbeit gut, und andere Personen finden sie auch gut, können diese die Arbeit mit der eigenen verschmelzen.
 
-### Fazit ###
+## Fazit
 
 *Git* ist sehr einfach und effizient zu bedienen, schon nach kurzer Zeit konnte ich damit umgehen. Man kann Git z. B. auch zusätzlich zu SVN oder CVS auf seinem Rechner nutzen. Das man kein zentrales Repository <del>hat</del> <ins>haben muss</ins>, ist ein echter Vorzug.
 

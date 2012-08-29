@@ -2,7 +2,6 @@
 layout: post
 title: "Gitweb-Theme im GitHub-Stil"
 date: 2009-02-19 20:00
-categories:
 tags: [gitweb, git, theme, customize, download, github]
 ---
 
@@ -20,13 +19,13 @@ I couldn’t see the interface of Gitweb any longer. That’s why I created a th
 
 Detailed instructions for installations are included in the package on GitHub.
 
-### Download
+## Download
 
 <div class="download">
     <p><a href="http://github.com/kogakure/gitweb-theme/">Download Gitweb Theme</a> on GitHub »</p>
 </div>
 
-### Screenshots
+## Screenshots
 
 <img src="/img/gitweb-theme-1.png" alt="Projektübersicht" />
 Projektübersicht/Project view

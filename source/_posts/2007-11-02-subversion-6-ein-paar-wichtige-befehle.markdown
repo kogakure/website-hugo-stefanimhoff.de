@@ -2,7 +2,6 @@
 layout: post
 title: "Subversion (6) – Ein paar wichtige Befehle"
 date: 2007-11-02 19:24
-categories:
 tags: [subversion, tutorial]
 ---
 
@@ -14,7 +13,7 @@ Es gibt in Subversion noch ein paar nützliche und notwendige Befehle, die man i
 <p>Der Inhalt dieses Artikels ist noch aktuell, doch kann ich nur dringend dazu raten, sich die fantastische Alternative zu Subversion anzusehen: <a href="/versionskontrolle-mit-git/"><strong>Git</strong></a>.</p>
 </div>
 
-### Tags anlegen ###
+## Tags anlegen
 
 Tags sind Lesezeichen oder Schlagworte, mit denen man sich eine bestimmte Versionsnummer durch einen leicht zu merkenden Namen, wie z. B. *version-1.2.5* oder *Finale-Version* markieren kann.
 
@@ -26,13 +25,13 @@ Der einfachste Weg einen *tag* anzulegen ist den aktuellen *trunk* im Repository
 svn copy file:///Users/XYZ/Subversion/meinewebsite/trunk file:///Users/XYZ/Subversion/meinewebsite/tags/version_1.0 -m "Taggen der Version 1.0"
 {% endcodeblock %}
 
-### Probleme beheben ###
+## Probleme beheben
 
 Manchmal kann es vorkommen, dass bestimmte Dateien gesperrt sind, und nicht weiter mit Subversion bearbeitet werden könnnen.
 
 Um solche Probleme zu lösen, benutzt man den Befehl `svn cleanup`.
 
-### Ignorieren ###
+## Ignorieren
 
 Eine wichtige Funktion in Subversion ist das Ignorieren von bestimmten Ordnern oder Dateien. Subversion nimmt keine Dateien von selbst mit ins Repository auf. Doch nach einiger Zeit kann sich eine Menge Dateien ansammeln, die man nicht mit ins Repository laden möchte (Cache-Ordner, Konfigurationsdateien, …). Diese werden mit einem `?` angezeigt, wenn man ein `svn status` eingibt. Um nicht mehr gefragt zu werden, ob man sie hinzufügen möchte, gibt man folgenden Befehl ein:
 
@@ -44,7 +43,7 @@ Darauf hin sollte sich ein TextEditor öffnen, in dem man die Dateien einfügen 
 
 Nun muss nur noch die Änderung an den Eigenschaften des Ordners ins Repository gespielt werden und man wird künftig nicht mehr nach den Dateien/Ordnern gefragt.
 
-### Exportieren ###
+## Exportieren
 
 Subversion-Verzeichnisse haben unsichtbare Ordner (.svn) in der Verzeichnisstruktur, die viele Informationen zu Subversion enthalten.
 

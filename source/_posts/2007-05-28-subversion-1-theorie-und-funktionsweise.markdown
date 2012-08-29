@@ -2,7 +2,6 @@
 layout: post
 title: "Subversion (1) – Theorie und Funktionsweise"
 date: 2007-05-28 18:04
-categories:
 tags: [tutorial, subversion]
 ---
 
@@ -14,7 +13,7 @@ Dieser erste Teil der Reihe *Subversion* beschäftigt sich mit der nötigen Theo
 <p>Der Inhalt dieses Artikels ist noch aktuell, doch kann ich nur dringend dazu raten, sich die fantastische Alternative zu Subversion anzusehen: <a href="/versionskontrolle-mit-git/"><strong>Git</strong></a>.</p>
 </div>
 
-### Was ist Versionskontrolle? ###
+## Was ist Versionskontrolle?
 
 Versionskontrolle ermöglicht es alle Änderungen an Dateien, die im Laufe der Zeit gemacht wurden, zurückzuverfolgen und wiederherstellen zu können.
 
@@ -22,13 +21,13 @@ Das bedeutet vor allem, nie wieder irgendeinen Teil der eigenen Daten zu verlier
 
 Doch seine besondere Stärke liegt in der Teamarbeit. Wenn mehr als eine Person an einer Datei arbeitet, führt dies immer zu Problemen. So ist es möglich, dass die eine Person Änderungen einer Anderen überspeichert.
 
-### Sperren, Ändern, Freigeben ###
+## Sperren, Ändern, Freigeben
 
 Modernere Systeme setzen immerhin schon einen Speicherschutz, solange jemand die Datei bearbeitet. Dies ist jedoch nicht effizient, da in der Zwischenzeit niemand anders an der Datei arbeiten kann. Gerade bei häufigen, kleineren Änderungen ist ein Projekt auf diese Weise kaum noch zu pflegen.
 
 Denn in der Praxis werden viele Dateien oft über lange Zeit zur Bearbeitung gesperrt, und es wird vergessen, sie wieder freizugeben. Besonders ärgerlich, wenn man dringend etwas ändern muss und dies nicht kann, weil die Person z.B. krank, zu Mittag oder im Urlaub ist. Meisten hilft dann höchstens noch ein Anruf in der IT-Abteilung.
 
-### Kopieren, Ändern, Zusammenführen ###
+## Kopieren, Ändern, Zusammenführen
 
 Subversion (oder auch kurz svn) hat hier einen komplett anderen Ansatz. Dieser führt meistens zu einer verunsicherten oder ablehnenden Reaktion, wenn man den Prozess erklärt. Doch legt sich diese Verunsicherung in der wirklichen Arbeit mit Subversion sehr schnell.
 
@@ -38,7 +37,7 @@ Dabei kann natürlich passieren, dass jemand eine geänderte Version zuvor zurü
 
 Die Person, die versucht Ihre Datei zurückzuspielen, doch langsamer war, bekommt eine Meldung, dass die eigene Version nicht mehr aktuell sei. Sie muss ihre Datei nun also erst auf den neusten Stand bringen.
 
-### Konflikte ###
+## Konflikte
 
 Dabei kann folgendes passieren:
 
@@ -52,6 +51,6 @@ Dabei kann folgendes passieren:
 
 Hierbei will ich anmerken, dass Fall zwei selten eintritt, solange jede Person ihre Dateien hin- und wieder auf den aktuellen Stand bringt, jeder weiß, was er zu tun hat und die Kommunikation des Teams stimmt.
 
-### Fazit ###
+## Fazit
 
 Subversion eignet sich aber auch wunderbar, wenn man nur alleine mit seinen Dateien arbeitet. Überspeicherungen, Verlust von wichtigen Änderungen oder die berühmte Einsicht, dass der Stand von vorgestern besser war, gehören damit der Vergangenheit an.

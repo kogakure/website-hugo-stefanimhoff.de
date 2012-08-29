@@ -2,7 +2,6 @@
 layout: post
 title: "Subversion (5) – Arbeiten mit Subversion"
 date: 2007-09-04 18:45
-categories:
 tags: [subversion, tutorial]
 ---
 
@@ -36,7 +35,7 @@ So wird der Inhalt des Ordners `Website` in mein Projektvereichnis `meinewebsite
 
 Der Befehl `svn status` bringt als Ergebnis, dass man die Version 1 ausgecheckt hat und sonst noch nichts weiter passiert ist.
 
-### Datei anlegen ###
+## Datei anlegen
 
 Im ersten Schritt lege ich jetzt eine Datei in meinem Hauptverzeichnis (index.html) an und kopiere ein Testbild in den Ordner `img` (test.jpg). Der Befehl `svn status` erzeugt jetzt zwei Zeilen, die die beiden neuen Dateien anzeigen, mit jeweils einem Fragezeichen davor. Das Fragezeichen zeigt an, dass diese Dateien unbekannt sind, sich also nicht im Repository befinden. Subversion überträgt keine Dateien automatisch ins Verzeichnis, außer man markiert sie dafür. Das mache ich jetzt:
 
@@ -46,7 +45,7 @@ svn add index.html img/test.jpg
 
 Wie gesehen kann man hier mehrere Dateien in einem Befehl hinzufügen, es funktioniert auch UNIX-Syntax, wie z. B. der *Asterisk* (Stern) für alle Dateien. In der Ausgabe dieses Befehls sieht man jetzt ein `A` neben der jeweiligen Datei, das steht für `Added` (hinzugefügt).
 
-### Änderungen ins Repository zurückspielen ###
+## Änderungen ins Repository zurückspielen
 
 Diese Änderungen/Neueinfügungen spiele ich nun ins Repository zurück.
 
@@ -56,7 +55,7 @@ svn ci -m "Dateien hinzugefuegt"
 
 Die Zeichenkette nach dem Parameter `-m` ist für die Log-Datei gedacht. Hier sollte man seine Änderungen beschreiben. Wir bekommen die Meldung zurück, dass die Dateien hinzugefügt wurden und der Revisionsstand nun `2` ist.
 
-### Datei löschen ###
+## Datei löschen
 
 In der täglichen Arbeit mit Subversion kommt es auch öfter vor, dass man eine Datei löschen möchte. Dabei muss man aber beachten, dass sie nur veschwindet, aber nicht aus dem Repository entfernt wird. Man kann sie also immer wieder herstellen. Auch die Dateigröße verbleibt im Repository, daher unbedingt *vorher* überlegen, welche Dateien man ins Repository spielt. Was drin ist, bleibt drin. Ein Entfernen von Dateien (und ist der Inhalt auch noch so peinlich) ist so gut wie unmöglich. Eine manuelle Manipulation mag für Profis möglich sein, doch damit wird die Historie zerstört und inkonsistent. Das Versionskontrollsystem GIT ermöglicht es z. B. dank eines Hash-Schlüssels solche Veränderungen oder Fehler zu entdecken. Bei Subversion gibt es so etwas leider nicht.
 

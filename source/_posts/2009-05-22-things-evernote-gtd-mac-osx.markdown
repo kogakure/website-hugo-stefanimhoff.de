@@ -2,7 +2,6 @@
 layout: post
 title: "Things & Evernote: GTD mit dem Mac"
 date: 2009-05-22 16:45
-categories:
 tags: [things, evernote, gtd, macosx]
 ---
 
@@ -12,7 +11,7 @@ David Allen hat mit seinem Organisationsbuch <cite>[Getting Things Done](http://
 
 Die Vielzahl von Software für die verschiedenen Betriebssysteme und für mobile Endgeräte machen es nicht gerade leicht, eine optimale Lösung zu finden, und es kann leicht eine Menge Zeit nur mit dem Austesten der möglichen Hilfsmittel verschwendet werden.
 
-### Aufgaben
+## Aufgaben
 
 Ich habe am Mac schon einiges an Software ausprobiert, neben zahllosen kostenlosen Systemen auch [OmniFocus](http://www.omnigroup.com/applications/omnifocus/ "The Omni Group - OmniFocus"), [The Hit List](http://www.potionfactory.com/thehitlist/ "The Hit List | Potion Factory"), [Things](http://culturedcode.com/things/ "Things - task management on the Mac") und [Remeber the Milk](http://www.rememberthemilk.com/ "Remember The Milk: Online to do list and task management"). Alle Produkte haben ihre Stärken und Schwächen. Ich habe jedes davon schon über einen längeren Zeitraum genutzt. Doch nach einer Testphase bin ich am Ende immer wieder zu <cite>Things</cite> zurückgekommen. Die eine oder andere Software hatte zwar Funktionen, die ich auch gerne in <cite>Things</cite> sehen würde, doch schlägt dieses seine Konkurrenz mit dem einfach zu bedienenden Interface und der geringen Komplexität.
 
@@ -22,7 +21,7 @@ Termingebundene Aufgaben lassen sich mit <cite>Things</cite> ebenfalls sehr gut 
 
 *Things* bietet außerdem noch Schlagworte und eine Synchronisation mit dem Kalenderprogramm iCal. Das beste ist aber die komfortable Synchronisation mit <cite>Things touch</cite> (der Version für iPhone und iPod touch). So ist es möglich auch unterwegs schnell Aufgaben und Ideen zu verfassen und diese später mit dem eigenen Mac zu synchronisieren.
 
-### Referenzmaterial
+## Referenzmaterial
 
 Ein weiterer großer Bereich, den David Allen anspricht ist das Zeug, das weder eine Aufgabe, noch ein Termin ist – das Referenzmaterial. Da ich kein Fan von riesigen Aktenschränken, Bergen von Zetteln oder Ordnern bin, versuche ich möglichst alle Dinge digital zu halten.
 Alle Notizen, Bilder, Inspirationen, Rezepte, Witze, Codeschnipsel etc. die anfallen brauchen einen Ort, an dem sie abgelegt werden.
@@ -33,7 +32,7 @@ Denn <cite>Evernote</cite> bietet genau diese Möglichkeit. Die Software ist sow
 
 Eine besondere Funktion von <cite>Evernote</cite> ist die Erkennung von Schrift in Bildern. Nachdem ein Bild auf den Server geladen wurde, lässt es sich durch die Suche nach Text finden, der im Bild vorkommt – dies Funktioniert ziemlich gut, sogar Handschrift wird oft gut erkannt.
 
-### Fazit
+## Fazit
 
 Für mich ist die Erfassung meiner Aufgaben am Mac damit mittlerweile sehr komfortabel geworden und ich bin sehr zufrieden damit. Sicherlich hat jede Software noch Dinge, die ich gerne sehen würde. Bei <cite>Things</cite> würde mich noch Unterprojekte und Planung von Projektaufgaben interessieren. Bei <cite>Evernote</cite> würde es mich freuen, wenn die Eingabe von Text komfortabler wäre, und semantische Markierung, wie z. B. für Code, sowie einen ordentlichen Export der Notizen/Daten bieten würde.
 

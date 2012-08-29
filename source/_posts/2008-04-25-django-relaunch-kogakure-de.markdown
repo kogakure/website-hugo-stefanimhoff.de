@@ -2,7 +2,6 @@
 layout: post
 title: "Django-Relaunch von kogakure.de"
 date: 2008-04-25 18:00
-categories:
 tags: [django, download, git, python, relaunch]
 ---
 
@@ -10,7 +9,7 @@ Es ist soweit! Mein erstes Django-Projekt ist online: das seit 1999 bestehende K
 
 <!-- more -->
 
-### Web-Entwicklung für Perfektionisten
+## Web-Entwicklung für Perfektionisten
 
 Was ist Django? Django ist ein [Python](http://www.python.org/ "Python Programming Language -- Official Website")-Web-Framework, das schnelle, saubere Entwicklung von dynamischen Websites ermöglicht.
 
@@ -20,33 +19,33 @@ Gegenüber anderen Web-Frameworks hat es einige Vorteile, vor allem ist es sehr 
 
 Obwohl Django erst in Version 0.97x ist, kann man es schon ohne Probleme in normalen Projekten einsetzten. Bis zur Version 1.0 sollen noch bestimmte API-Schnittstellen eindeutig festgelegt werden. Es ist spannend zu sehen, was für interessante Branches (Entwicklungszweige) noch in Arbeit sind und in naher Zukunft mit der Hauptentwicklungslinie verschmolzen werden.
 
-#### Objektrelationales Mapping
+### Objektrelationales Mapping
 
 Django liefert eine Datenbank-Schnittstelle, die es ermöglicht komplexe Tabellen zu erstellen, ohne auch nur eine einzige Zeile SQL schreiben zu müssen. Das hat den Vorteil, dass man auch in wenigen Minuten auf eine komplett andere Datenbank wechseln kann. Natürlich kann man aber SQL einsetzen, wenn man möchte.
 
-#### Automatische Administrationsoberfläche
+### Automatische Administrationsoberfläche
 
 Ein besonders starkes Argument für Django ist das automatische Admin-Interface. Wo man in anderen Web-Frameworks erst einmal Wochen damit beschäftigt ist eine Eingabe für seine Daten zu programmieren, können die Redakteure schon nach wenigen Minuten mit der Eingabe der Daten beginnen, selbst wenn noch nichts programmiert wurde. Und außerdem ist das Interface sehr hübsch und gut zu bedienen.
 
-#### Elegante URL-Konfiguration
+### Elegante URL-Konfiguration
 
 Django hat saubere URLs. Das URL-Design ist ein essentieller Bestandteil der Entwicklung. Man schreibt und wählt sich seine URLs selber.
 
-#### Templates
+### Templates
 
 Für Webdesigner besonders interessant: Django liefert gleich eine mächtige Template-Engine mit. Hier sind Python-Code und Markup streng getrennt. Kein wildes Vermischen von Programmiersprache und HTML bei Django. Das Template-System kommt mit einem unglaublich großen Repertoire an Filtern und Tags, die nach Belieben durch eigene erweitert werden können. Außerdem ist es das erste System, was ich kennengelernt habe, bei dem die Templates vererbt werden können.
 
-#### Cache
+### Cache
 
 Django liefert gleich eine riesige Auswahl an Caching-Möglichkeiten mit, ob im Filesystem, in der Datenbank oder in verschiedenen RAM-Speichern – man hat die freie Wahl.
 
-#### Internationalisierung
+### Internationalisierung
 
 Django unterstützt eine Vielzahl an Sprachen und bietet eine sehr gute Lokalisierung und Internationalisierung der Anwendungen. Kein Wunder, denn [laut Jacob Kaplan-Moss](http://www.jacobian.org/writing/2008/jan/30/arc/ "jacobian.org : A picture is worth a thousand words") hat Django einen Großteil seiner Benutzer aus nicht-englisch-sprechenden Ländern. Mittlerweile gibt es sogar Django-Entwickler in Nepal oder auf Fiji.
 
-### Die Entwicklung von kogakure.de
+## Die Entwicklung von kogakure.de
 
-#### Warum ein Framework?
+### Warum ein Framework?
 
 Die Seite kogakure.de lief vorher mit [ExpressionEngine](http://expressionengine.com/ "ExpressionEngine - Publish Your Universe!"), einem Publishing-Tool, das ich auch weiterhin sehr empfehlen kann.
 
@@ -62,13 +61,13 @@ Ich habe schon eine Menge Content-Management-Systeme ausprobiert und jedes ist a
 
 Frameworks haben mich bislang immer abgeschreckt, weil sie entweder mit PHP liefen (und ich hasse PHP) oder man einfach zu viel selber Programmieren musste. Bei Django halten sich Programmierung und Design (Template) immer schön im Gleichgewicht.
 
-#### Entwicklungsdauer
+### Entwicklungsdauer
 
 Mit der Entwicklung der Website habe ich zwar schon am 23. August 2007 begonnen, doch gab es zwischendurch einige Monate, wo ich nicht am Projekt gearbeitet habe, so z. B. im Januar und Februar, als ich bei der Übersetzung der Dokumentation der [Deutschen Django-Community](http://www.django-de.org/ "Django-de | Das Python Web Framework für Perfektionisten") geholfen habe.
 
 In meinem [Git](http://git.or.cz/ "Git - Fast Version Control System")-Repository konnte ich ca. 35 Arbeitstage zählen, wobei ich an manchen Tagen 10 Minuten an anderen auch mal 11 Stunden gearbeitet habe. Alles in allem kann man aber sagen, dass die Entwicklung mit Django rasend schnell geht. Die Datenmodelle waren schon nach dem ersten Tag erstellt und einrichtet.
 
-#### Applikationen
+### Applikationen
 
 Mein Projekt besteht aus sieben Applikationen:
 
@@ -84,7 +83,7 @@ Der Quellcode von kogakure.de ist übrigens (ohne Mediendateien) gerade mal 305 
 
 Die Website kommt mit allem daher, was eine moderne Website so haben sollte: Feeds für alle möglichen Daten, XML-Sitemaps für die Suchmaschinen und Markdown-Unterstützung. Einzig Kommentare und User-Login habe ich vorerst weggelassen, wobei die Implementierung in Django sehr leicht ist.
 
-#### Technische Details
+### Technische Details
 
 Die Website läuft auf einem [Apache 2 Server](http://httpd.apache.org/ "Welcome! - The Apache HTTP Server Project") mit [mod_python](http://www.modpython.org/ "Mod_python - Apache/Python Integration"), nutzt eine [PostgreSQL](http://www.postgresql.org/ "PostgreSQL")-Datenbank und [memcached](http://danga.com/memcached/ "memcached: a distributed memory object caching system") zum Zwischenspeichern der Inhalte. Mit Hilfe von Git wird die Live-Website mit dem lokalen Entwicklungsserver abgeglichen. Der Einfachheit halber erledige ich das mit Hilfe von [Capistrano](http://www.capify.org/ "Capistrano") – ich bin halt faul.
 
@@ -92,7 +91,7 @@ Der Entwicklungsserver nutzt übrigens eine [sqlite](http://www.sqlite.org/ "SQL
 
 Das Einrichten des Django-Projektes auf dem Apache-Server ging übrigens weitaus leichter, als befürchtet. Mit meinen [Rails](http://www.rubyonrails.org/ "Ruby on Rails")-Projekten hatte ich da schon mehr zu tun.
 
-### Der Source-Code
+## Der Source-Code
 
 Der Einstieg in Django ist (auch für Nichtprogrammierer) leicht, da es sehr gute Ressourcen kostenlos verfügbar gibt.
 
@@ -106,18 +105,18 @@ Da mir die Community von Django durch Hilfe im #IRC ([#django](irc://irc.freenod
     </ul>
 </div>
 
-### Django-Ressourcen
+## Django-Ressourcen
 
 Um den Einstieg in Django zu erleichtern, habe ich nachfolgend eine Liste von interessanten Ressourcen zusammengetragen, die mir beim Lernen oder bei Entscheidungen geholfen haben.
 
-#### Dokumentationen
+### Dokumentationen
 
 * [The Django Book](http://www.djangobook.com/ "The Django Book") – Das kostenlose Django-Handbuch
 * [Django Dokumentation](http://www.djangoproject.com/documentation/ "Django | Documentation") – Die offizielle Django-Dokumentation
 * [Installation von Django](http://www.djangoproject.com/documentation/install/ "Django | How to install Django | Django Documentation") – Anleitung für die Installation von Django
 * [Einsteiger-Tutorial](http://www.djangoproject.com/documentation/tutorial01/ "Django | Writing your first Django app, part 1 | Django Documentation") – Offizielles 4-teiliges Einsteigertutorial
 
-#### Screencasts
+### Screencasts
 
 * [Empty Thoughts Django Screencasts](http://blog.michaeltrier.com/screencasts "Empty Thoughts - Living on the Edge") – Fantastische Screencasts von Michael Trier
 * [Django in Seven Minutes](http://www.throwingbeans.org/django_screencasts.html "Django Screencasts") – Einstieg in Django in 7 Minuten
@@ -127,38 +126,38 @@ Um den Einstieg in Django zu erleichtern, habe ich nachfolgend eine Liste von in
 * [Django Screencast: Writing a simple todo list](http://turriate.com/media/video/tiddlylist.htm "Django Screencast: Writing a simple todo list") – Programmieren einer Todo-Liste mit Django
 * [Django: a simple blog in a few minutes](http://www2.lamptraining.com/screencast/1) – Einen simplen Blog mit Django programmieren
 
-#### Podcasts
+### Podcasts
 
 * [This Week in Django](http://thisweekindjango.com/ "This Week in Django") – Wöchentlicher Django-Podcast, ein Muss für Djangonauten. Gute Interviews und Blick hinter die Kulissen
 
-#### Video-Präsentationen
+### Video-Präsentationen
 
 * [Django: Web Development for Perfectionists with Deadlines](http://video.google.com/videoplay?docid=-70449010942275062 "django: Web Development for Perfectionists with Deadlines") – Jacob Kaplan-Moss stellt Django bei Google TechTalks vor (sehenswert!)
 * [Snakes and Rubies](http://www.djangoproject.com/snakesandrubies/ "Django | Snakes and Rubies downloads") – Die berühmte Diskussion von Ruby on Rails (David Heinemeier Hansson) und Django (Adrian Holovaty) über Gemeinsamkeiten und Unterschiede der beiden Frameworkds (sehenswert!)
 
-#### Folien
+### Folien
 
 * [A fast-paced introduction to Django.](http://toys.jacobian.org/presentations/2007/pycon/tutorials/beginning/) – Folien von der PyCon2007, Jacob Kaplan-Moss
 * [The Django Web Application Framework](http://www.slideshare.net/simon/the-django-web-application-framework "The Django Web Application Framework &raquo; SlideShare") – Folien von ACCU, Python Track 2006, Simon Willison
 * [Doing Local Right](http://www.slideshare.net/simon/doing-local-right "Doing Local Right &raquo; SlideShare") – Folien von der @media 2007, Simon Willison
 * [Python Web Development with Django](http://itmaurer.com/clepy/htdocs/media/presentation/presentation.html "Python Web Development with Django") – Folien über Python Web-Entwicklung mit Django, Ian Maurer
 
-#### Lernen und Hilfe
+### Lernen und Hilfe
 
 * [Google Groups Django users](http://groups.google.com/group/django-users "Django users | Google Groups") – Django Google Group, für Fragen und Antworten
 * [Django snippets](http://www.djangosnippets.org/ "Django snippets") – Nützliche Sammlung von Filtern, Tags und Code-Schnipseln
 * [dpaste](http://dpaste.com/ "dpaste") – Zwischenablage für Code-Beispiele. Direkt in den IRC posten ist eine Todsünde.
 * [Django Resources](http://code.djangoproject.com/wiki/DjangoResources "DjangoResources - Django Code - Trac") – Riesige Liste von Django-Ressourcen: Applikationen, Projekte, Anleitungen, Präsentationen …
 
-#### Tutorials
+### Tutorials
 
 * [Django Tutorials](http://code.djangoproject.com/wiki/Tutorials "Tutorials - Django Code - Trac") – Riesige Auswahl von Tutorials für Django
 
-#### Galerie
+### Galerie
 
 * [DjangoSites](http://www.djangosites.org/ "Latest Additions :: DjangoSites.org - Powered by Django") – Galerie mit Django-Websites
 
-#### Merchandising
+### Merchandising
 
 * [Django Shirts](http://django.spreadshirt.net/ "Django T-Shirts") – Ein Spreadshirt-Shop mit der nötigen Fan-Auswahl
 * [Official Django Logos](http://www.djangoproject.com/community/logos/ "Django | Logos") – Das Django-Logo im Vektorformat
@@ -166,7 +165,7 @@ Um den Einstieg in Django zu erleichtern, habe ich nachfolgend eine Liste von in
 * [Django Desktop Wallpaper](http://www.djangoproject.com/weblog/2005/nov/11/desktops/ "Django | Weblog | Django desktops") – Desktop-Wallpaper
 * [Django Cheat Sheet](http://www.mercurytide.co.uk/whitepapers/django-cheat-sheet/ "Django cheat sheet (Mercurytide)") – Django Cheat Sheet als PDF oder Wallpaper
 
-#### Django-Websites von Designern und Entwicklern
+### Django-Websites von Designern und Entwicklern
 
 * [Adrian Holovarty](http://www.holovaty.com/ "Adrian Holovaty's Web site") – Entwickler von Django (Chicago, Illinois, US)
 * [Brian Rosner](http://oebfare.com/ "oebfare") – Co-Host bei <cite>This Week in Django</cite> und Entwickler des newforms-admin Branch (Littleton, Colorado, US)
@@ -185,7 +184,7 @@ Um den Einstieg in Django zu erleichtern, habe ich nachfolgend eine Liste von in
 * [Simon Willison](http://simonwillison.net/ "Simon Willison’s Weblog") – Berater für OpenID und Web Entwicklung, Co-Gründer von Django (Brighton, England)
 * [Wilson Miner](http://www.wilsonminer.com/ "Wilson Miner Live") – Designer von EveryBlock, dem Django-Admin-Interface und der Django-Website (San Francisco, Kalifornien, US)
 
-#### Sonstiges
+### Sonstiges
 
 * [Django People](http://djangopeople.net/ "Django People") – Suchmaschine und Social Network für Djangonauten
 * [Django-de](http://www.django-de.org/ "Django-de | Das Python Web Framework für Perfektionisten") – Website der deutschen Community
@@ -194,7 +193,7 @@ Um den Einstieg in Django zu erleichtern, habe ich nachfolgend eine Liste von in
 * [Django Search](http://djangosearch.com/ "Django web framework search engine") – Django-Suchmaschine
 * [Django Plugables](http://djangoplugables.com/ "Django Pluggables &bull; Find reusable applications for your Django project, quickly and easily!") – Gute Übersicht über verfügbare Django-Applikationen
 
-#### Hosting
+### Hosting
 
 * [Django Friendly Webhosts](http://code.djangoproject.com/wiki/DjangoFriendlyWebHosts "DjangoFriendlyWebHosts - Django Code - Trac") – Liste von Hosts, die gut mit Django funktionieren
 * [Djangofriendly](http://djangofriendly.com/ "Hosts : Djangofriendly") – Digg-Style-Voting für Django-Hoster
@@ -202,7 +201,7 @@ Um den Einstieg in Django zu erleichtern, habe ich nachfolgend eine Liste von in
 * [Slicehost](http://www.slicehost.com/ "Slicehost - VPS Hosting") – Hoster für Entwickler
 * [Webfaction](http://www.webfaction.com/?affiliate=kogakure "Hosting for an agile web - WebFaction") – Hoster für Entwickler
 
-#### Django-Trunk
+### Django-Trunk
 
 * [Subversion](http://code.djangoproject.com/svn/django/ "Revision 7461: /django") – Offizieller Subversion-Trunk von Django
 * [Git](http://github.com/django/django/tree/master) – Git-Mirror von Django

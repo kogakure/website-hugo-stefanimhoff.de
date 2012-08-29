@@ -2,7 +2,6 @@
 layout: post
 title: "Eineinhalb Jahre GTD – Eine Billanz"
 date: 2007-11-24 01:15
-categories:
 tags: [gtd]
 ---
 
@@ -16,7 +15,7 @@ Das Buch ist auch in **Deutsch** erhältlich unter dem Titel <cite>[Wie ich die 
 
 Ich bin jedenfalls der Meinung, man *bekommt* mit Allens System wirklich den alltäglichen Wahnsinn geregelt.
 
-### Die GTD-Grundlagen ###
+## Die GTD-Grundlagen
 
 GTD nutzt so genannte *Kontexte*, also bestimmten Situationen/Orte, denen eine Aufgabe zugewiesen wird (Telefon, Zuhause, Besorgung o. ä.). Daneben gibt es noch die Zuteilung zu *Projekten*.
 
@@ -32,7 +31,7 @@ Wird eine Aufgabe vorerst nicht erledigt, weil man keine Zeit oder noch kein akt
 
 Aufgaben kann man auch delegieren oder bestimmten Zeitpunkten zuweisen. Wenn man bei einer Aufgabe auf jemand anderen warten muss, weißt man sie dem Kontext *Warten auf* zu.
 
-### GTD im Alltag ###
+## GTD im Alltag
 
 <img src="/img/gtd-nachher.jpg" width="300" height="191" alt="GTD nachher" title="So sah die Inbox aus, nachdem ich alle losen Enden sortiert hatte" /> Auf den ersten Blick sieht GTD vielleicht kompliziert oder umständlich aus, doch hilft es ungemein, den Kopf von belastendem Grübeln freizuhalten.
 Schon nach kurzer Zeit der Umstellung habe ich mich an diese Arbeitsweise gewöhnt und schnell die Eigenschaft übernommen, jeden Gedanken **sofort zu notieren** und gemäß des GTD-Prinzips irgendwo einzuordnen. So vergesse ich nie wieder wichtige Dinge und selbst kleine Ideen verschwinden nicht gleich aus dem Kopf.
@@ -41,7 +40,7 @@ Im Idealfall hat man dazu bestimmte **Arbeitswerkzeuge** dabei, die je nach Pers
 
 Gerade für für Computerprofis gibt es zahlreiche Systeme und Programme, die GTD digital ermöglichen. Somit sollte wohl für jeden das passende Arbeitswerkzeug zu finden sein. Ganze Websites und Weblogs beschäftigen sich nur mit GTD (z. B. [lifehack.org](http://www.lifehack.org/ "lifehack.org: Productivity, Getting Things Done and Lifehacks Blog"), [lifehacker](http://lifehacker.com/ "Lifehacker, tips and downloads for getting things done") oder [43 Folders](http://www.43folders.com/ "43 Folders")).
 
-### Die richtige GTD-Lösung? ###
+## Die richtige GTD-Lösung?
 
 Seit ich zum ersten Mal auf GTD getroffen bin, suche ich und teste (wenn gleich auch immer seltener) alternative Lösungen für Allens System.
 
@@ -62,7 +61,7 @@ Für mich zählen:
 
 In der ganzen Zeit bin ich zeitweise auch mal zweigleisig gefahren, um ein neues System zu testen, mein primäres Tool nutze ich aber immer noch.
 
-### Tracks ###
+## Tracks
 
 [Tracks](http://www.rousette.org.uk/projects/ "Tracks") ist eine mit [Ruby on Rails](http://www.rubyonrails.org/ "Ruby on Rails") programmierte Web-Applikation, die die Prinzipien von David Allens GTD auf einfache und effiziente Weise nutzt.
 

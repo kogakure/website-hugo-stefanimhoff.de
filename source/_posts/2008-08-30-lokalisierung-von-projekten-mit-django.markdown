@@ -2,7 +2,6 @@
 layout: post
 title: "Lokalisierung von Projekten mit Django"
 date: 2008-08-30 15:25
-categories:
 tags: [django, lokalisierung, i18l]
 ---
 
@@ -16,7 +15,7 @@ Die Arbeit, die dafür ausgeführt werden muss, ist auch nicht wirklich ein gro�
 
 Trotzdem führe ich hier kurz durch die wichtigsten Schritte, um den Einstieg zu erleichtern.
 
-### Ursprungsdateien
+## Ursprungsdateien
 
 Dieses Beispiel setzt auf dem Code für das offizielle Django-Tutorial auf und fährt nach Teil 4 fort.
 
@@ -100,7 +99,7 @@ class Choice(models.Model):
 {% endraw %}
 {% endcodeblock %}
 
-### Lokalisierung der Python-Dateien
+## Lokalisierung der Python-Dateien
 
 In jeder Python-Datei, die lokalisierte Zeichenketten enthalten soll, muss zuerst das Submodul "ugettext" oder "ugetttext\_lazy" importiert werden. Als Konvention wird das Modul als "_" (Unterstrich) importiert, um die Schreibarbeit zu erleichtern. Zusätzlich fallen die Zeichenketten auch besser ins Auge.
 
@@ -144,7 +143,7 @@ votes = models.IntegerField(_(u'Votes'))
 ...
 {% endcodeblock %}
 
-### Lokalisierung der HTML-Templates
+## Lokalisierung der HTML-Templates
 
 In den HTML-Templates wird eine etwas andere Syntax benutzt. Zuerst muss am Anfang der Datei das Templatetag für die Internationalisierung geladen werden.
 
@@ -178,7 +177,7 @@ Die Pluralisierung funktioniert (leider) nicht mehr wie gewohnt, wenn man sie lo
 {% endraw %}
 {% endcodeblock %}
 
-### Erzeugen der Sprachdateien
+## Erzeugen der Sprachdateien
 
 Um jetzt eine Übersetzung für die Applikation oder das Projekt zu erzeugen, muss man zuerst im Projekt- oder Applikations-Ordner einen neuen Ordner mit Namen `locale` anlegen. Um auch Templates mit zu übersetzen, muss man den Ordner im Projektverzeichnis anlegen.
 
@@ -200,10 +199,10 @@ django-admin.py compilemessages
 
 Dadurch wird die Datei in eine `.mo`-Datei umgewandelt.
 
-### Einstellen der gewünschten Sprache
+## Einstellen der gewünschten Sprache
 
 Ist in der `settings.py` unter `LANGUAGE_CODE` jetzt ein deutschsprachiger Code, wie z. B. `de-de` eingesetzt, nutzt Django die übersetzten Zeichenketten.
 
-### Fazit
+## Fazit
 
 Alles kein großer Aufwand, also bitte lokalisiert eure Applikationen. Ihr Wert steigt dadurch beträchtlich.

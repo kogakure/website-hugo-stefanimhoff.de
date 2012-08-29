@@ -2,7 +2,6 @@
 layout: post
 title: "Automatisierung mit Keyboard Maestro"
 date: 2011-03-27 12:58
-categories:
 tags: [software, macosx, automatisierung]
 ---
 

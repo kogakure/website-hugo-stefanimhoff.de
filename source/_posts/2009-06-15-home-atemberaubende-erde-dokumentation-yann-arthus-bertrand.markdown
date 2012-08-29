@@ -2,7 +2,6 @@
 layout: post
 title: "HOME – Atemberaubende Dokumentation über unsere Erde"
 date: 2009-06-15 17:23
-categories:
 tags: [dokumentation, film]
 ---
 

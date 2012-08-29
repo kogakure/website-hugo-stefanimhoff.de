@@ -2,7 +2,6 @@
 layout: post
 title: "Git-Präsentation"
 date: 2009-08-08 13:00
-categories:
 tags: [git, präsentation]
 ---
 

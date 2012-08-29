@@ -2,7 +2,6 @@
 layout: post
 title: "Grundlagen von Python & Django für Anfänger"
 date: 2008-08-01 15:00
-categories:
 tags: [django, python]
 ---
 
@@ -14,7 +13,7 @@ Es gibt verschiedene Möglichkeiten, Django auf dem eigenen Computer/Server zu i
 
 Für welche Variante man sich auch entscheidet, es ist ziemlich nützlich die Grundlagen von [Django](http://www.djangoproject.com/) und [Python](http://python.org/) zu verstehen.
 
-### Python-Module
+## Python-Module
 
 Django ist ein Python-Modul, in dem viele Submodule enthalten sind. Für die Programmiersprache Python gibt es weit über 4.000 Module von Drittanbietern, die fast jede gewünschte Funktion bieten.
 
@@ -26,7 +25,7 @@ Es ist möglich Module in Unterordnern zu strukturieren. Damit Python einen Ordn
 
 Um ein Modul eines Drittanbieters (wie z. B. Django) zu benutzen, muss es dem System bekannt sein. Dafür gibt es die Pfad-Variable `$PYTHONPATH`. Die meisten Betriebssysteme halten für solche Module einen zentralen Ort vor, an dem sie  abgelegt werden (unter meiner Mac OSX 10.5-Installation ist dies z. B. `/Library/Python/2.5/site-packages`).
 
-### Python-Pfad
+## Python-Pfad
 
 Um den genauen Pfad auf seinem Computer herauszubekommen, kann man im Terminal folgenden Befehl ausführen:
 
@@ -42,7 +41,7 @@ Um zu überprüfen, ob ein Modul geladen werden kann, startet man die interaktiv
 
 Dort gibt man einfach den Befehl `import django` ein. Wird der Befehl ohne Fehler ausgeführt, so ist das Modul installiert.
 
-### Symlinks
+## Symlinks
 
 Da dieser Pfad meistens in den Tiefen des Systems verborgen liegt, wählen viele Entwickler eine komfortablere Methode: Symlinks (symbolische Links). Dieses funktioniert aber nur bei Unix-Systemen, also Linux und Mac OSX. Windows-Benutzer schauen hier (mal wieder) in die Röhre. Ein Grund mehr ein Unix-System zu verwenden.
 
@@ -71,6 +70,6 @@ Genauso wie mit Django kann man mit fast allen Python-Modulen verfahren.
 
 Es gibt einen [Screencast von Eric Florenzano](http://www.eflorenzano.com/blog/post/first-two-django-screencasts/) auf englischer Sprache, der durch diesen Installationsprozess führt.
 
-### Fazit
+## Fazit
 
 Wer die Grundlagen um Module in Python verstanden hat, für den ist die Arbeit mit Django auch viel leichter zu verstehen.

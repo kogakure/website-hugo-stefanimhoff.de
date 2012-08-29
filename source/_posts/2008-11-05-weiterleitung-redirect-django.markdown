@@ -2,7 +2,6 @@
 layout: post
 title: "Weiterleitungen in Django"
 date: 2008-11-05 07:00
-categories:
 tags: [django, redirect, weiterleitung]
 ---
 
@@ -10,11 +9,11 @@ Ein wirklich nützliches Modul von Django ist `django.contrib.redirects`, welche
 
 <!-- more -->
 
-### Weiterleitungen
+## Weiterleitungen
 
 In Django kann man nach Aktivierung des `Redirect`-Moduls einfach im Admin-Interface *Weiterleitungen* von einer beliebigen URL auf die neue URL einstellen. Meine Kampfkunst-Website [kogakure.de](http://kogakure.de/) gibt es seit über 9 Jahren, und wurde in dieser Zeit in hunderten von Foreneinträgen und privaten Websites verlinkt. Oft existiert die alte Struktur der Website schon gar nicht mehr und alle alten Links führen zu einer Fehlerseite.
 
-### E-Mail-Benachrichtigung bei Fehler
+## E-Mail-Benachrichtigung bei Fehler
 
 Es ist möglich beim Aufruf eines fehlerhaften Links per E-Mail benachrichtigt zu werden. Dies ist praktisch, weil man so schnell den Fehler beheben kann und zukünftige Besucher gleich auf die korrekte URL weiterleiten kann.
 
@@ -31,7 +30,7 @@ IGNORABLE_404_STARTS = ('/cgi-bin/','/css/','/scripts/','/images/')
 
 Benachrichtigt werden alle Empfänger, die unter der Einstellung `ADMINS` eingetragen sind.
 
-### Saubere URLs mit Mod_Rewrite
+## Saubere URLs mit Mod_Rewrite
 
 Aus Gründen der Suchmaschinenoptimierung sollte man bei einer Website sowohl die *www*-Subdomain der URL einheitlich weglassen oder verwenden, als auch einen Slash ans Ende der Adresse anhängen (außer bei Dateien mit Endung).
 
