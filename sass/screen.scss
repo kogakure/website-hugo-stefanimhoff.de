@@ -1,0 +1,17 @@
+// ---------------------------------------------------------------------------
+// Imports
+
+@import "compass";
+@import "base";
+
+// ---------------------------------------------------------------------------
+// Layout
+
+.container {
+  @include container;
+  @include susy-grid-background;
+}
+
+abbr {
+  letter-spacing: 0.1em;
+}
