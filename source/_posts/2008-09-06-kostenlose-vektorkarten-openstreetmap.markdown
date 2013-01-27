@@ -2,7 +2,10 @@
 layout: post
 title: "Kostenlose Vektorkarten mit OpenStreetMap"
 date: 2008-09-06 18:59
-tags: [karten, openstreetmap, vektor]
+tags: 
+- karten
+- openstreetmap
+- vektor
 ---
 
 Ich habe keine Ahnung, warum dieses Juwel so lange unbemerkt von mir bleiben konnte, aber gestern hat mich ein Kollege auf den Kartendienst OpenStreetMap hingewiesen. Ähnlich wie bei [Wikipedia](http://de.wikipedia.org/ "Wikipedia – Die freie Enzyklopädie") wird dort von vielen Benutzern eine für jeden kostenlos verfügbare Karte zusammengetragen.

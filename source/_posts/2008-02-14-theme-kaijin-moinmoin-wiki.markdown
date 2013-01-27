@@ -2,7 +2,13 @@
 layout: post
 title: "Theme <cite>Kaijin</cite> für das MoinMoin-Wiki"
 date: 2008-02-14 20:58
-tags: [theme, customize, download, moinmoin, wiki, python]
+tags: 
+- theme
+- customize
+- download
+- moinmoin
+- wiki
+- python
 ---
 
 Seit über einem Jahr benutze ich jetzt das [MoinMoin Wiki](http://moinmo.in/ "MoinMoinWiki - MoinMoin") für meine private Wissensdatenbank. MoinMoin wurde in [Python](http://www.python.org/ "Python Programming Language – Official Website") geschrieben und ist ein ziemlich gutes Wiki. Nur optisch sind so gut wie alle verfügbaren [Themes](http://moinmo.in/ThemeMarket "ThemeMarket – MoinMoin") für MoinMoin eine Zumutung. Daher habe ich mich in den letzten Wochen daran gesetzt, mir ein eigenes Theme zu erstellen.

@@ -2,7 +2,9 @@
 layout: post
 title: "Grundlagen von Python & Django für Anfänger"
 date: 2008-08-01 15:00
-tags: [django, python]
+tags: 
+- django
+- python
 ---
 
 Da in letzter Zeit anscheinend das Interesse an Django stark gestiegen ist, halte ich es für sinnvoll, die Grundlagen des Systems für Anfänger aufzuzeigen.

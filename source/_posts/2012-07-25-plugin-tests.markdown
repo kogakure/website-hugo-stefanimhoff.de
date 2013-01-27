@@ -2,7 +2,8 @@
 layout: post
 title: "Plugin-Testseite mit mehreren Worten"
 date: 2012-07-25 14:00
-tags: []
+tags:
+custom_css: "custom_demo"
 ---
 
 ## Don’t break, boy

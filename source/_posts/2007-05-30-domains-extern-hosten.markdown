@@ -2,7 +2,9 @@
 layout: post
 title: "Domains extern hosten"
 date: 2007-05-30 23:55
-tags: [hosting, domain]
+tags: 
+- hosting
+- domain
 ---
 
 Viele Domainbesitzer in Deutschland wissen immer noch nicht, dass sie ihre Domains _nicht_ mit dem Speicherplatz zusammen kaufen müssen. Ich erkäre hier, wieso Inklusivdomains eine Mogelpackung sind und was für Vorteile das Trennen von Domain und Webspace mit sich bringen.

@@ -2,7 +2,8 @@
 layout: post
 title: "Eineinhalb Jahre GTD – Eine Billanz"
 date: 2007-11-24 01:15
-tags: [gtd]
+tags: 
+- gtd
 ---
 
 Seit genau eineinhalb Jahren benutze ich jetzt die Prinzipien des *GTD* (*Getting Things Done*®), nach dem gleichnamigen Buch von *David Allen* um meine alltäglichen Aufgaben zu organisieren.

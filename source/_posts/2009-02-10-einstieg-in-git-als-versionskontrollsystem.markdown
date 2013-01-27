@@ -2,7 +2,9 @@
 layout: post
 title: "Einstieg in Git als Versionskontrollsystem"
 date: 2009-02-10 20:00
-tags: [git, subversion]
+tags: 
+- git
+- subversion
 ---
 
 Mittlerweile habe ich das Versionskontrollsystem Git seit fast eineinhalb Jahren im Einsatz und bin jeden Tag wieder begeistert. Sogar bei meinem Arbeitgeber scheint eine Umstellung von Subversion auf Git in greifbarer Nähe.

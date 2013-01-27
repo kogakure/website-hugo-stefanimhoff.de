@@ -30,6 +30,17 @@ markdown: rdiscount
 pygments: false # default python pygments have been replaced by pygments.rb
 lsi: true # Related posts
 
+# Jekyll Assets
+assets:
+  dirname: assets
+  # baseurl: //my.super-cool-cdn.com/
+  sources:
+    - css
+    - js
+    - img
+  compress:
+    js: uglifier
+
 # Pagination
 paginate: 150
 recent_posts: 5

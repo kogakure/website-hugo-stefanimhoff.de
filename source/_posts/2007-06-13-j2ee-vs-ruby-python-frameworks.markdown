@@ -2,7 +2,10 @@
 layout: post
 title: "J2EE versus ruby/python-Frameworks"
 date: 2007-06-13 01:34
-tags: [django, rubyonrails, screencast]
+tags: 
+- django
+- rubyonrails
+- screencast
 ---
 
 Der NASA-Mitarbeiter Sean Kelly lässt Web-Frameworks in einem halbstündigen Match gegeneinander antreten. Ein sehr sehenswerter und inspirierender Film für alle, denen sonst die überzeugenden Argumente für moderne Web-Frameworks fehlen.

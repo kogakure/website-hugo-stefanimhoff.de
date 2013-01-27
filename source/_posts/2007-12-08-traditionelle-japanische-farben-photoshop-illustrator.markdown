@@ -2,7 +2,12 @@
 layout: post
 title: "Traditionelle, japanische Farben für Photoshop und Illustrator"
 date: 2007-12-08 21:05
-tags: [photoshop, illustrator, japan, farbe, download]
+tags: 
+- photoshop
+- illustrator
+- japan
+- farbe
+- download
 ---
 
 Bei einem Besuch in der Kunstausstellung <cite>[Japan und der Westen](http://www.kunstmuseum-wolfsburg.de/2007/japanandthewest/ "Kunstmuseum-Wolfsburg")</cite> im <cite>[Kunstmuseum Wolfsburg](http://www.kunstmuseum-wolfsburg.de/ "Kunstmuseum-Wolfsburg")</cite>, konnte ich ein wunderbares Buch über die traditionellen, japanischen Farben erstehen.

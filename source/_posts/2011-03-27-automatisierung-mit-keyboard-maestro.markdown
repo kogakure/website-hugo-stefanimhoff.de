@@ -2,7 +2,10 @@
 layout: post
 title: "Automatisierung mit Keyboard Maestro"
 date: 2011-03-27 12:58
-tags: [software, macosx, automatisierung]
+tags: 
+- software
+- macosx
+- automatisierung
 ---
 
 Ich bin kein Freund von Wiederholungen. Eine gleichförmige, anspruchslose Arbeit mehr als zweimal machen zu müssen, ist in meinen Augen Zeitverschwendung und ein Ärgernis. Daher liebe ich z. B. auch das Terminal, Unix-Bash-Skripte, Cronjobs und andere Helfer, die solche anspruchslosen Arbeiten automatisieren.

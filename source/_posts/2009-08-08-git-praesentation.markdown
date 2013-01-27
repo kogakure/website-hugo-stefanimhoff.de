@@ -2,7 +2,9 @@
 layout: post
 title: "Git-Präsentation"
 date: 2009-08-08 13:00
-tags: [git, präsentation]
+tags: 
+- git
+- präsentation
 ---
 
 Auf dem 4. Treffen der Django-UserGroup Hamburg habe ich eine Präsentation über Git vorgetragen, die ich hier als PDF zum Download anbiete.

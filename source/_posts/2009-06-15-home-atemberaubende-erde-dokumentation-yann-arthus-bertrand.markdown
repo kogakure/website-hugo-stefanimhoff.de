@@ -2,7 +2,9 @@
 layout: post
 title: "HOME – Atemberaubende Dokumentation über unsere Erde"
 date: 2009-06-15 17:23
-tags: [dokumentation, film]
+tags: 
+- dokumentation
+- film
 ---
 
 Am 5. Juni 2009 startete der atemberaubende Dokumentationsfilm <cite>HOME</cite> von Yann Arthus-Bertrand, ein Film über die Entstehung der Erde und des Lebens, sowie der Zerstörung und des Raubbaus an ihr. Sehr sehenswert!

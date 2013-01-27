@@ -2,7 +2,8 @@
 layout: post
 title: "2010 – ein Jahresrückblick"
 date: 2010-12-23 13:00
-tags: [vim]
+tags: 
+- vim
 ---
 
 Und wieder ist ein Jahr fast vorbei, mein jährlicher Blick in [Google History](https://www.google.com/history/) steht an.

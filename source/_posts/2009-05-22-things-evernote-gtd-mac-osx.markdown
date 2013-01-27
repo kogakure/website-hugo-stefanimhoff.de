@@ -2,7 +2,11 @@
 layout: post
 title: "Things & Evernote: GTD mit dem Mac"
 date: 2009-05-22 16:45
-tags: [things, evernote, gtd, macosx]
+tags: 
+- things
+- evernote
+- gtd
+- macosx
 ---
 
 David Allen hat mit seinem Organisationsbuch <cite>[Getting Things Done](http://www.amazon.de/gp/product/0142000280/ref=as_li_ss_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=0142000280&linkCode=as2&tag=kogakurede-21)</cite> (Deutsche Version: <cite>[Wie ich die Dinge geregelt kriege](http://www.amazon.de/gp/product/3492240607/ref=as_li_ss_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=3492240607&linkCode=as2&tag=kogakurede-21)</cite>) eine wahre Flut an Blogs, Software und Lösungen in Gang gebracht. Während Allen selbst in seinem Buch mit sehr handfesten Ablagesystemen arbeitet, ist es mittlerweile selbstredend sinnvoller digital mit GTD zu arbeiten, da man den digitalen Content leichter weiterverwenden, synchronisieren und bearbeiten kann.

@@ -2,7 +2,10 @@
 layout: post
 title: "Weiterleitungen in Django"
 date: 2008-11-05 07:00
-tags: [django, redirect, weiterleitung]
+tags: 
+- django
+- redirect
+- weiterleitung
 ---
 
 Ein wirklich nützliches Modul von Django ist `django.contrib.redirects`, welches das Einrichten von Weiterleitungen ermöglicht. Zusammen mit Djangos Möglichkeit zur Benachrichtigung per E-Mail bei Fehlern, möchte ich diese Funktionen nicht mehr missen.

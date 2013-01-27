@@ -2,7 +2,8 @@
 layout: post
 title: "Auto-Complete im Terminal"
 date: 2010-10-27 18:30
-tags: [terminal]
+tags: 
+- terminal
 ---
 
 Für mich gehört ständige Verbesserung (改善, jap. Kaizen) zur täglichen Arbeit dazu. Was mich aber seit längerem gestört hat, ist wenn ich die Namen des zu klonenden Git-Repositorys per Hand tippen muss. Auto-Complete bietet hier eine Lösung.

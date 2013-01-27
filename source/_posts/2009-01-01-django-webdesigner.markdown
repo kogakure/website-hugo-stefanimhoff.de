@@ -2,7 +2,8 @@
 layout: post
 title: "Django für Webdesigner"
 date: 2009-01-01 11:00
-tags: [django]
+tags: 
+- django
 ---
 
 Die Arbeit mit einem Webframework ist auch für Webdesigner mit grafischem Hintergrund geeignet und vielleicht sogar stressfreier, als sich z. B. mit dem Templatesystem von WordPress herumzuschlagen. Und wieso ich Django unter den Webframeworks für besonders geeignet halte.

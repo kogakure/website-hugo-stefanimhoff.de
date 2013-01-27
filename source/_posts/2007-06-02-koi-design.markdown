@@ -2,7 +2,11 @@
 layout: post
 title: "Das Koi-Design: Inspiration und Idee"
 date: 2007-06-02 02:00
-tags: [irezumi, japan, design, inspiration]
+tags: 
+- irezumi
+- japan
+- design
+- inspiration
 ---
 
 Die Idee für das Design dieser neuen Website schwirrte schon länger in meinem Kopf herum. Nur wollte sie irgendwie nicht in die physische Welt überwechseln. Als Inspiration habe ich die Kunst der japanischen Tätowierung verwendet – Irezumi.

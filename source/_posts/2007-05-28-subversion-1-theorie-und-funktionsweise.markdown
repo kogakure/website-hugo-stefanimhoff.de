@@ -2,7 +2,9 @@
 layout: post
 title: "Subversion (1) – Theorie und Funktionsweise"
 date: 2007-05-28 18:04
-tags: [tutorial, subversion]
+tags: 
+- tutorial
+- subversion
 ---
 
 Dieser erste Teil der Reihe *Subversion* beschäftigt sich mit der nötigen Theorie und Funktionsweise von Subversion.

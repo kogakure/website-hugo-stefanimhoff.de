@@ -2,7 +2,11 @@
 layout: post
 title: "Django Folder für Mac OS X"
 date: 2007-12-18 22:10
-tags: [django, design, macosx, customize]
+tags: 
+- django
+- design
+- macosx
+- customize
 ---
 
 Bei Wishingline gibt es zwei schöne Folder-Icons für Leopard von [Rails und Lighttpd](http://www.wishingline.com/notebook/2007/12/railslighttpdiconsforleopard/ "Rails and Lighttpd Icons for Leopard …On a Long Piece of String"). Diese Idee habe ich mir zum Anlass genommen einen Ordner für Django zu erstellen.

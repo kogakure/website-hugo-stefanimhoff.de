@@ -2,7 +2,11 @@
 layout: post
 title: "Buchtipp: <cite>Rework</cite> von 37signals"
 date: 2010-04-27 16:30
-tags: [buch, 37signals, gtd, business]
+tags: 
+- buch
+- 37signals
+- gtd
+- business
 ---
 
 Heute empfehle ich ein Buch, das ich vor kurzem erst beendet habe, und schon ein zweites Mal lese: <cite>Rework</cite> von <cite>37signals</cite>.

@@ -2,7 +2,10 @@
 layout: post
 title: "Lebensmittel-Datenbank"
 date: 2007-08-28 08:24
-tags: [lebensmittel, nahrung, essen]
+tags: 
+- lebensmittel
+- nahrung
+- essen
 ---
 
 Ich bin gestern über eine schöne Web 2.0 Anwendung gestolpert, mit der man die Nährwerte von Nahrungsmitteln komfortabel berechnen kann.

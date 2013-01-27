@@ -16,6 +16,8 @@ group :development do
   gem "gsl", "~> 1.14.7"
   gem "liquid", "~> 2.4.1"
   gem "jekyll", "~> 0.11.2"
+	gem "jekyll-assets", "~> 0.3.0"
+	gem "uglifier", "~> 1.3.0"
 end
 
 gem "sinatra", "~> 1.3.4"
