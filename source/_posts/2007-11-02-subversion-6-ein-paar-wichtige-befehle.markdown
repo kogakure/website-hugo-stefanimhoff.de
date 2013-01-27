@@ -51,7 +51,7 @@ Manchmal möchte man diese jedoch nicht haben, wenn man z. B. ein fertiges Proje
 
 Für diesen Zweck exportiert man das Arbeitsverzeichnis mit diesem Befehl:
 
-{% codeblock lang:language %}
+{% codeblock lang:sh %}
 svn export . ~/Desktop/export
 {% endcodeblock %}
 
