@@ -2,6 +2,8 @@
 layout: post
 title: "J2EE versus ruby/python-Frameworks"
 date: 2007-06-13 01:34
+description: 
+categories:
 tags: 
 - django
 - rubyonrails

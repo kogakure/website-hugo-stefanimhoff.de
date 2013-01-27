@@ -2,6 +2,8 @@
 layout: post
 title: "Subversion (4) – Importieren einer Projektstruktur"
 date: 2007-07-29 13:00
+description: 
+categories:
 tags: 
 - subversion
 - tutorial

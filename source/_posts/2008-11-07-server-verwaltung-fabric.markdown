@@ -2,6 +2,8 @@
 layout: post
 title: "Server-Verwaltung mit Fabric"
 date: 2008-11-07 12:00
+description: 
+categories:
 tags: 
 - python
 - deployment

@@ -2,6 +2,8 @@
 layout: post
 title: "Wunschliste: Computerspiele als Film"
 date: 2007-09-27 20:00
+description: 
+categories:
 tags: 
 - kino
 - film

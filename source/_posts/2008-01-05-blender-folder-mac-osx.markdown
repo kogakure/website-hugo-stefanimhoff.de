@@ -2,6 +2,8 @@
 layout: post
 title: "Blender Folder für Mac OS X"
 date: 2008-01-05 13:00
+description: 
+categories:
 tags: 
 - blender
 - design

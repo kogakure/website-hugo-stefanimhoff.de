@@ -2,6 +2,8 @@
 layout: post
 title: "Lebensmittel-Datenbank"
 date: 2007-08-28 08:24
+description: 
+categories:
 tags: 
 - lebensmittel
 - nahrung

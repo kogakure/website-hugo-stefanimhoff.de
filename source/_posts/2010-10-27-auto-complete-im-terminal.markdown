@@ -2,6 +2,8 @@
 layout: post
 title: "Auto-Complete im Terminal"
 date: 2010-10-27 18:30
+description: 
+categories:
 tags: 
 - terminal
 ---

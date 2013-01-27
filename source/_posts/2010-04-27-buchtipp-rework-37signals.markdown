@@ -2,6 +2,8 @@
 layout: post
 title: "Buchtipp: <cite>Rework</cite> von 37signals"
 date: 2010-04-27 16:30
+description: 
+categories:
 tags: 
 - buch
 - 37signals

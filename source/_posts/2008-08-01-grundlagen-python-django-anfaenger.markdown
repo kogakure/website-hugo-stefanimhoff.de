@@ -2,6 +2,8 @@
 layout: post
 title: "Grundlagen von Python & Django für Anfänger"
 date: 2008-08-01 15:00
+description: 
+categories:
 tags: 
 - django
 - python

@@ -2,6 +2,8 @@
 layout: post
 title: "Gitweb-Theme im GitHub-Stil"
 date: 2009-02-19 20:00
+description: 
+categories:
 tags: 
 - gitweb
 - git

@@ -2,6 +2,8 @@
 layout: post
 title: "2010 – ein Jahresrückblick"
 date: 2010-12-23 13:00
+description: 
+categories:
 tags: 
 - vim
 ---

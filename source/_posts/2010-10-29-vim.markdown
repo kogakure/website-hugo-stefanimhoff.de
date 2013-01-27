@@ -2,6 +2,8 @@
 layout: post
 title: "Bei der Macht von Vim – ich habe die Kraft"
 date: 2010-10-29 19:00
+description: 
+categories:
 tags: 
 - vim
 ---

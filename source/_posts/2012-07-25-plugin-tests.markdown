@@ -2,6 +2,8 @@
 layout: post
 title: "Plugin-Testseite mit mehreren Worten"
 date: 2012-07-25 14:00
+description: 
+categories:
 tags:
 custom_css: "custom_demo"
 ---

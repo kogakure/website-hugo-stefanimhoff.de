@@ -2,6 +2,8 @@
 layout: post
 title: "Django für Webdesigner"
 date: 2009-01-01 11:00
+description: 
+categories:
 tags: 
 - django
 ---

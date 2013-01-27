@@ -2,6 +2,8 @@
 layout: post
 title: "Subversion (1) – Theorie und Funktionsweise"
 date: 2007-05-28 18:04
+description: 
+categories:
 tags: 
 - tutorial
 - subversion

@@ -2,6 +2,8 @@
 layout: post
 title: "Einstieg in Git als Versionskontrollsystem"
 date: 2009-02-10 20:00
+description: 
+categories:
 tags: 
 - git
 - subversion

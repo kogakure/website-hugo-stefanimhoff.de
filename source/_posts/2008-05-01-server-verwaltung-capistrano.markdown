@@ -2,6 +2,8 @@
 layout: post
 title: "Server-Verwaltung mit Capistrano"
 date: 2008-05-01 18:18
+description: 
+categories:
 tags: 
 - ruby
 - server

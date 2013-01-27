@@ -2,6 +2,8 @@
 layout: post
 title: "GTD mit OmniFocus oder Things?"
 date: 2007-12-15 19:57
+description: 
+categories:
 tags: 
 - gtd
 - macosx

@@ -2,6 +2,8 @@
 layout: post
 title: "Domains extern hosten"
 date: 2007-05-30 23:55
+description: 
+categories:
 tags: 
 - hosting
 - domain

@@ -2,6 +2,8 @@
 layout: post
 title: "Eineinhalb Jahre GTD – Eine Billanz"
 date: 2007-11-24 01:15
+description: 
+categories:
 tags: 
 - gtd
 ---

@@ -2,6 +2,8 @@
 layout: post
 title: "Versionskontrolle mit Git"
 date: 2007-08-02 17:53
+description: 
+categories:
 tags: 
 - git
 - subversion

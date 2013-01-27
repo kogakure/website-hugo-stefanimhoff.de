@@ -2,6 +2,8 @@
 layout: post
 title: "Things & Evernote: GTD mit dem Mac"
 date: 2009-05-22 16:45
+description: 
+categories:
 tags: 
 - things
 - evernote

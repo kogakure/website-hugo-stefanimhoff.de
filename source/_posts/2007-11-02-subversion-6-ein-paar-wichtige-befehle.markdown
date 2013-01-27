@@ -2,6 +2,8 @@
 layout: post
 title: "Subversion (6) – Ein paar wichtige Befehle"
 date: 2007-11-02 19:24
+description: 
+categories:
 tags: 
 - subversion
 - tutorial

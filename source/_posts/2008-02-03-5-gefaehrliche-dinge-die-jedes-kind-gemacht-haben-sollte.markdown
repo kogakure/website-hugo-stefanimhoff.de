@@ -2,6 +2,8 @@
 layout: post
 title: "5 gefährliche Dinge, die jedes Kind gemacht haben sollte"
 date: 2008-02-03 12:34
+description: 
+categories:
 tags:
 ---
 

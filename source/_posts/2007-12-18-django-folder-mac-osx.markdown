@@ -2,6 +2,8 @@
 layout: post
 title: "Django Folder für Mac OS X"
 date: 2007-12-18 22:10
+description: 
+categories:
 tags: 
 - django
 - design

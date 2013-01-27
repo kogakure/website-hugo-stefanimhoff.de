@@ -2,6 +2,8 @@
 layout: post
 title: "Subversion (5) – Arbeiten mit Subversion"
 date: 2007-09-04 18:45
+description: 
+categories:
 tags: 
 - subversion
 - tutorial

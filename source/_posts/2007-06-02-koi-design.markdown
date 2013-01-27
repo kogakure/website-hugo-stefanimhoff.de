@@ -2,6 +2,8 @@
 layout: post
 title: "Das Koi-Design: Inspiration und Idee"
 date: 2007-06-02 02:00
+description: 
+categories:
 tags: 
 - irezumi
 - japan

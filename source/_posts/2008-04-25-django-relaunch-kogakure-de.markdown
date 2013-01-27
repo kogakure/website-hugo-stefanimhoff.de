@@ -2,6 +2,8 @@
 layout: post
 title: "Django-Relaunch von kogakure.de"
 date: 2008-04-25 18:00
+description: 
+categories:
 tags: 
 - django
 - download

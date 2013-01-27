@@ -2,6 +2,8 @@
 layout: post
 title: "Weiterleitungen in Django"
 date: 2008-11-05 07:00
+description: 
+categories:
 tags: 
 - django
 - redirect

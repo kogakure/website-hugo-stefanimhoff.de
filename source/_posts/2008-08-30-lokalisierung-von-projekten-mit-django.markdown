@@ -2,6 +2,8 @@
 layout: post
 title: "Lokalisierung von Projekten mit Django"
 date: 2008-08-30 15:25
+description: 
+categories:
 tags: 
 - django
 - lokalisierung

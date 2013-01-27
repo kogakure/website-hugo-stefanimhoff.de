@@ -2,6 +2,8 @@
 layout: post
 title: "GTD: Analog vs. Digital – 0:1"
 date: 2008-04-01 17:40
+description: 
+categories:
 tags: 
 - gtd
 ---

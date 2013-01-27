@@ -2,6 +2,8 @@
 layout: post
 title: "Zeige deine am häufigsten benutzen Terminal-Befehle"
 date: 2008-04-18 07:00
+description: 
+categories:
 tags: 
 - terminal
 - command

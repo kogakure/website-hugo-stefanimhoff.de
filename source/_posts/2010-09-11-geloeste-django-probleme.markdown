@@ -2,6 +2,8 @@
 layout: post
 title: "Gelöste Django-Probleme"
 date: 2010-09-11 16:00
+description: 
+categories:
 tags: 
 - django
 ---

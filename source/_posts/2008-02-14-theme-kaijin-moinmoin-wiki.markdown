@@ -2,6 +2,8 @@
 layout: post
 title: "Theme <cite>Kaijin</cite> für das MoinMoin-Wiki"
 date: 2008-02-14 20:58
+description: 
+categories:
 tags: 
 - theme
 - customize

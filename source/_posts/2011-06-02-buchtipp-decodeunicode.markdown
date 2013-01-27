@@ -2,6 +2,8 @@
 layout: post
 title: "Buchtipp: Decodeunicode"
 date: 2011-06-02 18:38
+description: 
+categories:
 tags: 
 - buch
 - unicode

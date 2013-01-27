@@ -2,6 +2,8 @@
 layout: post
 title: "Kostenlose Vektorkarten mit OpenStreetMap"
 date: 2008-09-06 18:59
+description: 
+categories:
 tags: 
 - karten
 - openstreetmap
