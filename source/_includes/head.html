@@ -21,6 +21,7 @@
   <link rel="apple-touch-icon" href="{{ site.url }}/apple-touch-icon.png">
   {% capture canonical %}{{ site.url }}/{% if site.permalink contains '.html' %}{{ page.url }}{% else %}{{ page.url | remove:'index.html' | strip_slash }}{% endif %}{% endcapture %}
   <link rel="canonical" href="{{ canonical }}">
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic' rel='stylesheet' type='text/css'>
   {% stylesheet application %}
   {% if page.custom_css %}{{ page.custom_css | stylesheet }}{% endif %}
   <link href="{{ site.subscribe_rss }}" rel="alternate" title="{{site.title}}" type="application/atom+xml">
