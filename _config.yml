@@ -39,7 +39,7 @@ assets:
     - js
     - img
   compress:
-    js: uglifier
+    js: closure # uglify, yui
 
 # Pagination
 paginate: 150
