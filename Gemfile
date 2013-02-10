@@ -16,7 +16,7 @@ group :development do
   gem "gsl", "~> 1.14.7"
   gem "liquid", "~> 2.4.1"
   gem "jekyll", "~> 0.12.0"
-	gem "jekyll-assets", "~> 0.3.0"
+	gem "jekyll-assets", "~> 0.3.2"
   gem "closure-compiler", "~> 1.1.8"
 	# gem "uglifier", "~> 1.3.0"
   # gem "yui-compressor", "~> 0.9.6"

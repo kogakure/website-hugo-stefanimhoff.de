@@ -24,7 +24,7 @@ GEM
       liquid (~> 2.3)
       maruku (~> 0.5)
       pygments.rb (~> 0.3.2)
-    jekyll-assets (0.3.0)
+    jekyll-assets (0.3.2)
       jekyll
       sprockets (~> 2.8)
     kramdown (0.13.8)
@@ -72,7 +72,7 @@ DEPENDENCIES
   gsl (~> 1.14.7)
   haml (~> 3.1.7)
   jekyll (~> 0.12.0)
-  jekyll-assets (~> 0.3.0)
+  jekyll-assets (~> 0.3.2)
   liquid (~> 2.4.1)
   pygments.rb (~> 0.3.7)
   rack (~> 1.5.0)
