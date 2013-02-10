@@ -2,11 +2,29 @@
 layout: post
 title: "Plugin-Testseite mit mehreren Worten"
 date: 2012-07-25 14:00
-description: 
+description:
 categories:
 tags:
 custom_css: "custom_demo"
 ---
+
+## Figure-Plugins
+
+{% figure testclass-1 testclass-2 "Figure mit 2 <b>tollen</b> Klassen" %}
+<img src="http://lorempixel.com/680/400/nature/" alt="Example image">
+{% endfigure %}
+
+{% figure meine-klasse %}
+<img src="http://lorempixel.com/680/400/food/" alt="Example image">
+{% endfigure %}
+
+{% figure "This is the figcaption" %}
+<img src="http://lorempixel.com/680/400/people/" alt="Example image">
+{% endfigure %}
+
+{% figure %}
+<img src="http://lorempixel.com/680/400/city/" alt="Example image">
+{% endfigure %}
 
 ## Don’t break, boy
 
