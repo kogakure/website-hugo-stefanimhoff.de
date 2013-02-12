@@ -14,5 +14,7 @@ sass_dir = "sass"
 images_dir = "source/img"
 fonts_dir = "source/fonts"
 
-line_comments = false
-output_style = :compressed
+# line_comments = false
+line_comments = true
+# output_style = :compressed
+output_style = :expanded # :nested, :expanded, :compact, :compressed

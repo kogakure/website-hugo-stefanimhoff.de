@@ -1,14 +1,23 @@
 // ---------------------------------------------------------------------------
-// Imports
-
-@import "susy";
+// Settings
+//-
+// Susy & Compass use HTML hacks to support IE 6 and 7. You can turn that off:
+// $legacy-support-for-ie6 : false;
+// $legacy-support-for-ie7 : true;
 
 // ---------------------------------------------------------------------------
-// Basic Grid
+// Font Sizes
+$relative-font-sizing: true;
+$base-font-size:       16px;
+$base-line-height:     24px;
 
-$total-columns  : 12;
-$column-width   : 4em;
-$gutter-width   : 1em;
-$grid-padding   : $gutter-width;
+// Grid ------------------------------------------------------------------
+$total-columns: 12;
+$column-width:  4em;
+$gutter-width:  1em;
+$grid-padding:  $gutter-width;
 
-$show-grid-backgrounds  : true;
+$show-grid-backgrounds: true;
+$default-rhythm-border-style: solid;
+
+@import "susy";
