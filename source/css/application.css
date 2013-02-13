@@ -124,27 +124,33 @@ h2 {
 h3 {
   font-size: 1em;
   line-height: 1.5em;
+  padding-top: 1em;
+  margin-bottom: 0.5em;
+  font-weight: 400;
 }
 
-/* line 51, ../../sass/application.scss */
+/* line 54, ../../sass/application.scss */
 h4 {
   font-size: 1em;
   line-height: 1.5em;
-}
-
-/* line 55, ../../sass/application.scss */
-h5 {
-  font-size: 1em;
-  line-height: 1.5em;
+  font-weight: 400;
 }
 
 /* line 59, ../../sass/application.scss */
+h5 {
+  font-size: 1em;
+  line-height: 1.5em;
+  font-weight: 400;
+}
+
+/* line 64, ../../sass/application.scss */
 h6 {
   font-size: 1em;
   line-height: 1.5em;
+  font-weight: 400;
 }
 
-/* line 63, ../../sass/application.scss */
+/* line 69, ../../sass/application.scss */
 p {
   margin-bottom: 1.5em;
 }

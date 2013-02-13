@@ -46,18 +46,24 @@ h2 {
 
 h3 {
   @include adjust-font-size-to($font-scale-h3);
+  @include leader(2/3, $font-scale-h3, padding);
+  @include trailer(1/3, $font-scale-h3, margin);
+  font-weight: 400;
 }
 
 h4 {
   @include adjust-font-size-to($font-scale-h4);
+  font-weight: 400;
 }
 
 h5 {
   @include adjust-font-size-to($font-scale-h5);
+  font-weight: 400;
 }
 
 h6 {
   @include adjust-font-size-to($font-scale-h6);
+  font-weight: 400;
 }
 
 p {
