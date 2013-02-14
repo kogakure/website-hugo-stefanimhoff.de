@@ -2,9 +2,9 @@
 layout: post
 title: "Git-Präsentation"
 date: 2009-08-08 13:00
-description: 
+description:
 categories:
-tags: 
+tags:
 - git
 - präsentation
 ---
@@ -21,7 +21,7 @@ Meine Abteilung ist bereits mit mehreren hundert Kundenprojekten und einigen int
 
 Die Migration meiner Abteilung ist bereits abgeschlossen und wir arbeiten seit einigen Wochen produktiv mit Git. In Kürze folgt noch eine weitere Abteilung nach.
 
-Wir haben uns für eine Kombination aus [Git](http://www.git-scm.org/ "Git - Fast Version Control System"), [Gitosis](http://eagain.net/gitweb/?p=gitosis.git), [Gitweb](http://git.or.cz/gitwiki/Gitweb "Gitweb - GitWiki") und [Redmine](http://www.redmine.org/ "Redmine") entschieden.
+Wir haben uns für eine Kombination aus [Git](http://git-scm.com/), [Gitosis](https://github.com/tv42/gitosis), [Gitweb](https://git.wiki.kernel.org/index.php/Gitweb) und [Redmine](http://www.redmine.org/ "Redmine") entschieden.
 
 Dank Gitosis ist es leicht möglich neue Projekte auf dem Server anzulegen, und benötigt nicht einmal Zugriff auf den Server. Es werden einfach die öffenlichen SSH-Schlüssel der Benutzer in ein Git-Repository aufgenommen, und Projekte über eine Konfigurationsdatei von Gitosis angelegt. Sobald die Änderungen zurück auf den Server gepusht worden sind, kann man ein neues Projekt auf den Server pushen und hinterher als zugelassener Benutzer auch wieder klonen und die Änderungen zurück pushen.
 

@@ -2,9 +2,9 @@
 layout: post
 title: "Bei der Macht von Vim – ich habe die Kraft"
 date: 2010-10-29 19:00
-description: 
+description:
 categories:
-tags: 
+tags:
 - vim
 ---
 
@@ -72,7 +72,7 @@ silent! call pathogen#helptags()
 
 Plugins werden ab jetzt nicht entpackt und kompliziert in die richtigen Unterordner verschoben, sondern einfach pro Plugin in einen eigenen Ordner unter `bundle` gestellt. Für Vim gibt es nämlich leider einige, verschiedene Möglichkeiten Erweiterungen zu installieren, einfache Skripte, automatische Installer und seit kurzem gottseidank auch Git-Checkouts.
 
-Meine Empfehlung ist, komplett auf Git-Checkouts umzusteigen. Das geht seit kurzem sehr leicht, denn irgend ein fleißiger Wichtel hat einen Mirror der meisten Skripte unter [vim-scripts](http://github.com/vim-scripts) auf Github eingestellt und ermöglicht so das automatische Update der Plugins über Git.
+Meine Empfehlung ist, komplett auf Git-Checkouts umzusteigen. Das geht seit kurzem sehr leicht, denn irgend ein fleißiger Wichtel hat einen Mirror der meisten Skripte unter [vim-scripts](https://github.com/vim-scripts) auf Github eingestellt und ermöglicht so das automatische Update der Plugins über Git.
 
 Einige Personen klonen sich die gewünschten Plugins als Submodule, ich verwende ein kleines Ruby-Skript von [Tammer Saleh](http://tammersaleh.com/posts/the-modern-vim-config-with-pathogen), mit dem ich meine Git-Repositorys aktualisiere:
 
@@ -120,13 +120,13 @@ Durch drücken des Komma im NORMAL-Modus, gefolgt von meinen Tastaturkürzeln ka
 
 Wenn du von TextMate zu Vim wechselt (oder von einem anderen Editor) wirst du natürlich mit Sicherheit einige liebgewonnene Möglichkeiten deines Editors vermissen. Wenn die vermisste Funktion nicht schon von Haus aus in Vim funkioniert, so funktioniert es mit sehr hoher Wahrscheinlichkeit durch eines der tausende Plugins.
 
-Eine Seitenleiste, in der alle Dateien in Baumstruktur zu sehen sind, kann z. B. durch [NERD tree](http://github.com/scrooloose/nerdtree) aktiviert werden. Ich dachte zuerst, diese Funktion benötige ich **ungedingt**, doch seit ich die Buffer und Splits von Vim kenne, benutze ich den NERD tree eigentlich gar nicht mehr.
+Eine Seitenleiste, in der alle Dateien in Baumstruktur zu sehen sind, kann z. B. durch [NERD tree](https://github.com/scrooloose/nerdtree) aktiviert werden. Ich dachte zuerst, diese Funktion benötige ich **ungedingt**, doch seit ich die Buffer und Splits von Vim kenne, benutze ich den NERD tree eigentlich gar nicht mehr.
 
 Wincent Colaiuta hat mit [Command-T](https://wincent.com/products/command-t) ein geniales Plugin programmiert, das die Funktion von TextMate reproduziert, durch wenige Tastenanschläge beliebige Dateien im Projekt zu öffnen.
 
-Einfach unabdingbar ist auch das Plugin [surround.vim](http://github.com/tpope/vim-surround), mit dem du Umfassungen wie Klammern, Tags, Hochkommata verändern, manipulieren oder löschen kannst.
+Einfach unabdingbar ist auch das Plugin [surround.vim](https://github.com/tpope/vim-surround), mit dem du Umfassungen wie Klammern, Tags, Hochkommata verändern, manipulieren oder löschen kannst.
 
-TextMate war wahrscheinlich das erste Programm, das Snippets im Großen Umfang eingeführt hat. Ich arbeite seit Jahren mit TextMate und könnte ohne Snippets nicht mehr vernünftig arbeiten. Vim bietet sogar mehrere Implementationen für Snippets. Ich persönlich nutze [snipmate](http://github.com/msanders/snipmate.vim) auch wenn es für Poweruser noch ein mächtigeres (aber auch komplizierteres Plugin) gibt. Snipmate bietet fast alle Funktionen, die auch TextMate hatte, die Snippets können fast kopiert werden und mit wenigen Änderungen angepasst werden. Ich habe mir die Mühe gemacht CSS-Zen und HTML-Zen für SnipMate zu konvertieren, das [Git-Repository für mein Snipmate](http://github.com/kogakure/snipmate.vim) findest du auf GitHub.
+TextMate war wahrscheinlich das erste Programm, das Snippets im Großen Umfang eingeführt hat. Ich arbeite seit Jahren mit TextMate und könnte ohne Snippets nicht mehr vernünftig arbeiten. Vim bietet sogar mehrere Implementationen für Snippets. Ich persönlich nutze [snipmate](https://github.com/msanders/snipmate.vim) auch wenn es für Poweruser noch ein mächtigeres (aber auch komplizierteres Plugin) gibt. Snipmate bietet fast alle Funktionen, die auch TextMate hatte, die Snippets können fast kopiert werden und mit wenigen Änderungen angepasst werden. Ich habe mir die Mühe gemacht CSS-Zen und HTML-Zen für SnipMate zu konvertieren, das [Git-Repository für mein Snipmate](https://github.com/kogakure/snipmate.vim) findest du auf GitHub.
 
 Peteris Krumin stellt auf seinem Blog [sieben Vim-Plugins](http://www.catonmat.net/blog/vim-plugins-surround-vim) vor, die du unbedingt kennen solltest.
 
@@ -140,7 +140,7 @@ Der eine mag es grell, der andere hell, einer mag es dunkel und einer beige. Fü
 
 ## Und wo fange ich jetzt an?
 
-Wenn du eineeinhalb Stunden Zeit hast, schau dir doch das Video vom GoogleTechTalk an, in dem der Entwickler von Vim, der Niederländer Bram Moolenaar zeigt in [7 Habits For Effective Text Editing 2.0](http://video.google.com/videoplay?docid=2538831956647446078#) was an Vim so beeindruckend ist.
+Wenn du eineeinhalb Stunden Zeit hast, schau dir doch das Video vom GoogleTechTalk an, in dem der Entwickler von Vim, der Niederländer Bram Moolenaar zeigt in [7 Habits For Effective Text Editing 2.0](http://www.youtube.com/watch?v=p6K4iIMlouI) was an Vim so beeindruckend ist.
 
 Es gibt außerdem zwei fantastische Artikel, die ich unbedingt empfehlen kann: [Coming Home to Vim](http://stevelosh.com/blog/2010/09/coming-home-to-vim/) von Steve Losh und [How I boosted my Vim](http://nvie.com/posts/how-i-boosted-my-vim/) von Vincent Driessen.
 

@@ -2,9 +2,9 @@
 layout: post
 title: "Subversion (2) – Installation"
 date: 2007-06-08 01:00
-description: 
+description:
 categories:
-tags: 
+tags:
 - subversion
 - tutorial
 ---
@@ -25,7 +25,7 @@ Für Windows gibt es das fantastische [TortoiseSVN](http://tortoisesvn.tigris.or
 
 Für Windows ist dies die beste Version, die verfügbar ist, und TortoiseSVN ist auch über alle Systeme betrachtet die beste Software. Irgendetwas muss ja auch mal auf Windows besser sein.
 
-Für MacOSX gibt es unter anderem die Programme [svnX](http://www.apple.com/downloads/macosx/development_tools/svnx.html "svnX - Development Tools"), [rapidsvn](http://rapidsvn.tigris.org/ "rapidsvn.tigris.org") und eine TortoiseSVN ähnliche Menüintegration durch das [SCPlugin](http://scplugin.tigris.org/ "scplugin.tigris.org"). Diese ist aber bei weitem nicht so intuitiv und mächtig wie die Windows-Variante.
+Für MacOSX gibt es unter anderem die Programme [svnX](http://code.google.com/p/svnx/), [rapidsvn](http://rapidsvn.tigris.org/ "rapidsvn.tigris.org") und eine TortoiseSVN ähnliche Menüintegration durch das [SCPlugin](http://scplugin.tigris.org/ "scplugin.tigris.org"). Diese ist aber bei weitem nicht so intuitiv und mächtig wie die Windows-Variante.
 
 Weiter gibt es noch eine Vielzahl anderer Programme für verschiedenste Plattformen und auch plattformübergreifende Programme, kostenlose und Profiversionen für teures Geld. Ein guter Anwärter für eine hübsche OS X Software scheint mir [Versions](http://www.versionsapp.com/) von [Sofa](http://www.madebysofa.com/) zu sein, das aber bislang nur angekündigt wurde.
 

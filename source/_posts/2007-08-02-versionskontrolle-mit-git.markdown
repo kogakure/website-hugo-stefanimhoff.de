@@ -2,9 +2,9 @@
 layout: post
 title: "Versionskontrolle mit Git"
 date: 2007-08-02 17:53
-description: 
+description:
 categories:
-tags: 
+tags:
 - git
 - subversion
 ---
@@ -17,7 +17,7 @@ Seit fast einem Jahr arbeite ich nun mit Subversion – und bin ziemlich zufried
 
 *CVS* habe ich nicht kennengelernt und das scheint auch gut zu sein, bei allen grausigen Meldungen, die man über CVS hört.
 
-Linus Torvalds sieht das wohl etwas anders, wie er in Googles <cite>[Tech Talk: Linus Torvalds on git](http://youtube.com/watch?v=4XpnKHJAok8 "YouTube - Tech Talk: Linus Torvalds on git")</cite> deutlich macht:
+Linus Torvalds sieht das wohl etwas anders, wie er in Googles <cite>[Tech Talk: Linus Torvalds on git](http://www.youtube.com/watch?v=4XpnKHJAok8)</cite> deutlich macht:
 
 > I see Subversion as being the most pointless project ever started, because the slogan for Subversion for a while was: <q>CVS done right</q> […]. And if you start with that kind of slogan, there is nowhere you can go. There’s no way to do CVS right.
 >
@@ -47,6 +47,6 @@ Ist seine Arbeit gut, und andere Personen finden sie auch gut, können diese die
 
 *Git* ist sehr einfach und effizient zu bedienen, schon nach kurzer Zeit konnte ich damit umgehen. Man kann Git z. B. auch zusätzlich zu SVN oder CVS auf seinem Rechner nutzen. Das man kein zentrales Repository <del>hat</del> <ins>haben muss</ins>, ist ein echter Vorzug.
 
-Neben dem [fantastischen Vortrag](http://youtube.com/watch?v=4XpnKHJAok8 "YouTube - Tech Talk: Linus Torvalds on git") von Linus Torvalds auf *Google Tech Talk* gibt es auch eine [Installationsanleitung für Mac OSX Tiger/Leopard](http://wincent.com/knowledge-base/Installing_Git_1.5.2.4_on_Mac_OS_X_Leopard "Installing Git 1.5.2.4 on Mac OS X Leopard - Knowledge Base"). Auf der [offiziellen Seite von Git](http://git.or.cz/ "Git - Fast Version Control System") findet man gute Handbücher und Tutorials.
+Neben dem [fantastischen Vortrag](http://www.youtube.com/watch?v=4XpnKHJAok8) von Linus Torvalds auf *Google Tech Talk* gibt es auf der [offiziellen Seite von Git](http://git-scm.com/) gute Handbücher und Tutorials.
 
 Ich werde Git in der nächsten Zeit in meinen Projekten testen und meine Erfahrungen hier veröffentlichen.

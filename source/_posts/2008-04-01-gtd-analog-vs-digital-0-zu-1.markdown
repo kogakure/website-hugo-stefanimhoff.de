@@ -2,9 +2,9 @@
 layout: post
 title: "GTD: Analog vs. Digital – 0:1"
 date: 2008-04-01 17:40
-description: 
+description:
 categories:
-tags: 
+tags:
 - gtd
 ---
 
@@ -17,8 +17,8 @@ Ich war mir nicht sicher, doch jetzt ist es entschieden. Digital geht schneller 
 
 ## Die Kandidaten
 
-* **[Moleskine](http://www.moleskine.com/)** mit Kugelschreiber
-* **[iPod touch](http://www.apple.com/de/ipodtouch/)** mit Zeigefinger
+* **[Moleskine](http://www.moleskine.com/de/)** mit Kugelschreiber
+* **[iPod touch](http://www.apple.com/de/ipod-touch/)** mit Zeigefinger
 
 ## Ausgangsposition
 

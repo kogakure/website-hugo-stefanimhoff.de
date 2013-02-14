@@ -2,9 +2,9 @@
 layout: post
 title: "Blender Folder für Mac OS X"
 date: 2008-01-05 13:00
-description: 
+description:
 categories:
-tags: 
+tags:
 - blender
 - design
 - macosx
@@ -19,13 +19,13 @@ Da mein [Django Folder-Icon](/django-folder-mac-osx/ "Django Folder für Mac OS 
 
 ## Blender
 
-[Blender](http://www.blender.org/ "blender.org") ist ein fantastisches OpenSource 3D-Programm, das kostenlos für alle üblichen Betriebssysteme erhältlich ist.
+[Blender](http://www.blender.org/) ist ein fantastisches OpenSource 3D-Programm, das kostenlos für alle üblichen Betriebssysteme erhältlich ist.
 
 Mit Blender kann man auf professionellem Niveau arbeiten. Es ist genauso gut, wie z. B. Autodesk Maya, und bietet neben einem fantastischen Interface Rigging, Animation, UV Unwrapping, Physics und Particle, Realtime 3D/Game Creation, Modeling, Rendering und Shading auch noch Imaging und Compositing an. Blender benutzt [Python](http://www.python.org/ "Python Programming Language -- Official Website"), um spezielle Verhaltensweisen in Blender zu programmieren.
 
 Wer lernen möchte mit einer solchen 3D-Software zu arbeiten oder von einer der kommerziellen Lösungen wechseln möchte, dem kann ich diese Software wärmstens Empfehlen.
 
-Das Blender es lässig mit den teuren Mitbewerbern aufnehmen kann, kann man in der [Showcase-Galerie](http://www.blender.org/features-gallery/gallery/images/ "blender.org") sehen oder in Projekten wie [Elephants Dream](http://orange.blender.org/ "Elephants Dream"), [Peach](http://peach.blender.org/ "Peach") oder  [Pumiferos](http://www.plumiferos.com/) bewundern.
+Das Blender es lässig mit den teuren Mitbewerbern aufnehmen kann, kann man in der [Showcase-Galerie](http://www.blender.org/features-gallery/gallery/art-gallery/) sehen oder in Projekten wie [Elephants Dream](http://orange.blender.org/ "Elephants Dream"), Peach oder  [Pumiferos](http://www.plumiferos.com/) bewundern.
 
 ## Leopard Folder-Icon
 

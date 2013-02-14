@@ -2,9 +2,9 @@
 layout: post
 title: "Grundlagen von Python & Django für Anfänger"
 date: 2008-08-01 15:00
-description: 
+description:
 categories:
-tags: 
+tags:
 - django
 - python
 ---
@@ -15,7 +15,7 @@ Da in letzter Zeit anscheinend das Interesse an Django stark gestiegen ist, halt
 
 Es gibt verschiedene Möglichkeiten, Django auf dem eigenen Computer/Server zu installieren. Es kann sowohl als Paket geladen oder in der Entwicklerversion genutzt werden.
 
-Für welche Variante man sich auch entscheidet, es ist ziemlich nützlich die Grundlagen von [Django](http://www.djangoproject.com/) und [Python](http://python.org/) zu verstehen.
+Für welche Variante man sich auch entscheidet, es ist ziemlich nützlich die Grundlagen von [Django](https://www.djangoproject.com/) und [Python](http://python.org/) zu verstehen.
 
 ## Python-Module
 
@@ -72,7 +72,7 @@ Damit ist das Modul Django installiert und kann benutzt werden. Mit einem Update
 
 Genauso wie mit Django kann man mit fast allen Python-Modulen verfahren.
 
-Es gibt einen [Screencast von Eric Florenzano](http://www.eflorenzano.com/blog/post/first-two-django-screencasts/) auf englischer Sprache, der durch diesen Installationsprozess führt.
+Es gibt einen [Screencast von Eric Florenzano](http://eflorenzano.com/blog/post/first-two-django-screencasts/) auf englischer Sprache, der durch diesen Installationsprozess führt.
 
 ## Fazit
 

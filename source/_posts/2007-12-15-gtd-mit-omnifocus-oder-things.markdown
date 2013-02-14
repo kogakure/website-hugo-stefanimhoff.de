@@ -2,19 +2,19 @@
 layout: post
 title: "GTD mit OmniFocus oder Things?"
 date: 2007-12-15 19:57
-description: 
+description:
 categories:
-tags: 
+tags:
 - gtd
 - macosx
 - software
 ---
 
-Seit ich mir Anfang Dezember überlegt habe, von meinem webbasierenden GTD-Tool [Tracks](http://www.rousette.org.uk/projects/ "Tracks") zu einer OS X Software zu wechseln, teste ich zwei interessante Kandidaten.
+Seit ich mir Anfang Dezember überlegt habe, von meinem webbasierenden GTD-Tool [Tracks](http://getontracks.org/) zu einer OS X Software zu wechseln, teste ich zwei interessante Kandidaten.
 
 <!-- more -->
 
-Ich hatte bis heute  [OmniFocus](http://www.omnigroup.com/applications/omnifocus/) 1.0 von *The OmniGroup* und [Things](http://culturedcode.com/things/) 0.8.1 von *CulturedCode* im Test.
+Ich hatte bis heute  [OmniFocus](http://www.omnigroup.com/products/omnifocus/) 1.0 von *The OmniGroup* und [Things](http://culturedcode.com/things/) 0.8.1 von *CulturedCode* im Test.
 
 Ein direkter Vergleichstest wäre aber ungerecht, da OmniFocus kurz vor der Veröffentlichung steht, Things aber erst in Alpha-Version vorliegt.
 

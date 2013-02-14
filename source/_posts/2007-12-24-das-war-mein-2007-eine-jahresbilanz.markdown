@@ -2,12 +2,12 @@
 layout: post
 title: "Das war mein 2007 – eine Jahresbilanz"
 date: 2007-12-24 14:00
-description: 
+description:
 categories:
 tags:
 ---
 
-Zum Jahresende will ich dieses Mal Googles [Webprotokoll](http://www.google.de/history/) als Erinnerungshilfe hinzuziehen. Dieser Dienst von Google ermöglicht es die eigenen Suchbegriffe anzusehen.
+Zum Jahresende will ich dieses Mal Googles Webprotokoll als Erinnerungshilfe hinzuziehen. Dieser Dienst von Google ermöglicht es die eigenen Suchbegriffe anzusehen.
 
 <!-- more -->
 
@@ -20,7 +20,7 @@ Ich suche nach Scientology, aber nur um zu verstehen, an was für einen hanebüc
 
 In der Bildersuche suche ich nach einer Diskussion mit meinen Kollegen nach dem [Fiat Multipla](http://images.google.de/images?q=fiat+multipla), weil dies meiner Meinung nach das hässlichste Auto ist, das je hergestellt wurde.
 
-Außerdem suche ich viel nach [ExpressionEngine](http://expressionengine.com/), da die Umsetzung meiner eigenen [Website](http://stefanimhoff.de/) im Januar voll im Gange ist. Besonders `segment_1`, `url_segments` und `conditional_variable` bestimmen diesen Monat.
+Außerdem suche ich viel nach [ExpressionEngine](http://ellislab.com/expressionengine), da die Umsetzung meiner eigenen [Website](http://stefanimhoff.de/) im Januar voll im Gange ist. Besonders `segment_1`, `url_segments` und `conditional_variable` bestimmen diesen Monat.
 
 ## Februar
 
@@ -32,7 +32,7 @@ Ich fange an alle unsere Jobs auf der Arbeit in [Subversion](http://subversion.t
 
 ## März
 
-Im März erkundige ich mich nach den [Palmeninseln](http://www.thepalm.ae/) und der [Weltkarteninselgruppe](http://www.theworld.ae/) von Dubai. Der Scheich von Dubai investiert eine Menge, weil er weiß, dass sein Öl in wenigen Jahren ausgehen wird. Natürlich bin ich neidisch auf diese reichen Sackgesichter, die sich dort eine Parzelle kaufen können. Naja, jedenfalls im Moment noch – bis die dann in einigen Jahren weggespült werden.
+Im März erkundige ich mich nach den Palmeninseln und der Weltkarteninselgruppe von Dubai. Der Scheich von Dubai investiert eine Menge, weil er weiß, dass sein Öl in wenigen Jahren ausgehen wird. Natürlich bin ich neidisch auf diese reichen Sackgesichter, die sich dort eine Parzelle kaufen können. Naja, jedenfalls im Moment noch – bis die dann in einigen Jahren weggespült werden.
 
 Bei ExpressionEngine interessieren mich u. a. `search_results` und `wegblog_name`, was wohl bedeutet, dass ich gerade die Suche auf meiner Seite programmiere.
 
@@ -48,15 +48,15 @@ ExpressionEngine steht immer noch auf meinem Tagesplan, dieses Mal mit `categori
 
 Der Mai ist die heiße Phase in der Entwicklung meiner neuen Website. Das RSS Modul interessiert mich näher, Attribute, Datumsformatierungen, Conditionals, wie z. B. `elseif`, sowie `comment_count`.
 
-Außerdem suche ich nach den Lyrics meiner neuen Alben von den [Poets of the Fall](http://poetsofthefall.com/), einer wirklich guten, finnischen Rockband.
+Außerdem suche ich nach den Lyrics meiner neuen Alben von den [Poets of the Fall](http://www.poetsofthefall.com/), einer wirklich guten, finnischen Rockband.
 
 ## Juni
 
 Im Juni lese ich das Buch [Robinson Crusoe](http://de.wikipedia.org/wiki/Robinson_Crusoe) und informiere mich mehr über die Hintergründe der Geschichte.
 
-Sonst kommt mir in diesem Monat [Django](http://www.djangoproject.com/) erneut in meine Gedanken, ich hatte mich schon mal im Herbst des Vorjahres damit beschäftigt, war aber an der Installation gescheitert.
+Sonst kommt mir in diesem Monat [Django](https://www.djangoproject.com/) erneut in meine Gedanken, ich hatte mich schon mal im Herbst des Vorjahres damit beschäftigt, war aber an der Installation gescheitert.
 
-Ich schaue den Film [Snakes and  Rubies](http://www.djangoproject.com/snakesandrubies/) an, in dem Adrian Holovaty und David Heinermeier Hannson die Vorteile und Unterschiede von Django und [Ruby on Rails](http://rubyonrails.com/) diskutieren.
+Ich schaue den Film [Snakes and  Rubies](https://www.djangoproject.com/snakesandrubies/) an, in dem Adrian Holovaty und David Heinermeier Hannson die Vorteile und Unterschiede von Django und [Ruby on Rails](http://rubyonrails.org/) diskutieren.
 
 Ein TextMate Bundle für Django muss her, und auch [ReST](http://docutils.sourceforge.net/rst.html) als Markupsprache der Djangoseite zieht mein Interesse an.
 
@@ -76,15 +76,15 @@ Ich erkundige mich, ob Jean-Yves Mitton, ein französischer Zeichner, mal wieder
 
 In diesem Monat schaue ich mir im Fernsehen vermutlich [Thoughtcrimes](http://www.imdb.com/title/tt0339785/) an, einen Film, der irgendwie gar nicht so schlecht war, auch wenn die Story etwas seltsam daherkommt.
 
-Und ich suche nach dem Film [Staplerfahrer Klaus](http://youtube.com/watch?v=NgqeBcdbFJ4), ein Klassiker, den man einfach gesehen haben muss.
+Und ich suche nach dem Film [Staplerfahrer Klaus](http://www.youtube.com/watch?v=YvdkvBXBAcw), ein Klassiker, den man einfach gesehen haben muss.
 
 ## August
 
 Im August erkundige ich mich nach Googles PageRank, denn mittlerweile sind schon fast vier Monate vergangen, und ich habe immer noch einen PageRank von Null. Ich befürchte die böse <cite>Google Sandbox</cite> (zu recht, wie ich feststelle).
 
-In diesem Monat erkundige ich mich auch nach Django-Hostern und finde heraus, dass TextDrive jetzt [Joyent](http://www.joyent.com/) ist. Ich entscheide mich für [Webfaction](http://www.webfaction.com/?affiliate=kogakure) als neuen Webhoster.
+In diesem Monat erkundige ich mich auch nach Django-Hostern und finde heraus, dass TextDrive jetzt [Joyent](http://joyent.com/) ist. Ich entscheide mich für [Webfaction](http://www.webfaction.com/?affiliate=kogakure) als neuen Webhoster.
 
-Im August entdecke ich [git](http://git.or.cz/) für mich, Linus Torvalds fantastisches Versionskontrollsystem. Git ist Subversion in vielen Punkten um Längen vorraus.
+Im August entdecke ich [git](http://git-scm.com/) für mich, Linus Torvalds fantastisches Versionskontrollsystem. Git ist Subversion in vielen Punkten um Längen vorraus.
 
 Der [Mister Wong](http://www.mister-wong.de/)-Skandal im August ist mal wieder typisch und sehr lustig. Irgendein asiatisch-amerikanischer Typ regt sich **unglaublich** über die Karikatur eines Chinesen im Logo des Bookmark-Dienstes Mister Wong auf. Faschisten, ihr alle! Hier kommt die braune Keule! Man kann sich auch künstlich aufregen… Tsssss. Jedenfalls muss ein neues Logo her. Die Community soll aushelfen.
 
@@ -94,7 +94,7 @@ Auf meinem Nachttisch liegt laut Google Suche Machiavellis <cite>[Der Fürst](ht
 
 In der [Autostadt Wolfsburg](http://www.autostadt.de/) eröffnet ein neues japanisches Restaurant, das <cite>Anan</cite>, mit extra einflogenem, japanischem Meisterkoch.
 
-Das Sommerloch geht langsam zu Ende, also erkundige ich mich, was meine Lieblingsserien so machen, und wann die Staffeln wieder starten: [Lost](http://abc.go.com/primetime/lost/), [StarGate SG-1 und StarGate Atlantis](http://stargate.mgm.com/), [Monk](http://www.usanetwork.com/series/monk/) und [Battlestar Galactica](http://www.scifi.com/battlestar/).
+Das Sommerloch geht langsam zu Ende, also erkundige ich mich, was meine Lieblingsserien so machen, und wann die Staffeln wieder starten: [Lost](http://abc.go.com/shows/lost), [StarGate SG-1 und StarGate Atlantis](http://stargate.mgm.com/), [Monk](http://www.usanetwork.com/series/monk/) und [Battlestar Galactica](http://www.syfy.com/battlestar/).
 
 ## September
 
@@ -102,7 +102,7 @@ Diesen Monat beschäftige ich mich vor allem LaTeX, Bibtex und Alphadin. Ich sch
 
 Auch mit SQLite3 schaue ich mir noch näher an. Eine wirklich feine, kleine und mächtige Datenbank.
 
-Mitte September will ich von Google wissen, wo eigentlich der Experimentalfilm [A Scanner Darkly](http://wip.warnerbros.com/ascannerdarkly/) bleibt. In den U.S.A. lief er schon vor über einem Jahr. Naja, lohnt wohl wieder nicht, so was in Deutsche Kinos zu bringen. Also muss *man* sich ja wieder woanders seinen Kinoeintritt holen. Selber schuld, die Filmstudios.
+Mitte September will ich von Google wissen, wo eigentlich der Experimentalfilm [A Scanner Darkly](http://www.imdb.de/title/tt0405296/) bleibt. In den U.S.A. lief er schon vor über einem Jahr. Naja, lohnt wohl wieder nicht, so was in Deutsche Kinos zu bringen. Also muss *man* sich ja wieder woanders seinen Kinoeintritt holen. Selber schuld, die Filmstudios.
 
 Eine ISO-Prüfung im Haus führt mich zu <cite>Dilbert</cite> und Dogbert, und ich kann den Bürokratiewahn mit einem lachenden Auge in der Comic lesend überstehen.
 
@@ -124,15 +124,15 @@ Ich muss mir eingestehen, dass ohne JavaScript-Frameworks und Ajax-Erfahrung kei
 
 jQuery hat die coolste Syntax und kann alles, was der Kunde von heute so will.
 
-Ich lache herzlich über den [Eklat bei Kerner](http://www.welt.de/fernsehen/article1250311/Die_oeffentliche_Hinrichtung_der_Eva_Herman.html), und schaue mir an, wie die arme Frau Hermann von einer Horde wütender Nazi-Jäger zu Klump gehauen wird.  Hach. Die Psychologen nennen das den *Mitleidseffekt*, weshalb auch der Großteil der Stimmen in Foren und Kommentaren für Eva Hermann ist.
+Ich lache herzlich über den [Eklat bei Kerner](http://www.welt.de/fernsehen/article1250311/Die-oeffentliche-Hinrichtung-der-Eva-Herman.html), und schaue mir an, wie die arme Frau Hermann von einer Horde wütender Nazi-Jäger zu Klump gehauen wird.  Hach. Die Psychologen nennen das den *Mitleidseffekt*, weshalb auch der Großteil der Stimmen in Foren und Kommentaren für Eva Hermann ist.
 
-Da ja bald Apples neues Betriebssystem [Leopard](http://www.apple.com/de/macosx/) erscheint, google ich schon mal nach passenden Space-Wallpapern.
+Da ja bald Apples neues Betriebssystem [Leopard](http://www.apple.com/de/osx/) erscheint, google ich schon mal nach passenden Space-Wallpapern.
 
 Diverse Suchen nach <cite>Kuehne und Nagel Logistics</cite> und einem *Leopard Widget* bezeugen es – Leopard ist da. FedEx versagt in meinem Fall total, so bekomme ich Leopard erst am Samstag morgen.
 
 MySQL und PostgreSQL muss ich mir selber kompilieren, aber Apache 2 und PHP sind schon bei Leopard dabei. Außerdem stelle ich fest, dass mein G5 zu langsam für die neuen iChat-Videohintergründe ist. Schade.
 
-[Manuela Hoffmann](http://www.surfgarden.de/blog/2007-10/die-dinge-wirklich-mal-geregelt-kriegen/) bringt mich auf [TaskPaper](http://hogbaysoftware.com/products/taskpaper) als GTD-Werkzeug, was ich zwei Wochen teste, dann aber wieder entferne, weil mir einfach noch zu viele Dinge fehlen.
+[Manuela Hoffmann](http://www.surfgarden.de/blog/2007-10/die-dinge-wirklich-mal-geregelt-kriegen/) bringt mich auf [TaskPaper](http://www.hogbaysoftware.com/products/taskpaper) als GTD-Werkzeug, was ich zwei Wochen teste, dann aber wieder entferne, weil mir einfach noch zu viele Dinge fehlen.
 
 ## November
 
@@ -146,7 +146,7 @@ Ich überlege mir, ob ich zukünftig mit Markdown, Textile oder ReST als Markup-
 
 Ich stelle fest, dass bislang nur Safari 3 automatisch Worte trennt, doch die Alpha-Version von Firefox 3 bringt die freudige Erkenntnis: Man kann jetzt `&shy;` benutzen, um wenigstens modernen Browsern ordentliche Worttrennung zu liefern.
 
-Ich stelle fest, dass [Symphony 2](http://sneakpeek.symphony21.com/) im Anmarsch ist und freue mich darauf.
+Ich stelle fest, dass [Symphony 2](http://getsymphony.com/) im Anmarsch ist und freue mich darauf.
 
 Irgendwie würde ich gerne ASL lernen, aber mir fehlt die Zeit.
 
@@ -162,21 +162,21 @@ Ich setze jQuery jetzt in Kundenprojekten ein, und benutze es auch gleich für G
 
 ## Dezember
 
-Die neue Version von [CandyBar](http://www.panic.com/candybar/) kommt raus, und hat jetzt gleich Pixadex integriert. Natürlich muss ich gleich Leopards Aussehen mit neuen Icons und Dock versehen.
+Die neue Version von CandyBar kommt raus, und hat jetzt gleich Pixadex integriert. Natürlich muss ich gleich Leopards Aussehen mit neuen Icons und Dock versehen.
 
-Ich überlege mir von einem webbasierenden GTD-Werkzeug auf eine OS X Lösung umzusteigen und teste drei Wochen lang [Things](http://www.culturedcode.com/things/) und [OmniFocus](http://www.omnigroup.com/applications/omnifocus/) zugleich.
+Ich überlege mir von einem webbasierenden GTD-Werkzeug auf eine OS X Lösung umzusteigen und teste drei Wochen lang [Things](http://culturedcode.com/things/) und [OmniFocus](http://www.omnigroup.com/products/omnifocus/) zugleich.
 
 Doch schon nach 14 Tagen steht für mich eigentlich fest: <cite>Things</cite> ist der Testsieger. Obwohl es derzeit noch weniger Funktionen als OmniFocus hat, fühlt es sich einfach *besser* an.
 
-Irgendwie kann ich es nicht lassen und kaufe mir einen [iPod touch](http://www.apple.com/de/ipodtouch/), den ich mit <cite>Jailbreak</cite> befreien will, was aber erstmal nicht klappt, weil Apple ein Update rausbringt, das die Sicherheitslücke schließt.
+Irgendwie kann ich es nicht lassen und kaufe mir einen [iPod touch](http://www.apple.com/de/ipod-touch/), den ich mit <cite>Jailbreak</cite> befreien will, was aber erstmal nicht klappt, weil Apple ein Update rausbringt, das die Sicherheitslücke schließt.
 
 Auf ARTE sehe ich einen interessanten Beitrag über die [Haddsch](http://de.wikipedia.org/wiki/Haddsch) - die Pilgerfahrt nach Mekka und google den genauen Verlauf nach. Diese Welt will sich mir einfach nicht erschließen. Den Teufel steinigen, auf einem Hügel sitzen und heulen, um einen Steinkasten wandern. Wem’s gefällt. Ach ja: Und ich trete aus der evangelischen Kirche aus.
 
-Ich lache mich tot, weil FileMaker ihr neues Datenbank-Produkt [Bentō](http://www.filemaker.de/bento/preview/) nennt. Die dachten wohl, das heißt Box. Das heißt aber Mittagessen ;)
+Ich lache mich tot, weil FileMaker ihr neues Datenbank-Produkt [Bentō](http://www.filemaker.de/products/bento/) nennt. Die dachten wohl, das heißt Box. Das heißt aber Mittagessen ;)
 
 Durch einen Artikel auf [praegnanz.de](http://praegnanz.de/weblog/ted) erfahre ich von der [TED](http://www.ted.com/) Website, die seit dem meine absolute Lieblingsseite ist. Dort kann man sich die Vorträge der TED-Konferenz ansehen, die es seit 1984 gibt. Bei TED sprechen außergewöhnliche Menschen über Forschung, Innovationen, Medien, Religion, Philosophie und vieles mehr. Eine Eintrittskarte kostet 6.000 $ und man kann sich nur für eine bewerben, ob man eingeladen wird, entscheidet TED. Jedenfalls habe ich mir alle 175 bislang veröffentlichten Beiträge schon mal heruntergeladen und eine Menge davon angesehen. Das ist wie ARTE hoch 10.
 
-Kurz vor Weihnachten setze ich mich 1-2 Stunden hin und gestalte in Photoshop ein Mac OS X Leopard-Icon für Django-Projekte. Dies führt zu einem unglaublichen Feedback aus der ganzen Django-Szene und lässt meine Besucherzahlen explodieren. Ich entdecke die [deutsche Community](http://www.django-de.org/) und nehme mir vor mich im neuen Jahr an der Übersetzung der englischen Dokumentation zu beteiligen.
+Kurz vor Weihnachten setze ich mich 1-2 Stunden hin und gestalte in Photoshop ein Mac OS X Leopard-Icon für Django-Projekte. Dies führt zu einem unglaublichen Feedback aus der ganzen Django-Szene und lässt meine Besucherzahlen explodieren. Ich entdecke die deutsche Community und nehme mir vor mich im neuen Jahr an der Übersetzung der englischen Dokumentation zu beteiligen.
 
 ## Weihnachtsgrüße
 

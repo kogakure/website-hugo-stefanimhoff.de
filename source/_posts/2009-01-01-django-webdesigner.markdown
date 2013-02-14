@@ -2,9 +2,9 @@
 layout: post
 title: "Django für Webdesigner"
 date: 2009-01-01 11:00
-description: 
+description:
 categories:
-tags: 
+tags:
 - django
 ---
 
@@ -67,7 +67,7 @@ Ich selber zähle mich zur Gruppe der durchschnittlichen Webdesigner, auch wenn 
 
 Aus eigener Erfahrung kann ich sagen, dass ich als Webdesigner mit 90 % der auftretenden Wünsche gut zurechtkam.
 
-Django hat eine sehr aktive Community: Ob [wöchentlicher Podcast]( http://thisweekindjango.com/), diverse Blogs von Django-Entwicklern, eine [fantastische Dokumentation](http://docs.djangoproject.com/), Tutorials, Foren/Groups oder IRC-Chat. Selbst bei Wünschen, die nicht von Haus aus zu lösen sind, und für die es noch kein Modul von Drittanbietern gibt, ist es sehr wahrscheinlich schnell eine Lösung zu finden.
+Django hat eine sehr aktive Community: Diverse Blogs von Django-Entwicklern, eine [fantastische Dokumentation](https://docs.djangoproject.com/en/1.4/), Tutorials, Foren/Groups oder IRC-Chat. Selbst bei Wünschen, die nicht von Haus aus zu lösen sind, und für die es noch kein Modul von Drittanbietern gibt, ist es sehr wahrscheinlich schnell eine Lösung zu finden.
 
 ## Datenbank und Daten
 
@@ -131,7 +131,7 @@ Vielleicht mag dies auf den ersten Blick etwas seltsam aussehen oder nicht gleic
 
 Die View ist bei Django die Datei, die Daten aus der Datenbank holt, nach beliebigen Regeln sortiert und gruppiert und diese an das Template weitergibt.
 
-Alle Abfragen und Überprüfungen finden hier statt. Django bietet standardmäßig schon eine vereinfachte Möglichkeit an, Daten aus der Datenbank zu holen, und in Listenansicht oder Detailansicht anzuzeigen, sowie einige andere. Ein Großteil der üblichen Anfragen lassen sich mit diesen [Generic Views](http://docs.djangoproject.com/en/dev/ref/generic-views/) erledigen, ohne auch nur eine Zeile programmieren zu müssen.
+Alle Abfragen und Überprüfungen finden hier statt. Django bietet standardmäßig schon eine vereinfachte Möglichkeit an, Daten aus der Datenbank zu holen, und in Listenansicht oder Detailansicht anzuzeigen, sowie einige andere. Ein Großteil der üblichen Anfragen lassen sich mit diesen Generic Views erledigen, ohne auch nur eine Zeile programmieren zu müssen.
 
 ## Templates
 
@@ -149,7 +149,7 @@ Die übliche Arbeitsweise ist das Erstellen eine Grundtemplates, was Grundstrukt
 
 Django-Templates lassen keine Programmierung (Python) oder Datenbankabfragen (SQL)  innerhalb von Templates zu. So bleibt der Code sauber und sieht nicht so furchtbar wie manches WordPress-Template aus, wo sich PHP, HTML, SQL-Abfragen und WordPress-Tags wirr ineinander verschachteln.
 
-Wem die [Grundfunktionen der Templatesprache](http://docs.djangoproject.com/en/dev/ref/templates/builtins/#ref-templates-builtins) nicht ausreichen, der kann [eigene Filter oder Tags](http://docs.djangoproject.com/en/dev/howto/custom-template-tags/#howto-custom-template-tags) scheiben, was oft nur wenige Zeilen Code erfordert.
+Wem die [Grundfunktionen der Templatesprache](https://docs.djangoproject.com/en/dev/ref/templates/builtins/) nicht ausreichen, der kann [eigene Filter oder Tags](https://docs.djangoproject.com/en/dev/howto/custom-template-tags/) scheiben, was oft nur wenige Zeilen Code erfordert.
 
 Ein Grundtemplate sieht in der Django-Dokumentation z. B. so aus:
 
@@ -202,7 +202,7 @@ Eine typische Seite eines Webdesigners könnte z. B. aus diesen Applikationen be
 * Kontaktformular
 * einige "statische" Seiten (Impressum, Über mich, etc.)
 
-Für vieles gibt es schon fertige Applikationen, einige sind sogar Teil von Django (in diesem Beispiel Kommentare, Kontaktformular und statische Seiten). Die Auswahl von Modulen lässt keine Wünsche offen: von Blog-Systemen, über Foren bis hin zu Shops ist fast alles bereits von eifrigen Programmierern erstellt worden. Und es kommen täglich [neue hinzu]( http://djangoplugables.com/projects/).
+Für vieles gibt es schon fertige Applikationen, einige sind sogar Teil von Django (in diesem Beispiel Kommentare, Kontaktformular und statische Seiten). Die Auswahl von Modulen lässt keine Wünsche offen: von Blog-Systemen, über Foren bis hin zu Shops ist fast alles bereits von eifrigen Programmierern erstellt worden. Und es kommen täglich neue hinzu.
 
 Außerdem ist es möglich, mehrere Webseiten mit einer Applikation zu betreiben, also z. B. nur einmal den Code für ein Forum vorzuhalten und dann für viele Kunden zu benutzen.
 
@@ -210,11 +210,11 @@ Außerdem ist es möglich, mehrere Webseiten mit einer Applikation zu betreiben,
 
 Eines darf natürlich nicht verschwiegen werden: Systeme die nicht PHP benutzen, erfordern mehr Aufwand bei der Einrichtung auf dem Server. Das gilt für Ruby on Rails genauso wie für Django.
 
-Der Aufwand hält sich aber in Grenzen, schon das Modul *mod_python* reicht für Apache aus, um Django zum Laufen zu bringen, auch wenn es noch schnellere Möglichkeiten gibt. Es gibt mittlerweile gute [Dokumentationen](http://django-hosting.de/) für die möglichen Arten der Produktionsumgebung.
+Der Aufwand hält sich aber in Grenzen, schon das Modul *mod_python* reicht für Apache aus, um Django zum Laufen zu bringen, auch wenn es noch schnellere Möglichkeiten gibt. Es gibt mittlerweile gute [Dokumentationen](http://django-hosting.de/wiki/WikiIndex/) für die möglichen Arten der Produktionsumgebung.
 
 Daher ist es derzeit nicht denkbar, solche Systeme für den Fliesenleger von nebenan zu benutzen, denn ein eigener Server oder mindestens ein eigener VHost mit SSH-Zugang, und der Möglichkeit den Server selber zu konfigurieren, sollte schon vorliegen. Auf den üblichen Webhostingpaketen der Massenhoster läuft dies derzeit noch nicht. In den USA gibt es aber schon erste Angebote im sehr günstigen Bereich (z. B. [Webfaction](http://www.webfaction.com/?affiliate=kogakure), [Slicehost](http://www.slicehost.com/), [Mediatemple](http://mediatemple.net/webhosting/gs/) oder [Dreamhost](http://www.dreamhost.com/)), die den Einsatz von Django ermöglichen, ohne den Server selber konfigurieren zu müssen. Die Website [Djangofriendly](http://djangofriendly.com/hosts/) bietet eine große Liste mit Hostern, die Django schon unterstützten. Auf einem eigenen Server kann man es natürlich immer installieren.
 
-Ob der Fliesenleger überhaupt ein CMS benötigt, steht auf einem anderen Blatt. Und bei Websites, die mehr seitenbasierenden Inhalt haben, ist ein System wie [Typolight](http://www.typolight.org/) mit Sicherheit die bessere Wahl.
+Ob der Fliesenleger überhaupt ein CMS benötigt, steht auf einem anderen Blatt. Und bei Websites, die mehr seitenbasierenden Inhalt haben, ist ein System wie Typolight (jetzt [Contao](https://contao.org/de/)) mit Sicherheit die bessere Wahl.
 
 ## Fazit
 
@@ -224,6 +224,6 @@ Selbst für die eigene Website eines Webdesigners ist Django eine gute Wahl, wei
 
 Der eigenen Kreativität sind in Django keine Grenzen gesetzt, weil Python mit seinen über 4000 Modulen von Drittanbietern, jeden noch so seltenen Wunsch erfüllen kann.
 
-Aus eigener Erfahrung kann ich nur sagen, dass das Stresslevel und der Arbeitsaufwand erheblich sinkt, wenn man seine Webportale mit Django betreibt, der Code bleibt kurz und übersichtlich, ist leicht zu warten, modular und objektorientiert. In Verbindung mit Deploymentwerkzeugen wie [Fabric](http://www.nongnu.org/fab/) oder [Capistrano](http://www.capify.org/), Versionskontrollsystemen wie z. B. [Git](http://git.or.cz/) macht die Entwicklung von Websites wieder Spaß.
+Aus eigener Erfahrung kann ich nur sagen, dass das Stresslevel und der Arbeitsaufwand erheblich sinkt, wenn man seine Webportale mit Django betreibt, der Code bleibt kurz und übersichtlich, ist leicht zu warten, modular und objektorientiert. In Verbindung mit Deploymentwerkzeugen wie [Fabric](http://www.nongnu.org/fab/) oder [Capistrano](http://capistranorb.com/), Versionskontrollsystemen wie z. B. [Git](http://git-scm.com/) macht die Entwicklung von Websites wieder Spaß.
 
-Also schließt euer Photoshop für ein paar Stunden und schaut einfach mal, ob Django nicht vielleicht das richtige Werkzeug für euch ist. Das vierteilige [Tutorial](http://docs.djangoproject.com/en/dev/intro/tutorial01/) bietet einen schnellen Einstieg in die Arbeitsweise mit Django. Der komplette Quellcode meines Kampfsport-Portals [kogakure.de](http://kogakure.de/) ist frei verfügbar und kann bei [Github geladen werden](http://github.com/kogakure/kogakure-de/tree/master).
+Also schließt euer Photoshop für ein paar Stunden und schaut einfach mal, ob Django nicht vielleicht das richtige Werkzeug für euch ist. Das vierteilige [Tutorial](https://docs.djangoproject.com/en/dev/intro/tutorial01/) bietet einen schnellen Einstieg in die Arbeitsweise mit Django. Der komplette Quellcode meines Kampfsport-Portals [kogakure.de](http://kogakure.de/) ist frei verfügbar und kann bei [Github geladen werden](https://github.com/kogakure/kogakure-de).

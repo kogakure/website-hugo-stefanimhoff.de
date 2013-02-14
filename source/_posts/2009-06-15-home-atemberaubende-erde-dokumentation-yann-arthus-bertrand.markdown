@@ -2,9 +2,9 @@
 layout: post
 title: "HOME – Atemberaubende Dokumentation über unsere Erde"
 date: 2009-06-15 17:23
-description: 
+description:
 categories:
-tags: 
+tags:
 - dokumentation
 - film
 ---
@@ -37,4 +37,4 @@ Der Film soll die Zuschauer bewegen, damit sie darüber schreiben, ihre Regierun
 
 Der Film fährt mit harten Fakten und erschreckenden Bildern auf, die selbst gebildete und gut informierte Personen noch erschrecken werden, zeitweise kam ich mir wie im Film Matrix vor, nachdem Neo die rote Pille genommen hatte.
 
-Mehr Informationen gibt es auf der offiziellen Website [www.home-2009.com](http://www.home-2009.com/ "HOME - a film by Yann Arthus-Bertrand"). Den Film kann man in HD auf [YouTube](http://www.youtube.com/user/homeprojectDE "YouTube") ansehen.
+Mehr Informationen gibt es auf der [offiziellen Website](http://www.homethemovie.org/). Den Film kann man in HD auf [YouTube](http://www.youtube.com/user/homeprojectDE) ansehen.

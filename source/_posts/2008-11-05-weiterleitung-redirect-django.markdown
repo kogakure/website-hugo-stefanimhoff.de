@@ -2,9 +2,9 @@
 layout: post
 title: "Weiterleitungen in Django"
 date: 2008-11-05 07:00
-description: 
+description:
 categories:
-tags: 
+tags:
 - django
 - redirect
 - weiterleitung
@@ -41,7 +41,7 @@ Aus Gründen der Suchmaschinenoptimierung sollte man bei einer Website sowohl di
 
 Für beide Fälle bietet Django standardmäßig schon Einstellungen: `PREPEND_WWW` und `APPEND_SLASH`. Leider bietet der erste Fall nur eine Funktion das *www* hinzuzufügen, nicht es wegzunehmen (was ich persönlich für viel sinnvoller halte). Tickets für diesen Fall wurden schon eingesendet.
 
-Es gibt auch schon diverse Möglichkeiten, dies zu lösen, z. B. über die [URL-Middleware](http://code.unicoders.org/browser/django/trunk/middleware/urlmiddleware.py) von Stefano J. Attardi.
+Es gibt auch schon diverse Möglichkeiten, dies zu lösen, z. B. über die URL-Middleware von Stefano J. Attardi.
 
 In einer Diskussion mit [Martin Mahner](http://www.mahner.org/), habe ich aber die Überzeugung von ihm übernommen, dass dies vom Server geregelt werden sollte, der kann das viel effizienter und schneller.
 

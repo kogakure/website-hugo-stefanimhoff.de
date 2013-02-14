@@ -2,9 +2,9 @@
 layout: post
 title: "Server-Verwaltung mit Capistrano"
 date: 2008-05-01 18:18
-description: 
+description:
 categories:
-tags: 
+tags:
 - ruby
 - server
 - deployment
@@ -15,7 +15,7 @@ Wer einen Webserver oder VirtualHost sein eigen nennt, sollte sich unbedingt Cap
 
 <!-- more -->
 
-[Capistrano](http://capify.org/ "Capistrano:  Home") ist ein sehr mächtiges [Ruby](http://www.ruby-lang.org/ "Ruby Programming Language")-Programm, das dafür gedacht ist komplexe Aufgaben des Deployment zu übernehmen. Dabei können ebenso mehrere Server (Fileserver, Datenbankserver, Applikationsserver), wie auch Versionskontrollsysteme ([Subversion](http://subversion.tigris.org/ "subversion.tigris.org"), [Git](http://git.or.cz/ "Git - Fast Version Control System"), [Mercurial](http://www.selenic.com/mercurial/ "Mercurial - Mercurial"), …) einbezogen werden.
+[Capistrano](http://capistranorb.com/) ist ein sehr mächtiges [Ruby](http://www.ruby-lang.org/de/)-Programm, das dafür gedacht ist komplexe Aufgaben des Deployment zu übernehmen. Dabei können ebenso mehrere Server (Fileserver, Datenbankserver, Applikationsserver), wie auch Versionskontrollsysteme ([Subversion](http://subversion.tigris.org/), [Git](http://git-scm.com/), [Mercurial](http://mercurial.selenic.com/), …) einbezogen werden.
 
 Die Fähigkeiten von Capistrano übersteigen meine Anspüche bei weitem, da ich automatische Versionierung, Tests oder automatisches Symlinken eher nicht brauche.
 
@@ -35,7 +35,7 @@ Und genau da setzt Capistrano an.
 
 ## Installation
 
-Um Capistrano zu installieren muss man zuerst [Ruby](http://www.ruby-lang.org/ "Ruby Programming Language") und [RubyGems](http://www.rubygems.org/ "RubyGems Manuals") auf seinem lokalen Computer installieren. Capistrano benötigt keine Installationen von Software auf den Servern.
+Um Capistrano zu installieren muss man zuerst [Ruby](http://www.ruby-lang.org/de/) und [RubyGems](http://rubygems.org/) auf seinem lokalen Computer installieren. Capistrano benötigt keine Installationen von Software auf den Servern.
 
 Zur Installation gibt man einfach ins Terminal folgenden Befehl ein:
 
@@ -65,7 +65,7 @@ cap -T
 
 anzeigen lassen. Für meine Zwecke sind diese Befehle aber viel zu übertrieben, daher habe ich mir kurzerhand einige eigene Befehle geschrieben.
 
-Die Befehle werden in der Programmiersprache [Ruby](http://www.ruby-lang.org/) geschrieben und können in den Dateien `Capfile`, `deploy.rb` oder in Plugin-Ordnern liegen.
+Die Befehle werden in der Programmiersprache [Ruby](http://www.ruby-lang.org/de/) geschrieben und können in den Dateien `Capfile`, `deploy.rb` oder in Plugin-Ordnern liegen.
 
 Der Einfachheit halber stehen alle meine Befehle direkt in der `Capfile`-Datei, zumal ich Django-Projekte habe, und daher eine andere Ordnerstruktur als bei <cite>Ruby on Rails</cite> vorliegt.
 
@@ -120,4 +120,4 @@ cap deploy
 
 im Terminal eingeben, der zuerst die Änderungen mit `git pull` auscheckt und im Anschluss eine andere Funktion aufruft, die den Apache-Server beendet und danach neustartet.
 
-Das war’s auch schon, wer Interesse hat kann sich bei [Peepcode einen Screencast für 9 $ herunterladen](http://peepcode.com/products/capistrano-2 "Capistrano 2 | PeepCode Screencasts for Ruby on Rails Developers"), der in viele Möglichkeiten von Capistrano einweist.
+Das war’s auch schon, wer Interesse hat kann sich bei [Peepcode einen Screencast für 9 $ herunterladen](https://peepcode.com/products/capistrano-2), der in viele Möglichkeiten von Capistrano einweist.

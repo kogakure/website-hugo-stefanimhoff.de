@@ -2,9 +2,9 @@
 layout: post
 title: "Lokalisierung von Projekten mit Django"
 date: 2008-08-30 15:25
-description: 
+description:
 categories:
-tags: 
+tags:
 - django
 - lokalisierung
 - i18l
@@ -16,7 +16,7 @@ Es gibt für Django mittlerweile schon eine große Menge nützlicher Applikation
 
 Viele Entwickler kommen aus den U.S.A. und sprechen meist nur eine Sprache: Englisch. Trotzdem sollte jeder Entwickler die Internationalisierung von Anfang an gleich mit einbauen, es sei denn er ist sich *sicher*, dass die Anwendung nie veröffentlicht wird.
 
-Die Arbeit, die dafür ausgeführt werden muss, ist auch nicht wirklich ein großer Mehraufwand. Dies ist übrigens alles sehr gut in der [Django-Dokumentation](http://docs.djangoproject.com/en/dev/topics/i18n/ "Django | Internationalization | Django Documentation") dokumentiert.
+Die Arbeit, die dafür ausgeführt werden muss, ist auch nicht wirklich ein großer Mehraufwand. Dies ist übrigens alles sehr gut in der [Django-Dokumentation](https://docs.djangoproject.com/en/dev/topics/i18n/) dokumentiert.
 
 Trotzdem führe ich hier kurz durch die wichtigsten Schritte, um den Einstieg zu erleichtern.
 

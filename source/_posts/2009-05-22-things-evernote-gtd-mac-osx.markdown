@@ -2,9 +2,9 @@
 layout: post
 title: "Things & Evernote: GTD mit dem Mac"
 date: 2009-05-22 16:45
-description: 
+description:
 categories:
-tags: 
+tags:
 - things
 - evernote
 - gtd
@@ -19,7 +19,7 @@ Die Vielzahl von Software für die verschiedenen Betriebssysteme und für mobile
 
 ## Aufgaben
 
-Ich habe am Mac schon einiges an Software ausprobiert, neben zahllosen kostenlosen Systemen auch [OmniFocus](http://www.omnigroup.com/applications/omnifocus/ "The Omni Group - OmniFocus"), [The Hit List](http://www.potionfactory.com/thehitlist/ "The Hit List | Potion Factory"), [Things](http://culturedcode.com/things/ "Things - task management on the Mac") und [Remeber the Milk](http://www.rememberthemilk.com/ "Remember The Milk: Online to do list and task management"). Alle Produkte haben ihre Stärken und Schwächen. Ich habe jedes davon schon über einen längeren Zeitraum genutzt. Doch nach einer Testphase bin ich am Ende immer wieder zu <cite>Things</cite> zurückgekommen. Die eine oder andere Software hatte zwar Funktionen, die ich auch gerne in <cite>Things</cite> sehen würde, doch schlägt dieses seine Konkurrenz mit dem einfach zu bedienenden Interface und der geringen Komplexität.
+Ich habe am Mac schon einiges an Software ausprobiert, neben zahllosen kostenlosen Systemen auch [OmniFocus](http://www.omnigroup.com/products/omnifocus/), [The Hit List](http://www.potionfactory.com/thehitlist/ "The Hit List | Potion Factory"), [Things](http://culturedcode.com/things/ "Things - task management on the Mac") und [Remeber the Milk](http://www.rememberthemilk.com/ "Remember The Milk: Online to do list and task management"). Alle Produkte haben ihre Stärken und Schwächen. Ich habe jedes davon schon über einen längeren Zeitraum genutzt. Doch nach einer Testphase bin ich am Ende immer wieder zu <cite>Things</cite> zurückgekommen. Die eine oder andere Software hatte zwar Funktionen, die ich auch gerne in <cite>Things</cite> sehen würde, doch schlägt dieses seine Konkurrenz mit dem einfach zu bedienenden Interface und der geringen Komplexität.
 
 *Things* bietet verschiedene Listen, wie einen *Eingang*, die Listen *Heute*, *Als Nächstes*, *Geplant* sowie *Irgendwann*, und bietet damit alles, was für GTD benötigt wird. Aktive Projekte werden in einer Liste *Projekte* gesammelt. CulturedCode hat noch eine Lösung für lange, nie endende Projekte entwickelt: Diese werden in *Verantwortungsbereichen* gesammeln. Sowohl Projekte, als auch einzelne Aufgaben können diesen Bereichen zugeordnet werden. Praktischerweise ist es auch möglich, Bereiche zeitweise zu deaktiviert, wodurch auch alle Aufgaben darin für diesen Zeitraum unsichtbar werden.
 
@@ -32,7 +32,7 @@ Termingebundene Aufgaben lassen sich mit <cite>Things</cite> ebenfalls sehr gut 
 Ein weiterer großer Bereich, den David Allen anspricht ist das Zeug, das weder eine Aufgabe, noch ein Termin ist – das Referenzmaterial. Da ich kein Fan von riesigen Aktenschränken, Bergen von Zetteln oder Ordnern bin, versuche ich möglichst alle Dinge digital zu halten.
 Alle Notizen, Bilder, Inspirationen, Rezepte, Witze, Codeschnipsel etc. die anfallen brauchen einen Ort, an dem sie abgelegt werden.
 
-Für mich war dabei ein wichtiges Kriterium, dass es egal ist, wo ich mich befinde, wenn ich diese Dinge erfasse. Für diesen Zweck benutze ich [Evernote](http://evernote.com/ "Remember Everything. | Evernote Corporation").
+Für mich war dabei ein wichtiges Kriterium, dass es egal ist, wo ich mich befinde, wenn ich diese Dinge erfasse. Für diesen Zweck benutze ich [Evernote](http://evernote.com/intl/de/).
 
 Denn <cite>Evernote</cite> bietet genau diese Möglichkeit. Die Software ist sowohl für Mac OS X, für Windows, iPhone und diverse mobile Geräte verfügbar. Natürlich ist sie auch über das Internet erreichbar. Dort können die Dinge, die täglich anfallen, in digitale Notizbücher einordnet und mit Schlagworten versehen werden. Diese werden über das Internet mit allen anderen Geräten synchronisiert. Monatlich sind 40 MB an Datensynchronisierung frei, wobei nur das Einstellen in die Datenbank gezählt wird, nicht das (auch mehrfache) Abrufen. Für einen geringen Beitrag (5 $/Monat) wird dieses Volumen sogar auf 500 MB erweitert.
 
@@ -42,4 +42,4 @@ Eine besondere Funktion von <cite>Evernote</cite> ist die Erkennung von Schrift 
 
 Für mich ist die Erfassung meiner Aufgaben am Mac damit mittlerweile sehr komfortabel geworden und ich bin sehr zufrieden damit. Sicherlich hat jede Software noch Dinge, die ich gerne sehen würde. Bei <cite>Things</cite> würde mich noch Unterprojekte und Planung von Projektaufgaben interessieren. Bei <cite>Evernote</cite> würde es mich freuen, wenn die Eingabe von Text komfortabler wäre, und semantische Markierung, wie z. B. für Code, sowie einen ordentlichen Export der Notizen/Daten bieten würde.
 
-Wenn man das [10-Finger-Schreiben](http://www.tipp10.de/ "TIPP10 - Kostenloser und intelligenter 10-Finger-Schreibtrainer") beherrscht und am iPhone schnell die Tasten bedienen kann, gibt es meiner Meinung nach kein Medium, mit dem man schneller seine Ideen, Aufgaben und Gedanken erfassen kann.
+Wenn man das [10-Finger-Schreiben](http://www.tipp10.com/de/) beherrscht und am iPhone schnell die Tasten bedienen kann, gibt es meiner Meinung nach kein Medium, mit dem man schneller seine Ideen, Aufgaben und Gedanken erfassen kann.

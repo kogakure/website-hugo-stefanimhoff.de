@@ -2,9 +2,9 @@
 layout: post
 title: "Gitweb-Theme im GitHub-Stil"
 date: 2009-02-19 20:00
-description: 
+description:
 categories:
-tags: 
+tags:
 - gitweb
 - git
 - theme
@@ -30,7 +30,7 @@ Detailed instructions for installations are included in the package on GitHub.
 ## Download
 
 <div class="download">
-    <p><a href="http://github.com/kogakure/gitweb-theme/">Download Gitweb Theme</a> on GitHub »</p>
+    <p><a href="https://github.com/kogakure/gitweb-theme/">Download Gitweb Theme</a> on GitHub »</p>
 </div>
 
 ## Screenshots

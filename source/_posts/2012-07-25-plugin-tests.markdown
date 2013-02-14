@@ -119,24 +119,24 @@ Und was ist mit diesem bizarren Link:
 
 [x] 1&1
 
-[√] <a href="http://google.de?test=1&lala=2&bubu=3">Peter & der Wolf</a>
+[√] <a href="http://www.google.de/?test=1&lala=2&bubu=3">Peter & der Wolf</a>
 
-[√] <a href="http://google.de?test=1&amp;lala=2&amp;bubu=3">Peter & der Wolf</a>
-
-[√] Peter & der Wolf
-
-[√] Peter &amp; der Wolf
-
-[√] <a href="http://google.de?test=1&amp;lala=2&amp;bubu=3">Peter &amp; der Wolf sind in der NATO</a>
+[√] <a href="http://www.google.de/?test=1&amp;lala=2&amp;bubu=3">Peter & der Wolf</a>
 
 [√] Peter & der Wolf
 
 [√] Peter &amp; der Wolf
 
-[x|√] <a id="test" href="http://google.de?test=1&amp;lala=2&amp;bubu=3" title="Peter &amp; der Wolf" alt="Peter & der Wolf mögen CSS und HTML">Peter &amp; der Wolf mögen CSS und HTML auch</a>
+[√] <a href="http://www.google.de/?test=1&amp;lala=2&amp;bubu=3">Peter &amp; der Wolf sind in der NATO</a>
 
 [√] Peter & der Wolf
 
 [√] Peter &amp; der Wolf
 
-[x|√] <a href="http://google.de?test=1&amp;lala=2&amp;bubu=3" title="Peter & der Wolf">Peter & der Wolf</a>
+[x|√] <a id="test" href="http://www.google.de/?test=1&amp;lala=2&amp;bubu=3" title="Peter &amp; der Wolf" alt="Peter & der Wolf mögen CSS und HTML">Peter &amp; der Wolf mögen CSS und HTML auch</a>
+
+[√] Peter & der Wolf
+
+[√] Peter &amp; der Wolf
+
+[x|√] <a href="http://www.google.de/?test=1&amp;lala=2&amp;bubu=3" title="Peter & der Wolf">Peter & der Wolf</a>

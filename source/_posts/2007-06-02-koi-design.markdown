@@ -2,9 +2,9 @@
 layout: post
 title: "Das Koi-Design: Inspiration und Idee"
 date: 2007-06-02 02:00
-description: 
+description:
 categories:
-tags: 
+tags:
 - irezumi
 - japan
 - design
@@ -19,7 +19,7 @@ Die Idee für das Design dieser neuen Website schwirrte schon länger in meinem 
 
 Tätowierungen sind eine Kunst, die im wahrsten Sinne des Wortes vergänglich sind, da mit dem Träger auch das Kunstwerk verschwindet, sobald er stirbt. Dies passt aber auch gut zum Begriff der *fließenden Welt*, einem Zeichen für die Vergänglichkeit im Buddhismus. Auch im Sinnbild der Samurai, in der Kirschblüte, kann man die Vergänglichkeit des Seins nach kurzer Dauer eines perfekten Lebens sehen.
 
-Diese Kunstwerke sind extrem schmerzhaft (dutzende Bambusnadeln werden [mehrmals pro Sekunde in die Haut gestochen](http://youtube.com/watch?v=NddXHY2QUV0 "YouTube - Horiyoshi is tattooing a backpiece")), langwierig (Von einigen Monaten bis zu mehreren Jahren) und teuer (ab 20.000 €). Das ist auch der Grund, wieso ich sie zwar gerne ansehe, aber selber wohl nie eines tragen werde.
+Diese Kunstwerke sind extrem schmerzhaft (dutzende Bambusnadeln werden [mehrmals pro Sekunde in die Haut gestochen](http://www.youtube.com/watch?v=NddXHY2QUV0)), langwierig (Von einigen Monaten bis zu mehreren Jahren) und teuer (ab 20.000 €). Das ist auch der Grund, wieso ich sie zwar gerne ansehe, aber selber wohl nie eines tragen werde.
 
 Einer der besten, lebenden Künstler des Irezumi ist Horiyoshi III, dessen Werke man in einigen Bildbänden betrachten kann ([Tattoos from the Floating World: Ukiyo-e Motifs in Japanese Tattoo](http://www.amazon.de/gp/product/9074822452?ie=UTF8&amp;tag=kogakurede-21&amp;linkCode=as2&amp;camp=1638&amp;creative=6742&amp;creativeASIN=9074822452 "Amazon.de: Tattoos from the Floating World: Ukiyo-e Motifs in Japanese Tattoo, Takahiro Kitamura, Katie M. Kitamura") und [Bushido: Legacies of the Japanese Tattoo](http://www.amazon.de/gp/product/0764312014?ie=UTF8&amp;tag=kogakurede-21&amp;linkCode=as2&amp;camp=1638&amp;creative=6742&amp;creativeASIN=0764312014 "Amazon.de: Bushido: Legacies of the Japanese Tattoo, Takahiro Kitamura, Katie M. Kitamura")).
 

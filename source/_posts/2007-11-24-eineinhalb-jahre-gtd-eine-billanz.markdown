@@ -2,9 +2,9 @@
 layout: post
 title: "Eineinhalb Jahre GTD – Eine Billanz"
 date: 2007-11-24 01:15
-description: 
+description:
 categories:
-tags: 
+tags:
 - gtd
 ---
 
@@ -39,7 +39,7 @@ Aufgaben kann man auch delegieren oder bestimmten Zeitpunkten zuweisen. Wenn man
 <img src="/img/gtd-nachher.jpg" width="300" height="191" alt="GTD nachher" title="So sah die Inbox aus, nachdem ich alle losen Enden sortiert hatte" /> Auf den ersten Blick sieht GTD vielleicht kompliziert oder umständlich aus, doch hilft es ungemein, den Kopf von belastendem Grübeln freizuhalten.
 Schon nach kurzer Zeit der Umstellung habe ich mich an diese Arbeitsweise gewöhnt und schnell die Eigenschaft übernommen, jeden Gedanken **sofort zu notieren** und gemäß des GTD-Prinzips irgendwo einzuordnen. So vergesse ich nie wieder wichtige Dinge und selbst kleine Ideen verschwinden nicht gleich aus dem Kopf.
 
-Im Idealfall hat man dazu bestimmte **Arbeitswerkzeuge** dabei, die je nach Person und Lebensumständen variieren können. Ich selbst benutze eine Kombination aus Web-Applikation, Text-Dateien, [Moleskine®](http://www.moleskine.com/ "Moleskine")-Notizbuch und Post-its® an verschiedenen Orten (z. B. auf dem Nachttisch).
+Im Idealfall hat man dazu bestimmte **Arbeitswerkzeuge** dabei, die je nach Person und Lebensumständen variieren können. Ich selbst benutze eine Kombination aus Web-Applikation, Text-Dateien, [Moleskine®](http://www.moleskine.com/de/)-Notizbuch und Post-its® an verschiedenen Orten (z. B. auf dem Nachttisch).
 
 Gerade für für Computerprofis gibt es zahlreiche Systeme und Programme, die GTD digital ermöglichen. Somit sollte wohl für jeden das passende Arbeitswerkzeug zu finden sein. Ganze Websites und Weblogs beschäftigen sich nur mit GTD (z. B. [lifehack.org](http://www.lifehack.org/ "lifehack.org: Productivity, Getting Things Done and Lifehacks Blog"), [lifehacker](http://lifehacker.com/ "Lifehacker, tips and downloads for getting things done") oder [43 Folders](http://www.43folders.com/ "43 Folders")).
 
@@ -51,7 +51,7 @@ Gleich vorweg: Das perfekte System in der täglichen Umsetzung gibt es für mich
 
 Die meisten Lösungen, die ich bislang gesehen habe, waren mir entweder zu einfach oder zu komplex.
 
-Zu **einfache Systeme** (purer Text) haben für mich nicht funktioniert, bestimmte Dinge blieben immer aussen vor. Ich habe die letzten Wochen mit [*TaskPaper*](http://hogbaysoftware.com/products/taskpaper "Taskpaper") einen interessanten Kandidaten getestet, der leider keine Zuweisung von Terminen ermöglichte und daher im Langzeittest vorerst nicht ausreichte. Mal sehen, wie sich die Software weiter entwickelt. Leider hat den Autor mein Angebot einer Lokalisierung auch vorerst nicht interessiert (Was ich von Software-Entwicklung halte, bei der nicht gleich von Anfang an Lokalisierung/Internationalisierung gedacht wird, würde hier zu weit führen…).
+Zu **einfache Systeme** (purer Text) haben für mich nicht funktioniert, bestimmte Dinge blieben immer aussen vor. Ich habe die letzten Wochen mit [*TaskPaper*](http://www.hogbaysoftware.com/products/taskpaper) einen interessanten Kandidaten getestet, der leider keine Zuweisung von Terminen ermöglichte und daher im Langzeittest vorerst nicht ausreichte. Mal sehen, wie sich die Software weiter entwickelt. Leider hat den Autor mein Angebot einer Lokalisierung auch vorerst nicht interessiert (Was ich von Software-Entwicklung halte, bei der nicht gleich von Anfang an Lokalisierung/Internationalisierung gedacht wird, würde hier zu weit führen…).
 
 Zu **komplexe Systeme**, die diverse Listen, Schlagworte, verschiedenste Daten und diverse Zuordnungen erlaubten, waren mir in der täglichen Anwendung zu zeitaufwendig.
 
@@ -66,13 +66,13 @@ In der ganzen Zeit bin ich zeitweise auch mal zweigleisig gefahren, um ein neues
 
 ## Tracks
 
-[Tracks](http://www.rousette.org.uk/projects/ "Tracks") ist eine mit [Ruby on Rails](http://www.rubyonrails.org/ "Ruby on Rails") programmierte Web-Applikation, die die Prinzipien von David Allens GTD auf einfache und effiziente Weise nutzt.
+[Tracks](http://getontracks.org/) ist eine mit [Ruby on Rails](http://rubyonrails.org/ "Ruby on Rails") programmierte Web-Applikation, die die Prinzipien von David Allens GTD auf einfache und effiziente Weise nutzt.
 
 Die Anwendung basiert zwar auf Ruby on Rails, erfordert aber keine Programmierkenntnisse in Ruby und läuft relativ schnell und leicht mit sqlite3. Alternativ können auch mächtigere Datenbanken benutzt werden.
 
 Tracks unterstützt *Kontexte*, *Projekte* und *Notizen*. Das ganze Interface ist zweigeteilt, auf der linken Seite hat man eine Liste seiner Kontexte und der *Next Actions* darin. Auf der rechten Seite befindet sich ein Link zum schnellen erstellen einer neuen Aufgabe, ein Überblick über die aktiven Projekte, die erledigten Projekte, aktive Kontexte und verborgene Kontexte (diese sind nicht auf der Startseite zu sehen).
 
-Eine Aufgabe benötigt einen **Titel**, optionale **Notizen** (*[Textile](http://www.textism.com/tools/textile/ "Textism: Tools: Textile")* wird unterstützt), muss einem **Kontext** zugewiesen werden (bei mir standardmäßig *Eingang*). Sie kann einem **Projekt** zugeordnet werden und kann ein **Datum** bekommen (nur Tage).
+Eine Aufgabe benötigt einen **Titel**, optionale **Notizen** (*Textile* wird unterstützt), muss einem **Kontext** zugewiesen werden (bei mir standardmäßig *Eingang*). Sie kann einem **Projekt** zugeordnet werden und kann ein **Datum** bekommen (nur Tage).
 
 Die Web-Applikation benutzt Ajax, weshalb die Bedienung sehr schnell und effizient ist.
 
