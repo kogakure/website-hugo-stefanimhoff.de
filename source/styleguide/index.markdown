@@ -58,7 +58,7 @@ The `blockquote` element represents a section that is being quoted from another 
 
 > Many forms of Government have been tried, and will be tried in this world of sin and woe. No one pretends that democracy is perfect or all-wise. Indeed, it has been said that democracy is the worst form of government except all those other forms that have been tried from time to time.
 
-Winston Churchill, in <cite>[a speech to the House of Commons](http://hansard.millbanksystems.com/commons/1947/nov/11/parliament-bill#column_206)</cite>. 11th November 1947
+– Winston Churchill, in <cite>[a speech to the House of Commons](http://hansard.millbanksystems.com/commons/1947/nov/11/parliament-bill#column_206)</cite>. 11th November 1947
 
 
 Additionally, you might wish to `cite` the source, as in the above example. The correct method involves including the cite attribute on the `blockquote` element, but since no browser makes any use of that information, it’s useful to link to the source also.
@@ -106,30 +106,6 @@ The `dl` element is for another type of list called a definition list. Instead o
 <dt>Here is a defined term.</dt>
 <dd><code>dt</code> terms may stand on their own without an accompanying <code>dd</code>, but in that case they share descriptions with the next available <code>dt</code>. You may not have a <code>dd</code> without a parent <code>dt</code>.</dd>
 </dl>
-
-### Figures
-
-Figures are usually used to refer to images:
-
-<figure>
-<img src="http://lorempixel.com/680/400/nature/" alt="Example image">
-<figcaption>
-<h4>Figure Heading</h4>
-<p>This is a placeholder image, with supporting caption.</p>
-</figcaption>
-</figure>
-
-Here, a part of a poem is marked up using figure:
-
-<figure>
-<p>‘Twas brillig, and the slithy toves<br>
-Did gyre and gimble in the wabe;<br>
-All mimsy were the borogoves,<br>
-And the mome raths outgrabe.</p>
-<figcaption>
-<p><cite>Jabberwocky</cite> (first verse). Lewis Carroll, 1832-98</p>
-</figcaption>
-</figure>
 
 Text-level Semantics
 --------------------
@@ -329,6 +305,29 @@ If you use these elements, you must use every element. They should appear in thi
 </tr>
 </tbody>
 </table>
+
+### Figures
+
+Figures are usually used to refer to images:
+
+<figure>
+<img src="http://lorempixel.com/680/408/nature/" alt="Example image">
+<figcaption>
+<p>This is a placeholder image, with supporting caption.</p>
+</figcaption>
+</figure>
+
+Here, a part of a poem is marked up using figure:
+
+<figure>
+<p>‘Twas brillig, and the slithy toves<br>
+Did gyre and gimble in the wabe;<br>
+All mimsy were the borogoves,<br>
+And the mome raths outgrabe.</p>
+<figcaption>
+<p><cite>Jabberwocky</cite> (first verse). Lewis Carroll, 1832-98</p>
+</figcaption>
+</figure>
 
 Forms
 -----
