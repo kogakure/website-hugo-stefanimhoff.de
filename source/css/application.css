@@ -178,46 +178,54 @@ blockquote + p {
   margin-right: 1.5em;
 }
 
-/* line 82, ../../sass/application.scss */
+/* line 81, ../../sass/application.scss */
+.verse pre {
+  font-family: inherit;
+  display: table;
+  width: auto;
+  margin: 0 auto;
+}
+
+/* line 89, ../../sass/application.scss */
 ol {
   margin-bottom: 1.5em;
   list-style: decimal;
 }
 
-/* line 87, ../../sass/application.scss */
+/* line 94, ../../sass/application.scss */
 ol ol {
   margin: 0 1.5em;
   list-style: lower-latin;
 }
 
-/* line 92, ../../sass/application.scss */
+/* line 99, ../../sass/application.scss */
 ul {
   margin-bottom: 1.5em;
   list-style: disc;
 }
 
-/* line 97, ../../sass/application.scss */
+/* line 104, ../../sass/application.scss */
 ul ul {
   margin: 0 1.5em;
   list-style: circle;
 }
 
-/* line 102, ../../sass/application.scss */
+/* line 109, ../../sass/application.scss */
 dl {
   margin-bottom: 1.5em;
 }
 
-/* line 106, ../../sass/application.scss */
+/* line 113, ../../sass/application.scss */
 dt {
   font-weight: 400;
 }
 
-/* line 110, ../../sass/application.scss */
+/* line 117, ../../sass/application.scss */
 dt + dd {
   margin-bottom: 1.5em;
 }
 
-/* line 114, ../../sass/application.scss */
+/* line 121, ../../sass/application.scss */
 dd {
   margin-left: 1.5em;
 }

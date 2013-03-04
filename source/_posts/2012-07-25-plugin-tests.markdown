@@ -8,6 +8,14 @@ tags:
 custom_css: "custom_demo"
 ---
 
+## Verse-Plugin
+{% verse %}
+God guard me from those thoughts men think
+In the mind alone;
+He that sings a lasting song
+Thinks in a marrow bone.
+{% endverse %}
+
 ## Figure-Plugins
 
 {% figure testclass-1 testclass-2 "Figure mit 2 <b>tollen</b> Klassen" %}

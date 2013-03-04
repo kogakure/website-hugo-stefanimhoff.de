@@ -78,6 +78,13 @@ blockquote + p {
   margin-right: 1.5em;
 }
 
+.verse pre {
+  font-family: inherit;
+  display: table;
+  width: auto;
+  margin: 0 auto;
+}
+
 // ### Lists
 ol {
   @include trailer(1);
