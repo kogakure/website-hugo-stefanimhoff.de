@@ -16,7 +16,7 @@ group :development do
   gem "stringex", "~> 1.5.1"
   gem "gsl", "~> 1.15.3"
   gem "liquid", "~> 2.5.0"
-  gem "jekyll", "~> 0.12.1"
+  gem "jekyll", "~> 0.12"
   gem "jekyll-assets", "~> 0.3.5"
   gem "closure-compiler", "~> 1.1.8"
   # gem "uglifier", "~> 1.3.0"
