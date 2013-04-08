@@ -1,0 +1,5 @@
+require "jekyll-assets"
+require "jekyll-assets/compass"
+require "closure-compiler"
+# require "uglifier"
+# require "yui/compressor"
