@@ -1,0 +1,70 @@
+---
+layout: none
+permalink: .htaccess
+---
+
+# Base Rewrite
+RewriteEngine On
+RewriteBase /
+
+# ----------------------------------------------------------------------
+# Append slash to URL
+# ----------------------------------------------------------------------
+
+RewriteCond %{REQUEST_FILENAME} !-f # Ignore files
+RewriteCond %{REQUEST_URI} !/$      # Ignore urls with appended slash
+RewriteCond %{REQUEST_URI} !(.*)/$  # Ignore any url with appended slash
+RewriteRule ^(.*)$ $1/ [L,R=301]    # Append slash and redirect permanent 301
+
+# ----------------------------------------------------------------------
+# Redirecting/Removing sites
+# ----------------------------------------------------------------------
+
+# Redirects (Permanent)
+Redirect 301 /notiz/das-koi-design-inspiration-und-idee /koi-design                                  # Der alte Titel war schlecht
+Redirect 301 /notiz/django-und-das-framework-ding /django                                            # Der alte Titel war peinlich
+Redirect 301 /notiz/django-folder-fuer-mac-os-x /django-folder-mac-osx                               # Titel verbessert
+Redirect 301 /notiz/blender-folder-fuer-mac-os-x-leopard /blender-folder-mac-osx                     # Titel verbessert
+Redirect 301 /notiz/theme-kaijin-fuer-das-moinmoin-wiki /theme-kaijin-moinmoin-wiki                  # Titel verbessert
+Redirect 301 /notiz/terminal-stoeckchen /notiz/terminal-most-used-commands                                # Der alte Titel war Blödsinn
+Redirect 301 /notiz/django-relaunch-von-kogakure-de /django-relaunch-kogakure-de                     # Titel verbessert
+Redirect 301 /notiz/server-verwaltung-mit-capistrano /server-verwaltung-capistrano                   # Titel verbessert
+Redirect 301 /notiz/grundlagen-von-python-django-fuer-anfaenger /grundlagen-python-django-anfaenger  # Titel verbessert
+Redirect 301 /notiz/kostenlose-vektorkarten-mit-openstreetmap /kostenlose-vektorkarten-openstreetmap # Titel verbessert
+Redirect 301 /notiz/django-fuer-webdesigner /django-webdesigner                                      # Titel verbessert
+Redirect 301 /notiz /                                                                                 # Catch all with same url (should be last)
+
+# Redirects (Gone)
+# ErrorDocument 404 /error/404
+# ErrorDocument 410 /error/410
+Redirect Gone /notiz/glueckliche-mitarbeiter
+Redirect Gone /notiz/musik-tipp-poets-of-the-fall
+Redirect Gone /notiz/why-we-fight
+Redirect Gone /notiz/meine-groesste-dummheit-vorerst
+Redirect Gone /notiz/abmahnung-kogakure-zitat-karl-valentin
+Redirect Gone /notiz/die-schatzinsel-bei-pro7
+Redirect Gone /notiz/wie-marions-kochbuch-google-manipuliert
+Redirect Gone /notiz/einfach-die-welt-veraendern
+Redirect Gone /notiz/expression-engine-2-sneak-preview
+Redirect Gone /notiz/cms-weblog-systeme-reloaded
+Redirect Gone /notiz/blender-animationsfilm-big-buck-bunny
+Redirect Gone /notiz/chris-jordan-zeigt-unsere-masslosigkeit-in-erschreckenden-bildern
+Redirect Gone /notiz/bash_profile-striptease
+Redirect Gone /notiz/platzsparend-browser-bookmark-unicode
+Redirect Gone /notiz/textmate-snippet-dummy-image-generator
+
+# ----------------------------------------------------------------------
+# Better website experience for IE users
+# ----------------------------------------------------------------------
+
+# Force the latest IE version, in various cases when it may fall back to IE7 mode
+#  github.com/rails/rails/commit/123eb25#commitcomment-118920
+# Use ChromeFrame if it's installed for a better experience for the poor IE folk
+
+<IfModule mod_headers.c>
+  Header set X-UA-Compatible "IE=Edge,chrome=1"
+  # mod_headers can't match by content-type, but we don't want to send this header on *everything*...
+  <FilesMatch "\.(js|css|gif|png|jpe?g|pdf|xml|oga|ogg|m4a|ogv|mp4|m4v|webm|svg|svgz|eot|ttf|otf|woff|ico|webp|appcache|manifest|htc|crx|oex|xpi|safariextz|vcf)$" >
+    Header unset X-UA-Compatible
+  </FilesMatch>
+</IfModule>

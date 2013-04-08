@@ -1,33 +1,36 @@
-<!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<!doctype html>
+<html class="no-js" lang="de">
 <head>
   <meta charset="utf-8">
-  <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
-  <meta name="author" content="{{ site.author }}">
-  {% if site.googleplus_user %}<link href="https://plus.google.com/{{ site.googleplus_user }}" rel="author">{% endif %}
-  <meta name="Generator" content="Jekyll & Octopress (http://octopress.org)">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  {% capture description %}{% if page.description %}{{ page.description }}{% elsif site.description %}{{ site.description }}{% endif %}{% endcapture %}{% if description.length %}
-  <meta name="description" content="{{ description }}">{% endif %}
-  {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
+  <!-- Prefetch DNS -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//www.google-analytics.com">
 
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>{% if page.title %}{{ page.title | strip_html }} – {% endif %}{{ site.title | strip_html }}</title>
+  {% capture description %}{% if page.description %}{{ page.description }}{% else %}{{ content | raw_content }}{% endif %}{% endcapture %}
+  <meta name="description" content="{{ description | strip_html | condense_spaces | truncate:150 }}">
+  {% capture author %}{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}{% endcapture %}
+  <meta name="author" content="{{ author | strip_html | condense_spaces | truncate:100 }}">
+  {% capture keywords %}{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}{% endcapture %}
+  <meta name="keywords" content="{{ keywords | strip_html | condense_spaces | truncate:2000 }}">
 
-  {% capture canonical %}{{ site.url }}{% if site.permalink contains '.html' %}{{ page.url }}{% else %}{% if page.url contains site.category_dir %}/{% endif %}{{ page.url | remove:'index.html' }}{% endif %}{% endcapture %}
+  <link rel="shortcut icon" href="{{ site.url }}/favicon.ico">
+  <link rel="apple-touch-icon" href="{{ site.url }}/apple-touch-icon.png">
+  {% capture canonical %}{{ site.url }}/{% if site.permalink contains '.html' %}{{ page.url }}{% else %}{{ page.url | remove:'index.html' | strip_slash }}{% endif %}{% endcapture %}
   <link rel="canonical" href="{{ canonical }}">
-  <link href="{{ root_url }}/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic' rel='stylesheet' type='text/css'>
+  {% capture is_preview %}{% preview %}{% endcapture %}
+
+  {% if is_preview == 'true' %}
+  <link href="{{ root_url }}/stylesheets/application.css" rel="stylesheet">
+  {% if page.custom_css %}<link href="{{ root_url }}/stylesheets/{{page.custom_css}}.css" rel="stylesheet">{% endif %}
+  {% else %}
+  {% stylesheet application %}
+  {% if page.custom_css %}{{ page.custom_css | stylesheet }}{% endif %}
+  {% endif %}
+
   <link href="{{ site.subscribe_rss }}" rel="alternate" title="{{site.title}}" type="application/atom+xml">
-  {% include custom/head.html %}
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="{{ root_url }}/javascripts/jquery.min.js"%3E%3C/script%3E'))</script>
-  <script src="{{ root_url }}{% javascript_assets_tag %}"></script>
-  {% include google_analytics.html %}
-  {% include gauges_analytics.html %}
-  {% unless favicon %}{% capture favicon %}{{ root_url }}/octopress-favicon.png{% endcapture %} {% endunless %}
-  <link href="{{favicon}}" rel="icon">
 </head>

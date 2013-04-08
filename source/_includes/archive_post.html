@@ -1,12 +1,9 @@
 {% capture category %}{{ post.categories | size }}{% endcapture %}
-{% include post/title.html %}
-<time datetime="{{ post.date | datetime | date_to_xmlschema }}" pubdate>{{ post.date | date: "<span class='month'>%b</span> <span class='day'>%d</span> <span class='year'>%Y</span>"}}</time>
+<h2><a href="{{ root_url }}{{ post.url }}">{{ post.title | ampersand }}</a></h2>
+<time datetime="{{ post.date | datetime | date_to_xmlschema }}" pubdate>{{ post.date | date: "%d.%m.%Y"}}</time>
+{% if category != '0' %}
 <footer>
-  {% if linklog %}
-  <a rel="bookmark" href="{{ permalink }}">{{ site.permalink_label }}</a>
-  {% endif %}
-  {% if category != '0' %}
-  {% if linklog %} &bull; {% endif %}
-  <span class="categories">posted in {{ post.categories | category_links }}</span>
-  {% endif %}
+  <span class="categories">{{ post.categories | category_links }}</span>
+  <span class="tags">{{ post.tags | tag_links }}</span>
 </footer>
+{% endif %}

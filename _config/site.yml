@@ -3,3 +3,14 @@
 #      User Configuration     #
 # --------------------------- #
 
+# Jekyll Assets
+assets:
+  dirname: assets
+  # baseurl: //my.super-cool-cdn.com/
+  sources:
+    - stylesheets
+    - javascripts
+    - images
+  compress:
+    js: closure # uglify, yui
+    css: sass # yui

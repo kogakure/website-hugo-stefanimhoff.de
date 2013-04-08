@@ -1,0 +1,13 @@
+/* TEAM */
+  Designer & Developer: Stefan Imhoff
+  Contact: stefan [at] imhoff [dot] name
+  Twitter: @kogakure
+  Location: Hamburg, Germany
+
+/* SITE */
+  Language: German
+  Doctype: HTML5
+  Standards: HTML5, CSS3
+  Components: jQuery
+  Software: MacVim, Photoshop, Fireworks, iTerm 2, Chrome Developer Tools
+  Tools: Jekyll, Compass, Susy, Git, Markdown, Ruby
