@@ -6,7 +6,7 @@ module Jekyll
     end
 
     def render(context)
-      if ENV.has_key?('JEKYLL_ENV')
+      if ENV.has_key?('OCTOPRESS_ENV')
         true
       else
         false
