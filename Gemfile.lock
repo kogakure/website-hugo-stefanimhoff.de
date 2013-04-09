@@ -24,6 +24,8 @@ GEM
     fast-stemmer (1.0.2)
     ffi (1.2.0)
     fssm (0.2.10)
+    gsl (1.15.3)
+      narray (>= 0.5.9)
     guard (1.6.2)
       listen (>= 0.6.0)
       lumberjack (>= 1.0.2)
@@ -61,6 +63,7 @@ GEM
       syntax (>= 1.0.0)
     method_source (0.8.1)
     multi_json (1.5.0)
+    narray (0.6.0.8)
     posix-spawn (0.3.6)
     pry (0.9.12)
       coderay (~> 1.0.5)
@@ -124,6 +127,7 @@ DEPENDENCIES
   RedCloth (~> 4.2.9)
   closure-compiler (~> 1.1.8)
   compass (~> 0.12.2)
+  gsl (~> 1.15.3)
   guard
   guard-coffeescript
   guard-compass
