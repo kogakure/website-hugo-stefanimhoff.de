@@ -15,10 +15,6 @@ author: "Stefan Imhoff"
 description: "Frontend Engineer @ XING, Designer, Martial Artist and hobby philosopher."
 keywords: "Stefan Imhoff, Hamburg, Frontend, Engineer"
 
-# Default date format is "ordinal" (resulting in "July 22nd 2007")
-# You can customize the format as defined in
-# http://www.ruby-doc.org/core-1.9.2/Time.html#method-i-strftime
-# Additionally, %o will give you the ordinal representation of the day
 date_format: "%d.%m.%Y"
 
 # RSS / Email (optional) subscription links (change if using something like Feedburner)
@@ -29,12 +25,6 @@ category_feeds: false
 email:
 
 titlecase: false       # Converts page and post titles to titlecase
-
-# To change the layout's default sidebar Add a new sidebar source/_includes/sidebars/your_sidebar.html
-# then make changes below, eg. post_sidebar: your_sidebar.html
-blog_index_sidebar: blog_index_default.html
-page_sidebar: page_default.html
-post_sidebar: post_default.html
 
 # Pagination
 paginate: 150                       # Posts per page on the blog index
