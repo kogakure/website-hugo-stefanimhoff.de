@@ -255,7 +255,7 @@ end
 
 desc "Clean out caches: .pygments-cache, .gist-cache, .sass-cache, and Compass-generated files."
 task :clean do
-  rm_rf [".pygments-cache", ".gist-cache"]
+  rm_rf [".pygments-cache", ".gist-cache", File.join(configuration[:source], "javascripts", "build")]
   system "compass clean"
   puts "## Cleaned Compass-generated files, and various caches ##"
 end
@@ -263,6 +263,7 @@ end
 desc "Remove generated files (#{configuration[:destination]} directory)."
 task :clobber do
   rm_rf [configuration[:destination]]
+  puts "## Cleaned generated site in #{configuration[:destination]} ##"
 end
 
 desc "Update theme source and style"
@@ -380,7 +381,7 @@ task :rsync do
     ""
   end
   document_root = ensure_trailing_slash(configuration[:document_root])
-  ok_failed system("rsync -avze 'ssh -p #{configuration[:ssh_port]} #{ssh_key}' #{exclude} #{configuration[:rsync_args]} #{"--delete" unless !configuration[:rsync_delete]} #{ensure_trailing_slash(configuration[:destination])} #{configuration[:ssh_user]}:#{document_root}")
+  ok_failed system("rsync -avze 'ssh -p #{configuration[:ssh_port]} #{ssh_key}' #{exclude} #{configuration[:rsync_args]} #{"--delete-after" unless !configuration[:rsync_delete]} #{ensure_trailing_slash(configuration[:destination])} #{configuration[:ssh_user]}:#{document_root}")
 end
 
 desc "deploy public directory to github pages"
@@ -464,18 +465,18 @@ task :setup_github_pages, :repo do |t, args|
     repo_url = args.repo
   else
     puts "Enter the read/write url for your repository"
-    puts "(For example, 'git@github.com:your_username/your_username.github.com)"
+    puts "(For example, 'git@github.com:your_username/your_username.github.io)"
     repo_url = get_stdin("Repository url: ")
   end
   unless repo_url[-4..-1] == ".git"
     repo_url << ".git"
   end
-  raise "!! The repo URL that was input was malformed." unless (repo_url =~ /https:\/\/github\.com\/[^\/]+\/[^\/]+/).nil? or (repo_url =~ /git@github\.com:[^\/]+\/[^\/]+/).nil?
-  user_match = repo_url.match(/(:([^\/]+)|(github\.com\/([^\/]+)))/)
+  raise "!! The repo URL that was input was malformed." unless (repo_url =~ /https:\/\/github\.(?:io|com)\/[^\/]+\/[^\/]+/).nil? or (repo_url =~ /git@github\.(?:io|com):[^\/]+\/[^\/]+/).nil?
+  user_match = repo_url.match(/(:([^\/]+)|(github\.(?:io|com)\/([^\/]+)))/)
   user = user_match[2] || user_match[4]
-  branch = (repo_url =~ /\/[\w-]+\.github\.com/).nil? ? 'gh-pages' : 'master'
+  branch = (repo_url =~ /\/[\w-]+\.github\.(?:io|com)/).nil? ? 'gh-pages' : 'master'
   project = (branch == 'gh-pages') ? repo_url.match(/\/(.+)(\.git)/)[1] : ''
-  url = "http://#{user}.github.com"
+  url = "http://#{user}.github.io"
   url += "/#{project}" unless project == ''
   unless (`git remote -v` =~ /origin.+?octopress(?:\.git)?/).nil?
     # If octopress is still the origin remote (from cloning) rename it to octopress
@@ -504,7 +505,7 @@ task :setup_github_pages, :repo do |t, args|
     unless exit_status.success?
       error = ''
       while line = stdout_err.gets do error << line end
-      puts "Be sure your repo (#{repo_url}) is set up properly and try again".red 
+      puts "Be sure your repo (#{repo_url}) is set up properly and try again".red
       abort error
     end
   end
