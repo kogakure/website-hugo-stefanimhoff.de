@@ -1,17 +1,31 @@
 {% unless page.no_header %}
-  <header>
-    {% if index %}
-      <h1 class="entry-title"><a href="{{ root_url }}{{ post.url }}">{{ post.title | ampersand }}</a></h1>
-    {% else %}
-      <h1 class="entry-title">{{ page.title | ampersand }}</h1>
-    {% endif %}
-    {% unless page.meta == false %}
-      <p class="meta">
-        {% include post/date.html %}{{ time }}
-      </p>
-    {% endunless %}
-  </header>
+  {% if page.title %}
+    <header class="article-header">
+      {% if index %}
+        <h1 class="article-title"><a href="{{ root_url }}{{ post.url }}">{{ post.title | ampersand }}</a></h1>
+      {% else %}
+        <h1 class="article-title">{{ page.title | ampersand }}</h1>
+      {% endif %}
+      {% unless page.meta == false %}
+        <p class="meta">
+          {% include post/date.html %}{{ time }}
+        </p>
+      {% endunless %}
+    </header>
+  {% endif %}
 {% endunless %}
 {% unless index %}
-  <div class="entry-content">{{ content | ampersand | abbr | nospace }}</div>
+  <div class="article-body">{{ content | ampersand | abbr | nospace }}</div>
+{% endunless %}
+{% unless page.footer == false %}
+  <footer class="article-footer">
+    {% if page.date or page.author %}
+      <p class="meta">
+        {% if page.author %}{% include post/author.html %}{% endif %}
+        {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
+        {% if page.categories %}{% include post/categories.html %}{% endif %}
+        {% if page.tags %}{% include post/tags.html %}{% endif %}
+      </p>
+    {% endif %}
+  </footer>
 {% endunless %}

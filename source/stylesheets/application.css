@@ -65,27 +65,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* line 61, ../../vendor/bundle/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
 * html {
-  font-size: 143.75%;
+  font-size: 112.5%;
 }
 
 /* line 64, ../../vendor/bundle/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
 html {
-  font-size: 23px;
-  line-height: 1.04348em;
-}
-
-/* line 19, ../../assets/stylesheets/partials/_base.scss */
-html {
-  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(5%, rgba(0, 0, 0, 0.5)), color-stop(5%, rgba(0, 0, 0, 0)));
-  background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
-  background-image: -moz-linear-gradient(bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
-  background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
-  background-image: linear-gradient(bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
-  -webkit-background-size: 100% 1.5em;
-  -moz-background-size: 100% 1.5em;
-  -o-background-size: 100% 1.5em;
-  background-size: 100% 1.5em;
-  background-position: left top;
+  font-size: 18px;
+  line-height: 1.33333em;
 }
 
 /* line 1, ../../assets/stylesheets/partials/_typography.scss */
@@ -97,6 +83,112 @@ body {
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   hyphens: auto;
+}
+
+/* line 10, ../../assets/stylesheets/partials/_typography.scss */
+h1 {
+  font-size: 2.32706em;
+  line-height: 1.14594em;
+  margin-bottom: 0.57297em;
+}
+
+/* line 15, ../../assets/stylesheets/partials/_typography.scss */
+h2 {
+  font-size: 1.618em;
+  line-height: 1.64813em;
+}
+
+/* line 19, ../../assets/stylesheets/partials/_typography.scss */
+h3 {
+  font-size: 1.43822em;
+  line-height: 1.85414em;
+  font-weight: 400;
+}
+
+/* line 24, ../../assets/stylesheets/partials/_typography.scss */
+h4, h5, h6 {
+  font-size: 1em;
+  line-height: 1.33333em;
+  font-weight: 700;
+}
+
+/* line 30, ../../assets/stylesheets/partials/_typography.scss */
+p {
+  margin-bottom: 1.33333em;
+}
+
+/* line 35, ../../assets/stylesheets/partials/_typography.scss */
+hr {
+  border: 0;
+  height: 0;
+  margin: 0 1.33333em;
+  color: rgba(51, 51, 51, 0.3);
+  border-bottom-style: solid;
+  border-bottom-width: 0.11111em;
+  padding-bottom: 1.22222em;
+  margin-bottom: 2.66667em;
+}
+
+/* line 45, ../../assets/stylesheets/partials/_typography.scss */
+blockquote {
+  margin-left: 1.33333em;
+  margin-right: 1.33333em;
+  margin-top: 1.33333em;
+  margin-bottom: 1.33333em;
+  font-style: italic;
+}
+
+/* line 53, ../../assets/stylesheets/partials/_typography.scss */
+blockquote + p {
+  margin-left: 1.33333em;
+  margin-right: 1.33333em;
+}
+
+/* line 58, ../../assets/stylesheets/partials/_typography.scss */
+.verse pre {
+  font-family: inherit;
+  display: table;
+  width: auto;
+  margin: 0 auto;
+}
+
+/* line 66, ../../assets/stylesheets/partials/_typography.scss */
+ol {
+  margin-bottom: 1.33333em;
+  list-style: decimal;
+}
+
+/* line 71, ../../assets/stylesheets/partials/_typography.scss */
+ol ol {
+  margin: 0 1.33333em;
+  list-style: lower-latin;
+}
+
+/* line 76, ../../assets/stylesheets/partials/_typography.scss */
+ul {
+  margin-bottom: 1.33333em;
+  list-style: disc;
+}
+
+/* line 81, ../../assets/stylesheets/partials/_typography.scss */
+ul ul {
+  margin: 0 1.33333em;
+  list-style: circle;
+}
+
+/* line 86, ../../assets/stylesheets/partials/_typography.scss */
+dl {
+  margin-bottom: 1.33333em;
+}
+
+/* line 94, ../../assets/stylesheets/partials/_typography.scss */
+dt + dd {
+  margin-bottom: 1.33333em;
+}
+
+/* line 98, ../../assets/stylesheets/partials/_typography.scss */
+dd {
+  margin-left: 1.33333em;
 }
 
 /* line 24, ../../assets/stylesheets/partials/_grids.scss */
