@@ -7,10 +7,8 @@ require 'guard/jekyll'
 
 configurator   = Octopress::Configuration.new
 configuration  = configurator.read_configuration
-js_assets      = Octopress::JSAssetsManager.new
 
 stylesheets_dir    = "assets/stylesheets"
-javascripts_dir    = "assets/javascripts"
 
 guard :compass do
   watch %r{^#{stylesheets_dir}/(.*)\.s[ac]ss$}
@@ -31,8 +29,5 @@ guard :shell do
       FileUtils.cp m.first, path
       "Copied #{m.first} -> #{path}"
     end
-  end
-  watch /^#{javascripts_dir}\/.+\.(js|coffee|mustache|eco|tmpl)/ do |change|
-    js_assets.compile
   end
 end

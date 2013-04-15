@@ -1,13 +1,12 @@
 ---
-# ------------ #
-#   kogakure   #
-# ------------ #
+# ----------- #
+#   Website   #
+# ----------- #
 
 theme:
   name: kogakure
   stylesheets_dir: assets/stylesheets
-  javascripts_dir: assets/javascripts
-
+  javascripts_dir: source/javascripts
 
 url: http://stefanimhoff.de
 title: Stefan Imhoff
