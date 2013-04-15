@@ -25,8 +25,8 @@
   {% capture is_preview %}{% preview %}{% endcapture %}
 
   {% if is_preview == 'true' %}
-  <link href="{{ root_url }}/css/application.css" rel="stylesheet">
-  {% if page.custom_css %}<link href="{{ root_url }}/css/{{page.custom_css}}.css" rel="stylesheet">{% endif %}
+  <link href="{{ root_url }}/stylesheets/application.css" rel="stylesheet">
+  {% if page.custom_css %}<link href="{{ root_url }}/stylesheets/{{page.custom_css}}.css" rel="stylesheet">{% endif %}
   {% else %}
   {% stylesheet application %}
   {% if page.custom_css %}{{ page.custom_css | stylesheet }}{% endif %}
