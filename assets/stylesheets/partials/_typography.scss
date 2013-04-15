@@ -31,6 +31,10 @@ p {
   @include trailer(1);
 }
 
+.article-body > p:first-child {
+  @include adjust-font-size-to(22px);
+}
+
 // ### Horizontal borders
 hr {
   border: 0;

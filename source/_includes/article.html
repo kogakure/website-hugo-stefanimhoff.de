@@ -1,4 +1,5 @@
 {% unless page.no_header %}
+  <!-- @TODO: Fix for Startpage -->
   {% if page.title %}
     <header class="article-header">
       {% if index %}
@@ -13,10 +14,13 @@
       {% endunless %}
     </header>
   {% endif %}
+  
 {% endunless %}
+
 {% unless index %}
   <div class="article-body">{{ content | ampersand | abbr | nospace }}</div>
 {% endunless %}
+
 {% unless page.footer == false %}
   <footer class="article-footer">
     {% if page.date or page.author %}
