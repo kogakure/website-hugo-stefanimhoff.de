@@ -1,7 +1,7 @@
 body {
   font-family: $base-font-family;
   font-style: normal;
-  font-weight: $book;
+  font-weight: $normal;
   color: $dark-grey;
   @include hyphens(auto);
 }
@@ -16,11 +16,14 @@ h2 {
   @include adjust-font-size-to($font-scale-h2);
 }
 
-h3, h4, h5, h6 {
+h3 {
   @include adjust-font-size-to($font-scale-h3);
-  @include leader(2/3, $font-scale-h3, padding);
-  @include trailer(1/3, $font-scale-h3, margin);
   font-weight: $normal;
+}
+
+h4, h5, h6 {
+  @include adjust-font-size-to($font-scale-h4);
+  font-weight: $bold;
 }
 
 // ### Paragraphs
@@ -32,7 +35,7 @@ p {
 hr {
   border: 0;
   height: 0;
-  margin: 0 50px;
+  margin: 0 $base-rhythm-unit;
   color: rgba(#333, 0.3);
   @include trailing-border(2px);
   @include trailer(2, $base-font-size, margin);
@@ -40,13 +43,16 @@ hr {
 
 // ### Quotes
 blockquote {
-  margin: 1.5em;
+  margin-left: $base-rhythm-unit;
+  margin-right: $base-rhythm-unit;
+  @include leader();
+  @include trailer();
   font-style: italic;
 }
 
 blockquote + p {
-  margin-left: 1.5em;
-  margin-right: 1.5em;
+  margin-left: $base-rhythm-unit;
+  margin-right: $base-rhythm-unit;
 }
 
 .verse pre {
@@ -63,7 +69,7 @@ ol {
 }
 
 ol ol {
-  margin: 0 1.5em;
+  margin: 0 $base-rhythm-unit;
   list-style: lower-latin;
 }
 
@@ -73,7 +79,7 @@ ul {
 }
 
 ul ul {
-  margin: 0 1.5em;
+  margin: 0 $base-rhythm-unit;
   list-style: circle;
 }
 
@@ -82,7 +88,7 @@ dl {
 }
 
 dt {
-  font-weight: 400;
+  //font-weight: $normal;
 }
 
 dt + dd {
@@ -90,5 +96,5 @@ dt + dd {
 }
 
 dd {
-  margin-left: 1.5em;
+  margin-left: $base-rhythm-unit;
 }

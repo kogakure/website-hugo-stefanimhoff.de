@@ -23,5 +23,5 @@ $default-rhythm-border-style: solid;
 
 .container {
   @include container;
-  @include susy-grid-background; // Grid
+  @include susy-grid-background; // Grid anzeigen
 }

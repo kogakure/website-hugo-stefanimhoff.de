@@ -65,16 +65,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* line 61, ../../vendor/bundle/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
 * html {
-  font-size: 100%;
+  font-size: 143.75%;
 }
 
 /* line 64, ../../vendor/bundle/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
 html {
-  font-size: 16px;
-  line-height: 1.5em;
+  font-size: 23px;
+  line-height: 1.04348em;
 }
 
-/* line 35, ../../assets/stylesheets/partials/_base.scss */
+/* line 19, ../../assets/stylesheets/partials/_base.scss */
 html {
   background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(5%, rgba(0, 0, 0, 0.5)), color-stop(5%, rgba(0, 0, 0, 0)));
   background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
@@ -90,119 +90,13 @@ html {
 
 /* line 1, ../../assets/stylesheets/partials/_typography.scss */
 body {
-  font-family: "Ubuntu", Verdana, sans-serif;
+  font-family: "Gentium Basic", sans-serif;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   color: #333333;
-  -ms-word-break: break-all;
-  word-break: break-all;
-  word-break: break-word;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   hyphens: auto;
-}
-
-/* line 10, ../../assets/stylesheets/partials/_typography.scss */
-h1 {
-  font-size: 2.61794em;
-  line-height: 1.14594em;
-  margin-bottom: 0.57297em;
-}
-
-/* line 15, ../../assets/stylesheets/partials/_typography.scss */
-h2 {
-  font-size: 1.618em;
-  line-height: 1.85414em;
-}
-
-/* line 19, ../../assets/stylesheets/partials/_typography.scss */
-h3, h4, h5, h6 {
-  font-size: 1em;
-  line-height: 1.5em;
-  padding-top: 1em;
-  margin-bottom: 0.5em;
-  font-weight: 400;
-}
-
-/* line 27, ../../assets/stylesheets/partials/_typography.scss */
-p {
-  margin-bottom: 1.5em;
-}
-
-/* line 32, ../../assets/stylesheets/partials/_typography.scss */
-hr {
-  border: 0;
-  height: 0;
-  margin: 0 50px;
-  color: rgba(51, 51, 51, 0.3);
-  border-bottom-style: solid;
-  border-bottom-width: 0.125em;
-  padding-bottom: 1.375em;
-  margin-bottom: 3em;
-}
-
-/* line 42, ../../assets/stylesheets/partials/_typography.scss */
-blockquote {
-  margin: 1.5em;
-  font-style: italic;
-}
-
-/* line 47, ../../assets/stylesheets/partials/_typography.scss */
-blockquote + p {
-  margin-left: 1.5em;
-  margin-right: 1.5em;
-}
-
-/* line 52, ../../assets/stylesheets/partials/_typography.scss */
-.verse pre {
-  font-family: inherit;
-  display: table;
-  width: auto;
-  margin: 0 auto;
-}
-
-/* line 60, ../../assets/stylesheets/partials/_typography.scss */
-ol {
-  margin-bottom: 1.5em;
-  list-style: decimal;
-}
-
-/* line 65, ../../assets/stylesheets/partials/_typography.scss */
-ol ol {
-  margin: 0 1.5em;
-  list-style: lower-latin;
-}
-
-/* line 70, ../../assets/stylesheets/partials/_typography.scss */
-ul {
-  margin-bottom: 1.5em;
-  list-style: disc;
-}
-
-/* line 75, ../../assets/stylesheets/partials/_typography.scss */
-ul ul {
-  margin: 0 1.5em;
-  list-style: circle;
-}
-
-/* line 80, ../../assets/stylesheets/partials/_typography.scss */
-dl {
-  margin-bottom: 1.5em;
-}
-
-/* line 84, ../../assets/stylesheets/partials/_typography.scss */
-dt {
-  font-weight: 400;
-}
-
-/* line 88, ../../assets/stylesheets/partials/_typography.scss */
-dt + dd {
-  margin-bottom: 1.5em;
-}
-
-/* line 92, ../../assets/stylesheets/partials/_typography.scss */
-dd {
-  margin-left: 1.5em;
 }
 
 /* line 24, ../../assets/stylesheets/partials/_grids.scss */

@@ -1,20 +1,18 @@
 // Import Compass
 @import "compass";
 @import "compass/reset";
-@import "compass/css3/hyphenation";
 
 // Font Weights
-$book:   300;
 $normal: 400;
-$medium: 500;
 $bold:   700;
 
 // Base Font
-$base-font-family:     "Ubuntu", Verdana, sans-serif;
+$base-font-family:     'Gentium Basic', sans-serif;
 $base-font-weight:     $normal;
-$base-font-size:       16px;
+$base-font-size:       18px;
 $base-line-height:     24px;
 $relative-font-sizing: true;
+$base-rhythm-unit:     $base-line-height / $base-font-size * $font-unit;
 
 // Fixed Font
 $fixed-font-family: monospace;
@@ -23,17 +21,17 @@ $fixed-line-height: $base-line-height;
 
 // Headline Font Sizes
 $font-scale-h1: 41.887px;
-$font-scale-h2: 25.888px;
-$font-scale-h3: 16px;
-$font-scale-h4: 16px;
-$font-scale-h5: 16px;
-$font-scale-h6: 16px;
+$font-scale-h2: 29.124px;
+$font-scale-h3: 25.888px;
+$font-scale-h4: 18px;
+$font-scale-h5: 18px;
+$font-scale-h6: 18px;
 
 // Vertical Rhythm
-@include establish-baseline;
+@include establish-baseline();
 
 html {
-  @include debug-vertical-alignment(); // Zeilenhöhe anzeigen
+  //@include debug-vertical-alignment(); // Zeilenhöhe anzeigen
 }
 
 @import "../modules/all";
