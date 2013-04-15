@@ -3,6 +3,7 @@ body {
   font-style: normal;
   font-weight: $book;
   color: $dark-grey;
+  @include hyphens(auto);
 }
 
 // ### Headlines

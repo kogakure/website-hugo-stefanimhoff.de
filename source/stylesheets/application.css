@@ -74,7 +74,7 @@ html {
   line-height: 1.5em;
 }
 
-/* line 34, ../../assets/stylesheets/partials/_base.scss */
+/* line 35, ../../assets/stylesheets/partials/_base.scss */
 html {
   background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(5%, rgba(0, 0, 0, 0.5)), color-stop(5%, rgba(0, 0, 0, 0)));
   background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
@@ -94,22 +94,28 @@ body {
   font-style: normal;
   font-weight: 300;
   color: #333333;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
 }
 
-/* line 9, ../../assets/stylesheets/partials/_typography.scss */
+/* line 10, ../../assets/stylesheets/partials/_typography.scss */
 h1 {
   font-size: 2.61794em;
   line-height: 1.14594em;
   margin-bottom: 0.57297em;
 }
 
-/* line 14, ../../assets/stylesheets/partials/_typography.scss */
+/* line 15, ../../assets/stylesheets/partials/_typography.scss */
 h2 {
   font-size: 1.618em;
   line-height: 1.85414em;
 }
 
-/* line 18, ../../assets/stylesheets/partials/_typography.scss */
+/* line 19, ../../assets/stylesheets/partials/_typography.scss */
 h3, h4, h5, h6 {
   font-size: 1em;
   line-height: 1.5em;
@@ -118,12 +124,12 @@ h3, h4, h5, h6 {
   font-weight: 400;
 }
 
-/* line 26, ../../assets/stylesheets/partials/_typography.scss */
+/* line 27, ../../assets/stylesheets/partials/_typography.scss */
 p {
   margin-bottom: 1.5em;
 }
 
-/* line 31, ../../assets/stylesheets/partials/_typography.scss */
+/* line 32, ../../assets/stylesheets/partials/_typography.scss */
 hr {
   border: 0;
   height: 0;
@@ -135,19 +141,19 @@ hr {
   margin-bottom: 3em;
 }
 
-/* line 41, ../../assets/stylesheets/partials/_typography.scss */
+/* line 42, ../../assets/stylesheets/partials/_typography.scss */
 blockquote {
   margin: 1.5em;
   font-style: italic;
 }
 
-/* line 46, ../../assets/stylesheets/partials/_typography.scss */
+/* line 47, ../../assets/stylesheets/partials/_typography.scss */
 blockquote + p {
   margin-left: 1.5em;
   margin-right: 1.5em;
 }
 
-/* line 51, ../../assets/stylesheets/partials/_typography.scss */
+/* line 52, ../../assets/stylesheets/partials/_typography.scss */
 .verse pre {
   font-family: inherit;
   display: table;
@@ -155,46 +161,46 @@ blockquote + p {
   margin: 0 auto;
 }
 
-/* line 59, ../../assets/stylesheets/partials/_typography.scss */
+/* line 60, ../../assets/stylesheets/partials/_typography.scss */
 ol {
   margin-bottom: 1.5em;
   list-style: decimal;
 }
 
-/* line 64, ../../assets/stylesheets/partials/_typography.scss */
+/* line 65, ../../assets/stylesheets/partials/_typography.scss */
 ol ol {
   margin: 0 1.5em;
   list-style: lower-latin;
 }
 
-/* line 69, ../../assets/stylesheets/partials/_typography.scss */
+/* line 70, ../../assets/stylesheets/partials/_typography.scss */
 ul {
   margin-bottom: 1.5em;
   list-style: disc;
 }
 
-/* line 74, ../../assets/stylesheets/partials/_typography.scss */
+/* line 75, ../../assets/stylesheets/partials/_typography.scss */
 ul ul {
   margin: 0 1.5em;
   list-style: circle;
 }
 
-/* line 79, ../../assets/stylesheets/partials/_typography.scss */
+/* line 80, ../../assets/stylesheets/partials/_typography.scss */
 dl {
   margin-bottom: 1.5em;
 }
 
-/* line 83, ../../assets/stylesheets/partials/_typography.scss */
+/* line 84, ../../assets/stylesheets/partials/_typography.scss */
 dt {
   font-weight: 400;
 }
 
-/* line 87, ../../assets/stylesheets/partials/_typography.scss */
+/* line 88, ../../assets/stylesheets/partials/_typography.scss */
 dt + dd {
   margin-bottom: 1.5em;
 }
 
-/* line 91, ../../assets/stylesheets/partials/_typography.scss */
+/* line 92, ../../assets/stylesheets/partials/_typography.scss */
 dd {
   margin-left: 1.5em;
 }
