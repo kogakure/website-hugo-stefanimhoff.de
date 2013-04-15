@@ -10,9 +10,7 @@ tags:
 
 Seit genau eineinhalb Jahren benutze ich jetzt die Prinzipien des *GTD* (*Getting Things Done*®), nach dem gleichnamigen Buch von *David Allen* um meine alltäglichen Aufgaben zu organisieren.
 
-<!-- more -->
-
-<img src="/images/gtd-vorher.jpg" width="300" height="191" alt="GTD vorher" title="So sah die Inbox aus, bevor ich alle losen Enden sortiert hatte" /> David Allen stellt in seinem Buch ein interessantes System vor, mit dem man seine täglichen Aufgaben effektiv und effizient erledigen kann.
+<img src="{{ site.images_dir }}gtd-vorher.jpg" width="300" height="191" alt="GTD vorher" title="So sah die Inbox aus, bevor ich alle losen Enden sortiert hatte" /> David Allen stellt in seinem Buch ein interessantes System vor, mit dem man seine täglichen Aufgaben effektiv und effizient erledigen kann.
 
 Das Buch ist auch in **Deutsch** erhältlich unter dem Titel <cite>[Wie ich die Dinge geregelt kriege](http://www.amazon.de/gp/product/3492240607/ref=as_li_ss_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=3492240607&linkCode=as2&tag=kogakurede-21)</cite>.
 
@@ -36,7 +34,7 @@ Aufgaben kann man auch delegieren oder bestimmten Zeitpunkten zuweisen. Wenn man
 
 ## GTD im Alltag
 
-<img src="/images/gtd-nachher.jpg" width="300" height="191" alt="GTD nachher" title="So sah die Inbox aus, nachdem ich alle losen Enden sortiert hatte" /> Auf den ersten Blick sieht GTD vielleicht kompliziert oder umständlich aus, doch hilft es ungemein, den Kopf von belastendem Grübeln freizuhalten.
+<img src="{{ site.images_dir }}gtd-nachher.jpg" width="300" height="191" alt="GTD nachher" title="So sah die Inbox aus, nachdem ich alle losen Enden sortiert hatte" /> Auf den ersten Blick sieht GTD vielleicht kompliziert oder umständlich aus, doch hilft es ungemein, den Kopf von belastendem Grübeln freizuhalten.
 Schon nach kurzer Zeit der Umstellung habe ich mich an diese Arbeitsweise gewöhnt und schnell die Eigenschaft übernommen, jeden Gedanken **sofort zu notieren** und gemäß des GTD-Prinzips irgendwo einzuordnen. So vergesse ich nie wieder wichtige Dinge und selbst kleine Ideen verschwinden nicht gleich aus dem Kopf.
 
 Im Idealfall hat man dazu bestimmte **Arbeitswerkzeuge** dabei, die je nach Person und Lebensumständen variieren können. Ich selbst benutze eine Kombination aus Web-Applikation, Text-Dateien, [Moleskine®](http://www.moleskine.com/de/)-Notizbuch und Post-its® an verschiedenen Orten (z. B. auf dem Nachttisch).

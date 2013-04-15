@@ -13,9 +13,7 @@ tags:
 
 Heute empfehle ich ein Buch, das ich vor kurzem erst beendet habe, und schon ein zweites Mal lese: <cite>Rework</cite> von <cite>37signals</cite>.
 
-<!-- more -->
-
-<a href="http://www.amazon.de/gp/product/0307463745?ie=UTF8&amp;tag=kogakurede-21&amp;linkCode=as2&amp;camp=1638&amp;creative=19454&amp;creativeASIN=0307463745"><img width="250" height="378" src="/images/rework.png" alt="37signals: Rework" /></a>
+<a href="http://www.amazon.de/gp/product/0307463745?ie=UTF8&amp;tag=kogakurede-21&amp;linkCode=as2&amp;camp=1638&amp;creative=19454&amp;creativeASIN=0307463745"><img width="250" height="378" src="{{ site.images_dir }}rework.png" alt="37signals: Rework" /></a>
 
 Ich bin schon seit langem ein großer Anhänger der Philosophie von Einfachheit und Schlichtheit, die <cite>37signals</cite> mit Erfolg kultivieren. Bereits ihr erstes (kostenloses) Buch [Getting Real](http://gettingreal.37signals.com/) (auch als [Paperback-Version](http://www.amazon.de/gp/product/0578012812?ie=UTF8&amp;tag=kogakurede-21&amp;linkCode=as2&amp;camp=1638&amp;creative=19454&amp;creativeASIN=0578012812) erhältlich) habe ich mit großem Interesse gelesen.
 

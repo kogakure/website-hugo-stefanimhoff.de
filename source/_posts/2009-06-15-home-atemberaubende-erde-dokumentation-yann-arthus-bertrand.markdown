@@ -9,10 +9,6 @@ tags:
 - film
 ---
 
-Am 5. Juni 2009 startete der atemberaubende Dokumentationsfilm <cite>HOME</cite> von Yann Arthus-Bertrand, ein Film über die Entstehung der Erde und des Lebens, sowie der Zerstörung und des Raubbaus an ihr. Sehr sehenswert!
-
-<!-- more -->
-
 Am 5. Juni 2009 startete der Dokumentationsfilm <cite>HOME</cite> von Yann Arthus-Bertrand gleichzeitig und kostenlos in allen Ländern und in allen nur erdenklichen Medien: im Internet, Fernsehen und Kinos, wobei der Film den Kinos sogar kostenlos zur Verfügung gestellt wurde. Außerdem ist der Film schon auf DVD erhältlich, und ein Teil des Verkaufspreises wird der Organisation <cite>Good Planet</cite> gespendet.
 
 Mit einem Budget von ca. 10-15 Millionen Dollar, gesponsert von [EuropaCorp](http://www.europacorp.com/ "EuropaCorp") und [PPR](http://www.ppr.com/ "PPR"), wollte der Regisseur einen bewegenden Film über unsere Erde erstellen, was ihm durchweg gelungen ist.

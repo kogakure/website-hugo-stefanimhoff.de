@@ -11,8 +11,6 @@ tags:
 
 Weil es grad alle machen: Ich weiß, was du letztens ins Terminal getippt hast.
 
-<!-- more -->
-
 {% codeblock lang:sh %}
 history | awk '{print $2}' | sort | uniq -c | sort -rn | head -10
 

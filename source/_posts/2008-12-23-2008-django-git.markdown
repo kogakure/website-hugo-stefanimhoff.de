@@ -9,8 +9,6 @@ tags:
 
 Wie jedes Jahr ist es so kurz vor dem Jahreswechsel mal wieder Zeit um zu schauen, was in 2008 so auf dem Plan stand. Dafür habe ich, um mein Gedächtnis aufzufrischen, wieder Google History zur Hilfe herangezogen.
 
-<!-- more -->
-
 Das vergangene Jahr stand ganz im Stern von [Django](https://www.djangoproject.com/), und auch 2009 wird Django mit großer Wahrscheinlichkeit wieder dazugehören. Das kommt daher, dass mir vorher noch nie ein solches fantastisches Framework (oder CMS) begegnet ist – und ich bin *pingelig*, was das angeht.
 
 Als zweites stand dieses Jahr das Versionskontrollsystem <cite>Git</cite> hoch oben auf meinem Plan. Denn `Git = Subversion + mehr Funktionen - weniger Stress`. Und es gibt noch [viele  weitere Gründe](http://git-scm.com/about), wieso man Git ausprobieren sollte. [Hinsurfen](http://git-scm.com/), [herunterladen](http://git-scm.com/downloads), [Handbuch ansehen](http://git-scm.com/doc), [glücklich sein](https://github.com/). Das gilt auch für Designer. Quält euch doch nicht mit Subversion herum!

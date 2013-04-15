@@ -11,8 +11,6 @@ tags:
 
 Viele Domainbesitzer in Deutschland wissen immer noch nicht, dass sie ihre Domains _nicht_ mit dem Speicherplatz zusammen kaufen müssen. Ich erkäre hier, wieso Inklusivdomains eine Mogelpackung sind und was für Vorteile das Trennen von Domain und Webspace mit sich bringen.
 
-<!-- more -->
-
 Überlicherweise kauft man sich einen Webhosting-Paket bei irgendeinem Anbieter, der dann meist Inklusivdomains mitliefert.
 
 Für viele kleinere Domainbesitzer mag dies auf den ersten Blick wie ein Schnäppchen aussehen, doch der Schein trügt zumeist. Denn mit diesen *spottbilligen* Angeboten sind Mindestvertragslaufzeiten von **1-2 Jahren** verbunden. Gerade im Internet ändern sich die Angebote aber fast schon wöchentlich.

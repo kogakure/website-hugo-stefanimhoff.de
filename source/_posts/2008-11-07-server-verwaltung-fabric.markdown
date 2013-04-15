@@ -13,8 +13,6 @@ tags:
 
 Vor einiger Zeit habe ich meinen Workflow mit Capistrano beschrieben, und wie man damit einen Server fernwarten kann. Kürzlich bin ich auf das in Python geschriebene, viel schlankere Tool <cite>Fabric</cite> aufmerksam gemacht worden.
 
-<!-- more -->
-
 Capistrano ist ein sehr mächtiges Tool, von dem ich für meine Projekte nicht mal die Grundlagen benötige. Daher bin ich jetzt auf [Fabric](http://www.nongnu.org/fab/) umgestiegen, was für normale Zwecke viel optimaler zu bedienen und schneller einzurichten ist.
 
 Fabric ist nicht nur für Django-/Python-Arbeitsweise, sondern für jede Server-Fernwartung geeignet. Ich selbst verwende es z. B. um meine wöchentlichen Server-Backups durchzuführen, um mit Django und Git zu arbeiten, um Kunden-Repositorys mit Subversion auf dem Server meiner Arbeitsstelle anzulegen und um lokale Skripte auszuführen.

@@ -14,8 +14,6 @@ tags:
 
 Es ist soweit! Mein erstes Django-Projekt ist online: das seit 1999 bestehende Kampfkunst-Magazin [kogakure.de](http://kogakure.de/ "kogakure.de – Ninja, Ninjutsu und Kampfkunst").
 
-<!-- more -->
-
 ## Web-Entwicklung für Perfektionisten
 
 Was ist Django? Django ist ein [Python](http://www.python.org/ "Python Programming Language -- Official Website")-Web-Framework, das schnelle, saubere Entwicklung von dynamischen Websites ermöglicht.

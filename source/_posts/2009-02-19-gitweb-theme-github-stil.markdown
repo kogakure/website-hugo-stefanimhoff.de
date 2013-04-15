@@ -15,8 +15,6 @@ tags:
 
 Das Standard-Theme von Gitweb ist wirklich nicht sehr ansprechend und scheinbar nur auf Funktionalität ausgelegt. Daher habe ich eine Alternative erstellt, die sich von der Gestaltung an GitHub anlehnt.
 
-<!-- more -->
-
 Ich konnte die Oberfläche von Gitweb nicht mehr sehen. Daher habe ich mir einen Theme erstellt, der von der Gestaltung an GitHub erinnert.
 
 Die genaue Anleitung zur Installation befindet sich mit im Paket auf GitHub.
@@ -35,17 +33,17 @@ Detailed instructions for installations are included in the package on GitHub.
 
 ## Screenshots
 
-<img src="/images/gitweb-theme-1.png" alt="Projektübersicht" />
+<img src="{{ site.images_dir }}gitweb-theme-1.png" alt="Projektübersicht" />
 Projektübersicht/Project view
 
-<img src="/images/gitweb-theme-2.png" alt="Zusammenfassung" />
+<img src="{{ site.images_dir }}gitweb-theme-2.png" alt="Zusammenfassung" />
 Zusammenfassung/Summary
 
-<img src="/images/gitweb-theme-3.png" alt="Commit" />
+<img src="{{ site.images_dir }}gitweb-theme-3.png" alt="Commit" />
 Commit
 
-<img src="/images/gitweb-theme-4.png" alt="Diff" />
+<img src="{{ site.images_dir }}gitweb-theme-4.png" alt="Diff" />
 DIFF
 
-<img src="/images/gitweb-theme-5.png" alt="Log" />
+<img src="{{ site.images_dir }}gitweb-theme-5.png" alt="Log" />
 Log

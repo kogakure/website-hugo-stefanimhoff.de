@@ -9,8 +9,6 @@ tags:
 
 Zum Jahresende will ich dieses Mal Googles Webprotokoll als Erinnerungshilfe hinzuziehen. Dieser Dienst von Google ermöglicht es die eigenen Suchbegriffe anzusehen.
 
-<!-- more -->
-
 Ich finde es ziemlich interessant, im Nachhinein noch zu sehen, was man vor langer Zeit in Google gesucht hat, und welche Seiten man angeschaut hat.
 
 ## Januar

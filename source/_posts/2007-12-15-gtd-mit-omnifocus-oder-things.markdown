@@ -12,8 +12,6 @@ tags:
 
 Seit ich mir Anfang Dezember überlegt habe, von meinem webbasierenden GTD-Tool [Tracks](http://getontracks.org/) zu einer OS X Software zu wechseln, teste ich zwei interessante Kandidaten.
 
-<!-- more -->
-
 Ich hatte bis heute  [OmniFocus](http://www.omnigroup.com/products/omnifocus/) 1.0 von *The OmniGroup* und [Things](http://culturedcode.com/things/) 0.8.1 von *CulturedCode* im Test.
 
 Ein direkter Vergleichstest wäre aber ungerecht, da OmniFocus kurz vor der Veröffentlichung steht, Things aber erst in Alpha-Version vorliegt.

@@ -10,8 +10,6 @@ tags:
 
 Für mich gehört ständige Verbesserung (改善, jap. Kaizen) zur täglichen Arbeit dazu. Was mich aber seit längerem gestört hat, ist wenn ich die Namen des zu klonenden Git-Repositorys per Hand tippen muss. Auto-Complete bietet hier eine Lösung.
 
-<!-- more -->
-
 Für mich gehört ständige Verbesserung (改善, jap. Kaizen) zur täglichen Arbeit dazu. Ich klone die Jobs meiner Kunden über Gitosis von unserem Git-Server. Um mir Schreibarbeit zu sparen habe ich mir schon vor zwei Jahren ein kleines Bash-Skript `gcl` geschrieben, das als Parameter den Namen eine Repositorys erwartet und dieses dann an die richtige Position klont und auch gleich noch den Ordner im Finder für mich öffnet.
 
 So weit bin ich auch schon sehr zufrieden damit gewesen und glaube meine Arbeitsweise ist immer noch zehn mal so schnell, als über eine GUI. Doch was mich seit längerem schon gestört hat, ist die Tatsache, dass ich den Job-Namen als Parameter nach meinem Terminal-Befehl anhängen muss: `gcl domain.de`. Auch wenn ich recht schnell tippe, ermüdet es doch lange Domainnamen zu tippen oder sich die vielen hundert Kundenprojekte in Erinnerung zu rufen.

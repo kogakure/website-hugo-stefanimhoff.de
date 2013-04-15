@@ -10,8 +10,6 @@ tags:
 
 Und wieder ist ein Jahr fast vorbei, mein jährlicher Blick in Google History steht an.
 
-<!-- more -->
-
 Hier also die Begriffe des Jahres, die mich am meisten beschäftigt haben (unsortiert):
 
 [Django](https://www.djangoproject.com/) war auch dieses Jahr ein wichtigter Begriff, ebenso [pip](http://pypi.python.org/pypi/pip), [virtualenv](http://pypi.python.org/pypi/virtualenv) und [virtualenvwrapper](http://www.doughellmann.com/projects/virtualenvwrapper/). Ich habe angefangen, am Relaunch dieser Website zu arbeiten und [South](http://south.aeracode.org/) für Daten- und Schemamigration zu verwenden, sowie [Pygments](http://pygments.org/) für die Code-Colorierung.

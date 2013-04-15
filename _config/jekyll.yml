@@ -9,6 +9,7 @@ source:       source   # source file directory
 destination:  public   # compiled site directory
 plugins:      plugins
 code_dir:     downloads/code
+images_dir:   /images/
 
 # Categories
 category_dir: thema

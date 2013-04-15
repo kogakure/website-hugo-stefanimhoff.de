@@ -11,8 +11,6 @@ tags:
 
 Es gibt in Subversion noch ein paar nützliche und notwendige Befehle, die man im täglichen Umgang brauchen wird.
 
-<!-- more -->
-
 <div class="hinweis">
 <p>Der Inhalt dieses Artikels ist noch aktuell, doch kann ich nur dringend dazu raten, sich die fantastische Alternative zu Subversion anzusehen: <a href="/versionskontrolle-mit-git/"><strong>Git</strong></a>.</p>
 </div>

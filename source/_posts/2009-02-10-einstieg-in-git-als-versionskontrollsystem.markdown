@@ -11,8 +11,6 @@ tags:
 
 Mittlerweile habe ich das Versionskontrollsystem Git seit fast eineinhalb Jahren im Einsatz und bin jeden Tag wieder begeistert. Sogar bei meinem Arbeitgeber scheint eine Umstellung von Subversion auf Git in greifbarer Nähe.
 
-<!-- more -->
-
 Zuhause befinden sich fast nur noch Git-Repositorys auf meiner Festplatte, und ich kann mir eine Arbeit ohne Git nicht mehr vorstellen. Im letzten Jahr hat Git sich stark verbessert und es sind viel Zusatzsoftware, Dokumentationen und Filme für Git erschienen.
 
 Den mittlerweile veralteten Artikel von 2007 ersetze ich durch eine große Liste hilfreicher Links zu Git:

@@ -13,8 +13,6 @@ tags:
 
 Heute möchte ich eine wirklich feine Software vorstellen, die sich für alle, die irgendetwas lernen möchten, fantastisch eignet: ProVoc.
 
-<!-- more -->
-
 Mit [ProVoc](http://www.arizona-software.ch/provoc/) bietet das Schweizer Unternehmen [Arizona Software](http://www.arizona-software.ch/) eine **kostenlose** Software zum Lernen von Vokabeln an, die ihresgleichen vergeblich sucht.
 
 ## Multimediales Lernen

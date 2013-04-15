@@ -10,8 +10,6 @@ tags:
 
 Eric Holscher hat auf der DjangoCon 2010 einen interessanten Vortrag gehalten, in dem er die besten Lösungen für alltägliche Probleme mit Django aufzeigt.
 
-<!-- more -->
-
 Die Liste von Applikationen, die Eric vorstellt ist sehr interessant, und sollte jedem, der beginnt sich mit Django zu beschäftigen bekannt sein. Eric Holscher spricht in seinem Talk – seinen [Blog-Artikel und die Folien](http://ericholscher.com/blog/2010/sep/10/djangocon-talk/) gibt es hier – sieben allgemein bekannte Lösungen für bekannte Probleme an:
 
 * Suche: [Haystack](http://haystacksearch.org/)

@@ -12,8 +12,6 @@ tags:
 
 Ein wirklich nützliches Modul von Django ist `django.contrib.redirects`, welches das Einrichten von Weiterleitungen ermöglicht. Zusammen mit Djangos Möglichkeit zur Benachrichtigung per E-Mail bei Fehlern, möchte ich diese Funktionen nicht mehr missen.
 
-<!-- more -->
-
 ## Weiterleitungen
 
 In Django kann man nach Aktivierung des `Redirect`-Moduls einfach im Admin-Interface *Weiterleitungen* von einer beliebigen URL auf die neue URL einstellen. Meine Kampfkunst-Website [kogakure.de](http://kogakure.de/) gibt es seit über 9 Jahren, und wurde in dieser Zeit in hunderten von Foreneinträgen und privaten Websites verlinkt. Oft existiert die alte Struktur der Website schon gar nicht mehr und alle alten Links führen zu einer Fehlerseite.

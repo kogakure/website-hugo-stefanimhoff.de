@@ -10,8 +10,6 @@ tags:
 
 Die Arbeit mit einem Webframework ist auch für Webdesigner mit grafischem Hintergrund geeignet und vielleicht sogar stressfreier, als sich z. B. mit dem Templatesystem von WordPress herumzuschlagen. Und wieso ich Django unter den Webframeworks für besonders geeignet halte.
 
-<!-- more -->
-
 Für viele Webdesigner sind Webframeworks noch immer ein Buch mit sieben Siegeln. Leider hat sich der Irrglaube festgesetzt, Webframeworks wären nur für Webentwickler geeignet.
 
 Auch wenn einige Webdesigner sich möglicherweise schon mit [Ruby on Rails](http://rubyonrails.org/) oder einem PHP-Webframework beschäftigt haben, trifft dies doch wohl nur auf eine Minderheit der Webdesigner zu. Die Mehrheit arbeitet wahrscheinlich mit WordPress, Textpattern oder Typo3.

@@ -11,8 +11,6 @@ tags:
 
 Da in letzter Zeit anscheinend das Interesse an Django stark gestiegen ist, halte ich es für sinnvoll, die Grundlagen des Systems für Anfänger aufzuzeigen.
 
-<!-- more -->
-
 Es gibt verschiedene Möglichkeiten, Django auf dem eigenen Computer/Server zu installieren. Es kann sowohl als Paket geladen oder in der Entwicklerversion genutzt werden.
 
 Für welche Variante man sich auch entscheidet, es ist ziemlich nützlich die Grundlagen von [Django](https://www.djangoproject.com/) und [Python](http://python.org/) zu verstehen.

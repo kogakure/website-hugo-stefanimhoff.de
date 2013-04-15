@@ -12,8 +12,6 @@ tags:
 
 Computerspiele bieten oft eine interessante und spannende Story, doch leider gelingt die Umsetzung im Film nur selten. Hier ist meine persönliche Wunschliste von Computerspielen, die ich gerne verfilmt sehen würde.
 
-<!-- more -->
-
 Da am 13. Dezember 2007 mit <cite>[Hitman](http://de.wikipedia.org/wiki/Hitman_(Computerspiel\))</cite> ein Computerspiel aus meinen Gamer-Zeiten [ins Kino kommt](http://www.imdb.com/title/tt0465494/), will ich in diesem Artikel meine Lieblings-Computerspiele, die eine gute Filmvorlage liefern könnten,  aufzählen.
 
 <cite>Hitman</cite> stand auf meiner Liste, und ich hoffe, dass der Film gut wird; der Trailer sieht jedenfalls sehr vielversprechend aus.

@@ -11,8 +11,6 @@ tags:
 
 Vor ein paar Wochen bin ich über *Git* gestolpert, das Versionskontrollsystem von [Linus Torvalds](http://en.wikipedia.org/wiki/Linus_Torvalds "Linus Torvalds - Wikipedia, the free encyclopedia"). Git wird zur Zeit von Junio Hamano entwickelt.
 
-<!-- more -->
-
 Seit fast einem Jahr arbeite ich nun mit Subversion – und bin ziemlich zufrieden. Meine Ansprüche sind aber auch nicht sehr hoch, da ich kein Software-Entwickler bin, oder riesige Mengen Code zu bewältigen habe. Bei mir gab es bislang auch noch keinen `branch` in einem meiner Projekte
 
 *CVS* habe ich nicht kennengelernt und das scheint auch gut zu sein, bei allen grausigen Meldungen, die man über CVS hört.
