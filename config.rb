@@ -22,6 +22,9 @@ images_dir                  = "#{config[:source]}/images"
 fonts_dir                   = "#{config[:source]}/fonts"
 generated_images_dir        = "#{config[:source]}/images"
 
+output_style                = :expanded
+line_comments               = :true
+
 unless Octopress.env == 'development'
   line_comments             = false
   output_style              = :compressed
