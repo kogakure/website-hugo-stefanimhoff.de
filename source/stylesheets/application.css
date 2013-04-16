@@ -117,7 +117,13 @@ p {
   margin-bottom: 1.33333em;
 }
 
-/* line 35, ../../assets/stylesheets/partials/_typography.scss */
+/* line 34, ../../assets/stylesheets/partials/_typography.scss */
+.article-body > p:first-child {
+  font-size: 1.22222em;
+  line-height: 2.18182em;
+}
+
+/* line 39, ../../assets/stylesheets/partials/_typography.scss */
 hr {
   border: 0;
   height: 0;
@@ -129,7 +135,7 @@ hr {
   margin-bottom: 2.66667em;
 }
 
-/* line 45, ../../assets/stylesheets/partials/_typography.scss */
+/* line 49, ../../assets/stylesheets/partials/_typography.scss */
 blockquote {
   margin-left: 1.33333em;
   margin-right: 1.33333em;
@@ -138,13 +144,13 @@ blockquote {
   font-style: italic;
 }
 
-/* line 53, ../../assets/stylesheets/partials/_typography.scss */
+/* line 57, ../../assets/stylesheets/partials/_typography.scss */
 blockquote + p {
   margin-left: 1.33333em;
   margin-right: 1.33333em;
 }
 
-/* line 58, ../../assets/stylesheets/partials/_typography.scss */
+/* line 62, ../../assets/stylesheets/partials/_typography.scss */
 .verse pre {
   font-family: inherit;
   display: table;
@@ -152,41 +158,41 @@ blockquote + p {
   margin: 0 auto;
 }
 
-/* line 66, ../../assets/stylesheets/partials/_typography.scss */
+/* line 70, ../../assets/stylesheets/partials/_typography.scss */
 ol {
   margin-bottom: 1.33333em;
   list-style: decimal;
 }
 
-/* line 71, ../../assets/stylesheets/partials/_typography.scss */
+/* line 75, ../../assets/stylesheets/partials/_typography.scss */
 ol ol {
   margin: 0 1.33333em;
   list-style: lower-latin;
 }
 
-/* line 76, ../../assets/stylesheets/partials/_typography.scss */
+/* line 80, ../../assets/stylesheets/partials/_typography.scss */
 ul {
   margin-bottom: 1.33333em;
   list-style: disc;
 }
 
-/* line 81, ../../assets/stylesheets/partials/_typography.scss */
+/* line 85, ../../assets/stylesheets/partials/_typography.scss */
 ul ul {
   margin: 0 1.33333em;
   list-style: circle;
 }
 
-/* line 86, ../../assets/stylesheets/partials/_typography.scss */
+/* line 90, ../../assets/stylesheets/partials/_typography.scss */
 dl {
   margin-bottom: 1.33333em;
 }
 
-/* line 94, ../../assets/stylesheets/partials/_typography.scss */
+/* line 98, ../../assets/stylesheets/partials/_typography.scss */
 dt + dd {
   margin-bottom: 1.33333em;
 }
 
-/* line 98, ../../assets/stylesheets/partials/_typography.scss */
+/* line 102, ../../assets/stylesheets/partials/_typography.scss */
 dd {
   margin-left: 1.33333em;
 }
@@ -219,5 +225,27 @@ dd {
 .container:after {
   content: "";
   display: table;
+  clear: both;
+}
+
+/* line 29, ../../assets/stylesheets/partials/_grids.scss */
+.main {
+  background: grey;
+  margin-left: 16.94915%;
+  width: 66.10169%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+}
+
+/* line 35, ../../assets/stylesheets/partials/_grids.scss */
+header {
+  background: red;
+  clear: both;
+}
+
+/* line 40, ../../assets/stylesheets/partials/_grids.scss */
+footer {
+  background: purple;
   clear: both;
 }
