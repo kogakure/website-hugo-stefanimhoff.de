@@ -20,6 +20,7 @@ group :development do
   gem 'closure-compiler', '~> 1.1.8' # Google Closure
   gem 'gsl', '~> 1.15.3' # LSI support for tags
   gem 'nokogiri'
+  gem 'i18n', '~> 0.6.4'
 
   # Guard related
   gem 'guard'

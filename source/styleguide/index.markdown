@@ -170,14 +170,43 @@ When you call the `activate()` method on the `robotSnowman` object, the eyes glo
 
 Used in conjunction with the `pre` element:
 
+#### Markdown Codeblock
+
     function getJello() { echo $aDeliciousSnack; }
+
+#### Octopress Codeblock
 
 Shown with line numbers:
 
-{% codeblock Javascript Array Syntax lang:js http://j.mp/pPUUmW MDN Documentation %}
-var arr1 = new Array(arrayLength);
-var arr2 = new Array(element0, element1, ..., elementN);
+{% codeblock %}
+Awesome code snippet
 {% endcodeblock %}
+
+Noch ein Test:
+
+{% codeblock shell\.sh %}
+code snippet
+{% endcodeblock %}
+
+{% codeblock file\.sh %}
+code snippet
+{% endcodeblock %}
+
+{% codeblock Time to be Awesome! (awesome\.rb) %}
+code snippet
+{% endcodeblock %}
+
+{% codeblock Got pain? painreleif\.sh http://site.com/painreleief.sh Download it! %}
+$ rm -rf ~/PAIN
+{% endcodeblock %}
+
+#### Github Codeblock Markdown
+
+Example (plain)
+
+```
+$ sudo make me a sandwich
+```
 
 ### Variable
 The `var` element is used to denote a variable in a mathematical expression or programming context, but can also be used to indicate a placeholder where the contents should be replaced with your own value. Example:
