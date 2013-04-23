@@ -3,8 +3,8 @@ layout: post
 title: "2008 war Django (und Git)"
 date: 2008-12-23 15:00
 description:
-categories:
-tags:
+categories: []
+tags: []
 ---
 
 Wie jedes Jahr ist es so kurz vor dem Jahreswechsel mal wieder Zeit um zu schauen, was in 2008 so auf dem Plan stand. Dafür habe ich, um mein Gedächtnis aufzufrischen, wieder Google History zur Hilfe herangezogen.

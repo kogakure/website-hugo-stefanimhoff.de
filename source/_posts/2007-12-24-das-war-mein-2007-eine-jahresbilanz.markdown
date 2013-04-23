@@ -3,8 +3,8 @@ layout: post
 title: "Das war mein 2007 – eine Jahresbilanz"
 date: 2007-12-24 14:00
 description:
-categories:
-tags:
+categories: []
+tags: []
 ---
 
 Zum Jahresende will ich dieses Mal Googles Webprotokoll als Erinnerungshilfe hinzuziehen. Dieser Dienst von Google ermöglicht es die eigenen Suchbegriffe anzusehen.
