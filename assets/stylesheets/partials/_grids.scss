@@ -27,17 +27,14 @@ $default-rhythm-border-style: solid;
 }
 
 .main {
-  background: grey;
   @include push(2);
   @include span-columns(8);
 }
 
 header {
-  background: red;
   clear: both;
 }
 
 footer {
-  background: purple;
   clear: both;
 }
