@@ -4,7 +4,7 @@ title: "Styleguide"
 footer: false
 ---
 
-This document is a guide to the mark-up styles used throughout the site.
+This document is a guide to the mark-up styles used throughout the site. This is an entry section which is just so long, it can break into two or even better – three lines. Just in case, you know? How else can I see the line height in the intro paragraph?
 
 Sections
 --------
