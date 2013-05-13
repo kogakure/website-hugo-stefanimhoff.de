@@ -139,6 +139,7 @@ DEPENDENCIES
   jekyll (~> 1.0.0.beta4)
   jekyll-assets (~> 0.3.5)
   liquid (~> 2.3.0)
+  nokogiri
   rack (~> 1.5.0)
   rake (~> 10.0.3)
   rb-fchange
