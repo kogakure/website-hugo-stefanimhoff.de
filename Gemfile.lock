@@ -25,7 +25,7 @@ GEM
     ffi (1.7.0)
     formatador (0.2.4)
     fssm (0.2.10)
-    gsl (1.15.3)
+    gsl (1.14.7)
       narray (>= 0.5.9)
     guard (1.7.0)
       formatador (>= 0.2.4)
@@ -129,7 +129,7 @@ DEPENDENCIES
   RedCloth (~> 4.2.9)
   closure-compiler (~> 1.1.8)
   compass (~> 0.12.2)
-  gsl (~> 1.15.3)
+  gsl (~> 1.14.7)
   guard
   guard-coffeescript
   guard-compass

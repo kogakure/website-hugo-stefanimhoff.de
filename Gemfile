@@ -18,7 +18,7 @@ group :development do
   gem 'stitch-rb'
   gem 'uglifier'
   gem 'closure-compiler', '~> 1.1.8' # Google Closure
-  gem 'gsl', '~> 1.15.3' # LSI support for tags
+  gem 'gsl', '~> 1.14.7' # LSI support for tags, needs to be 1.14.x with Homebrew GSL 1.14
   gem 'nokogiri'
   gem 'i18n', '~> 0.6.4'
 
