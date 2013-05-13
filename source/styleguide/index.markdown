@@ -163,51 +163,6 @@ The `time` element is used to represent either a time on a 24 hour clock, or a p
 
 Queen Elizabeth II was proclaimed sovereign of each of the Commonwealth realms on <time datetime="1952-02-06">6</time> and <time datetime="1952-02-07">7 February 1952</time>, after the death of her father, King George VI.
 
-### Code
-The `code` element is used to represent fragments of computer code. Useful for technology-oriented sites, not so useful otherwise. Example:
-
-When you call the `activate()` method on the `robotSnowman` object, the eyes glow.
-
-Used in conjunction with the `pre` element:
-
-#### Markdown Codeblock
-
-    function getJello() { echo $aDeliciousSnack; }
-
-#### Octopress Codeblock
-
-Shown with line numbers:
-
-{% codeblock %}
-Awesome code snippet
-{% endcodeblock %}
-
-Noch ein Test:
-
-{% codeblock shell\.sh %}
-code snippet
-{% endcodeblock %}
-
-{% codeblock file\.sh %}
-code snippet
-{% endcodeblock %}
-
-{% codeblock Time to be Awesome! (awesome\.rb) %}
-code snippet
-{% endcodeblock %}
-
-{% codeblock Got pain? painreleif\.sh http://site.com/painreleief.sh Download it! %}
-$ rm -rf ~/PAIN
-{% endcodeblock %}
-
-#### Github Codeblock Markdown
-
-Example (plain)
-
-```
-$ sudo make me a sandwich
-```
-
 ### Variable
 The `var` element is used to denote a variable in a mathematical expression or programming context, but can also be used to indicate a placeholder where the contents should be replaced with your own value. Example:
 
@@ -357,6 +312,149 @@ And the mome raths outgrabe.</p>
 <p><cite>Jabberwocky</cite> (first verse). Lewis Carroll, 1832-98</p>
 </figcaption>
 </figure>
+
+### Code
+The `code` element is used to represent fragments of computer code. Useful for technology-oriented sites, not so useful otherwise. Example:
+
+When you call the `activate()` method on the `robotSnowman` object, the eyes glow.
+
+Used in conjunction with the `pre` element:
+
+#### Markdown Codeblock
+
+    function getJello() { echo $aDeliciousSnack; }
+
+#### Octopress Codeblock
+
+Shown with line numbers:
+
+{% codeblock %}
+Awesome code snippet
+{% endcodeblock %}
+
+Noch ein Test:
+
+{% codeblock shell\.sh %}
+code snippet
+{% endcodeblock %}
+
+{% codeblock file\.sh %}
+code snippet
+{% endcodeblock %}
+
+{% codeblock Time to be Awesome! (awesome\.rb) %}
+code snippet
+{% endcodeblock %}
+
+{% codeblock Got pain? painreleif\.sh http://site.com/painreleief.sh Download it! %}
+$ rm -rf ~/PAIN
+{% endcodeblock %}
+
+{% codeblock lang:ruby %}
+namespace :images do
+
+  desc "Crush all PNGs and JPEGs"
+  task :crush do
+    IPad::Application.config.assets.paths.each do |directory|
+      ImageDiminish.optimize({
+        directory: directory,
+        quantize: true
+      })
+    end
+  end
+
+end
+{% endcodeblock %}
+
+{% codeblock lang:css %}
+/**
+ * CSS/Markup: Flexbox
+ */
+
+article {
+  margin-bottom: 20px;
+}
+
+article > div {
+  display: -webkit-flex;
+  display: flex;
+  background: red;
+}
+
+.trigger {
+  background: red;
+  display: block;
+}
+
+.opportunity {
+  background: green;
+  flex: 1;
+}
+
+.match {
+  background: blue;
+  flex: 1;
+}
+{% endcodeblock %}
+
+#### Github Codeblock Markdown
+
+##### Example (plain)
+
+```
+$ sudo make me a sandwich
+```
+
+##### Example (ruby)
+
+```ruby
+namespace :images do
+
+  desc "Crush all PNGs and JPEGs"
+  task :crush do
+    IPad::Application.config.assets.paths.each do |directory|
+      ImageDiminish.optimize({
+        directory: directory,
+        quantize: true
+      })
+    end
+  end
+
+end
+```
+
+##### Example (css)
+
+```css
+/**
+ * CSS/Markup: Flexbox
+ */
+
+article {
+  margin-bottom: 20px;
+}
+
+article > div {
+  display: -webkit-flex;
+  display: flex;
+  background: red;
+}
+
+.trigger {
+  background: red;
+  display: block;
+}
+
+.opportunity {
+  background: green;
+  flex: 1;
+}
+
+.match {
+  background: blue;
+  flex: 1;
+}
+```
 
 Forms
 -----
