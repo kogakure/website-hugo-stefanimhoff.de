@@ -7,7 +7,9 @@ $normal: 400;
 $bold:   700;
 
 // Base Font
-$base-font-family:     'Gentium Basic', sans-serif;
+$base-font-family:     'Gentium Basic', serif;
+$base-font-sans:       'Arial', 'Helvetica', sans-serif;
+$base-font-mono:       'Menlo', monospace;
 $base-font-weight:     $normal;
 $base-font-size:       18px;
 $base-line-height:     24px;

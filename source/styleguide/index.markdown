@@ -176,14 +176,14 @@ The computer said <samp>Too much cheese in tray two</samp> but I didn’t know w
 ### Keyboard entry
 The `kbd` element is used to denote user input (typically via a keyboard, although it may also be used to represent other input methods, such as voice commands). Example:
 
-To take a screenshot on your Mac, press <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>3</kbd>.
+This is just some random text, just to make sure the keyboard shortcut will be shown in the middle of a paragraph, so I can see the line-height is done correctly. To take a screenshot on your Mac, press <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>3</kbd>. And some more text should follow after my shortcuts, just to be sure it looks really good.
 
 ### Superscript and subscript text
 The `sup` element represents a superscript and the sub element represents a `sub`. These elements must be used only to mark up typographical conventions with specific meanings, not for typographical presentation. As a guide, only use these elements if their absence would change the meaning of the content. Example:
 
-The coordinate of the <var>i</var>th point is (<var>x<sub><var>i</var></sub></var>, <var>y<sub><var>i<var></sub></var>). For example, the 10th point has coordinate (<var>x<sub>10</sub></var>, <var>y<sub>10</sub></var>).
+The coordinate of the <var>i</var>th point is (<var>x<sub><var>i</var></sub></var>, <var>y<sub><var>i<var></sub></var>). For example, the 10th point has coordinate (<var>x<sub>10</sub></var>, <var>y<sub>10</sub></var>). This is just some more text to see who the subscript is fitted into the lines, because both, superscript and subscript should fit harmonically into a line.
 
-f(<var>x</var>, <var>n</var>) = log<sub>4</sub><var>x</var><sup><var>n</var></sup>
+Math is a nice thing, sometimes one wants to have a formular right in the middle of the text. And even some calculations like this one: f(<var>x</var>, <var>n</var>) = log<sub>4</sub><var>x</var><sup><var>n</var></sup> should work also and should not strech or break the line-height of the other lines.
 
 ### Italicised
 The `i` element is used for text in an alternate voice or mood, or otherwise offset from the normal prose. Examples include taxonomic designations, technical terms, idiomatic phrases from another language, the name of a ship or other spans of text whose typographic presentation is typically italicised. Example:

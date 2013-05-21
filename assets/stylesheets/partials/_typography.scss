@@ -11,16 +11,13 @@ h1 {
   @include adjust-font-size-to($font-scale-h1);
   @include trailer(1, $font-scale-h1, margin);
 }
-
 h2 {
   @include adjust-font-size-to($font-scale-h2);
 }
-
 h3 {
   @include adjust-font-size-to($font-scale-h3);
   font-weight: $normal;
 }
-
 h4, h5, h6 {
   @include adjust-font-size-to($font-scale-h4);
   font-weight: $bold;
@@ -30,7 +27,6 @@ h4, h5, h6 {
 p {
   @include trailer(1);
 }
-
 .article-body > p:first-child {
   @include adjust-font-size-to(22px);
 }
@@ -53,12 +49,10 @@ blockquote {
   @include trailer();
   font-style: italic;
 }
-
 blockquote + p {
   margin-left: $base-rhythm-unit;
   margin-right: $base-rhythm-unit;
 }
-
 .verse pre {
   font-family: inherit;
   display: table;
@@ -71,34 +65,26 @@ ol {
   @include trailer(1);
   list-style: decimal;
 }
-
 ol ol {
   margin: 0 $base-rhythm-unit;
   list-style: lower-latin;
 }
-
 ul {
   @include trailer(1);
   list-style: disc;
 }
-
 ul ul {
   margin: 0 $base-rhythm-unit;
   list-style: circle;
 }
-
 dl {
   @include trailer(1);
 }
-
 dt {
-  //font-weight: $normal;
 }
-
 dt + dd {
   @include trailer(1);
 }
-
 dd {
   margin-left: $base-rhythm-unit;
 }
@@ -113,7 +99,6 @@ a {
 em {
   font-style: italic;
 }
-
 strong {
   font-weight: $bold;
 }
@@ -145,10 +130,39 @@ s {
 // Sample output
 
 // Keyboard entry
+kbd {
+  @include adjust-font-size-to(12px);
+  @include border-radius(3px);
+  @include box-shadow(0 1px 0 rgba($black, 0.2), 0 0 0 2px $white inset);
+  background-color: $keyboard-background;
+  border: 1px solid $keyboard-border;
+  color: $dark-grey;
+  display: inline-block;
+  font-family: $base-font-sans;
+  font-weight: $bold;
+  line-height: 1.4;
+  margin: 0 0.1em;
+  padding: 0.3em 0.6em 0.1em;
+  text-shadow: 0 1px 0 $white;
+  white-space: nowrap;
+}
 
 // Superscript/subscript
+sup, sub {
+  position: relative;
+  vertical-align: 0;
+}
+sup {
+  bottom: 1ex;
+}
+sub {
+  top: 0.8ex;
+}
 
 // Italicised/Emboldened
+i { font-style: italic; }
+
+b { font-weight: $bold; }
 
 // Marked
 
