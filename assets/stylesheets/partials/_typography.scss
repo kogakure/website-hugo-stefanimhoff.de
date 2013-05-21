@@ -126,8 +126,17 @@ s {
 // Code
 
 // Variable
+var {
+  font-style: italic;
+}
 
 // Sample output
+samp {
+  @include adjust-font-size-to(15px);
+  color: $sample-color;
+  font-family: $base-font-mono;
+  margin: 0 0.4em;
+}
 
 // Keyboard entry
 kbd {
@@ -167,3 +176,9 @@ b { font-weight: $bold; }
 // Marked
 
 // Edits
+ins {
+  text-decoration: underline;
+}
+del {
+  text-decoration: line-through;
+}
