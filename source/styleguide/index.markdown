@@ -196,7 +196,7 @@ The `b` element is used for text stylistically offset from normal prose without 
 You enter a small room. Your <b>sword</b> glows brighter. A <b>rat</b> scurries past the corner wall.
 
 ### Marked or highlighted text
-The `mark` element is used to represent a run of text marked or highlighted for reference purposes. When used in a quotation it indicates a highlight not originally present but added to bring the reader’s attention to that part of the text. When used in the main prose of a document, it indicates a part of the document that has been highlighted due to its relevance to the user’s current activity. Example:
+The `mark` element is used to <mark>represent</mark> a run of text marked or highlighted for reference purposes. When used in a quotation it indicates a highlight not originally present but added to bring the reader’s <mark>attention</mark> to that part of the text. When used in the <mark>main prose</mark> of a document, it indicates a part of the document that has been highlighted due to its relevance to the user’s current activity. Example:
 
 I also have some <mark>kitten</mark>s who are visiting me these days. They’re really cute. I think they like my garden! Maybe I should adopt a <mark>kitten</mark>.
 

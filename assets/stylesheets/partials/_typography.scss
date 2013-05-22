@@ -59,6 +59,9 @@ blockquote + p {
   width: auto;
   margin: 0 auto;
 }
+// Citations
+
+// Inline quotes
 
 // ### Lists
 ol {
@@ -81,12 +84,13 @@ dl {
   @include trailer(1);
 }
 dt {
+  font-weight: $bold;
 }
 dt + dd {
   @include trailer(1);
 }
 dd {
-  margin-left: $base-rhythm-unit;
+  margin-left: 0;
 }
 
 // Links
@@ -113,15 +117,21 @@ s {
   text-decoration: line-through;
 }
 
-// Citations
-
-// Inline quotes
-
 // Definition
+dfn {
+  border-bottom: 1px dotted $definition-color;
+  cursor: help;
+}
 
 // Abbrevations
-
-// Time
+abbr, acronym {
+  text-transform: lowercase;
+  font-variant: small-caps;
+  letter-spacing: 0.1em;
+}
+abbr[title], acronym[title] {
+  border-bottom-width: 0;
+}
 
 // Code
 
@@ -174,6 +184,32 @@ i { font-style: italic; }
 b { font-weight: $bold; }
 
 // Marked
+mark {
+  @include background-size(25px 21px);
+  background-color: transparent;
+  background-image: inline-image("css/mark-center.png");
+  position: relative;
+  color: rgba($black, 0.75);
+  &:before, &:after {
+    @include background-size(5px 21px);
+    background-repeat: no-repeat;
+    content: '';
+    display: block;
+    height: 21px;
+    position: absolute;
+    width: 5px;
+  }
+  &:before {
+    background-image: inline-image("css/mark-left.png");
+    left: -5px;
+    top: 0;
+  }
+  &:after {
+    background-image: inline-image("css/mark-right.png");
+    bottom: 0;
+    right: -5px;
+  }
+}
 
 // Edits
 ins {

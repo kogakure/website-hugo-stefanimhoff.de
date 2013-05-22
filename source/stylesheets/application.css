@@ -1,277 +1,72 @@
-/* line 17, ../../vendor/bundle/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-}
+/*
+Syntax error: Invalid CSS after "...kground-image: ": expected expression (e.g. 1px, bold), was "@include inline..."
+        on line 189 of /Users/kogakure/Desktop/Relaunch/saitan/assets/stylesheets/partials/_typography.scss
+        from line 5 of /Users/kogakure/Desktop/Relaunch/saitan/assets/stylesheets/application.scss
 
-/* line 22, ../../vendor/bundle/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-html {
-  line-height: 1;
-}
-
-/* line 24, ../../vendor/bundle/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-ol, ul {
-  list-style: none;
-}
-
-/* line 26, ../../vendor/bundle/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* line 28, ../../vendor/bundle/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
-}
-
-/* line 30, ../../vendor/bundle/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-q, blockquote {
-  quotes: none;
-}
-/* line 103, ../../vendor/bundle/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
-}
-
-/* line 32, ../../vendor/bundle/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-a img {
-  border: none;
-}
-
-/* line 116, ../../vendor/bundle/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
-  display: block;
-}
-
-/* line 61, ../../vendor/bundle/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
-* html {
-  font-size: 112.5%;
-}
-
-/* line 64, ../../vendor/bundle/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
-html {
-  font-size: 18px;
-  line-height: 1.33333em;
-}
-
-/* line 1, ../../assets/stylesheets/partials/_typography.scss */
-body {
-  font-family: "Gentium Basic", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  color: #333333;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  hyphens: auto;
-}
-
-/* line 10, ../../assets/stylesheets/partials/_typography.scss */
-h1 {
-  font-size: 2.32706em;
-  line-height: 1.14594em;
-  margin-bottom: 0.57297em;
-}
-
-/* line 15, ../../assets/stylesheets/partials/_typography.scss */
-h2 {
-  font-size: 1.618em;
-  line-height: 1.64813em;
-}
-
-/* line 19, ../../assets/stylesheets/partials/_typography.scss */
-h3 {
-  font-size: 1.43822em;
-  line-height: 1.85414em;
-  font-weight: 400;
-}
-
-/* line 24, ../../assets/stylesheets/partials/_typography.scss */
-h4, h5, h6 {
-  font-size: 1em;
-  line-height: 1.33333em;
-  font-weight: 700;
-}
-
-/* line 30, ../../assets/stylesheets/partials/_typography.scss */
-p {
-  margin-bottom: 1.33333em;
-}
-
-/* line 34, ../../assets/stylesheets/partials/_typography.scss */
-.article-body > p:first-child {
-  font-size: 1.22222em;
-  line-height: 2.18182em;
-}
-
-/* line 39, ../../assets/stylesheets/partials/_typography.scss */
-hr {
-  border: 0;
-  height: 0;
-  margin: 0 1.33333em;
-  color: rgba(51, 51, 51, 0.3);
-  border-bottom-style: solid;
-  border-bottom-width: 0.11111em;
-  padding-bottom: 1.22222em;
-  margin-bottom: 2.66667em;
-}
-
-/* line 49, ../../assets/stylesheets/partials/_typography.scss */
-blockquote {
-  margin-left: 1.33333em;
-  margin-right: 1.33333em;
-  margin-top: 1.33333em;
-  margin-bottom: 1.33333em;
-  font-style: italic;
-}
-
-/* line 57, ../../assets/stylesheets/partials/_typography.scss */
-blockquote + p {
-  margin-left: 1.33333em;
-  margin-right: 1.33333em;
-}
-
-/* line 62, ../../assets/stylesheets/partials/_typography.scss */
-.verse pre {
-  font-family: inherit;
-  display: table;
-  width: auto;
-  margin: 0 auto;
-}
-
-/* line 70, ../../assets/stylesheets/partials/_typography.scss */
-ol {
-  margin-bottom: 1.33333em;
-  list-style: decimal;
-}
-
-/* line 75, ../../assets/stylesheets/partials/_typography.scss */
-ol ol {
-  margin: 0 1.33333em;
-  list-style: lower-latin;
-}
-
-/* line 80, ../../assets/stylesheets/partials/_typography.scss */
-ul {
-  margin-bottom: 1.33333em;
-  list-style: disc;
-}
-
-/* line 85, ../../assets/stylesheets/partials/_typography.scss */
-ul ul {
-  margin: 0 1.33333em;
-  list-style: circle;
-}
-
-/* line 90, ../../assets/stylesheets/partials/_typography.scss */
-dl {
-  margin-bottom: 1.33333em;
-}
-
-/* line 98, ../../assets/stylesheets/partials/_typography.scss */
-dt + dd {
-  margin-bottom: 1.33333em;
-}
-
-/* line 102, ../../assets/stylesheets/partials/_typography.scss */
-dd {
-  margin-left: 1.33333em;
-}
-
-/* line 107, ../../assets/stylesheets/partials/_typography.scss */
-a {
-  color: #0000cc;
-}
-/* line 18, ../../vendor/bundle/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
-a:visited {
-  color: #cccccc;
-}
-/* line 21, ../../vendor/bundle/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
-a:focus {
-  color: #cccc00;
-}
-/* line 24, ../../vendor/bundle/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
-a:hover {
-  color: #00cccc;
-}
-/* line 27, ../../vendor/bundle/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
-a:active {
-  color: #cc00cc;
-}
-
-/* line 113, ../../assets/stylesheets/partials/_typography.scss */
-em {
-  font-style: italic;
-}
-
-/* line 117, ../../assets/stylesheets/partials/_typography.scss */
-strong {
-  font-weight: 700;
-}
-
-/* line 122, ../../assets/stylesheets/partials/_typography.scss */
-small {
-  font-size: 0.77778em;
-  line-height: 1.71429em;
-}
-
-/* line 127, ../../assets/stylesheets/partials/_typography.scss */
-s {
-  text-decoration: line-through;
-}
-
-/* line 24, ../../assets/stylesheets/partials/_grids.scss */
-.container {
-  *zoom: 1;
-  max-width: 59em;
-  _width: 59em;
-  padding-left: 1em;
-  padding-right: 1em;
-  margin-left: auto;
-  margin-right: auto;
-  /* @include susy-grid-background; // Grid anzeigen */
-}
-/* line 38, ../../vendor/bundle/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-.container:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* line 29, ../../assets/stylesheets/partials/_grids.scss */
-.main {
-  margin-left: 16.94915%;
-  width: 66.10169%;
-  float: left;
-  margin-right: 1.69492%;
-  display: inline;
-}
-
-/* line 34, ../../assets/stylesheets/partials/_grids.scss */
-header {
-  clear: both;
-}
-
-/* line 38, ../../assets/stylesheets/partials/_grids.scss */
-footer {
-  clear: both;
-}
+Backtrace:
+/Users/kogakure/Desktop/Relaunch/saitan/assets/stylesheets/partials/_typography.scss:189
+/Users/kogakure/Desktop/Relaunch/saitan/assets/stylesheets/application.scss:5
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/scss/parser.rb:1148:in `expected'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/script/lexer.rb:199:in `expected!'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/script/parser.rb:472:in `assert_expr'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/script/parser.rb:49:in `parse'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/scss/parser.rb:1022:in `sass_script'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/scss/parser.rb:882:in `value!'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/scss/parser.rb:859:in `declaration'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/scss/parser.rb:582:in `block in declaration_or_ruleset'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/scss/parser.rb:1122:in `call'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/scss/parser.rb:1122:in `rethrow'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/scss/parser.rb:592:in `declaration_or_ruleset'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/scss/parser.rb:554:in `block_child'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/scss/parser.rb:546:in `block_contents'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/scss/parser.rb:535:in `block'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/scss/parser.rb:529:in `ruleset'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/scss/parser.rb:553:in `block_child'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/scss/parser.rb:546:in `block_contents'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/scss/parser.rb:82:in `stylesheet'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/scss/parser.rb:27:in `parse'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/engine.rb:342:in `_to_tree'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/engine.rb:274:in `to_tree'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:225:in `visit_import'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:53:in `map'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:128:in `visit_root'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:7:in `visit'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/tree/root_node.rb:20:in `render'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/engine.rb:315:in `_render'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/engine.rb:262:in `render'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/compass-0.12.2/lib/compass/compiler.rb:140:in `block (2 levels) in compile'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/compass-0.12.2/lib/compass/compiler.rb:139:in `block in compile'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/compass-0.12.2/lib/compass/logger.rb:45:in `red'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/compass-0.12.2/lib/compass/compiler.rb:138:in `compile'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/compass-0.12.2/lib/compass/compiler.rb:118:in `compile_if_required'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/compass-0.12.2/lib/compass/compiler.rb:103:in `block (2 levels) in run'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `each'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `block in run'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/compass-0.12.2/lib/compass/compiler.rb:100:in `run'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/compass-0.12.2/lib/compass/commands/update_project.rb:45:in `perform'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/compass-0.12.2/lib/compass/commands/base.rb:18:in `execute'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/compass-0.12.2/lib/compass/commands/project_base.rb:19:in `execute'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/compass-0.12.2/bin/compass:30:in `block in <top (required)>'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/compass-0.12.2/bin/compass:44:in `call'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/compass-0.12.2/bin/compass:44:in `<top (required)>'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/bin/compass:23:in `load'
+/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/bin/compass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Invalid CSS after \"...kground-image: \": expected expression (e.g. 1px, bold), was \"@include inline...\"\A         on line 189 of /Users/kogakure/Desktop/Relaunch/saitan/assets/stylesheets/partials/_typography.scss\A         from line 5 of /Users/kogakure/Desktop/Relaunch/saitan/assets/stylesheets/application.scss"; }
