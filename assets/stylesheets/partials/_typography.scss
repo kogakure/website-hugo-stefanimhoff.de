@@ -125,9 +125,10 @@ dfn {
 
 // Abbrevations
 abbr, acronym {
-  text-transform: lowercase;
+  cursor: help;
   font-variant: small-caps;
   letter-spacing: 0.1em;
+  text-transform: lowercase;
 }
 abbr[title], acronym[title] {
   border-bottom-width: 0;

@@ -1,72 +1,413 @@
-/*
-Syntax error: Invalid CSS after "...kground-image: ": expected expression (e.g. 1px, bold), was "@include inline..."
-        on line 189 of /Users/kogakure/Desktop/Relaunch/saitan/assets/stylesheets/partials/_typography.scss
-        from line 5 of /Users/kogakure/Desktop/Relaunch/saitan/assets/stylesheets/application.scss
+/* line 17, ../../vendor/bundle/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
 
-Backtrace:
-/Users/kogakure/Desktop/Relaunch/saitan/assets/stylesheets/partials/_typography.scss:189
-/Users/kogakure/Desktop/Relaunch/saitan/assets/stylesheets/application.scss:5
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/scss/parser.rb:1148:in `expected'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/script/lexer.rb:199:in `expected!'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/script/parser.rb:472:in `assert_expr'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/script/parser.rb:49:in `parse'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/scss/parser.rb:1022:in `sass_script'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/scss/parser.rb:882:in `value!'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/scss/parser.rb:859:in `declaration'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/scss/parser.rb:582:in `block in declaration_or_ruleset'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/scss/parser.rb:1122:in `call'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/scss/parser.rb:1122:in `rethrow'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/scss/parser.rb:592:in `declaration_or_ruleset'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/scss/parser.rb:554:in `block_child'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/scss/parser.rb:546:in `block_contents'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/scss/parser.rb:535:in `block'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/scss/parser.rb:529:in `ruleset'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/scss/parser.rb:553:in `block_child'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/scss/parser.rb:546:in `block_contents'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/scss/parser.rb:82:in `stylesheet'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/scss/parser.rb:27:in `parse'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/engine.rb:342:in `_to_tree'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/engine.rb:274:in `to_tree'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:225:in `visit_import'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:100:in `visit'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:53:in `map'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:53:in `visit_children'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:37:in `block in visit'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:128:in `visit_root'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/tree/visitors/base.rb:37:in `visit'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:100:in `visit'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/tree/visitors/perform.rb:7:in `visit'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/tree/root_node.rb:20:in `render'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/engine.rb:315:in `_render'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/sass-3.2.7/lib/sass/engine.rb:262:in `render'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/compass-0.12.2/lib/compass/compiler.rb:140:in `block (2 levels) in compile'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/compass-0.12.2/lib/compass/compiler.rb:139:in `block in compile'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/compass-0.12.2/lib/compass/logger.rb:45:in `red'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/compass-0.12.2/lib/compass/compiler.rb:138:in `compile'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/compass-0.12.2/lib/compass/compiler.rb:118:in `compile_if_required'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/compass-0.12.2/lib/compass/compiler.rb:103:in `block (2 levels) in run'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `each'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `block in run'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/compass-0.12.2/lib/compass/compiler.rb:100:in `run'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/compass-0.12.2/lib/compass/commands/update_project.rb:45:in `perform'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/compass-0.12.2/lib/compass/commands/base.rb:18:in `execute'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/compass-0.12.2/lib/compass/commands/project_base.rb:19:in `execute'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:15:in `run!'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/compass-0.12.2/bin/compass:30:in `block in <top (required)>'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/compass-0.12.2/bin/compass:44:in `call'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/gems/compass-0.12.2/bin/compass:44:in `<top (required)>'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/bin/compass:23:in `load'
-/Users/kogakure/Desktop/Relaunch/saitan/vendor/bundle/bin/compass:23:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Invalid CSS after \"...kground-image: \": expected expression (e.g. 1px, bold), was \"@include inline...\"\A         on line 189 of /Users/kogakure/Desktop/Relaunch/saitan/assets/stylesheets/partials/_typography.scss\A         from line 5 of /Users/kogakure/Desktop/Relaunch/saitan/assets/stylesheets/application.scss"; }
+/* line 22, ../../vendor/bundle/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../vendor/bundle/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../vendor/bundle/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../vendor/bundle/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../vendor/bundle/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../vendor/bundle/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../vendor/bundle/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../vendor/bundle/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 61, ../../vendor/bundle/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+* html {
+  font-size: 112.5%;
+}
+
+/* line 64, ../../vendor/bundle/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/_vertical_rhythm.scss */
+html {
+  font-size: 18px;
+  line-height: 1.33333em;
+}
+
+/* line 1, ../../assets/stylesheets/partials/_typography.scss */
+body {
+  font-family: "Gentium Basic", serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #333333;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+
+/* line 10, ../../assets/stylesheets/partials/_typography.scss */
+h1 {
+  font-size: 2.32706em;
+  line-height: 1.14594em;
+  margin-bottom: 0.57297em;
+}
+
+/* line 14, ../../assets/stylesheets/partials/_typography.scss */
+h2 {
+  font-size: 1.618em;
+  line-height: 1.64813em;
+}
+
+/* line 17, ../../assets/stylesheets/partials/_typography.scss */
+h3 {
+  font-size: 1.43822em;
+  line-height: 1.85414em;
+  font-weight: 400;
+}
+
+/* line 21, ../../assets/stylesheets/partials/_typography.scss */
+h4, h5, h6 {
+  font-size: 1em;
+  line-height: 1.33333em;
+  font-weight: 700;
+}
+
+/* line 27, ../../assets/stylesheets/partials/_typography.scss */
+p {
+  margin-bottom: 1.33333em;
+}
+
+/* line 30, ../../assets/stylesheets/partials/_typography.scss */
+.article-body > p:first-child {
+  font-size: 1.22222em;
+  line-height: 2.18182em;
+}
+
+/* line 35, ../../assets/stylesheets/partials/_typography.scss */
+hr {
+  border: 0;
+  height: 0;
+  margin: 0 1.33333em;
+  color: rgba(51, 51, 51, 0.3);
+  border-bottom-style: solid;
+  border-bottom-width: 0.11111em;
+  padding-bottom: 1.22222em;
+  margin-bottom: 2.66667em;
+}
+
+/* line 45, ../../assets/stylesheets/partials/_typography.scss */
+blockquote {
+  margin-left: 1.33333em;
+  margin-right: 1.33333em;
+  margin-top: 1.33333em;
+  margin-bottom: 1.33333em;
+  font-style: italic;
+}
+
+/* line 52, ../../assets/stylesheets/partials/_typography.scss */
+blockquote + p {
+  margin-left: 1.33333em;
+  margin-right: 1.33333em;
+}
+
+/* line 56, ../../assets/stylesheets/partials/_typography.scss */
+.verse pre {
+  font-family: inherit;
+  display: table;
+  width: auto;
+  margin: 0 auto;
+}
+
+/* line 67, ../../assets/stylesheets/partials/_typography.scss */
+ol {
+  margin-bottom: 1.33333em;
+  list-style: decimal;
+}
+
+/* line 71, ../../assets/stylesheets/partials/_typography.scss */
+ol ol {
+  margin: 0 1.33333em;
+  list-style: lower-latin;
+}
+
+/* line 75, ../../assets/stylesheets/partials/_typography.scss */
+ul {
+  margin-bottom: 1.33333em;
+  list-style: disc;
+}
+
+/* line 79, ../../assets/stylesheets/partials/_typography.scss */
+ul ul {
+  margin: 0 1.33333em;
+  list-style: circle;
+}
+
+/* line 83, ../../assets/stylesheets/partials/_typography.scss */
+dl {
+  margin-bottom: 1.33333em;
+}
+
+/* line 86, ../../assets/stylesheets/partials/_typography.scss */
+dt {
+  font-weight: 700;
+}
+
+/* line 89, ../../assets/stylesheets/partials/_typography.scss */
+dt + dd {
+  margin-bottom: 1.33333em;
+}
+
+/* line 92, ../../assets/stylesheets/partials/_typography.scss */
+dd {
+  margin-left: 0;
+}
+
+/* line 97, ../../assets/stylesheets/partials/_typography.scss */
+a {
+  color: #0000cc;
+}
+/* line 18, ../../vendor/bundle/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+a:visited {
+  color: #cccccc;
+}
+/* line 21, ../../vendor/bundle/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+a:focus {
+  color: #cccc00;
+}
+/* line 24, ../../vendor/bundle/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+a:hover {
+  color: #00cccc;
+}
+/* line 27, ../../vendor/bundle/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
+a:active {
+  color: #cc00cc;
+}
+
+/* line 103, ../../assets/stylesheets/partials/_typography.scss */
+em {
+  font-style: italic;
+}
+
+/* line 106, ../../assets/stylesheets/partials/_typography.scss */
+strong {
+  font-weight: 700;
+}
+
+/* line 111, ../../assets/stylesheets/partials/_typography.scss */
+small {
+  font-size: 0.77778em;
+  line-height: 1.71429em;
+}
+
+/* line 116, ../../assets/stylesheets/partials/_typography.scss */
+s {
+  text-decoration: line-through;
+}
+
+/* line 121, ../../assets/stylesheets/partials/_typography.scss */
+dfn {
+  border-bottom: 1px dotted #999999;
+  cursor: help;
+}
+
+/* line 127, ../../assets/stylesheets/partials/_typography.scss */
+abbr, acronym {
+  cursor: help;
+  font-variant: small-caps;
+  letter-spacing: 0.1em;
+  text-transform: lowercase;
+}
+
+/* line 133, ../../assets/stylesheets/partials/_typography.scss */
+abbr[title], acronym[title] {
+  border-bottom-width: 0;
+}
+
+/* line 140, ../../assets/stylesheets/partials/_typography.scss */
+var {
+  font-style: italic;
+}
+
+/* line 145, ../../assets/stylesheets/partials/_typography.scss */
+samp {
+  font-size: 0.83333em;
+  line-height: 1.6em;
+  color: #cccccc;
+  font-family: "Menlo", monospace;
+  margin: 0 0.4em;
+}
+
+/* line 153, ../../assets/stylesheets/partials/_typography.scss */
+kbd {
+  font-size: 0.66667em;
+  line-height: 2em;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px white inset;
+  -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px white inset;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0 0 2px white inset;
+  background-color: #f7f7f7;
+  border: 1px solid #cccccc;
+  color: #333333;
+  display: inline-block;
+  font-family: "Arial", "Helvetica", sans-serif;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0 0.1em;
+  padding: 0.3em 0.6em 0.1em;
+  text-shadow: 0 1px 0 white;
+  white-space: nowrap;
+}
+
+/* line 171, ../../assets/stylesheets/partials/_typography.scss */
+sup, sub {
+  position: relative;
+  vertical-align: 0;
+}
+
+/* line 175, ../../assets/stylesheets/partials/_typography.scss */
+sup {
+  bottom: 1ex;
+}
+
+/* line 178, ../../assets/stylesheets/partials/_typography.scss */
+sub {
+  top: 0.8ex;
+}
+
+/* line 183, ../../assets/stylesheets/partials/_typography.scss */
+i {
+  font-style: italic;
+}
+
+/* line 185, ../../assets/stylesheets/partials/_typography.scss */
+b {
+  font-weight: 700;
+}
+
+/* line 188, ../../assets/stylesheets/partials/_typography.scss */
+mark {
+  -webkit-background-size: 25px 21px;
+  -moz-background-size: 25px 21px;
+  -o-background-size: 25px 21px;
+  background-size: 25px 21px;
+  background-color: transparent;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAiCAYAAABFlhkzAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MjY0MjdFNUFCQjRDMTFFMkE1Nzc5ODhFRjQ4MzQ3OEMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MjY0MjdFNUJCQjRDMTFFMkE1Nzc5ODhFRjQ4MzQ3OEMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpDQ0YzQjA3NUJCNEIxMUUyQTU3Nzk4OEVGNDgzNDc4QyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpDQ0YzQjA3NkJCNEIxMUUyQTU3Nzk4OEVGNDgzNDc4QyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pn0T5SsAAAO+SURBVHjabFc7ixUxFM5kMjN79y4+cBEfuLiCqIUg+AtUsNPKSqzs7EX9Ef4DK8HGSqwEwUqw8oEiNoKKbiOi6657787cSTKeXL6zfgQHPjLJnFe+nJxk3Npvo8+C4LIgjTwVnBSMBG/Mv+eSwAke0dh+wUXBhuCo4IPgmX50JHhbcA6CVwSrgu+Ca4LTgluCPYJOMBF8FJyA02PQWxH8FCwLHiajhczgRWoFi4g4vU8FY8GW4LXgAL4vAOv4lt6D4KCgh36Ak9TvbWY4RecFEUJp7BRmeF/wWPAL8mPIvxJ8gcwEDpYwixWHSCpBg4/JaC2YwdkA5eMIJjlv0Y5AX42+h40KOtFhmslICVQQWkCENSjYjXcLeXW8G0EZfC9gJ7VDcnCIBjsYN+i3aJPcPoxbyE9otj2it6DHwtZcMRnZJoOqNIazDcg5iizAQAndCOcFZlbA6Y7SEkXbwIFHuxfKSotSNMJ4hX4g47qv5hSNYEwjd2gHWrgIww2UZxiL2VooVZ3S7tBRY3/Iu0boiQZdRItxQ7odJYvSONMsMpReAUIRrckMq6GKZlFS3xBNczoCPhToK48FlZIAWnrKopLWJZCO0jm3b4kvT8ptFl0k5SELxtNa+WyPeEspZdFqNtUQ6qFQ046t4MDS7DSIiqjecsStpbTTfqR3S8qOjFnKQF38CmONo/oxUBQd1SatKx19c8S7ZlMk2mZciwoyogtakzNDVASKWhNgDNnc4aBZNKLoS+K/o0WLtHu1ZrWUTZaKZqBU3oliyDjvaTaOMqvN8t2Q0UhlRGdtXbYDVbihdz25avQnZNxilxdZslheA0tr0KI/pYWvaA+EbCdrKY+U/44pd9khU5JwSZEWtMglOTVElyWHXql1NG1PVZVLiCEKPBVAS5nTUzZGzkA9cNRJTdEH4jLQzGy2P3hmPdZLM21eTTdpu3dUpiOhJ0o8GarocqDpPaUgWoebQp8d6Hm1Lagk9DSz1N9Fu9xQ0iTHiw4pOaJImV9LtBlaA3Ve0eYc6OzW8XlnHU4Kyv1Zdkz+r+5opdXAGgrOoD/faDPUk4ZuEZ6uig2MbFKul0SZp3pk6LwY9NBfpsPcQlgNK4XbcDjQpaBFcJbqWSA6k06VhF/iUrVKd6RNXHgDrYUamdLBlMrIJ8EZStPk9LlemAv8H6Rr+E1ceO8IDguu4k70Gf8ARxDZN8Earurv8a9wXnAd1DwQPNkpAfQDcoF/HPCcFbwV3BCka/5XwQ84Xie5RONdwTvBPTbwV4ABAKt/ar2m/+g8AAAAAElFTkSuQmCC');
+  position: relative;
+  color: rgba(0, 0, 0, 0.75);
+}
+/* line 194, ../../assets/stylesheets/partials/_typography.scss */
+mark:before, mark:after {
+  -webkit-background-size: 5px 21px;
+  -moz-background-size: 5px 21px;
+  -o-background-size: 5px 21px;
+  background-size: 5px 21px;
+  background-repeat: no-repeat;
+  content: '';
+  display: block;
+  height: 21px;
+  position: absolute;
+  width: 5px;
+}
+/* line 203, ../../assets/stylesheets/partials/_typography.scss */
+mark:before {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAiCAYAAABfqvm9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6Q0NGM0IwNkZCQjRCMTFFMkE1Nzc5ODhFRjQ4MzQ3OEMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Q0NGM0IwNzBCQjRCMTFFMkE1Nzc5ODhFRjQ4MzQ3OEMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpDQ0YzQjA2REJCNEIxMUUyQTU3Nzk4OEVGNDgzNDc4QyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpDQ0YzQjA2RUJCNEIxMUUyQTU3Nzk4OEVGNDgzNDc4QyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PtG8mAYAAAMVSURBVHjanJY7iBNRFIYzk5lMNo9Voquy4mNFRQuVBZWtxEpEFASLrSxsbLRVbBexttLS3gV7LRYbbXxg5aMSxFSCuj52TTKTjOfId+QQJpE48DE72bn/Pe87QXu1NOnVEFKhy/NO4YJwWx+iCcUC4SaCd4RPwnEhFjYJX6IxC/Oh31rCXmFGqAnXha/CUQQrwtNghMuhMHDPW4UlYRrqCDQRT4RMWB9loYrNEqfPwjVhj7AZd3MEE+7mUWWUoMblDDF6zILvuBZjlQqsCz1yoc9BkcunyVqCpWpRmaAHLE5gijVqZXWUhZeF7YhkrhLqiGfcG4jmxFzfqxUJ3hWusmuPnfXqsDjB7RzhPoJrGvMiwQ+4OiBuKdnMWdxFMHIhGLBRUCQ4Q/XrCxudO1MI5rj9E8ESm4TDMdT6OimcQEDZwiJLTsy7ZcQjV68aktQEF4VTwm5hBwtDd8+xInGFnyFqV+YFjwiHcbFDIgIsyV2sQhe7GJEQYd2so/+cE14J34RtiLV4jgiFicwSBut3E+7xd9WKVIv2mbCfLrF4qZurLKhRe3VXKolLjP7W104xN+ylBUTXiKdlN0asZUWM9QG/a3Iiy1LP7fKEkXRQmGdxlVhWhxJRwYt1jEmjEbNwgXg23JSOcTFy7Tdwm6l4WCS4wTV9hy7psWjgMt9HOHfDOC8SvMWuTaxtukERunKJXdz71n7hkJiWxCEm9A83ZWwOWseEboxFruCzYcFz9Ogb4Z4eOoiErrhLLoFq6S8qIi8aDlqPy8JzMqcbvCUENmhTSiawzCJes8L210thhVq7IrSFF3RIwIY2gcoQugmUDQuucFdXXwv7mInzWBmTpAZlEjv3/8zQcQe9tuJ74QZ1+Xcqu2KvYpmNsO44wTZkZDzD7T6k1Gns+jn/16fIopveqeuazGGd07XxNe5SoXfCfcrpIgmzYzR0E71iw2Hc9YC5+NAdXJdITEyLWvn0Rh2j/tIkPHKfbsvc55iTB2xsscF08B/fh3aEnhWOCR8prV16Yk4qWCWzJlzGQvt6OP9bgAEAxATa+HKmK4EAAAAASUVORK5CYII=');
+  left: -5px;
+  top: 0;
+}
+/* line 208, ../../assets/stylesheets/partials/_typography.scss */
+mark:after {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAiCAYAAABStIn6AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6Q0NGM0IwNzNCQjRCMTFFMkE1Nzc5ODhFRjQ4MzQ3OEMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Q0NGM0IwNzRCQjRCMTFFMkE1Nzc5ODhFRjQ4MzQ3OEMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpDQ0YzQjA3MUJCNEIxMUUyQTU3Nzk4OEVGNDgzNDc4QyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpDQ0YzQjA3MkJCNEIxMUUyQTU3Nzk4OEVGNDgzNDc4QyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Ps13MesAAAK5SURBVHjapJVLb01RFMfPfRW32iaGGJH4AKZGEkMJCTFA4isw8RE6MTMyREgwISKEiEEngnglaKoal7a3LVql7uvce3v8V/Pbybq39yVO8st57L3+e62119onNbcanYii6Fb0n1dKQi91/yzyYrfYKqbEPVEQDwcRysKY2CJ+iCVh4r8GFQlCZrQqmvBTLDD2z6E1xDpCdq2JqqiLOXFHTPQTKiKS2DvGJvQbsUVxepDQ5jGuk+gqImWEZwcN7ROhDYm0yOBhoEh4Jni+l9AsK6edUMKzLfCHcRP9II6IU+K6F7LJNbDQYkKqiBIh1vhuZfFOHBeHOuVoOys2EE4xlrh3E34gvoszLLBJaAWjdd6DQAJN5jwSh6n28U5CCzyH5MYu+Vmev4mDtNEbZ9OS7IJLZonvZao9JkdfxDNxs19Bhh1qkvSIZ+u3HDs3jTcXuwl9xSgkvOZyk3JVb2M291g3oQJeZFyCM4iEHCUu9CfibLtQmqQOUwZ2H6VV8i7hodotzAPiHPZHvUdLTAp5yrbVUCjWpsvdNG2zl3DHs+xMmp0KV53VQ9VHbpGYg9Ca+7X4KGbMoymMSkwKlRy7lqnyLeMK2I7nS2GXQ6NWcDlxrRLaZBgPdoptYgdlMeFKZcPVPF7knHHCpLKr+Kw7arIk/a1P9nuM0oiFQ67i6ikmLKv2ZQQuu07YEJogBwn3kOCc82aNn8ILcdftYEvTlghhmdjtGiHkBuIrnN23e/Xac7dDRf5tCYuk2d5JTse5Xod/yIEvuqr7GcR82+eFdo0lm4RSGNjqexCJ8SqmZUY4AYrMnyJ3LaHN87Hh6sh2aIYkD3HE5mnWxXZvgtAkK5cwMKGr/C0uiJPivnjaKSQvdEX3x3hzzY2NdjrkuwmFM9sSe6NtbGCR4NF+3V/1+yX3ErHrrwADALWxMUQUhRVnAAAAAElFTkSuQmCC');
+  bottom: 0;
+  right: -5px;
+}
+
+/* line 216, ../../assets/stylesheets/partials/_typography.scss */
+ins {
+  text-decoration: underline;
+}
+
+/* line 219, ../../assets/stylesheets/partials/_typography.scss */
+del {
+  text-decoration: line-through;
+}
+
+/* line 24, ../../assets/stylesheets/partials/_grids.scss */
+.container {
+  *zoom: 1;
+  max-width: 59em;
+  _width: 59em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  /* @include susy-grid-background; // Grid anzeigen */
+}
+/* line 38, ../../vendor/bundle/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 29, ../../assets/stylesheets/partials/_grids.scss */
+.main {
+  margin-left: 16.94915%;
+  width: 66.10169%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+}
+
+/* line 34, ../../assets/stylesheets/partials/_grids.scss */
+header {
+  clear: both;
+}
+
+/* line 38, ../../assets/stylesheets/partials/_grids.scss */
+footer {
+  clear: both;
+}
