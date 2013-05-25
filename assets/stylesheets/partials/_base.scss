@@ -43,4 +43,14 @@ html {
   @include box-sizing(border-box);
 }
 
+.sans {
+  font-family: $base-font-sans;
+}
+.mono {
+  font-family: $base-font-mono;
+}
+.japanese {
+  font-family: $base-font-japanese;
+}
+
 @import "../modules/all";

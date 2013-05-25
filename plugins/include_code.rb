@@ -40,7 +40,7 @@ module Jekyll
         lineos:    opts[:lineos],
         marks:     opts[:marks],
         url:       opts[:url],
-        link_text: opts[:link_text] || 'view raw',
+        link_text: opts[:link_text] || 'Quellcode',
         start:     opts[:start]     || 1,
         end:       opts[:end]
       }

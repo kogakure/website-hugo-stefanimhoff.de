@@ -20,7 +20,7 @@ module BacktickCodeBlock
           lineos:    opts[:lineos],
           marks:     opts[:marks],
           url:       opts[:url],
-          link_text: opts[:link_text] || 'link',
+          link_text: opts[:link_text] || 'Download',
           start:     opts[:start]     || 1,
           escape:    opts[:escape]    || escape
         }

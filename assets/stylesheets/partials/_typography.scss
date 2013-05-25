@@ -189,54 +189,9 @@ abbr[title], acronym[title] {
 }
 
 // Pre
-// @TODO
-figure.code,
-.gist-file,
 pre {
-  @include box-shadow(rgba(#000, 0.06) 0 0 10px);
-  @include adjust-font-size-to($font-scale-small);
-}
-pre {
-  white-space: pre;
-  font-family: $base-font-mono;
-}
-pre {
-  background: #002B36;
-  @include border-radius(0.4em);
-  border: 1px solid #05232B;
-  padding: 0.8em 1em;
-  color: #93A1A1;
-  overflow: auto;
   @include trailer(1);
 }
-.highlight pre,
-.gist-highlight pre {
-  border: 0;
-}
-figure.code pre {
-  margin-bottom: 0;
-}
-.highlight .line-numbers,
-html .gist .gist-file .gist-syntax, .gist-hightlight .line-numbers {
-  text-align: right;
-  background: #073642;
-  border-right: 1px solid #00232c !important;
-  text-shadow: #021014 0 -1px;
-  padding: 0.8em !important;
-  @include border-radius(0);
-}
-figure.code .highlight pre,
-.gist-file .highlight pre,
-pre .highlight pre {
-  @include box-shadow(0);
-}
-.highlight .line-numbers span,
-html .gist .gist-file .gist-syntax .gist-highlight .line-numbers span {
-  color: #586E75 !important;
-}
-/* @TODO: END  */
-
-// Code
 
 // Variable
 var {

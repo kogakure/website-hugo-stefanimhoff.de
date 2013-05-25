@@ -31,7 +31,7 @@ module Jekyll
         lineos:    opts[:lineos],
         marks:     opts[:marks],
         url:       opts[:url],
-        link_text: opts[:link_text] || 'Gist page',
+        link_text: opts[:link_text] || 'Gist',
         start:     opts[:start],
         end:       opts[:end]
       }

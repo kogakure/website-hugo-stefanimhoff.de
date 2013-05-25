@@ -384,20 +384,21 @@ Awesome code snippet
 
 Noch ein Test:
 
-{% codeblock shell\.sh %}
-code snippet
+{% codeblock lang:rb %}
+# Code Snippet mit lang:rb ohne Titel
 {% endcodeblock %}
 
-{% codeblock file\.sh %}
-code snippet
+{% codeblock lang:sh file.sh %}
+Code Snippet mit lang:sh und mit Titel
 {% endcodeblock %}
 
-{% codeblock Time to be Awesome! (awesome\.rb) %}
-code snippet
+{% codeblock Time to be Awesome! (awesome.rb) %}
+# Code snippet über Dateiendung erkannt
 {% endcodeblock %}
 
-{% codeblock Got pain? painreleif\.sh http://site.com/painreleief.sh Download it! %}
+{% codeblock Got pain? painreleif.sh http://site.com/painreleief.sh %}
 $ rm -rf ~/PAIN
+# Über Codeendung sh erkannt mit Link ohne Titel
 {% endcodeblock %}
 
 {% codeblock lang:ruby %}
@@ -506,29 +507,13 @@ article > div {
 }
 ```
 
-##### Jekyll highlight
+##### Gist-File
 
-{% highlight ruby %}
-  def show
-    @widget = Widget(params[:id])
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @widget }
-    end
-  end
-{% endhighlight %}
+{% gist 1027674 gist_tag.rb %}
 
-With Linenumbers:
+##### Include Code
 
-{% highlight ruby linenos %}
-  def show
-    @widget = Widget(params[:id])
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @widget }
-    end
-  end
-{% endhighlight %}
+{% include_code test.js %}
 
 Forms
 -----
