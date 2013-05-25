@@ -88,12 +88,12 @@ Every interaction is both precious and an opportunity to delight.
 
 ### Pullquote
 
-#### Pullquote rechts
+#### Pullquote (right)
 {% pullquote %}
 When writing longform posts, I find it helpful to include pull quotes to help readers easily identify the topics covered in each section. Some prefer to break things up with lots of headings, and while this seems to be a trend it doesn’t work so well for long form prose. It is important to note that {" pull quotes are merely visual in presentation and should not appear twice in the text. "} That is why it a CSS only technique for styling pull quotes is preferable. Octopress includes a handy pull quote plugin to make this easy for you.
 {% endpullquote %}
 
-#### Pullquote links
+#### Pullquote (links)
 {% pullquote left %}
 When writing longform posts, I find it helpful to include pull quotes to help readers easily identify the topics covered in each section. Some prefer to break things up with lots of headings, and while this seems to be a trend it doesn’t work so well for long form prose. It is important to note that {" pull quotes are merely visual in presentation and should not appear twice in the text. "} That is why it a CSS only technique for styling pull quotes is preferable. Octopress includes a handy pull quote plugin to make this easy for you.
 {% endpullquote %}
@@ -192,11 +192,6 @@ The `s` element is used to represent content that is no longer accurate or relev
 The `cite` element is used to represent the title of a work (e.g. a book, essay, poem, song, film, TV show, sculpture, painting, musical, exhibition, etc). This can be a work that is being quoted or referenced in detail (i.e. a citation), or it can just be a work that is mentioned in passing. Example:
 
 <cite>Universal Declaration of Human Rights</cite>, United Nations, December 1948. Adopted by General Assembly resolution 217 A (III).
-
-### Inline quotes
-The `q` element is used for quoting text inline. Example showing nested quotations:
-
-John said, <q>I saw Lucy at lunch, she told me <q>Mary wants you to get some ice cream on your way home.</q> I think I will get some at Ben and Jerry’s, on Gloucester Road.</q>
 
 ### Definition
 The `dfn` element is used to highlight the first use of a term. The `title` attribute can be used to describe the term. Example:
