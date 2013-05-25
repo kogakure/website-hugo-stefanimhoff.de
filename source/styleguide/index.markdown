@@ -58,10 +58,60 @@ The `blockquote` element represents a section that is being quoted from another 
 
 > Many forms of Government have been tried, and will be tried in this world of sin and woe. No one pretends that democracy is perfect or all-wise. Indeed, it has been said that democracy is the worst form of government except all those other forms that have been tried from time to time.
 
-– Winston Churchill, in <cite>[a speech to the House of Commons](http://hansard.millbanksystems.com/commons/1947/nov/11/parliament-bill#column_206)</cite>. 11th November 1947
-
+<strong>Winston Churchill</strong>, in <cite>[a speech to the House of Commons](http://hansard.millbanksystems.com/commons/1947/nov/11/parliament-bill#column_206)</cite>. 11th&nbsp;November&nbsp;1947
 
 Additionally, you might wish to `cite` the source, as in the above example. The correct method involves including the cite attribute on the `blockquote` element, but since no browser makes any use of that information, it’s useful to link to the source also.
+
+#### Simple Blockquote
+
+{% blockquote %}
+Last night I lay in bed looking up at the stars in the sky and I thought to myself, where the heck is the ceiling.
+{% endblockquote %}
+
+#### Quote from a printed work
+
+{% blockquote Douglas Adams, The Hichhikers Guide to the Galaxy %}
+Flying is learning how to throw yourself at the ground and miss.
+{% endblockquote %}
+
+#### Quote from Twitter
+
+{% blockquote @allanbranch https://twitter.com/allanbranch/status/90766146063712256 %}
+Over the past 24 hours I've been reflecting on my life & I've realized only one thing. I need a medieval battle axe.
+{% endblockquote %}
+
+#### Quote form an article on the web
+
+{% blockquote Seth Godin http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html Welcome to Island Marketing %}
+Every interaction is both precious and an opportunity to delight.
+{% endblockquote %}
+
+### Pullquote
+
+#### Pullquote rechts
+{% pullquote %}
+When writing longform posts, I find it helpful to include pull quotes to help readers easily identify the topics covered in each section. Some prefer to break things up with lots of headings, and while this seems to be a trend it doesn’t work so well for long form prose. It is important to note that {" pull quotes are merely visual in presentation and should not appear twice in the text. "} That is why it a CSS only technique for styling pull quotes is preferable. Octopress includes a handy pull quote plugin to make this easy for you.
+{% endpullquote %}
+
+#### Pullquote links
+{% pullquote left %}
+When writing longform posts, I find it helpful to include pull quotes to help readers easily identify the topics covered in each section. Some prefer to break things up with lots of headings, and while this seems to be a trend it doesn’t work so well for long form prose. It is important to note that {" pull quotes are merely visual in presentation and should not appear twice in the text. "} That is why it a CSS only technique for styling pull quotes is preferable. Octopress includes a handy pull quote plugin to make this easy for you.
+{% endpullquote %}
+
+### Inline Quotes
+
+#### Normal
+Peter sagte <q>Sie soll mir das sofort hergeben</q> und war ziemlich sauer.
+
+#### Deutsche Quotes (verschachtelt)
+Luke führte weiter aus, <q>Und sie nannte ihn einen <q>total blöd-aussehenen Idioten</q>! Ich denke ich habe eine Chance!</q> Dieser arme Idiot …
+
+#### Englische Quotes (verschachtelt)
+<p lang="en">Luke conntinued, <q>And the she called him a <q>scruffy-looking nerf-herder</q>! I think I’ve got a chance!</q> The poor naive fool …</p>
+
+#### Japanische Quotes (verschachtelt)
+
+<p lang="ja">彼女は<q>日本語に猫は<q>にゃん</q>と鳴く</q>と言った。</p>
 
 ### Ordered list
 The `ol` element denotes an ordered list, and various numbering schemes are available through the CSS (including 1,2,3… a,b,c… i,ii,iii… and so on). Each item requires a surrounding `<li>` and `</li>` tag, to denote individual items within the list (as you may have guessed, li stands for list item).
