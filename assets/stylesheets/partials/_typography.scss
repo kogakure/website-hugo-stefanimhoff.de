@@ -187,6 +187,10 @@ abbr, acronym {
 abbr[title], acronym[title] {
   border-bottom-width: 0;
 }
+abbr.no-caps {
+  font-variant: normal;
+  text-transform: none;
+}
 
 // Pre
 pre {

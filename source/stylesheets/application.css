@@ -555,6 +555,11 @@ caption, th, td {
 }
 
 /* line 339, ../../assets/stylesheets/partials/_typography.scss */
+img {
+  max-width: 100%;
+}
+
+/* line 344, ../../assets/stylesheets/partials/_typography.scss */
 video {
   display: block;
   box-sizing: border-box;
@@ -563,7 +568,7 @@ video {
   margin-bottom: 1.33333em;
 }
 
-/* line 346, ../../assets/stylesheets/partials/_typography.scss */
+/* line 351, ../../assets/stylesheets/partials/_typography.scss */
 .fluid-width-video-wrapper {
   margin-bottom: 1.33333em;
 }

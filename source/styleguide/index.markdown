@@ -42,7 +42,7 @@ Dudley was ninety-two, in his second life, and fast approaching time for another
 The Carlton AllLander drove Dudley home just after dawn. Like the astronomer, the vehicle was old and worn, but perfectly capable of doing its job. It had a cheap diesel engine, common enough on a semi-frontier world like Gralmond, although its drive array was a thoroughly modern photoneural processor. With its high suspension and deep-tread tyres it could plough along the dirt track to the observatory in all weather and seasons, including the metre-deep snow of Gralmond’s winters.
 
 ### Pre-formatted text
-The `pre` element represents a block of pre-formatted text, in which structure is represented by typographic conventions rather than by elements. Such examples are an e-mail (with paragraphs indicated by blank lines, lists indicated by lines prefixed with a bullet), fragments of computer code (with structure indicated according to the conventions of that language) or displaying <abbr>ASCII</abbr> art. Here’s an example showing the printable characters of <abbr>ASCII</abbr>:
+The `pre` element represents a block of pre-formatted text, in which structure is represented by typographic conventions rather than by elements. Such examples are an e-mail (with paragraphs indicated by blank lines, lists indicated by lines prefixed with a bullet), fragments of computer code (with structure indicated according to the conventions of that language) or displaying ASCII art. Here’s an example showing the printable characters of ASCII:
 
 <pre>
 ! " # $ % & ' ( ) * + , - . /
@@ -212,7 +212,7 @@ Bob’s <dfn title="Dog">canine</dfn> mother and <dfn title="Horse">equine</dfn>
 ### Abbreviation
 The `abbr` element is used for any abbreviated text, whether it be acronym, initialism, or otherwise. Generally, it’s less work and useful (enough) to mark up only the first occurrence of any particular abbreviation on a page, and ignore the rest. Any text in the title attribute will appear when the user’s mouse hovers the abbreviation (although notably, this does not work in Internet Explorer for Windows). Example abbreviations:
 
-<abbr title="British Broadcasting Corportation">BBC</abbr>, <abbr title="HyperText Markup Language">HTML</abbr>, and <abbr title="Staffordshire">Staffs.</abbr>
+BBC, HTML, and <abbr class="no-caps" title="Staffordshire">Staffs.</abbr>
 
 ### Time
 The `time` element is used to represent either a time on a 24 hour clock, or a precise date in the proleptic Gregorian calendar, optionally with a time and a time-zone offset. Example:
@@ -465,7 +465,7 @@ Figures are usually used to refer to images:
 
 ### Video
 
-#### Native Octopress Video Tag
+#### Native HTML5 Tag
 {% video http://s3.imathis.com/video/zero-to-fancy-buttons.mp4 640 420 http://s3.imathis.com/video/zero-to-fancy-buttons.png %}
 
 #### YouTube
