@@ -261,6 +261,12 @@ The `del` element is used to represent deleted or retracted text which still mus
 
 She bought <del datetime="2005-05-30T13:00:00">two</del> <ins datetime="2005-05-30T13:00:00">five</ins> pairs of shoes.
 
+### Ruby
+
+<ruby>攻殻<rp>（</rp><rt>こうかく</rt><rp>）</rp>機動隊<rp>（</rp><rt>きどうたい</rt><rp>）</rp></ruby>
+
+Das Japanische Kino hat einige Meisterwerke hervorgebracht, sowohl in Farbe als auch in Schwarz/Weiß. Der bekannte Film 7 Samurai (<ruby>七人の侍<rp>（</rp><rt>しちにんのさむらい</rt><rp>）</ruby>) von Akira Kurosawa ist einer der besten Filme der japanischen Geschichte. Der Film ist so gut, dass er sogar ein Remake erfahren hat: <cite>Die Glorreichen Sieben</cite>.
+
 Tabular data
 ------------
 
@@ -270,7 +276,7 @@ If you use these elements, you must use every element. They should appear in thi
 
 ### Regular Table
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>#</th>
@@ -303,7 +309,7 @@ If you use these elements, you must use every element. They should appear in thi
 
 ### Striped Table
 
-<table class="table-striped">
+<table class="table table-striped">
   <thead>
     <tr>
       <th>#</th>
@@ -336,7 +342,7 @@ If you use these elements, you must use every element. They should appear in thi
 
 ### Bordered  Table
 
-<table class="table-bordered">
+<table class="table table-bordered">
   <thead>
     <tr>
       <th>#</th>
@@ -369,7 +375,7 @@ If you use these elements, you must use every element. They should appear in thi
 
 ### Hovered Table
 
-<table class="table-hover">
+<table class="table table-hover">
   <thead>
     <tr>
       <th>#</th>
@@ -402,7 +408,7 @@ If you use these elements, you must use every element. They should appear in thi
 
 ### Condensed Table
 
-<table class="table-condensed">
+<table class="table table-condensed">
   <thead>
     <tr>
       <th>#</th>
