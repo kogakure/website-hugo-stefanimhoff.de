@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Styleguide"
+title: "The ultimate and awesome Styleguide of this page"
 footer: false
 ---
 
@@ -443,12 +443,25 @@ If you use these elements, you must use every element. They should appear in thi
 
 Figures are usually used to refer to images:
 
-<figure>
+#### Without caption
+
+{% figure %}
 <img src="http://lorempixel.com/680/408/nature/" alt="Example image">
-<figcaption>
-<p>This is a placeholder image, with supporting caption.</p>
-</figcaption>
-</figure>
+{% endfigure %}
+
+#### With caption
+
+{% figure "Dies ist die Caption des Fotos, die ich etwas länger schreibe, nur damit ich testen kann, wie sie aussieht, wenn sie sich über mehrere Zeilen erstreckt." %}
+<img src="http://lorempixel.com/680/408/nature/" alt="Example image">
+{% endfigure %}
+
+{% figure %}
+<img src="{{ site.images_dir }}styleguide/kelp-demo-1.jpg" alt="" />
+{% endfigure %}
+
+{% figure %}
+<img src="{{ site.images_dir }}styleguide/kelp-demo-2.jpg" alt="" />
+{% endfigure %}
 
 ### Code
 The `code` element is used to represent fragments of computer code. Useful for technology-oriented sites, not so useful otherwise. Example:
