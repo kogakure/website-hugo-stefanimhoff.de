@@ -1,24 +1,33 @@
 #
-# Author: Brandon Mathis
-# A full rewrite based on the work of: Josediaz Gonzalez - https://github.com/josegonzalez/josediazgonzalez.com/blob/master/_plugins/blockquote.rb
+# Author: Stefan Imhoff
+# 
+# Based on blockquote.rb of: Brandon Mathis
+# 
+# Outputs a string with a given attribution as a quote and preserves the layout (for a verse)
 #
-# Outputs a string with a given attribution as a quote
-#
-#   {% blockquote Bobby Willis http://google.com/search?q=pants the search for bobby's pants %}
-#   Wheeee!
+#   {% verse Lewis Carroll, Jabberwocky (1832-98)  %}
+#    ‘Twas brillig, and the slithy toves
+#    Did gyre and gimble            in the wabe;
+#    All mimsy     were     the borogoves,
+#    And       the mome     raths            outgrabe.
 #   {% endblockquote %}
 #   ...
-#   <blockquote>
-#     <p>Wheeee!</p>
-#     <footer>
-#     <strong>Bobby Willis</strong><cite><a href="http://google.com/search?q=pants">The Search For Bobby's Pants</a>
+#   <blockquote class="verse">
+#   <pre>
+#     <p>
+#       ‘Twas brillig, and the slithy toves<br>
+#       Did gyre and gimble            in the wabe;<br>
+#       All mimsy     were     the borogoves,<br>
+#       And       the mome     raths            outgrabe.
+#     </p>
+#   </pre>
 #   </blockquote>
 #
 require './plugins/titlecase.rb'
 
 module Jekyll
 
-  class Blockquote < Liquid::Block
+  class BlockquoteVerse < Liquid::Block
     FullCiteWithTitleVerse = /(\S.*)\s+(https?:\/\/)(\S+)\s+(.+)/i
     FullCiteVerse = /(\S.*)\s+(https?:\/\/)(\S+)/i
     AuthorTitleVerse = /([^,]+),([^,]+)/
@@ -79,4 +88,4 @@ module Jekyll
   end
 end
 
-Liquid::Template.register_tag('verse', Jekyll::Blockquote)
+Liquid::Template.register_tag('verse', Jekyll::BlockquoteVerse)
