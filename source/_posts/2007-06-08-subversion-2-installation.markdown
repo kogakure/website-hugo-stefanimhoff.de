@@ -12,7 +12,7 @@ tags:
 Die Installation von Subversion ist relativ leicht und schnell erledigt, für die Bedienung kann man eine der zahllosen grafischen Oberflächen oder das Terminal benutzten. In diesem Teil der Reihe stelle ich ein paar Programme vor und zeige wie man Subversion aus dem Quellcode selber kompiliert.
 
 <div class="hinweis">
-<p>Der Inhalt dieses Artikels ist noch aktuell, doch kann ich nur dringend dazu raten, sich die fantastische Alternative zu Subversion anzusehen: <a href="/versionskontrolle-mit-git/"><strong>Git</strong></a>.</p>
+<p>Der Inhalt dieses Artikels ist noch aktuell, doch kann ich nur dringend dazu raten, sich die fantastische Alternative zu Subversion anzusehen: <a href="/versionskontrolle-mit-git/">Git</a>.</p>
 </div>
 
 ## Installationsarten, Programmoberflächen
@@ -23,7 +23,7 @@ Für Windows gibt es das fantastische [TortoiseSVN](http://tortoisesvn.tigris.or
 
 Für Windows ist dies die beste Version, die verfügbar ist, und TortoiseSVN ist auch über alle Systeme betrachtet die beste Software. Irgendetwas muss ja auch mal auf Windows besser sein.
 
-Für MacOSX gibt es unter anderem die Programme [svnX](http://code.google.com/p/svnx/), [rapidsvn](http://rapidsvn.tigris.org/ "rapidsvn.tigris.org") und eine TortoiseSVN ähnliche Menüintegration durch das [SCPlugin](http://scplugin.tigris.org/ "scplugin.tigris.org"). Diese ist aber bei weitem nicht so intuitiv und mächtig wie die Windows-Variante.
+Für Mac OS X gibt es unter anderem die Programme [svnX](http://code.google.com/p/svnx/), [rapidsvn](http://rapidsvn.tigris.org/ "rapidsvn.tigris.org") und eine TortoiseSVN ähnliche Menüintegration durch das [SCPlugin](http://scplugin.tigris.org/ "scplugin.tigris.org"). Diese ist aber bei weitem nicht so intuitiv und mächtig wie die Windows-Variante.
 
 Weiter gibt es noch eine Vielzahl anderer Programme für verschiedenste Plattformen und auch plattformübergreifende Programme, kostenlose und Profiversionen für teures Geld. Ein guter Anwärter für eine hübsche OS X Software scheint mir [Versions](http://www.versionsapp.com/) von [Sofa](http://www.madebysofa.com/) zu sein, das aber bislang nur angekündigt wurde.
 
@@ -41,7 +41,7 @@ Untereinander, unübersichtlich sortiert (so ist das immer auf Entwicklerseiten)
 
 Wer etwas feige ist, kann sich jetzt eines der binären Pakete für sein System herunterladen und installieren. Alle mutigeren laden sich den Quellcode herunter.
 
-Gut versteckt, mitten im Satz <q>The latest source release can always be found _in this directory_, […]</q>,  findet man den Link zu den Quellcode-Paketen.
+Gut versteckt, mitten im Satz <q lang="en">The latest source release can always be found _in this directory_, […]</q>,  findet man den Link zu den Quellcode-Paketen.
 
 Die aktuelle Version zum Zeitpunkt dieser Anleitung ist `Subversion 1.4.3`.
 Genau dieses Paket lade ich als `tar.gz` auf meinen Desktop.

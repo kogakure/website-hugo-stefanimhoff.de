@@ -2,9 +2,9 @@
 layout: post
 title: "Subversion (3) – Einrichten des Repository"
 date: 2007-07-20 09:00
-description: 
+description:
 categories:
-tags: 
+tags:
 - subversion
 - tutorial
 ---
@@ -12,7 +12,7 @@ tags:
 Um mit Subversion zu arbeiten, muss man sich zuerst ein *Repository* (eine Ablage/Depot) erstellen, in dem das spätere Projekt liegt.
 
 <div class="hinweis">
-<p>Der Inhalt dieses Artikels ist noch aktuell, doch kann ich nur dringend dazu raten, sich die fantastische Alternative zu Subversion anzusehen: <a href="/versionskontrolle-mit-git/"><strong>Git</strong></a>.</p>
+<p>Der Inhalt dieses Artikels ist noch aktuell, doch kann ich nur dringend dazu raten, sich die fantastische Alternative zu Subversion anzusehen: <a href="/versionskontrolle-mit-git/">Git</a>.</p>
 </div>
 
 Hier kann man auf verschiedene Möglichkeiten arbeiten: Entweder man legt ein Repository für alle seine Projekte an, oder man legt für jedes Projekt ein eigenes an.
@@ -48,9 +48,9 @@ svnadmin create --fs-type fsfs .
 
 Der Parameter `--fs-type fsfs` sorgt dafür, dass ein Repository vom Typ *Filesystem* erzeugt wird. Es gibt noch das <cite>Berkeley DB</cite> Format, das aber in einigen Umgebungen und Netzwerken Probleme erzeugen kann. Wenn man mit tausenden Personen an einem solchen Projekt arbeitet ist es wahrscheinlich besser das Datenbankformat zu verwenden, aber nicht für sich selber oder ein paar dutzend Kollegen.
 
-Der Punkt am Ende des Befehls ist übrigens wichtig, und darf nicht weggelassen werden, er sagt dem Programm wo das Repository angelegt werden soll, und zwar im aktuellen Verzeichnis (.). Hier kann man auch eine normale Pfadangabe benutzen.
+Der Punkt am Ende des Befehls ist übrigens wichtig, und darf nicht weggelassen werden, er sagt dem Programm wo das Repository angelegt werden soll, und zwar im aktuellen Verzeichnis (`.`). Hier kann man auch eine normale Pfadangabe benutzen.
 
-Durch diesen Befehl wurden einige Verzeichnisse angelegt, die in allen Repositories so aussehen. Der Ordner `conf` enthält die Konfigurationsdateien für einen Server. Die anderen Ordner speichern die Stände, Status von Dateien, Sperrungen, u.s.w.
+Durch diesen Befehl wurden einige Verzeichnisse angelegt, die in allen Repositories so aussehen. Der Ordner `conf` enthält die Konfigurationsdateien für einen Server. Die anderen Ordner speichern die Stände, Status von Dateien, Sperrungen, u. s. w.
 
 Wichtig ist, hier nichts zu verändern, mit Ausnahme der Konfigurationsdateien, doch dazu später mehr.
 

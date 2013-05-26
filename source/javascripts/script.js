@@ -1,7 +1,7 @@
 $(function() {
   // Widon't on all text
-  $(".hentry p, .hentry li, .hentry dd, .hentry dt, .hentry h1, .hentry h2, .hentry h3, .hentry h4, .hentry h5, .hentry h6").widont();
+  $(".article p, .article li, .article dd, .article dt, .article h1, .article h2, .article h3, .article h4, .article h5, .article h6").widont();
 
   // Fitvids
-  $(".article-body").fitVids();
+  $(".article").fitVids();
 });

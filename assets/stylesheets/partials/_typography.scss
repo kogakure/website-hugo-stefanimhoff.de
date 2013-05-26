@@ -53,10 +53,6 @@ blockquote {
   @include trailer();
   font-style: italic;
 }
-blockquote + p {
-  margin-left: $base-rhythm-unit;
-  margin-right: $base-rhythm-unit;
-}
 .verse pre {
   font-family: inherit;
   display: table;
@@ -96,20 +92,25 @@ blockquote cite:before {
 q {
   font-style: italic;
 }
-:lang(en) > q {
+:lang(en) > q,
+.article-body q[lang|=en] {
   quotes: '“' '”' '‘' '’';
 }
-:lang(fr) > q {
+:lang(fr) > q,
+.article-body q[lang|=fr] {
   quotes: '« ' ' »' '“' '”';
 }
 /* Alternative deutsche Schreibweise */
-/* :lang(de) > q { */
+/* :lang(de) > q,
+ * .article-body q[lang|=de] { */
 /*   quotes: '„' '“' '‚' '‘'; */
 /* } */
-:lang(de) > q {
+:lang(de) > q,
+.article-body q[lang|=de] {
   quotes: '»' '«' '›' '‹';
 }
-:lang(ja) > q {
+:lang(ja) > q,
+.article-body q[lang|=ja] {
   quotes: '「' '」' '『' '』';
   font-style: normal;
 }

@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Volume reparieren unter Mac OS X"
+title: "Volume reparieren unter Mac&nbsp;OS X"
 date: 2007-05-23 11:40
-description: 
+description: Wie man eine Boot-Festplatte unter Mac OSX ohne die Installations-CD repariert, im Single-User Modus und mit Terminalbefehlen.
 categories:
-tags: 
+tags:
 - tutorial
 - macosx
 ---

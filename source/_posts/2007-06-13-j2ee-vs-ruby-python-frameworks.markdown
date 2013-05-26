@@ -35,6 +35,6 @@ Die Bewertungskriterien sind unter anderem:
 * Lokalisierung/Internationalisierung
 * Spaß
 
-Im ersten Teil lässt er alle Frameworks `Hallo Welt` schreiben, im zweiten Teil programmiert er eine einfache Zeitmess-Anwendung. Ohne schon zu viel zu verraten, hängen natürlich alle ruby/python-Frameworks den Java-Kram um Längen ab. Immerhin verwendet ja sogar Google python in ihren Applikationen.
+Im ersten Teil lässt er alle Frameworks `Hallo Welt` schreiben, im zweiten Teil programmiert er eine einfache Zeitmess-Anwendung. Ohne schon zu viel zu verraten, hängen natürlich alle ruby/python-Frameworks den Java-Kram um Längen ab. Immerhin verwendet ja sogar Google <cite>python</cite> in ihren Applikationen.
 
-Also – wenn’s es die NASA und Google benutzen, kann es nur gut sein ;)
+Also – wenn’s es die NASA und Google benutzen, kann es nur gut sein. ;)

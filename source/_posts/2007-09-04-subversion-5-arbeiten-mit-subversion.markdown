@@ -2,9 +2,9 @@
 layout: post
 title: "Subversion (5) – Arbeiten mit Subversion"
 date: 2007-09-04 18:45
-description: 
+description:
 categories:
-tags: 
+tags:
 - subversion
 - tutorial
 ---
@@ -12,7 +12,7 @@ tags:
 Die eigentliche Arbeit mit Subversion ist relativ leicht erklärt und gelernt. Von größeren Aktionen wie `merge` mal abgesehen.
 
 <div class="hinweis">
-<p>Der Inhalt dieses Artikels ist noch aktuell, doch kann ich nur dringend dazu raten, sich die fantastische Alternative zu Subversion anzusehen: <a href="/versionskontrolle-mit-git/"><strong>Git</strong></a>.</p>
+<p>Der Inhalt dieses Artikels ist noch aktuell, doch kann ich nur dringend dazu raten, sich die fantastische Alternative zu Subversion anzusehen: <a href="/versionskontrolle-mit-git/">Git</a>.</p>
 </div>
 
 Zuerst lege ich mir ein Arbeitsverzeichnis an, in dem ich künftig meine Projekte bearbeiten will, z. B. einen Ordner `Arbeit` im Heimatverzeichnis.
@@ -59,7 +59,7 @@ Die Zeichenkette nach dem Parameter `-m` ist für die Log-Datei gedacht. Hier so
 
 ## Datei löschen
 
-In der täglichen Arbeit mit Subversion kommt es auch öfter vor, dass man eine Datei löschen möchte. Dabei muss man aber beachten, dass sie nur veschwindet, aber nicht aus dem Repository entfernt wird. Man kann sie also immer wieder herstellen. Auch die Dateigröße verbleibt im Repository, daher unbedingt *vorher* überlegen, welche Dateien man ins Repository spielt. Was drin ist, bleibt drin. Ein Entfernen von Dateien (und ist der Inhalt auch noch so peinlich) ist so gut wie unmöglich. Eine manuelle Manipulation mag für Profis möglich sein, doch damit wird die Historie zerstört und inkonsistent. Das Versionskontrollsystem GIT ermöglicht es z. B. dank eines Hash-Schlüssels solche Veränderungen oder Fehler zu entdecken. Bei Subversion gibt es so etwas leider nicht.
+In der täglichen Arbeit mit Subversion kommt es auch öfter vor, dass man eine Datei löschen möchte. Dabei muss man aber beachten, dass sie nur veschwindet, aber nicht aus dem Repository entfernt wird. Man kann sie also immer wieder herstellen. Auch die Dateigröße verbleibt im Repository, daher unbedingt *vorher* überlegen, welche Dateien man ins Repository spielt. Was drin ist, bleibt drin. Ein Entfernen von Dateien (und ist der Inhalt auch noch so peinlich) ist so gut wie unmöglich. Eine manuelle Manipulation mag für Profis möglich sein, doch damit wird die Historie zerstört und inkonsistent. Das Versionskontrollsystem Git ermöglicht es z. B. dank eines Hash-Schlüssels solche Veränderungen oder Fehler zu entdecken. Bei Subversion gibt es so etwas leider nicht.
 
 Wenn man Dateien über die normale Löschfunktion des Computers entfernt, erfährt Subversion davon nichts. Beim nächsten `svn status` erscheint neben der Datei ein `!`. Dies bedeutet, dass eine Datei fehlt, die eigentlich da sein müsste. Diese muss nun manuell zum Löschen markiert werden oder wieder hergestellt werden.
 

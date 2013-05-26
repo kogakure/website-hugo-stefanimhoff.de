@@ -17,11 +17,11 @@ Seit fast einem Jahr arbeite ich nun mit Subversion – und bin ziemlich zufried
 
 Linus Torvalds sieht das wohl etwas anders, wie er in Googles <cite>[Tech Talk: Linus Torvalds on git](http://www.youtube.com/watch?v=4XpnKHJAok8)</cite> deutlich macht:
 
-> I see Subversion as being the most pointless project ever started, because the slogan for Subversion for a while was: <q>CVS done right</q> […]. And if you start with that kind of slogan, there is nowhere you can go. There’s no way to do CVS right.
->
-> – Linus Torvalds
+{% blockquote Linus Torvalds http://www.youtube.com/watch?v=4XpnKHJAok8 Tech Talk: Linus Torvalds on git %}
+I see Subversion as being the most pointless project ever started, because the slogan for Subversion for a while was: <q lang="en">CVS done right</q> […]. And if you start with that kind of slogan, there is nowhere you can go. There’s no way to do CVS right.
+{% endblockquote %}
 
-Zur Namensfindung von Git (*engl.* Blödmann, Depp, Idiot) erzählt Linus Torvalds scherzhaft, dass er seine Projekte eben gerne nach sich benennt.
+Zur Namensfindung von Git (engl. <em>Blödmann, Depp, Idiot</em>) erzählt Linus Torvalds scherzhaft, dass er seine Projekte eben gerne nach sich benennt.
 
 ## Vorzüge von Git
 
@@ -37,7 +37,9 @@ Zur Namensfindung von Git (*engl.* Blödmann, Depp, Idiot) erzählt Linus Torval
 *Git* passt besser in eine *OpenSource*-Community, weil man sich nicht über die Probleme des Zugriffs auf ein Repository beschäftigen muss.
 Gibt man zu wenigen Personen Zugriff auf sein Repository, gibt es auch wenig Entwicklung. Gibt man zu vielen Zugriff entsteht nur Müll.
 
-Linus bringt es klar auf den Punkt: <q>Die meisten da draußen sind Schwachköpfe, und ich vertraue ihnen nicht</q>. Trotzdem kann jeder sich eine Kopie seines Projektes ziehen, daran arbeiten und es verbessern.
+{% pullquote %}
+Linus bringt es klar auf den Punkt: <q>{"Die meisten da draußen sind Schwachköpfe, und ich vertraue ihnen nicht!"}</q>. Trotzdem kann jeder sich eine Kopie seines Projektes ziehen, daran arbeiten und es verbessern.
+{% endpullquote %}
 
 Ist seine Arbeit gut, und andere Personen finden sie auch gut, können diese die Arbeit mit der eigenen verschmelzen.
 

@@ -57,8 +57,7 @@ p q r s t u v w x y z { | } ~
 The `blockquote` element represents a section that is being quoted from another source.
 
 > Many forms of Government have been tried, and will be tried in this world of sin and woe. No one pretends that democracy is perfect or all-wise. Indeed, it has been said that democracy is the worst form of government except all those other forms that have been tried from time to time.
-
-<strong>Winston Churchill</strong>, in <cite>[a speech to the House of Commons](http://hansard.millbanksystems.com/commons/1947/nov/11/parliament-bill#column_206)</cite>. 11th&nbsp;November&nbsp;1947
+> <footer><strong>Winston Churchill</strong>, in <cite>[a speech to the House of Commons](http://hansard.millbanksystems.com/commons/1947/nov/11/parliament-bill#column_206)</cite>. 11th&nbsp;November&nbsp;1947</footer>
 
 Additionally, you might wish to `cite` the source, as in the above example. The correct method involves including the cite attribute on the `blockquote` element, but since no browser makes any use of that information, it’s useful to link to the source also.
 
