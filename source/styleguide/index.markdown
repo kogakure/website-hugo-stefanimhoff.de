@@ -113,6 +113,17 @@ Luke führte weiter aus, <q>Und sie nannte ihn einen <q>total blöd-aussehenen I
 
 <p lang="ja">彼女は<q>日本語に猫は<q>にゃん</q>と鳴く</q>と言った。</p>
 
+### Verse
+
+Here, a part of a poem is marked:
+
+{% verse Lewis Carroll, Jabberwocky (1832-98) %}
+‘Twas brillig, and the slithy toves
+Did gyre and gimble            in the wabe;
+All mimsy     were     the borogoves,
+And       the mome     raths            outgrabe.
+{% endverse %}
+
 ### Ordered list
 The `ol` element denotes an ordered list, and various numbering schemes are available through the CSS (including 1,2,3… a,b,c… i,ii,iii… and so on). Each item requires a surrounding `<li>` and `</li>` tag, to denote individual items within the list (as you may have guessed, li stands for list item).
 
@@ -257,82 +268,169 @@ Tables should be used when displaying tabular data. The `thead`, `tfoot` and `tb
 
 If you use these elements, you must use every element. They should appear in this order: `thead`, `tfoot` and `tbody`, so that browsers can render the foot before receiving all the data. You must use these tags within the table element.
 
+### Regular Table
+
 <table>
-<caption>The Very Best Eggnog</caption>
-<colgroup>
-<col style="width:15em;">
-<col style="width:6em;">
-<col style="width:6em;">
-</colgroup>
-<thead>
-<tr>
-<th scope="col">Ingredients</th>
-<th scope="col">Serves 12</th>
-<th scope="col">Serves 24</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Milk</td>
-<td>1 quart</td>
-<td>2 quart</td>
-</tr>
-<tr>
-<td>Cinnamon Sticks</td>
-<td>2</td>
-<td>1</td>
-</tr>
-<tr>
-<td>Vanilla Bean, Split</td>
-<td>1</td>
-<td>2</td>
-</tr>
-<tr>
-<td>Cloves</td>
-<td>5</td>
-<td>10</td>
-</tr>
-<tr>
-<td>Mace</td>
-<td>10 blades</td>
-<td>20 blades</td>
-</tr>
-<tr>
-<td>Egg Yolks</td>
-<td>12</td>
-<td>24</td>
-</tr>
-<tr>
-<td>Cups Sugar</td>
-<td>1 ½ cups</td>
-<td>3 cups</td>
-</tr>
-<tr>
-<td>Dark Rum</td>
-<td>1 ½ cups</td>
-<td>3 cups</td>
-</tr>
-<tr>
-<td>Brandy</td>
-<td>1 ½ cups</td>
-<td>3 cups</td>
-</tr>
-<tr>
-<td>Vanilla</td>
-<td>1 tbsp</td>
-<td>2 tbsp</td>
-</tr>
-<tr>
-<td>Half-and-half or Light Cream</td>
-<td>1 quart</td>
-<td>2 quart</td>
-</tr>
-<tr>
-<td>Freshly grated nutmeg to taste</td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Username</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+
+### Striped Table
+
+<table class="table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Username</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+
+### Bordered  Table
+
+<table class="table-bordered">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Username</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+
+### Hovered Table
+
+<table class="table-hover">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Username</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+
+### Condensed Table
+
+<table class="table-condensed">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Username</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
 </table>
 
 ### Figures
@@ -343,18 +441,6 @@ Figures are usually used to refer to images:
 <img src="http://lorempixel.com/680/408/nature/" alt="Example image">
 <figcaption>
 <p>This is a placeholder image, with supporting caption.</p>
-</figcaption>
-</figure>
-
-Here, a part of a poem is marked up using figure:
-
-<figure>
-<p>‘Twas brillig, and the slithy toves<br>
-Did gyre and gimble in the wabe;<br>
-All mimsy were the borogoves,<br>
-And the mome raths outgrabe.</p>
-<figcaption>
-<p><cite>Jabberwocky</cite> (first verse). Lewis Carroll, 1832-98</p>
 </figcaption>
 </figure>
 

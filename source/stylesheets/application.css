@@ -484,11 +484,70 @@ del {
 
 /* line 281, ../../assets/stylesheets/partials/_typography.scss */
 table {
+  width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
+  margin-bottom: 1.33333em;
+}
+/* line 286, ../../assets/stylesheets/partials/_typography.scss */
+table th, table td {
+  padding: 8px;
+  text-align: left;
+  border-top: 1px solid #dddddd;
+  vertical-align: top;
+}
+/* line 292, ../../assets/stylesheets/partials/_typography.scss */
+table th {
+  font-weight: 700;
+}
+/* line 295, ../../assets/stylesheets/partials/_typography.scss */
+table thead th {
+  vertical-align: bottom;
+}
+/* line 303, ../../assets/stylesheets/partials/_typography.scss */
+table caption + thead tr:first-child th,
+table caption + thead tr:first-child td,
+table colgroup + thead tr:first-child th,
+table colgroup + thead tr:first-child td,
+table thead:first-child tr:first-child th,
+table thead:first-child tr:first-child td {
+  border-top: 0;
 }
 
-/* line 286, ../../assets/stylesheets/partials/_typography.scss */
+/* line 310, ../../assets/stylesheets/partials/_typography.scss */
+.table-striped tbody > tr:nth-child(odd) > td,
+.table-striped tbody > tr:nth-child(odd) > th {
+  background-color: #f9f9f9;
+}
+
+/* line 315, ../../assets/stylesheets/partials/_typography.scss */
+.table-bordered {
+  border: 1px solid #dddddd;
+  border-collapse: separate;
+  border-left: 0;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 320, ../../assets/stylesheets/partials/_typography.scss */
+.table-bordered th, .table-bordered td {
+  border-left: 1px solid #dddddd;
+}
+
+/* line 327, ../../assets/stylesheets/partials/_typography.scss */
+.table-hover tbody tr:hover > td,
+.table-hover tbody tr:hover > th {
+  background-color: #f9f9f9;
+}
+
+/* line 333, ../../assets/stylesheets/partials/_typography.scss */
+.table-condensed th, .table-condensed td {
+  padding: 4px 5px;
+}
+
+/* line 338, ../../assets/stylesheets/partials/_typography.scss */
 caption, th, td {
   text-align: left;
   font-weight: 400;

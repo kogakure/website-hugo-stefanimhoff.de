@@ -1,36 +1,82 @@
 #
-# Author: Stefan Imhoff
+# Author: Brandon Mathis
+# A full rewrite based on the work of: Josediaz Gonzalez - https://github.com/josegonzalez/josediazgonzalez.com/blob/master/_plugins/blockquote.rb
 #
-# Outputs a blockquote class "verse" with pre inside to keep the lines
+# Outputs a string with a given attribution as a quote
 #
-#   {% verse %}
+#   {% blockquote Bobby Willis http://google.com/search?q=pants the search for bobby's pants %}
+#   Wheeee!
+#   {% endblockquote %}
 #   ...
-#   {% endverse %}
-
-require './plugins/raw'
+#   <blockquote>
+#     <p>Wheeee!</p>
+#     <footer>
+#     <strong>Bobby Willis</strong><cite><a href="http://google.com/search?q=pants">The Search For Bobby's Pants</a>
+#   </blockquote>
+#
+require './plugins/titlecase.rb'
 
 module Jekyll
 
-  class VerseBlock < Liquid::Block
-    include TemplateWrapper
-    FigureWithClassCaption = /([^"]+)"([^"]+)"/i
-    FigureWithCaption = /"([^"]+)"/i
-    FigureWithClass = /([\w\s]+)/i
+  class Blockquote < Liquid::Block
+    FullCiteWithTitleVerse = /(\S.*)\s+(https?:\/\/)(\S+)\s+(.+)/i
+    FullCiteVerse = /(\S.*)\s+(https?:\/\/)(\S+)/i
+    AuthorTitleVerse = /([^,]+),([^,]+)/
+    AuthorVerse =  /(.+)/
 
     def initialize(tag_name, markup, tokens)
+      @by = nil
+      @source = nil
+      @title = nil
+      if markup.strip =~ FullCiteWithTitleVerse
+        @by = $1
+        @source = $2 + $3
+        @title = $4.titlecase.strip
+      elsif markup.strip =~ FullCiteVerse
+        @by = $1
+        @source = $2 + $3
+      elsif markup.strip =~ AuthorTitleVerse
+        @by = $1
+        @title = $2.titlecase.strip
+      elsif markup.strip =~ AuthorVerse
+        @by = $1
+      end
       super
     end
 
     def render(context)
-      content = super
-      source = "<blockquote class=\"verse\"><pre>"
-      source += content
-      source += "</pre></blockquote>"
-      source = safe_wrap(source)
-      source
+      quote = paragraphize(super)
+      author = "<strong>#{@by.strip}</strong>" if @by
+      if @source
+        url = @source.match(/https?:\/\/(.+)/)[1].split('/')
+        parts = []
+        url.each do |part|
+          if (parts + [part]).join('/').length < 32
+            parts << part
+          end
+        end
+        source = parts.join('/')
+        source << '/&hellip;' unless source == @source
+      end
+      if !@source.nil?
+        cite = " <cite><a href='#{@source}'>#{(@title || source)}</a></cite>"
+      elsif !@title.nil?
+        cite = " <cite>#{@title}</cite>"
+      end
+      blockquote = if @by.nil?
+        quote
+      elsif cite
+        "#{quote}<footer>#{author + cite}</footer>"
+      else
+        "#{quote}<footer>#{author}</footer>"
+      end
+      "<blockquote class=\"verse\"><pre>#{blockquote}</pre></blockquote>"
     end
 
+    def paragraphize(input)
+      "<p>#{input.lstrip.rstrip.gsub(/\n\n/, '</p><p>').gsub(/\n/, '<br/>')}</p>"
+    end
   end
 end
 
-Liquid::Template.register_tag('verse', Jekyll::VerseBlock)
+Liquid::Template.register_tag('verse', Jekyll::Blockquote)
