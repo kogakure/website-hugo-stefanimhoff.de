@@ -75,24 +75,24 @@ html {
   line-height: 1.33333em;
 }
 
-/* line 42, ../../assets/stylesheets/partials/_base.scss */
+/* line 46, ../../assets/stylesheets/partials/_base.scss */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 46, ../../assets/stylesheets/partials/_base.scss */
+/* line 49, ../../assets/stylesheets/partials/_base.scss */
 .sans {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* line 49, ../../assets/stylesheets/partials/_base.scss */
+/* line 50, ../../assets/stylesheets/partials/_base.scss */
 .mono, p code, li code, .highlight pre {
   font-family: Menlo, Monaco, "Andale Mono", "Lucida console", "Courier New", monospace;
 }
 
-/* line 52, ../../assets/stylesheets/partials/_base.scss */
+/* line 51, ../../assets/stylesheets/partials/_base.scss */
 .japanese {
   font-family: "Hiragino Maru Gothic Pro", sans-serif;
 }
@@ -116,9 +116,9 @@ body {
 
 /* line 14, ../../assets/stylesheets/partials/_typography.scss */
 h1 {
-  font-size: 2.32706em;
-  line-height: 1.14594em;
-  margin-bottom: 0.57297em;
+  font-size: 2.61794em;
+  line-height: 1.27326em;
+  margin-bottom: 0.50931em;
 }
 
 /* line 18, ../../assets/stylesheets/partials/_typography.scss */
@@ -430,12 +430,12 @@ i {
   font-style: italic;
 }
 
-/* line 242, ../../assets/stylesheets/partials/_typography.scss */
+/* line 241, ../../assets/stylesheets/partials/_typography.scss */
 b {
   font-weight: 700;
 }
 
-/* line 245, ../../assets/stylesheets/partials/_typography.scss */
+/* line 244, ../../assets/stylesheets/partials/_typography.scss */
 mark {
   -webkit-background-size: 25px 21px;
   -moz-background-size: 25px 21px;
@@ -446,7 +446,7 @@ mark {
   position: relative;
   color: rgba(0, 0, 0, 0.75);
 }
-/* line 251, ../../assets/stylesheets/partials/_typography.scss */
+/* line 250, ../../assets/stylesheets/partials/_typography.scss */
 mark:before, mark:after {
   -webkit-background-size: 5px 21px;
   -moz-background-size: 5px 21px;
@@ -459,52 +459,52 @@ mark:before, mark:after {
   position: absolute;
   width: 5px;
 }
-/* line 260, ../../assets/stylesheets/partials/_typography.scss */
+/* line 259, ../../assets/stylesheets/partials/_typography.scss */
 mark:before {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAiCAYAAABfqvm9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6Q0NGM0IwNkZCQjRCMTFFMkE1Nzc5ODhFRjQ4MzQ3OEMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Q0NGM0IwNzBCQjRCMTFFMkE1Nzc5ODhFRjQ4MzQ3OEMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpDQ0YzQjA2REJCNEIxMUUyQTU3Nzk4OEVGNDgzNDc4QyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpDQ0YzQjA2RUJCNEIxMUUyQTU3Nzk4OEVGNDgzNDc4QyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PtG8mAYAAAMVSURBVHjanJY7iBNRFIYzk5lMNo9Voquy4mNFRQuVBZWtxEpEFASLrSxsbLRVbBexttLS3gV7LRYbbXxg5aMSxFSCuj52TTKTjOfId+QQJpE48DE72bn/Pe87QXu1NOnVEFKhy/NO4YJwWx+iCcUC4SaCd4RPwnEhFjYJX6IxC/Oh31rCXmFGqAnXha/CUQQrwtNghMuhMHDPW4UlYRrqCDQRT4RMWB9loYrNEqfPwjVhj7AZd3MEE+7mUWWUoMblDDF6zILvuBZjlQqsCz1yoc9BkcunyVqCpWpRmaAHLE5gijVqZXWUhZeF7YhkrhLqiGfcG4jmxFzfqxUJ3hWusmuPnfXqsDjB7RzhPoJrGvMiwQ+4OiBuKdnMWdxFMHIhGLBRUCQ4Q/XrCxudO1MI5rj9E8ESm4TDMdT6OimcQEDZwiJLTsy7ZcQjV68aktQEF4VTwm5hBwtDd8+xInGFnyFqV+YFjwiHcbFDIgIsyV2sQhe7GJEQYd2so/+cE14J34RtiLV4jgiFicwSBut3E+7xd9WKVIv2mbCfLrF4qZurLKhRe3VXKolLjP7W104xN+ylBUTXiKdlN0asZUWM9QG/a3Iiy1LP7fKEkXRQmGdxlVhWhxJRwYt1jEmjEbNwgXg23JSOcTFy7Tdwm6l4WCS4wTV9hy7psWjgMt9HOHfDOC8SvMWuTaxtukERunKJXdz71n7hkJiWxCEm9A83ZWwOWseEboxFruCzYcFz9Ogb4Z4eOoiErrhLLoFq6S8qIi8aDlqPy8JzMqcbvCUENmhTSiawzCJes8L210thhVq7IrSFF3RIwIY2gcoQugmUDQuucFdXXwv7mInzWBmTpAZlEjv3/8zQcQe9tuJ74QZ1+Xcqu2KvYpmNsO44wTZkZDzD7T6k1Gns+jn/16fIopveqeuazGGd07XxNe5SoXfCfcrpIgmzYzR0E71iw2Hc9YC5+NAdXJdITEyLWvn0Rh2j/tIkPHKfbsvc55iTB2xsscF08B/fh3aEnhWOCR8prV16Yk4qWCWzJlzGQvt6OP9bgAEAxATa+HKmK4EAAAAASUVORK5CYII=');
   left: -5px;
   top: 0;
 }
-/* line 265, ../../assets/stylesheets/partials/_typography.scss */
+/* line 264, ../../assets/stylesheets/partials/_typography.scss */
 mark:after {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAiCAYAAABStIn6AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6Q0NGM0IwNzNCQjRCMTFFMkE1Nzc5ODhFRjQ4MzQ3OEMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Q0NGM0IwNzRCQjRCMTFFMkE1Nzc5ODhFRjQ4MzQ3OEMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpDQ0YzQjA3MUJCNEIxMUUyQTU3Nzk4OEVGNDgzNDc4QyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpDQ0YzQjA3MkJCNEIxMUUyQTU3Nzk4OEVGNDgzNDc4QyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Ps13MesAAAK5SURBVHjapJVLb01RFMfPfRW32iaGGJH4AKZGEkMJCTFA4isw8RE6MTMyREgwISKEiEEngnglaKoal7a3LVql7uvce3v8V/Pbybq39yVO8st57L3+e62119onNbcanYii6Fb0n1dKQi91/yzyYrfYKqbEPVEQDwcRysKY2CJ+iCVh4r8GFQlCZrQqmvBTLDD2z6E1xDpCdq2JqqiLOXFHTPQTKiKS2DvGJvQbsUVxepDQ5jGuk+gqImWEZwcN7ROhDYm0yOBhoEh4Jni+l9AsK6edUMKzLfCHcRP9II6IU+K6F7LJNbDQYkKqiBIh1vhuZfFOHBeHOuVoOys2EE4xlrh3E34gvoszLLBJaAWjdd6DQAJN5jwSh6n28U5CCzyH5MYu+Vmev4mDtNEbZ9OS7IJLZonvZao9JkdfxDNxs19Bhh1qkvSIZ+u3HDs3jTcXuwl9xSgkvOZyk3JVb2M291g3oQJeZFyCM4iEHCUu9CfibLtQmqQOUwZ2H6VV8i7hodotzAPiHPZHvUdLTAp5yrbVUCjWpsvdNG2zl3DHs+xMmp0KV53VQ9VHbpGYg9Ca+7X4KGbMoymMSkwKlRy7lqnyLeMK2I7nS2GXQ6NWcDlxrRLaZBgPdoptYgdlMeFKZcPVPF7knHHCpLKr+Kw7arIk/a1P9nuM0oiFQ67i6ikmLKv2ZQQuu07YEJogBwn3kOCc82aNn8ILcdftYEvTlghhmdjtGiHkBuIrnN23e/Xac7dDRf5tCYuk2d5JTse5Xod/yIEvuqr7GcR82+eFdo0lm4RSGNjqexCJ8SqmZUY4AYrMnyJ3LaHN87Hh6sh2aIYkD3HE5mnWxXZvgtAkK5cwMKGr/C0uiJPivnjaKSQvdEX3x3hzzY2NdjrkuwmFM9sSe6NtbGCR4NF+3V/1+yX3ErHrrwADALWxMUQUhRVnAAAAAElFTkSuQmCC');
   bottom: 0;
   right: -5px;
 }
 
-/* line 273, ../../assets/stylesheets/partials/_typography.scss */
+/* line 272, ../../assets/stylesheets/partials/_typography.scss */
 ins {
   text-decoration: underline;
 }
 
-/* line 276, ../../assets/stylesheets/partials/_typography.scss */
+/* line 275, ../../assets/stylesheets/partials/_typography.scss */
 del {
   text-decoration: line-through;
 }
 
-/* line 281, ../../assets/stylesheets/partials/_typography.scss */
+/* line 280, ../../assets/stylesheets/partials/_typography.scss */
 .table {
   width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
   margin-bottom: 1.33333em;
 }
-/* line 286, ../../assets/stylesheets/partials/_typography.scss */
+/* line 285, ../../assets/stylesheets/partials/_typography.scss */
 .table th, .table td {
   padding: 8px;
   text-align: left;
   border-top: 1px solid #dddddd;
   vertical-align: top;
 }
-/* line 292, ../../assets/stylesheets/partials/_typography.scss */
+/* line 291, ../../assets/stylesheets/partials/_typography.scss */
 .table th {
   font-weight: 700;
 }
-/* line 295, ../../assets/stylesheets/partials/_typography.scss */
+/* line 294, ../../assets/stylesheets/partials/_typography.scss */
 .table thead th {
   vertical-align: bottom;
 }
-/* line 303, ../../assets/stylesheets/partials/_typography.scss */
+/* line 302, ../../assets/stylesheets/partials/_typography.scss */
 .table caption + thead tr:first-child th,
 .table caption + thead tr:first-child td,
 .table colgroup + thead tr:first-child th,
@@ -514,13 +514,13 @@ del {
   border-top: 0;
 }
 
-/* line 310, ../../assets/stylesheets/partials/_typography.scss */
+/* line 308, ../../assets/stylesheets/partials/_typography.scss */
 .table-striped tbody > tr:nth-child(odd) > td,
 .table-striped tbody > tr:nth-child(odd) > th {
   background-color: #f9f9f9;
 }
 
-/* line 315, ../../assets/stylesheets/partials/_typography.scss */
+/* line 312, ../../assets/stylesheets/partials/_typography.scss */
 .table-bordered {
   border: 1px solid #dddddd;
   border-collapse: separate;
@@ -531,27 +531,41 @@ del {
   -o-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 320, ../../assets/stylesheets/partials/_typography.scss */
+/* line 317, ../../assets/stylesheets/partials/_typography.scss */
 .table-bordered th, .table-bordered td {
   border-left: 1px solid #dddddd;
 }
 
-/* line 327, ../../assets/stylesheets/partials/_typography.scss */
+/* line 323, ../../assets/stylesheets/partials/_typography.scss */
 .table-hover tbody tr:hover > td,
 .table-hover tbody tr:hover > th {
   background-color: #f9f9f9;
 }
 
-/* line 333, ../../assets/stylesheets/partials/_typography.scss */
+/* line 328, ../../assets/stylesheets/partials/_typography.scss */
 .table-condensed th, .table-condensed td {
   padding: 4px 5px;
 }
 
-/* line 338, ../../assets/stylesheets/partials/_typography.scss */
+/* line 332, ../../assets/stylesheets/partials/_typography.scss */
 caption, th, td {
   text-align: left;
   font-weight: 400;
   vertical-align: middle;
+}
+
+/* line 339, ../../assets/stylesheets/partials/_typography.scss */
+video {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1.33333em;
+}
+
+/* line 346, ../../assets/stylesheets/partials/_typography.scss */
+.fluid-width-video-wrapper {
+  margin-bottom: 1.33333em;
 }
 
 /* line 24, ../../assets/stylesheets/partials/_grids.scss */

@@ -463,6 +463,19 @@ Figures are usually used to refer to images:
 <img src="{{ site.images_dir }}styleguide/kelp-demo-2.jpg" alt="" />
 {% endfigure %}
 
+### Video
+
+#### Native Octopress Video Tag
+{% video http://s3.imathis.com/video/zero-to-fancy-buttons.mp4 640 420 http://s3.imathis.com/video/zero-to-fancy-buttons.png %}
+
+#### YouTube
+
+{% youtube TVblWq3tDwY %}
+
+#### Vimeo
+
+{% vimeo 45858333 %}
+
 ### Code
 The `code` element is used to represent fragments of computer code. Useful for technology-oriented sites, not so useful otherwise. Example:
 
