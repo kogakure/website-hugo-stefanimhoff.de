@@ -8,9 +8,13 @@ tags:
 - gtd
 ---
 
-Seit genau eineinhalb Jahren benutze ich jetzt die Prinzipien des *GTD* (*Getting Things Done*®), nach dem gleichnamigen Buch von *David Allen* um meine alltäglichen Aufgaben zu organisieren.
+Seit genau eineinhalb Jahren benutze ich jetzt die Prinzipien des *GTD* (<em>Getting Things Done</em>®), nach dem gleichnamigen Buch von *David Allen* um meine alltäglichen Aufgaben zu organisieren.
 
-<img src="{{ site.images_dir }}gtd-vorher.jpg" width="300" height="191" alt="GTD vorher" title="So sah die Inbox aus, bevor ich alle losen Enden sortiert hatte" /> David Allen stellt in seinem Buch ein interessantes System vor, mit dem man seine täglichen Aufgaben effektiv und effizient erledigen kann.
+{% figure %}
+<img src="{{ site.images_dir }}gtd-vorher.jpg" alt="Mein Schreibtisch vorher" title="So sah die Inbox aus, bevor ich alle losen Enden sortiert hatte">
+{% endfigure %}
+
+David Allen stellt in seinem Buch ein interessantes System vor, mit dem man seine täglichen Aufgaben effektiv und effizient erledigen kann.
 
 Das Buch ist auch in **Deutsch** erhältlich unter dem Titel <cite>[Wie ich die Dinge geregelt kriege](http://www.amazon.de/gp/product/3492240607/ref=as_li_ss_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=3492240607&linkCode=as2&tag=kogakurede-21)</cite>.
 
@@ -34,7 +38,11 @@ Aufgaben kann man auch delegieren oder bestimmten Zeitpunkten zuweisen. Wenn man
 
 ## GTD im Alltag
 
-<img src="{{ site.images_dir }}gtd-nachher.jpg" width="300" height="191" alt="GTD nachher" title="So sah die Inbox aus, nachdem ich alle losen Enden sortiert hatte" /> Auf den ersten Blick sieht GTD vielleicht kompliziert oder umständlich aus, doch hilft es ungemein, den Kopf von belastendem Grübeln freizuhalten.
+{% figure %}
+<img src="{{ site.images_dir }}gtd-nachher.jpg" alt="Mein Schreibtisch danach" title="So sah die Inbox aus, nachdem ich alle losen Enden sortiert hatte" />
+{% endfigure %}
+
+Auf den ersten Blick sieht GTD vielleicht kompliziert oder umständlich aus, doch hilft es ungemein, den Kopf von belastendem Grübeln freizuhalten.
 Schon nach kurzer Zeit der Umstellung habe ich mich an diese Arbeitsweise gewöhnt und schnell die Eigenschaft übernommen, jeden Gedanken **sofort zu notieren** und gemäß des GTD-Prinzips irgendwo einzuordnen. So vergesse ich nie wieder wichtige Dinge und selbst kleine Ideen verschwinden nicht gleich aus dem Kopf.
 
 Im Idealfall hat man dazu bestimmte **Arbeitswerkzeuge** dabei, die je nach Person und Lebensumständen variieren können. Ich selbst benutze eine Kombination aus Web-Applikation, Text-Dateien, [Moleskine®](http://www.moleskine.com/de/)-Notizbuch und Post-its® an verschiedenen Orten (z. B. auf dem Nachttisch).
@@ -45,11 +53,13 @@ Gerade für für Computerprofis gibt es zahlreiche Systeme und Programme, die GT
 
 Seit ich zum ersten Mal auf GTD getroffen bin, suche ich und teste (wenn gleich auch immer seltener) alternative Lösungen für Allens System.
 
-Gleich vorweg: Das perfekte System in der täglichen Umsetzung gibt es für mich **nicht**, bei **allen** Lösungen muss man Kompromisse eingehen. Leider. Erst wenn  eine neurale Schnittstelle entwickelt wurde, in die man seine Gedanken gleich in Textform einspeisen kann und direkt und überall über die Netzhaut abrufen kann, bin ich wohl zufrieden.
+Gleich vorweg: Das perfekte System in der täglichen Umsetzung gibt es für mich **nicht**, bei **allen** Lösungen muss man Kompromisse eingehen. Erst wenn  eine neurale Schnittstelle entwickelt wurde, in die man seine Gedanken gleich in Textform einspeisen kann und direkt und überall über die Netzhaut abrufen kann, bin ich wohl zufrieden.
 
 Die meisten Lösungen, die ich bislang gesehen habe, waren mir entweder zu einfach oder zu komplex.
 
-Zu **einfache Systeme** (purer Text) haben für mich nicht funktioniert, bestimmte Dinge blieben immer aussen vor. Ich habe die letzten Wochen mit [*TaskPaper*](http://www.hogbaysoftware.com/products/taskpaper) einen interessanten Kandidaten getestet, der leider keine Zuweisung von Terminen ermöglichte und daher im Langzeittest vorerst nicht ausreichte. Mal sehen, wie sich die Software weiter entwickelt. Leider hat den Autor mein Angebot einer Lokalisierung auch vorerst nicht interessiert (Was ich von Software-Entwicklung halte, bei der nicht gleich von Anfang an Lokalisierung/Internationalisierung gedacht wird, würde hier zu weit führen…).
+{% pullquote %}
+{"Zu einfache Systeme haben für mich nicht funktioniert"} – wie z. B. purer Text. Bestimmte Dinge blieben immer aussen vor. Ich habe die letzten Wochen mit [*TaskPaper*](http://www.hogbaysoftware.com/products/taskpaper) einen interessanten Kandidaten getestet, der leider keine Zuweisung von Terminen ermöglichte und daher im Langzeittest vorerst nicht ausreichte. Mal sehen, wie sich die Software weiter entwickelt. Leider hat den Autor mein Angebot einer Lokalisierung auch vorerst nicht interessiert (Was ich von Software-Entwicklung halte, bei der nicht gleich von Anfang an Lokalisierung/Internationalisierung gedacht wird, würde hier zu weit führen…).
+{% endpullquote %}
 
 Zu **komplexe Systeme**, die diverse Listen, Schlagworte, verschiedenste Daten und diverse Zuordnungen erlaubten, waren mir in der täglichen Anwendung zu zeitaufwendig.
 
@@ -70,7 +80,7 @@ Die Anwendung basiert zwar auf Ruby on Rails, erfordert aber keine Programmierke
 
 Tracks unterstützt *Kontexte*, *Projekte* und *Notizen*. Das ganze Interface ist zweigeteilt, auf der linken Seite hat man eine Liste seiner Kontexte und der *Next Actions* darin. Auf der rechten Seite befindet sich ein Link zum schnellen erstellen einer neuen Aufgabe, ein Überblick über die aktiven Projekte, die erledigten Projekte, aktive Kontexte und verborgene Kontexte (diese sind nicht auf der Startseite zu sehen).
 
-Eine Aufgabe benötigt einen **Titel**, optionale **Notizen** (*Textile* wird unterstützt), muss einem **Kontext** zugewiesen werden (bei mir standardmäßig *Eingang*). Sie kann einem **Projekt** zugeordnet werden und kann ein **Datum** bekommen (nur Tage).
+Eine Aufgabe benötigt einen **Titel**, optionale **Notizen** (<em>Textile</em> wird unterstützt), muss einem **Kontext** zugewiesen werden (bei mir standardmäßig *Eingang*). Sie kann einem **Projekt** zugeordnet werden und kann ein **Datum** bekommen (nur Tage).
 
 Die Web-Applikation benutzt Ajax, weshalb die Bedienung sehr schnell und effizient ist.
 

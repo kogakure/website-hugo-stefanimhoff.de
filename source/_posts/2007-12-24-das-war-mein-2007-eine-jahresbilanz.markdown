@@ -26,7 +26,7 @@ Hier war nicht so viel los, vor allem liegt das aber wohl daran, dass ich das We
 
 Die @media in London zieht mein Interesse an, obwohl ich – mal wieder – nicht hin <del>kann</del> <ins>darf</ins>.
 
-Ich fange an alle unsere Jobs auf der Arbeit in [Subversion](http://subversion.tigris.org/) Repositorys zu verschieben. Daher benötige ich eine Installationsanleitung für das gottverdammte Linux SuSE 10, weil nur dieses von unserer IT-Abteilung für uns installiert wird. Kompilieren macht jedenfalls unter diesem System keinen Spaß, weil auch wirklich kein Standard-UNIX-Pfad stimmt.
+Ich fange an alle unsere Jobs auf der Arbeit in [Subversion](http://subversion.tigris.org/)-Repositorys zu verschieben. Daher benötige ich eine Installationsanleitung für das gottverdammte *Linux SuSE 10*, weil nur dieses von unserer IT-Abteilung für uns installiert wird. Kompilieren macht jedenfalls unter diesem System keinen Spaß, weil auch wirklich kein Standard-UNIX-Pfad stimmt.
 
 ## März
 
@@ -34,31 +34,31 @@ Im März erkundige ich mich nach den Palmeninseln und der Weltkarteninselgruppe 
 
 Bei ExpressionEngine interessieren mich u. a. `search_results` und `wegblog_name`, was wohl bedeutet, dass ich gerade die Suche auf meiner Seite programmiere.
 
-Zusätzlich will ich noch wissen, wie man eine Personal-Version von ExpressionEngine zu einer Core-Version downgraded. Ich hab jetzt nämlich zwei EspressionEngine-Projekte, aber nur eine Lizenz. Natürlich gibt es keine Ergebnisse bei pmachine, aber es reicht nach etwas testen aus, wenn man einige der Module löscht.
+Zusätzlich will ich noch wissen, wie man eine Personal-Version von ExpressionEngine zu einer Core-Version downgraded. Ich hab jetzt nämlich zwei EspressionEngine-Projekte, aber nur eine Lizenz. Natürlich gibt es keine Ergebnisse bei <em>pmachine</em>, aber es reicht nach etwas testen aus, wenn man einige der Module löscht.
 
 ## April
 
-Dieser Monat ist der Kompilierungsmonat, jedenfalls installiere ich die <cite>Apple Developer Tools</cite>, Subversion unter Mac OS X, und suche nach verschiedenen Linux-Paketen.
+Dieser Monat ist der Kompilierungsmonat, jedenfalls installiere ich die *Apple Developer Tools*, Subversion unter Mac OS X, und suche nach verschiedenen Linux-Paketen.
 
 ExpressionEngine steht immer noch auf meinem Tagesplan, dieses Mal mit `categories`, `conditionals`, Debugging-, Geschwindigkeitsmessungs- und Statistik-Fragen.
 
 ## Mai
 
-Der Mai ist die heiße Phase in der Entwicklung meiner neuen Website. Das RSS Modul interessiert mich näher, Attribute, Datumsformatierungen, Conditionals, wie z. B. `elseif`, sowie `comment_count`.
+Der Mai ist die heiße Phase in der Entwicklung meiner neuen Website. Das RSS-Modul interessiert mich näher, Attribute, Datumsformatierungen, Conditionals, wie z. B. `elseif`, sowie `comment_count`.
 
 Außerdem suche ich nach den Lyrics meiner neuen Alben von den [Poets of the Fall](http://www.poetsofthefall.com/), einer wirklich guten, finnischen Rockband.
 
 ## Juni
 
-Im Juni lese ich das Buch [Robinson Crusoe](http://de.wikipedia.org/wiki/Robinson_Crusoe) und informiere mich mehr über die Hintergründe der Geschichte.
+Im Juni lese ich das Buch <cite>[Robinson Crusoe](http://de.wikipedia.org/wiki/Robinson_Crusoe)</cite> und informiere mich mehr über die Hintergründe der Geschichte.
 
 Sonst kommt mir in diesem Monat [Django](https://www.djangoproject.com/) erneut in meine Gedanken, ich hatte mich schon mal im Herbst des Vorjahres damit beschäftigt, war aber an der Installation gescheitert.
 
-Ich schaue den Film [Snakes and  Rubies](https://www.djangoproject.com/snakesandrubies/) an, in dem Adrian Holovaty und David Heinermeier Hannson die Vorteile und Unterschiede von Django und [Ruby on Rails](http://rubyonrails.org/) diskutieren.
+Ich schaue den Film <cite>[Snakes and  Rubies](https://www.djangoproject.com/snakesandrubies/)</cite> an, in dem *Adrian Holovaty* und *David Heinermeier Hannson* die Vorteile und Unterschiede von Django und [Ruby on Rails](http://rubyonrails.org/) diskutieren.
 
-Ein TextMate Bundle für Django muss her, und auch [ReST](http://docutils.sourceforge.net/rst.html) als Markupsprache der Djangoseite zieht mein Interesse an.
+Ein TextMate-Bundle für Django muss her, und auch [ReST](http://docutils.sourceforge.net/rst.html) als Markupsprache der Djangoseite zieht mein Interesse an.
 
-Logischerweise interessiere ich mich jetzt auch für  [Python](http://www.python.org/), die Programmiersprache, auf der Django basiert. Das Buch [Dive Into Python](http://www.diveintopython.org/), das im Internet kostenlos verfügbar ist, lese ich in den nächsten Wochen komplett durch.
+Logischerweise interessiere ich mich jetzt auch für  [Python](http://www.python.org/), die Programmiersprache, auf der Django basiert. Das Buch <cite>[Dive Into Python](http://www.diveintopython.org/)</cite>, das im Internet kostenlos verfügbar ist, lese ich in den nächsten Wochen komplett durch.
 
 ## Juli
 
@@ -66,31 +66,31 @@ Im Juli beschäftigen mich wieder stark Django und Python: Django Filter, Statis
 
 Ich schaue mir die [SQLite3](http://www.sqlite.org/)-Datenbank und ihre Syntax an, da sie für eine lokale Entwicklung geradezu optimal ist.
 
-Irgendetwas treibt mich in diesem Monat dazu, mich nach den Glanzlichtern der Internet-Goldgräberzeit zu erkundigen. Was wurde aus <cite>Balthaser Studios</cite>, <cite>Egomedia</cite>, <cite>Alien Arts</cite> oder <cite>All Media Studios</cite>. Oder auch dem <cite>The Horus Project</cite>. Hach, irgendwie war die Flash-Ära lustig. Ein pures <q>wer hat die besseren Animationen</q>. Content? Null.
+Irgendetwas treibt mich in diesem Monat dazu, mich nach den Glanzlichtern der Internet-Goldgräberzeit zu erkundigen. Was wurde aus *Balthaser Studios*, *Egomedia*, *Alien Arts* oder *All Media Studios*. Oder auch dem *The Horus Project*. Hach, irgendwie war die Flash-Ära lustig. Ein pures <q>wer hat die besseren Animationen</q>. Content? Null.
 
-An Musik suche ich im Juli nach dem <cite>Halo 3</cite> Soundtrack und nach den Lyrics von <cite>Sound Of Silence</cite>.
+An Musik suche ich im Juli nach dem *Halo 3* Soundtrack und nach den Lyrics von <cite>Sound Of Silence</cite>.
 
-Ich erkundige mich, ob Jean-Yves Mitton, ein französischer Zeichner, mal wieder einen Band meiner Lieblings-Comicreihe [Quetzalcoatl](http://mitton.free.fr/docs/QUETZALCOATL.htm) fertiggestellt hat. Er arbeitet leider sehr langsam, dafür mit sehr hoher Qualität, im Durchschnitt schafft er nicht mal einen Band pro Jahr. Der letzte Band erscheint dann nach zehn Jahren seit dem Start der Reihe 2008.
+Ich erkundige mich, ob Jean-Yves Mitton, ein französischer Zeichner, mal wieder einen Band meiner Lieblings-Comicreihe <cite>[Quetzalcoatl](http://mitton.free.fr/docs/QUETZALCOATL.htm)</cite> fertiggestellt hat. Er arbeitet leider sehr langsam, dafür mit sehr hoher Qualität, im Durchschnitt schafft er nicht mal einen Band pro Jahr. Der letzte Band erscheint dann nach zehn Jahren seit dem Start der Reihe 2008.
 
 In diesem Monat schaue ich mir im Fernsehen vermutlich [Thoughtcrimes](http://www.imdb.com/title/tt0339785/) an, einen Film, der irgendwie gar nicht so schlecht war, auch wenn die Story etwas seltsam daherkommt.
 
-Und ich suche nach dem Film [Staplerfahrer Klaus](http://www.youtube.com/watch?v=YvdkvBXBAcw), ein Klassiker, den man einfach gesehen haben muss.
+Und ich suche nach dem Film <cite>[Staplerfahrer Klaus](http://www.youtube.com/watch?v=YvdkvBXBAcw)</cite>, ein Klassiker, den man einfach gesehen haben muss.
 
 ## August
 
-Im August erkundige ich mich nach Googles PageRank, denn mittlerweile sind schon fast vier Monate vergangen, und ich habe immer noch einen PageRank von Null. Ich befürchte die böse <cite>Google Sandbox</cite> (zu recht, wie ich feststelle).
+Im August erkundige ich mich nach Googles PageRank, denn mittlerweile sind schon fast vier Monate vergangen, und ich habe immer noch einen PageRank von Null. Ich befürchte die böse Google Sandbox (zu recht, wie ich feststelle).
 
 In diesem Monat erkundige ich mich auch nach Django-Hostern und finde heraus, dass TextDrive jetzt [Joyent](http://joyent.com/) ist. Ich entscheide mich für [Webfaction](http://www.webfaction.com/?affiliate=kogakure) als neuen Webhoster.
 
-Im August entdecke ich [git](http://git-scm.com/) für mich, Linus Torvalds fantastisches Versionskontrollsystem. Git ist Subversion in vielen Punkten um Längen vorraus.
+Im August entdecke ich [Git](http://git-scm.com/) für mich, Linus Torvalds fantastisches Versionskontrollsystem. Git ist Subversion in vielen Punkten um Längen vorraus.
 
-Der [Mister Wong](http://www.mister-wong.de/)-Skandal im August ist mal wieder typisch und sehr lustig. Irgendein asiatisch-amerikanischer Typ regt sich **unglaublich** über die Karikatur eines Chinesen im Logo des Bookmark-Dienstes Mister Wong auf. Faschisten, ihr alle! Hier kommt die braune Keule! Man kann sich auch künstlich aufregen… Tsssss. Jedenfalls muss ein neues Logo her. Die Community soll aushelfen.
+Der [Mister Wong](http://www.mister-wong.de/)-Skandal im August ist mal wieder typisch und sehr lustig. Irgendein asiatisch-amerikanischer Typ regt sich **unglaublich** über die Karikatur eines Chinesen im Logo des Bookmark-Dienstes Mister Wong auf. Faschisten, ihr alle! Hier kommt die braune Keule! Man kann sich auch künstlich aufregen … Tsssss. Jedenfalls muss ein neues Logo her. Die Community soll aushelfen.
 
 Zum ersten mal in meinem Leben beschäftige ich mich im späten August mit [LaTeX](http://de.wikipedia.org/wiki/LaTeX). Einige Studenten aus unserer Firma haben mich darauf gestoßen. Muss ich können, tu ich lernen. Mein Motto ;)
 
 Auf meinem Nachttisch liegt laut Google Suche Machiavellis <cite>[Der Fürst](http://www.amazon.de/gp/product/3458344721/ref=as_li_ss_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=3458344721&linkCode=as2&tag=kogakurede-21)</cite>.
 
-In der [Autostadt Wolfsburg](http://www.autostadt.de/) eröffnet ein neues japanisches Restaurant, das <cite>Anan</cite>, mit extra einflogenem, japanischem Meisterkoch.
+In der [Autostadt Wolfsburg](http://www.autostadt.de/) eröffnet ein neues japanisches Restaurant, das *Anan*, mit extra einflogenem, japanischem Meisterkoch.
 
 Das Sommerloch geht langsam zu Ende, also erkundige ich mich, was meine Lieblingsserien so machen, und wann die Staffeln wieder starten: [Lost](http://abc.go.com/shows/lost), [StarGate SG-1 und StarGate Atlantis](http://stargate.mgm.com/), [Monk](http://www.usanetwork.com/series/monk/) und [Battlestar Galactica](http://www.syfy.com/battlestar/).
 
@@ -112,13 +112,13 @@ Im September arbeite ich mich im Detail in die Befehlssyntax von git ein, was ab
 
 Immer noch beschäftigt mich LaTeX, es ist einfach cool, was man mit einem puren Texteditor erstellen kann.
 
-Ich setze mir ein neues Wiki auf, <cite>DokuWiki</cite> nervt irgendwie. Das neue Wiki heißt [MoinMoin](http://moinmo.in/) und basiert auf Python.
+Ich setze mir ein neues Wiki auf, DokuWiki nervt irgendwie. Das neue Wiki heißt [MoinMoin](http://moinmo.in/) und basiert auf Python.
 
 Ich schaue mir die <cite>PostgreSQL</cite>-Datenbank an, und stelle fest, das MySQL dagegen ja fast ein Kinderspielzeug ist. So ein Glück, dass Postgres die von Django favorisierte Datenbank ist.
 
 ActiveCollab, der OpenSource Projektmanager ist jetzt kommerziell, das Projekt wird aber von einem anderen Entwickler in der OpenSource-Lizenz als [ProjectPier](http://www.projectpier.org/) weiterentwickelt. Danke!
 
-Ich muss mir eingestehen, dass ohne JavaScript-Frameworks und Ajax-Erfahrung kein Arbeitgeber mehr beeindruckt ist. Naja, also such ich mir aus der langen Liste (YUI, Dojo, Mochikit, Prototype, jQuery, …) ein raus: [jQuery](http://jquery.com/).
+Ich muss mir eingestehen, dass ohne JavaScript-Frameworks und Ajax-Erfahrung kein Arbeitgeber mehr beeindruckt ist. Naja, also such ich mir aus der langen Liste (YUI, Dojo, Mochikit, Prototype, jQuery, …) eins raus: [jQuery](http://jquery.com/).
 
 jQuery hat die coolste Syntax und kann alles, was der Kunde von heute so will.
 
@@ -168,7 +168,7 @@ Doch schon nach 14 Tagen steht für mich eigentlich fest: <cite>Things</cite> is
 
 Irgendwie kann ich es nicht lassen und kaufe mir einen [iPod touch](http://www.apple.com/de/ipod-touch/), den ich mit <cite>Jailbreak</cite> befreien will, was aber erstmal nicht klappt, weil Apple ein Update rausbringt, das die Sicherheitslücke schließt.
 
-Auf ARTE sehe ich einen interessanten Beitrag über die [Haddsch](http://de.wikipedia.org/wiki/Haddsch) - die Pilgerfahrt nach Mekka und google den genauen Verlauf nach. Diese Welt will sich mir einfach nicht erschließen. Den Teufel steinigen, auf einem Hügel sitzen und heulen, um einen Steinkasten wandern. Wem’s gefällt. Ach ja: Und ich trete aus der evangelischen Kirche aus.
+Auf ARTE sehe ich einen interessanten Beitrag über die [Haddsch](http://de.wikipedia.org/wiki/Haddsch) - die Pilgerfahrt nach Mekka – und google den genauen Verlauf nach. Diese Welt will sich mir einfach nicht erschließen. Den Teufel steinigen, auf einem Hügel sitzen und heulen, um einen Steinkasten wandern. Wem’s gefällt. Ach ja: Und ich trete aus der evangelischen Kirche aus.
 
 Ich lache mich tot, weil FileMaker ihr neues Datenbank-Produkt [Bentō](http://www.filemaker.de/products/bento/) nennt. Die dachten wohl, das heißt Box. Das heißt aber Mittagessen ;)
 
