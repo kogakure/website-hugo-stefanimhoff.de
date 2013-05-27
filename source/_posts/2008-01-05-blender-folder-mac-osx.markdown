@@ -13,7 +13,9 @@ tags:
 
 Da mein [Django Folder-Icon](/django-folder-mac-osx/ "Django Folder für Mac OS X Leopard • Notizen • Stefan Imhoff"), das ich im Dezember veröffentlicht habe, ein riesiger Erfolg war und schon unzählige Male heruntergeladen wurde, habe ich einen neuen Ordner erstellt – dieses mal für Blender.
 
-<a href="/downloads/blender-leopard-folder.zip"><img src="{{ site.images_dir }}blender-leopard-folders.jpg" alt="Blender Folder" width="292" height="365" /></a>
+{% figure %}
+<a href="/downloads/blender-osx-folder.zip"><img src="{{ site.images_dir }}blender-osx-folders.jpg" alt="Blender Folder"></a>
+{% endfigure %}
 
 ## Blender
 
@@ -25,12 +27,12 @@ Wer lernen möchte mit einer solchen 3D-Software zu arbeiten oder von einer der 
 
 Das Blender es lässig mit den teuren Mitbewerbern aufnehmen kann, kann man in der [Showcase-Galerie](http://www.blender.org/features-gallery/gallery/art-gallery/) sehen oder in Projekten wie [Elephants Dream](http://orange.blender.org/ "Elephants Dream"), Peach oder  [Pumiferos](http://www.plumiferos.com/) bewundern.
 
-## Leopard Folder-Icon
+## Folder-Icon
 
 Die Icons sind in allen Größen von 16 Pixel bis 512 Pixel im Download vorhanden. Wer sie gebrauchen kann, kann sie gerne benutzen.
 
 **Advice:** The folder is property of [Apple](http://www.apple.com/ "Apple"), the Blender-Logo is property of [Blender Foundation](http://www.blender.org/). For private use only [(CreativeCommons)](http://creativecommons.org/licenses/by-nc-nd/3.0/deed.de "Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 Unported").
 
 <div class="download">
-    <p><a href="/downloads/blender-leopard-folder.zip">Download Mac OS X 10.5 *Leopard* Blender-Folder (814 KB)</a> (zip) »</p>
+    <p><a href="/downloads/blender-osx-folder.zip">Download Mac OS X Blender-Folder (814 KB)</a> (zip) »</p>
 </div>
