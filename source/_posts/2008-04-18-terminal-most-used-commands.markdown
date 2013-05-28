@@ -2,9 +2,9 @@
 layout: post
 title: "Zeige deine am häufigsten benutzen Terminal-Befehle"
 date: 2008-04-18 07:00
-description: 
+description:
 categories:
-tags: 
+tags:
 - terminal
 - command
 ---
@@ -32,3 +32,23 @@ history | awk '{print $2}' | sort | uniq -c | sort -rn | head -10
 * gca (git commit -a)
 * gba (git branch -a)
 * gp (git push)
+
+## Update
+
+Beim reviewen des Artikels habe ich mich spontan entschlossen, das ganze noch einmal heute (Mai 2013) zu machen, um zu schauen, was sich verändert hat:
+
+{% codeblock lang:sh %}
+history | awk '{print $2}' | sort | uniq -c | sort -rn | head -10
+
+1113 git
+ 873 cd
+ 809 gst
+ 618 rake
+ 448 brew
+ 305 ll
+ 271 gp
+ 218 npm
+ 216 sudo
+ 183 bundle
+{% endcodeblock %}
+
