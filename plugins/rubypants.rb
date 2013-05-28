@@ -203,7 +203,7 @@ class RubyPants < String
   # <tt>:stupefy</tt>       :: translate RubyPants HTML entities
   #                            to their ASCII counterparts.
   #
-  def initialize(string, options=[2])
+  def initialize(string, options=[0])
     super string
     @options = [*options]
   end

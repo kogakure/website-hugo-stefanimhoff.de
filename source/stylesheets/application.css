@@ -128,31 +128,36 @@ h2 {
 }
 
 /* line 21, ../../assets/stylesheets/partials/_typography.scss */
+h2 + h3 {
+  margin-top: 1.33333em;
+}
+
+/* line 24, ../../assets/stylesheets/partials/_typography.scss */
 h3 {
   font-size: 1.43822em;
   line-height: 1.39061em;
   font-weight: 400;
 }
 
-/* line 25, ../../assets/stylesheets/partials/_typography.scss */
+/* line 28, ../../assets/stylesheets/partials/_typography.scss */
 h4, h5, h6 {
   font-size: 1em;
   line-height: 1.33333em;
   font-weight: 700;
 }
 
-/* line 31, ../../assets/stylesheets/partials/_typography.scss */
+/* line 34, ../../assets/stylesheets/partials/_typography.scss */
 p {
   margin-bottom: 1.33333em;
 }
 
-/* line 34, ../../assets/stylesheets/partials/_typography.scss */
+/* line 37, ../../assets/stylesheets/partials/_typography.scss */
 .article-body > p:first-child {
   font-size: 1.22222em;
   line-height: 1.63636em;
 }
 
-/* line 39, ../../assets/stylesheets/partials/_typography.scss */
+/* line 42, ../../assets/stylesheets/partials/_typography.scss */
 hr {
   border: 0;
   height: 0;
@@ -164,7 +169,7 @@ hr {
   margin-bottom: 2.66667em;
 }
 
-/* line 49, ../../assets/stylesheets/partials/_typography.scss */
+/* line 52, ../../assets/stylesheets/partials/_typography.scss */
 blockquote {
   margin-left: 1.33333em;
   margin-right: 1.33333em;
@@ -173,7 +178,7 @@ blockquote {
   font-style: italic;
 }
 
-/* line 56, ../../assets/stylesheets/partials/_typography.scss */
+/* line 59, ../../assets/stylesheets/partials/_typography.scss */
 .verse pre {
   font-family: inherit;
   display: table;
@@ -181,19 +186,19 @@ blockquote {
   margin: 0 auto;
 }
 
-/* line 64, ../../assets/stylesheets/partials/_typography.scss */
+/* line 67, ../../assets/stylesheets/partials/_typography.scss */
 cite {
   font-style: italic;
 }
 
-/* line 67, ../../assets/stylesheets/partials/_typography.scss */
+/* line 70, ../../assets/stylesheets/partials/_typography.scss */
 blockquote cite:before {
   content: '–';
   padding-right: 0.3em;
   padding-left: 0.3em;
 }
 
-/* line 75, ../../assets/stylesheets/partials/_typography.scss */
+/* line 78, ../../assets/stylesheets/partials/_typography.scss */
 .pullquote-right:before,
 .pullquote-left:before {
   font-size: 1.43822em;
@@ -208,24 +213,24 @@ blockquote cite:before {
   width: 45%;
 }
 
-/* line 86, ../../assets/stylesheets/partials/_typography.scss */
+/* line 89, ../../assets/stylesheets/partials/_typography.scss */
 .pullquote-left:before {
   float: left;
   margin: 0 1.33333em 1.33333em 0;
 }
 
-/* line 92, ../../assets/stylesheets/partials/_typography.scss */
+/* line 95, ../../assets/stylesheets/partials/_typography.scss */
 q {
   font-style: italic;
 }
 
-/* line 96, ../../assets/stylesheets/partials/_typography.scss */
+/* line 99, ../../assets/stylesheets/partials/_typography.scss */
 :lang(en) > q,
 .article-body q[lang|=en] {
   quotes: '“' '”' '‘' '’';
 }
 
-/* line 100, ../../assets/stylesheets/partials/_typography.scss */
+/* line 103, ../../assets/stylesheets/partials/_typography.scss */
 :lang(fr) > q,
 .article-body q[lang|=fr] {
   quotes: '« ' ' »' '“' '”';
@@ -236,74 +241,74 @@ q {
  * .article-body q[lang|=de] { */
 /*   quotes: '„' '“' '‚' '‘'; */
 /* } */
-/* line 109, ../../assets/stylesheets/partials/_typography.scss */
+/* line 112, ../../assets/stylesheets/partials/_typography.scss */
 :lang(de) > q,
 .article-body q[lang|=de] {
   quotes: '»' '«' '›' '‹';
 }
 
-/* line 113, ../../assets/stylesheets/partials/_typography.scss */
+/* line 116, ../../assets/stylesheets/partials/_typography.scss */
 :lang(ja) > q,
 .article-body q[lang|=ja] {
   quotes: '「' '」' '『' '』';
   font-style: normal;
 }
 
-/* line 118, ../../assets/stylesheets/partials/_typography.scss */
+/* line 121, ../../assets/stylesheets/partials/_typography.scss */
 q:before {
   content: open-quote;
 }
 
-/* line 119, ../../assets/stylesheets/partials/_typography.scss */
+/* line 122, ../../assets/stylesheets/partials/_typography.scss */
 q:after {
   content: close-quote;
 }
 
-/* line 122, ../../assets/stylesheets/partials/_typography.scss */
+/* line 125, ../../assets/stylesheets/partials/_typography.scss */
 ol {
   margin-bottom: 1.33333em;
   list-style: decimal;
 }
 
-/* line 126, ../../assets/stylesheets/partials/_typography.scss */
+/* line 129, ../../assets/stylesheets/partials/_typography.scss */
 ol ol {
   margin: 0 1.33333em;
   list-style: lower-latin;
 }
 
-/* line 130, ../../assets/stylesheets/partials/_typography.scss */
+/* line 133, ../../assets/stylesheets/partials/_typography.scss */
 ul {
   margin-bottom: 1.33333em;
   list-style: disc;
 }
 
-/* line 134, ../../assets/stylesheets/partials/_typography.scss */
+/* line 137, ../../assets/stylesheets/partials/_typography.scss */
 ul ul {
   margin: 0 1.33333em;
   list-style: circle;
 }
 
-/* line 138, ../../assets/stylesheets/partials/_typography.scss */
+/* line 141, ../../assets/stylesheets/partials/_typography.scss */
 dl {
   margin-bottom: 1.33333em;
 }
 
-/* line 141, ../../assets/stylesheets/partials/_typography.scss */
+/* line 144, ../../assets/stylesheets/partials/_typography.scss */
 dt {
   font-weight: 700;
 }
 
-/* line 144, ../../assets/stylesheets/partials/_typography.scss */
+/* line 147, ../../assets/stylesheets/partials/_typography.scss */
 dt + dd {
   margin-bottom: 1.33333em;
 }
 
-/* line 147, ../../assets/stylesheets/partials/_typography.scss */
+/* line 150, ../../assets/stylesheets/partials/_typography.scss */
 dd {
   margin-left: 0;
 }
 
-/* line 152, ../../assets/stylesheets/partials/_typography.scss */
+/* line 155, ../../assets/stylesheets/partials/_typography.scss */
 a {
   color: #0000cc;
 }
@@ -324,34 +329,34 @@ a:active {
   color: #cc00cc;
 }
 
-/* line 158, ../../assets/stylesheets/partials/_typography.scss */
+/* line 161, ../../assets/stylesheets/partials/_typography.scss */
 em {
   font-style: italic;
 }
 
-/* line 161, ../../assets/stylesheets/partials/_typography.scss */
+/* line 164, ../../assets/stylesheets/partials/_typography.scss */
 strong {
   font-weight: 700;
 }
 
-/* line 166, ../../assets/stylesheets/partials/_typography.scss */
+/* line 169, ../../assets/stylesheets/partials/_typography.scss */
 small {
   font-size: 0.77778em;
   line-height: 1.71429em;
 }
 
-/* line 171, ../../assets/stylesheets/partials/_typography.scss */
+/* line 174, ../../assets/stylesheets/partials/_typography.scss */
 s {
   text-decoration: line-through;
 }
 
-/* line 176, ../../assets/stylesheets/partials/_typography.scss */
+/* line 179, ../../assets/stylesheets/partials/_typography.scss */
 dfn {
   border-bottom: 1px dotted #999999;
   cursor: help;
 }
 
-/* line 182, ../../assets/stylesheets/partials/_typography.scss */
+/* line 185, ../../assets/stylesheets/partials/_typography.scss */
 abbr, acronym {
   cursor: help;
   font-variant: small-caps;
@@ -359,28 +364,28 @@ abbr, acronym {
   text-transform: lowercase;
 }
 
-/* line 188, ../../assets/stylesheets/partials/_typography.scss */
+/* line 191, ../../assets/stylesheets/partials/_typography.scss */
 abbr[title], acronym[title] {
   border-bottom-width: 0;
 }
 
-/* line 191, ../../assets/stylesheets/partials/_typography.scss */
+/* line 194, ../../assets/stylesheets/partials/_typography.scss */
 abbr.no-caps {
   font-variant: normal;
   text-transform: none;
 }
 
-/* line 197, ../../assets/stylesheets/partials/_typography.scss */
+/* line 200, ../../assets/stylesheets/partials/_typography.scss */
 pre {
   margin-bottom: 1.33333em;
 }
 
-/* line 202, ../../assets/stylesheets/partials/_typography.scss */
+/* line 205, ../../assets/stylesheets/partials/_typography.scss */
 var {
   font-style: italic;
 }
 
-/* line 207, ../../assets/stylesheets/partials/_typography.scss */
+/* line 210, ../../assets/stylesheets/partials/_typography.scss */
 samp {
   font-size: 0.83333em;
   line-height: 1.6em;
@@ -389,7 +394,7 @@ samp {
   margin: 0 0.4em;
 }
 
-/* line 215, ../../assets/stylesheets/partials/_typography.scss */
+/* line 218, ../../assets/stylesheets/partials/_typography.scss */
 kbd {
   font-size: 0.66667em;
   line-height: 2em;
@@ -414,33 +419,33 @@ kbd {
   white-space: nowrap;
 }
 
-/* line 233, ../../assets/stylesheets/partials/_typography.scss */
+/* line 236, ../../assets/stylesheets/partials/_typography.scss */
 sup, sub {
   position: relative;
   vertical-align: 0;
 }
 
-/* line 237, ../../assets/stylesheets/partials/_typography.scss */
+/* line 240, ../../assets/stylesheets/partials/_typography.scss */
 sup {
   bottom: 1ex;
 }
 
-/* line 240, ../../assets/stylesheets/partials/_typography.scss */
+/* line 243, ../../assets/stylesheets/partials/_typography.scss */
 sub {
   top: 0.8ex;
 }
 
-/* line 245, ../../assets/stylesheets/partials/_typography.scss */
+/* line 248, ../../assets/stylesheets/partials/_typography.scss */
 i {
   font-style: italic;
 }
 
-/* line 246, ../../assets/stylesheets/partials/_typography.scss */
+/* line 249, ../../assets/stylesheets/partials/_typography.scss */
 b {
   font-weight: 700;
 }
 
-/* line 249, ../../assets/stylesheets/partials/_typography.scss */
+/* line 252, ../../assets/stylesheets/partials/_typography.scss */
 mark {
   -webkit-background-size: 25px 21px;
   -moz-background-size: 25px 21px;
@@ -451,7 +456,7 @@ mark {
   position: relative;
   color: rgba(0, 0, 0, 0.75);
 }
-/* line 255, ../../assets/stylesheets/partials/_typography.scss */
+/* line 258, ../../assets/stylesheets/partials/_typography.scss */
 mark:before, mark:after {
   -webkit-background-size: 5px 21px;
   -moz-background-size: 5px 21px;
@@ -464,52 +469,52 @@ mark:before, mark:after {
   position: absolute;
   width: 5px;
 }
-/* line 264, ../../assets/stylesheets/partials/_typography.scss */
+/* line 267, ../../assets/stylesheets/partials/_typography.scss */
 mark:before {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAiCAYAAABfqvm9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6Q0NGM0IwNkZCQjRCMTFFMkE1Nzc5ODhFRjQ4MzQ3OEMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Q0NGM0IwNzBCQjRCMTFFMkE1Nzc5ODhFRjQ4MzQ3OEMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpDQ0YzQjA2REJCNEIxMUUyQTU3Nzk4OEVGNDgzNDc4QyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpDQ0YzQjA2RUJCNEIxMUUyQTU3Nzk4OEVGNDgzNDc4QyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PtG8mAYAAAMVSURBVHjanJY7iBNRFIYzk5lMNo9Voquy4mNFRQuVBZWtxEpEFASLrSxsbLRVbBexttLS3gV7LRYbbXxg5aMSxFSCuj52TTKTjOfId+QQJpE48DE72bn/Pe87QXu1NOnVEFKhy/NO4YJwWx+iCcUC4SaCd4RPwnEhFjYJX6IxC/Oh31rCXmFGqAnXha/CUQQrwtNghMuhMHDPW4UlYRrqCDQRT4RMWB9loYrNEqfPwjVhj7AZd3MEE+7mUWWUoMblDDF6zILvuBZjlQqsCz1yoc9BkcunyVqCpWpRmaAHLE5gijVqZXWUhZeF7YhkrhLqiGfcG4jmxFzfqxUJ3hWusmuPnfXqsDjB7RzhPoJrGvMiwQ+4OiBuKdnMWdxFMHIhGLBRUCQ4Q/XrCxudO1MI5rj9E8ESm4TDMdT6OimcQEDZwiJLTsy7ZcQjV68aktQEF4VTwm5hBwtDd8+xInGFnyFqV+YFjwiHcbFDIgIsyV2sQhe7GJEQYd2so/+cE14J34RtiLV4jgiFicwSBut3E+7xd9WKVIv2mbCfLrF4qZurLKhRe3VXKolLjP7W104xN+ylBUTXiKdlN0asZUWM9QG/a3Iiy1LP7fKEkXRQmGdxlVhWhxJRwYt1jEmjEbNwgXg23JSOcTFy7Tdwm6l4WCS4wTV9hy7psWjgMt9HOHfDOC8SvMWuTaxtukERunKJXdz71n7hkJiWxCEm9A83ZWwOWseEboxFruCzYcFz9Ogb4Z4eOoiErrhLLoFq6S8qIi8aDlqPy8JzMqcbvCUENmhTSiawzCJes8L210thhVq7IrSFF3RIwIY2gcoQugmUDQuucFdXXwv7mInzWBmTpAZlEjv3/8zQcQe9tuJ74QZ1+Xcqu2KvYpmNsO44wTZkZDzD7T6k1Gns+jn/16fIopveqeuazGGd07XxNe5SoXfCfcrpIgmzYzR0E71iw2Hc9YC5+NAdXJdITEyLWvn0Rh2j/tIkPHKfbsvc55iTB2xsscF08B/fh3aEnhWOCR8prV16Yk4qWCWzJlzGQvt6OP9bgAEAxATa+HKmK4EAAAAASUVORK5CYII=');
   left: -5px;
   top: 0;
 }
-/* line 269, ../../assets/stylesheets/partials/_typography.scss */
+/* line 272, ../../assets/stylesheets/partials/_typography.scss */
 mark:after {
   background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAiCAYAAABStIn6AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6Q0NGM0IwNzNCQjRCMTFFMkE1Nzc5ODhFRjQ4MzQ3OEMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6Q0NGM0IwNzRCQjRCMTFFMkE1Nzc5ODhFRjQ4MzQ3OEMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpDQ0YzQjA3MUJCNEIxMUUyQTU3Nzk4OEVGNDgzNDc4QyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpDQ0YzQjA3MkJCNEIxMUUyQTU3Nzk4OEVGNDgzNDc4QyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Ps13MesAAAK5SURBVHjapJVLb01RFMfPfRW32iaGGJH4AKZGEkMJCTFA4isw8RE6MTMyREgwISKEiEEngnglaKoal7a3LVql7uvce3v8V/Pbybq39yVO8st57L3+e62119onNbcanYii6Fb0n1dKQi91/yzyYrfYKqbEPVEQDwcRysKY2CJ+iCVh4r8GFQlCZrQqmvBTLDD2z6E1xDpCdq2JqqiLOXFHTPQTKiKS2DvGJvQbsUVxepDQ5jGuk+gqImWEZwcN7ROhDYm0yOBhoEh4Jni+l9AsK6edUMKzLfCHcRP9II6IU+K6F7LJNbDQYkKqiBIh1vhuZfFOHBeHOuVoOys2EE4xlrh3E34gvoszLLBJaAWjdd6DQAJN5jwSh6n28U5CCzyH5MYu+Vmev4mDtNEbZ9OS7IJLZonvZao9JkdfxDNxs19Bhh1qkvSIZ+u3HDs3jTcXuwl9xSgkvOZyk3JVb2M291g3oQJeZFyCM4iEHCUu9CfibLtQmqQOUwZ2H6VV8i7hodotzAPiHPZHvUdLTAp5yrbVUCjWpsvdNG2zl3DHs+xMmp0KV53VQ9VHbpGYg9Ca+7X4KGbMoymMSkwKlRy7lqnyLeMK2I7nS2GXQ6NWcDlxrRLaZBgPdoptYgdlMeFKZcPVPF7knHHCpLKr+Kw7arIk/a1P9nuM0oiFQ67i6ikmLKv2ZQQuu07YEJogBwn3kOCc82aNn8ILcdftYEvTlghhmdjtGiHkBuIrnN23e/Xac7dDRf5tCYuk2d5JTse5Xod/yIEvuqr7GcR82+eFdo0lm4RSGNjqexCJ8SqmZUY4AYrMnyJ3LaHN87Hh6sh2aIYkD3HE5mnWxXZvgtAkK5cwMKGr/C0uiJPivnjaKSQvdEX3x3hzzY2NdjrkuwmFM9sSe6NtbGCR4NF+3V/1+yX3ErHrrwADALWxMUQUhRVnAAAAAElFTkSuQmCC');
   bottom: 0;
   right: -5px;
 }
 
-/* line 277, ../../assets/stylesheets/partials/_typography.scss */
+/* line 280, ../../assets/stylesheets/partials/_typography.scss */
 ins {
   text-decoration: underline;
 }
 
-/* line 280, ../../assets/stylesheets/partials/_typography.scss */
+/* line 283, ../../assets/stylesheets/partials/_typography.scss */
 del {
   text-decoration: line-through;
 }
 
-/* line 285, ../../assets/stylesheets/partials/_typography.scss */
+/* line 288, ../../assets/stylesheets/partials/_typography.scss */
 .table {
   width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
   margin-bottom: 1.33333em;
 }
-/* line 290, ../../assets/stylesheets/partials/_typography.scss */
+/* line 293, ../../assets/stylesheets/partials/_typography.scss */
 .table th, .table td {
   padding: 8px;
   text-align: left;
   border-top: 1px solid #dddddd;
   vertical-align: top;
 }
-/* line 296, ../../assets/stylesheets/partials/_typography.scss */
+/* line 299, ../../assets/stylesheets/partials/_typography.scss */
 .table th {
   font-weight: 700;
 }
-/* line 299, ../../assets/stylesheets/partials/_typography.scss */
+/* line 302, ../../assets/stylesheets/partials/_typography.scss */
 .table thead th {
   vertical-align: bottom;
 }
-/* line 307, ../../assets/stylesheets/partials/_typography.scss */
+/* line 310, ../../assets/stylesheets/partials/_typography.scss */
 .table caption + thead tr:first-child th,
 .table caption + thead tr:first-child td,
 .table colgroup + thead tr:first-child th,
@@ -519,13 +524,13 @@ del {
   border-top: 0;
 }
 
-/* line 313, ../../assets/stylesheets/partials/_typography.scss */
+/* line 316, ../../assets/stylesheets/partials/_typography.scss */
 .table-striped tbody > tr:nth-child(odd) > td,
 .table-striped tbody > tr:nth-child(odd) > th {
   background-color: #f9f9f9;
 }
 
-/* line 317, ../../assets/stylesheets/partials/_typography.scss */
+/* line 320, ../../assets/stylesheets/partials/_typography.scss */
 .table-bordered {
   border: 1px solid #dddddd;
   border-collapse: separate;
@@ -536,35 +541,35 @@ del {
   -o-border-radius: 4px;
   border-radius: 4px;
 }
-/* line 322, ../../assets/stylesheets/partials/_typography.scss */
+/* line 325, ../../assets/stylesheets/partials/_typography.scss */
 .table-bordered th, .table-bordered td {
   border-left: 1px solid #dddddd;
 }
 
-/* line 328, ../../assets/stylesheets/partials/_typography.scss */
+/* line 331, ../../assets/stylesheets/partials/_typography.scss */
 .table-hover tbody tr:hover > td,
 .table-hover tbody tr:hover > th {
   background-color: #f9f9f9;
 }
 
-/* line 333, ../../assets/stylesheets/partials/_typography.scss */
+/* line 336, ../../assets/stylesheets/partials/_typography.scss */
 .table-condensed th, .table-condensed td {
   padding: 4px 5px;
 }
 
-/* line 337, ../../assets/stylesheets/partials/_typography.scss */
+/* line 340, ../../assets/stylesheets/partials/_typography.scss */
 caption, th, td {
   text-align: left;
   font-weight: 400;
   vertical-align: middle;
 }
 
-/* line 344, ../../assets/stylesheets/partials/_typography.scss */
+/* line 347, ../../assets/stylesheets/partials/_typography.scss */
 img {
   max-width: 100%;
 }
 
-/* line 349, ../../assets/stylesheets/partials/_typography.scss */
+/* line 352, ../../assets/stylesheets/partials/_typography.scss */
 video {
   display: block;
   box-sizing: border-box;
@@ -573,7 +578,7 @@ video {
   margin-bottom: 1.33333em;
 }
 
-/* line 356, ../../assets/stylesheets/partials/_typography.scss */
+/* line 359, ../../assets/stylesheets/partials/_typography.scss */
 .fluid-width-video-wrapper {
   margin-bottom: 1.33333em;
 }

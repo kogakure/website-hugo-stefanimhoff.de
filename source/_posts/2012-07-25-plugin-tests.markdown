@@ -62,6 +62,24 @@ This shit is only for Americans, so totally useless for Germans.
 
 [√] It will convert dashes like (--) or (---) into longer versions.
 
+## Markdown Extra
+
+### no_intra_emphasis
+
+Dies ist nicht em: no_intra_emphasis
+
+### strikethrough
+
+Dies ist ~~durchgestrichen~~
+
+### autolink
+
+Autolink ist aktiviert http://www.google.de
+
+### superscript
+
+Dies ist Superscript x^2
+
 ## Widont
 
 Cras mi diam, semper non sollicitudin quis, ultricies vitae quam. Praesent condimentum mollis magna, in iaculis metus luctus eget. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas tincidunt, nunc in gravida mollis, quam metus lacinia risus, at lacinia neque libero id erat. Pellentesque eros sapien, rutrum eu mattis a, dictum rutrum dui. Ut varius sapien quis urna laoreet ac luctus lectus condimentum. Nullam convallis odio convallis eros hendrerit ultricies.

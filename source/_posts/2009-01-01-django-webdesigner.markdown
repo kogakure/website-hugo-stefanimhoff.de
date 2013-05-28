@@ -77,7 +77,7 @@ Wenn das Datenkonzept fertig gestellt ist, wird die Datenbank in einer einfach z
 
 Das folgende Beispiel (von der Django-Website) zeigt den Code von zwei Tabellen, einer `Reporter`-Tabelle und einer `Artikel`-Tabelle:
 
-{% codeblock models.py lang:django %}
+{% codeblock models.py lang:python %}
 class Reporter(models.Model):
     full_name = models.CharField(max_length=70)
 
@@ -113,7 +113,7 @@ Mit ein wenig Wissen um [Regular Expressions]( http://www.regular-expressions.in
 
 Dieses kurze Beispiel aus der Django-Dokumentation zeigt die Konfiguration einiger URLs:
 
-{% codeblock urls.py lang:django %}
+{% codeblock urls.py lang:python %}
 from django.conf.urls.defaults import *
 
 urlpatterns = patterns('',

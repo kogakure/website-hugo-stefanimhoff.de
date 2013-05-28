@@ -28,7 +28,6 @@ redcarpet:
     - strikethrough
     - autolink
     - superscript
-    - smart
 pygments:     false        # Jekyll's default Python Pygments have been replaced by pygments.rb.
 lsi:          true         # Related posts
 

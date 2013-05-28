@@ -54,17 +54,19 @@ Django unterstützt eine Vielzahl an Sprachen und bietet eine sehr gute Lokalisi
 
 Die Seite kogakure.de lief vorher mit [ExpressionEngine](http://ellislab.com/expressionengine), einem Publishing-Tool, das ich auch weiterhin sehr empfehlen kann.
 
+{% pullquote %}
 Doch jedes CMS (Content-Management-System) hat seine Begrenzungen, mit denen man leben muss oder sich mühsam nach Möglichkeiten umsehen muss, das System zu erweitern (Plugins, Extensions, Module). Da die meisten Erweiterungen einfach oben auf das CMS draufgesetzt werden, leidet darunter auch die Performance. So kann man nach dem Installieren eines Dutzend von [WordPress](http://wordpress.org/ "WordPress › Blog Tool and Weblog Platform")-Plugins leicht unzählige parallele Datenbankanfragen haben. Bei Django passiert so etwas nicht.
 
-Dies hat auch noch andere Nachteile: Man benutzt die Plugins, weiß aber meist nicht wie sie funktionieren oder ob sie überhaupt gut programmiert sind. Plugins bieten für Hacker eine besonders gute Angriffsfläche.
+Dies hat auch noch andere Nachteile: Man benutzt die Plugins, weiß aber meist nicht wie sie funktionieren oder ob sie überhaupt gut programmiert sind. {"Plugins bieten für Hacker eine besonders gute Angriffsfläche."}
+{% endpullquote %}
 
 Zu allem Unglück kam es in der Vergangenheit immer wieder vor, dass Plugins nicht weiterentwickelt wurden und mit neuen Versionen der CMS nicht mehr liefen.
 
-Django benutzt Python-Module. Diese sind in Python programmiert und laufen auch außerhalb von Django. Und Python ist nebenbei bemerkt sehr leicht zu lernen, gut zu lesen und weitaus länger als z. B. PHP am Markt. Google und Yahoo benutzen Python – um nur einige zu nennen.
+Django benutzt Python-Module. Diese sind in Python programmiert und laufen auch außerhalb von Django. Und Python ist nebenbei bemerkt leicht zu lernen, gut zu lesen und weitaus länger als z. B. PHP am Markt. Google und Yahoo benutzen Python – um nur einige zu nennen.
 
-Ich habe schon eine Menge Content-Management-Systeme ausprobiert und jedes ist auf seine Art begrenzt und nur für einen einzigen Zweck geeignet (z. B. WordPress für einen Blog). Will man aber eine Website haben die nicht so einfach in eine Schublade gesteckt werden kann, oder die möglichst lange bestehen soll, hat man mit Content-Management-Systemen ein Problem. Zu oft hat man schon von diesen CMS-Hoppern gehört, die z. B. von [MovableType](http://www.movabletype.org/) zu [TextPattern](http://textpattern.com/ "Textpattern"), dann zu [WordPress](http://wordpress.org/ "WordPress › Blog Tool and Weblog Platform") und schließlich zu [ExpressionEngine](http://ellislab.com/expressionengine) gewechselt sind. Die haben einfach zu viel Zeit…
+Ich habe schon eine Menge Content-Management-Systeme ausprobiert und jedes ist auf seine Art begrenzt und nur für einen einzigen Zweck geeignet (z. B. WordPress für einen Blog). Will man aber eine Website haben die nicht so einfach in eine Schublade gesteckt werden kann, oder die möglichst lange bestehen soll, hat man mit Content-Management-Systemen ein Problem. Zu oft hat man schon von diesen CMS-Hoppern gehört, die z. B. von [MovableType](http://www.movabletype.org/) zu [TextPattern](http://textpattern.com/ "Textpattern"), dann zu [WordPress](http://wordpress.org/ "WordPress › Blog Tool and Weblog Platform") und schließlich zu [ExpressionEngine](http://ellislab.com/expressionengine) gewechselt sind. Die haben einfach zu viel Zeit.
 
-Frameworks haben mich bislang immer abgeschreckt, weil sie entweder mit PHP liefen (und ich hasse PHP) oder man einfach zu viel selber Programmieren musste. Bei Django halten sich Programmierung und Design (Template) immer schön im Gleichgewicht.
+Frameworks haben mich bislang immer abgeschreckt, weil sie entweder mit PHP liefen (und ich mag PHP nicht sonderlich) oder man einfach zu viel selber Programmieren musste. Bei Django halten sich Programmierung und Design (Template) immer schön im Gleichgewicht.
 
 ### Entwicklungsdauer
 
@@ -92,7 +94,7 @@ Die Website kommt mit allem daher, was eine moderne Website so haben sollte: Fee
 
 Die Website läuft auf einem [Apache 2 Server](http://httpd.apache.org/ "Welcome! - The Apache HTTP Server Project") mit [mod_python](http://www.modpython.org/ "Mod_python - Apache/Python Integration"), nutzt eine [PostgreSQL](http://www.postgresql.org/ "PostgreSQL")-Datenbank und [memcached](http://memcached.org/) zum Zwischenspeichern der Inhalte. Mit Hilfe von Git wird die Live-Website mit dem lokalen Entwicklungsserver abgeglichen. Der Einfachheit halber erledige ich das mit Hilfe von [Capistrano](http://capistranorb.com/) – ich bin halt faul.
 
-Der Entwicklungsserver nutzt übrigens eine [sqlite](http://www.sqlite.org/ "SQLite Home Page")-Datenbank. Die Website nutzt den Django-Trunk der über Git direkt mit dem Subversion-Trunk abgeglichen wird.
+Der Entwicklungsserver nutzt übrigens eine [SQLite](http://www.sqlite.org/ "SQLite Home Page")-Datenbank. Die Website nutzt den Django-Trunk der über Git direkt mit dem Subversion-Trunk abgeglichen wird.
 
 Das Einrichten des Django-Projektes auf dem Apache-Server ging übrigens weitaus leichter, als befürchtet. Mit meinen [Rails](http://rubyonrails.org/ "Ruby on Rails")-Projekten hatte ich da schon mehr zu tun.
 
@@ -150,7 +152,7 @@ Um den Einstieg in Django zu erleichtern, habe ich nachfolgend eine Liste von in
 
 * [Django Tutorials](https://code.djangoproject.com/wiki/Tutorials) – Riesige Auswahl von Tutorials für Django
 
-### Galerie
+### Showcases
 
 * [DjangoSites](http://www.djangosites.org/ "Latest Additions :: DjangoSites.org - Powered by Django") – Galerie mit Django-Websites
 
@@ -167,7 +169,6 @@ Um den Einstieg in Django zu erleichtern, habe ich nachfolgend eine Liste von in
 * [Bryan Veloso: Avalonstar](http://avalonstar.com/ "avalonstar:distortion") – Designer und Blogger (Seattle, Washington, US)
 * [Jacob Kaplan-Moss](http://www.jacobian.org/ "jacobian.org : i got nothing") – Entwickler von Django (Lawrence, Kansas, US)
 * [James Bennett: The B-List](http://www.b-list.org/ "The B-List: Latest entries") – Release Manager von Django (Lawrence, Kansas, US)
-* [Jannis Leidel](http://jannisleidel.com/) – Programmierer, Deutsche Django-Community, eine Menge Django-Applikationen und Commits zum Trunk beigetragen (Berlin)
 * [Jeff Croft](http://jeffcroft.com/ "JeffCroft.com: Homepage") – Designer und Python Programmierer (Seattle, Washington, US)
 * [Nathan Borror](http://nthn.me/) – Designer (Lawrence, Kansas, US)
 * [Paul Bissex: E-Scribe](http://news.e-scribe.com/ "E-Scribe News : a programmer&#39;s blog") – Entwickler, Lehrer und Autor (Northampton, Massachusetts, US)
