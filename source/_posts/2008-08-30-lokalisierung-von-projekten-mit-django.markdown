@@ -104,9 +104,9 @@ class Choice(models.Model):
 
 ## Lokalisierung der Python-Dateien
 
-In jeder Python-Datei, die lokalisierte Zeichenketten enthalten soll, muss zuerst das Submodul "ugettext" oder "ugetttext\_lazy" importiert werden. Als Konvention wird das Modul als "\_" (Unterstrich) importiert, um die Schreibarbeit zu erleichtern. Zusätzlich fallen die Zeichenketten auch besser ins Auge.
+In jeder Python-Datei, die lokalisierte Zeichenketten enthalten soll, muss zuerst das Submodul `ugettext` oder `ugetttext_lazy` importiert werden. Als Konvention wird das Modul als `_` (Unterstrich) importiert, um die Schreibarbeit zu erleichtern. Zusätzlich fallen die Zeichenketten auch besser ins Auge.
 
-In der `admin.py` wird am Anfang das erwähnte Submodul importiert. Jetzt werden alle Zeichenketten wie unten zu sehen geändert. Dabei ist es am besten, wenn alle Zeichenketten als Unicode mit dem kleinen "u" davor markiert werden. Die Zeichenketten müssen in Klammern eingefasst werden, da "ugetttext" eine Funktion ist.
+In der `admin.py` wird am Anfang das erwähnte Submodul importiert. Jetzt werden alle Zeichenketten wie unten zu sehen geändert. Dabei ist es am besten, wenn alle Zeichenketten als Unicode mit dem kleinen `u` davor markiert werden. Die Zeichenketten müssen in Klammern eingefasst werden, da `ugetttext` eine Funktion ist.
 
 {% codeblock lang:python admin.py %}
 ...
@@ -192,7 +192,7 @@ django-admin.py makemessages -l de
 
 Damit wird die Sprachdatei für "Deutsch" angelegt. Diese findet man in einem Unterordner von `locale`.
 
-Mit einem einfachen Texteditor oder einem `.po`-Editor kann man diese jetzt übersetzten. Die Datei zeigt immer den Namen der Datei und die Zeile der Zeichenkette an, in der folgenden Zeile kommt die Orginalversion (Englisch). An der freien Stelle ("") gibt man die entsprechende deutsche Übersetzung ein.
+Mit einem einfachen Texteditor oder einem `.po`-Editor kann man diese jetzt übersetzten. Die Datei zeigt immer den Namen der Datei und die Zeile der Zeichenkette an, in der folgenden Zeile kommt die Orginalversion (Englisch). An der freien Stelle (`""`) gibt man die entsprechende deutsche Übersetzung ein.
 
 Wenn man damit fertig ist, führt man im Terminal diesen Befehl aus:
 

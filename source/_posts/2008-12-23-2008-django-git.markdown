@@ -86,8 +86,8 @@ Im Juni installiere ich mir auch [Ubuntu](http://www.ubuntu.com/ "Ubuntu Home Pa
 
 Ich versuche einige Abteilungen im Hause mal dazu zu bewegen, [CVS](http://de.wikipedia.org/wiki/Concurrent_Versions_System) vielleicht langsam einzumotten. Natürlich erfolglos.
 
-**Die**: <q>Wir können nicht wechseln, wir dürfen unsere History nicht verlieren</q>.
-**Ich**: <q>Schon mal was von Git-CVS gehört?</q>
+* **Die**: <q>Wir können nicht wechseln, wir dürfen unsere History nicht verlieren</q>.
+* **Ich**: <q>Schon mal was von Git-CVS gehört?</q>
 
 Wir setzten ja in unserer Abteilung immerhin schon [Subversion](http://subversion.tigris.org/ "subversion.tigris.org") ein.
 
@@ -103,7 +103,7 @@ MobileMe ist ein echter Flop, trotzt erweiterter Test-Phase kündige ich meinen 
 
 Ich wechsele von meinem Wiki zu [Evernote](http://evernote.com/intl/de/). So lässt sich all das *Zeug* wirklich komfortabel ablegen. Markieren, reinziehen, verschlagworten, synchronisieren. Evernote ist genau das fehlende Stück Software, dass ich für meinen GTD-Prozess noch brauchte. [Things](http://culturedcode.com/things/) benutze ich für die Aufgaben und Evernote für das *Zeug*.
 
-Ich lerne, wie man [Vim](http://www.vim.org/ "welcome home : vim online") bedient. Und zwar mal richtig und nicht nur "*i, :wq*". Immerhin hat man [TextMate](http://macromates.com/ "TextMate — The Missing Editor for Mac OS X") ja nicht auf dem Server dabei.
+Ich lerne, wie man [Vim](http://www.vim.org/ "welcome home : vim online") bedient. Und zwar mal richtig und nicht nur `i`, `:wq`. Immerhin hat man [TextMate](http://macromates.com/ "TextMate — The Missing Editor for Mac OS X") ja nicht auf dem Server dabei.
 
 Der größte Branch von Django (Newforms-Admin) wird in den Trunk migriert. Jetzt ist es nicht mehr weit, bis Django die Version 1.0 erreicht.
 
@@ -113,7 +113,7 @@ Im Juli fällt mir im Einkaufsmarkt eine schwarze Tüte mit Tiefkühlbrötchen a
 
 Ich testen [django-robots](http://code.google.com/p/django-robots/ "django-robots - Google Code") und [django-mobileadmin](http://code.google.com/p/django-mobileadmin/ "django-mobileadmin - Google Code"). Wahnsinn, was [Jannis Leidel](http://jannisleidel.com/ "Jannis Leidel") für [Django-Projekte](http://code.google.com/u/leidel/ "Google Code") entwickelt. Hast du eigentlich noch Freizeit? ;)
 
-Microsoft sorgt für Lacher mit seinem The Mojave Experiment. In der *wissenschaftlichen* Studie versucht Microsoft einigen US-Midwest-Landeiern zu beweisen, dass sie Windows Vista eigentlich ganz toll finden. Auf perfekten Systemen, mit perfekten Treibern führt ein Microsoft-Profi diese Landeier durch Vista und erntet so lustige Kommentare wie: <q>Really, this is Vista? I **LOVE** it</q>.
+Microsoft sorgt für Lacher mit seinem The Mojave Experiment. In der *wissenschaftlichen* Studie versucht Microsoft einigen US-Midwest-Landeiern zu beweisen, dass sie Windows Vista eigentlich ganz toll finden. Auf perfekten Systemen, mit perfekten Treibern führt ein Microsoft-Profi diese Landeier durch Vista und erntet so lustige Kommentare wie: <q lang="en">Really, this is Vista? I **LOVE** it</q>.
 
 Mein Preis für die beste Werbung 2008 geht schon im August an Nokia für ihre Werbung [Nokia: The 4th Screen](http://www.youtube.com/watch?v=XpeNk3E36YU "YouTube - Nokia: Go Play - 4th Screen").
 
@@ -123,7 +123,7 @@ Im August fällt mir auch auf, das kein [Sumo](http://www.sumo.or.jp/eng/ "Nihon
 
 [Django 1.0](https://www.djangoproject.com/weblog/2008/sep/03/1/) wird veröffentlicht! Und die erste DjangoCon findet statt. Die Vorträge der Keynote kann man bei [YouTube ansehen](http://www.youtube.com/results?search_query=djangocon+2008 "YouTube - djangocon 2008").
 
-Durch einen Vortrag auf der DjangoCon (*No, you can’t have a Pony*) und die Feststellung das Django ein Maskottchen benötigt, wird im Scherz die Idee des [Django Pony](http://djangopony.com/ "djangopony - Magic that can't be removed.") geboren. Jetzt **kann** Django ja nur noch erfolgreich werden ;)
+Durch einen Vortrag auf der DjangoCon (<q lang="en">No, you can’t have a Pony</q>) und die Feststellung das Django ein Maskottchen benötigt, wird im Scherz die Idee des [Django Pony](http://djangopony.com/ "djangopony - Magic that can't be removed.") geboren. Jetzt **kann** Django ja nur noch erfolgreich werden ;)
 
 Google bringt seinen neuen Browser [Google Chrome](https://www.google.com/intl/de/chrome/browser/) auf den Markt. Eine nette Idee, aber noch viel zu fehlerhaft. Meine eigene Website wird nicht richtig angezeigt, dabei validiert die penibel.
 
