@@ -46,7 +46,7 @@ Gut versteckt, mitten im Satz <q lang="en">The latest source release can always 
 Die aktuelle Version zum Zeitpunkt dieser Anleitung ist `Subversion 1.4.3`.
 Genau dieses Paket lade ich als `tar.gz` auf meinen Desktop.
 
-Um Quellcode selber kompilieren zu können, müssen unter Mac OSX die Xcode Tools installiert sein, diese findet man auf der Installations-CD von Mac OSX.
+Um Quellcode selber kompilieren zu können, müssen unter Mac OS X die Xcode Tools installiert sein, diese findet man auf der Installations-CD von Mac OS X.
 
 Dann öffnet man das Programm *Terminal* aus dem Anwendungsordner.
 

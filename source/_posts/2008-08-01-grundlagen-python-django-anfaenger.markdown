@@ -25,7 +25,7 @@ Ein Modul ist im Grunde genommen jede Datei mit der Dateiendung .py, in der Klas
 
 Es ist möglich Module in Unterordnern zu strukturieren. Damit Python einen Ordner als Modul erkennt muss eine Textdatei mit dem Namen `__init__.py` darin liegen. Diese ist in den meisten Fällen ohne Inhalt.
 
-Um ein Modul eines Drittanbieters (wie z. B. Django) zu benutzen, muss es dem System bekannt sein. Dafür gibt es die Pfad-Variable `$PYTHONPATH`. Die meisten Betriebssysteme halten für solche Module einen zentralen Ort vor, an dem sie  abgelegt werden (unter meiner Mac OSX 10.5-Installation ist dies z. B. `/Library/Python/2.5/site-packages`).
+Um ein Modul eines Drittanbieters (wie z. B. Django) zu benutzen, muss es dem System bekannt sein. Dafür gibt es die Pfad-Variable `$PYTHONPATH`. Die meisten Betriebssysteme halten für solche Module einen zentralen Ort vor, an dem sie  abgelegt werden (unter meiner Mac OS X 10.5-Installation ist dies z. B. `/Library/Python/2.5/site-packages`).
 
 ## Python-Pfad
 
@@ -45,7 +45,7 @@ Dort gibt man einfach den Befehl `import django` ein. Wird der Befehl ohne Fehle
 
 ## Symlinks
 
-Da dieser Pfad meistens in den Tiefen des Systems verborgen liegt, wählen viele Entwickler eine komfortablere Methode: Symlinks (symbolische Links). Dieses funktioniert aber nur bei Unix-Systemen, also Linux und Mac OSX. Windows-Benutzer schauen hier (mal wieder) in die Röhre. Ein Grund mehr ein Unix-System zu verwenden.
+Da dieser Pfad meistens in den Tiefen des Systems verborgen liegt, wählen viele Entwickler eine komfortablere Methode: Symlinks (symbolische Links). Dieses funktioniert aber nur bei Unix-Systemen, also Linux und Mac OS X. Windows-Benutzer schauen hier (mal wieder) in die Röhre. Ein Grund mehr ein Unix-System zu verwenden.
 
 Ein symbolischer Link ist ein Zeiger auf einen anderen Ordner des Computers, ähnlich einer Verknüpfung, nur mit dem Unterschied, das der Rechner wirklich *denkt*, der Ordner würde an diesem Platz im System liegen – in Wirklichkeit zeigt der Ordner lediglich auf das Original.
 
