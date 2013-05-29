@@ -49,7 +49,7 @@ ln -nfs $VIM_SRC/vimrc.vim .vimrc
 ln -nfs $VIM_SRC/gvimrc.vim .gvimrc
 {% endcodeblock %}
 
-Dieses Skript verlinkt meine Konfigurationsdateien als symbolischen Link in das HOME-Verzeichnis, wo Vim sie erwartet.
+Dieses Skript verlinkt meine Konfigurationsdateien als symbolischen Link in das Home-Verzeichnis, wo Vim sie erwartet.
 
 ## Der zweite, und wichtigste Schritt
 
