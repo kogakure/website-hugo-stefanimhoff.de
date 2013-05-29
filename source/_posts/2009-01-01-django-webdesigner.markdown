@@ -29,7 +29,7 @@ Das dieses Suchen nach den geeigneten Erweiterungen und deren Anpassung nicht op
 * die Suche nach geeigneten Lösungen für ein spezifisches Problem erfordert eine lange und mühsame Recherche im Internet
 * Erweiterungen und Plugins sind z. T. nach einem Update des Programms nicht mehr zu nutzen, wenn der Entwickler nicht mehr mit der Entwicklung des Kernsystems Schritt halten kann, oder das Interesse verliert
 * ein Webdesigner muss eine Vielzahl von CMS und deren Begrenzungen kennen, um bei spezifischen Kundenwünschen zu wissen, welches am besten mit den Wünschen des Kunden übereinstimmt, dies kann sehr anstrengend sein, weil ständig neue Systeme auf den Markt kommen
-* daher werden Kunden oft auch nach dem Motto <q>one fits all</q> mit nicht optimalen Lösungen abgespeist
+* daher werden Kunden oft auch nach dem Motto <q lang="en">one fits all</q> mit nicht optimalen Lösungen abgespeist
 
 ## Webframeworks
 

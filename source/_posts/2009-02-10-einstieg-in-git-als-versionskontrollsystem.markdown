@@ -57,6 +57,7 @@ Den mittlerweile veralteten Artikel von 2007 ersetze ich durch eine große Liste
 
 ## Git-Hosting
 * [GitHub](https://github.com/) – Kostenlose, öffentliche Repositorys bis <del>100</del> <ins>300</ins> MB, oder kommerzielle größere Angebote
+* [Bitbucket](https://bitbucket.org/) – Kostenlose, öffentliche und private Repositories für bis zu 5 Entwickler
 * [Gitorious](http://gitorious.org/ "Free open source project hosting - Gitorious") – Kostenlose, öffentliche Repositorys
 
 ## Software
