@@ -1,0 +1,150 @@
+// Text
+// ----
+
+// Paragraphs
+p {
+  @include trailer(1);
+}
+.article-body > p:first-child {
+  @include adjust-font-size-to(22px);
+}
+
+// Horizontal borders
+hr {
+  @include trailer(2, $base-font-size, margin);
+  @include trailing-border(2px);
+  border: 0;
+  color: rgba($dark-grey, 0.3);
+  height: 0;
+  margin: 0 $base-rhythm-unit;
+}
+// Emphasis
+em {
+  font-style: italic;
+}
+strong {
+  font-weight: $bold;
+}
+
+// Small print
+small {
+  @include adjust-font-size-to($font-scale-small);
+}
+
+// Strikethrough
+s {
+  text-decoration: line-through;
+}
+
+// Definition
+dfn {
+  border-bottom: 1px dotted $definition-color;
+  cursor: help;
+}
+
+// Abbrevations
+abbr, acronym {
+  cursor: help;
+  font-variant: small-caps;
+  letter-spacing: 0.1em;
+  text-transform: lowercase;
+}
+abbr[title], acronym[title] {
+  border-bottom-width: 0;
+}
+abbr.no-caps {
+  font-variant: normal;
+  text-transform: none;
+}
+
+// Pre
+pre {
+  @include trailer(1);
+}
+
+// Variable
+var {
+  font-style: italic;
+}
+
+// Sample output
+samp {
+  @include adjust-font-size-to(15px);
+  @extend %mono;
+  color: $sample-color;
+  margin: 0 0.4em;
+}
+
+// Keyboard entry
+kbd {
+  @extend %sans;
+  @include adjust-font-size-to(12px);
+  @include border-radius(3px);
+  @include box-shadow(0 1px 0 rgba($black, 0.2), 0 0 0 2px $white inset);
+  background-color: $keyboard-background;
+  border: 1px solid $keyboard-border;
+  color: $dark-grey;
+  display: inline-block;
+  font-weight: $bold;
+  line-height: 1.4;
+  margin: 0 0.1em;
+  padding: 0.3em 0.6em 0.1em;
+  text-shadow: 0 1px 0 $white;
+  white-space: nowrap;
+}
+
+// Superscript/subscript
+sup, sub {
+  position: relative;
+  vertical-align: 0;
+}
+sup {
+  bottom: 1ex;
+}
+sub {
+  top: 0.8ex;
+}
+
+// Italicised/Emboldened
+i {
+  font-style: italic;
+}
+b {
+  font-weight: $bold;
+}
+
+// Marked
+mark {
+  @include background-size(25px 21px);
+  background-color: transparent;
+  background-image: inline-image("css/mark-center.png");
+  color: rgba($black, 0.75);
+  position: relative;
+  &:before, &:after {
+    @include background-size(5px 21px);
+    background-repeat: no-repeat;
+    content: '';
+    display: block;
+    height: 21px;
+    position: absolute;
+    width: 5px;
+  }
+  &:before {
+    background-image: inline-image("css/mark-left.png");
+    left: -5px;
+    top: 0;
+  }
+  &:after {
+    background-image: inline-image("css/mark-right.png");
+    bottom: 0;
+    right: -5px;
+  }
+}
+
+// Edits
+ins {
+  text-decoration: underline;
+}
+del {
+  text-decoration: line-through;
+}

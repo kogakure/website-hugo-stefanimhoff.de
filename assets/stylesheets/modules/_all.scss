@@ -1,3 +1,11 @@
+// Import all modules
+// ------------------
+
+// The modules directory is reserved for Sass code that doesn’t cause Sass
+// to actually output CSS.
+
+@import "typography";
 @import "colors";
-@import "utilities";
 @import "solarized";
+@import "extends";
+@import "utilities";

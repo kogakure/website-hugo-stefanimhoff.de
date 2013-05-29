@@ -1,16 +1,19 @@
+// Syntax Highlighting
+// -------------------
+
 p, li {
   code {
-    @extend .mono;
-    display: inline-block;
-    white-space: no-wrap;
+    @extend %mono;
+    @include border-radius(.4em);
     background: #fff;
+    border: 1px solid #ddd;
+    color: #555;
+    display: inline-block;
     font-size: .8em;
     line-height: 1.5em;
-    color: #555;
-    border: 1px solid #ddd;
-    @include border-radius(.4em);
-    padding: 0 .3em;
     margin: -1px 0;
+    padding: 0 .3em;
+    white-space: no-wrap;
   }
   pre code { font-size: 1em; background: none; border: none; }
 }
@@ -22,89 +25,89 @@ pre, figure.code table {
 }
 
 .highlight pre {
-  background: $pre-bg;
+  @extend %mono;
   @include border-radius(.4em);
-  @extend .mono;
-  color: $pre-color;
-  overflow: scroll;
-  overflow-y: hidden;
-  overflow-x: auto;
+  background: $pre-bg;
   border: 1px solid $pre-border;
-  margin-bottom: 2.1em;
-  padding: 1em .8em;
+  color: $pre-color;
   font-size: 13px;
   line-height: 1.45em;
+  margin-bottom: 2.1em;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overflow: scroll;
+  padding: 1em .8em;
 }
 
 figure.code {
   @include box-shadow(rgba(#000, .06) 0 0 10px);
   background: none;
-  padding: 0;
   border: 0;
   margin-bottom: 1.5em;
+  padding: 0;
   pre {
     @include border-radius(0px);
     @include box-shadow(none);
     background: none;
-    color: $base1;
     border: none;
-    padding: 0;
-    margin-bottom: 0;
-    overflow: visible;
+    color: $base1;
     font-style: normal;
     font-weight: normal;
+    margin-bottom: 0;
+    overflow: visible;
+    padding: 0;
   }
   figcaption {
+    @include border-top-radius(5px);
+    @extend %sans;
+    background-color: #aaaaaa;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 2em;
+    margin-bottom: 0;
     position: relative;
     text-align: center;
-    font-size: 13px;
-    line-height: 2em;
-    font-weight: normal;
-    margin-bottom: 0;
-    @include border-top-radius(5px);
-    font-family: "Helvetica Neue", Arial, "Lucida Grande", "Lucida Sans Unicode", Lucida, sans-serif;
-    background-color: #aaaaaa;
     @if lightness($base03) <= lightness(#555) {
-      text-shadow: #cbcccc 0 1px 0;
       color: #555;
+      text-shadow: #cbcccc 0 1px 0;
       @include background-image(linear-gradient(
         #e0e0e0, #cfcfcf 6%, #b1b1b1 90%, #aaaaaa
       ));
       border: 1px solid #a5a5a5 {
-        top-color: #cbcbcb;
         bottom: 0;
+        top-color: #cbcbcb;
       }
     }
     @else if lightness($base03) > lightness(#555) {
-      text-shadow: #fff 0 1px 0;
-      color: #777;
       @include background-image(linear-gradient(
         #fff, #f0f0f0 6%, #e5e5e5 90%, #ddd
       ));
+      color: #777;
       border: 1px solid #c5c5c5 {
         top-color: #d5d5d5;
         bottom: 0;
       }
+      text-shadow: #fff 0 1px 0;
     }
     a {
-      position: absolute; right: .8em;
       @include hover-link;
       color: inherit;
-      z-index: 1;
       padding-left: 3em;
+      position: absolute; right: .8em;
+      z-index: 1;
     }
   }
   .marked {
-    position: relative;
     display: block;
+    position: relative;
     &:after {
-      content: "";
-      position: absolute;
       background: $marker-bg;
-      left: -.8em; top: 0; bottom: 0; right: -.8em;
       border: 0px solid $marker-border {
         left-color: $marker-border-left;
       }
+      content: "";
+      left: -.8em; top: 0; bottom: 0; right: -.8em;
+      position: absolute;
     }
     &.start:after {
       border-top-width: 1px;
@@ -119,8 +122,8 @@ figure.code {
 }
 
 figure .highlight {
-  border: 1px solid $pre-border;
   background: $base03;
+  border: 1px solid $pre-border;
   overflow-y: hidden;
   overflow-x: auto;
 
@@ -128,15 +131,15 @@ figure .highlight {
   [data-line]:before { content: attr(data-line); }
 
   td {
-    line-height: 1.45em;
     font-size: 13px;
+    line-height: 1.45em;
     pre { padding: .8em; }
   }
 
   .main {
-    width: 100%;
     background: $base03;
     margin-left: 0;
+    width: 100%;
   }
 
   .line-numbers {

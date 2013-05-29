@@ -1,53 +1,36 @@
-// Import Compass
+// Base
+// ----
+
+// Imports
 @import "compass";
 @import "compass/reset";
-
-// Font Weights
-$normal: 400;
-$bold:   700;
-
-// Base Font
-$base-font-family:   'Gentium Basic', serif;
-$base-font-sans:     Arial, Helvetica, sans-serif;
-$base-font-mono:     Menlo, Monaco, 'Andale Mono', 'Lucida console', 'Courier New', monospace;
-$base-font-japanese: 'Hiragino Maru Gothic Pro', sans-serif;
-
-$base-font-size:   18px;
-$base-line-height: 24px;
-$base-font-weight: $normal;
-$base-rhythm-unit: $base-line-height / $base-font-size * $font-unit;
-
-$relative-font-sizing:       true;
-$round-to-nearest-half-line: true; // Verhindert zu große Lücken zwischen den Zeilen
-
-// Fixed Font
-$fixed-font-family: monospace;
-$fixed-font-size:   85%;
-$fixed-line-height: $base-line-height;
-
-// Headline Font Sizes
-$font-scale-h1: 47.123px;
-$font-scale-h2: 29.124px;
-$font-scale-h3: 25.888px;
-$font-scale-h4: 18px;
-$font-scale-h5: 18px;
-$font-scale-h6: 18px;
-$font-scale-small: 14px;
+@import "../modules/all";
 
 // Vertical Rhythm
 @include establish-baseline();
 
 // Zeilenhöhe anzeigen
-// html {
-//   @include debug-vertical-alignment();
-// }
+/* html { */
+/*   @include debug-vertical-alignment(); */
+/* } */
 
 // Alle Elemente so einstellen, dass Padding nicht dazu gerechnet wird
 * { @include box-sizing(border-box); }
 
-// Extends
-.sans { font-family: $base-font-sans; }
-.mono { font-family: $base-font-mono; }
-.japanese { font-family: $base-font-japanese; }
+body {
+  @extend %base;
+  @include hyphens(auto);
+  color: $dark-grey;
+  font-style: normal;
+  font-weight: $normal;
+}
 
-@import "../modules/all";
+:lang(ja) {
+  @extend %japanese;
+}
+
+// Links
+a {
+  // normal, hover, active, visited, focus
+  @include link-colors(#00c, #0cc, #c0c, #ccc, #cc0);
+}

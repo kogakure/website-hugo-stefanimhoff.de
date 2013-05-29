@@ -1,0 +1,13 @@
+// Video
+// -----
+
+video {
+  @include trailer(1);
+  box-sizing: border-box;
+  display: block;
+  height: auto;
+  width: 100%;
+}
+.fluid-width-video-wrapper {
+  @include trailer(1);
+}

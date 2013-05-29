@@ -1,0 +1,31 @@
+// Lists
+// -----
+
+ol {
+  @include trailer(1);
+  list-style: decimal;
+}
+ol ol {
+  list-style: lower-latin;
+  margin: 0 $base-rhythm-unit;
+}
+ul {
+  @include trailer(1);
+  list-style: disc;
+}
+ul ul {
+  list-style: circle;
+  margin: 0 $base-rhythm-unit;
+}
+dl {
+  @include trailer(1);
+}
+dt {
+  font-weight: $bold;
+}
+dt + dd {
+  @include trailer(1);
+}
+dd {
+  margin-left: 0;
+}

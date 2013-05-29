@@ -1,0 +1,21 @@
+// Headlines
+// ---------
+
+h1 {
+  @include adjust-font-size-to($font-scale-h1);
+  @include trailer(1, $font-scale-h1, margin);
+}
+h2 {
+  @include adjust-font-size-to($font-scale-h2);
+}
+h2 + h3 {
+  @include leader(1);
+}
+h3 {
+  @include adjust-font-size-to($font-scale-h3);
+  font-weight: $normal;
+}
+h4, h5, h6 {
+  @include adjust-font-size-to($font-scale-h4);
+  font-weight: $bold;
+}

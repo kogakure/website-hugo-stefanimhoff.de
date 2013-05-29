@@ -1,15 +1,13 @@
+// Grids
+// -----
+
 @import "susy";
 
-// Settings
-// ---------
-//
 // Susy & Compass use HTML hacks to support IE 6 and 7. You can turn that off:
-// $legacy-support-for-ie6 : false;
-// $legacy-support-for-ie7 : true;
+/* $legacy-support-for-ie6 : false; */
+/* $legacy-support-for-ie7 : true; */
 
 // Grid
-// ----
-
 $total-columns: 12;
 $column-width:  4em;
 $gutter-width:  1em;
@@ -19,8 +17,6 @@ $show-grid-backgrounds:       true;
 $default-rhythm-border-style: solid;
 
 // Layout
-// ------
-
 .container {
   @include container;
   /* @include susy-grid-background; // Grid anzeigen */
