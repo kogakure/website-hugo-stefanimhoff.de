@@ -2,15 +2,15 @@
 layout: post
 title: "Auto-Complete im Terminal"
 date: 2010-10-27 18:30
-description: 
+description:
 categories:
-tags: 
+tags:
 - terminal
 ---
 
-Für mich gehört ständige Verbesserung (改善, jap. Kaizen) zur täglichen Arbeit dazu. Was mich aber seit längerem gestört hat, ist wenn ich die Namen des zu klonenden Git-Repositorys per Hand tippen muss. Auto-Complete bietet hier eine Lösung.
+Für mich gehört ständige Verbesserung (<ruby>改善<rp>（</rp><rt>かいぜん</rt><rp>)<rp></ruby>, jap. Kaizen) zur täglichen Arbeit dazu. Was mich aber seit längerem gestört hat, ist wenn ich die Namen des zu klonenden Git-Repositorys per Hand tippen muss. Auto-Complete bietet hier eine Lösung.
 
-Für mich gehört ständige Verbesserung (改善, jap. Kaizen) zur täglichen Arbeit dazu. Ich klone die Jobs meiner Kunden über Gitosis von unserem Git-Server. Um mir Schreibarbeit zu sparen habe ich mir schon vor zwei Jahren ein kleines Bash-Skript `gcl` geschrieben, das als Parameter den Namen eine Repositorys erwartet und dieses dann an die richtige Position klont und auch gleich noch den Ordner im Finder für mich öffnet.
+Ich klone die Jobs meiner Kunden über Gitosis von unserem Git-Server. Um mir Schreibarbeit zu sparen habe ich mir schon vor zwei Jahren ein kleines Bash-Skript `gcl` geschrieben, das als Parameter den Namen eine Repositorys erwartet und dieses dann an die richtige Position klont und auch gleich noch den Ordner im Finder für mich öffnet.
 
 So weit bin ich auch schon sehr zufrieden damit gewesen und glaube meine Arbeitsweise ist immer noch zehn mal so schnell, als über eine GUI. Doch was mich seit längerem schon gestört hat, ist die Tatsache, dass ich den Job-Namen als Parameter nach meinem Terminal-Befehl anhängen muss: `gcl domain.de`. Auch wenn ich recht schnell tippe, ermüdet es doch lange Domainnamen zu tippen oder sich die vielen hundert Kundenprojekte in Erinnerung zu rufen.
 
@@ -72,10 +72,10 @@ complete -o default -W "${GIT_JOBS_COMPLETE[*]}" gcl
 
 Ich suche mir alle Zeilen aus allen gitosis.conf-Dateien, die den String "writable" enthalten. Da ich mehre Gitosis-Instanzen verwalte, kann ich nicht nur in einer Datei suchen.
 
-Im nächsten Schritt schneide ich mit `cut` vom Delimiter "=" an die Zeichenkette aus, ich verwerfe also alles was vor den eigentlichen Git-Repositorys steht.
+Im nächsten Schritt schneide ich mit `cut` vom Delimiter `=` an die Zeichenkette aus, ich verwerfe also alles was vor den eigentlichen Git-Repositorys steht.
 
 Anschließend ersetze ich alle Leerzeichen durch Zeilenumbrüche. Dies ist hier möglich, da die Repository-Namen keine Leerzeichen enthalten dürfen, und daher nur zwischen den Namen Leerzeichen stehen.
 
 Als letzten Schritt sortiere ich die Git-Repository-Namen und entferne Duplikate.
 
-Die letzte Zeile registriert für meine Klon-Skript `gcl` die Zeichenkette für Auto-Complete. Wenn ich jetzt den Befehl eingebe und TAB drücke, fragt mich das Terminal, ob ich alle Jobs sehen möchte (weil es sehr viele sind, kommt diese Sicherheitsabfrage, bei geringen Anzahlen zeigt das Terminal gleich alle Ergebnisse). Oder ich tippe nach dem Befehl schon die ersten Zeichen eines Jobs und TAB vervollständigt diesen für mich.
+Die letzte Zeile registriert für meine Klon-Skript `gcl` die Zeichenkette für Auto-Complete. Wenn ich jetzt den Befehl eingebe und <kbd>⇥</kbd> drücke, fragt mich das Terminal, ob ich alle Jobs sehen möchte (weil es sehr viele sind, kommt diese Sicherheitsabfrage, bei geringen Anzahlen zeigt das Terminal gleich alle Ergebnisse). Oder ich tippe nach dem Befehl schon die ersten Zeichen eines Jobs und <kbd>⇥</kbd> vervollständigt diesen für mich.

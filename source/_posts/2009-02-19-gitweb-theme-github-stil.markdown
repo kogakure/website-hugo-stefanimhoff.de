@@ -19,7 +19,7 @@ Ich konnte die Oberfläche von Gitweb nicht mehr sehen. Daher habe ich mir einen
 
 Die genaue Anleitung zur Installation befindet sich mit im Paket auf GitHub.
 
-**English:**
+## English
 
 I couldn’t see the interface of Gitweb any longer. That’s why I created a theme which is strongly influenced by GitHub.
 

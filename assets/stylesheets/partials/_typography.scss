@@ -74,6 +74,10 @@ blockquote cite:before {
 }
 
 // Pullquote
+.pullquote {
+  @include adjust-font-size-to(41.887px);
+  text-align: center;
+}
 .pullquote-right:before,
 .pullquote-left:before {
   @include adjust-font-size-to(25.888px);
@@ -120,6 +124,26 @@ q {
 
 q:before {content: open-quote;}
 q:after {content: close-quote;}
+
+blockquote.pullquote[lang|=de] {
+  quotes: '»' '«' '›' '‹';
+  p:first-child:before {
+    content: open-quote;
+  }
+  p:last-child:after {
+    content: close-quote;
+  }
+}
+
+blockquote.pullquote[lang|=en] {
+  quotes: '“' '”' '‘' '’';
+  p:first-child:before {
+    content: open-quote;
+  }
+  p:last-child:after {
+    content: close-quote;
+  }
+}
 
 // ### Lists
 ol {

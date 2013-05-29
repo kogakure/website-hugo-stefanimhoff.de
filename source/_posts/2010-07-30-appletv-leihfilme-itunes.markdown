@@ -2,9 +2,9 @@
 layout: post
 title: "AppleTV und die Leihfilme auf iTunes"
 date: 2010-07-30 07:00
-description: 
+description:
 categories:
-tags: 
+tags:
 - apple
 - appletv
 - itunes
@@ -26,6 +26,6 @@ Also hört mir zu Studiobosse, und hört **aufmerksam** zu:
 4. Ich will auch keine 1-2 GByte pro Film auf meiner Festplatte liegen haben, dadurch dauert das Backup länger und ich kann den Film noch nicht mal einem Freund verleihen.
 5. Ich bin aber bereit 3,99 € für einmaliges sehen zu bezahlen. Das ist die Hälfte des Gewinns, für eine Benutzung. Und überhaupt: für Benutzung. Denn so, wie ihr es jetzt handhabt, schaue ich die Filme halt nicht an, oder erst, wenn Sie mal im Fernsehen kommen. Ich kaufe keine Filme bei iTunes. Hab ich nie, werd ich nie. Klar?
 
-Also, ich will Geld ausgeben, und würde mir auch mehrere Filme in der Woche aus*leihen*. Wobei hier die Betonung auf *Leihen* liegt. Bringt also bitte eure ganzen Filme auf iTunes, auch die, die kein Mainstream sind. Schon mal vom Long-Tail gehört? Ihr könne natürlich auch warten, bis eure Studios eingegangen sind, was bei solchem Geschäftsgebaren früher oder später passieren wird. Und *ihr* wundert euch, dass so viele Leute lieber ein Torrent saugen?
+Also, ich will Geld ausgeben, und würde mir auch mehrere Filme in der Woche aus<em>leihen</em>. Wobei hier die Betonung auf *Leihen* liegt. Bringt also bitte eure ganzen Filme auf iTunes, auch die, die kein Mainstream sind. Schon mal vom Long-Tail gehört? Ihr könne natürlich auch warten, bis eure Studios eingegangen sind, was bei solchem Geschäftsgebaren früher oder später passieren wird. Und *ihr* wundert euch, dass so viele Leute lieber ein Torrent saugen?
 
 Und solange ihr das nicht hinbekommt, lasse ich mir einfach für eine viel günstigere Gebühr Bluerays und DVDs von [LoveFilm](http://www.lovefilm.de/) schicken oder streame viele Titel direkt auf mein iPad, PlayStation oder den Computer.

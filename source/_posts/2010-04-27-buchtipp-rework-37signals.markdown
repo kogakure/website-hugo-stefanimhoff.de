@@ -2,9 +2,9 @@
 layout: post
 title: "Buchtipp: <cite>Rework</cite> von 37signals"
 date: 2010-04-27 16:30
-description: 
+description:
 categories:
-tags: 
+tags:
 - buch
 - 37signals
 - gtd
@@ -13,11 +13,13 @@ tags:
 
 Heute empfehle ich ein Buch, das ich vor kurzem erst beendet habe, und schon ein zweites Mal lese: <cite>Rework</cite> von <cite>37signals</cite>.
 
-<a href="http://www.amazon.de/gp/product/0307463745?ie=UTF8&amp;tag=kogakurede-21&amp;linkCode=as2&amp;camp=1638&amp;creative=19454&amp;creativeASIN=0307463745"><img width="250" height="378" src="{{ site.images_dir }}rework.png" alt="37signals: Rework" /></a>
+{% figure %}
+<a href="http://www.amazon.de/gp/product/0307463745?ie=UTF8&amp;tag=kogakurede-21&amp;linkCode=as2&amp;camp=1638&amp;creative=19454&amp;creativeASIN=0307463745"><img src="{{ site.images_dir }}rework.png" alt="37signals: Rework" /></a>
+{% endfigure %}
 
 Ich bin schon seit langem ein großer Anhänger der Philosophie von Einfachheit und Schlichtheit, die <cite>37signals</cite> mit Erfolg kultivieren. Bereits ihr erstes (kostenloses) Buch [Getting Real](http://gettingreal.37signals.com/) (auch als [Paperback-Version](http://www.amazon.de/gp/product/0578012812?ie=UTF8&amp;tag=kogakurede-21&amp;linkCode=as2&amp;camp=1638&amp;creative=19454&amp;creativeASIN=0578012812) erhältlich) habe ich mit großem Interesse gelesen.
 
-Doch mit <cite>Rework</cite> ist Ihnen ein wahres Meisterstück gelungen. Nicht ohne Grund ist es in den USA und Großbritannien ein Bestseller. Kritiker und CEOs loben das Buch in den höchsten Tönen (Seth Godin, John Maeda, Chris Anderson u. a.).
+Doch mit <cite>Rework</cite> ist Ihnen ein wahres Meisterstück gelungen. Nicht ohne Grund ist es in den USA und Großbritannien ein Bestseller. Kritiker und <abbr title="Chief Executive Officer">CEO</abbr>s loben das Buch in den höchsten Tönen (Seth Godin, John Maeda, Chris Anderson u. a.).
 
 Und im Gegensatz zum noch recht einfach gehaltenten <cite>Getting Real</cite> gibt es <cite>Rework</cite> als Hardcover-Version, in sehr ansprechender Bindung und mit fantastischen Zeichnungen von Mike Rohde.
 

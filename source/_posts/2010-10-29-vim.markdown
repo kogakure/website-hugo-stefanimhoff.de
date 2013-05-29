@@ -10,10 +10,6 @@ tags:
 
 So ähnlich lautete der Spruch des Superhelden *He-Man* aus den 80er Jahren, kurz bevor er seine Superkräfte bekam. Und ungefähr genauso lange gibt es auch Vim: nämlich 22 Jahre. Und das ältere Vi, auf dem Vim basiert, gibt es sogar schon länger als ich lebe. Wenn also ein *simpler* Texteditor seit so langer Zeit existiert und solche *Kraft* verleiht, muss einfach etwas Besonderes daran sein.
 
-So ähnlich lautete der Spruch des Superhelden *He-Man* aus den 80er Jahren, kurz bevor er seine Superkräfte bekam. Und ungefähr genauso lange gibt es auch Vim: nämlich 22 Jahre. Und das ältere Vi, auf dem Vim basiert, gibt es sogar schon länger als ich lebe. Wenn also ein *simpler* Texteditor seit so langer Zeit existiert und solche *Kraft* verleiht, muss einfach etwas Besonderes daran sein.
-
-## An Vim gescheitert?
-
 Das erste Mal bin ich vor einigen Jahren über Vim (oder Vi) gestolpert, als ich zum ersten Mal irgendeine Datei auf einem Server bearbeiten musste und dort keiner meiner schicken Editoren funktionierte. Das erste Mal, als ich mit Vi(m) arbeitete, war meine natürliche Reaktion: <q>WTF, was soll der Scheiß, ich kann erst tippen, wenn ich i gedrückt habe? Wer denkt sich denn so einen Mist aus?</q>.
 
 Aber weil ich als Webworker zwangsläufig immer wieder etwas auf dem Server bearbeiten muss, kam ich nicht darum herum entweder Vim oder Nano zu lernen. Und so bin ich auch jahrelang ganz gut mit vier oder fünf Vim-Tasten zurechtgekommen. Aber ich lag ja **so** falsch. Falsch. Falsch. Falsch.
@@ -118,7 +114,7 @@ Durch drücken des Komma im NORMAL-Modus, gefolgt von meinen Tastaturkürzeln ka
 
 Wenn du von TextMate zu Vim wechselt (oder von einem anderen Editor) wirst du natürlich mit Sicherheit einige liebgewonnene Möglichkeiten deines Editors vermissen. Wenn die vermisste Funktion nicht schon von Haus aus in Vim funkioniert, so funktioniert es mit sehr hoher Wahrscheinlichkeit durch eines der tausende Plugins.
 
-Eine Seitenleiste, in der alle Dateien in Baumstruktur zu sehen sind, kann z. B. durch [NERD tree](https://github.com/scrooloose/nerdtree) aktiviert werden. Ich dachte zuerst, diese Funktion benötige ich **ungedingt**, doch seit ich die Buffer und Splits von Vim kenne, benutze ich den NERD tree eigentlich gar nicht mehr.
+Eine Seitenleiste, in der alle Dateien in Baumstruktur zu sehen sind, kann z. B. durch [NERD tree](https://github.com/scrooloose/nerdtree) aktiviert werden. Ich dachte zuerst, diese Funktion benötige ich **ungedingt**, doch seit ich die Buffer und Splits von Vim kenne, benutze ich den NERD tree eigentlich nur noch selten.
 
 Wincent Colaiuta hat mit [Command-T](https://wincent.com/products/command-t) ein geniales Plugin programmiert, das die Funktion von TextMate reproduziert, durch wenige Tastenanschläge beliebige Dateien im Projekt zu öffnen.
 

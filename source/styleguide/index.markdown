@@ -264,7 +264,7 @@ She bought <del datetime="2005-05-30T13:00:00">two</del> <ins datetime="2005-05-
 
 <ruby>攻殻<rp>（</rp><rt>こうかく</rt><rp>）</rp>機動隊<rp>（</rp><rt>きどうたい</rt><rp>）</rp></ruby>
 
-Das Japanische Kino hat einige Meisterwerke hervorgebracht, sowohl in Farbe als auch in Schwarz/Weiß. Der bekannte Film 7 Samurai (<ruby>七人の侍<rp>（</rp><rt>しちにんのさむらい</rt><rp>）</ruby>) von Akira Kurosawa ist einer der besten Filme der japanischen Geschichte. Der Film ist so gut, dass er sogar ein Remake erfahren hat: <cite>Die Glorreichen Sieben</cite>.
+Das Japanische Kino hat einige Meisterwerke hervorgebracht, sowohl in Farbe als auch in Schwarz/Weiß. Der bekannte Film 7 Samurai (<ruby>七人の侍<rp>（</rp><rt>しちにんのさむらい</rt><rp>）</rp></ruby>) von Akira Kurosawa ist einer der besten Filme der japanischen Geschichte. Der Film ist so gut, dass er sogar ein Remake erfahren hat: <cite>Die Glorreichen Sieben</cite>.
 
 Tabular data
 ------------
@@ -451,7 +451,23 @@ Figures are usually used to refer to images:
 #### With caption
 
 {% figure "Dies ist die Caption des Fotos, die ich etwas länger schreibe, nur damit ich testen kann, wie sie aussieht, wenn sie sich über mehrere Zeilen erstreckt." %}
-<img src="http://lorempixel.com/680/408/nature/" alt="Example image">
+<img src="http://lorempixel.com/680/408/sports/" alt="Example image">
+{% endfigure %}
+
+{% figure testclass-1 testclass-2 "Figure mit 2 <b>tollen</b> Klassen" %}
+<img src="http://lorempixel.com/680/400/nature/" alt="Example image">
+{% endfigure %}
+
+{% figure meine-klasse %}
+<img src="http://lorempixel.com/680/400/food/" alt="Example image">
+{% endfigure %}
+
+{% figure "This is the figcaption" %}
+<img src="http://lorempixel.com/680/400/people/" alt="Example image">
+{% endfigure %}
+
+{% figure %}
+<img src="http://lorempixel.com/680/400/city/" alt="Example image">
 {% endfigure %}
 
 {% figure %}
