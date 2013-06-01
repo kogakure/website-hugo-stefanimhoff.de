@@ -1,7 +1,7 @@
 #
 # Author: Stefan Imhoff
 #
-# Outputs a figure with optional class(es) and optional figcapture
+# Outputs a figure with optional class(es) and optional figcaption
 #
 #   {% figure class1 class2 class3 "This is the figcaption" %}
 #   ...
@@ -51,19 +51,20 @@ module Jekyll
       content = super
 
       if @class
-        source = "<figure class=\"#{@class}\">"
+        source = "<div class=\"figure\"><figure class=\"#{@class}\"><div>"
       else
-        source = "<figure>"
+        source = "<div class=\"figure\"><figure><div>"
       end
 
       source += content
 
       if @caption
-        source += "<figcaption>#{@caption}</figcaption>"
+        source += "</div><figcaption>#{@caption}</figcaption>"
+      else
+        source += "</div>"
       end
 
-      source += "</figure>"
-      source = safe_wrap(source)
+      source += "</figure></div>"
       source
     end
 

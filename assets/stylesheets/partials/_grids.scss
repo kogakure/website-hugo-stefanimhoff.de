@@ -22,11 +22,16 @@ $default-rhythm-border-style: solid;
   @include squish(2, 2);
 }
 
+%indented-grid {
+  @include span-columns(6);
+  @include squish(3, 3);
+}
+
 // Layout
 .page .container,
 .post .container {
   @include container;
-  @include susy-grid-background; // Grid anzeigen
+  /* @include susy-grid-background; // Grid anzeigen */
 }
 
 /* .main { */
@@ -42,15 +47,18 @@ $default-rhythm-border-style: solid;
 }
 .article-body {
   > p, > h2, > h3, > h4, > h5, > h6,
-  > hr, > pre, > blockquote,
-  > figure.code, > img, > figure,
+  > pre,
+  > figure.code, > img, .figure figure,
   > ul, > ol, > dl,
   > .table, > .highlight,
   > .fluid-width-video-wrapper {
     @extend %main-grid;
   }
-  figure.fullsize {
-    @include squish(0, 0);
+  > hr {
+    @extend %indented-grid;
+  }
+  > blockquote {
+    @extend %indented-grid;
   }
 }
 

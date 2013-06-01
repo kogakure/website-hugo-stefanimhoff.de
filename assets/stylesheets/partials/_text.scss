@@ -16,7 +16,7 @@ hr {
   margin: 0 $base-rhythm-unit;
   color: rgba($dark-grey, 0.3);
   @include trailer(2, $base-font-size, margin);
-  @include trailing-border(2px);
+  @include trailing-border(1px);
 }
 // Emphasis
 em {
