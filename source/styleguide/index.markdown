@@ -438,6 +438,12 @@ If you use these elements, you must use every element. They should appear in thi
   </tbody>
 </table>
 
+### Images
+
+A simple image without figure element:
+
+<img src="http://lorempixel.com/680/408/technics/" alt="Example image">
+
 ### Figures
 
 Figures are usually used to refer to images:
@@ -454,8 +460,8 @@ Figures are usually used to refer to images:
 <img src="http://lorempixel.com/680/408/sports/" alt="Example image">
 {% endfigure %}
 
-{% figure testclass-1 testclass-2 "Figure mit 2 <b>tollen</b> Klassen" %}
-<img src="http://lorempixel.com/680/400/nature/" alt="Example image">
+{% figure fullsize "Figure mit <b>tollen</b> Klassen und Caption" %}
+<img src="http://lorempixel.com/1000/500/nature/" alt="Example image">
 {% endfigure %}
 
 {% figure meine-klasse %}

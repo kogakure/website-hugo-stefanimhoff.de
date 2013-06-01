@@ -16,15 +16,42 @@ $grid-padding:  $gutter-width;
 $show-grid-backgrounds:       true;
 $default-rhythm-border-style: solid;
 
+// Grid extends
+%main-grid {
+  @include span-columns(8);
+  @include squish(2, 2);
+}
+
 // Layout
-.container {
+.page .container,
+.post .container {
   @include container;
   @include susy-grid-background; // Grid anzeigen
 }
 
-.main {
-  @include push(2);
-  @include span-columns(8);
+/* .main { */
+/*   @include push(2); */
+/*   @include span-columns(8); */
+/* } */
+
+
+.article-header {
+  h1 {
+    @extend %main-grid;
+  }
+}
+.article-body {
+  > p, > h2, > h3, > h4, > h5, > h6,
+  > hr, > pre, > blockquote,
+  > figure.code, > img, > figure,
+  > ul, > ol, > dl,
+  > .table, > .highlight,
+  > .fluid-width-video-wrapper {
+    @extend %main-grid;
+  }
+  figure.fullsize {
+    @include squish(0, 0);
+  }
 }
 
 header {
