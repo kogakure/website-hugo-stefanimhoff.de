@@ -65,7 +65,7 @@ module Jekyll
       end
 
       source += "</figure></div>"
-      source
+      source = safe_wrap(source)
     end
 
   end

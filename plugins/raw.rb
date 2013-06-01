@@ -4,7 +4,7 @@
 module TemplateWrapper
   # Escape content for Textile with <notextile>
   def safe_wrap(input)
-    "<notextile>#{input}</notextile>"
+    "<div><notextile>#{input}</notextile></div>"
   end
 end
 
