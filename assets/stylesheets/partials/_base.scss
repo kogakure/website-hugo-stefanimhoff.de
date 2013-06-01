@@ -24,6 +24,7 @@ body {
   color: $dark-grey;
   font-style: normal;
   font-weight: $normal;
+  transition: all 0.3s linear;
   @include hyphens(auto);
 }
 

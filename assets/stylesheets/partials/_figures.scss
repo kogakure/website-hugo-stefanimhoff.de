@@ -1,6 +1,73 @@
 // Figures & Images
 // ----------------
 
+.figure {
+  figure.fullsize {
+    @include span-columns(12);
+    @include squish(0, 0);
+  }
+  figure.hangleft {
+    @include span-columns(12);
+    @include squish(0, 0);
+    div {
+      @include span-columns(10);
+      img {
+        float: left;
+      }
+    }
+    figcaption {
+      text-align: left;
+      @include span-columns(2 omega, 12);
+    }
+  }
+  figure.hangright {
+    @include span-columns(12);
+    @include squish(0, 0);
+    div {
+      @include span-columns(10 omega);
+      img {
+        float: right;
+      }
+    }
+    figcaption {
+      text-align: right;
+      @include span-columns(2, 12);
+    }
+  }
+  figure.center {
+    @include span-columns(10);
+    @include squish(1, 1);
+  }
+  figure.wrap {
+    @include span-columns(12);
+    @include squish(0, 0);
+    div {
+      @include span-columns(4);
+      @include squish(1, 0);
+    }
+    figcaption {
+      @include span-columns(5 omega);
+      @include squish(0, 2);
+    }
+  }
+}
+
+figure {
+  @include trailer(1);
+}
+
+figcaption {
+  @include adjust-font-size-to($font-scale-small);
+}
+
 img {
   max-width: 100%;
+}
+
+.border img {
+  border: 1px solid $image-border-color;
+}
+
+.shadow img {
+  @include box-shadow(0 1px 3px rgba($black, 0.5));
 }

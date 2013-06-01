@@ -14,8 +14,6 @@
 #     <strong>Bobby Willis</strong><cite><a href="http://google.com/search?q=pants">The Search For Bobby's Pants</a>
 #   </blockquote>
 #
-require './plugins/titlecase.rb'
-
 module Jekyll
 
   class Blockquote < Liquid::Block
@@ -31,13 +29,13 @@ module Jekyll
       if markup.strip =~ FullCiteWithTitle
         @by = $1
         @source = $2 + $3
-        @title = $4.titlecase.strip
+        @title = $4.strip
       elsif markup.strip =~ FullCite
         @by = $1
         @source = $2 + $3
       elsif markup.strip =~ AuthorTitle
         @by = $1
-        @title = $2.titlecase.strip
+        @title = $2.strip
       elsif markup.strip =~ Author
         @by = $1
       end

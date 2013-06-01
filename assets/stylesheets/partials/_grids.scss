@@ -16,15 +16,50 @@ $grid-padding:  $gutter-width;
 $show-grid-backgrounds:       true;
 $default-rhythm-border-style: solid;
 
-// Layout
-.container {
-  @include container;
-  @include susy-grid-background; // Grid anzeigen
+// Grid extends
+%main-grid {
+  @include span-columns(8);
+  @include squish(2, 2);
 }
 
-.main {
-  @include push(2);
-  @include span-columns(8);
+%indented-grid {
+  @include span-columns(6);
+  @include squish(3, 3);
+}
+
+// Layout
+.page .container,
+.post .container {
+  @include container;
+  /* @include susy-grid-background; // Grid anzeigen */
+}
+
+/* .main { */
+/*   @include push(2); */
+/*   @include span-columns(8); */
+/* } */
+
+
+.article-header {
+  h1 {
+    @extend %main-grid;
+  }
+}
+.article-body {
+  > p, > h2, > h3, > h4, > h5, > h6,
+  > pre,
+  > figure.code, > img, .figure figure,
+  > ul, > ol, > dl,
+  > .table, > .highlight,
+  > .fluid-width-video-wrapper {
+    @extend %main-grid;
+  }
+  > hr {
+    @extend %indented-grid;
+  }
+  > blockquote {
+    @extend %indented-grid;
+  }
 }
 
 header {

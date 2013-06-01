@@ -56,15 +56,16 @@ p q r s t u v w x y z { | } ~
 ### Blockquotes
 The `blockquote` element represents a section that is being quoted from another source.
 
-> Many forms of Government have been tried, and will be tried in this world of sin and woe. No one pretends that democracy is perfect or all-wise. Indeed, it has been said that democracy is the worst form of government except all those other forms that have been tried from time to time.
-> <footer><strong>Winston Churchill</strong>, in <cite>[a speech to the House of Commons](http://hansard.millbanksystems.com/commons/1947/nov/11/parliament-bill#column_206)</cite>. 11th&nbsp;November&nbsp;1947</footer>
-
 Additionally, you might wish to `cite` the source, as in the above example. The correct method involves including the cite attribute on the `blockquote` element, but since no browser makes any use of that information, it’s useful to link to the source also.
 
 #### Simple Blockquote
 
-{% blockquote %}
-Last night I lay in bed looking up at the stars in the sky and I thought to myself, where the heck is the ceiling.
+{% blockquote Winston Churchill http://hansard.millbanksystems.com/commons/1947/nov/11/parliament-bill#column_206a Speech to the House of Commons %}
+Many forms of Government have been tried, and will be tried in this world of sin and woe. No one pretends that democracy is perfect or all-wise. Indeed, it has been said that democracy is the worst form of government except all those other forms that have been tried from time to time.
+{% endblockquote %}
+
+{% blockquote J.R.R. Tolkien, Der Herr der Ringe %}
+Drei Ringe den Elben, hoch im Licht. Sieben den Zwergen in ihren Hallen aus Stein. Den Sterblichen, ewig dem Tode verfalln: Neun. Ein Ring sie zu knechten, sie alle zu finden, ins Dunkel zu treiben und ewig zu binden. Im Lande Mordor, wo die Schatten drohn.
 {% endblockquote %}
 
 #### Quote from a printed work
@@ -438,6 +439,12 @@ If you use these elements, you must use every element. They should appear in thi
   </tbody>
 </table>
 
+### Images
+
+A simple image without figure element:
+
+<img src="http://lorempixel.com/680/408/technics/" alt="Example image">
+
 ### Figures
 
 Figures are usually used to refer to images:
@@ -454,25 +461,103 @@ Figures are usually used to refer to images:
 <img src="http://lorempixel.com/680/408/sports/" alt="Example image">
 {% endfigure %}
 
-{% figure testclass-1 testclass-2 "Figure mit 2 <b>tollen</b> Klassen" %}
-<img src="http://lorempixel.com/680/400/nature/" alt="Example image">
+{% figure border "Dies ist ein normales Foto in einer figure mit Klasse <b>.border</b>" %}
+<img src="http://lorempixel.com/680/408/sports/" alt="Example image">
 {% endfigure %}
 
-{% figure meine-klasse %}
-<img src="http://lorempixel.com/680/400/food/" alt="Example image">
+{% figure shadow "Dies ist ein normales Foto in einer figure mit Klasse <b>.shadow</b>" %}
+<img src="http://lorempixel.com/680/408/sports/" alt="Example image">
 {% endfigure %}
 
-{% figure "This is the figcaption" %}
-<img src="http://lorempixel.com/680/400/people/" alt="Example image">
+Just some dummy text to sepearte the images: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+Some more dummy text to sepearte the images: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+#### Fullsize
+
+{% figure fullsize %}
+<img src="http://lorempixel.com/1200/500/nature/" alt="Example image">
 {% endfigure %}
 
-{% figure %}
-<img src="http://lorempixel.com/680/400/city/" alt="Example image">
+{% figure fullsize "Figure mit Klasse <b>.fullsize</b> und Caption, Image should be at least 1100 Pixel" %}
+<img src="http://lorempixel.com/1200/500/nature/" alt="Example image">
 {% endfigure %}
+
+{% figure fullsize border "Figure mit Klasse <b>.fullsize .border</b> und Caption, Image should be at least 1100 Pixel" %}
+<img src="http://lorempixel.com/1200/500/nature/" alt="Example image">
+{% endfigure %}
+
+Just some dummy text to sepearte the images: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+#### Hanging Left
+
+{% figure hangleft %}
+<img src="http://lorempixel.com/900/400/food/" alt="Example image">
+{% endfigure %}
+
+{% figure hangleft "Figure mit Klasse <b>.hangleft</b> und Caption, Image should be at least 850 Pixel" %}
+<img src="http://lorempixel.com/900/400/food/" alt="Example image">
+{% endfigure %}
+
+{% figure hangleft border "Figure mit Klasse <b>.hangleft .border</b> und Caption, Image should be at least 850 Pixel" %}
+<img src="http://lorempixel.com/900/400/food/" alt="Example image">
+{% endfigure %}
+
+Just some dummy text to sepearte the images: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+#### Hanging Right
+
+{% figure hangright %}
+<img src="http://lorempixel.com/900/400/animals/" alt="Example image">
+{% endfigure %}
+
+{% figure hangright "Figure mit Klasse <b>.hangright</b> und Caption, Image should be at least 850 Pixel" %}
+<img src="http://lorempixel.com/900/400/animals/" alt="Example image">
+{% endfigure %}
+
+{% figure hangright border "Figure mit Klasse <b>.hangright .border</b> und Caption, Image should be at least 850 Pixel" %}
+<img src="http://lorempixel.com/900/400/animals/" alt="Example image">
+{% endfigure %}
+
+Just some dummy text to sepearte the images: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+#### Centered
+
+{% figure center %}
+<img src="http://lorempixel.com/900/400/people/" alt="Example image">
+{% endfigure %}
+
+{% figure center "Figure mit Klasse <b>.center</b> und Caption, Image should be at least 850 Pixels" %}
+<img src="http://lorempixel.com/900/400/people/" alt="Example image">
+{% endfigure %}
+
+{% figure center border "Figure mit Klasse <b>.center .border</b> und Caption, Image should be at least 850 Pixels" %}
+<img src="http://lorempixel.com/900/400/people/" alt="Example image">
+{% endfigure %}
+
+Just some dummy text to sepearte the images: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+#### Wrap
+
+{% figure wrap %}
+<img src="http://lorempixel.com/350/400/technics/" alt="Example image">
+{% endfigure %}
+
+{% figure wrap "Figure mit Klasse <b>.wrap</b> und Caption, für kleine Bilder, Image should be at least 350 Pixel" %}
+<img src="http://lorempixel.com/350/400/technics/" alt="Example image">
+{% endfigure %}
+
+{% figure wrap border "Figure mit Klasse <b>.wrap .border</b> und Caption, für kleine Bilder, Image should be at least 350 Pixel" %}
+<img src="http://lorempixel.com/350/400/technics/" alt="Example image">
+{% endfigure %}
+
+Just some dummy text to sepearte the images: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 {% figure %}
 <img src="{{ site.images_dir }}styleguide/kelp-demo-1.jpg" alt="" />
 {% endfigure %}
+
+Just some dummy text to sepearte the images: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 {% figure %}
 <img src="{{ site.images_dir }}styleguide/kelp-demo-2.jpg" alt="" />
@@ -498,11 +583,7 @@ When you call the `activate()` method on the `robotSnowman` object, the eyes glo
 
 Used in conjunction with the `pre` element:
 
-#### Markdown Codeblock
-
-    function getJello() { echo $aDeliciousSnack; }
-
-#### Octopress Codeblock
+#### Codeblock
 
 Shown with line numbers:
 
@@ -519,6 +600,8 @@ Noch ein Test:
 {% codeblock lang:sh file.sh %}
 Code Snippet mit lang:sh und mit Titel
 {% endcodeblock %}
+
+Beispielsatz, der ein eigener Absatz sein sollte.
 
 {% codeblock Time to be Awesome! (awesome.rb) %}
 # Code snippet über Dateiendung erkannt
