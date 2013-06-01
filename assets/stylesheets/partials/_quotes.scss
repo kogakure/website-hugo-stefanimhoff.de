@@ -20,9 +20,9 @@ cite {
   font-style: italic;
 }
 blockquote cite:before {
-  content: '–';
   padding-left: 0.3em;
   padding-right: 0.3em;
+  content: '–';
 }
 
 // Pullquote
@@ -32,14 +32,14 @@ blockquote cite:before {
 }
 .pullquote-right:before,
 .pullquote-left:before {
-  border: 0;
-  content: attr(data-pullquote);
   float: right;
-  margin: 0 0 $base-rhythm-unit $base-rhythm-unit;
-  padding: 0;
   position: relative;
   top: 15px;
   width: 45%;
+  border: 0;
+  margin: 0 0 $base-rhythm-unit $base-rhythm-unit;
+  padding: 0;
+  content: attr(data-pullquote);
   @include adjust-font-size-to(25.888px);
 }
 .pullquote-left:before {

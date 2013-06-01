@@ -2,16 +2,16 @@
 // -----
 
 ol {
-  @include trailer(1);
   list-style: decimal;
+  @include trailer(1);
 }
 ol ol {
   list-style: lower-latin;
   margin: 0 $base-rhythm-unit;
 }
 ul {
-  @include trailer(1);
   list-style: disc;
+  @include trailer(1);
 }
 ul ul {
   list-style: circle;

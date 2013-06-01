@@ -5,7 +5,7 @@ footer: false
 body_class: archive
 ---
 
-<div id="blog-archives">
+<div class="blog-archives">
 {% for post in site.posts reverse %}
 {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
 {% unless year == this_year %}

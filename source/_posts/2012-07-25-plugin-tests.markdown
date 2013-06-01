@@ -159,7 +159,7 @@ Und was ist mit diesem bizarren Link:
 
 [√] Peter &amp; der Wolf
 
-[x|√] <a id="test" href="http://www.google.de/?test=1&amp;lala=2&amp;bubu=3" title="Peter &amp; der Wolf" alt="Peter & der Wolf mögen CSS und HTML">Peter &amp; der Wolf mögen CSS und HTML auch</a>
+[x|√] <a class="test" href="http://www.google.de/?test=1&amp;lala=2&amp;bubu=3" title="Peter &amp; der Wolf" alt="Peter & der Wolf mögen CSS und HTML">Peter &amp; der Wolf mögen CSS und HTML auch</a>
 
 [√] Peter & der Wolf
 
