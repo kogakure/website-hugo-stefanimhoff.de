@@ -11,10 +11,10 @@ p {
 
 // Horizontal borders
 hr {
-  border: 0;
-  color: rgba($dark-grey, 0.3);
   height: 0;
+  border: 0;
   margin: 0 $base-rhythm-unit;
+  color: rgba($dark-grey, 0.3);
   @include trailer(2, $base-font-size, margin);
   @include trailing-border(2px);
 }
@@ -44,10 +44,10 @@ dfn {
 
 // Abbrevations
 abbr, acronym {
-  cursor: help;
   font-variant: small-caps;
   letter-spacing: 0.1em;
   text-transform: lowercase;
+  cursor: help;
 }
 abbr[title], acronym[title] {
   border-bottom-width: 0;
@@ -70,22 +70,22 @@ var {
 // Sample output
 samp {
   @extend %mono;
-  color: $sample-color;
   margin: 0 0.4em;
+  color: $sample-color;
   @include adjust-font-size-to(15px);
 }
 
 // Keyboard entry
 kbd {
   @extend %sans;
-  background-color: $keyboard-background;
-  border: 1px solid $keyboard-border;
-  color: $dark-grey;
   display: inline-block;
-  font-weight: $bold;
-  line-height: 1.4;
+  border: 1px solid $keyboard-border;
   margin: 0 0.1em;
   padding: 0.3em 0.6em 0.1em;
+  color: $dark-grey;
+  background-color: $keyboard-background;
+  font-weight: $bold;
+  line-height: 1.4;
   text-shadow: 0 1px 0 $white;
   white-space: nowrap;
   @include adjust-font-size-to(12px);
@@ -115,29 +115,29 @@ b {
 
 // Marked
 mark {
+  position: relative;
   background-color: transparent;
   background-image: inline-image("css/mark-center.png");
   color: rgba($black, 0.75);
-  position: relative;
   @include background-size(25px 21px);
   &:before, &:after {
-    background-repeat: no-repeat;
-    content: '';
+    position: absolute;
     display: block;
     height: 21px;
-    position: absolute;
     width: 5px;
+    background-repeat: no-repeat;
+    content: '';
     @include background-size(5px 21px);
   }
   &:before {
-    background-image: inline-image("css/mark-left.png");
     left: -5px;
     top: 0;
+    background-image: inline-image("css/mark-left.png");
   }
   &:after {
-    background-image: inline-image("css/mark-right.png");
     bottom: 0;
     right: -5px;
+    background-image: inline-image("css/mark-right.png");
   }
 }
 

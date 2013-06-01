@@ -2,10 +2,10 @@
 // -----
 
 video {
-  box-sizing: border-box;
   display: block;
   height: auto;
   width: 100%;
+  box-sizing: border-box;
   @include trailer(1);
 }
 .fluid-width-video-wrapper {

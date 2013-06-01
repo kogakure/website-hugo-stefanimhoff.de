@@ -2,17 +2,17 @@
 // ------
 
 blockquote {
-  font-style: italic;
   margin-left: $base-rhythm-unit;
   margin-right: $base-rhythm-unit;
+  font-style: italic;
   @include leader();
   @include trailer();
 }
 .verse pre {
   display: table;
-  font-family: inherit;
   margin: 0 auto;
   width: auto;
+  font-family: inherit;
 }
 
 // Citations
