@@ -19,7 +19,7 @@
 #   ...
 #   {% endfigure %}
 
-require './plugins/raw'
+# require './plugins/raw'
 
 module Jekyll
 
