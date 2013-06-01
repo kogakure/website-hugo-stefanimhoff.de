@@ -11,12 +11,12 @@ p {
 
 // Horizontal borders
 hr {
-  @include trailer(2, $base-font-size, margin);
-  @include trailing-border(2px);
   border: 0;
   color: rgba($dark-grey, 0.3);
   height: 0;
   margin: 0 $base-rhythm-unit;
+  @include trailer(2, $base-font-size, margin);
+  @include trailing-border(2px);
 }
 // Emphasis
 em {
@@ -69,18 +69,15 @@ var {
 
 // Sample output
 samp {
-  @include adjust-font-size-to(15px);
   @extend %mono;
   color: $sample-color;
   margin: 0 0.4em;
+  @include adjust-font-size-to(15px);
 }
 
 // Keyboard entry
 kbd {
   @extend %sans;
-  @include adjust-font-size-to(12px);
-  @include border-radius(3px);
-  @include box-shadow(0 1px 0 rgba($black, 0.2), 0 0 0 2px $white inset);
   background-color: $keyboard-background;
   border: 1px solid $keyboard-border;
   color: $dark-grey;
@@ -91,6 +88,9 @@ kbd {
   padding: 0.3em 0.6em 0.1em;
   text-shadow: 0 1px 0 $white;
   white-space: nowrap;
+  @include adjust-font-size-to(12px);
+  @include border-radius(3px);
+  @include box-shadow(0 1px 0 rgba($black, 0.2), 0 0 0 2px $white inset);
 }
 
 // Superscript/subscript
@@ -115,19 +115,19 @@ b {
 
 // Marked
 mark {
-  @include background-size(25px 21px);
   background-color: transparent;
   background-image: inline-image("css/mark-center.png");
   color: rgba($black, 0.75);
   position: relative;
+  @include background-size(25px 21px);
   &:before, &:after {
-    @include background-size(5px 21px);
     background-repeat: no-repeat;
     content: '';
     display: block;
     height: 21px;
     position: absolute;
     width: 5px;
+    @include background-size(5px 21px);
   }
   &:before {
     background-image: inline-image("css/mark-left.png");

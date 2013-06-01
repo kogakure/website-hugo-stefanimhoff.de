@@ -19,10 +19,10 @@
 
 body {
   @extend %base;
-  @include hyphens(auto);
   color: $dark-grey;
   font-style: normal;
   font-weight: $normal;
+  @include hyphens(auto);
 }
 
 :lang(ja) {

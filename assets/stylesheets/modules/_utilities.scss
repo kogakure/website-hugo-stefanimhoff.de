@@ -2,17 +2,17 @@
 // ---------
 
 @mixin mask-image($img, $repeat: no-repeat){
-  @include experimental(mask-image, image-url($img), -webkit, -moz, -o, -ms);
-  @include experimental(mask-repeat, $repeat, -webkit, -moz, -o, -ms);
   width: image-width($img);
   height: image-height($img);
+  @include experimental(mask-image, image-url($img), -webkit, -moz, -o, -ms);
+  @include experimental(mask-repeat, $repeat, -webkit, -moz, -o, -ms);
 }
 
 @mixin shadow-box($border: #fff .5em solid, $shadow: rgba(#000, .15) 0 1px 4px, $border-radius: .3em) {
+  border: $border;
   @include border-radius($border-radius);
   @include box-shadow($shadow);
   @include box-sizing(border-box);
-  border: $border;
 }
 
 @mixin selection($bg, $color: inherit, $text-shadow: none){

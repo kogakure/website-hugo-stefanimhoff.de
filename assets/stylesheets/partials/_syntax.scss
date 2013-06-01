@@ -4,7 +4,6 @@
 p, li {
   code {
     @extend %mono;
-    @include border-radius(.4em);
     background: #fff;
     border: 1px solid #ddd;
     color: #555;
@@ -14,6 +13,7 @@ p, li {
     margin: -1px 0;
     padding: 0 .3em;
     white-space: no-wrap;
+    @include border-radius(.4em);
   }
   pre code { font-size: 1em; background: none; border: none; }
 }
@@ -26,7 +26,6 @@ pre, figure.code table {
 
 .highlight pre {
   @extend %mono;
-  @include border-radius(.4em);
   background: $pre-bg;
   border: 1px solid $pre-border;
   color: $pre-color;
@@ -37,17 +36,16 @@ pre, figure.code table {
   overflow-y: hidden;
   overflow: scroll;
   padding: 1em .8em;
+  @include border-radius(.4em);
 }
 
 figure.code {
-  @include box-shadow(rgba(#000, .06) 0 0 10px);
   background: none;
   border: 0;
   margin-bottom: 1.5em;
   padding: 0;
+  @include box-shadow(rgba(#000, .06) 0 0 10px);
   pre {
-    @include border-radius(0px);
-    @include box-shadow(none);
     background: none;
     border: none;
     color: $base1;
@@ -56,9 +54,10 @@ figure.code {
     margin-bottom: 0;
     overflow: visible;
     padding: 0;
+    @include border-radius(0px);
+    @include box-shadow(none);
   }
   figcaption {
-    @include border-top-radius(5px);
     @extend %sans;
     background-color: #aaaaaa;
     font-size: 13px;
@@ -67,6 +66,7 @@ figure.code {
     margin-bottom: 0;
     position: relative;
     text-align: center;
+    @include border-top-radius(5px);
     @if lightness($base03) <= lightness(#555) {
       color: #555;
       text-shadow: #cbcccc 0 1px 0;
@@ -90,11 +90,11 @@ figure.code {
       text-shadow: #fff 0 1px 0;
     }
     a {
-      @include hover-link;
       color: inherit;
       padding-left: 3em;
       position: absolute; right: .8em;
       z-index: 1;
+      @include hover-link;
     }
   }
   .marked {
@@ -149,13 +149,13 @@ figure .highlight {
     @if lightness($base03) > lightness(#555) {
       background: lighten($base03, 1);
       border-right: 1px solid darken($base02, 2);
-      @include box-shadow(lighten($base03, 2) -1px 0 inset);
       text-shadow: lighten($base02, 2) 0 -1px;
+      @include box-shadow(lighten($base03, 2) -1px 0 inset);
     } @else {
       background: $base02;
       border-right: 1px solid darken($base03, 2);
-      @include box-shadow(lighten($base02, 2) -1px 0 inset);
       text-shadow: darken($base02, 10) 0 -1px;
+      @include box-shadow(lighten($base02, 2) -1px 0 inset);
     }
   }
 
