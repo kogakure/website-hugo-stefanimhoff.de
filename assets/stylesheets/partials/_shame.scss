@@ -2,3 +2,13 @@
 // -----
 
 // Quick fixes and things to be done right later.
+
+// Quick demo to prove my idea
+.home .intro {
+  background: #5EA459 url(/images/styleguide/kelp-demo-1.jpg) center top no-repeat;
+  background-size: cover;
+  /* background-size: contain; */
+  /* background-attachment: fixed; */
+  height: 300px;
+  color: $white;
+}

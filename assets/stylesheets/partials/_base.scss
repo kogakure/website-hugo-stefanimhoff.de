@@ -15,7 +15,9 @@
 /* } */
 
 // Alle Elemente so einstellen, dass Padding nicht dazu gerechnet wird
-* { @include box-sizing(border-box); }
+* {
+  @include box-sizing(border-box);
+}
 
 body {
   @extend %base;
