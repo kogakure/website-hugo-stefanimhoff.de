@@ -19,8 +19,6 @@
 #   ...
 #   {% endfigure %}
 
-# require './plugins/raw'
-
 module Jekyll
 
   class FigureBlock < Liquid::Block
@@ -49,23 +47,29 @@ module Jekyll
 
     def render(context)
       content = super
+      content = content.strip
 
       if @class
-        source = "<div class=\"figure\"><figure class=\"#{@class}\"><div>"
+        source = "<figure class=\"#{@class}\">\n<div>"
       else
-        source = "<div class=\"figure\"><figure><div>"
+        source = "<figure>\n<div>"
       end
 
       source += content
 
       if @caption
-        source += "</div><figcaption>#{@caption}</figcaption>"
+        source += "</div><figcaption>#{@caption}</figcaption>\n"
       else
         source += "</div>"
       end
 
-      source += "</figure></div>"
-      source = safe_wrap(source)
+      source += "</figure>"
+
+      output = "<div class=\"figure\">\n<notextile>\n"
+      output += source
+      output += "\n</notextile>\n</div>"
+
+      output
     end
 
   end
