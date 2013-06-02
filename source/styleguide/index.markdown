@@ -276,6 +276,7 @@ If you use these elements, you must use every element. They should appear in thi
 
 ### Regular Table
 
+<figure class="table-figure">
 <table class="table">
   <thead>
     <tr>
@@ -306,9 +307,11 @@ If you use these elements, you must use every element. They should appear in thi
     </tr>
   </tbody>
 </table>
+</figure>
 
 ### Striped Table
 
+<figure class="table-figure">
 <table class="table table-striped">
   <thead>
     <tr>
@@ -339,9 +342,11 @@ If you use these elements, you must use every element. They should appear in thi
     </tr>
   </tbody>
 </table>
+</figure>
 
 ### Bordered  Table
 
+<figure class="table-figure">
 <table class="table table-bordered">
   <thead>
     <tr>
@@ -372,9 +377,11 @@ If you use these elements, you must use every element. They should appear in thi
     </tr>
   </tbody>
 </table>
+</figure>
 
 ### Hovered Table
 
+<figure class="table-figure">
 <table class="table table-hover">
   <thead>
     <tr>
@@ -405,9 +412,11 @@ If you use these elements, you must use every element. They should appear in thi
     </tr>
   </tbody>
 </table>
+</figure>
 
 ### Condensed Table
 
+<figure class="table-figure">
 <table class="table table-condensed">
   <thead>
     <tr>
@@ -438,6 +447,7 @@ If you use these elements, you must use every element. They should appear in thi
     </tr>
   </tbody>
 </table>
+</figure>
 
 ### Images
 

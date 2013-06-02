@@ -50,7 +50,7 @@ $default-rhythm-border-style: solid;
   > pre,
   > figure.code, > img, .figure figure,
   > ul, > ol, > dl,
-  > .table, > .highlight,
+  > .table-figure, > .highlight,
   > .fluid-width-video-wrapper, > .download {
     @extend %main-grid;
   }

@@ -2,7 +2,7 @@
 // ------
 
 .table {
-  display: table !important;
+  width: 100%;
   border-collapse: collapse;
   border-spacing: 0;
   @include trailer(1);
