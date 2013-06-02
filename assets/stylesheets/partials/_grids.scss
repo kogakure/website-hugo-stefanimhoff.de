@@ -39,11 +39,11 @@ $default-rhythm-border-style: solid;
 /*   @include span-columns(8); */
 /* } */
 
-
-.article-header {
-  h1 {
-    @extend %main-grid;
-  }
+.article-header,
+.article-related,
+.article-footer,
+.pagination {
+  @extend %main-grid;
 }
 .article-body {
   > p, > h2, > h3, > h4, > h5, > h6,
@@ -51,7 +51,7 @@ $default-rhythm-border-style: solid;
   > figure.code, > img, .figure figure,
   > ul, > ol, > dl,
   > .table, > .highlight,
-  > .fluid-width-video-wrapper {
+  > .fluid-width-video-wrapper, > .download {
     @extend %main-grid;
   }
   > hr {
