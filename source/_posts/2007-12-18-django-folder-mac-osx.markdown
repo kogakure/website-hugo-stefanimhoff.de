@@ -23,4 +23,4 @@ Die Icons sind in allen Größen von 16 Pixel bis 512 Pixel im Download vorhande
 
 **Advice:** The folder is property of [Apple](http://www.apple.com/ "Apple"), the Django-Logo is property of [Lawrence Journal-World](http://www2.ljworld.com/). For private use only [(CreativeCommons)](http://creativecommons.org/licenses/by-nc-nd/3.0/deed.de "Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 Unported").
 
-{% download /downloads/django-osx-folder.zip "Download Mac OS X Django-Folder (612 KB)" %}
+{% download /downloads/django-osx-folder.zip "Django-Folder (612 KB)" %}

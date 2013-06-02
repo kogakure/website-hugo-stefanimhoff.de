@@ -31,17 +31,26 @@ Detailed instructions for installations are included in the package on GitHub.
 
 ## Screenshots
 
-<img src="{{ site.images_dir }}gitweb-theme-1.png" alt="Projektübersicht" />
-Projektübersicht/Project view
+{% figure border "Projektübersicht/Project view" %}
+<img src="{{ site.images_dir }}gitweb-theme-projects.png" alt="Projektübersicht" />
+{% endfigure %}
 
-<img src="{{ site.images_dir }}gitweb-theme-2.png" alt="Zusammenfassung" />
-Zusammenfassung/Summary
+{% figure border "Zusammenfassung/Summary" %}
+<img src="{{ site.images_dir }}gitweb-theme-summary.png" alt="Zusammenfassung" />
+{% endfigure %}
 
-<img src="{{ site.images_dir }}gitweb-theme-3.png" alt="Commit" />
-Commit
+{% figure border "Commit" %}
+<img src="{{ site.images_dir }}gitweb-theme-commit.png" alt="Commit" />
+{% endfigure %}
 
-<img src="{{ site.images_dir }}gitweb-theme-4.png" alt="Diff" />
-DIFF
+{% figure border "Commit-DIFF" %}
+<img src="{{ site.images_dir }}gitweb-theme-commitdiff.png" alt="Commit-DIFF" />
+{% endfigure %}
 
-<img src="{{ site.images_dir }}gitweb-theme-5.png" alt="Log" />
-Log
+{% figure border "Historie/Log" %}
+<img src="{{ site.images_dir }}gitweb-theme-log.png" alt="Historie" />
+{% endfigure %}
+
+{% figure border "Dateiansicht/Tree view" %}
+<img src="{{ site.images_dir }}gitweb-theme-tree.png" alt="Dateiansicht" />
+{% endfigure %}

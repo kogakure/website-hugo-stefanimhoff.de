@@ -2,9 +2,9 @@
 layout: post
 title: "Buchtipp: Decodeunicode"
 date: 2011-06-02 18:38
-description: 
+description:
 categories:
-tags: 
+tags:
 - buch
 - unicode
 - schrift
@@ -13,9 +13,11 @@ tags:
 
 Durch Zufall bin ich kürzlich auf ein Buch gestoßen, dass für alle an Typographie und Zeichen interessierten ein Kauftipp ist. Das Buch ist 656 Seiten stark, enthält alle derzeitigen 109.242 digitalen Schriftzeichen des Unicode-Zeichensatzes und wiegt fast 2 Kilogramm.
 
+{% figure "<cite>decodeunicode – Die Schriftzeichen der Welt</cite>" %}
 <a href="http://www.amazon.de/gp/product/3874398137/ref=as_li_ss_tl?ie=UTF8&amp;tag=kogakurede-21&amp;linkCode=as2&amp;camp=1638&amp;creative=19454&amp;creativeASIN=3874398137">
-  <img width="300" height="311" src="{{ site.images_dir }}decodeunicode.jpg" alt="Decodeunicode: Die Schriftzeichen der Welt" />
+  <img src="{{ site.images_dir }}decodeunicode.jpg" alt="Decodeunicode: Die Schriftzeichen der Welt" />
 </a>
+{% endfigure %}
 
 Mit Unicode bin ich sehr früh in Kontakt gekommen, da ich die japanische Sprache überaus liebe. Als ich meine Kampfkunst-Website [kogakure.de](http://kogakure.de/) 2000 zum zweiten Mal neu gestaltete, hatte ich ein Lexikon mit japanischen Kampfkunst-Begriffen eingeführt und noch auf Grafiken für die japanischen Zeichen gesetzt. Dies war aber nicht zu warten und so habe ich bereits 2002 eine neue Version meines Lexikons mit Unicode veröffentlicht. Zu dieser Zeit war die Verbreitung von Unicode zwar noch irgendwo zwischen 0 und 1 %, doch ich bin trotzt einiger Proteste meiner Besucher dabei geblieben. Jeder der die Zeichen sehen wollte war gezwungen, sich von der Windows-CD den optionalen Zeichensatz zu installieren. Heute sind nach einer Auswertung von Google fast 50 % aller Websites in Unicode codiert.
 

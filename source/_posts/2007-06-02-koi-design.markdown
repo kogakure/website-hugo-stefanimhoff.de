@@ -21,8 +21,6 @@ Diese Kunstwerke sind extrem schmerzhaft (dutzende Bambusnadeln werden [mehrmals
 
 Einer der besten, lebenden Künstler des Irezumi ist Horiyoshi III, dessen Werke man in einigen Bildbänden betrachten kann ([Tattoos from the Floating World: Ukiyo-e Motifs in Japanese Tattoo](http://www.amazon.de/gp/product/9074822452?ie=UTF8&amp;tag=kogakurede-21&amp;linkCode=as2&amp;camp=1638&amp;creative=6742&amp;creativeASIN=9074822452 "Amazon.de: Tattoos from the Floating World: Ukiyo-e Motifs in Japanese Tattoo, Takahiro Kitamura, Katie M. Kitamura") und [Bushido: Legacies of the Japanese Tattoo](http://www.amazon.de/gp/product/0764312014?ie=UTF8&amp;tag=kogakurede-21&amp;linkCode=as2&amp;camp=1638&amp;creative=6742&amp;creativeASIN=0764312014 "Amazon.de: Bushido: Legacies of the Japanese Tattoo, Takahiro Kitamura, Katie M. Kitamura")).
 
-<img src="{{ site.images_dir }}irezumi-oni.jpg" alt="Irezumi von Horiyoshi IV" title="Irezumi auf dem Rücken von Miho Ito. Zwar kein typisches Irezumi-Motiv, trotzdem mein Favourit: Ein Oni (Dämon) zerstört religiöse Gegenstände, wie die Sutra, Pinsel und Gebetskette. Tätowiert von Horiyoshi III auf den Rücken von Miho Ito." />
-
 Im Irezumi werden nicht wahllos irgendwelche Dinge auf den Körper tätowiert, die Bilder haben eine tiefe Bedeutung für den Träger und erfordern Fachwissen über Religion, Geschichte und Mythen aus China und Japan. Das ist auch der Grund, weshalb man oft schlechte Kopien und pseudo-japanische Tätowierungen in westlichen Tätowierstudios angeboten bekommt. Diesen Tätowierern fehlt meist dieses Hintergrundwissen.
 
 ## Yakuza
@@ -37,7 +35,9 @@ Neben Göttern, Fabelwesen und Dämonen ist die wichtigste Quelle für Motive di
 
 ## Die Räuber vom Liang-Shan Moor
 
-<img src="{{ site.images_dir }}suikoden-luta.jpg" alt="Hauptmann Lu-Ta, der Blumenmönch" title="Hauptmann Lu-Ta, der Blumenmönch. Motiv aus dem Suikoden von Kunyoshi: Hauptmann Lu-Ta, der Blumenmönch, zerschlägt einen Baum mit einem Hieb, um eine Bande von Taugenichtsen zu beeindrucken." />
+{% figure "Motiv aus dem <cite>Suikoden</cite> von Kunyoshi: Hauptmann Lu-Ta, der Blumenmönch, zerschlägt einen Baum mit einem Hieb, um eine Bande von Taugenichtsen zu beeindrucken." %}
+<img src="{{ site.images_dir }}suikoden-luta.jpg" alt="Hauptmann Lu-Ta, der Blumenmönch" title="Motiv aus dem Suikoden von Kunyoshi: Hauptmann Lu-Ta, der Blumenmönch, zerschlägt einen Baum mit einem Hieb, um eine Bande von Taugenichtsen zu beeindrucken." />
+{% endfigure %}
 
 Kurz zusammengefasst geht es um eine Räuberbande von 108 heldenhaften Männern und Frauen, die jeder durch widrige Umstände zum gesetzlosen Leben gezwungen werden, und sich im Liang-Shan Moor auf einer befestigten Insel verschanzen, von wo aus sie jahrelang im großen Stil auf Raubzug gehen. Dabei kämpfen sie gegen korrupte Beamte des Kaisers und zahlreiche Schurken. Die Geschichte ist zu Teilen wahr und soll in der Song Dynastie stattgefunden haben.
 
@@ -45,11 +45,13 @@ Das Abenteuer ist im Taschenbuchformat erhältlich und sehr unterhaltsam – auc
 
 ## Bedeutung des Motivs
 
-<img src="{{ site.images_dir }}design-koi.jpg" alt="Design: Digitales Irezumi" title="Koi beim Hinaufschwimmen der Longmen Wassefälle. Es enthält typische Elemente wie Blätter, Blüten und Wellenkämme." />
-
 Das Motiv, das ich für mein Design gewählt habe zeigt einen Koi (Karpfen), der versucht die schweren Stromschnellen der Longmen Wasserfälle hinaufzuschwimmen.
 
 Der Legende nach verwandelt sich ein Koi, dem es gelingt die magischen Wasserfälle hinaufzuschwimmen, in einen Drachen. Nach weiteren 500 Jahren verwandelt er sich dann in einen gehörnten Drachen und nach 1000 Jahren in einen geflügelten. Somit müsste das nächste Design wohl einen Drachen zeigen. Naja, mal sehen…
+
+{% figure fullsize "Koi beim Hinaufschwimmen der Longmen Wassefälle. Es enthält typische Elemente wie Blätter, Blüten und Wellenkämme." %}
+<img src="{{ site.images_dir }}design-koi.jpg" alt="Design: Digitales Irezumi" title="Koi beim Hinaufschwimmen der Longmen Wassefälle. Es enthält typische Elemente wie Blätter, Blüten und Wellenkämme." />
+{% endfigure %}
 
 Die schwierigste Entscheidung bei meinem Design war, wie viel Tätowierung auf der Seite zu sehen sein soll. Während die echte japanische Tätowierung von der Fläche lebt, und bis auf Füße, Hände und einen kleinen Bereich vorne nichts frei lässt, hätte eine derart große Fläche die Seite zu unruhig gemacht und zu sehr vom Inhalt abgelenkt. Dazu kam noch erschwerend hinzu, dass es eigentlich kein wirkliches Ende bei einem solchen Werk gibt. Im Internet muss man seine Fläche aber irgendwie begrenzen.
 

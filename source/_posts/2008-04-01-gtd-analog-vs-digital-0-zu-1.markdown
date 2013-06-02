@@ -10,10 +10,6 @@ tags:
 
 Der ultimative GTD-Test: Was ist denn nun schneller? Analoges oder digitales Notieren. Ich habe den Test gemacht.
 
-{% figure %}
-<img src="{{ site.images_dir }}ipod-touch-vs-moleskine.jpg" alt="Moleskine vs. iPod touch ">
-{% endfigure %}
-
 Ich war mir nicht sicher, doch jetzt ist es entschieden. Digital geht schneller und hat mehr Vorteile. Hier die Details des Tests:
 
 ## Die Kandidaten
