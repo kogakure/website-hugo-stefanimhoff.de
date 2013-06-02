@@ -27,9 +27,7 @@ Detailed instructions for installations are included in the package on GitHub.
 
 ## Download
 
-<div class="download">
-    <p><a href="https://github.com/kogakure/gitweb-theme/">Download Gitweb Theme</a> on GitHub »</p>
-</div>
+{% download https://github.com/kogakure/gitweb-theme/ "Gitweb Theme on GitHub" %}
 
 ## Screenshots
 

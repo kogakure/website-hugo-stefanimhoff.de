@@ -43,6 +43,4 @@ This Theme is licenced under a <a rel="license" href="http://creativecommons.org
 
 ## Download
 
-<div class="download">
-    <p><a href="/downloads/moinmoin-kaijin-theme.zip">Download MoinMoin Kainjin Theme (98 KB)</a> (zip) »</p>
-</div>
+{% download /downloads/moinmoin-kaijin-theme.zip "MoinMoin Kainjin Theme (98 KB)" %}

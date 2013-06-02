@@ -33,6 +33,4 @@ Die Icons sind in allen Größen von 16 Pixel bis 512 Pixel im Download vorhande
 
 **Advice:** The folder is property of [Apple](http://www.apple.com/ "Apple"), the Blender-Logo is property of [Blender Foundation](http://www.blender.org/). For private use only [(CreativeCommons)](http://creativecommons.org/licenses/by-nc-nd/3.0/deed.de "Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 Unported").
 
-<div class="download">
-    <p><a href="/downloads/blender-osx-folder.zip">Download Mac OS X Blender-Folder (814 KB)</a> (zip) »</p>
-</div>
+{% download /downloads/blender-osx-folder.zip "Download Mac OS X Blender-Folder (814 KB)" %}

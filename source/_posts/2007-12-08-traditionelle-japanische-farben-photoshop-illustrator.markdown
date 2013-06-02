@@ -22,6 +22,4 @@ Jede Seite des Buches zeigt drei Farben, die immer einem oder mehreren wunderbar
 
 Ich habe mir die Mühe gemacht und die RGB-Palette mit den korrekten Farbnamen als Adobe Austauschdatei (ase) erstellt. Diese Farbpalette kann z. B. in Photoshop oder Illustrator importiert werden.
 
-<div class="download">
-    <p><a href="/downloads/traditional-colors-of-japan-rgb.zip">Download Farbpalette</a> (zip) »</p>
-</div>
+{% download /downloads/traditional-colors-of-japan-rgb.zip "Download Farbpalette" %}
