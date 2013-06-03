@@ -2,8 +2,9 @@
 layout: post
 title: "J2EE versus ruby/python-Frameworks"
 date: 2007-06-13 01:34
-description:
+description: Argumente für oder gegen das eine oder andere Webframework.
 categories:
+- Code
 tags:
 - django
 - rubyonrails
@@ -15,6 +16,8 @@ Der NASA-Mitarbeiter Sean Kelly lässt Web-Frameworks in einem halbstündigen Ma
 Brauchst du noch eine überzeugende Stimme, um deinem CEO zu erklären, wieso du seinen Java- und JSP-Dreck nicht haben willst? Wollen die Entwickler in deiner Firma einfach nicht verstehen, dass Webentwicklung schnell und einfach sein muss, um auf Wünsche JIT reagieren zu können?
 
 Dann schau dir das halbstündige (36:18), sehr lustige und überzeugende Video <cite>[Better Web App Development](http://oodt.jpl.nasa.gov/better-web-app.mov)</cite> des NASA-Mitarbeiters Sean Kelly an.
+
+{% youtube DWODIO6aCUE %}
 
 Er berichtet von seiner Arbeit in den 90ern für einen Wetterdienst. Damals waren alle Applikationen des Dienstes in C++ geschrieben. C++ ist eine sehr gute Sprache zur Anwendungsentwicklung, versagt aber völlig bei der Benutzerschnittstelle, weil der Code nach jeder Änderung neu kompiliert werden muss. So ist ein schnelles Reagieren und Interagieren mit Wünschen von Außen kaum möglich.
 

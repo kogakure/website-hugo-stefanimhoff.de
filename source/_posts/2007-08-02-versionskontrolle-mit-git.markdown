@@ -2,8 +2,9 @@
 layout: post
 title: "Versionskontrolle mit Git"
 date: 2007-08-02 17:53
-description:
+description: Vorzüge von Git gegenüber anderen Versionskontrollsystemen.
 categories:
+- Versionskontrolle
 tags:
 - git
 - subversion

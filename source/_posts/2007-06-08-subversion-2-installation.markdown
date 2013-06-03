@@ -2,8 +2,9 @@
 layout: post
 title: "Subversion (2) – Installation"
 date: 2007-06-08 01:00
-description:
+description: Installation von Subversion.
 categories:
+- Versionskontrolle
 tags:
 - subversion
 - tutorial

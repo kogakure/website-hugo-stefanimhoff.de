@@ -2,8 +2,9 @@
 layout: post
 title: "Das Koi-Design: Inspiration und Idee"
 date: 2007-06-02 02:00
-description:
+description: Irezumi (Japanische Tätorwierung) als Inspiration für meine Website und über die Entstehung meines Designs.
 categories:
+- Design
 tags:
 - irezumi
 - japan

@@ -2,8 +2,9 @@
 layout: post
 title: "Subversion (5) – Arbeiten mit Subversion"
 date: 2007-09-04 18:45
-description:
+description: Grundlegende Arbeitsschritte mit Subversion.
 categories:
+- Versionskontrolle
 tags:
 - subversion
 - tutorial

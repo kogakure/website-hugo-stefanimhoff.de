@@ -2,8 +2,9 @@
 layout: post
 title: "Domains extern hosten"
 date: 2007-05-30 23:55
-description:
+description: Domains getrennt vom Webhosting-Paket hosten und was das für Vorteile bringt.
 categories:
+- Server
 tags:
 - hosting
 - domain
