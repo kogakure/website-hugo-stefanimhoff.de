@@ -2,10 +2,9 @@
 layout: post
 title: "GTD: Analog vs. Digital – 0:1"
 date: 2008-04-01 17:40
-description:
-categories:
-tags:
-- gtd
+description: "GTD digital vs. analog. Was ist effizienter und schneller? Ein Test."
+categories: [Produktivität]
+tags: [gtd]
 ---
 
 Der ultimative GTD-Test: Was ist denn nun schneller? Analoges oder digitales Notieren. Ich habe den Test gemacht.

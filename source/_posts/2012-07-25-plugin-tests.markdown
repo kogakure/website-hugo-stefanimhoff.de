@@ -2,9 +2,9 @@
 layout: post
 title: "Plugin-Testseite mit mehreren Worten"
 date: 2012-07-25 14:00
-description:
-categories:
-tags:
+description: "@TODO: Dies ist nur ein Test und wird noch gelöscht"
+categories: [Persönlich]
+tags: [test]
 custom_css: "custom_demo"
 ---
 

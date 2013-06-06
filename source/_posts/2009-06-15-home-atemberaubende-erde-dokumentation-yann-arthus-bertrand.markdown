@@ -2,11 +2,9 @@
 layout: post
 title: "HOME – Atemberaubende Dokumentation über unsere Erde"
 date: 2009-06-15 17:23
-description:
-categories:
-tags:
-- dokumentation
-- film
+description: "Filmempfehlung: Die Naturdokumentation 'Home' von Yann Arthus-Bertrand."
+categories: [Empfehlung, Film]
+tags: [dokumentation, film]
 ---
 
 Am 5. Juni 2009 startete der Dokumentationsfilm <cite>HOME</cite> von Yann Arthus-Bertrand gleichzeitig und kostenlos in allen Ländern und in allen nur erdenklichen Medien: im Internet, Fernsehen und Kinos, wobei der Film den Kinos sogar kostenlos zur Verfügung gestellt wurde. Außerdem ist der Film schon auf DVD erhältlich, und ein Teil des Verkaufspreises wird der Organisation <cite>Good Planet</cite> gespendet.

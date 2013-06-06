@@ -2,10 +2,9 @@
 layout: post
 title: "2010 – ein Jahresrückblick"
 date: 2010-12-23 13:00
-description:
-categories:
-tags:
-- vim
+description: "Mein persönlicher Jahresrückblick für 2010."
+categories: [Persönlich]
+tags: [vim]
 ---
 
 Und wieder ist ein Jahr fast vorbei, mein jährlicher Blick in Google History steht an.

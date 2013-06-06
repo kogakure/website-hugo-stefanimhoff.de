@@ -2,12 +2,9 @@
 layout: post
 title: "GTD mit OmniFocus oder Things?"
 date: 2007-12-15 19:57
-description:
-categories:
-tags:
-- gtd
-- macosx
-- software
+description: "OmniFocus und Things im Vergleich als GTD-Tool für Mac OS X."
+categories: [Produktivität]
+tags: [gtd, macosx, software]
 ---
 
 Seit ich mir Anfang Dezember überlegt habe, von meinem webbasierenden GTD-Tool [Tracks](http://getontracks.org/) zu einer OS X Software zu wechseln, teste ich zwei interessante Kandidaten.

@@ -2,8 +2,8 @@
 layout: post
 title: "Das war mein 2007 – eine Jahresbilanz"
 date: 2007-12-24 14:00
-description:
-categories: []
+description: "Mein persönlicher Jahresrückblick für 2007."
+categories: [Persönlich]
 tags: []
 ---
 

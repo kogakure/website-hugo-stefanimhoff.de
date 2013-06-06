@@ -2,13 +2,9 @@
 layout: post
 title: "Buchtipp: Decodeunicode"
 date: 2011-06-02 18:38
-description:
-categories:
-tags:
-- buch
-- unicode
-- schrift
-- sprache
+description: "Empfehlung für alle an Schrift und Zeichen Interessierten: decodeunicode – Die Schriftzeichen der Welt."
+categories: [Empfehlung, Buch, Typographie]
+tags: [buch, unicode, schrift, typographie, sprache]
 ---
 
 Durch Zufall bin ich kürzlich auf ein Buch gestoßen, dass für alle an Typographie und Zeichen interessierten ein Kauftipp ist. Das Buch ist 656 Seiten stark, enthält alle derzeitigen 109.242 digitalen Schriftzeichen des Unicode-Zeichensatzes und wiegt fast 2 Kilogramm.

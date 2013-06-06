@@ -2,15 +2,9 @@
 layout: post
 title: "Gitweb-Theme im GitHub-Stil"
 date: 2009-02-19 20:00
-description:
-categories:
-tags:
-- gitweb
-- git
-- theme
-- customize
-- download
-- github
+description: "Ein Theme für GitWeb zum Download, damit es GitHub ähnlicher sieht und nicht mehr so hässlich ist."
+categories: [Download]
+tags: [gitweb, git, theme, customize, download, github]
 ---
 
 Das Standard-Theme von Gitweb ist wirklich nicht sehr ansprechend und scheinbar nur auf Funktionalität ausgelegt. Daher habe ich eine Alternative erstellt, die sich von der Gestaltung an GitHub anlehnt.

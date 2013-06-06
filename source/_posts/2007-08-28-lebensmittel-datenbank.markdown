@@ -3,7 +3,7 @@ layout: post
 title: "Lebensmittel-Datenbank"
 date: 2007-08-28 08:24
 description: "FDDB, das kostenlose Ernährungstagebuch und Lebensmittel-Datenbank."
-categories: [Tipps, Websites]
+categories: [Empfehlung, Website]
 tags: [lebensmittel, nahrung, essen]
 ---
 
