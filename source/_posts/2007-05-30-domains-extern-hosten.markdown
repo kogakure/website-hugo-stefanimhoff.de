@@ -2,12 +2,9 @@
 layout: post
 title: "Domains extern hosten"
 date: 2007-05-30 23:55
-description: Domains getrennt vom Webhosting-Paket hosten und was das für Vorteile bringt.
-categories:
-- Server
-tags:
-- hosting
-- domain
+description: "Domains getrennt vom Webhosting-Paket hosten und was das für Vorteile bringt."
+categories: [Server]
+tags: [hosting, domain]
 ---
 
 Viele Domainbesitzer in Deutschland wissen immer noch nicht, dass sie ihre Domains _nicht_ mit dem Speicherplatz zusammen kaufen müssen. Ich erkäre hier, wieso Inklusivdomains eine Mogelpackung sind und was für Vorteile das Trennen von Domain und Webspace mit sich bringen.

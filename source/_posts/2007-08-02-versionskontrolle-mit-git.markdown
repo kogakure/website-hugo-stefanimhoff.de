@@ -2,12 +2,9 @@
 layout: post
 title: "Versionskontrolle mit Git"
 date: 2007-08-02 17:53
-description: Vorzüge von Git gegenüber anderen Versionskontrollsystemen.
-categories:
-- Versionskontrolle
-tags:
-- git
-- subversion
+description: "Vorzüge von Git gegenüber anderen Versionskontrollsystemen."
+categories: [Versionskontrolle]
+tags: [git, subversion]
 ---
 
 Vor ein paar Wochen bin ich über *Git* gestolpert, das Versionskontrollsystem von [Linus Torvalds](http://en.wikipedia.org/wiki/Linus_Torvalds "Linus Torvalds - Wikipedia, the free encyclopedia"). Git wird zur Zeit von Junio Hamano entwickelt.

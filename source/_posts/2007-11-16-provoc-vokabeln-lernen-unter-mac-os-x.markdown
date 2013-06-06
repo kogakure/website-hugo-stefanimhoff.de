@@ -2,13 +2,9 @@
 layout: post
 title: "ProVoc – Vokabeln lernen unter Mac OS X"
 date: 2007-11-16 07:00
-description:
-categories:
-tags:
-- macosx
-- sprache
-- lernen
-- vokabel
+description: "Vokabeln lernen unter Mac OS X mit der Software ProVoc."
+categories: [Tipps, Software]
+tags: [macosx, sprache, lernen, vokabel]
 ---
 
 Heute möchte ich eine wirklich feine Software vorstellen, die sich für alle, die irgendetwas lernen möchten, fantastisch eignet: <cite>ProVoc</cite>.

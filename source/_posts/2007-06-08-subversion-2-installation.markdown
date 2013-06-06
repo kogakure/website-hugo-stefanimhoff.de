@@ -2,12 +2,9 @@
 layout: post
 title: "Subversion (2) – Installation"
 date: 2007-06-08 01:00
-description: Installation von Subversion.
-categories:
-- Versionskontrolle
-tags:
-- subversion
-- tutorial
+description: "Installation von Subversion."
+categories: [Versionskontrolle]
+tags: [subversion, tutorial]
 ---
 
 Die Installation von Subversion ist relativ leicht und schnell erledigt, für die Bedienung kann man eine der zahllosen grafischen Oberflächen oder das Terminal benutzten. In diesem Teil der Reihe stelle ich ein paar Programme vor und zeige wie man Subversion aus dem Quellcode selber kompiliert.
