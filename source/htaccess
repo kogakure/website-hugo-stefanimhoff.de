@@ -3,6 +3,9 @@ layout: none
 permalink: .htaccess
 ---
 
+# mod_pagespeed
+SetOutputFilter MOD_PAGESPEED_OUTPUT_FILTER
+
 # Base Rewrite
 RewriteEngine On
 RewriteBase /
