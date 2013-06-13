@@ -9,12 +9,48 @@ ExpiresByType application/x-javascript "access plus 2 month"
 ExpiresByType text/css "access plus 7 days"
 SetOutputFilter DEFLATE
 
-# Permanent Redirect
-redirect 301 /notiz/abmahnung-kogakure-zitat-karl-valentin/ http://stefanimhoff.de/
-
 # Base Rewrite
 RewriteEngine On
 RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !/$
+RewriteCond %{REQUEST_URI} !(.*)/$
+RewriteRule ^(.*)$ $1/ [L,R=301]
+
+# Permanent Redirect
+Redirect 301 /notiz/django-und-das-framework-ding /notiz/django
+Redirect 301 /notiz/django-folder-fuer-mac-os-x-leopard /notiz/django-folder-fuer-mac-os-x
+Redirect 301 /notiz/django-folder-fuer-mac-os-x /notiz/django-folder-mac-osx
+Redirect 301 /notiz/blender-folder-fuer-mac-os-x-leopard /notiz/blender-folder-mac-osx
+Redirect 301 /notiz/theme-kaijin-fuer-das-moinmoin-wiki /notiz/theme-kaijin-moinmoin-wiki
+Redirect 301 /notiz/terminal-stoeckchen /notiz/terminal-most-used-commands
+Redirect 301 /notiz/django-relaunch-von-kogakure-de /notiz/django-relaunch-kogakure-de
+Redirect 301 /notiz/server-verwaltung-mit-capistrano /notiz/server-verwaltung-capistrano
+Redirect 301 /notiz/grundlagen-von-python-django-fuer-anfaenger /notiz/grundlagen-python-django-anfaenger
+Redirect 301 /notiz/kostenlose-vektorkarten-mit-openstreetmap /notiz/kostenlose-vektorkarten-openstreetmap
+Redirect 301 /notiz/django-fuer-webdesigner /notiz/django-webdesigner
+
+# Redirects (Gone)
+# ErrorDocument 410 /main/404/
+Redirect Gone /notiz/glueckliche-mitarbeiter
+Redirect Gone /notiz/musik-tipp-poets-of-the-fall
+Redirect Gone /notiz/why-we-fight
+Redirect Gone /notiz/meine-groesste-dummheit-vorerst
+Redirect Gone /notiz/abmahnung-kogakure-zitat-karl-valentin
+Redirect Gone /notiz/die-schatzinsel-bei-pro7
+Redirect Gone /notiz/django-basic-apps-von-nathan-borror
+Redirect Gone /notiz/wie-marions-kochbuch-google-manipuliert
+Redirect Gone /notiz/einfach-die-welt-veraendern
+Redirect Gone /notiz/expression-engine-2-sneak-preview
+Redirect Gone /notiz/cms-weblog-systeme-reloaded
+Redirect Gone /notiz/blender-animationsfilm-big-buck-bunny
+Redirect Gone /notiz/chris-jordan-zeigt-unsere-masslosigkeit-in-erschreckenden-bildern
+Redirect Gone /notiz/bash_profile-striptease
+Redirect Gone /notiz/platzsparend-browser-bookmark-unicode
+Redirect Gone /notiz/textmate-snippet-dummy-image-generator
+Redirect Gone /notiz/blogs-sind-tot-es-lebe-die-website
+Redirect Gone /xml/atom/notizen
 
 # Redirect (Aktion www.-freies Internet :P )
 RewriteCond %{HTTP_HOST} !^stefanimhoff\.de$
@@ -28,10 +64,6 @@ RewriteRule ^css/screen\.css$ css/screen.min.css
 RewriteCond %{DOCUMENT_ROOT}/css/print.min.css -f
 RewriteRule ^css/print\.css$ css/print.min.css
 
-# Entfernt das index.php aus der URL                                   
+# Entfernt das index.php aus der URL
 RewriteCond $1 !^(googleeac4fc886a6f9f8d.html|BingSiteAuth.xml|LiveSearchSiteAuth.xml|y_key_dc6ca9ea04c4d2d2.html|images|files|deusex|themes|mint|templates|js|css|favicon\.ico|robots\.txt|index\.php) [NC]
 RewriteRule ^(.*)$ /index.php/$1 [L]
-
-# Redirects (Gone)
-# ErrorDocument 410 /main/404/
-Redirect Gone /notiz/glueckliche-mitarbeiter/
