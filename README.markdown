@@ -9,9 +9,8 @@
 
 Höchste Priorität zuerst
 
-* Misc
-* Misc
-* Misc
+* Schema.org
+* WAI-Aria
 
 ## Changelog
 
