@@ -1,9 +1,16 @@
-<!doctype html>
-<html lang="de">
+<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="de" class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="de" class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="de" class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="de" class="no-js"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>{% if page.title %}{{ page.title | strip_html }} – {% endif %}{{ site.title | strip_html }}</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
 
   <!-- Prefetch DNS -->
   <link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -12,7 +19,6 @@
   <!-- Robots -->
   <meta name="robots" content="all">
 
-  <title>{% if page.title %}{{ page.title | strip_html }} – {% endif %}{{ site.title | strip_html }}</title>
   {% capture description %}{% if page.description %}{{ page.description }}{% else %}{{ content | raw_content }}{% endif %}{% endcapture %}
   <!-- Description -->
   <meta name="description" content="{{ description | strip_html | condense_spaces | truncate:150 }}">
@@ -53,6 +59,9 @@
   {% stylesheet application %}
   {% if page.custom_css %}{{ page.custom_css | stylesheet }}{% endif %}
   {% endif %}
+  
+  <script src="javascripts/libs/modernizr-2.6.2.min.js"></script>
+  
   <!-- Feeds -->
   <link href="{{ site.subscribe_rss }}" rel="alternate" title="{{site.title}}" type="application/atom+xml">
 
