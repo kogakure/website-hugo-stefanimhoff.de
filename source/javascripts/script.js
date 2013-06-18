@@ -3,7 +3,7 @@ $(function() {
   FastClick.attach(document.body);
 
   // Widon't on all text
-  $(".page p,  .post p, .page li, .post li, .page dd, .post dd, .page dt, .post dt, .page h1, .post h1, .page h2, .post h2, .page h3, .post h3, .page h4, .post h4, .page h5, .post h5, .page h6, .post h6").widont();
+  $(".page article p, .post article p, .page article li, .post article li, .page article dd, .post article dd, .page article dt, .post article dt, .page article h1, .post article h1, .page article h2, .post article h2, .page article h3, .post article h3, .page article h4, .post article h4, .page article h5, .post article h5, .page article h6, .post article h6").widont();
 
   // Fitvids
   $(".article").fitVids();
