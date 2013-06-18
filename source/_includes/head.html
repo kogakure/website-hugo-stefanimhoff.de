@@ -97,7 +97,7 @@
   {% stylesheet application %}
   {% if page.custom_css %}{{ page.custom_css | stylesheet }}{% endif %}
   {% endif %}
-  <script src="javascripts/libs/modernizr-2.6.2.min.js"></script>
+  <script src="{{ root_url }}/javascripts/libs/modernizr-2.6.2.min.js"></script>
 
   <!-- Feeds -->
   <link href="{{ site.subscribe_rss }}" rel="alternate" title="{{site.title}}" type="application/atom+xml">
