@@ -1,18 +1,13 @@
 {% include head.html %}
 <body{% if page.body_class %} class="{{ page.body_class }}"{% endif %}>
   <!--[if lt IE 7]><p class="chromeframe">Dein Browser ist <em>uralt!</em> <a href="http://browsehappy.com/">Hol dir einen anderen Browser</a> oder <a href="http://www.google.com/chromeframe/?redirect=true">installiere Google Chrome Frame</a> für volles Erlebnis dieser Seite.</p><![endif]-->
+{% include header.html %}
   <div class="container">
-    <header>
-      [SITE HEADER]
-      {% include navigation.html %}
-    </header>
     <section class="main" role="main">
       {{ content }}
     </section>
-    <footer>
-      [SITE FOOTER]
-    </footer>
   </div>
+{% include footer.html %}
 {% include scripts.html %}
 </body>
 </html>
