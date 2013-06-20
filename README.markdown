@@ -14,14 +14,16 @@ Höchste Priorität zuerst
 
 ## Changelog
 
-1.1.0 [YYYY-MM-DD]
+0.2.0 [2013-04-15]
 
-* Misc
-* Misc
-* Misc
+* Update to Octopress 2.1
 
-1.0.0 [YYYY-MM-DD]
+0.1.0 [2012-07-25]
 
-* Misc
-* Misc
-* Misc
+* Abbreviation plugin
+* Ampersand plugin
+
+0.0.0 [2012-07-09]
+
+* Initial commit
+* Gemfile
