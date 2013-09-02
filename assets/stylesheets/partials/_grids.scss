@@ -46,7 +46,8 @@ $default-rhythm-border-style: solid;
   @extend %main-grid;
 }
 .article-body {
-  > * {
+  > *,
+  > .fluid-width-video-wrapper {
     @extend %main-grid;
   }
   > .figure {
