@@ -31,7 +31,7 @@ $default-rhythm-border-style: solid;
 .page .container,
 .post .container {
   @include container;
-  /* @include susy-grid-background; // Grid anzeigen */
+  // @include susy-grid-background; // Grid anzeigen
 }
 
 /* .main { */
@@ -46,13 +46,15 @@ $default-rhythm-border-style: solid;
   @extend %main-grid;
 }
 .article-body {
-  > p, > h2, > h3, > h4, > h5, > h6,
-  > pre,
-  > figure.code, > img, .figure figure,
-  > ul, > ol, > dl,
-  > .table-figure, > .highlight,
-  > .fluid-width-video-wrapper, > .download {
+  > * {
     @extend %main-grid;
+  }
+  > .figure {
+    @include span-columns(12);
+    @include squish(0, 0);
+  }
+  > .figure figure {
+    @include squish(2, 2);
   }
   > hr {
     @extend %indented-grid;
