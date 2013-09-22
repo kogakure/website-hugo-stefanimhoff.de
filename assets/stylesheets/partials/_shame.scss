@@ -14,13 +14,55 @@
 }
 
 header.header {
-  background: rgba(#FFFFFF, 0.85);
-  border-bottom: 1px solid #ededed;
-  position: fixed;
+  font-family: $base-font-sans;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: 1000;
   width: 100%;
+  padding: 10px 0;
+  @include transition(transform 0.5s 0.5s, background 0.5s, color 0.1s);
+  a {
+    color: #333333;
+    text-decoration: none;
+  }
+  .logo {
+    overflow: hidden;
+  }
+  nav {
+    @include span-columns(omega 9);
+    text-align: right;
+  }
+  ul {
+    list-style: none;
+    margin-bottom: 0;
+  }
+  li {
+    display: inline;
+    padding-left: 15px;
+  }
+  &:hover,
+  &:focus {
+    background: rgba(#FFFFFF, 0.85);
+  }
+  .logo {
+    @include span-columns(3);
+  }
+
+  .content {
+    @include container;
+  }
 }
 
 .container {
-  padding-top: 100px;
+  padding-top: 80px;
+}
+
+// Hintergrund-Muster
+body {
+  background-color: #EEEEEE;
+  background-image: inline-image("css/bgnoise_lg_@2X.png");
+  // background-image: inline-image("css/billie_holiday.png");
+  @include background-size(100px 100px);
 }
