@@ -19,6 +19,7 @@ group :development do
   # Custom Gems
   gem 'susy', '~> 1.0.9' # Grid system
   gem 'jekyll-assets', '~> 0.3.5' # Asset pipeline
+  gem 'i18n', '~> 0.6.4'
   gem 'uglifier'
   gem 'closure-compiler', '~> 1.1.8' # Google Closure
   # gem 'gsl', '~> 1.14.7' # LSI support for tags, needs to be 1.14.x with Homebrew GSL 1.14
