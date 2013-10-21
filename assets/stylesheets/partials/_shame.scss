@@ -12,3 +12,23 @@
   height: 300px;
   color: $white;
 }
+
+// Hintergrund-Muster
+body {
+  background-color: #EEEEEE;
+  // background-image: inline-image("css/bgnoise_lg_@2X.png");
+  // background-image: inline-image("css/billie_holiday.png");
+  // @include background-size(100px 100px);
+}
+
+// Kein Auto-Adjust beim Drehen des iPhones
+@media screen and (max-width: 480px) {
+  html {
+    -webkit-text-size-adjust: none;
+  }
+}
+
+// Active/Inactive-Fenster Selection
+.article * {
+  @include selection(black, white);
+}
