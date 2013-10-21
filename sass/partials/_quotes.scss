@@ -1,0 +1,102 @@
+// Quotes
+// ------
+
+blockquote {
+  margin-left: $base-rhythm-unit;
+  margin-right: $base-rhythm-unit;
+  font-style: italic;
+  @include leader();
+  @include trailer();
+}
+.verse pre {
+  display: table;
+  margin: 0 auto;
+  width: auto;
+  font-family: inherit;
+}
+
+// Citations
+cite {
+  font-style: italic;
+}
+blockquote cite:before {
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+  content: '–';
+}
+
+// Pullquote
+.pullquote {
+  text-align: center;
+  @include adjust-font-size-to(41.887px);
+}
+.pullquote-right:before,
+.pullquote-left:before {
+  float: right;
+  position: relative;
+  top: 15px;
+  width: 45%;
+  border: 0;
+  margin: 0 0 $base-rhythm-unit $base-rhythm-unit;
+  padding: 0;
+  content: attr(data-pullquote);
+  @include adjust-font-size-to(25.888px);
+}
+.pullquote-left:before {
+  float: left;
+  margin: 0 $base-rhythm-unit $base-rhythm-unit 0;
+}
+
+// Inline quotes
+q {
+  font-style: italic;
+}
+:lang(en) > q,
+.article-body q[lang|=en] {
+  quotes: '“' '”' '‘' '’';
+}
+:lang(fr) > q,
+.article-body q[lang|=fr] {
+  quotes: '« ' ' »' '“' '”';
+}
+// Alternative deutsche Schreibweise
+/* :lang(de) > q,
+ * .article-body q[lang|=de] { */
+/*   quotes: '„' '“' '‚' '‘'; */
+/* } */
+:lang(de) > q,
+.article-body q[lang|=de] {
+  quotes: '»' '«' '›' '‹';
+}
+:lang(ja) > q,
+.article-body q[lang|=ja] {
+  font-style: normal;
+  quotes: '「' '」' '『' '』';
+}
+
+q:before {
+  content: open-quote;
+}
+q:after {
+  content: close-quote;
+}
+
+blockquote.pullquote[lang|=de] {
+  quotes: '»' '«' '›' '‹';
+  p:first-child:before {
+    content: open-quote;
+  }
+  p:last-child:after {
+    content: close-quote;
+  }
+}
+
+blockquote.pullquote[lang|=en] {
+  quotes: '“' '”' '‘' '’';
+  p:first-child:before {
+    content: open-quote;
+  }
+  p:last-child:after {
+    content: close-quote;
+  }
+}

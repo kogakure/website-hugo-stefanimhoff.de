@@ -1,0 +1,150 @@
+// Text
+// ----
+
+// Paragraphs
+p {
+  @include trailer(1);
+}
+.article-body > p:first-child {
+  @include adjust-font-size-to(22px);
+}
+
+// Horizontal borders
+hr {
+  height: 0;
+  border: 0;
+  margin: 0 $base-rhythm-unit;
+  color: rgba($dark-grey, 0.3);
+  @include trailer(2, $base-font-size, margin);
+  @include trailing-border(1px);
+}
+// Emphasis
+em {
+  font-style: italic;
+}
+strong {
+  font-weight: $bold;
+}
+
+// Small print
+small {
+  @include adjust-font-size-to($font-scale-small);
+}
+
+// Strikethrough
+s {
+  text-decoration: line-through;
+}
+
+// Definition
+dfn {
+  border-bottom: 1px dotted $definition-color;
+  cursor: help;
+}
+
+// Abbrevations
+abbr, acronym {
+  font-variant: small-caps;
+  letter-spacing: 0.1em;
+  text-transform: lowercase;
+  cursor: help;
+}
+abbr[title], acronym[title] {
+  border-bottom-width: 0;
+}
+abbr.no-caps {
+  font-variant: normal;
+  text-transform: none;
+}
+
+// Pre
+pre {
+  @include trailer(1);
+}
+
+// Variable
+var {
+  font-style: italic;
+}
+
+// Sample output
+samp {
+  @extend %mono;
+  margin: 0 0.4em;
+  color: $sample-color;
+  @include adjust-font-size-to(15px);
+}
+
+// Keyboard entry
+kbd {
+  @extend %sans;
+  display: inline-block;
+  border: 1px solid $keyboard-border;
+  margin: 0 0.1em;
+  padding: 0.3em 0.6em 0.1em;
+  color: $dark-grey;
+  background-color: $keyboard-background;
+  font-weight: $bold;
+  line-height: 1.4 !important;
+  text-shadow: 0 1px 0 $white;
+  white-space: nowrap;
+  @include adjust-font-size-to(12px);
+  @include border-radius(3px);
+  @include box-shadow(0 1px 0 rgba($black, 0.2), 0 0 0 2px $white inset);
+}
+
+// Superscript/subscript
+sup, sub {
+  position: relative;
+  vertical-align: 0;
+}
+sup {
+  bottom: 1ex;
+}
+sub {
+  top: 0.8ex;
+}
+
+// Italicised/Emboldened
+i {
+  font-style: italic;
+}
+b {
+  font-weight: $bold;
+}
+
+// Marked
+mark {
+  position: relative;
+  background-color: transparent;
+  background-image: inline-image("css/mark-center.png");
+  color: rgba($black, 0.75);
+  @include background-size(25px 21px);
+  &:before, &:after {
+    position: absolute;
+    display: block;
+    height: 21px;
+    width: 5px;
+    background-repeat: no-repeat;
+    content: '';
+    @include background-size(5px 21px);
+  }
+  &:before {
+    left: -5px;
+    top: 0;
+    background-image: inline-image("css/mark-left.png");
+  }
+  &:after {
+    bottom: 0;
+    right: -5px;
+    background-image: inline-image("css/mark-right.png");
+  }
+}
+
+// Edits
+ins {
+  text-decoration: underline;
+}
+del {
+  text-decoration: line-through;
+}

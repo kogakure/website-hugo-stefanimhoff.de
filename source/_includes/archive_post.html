@@ -1,0 +1,9 @@
+{% capture category %}{{ post.categories | size }}{% endcapture %}
+<h2><a href="{{ root_url }}{{ post.url }}">{{ post.title | ampersand }}</a></h2>
+<time datetime="{{ post.date | datetime | date_to_xmlschema }}" pubdate>{{ post.date | date: "%d.%m.%Y"}}</time>
+{% if category != '0' %}
+<footer>
+  <span class="categories">{{ post.categories | category_links }}</span>
+  <span class="tags">{{ post.tags | tag_links }}</span>
+</footer>
+{% endif %}

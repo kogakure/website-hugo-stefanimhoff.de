@@ -1,0 +1,19 @@
+---
+layout: page
+title: Blog-Archiv
+footer: false
+body_class: archive
+---
+
+<div class="blog-archives">
+{% for post in site.posts reverse %}
+{% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+{% unless year == this_year %}
+  {% assign year = this_year %}
+  <h2>{{ year }}</h2>
+{% endunless %}
+<article {% if linklog %}data-linklog{% endif %}>
+  {% include archive_post.html %}
+</article>
+{% endfor %}
+</div>
