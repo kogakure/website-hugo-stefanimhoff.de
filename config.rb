@@ -15,6 +15,7 @@ css_dir = "public/stylesheets"
 sass_dir = "sass"
 images_dir = "source/images"
 fonts_dir = "source/fonts"
+generated_images_dir = "source/images"
 
-line_comments = false
-output_style = :compressed
+output_style = :expanded
+line_comments = true

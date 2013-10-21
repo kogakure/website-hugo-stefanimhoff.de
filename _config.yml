@@ -2,6 +2,11 @@
 #      Main Configs       #
 # ----------------------- #
 
+theme:
+  name: kogakure
+  stylesheets_dir: source/stylesheets
+  javascripts_dir: source/javascripts
+
 url: http://stefanimhoff.de
 title: Stefan Imhoff
 #subtitle: A blogging framework for hackers.
@@ -25,11 +30,6 @@ email:
 # ----------------------- #
 #    Jekyll & Plugins     #
 # ----------------------- #
-
-# theme:
-#   name: kogakure
-#   stylesheets_dir: assets/stylesheets
-#   javascripts_dir: source/javascripts
 
 # Jekyll Assets
 assets:
