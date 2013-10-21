@@ -16,9 +16,9 @@
 // Hintergrund-Muster
 body {
   background-color: #EEEEEE;
-  // background-image: inline-image("css/bgnoise_lg_@2X.png");
+  background-image: inline-image("css/bgnoise_lg_@2X.png");
   // background-image: inline-image("css/billie_holiday.png");
-  // @include background-size(100px 100px);
+  @include background-size(100px 100px);
 }
 
 // Kein Auto-Adjust beim Drehen des iPhones
