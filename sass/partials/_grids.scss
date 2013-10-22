@@ -47,12 +47,23 @@ $default-rhythm-border-style: solid;
 }
 
 .article-body {
-  > p, > h2, > h3, > h4, > h5, > h6,
+  > p,
+  > h2,
+  > h3,
+  > h4,
+  > h5,
+  > h6,
   > pre,
-  > figure.code, > img, .figure figure,
-  > ul, > ol, > dl,
-  > .table-figure, > .highlight,
-  > .fluid-width-video-wrapper, > .download {
+  > figure.code,
+  > img,
+  > .figure figure,
+  > ul,
+  > ol,
+  > dl,
+  > .table-figure,
+  > .highlight,
+  > .fluid-width-video-wrapper,
+  > .download {
     @extend %main-grid;
   }
   > hr {
