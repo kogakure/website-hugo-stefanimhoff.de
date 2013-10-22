@@ -1,0 +1,92 @@
+# ----------------------- #
+#      Main Configs       #
+# ----------------------- #
+
+url: http://stefanimhoff.de
+title: Stefan Imhoff
+author: "Stefan Imhoff"
+description: "Frontend Engineer @ XING, Designer, Martial Artist and hobby philosopher."
+keywords: "Stefan Imhoff, Hamburg, Frontend, Engineer"
+twitter: "@kogakure"
+googleplus: "104687479698350625994"
+geo_latitude: "53.596835"
+geo_longitude: "10.102015"
+
+date_format: "%d.%m.%Y"
+
+# RSS / Email (optional) subscription links (change if using something like Feedburner)
+subscribe_rss: "/atom.xml"
+subscribe_email:
+category_feeds: false
+# RSS feeds can list your email address if you like
+email:
+
+# ----------------------- #
+#    Jekyll & Plugins     #
+# ----------------------- #
+
+# Jekyll Assets
+assets:
+  dirname: assets
+  # baseurl: //my.super-cool-cdn.com/
+  sources:
+    - stylesheets
+    - javascripts
+    - images
+  compress:
+    js: closure # uglify, yui
+    css: sass   # yui
+
+root:         /
+permalink:    /:title/            # /blog/:title/, /notebook/:year/:month/:day/:title/
+source:       source              # source file directory
+destination:  public              # compiled site directory
+plugins:      plugins
+code_dir:     downloads/code
+images_dir:   /images/
+
+titlecase: false                  # Converts page and post titles to titlecase
+
+excerpt_link: "Weiterlesen &arr;" # "Continue reading" link text at the bottom of excerpted articles
+excerpt_in_feed: false            # Truncate excerpted articles in the atom feed
+permalink_label: "Permalink"
+permalink_label_feed: "★ Permalink"
+linklog_marker: "→"
+linklog_marker_position: after
+linklog_marker_position_feed: after
+standard_post_marker:
+
+# Categories
+category_dir: thema
+category_title_prefix: "Thema: "
+
+# Tags
+tag_dir: tags
+tag_title_prefix: "Tags: "
+
+include:
+  - .htaccess
+
+# Markdown
+markdown:     rdiscount
+rdiscount:
+  extensions:
+    - autolink
+    - footnotes
+
+pygments:     false        # Jekyll's default Python Pygments have been replaced by pygments.rb.
+lsi:          true         # Related posts
+
+env:            production # affects asset compilation
+post_index_dir: source     # directory for your posts index page (if you put your index in source/blog/index.html, set this to 'source/blog')
+stash_dir:      _stash     # directory to stash posts for speedy generation
+posts_dir:      _posts     # directory for blog files
+new_post_ext:   markdown   # default new post file extension when using the new_post task
+new_page_ext:   markdown   # default new page file extension when using the new_page task
+server_host:    0.0.0.0    # host ip address for preview server
+server_port:    4000       # port for preview server eg. localhost:4000
+timezone:       local      # default time and date used to local timezone. Vew supported timezones (under TZ column): http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+
+# Pagination
+paginate:       1000       # Posts per page on the blog index
+paginate_path:  :num       # default path for pagination, eg. page/2/

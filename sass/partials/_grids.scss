@@ -1,0 +1,84 @@
+// Grids
+// -----
+
+@import "susy";
+
+// Susy & Compass use HTML hacks to support IE 6 and 7. You can turn that off:
+/* $legacy-support-for-ie6 : false; */
+/* $legacy-support-for-ie7 : true; */
+
+// Grid
+$total-columns: 12;
+$column-width:  4em;
+$gutter-width:  1em;
+$grid-padding:  $gutter-width;
+
+$show-grid-backgrounds:       true;
+$default-rhythm-border-style: solid;
+
+// Grid extends
+%main-grid {
+  @include span-columns(8);
+  @include squish(2, 2);
+}
+
+%indented-grid {
+  @include span-columns(6);
+  @include squish(3, 3);
+}
+
+// Layout
+.page .container,
+.post .container {
+  @include container;
+  // @include susy-grid-background; // Grid anzeigen
+}
+
+/* .main { */
+/*   @include push(2); */
+/*   @include span-columns(8); */
+/* } */
+
+.article-header,
+.article-related,
+.article-footer,
+.pagination {
+  @extend %main-grid;
+}
+
+.article-body {
+  > p,
+  > h2,
+  > h3,
+  > h4,
+  > h5,
+  > h6,
+  > pre,
+  > figure.code,
+  > img,
+  > .figure figure,
+  > ul,
+  > ol,
+  > dl,
+  > .table-figure,
+  > .highlight,
+  > .fluid-width-video-wrapper,
+  > .hinweis,
+  > .download {
+    @extend %main-grid;
+  }
+  > hr {
+    @extend %indented-grid;
+  }
+  > blockquote {
+    @extend %indented-grid;
+  }
+}
+
+header {
+  clear: both;
+}
+
+footer {
+  clear: both;
+}

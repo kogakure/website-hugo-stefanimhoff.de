@@ -96,6 +96,11 @@
   {% stylesheet application %}
   {% if page.custom_css %}{{ page.custom_css | stylesheet }}{% endif %}
   {% endif %}
+  <!--[if lt IE 9]>
+  <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <![endif]-->
+
+  <!-- Modernizer -->
   <script src="{{ root_url }}/javascripts/libs/modernizr-2.6.2.min.js"></script>
 
   <!-- Feeds -->
@@ -110,7 +115,7 @@
   <meta name="MSSmartTagsPreventParsing" content="true">
   <meta http-equiv="imagetoolbar" content="no">
 
-  <!-- Statistics: TODO -->
+  <!-- Statistics: @TODO -->
   {% comment %}{% include mint.html %}{% endcomment %}
   {% comment %}{% include google_analytics.html %}{% endcomment %}
 </head>
