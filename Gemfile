@@ -15,14 +15,14 @@ group :development do
   gem 'stringex', '~> 1.4.0'
   gem 'liquid', '~> 2.3.0'
   gem 'directory_watcher', '1.4.1'
-  
+
   # Custom Gems
-  gem 'susy', '~> 1.0.9' # Grid system
-  gem 'jekyll-assets', '~> 0.3.5' # Asset pipeline
-  gem 'i18n', '~> 0.6.4'
-  gem 'uglifier'
+  gem 'susy', '~> 1.0.9'             # Grid system
+  gem 'jekyll-assets', '~> 0.3.5'    # Asset pipeline
+  gem 'i18n', '~> 0.6.4'             # Localizing dates
+  gem 'uglifier'                     # UglifyJS
   gem 'closure-compiler', '~> 1.1.8' # Google Closure
-  # gem 'gsl', '~> 1.14.7' # LSI support for tags, needs to be 1.14.x with Homebrew GSL 1.14
+  gem 'gsl', '~> 1.14.7'             # LSI support for tags, needs to be 1.14.x with Homebrew GSL 1.14
 end
 
 gem 'sinatra', '~> 1.4.2'

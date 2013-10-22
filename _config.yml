@@ -35,20 +35,20 @@ assets:
     - images
   compress:
     js: closure # uglify, yui
-    css: sass # yui
+    css: sass   # yui
 
 root:         /
-permalink:    /:title/ # /blog/:title/, /notebook/:year/:month/:day/:title/
-source:       source   # source file directory
-destination:  public   # compiled site directory
+permalink:    /:title/            # /blog/:title/, /notebook/:year/:month/:day/:title/
+source:       source              # source file directory
+destination:  public              # compiled site directory
 plugins:      plugins
 code_dir:     downloads/code
 images_dir:   /images/
 
-titlecase: false                    # Converts page and post titles to titlecase
+titlecase: false                  # Converts page and post titles to titlecase
 
-excerpt_link: "Weiterlesen &arr;"   # "Continue reading" link text at the bottom of excerpted articles
-excerpt_in_feed: false              # Truncate excerpted articles in the atom feed
+excerpt_link: "Weiterlesen &arr;" # "Continue reading" link text at the bottom of excerpted articles
+excerpt_in_feed: false            # Truncate excerpted articles in the atom feed
 permalink_label: "Permalink"
 permalink_label_feed: "★ Permalink"
 linklog_marker: "→"
@@ -75,7 +75,7 @@ rdiscount:
     - footnotes
 
 pygments:     false        # Jekyll's default Python Pygments have been replaced by pygments.rb.
-#lsi:          true         # Related posts
+lsi:          true         # Related posts
 
 env:            production # affects asset compilation
 post_index_dir: source     # directory for your posts index page (if you put your index in source/blog/index.html, set this to 'source/blog')
@@ -90,4 +90,3 @@ timezone:       local      # default time and date used to local timezone. Vew s
 # Pagination
 paginate:       1000       # Posts per page on the blog index
 paginate_path:  :num       # default path for pagination, eg. page/2/
-
