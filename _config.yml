@@ -2,14 +2,8 @@
 #      Main Configs       #
 # ----------------------- #
 
-theme:
-  name: kogakure
-  stylesheets_dir: source/stylesheets
-  javascripts_dir: source/javascripts
-
 url: http://stefanimhoff.de
 title: Stefan Imhoff
-#subtitle: A blogging framework for hackers.
 author: "Stefan Imhoff"
 description: "Frontend Engineer @ XING, Designer, Martial Artist and hobby philosopher."
 keywords: "Stefan Imhoff, Hamburg, Frontend, Engineer"
@@ -50,6 +44,7 @@ destination:  public   # compiled site directory
 plugins:      plugins
 code_dir:     downloads/code
 images_dir:   /images/
+
 titlecase: false                    # Converts page and post titles to titlecase
 
 excerpt_link: "Weiterlesen &arr;"   # "Continue reading" link text at the bottom of excerpted articles
@@ -78,6 +73,7 @@ rdiscount:
   extensions:
     - autolink
     - footnotes
+
 pygments:     false        # Jekyll's default Python Pygments have been replaced by pygments.rb.
 #lsi:          true         # Related posts
 
@@ -95,4 +91,3 @@ timezone:       local      # default time and date used to local timezone. Vew s
 paginate:       1000       # Posts per page on the blog index
 paginate_path:  :num       # default path for pagination, eg. page/2/
 
-deploy_method: rsync

@@ -1,7 +1,7 @@
+# Require any additional compass plugins here.
 require 'sass-globbing'
 require 'susy'
 
-# Require any additional compass plugins here.
 project_type = :stand_alone
 
 # Publishing paths
