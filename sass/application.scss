@@ -4,12 +4,15 @@
 @import "base/config";
 @import "base/base";
 @import "base/solarized";
+@import "base/syntax";
+
+@import "module/**/*";
+@import "state";
 
 // ====== v ======== Remove this later or move it up
 
 // Partials
 @import "partials/grids";
-@import "partials/syntax";
 @import "partials/quotes";
 @import "partials/tables";
 @import "partials/figures";
