@@ -1,12 +1,15 @@
-// Modules and Variables
-@import "partials/base";
+@import "base/vars";
+@import "base/mixins";
+@import "base/extends"
+@import "base/config";
+@import "base/base";
+@import "base/solarized";
+
+// ====== v ======== Remove this later or move it up
 
 // Partials
 @import "partials/grids";
 @import "partials/syntax";
-@import "partials/headings";
-@import "partials/text";
-@import "partials/lists";
 @import "partials/quotes";
 @import "partials/tables";
 @import "partials/figures";

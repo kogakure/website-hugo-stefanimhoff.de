@@ -1,5 +1,58 @@
-// Text
-// ----
+// Base
+// ====
+
+// Zeilenhöhe anzeigen
+/* html { */
+/*   @include debug-vertical-alignment(); */
+/* } */
+
+// Alle Elemente so einstellen, dass Padding nicht dazu gerechnet wird
+* {
+  @include box-sizing(border-box);
+}
+
+body {
+  @extend %base;
+  @include transition(all 0.3s linear);
+  @include hyphens(auto);
+  color: $dark-grey;
+  font-style: normal;
+  font-weight: $normal;
+}
+
+:lang(ja) {
+  @extend %japanese;
+}
+
+// Links
+a {
+  // normal, hover, active, visited, focus
+  @include link-colors(#00c, #0cc, #c0c, #ccc, #cc0);
+}
+
+// Headlines
+h1 {
+  @include adjust-font-size-to($font-scale-h1);
+  @include trailer(1, $font-scale-h1, margin);
+}
+
+h2 {
+  @include adjust-font-size-to($font-scale-h2);
+}
+
+h2 + h3 {
+  @include leader(1);
+}
+
+h3 {
+  font-weight: $normal;
+  @include adjust-font-size-to($font-scale-h3);
+}
+
+h4, h5, h6 {
+  font-weight: $bold;
+  @include adjust-font-size-to($font-scale-h4);
+}
 
 // Paragraphs
 p {
@@ -18,10 +71,12 @@ hr {
   @include trailer(2, $base-font-size, margin);
   @include trailing-border(1px);
 }
+
 // Emphasis
 em {
   font-style: italic;
 }
+
 strong {
   font-weight: $bold;
 }
@@ -49,9 +104,11 @@ abbr, acronym {
   text-transform: lowercase;
   cursor: help;
 }
+
 abbr[title], acronym[title] {
   border-bottom-width: 0;
 }
+
 abbr.no-caps {
   font-variant: normal;
   text-transform: none;
@@ -98,9 +155,11 @@ sup, sub {
   position: relative;
   vertical-align: 0;
 }
+
 sup {
   bottom: 1ex;
 }
+
 sub {
   top: 0.8ex;
 }
@@ -109,6 +168,7 @@ sub {
 i {
   font-style: italic;
 }
+
 b {
   font-weight: $bold;
 }
@@ -129,11 +189,13 @@ mark {
     content: '';
     @include background-size(5px 21px);
   }
+  
   &:before {
     left: -5px;
     top: 0;
     background-image: inline-image("css/mark-left.png");
   }
+  
   &:after {
     bottom: 0;
     right: -5px;
@@ -145,6 +207,46 @@ mark {
 ins {
   text-decoration: underline;
 }
+
 del {
   text-decoration: line-through;
+}
+
+// Lists
+// -----
+
+ol {
+  list-style: decimal;
+  @include trailer(1);
+}
+
+ol ol {
+  list-style: lower-latin;
+  margin: 0 $base-rhythm-unit;
+}
+
+ul {
+  list-style: disc;
+  @include trailer(1);
+}
+
+ul ul {
+  list-style: circle;
+  margin: 0 $base-rhythm-unit;
+}
+
+dl {
+  @include trailer(1);
+}
+
+dt {
+  font-weight: $bold;
+}
+
+dt + dd {
+  @include trailer(1);
+}
+
+dd {
+  margin-left: 0;
 }

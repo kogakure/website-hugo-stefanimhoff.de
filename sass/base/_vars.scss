@@ -1,3 +1,21 @@
+// Vars
+// =====
+
+// Colors
+// ------
+
+$black:                    #000000;
+$white:                    #FFFFFF;
+$dark-grey:                #333333;
+
+$keyboard-border:          #CCCCCC;
+$keyboard-background:      #F7F7F7;
+$sample-color:             #CCCCCC;
+$definition-color:         #999999;
+$table-border-color:       #DDDDDD;
+$table-striped-background: #F9F9F9;
+$image-border-color:       #DDDDDD;
+
 // Typography
 // ----------
 
@@ -6,6 +24,8 @@
 18px @ 1:1.618
 16px @ 1:1.618
 ----------------------
+
+@TODO: Switch this out and use modular-scale gem.
 
 http://modularscale.com/scale/?px1=18&px2=16&ra1=1.618&ra2=0
 
