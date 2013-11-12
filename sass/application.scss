@@ -1,13 +1,13 @@
-@import "base/vars";
 @import "base/mixins";
-@import "base/extends"
 @import "base/config";
+@import "base/vars";
+@import "base/extends";
 @import "base/base";
 @import "base/solarized";
 @import "base/syntax";
 
-@import "module/**/*";
-@import "state";
+// @import "module/**/*";
+@import "state/state";
 
 // ====== v ======== Remove this later or move it up
 
