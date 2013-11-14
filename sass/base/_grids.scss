@@ -18,12 +18,6 @@ $grid-padding:  $gutter-width;
 $show-grid-backgrounds:       true;
 $default-rhythm-border-style: solid;
 
-// Debugging grid/vertical-algin
-// ----------------------------------------------------------------------------
-
-// .page .container, .post .container { @include susy-grid-background; }
-// html { @include debug-vertical-alignment(); }
-
 // Layout
 // ----------------------------------------------------------------------------
 .page .container,

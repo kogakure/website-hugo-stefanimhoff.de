@@ -21,51 +21,21 @@ $image-border-color:       #DDDDDD;
 // ----------------------------------------------------------------------------
 
 /* Modular Scale
-----------------------
-18px @ 1:1.618
-16px @ 1:1.618
-----------------------
+ * ----------------------
+ * 18px @ 1:1.618
+ * 16px @ 1:1.618i
+ * ----------------------
+ *
+ * http://modularscale.com/scale/?px1=18&px2=16&ra1=1.618&ra2=0
+ *
+ */
 
-@TODO: Switch this out and use modular-scale gem.
-
-http://modularscale.com/scale/?px1=18&px2=16&ra1=1.618&ra2=0
-
-Pixels  | Ems    | Ems @ 16 | % of 13
---------|--------|----------|-----------
-845.479 | 46.971 | 52.842   | 6,503.685
-751.538 | 41.752 | 46.971   | 5,781.062
-522.546 | 29.03  | 32.659   | 4,019.585
-464.486 | 25.805 | 29.03    | 3,572.969
-322.958 | 17.942 | 20.185   | 2,484.292
-287.074 | 15.949 | 17.942   | 2,208.262
-199.603 | 11.089 | 12.475   | 1,535.408
-177.425 | 9.857  | 11.089   | 1,364.808
-123.364 | 6.854  | 7.71     | 948.954
-109.657 | 6.092  | 6.854    | 843.515
-76.245  | 4.236  | 4.765    | 586.500
-67.773  | 3.765  | 4.236    | 521.331
-47.123  | 2.618  | 2.945    | 362.485
-41.887  | 2.327  | 2.618    | 322.208
-29.124  | 1.618  | 1.82     | 224.031
-25.888  | 1.438  | 1.618    | 199.138
-18.000  | 1      | 1.125    | 138.462
-16.000  | 0.889  | 1        | 123.077
-11.125  | 0.618  | 0.695    | 85.577
-9.889   | 0.549  | 0.618    | 76.069
-6.876   | 0.382  | 0.43     | 52.892
-6.112   | 0.34   | 0.382    | 47.015
-4.250   | 0.236  | 0.266    | 32.692
-3.778   | 0.21   | 0.236    | 29.062
-2.627   | 0.146  | 0.164    | 20.208
-2.335   | 0.13   | 0.146    | 17.962
-1.624   | 0.09   | 0.102    | 12.492
-1.443   | 0.08   | 0.09     | 11.100
-1.004   | 0.056  | 0.063    | 7.723
-*/
+$ratio:         golden(); // Default
+$base-size:     16px 18px;
 
 // Font Weights
-$normal:                     400;
-$bold:                       700;
+$normal:        400;
+$bold:          700;
 
 // Font Families
 $base-font-family:           'Gentium Basic', serif;
@@ -74,7 +44,7 @@ $base-font-mono:             Menlo, Monaco, 'Andale Mono', 'Lucida console', 'Co
 $base-font-japanese:         'Hiragino Maru Gothic Pro', sans-serif;
 
 // Base sizes and line-height
-$base-font-size:             18px;
+$base-font-size:             modular-scale(1);
 $base-line-height:           24px;
 $base-font-weight:           $normal;
 $base-rhythm-unit:           $base-line-height / $base-font-size * $font-unit;
@@ -84,10 +54,10 @@ $relative-font-sizing:       true;
 $round-to-nearest-half-line: true; // Verhindert zu große Lücken zwischen den Zeilen
 
 // Headline Font Sizes
-$font-scale-h1:              47.123px;
-$font-scale-h2:              29.124px;
-$font-scale-h3:              25.888px;
-$font-scale-h4:              18px;
-$font-scale-h5:              18px;
-$font-scale-h6:              18px;
-$font-scale-small:           14px;
+$font-scale-h1:              modular-scale(5); // 47.123px;
+$font-scale-h2:              modular-scale(3); // 29.124px;
+$font-scale-h3:              modular-scale(2); // 25.888px;
+$font-scale-h4:              modular-scale(1); // 18px;
+$font-scale-h5:              modular-scale(1); // 18px;
+$font-scale-h6:              modular-scale(1); // 18px;
+$font-scale-small:           modular-scale(-1); // 11px (14px);
