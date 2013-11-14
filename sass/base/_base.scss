@@ -125,6 +125,22 @@ pre {
   @include trailer(1);
 }
 
+.code .gist .gist-file {
+  margin-bottom: 0;
+  border: 0;
+  .gist-data .line-numbers {
+    background: #fefefe;
+    border-right: 1px solid #e0e0e0;
+    color: #586e75;
+    text-align: right;
+    padding: .8em;
+    text-shadow: #eaeaea 0 -1px;
+    -webkit-box-shadow: white -1px 0 inset;
+    -moz-box-shadow: white -1px 0 inset;
+    box-shadow: white -1px 0 inset;
+  }
+}
+
 // Variable
 // ----------------------------------------------------------------------------
 var {
