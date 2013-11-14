@@ -1,10 +1,9 @@
+// =============================================================================
 // Base
-// ====
+// =============================================================================
 
 // Zeilenhöhe anzeigen
-/* html { */
-/*   @include debug-vertical-alignment(); */
-/* } */
+// html { @include debug-vertical-alignment(); }
 
 // Alle Elemente so einstellen, dass Padding nicht dazu gerechnet wird
 * {
@@ -25,12 +24,14 @@ body {
 }
 
 // Links
+// -----------------------------------------------------------------------------
 a {
   // normal, hover, active, visited, focus
   @include link-colors(#00c, #0cc, #c0c, #ccc, #cc0);
 }
 
 // Headlines
+// -----------------------------------------------------------------------------
 h1 {
   @include adjust-font-size-to($font-scale-h1);
   @include trailer(1, $font-scale-h1, margin);
@@ -55,6 +56,7 @@ h4, h5, h6 {
 }
 
 // Paragraphs
+// -----------------------------------------------------------------------------
 p {
   @include trailer(1);
 }
@@ -63,6 +65,7 @@ p {
 }
 
 // Horizontal borders
+// -----------------------------------------------------------------------------
 hr {
   height: 0;
   border: 0;
@@ -73,6 +76,7 @@ hr {
 }
 
 // Emphasis
+// -----------------------------------------------------------------------------
 em {
   font-style: italic;
 }
@@ -82,22 +86,26 @@ strong {
 }
 
 // Small print
+// -----------------------------------------------------------------------------
 small {
   @include adjust-font-size-to($font-scale-small);
 }
 
 // Strikethrough
+// -----------------------------------------------------------------------------
 s {
   text-decoration: line-through;
 }
 
 // Definition
+// -----------------------------------------------------------------------------
 dfn {
   border-bottom: 1px dotted $definition-color;
   cursor: help;
 }
 
 // Abbrevations
+// -----------------------------------------------------------------------------
 abbr, acronym {
   font-variant: small-caps;
   letter-spacing: 0.1em;
@@ -115,16 +123,19 @@ abbr.no-caps {
 }
 
 // Pre
+// -----------------------------------------------------------------------------
 pre {
   @include trailer(1);
 }
 
 // Variable
+// -----------------------------------------------------------------------------
 var {
   font-style: italic;
 }
 
 // Sample output
+// -----------------------------------------------------------------------------
 samp {
   @extend %mono;
   margin: 0 0.4em;
@@ -133,6 +144,7 @@ samp {
 }
 
 // Keyboard entry
+// -----------------------------------------------------------------------------
 kbd {
   @extend %sans;
   display: inline-block;
@@ -151,6 +163,7 @@ kbd {
 }
 
 // Superscript/subscript
+// -----------------------------------------------------------------------------
 sup, sub {
   position: relative;
   vertical-align: 0;
@@ -165,6 +178,7 @@ sub {
 }
 
 // Italicised/Emboldened
+// -----------------------------------------------------------------------------
 i {
   font-style: italic;
 }
@@ -174,6 +188,7 @@ b {
 }
 
 // Marked
+// -----------------------------------------------------------------------------
 mark {
   position: relative;
   background-color: transparent;
@@ -189,13 +204,13 @@ mark {
     content: '';
     @include background-size(5px 21px);
   }
-  
+
   &:before {
     left: -5px;
     top: 0;
     background-image: inline-image("css/mark-left.png");
   }
-  
+
   &:after {
     bottom: 0;
     right: -5px;
@@ -204,6 +219,7 @@ mark {
 }
 
 // Edits
+// -----------------------------------------------------------------------------
 ins {
   text-decoration: underline;
 }
@@ -213,8 +229,7 @@ del {
 }
 
 // Lists
-// -----
-
+// -----------------------------------------------------------------------------
 ol {
   list-style: decimal;
   @include trailer(1);
