@@ -1,7 +1,6 @@
 # Require any additional compass plugins here.
 require 'sass-globbing'
 require 'susy'
-require 'compass-normalize'
 require 'modular-scale'
 
 project_type = :stand_alone
