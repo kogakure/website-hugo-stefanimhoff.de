@@ -1,5 +1,6 @@
+// ============================================================================
 // Shame
-// -----
+// ============================================================================
 
 // Quick fixes and things to be done right later.
 
@@ -16,8 +17,7 @@
 // Hintergrund-Muster
 body {
   background-color: #EEEEEE;
-  background-image: inline-image("css/bgnoise_lg_@2X.png");
-  // background-image: inline-image("css/billie_holiday.png");
+  background-image: inline-image("css/billie_holiday.png");
   @include background-size(100px 100px);
 }
 

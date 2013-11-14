@@ -1,19 +1,29 @@
-// Modules and Variables
-@import "partials/base";
+// Initialize/Variables/Mixins
+@import "base/init";
+@import "base/vars";
+@import "base/mixins";
 
-// Partials
-@import "partials/grids";
-@import "partials/syntax";
-@import "partials/headings";
-@import "partials/text";
-@import "partials/lists";
-@import "partials/quotes";
-@import "partials/tables";
-@import "partials/figures";
-@import "partials/video";
+// Base styles/Grids
+@import "base/base";
+@import "base/grids";
+
+// Code coloring
+@import "base/solarized";
+@import "base/syntax";
+
+// Extends
+@import "base/extends";
+
+// Module/States
+@import "module/**/*";
+@import "state/state";
 
 // Third-party
 // @import "vendor/colorpicker";
 // @import "vendor/jquery.ui.core";
 
-@import "partials/shame";
+// Debugging
+@import "base/debug";
+
+// Only for quick tests and fixes – NOT for permanent!
+@import "base/shame";
