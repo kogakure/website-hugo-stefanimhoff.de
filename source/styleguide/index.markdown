@@ -471,11 +471,11 @@ Figures are usually used to refer to images:
 <img src="http://lorempixel.com/680/408/sports/" alt="Example image">
 {% endfigure %}
 
-{% figure border "Dies ist ein normales Foto in einer figure mit Klasse <b>.border</b>" %}
+{% figure figure-border "Dies ist ein normales Foto in einer figure mit Klasse <b>.figure-border</b>" %}
 <img src="http://lorempixel.com/680/408/sports/" alt="Example image">
 {% endfigure %}
 
-{% figure shadow "Dies ist ein normales Foto in einer figure mit Klasse <b>.shadow</b>" %}
+{% figure figure-shadow "Dies ist ein normales Foto in einer figure mit Klasse <b>.figure-shadow</b>" %}
 <img src="http://lorempixel.com/680/408/sports/" alt="Example image">
 {% endfigure %}
 
@@ -485,15 +485,15 @@ Some more dummy text to sepearte the images: Lorem ipsum dolor sit amet, consete
 
 #### Fullsize
 
-{% figure fullsize %}
+{% figure figure-fullsize %}
 <img src="http://lorempixel.com/1200/500/nature/" alt="Example image">
 {% endfigure %}
 
-{% figure fullsize "Figure mit Klasse <b>.fullsize</b> und Caption, Image should be at least 1100 Pixel" %}
+{% figure figure-fullsize "Figure mit Klasse <b>.figure-fullsize</b> und Caption, Image should be at least 1100 Pixel" %}
 <img src="http://lorempixel.com/1200/500/nature/" alt="Example image">
 {% endfigure %}
 
-{% figure fullsize border "Figure mit Klasse <b>.fullsize .border</b> und Caption, Image should be at least 1100 Pixel" %}
+{% figure figure-fullsize figure-border "Figure mit Klasse <b>.figure-fullsize .figure-border</b> und Caption, Image should be at least 1100 Pixel" %}
 <img src="http://lorempixel.com/1200/500/nature/" alt="Example image">
 {% endfigure %}
 
@@ -501,15 +501,15 @@ Just some dummy text to sepearte the images: Lorem ipsum dolor sit amet, consete
 
 #### Hanging Left
 
-{% figure hangleft %}
+{% figure figure-hangleft %}
 <img src="http://lorempixel.com/900/400/food/" alt="Example image">
 {% endfigure %}
 
-{% figure hangleft "Figure mit Klasse <b>.hangleft</b> und Caption, Image should be at least 850 Pixel" %}
+{% figure figure-hangleft "Figure mit Klasse <b>.figure-hangleft</b> und Caption, Image should be at least 850 Pixel" %}
 <img src="http://lorempixel.com/900/400/food/" alt="Example image">
 {% endfigure %}
 
-{% figure hangleft border "Figure mit Klasse <b>.hangleft .border</b> und Caption, Image should be at least 850 Pixel" %}
+{% figure figure-hangleft figure-border "Figure mit Klasse <b>.figure-hangleft .figure-border</b> und Caption, Image should be at least 850 Pixel" %}
 <img src="http://lorempixel.com/900/400/food/" alt="Example image">
 {% endfigure %}
 
@@ -517,15 +517,15 @@ Just some dummy text to sepearte the images: Lorem ipsum dolor sit amet, consete
 
 #### Hanging Right
 
-{% figure hangright %}
+{% figure figure-hangright %}
 <img src="http://lorempixel.com/900/400/animals/" alt="Example image">
 {% endfigure %}
 
-{% figure hangright "Figure mit Klasse <b>.hangright</b> und Caption, Image should be at least 850 Pixel" %}
+{% figure figure-hangright "Figure mit Klasse <b>.figure-hangright</b> und Caption, Image should be at least 850 Pixel" %}
 <img src="http://lorempixel.com/900/400/animals/" alt="Example image">
 {% endfigure %}
 
-{% figure hangright border "Figure mit Klasse <b>.hangright .border</b> und Caption, Image should be at least 850 Pixel" %}
+{% figure figure-hangright figure-border "Figure mit Klasse <b>.figure-hangright .figure-border</b> und Caption, Image should be at least 850 Pixel" %}
 <img src="http://lorempixel.com/900/400/animals/" alt="Example image">
 {% endfigure %}
 
@@ -533,15 +533,15 @@ Just some dummy text to sepearte the images: Lorem ipsum dolor sit amet, consete
 
 #### Centered
 
-{% figure center %}
+{% figure figure-center %}
 <img src="http://lorempixel.com/900/400/people/" alt="Example image">
 {% endfigure %}
 
-{% figure center "Figure mit Klasse <b>.center</b> und Caption, Image should be at least 850 Pixels" %}
+{% figure figure-center "Figure mit Klasse <b>.figure-center</b> und Caption, Image should be at least 850 Pixels" %}
 <img src="http://lorempixel.com/900/400/people/" alt="Example image">
 {% endfigure %}
 
-{% figure center border "Figure mit Klasse <b>.center .border</b> und Caption, Image should be at least 850 Pixels" %}
+{% figure figure-center figure-border "Figure mit Klasse <b>.figure-center .figure-border</b> und Caption, Image should be at least 850 Pixels" %}
 <img src="http://lorempixel.com/900/400/people/" alt="Example image">
 {% endfigure %}
 
@@ -549,15 +549,15 @@ Just some dummy text to sepearte the images: Lorem ipsum dolor sit amet, consete
 
 #### Wrap
 
-{% figure wrap %}
+{% figure figure-wrap %}
 <img src="http://lorempixel.com/350/400/technics/" alt="Example image">
 {% endfigure %}
 
-{% figure wrap "Figure mit Klasse <b>.wrap</b> und Caption, für kleine Bilder, Image should be at least 350 Pixel" %}
+{% figure figure-wrap "Figure mit Klasse <b>.figure-wrap</b> und Caption, für kleine Bilder, Image should be at least 350 Pixel" %}
 <img src="http://lorempixel.com/350/400/technics/" alt="Example image">
 {% endfigure %}
 
-{% figure wrap border "Figure mit Klasse <b>.wrap .border</b> und Caption, für kleine Bilder, Image should be at least 350 Pixel" %}
+{% figure figure-wrap figure-border "Figure mit Klasse <b>.figure-wrap .figure--border</b> und Caption, für kleine Bilder, Image should be at least 350 Pixel" %}
 <img src="http://lorempixel.com/350/400/technics/" alt="Example image">
 {% endfigure %}
 

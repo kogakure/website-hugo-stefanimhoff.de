@@ -22,7 +22,7 @@ group :development do
   gem 'i18n', '~> 0.6.4'             # Localizing dates
   gem 'uglifier'                     # UglifyJS
   gem 'closure-compiler', '~> 1.1.8' # Google Closure
-  gem 'gsl'
+  gem 'gsl', '~> 1.14.7'             # LSI support for tags, needs to be 1.14.x with Homebrew GSL 1.14
 end
 
 gem 'sinatra', '~> 1.4.2'

@@ -14,7 +14,7 @@ GEM
     execjs (2.0.2)
     fast-stemmer (1.0.1)
     fssm (0.2.9)
-    gsl (1.15.3)
+    gsl (1.14.7)
       narray (>= 0.5.9)
     haml (3.1.7)
     hike (1.2.3)
@@ -77,7 +77,7 @@ DEPENDENCIES
   closure-compiler (~> 1.1.8)
   compass (~> 0.12.2)
   directory_watcher (= 1.4.1)
-  gsl
+  gsl (~> 1.14.7)
   haml (~> 3.1.7)
   i18n (~> 0.6.4)
   jekyll (~> 0.12)
