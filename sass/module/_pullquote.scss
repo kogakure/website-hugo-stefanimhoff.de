@@ -1,0 +1,46 @@
+// ============================================================================
+// Pullquote
+// ============================================================================
+
+.pullquote {
+  text-align: center;
+  @include adjust-font-size-to(41.887px);
+}
+
+.pullquote-right:before,
+.pullquote-left:before {
+  float: right;
+  position: relative;
+  top: 15px;
+  width: 45%;
+  border: 0;
+  margin: 0 0 $base-rhythm-unit $base-rhythm-unit;
+  padding: 0;
+  content: attr(data-pullquote);
+  @include adjust-font-size-to(25.888px);
+}
+
+.pullquote-left:before {
+  float: left;
+  margin: 0 $base-rhythm-unit $base-rhythm-unit 0;
+}
+
+blockquote.pullquote[lang|=de] {
+  quotes: '»' '«' '›' '‹';
+  p:first-child:before {
+    content: open-quote;
+  }
+  p:last-child:after {
+    content: close-quote;
+  }
+}
+
+blockquote.pullquote[lang|=en] {
+  quotes: '“' '”' '‘' '’';
+  p:first-child:before {
+    content: open-quote;
+  }
+  p:last-child:after {
+    content: close-quote;
+  }
+}
