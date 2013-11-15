@@ -467,7 +467,7 @@ Figures are usually used to refer to images:
 
 #### With caption
 
-{% figure "Dies ist die Caption des Fotos, die ich etwas länger schreibe, nur damit ich testen kann, wie sie aussieht, wenn sie sich über mehrere Zeilen erstreckt." %}
+{% figure figure-longcaption "Dies ist die Caption des Fotos, die ich etwas länger schreibe, nur damit ich testen kann, wie sie aussieht, wenn sie sich über mehrere Zeilen erstreckt." %}
 <img src="http://lorempixel.com/680/408/sports/" alt="Example image">
 {% endfigure %}
 
