@@ -50,24 +50,24 @@ module Jekyll
       content = content.strip
 
       if @class
-        source = "<figure class=\"#{@class}\">\n<div>"
+        source = "<figure class=\"#{@class}\">\n"
       else
-        source = "<figure>\n<div>"
+        source = "<figure>\n"
       end
 
       source += content
 
       if @caption
-        source += "</div><figcaption>#{@caption}</figcaption>\n"
+        source += "<figcaption>#{@caption}</figcaption>\n"
       else
-        source += "</div>"
+        source += ""
       end
 
       source += "</figure>"
 
-      output = "<div class=\"figure\">\n<notextile>\n"
+      output = "<div>\n"
       output += source
-      output += "\n</notextile>\n</div>"
+      output += "\n</div>"
 
       output
     end
