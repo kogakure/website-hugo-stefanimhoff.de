@@ -336,6 +336,7 @@ q:after {
 // Images
 // ----------------------------------------------------------------------------
 img {
+  border: 3px solid $image-border-color;
   max-width: 100%;
   height: auto !important;
   width: auto\9; /* ie8 */
