@@ -54,23 +54,6 @@
   @include squish(1, 1);
 }
 
-// Small image with caption next to it (@TODO: This should be removed, looks bad)
-// ----------------------------------------------------------------------------
-.figure figure.figure-wrap {
-  @include span-columns(12);
-  @include squish(0, 0);
-
-  div {
-    @include span-columns(4);
-    @include squish(1, 0);
-  }
-
-  figcaption {
-    @include span-columns(5 omega);
-    @include squish(0, 2);
-  }
-}
-
 // Figure with a border
 // ----------------------------------------------------------------------------
 // Border is now a default, but there might be images which need a border

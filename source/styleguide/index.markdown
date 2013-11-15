@@ -547,22 +547,6 @@ Just some dummy text to sepearte the images: Lorem ipsum dolor sit amet, consete
 
 Just some dummy text to sepearte the images: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
-#### Wrap
-
-{% figure figure-wrap %}
-<img src="http://lorempixel.com/350/400/technics/" alt="Example image">
-{% endfigure %}
-
-{% figure figure-wrap "Figure mit Klasse <b>.figure-wrap</b> und Caption, für kleine Bilder, Image should be at least 350 Pixel" %}
-<img src="http://lorempixel.com/350/400/technics/" alt="Example image">
-{% endfigure %}
-
-{% figure figure-wrap figure-border "Figure mit Klasse <b>.figure-wrap .figure--border</b> und Caption, für kleine Bilder, Image should be at least 350 Pixel" %}
-<img src="http://lorempixel.com/350/400/technics/" alt="Example image">
-{% endfigure %}
-
-Just some dummy text to sepearte the images: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
 {% figure %}
 <img src="{{ site.images_dir }}styleguide/kelp-demo-1.jpg" alt="" />
 {% endfigure %}
