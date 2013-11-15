@@ -25,7 +25,7 @@ module Jekyll
     include TemplateWrapper
     FigureWithClassCaption = /([^"]+)"([^"]+)"/i
     FigureWithCaption = /"([^"]+)"/i
-    FigureWithClass = /([\w\s]+)/i
+    FigureWithClass = /([\w\s\-]+)/i
 
     def initialize(tag_name, markup, tokens)
       @class = nil
