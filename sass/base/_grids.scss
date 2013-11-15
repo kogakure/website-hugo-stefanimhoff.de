@@ -18,6 +18,17 @@ $grid-padding:  $gutter-width;
 $show-grid-backgrounds:       true;
 $default-rhythm-border-style: solid;
 
+// Extends
+%main-grid {
+  @include span-columns(8);
+  @include squish(2, 2);
+}
+
+%indented-grid {
+  @include span-columns(6);
+  @include squish(3, 3);
+}
+
 // Layout
 // ----------------------------------------------------------------------------
 .page .container,

@@ -61,3 +61,20 @@ $font-scale-h4:              modular-scale(1); // 18px;
 $font-scale-h5:              modular-scale(1); // 18px;
 $font-scale-h6:              modular-scale(1); // 18px;
 $font-scale-small:           modular-scale(-1); // 11px (14px);
+
+// Extends
+%base {
+  font-family: $base-font-family;
+}
+
+%sans {
+  font-family: $base-font-sans;
+}
+
+%mono {
+  font-family: $base-font-mono;
+}
+
+%japanese {
+  font-family: $base-font-japanese;
+}
