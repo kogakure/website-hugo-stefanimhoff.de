@@ -13,7 +13,8 @@
 $total-columns: 12;
 $column-width:  4em;
 $gutter-width:  1em;
-$grid-padding:  $gutter-width;
+// $grid-padding:  $gutter-width;
+$grid-padding:  0;
 
 $show-grid-backgrounds:       true;
 $default-rhythm-border-style: solid;

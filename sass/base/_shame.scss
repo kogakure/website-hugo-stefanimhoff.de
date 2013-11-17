@@ -32,3 +32,55 @@ body {
 .article * {
   @include selection(black, white);
 }
+
+// Off-Screen Navigation (einfach, ohne JavaScript)
+.outer-container {
+  position: relative;
+  width: 100%;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+#top {
+  z-index: 100;
+
+  .nav-btn {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    z-index: 100;
+  }
+}
+
+#nav {
+  background: black; // @TODO: Texture
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 200;
+
+  .nav-close-btn {
+    display: none;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+  }
+
+  // Wenn nicht das Ziel, dann lass das Menü verschwinden
+  &:not(:target) {
+    z-index: 1;
+    height: 0;
+  }
+
+  // Wenn das Ziel, lass den Schließen-Button erscheinen
+  &:target {
+    .nav-close-btn {
+      display: block;
+    }
+  }
+}
+
