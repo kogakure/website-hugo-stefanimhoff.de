@@ -11,6 +11,16 @@
   width: device-width;
 }
 
+html, body {
+  height: 100%;
+  min-height: 100%;
+}
+
+.outer-container {
+  min-height: 100%;
+}
+
+
 // Imports
 // ----------------------------------------------------------------------------
 @import "compass";
