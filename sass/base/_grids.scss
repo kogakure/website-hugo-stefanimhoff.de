@@ -32,8 +32,8 @@ $default-rhythm-border-style: solid;
 
 // Layout
 // ----------------------------------------------------------------------------
-.page .container,
-.post .container {
+.page .main,
+.post .main {
   @include container;
 }
 
