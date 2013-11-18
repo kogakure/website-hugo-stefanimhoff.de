@@ -2,8 +2,9 @@
 <body{% if page.body_class %} class="{{ page.body_class }}"{% endif %}>
   <!--[if lt IE 7]><p class="chromeframe">Dein Browser ist <em>uralt!</em> <a href="http://browsehappy.com/">Hol dir einen anderen Browser</a> oder <a href="http://www.google.com/chromeframe/?redirect=true">installiere Google Chrome Frame</a> für volles Erlebnis dieser Seite.</p><![endif]-->
 <div class="outer-container">
-  {% include header.html %}
+  {% include navigation.html %}
   <div class="container">
+    {% include header.html %}
     <main class="main" role="main">
       {{ content }}
     </main>
