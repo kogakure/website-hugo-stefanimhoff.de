@@ -108,3 +108,27 @@ body {
   }
 }
 
+// JavaScript menu mit Transition
+.csstransforms3d.csstransitions.js {
+  #nav {
+    right: 0;
+    background: blue;
+    @include transform(translate3d(250px, 0, 0));
+    @include backface-visibility(hidden);
+  }
+
+  .container {
+    right: 0;
+    @include backface-visibility(hidden);
+  }
+
+  .navigation--open {
+    #nav {
+      @include transform(translate3d(0, 0, 0));
+    }
+
+    .container {
+      @include transform(translate3d(-250px, 0, 0));
+    }
+  }
+}
