@@ -88,9 +88,9 @@ body {
 // JavaScript menu
 .js {
   #nav {
+    background: black;
     height: 100%;
     width: 250px;
-    background: yellow;
     right: -250px;
 
     .nav-close-btn {
@@ -101,6 +101,7 @@ body {
   .navigation--open {
     #nav {
       right: 0;
+      height: 100%;
     }
     .container {
       right: 250px;
@@ -112,19 +113,25 @@ body {
 .csstransforms3d.csstransitions.js {
   #nav {
     right: 0;
-    background: blue;
     @include transform(translate3d(250px, 0, 0));
     @include backface-visibility(hidden);
+    @include transition(opacity 300ms 100ms ease, transform 400ms ease);
+    @include transform-origin(50% 0%);
+    opacity: 0.75;
   }
 
   .container {
     right: 0;
+    @include transform(translate3d(0, 0, 0));
+    @include transition(transform 400ms ease);
     @include backface-visibility(hidden);
   }
 
+  // Navigation is open
   .navigation--open {
     #nav {
       @include transform(translate3d(0, 0, 0));
+      opacity: 1;
     }
 
     .container {
