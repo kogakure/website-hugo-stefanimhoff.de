@@ -15,8 +15,11 @@
 }
 
 // Hintergrund-Muster
-body {
+body, .container {
   background-color: #EEEEEE;
+}
+
+.container {
   background-image: inline-image("css/billie_holiday.png");
   @include background-size(100px 100px);
 }
