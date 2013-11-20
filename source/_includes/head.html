@@ -1,8 +1,9 @@
+{% capture language %}{% if page.language %}{{ page.language }}{% else %}de{% endif %}{% endcapture %}
 <!DOCTYPE html>
 <!--[if lt IE 7]><html lang="de" class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
 <!--[if IE 7]><html lang="de" class="no-js lt-ie9 lt-ie8"><![endif]-->
 <!--[if IE 8]><html lang="de" class="no-js lt-ie9"><![endif]-->
-<!--[if gt IE 8]><!--><html lang="de" class="no-js"><!--<![endif]-->
+  <!--[if gt IE 8]><!--><html lang="{{ language }}" class="no-js"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -47,7 +48,7 @@
   <link href="https://plus.google.com/{{ site.googleplus }}" rel="publisher">
 
   <!-- Language -->
-  <meta name="content-language" content="de">
+  <meta name="content-language" content="{{ language }}">
   {% capture author %}{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}{% endcapture %}
   <!-- Author -->
   <meta name="author" content="{{ author | strip_html | condense_spaces | truncate:100 }}">
