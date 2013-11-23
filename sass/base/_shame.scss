@@ -15,8 +15,11 @@
 }
 
 // Hintergrund-Muster
-body {
+body, .container {
   background-color: #EEEEEE;
+}
+
+.container {
   background-image: inline-image("css/billie_holiday.png");
   @include background-size(100px 100px);
 }
@@ -31,4 +34,111 @@ body {
 // Active/Inactive-Fenster Selection
 .article * {
   @include selection(black, white);
+}
+
+// Off-Screen Navigation (einfach, ohne JavaScript)
+.outer-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+#top {
+  z-index: 100;
+
+  .nav-btn {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    z-index: 100;
+  }
+}
+
+#nav {
+  background: black; // @TODO: Texture
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 200;
+
+  .nav-close-btn {
+    display: none;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+  }
+
+  // Wenn nicht das Ziel, dann lass das Menü verschwinden
+  &:not(:target) {
+    z-index: 1;
+    height: 0;
+  }
+
+  // Wenn das Ziel, lass den Schließen-Button erscheinen
+  &:target {
+    .nav-close-btn {
+      display: block;
+    }
+  }
+}
+
+// JavaScript menu
+.js {
+  #nav {
+    background: black;
+    height: 100%;
+    width: 250px;
+    right: -250px;
+
+    .nav-close-btn {
+      display: none;
+    }
+  }
+
+  .navigation--open {
+    #nav {
+      right: 0;
+      height: 100%;
+    }
+    .container {
+      right: 250px;
+    }
+  }
+}
+
+// JavaScript menu mit Transition
+.csstransforms3d.csstransitions.js {
+  #nav {
+    right: 0;
+    @include transform(translate3d(250px, 0, 0));
+    @include backface-visibility(hidden);
+    @include transition(opacity 300ms 100ms ease, transform 400ms ease);
+    @include transform-origin(50% 0%);
+    opacity: 0.75;
+  }
+
+  .container {
+    right: 0;
+    @include transform(translate3d(0, 0, 0));
+    @include transition(transform 400ms ease);
+    @include backface-visibility(hidden);
+  }
+
+  // Navigation is open
+  .navigation--open {
+    #nav {
+      @include transform(translate3d(0, 0, 0));
+      opacity: 1;
+    }
+
+    .container {
+      @include transform(translate3d(-250px, 0, 0));
+    }
+  }
 }

@@ -345,11 +345,14 @@ img {
 // Figure
 // ----------------------------------------------------------------------------
 figure {
+  @include span-columns(8);
+  @include squish(2, 2);
   @include trailer(1);
 }
 
 figcaption {
   @include adjust-font-size-to($font-scale-small);
+  text-align: center;
 }
 
 // Video

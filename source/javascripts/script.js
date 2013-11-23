@@ -7,4 +7,18 @@ $(function() {
 
   // Fitvids
   $(".container").fitVids();
+
+  // Navigation (@TODO: temporary)
+  $(".nav-btn").on("click", function(event) {
+    $("body").toggleClass("navigation--open");
+    event.preventDefault();
+  });
+
+  // $(".nav-close-btn").on("click", function() {
+  //   $("body").removeClass("navigation-open");
+  // });
+
+  $(".container").on("click", function() {
+    $("body").removeClass("navigation-open");
+  });
 });

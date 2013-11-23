@@ -467,7 +467,7 @@ Figures are usually used to refer to images:
 
 #### With caption
 
-{% figure "Dies ist die Caption des Fotos, die ich etwas länger schreibe, nur damit ich testen kann, wie sie aussieht, wenn sie sich über mehrere Zeilen erstreckt." %}
+{% figure figure-longcaption "Dies ist die Caption des Fotos, die ich etwas länger schreibe, nur damit ich testen kann, wie sie aussieht, wenn sie sich über mehrere Zeilen erstreckt." %}
 <img src="http://lorempixel.com/680/408/sports/" alt="Example image">
 {% endfigure %}
 
@@ -543,22 +543,6 @@ Just some dummy text to sepearte the images: Lorem ipsum dolor sit amet, consete
 
 {% figure figure-center figure-border "Figure mit Klasse <b>.figure-center .figure-border</b> und Caption, Image should be at least 850 Pixels" %}
 <img src="http://lorempixel.com/900/400/people/" alt="Example image">
-{% endfigure %}
-
-Just some dummy text to sepearte the images: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
-#### Wrap
-
-{% figure figure-wrap %}
-<img src="http://lorempixel.com/350/400/technics/" alt="Example image">
-{% endfigure %}
-
-{% figure figure-wrap "Figure mit Klasse <b>.figure-wrap</b> und Caption, für kleine Bilder, Image should be at least 350 Pixel" %}
-<img src="http://lorempixel.com/350/400/technics/" alt="Example image">
-{% endfigure %}
-
-{% figure figure-wrap figure-border "Figure mit Klasse <b>.figure-wrap .figure--border</b> und Caption, für kleine Bilder, Image should be at least 350 Pixel" %}
-<img src="http://lorempixel.com/350/400/technics/" alt="Example image">
 {% endfigure %}
 
 Just some dummy text to sepearte the images: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
