@@ -98,6 +98,11 @@ When writing longform posts, I find it helpful to include pull quotes to help re
 When writing longform posts, I find it helpful to include pull quotes to help readers easily identify the topics covered in each section. Some prefer to break things up with lots of headings, and while this seems to be a trend it doesn’t work so well for long form prose. It is important to note that {" pull quotes are merely visual in presentation and should not appear twice in the text. "} That is why it a CSS only technique for styling pull quotes is preferable. Octopress includes a handy pull quote plugin to make this easy for you.
 {% endpullquote %}
 
+#### Pullquote (centered)
+<blockquote lang="en" class="pullquote">
+<p>No time for pessimism.</p>
+</blockquote>
+
 ### Inline Quotes
 
 #### Normal

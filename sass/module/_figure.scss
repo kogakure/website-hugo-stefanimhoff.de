@@ -2,18 +2,34 @@
 // Figures & Images
 // ============================================================================
 
+// Grid overrides (to break free of main column)
+%grid-12-of-8-break-out {
+  width: columns(12, 8);
+  margin-left: -(gutter(8) + columns(2, 8));
+}
+
+%grid-10-of-8-break-out {
+  width: columns(10, 8);
+  margin-left: -(gutter(8) + columns(1, 8));
+}
+
+// Layout on div and margin to the bottom
+div.figure {
+  float: left;
+  clear: both;
+  @include trailer(1);
+}
+
 // Fullsize image reaching from edge to edge
 // ----------------------------------------------------------------------------
 .figure-fullsize {
-  @include span-columns(12);
-  @include squish(0, 0);
+  @extend %grid-12-of-8-break-out;
 }
 
 // Image left aligned with caption to the right
 // ----------------------------------------------------------------------------
 .figure-hangleft {
-  @include span-columns(12);
-  @include squish(0, 0);
+  @extend %grid-12-of-8-break-out;
 
   img {
     @include span-columns(10);
@@ -21,16 +37,15 @@
   }
 
   figcaption {
-    text-align: left;
     @include span-columns(2 omega, 12);
+    text-align: left;
   }
 }
 
 // Image right aligned with caption to the left
 // ----------------------------------------------------------------------------
 .figure-hangright {
-  @include span-columns(12);
-  @include squish(0, 0);
+  @extend %grid-12-of-8-break-out;
 
   img {
     @include span-columns(10 omega);
@@ -46,8 +61,7 @@
 // Image centered with caption below
 // ----------------------------------------------------------------------------
 .figure-center {
-  @include span-columns(10);
-  @include squish(1, 1);
+  @extend %grid-10-of-8-break-out;
 }
 
 // Figure with a long caption

@@ -67,9 +67,9 @@ hr {
   height: 0;
   border: 0;
   margin: 0 $base-rhythm-unit;
-  color: rgba($dark-grey, 0.3);
+  color: rgba($light-grey, 0.9);
   @include trailer(2, $base-font-size, margin);
-  @include trailing-border(1px);
+  @include trailing-border(3px);
 }
 
 // Emphasis
@@ -139,6 +139,10 @@ pre {
     -moz-box-shadow: white -1px 0 inset;
     box-shadow: white -1px 0 inset;
   }
+}
+
+figure.code {
+  @extend %grid-10-of-8-break-out;
 }
 
 // Variable
@@ -344,11 +348,6 @@ img {
 
 // Figure
 // ----------------------------------------------------------------------------
-figure {
-  @include span-columns(8);
-  @include squish(2, 2);
-  @include trailer(1);
-}
 
 figcaption {
   @include adjust-font-size-to($font-scale-small);

@@ -11,10 +11,10 @@
 .pullquote-left:before {
   float: right;
   position: relative;
-  top: 15px;
-  width: 45%;
+  top: 25px;
+  width: columns(4, 8);
   border: 0;
-  margin: 0 0 $base-rhythm-unit $base-rhythm-unit;
+  margin: 0 columns(-3) $base-rhythm-unit $base-rhythm-unit;
   padding: 0;
   content: attr(data-pullquote);
   @include adjust-font-size-to(25.888px);
@@ -22,7 +22,8 @@
 
 .pullquote-left:before {
   float: left;
-  margin: 0 $base-rhythm-unit $base-rhythm-unit 0;
+  margin: 0 $base-rhythm-unit $base-rhythm-unit columns(-3);
+  width: columns(4, 8);
 }
 
 blockquote.pullquote[lang|=de] {

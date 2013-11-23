@@ -65,7 +65,7 @@ module Jekyll
 
       source += "</figure>"
 
-      output = "<div>\n"
+      output = "<div class=\"figure\">\n"
       output += source
       output += "\n</div>"
 
