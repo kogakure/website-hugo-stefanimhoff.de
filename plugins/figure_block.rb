@@ -19,6 +19,8 @@
 #   ...
 #   {% endfigure %}
 
+require './plugins/raw'
+
 module Jekyll
 
   class FigureBlock < Liquid::Block
@@ -63,7 +65,7 @@ module Jekyll
         source += ""
       end
 
-      source += "</figure>"
+      source += "\n</figure>"
 
       output = "<div class=\"figure\">\n"
       output += source
