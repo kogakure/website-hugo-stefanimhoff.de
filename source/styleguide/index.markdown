@@ -129,6 +129,20 @@ All mimsy     were     the borogoves,
 And       the mome     raths            outgrabe.
 {% endverse %}
 
+### Aside
+
+{% aside aside-left %}
+<h4>Headline</h4>
+<p>Dies ist eine Anmerkung in der Seitenleiste, etwas länger, damit es auch mal umbricht, im linken Rand</p>
+{% endaside %}
+
+{% aside aside-right %}
+<h4>Headline</h4>
+<p>Dies ist eine Anmerkung in der Seitenleiste, etwas länger, damit es auch mal umbricht, im rechten Rand</p>
+{% endaside %}
+
+At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
 ### Ordered list
 The `ol` element denotes an ordered list, and various numbering schemes are available through the CSS (including 1,2,3… a,b,c… i,ii,iii… and so on). Each item requires a surrounding `<li>` and `</li>` tag, to denote individual items within the list (as you may have guessed, li stands for list item).
 

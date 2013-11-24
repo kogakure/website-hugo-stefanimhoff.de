@@ -1,0 +1,28 @@
+// ============================================================================
+// Asides
+// ============================================================================
+
+.aside {
+  @include adjust-font-size-to($font-scale-small);
+
+  h4 {
+    @include adjust-font-size-to($font-scale-h4);
+  }
+
+  .aside-left,
+  .aside-right {
+    width: columns(2, 8);
+    margin-top: 0.5em;
+  }
+
+  .aside-left {
+    text-align: right;
+    float: left;
+    margin-left: -(gutter(8) + columns(2, 8));
+  }
+
+  .aside-right {
+    float: right;
+    margin-right: -(gutter(8) + columns(2, 8));
+  }
+}
