@@ -614,7 +614,7 @@ Bilder
 
 A simple image without figure element:
 
-<img src="http://lorempixel.com/680/408/technics/" alt="Example image">
+<img src="http://lorempixel.com/680/408/nightlife/" alt="Example image">
 
 
 Abbildungen
@@ -691,19 +691,6 @@ Just some dummy text to sepearte the images: Lorem ipsum dolor sit amet, consete
 {% figure figure-center "Figure mit Klasse <b>.figure-center</b> und Caption, Image should be at least 850 Pixels" %}
 <img src="http://lorempixel.com/900/400/people/" alt="Example image">
 {% endfigure %}
-
-Just some dummy text to sepearte the images: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
-{% figure %}
-<img src="http://lorempixel.com/680/408/nightlife/" alt="Example image">
-{% endfigure %}
-
-Just some dummy text to sepearte the images: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
-{% figure %}
-<img src="http://lorempixel.com/680/408/nightlife/" alt="Example image">
-{% endfigure %}
-
 
 Videos
 ------
