@@ -1,37 +1,67 @@
 ---
 layout: page
-title: "The ultimate and awesome Styleguide of this page"
+title: "Styleguide"
 footer: false
 ---
 
-This document is a guide to the mark-up styles used throughout the site. This is an entry section which is just so long, it can break into two or even better – three lines. Just in case, you know? How else can I see the line height in the intro paragraph?
+Dieses Dokument ist der Styleguide für diese Website. Dies ist der erste Absatz des Artikels und als dieser wird er anders gestaltet. Der weitere Text hier ist nur geschrieben worden, damit man sehen kann, wie der erste Absatz in weitere Zeilen umbricht.
 
-Sections
---------
-The main page header of this guide is an `h1` element. Any header elements may include links, as depicted in the example.
+Überschriften
+-------------
 
-The secondary header above is an `h2` element, which may be used for any form of important page-level header. More than one may be used per page. Consider using an `h2` unless you need a header level of less importance, or as a sub-header to an existing `h2` element.
+Die Hauptüberschrift dieses Styleguides in eine `h1`. Jede Überschrift kann auch Links enthalten.
 
-### Third-Level Header
-The header above is an `h3` element, which may be used for any form of page-level header which falls below the `h2` header in a document hierarchy.
+Die 2. Überschrift oben ist eine `h2`, die benutzt werden kann um Hauptsektionen auf Seitenebene zu markieren. Davon kann mehr als eine Überschrift pro Seite verwendet werden.
 
-#### Fourth-Level Header
-The header above is an `h4` element, which may be used for any form of page-level header which falls below the `h3` header in a document hierarchy.
+```html
+## Überschrift der zweiten Ordnung
+```
 
-##### Fifth-Level Header
-The header above is an `h5` element, which may be used for any form of page-level header which falls below the `h4` header in a document hierarchy.
+### Überschrift der dritten Ordnung
+Die Überschrift oben ist eine `h3`, die benutzt werden kann für jede Überschrift die in der Hierarchie unter der `h2` ist.
 
-###### Sixth-Level Header
-The header above is an `h6` element, which may be used for any form of page-level header which falls below the `h5` header in a document hierarchy.
+```html
+### Überschrift der dritten Ordnung
+```
 
-Grouping content
-----------------
+#### Überschrift der vierten Ordnung
+Die Überschrift oben ist eine `h4`, die benutzt werden kann für jede Überschrift die in der Hierarchie unter der `h3` ist.
 
-### Paragraphs
-All paragraphs are wrapped in `p` tags. Additionally, `p` elements can be wrapped with a `blockquote` element if the `p` element is indeed a quote. Historically, `blockquote` has been used purely to force indents, but this is now achieved using CSS. Reserve `blockquote` for quotes.
+```html
+#### Überschrift der vierten Ordnung
+```
+##### Überschrift der fünften Ordnung
+Die Überschrift oben ist eine `h5`, die benutzt werden kann für jede Überschrift die in der Hierarchie unter der `h4` ist.
 
-### Horizontal rule
-The `hr` element represents a paragraph-level thematic break, e.g. a scene change in a story, or a transition to another topic within a section of a reference book. The following extract from <cite>Pandora’s Star</cite> by Peter F. Hamilton shows two paragraphs that precede a scene change and the paragraph that follows it:
+```html
+##### Überschrift der fünften Ordnung
+```
+
+###### Überschrift der sechsten Ordnung
+Die Überschrift oben ist eine `h6`, die benutzt werden kann für jede Überschrift die in der Hierarchie unter der `h5` ist.
+
+```html
+###### Überschrift der sechsten Ordnung
+```
+
+
+Absätze
+-------
+
+Alle Absätze werden in `p` gewrappt. Zusätzlich können `p` auch in `blockquote` gewrappt werden.
+
+Absätze sind in der Textgestaltung einen aus einem oder mehreren Sätzen bestehenden Abschnitt eines fortlaufenden Textes. Ein Absatz ist ein Sinnzusammenhang oder ein eigenes kleines Thema. Ist dieser Gedanke ausgeführt, folgt ein neuer Absatz.
+
+```html
+Dies ist ein Absatz.
+
+Dies ist ein zweiter Absatz.
+```
+
+Sektionen-Trenner
+-----------------
+
+Das `hr` kennzeichnet einen thematischen Bruch auf Absatzebene, z. B. einen Szenenwechel in einer Geschichte oder einen Übergang zu einem anderen Thema. Der folgende Auszug aus <cite>Pandora’s Star</cite> von Peter F. Hamilton zeight zwei Absätze, die einen Szenenwechel zeigen:
 
 Dudley was ninety-two, in his second life, and fast approaching time for another rejuvenation. Despite his body having the physical age of a standard fifty-year-old, the prospect of a long degrading campaign within academia was one he regarded with dread. For a supposedly advanced civilization, the Intersolar Commonwearth could be appallingly backward at times, not to mention cruel.
 
@@ -41,8 +71,19 @@ Dudley was ninety-two, in his second life, and fast approaching time for another
 
 The Carlton AllLander drove Dudley home just after dawn. Like the astronomer, the vehicle was old and worn, but perfectly capable of doing its job. It had a cheap diesel engine, common enough on a semi-frontier world like Gralmond, although its drive array was a thoroughly modern photoneural processor. With its high suspension and deep-tread tyres it could plough along the dirt track to the observatory in all weather and seasons, including the metre-deep snow of Gralmond’s winters.
 
-### Pre-formatted text
-The `pre` element represents a block of pre-formatted text, in which structure is represented by typographic conventions rather than by elements. Such examples are an e-mail (with paragraphs indicated by blank lines, lists indicated by lines prefixed with a bullet), fragments of computer code (with structure indicated according to the conventions of that language) or displaying ASCII art. Here’s an example showing the printable characters of ASCII:
+```html
+Dudley was ninety-two, in his second life …
+
+---------------------------------------
+
+The Carlton AllLander drove Dudley home just after dawn. …
+```
+
+
+Preformatierter Text
+--------------------
+
+Das `pre` wird verwendet, um preformatierten Text anzuzeigen, also Text, der genau so angezeigt werden soll, wie er geschrieben war, also inklusive eventueller mehrfacher Leerzeichen, Einrückungen oder ASCII-Zeichen.
 
 <pre>
 ! " # $ % & ' ( ) * + , - . /
@@ -53,74 +94,151 @@ a b c d e f g h i j k l m n o
 p q r s t u v w x y z { | } ~
 </pre>
 
-### Blockquotes
-The `blockquote` element represents a section that is being quoted from another source.
+```html
+<pre>
+   Dies    soll genau  S O  aussehen.
+</pre>
+```
 
-Additionally, you might wish to `cite` the source, as in the above example. The correct method involves including the cite attribute on the `blockquote` element, but since no browser makes any use of that information, it’s useful to link to the source also.
 
-#### Simple Blockquote
+Zitate
+------
 
-{% blockquote Winston Churchill http://hansard.millbanksystems.com/commons/1947/nov/11/parliament-bill#column_206a Speech to the House of Commons %}
-Many forms of Government have been tried, and will be tried in this world of sin and woe. No one pretends that democracy is perfect or all-wise. Indeed, it has been said that democracy is the worst form of government except all those other forms that have been tried from time to time.
+### Blockzitat
+
+Die `blockquote` repräsentiert einen Abschnitt, der aus einer anderen Quelle zitiert.
+
+Zusätzlich dazu kann auch das Element `cite` verwendet werden, um ein Werk zu marieren aus dem zitiert wurde.
+
+#### Einfaches Blockzitat
+
+{% blockquote %}
+Dies ist ein Zitat.
 {% endblockquote %}
+
+```html
+{% raw %}{% blockquote %}
+Dies ist ein Zitat.
+{% endblockquote %}{% endraw %}
+```
+
+#### Zitat aus einem gedruckten Werk
 
 {% blockquote J.R.R. Tolkien, Der Herr der Ringe %}
 Drei Ringe den Elben, hoch im Licht. Sieben den Zwergen in ihren Hallen aus Stein. Den Sterblichen, ewig dem Tode verfalln: Neun. Ein Ring sie zu knechten, sie alle zu finden, ins Dunkel zu treiben und ewig zu binden. Im Lande Mordor, wo die Schatten drohn.
 {% endblockquote %}
 
-#### Quote from a printed work
-
 {% blockquote Douglas Adams, The Hichhikers Guide to the Galaxy %}
 Flying is learning how to throw yourself at the ground and miss.
 {% endblockquote %}
 
-#### Quote from Twitter
+```html
+{% raw %}{% blockquote Douglas Adams, The Hichhikers Guide to the Galaxy %}
+…
+{% endblockquote %}{% endraw %}
+```
+
+#### Zitat von Twitter
 
 {% blockquote @allanbranch https://twitter.com/allanbranch/status/90766146063712256 %}
 Over the past 24 hours I've been reflecting on my life & I've realized only one thing. I need a medieval battle axe.
 {% endblockquote %}
 
-#### Quote form an article on the web
+```html
+{% raw %}{% blockquote @allanbranch https://twitter.com/allanbranch/status/90766146063712256 %}
+…
+{% endblockquote %}{% endraw %}
+```
+
+#### Zitat aus einem Artikel im Internet
 
 {% blockquote Seth Godin http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html Welcome to Island Marketing %}
 Every interaction is both precious and an opportunity to delight.
 {% endblockquote %}
 
+{% blockquote Winston Churchill http://hansard.millbanksystems.com/commons/1947/nov/11/parliament-bill#column_206a Speech to the House of Commons %}
+Many forms of Government have been tried, and will be tried in this world of sin and woe. No one pretends that democracy is perfect or all-wise. Indeed, it has been said that democracy is the worst form of government except all those other forms that have been tried from time to time.
+{% endblockquote %}
+
+```html
+{% raw %}{% blockquote Seth Godin http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html Welcome to Island Marketing %}
+…
+{% endblockquote %}{% endraw %}
+```
+
 ### Pullquote
 
-#### Pullquote (right)
+#### Pullquote (rechts)
+
 {% pullquote %}
-When writing longform posts, I find it helpful to include pull quotes to help readers easily identify the topics covered in each section. Some prefer to break things up with lots of headings, and while this seems to be a trend it doesn’t work so well for long form prose. It is important to note that {" pull quotes are merely visual in presentation and should not appear twice in the text. "} That is why it a CSS only technique for styling pull quotes is preferable. Octopress includes a handy pull quote plugin to make this easy for you.
+Wenn man sehr lange Absätze schreibt, ist es hilfreich ein herausgeschobenen Zitatblock zu verwenden, der einen wichtigen Teil des Abschnitts markiert. Einige benutzen vielleicht lieber viele Überschriften, was auch meistens gut funktioniert, aber weniger gut für lange Prosa geeignet ist. {" Wichtig anzumerken ist, dass die Pullquotes nur eine visuelle Präsentation sind und nicht zweimal im Code erscheinen. "} Deshalb werden CSS-Techniken angewandt, um das Zitat ein weiteres mal sichtbar zu machen. Octopress macht dieses sehr einfach mit dem Pullquote-Tag.
 {% endpullquote %}
 
 #### Pullquote (links)
+
 {% pullquote left %}
-When writing longform posts, I find it helpful to include pull quotes to help readers easily identify the topics covered in each section. Some prefer to break things up with lots of headings, and while this seems to be a trend it doesn’t work so well for long form prose. It is important to note that {" pull quotes are merely visual in presentation and should not appear twice in the text. "} That is why it a CSS only technique for styling pull quotes is preferable. Octopress includes a handy pull quote plugin to make this easy for you.
+Wenn man sehr lange Absätze schreibt, ist es hilfreich ein herausgeschobenen Zitatblock zu verwenden, der einen wichtigen Teil des Abschnitts markiert. Einige benutzen vielleicht lieber viele Überschriften, was auch meistens gut funktioniert, aber weniger gut für lange Prosa geeignet ist. {" Wichtig anzumerken ist, dass die Pullquotes nur eine visuelle Präsentation sind und nicht zweimal im Code erscheinen. "} Deshalb werden CSS-Techniken angewandt, um das Zitat ein weiteres mal sichtbar zu machen. Octopress macht dieses sehr einfach mit dem Pullquote-Tag.
 {% endpullquote %}
 
+```html
+{% raw %}{% pullquote left %}
+When writing longform posts […] {" pull quotes are […] in the text. "} That is why […]
+{% endpullquote %}{% endraw %}
+```
+
 #### Pullquote (centered)
+
+Manchmal möchte man einen kurzen Zitatblock verwenden, der nicht im Text vorkommt, oder besonders prägnant ist und daher zentriert stehen soll. Wenn ein Attribute `lang` mitgegeben wird, werden automatisch die korrekten Zitatzeichen verwendet (für Deutsch, Englisch und Japanisch).
+
 <blockquote lang="en" class="pullquote">
 <p>No time for pessimism.</p>
 </blockquote>
 
-### Inline Quotes
+```html
+<blockquote lang="en" class="pullquote">
+<p>No time for pessimism.</p>
+</blockquote>
+```
+
+### Inline-Zitate
 
 #### Normal
+
 Peter sagte <q>Sie soll mir das sofort hergeben</q> und war ziemlich sauer.
 
+```html
+Peter sagte <q>Sie soll mir das sofort hergeben</q> und war ziemlich sauer.
+```
+
 #### Deutsche Quotes (verschachtelt)
+
 Luke führte weiter aus, <q>Und sie nannte ihn einen <q>total blöd-aussehenen Idioten</q>! Ich denke ich habe eine Chance!</q> Dieser arme Idiot …
 
+```html
+Luke führte weiter aus, <q>Und sie nannte ihn einen <q>total blöd-aussehenen Idioten</q>! Ich denke ich habe eine Chance!</q> Dieser arme Idiot …
+```
+
 #### Englische Quotes (verschachtelt)
+
 <p lang="en">Luke conntinued, <q>And the she called him a <q>scruffy-looking nerf-herder</q>! I think I’ve got a chance!</q> The poor naive fool …</p>
+
+```html
+<p lang="en">Luke conntinued, <q>And the she called him a <q>scruffy-looking nerf-herder</q>! I think I’ve got a chance!</q> The poor naive fool …</p>
+```
 
 #### Japanische Quotes (verschachtelt)
 
 <p lang="ja">彼女は<q>日本語に猫は<q>にゃん</q>と鳴く</q>と言った。</p>
 
-### Verse
+```html
+<p lang="ja">彼女は<q>日本語に猫は<q>にゃん</q>と鳴く</q>と言った。</p>
+```
 
-Here, a part of a poem is marked:
+
+Verse
+-----
+
+Gedichte und Verse sollen so geschrieben werden, wie sie vom Autor gedacht waren und außerdem in der Seite zentriert stehen. Dafür gibt es einen Stil:
 
 {% verse Lewis Carroll, Jabberwocky (1832-98) %}
 ‘Twas brillig, and the slithy toves
@@ -129,19 +247,39 @@ All mimsy     were     the borogoves,
 And       the mome     raths            outgrabe.
 {% endverse %}
 
-### Aside
+```html
+{% raw %}{% verse Lewis Carroll, Jabberwocky (1832-98) %}
+‘Twas brillig, and the slithy toves
+Did gyre and gimble            in the wabe;
+All mimsy     were     the borogoves,
+And       the mome     raths            outgrabe.
+{% endverse %}{% endraw %}
+```
+
+Nebenbemerkungen
+----------------
 
 {% aside aside-left %}
-<h4>Headline</h4>
-<p>Dies ist eine Anmerkung in der Seitenleiste, etwas länger, damit es auch mal umbricht, im linken Rand</p>
+<h4>Überschrift</h4>
+<p>Dies ist eine Anmerkung in der Seitenleiste im linken Rand</p>
 {% endaside %}
 
 {% aside aside-right %}
-<h4>Headline</h4>
-<p>Dies ist eine Anmerkung in der Seitenleiste, etwas länger, damit es auch mal umbricht, im rechten Rand</p>
+<h4>Überschrift</h4>
+<p>Dies ist eine Anmerkung in der Seitenleiste im rechten Rand</p>
 {% endaside %}
 
-At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+Manchmal möchte man mitten im Text etwas erklären, was nicht direkt zum Text gehört, aber das zum Verständnis des Textes beitragen kann. Diese Nebenbemerkungen wurden im Print üblicherweise in den Rand der Publikation gedruckt und hatten eine kleinere Schrift. Manchmal kann man diese aber auch im Text selbst stehen sehen, und sie werden durch eine andere Farbe oder einen Rand als Nebenbemerkung gekennzeichnet. Auf dieser Website stehen die Nebenbemerkungen (`aside`) im Rand und zwar wahlweise im linken oder rechten Rand. Als Überschrift (wenn nötig) sollte minimal eine `h4` verwendet werden.
+
+```html
+{% raw %}{% aside aside-right %}
+<h4>Überschrift</h4>
+<p>Dies ist eine Anmerkung in der Seitenleiste im rechten Rand</p>
+{% endaside %}{% endraw %}
+```
+
+Listen
+------
 
 ### Ordered list
 The `ol` element denotes an ordered list, and various numbering schemes are available through the CSS (including 1,2,3… a,b,c… i,ii,iii… and so on). Each item requires a surrounding `<li>` and `</li>` tag, to denote individual items within the list (as you may have guessed, li stands for list item).
@@ -187,8 +325,9 @@ The `dl` element is for another type of list called a definition list. Instead o
 <dd><code>dt</code> terms may stand on their own without an accompanying <code>dd</code>, but in that case they share descriptions with the next available <code>dt</code>. You may not have a <code>dd</code> without a parent <code>dt</code>.</dd>
 </dl>
 
-Text-level Semantics
---------------------
+
+Inline-Text
+-----------
 
 There are a number of inline HTML elements you may use anywhere within other elements.
 
@@ -286,8 +425,9 @@ She bought <del datetime="2005-05-30T13:00:00">two</del> <ins datetime="2005-05-
 
 Das Japanische Kino hat einige Meisterwerke hervorgebracht, sowohl in Farbe als auch in Schwarz/Weiß. Der bekannte Film 7 Samurai (<ruby>七人の侍<rp>（</rp><rt>しちにんのさむらい</rt><rp>）</rp></ruby>) von Akira Kurosawa ist einer der besten Filme der japanischen Geschichte. Der Film ist so gut, dass er sogar ein Remake erfahren hat: <cite>Die Glorreichen Sieben</cite>.
 
-Tabular data
-------------
+
+Tabellen
+--------
 
 Tables should be used when displaying tabular data. The `thead`, `tfoot` and `tbody` elements enable you to group rows within each a table.
 
@@ -468,13 +608,17 @@ If you use these elements, you must use every element. They should appear in thi
 </table>
 </figure>
 
-### Images
+
+Bilder
+------
 
 A simple image without figure element:
 
 <img src="http://lorempixel.com/680/408/technics/" alt="Example image">
 
-### Figures
+
+Figures
+-------
 
 Figures are usually used to refer to images:
 
@@ -576,7 +720,9 @@ Just some dummy text to sepearte the images: Lorem ipsum dolor sit amet, consete
 <img src="{{ site.images_dir }}styleguide/kelp-demo-2.jpg" alt="" />
 {% endfigure %}
 
-### Video
+
+Videos
+------
 
 #### Native HTML5 Tag
 {% video http://s3.imathis.com/video/zero-to-fancy-buttons.mp4 640 420 http://s3.imathis.com/video/zero-to-fancy-buttons.png %}
@@ -589,7 +735,10 @@ Just some dummy text to sepearte the images: Lorem ipsum dolor sit amet, consete
 
 {% vimeo 45858333 %}
 
-### Code
+
+Code
+----
+
 The `code` element is used to represent fragments of computer code. Useful for technology-oriented sites, not so useful otherwise. Example:
 
 When you call the `activate()` method on the `robotSnowman` object, the eyes glow.

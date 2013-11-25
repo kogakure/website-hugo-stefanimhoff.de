@@ -40,20 +40,19 @@ h1 {
 
 h2 {
   @include adjust-font-size-to($font-scale-h2);
-}
-
-h2 + h3 {
-  @include leader(1);
+  @include trailer(1, $font-scale-h2, margin);
 }
 
 h3 {
   font-weight: $normal;
   @include adjust-font-size-to($font-scale-h3);
+  @include trailer(1, $font-scale-h3, margin);
 }
 
 h4, h5, h6 {
   font-weight: $bold;
   @include adjust-font-size-to($font-scale-h4);
+  @include trailer(1, $font-scale-h4, margin);
 }
 
 // Paragraphs
