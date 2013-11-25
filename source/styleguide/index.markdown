@@ -96,7 +96,7 @@ p q r s t u v w x y z { | } ~
 
 ```html
 <pre>
-   Dies    soll genau  S O  aussehen.
+Dies    soll genau  S O  aussehen.
 </pre>
 ```
 
@@ -171,13 +171,13 @@ Many forms of Government have been tried, and will be tried in this world of sin
 #### Pullquote (rechts)
 
 {% pullquote %}
-Wenn man sehr lange Absätze schreibt, ist es hilfreich ein herausgeschobenen Zitatblock zu verwenden, der einen wichtigen Teil des Abschnitts markiert. Einige benutzen vielleicht lieber viele Überschriften, was auch meistens gut funktioniert, aber weniger gut für lange Prosa geeignet ist. {" Wichtig anzumerken ist, dass die Pullquotes nur eine visuelle Präsentation sind und nicht zweimal im Code erscheinen. "} Deshalb werden CSS-Techniken angewandt, um das Zitat ein weiteres mal sichtbar zu machen. Octopress macht dieses sehr einfach mit dem Pullquote-Tag.
+Wenn man sehr lange Absätze schreibt, ist es hilfreich ein herausgeschobenen Zitatblock zu verwenden, der einen wichtigen Teil des Abschnitts markiert. Einige benutzen vielleicht lieber viele Überschriften, was auch meistens gut funktioniert, aber weniger gut für lange Prosa geeignet ist. {" Wichtig anzumerken ist, dass die Pullquotes nur visuelle Präsentation sind und nicht zweimal im Code erscheinen. "} Deshalb werden CSS-Techniken angewandt, um das Zitat ein weiteres mal sichtbar zu machen. In Octopress kann man dieses sehr einfach mit dem Pullquote-Tag erreichen.
 {% endpullquote %}
 
 #### Pullquote (links)
 
 {% pullquote left %}
-Wenn man sehr lange Absätze schreibt, ist es hilfreich ein herausgeschobenen Zitatblock zu verwenden, der einen wichtigen Teil des Abschnitts markiert. Einige benutzen vielleicht lieber viele Überschriften, was auch meistens gut funktioniert, aber weniger gut für lange Prosa geeignet ist. {" Wichtig anzumerken ist, dass die Pullquotes nur eine visuelle Präsentation sind und nicht zweimal im Code erscheinen. "} Deshalb werden CSS-Techniken angewandt, um das Zitat ein weiteres mal sichtbar zu machen. Octopress macht dieses sehr einfach mit dem Pullquote-Tag.
+Wenn man sehr lange Absätze schreibt, ist es hilfreich ein herausgeschobenen Zitatblock zu verwenden, der einen wichtigen Teil des Abschnitts markiert. Einige benutzen vielleicht lieber viele Überschriften, was auch meistens gut funktioniert, aber weniger gut für lange Prosa geeignet ist. {" Wichtig anzumerken ist, dass die Pullquotes nur visuelle Präsentation sind und nicht zweimal im Code erscheinen. "} Deshalb werden CSS-Techniken angewandt, um das Zitat ein weiteres mal sichtbar zu machen. In Octopress kann man dieses sehr einfach mit dem Pullquote-Tag erreichen.
 {% endpullquote %}
 
 ```html
@@ -617,8 +617,8 @@ A simple image without figure element:
 <img src="http://lorempixel.com/680/408/technics/" alt="Example image">
 
 
-Figures
--------
+Abbildungen
+-----------
 
 Figures are usually used to refer to images:
 
@@ -656,10 +656,6 @@ Some more dummy text to sepearte the images: Lorem ipsum dolor sit amet, consete
 <img src="http://lorempixel.com/1200/500/nature/" alt="Example image">
 {% endfigure %}
 
-{% figure figure-fullsize figure-border "Figure mit Klasse <b>.figure-fullsize .figure-border</b> und Caption, Image should be at least 1100 Pixel" %}
-<img src="http://lorempixel.com/1200/500/nature/" alt="Example image">
-{% endfigure %}
-
 Just some dummy text to sepearte the images: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 #### Hanging Left
@@ -669,10 +665,6 @@ Just some dummy text to sepearte the images: Lorem ipsum dolor sit amet, consete
 {% endfigure %}
 
 {% figure figure-hangleft "Figure mit Klasse <b>.figure-hangleft</b> und Caption, Image should be at least 850 Pixel" %}
-<img src="http://lorempixel.com/900/400/food/" alt="Example image">
-{% endfigure %}
-
-{% figure figure-hangleft figure-border "Figure mit Klasse <b>.figure-hangleft .figure-border</b> und Caption, Image should be at least 850 Pixel" %}
 <img src="http://lorempixel.com/900/400/food/" alt="Example image">
 {% endfigure %}
 
@@ -688,10 +680,6 @@ Just some dummy text to sepearte the images: Lorem ipsum dolor sit amet, consete
 <img src="http://lorempixel.com/900/400/animals/" alt="Example image">
 {% endfigure %}
 
-{% figure figure-hangright figure-border "Figure mit Klasse <b>.figure-hangright .figure-border</b> und Caption, Image should be at least 850 Pixel" %}
-<img src="http://lorempixel.com/900/400/animals/" alt="Example image">
-{% endfigure %}
-
 Just some dummy text to sepearte the images: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 #### Centered
@@ -701,10 +689,6 @@ Just some dummy text to sepearte the images: Lorem ipsum dolor sit amet, consete
 {% endfigure %}
 
 {% figure figure-center "Figure mit Klasse <b>.figure-center</b> und Caption, Image should be at least 850 Pixels" %}
-<img src="http://lorempixel.com/900/400/people/" alt="Example image">
-{% endfigure %}
-
-{% figure figure-center figure-border "Figure mit Klasse <b>.figure-center .figure-border</b> und Caption, Image should be at least 850 Pixels" %}
 <img src="http://lorempixel.com/900/400/people/" alt="Example image">
 {% endfigure %}
 
