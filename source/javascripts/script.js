@@ -8,24 +8,37 @@ $(function() {
   // Fitvids
   $(".container").fitVids();
 
-  // Navigation (@TODO: temporary)
+  // Navigation
+  // ==========
+
+  // Open navigation by clicking on "open"
   $(".nav-btn").on("click", function(event) {
     $("body").toggleClass("navigation--open");
     event.preventDefault();
   });
 
+  // Close navigation by clicking on "close"
   $(".nav-close-btn").on("click", function(event) {
     $("body").removeClass("navigation--open");
     event.preventDefault();
   });
 
+  // Close navigation by clicking somewhere in main column
   $(".main").on("click", function() {
     $("body").removeClass("navigation--open");
   });
 
-  $(".main").on("mouseenter", function() {
-    window.setTimeout(function() {
+  // Close navigation after 1.5s after leaving the navigation
+  $("#nav").on("mouseleave", function() {
+    timer = window.setTimeout(function() {
       $("body").removeClass("navigation--open");
-    }, 2000);
+    }, 1500);
+  });
+
+  // Stop timeout that closes the navigation when entering the navigation (again)
+  $("#nav").on("mouseenter", function() {
+    if (timer) {
+      clearTimeout(timer);
+    }
   });
 });
