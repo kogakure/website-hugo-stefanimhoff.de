@@ -14,11 +14,18 @@ $(function() {
     event.preventDefault();
   });
 
-  // $(".nav-close-btn").on("click", function() {
-  //   $("body").removeClass("navigation-open");
-  // });
+  $(".nav-close-btn").on("click", function(event) {
+    $("body").removeClass("navigation--open");
+    event.preventDefault();
+  });
 
-  $(".container").on("click", function() {
-    $("body").removeClass("navigation-open");
+  $(".main").on("click", function() {
+    $("body").removeClass("navigation--open");
+  });
+
+  $(".main").on("mouseenter", function() {
+    window.setTimeout(function() {
+      $("body").removeClass("navigation--open");
+    }, 2000);
   });
 });
