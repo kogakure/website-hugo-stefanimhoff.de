@@ -182,7 +182,7 @@ Wenn man sehr lange Absätze schreibt, ist es hilfreich ein herausgeschobenen Zi
 
 ```html
 {% raw %}{% pullquote left %}
-When writing longform posts […] {" pull quotes are […] in the text. "} That is why […]
+Wenn man sehr lange Absätze schreibt, … {" Wichtig anzumerken ist … und nicht zweimal im Code erscheinen. "} Deshalb werden CSS-Techniken angewandt, um …
 {% endpullquote %}{% endraw %}
 ```
 
