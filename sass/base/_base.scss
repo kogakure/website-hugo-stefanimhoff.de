@@ -139,6 +139,7 @@ pre {
 
 figure.code {
   @extend %grid-10-of-8-break-out;
+  clear: both;
 }
 
 // Variable

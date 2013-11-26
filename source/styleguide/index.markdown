@@ -562,20 +562,18 @@ Das Japanische Kino hat einige Meisterwerke hervorgebracht, sowohl in Farbe als 
 Tabellen
 --------
 
-Tables should be used when displaying tabular data. The `thead`, `tfoot` and `tbody` elements enable you to group rows within each a table.
+Tabellen sollten verwendet werden, um tabellarische Daten anzuzeigen. Die Elemente `thead`, `tbody` und `tfoot` sind dafür da Reihen in der Tabelle zu gruppieren.
 
-If you use these elements, you must use every element. They should appear in this order: `thead`, `tfoot` and `tbody`, so that browsers can render the foot before receiving all the data. You must use these tags within the table element.
-
-### Regular Table
+### Einfache Tabellen
 
 <figure class="table-figure">
 <table class="table">
   <thead>
     <tr>
       <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
+      <th>Vorname</th>
+      <th>Nachname</th>
+      <th>Benutzername</th>
     </tr>
   </thead>
   <tbody>
@@ -601,16 +599,51 @@ If you use these elements, you must use every element. They should appear in thi
 </table>
 </figure>
 
-### Striped Table
+```html
+<figure class="table-figure">
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Vorname</th>
+      <th>Nachname</th>
+      <th>Benutzername</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+</figure>
+```
+
+### Gestreifte Tabellen
 
 <figure class="table-figure">
 <table class="table table-striped">
   <thead>
     <tr>
       <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
+      <th>Vorname</th>
+      <th>Nachname</th>
+      <th>Benutzername</th>
     </tr>
   </thead>
   <tbody>
@@ -636,16 +669,24 @@ If you use these elements, you must use every element. They should appear in thi
 </table>
 </figure>
 
-### Bordered  Table
+```html
+<figure class="table-figure">
+<table class="table table-striped">
+…
+</table>
+</figure>
+```
+
+### Tabellen mit Rand
 
 <figure class="table-figure">
 <table class="table table-bordered">
   <thead>
     <tr>
       <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
+      <th>Vorname</th>
+      <th>Nachname</th>
+      <th>Benutzername</th>
     </tr>
   </thead>
   <tbody>
@@ -671,7 +712,15 @@ If you use these elements, you must use every element. They should appear in thi
 </table>
 </figure>
 
-### Hovered Table
+```html
+<figure class="table-figure">
+<table class="table table-bordered">
+…
+</table>
+</figure>
+```
+
+### Tabellen mit Hover-Interaktion
 
 <figure class="table-figure">
 <table class="table table-hover">
@@ -706,16 +755,24 @@ If you use these elements, you must use every element. They should appear in thi
 </table>
 </figure>
 
-### Condensed Table
+```html
+<figure class="table-figure">
+<table class="table table-hover">
+…
+</table>
+</figure>
+```
+
+### Verdichtete Tabellen
 
 <figure class="table-figure">
 <table class="table table-condensed">
   <thead>
     <tr>
       <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
+      <th>Vorname</th>
+      <th>Nachname</th>
+      <th>Benutzername</th>
     </tr>
   </thead>
   <tbody>
@@ -741,45 +798,73 @@ If you use these elements, you must use every element. They should appear in thi
 </table>
 </figure>
 
+```html
+<figure class="table-figure">
+<table class="table table-condensed">
+…
+</table>
+</figure>
+```
+
 
 Bilder
 ------
 
-A simple image without figure element:
+Ein einfaches Bild ohne Abbildung:
 
 <img src="http://lorempixel.com/680/408/nightlife/" alt="Example image">
+
+```html
+<img src="http://lorempixel.com/680/408/nightlife/" alt="Example image">
+```
 
 
 Abbildungen
 -----------
 
-Figures are usually used to refer to images:
+Das Element `figure` wird verwendet um mehrere Objekte in einer Abbildung mit einem Untertitel zusammenzufassen. Überlicherweise werden ein oder mehrer Bilder in einer Abbildung angezeigt, es können aber auch andere Objekte, wie z. B. Code angezeigt werden.
 
-#### Without caption
+#### Abbildung ohne Untertitel
 
 {% figure %}
 <img src="http://lorempixel.com/680/408/fashion/" alt="Example image">
 {% endfigure %}
 
-#### With caption
+```html
+{% raw %}{% figure %}
+<img src="http://lorempixel.com/680/408/fashion/" alt="Example image">
+{% endfigure %}{% endraw %}
+```
+
+#### Abbildungen mit Untertitel
+
+Normalerweise sind die Untertitel zentriert ausgerichtet. Es gibt aber fälle, in denen der Untertitel zu lang ist und mehrzeiliger Text sieht zentriert nicht gut aus. Dafür gibt es das Klassen-Attribut `figure-longcaption`.
 
 {% figure figure-longcaption "Dies ist die Caption des Fotos, die ich etwas länger schreibe, nur damit ich testen kann, wie sie aussieht, wenn sie sich über mehrere Zeilen erstreckt." %}
 <img src="http://lorempixel.com/680/408/sports/" alt="Example image">
 {% endfigure %}
 
+Im aktuellen Design haben zwar sowieso alle Abbildungen einen Rand, dies mag sich aber in Zukunft ändern. Bei Abbildungen, die also auf jeden Fall einen Rand benötigen, weil sie sonst nicht wirken oder schlecht aussehen, fügt man daher das Klassen-Attribut `figure-border` hinzu.
+
 {% figure figure-border "Dies ist ein normales Foto in einer figure mit Klasse <b>.figure-border</b>" %}
 <img src="http://lorempixel.com/680/408/sports/" alt="Example image">
 {% endfigure %}
+
+Abbildungen, die einen Schatten haben sollen, können das Klassen-Attribut `figure-shadow` bekommen.
 
 {% figure figure-shadow "Dies ist ein normales Foto in einer figure mit Klasse <b>.figure-shadow</b>" %}
 <img src="http://lorempixel.com/680/408/sports/" alt="Example image">
 {% endfigure %}
 
-Just some dummy text to sepearte the images: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+```html
+{% raw %}{% figure figure-longcaption figure-border figure-shadow %}
+…
+{% endfigure %}{% endraw %}
+```
 
-Some more dummy text to sepearte the images: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+#### Abbildungen in maximaler Breite
 
-#### Fullsize
+Um besonders große Fotos einzusetzen, kann das Klassen-Attribut `figure-fullsize` benutzt werden. Abbildungen in Vollbild sollten aber mindestens 1100 Pixel Breite aufweisen.
 
 {% figure figure-fullsize %}
 <img src="http://lorempixel.com/1200/500/nature/" alt="Example image">
@@ -789,9 +874,15 @@ Some more dummy text to sepearte the images: Lorem ipsum dolor sit amet, consete
 <img src="http://lorempixel.com/1200/500/nature/" alt="Example image">
 {% endfigure %}
 
-Just some dummy text to sepearte the images: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+```html
+{% raw %}{% figure figure-fullsize %}
+…
+{% endfigure %}{% endraw %}
+```
 
 #### Hanging Left
+
+Abbildungen können in den Rand geschoben werden, wahlweise links (`figure-hangleft`) oder rechts (`figure-hangricht`). Der Untertitel steht dann im Rand neben dem Foto. Fotos dieser Art sollten mindestens 850 Pixel breit sein.
 
 {% figure figure-hangleft %}
 <img src="http://lorempixel.com/900/400/food/" alt="Example image">
@@ -801,7 +892,11 @@ Just some dummy text to sepearte the images: Lorem ipsum dolor sit amet, consete
 <img src="http://lorempixel.com/900/400/food/" alt="Example image">
 {% endfigure %}
 
-Just some dummy text to sepearte the images: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+```html
+{% raw %}{% figure figure-hangleft %}
+…
+{% endfigure %}{% endraw %}
+```
 
 #### Hanging Right
 
@@ -813,9 +908,15 @@ Just some dummy text to sepearte the images: Lorem ipsum dolor sit amet, consete
 <img src="http://lorempixel.com/900/400/animals/" alt="Example image">
 {% endfigure %}
 
-Just some dummy text to sepearte the images: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+```html
+{% raw %}{% figure figure-hangright %}
+…
+{% endfigure %}{% endraw %}
+```
 
 #### Centered
+
+Es ist auch möglich Abbildungen zentriert (`figure-center`) zu setzen, so dass sie in beide Ränder hineinragen.
 
 {% figure figure-center %}
 <img src="http://lorempixel.com/900/400/people/" alt="Example image">
@@ -825,19 +926,40 @@ Just some dummy text to sepearte the images: Lorem ipsum dolor sit amet, consete
 <img src="http://lorempixel.com/900/400/people/" alt="Example image">
 {% endfigure %}
 
+```html
+{% raw %}{% figure figure-center %}
+…
+{% endfigure %}{% endraw %}
+```
+
 Videos
 ------
 
-#### Native HTML5 Tag
+Es ist auch möglich Videos einzubetten, und zwar als natives HTML5, direkt von YouTube oder Vimeo.
+
+#### Native HTML5-Videos
+
 {% video http://s3.imathis.com/video/zero-to-fancy-buttons.mp4 640 420 http://s3.imathis.com/video/zero-to-fancy-buttons.png %}
 
-#### YouTube
+```html
+{% raw %}{% video http://s3.imathis.com/video/zero-to-fancy-buttons.mp4 640 420 http://s3.imathis.com/video/zero-to-fancy-buttons.png %}{% endraw %}
+```
+
+#### YouTube-Videos
 
 {% youtube TVblWq3tDwY %}
 
-#### Vimeo
+```html
+{% raw %}{% youtube TVblWq3tDwY %}{% endraw %}
+```
+
+#### Vimeo-Videos
 
 {% vimeo 45858333 %}
+
+```html
+{% raw %}{% vimeo 45858333 %}{% endraw %}
+```
 
 
 Code
