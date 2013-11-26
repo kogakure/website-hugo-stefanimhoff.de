@@ -384,7 +384,7 @@ Das Element `a` wird verwendet um Text zu verlinken, ob auf eine andere Seite, e
 [Dies ist ein Link](http://kogakure.de)
 ```
 
-### Betonter Text
+### Betonte Texte
 
 Das Element `em` wird benutzt, um Betonung für Text auszuzeichnen, also z. B. wenn etwas anders ausgesprochen wird oder wichtiger ist. Um Text nur schräg zu stellen ist das Element `i` vorzuziehen:
 
@@ -394,7 +394,7 @@ Du *musst* einfach Negitoro Maki probieren!
 Du *musst* einfach Negitoro Maki probieren!
 ```
 
-### Wichtiger Text
+### Wichtige Texte
 
 Das Element `strong` wird verwendet, um Text mit starker Wichtigkeit auszuzeichnen. Wo Text nur fett sein soll, ist das Element `b`vorzuziehen:
 
@@ -404,87 +404,160 @@ Das Eis zu betreten ist **verboten**!
 Das Eis zu betreten ist **verboten**!
 ```
 
-### Small print
+### Kleingedruckte Texte
 
-The `small` element is used to represent disclaimers, caveats, legal restrictions, or copyrights (commonly referred to as ‘small print’). It can also be used for attributions or satisfying licensing requirements. Example:
+Das Element `small` wird verwendet um Ausschlussklauseln und rechtliche Hinweise, Copyrights und Kleingedrucktes auszuzeichnen. Es kann auch verwendet werden um die Quelle eines Werkes auszuzeichnen oder Lizenzen zu markieren:
 
-<small>Copyright © 1922-2011 Acme Corporation. All Rights Reserved</small>
+<small>Copyright © 1922-2011 Firmenname. All Rights Reserved</small>
 
-### Strikethrough
+```html
+<small>Copyright © 1922-2011 Firmenname. All Rights Reserved</small>
+```
 
-The `s` element is used to represent content that is no longer accurate or relevant. When indicating document edits i.e., marking a span of text as having been removed from a document, use the del element instead. Example:
+### Durchgestrichene Texte
 
-<s>Recommended retail price: £3.99 per bottle</s><br>
-<strong>Now selling for just £2.99 a bottle!</strong>
+Das Element `s` wird verwendet um Inhalte auszuzeichnen, die nicht länger akturat oder relevant sind. Um in Dokumenten zu markieren, dass ein Text entfernt wurde, ist das Element `del` zu verwenden.
 
-### Citations
-The `cite` element is used to represent the title of a work (e.g. a book, essay, poem, song, film, TV show, sculpture, painting, musical, exhibition, etc). This can be a work that is being quoted or referenced in detail (i.e. a citation), or it can just be a work that is mentioned in passing. Example:
+<s>Empfohlene Preisempfehlung: 3,99 € pro Flasche</s><br>
+<strong>Jetzt für nur noch 2,99 € pro Flasche! </strong>
+
+```html
+<s>Empfohlene Preisempfehlung: 3,99 € pro Flasche</s>
+```
+
+### Zitat-Quellen
+
+Das Element `cite` wird verwendet um den Titel einer Arbeit (z. B. ein Buch, Aufsatz, Gedicht, Song, Film, TV-Show, Skulptur, Gemälde, Musical, Ausstellung etc) zu markieren.
 
 <cite>Universal Declaration of Human Rights</cite>, United Nations, December 1948. Adopted by General Assembly resolution 217 A (III).
 
-### Definition
-The `dfn` element is used to highlight the first use of a term. The `title` attribute can be used to describe the term. Example:
+```html
+<cite>Universal Declaration of Human Rights</cite>, United Nations, …
+```
 
-Bob’s <dfn title="Dog">canine</dfn> mother and <dfn title="Horse">equine</dfn> father sat him down and carefully explained that he was an <dfn title="A mutation that combines two or more sets of chromosomes from different species">allopolyploid</dfn> organism.
+### Definitionen
 
-### Abbreviation
-The `abbr` element is used for any abbreviated text, whether it be acronym, initialism, or otherwise. Generally, it’s less work and useful (enough) to mark up only the first occurrence of any particular abbreviation on a page, and ignore the rest. Any text in the title attribute will appear when the user’s mouse hovers the abbreviation (although notably, this does not work in Internet Explorer for Windows). Example abbreviations:
+Das Element `dfn` wird verwendet um Begriffe zu markieren, die erklärungsbedürftig sind. Mit dem Attribute `title` kann die Erklärung hinzugefügt werden.
+
+Die <dfn title="geheime Person">Ninja</dfn> wurden im Zeitalter <dfn title="Zeitalter des Bürgerkriegs">Sengokujidai</dfn> von Japan als Spione, Kundschafter oder Attentäter eingesetzt, um Aufgaben zu erledigen, die den <dfn title="Kriegerkaste Japans">Samurai</dfn> aufgrund ihres Ehrenkodex nicht möglich war.
+
+```html
+Die <dfn title="geheime Person">Ninja</dfn> wurden im Zeitalter …
+```
+
+### Abkürzungen
+
+Das Element `abbr` wird für abgekürzten Text verwenden, egal ob es sich um Akronyme, Initialworte oder ähnliches. Ein Plugin geht durch alle Abkürzungen des Textes und wandelt sie automatisch in `abbr` um. Nur wenn die Abkürzung nicht in Kapitälchen geschrieben werden soll, muss es per Hand ausgezeichnet werden.
 
 BBC, HTML, and <abbr class="no-caps" title="Staffordshire">Staffs.</abbr>
 
-### Time
-The `time` element is used to represent either a time on a 24 hour clock, or a precise date in the proleptic Gregorian calendar, optionally with a time and a time-zone offset. Example:
+```html
+BBC, HTML, and <abbr class="no-caps" title="Staffordshire">Staffs.</abbr>
+```
 
-Queen Elizabeth II was proclaimed sovereign of each of the Commonwealth realms on <time datetime="1952-02-06">6</time> and <time datetime="1952-02-07">7 February 1952</time>, after the death of her father, King George VI.
+### Zeiten
 
-### Variable
-The `var` element is used to denote a variable in a mathematical expression or programming context, but can also be used to indicate a placeholder where the contents should be replaced with your own value. Example:
+Das Element `time` wird benutzt, um entweder die Zeit auf einer 24-Stunden-Uhr zu markieren oder ein präzises Datum des Gregorianischen Kalenders zu kennzeichnen.
 
-If there are <var>n</var> pipes leading to the ice cream factory then I expect at *least* <var>n</var> flavours of ice cream to be available for purchase!
+Die Schlacht von Sekigahara am <time datetime="1600-10-21">21. Oktober 1600</time> stellte einen Wendepunkt der japanischen Geschichte dar. Durch den Sieg gelangt es dem Haus Tokugawa, die Vormachtstellung in Japan zu sichern.
 
-### Sample output
-The `samp` element is used to represent (sample) output from a program or computing system. Useful for technology-oriented sites, not so useful otherwise. Example:
+```html
+Die Schlacht von Sekigahara am <time datetime="1600-10-21">21. Oktober 1600</time> …
+```
 
-The computer said <samp>Too much cheese in tray two</samp> but I didn’t know what that meant.
+### Variablen
 
-### Keyboard entry
-The `kbd` element is used to denote user input (typically via a keyboard, although it may also be used to represent other input methods, such as voice commands). Example:
+Das Element `var` wird verwendet, um Variablen in mathematischen Ausdrücken oder Programmcode zu kennzeichnen, kann aber auch verwendet werden um Platzhalter zu markieren, bei denen der Wert mit dem eigenen Wert ersetzt werden soll.
 
-This is just some random text, just to make sure the keyboard shortcut will be shown in the middle of a paragraph, so I can see the line-height is done correctly. To take a screenshot on your Mac, press <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>3</kbd>. And some more text should follow after my shortcuts, just to be sure it looks really good.
+Wenn <var>n</var> Rohre zur Eiscreme-Fabrik führen, dann erwarte ich *wenigstens* <var>n</var> verschiedene Geschmacksrichtungen für den Verkauf!
 
-### Superscript and subscript text
-The `sup` element represents a superscript and the sub element represents a `sub`. These elements must be used only to mark up typographical conventions with specific meanings, not for typographical presentation. As a guide, only use these elements if their absence would change the meaning of the content. Example:
+```html
+Wenn <var>n</var> Rohre zur Eiscreme-Fabrik führen, dann erwarte …
+```
 
-The coordinate of the <var>i</var>th point is (<var>x<sub><var>i</var></sub></var>, <var>y<sub><var>i<var></sub></var>). For example, the 10th point has coordinate (<var>x<sub>10</sub></var>, <var>y<sub>10</sub></var>). This is just some more text to see who the subscript is fitted into the lines, because both, superscript and subscript should fit harmonically into a line.
+### Beispiel-Ausgabe
 
-Math is a nice thing, sometimes one wants to have a formular right in the middle of the text. And even some calculations like this one: f(<var>x</var>, <var>n</var>) = log<sub>4</sub><var>x</var><sup><var>n</var></sup> should work also and should not strech or break the line-height of the other lines.
+Das Element `samp` wird verwendet um beispielhafte Ausgaben von Programmen oder Computer-Systemen zu kennzeichnen.
 
-### Italicised
-The `i` element is used for text in an alternate voice or mood, or otherwise offset from the normal prose. Examples include taxonomic designations, technical terms, idiomatic phrases from another language, the name of a ship or other spans of text whose typographic presentation is typically italicised. Example:
+Der Computer sagte <samp>Fehler -1</samp>, aber ich weiß nicht, was das bedeutet.
 
-There is a certain <i lang="fr">je ne sais quoi</i> in the air.
+```html
+Der Computer sagte <samp>Fehler -1</samp>, aber ich weiß nicht, was das bedeutet.
+```
 
-### Emboldened
-The `b` element is used for text stylistically offset from normal prose without conveying extra importance, such as key words in a document abstract, product names in a review, or other spans of text whose typographic presentation is typically emboldened. Example:
+### Keyboard-Tasten
 
-You enter a small room. Your <b>sword</b> glows brighter. A <b>rat</b> scurries past the corner wall.
+Mit dem Element `kbd` werden Benutzereingaben gekennzeichnet (üblicherweise über die Tastatur, aber es können auch andere Eingaben, wie Sprachbefehle gekennzeichnet werden).
 
-### Marked or highlighted text
-The `mark` element is used to <mark>represent</mark> a run of text marked or highlighted for reference purposes. When used in a quotation it indicates a highlight not originally present but added to bring the reader’s <mark>attention</mark> to that part of the text. When used in the <mark>main prose</mark> of a document, it indicates a part of the document that has been highlighted due to its relevance to the user’s current activity. Example:
+Dies ist nur etwas zufälliger Text, um sicherzustellen, dass die Tastaturbefehle in der mitte des Absatz gezeigt werden, da so die korrekte Zeilenhöhe geprüft werden kann. Um einen Screenshot am Mac zu erstellen, drücke <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>3</kbd>. Und noch etwas Text danach, nur um sicherzugehen, das alles gut aussieht.
 
-I also have some <mark>kitten</mark>s who are visiting me these days. They’re really cute. I think they like my garden! Maybe I should adopt a <mark>kitten</mark>.
+```html
+Drücke <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>3</kbd>
+```
+
+### Superskript und Subskript
+
+Das Element `sup` kennzeichnet Superskript und das Element `sub` Subskript.
+
+Die Koordinate des <var>i</var>ten Punktes ist (<var>x<sub><var>i</var></sub></var>, <var>y<sub><var>i<var></sub></var>). Der zehnte Punkt hat die Coordinate (<var>x<sub>10</sub></var>, <var>y<sub>10</sub></var>). Dies ist nur etwas weiterer Text der nur dafür da ist zu prüfen, ob die Zeilenhöhe stimmt.
+
+Mathe ist eine nette Sache, manchmal möchte man mitten im Text eine Formel haben. Und sogar Berechnungen wie diese f(<var>x</var>, <var>n</var>) = log<sub>4</sub><var>x</var><sup><var>n</var></sup> sollte funktionieren und nicht die Zeilenhöhe verändern oder den Textfluß verändern.
+
+```html
+x<sub>i</sub>
+
+f(x, n) = log<sub>4</sub>x<sup>n</sup>
+```
+
+### Kursive Texte
+
+Das Element `i` wird benutzt um eine andere Stimme oder Stimmung zu kennzeichnen oder Text, der auf andere Weise vom Fließtext abweicht. Dies können z. B. technische Begriffe, umgangssprachliche Begriffe aus anderen Sprachen, der Name eines Schiffes oder andere Arten von Text, die üblicherweise kursiv dargestellt werden.
+
+Es liegt eine bestimmte <i lang="fr">je ne sais quoi</i> in der Luft.
+
+```html
+Es liegt eine bestimmte <i lang="fr">je ne sais quoi</i> in der Luft.
+```
+
+### Fette Texte
+
+Das Element `b` wird verwendet um Worte vom Text abzuheben ohne ihnen extra Bedeutung zu geben, wie z. B. Schlüsselworte, Produktnamen oder andere Arten von Text, die üblicherweise fett dargestellt werden.
+
+Du betrittst einen kleinen Raum. Dein <b>Schwert</b> leuchtet heller. Eine <b>Ratte</b> huscht an der Wand vorbei.
+
+```html
+Dein <b>Schwert</b> leuchtet heller. Eine <b>Ratte</b> huscht an der Wand vorbei.
+```
+
+### Markierte oder hervorgehobene Texte
+
+Das Element `mark` wird verwendet um einen <mark>Textmarker</mark> zu repräsentieren, der durch einen Text geht und stellen hervorhebt. Wenn es in einem Zitat verwendet wird, dann um eine Stelle <mark>hervorzuheben</mark>, die vorher nicht hervorgehoben war, aber auf die hingewiesen werden soll.
+
+```html
+Mit <mark>mark</mark> kann man Worte markieren.
+```
 
 ### Edits
-The `del` element is used to represent deleted or retracted text which still must remain on the page for some reason. Meanwhile its counterpart, the `ins` element, is used to represent inserted text. Both `del` and `ins` have a `datetime` attribute which allows you to include a timestamp directly in the element. Example inserted text and usage:
 
-She bought <del datetime="2005-05-30T13:00:00">two</del> <ins datetime="2005-05-30T13:00:00">five</ins> pairs of shoes.
+Das Element `del` wird verwendet um Text zu markieren, der nicht mehr gültig ist und entfernt werden müsste, aber aus bestimmten Gründen auf der Seite stehen bleiben muss. Sein Gegenstück, das Element `ins` markiert Text, der hinzugefügt wurde. Es kann optional ein Zeitstempel hinzugefügt werden, der anzeigt, wann die Änderung durchgeführt wurde.
+
+Sie kaufte <del datetime="2005-05-30T13:00:00">zwei</del> <ins datetime="2005-05-30T13:00:00">fünf</ins> Paar Schuhe.
+
+```html
+Sie kaufte <del datetime="2005-05-30T13:00:00">zwei</del> <ins datetime="2005-05-30T13:00:00">fünf</ins> Paar Schuhe.
+```
 
 ### Ruby
+
+Das Element `ruby` hat nichts mit der Programmiersprache <cite>Ruby</cite> zu tun. Damit wird in verschiedenen asiatischen Sprachen die Aussprache von seltenen Schriftzeichen übertitelt. Im Japanischen gelten z. B. nur 1945 Zeichen als offizielle Zeichen, die im täglichen Sprachgebrauch von offiziellen Dokumenten verwendet werden dürfen. Es gibt aber viele tausend Zeichen mehr. Um auch weniger gebildeten zu ermöglichen, das Zeichen zu lesen, wird dann über diesen Zeichen Lautschrift geschrieben.
 
 <ruby>攻殻<rp>（</rp><rt>こうかく</rt><rp>）</rp>機動隊<rp>（</rp><rt>きどうたい</rt><rp>）</rp></ruby>
 
 Das Japanische Kino hat einige Meisterwerke hervorgebracht, sowohl in Farbe als auch in Schwarz/Weiß. Der bekannte Film 7 Samurai (<ruby>七人の侍<rp>（</rp><rt>しちにんのさむらい</rt><rp>）</rp></ruby>) von Akira Kurosawa ist einer der besten Filme der japanischen Geschichte. Der Film ist so gut, dass er sogar ein Remake erfahren hat: <cite>Die Glorreichen Sieben</cite>.
 
+```html
+<ruby>攻殻<rp>（</rp><rt>こうかく</rt><rp>）</rp>機動隊<rp>（</rp><rt>きどうたい</rt><rp>）</rp></ruby>
+```
 
 Tabellen
 --------
