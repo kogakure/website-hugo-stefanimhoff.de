@@ -186,7 +186,7 @@ Wenn man sehr lange Absätze schreibt, … {" Wichtig anzumerken ist … und nic
 {% endpullquote %}{% endraw %}
 ```
 
-#### Pullquote (centered)
+#### Pullquote (zentriert)
 
 Manchmal möchte man einen kurzen Zitatblock verwenden, der nicht im Text vorkommt, oder besonders prägnant ist und daher zentriert stehen soll. Wenn ein Attribute `lang` mitgegeben wird, werden automatisch die korrekten Zitatzeichen verwendet (für Deutsch, Englisch und Japanisch).
 
@@ -281,14 +281,23 @@ Manchmal möchte man mitten im Text etwas erklären, was nicht direkt zum Text g
 Listen
 ------
 
-### Ordered list
-The `ol` element denotes an ordered list, and various numbering schemes are available through the CSS (including 1,2,3… a,b,c… i,ii,iii… and so on). Each item requires a surrounding `<li>` and `</li>` tag, to denote individual items within the list (as you may have guessed, li stands for list item).
+### Geordnete Listen
 
-1. This is an ordered list.
-2. This is the second item, which contains a sub list
-   1. This is the sub list, which is also ordered.
-   2. It has two items.
-3. This is the final item on this list.
+Das Element `ol` kennzeichnet eine geordnete Lste, und durch CSS sind verschiedenste Nummerierungen möglich (z. B. 1, 2, 3, … a, b, c, … und so weiter).
+
+1. Dies ist eine geordnete Liste
+2. Dies ist der zweite Listeneintrag, der eine Unterliste enthält
+   1. Dies ist die Unterliste, ebenfalls geordnet
+   2. Sie hat zwei Einträge
+3. Dies ist der letzte Eintrag auf dieser Liste
+
+```html
+1. Dies ist eine geordnete Liste
+2. Dies ist der zweite Listeneintrag, der eine Unterliste enthält
+   1. Dies ist die Unterliste, ebenfalls geordnet
+   2. Sie hat zwei Einträge
+3. Dies ist der letzte Eintrag auf dieser Liste
+```
 
 ### Unordered list
 The `ul` element denotes an unordered list (ie. a list of loose items that don’t require numbering, or a bulleted list). Again, each item requires a surrounding `<li>` and `</li>` tag, to denote individual items. Here is an example list showing the constituent parts of the British Isles:
