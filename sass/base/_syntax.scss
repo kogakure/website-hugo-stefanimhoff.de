@@ -97,6 +97,7 @@ figure.code {
       color: inherit;
       padding-left: 3em;
       position: absolute; right: .8em;
+      text-transform: capitalize;
       z-index: 1;
       @include hover-link;
     }

@@ -965,40 +965,76 @@ Es ist auch möglich Videos einzubetten, und zwar als natives HTML5, direkt von 
 Code
 ----
 
-The `code` element is used to represent fragments of computer code. Useful for technology-oriented sites, not so useful otherwise. Example:
+Das Element `code` ist nützlich um Fragmente von Computercode auszuzeichnen.
 
-When you call the `activate()` method on the `robotSnowman` object, the eyes glow.
+Wenn du die Methode `activate()` des Objektes `robotSnowman` aufrufst, leuchten die Augen.
 
-Used in conjunction with the `pre` element:
+Dieses wird oft zusammen mit dem Element `pre` verwendet.
 
-#### Codeblock
+### Codeblöcke
 
-Shown with line numbers:
+Mit Zeilennummern:
 
 {% codeblock %}
-Awesome code snippet
+Mein fantastischer Code
 {% endcodeblock %}
 
-Noch ein Test:
+```html
+{% raw %}{% codeblock %}
+Mein fantastischer Code
+{% endcodeblock %}{% endraw %}
+```
+
+Codeblock mit einem Sprach-Attribut und ohne Titel.
 
 {% codeblock lang:rb %}
 # Code Snippet mit lang:rb ohne Titel
 {% endcodeblock %}
 
+```html
+{% raw %}{% codeblock lang:rb %}
+# Code Snippet mit lang:rb ohne Titel
+{% endcodeblock %}{% endraw %}
+```
+
+Codeblock mit einem Sprach-Attribut und mit Titel.
+
 {% codeblock lang:sh file.sh %}
 Code Snippet mit lang:sh und mit Titel
 {% endcodeblock %}
 
-Beispielsatz, der ein eigener Absatz sein sollte.
+```html
+{% raw %}{% codeblock lang:rb file.sh %}
+Code Snippet mit lang:sh und mit Titel
+{% endcodeblock %}{% endraw %}
+```
+
+In diesem Beispiel wird die Programmiersprache über die Dateiendung erkannt:
 
 {% codeblock Time to be Awesome! (awesome.rb) %}
 # Code snippet über Dateiendung erkannt
 {% endcodeblock %}
 
+```html
+{% raw %}{% codeblock Time to be Awesome! (awesome.rb) %}
+…
+{% endcodeblock %}{% endraw %}
+```
+
+Beipsiel, das zusätzlich noch auf eine URL verlinkt:
+
 {% codeblock Got pain? painreleif.sh http://site.com/painreleief.sh %}
 $ rm -rf ~/PAIN
 # Über Codeendung sh erkannt mit Link ohne Titel
 {% endcodeblock %}
+
+```html
+{% raw %}{% codeblock painreleif.sh http://site.com/painreleief.sh %}
+…
+{% endcodeblock %}{% endraw %}
+```
+
+Verschiedene Beispiele mit unterschiedlichen Programmier- und Auszeichnungssprachen, das Einfärben des Codes ist jeweils passend:
 
 {% codeblock lang:ruby %}
 namespace :images do
@@ -1047,15 +1083,13 @@ article > div {
 }
 {% endcodeblock %}
 
-#### Github Codeblock Markdown
+### Github Codeblock Markdown
 
-##### Example (plain)
+Es wird ebenfalls GitHub Flavored Markdown und die *Fenced code blocks* unterstützt:
 
 ```
 $ sudo make me a sandwich
 ```
-
-##### Example (ruby)
 
 ```ruby
 namespace :images do
@@ -1072,8 +1106,6 @@ namespace :images do
 
 end
 ```
-
-##### Example (css)
 
 ```css
 /**
@@ -1106,10 +1138,22 @@ article > div {
 }
 ```
 
-##### Gist-File
+### Gist-Datei
+
+Außerdem können Gist-Tags von GitHub direkt über die ID des Gists eingebunden werden:
 
 {% gist 1027674 gist_tag.rb %}
 
-##### Include Code
+```html
+{% raw %}{% gist 1027674 gist_tag.rb %}{% endraw %}
+```
+
+### Code einbinden
+
+Es können auch Dateien aus dem Dateisystem angezeigt werde:
 
 {% include_code test.js %}
+
+```html
+{% raw %}{% include_code test.js %}{% endraw %}
+```
