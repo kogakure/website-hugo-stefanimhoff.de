@@ -299,68 +299,119 @@ Das Element `ol` kennzeichnet eine geordnete Lste, und durch CSS sind verschiede
 3. Dies ist der letzte Eintrag auf dieser Liste
 ```
 
-### Unordered list
-The `ul` element denotes an unordered list (ie. a list of loose items that don’t require numbering, or a bulleted list). Again, each item requires a surrounding `<li>` and `</li>` tag, to denote individual items. Here is an example list showing the constituent parts of the British Isles:
+### Ungeordnete Listen
 
-* United Kingdom of Great Britain and Northern Ireland:
-  * England
-  * Scotland
-  * Wales
-  * Northern Ireland
-* Republic of Ireland
-* Isle of Man
-* Channel Islands:
-  * Bailiwick of Guernsey
-  * Bailiwick of Jersey
+Das Element `ul` kennzeichnet eine ungeordnete Liste (z. B. eine Liste von Einträgen, die nur locker sortiert sind oder eine Punktliste).
 
-Sometimes we may want each list item to contain block elements, typically a paragraph or two.
+* HTML
+* CSS
+  * Sass
+    * Compass
+  * LESS
+  * Stylus
+* JavaScript
+  * Backbone.js
+  * Angular.js
+  * Ember.js
 
-* The British Isles is an archipelago consisting of the two large islands of Great Britain and Ireland, and many smaller surrounding islands.
+```html
+* HTML
+* CSS
+  * Sass
+    * Compass
+  * LESS
+  * Stylus
+* JavaScript
+  * Backbone.js
+  * Angular.js
+  * Ember.js
+```
 
-* Great Britain is the largest island of the archipelago. Ireland is the second largest island of the archipelago and lies directly to the west of Great Britain.
+Manchmal soll eine Liste auch Blockelemente enthalten, üblicherweise einen Absatz oder zwei.
 
-* The full list of islands in the British Isles includes over 1,000 islands, of which 51 have an area larger than 20 km2.
+* HTML ist eine Auszeichnungssprache die verwendet wird, um die semantische Struktur eines Dokumentes zu schreiben.
 
-### Definition list
-The `dl` element is for another type of list called a definition list. Instead of list items, the content of a `dl` consists of dt (Definition Term) and `dd` (Definition description) pairs. Though it may be called a “definition list”, `dl` can apply to other scenarios where a parent/child relationship is applicable. For example, it may be used for marking up dialogues, with each `dt` naming a speaker, and each `dd` containing his or her words.
+* CSS ist eine deklarive Sprache für Stilvorlagen. Damit wird das visuelle Aussehen eines HTML-Dokumentes gesteuert.
+
+* JavaScript ist eine Programmiersprache, die verwendet wird um Interaktionen zu einer Website hinzuzufügen oder ganze Programme für das Internet zu schreiben.
+
+```html
+* HTML ist eine Auszeichnungssprache die verwendet wird, um die semantische …
+
+* CSS ist eine deklarive Sprache für Stilvorlagen. Damit wird das visuelle …
+
+* JavaScript ist eine Programmiersprache, die verwendet wird um Interaktionen …
+```
+
+### Definitionslisten
+
+Das Element `dl` ist ein weiterer Typ von Liste, nämlich eine Defintionsliste. Anstelle von Listeneinträgen besteht eine `dl` aus Paaren von `dt` (Defintion Term) und `dd` (Definition Description). Auch wenn diese Listenform *Definitionsliste* genannt wird, kann sie auch in anderen Szenarios verwendet werden, in denen Eltern/Kind-Beziehungen vorkommen.
 
 <dl>
-<dt>This is a term.</dt>
-<dd>This is the definition of that term, which both live in a <code>dl</code>.</dd>
-<dt>Here is another term.</dt>
-<dd>And it gets a definition too, which is this line.</dd>
-<dt>Here is term that shares a definition with the term below.</dt>
-<dt>Here is a defined term.</dt>
-<dd><code>dt</code> terms may stand on their own without an accompanying <code>dd</code>, but in that case they share descriptions with the next available <code>dt</code>. You may not have a <code>dd</code> without a parent <code>dt</code>.</dd>
+<dt>Dies ist eine Bezeichnung.</dt>
+<dd>Dies ist die Definition für die Bezeichnung.</dd>
+<dt>Dies ist eine weitere Bezeichnung.</dt>
+<dd>Und dies ist die Definitions für die Bezeichnung.</dd>
+<dt>Hier ist eine Bezeichnung die sich eine Definition mit der Bezeichnung darunter teilt.</dt>
+<dt>Dies ist eine Bezeichnung.</dt>
+<dd>Dies ist eine Definition für die beiden Bezeichnungen darüber.</dd>
 </dl>
 
+```html
+<dl>
+<dt>Dies ist eine Bezeichnung.</dt>
+<dd>Dies ist die Definition für die Bezeichnung.</dd>
+<dt>Dies ist eine weitere Bezeichnung.</dt>
+<dd>Und dies ist die Definitions für die Bezeichnung.</dd>
+<dt>Hier ist eine Bezeichnung … der Bezeichnung darunter teilt.</dt>
+<dt>Dies ist eine Bezeichnung.</dt>
+<dd>Dies ist eine Definition für die beiden Bezeichnungen darüber.</dd>
+</dl>
+```
 
 Inline-Text
 -----------
 
-There are a number of inline HTML elements you may use anywhere within other elements.
+Es gibt eine Vielzahl von Inline-HTML-Elementen, die überall in anderen Elementen verwendet werden können.
 
-### Links and anchors
-The a element is used to hyperlink text, be that to another page, a named fragment on the current page or any other location on the web. Example:
+### Links und Anker
 
-[Got to the home page](/) or [return to the top of this page](#container).
+Das Element `a` wird verwendet um Text zu verlinken, ob auf eine andere Seite, ein benanntes Fragment der aktuellen Seite oder auf einen anderen Ort im Internet:
 
-### Stressed emphasis
-The `em` element is used to denote text with stressed emphasis, i.e., something you’d pronounce differently. Where italicizing is required for stylistic differentiation, the `i` element may be preferable. Example:
+[Gehe zur Startseite zurück](/),  [Springe zum Anfang der Seite](#top) oder besuche eine [fantastische Website im Internet](http://kogakure.de).
 
-You simply *must* try the negitoro maki!
+```html
+[Dies ist ein Link](http://kogakure.de)
+```
 
-### Strong importance
-The `strong` element is used to denote text with strong importance. Where bolding is used for stylistic differentiation, the `b` element may be preferable. Example:
+### Betonter Text
 
-**Don’t** stick nails in the electrical outlet.
+Das Element `em` wird benutzt, um Betonung für Text auszuzeichnen, also z. B. wenn etwas anders ausgesprochen wird oder wichtiger ist. Um Text nur schräg zu stellen ist das Element `i` vorzuziehen:
+
+Du *musst* einfach Negitoro Maki probieren!
+
+```html
+Du *musst* einfach Negitoro Maki probieren!
+```
+
+### Wichtiger Text
+
+Das Element `strong` wird verwendet, um Text mit starker Wichtigkeit auszuzeichnen. Wo Text nur fett sein soll, ist das Element `b`vorzuziehen:
+
+Das Eis zu betreten ist **verboten**!
+
+```html
+Das Eis zu betreten ist **verboten**!
+```
 
 ### Small print
+
 The `small` element is used to represent disclaimers, caveats, legal restrictions, or copyrights (commonly referred to as ‘small print’). It can also be used for attributions or satisfying licensing requirements. Example:
 
 <small>Copyright © 1922-2011 Acme Corporation. All Rights Reserved</small>
 
 ### Strikethrough
+
 The `s` element is used to represent content that is no longer accurate or relevant. When indicating document edits i.e., marking a span of text as having been removed from a document, use the del element instead. Example:
 
 <s>Recommended retail price: £3.99 per bottle</s><br>
