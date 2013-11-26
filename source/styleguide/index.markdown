@@ -208,7 +208,7 @@ Peter sagte <q>Sie soll mir das sofort hergeben</q> und war ziemlich sauer.
 Peter sagte <q>Sie soll mir das sofort hergeben</q> und war ziemlich sauer.
 ```
 
-#### Deutsche Quotes (verschachtelt)
+#### Deutsche Zitate (verschachtelt)
 
 Luke führte weiter aus, <q>Und sie nannte ihn einen <q>total blöd-aussehenen Idioten</q>! Ich denke ich habe eine Chance!</q> Dieser arme Idiot …
 
@@ -216,7 +216,7 @@ Luke führte weiter aus, <q>Und sie nannte ihn einen <q>total blöd-aussehenen I
 Luke führte weiter aus, <q>Und sie nannte ihn einen <q>total blöd-aussehenen Idioten</q>! Ich denke ich habe eine Chance!</q> Dieser arme Idiot …
 ```
 
-#### Englische Quotes (verschachtelt)
+#### Englische Zitate (verschachtelt)
 
 <p lang="en">Luke conntinued, <q>And the she called him a <q>scruffy-looking nerf-herder</q>! I think I’ve got a chance!</q> The poor naive fool …</p>
 
@@ -224,7 +224,7 @@ Luke führte weiter aus, <q>Und sie nannte ihn einen <q>total blöd-aussehenen I
 <p lang="en">Luke conntinued, <q>And the she called him a <q>scruffy-looking nerf-herder</q>! I think I’ve got a chance!</q> The poor naive fool …</p>
 ```
 
-#### Japanische Quotes (verschachtelt)
+#### Japanische Zitate (verschachtelt)
 
 <p lang="ja">彼女は<q>日本語に猫は<q>にゃん</q>と鳴く</q>と言った。</p>
 
