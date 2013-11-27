@@ -1,4 +1,7 @@
 $(function() {
+  var timer,
+      url = window.location.href;
+
   // FastClick
   // =========
   FastClick.attach(document.body);
@@ -44,4 +47,10 @@ $(function() {
       clearTimeout(timer);
     }
   });
+
+  // Hightlight current navigation item
+  $('#nav a').filter(function() {
+      return this.href == url;
+  }).addClass('navigation--active');
+
 });
