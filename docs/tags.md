@@ -68,3 +68,6 @@ vim
 vokabel
 weiterleitung
 wiki
+erb
+dry
+html
