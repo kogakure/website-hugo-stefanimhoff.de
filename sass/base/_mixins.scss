@@ -25,8 +25,34 @@
   }
 }
 
+// Quotes for `blockquote` in multiple languages
+@mixin pullquote-quotes($quotes) {
+  quotes: $quotes;
+  p:first-child:before {
+    content: open-quote;
+  }
+
+  p:last-child:after {
+    content: close-quote;
+  }
+}
+
+// Quotes for `q` in multiple languages
+@mixin q-quotes($language, $quotes) {
+  :lang(#{$language}) > q,
+  .article-body q[lang|=#{$language}] {
+    quotes: $quotes;
+    @if $language == "ja" {
+      font-style: normal;
+    }
+  }
+}
+
+
 @function text-color($color, $dark: dark, $light: light){
   $text-color: ( (red($color)*299) + (green($color)*587) + (blue($color)*114) ) / 1000;
   $text-color: if($text-color >= 150, $dark, $light);
   @return $text-color;
 }
+
+

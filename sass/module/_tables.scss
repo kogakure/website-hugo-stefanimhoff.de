@@ -8,8 +8,8 @@
   border-spacing: 0;
   @include trailer(1);
   th, td {
-    padding: 8px;
     border-top: 1px solid $table-border-color;
+    padding: 8px;
     text-align: left;
     vertical-align: top;
   }

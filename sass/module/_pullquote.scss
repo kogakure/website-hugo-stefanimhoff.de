@@ -3,21 +3,21 @@
 // ============================================================================
 
 .pullquote {
-  text-align: center;
   @include adjust-font-size-to(41.887px);
+  text-align: center;
 }
 
 .pullquote-right:before,
 .pullquote-left:before {
+  @include adjust-font-size-to(25.888px);
+  border: 0;
+  content: attr(data-pullquote);
   float: right;
+  margin: 0 columns(-3) $base-rhythm-unit $base-rhythm-unit;
+  padding: 0;
   position: relative;
   top: 10px;
   width: columns(4, 8);
-  border: 0;
-  margin: 0 columns(-3) $base-rhythm-unit $base-rhythm-unit;
-  padding: 0;
-  content: attr(data-pullquote);
-  @include adjust-font-size-to(25.888px);
 }
 
 .pullquote-left:before {
@@ -27,21 +27,13 @@
 }
 
 blockquote.pullquote[lang|=de] {
-  quotes: '»' '«' '›' '‹';
-  p:first-child:before {
-    content: open-quote;
-  }
-  p:last-child:after {
-    content: close-quote;
-  }
+  @include pullquote-quotes('»' '«' '›' '‹');
 }
 
 blockquote.pullquote[lang|=en] {
-  quotes: '“' '”' '‘' '’';
-  p:first-child:before {
-    content: open-quote;
-  }
-  p:last-child:after {
-    content: close-quote;
-  }
+  @include pullquote-quotes('“' '”' '‘' '’');
+}
+
+blockquote.pullquote[lang|=ja] {
+  @include pullquote-quotes('「' '」' '『' '』');
 }
