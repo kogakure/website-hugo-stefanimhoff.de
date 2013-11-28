@@ -118,15 +118,14 @@ body, .container {
     right: 0;
     @include transform(translate3d(250px, 0, 0));
     @include backface-visibility(hidden);
-    @include transition(opacity 300ms 100ms ease, transform 400ms ease);
+    @include transition($animation-off-screen-menu);
     @include transform-origin(50% 0%);
-    opacity: 0.75;
   }
 
   .container {
     right: 0;
     @include transform(translate3d(0, 0, 0));
-    @include transition(transform 400ms ease);
+    @include transition($animation-off-screen-menu);
     @include backface-visibility(hidden);
   }
 
@@ -134,7 +133,6 @@ body, .container {
   .navigation--open {
     #nav {
       @include transform(translate3d(0, 0, 0));
-      opacity: 1;
     }
 
     .container {

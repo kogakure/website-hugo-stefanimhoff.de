@@ -18,6 +18,15 @@ $table-border-color:       #DDDDDD;
 $table-striped-background: #F9F9F9;
 $image-border-color:       #CCCCCC;
 
+// Animations
+// ----------------------------------------------------------------------------
+
+// Curves
+$cubic-bezier-bouncing: cubic-bezier(0.135, 0.780, 0.215, 1.080);
+
+// Animations
+$animation-off-screen-menu: transform 500ms $cubic-bezier-bouncing;
+
 // Typography
 // ----------------------------------------------------------------------------
 
