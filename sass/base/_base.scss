@@ -9,6 +9,7 @@
 
 body {
   @extend %base;
+  @include font-smoothing(subpixel-antialiased);
   @include hyphens(auto);
   color: $dark-grey;
   font-style: normal;
