@@ -74,7 +74,7 @@ $(function() {
     $(window).scrollTop(0);
 
     // Add the transition property to the body element
-    $("body").css("transition", "all 1s cubic-bezier(0.175, 0.885, 0.320, 1.275)");
+    $("body").css("transition", "all 1s cubic-bezier(0.135, 0.780, 0.215, 1.080)");
 
     // Apply the scroll effects
     $("body").css("margin-top", "0");
