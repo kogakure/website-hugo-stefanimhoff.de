@@ -61,7 +61,7 @@ category_dir: thema
 category_title_prefix: "Thema: "
 
 # Tags
-tag_dir: tags
+tag_dir: tag
 tag_title_prefix: "Tags: "
 
 include:

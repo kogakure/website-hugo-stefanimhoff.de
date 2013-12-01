@@ -38,7 +38,7 @@ Thinks in a marrow bone.
 
 Es ist z. B. kein Problem die z. T. gelieferte Ware zu stornieren. U. a. sagt man u. a., dass s. o. und u. s. w. bei uns i. d. R. abgekürzt werden, d. h. mit Punkt geschrieben.
 
-Es sind 16 px auf der Unterseite.
+Es sind 16 px auf der Unterseite. [^1]
 
 Bitte überweisen sie 6000 $ oder 6.000 $, oder 3000 € bzw. 3.000 €, oder 1200 £ oder 1.200 £ oder 100 ¥ oder 1.00 ¥ wenn sie das lieber haben.
 
@@ -123,7 +123,7 @@ Vestibulum vestibulum fringilla sapien, ac dignissim diam pretium nec.
 
 ## Ampersand
 
-Wenn man einen Firmennamen schreibt, sollte dies ersetzt werden:
+Wenn man einen Firmennamen[^2] schreibt, sollte dies ersetzt werden:
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Peter & Söhne. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
@@ -166,3 +166,6 @@ Und was ist mit diesem bizarren Link:
 [√] Peter &amp; der Wolf
 
 [x|√] <a href="http://www.google.de/?test=1&amp;lala=2&amp;bubu=3" title="Peter & der Wolf">Peter & der Wolf</a>
+
+[^1]: Dies ist eine Fußnote
+[^2]: Dies ist eine zweite Fußnote

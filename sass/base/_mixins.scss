@@ -3,7 +3,7 @@
 // ============================================================================
 
 // Masking images
-// ==============
+// ----------------------------------------------------------------------------
 @mixin mask-image($img, $repeat: no-repeat){
   width: image-width($img);
   height: image-height($img);
@@ -12,7 +12,7 @@
 }
 
 // Box with a shadow
-// =================
+// ----------------------------------------------------------------------------
 @mixin shadow-box($border: #fff .5em solid, $shadow: rgba(#000, .15) 0 1px 4px, $border-radius: .3em) {
   border: $border;
   @include border-radius($border-radius);
@@ -21,7 +21,7 @@
 }
 
 // ::selection
-// ===========
+// ----------------------------------------------------------------------------
 @mixin selection($bg, $color: inherit, $text-shadow: none){
   * {
     &::-moz-selection { background: $bg; color: $color; text-shadow: $text-shadow; }
@@ -31,7 +31,7 @@
 }
 
 // Quotes for `blockquote` in multiple languages
-// =============================================
+// ----------------------------------------------------------------------------
 @mixin pullquote-quotes($quotes) {
   quotes: $quotes;
   p:first-child:before {
@@ -44,7 +44,7 @@
 }
 
 // Quotes for `q` in multiple languages
-// ====================================
+// ----------------------------------------------------------------------------
 @mixin q-quotes($language, $quotes) {
   :lang(#{$language}) > q,
   .article-body q[lang|=#{$language}] {
@@ -56,7 +56,7 @@
 }
 
 // WebKit font-smoothing
-// =====================
+// ----------------------------------------------------------------------------
 //
 // References:
 //
