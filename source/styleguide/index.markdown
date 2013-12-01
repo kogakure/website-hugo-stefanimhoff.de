@@ -402,16 +402,6 @@ Das Eis zu betreten ist **verboten**!
 Das Eis zu betreten ist **verboten**!
 ```
 
-### Kleingedruckte Texte
-
-Das Element `small` wird verwendet um Ausschlussklauseln und rechtliche Hinweise, Copyrights und Kleingedrucktes auszuzeichnen. Es kann auch verwendet werden um die Quelle eines Werkes auszuzeichnen oder Lizenzen zu markieren:
-
-<small>Copyright © 1922-2011 Firmenname. All Rights Reserved</small>
-
-```html
-<small>Copyright © 1922-2011 Firmenname. All Rights Reserved</small>
-```
-
 ### Durchgestrichene Texte
 
 Das Element `s` wird verwendet um Inhalte auszuzeichnen, die nicht länger akturat oder relevant sind. Um in Dokumenten zu markieren, dass ein Text entfernt wurde, ist das Element `del` zu verwenden.
