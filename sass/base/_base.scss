@@ -80,9 +80,9 @@ strong {
 
 // Small print
 // ----------------------------------------------------------------------------
-small {
-  @include adjust-font-size-to($font-scale-small);
-}
+// small {
+//   @include adjust-font-size-to($font-scale-small);
+// }
 
 // Strikethrough
 // ----------------------------------------------------------------------------

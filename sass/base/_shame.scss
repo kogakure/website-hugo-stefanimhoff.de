@@ -20,7 +20,7 @@ body, .container {
 }
 
 .container {
-  background-image: inline-image("css/billie_holiday.png");
+  background-image: inline-image("css/billie_holiday_@2X.png");
   @include background-size(100px 100px);
 }
 
@@ -149,17 +149,16 @@ body, .container {
 
 // New header with article title (BETA)
 header#top {
-  @include trailer(1);
   background-color: #84a2aa;
   background-image: url(/images/css/test-header.jpg);
   background-position: center left;
   background-size: cover;
-  border-top: 10px solid black;
+  border-top: 10px solid #20310e;
   padding: 80px 0 20px 0;
   // background-attachment: fixed;
-  // @FIXME: Bug in Google Chrome/Opera.
-  // Can’t be used at the moment in combination
-  // with translate3d
+  // * @FIXME: Bug in Google Chrome/Opera.
+  // * Can’t be used at the moment in combination
+  // * with translate3d
 
   h1 {
     color: white;
@@ -172,5 +171,69 @@ header#top {
 }
 
 .article-title h1 {
-  @include squish(2, 2);
+  @extend %main-grid;
 }
+
+// New Footer (BETA)
+.contentinfo {
+  @extend %sans;
+  @include background-size(102px 102px);
+  background-image: inline-image("css/classy_fabric_@2X.png");
+  color: rgba(white, 0.25);
+  padding-top: $base-rhythm-unit;
+
+  .wrap {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+  small {
+    color: rgba($white, 0.3);
+    margin-top: $base-rhythm-unit;
+    display: block;
+    background-image: inline-image("css/dark_stripes_@2X.png");
+    @include background-size(50px 50px);
+    padding: 0.5em 0;
+
+    a {
+      @include link-colors($footer-link-color, $footer-link-color-active, $footer-link-color-active, $footer-link-color, $footer-link-color-active);
+      text-decoration: none;
+    }
+
+    ul, span {
+      @include adjust-font-size-to($base-font-size);
+    }
+
+    span b {
+      @extend %serif;
+    }
+
+    ul {
+      float: right;
+      margin: 0 0 0 0.5em;
+      list-style: none;
+      overflow: hidden;
+    }
+
+    li {
+      white-space: nowrap;
+      float: left;
+      padding-right: 0.5em;
+
+      &:after {
+        content: '·';
+        color: rgba($white, 0.3);
+        padding-left: 0.5em;
+      }
+
+      &:last-child {
+        padding-right: 0;
+
+        &:after {
+          content: none;
+        }
+      }
+    }
+  }
+}
+
