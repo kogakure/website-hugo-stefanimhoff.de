@@ -10,12 +10,22 @@ $white:                    #FFFFFF;
 $dark-grey:                #333333;
 $light-grey:               #DDDDDD;
 
+// Keyboard
 $keyboard-border:          #CCCCCC;
 $keyboard-background:      #F7F7F7;
-$sample-color:             #CCCCCC;
+
+// Sample
+$sample-color:             $white;
+$sample-background:        $dark-grey;
+
+// Definition
 $definition-color:         #999999;
+
+// Table
 $table-border-color:       #DDDDDD;
 $table-striped-background: #F9F9F9;
+
+// Image
 $image-border-color:       #CCCCCC;
 
 // Footer

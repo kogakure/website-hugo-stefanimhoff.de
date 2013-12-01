@@ -146,9 +146,16 @@ var {
 // ----------------------------------------------------------------------------
 samp {
   @extend %mono;
-  margin: 0 0.4em;
   color: $sample-color;
-  @include adjust-font-size-to(15px);
+  background: $sample-background;
+  border: 1px solid #ddd;
+  display: inline-block;
+  font-size: .8em;
+  line-height: 1.5em;
+  margin: -1px 0;
+  padding: 0 .3em;
+  white-space: no-wrap;
+  @include border-radius(.4em);
 }
 
 // Keyboard entry
