@@ -1,7 +1,7 @@
 {% unless page.no_header %}
   {% if page.title or post.title %}
     <header class="article-header">
-      <h1 class="article-title">{{ page.title | ampersand }}</h1>
+      <!-- <h1 class="article-title">{{ page.title | ampersand }}</h1> -->
       {% unless page.meta == false %}
         <p class="meta">
           {% include post/date.html %}{{ time }}
@@ -9,7 +9,6 @@
       {% endunless %}
     </header>
   {% endif %}
-  
 {% endunless %}
 
 {% unless index %}

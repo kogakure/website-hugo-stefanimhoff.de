@@ -146,3 +146,31 @@ body, .container {
 #nav .navigation--active {
   color: yellow;
 }
+
+// New header with article title (BETA)
+header#top {
+  @include trailer(1);
+  background-color: #84a2aa;
+  background-image: url(/images/css/test-header.jpg);
+  background-position: center left;
+  background-size: cover;
+  border-top: 10px solid black;
+  padding: 80px 0 20px 0;
+  // background-attachment: fixed;
+  // @FIXME: Bug in Google Chrome/Opera.
+  // Can’t be used at the moment in combination
+  // with translate3d
+
+  h1 {
+    color: white;
+    @include text-shadow(0 2px 3px black);
+  }
+}
+
+.article-title {
+  @include container;
+}
+
+.article-title h1 {
+  @include squish(2, 2);
+}
