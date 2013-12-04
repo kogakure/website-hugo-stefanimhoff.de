@@ -1,0 +1,122 @@
+{% capture language %}{% if page.language %}{{ page.language }}{% else %}de{% endif %}{% endcapture %}
+<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="de" class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="de" class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="de" class="no-js lt-ie9"><![endif]-->
+  <!--[if gt IE 8]><!--><html lang="{{ language }}" class="no-js"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>{% if page.title %}{{ page.title | strip_html }} – {% endif %}{{ site.title | strip_html }}</title>
+
+  <!-- Mobile -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="{{ site.title }}">
+
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="address=no">
+
+  <!-- Prefetch DNS -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//www.google-analytics.com">
+
+  <!-- Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Gentium+Basic:400,700,400italic|Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
+  <meta http-equiv="cleartype" content="on">
+
+  <!-- Robots -->
+  <meta name="robots" content="all">
+  {% capture description %}{% if page.description %}{{ page.description }}{% else %}{{ content | raw_content }}{% endif %}{% endcapture %}
+  <!-- Description -->
+  <meta name="description" content="{{ description | strip_html | condense_spaces | truncate:150 }}">
+
+  <!-- Social -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="{{ site.twitter }}">
+  <meta name="twitter:url" content="{{ site.url }}">
+  <meta name="twitter:title" content="{{ site.title }}">
+  <meta name="twitter:description" content="{{ description | strip_html | condense_spaces | truncate:150 }}">
+  <meta name="twitter:image" content="@TODO">
+
+  <meta property="og:url" content="{{ site.url }}" />
+  <meta property="og:title" content="{{ site.title }}">
+  <meta property="og:description" content="{{ description | strip_html | condense_spaces | truncate:150 }}">
+  <meta property="og:image" content="@TODO">
+
+  <link href="https://plus.google.com/{{ site.googleplus }}" rel="publisher">
+
+  <!-- Language -->
+  <meta name="content-language" content="{{ language }}">
+  {% capture author %}{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}{% endcapture %}
+  <!-- Author -->
+  <meta name="author" content="{{ author | strip_html | condense_spaces | truncate:100 }}">
+
+  <!-- Geo -->
+  <meta name="icbm" content="{{ site.geo_latitude }},{{ site.geo_longitude }}">
+  <meta name="geo.position" content="{{ site.geo_latitude }};{{ site.geo_longitude }}">
+  {% capture keywords %}{% if page.keywords %}{{ page.keywords }}{% else %}{{ site.keywords }}{% endif %}{% endcapture %}
+  <!-- Keywords -->
+  <meta name="keywords" content="{{ keywords | strip_html | condense_spaces | truncate:2000 }}">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="@TODO">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="@TODO">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="@TODO">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="@TODO">
+
+  <meta name="msapplication-TileImage" content="@TODO">
+  <meta name="msapplication-TileColor" content="#ffffff">
+
+  <link rel="shortcut icon" href="{{ site.url }}/favicon.ico">
+  <link rel="shortcut icon" href="@TODO">
+  <link rel="icon" href="@TODO" type="image/x-icon">
+
+  <link rel="apple-touch-startup-image" href="@TODO" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)">
+  <link rel="apple-touch-startup-image" href="@TODO" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio: 2)">
+  <link rel="apple-touch-startup-image" href="@TODO" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">
+  <link rel="apple-touch-startup-image" href="@TODO" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) and (-webkit-min-device-pixel-ratio: 2)">
+  <link rel="apple-touch-startup-image" href="@TODO" media="screen and (max-device-width: 320px) and (max-device-height: 1136px) and (-webkit-min-device-pixel-ratio: 2)">
+  <link rel="apple-touch-startup-image" href="@TODO" media="screen and (max-device-width: 320px) and (max-device-height: 460px)">
+  <link rel="apple-touch-startup-image" href="@TODO" media="screen and (max-device-width: 320px) and (max-device-height: 460px) and (-webkit-min-device-pixel-ratio: 2)">
+  {% capture canonical %}{{ site.url }}/{% if site.permalink contains '.html' %}{{ page.url }}{% else %}{{ page.url | remove:'index.html' | strip_slash }}{% endif %}{% endcapture %}
+  <!-- Canonical -->
+  <link rel="canonical" href="{{ canonical }}">
+  {% capture is_preview %}{% preview %}{% endcapture %}
+  {% if is_preview == 'true' %}
+  <!-- Stylesheets -->
+  <link href="{{ root_url }}/stylesheets/application.css" rel="stylesheet">
+  {% if page.custom_css %}<link href="{{ root_url }}/stylesheets/{{page.custom_css}}.css" rel="stylesheet">{% endif %}
+  {% else %}
+  <!-- Stylesheets -->
+  {% stylesheet application %}
+  {% if page.custom_css %}{{ page.custom_css | stylesheet }}{% endif %}
+  {% endif %}
+  <!--[if lt IE 9]>
+  <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <![endif]-->
+
+  <!-- Modernizer -->
+  <script src="{{ root_url }}/javascripts/libs/modernizr-2.6.2.min.js"></script>
+
+  <!-- Feeds -->
+  <link href="{{ site.subscribe_rss }}" rel="alternate" title="{{site.title}}" type="application/atom+xml">
+
+  <!-- OpenID -->
+  <link rel="openid.server" href="http://www.myopenid.com/server">
+  <link rel="openid.delegate" href="http://kogakure.myopenid.com/">
+  <meta http-equiv="X-XRDS-Location" content="http://kogakure.myopenid.com/xrds">
+
+  <!-- Switch off Microsoft junk -->
+  <meta name="MSSmartTagsPreventParsing" content="true">
+  <meta http-equiv="imagetoolbar" content="no">
+
+  <!-- Statistics: @TODO -->
+  {% comment %}{% include mint.html %}{% endcomment %}
+  {% comment %}{% include google_analytics.html %}{% endcomment %}
+</head>

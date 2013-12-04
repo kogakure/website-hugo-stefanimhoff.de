@@ -16,7 +16,7 @@ layout: nil
 
   {% for post in site.posts limit: 20 %}
     <entry>
-      {% include feed_entry.xml %}
+      {% include feeds/entry.xml %}
       <content type="html"><![CDATA[{{ content | cdata_escape }}]]></content>
     </entry>
   {% endfor %}
