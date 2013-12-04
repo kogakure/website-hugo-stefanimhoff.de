@@ -23,25 +23,25 @@ $(function() {
   // ==========
   // Open navigation by clicking on "open"
   $(".nav-btn").on("click", function(event) {
-    $("body").toggleClass("navigation--open");
+    $("body").toggleClass("navigation-is-open");
     event.preventDefault();
   });
 
   // Close navigation by clicking on "close"
   $(".nav-close-btn").on("click", function(event) {
-    $("body").removeClass("navigation--open");
+    $("body").removeClass("navigation-is-open");
     event.preventDefault();
   });
 
   // Close navigation by clicking somewhere in main column
   $(".main").on("click", function() {
-    $("body").removeClass("navigation--open");
+    $("body").removeClass("navigation-is-open");
   });
 
   // Close navigation after 1.5s after leaving the navigation
   $("#nav").on("mouseleave", function() {
     timer = window.setTimeout(function() {
-      $("body").removeClass("navigation--open");
+      $("body").removeClass("navigation-is-open");
     }, 1500);
   });
 
@@ -57,7 +57,7 @@ $(function() {
   // ==================================
   $('#nav a').filter(function() {
       return this.href == url;
-  }).addClass('navigation--active');
+  }).addClass('navigation-is-active');
 
 
   // Scroll smoothly to the top of the page

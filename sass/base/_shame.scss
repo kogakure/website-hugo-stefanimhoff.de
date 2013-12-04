@@ -101,7 +101,7 @@ body, .container {
     }
   }
 
-  .navigation--open {
+  .navigation-is-open {
     #nav {
       right: 0;
       height: 100%;
@@ -130,7 +130,7 @@ body, .container {
   }
 
   // Navigation is open
-  .navigation--open {
+  .navigation-is-open {
     #nav {
       @include transform(translate3d(0, 0, 0));
     }
@@ -143,7 +143,7 @@ body, .container {
 
 
 // Active Navigaiton styling
-#nav .navigation--active {
+#nav .navigation-is-active {
   color: yellow;
 }
 
