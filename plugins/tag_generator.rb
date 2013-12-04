@@ -36,7 +36,7 @@ module Jekyll
       @name = 'index.html'
       self.process(@name)
       # Read the YAML data from the layout page.
-      self.read_yaml(File.join(base, '_layouts'), 'tag_index.html')
+      self.read_yaml(File.join(base, '_layouts'), 'tags.html')
       self.data['tag']    = tag
       # Set the title for this page.
       title_prefix             = site.config['tag_title_prefix'] || 'Tag: '
@@ -105,7 +105,7 @@ module Jekyll
 
     # Loops through the list of tag pages and processes each one.
     def write_tag_indexes
-      if self.layouts.key? 'tag_index'
+      if self.layouts.key? 'tags'
         dir = self.config['tag_dir'] || 'tag'
         self.tags.keys.each do |tag|
           self.write_tag_index(File.join(dir, tag.gsub(/_|\W/, '-')), tag)
@@ -113,7 +113,7 @@ module Jekyll
 
       # Throw an exception if the layout couldn't be found.
       else
-        throw "No 'tag_index' layout found."
+        throw "No 'tags' layout found."
       end
     end
 
