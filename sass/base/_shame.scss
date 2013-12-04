@@ -179,7 +179,7 @@ header#top {
 }
 
 // New Footer (BETA)
-.contentinfo {
+.footer {
   @extend %sans;
   @include background-size(102px 102px);
   background-image: inline-image("css/classy_fabric_@2X.png");
