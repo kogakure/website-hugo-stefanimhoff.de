@@ -16,8 +16,10 @@
 # - tag_dir:          The subfolder to build tag pages in (default is 'tags').
 # - tag_title_prefix: The string used before the tag name in the page title (default is
 #                          'Tag: ').
-module Jekyll
 
+require 'stringex'
+
+module Jekyll
 
   # The TagIndex class creates a single tag page for the specified tag.
   class TagIndex < Page
@@ -92,12 +94,13 @@ module Jekyll
       self.pages << index
 
       # Create an Atom-feed for each index.
-      feed = TagFeed.new(self, self.source, tag_dir, tag)
-      feed.render(self.layouts, site_payload)
-      feed.write(self.dest)
-      # Record the fact that this page has been added, otherwise Site::cleanup will remove it
-
-      self.pages << feed
+      if self.config['tag_feeds']
+        feed = TagFeed.new(self, self.source, tag_dir, tag)
+        feed.render(self.layouts, site_payload)
+        feed.write(self.dest)
+        # Record the fact that this page has been added, otherwise Site::cleanup will remove it
+        self.pages << feed
+      end
     end
 
     # Loops through the list of tag pages and processes each one.

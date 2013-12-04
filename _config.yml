@@ -14,13 +14,6 @@ geo_longitude: "10.102015"
 
 date_format: "%d.%m.%Y"
 
-# RSS / Email (optional) subscription links (change if using something like Feedburner)
-subscribe_rss: "/atom.xml"
-subscribe_email:
-category_feeds: false
-# RSS feeds can list your email address if you like
-email:
-
 # ----------------------- #
 #    Jekyll & Plugins     #
 # ----------------------- #
@@ -56,11 +49,19 @@ linklog_marker_position: after
 linklog_marker_position_feed: after
 standard_post_marker:
 
+# RSS / Email (optional) subscription links (change if using something like Feedburner)
+subscribe_rss: "/atom.xml"
+subscribe_email:
+# RSS feeds can list your email address if you like
+email:
+
 # Categories
+category_feeds: true
 category_dir: thema
 category_title_prefix: "Thema: "
 
 # Tags
+tag_feeds: true
 tag_dir: tag
 tag_title_prefix: "Tags: "
 
