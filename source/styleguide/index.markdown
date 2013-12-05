@@ -625,7 +625,7 @@ Tabellen sollten verwendet werden, um tabellarische Daten anzuzeigen. Die Elemen
 ### Gestreifte Tabellen
 
 <figure class="table-figure">
-<table class="table table-striped">
+<table class="table--striped">
   <thead>
     <tr>
       <th>#</th>
@@ -659,7 +659,7 @@ Tabellen sollten verwendet werden, um tabellarische Daten anzuzeigen. Die Elemen
 
 ```html
 <figure class="table-figure">
-<table class="table table-striped">
+<table class="table--striped">
 …
 </table>
 </figure>
@@ -668,7 +668,7 @@ Tabellen sollten verwendet werden, um tabellarische Daten anzuzeigen. Die Elemen
 ### Tabellen mit Rand
 
 <figure class="table-figure">
-<table class="table table-bordered">
+<table class="table--bordered">
   <thead>
     <tr>
       <th>#</th>
@@ -702,7 +702,7 @@ Tabellen sollten verwendet werden, um tabellarische Daten anzuzeigen. Die Elemen
 
 ```html
 <figure class="table-figure">
-<table class="table table-bordered">
+<table class="table--bordered">
 …
 </table>
 </figure>
@@ -711,7 +711,7 @@ Tabellen sollten verwendet werden, um tabellarische Daten anzuzeigen. Die Elemen
 ### Tabellen mit Hover-Interaktion
 
 <figure class="table-figure">
-<table class="table table-hover">
+<table class="table--hover">
   <thead>
     <tr>
       <th>#</th>
@@ -745,7 +745,7 @@ Tabellen sollten verwendet werden, um tabellarische Daten anzuzeigen. Die Elemen
 
 ```html
 <figure class="table-figure">
-<table class="table table-hover">
+<table class="table-hover">
 …
 </table>
 </figure>
@@ -754,7 +754,7 @@ Tabellen sollten verwendet werden, um tabellarische Daten anzuzeigen. Die Elemen
 ### Verdichtete Tabellen
 
 <figure class="table-figure">
-<table class="table table-condensed">
+<table class="table--condensed">
   <thead>
     <tr>
       <th>#</th>
@@ -788,7 +788,7 @@ Tabellen sollten verwendet werden, um tabellarische Daten anzuzeigen. Die Elemen
 
 ```html
 <figure class="table-figure">
-<table class="table table-condensed">
+<table class="table--condensed">
 …
 </table>
 </figure>
