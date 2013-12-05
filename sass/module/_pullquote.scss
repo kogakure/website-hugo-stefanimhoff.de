@@ -2,28 +2,15 @@
 // Pullquote
 // ============================================================================
 
-.pullquote {
+%pullquote {
+  @include adjust-font-size-to(25.888px);
+  font-style: italic;
+}
+
+blockquote.pullquote {
+  @extend %pullquote;
   @include adjust-font-size-to(41.887px);
   text-align: center;
-}
-
-.pullquote-right:before,
-.pullquote-left:before {
-  @include adjust-font-size-to(25.888px);
-  border: 0;
-  content: attr(data-pullquote);
-  float: right;
-  margin: 0 columns(-3) $base-rhythm-unit $base-rhythm-unit;
-  padding: 0;
-  position: relative;
-  top: 10px;
-  width: columns(4, 8);
-}
-
-.pullquote-left:before {
-  float: left;
-  margin: 0 $base-rhythm-unit $base-rhythm-unit columns(-3);
-  width: columns(4, 8);
 }
 
 blockquote.pullquote[lang|=de] {
@@ -36,4 +23,24 @@ blockquote.pullquote[lang|=en] {
 
 blockquote.pullquote[lang|=ja] {
   @include pullquote-quotes('「' '」' '『' '』');
+}
+
+.pullquote--right:before,
+.pullquote--left:before {
+  @extend %pullquote;
+  border: 0;
+  content: attr(data-pullquote);
+  float: right;
+  margin: 0 columns(-3) $base-rhythm-unit $base-rhythm-unit;
+  padding: 0;
+  position: relative;
+  top: 10px;
+  width: columns(4, 8);
+}
+
+.pullquote--left:before {
+  float: left;
+  margin: 0 $base-rhythm-unit $base-rhythm-unit columns(-3);
+  text-align: right;
+  width: columns(4, 8);
 }
