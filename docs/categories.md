@@ -16,5 +16,6 @@ Rant
 Server
 Software
 Typographie
+Technik
 Versionskontrolle
 Website

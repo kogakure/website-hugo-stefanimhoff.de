@@ -5,6 +5,9 @@ apple
 appletv
 automatisierung
 blender
+macosx
+hardware
+software
 buch
 business
 capistrano
