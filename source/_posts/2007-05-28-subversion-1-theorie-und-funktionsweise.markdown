@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Subversion (1) – Theorie und Funktionsweise"
+author: "Stefan Imhoff"
 date: 2007-05-28 18:04
 description: "Theorie und Funktionsweise von Subversion."
 categories:

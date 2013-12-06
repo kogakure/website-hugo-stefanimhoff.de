@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Subversion (6) – Ein paar wichtige Befehle"
+author: "Stefan Imhoff"
 date: 2007-11-02 19:24
 description: "Nützliche und Notwendige Befehle für den täglichen Gebrauch in Subversion."
 categories:

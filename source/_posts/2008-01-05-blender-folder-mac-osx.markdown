@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Blender Folder für Mac OS X"
+author: "Stefan Imhoff"
 date: 2008-01-05 13:00
 description: "Blender-Ordner-Icon für Mac OS X zum Download."
 categories:

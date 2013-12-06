@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "5 gefährliche Dinge, die jedes Kind gemacht haben sollte"
+author: "Stefan Imhoff"
 date: 2008-02-03 12:34
 description: "Zusammenfassung des TED-Vortrags '5 dangerous things you should let your kids do' von Gever Tulley."
 categories:

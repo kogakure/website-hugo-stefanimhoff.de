@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Lokalisierung von Projekten mit Django"
+author: "Stefan Imhoff"
 date: 2008-08-30 15:25
 description: "Einführung in die Lokalisierung und Internationalisierung einer Django-Applikation."
 categories:

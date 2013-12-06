@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "HOME – Atemberaubende Dokumentation über unsere Erde"
+author: "Stefan Imhoff"
 date: 2009-06-15 17:23
 description: "Filmempfehlung: Die Naturdokumentation 'Home' von Yann Arthus-Bertrand."
 categories:

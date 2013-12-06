@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Subversion (5) – Arbeiten mit Subversion"
+author: "Stefan Imhoff"
 date: 2007-09-04 18:45
 description: "Grundlegende Arbeitsschritte mit Subversion."
 categories:

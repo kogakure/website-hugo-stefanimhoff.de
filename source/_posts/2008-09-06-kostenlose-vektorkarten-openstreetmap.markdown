@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Kostenlose Vektorkarten mit OpenStreetMap"
+author: "Stefan Imhoff"
 date: 2008-09-06 18:59
 description: "Einführung in OpenStreetMap."
 categories:

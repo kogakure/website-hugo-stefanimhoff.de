@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Lebensmittel-Datenbank"
+author: "Stefan Imhoff"
 date: 2007-08-28 08:24
 description: "FDDB, das kostenlose Ernährungstagebuch und Lebensmittel-Datenbank."
 categories:

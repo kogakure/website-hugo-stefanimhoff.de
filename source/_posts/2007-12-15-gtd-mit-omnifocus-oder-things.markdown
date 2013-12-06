@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "GTD mit OmniFocus oder Things?"
+author: "Stefan Imhoff"
 date: 2007-12-15 19:57
 description: "OmniFocus und Things im Vergleich als GTD-Tool für Mac OS X."
 categories:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Server-Verwaltung mit Capistrano"
+author: "Stefan Imhoff"
 date: 2008-05-01 18:18
 description: "Einführung in Serververwaltung mit Capistrano."
 categories:

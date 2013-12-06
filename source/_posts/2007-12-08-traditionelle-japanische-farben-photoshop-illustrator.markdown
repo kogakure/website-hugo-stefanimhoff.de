@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Traditionelle, japanische Farben für Photoshop und Illustrator"
+author: "Stefan Imhoff"
 date: 2007-12-08 21:05
 description: "Traditionelle, japanische Farben als Farbpalette für Photoshop und Illustrator zum Download."
 categories:

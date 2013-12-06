@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Automatisierung mit Keyboard Maestro"
+author: "Stefan Imhoff"
 date: 2011-03-27 12:58
 description: "Keyboard Maestro als mächtige Werkzeug zum automatisieren von Prozessen unter Mac OS X."
 categories:

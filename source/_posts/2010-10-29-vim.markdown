@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Bei der Macht von Vim – ich habe die Kraft"
+author: "Stefan Imhoff"
 date: 2010-10-29 19:00
 description: "Warum Vim so genial ist, und wie man am besten in Vim einsteigt."
 categories:

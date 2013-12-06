@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Server-Verwaltung mit Fabric"
+author: "Stefan Imhoff"
 date: 2008-11-07 12:00
 description: "Einführung in Serververwaltung mit Fabric."
 categories:

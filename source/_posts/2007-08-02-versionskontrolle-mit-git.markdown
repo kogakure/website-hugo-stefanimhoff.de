@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Versionskontrolle mit Git"
+author: "Stefan Imhoff"
 date: 2007-08-02 17:53
 description: "Vorzüge von Git gegenüber anderen Versionskontrollsystemen."
 categories:

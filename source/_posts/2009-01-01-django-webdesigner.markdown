@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Django für Webdesigner"
+author: "Stefan Imhoff"
 date: 2009-01-01 11:00
 description: "Einführung in Django für Webdesigner"
 categories:

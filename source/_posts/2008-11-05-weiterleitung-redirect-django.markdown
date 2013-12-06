@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Weiterleitungen in Django"
+author: "Stefan Imhoff"
 date: 2008-11-05 07:00
 description: "Einführung in das Modul für Weiterleitung von Django."
 categories:

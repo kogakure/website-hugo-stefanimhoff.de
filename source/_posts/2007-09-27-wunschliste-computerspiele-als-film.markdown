@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Wunschliste: Computerspiele als Film"
+author: "Stefan Imhoff"
 date: 2007-09-27 20:00
 description: "Meine persönliche Wunschliste, für Computerspiele, die ich gerne verfilmt sehen würde."
 categories:

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Domains extern hosten"
+author: "Stefan Imhoff"
 date: 2007-05-30 23:55
 description: "Domains getrennt vom Webhosting-Paket hosten und was das für Vorteile bringt."
 categories:

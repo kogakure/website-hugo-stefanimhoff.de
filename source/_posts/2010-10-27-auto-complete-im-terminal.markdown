@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Auto-Complete im Terminal"
+author: "Stefan Imhoff"
 date: 2010-10-27 18:30
 description: "Auto-Complete-Skripte für das Terminal selber schreiben."
 categories:

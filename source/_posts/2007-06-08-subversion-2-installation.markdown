@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Subversion (2) – Installation"
+author: "Stefan Imhoff"
 date: 2007-06-08 01:00
 description: "Installation von Subversion."
 categories:

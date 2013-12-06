@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Git-Präsentation"
+author: "Stefan Imhoff"
 date: 2009-08-08 13:00
 description: "Git-Präsentation 'Sei (k)ein Blödmann und nimm Git!'."
 categories:

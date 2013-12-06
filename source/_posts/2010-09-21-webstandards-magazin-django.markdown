@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Webstandards-Magazin: Artikel über Django"
+author: "Stefan Imhoff"
 date: 2010-09-21 09:25
 description: "Mein Artikel für das Webstandards-Magazin zum Thema Django."
 categories:
