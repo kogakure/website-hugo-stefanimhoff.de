@@ -3,8 +3,13 @@ layout: post
 title: "Duplikation ist in Ordnung"
 date: 2013-11-27 12:45
 comments: false
-categories: Code
-tags: [html, rubyonrails, erb, dry]
+categories:
+- Code
+tags:
+- html
+- rubyonrails
+- erb
+- dry
 ---
 
 Immer wieder wird Entwicklern das Prinzip von DRY eingetrichtert, was im Prinzip besagt, dass duplizierter Code schlecht ist. Und das stimmt auch so für Code.

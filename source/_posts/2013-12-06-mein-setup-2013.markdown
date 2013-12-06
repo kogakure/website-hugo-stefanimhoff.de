@@ -3,8 +3,13 @@ layout: post
 title: "Mein Setup 2013"
 date: 2013-12-06 20:45
 comments: false
-categories: [Empfehlung, Technik]
-tags: [macosx, hardware, software]
+categories:
+- Empfehlung
+- Technik
+tags:
+- macosx
+- hardware
+- software
 ---
 
 Das Jahr neigt ist fast zu Ende und damit scheint es mir der richtige Zeitpunkt zu sein in diesem Blog-Artikel auf meine aktuelle Arbeitsumgebung einzugehen.

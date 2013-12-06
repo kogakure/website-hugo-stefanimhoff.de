@@ -3,8 +3,14 @@ layout: post
 title: "Server-Verwaltung mit Fabric"
 date: 2008-11-07 12:00
 description: "Einführung in Serververwaltung mit Fabric."
-categories: [Server, Code]
-tags: [python, deployment, server, fabric]
+categories:
+- Server
+- Code
+tags:
+- python
+- deployment
+- server
+- fabric
 ---
 
 Vor einiger Zeit habe ich meinen Workflow mit Capistrano beschrieben, und wie man damit einen Server fernwarten kann. Kürzlich bin ich auf das in Python geschriebene, viel schlankere Tool <cite>Fabric</cite> aufmerksam gemacht worden.

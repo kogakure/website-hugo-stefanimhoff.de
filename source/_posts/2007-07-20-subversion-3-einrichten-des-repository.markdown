@@ -3,8 +3,11 @@ layout: post
 title: "Subversion (3) – Einrichten des Repository"
 date: 2007-07-20 09:00
 description: "Ein Repository mit Subversion einrichten."
-categories: [Versionskontrolle]
-tags: [subversion, tutorial]
+categories:
+- Versionskontrolle
+tags:
+- subversion
+- tutorial
 ---
 
 Um mit Subversion zu arbeiten, muss man sich zuerst ein *Repository* (eine Ablage/Depot) erstellen, in dem das spätere Projekt liegt.

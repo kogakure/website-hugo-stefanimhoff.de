@@ -3,8 +3,10 @@ layout: post
 title: "Auto-Complete im Terminal"
 date: 2010-10-27 18:30
 description: "Auto-Complete-Skripte für das Terminal selber schreiben."
-categories: [Code]
-tags: [terminal]
+categories:
+- Code
+tags:
+- terminal
 ---
 
 Für mich gehört ständige Verbesserung (<ruby>改善<rp>（</rp><rt>かいぜん</rt><rp>)<rp></ruby>, jap. Kaizen) zur täglichen Arbeit dazu. Was mich aber seit längerem gestört hat, ist wenn ich die Namen des zu klonenden Git-Repositorys per Hand tippen muss. Auto-Complete bietet hier eine Lösung.

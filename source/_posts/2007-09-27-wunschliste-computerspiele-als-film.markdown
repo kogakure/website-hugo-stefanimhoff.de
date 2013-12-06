@@ -3,8 +3,12 @@ layout: post
 title: "Wunschliste: Computerspiele als Film"
 date: 2007-09-27 20:00
 description: "Meine persönliche Wunschliste, für Computerspiele, die ich gerne verfilmt sehen würde."
-categories: [Persönlich]
-tags: [kino, film, game]
+categories:
+- Persoenlich
+tags:
+- kino
+- film
+- game
 ---
 
 Computerspiele bieten oft eine interessante und spannende Story, doch leider gelingt die Umsetzung im Film nur selten. Hier ist meine persönliche Wunschliste von Computerspielen, die ich gerne verfilmt sehen würde.

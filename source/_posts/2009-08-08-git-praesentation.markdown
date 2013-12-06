@@ -3,8 +3,12 @@ layout: post
 title: "Git-Präsentation"
 date: 2009-08-08 13:00
 description: "Git-Präsentation 'Sei (k)ein Blödmann und nimm Git!'."
-categories: [Versionskontrolle, Präsentation]
-tags: [git, präsentation]
+categories:
+- Versionskontrolle
+- Praesentation
+tags:
+- git
+- praesentation
 ---
 
 Auf dem 4. Treffen der Django-UserGroup Hamburg habe ich eine Präsentation über Git vorgetragen, die ich hier als PDF zum Download anbiete.

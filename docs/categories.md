@@ -8,9 +8,9 @@ Downloads
 Empfehlung
 Film
 Hilfe
-Persönlich
-Produktivität
-Präsentation
+Persoenlich
+Produktivitaet
+Praesentation
 Publikation
 Rant
 Server

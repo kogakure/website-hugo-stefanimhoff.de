@@ -3,8 +3,11 @@ layout: post
 title: "Subversion (6) – Ein paar wichtige Befehle"
 date: 2007-11-02 19:24
 description: "Nützliche und Notwendige Befehle für den täglichen Gebrauch in Subversion."
-categories: [Versionskontrolle]
-tags: [subversion, tutorial]
+categories:
+- Versionskontrolle
+tags:
+- subversion
+- tutorial
 ---
 
 Es gibt in Subversion noch ein paar nützliche und notwendige Befehle, die man im täglichen Umgang brauchen wird.

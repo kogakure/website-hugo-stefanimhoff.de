@@ -3,8 +3,14 @@ layout: post
 title: "Server-Verwaltung mit Capistrano"
 date: 2008-05-01 18:18
 description: "Einführung in Serververwaltung mit Capistrano."
-categories: [Server, Code]
-tags: [ruby, server, deployment, capistrano]
+categories:
+- Server
+- Code
+tags:
+- ruby
+- server
+- deployment
+- capistrano
 ---
 
 Wer einen Webserver oder VirtualHost sein eigen nennt, sollte sich unbedingt Capistrano ansehen, ein Programm, das es ermöglicht diverse Aufgaben zu automatisieren.

@@ -46,7 +46,7 @@ moinmoin
 nahrung
 openstreetmap
 photoshop
-präsentation
+praesentation
 python
 redirect
 relaunch

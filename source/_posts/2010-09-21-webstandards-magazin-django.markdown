@@ -3,8 +3,10 @@ layout: post
 title: "Webstandards-Magazin: Artikel über Django"
 date: 2010-09-21 09:25
 description: "Mein Artikel für das Webstandards-Magazin zum Thema Django."
-categories: [Publikation]
-tags: [django]
+categories:
+- Publikation
+tags:
+- django
 ---
 
 Da lag es im Briefkasten: mein Belegexemplar der aktuellen Ausgabe 07/2010 des Webstandards-Magazin. Für mich ist dies eine Premiere, denn ich habe meinen ersten Artikel für das Webstandards-Magazin geschrieben.

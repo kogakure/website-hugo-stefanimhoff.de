@@ -3,8 +3,11 @@ layout: post
 title: "Subversion (5) – Arbeiten mit Subversion"
 date: 2007-09-04 18:45
 description: "Grundlegende Arbeitsschritte mit Subversion."
-categories: [Versionskontrolle]
-tags: [subversion, tutorial]
+categories:
+- Versionskontrolle
+tags:
+- subversion
+- tutorial
 ---
 
 Die eigentliche Arbeit mit Subversion ist relativ leicht erklärt und gelernt. Von größeren Aktionen wie `merge` mal abgesehen.
