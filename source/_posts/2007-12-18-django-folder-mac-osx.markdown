@@ -1,10 +1,16 @@
 ---
 layout: post
 title: "Django Folder für Mac OS X"
+author: "Stefan Imhoff"
 date: 2007-12-18 22:10
 description: "Django-Ordner-Icon für Mac OS X zum Download."
-categories: [Downloads]
-tags: [django, design, macosx, customize]
+categories:
+- Downloads
+tags:
+- django
+- design
+- macosx
+- customize
 ---
 
 Bei Wishingline gibt es zwei schöne Folder-Icons von [Rails und Lighttpd](http://scottboms.com/2007/12/railslighttpdiconsforleopard/). Diese Idee habe ich mir zum Anlass genommen einen Ordner für Django zu erstellen.

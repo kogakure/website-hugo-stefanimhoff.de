@@ -3,11 +3,11 @@
 #
 # Outputs a aside tag
 #
-#   {% aside aside-left %}
+#   {% aside aside--left %}
 #   ...
 #   {% endaside %}
 #
-#   {% aside aside-right %}
+#   {% aside aside--right %}
 #   ...
 #   {% endaside %}
 
@@ -44,7 +44,7 @@ module Jekyll
 
       source += "\n</aside>"
 
-      output = "<div class=\"aside\">\n"
+      output = "<div class=\"aside-block\">\n"
       output += source
       output += "\n</div>"
 

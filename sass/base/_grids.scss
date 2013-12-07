@@ -27,13 +27,16 @@ $default-rhythm-border-style: solid;
 // Layout
 // ----------------------------------------------------------------------------
 .page .main,
-.post .main {
+.post .main,
+.wrap {
   @include container;
 }
 
 .post .article,
 .page .article {
   @extend %main-grid;
+  @include leader(1);
+  @include trailer(2);
 }
 
 header {

@@ -1,0 +1,28 @@
+// ============================================================================
+// Footnotes
+// ============================================================================
+//
+// To set a footnote do this syntax[^1]
+//
+// To describe a footnote use this:
+//
+// [^1]: Description of the footnote
+
+sup a[rel="footnote"] {
+  @extend %sans;
+  @include link-colors($dark-grey, $dark-grey, $dark-grey, $dark-grey, $dark-grey);
+  cursor: help;
+  text-decoration: none;
+}
+
+.footnotes {
+  @extend %sans;
+  @include adjust-font-size-to(modular-scale(1));
+  color: lighten($dark-grey, 40);
+
+  a[rev="footnote"] {
+    @include link-colors($dark-grey, $dark-grey, $dark-grey, $dark-grey, $dark-grey);
+    text-decoration: none;
+    margin-left: 0.25em;
+  }
+}

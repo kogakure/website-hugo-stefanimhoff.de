@@ -10,13 +10,37 @@ $white:                    #FFFFFF;
 $dark-grey:                #333333;
 $light-grey:               #DDDDDD;
 
+// Keyboard
 $keyboard-border:          #CCCCCC;
 $keyboard-background:      #F7F7F7;
-$sample-color:             #CCCCCC;
+
+// Sample
+$sample-color:             $white;
+$sample-background:        $dark-grey;
+
+// Definition
 $definition-color:         #999999;
+
+// Table
 $table-border-color:       #DDDDDD;
 $table-striped-background: #F9F9F9;
+
+// Image
 $image-border-color:       #CCCCCC;
+
+// Footer
+$footer-link-color:        rgba($white, 0.5);
+$footer-link-color-active: $white;
+
+// Animations
+// ----------------------------------------------------------------------------
+
+// Curves
+$cubic-bezier-bouncing: cubic-bezier(0.205, 0.010, 0.005, 1.000);
+
+
+// Animations
+$animation-off-screen-menu: transform 500ms $cubic-bezier-bouncing;
 
 // Typography
 // ----------------------------------------------------------------------------
@@ -40,7 +64,7 @@ $bold:          700;
 
 // Font Families
 $base-font-family:           'Gentium Basic', serif;
-$base-font-sans:             Arial, Helvetica, sans-serif;
+$base-font-sans:             'Yanone Kaffeesatz', Arial, Helvetica, sans-serif;
 $base-font-mono:             Menlo, Monaco, 'Andale Mono', 'Lucida console', 'Courier New', monospace;
 $base-font-japanese:         'Hiragino Maru Gothic Pro', sans-serif;
 

@@ -1,10 +1,16 @@
 ---
 layout: post
 title: "Blender Folder für Mac OS X"
+author: "Stefan Imhoff"
 date: 2008-01-05 13:00
 description: "Blender-Ordner-Icon für Mac OS X zum Download."
-categories: [Downloads]
-tags: [blender, design, macosx, customize]
+categories:
+- Downloads
+tags:
+- blender
+- design
+- macosx
+- customize
 ---
 
 Da mein [Django Folder-Icon](/django-folder-mac-osx/ "Django Folder für Mac OS X Leopard • Notizen • Stefan Imhoff"), das ich im Dezember veröffentlicht habe, ein riesiger Erfolg war und schon unzählige Male heruntergeladen wurde, habe ich einen neuen Ordner erstellt – dieses mal für Blender.

@@ -15,20 +15,20 @@
 
 // Layout on div and margin to the bottom
 div.figure {
-  float: left;
-  clear: both;
   @include trailer(1);
+  clear: both;
+  float: left;
 }
 
 // Fullsize image reaching from edge to edge
 // ----------------------------------------------------------------------------
-.figure-fullsize {
+.figure--fullsize {
   @extend %grid-12-of-8-break-out;
 }
 
 // Image left aligned with caption to the right
 // ----------------------------------------------------------------------------
-.figure-hangleft {
+.figure--hangleft {
   @extend %grid-12-of-8-break-out;
 
   img {
@@ -44,7 +44,7 @@ div.figure {
 
 // Image right aligned with caption to the left
 // ----------------------------------------------------------------------------
-.figure-hangright {
+.figure--hangright {
   @extend %grid-12-of-8-break-out;
 
   img {
@@ -60,13 +60,13 @@ div.figure {
 
 // Image centered with caption below
 // ----------------------------------------------------------------------------
-.figure-center {
+.figure--center {
   @extend %grid-10-of-8-break-out;
 }
 
 // Figure with a long caption
 // ----------------------------------------------------------------------------
-.figure-longcaption {
+.figure--longcaption {
   figcaption {
     text-align: left;
   }
@@ -77,12 +77,12 @@ div.figure {
 // Border is now a default, but there might be images which need a border
 // (white/bright background). These should become an additional class attribute
 // for a border.
-.figure-border img {
+.figure--border img {
   border: 3px solid $image-border-color;
 }
 
 // Figure with a shadow
 // ----------------------------------------------------------------------------
-.figure-shadow img {
+.figure--shadow img {
   @include box-shadow(0 1px 3px rgba($black, 0.5));
 }

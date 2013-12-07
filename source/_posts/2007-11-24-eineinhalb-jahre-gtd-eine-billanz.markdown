@@ -1,10 +1,13 @@
 ---
 layout: post
 title: "Eineinhalb Jahre GTD – Eine Billanz"
+author: "Stefan Imhoff"
 date: 2007-11-24 01:15
 description: "Einführung in GTD (Getting Things Done)."
-categories: [Produktivität]
-tags: [gtd]
+categories:
+- Produktivitaet
+tags:
+- gtd
 ---
 
 Seit genau eineinhalb Jahren benutze ich jetzt die Prinzipien des *GTD* (<em>Getting Things Done</em>®), nach dem gleichnamigen Buch von *David Allen* um meine alltäglichen Aufgaben zu organisieren.

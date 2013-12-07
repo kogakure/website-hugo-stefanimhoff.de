@@ -2,6 +2,8 @@
 // Mixins
 // ============================================================================
 
+// Masking images
+// ----------------------------------------------------------------------------
 @mixin mask-image($img, $repeat: no-repeat){
   width: image-width($img);
   height: image-height($img);
@@ -9,6 +11,8 @@
   @include experimental(mask-repeat, $repeat, -webkit, -moz, -o, -ms);
 }
 
+// Box with a shadow
+// ----------------------------------------------------------------------------
 @mixin shadow-box($border: #fff .5em solid, $shadow: rgba(#000, .15) 0 1px 4px, $border-radius: .3em) {
   border: $border;
   @include border-radius($border-radius);
@@ -17,6 +21,7 @@
 }
 
 // ::selection
+// ----------------------------------------------------------------------------
 @mixin selection($bg, $color: inherit, $text-shadow: none){
   * {
     &::-moz-selection { background: $bg; color: $color; text-shadow: $text-shadow; }
@@ -25,8 +30,41 @@
   }
 }
 
-@function text-color($color, $dark: dark, $light: light){
-  $text-color: ( (red($color)*299) + (green($color)*587) + (blue($color)*114) ) / 1000;
-  $text-color: if($text-color >= 150, $dark, $light);
-  @return $text-color;
+// Quotes for `blockquote` in multiple languages
+// ----------------------------------------------------------------------------
+@mixin pullquote-quotes($quotes) {
+  quotes: $quotes;
+  p:first-child:before {
+    content: open-quote;
+  }
+
+  p:last-child:after {
+    content: close-quote;
+  }
+}
+
+// Quotes for `q` in multiple languages
+// ----------------------------------------------------------------------------
+@mixin q-quotes($language, $quotes) {
+  :lang(#{$language}) > q,
+  .article-body q[lang|=#{$language}] {
+    quotes: $quotes;
+    @if $language == "ja" {
+      font-style: normal;
+    }
+  }
+}
+
+// WebKit font-smoothing
+// ----------------------------------------------------------------------------
+//
+// References:
+//
+// 1. http://maxvoltar.com/sandbox/fontsmoothing/
+// 2. http://maxvoltar.com/archive/-webkit-font-smoothing
+//
+// Values: none, antialiased (default), subpixel-antialiased
+//
+@mixin font-smoothing($value: antialiased) {
+  -webkit-font-smoothing: $value !important;
 }

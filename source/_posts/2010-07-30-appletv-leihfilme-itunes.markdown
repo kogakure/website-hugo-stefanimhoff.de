@@ -1,10 +1,15 @@
 ---
 layout: post
 title: "AppleTV und die Leihfilme auf iTunes"
+author: "Stefan Imhoff"
 date: 2010-07-30 07:00
 description: "Meine Gedanken zum Thema Leihfilme auf iTunes."
-categories: [Rant]
-tags: [apple, appletv, itunes]
+categories:
+- Rant
+tags:
+- apple
+- appletv
+- itunes
 ---
 
 Ich bin seit fast zwei Jahren Besitzer eines AppleTV und finde das Gerät wirklich spitze. Was ich aber nicht verstehen kann, ist nach welchen Kriterien Studios sich entscheiden Ihre Filme dort zu veröffentlichen.

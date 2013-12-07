@@ -1,10 +1,13 @@
 ---
 layout: post
 title: "5 gefährliche Dinge, die jedes Kind gemacht haben sollte"
+author: "Stefan Imhoff"
 date: 2008-02-03 12:34
 description: "Zusammenfassung des TED-Vortrags '5 dangerous things you should let your kids do' von Gever Tulley."
-categories: [Empfehlung]
-tags: [tedtalk]
+categories:
+- Empfehlung
+tags:
+- tedtalk
 ---
 
 Ich bin gerade auf [TED](http://www.ted.com/) über den Vortrag [5 dangerous things you should let your kids do](http://www.youtube.com/watch?v=NXhddUqNNjo) von Gever Tulley gestoßen, der darin sogar 6 gefährliche Dinge vorstellt, die jedes Kind gemacht haben sollte.

@@ -8,13 +8,14 @@ Downloads
 Empfehlung
 Film
 Hilfe
-Persönlich
-Produktivität
-Präsentation
+Persoenlich
+Produktivitaet
+Praesentation
 Publikation
 Rant
 Server
 Software
 Typographie
+Technik
 Versionskontrolle
 Website
