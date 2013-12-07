@@ -13,26 +13,43 @@ custom_css: "custom_demo"
 
 ## Testing des Markdown-Parser
 
-Dies ist ein Absatz.
-
 <section>
-Dies ist eine Section.
+Eine Section
 </section>
 
-Dies ist ein Absatz.
-
 <aside>
-Dies ist eine Aside.
+Eine Aside
 </aside>
 
 Dies ist ein Absatz.
 
-<figure>
-<img src="http://lorempixel.com/680/400/nature/" alt="Example image">
-<figcaption>Dies ist der Untertitel</figure>
-</figure>
+Dies ist ein Absatz. Autolink: www.google.de, http://google.de, google.de
 
-Dies ist ein Absatz.
+Tables
+
+| Tables        | Are             | Cool   |
+| ------------- | :-------------: | -----: |
+| col 3 is      | right-aligned   | $1600  |
+| col 2 is      | centered        | $12    |
+| zebra stripes | are neat        | $1     |
+
+Fenced Code block
+
+Dies ist ein BlockCode
+
+Blockcode Ende
+
+~~strikethrough~~, Superscript: 2^(nd), _underlined_, ==hightlight== This is a "quote"
+
+A footnote. [^1]
+
+[^1]: Footnote
+
+```ruby
+require 'redcarpet'
+markdown = Redcarpet.new("Hello World!")
+puts markdown.to_html
+```
 
 ## Verse-Plugin
 {% verse %}

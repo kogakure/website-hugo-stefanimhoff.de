@@ -69,7 +69,7 @@ include:
   - .htaccess
 
 # Markdown
-markdown:     rdiscount
+markdown: rdiscount
 rdiscount:
   extensions:
     - autolink
