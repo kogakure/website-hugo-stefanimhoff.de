@@ -8,6 +8,29 @@ tags: [test]
 custom_css: "custom_demo"
 ---
 
+## Testing des Markdown-Parser
+
+Dies ist ein Absatz.
+
+<section>
+Dies ist eine Section.
+</section>
+
+Dies ist ein Absatz.
+
+<aside>
+Dies ist eine Aside.
+</aside>
+
+Dies ist ein Absatz.
+
+<figure>
+<img src="http://lorempixel.com/680/400/nature/" alt="Example image">
+<figcaption>Dies ist der Untertitel</figure>
+</figure>
+
+Dies ist ein Absatz.
+
 ## Verse-Plugin
 {% verse %}
 God guard me from those thoughts men think
