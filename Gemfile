@@ -17,7 +17,6 @@ group :development do
   gem 'liquid', '~> 2.3.0'
   gem 'directory_watcher', '1.4.1'
 
-
   # Custom Gems
   gem 'susy', '~> 1.0.9'             # Grid system
   gem 'modular-scale'                # Font scale

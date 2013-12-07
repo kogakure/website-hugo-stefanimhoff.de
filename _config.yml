@@ -74,6 +74,16 @@ rdiscount:
   extensions:
     - autolink
     - footnotes
+# markdown: redcarpet
+# redcarpet:
+#   extensions:
+#     - autolink
+#     - strikethrough
+#     - lax_spacing
+#     - superscript
+#     - underline
+#     - highlight
+#     - footnotes
 
 pygments:     false        # Jekyll's default Python Pygments have been replaced by pygments.rb.
 lsi:          true         # Related posts
