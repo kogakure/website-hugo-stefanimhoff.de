@@ -57,7 +57,7 @@ $(function() {
   // ==================================
   $('#nav a').filter(function() {
       return this.href == url;
-  }).addClass('navigation-is-active');
+  }).closest("li").addClass('nav-is-active');
 
 
   // Scroll smoothly to the top of the page
