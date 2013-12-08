@@ -12,7 +12,7 @@ group :development do
   gem 'sass', '~> 3.2'
   gem 'sass-globbing', '~> 1.0.0'
   gem 'rubypants', '~> 0.2.0'
-  gem 'rb-fsevent', '~> 0.9'
+  gem 'rb-fsevent', '~> 0.9.3'
   gem 'stringex', '~> 1.4.0'
   gem 'liquid', '~> 2.3.0'
   gem 'directory_watcher', '1.4.1'
@@ -25,6 +25,7 @@ group :development do
   gem 'uglifier'                     # UglifyJS
   gem 'closure-compiler', '~> 1.1.8' # Google Closure
   gem 'gsl', '~> 1.14.7'             # LSI support for tags, needs to be 1.14.x with Homebrew GSL 1.14
+  gem 'fontcustom', '~> 1.2.0'       # Compiling vector icons
 end
 
 gem 'sinatra', '~> 1.4.2'
