@@ -30,7 +30,7 @@ input:
 output:
   fonts:   source/fonts # required
   css:     sass/base
-  preview: styleguide
+  preview: docs
   # my-custom-template.yml: config
 
 

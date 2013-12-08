@@ -33,7 +33,7 @@ From project root execute:
 fontcustom compile
 ```
 
-This will create webfonts in `source/fonts`, a SASS file in `sass/base` and a preview file in `styleguide`.
+This will create webfonts in `source/fonts`, a SASS file in `sass/base` and a preview file in `docs`.
 
 ## Changelog
 
