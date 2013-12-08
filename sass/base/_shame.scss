@@ -33,7 +33,7 @@ body, .container {
 
 // Active/Inactive-Fenster Selection
 .article * {
-  @include selection(black, white);
+  @include selection($selection-background, $selection-color); // THEME-Farbe
 }
 
 // Off-Screen Navigation (einfach, ohne JavaScript)

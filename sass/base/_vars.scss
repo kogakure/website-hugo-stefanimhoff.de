@@ -31,12 +31,16 @@ $image-border-color:       #CCCCCC;
 // Navigation
 $nav-background:           #0C0C0C;
 $nav-link-color:           rgba($white, 0.5);
-$nav-link-color-hover:     #89b46b; // THEME (Matching to image)
+$nav-link-color-hover:     #89B46B; // THEME (Matching to image)
 $nav-link-color-active:    $white;
 
 // Footer
 $footer-link-color:        rgba($white, 0.5);
 $footer-link-color-active: $white;
+
+// Selection
+$selection-background:     #89B46B; // THEME
+$selection-color:          $white; // THEME
 
 // Animations
 // ----------------------------------------------------------------------------
