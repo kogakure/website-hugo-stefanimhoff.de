@@ -20,7 +20,7 @@ body, .container {
 }
 
 .container {
-  background-image: inline-image("css/billie_holiday_@2X.png");
+  background-image: inline-image("css/patterns/billie_holiday_@2X.png");
   @include background-size(100px 100px);
 }
 
@@ -62,7 +62,7 @@ body, .container {
 #nav {
   @include background-size(46px 23px);
   background-color: $nav-background;
-  background-image: inline-image("css/pw_maze_black_@2X.png");
+  background-image: inline-image("css/patterns/pw_maze_black_@2X.png");
   overflow: hidden;
   position: absolute;
   top: 0;
@@ -215,7 +215,7 @@ header#top {
 .footer {
   @extend %sans;
   @include background-size(102px 102px);
-  background-image: inline-image("css/classy_fabric_@2X.png");
+  background-image: inline-image("css/patterns/classy_fabric_@2X.png");
   color: rgba(white, 0.25);
   padding-top: $base-rhythm-unit;
 
@@ -228,7 +228,7 @@ header#top {
     color: rgba($white, 0.3);
     margin-top: $base-rhythm-unit;
     display: block;
-    background-image: inline-image("css/dark_stripes_@2X.png");
+    background-image: inline-image("css/patterns/dark_stripes_@2X.png");
     @include background-size(50px 50px);
     padding: 0.5em 0;
 
