@@ -5,6 +5,9 @@ apple
 appletv
 automatisierung
 blender
+macosx
+hardware
+software
 buch
 business
 capistrano
@@ -43,7 +46,7 @@ moinmoin
 nahrung
 openstreetmap
 photoshop
-präsentation
+praesentation
 python
 redirect
 relaunch

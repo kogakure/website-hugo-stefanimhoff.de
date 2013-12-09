@@ -16,8 +16,10 @@
 # - tag_dir:          The subfolder to build tag pages in (default is 'tags').
 # - tag_title_prefix: The string used before the tag name in the page title (default is
 #                          'Tag: ').
-module Jekyll
 
+require 'stringex'
+
+module Jekyll
 
   # The TagIndex class creates a single tag page for the specified tag.
   class TagIndex < Page
@@ -34,7 +36,7 @@ module Jekyll
       @name = 'index.html'
       self.process(@name)
       # Read the YAML data from the layout page.
-      self.read_yaml(File.join(base, '_layouts'), 'tag_index.html')
+      self.read_yaml(File.join(base, '_layouts'), 'tags.html')
       self.data['tag']    = tag
       # Set the title for this page.
       title_prefix             = site.config['tag_title_prefix'] || 'Tag: '
@@ -61,7 +63,7 @@ module Jekyll
       @name = 'atom.xml'
       self.process(@name)
       # Read the YAML data from the layout page
-      self.read_yaml(File.join(base, '_includes'), 'tag_feed.xml')
+      self.read_yaml(File.join(base, '_includes/feeds'), 'tag.xml')
       self.data['tag'] = tag
       # Set the title for this page.
       title_prefix             = site.config['tag_title_prefix'] || 'Tag: '
@@ -92,17 +94,18 @@ module Jekyll
       self.pages << index
 
       # Create an Atom-feed for each index.
-      feed = TagFeed.new(self, self.source, tag_dir, tag)
-      feed.render(self.layouts, site_payload)
-      feed.write(self.dest)
-      # Record the fact that this page has been added, otherwise Site::cleanup will remove it
-
-      self.pages << feed
+      if self.config['tag_feeds']
+        feed = TagFeed.new(self, self.source, tag_dir, tag)
+        feed.render(self.layouts, site_payload)
+        feed.write(self.dest)
+        # Record the fact that this page has been added, otherwise Site::cleanup will remove it
+        self.pages << feed
+      end
     end
 
     # Loops through the list of tag pages and processes each one.
     def write_tag_indexes
-      if self.layouts.key? 'tag_index'
+      if self.layouts.key? 'tags'
         dir = self.config['tag_dir'] || 'tag'
         self.tags.keys.each do |tag|
           self.write_tag_index(File.join(dir, tag.gsub(/_|\W/, '-')), tag)
@@ -110,7 +113,7 @@ module Jekyll
 
       # Throw an exception if the layout couldn't be found.
       else
-        throw "No 'tag_index' layout found."
+        throw "No 'tags' layout found."
       end
     end
 

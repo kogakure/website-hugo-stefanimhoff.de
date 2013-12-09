@@ -1,12 +1,55 @@
 ---
 layout: post
 title: "Plugin-Testseite mit mehreren Worten"
+author: "Stefan Imhoff"
 date: 2012-07-25 14:00
 description: "@TODO: Dies ist nur ein Test und wird noch gelöscht"
-categories: [Persönlich]
-tags: [test]
+categories:
+- Persoenlich
+tags:
+- test
 custom_css: "custom_demo"
 ---
+
+## Testing des Markdown-Parser
+
+<section>
+Eine Section
+</section>
+
+<aside>
+Eine Aside
+</aside>
+
+Dies ist ein Absatz.
+
+Dies ist ein Absatz. Autolink: www.google.de, http://google.de, google.de
+
+Tables
+
+| Tables        | Are             | Cool   |
+| ------------- | :-------------: | -----: |
+| col 3 is      | right-aligned   | $1600  |
+| col 2 is      | centered        | $12    |
+| zebra stripes | are neat        | $1     |
+
+Fenced Code block
+
+Dies ist ein BlockCode
+
+Blockcode Ende
+
+~~strikethrough~~, Superscript: 2^(nd), _underlined_, ==hightlight== This is a "quote"
+
+A footnote. [^1]
+
+[^1]: Footnote
+
+```ruby
+require 'redcarpet'
+markdown = Redcarpet.new("Hello World!")
+puts markdown.to_html
+```
 
 ## Verse-Plugin
 {% verse %}
@@ -38,7 +81,7 @@ Thinks in a marrow bone.
 
 Es ist z. B. kein Problem die z. T. gelieferte Ware zu stornieren. U. a. sagt man u. a., dass s. o. und u. s. w. bei uns i. d. R. abgekürzt werden, d. h. mit Punkt geschrieben.
 
-Es sind 16 px auf der Unterseite.
+Es sind 16 px auf der Unterseite. [^1]
 
 Bitte überweisen sie 6000 $ oder 6.000 $, oder 3000 € bzw. 3.000 €, oder 1200 £ oder 1.200 £ oder 100 ¥ oder 1.00 ¥ wenn sie das lieber haben.
 
@@ -123,7 +166,7 @@ Vestibulum vestibulum fringilla sapien, ac dignissim diam pretium nec.
 
 ## Ampersand
 
-Wenn man einen Firmennamen schreibt, sollte dies ersetzt werden:
+Wenn man einen Firmennamen[^2] schreibt, sollte dies ersetzt werden:
 
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Peter & Söhne. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
@@ -166,3 +209,6 @@ Und was ist mit diesem bizarren Link:
 [√] Peter &amp; der Wolf
 
 [x|√] <a href="http://www.google.de/?test=1&amp;lala=2&amp;bubu=3" title="Peter & der Wolf">Peter & der Wolf</a>
+
+[^1]: Dies ist eine Fußnote
+[^2]: Dies ist eine zweite Fußnote

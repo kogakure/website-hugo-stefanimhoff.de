@@ -1,10 +1,14 @@
 ---
 layout: post
 title: "Zeige deine am häufigsten benutzen Terminal-Befehle"
+author: "Stefan Imhoff"
 date: 2008-04-18 07:00
 description: "Welches sind die eigenen, am meisten verwendeten Terminal-Befehle?"
-categories: [Empfehlung]
-tags: [terminal, command]
+categories:
+- Empfehlung
+tags:
+- terminal
+- command
 ---
 
 Weil es grad alle machen: Ich weiß, was du letztens ins Terminal getippt hast.

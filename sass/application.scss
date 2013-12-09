@@ -1,26 +1,37 @@
-// Initialize/Variables/Mixins
 @import "base/init";
 @import "base/vars";
 @import "base/mixins";
 
-// Base styles/Grids
-@import "base/grids";
+// Theme
+@import "theme/bonsai";
+
+// Layout
+@import "layout/grids";
+@import "layout/header";
+@import "layout/content";
+@import "layout/footer";
+@import "layout/navigation";
+
+// Base
 @import "base/base";
 
-// Code coloring
+// Syntax-Highlighting
 @import "base/solarized";
 @import "base/syntax";
 
-// Module/States
+// Vektor-Fonts
+@import "base/iconfont";
+
+// Modules/States
 @import "module/**/*";
 @import "state/state";
 
-// Third-party
+// Third-Party
 // @import "vendor/colorpicker";
 // @import "vendor/jquery.ui.core";
 
 // Debugging
 @import "base/debug";
 
-// Only for quick tests and fixes – NOT for permanent!
+// Nur für schnelle Test und Fixes!
 @import "base/shame";

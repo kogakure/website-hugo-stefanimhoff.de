@@ -1,0 +1,159 @@
+// ============================================================================
+// Navigation
+// ============================================================================
+
+// Container für Off-Canvas-Navigation
+// ----------------------------------------------------------------------------
+// Der äußere Container hat nur den Zweck, dass keine Scrollleiste zu sehen ist,
+// der innere Container wird verschoben.
+.outer-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+// Navigationsmenü (Basis-Version, ohne JavaScript)
+// ----------------------------------------------------------------------------
+// Dieses Navigationsmenü verwendet einen Trick über CSS mit :target und :not
+// und ist oben am Rand der Seite.
+#nav {
+  @include background-size(46px 23px);
+  background-color: $nav-background;
+  background-image: inline-image("css/patterns/pw_maze_black_@2X.png");
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 200;
+
+  .nav-close-btn {
+    display: none;
+    position: absolute;
+    right: 1em;
+    top: 1em;
+  }
+
+  // Wenn nicht das Ziel, dann lass das Menü verschwinden
+  &:not(:target) {
+    z-index: 1;
+    height: 0;
+  }
+
+  // Wenn das Ziel, lass den Schließen-Button erscheinen
+  &:target {
+    .nav-close-btn {
+      display: block;
+    }
+  }
+}
+
+// Navigationsmenü (JavaScript)
+// ----------------------------------------------------------------------------
+// Sobald der Browser JavaScript unterstützt bekommt der User das Off-Canvas-
+// Menü zu sehen.
+.js {
+  #nav {
+    @include box-shadow(inset 5px 5px 10px rgba($black, 0.85));
+    height: 100%;
+    right: -250px;
+    width: 250px;
+
+    .nav-close-btn {
+      display: none; // @TODO: Ersetzen mit Vektor-Icon "X"
+    }
+  }
+
+  .navigation-is-open {
+    #nav {
+      right: 0;
+      height: 100%;
+    }
+    .container {
+      right: 250px;
+    }
+  }
+}
+
+// Navigationsmenü (JavaScript und CSS-Transform3D und CSS-Transitons)
+// ----------------------------------------------------------------------------
+// Wenn CSS-Transform3D und CSS-Transitions unterstützt werden, wird das
+// Off-Canvas-Menü animiert.
+.csstransforms3d.csstransitions.js {
+  #nav {
+    right: 0;
+    @include transform(translate3d(250px, 0, 0));
+    @include backface-visibility(hidden);
+    @include transition($animation-off-screen-menu);
+    @include transform-origin(50% 0%);
+  }
+
+  .container {
+    right: 0;
+    @include transform(translate3d(0, 0, 0));
+    @include transition($animation-off-screen-menu);
+    @include backface-visibility(hidden);
+  }
+
+  // Navigation is open
+  .navigation-is-open {
+    #nav {
+      @include transform(translate3d(0, 0, 0));
+    }
+
+    .container {
+      @include transform(translate3d(-250px, 0, 0));
+    }
+  }
+}
+
+// Styling der Navigationpunkte (Basis-Navigation)
+// ----------------------------------------------------------------------------
+.nav {
+  @extend %sans;
+  font-size: 18px;
+  font-weight: 200;
+  letter-spacing: 0.1em;
+  list-style: none;
+  margin: 30px 40px;
+
+  li {
+    margin-bottom: 0.3em;
+  }
+
+  a {
+    @include link-colors($nav-link-color, $nav-link-color-hover, $nav-link-color-active, $nav-link-color, $nav-link-color-active);
+    @include text-shadow(0 0 5px $black);
+    @include transition($animation-navigation-link-hover);
+    border: 0;
+    text-decoration: none;
+  }
+}
+
+// Styling der Navigationpunkte (Hauptmenüpunkte)
+// ----------------------------------------------------------------------------
+.nav--main {
+  @extend .nav;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+// Styling für aktiven Navigationspunkt
+// ----------------------------------------------------------------------------
+// Dieses State-Klassenattribut wird über JavaScript gesetzt.
+#nav .nav-is-active a {
+  color: $nav-link-color-active;
+}
+
+
+// Styling für aktiven Navigationspunkt
+// ----------------------------------------------------------------------------
+.nav-item-external a:hover {
+  &:after {
+    content: " →"; // @TODO: Den Pfeil mit einem hübschen Vektor-Icon-Pfeil ersetzen
+  }
+}

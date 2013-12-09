@@ -1,10 +1,14 @@
 ---
 layout: post
 title: "Subversion (1) – Theorie und Funktionsweise"
+author: "Stefan Imhoff"
 date: 2007-05-28 18:04
 description: "Theorie und Funktionsweise von Subversion."
-categories: [Versionskontrolle]
-tags: [tutorial, subversion]
+categories:
+- Versionskontrolle
+tags:
+- tutorial
+- subversion
 ---
 
 Dieser erste Teil der Reihe *Subversion* beschäftigt sich mit der nötigen Theorie und Funktionsweise von Subversion.

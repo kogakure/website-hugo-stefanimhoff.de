@@ -9,7 +9,7 @@ Dieses Dokument ist der Styleguide für diese Website. Dies ist der erste Absatz
 Überschriften
 -------------
 
-Die Hauptüberschrift dieses Styleguides in eine `h1`. Jede Überschrift kann auch Links enthalten.
+Die Hauptüberschrift dieses Styleguides[^1] in eine `h1`. Jede Überschrift kann auch Links enthalten.
 
 Die 2. Überschrift oben ist eine `h2`, die benutzt werden kann um Hauptsektionen auf Seitenebene zu markieren. Davon kann mehr als eine Überschrift pro Seite verwendet werden.
 
@@ -83,7 +83,7 @@ The Carlton AllLander drove Dudley home just after dawn. …
 Preformatierter Text
 --------------------
 
-Das `pre` wird verwendet, um preformatierten Text anzuzeigen, also Text, der genau so angezeigt werden soll, wie er geschrieben war, also inklusive eventueller mehrfacher Leerzeichen, Einrückungen oder ASCII-Zeichen.
+Das `pre` wird verwendet, um preformatierten Text anzuzeigen, also Text, der genau so angezeigt werden soll, wie er geschrieben war, also inklusive eventueller mehrfacher Leerzeichen, Einrückungen oder ASCII-Zeichen[^2].
 
 <pre>
 ! " # $ % & ' ( ) * + , - . /
@@ -257,12 +257,12 @@ And       the mome     raths            outgrabe.
 Randbemerkungen
 ---------------
 
-{% aside aside-left %}
+{% aside aside %}
 <h4>Überschrift</h4>
 <p>Dies ist eine Anmerkung in der Seitenleiste im linken Rand</p>
 {% endaside %}
 
-{% aside aside-right %}
+{% aside aside--left %}
 <h4>Überschrift</h4>
 <p>Dies ist eine Anmerkung in der Seitenleiste im rechten Rand</p>
 {% endaside %}
@@ -270,7 +270,7 @@ Randbemerkungen
 Manchmal möchte man mitten im Text etwas erklären, was nicht direkt zum Text gehört, aber das zum Verständnis des Textes beitragen kann. Diese Randbemerkungen wurden im Print üblicherweise in den Rand der Publikation gedruckt und hatten eine kleinere Schrift. Manchmal kann man diese aber auch im Text selbst stehen sehen, und sie werden durch eine andere Farbe oder einen Rand als Nebenbemerkung gekennzeichnet. Auf dieser Website stehen die Randbemerkungen (`aside`) im Rand und zwar wahlweise im linken oder rechten Rand. Als Überschrift (wenn nötig) sollte minimal eine `h4` verwendet werden.
 
 ```html
-{% raw %}{% aside aside-right %}
+{% raw %}{% aside aside--left %}
 <h4>Überschrift</h4>
 <p>Dies ist eine Anmerkung in der Seitenleiste im rechten Rand</p>
 {% endaside %}{% endraw %}
@@ -386,7 +386,7 @@ Das Element `a` wird verwendet um Text zu verlinken, ob auf eine andere Seite, e
 
 Das Element `em` wird benutzt, um Betonung für Text auszuzeichnen, also z. B. wenn etwas anders ausgesprochen wird oder wichtiger ist. Um Text nur schräg zu stellen ist das Element `i` vorzuziehen:
 
-Du *musst* einfach Negitoro Maki probieren!
+Du *musst* einfach Negitoro Maki[^3] probieren!
 
 ```html
 Du *musst* einfach Negitoro Maki probieren!
@@ -400,16 +400,6 @@ Das Eis zu betreten ist **verboten**!
 
 ```html
 Das Eis zu betreten ist **verboten**!
-```
-
-### Kleingedruckte Texte
-
-Das Element `small` wird verwendet um Ausschlussklauseln und rechtliche Hinweise, Copyrights und Kleingedrucktes auszuzeichnen. Es kann auch verwendet werden um die Quelle eines Werkes auszuzeichnen oder Lizenzen zu markieren:
-
-<small>Copyright © 1922-2011 Firmenname. All Rights Reserved</small>
-
-```html
-<small>Copyright © 1922-2011 Firmenname. All Rights Reserved</small>
 ```
 
 ### Durchgestrichene Texte
@@ -457,7 +447,7 @@ BBC, HTML, and <abbr class="no-caps" title="Staffordshire">Staffs.</abbr>
 
 Das Element `time` wird benutzt, um entweder die Zeit auf einer 24-Stunden-Uhr zu markieren oder ein präzises Datum des Gregorianischen Kalenders zu kennzeichnen.
 
-Die Schlacht von Sekigahara am <time datetime="1600-10-21">21. Oktober 1600</time> stellte einen Wendepunkt der japanischen Geschichte dar. Durch den Sieg gelangt es dem Haus Tokugawa, die Vormachtstellung in Japan zu sichern.
+Die Schlacht von Sekigahara[^4] am <time datetime="1600-10-21">21. Oktober 1600</time> stellte einen Wendepunkt der japanischen Geschichte dar. Durch den Sieg gelangt es dem Haus Tokugawa, die Vormachtstellung in Japan zu sichern.
 
 ```html
 Die Schlacht von Sekigahara am <time datetime="1600-10-21">21. Oktober 1600</time> …
@@ -635,7 +625,7 @@ Tabellen sollten verwendet werden, um tabellarische Daten anzuzeigen. Die Elemen
 ### Gestreifte Tabellen
 
 <figure class="table-figure">
-<table class="table table-striped">
+<table class="table--striped">
   <thead>
     <tr>
       <th>#</th>
@@ -669,7 +659,7 @@ Tabellen sollten verwendet werden, um tabellarische Daten anzuzeigen. Die Elemen
 
 ```html
 <figure class="table-figure">
-<table class="table table-striped">
+<table class="table--striped">
 …
 </table>
 </figure>
@@ -678,7 +668,7 @@ Tabellen sollten verwendet werden, um tabellarische Daten anzuzeigen. Die Elemen
 ### Tabellen mit Rand
 
 <figure class="table-figure">
-<table class="table table-bordered">
+<table class="table--bordered">
   <thead>
     <tr>
       <th>#</th>
@@ -712,7 +702,7 @@ Tabellen sollten verwendet werden, um tabellarische Daten anzuzeigen. Die Elemen
 
 ```html
 <figure class="table-figure">
-<table class="table table-bordered">
+<table class="table--bordered">
 …
 </table>
 </figure>
@@ -721,7 +711,7 @@ Tabellen sollten verwendet werden, um tabellarische Daten anzuzeigen. Die Elemen
 ### Tabellen mit Hover-Interaktion
 
 <figure class="table-figure">
-<table class="table table-hover">
+<table class="table--hover">
   <thead>
     <tr>
       <th>#</th>
@@ -755,7 +745,7 @@ Tabellen sollten verwendet werden, um tabellarische Daten anzuzeigen. Die Elemen
 
 ```html
 <figure class="table-figure">
-<table class="table table-hover">
+<table class="table-hover">
 …
 </table>
 </figure>
@@ -764,7 +754,7 @@ Tabellen sollten verwendet werden, um tabellarische Daten anzuzeigen. Die Elemen
 ### Verdichtete Tabellen
 
 <figure class="table-figure">
-<table class="table table-condensed">
+<table class="table--condensed">
   <thead>
     <tr>
       <th>#</th>
@@ -798,7 +788,7 @@ Tabellen sollten verwendet werden, um tabellarische Daten anzuzeigen. Die Elemen
 
 ```html
 <figure class="table-figure">
-<table class="table table-condensed">
+<table class="table--condensed">
 …
 </table>
 </figure>
@@ -836,96 +826,96 @@ Das Element `figure` wird verwendet um mehrere Objekte in einer Abbildung mit ei
 
 #### Abbildungen mit Untertitel
 
-Normalerweise sind die Untertitel zentriert ausgerichtet. Es gibt aber fälle, in denen der Untertitel zu lang ist und mehrzeiliger Text sieht zentriert nicht gut aus. Dafür gibt es das Klassen-Attribut `figure-longcaption`.
+Normalerweise sind die Untertitel zentriert ausgerichtet. Es gibt aber fälle, in denen der Untertitel zu lang ist und mehrzeiliger Text sieht zentriert nicht gut aus. Dafür gibt es das Klassen-Attribut `figure--longcaption`.
 
-{% figure figure-longcaption "Dies ist die Caption des Fotos, die ich etwas länger schreibe, nur damit ich testen kann, wie sie aussieht, wenn sie sich über mehrere Zeilen erstreckt. Diese verwendet <b>.figure-longcaption</b> als Klassen-Attribut." %}
+{% figure figure--longcaption "Dies ist die Caption des Fotos, die ich etwas länger schreibe, nur damit ich testen kann, wie sie aussieht, wenn sie sich über mehrere Zeilen erstreckt. Diese verwendet <b>.figure--longcaption</b> als Klassen-Attribut." %}
 <img src="http://lorempixel.com/680/408/sports/" alt="Example image">
 {% endfigure %}
 
-Im aktuellen Design haben zwar sowieso alle Abbildungen einen Rand, dies mag sich aber in Zukunft ändern. Bei Abbildungen, die also auf jeden Fall einen Rand benötigen, weil sie sonst nicht wirken oder schlecht aussehen, fügt man daher das Klassen-Attribut `figure-border` hinzu.
+Im aktuellen Design haben zwar sowieso alle Abbildungen einen Rand, dies mag sich aber in Zukunft ändern. Bei Abbildungen, die also auf jeden Fall einen Rand benötigen, weil sie sonst nicht wirken oder schlecht aussehen, fügt man daher das Klassen-Attribut `figure--border` hinzu.
 
-{% figure figure-border "Dies ist ein normales Foto in einer figure mit dem Klassen-Attribut <b>.figure-border</b>" %}
+{% figure figure--border "Dies ist ein normales Foto in einer figure mit dem Klassen-Attribut <b>.figure--border</b>" %}
 <img src="http://lorempixel.com/680/408/sports/" alt="Example image">
 {% endfigure %}
 
-Abbildungen, die einen Schatten haben sollen, können das Klassen-Attribut `figure-shadow` bekommen.
+Abbildungen, die einen Schatten haben sollen, können das Klassen-Attribut `figure--shadow` bekommen.
 
-{% figure figure-shadow "Dies ist ein normales Foto in einer figure mit dem Klassen-Attribut <b>.figure-shadow</b>" %}
+{% figure figure--shadow "Dies ist ein normales Foto in einer figure mit dem Klassen-Attribut <b>.figure--shadow</b>" %}
 <img src="http://lorempixel.com/680/408/sports/" alt="Example image">
 {% endfigure %}
 
 ```html
-{% raw %}{% figure figure-longcaption figure-border figure-shadow %}
+{% raw %}{% figure figure--longcaption figure--border figure--shadow %}
 …
 {% endfigure %}{% endraw %}
 ```
 
 #### Abbildungen in maximaler Breite
 
-Um besonders große Fotos einzusetzen, kann das Klassen-Attribut `figure-fullsize` benutzt werden. Abbildungen in Vollbild sollten aber mindestens 1100 Pixel Breite aufweisen.
+Um besonders große Fotos einzusetzen, kann das Klassen-Attribut `figure--fullsize` benutzt werden. Abbildungen in Vollbild sollten aber mindestens 1100 Pixel Breite aufweisen.
 
-{% figure figure-fullsize %}
+{% figure figure--fullsize %}
 <img src="http://lorempixel.com/1200/500/nature/" alt="Example image">
 {% endfigure %}
 
-{% figure figure-fullsize "Figure mit dem Klassen-Attribut <b>.figure-fullsize</b> und Untertitel, das Bild sollte mindestens 1100 Pixel breit sein." %}
+{% figure figure--fullsize "Figure mit dem Klassen-Attribut <b>.figure--fullsize</b> und Untertitel, das Bild sollte mindestens 1100 Pixel breit sein." %}
 <img src="http://lorempixel.com/1200/500/nature/" alt="Example image">
 {% endfigure %}
 
 ```html
-{% raw %}{% figure figure-fullsize %}
+{% raw %}{% figure figure--fullsize %}
 …
 {% endfigure %}{% endraw %}
 ```
 
 #### Hanging Left
 
-Abbildungen können in den Rand geschoben werden, wahlweise links (`figure-hangleft`) oder rechts (`figure-hangright`). Der Untertitel steht dann im Rand neben dem Foto. Fotos dieser Art sollten mindestens 850 Pixel breit sein.
+Abbildungen können in den Rand geschoben werden, wahlweise links (`figure--hangleft`) oder rechts (`figure--hangright`). Der Untertitel steht dann im Rand neben dem Foto. Fotos dieser Art sollten mindestens 850 Pixel breit sein.
 
-{% figure figure-hangleft %}
+{% figure figure--hangleft %}
 <img src="http://lorempixel.com/900/400/food/" alt="Example image">
 {% endfigure %}
 
-{% figure figure-hangleft "Figure mit dem Klassen-Attribut <b>.figure-hangleft</b> und Untertitel, das Bild sollte mindestens 850 Pixel breit sein." %}
+{% figure figure--hangleft "Figure mit dem Klassen-Attribut <b>.figure--hangleft</b> und Untertitel, das Bild sollte mindestens 850 Pixel breit sein." %}
 <img src="http://lorempixel.com/900/400/food/" alt="Example image">
 {% endfigure %}
 
 ```html
-{% raw %}{% figure figure-hangleft %}
+{% raw %}{% figure figure--hangleft %}
 …
 {% endfigure %}{% endraw %}
 ```
 
 #### Hanging Right
 
-{% figure figure-hangright %}
+{% figure figure--hangright %}
 <img src="http://lorempixel.com/900/400/animals/" alt="Example image">
 {% endfigure %}
 
-{% figure figure-hangright "Figure mit dem Klassen-Attribut <b>.figure-hangright</b> und Untertitel, das Bild sollte mindestens 850 Pixel breit sein." %}
+{% figure figure--hangright "Figure mit dem Klassen-Attribut <b>.figure--hangright</b> und Untertitel, das Bild sollte mindestens 850 Pixel breit sein." %}
 <img src="http://lorempixel.com/900/400/animals/" alt="Example image">
 {% endfigure %}
 
 ```html
-{% raw %}{% figure figure-hangright %}
+{% raw %}{% figure figure--hangright %}
 …
 {% endfigure %}{% endraw %}
 ```
 
 #### Centered
 
-Es ist auch möglich Abbildungen zentriert (`figure-center`) zu setzen, so dass sie in beide Ränder hineinragen.
+Es ist auch möglich Abbildungen zentriert (`figure--center`) zu setzen, so dass sie in beide Ränder hineinragen.
 
-{% figure figure-center %}
+{% figure figure--center %}
 <img src="http://lorempixel.com/900/400/people/" alt="Example image">
 {% endfigure %}
 
-{% figure figure-center "Figure mit dem Klassen-Attribut <b>.figure-center</b> und Untertitel, das Bild sollte mindestens 850 Pixel breit sein." %}
+{% figure figure--center "Figure mit dem Klassen-Attribut <b>.figure--center</b> und Untertitel, das Bild sollte mindestens 850 Pixel breit sein." %}
 <img src="http://lorempixel.com/900/400/people/" alt="Example image">
 {% endfigure %}
 
 ```html
-{% raw %}{% figure figure-center %}
+{% raw %}{% figure figure--center %}
 …
 {% endfigure %}{% endraw %}
 ```
@@ -1155,3 +1145,9 @@ Es können auch Dateien aus dem Dateisystem angezeigt werde:
 ```html
 {% raw %}{% include_code test.js %}{% endraw %}
 ```
+
+[^1]: Ein Styleguide (oder deutsch Gestaltungsrichtlinie) beschreibt, wie bestimmte Elemente eines Druckerzeugnisses oder einer Website zu gestalten sind. Diese Richtlinien sollen ein einheitliches Erscheinungsbild verschiedener Kommunikationsmittel einer Institution oder Firma, z. B. Werbe- und Informationsmaterial, Geschäftsbriefe oder Internetauftritte, gewährleisten und so die Bildung einer Corporate Identity ermöglichen. Daneben werden Styleguides auch für die Software-Erstellung oder Produkte allgemein eingesetzt; auch hier ist das Ziel: Produkte sollen als zusammengehörig wahrgenommen werden und ggf. auch mit der verbundenen Marke assoziiert werden.
+[^2]: Der American Standard Code for Information Interchange (ASCII, alternativ US-ASCII, oft [ˈæski] ausgesprochen) ist eine 7-Bit-Zeichenkodierung; sie entspricht der US-Variante von ISO 646 und dient als Grundlage für spätere, auf mehr Bits basierende Kodierungen für Zeichensätze. Die ASCII-Kodierung wurde am 17. Juni 1963 von der American Standards Association (ASA) als Standard ASA X3.4-1963 veröffentlicht und 1967 sowie zuletzt im Jahr 1968 (ANSI X3.4-1968) aktualisiert. Die Zeichenkodierung definiert 128 Zeichen, bestehend aus 33 nicht druckbaren sowie 95 druckbaren.
+[^3]: Maki-Sushi (巻き寿司, Maki-Zushi, dt. „Rollen-Sushi“) sind mit einer Bambusmatte (Makisu) gerollte Stücke. Es wird für gewöhnlich in Nori eingepackt.
+[^4]: Die Schlacht von Sekigahara (jap. 関ヶ原の戦い, Sekigahara no tatakai) am 21. Oktober 1600 stellte einen Wendepunkt in der japanischen Geschichte dar. Durch den Sieg in dieser Schlacht gelang es dem Haus Tokugawa, seine Vormachtstellung in Japan zu festigen. Im Laufe der nächsten fünfzig Jahre gab es zwar noch einige kleinere Aufstände, aber das Land wurde letztlich befriedet. Viele Historiker setzen den Übergang von der Sengoku-Zeit zur Edo-Zeit auf das Datum dieser Schlacht.
+

@@ -1,0 +1,66 @@
+// ============================================================================
+// Footer
+// ============================================================================
+
+.footer {
+  @extend %sans;
+  @include background-size(102px 102px);
+  background-image: inline-image("css/patterns/classy_fabric_@2X.png");
+  color: rgba(white, 0.25);
+  padding-top: $base-rhythm-unit;
+
+  .wrap {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+  small {
+    color: rgba($white, 0.3);
+    margin-top: $base-rhythm-unit;
+    display: block;
+    background-image: inline-image("css/patterns/dark_stripes_@2X.png");
+    @include background-size(50px 50px);
+    padding: 0.5em 0;
+
+    a {
+      @include link-colors($footer-link-color, $footer-link-color-active, $footer-link-color-active, $footer-link-color, $footer-link-color-active);
+      border: 0;
+      text-decoration: none;
+    }
+
+    ul, span {
+      @include adjust-font-size-to($base-font-size);
+    }
+
+    span b {
+      @extend %mono;
+    }
+
+    ul {
+      float: right;
+      margin: 0 0 0 0.5em;
+      list-style: none;
+      overflow: hidden;
+    }
+
+    li {
+      white-space: nowrap;
+      float: left;
+      padding-right: 0.5em;
+
+      &:after {
+        content: '·';
+        color: rgba($white, 0.3);
+        padding-left: 0.5em;
+      }
+
+      &:last-child {
+        padding-right: 0;
+
+        &:after {
+          content: none;
+        }
+      }
+    }
+  }
+}

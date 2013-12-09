@@ -38,7 +38,7 @@ module Jekyll
       @name = 'index.html'
       self.process(@name)
       # Read the YAML data from the layout page.
-      self.read_yaml(File.join(base, '_layouts'), 'category_index.html')
+      self.read_yaml(File.join(base, '_layouts'), 'categories.html')
       self.data['category']    = category
       # Set the title for this page.
       title_prefix             = site.config['category_title_prefix'] || 'Category: '
@@ -65,7 +65,7 @@ module Jekyll
       @name = 'atom.xml'
       self.process(@name)
       # Read the YAML data from the layout page.
-      self.read_yaml(File.join(base, '_includes/custom'), 'category_feed.xml')
+      self.read_yaml(File.join(base, '_includes/feeds'), 'category.xml')
       self.data['category']    = category
       # Set the title for this page.
       title_prefix             = site.config['category_title_prefix'] || 'Category: '
@@ -108,7 +108,7 @@ module Jekyll
 
     # Loops through the list of category pages and processes each one.
     def write_category_indexes
-      if self.layouts.key? 'category_index'
+      if self.layouts.key? 'categories'
         dir = self.config['category_dir']
         self.categories.keys.each do |category|
           if category =~ /(.+)\[(.+)\]/

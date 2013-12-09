@@ -1,10 +1,16 @@
 ---
 layout: post
 title: "Kostenlose Vektorkarten mit OpenStreetMap"
+author: "Stefan Imhoff"
 date: 2008-09-06 18:59
 description: "Einführung in OpenStreetMap."
-categories: [Empfehlung, Website]
-tags: [karten, openstreetmap, vektor]
+categories:
+- Empfehlung
+- Website
+tags:
+- karten
+- openstreetmap
+- vektor
 ---
 
 Ich habe keine Ahnung, warum dieses Juwel so lange unbemerkt von mir bleiben konnte, aber gestern hat mich ein Kollege auf den Kartendienst OpenStreetMap hingewiesen. Ähnlich wie bei Wikipedia wird dort von vielen Benutzern eine für jeden kostenlos verfügbare Karte zusammengetragen.

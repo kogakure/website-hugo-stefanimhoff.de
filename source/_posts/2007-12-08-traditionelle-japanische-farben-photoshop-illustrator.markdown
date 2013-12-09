@@ -1,10 +1,18 @@
 ---
 layout: post
 title: "Traditionelle, japanische Farben für Photoshop und Illustrator"
+author: "Stefan Imhoff"
 date: 2007-12-08 21:05
 description: "Traditionelle, japanische Farben als Farbpalette für Photoshop und Illustrator zum Download."
-categories: [Design, Downloads]
-tags: [photoshop, illustrator,  japan, farbe, download]
+categories:
+- Design
+- Downloads
+tags:
+- photoshop
+- illustrator
+- japan
+- farbe
+- download
 ---
 
 Bei einem Besuch in der Kunstausstellung <cite>Japan und der Westen</cite> im [Kunstmuseum Wolfsburg](http://www.kunstmuseum-wolfsburg.de/ "Kunstmuseum-Wolfsburg"), konnte ich ein wunderbares Buch über die traditionellen, japanischen Farben erstehen.

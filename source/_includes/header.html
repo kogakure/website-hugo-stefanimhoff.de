@@ -1,10 +1,6 @@
-<!-- <header class="header"> -->
-<!--   <div class="content"> -->
-<!--     <a href="/" class="logo">{{ site.title }}</a> -->
-<!--     <a class="nav-btn" id="nav-open-btn" href="#nav">Menü</a> -->
-<!--   </div> -->
-<!-- </header> -->
-<header id="top" role="banner">
-  <h1>Title</h1>
+<header id="top" class="header" role="banner">
+  <div class="article-title">
+    <h1>{% if page.title or post.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+  </div>
   <a href="#nav" class="nav-btn">Navigation</a>
 </header>

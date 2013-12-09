@@ -1,10 +1,14 @@
 ---
 layout: post
 title: "2010 – ein Jahresrückblick"
+author: "Stefan Imhoff"
 date: 2010-12-23 13:00
 description: "Mein persönlicher Jahresrückblick für 2010."
-categories: [Persönlich]
-tags: [vim]
+categories:
+- Persoenlich
+tags:
+- vim
+- jahresrueckblick
 ---
 
 Und wieder ist ein Jahr fast vorbei, mein jährlicher Blick in Google History steht an.

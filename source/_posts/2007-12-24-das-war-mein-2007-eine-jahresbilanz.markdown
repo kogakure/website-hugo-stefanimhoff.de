@@ -1,10 +1,13 @@
 ---
 layout: post
 title: "Das war mein 2007 – eine Jahresbilanz"
+author: "Stefan Imhoff"
 date: 2007-12-24 14:00
 description: "Mein persönlicher Jahresrückblick für 2007."
-categories: [Persönlich]
-tags: []
+categories:
+- Persoenlich
+tags:
+- jahresrueckblick
 ---
 
 Zum Jahresende will ich dieses Mal Googles Webprotokoll als Erinnerungshilfe hinzuziehen. Dieser Dienst von Google ermöglicht es die eigenen Suchbegriffe anzusehen.

@@ -9,7 +9,7 @@
 
 body {
   @extend %base;
-  @include transition(all 0.3s linear);
+  @include font-smoothing(subpixel-antialiased);
   @include hyphens(auto);
   color: $dark-grey;
   font-style: normal;
@@ -24,13 +24,20 @@ body {
 // ----------------------------------------------------------------------------
 a {
   // normal, hover, active, visited, focus
-  @include link-colors(#00c, #0cc, #c0c, #ccc, #cc0);
+  @include link-colors($link-color, $link-hover-color, $link-active-color, $link-visited-color, $link-focus-color);
+  text-decoration: none;
+  border-bottom: 1px solid $link-border-color;
+  @include transition($animation-link-hover);
+
+  &:hover, &:active, &:focus {
+    border-color: $link-hover-border-color;
+  }
 }
 
 // Headlines
 // ----------------------------------------------------------------------------
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Yanone Kaffeesatz', sans-serif;
+  @extend %sans;
 }
 
 h1 {
@@ -57,7 +64,7 @@ p {
   @include adjust-font-size-to(22px);
 }
 
-// Horizontal borders
+// Horizontale Trenner
 // ----------------------------------------------------------------------------
 hr {
   height: 0;
@@ -76,12 +83,6 @@ em {
 
 strong {
   font-weight: $bold;
-}
-
-// Small print
-// ----------------------------------------------------------------------------
-small {
-  @include adjust-font-size-to($font-scale-small);
 }
 
 // Strikethrough
@@ -152,9 +153,16 @@ var {
 // ----------------------------------------------------------------------------
 samp {
   @extend %mono;
-  margin: 0 0.4em;
   color: $sample-color;
-  @include adjust-font-size-to(15px);
+  background: $sample-background;
+  border: 1px solid #ddd;
+  display: inline-block;
+  font-size: .8em;
+  line-height: 1.5em;
+  margin: -1px 0;
+  padding: 0 .3em;
+  white-space: no-wrap;
+  @include border-radius(.4em);
 }
 
 // Keyboard entry
@@ -176,11 +184,15 @@ kbd {
   @include box-shadow(0 1px 0 rgba($black, 0.2), 0 0 0 2px $white inset);
 }
 
-// Superscript/subscript
+// Superscript/Subscript
 // ----------------------------------------------------------------------------
 sup, sub {
   position: relative;
   vertical-align: 0;
+
+  a {
+    border: 0;
+  }
 }
 
 sup {
@@ -191,7 +203,7 @@ sub {
   top: 0.8ex;
 }
 
-// Italicised/Emboldened
+// Italic/Fett
 // ----------------------------------------------------------------------------
 i {
   font-style: italic;
@@ -201,7 +213,7 @@ b {
   font-weight: $bold;
 }
 
-// Marked
+// Markiert
 // ----------------------------------------------------------------------------
 mark {
   position: relative;
@@ -232,7 +244,7 @@ mark {
   }
 }
 
-// Edits
+// Bearbeitungen
 // ----------------------------------------------------------------------------
 ins {
   text-decoration: underline;
@@ -242,7 +254,7 @@ del {
   text-decoration: line-through;
 }
 
-// Lists
+// Listen
 // ----------------------------------------------------------------------------
 ol {
   list-style: decimal;
@@ -280,7 +292,7 @@ dd {
   margin-left: 0;
 }
 
-// Quotes
+// Zitate
 // ----------------------------------------------------------------------------
 blockquote {
   margin-left: $base-rhythm-unit;
@@ -304,28 +316,12 @@ blockquote cite:before {
 q {
   font-style: italic;
 }
-:lang(en) > q,
-.article-body q[lang|=en] {
-  quotes: '“' '”' '‘' '’';
-}
-:lang(fr) > q,
-.article-body q[lang|=fr] {
-  quotes: '« ' ' »' '“' '”';
-}
-// Alternative deutsche Schreibweise
-/* :lang(de) > q,
- * .article-body q[lang|=de] { */
-/*   quotes: '„' '“' '‚' '‘'; */
-/* } */
-:lang(de) > q,
-.article-body q[lang|=de] {
-  quotes: '»' '«' '›' '‹';
-}
-:lang(ja) > q,
-.article-body q[lang|=ja] {
-  font-style: normal;
-  quotes: '「' '」' '『' '』';
-}
+
+// @include q-quotes(de, '„' '“' '‚' '‘'); // Alternative, deutsche Schreibweise
+@include q-quotes(de, '»' '«' '›' '‹');
+@include q-quotes(en, '“' '”' '‘' '’');
+@include q-quotes(fr, '« ' ' »' '“' '”');
+@include q-quotes(ja, '「' '」' '『' '』');
 
 q:before {
   content: open-quote;
@@ -334,7 +330,7 @@ q:after {
   content: close-quote;
 }
 
-// Images
+// Bilder
 // ----------------------------------------------------------------------------
 img {
   border: 3px solid $image-border-color;
@@ -343,7 +339,7 @@ img {
   width: auto\9; /* ie8 */
 }
 
-// Figure
+// Abbildungen
 // ----------------------------------------------------------------------------
 
 figcaption {
@@ -361,7 +357,7 @@ video {
   @include trailer(1);
 }
 
-// Tables
+// Tabellen
 // ----------------------------------------------------------------------------
 caption, th, td {
   font-weight: $normal;

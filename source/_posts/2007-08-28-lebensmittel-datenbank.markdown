@@ -1,10 +1,16 @@
 ---
 layout: post
 title: "Lebensmittel-Datenbank"
+author: "Stefan Imhoff"
 date: 2007-08-28 08:24
 description: "FDDB, das kostenlose Ernährungstagebuch und Lebensmittel-Datenbank."
-categories: [Empfehlung, Website]
-tags: [lebensmittel, nahrung, essen]
+categories:
+- Empfehlung
+- Website
+tags:
+- lebensmittel
+- nahrung
+- essen
 ---
 
 Ich bin gestern über eine schöne Web 2.0 Anwendung gestolpert, mit der man die Nährwerte von Nahrungsmitteln komfortabel berechnen kann.

@@ -1,10 +1,18 @@
 ---
 layout: post
 title: "Django-Relaunch von kogakure.de"
+author: "Stefan Imhoff"
 date: 2008-04-25 18:00
 description: "Einblick in den Django-Relaunch der Website kogakure.de"
-categories: [Code, Website]
-tags: [django, download, git, python, relaunch]
+categories:
+- Code
+- Website
+tags:
+- django
+- download
+- git
+- python
+- relaunch
 ---
 
 Es ist soweit! Mein erstes Django-Projekt ist online: das seit 1999 bestehende Kampfkunst-Magazin [kogakure.de](http://kogakure.de/ "kogakure.de – Ninja, Ninjutsu und Kampfkunst").

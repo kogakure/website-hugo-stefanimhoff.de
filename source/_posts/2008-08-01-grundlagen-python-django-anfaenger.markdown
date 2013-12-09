@@ -1,10 +1,14 @@
 ---
 layout: post
 title: "Grundlagen von Python & Django für Anfänger"
+author: "Stefan Imhoff"
 date: 2008-08-01 15:00
 description: "Einführung in die Grundlagen von Python & Django für Anfänger."
-categories: [Code]
-tags: [django, python]
+categories:
+- Code
+tags:
+- django
+- python
 ---
 
 Da in letzter Zeit anscheinend das Interesse an Django stark gestiegen ist, halte ich es für sinnvoll, die Grundlagen des Systems für Anfänger aufzuzeigen.
