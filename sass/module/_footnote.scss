@@ -21,7 +21,8 @@ sup a[rel="footnote"] {
 
   a[rev="footnote"] {
     @include link-colors($dark-grey, $dark-grey, $dark-grey, $dark-grey, $dark-grey);
-    text-decoration: none;
+    border: 0;
     margin-left: 0.25em;
+    text-decoration: none;
   }
 }

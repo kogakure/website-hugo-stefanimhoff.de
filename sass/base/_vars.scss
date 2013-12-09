@@ -11,8 +11,8 @@ $dark-grey:                #333333;
 $light-grey:               #DDDDDD;
 
 // Header
-$header-background:        #84A2AA; // THEME
-$header-border-top-color:  #20310E; // THEME
+$header-background:        $dark-grey; // THEME
+$header-border-top-color:  $black;     // THEME
 
 // Content
 $content-background:       #EEEEEE;
@@ -24,8 +24,18 @@ $footer-link-color-active: $white;
 // Navigation
 $nav-background:           #0C0C0C;
 $nav-link-color:           rgba($white, 0.5);
-$nav-link-color-hover:     #89B46B; // THEME
+$nav-link-color-hover:     $white; // THEME
 $nav-link-color-active:    $white;
+
+// Links
+$link-color:               $dark-grey; // THEME
+$link-hover-color:         $dark-grey; // THEME
+$link-active-color:        $dark-grey; // THEME
+$link-visited-color:       $dark-grey; // THEME
+$link-focus-color:         $dark-grey; // THEME
+
+$link-border-color:        rgba($dark-grey, 0.2); // THEME
+$link-hover-border-color:  $dark-grey; // THEME
 
 // Tastatur (kbd)
 $keyboard-border:          #CCCCCC;
@@ -46,22 +56,24 @@ $table-striped-background: #F9F9F9;
 $image-border-color:       #CCCCCC;
 
 // ::selection
-$selection-background:     #89B46B; // THEME
-$selection-color:          $white;  // THEME
+$selection-background:     $dark-grey; // THEME
+$selection-color:          $white;     // THEME
 
 // Pfade
 // ----------------------------------------------------------------------------
 
-$header-background-url:    "/images/css/header/test-header.jpg"; // THEME
+$header-background-url:    ""; // THEME
 
 // Animationen
 // ----------------------------------------------------------------------------
 
 // Animations-Kurven
-$cubic-bezier-bouncing: cubic-bezier(0.205, 0.010, 0.005, 1.000);
+$cubic-bezier-bouncing:          cubic-bezier(0.205, 0.010, 0.005, 1.000);
 
 // Animationen-Timings
-$animation-off-screen-menu: transform 500ms $cubic-bezier-bouncing;
+$animation-off-screen-menu:       transform 500ms $cubic-bezier-bouncing;
+$animation-link-hover:            all 500ms linear;
+$animation-navigation-link-hover: all 100ms linear;
 
 // Typographie
 // ----------------------------------------------------------------------------

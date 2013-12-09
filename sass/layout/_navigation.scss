@@ -116,18 +116,21 @@
 .nav {
   @extend %sans;
   font-size: 18px;
+  font-weight: 200;
   letter-spacing: 0.1em;
   list-style: none;
   margin: 30px 40px;
-  font-weight: 200;
 
   li {
     margin-bottom: 0.3em;
   }
 
   a {
-    text-decoration: none;
     @include link-colors($nav-link-color, $nav-link-color-hover, $nav-link-color-active, $nav-link-color, $nav-link-color-active);
+    @include text-shadow(0 0 5px $black);
+    @include transition($animation-navigation-link-hover);
+    border: 0;
+    text-decoration: none;
   }
 }
 

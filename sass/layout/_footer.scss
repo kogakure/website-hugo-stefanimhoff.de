@@ -24,6 +24,7 @@
 
     a {
       @include link-colors($footer-link-color, $footer-link-color-active, $footer-link-color-active, $footer-link-color, $footer-link-color-active);
+      border: 0;
       text-decoration: none;
     }
 
