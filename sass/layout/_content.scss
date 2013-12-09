@@ -1,0 +1,20 @@
+// ============================================================================
+// Content
+// ============================================================================
+
+// Hintergrund-Muster für den Content-Bereich
+// ----------------------------------------------------------------------------
+body, .container {
+  background-color: $content-background;
+}
+
+.container {
+  background-image: inline-image("css/patterns/billie_holiday_@2X.png");
+  @include background-size(100px 100px);
+}
+
+// Active/Inactive-Fenster Selection
+// ----------------------------------------------------------------------------
+.article * {
+  @include selection($selection-background, $selection-color);
+}

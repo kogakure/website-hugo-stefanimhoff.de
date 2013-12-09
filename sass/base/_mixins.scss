@@ -2,7 +2,7 @@
 // Mixins
 // ============================================================================
 
-// Masking images
+// Bildmasken
 // ----------------------------------------------------------------------------
 @mixin mask-image($img, $repeat: no-repeat){
   width: image-width($img);
@@ -11,7 +11,7 @@
   @include experimental(mask-repeat, $repeat, -webkit, -moz, -o, -ms);
 }
 
-// Box with a shadow
+// Box mit Schatten
 // ----------------------------------------------------------------------------
 @mixin shadow-box($border: #fff .5em solid, $shadow: rgba(#000, .15) 0 1px 4px, $border-radius: .3em) {
   border: $border;
@@ -30,7 +30,7 @@
   }
 }
 
-// Quotes for `blockquote` in multiple languages
+// Zitatzeichen für `blockquote` in verschiedenen Sprachen
 // ----------------------------------------------------------------------------
 @mixin pullquote-quotes($quotes) {
   quotes: $quotes;
@@ -43,7 +43,7 @@
   }
 }
 
-// Quotes for `q` in multiple languages
+// Zitatzeichen für `q` in verschiedenen Sprachen
 // ----------------------------------------------------------------------------
 @mixin q-quotes($language, $quotes) {
   :lang(#{$language}) > q,
@@ -58,12 +58,12 @@
 // WebKit font-smoothing
 // ----------------------------------------------------------------------------
 //
-// References:
+// Referenzen:
 //
 // 1. http://maxvoltar.com/sandbox/fontsmoothing/
 // 2. http://maxvoltar.com/archive/-webkit-font-smoothing
 //
-// Values: none, antialiased (default), subpixel-antialiased
+// Werte: none, antialiased (default), subpixel-antialiased
 //
 @mixin font-smoothing($value: antialiased) {
   -webkit-font-smoothing: $value !important;

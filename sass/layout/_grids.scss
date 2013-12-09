@@ -4,11 +4,11 @@
 
 @import "susy";
 
-// Susy & Compass use HTML hacks to support IE 6 and 7.
+// Susy & Compass benutzen HTML hacks um IE 6 und 7 zu unterstützen
 $legacy-support-for-ie6: true;
 $legacy-support-for-ie7: true;
 
-// Grid settings
+// Grid-Einstellungen
 // ----------------------------------------------------------------------------
 $total-columns: 12;
 $column-width:  4em;
@@ -24,7 +24,7 @@ $default-rhythm-border-style: solid;
   @include squish(2, 2);
 }
 
-// Layout
+// Grids
 // ----------------------------------------------------------------------------
 .page .main,
 .post .main,
@@ -45,4 +45,12 @@ header {
 
 footer {
   clear: both;
+}
+
+.article-title {
+  @include container;
+}
+
+.article-title h1 {
+  @extend %main-grid;
 }

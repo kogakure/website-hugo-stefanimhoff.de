@@ -1,8 +1,8 @@
 // ============================================================================
-// Vars
+// Variablen
 // ============================================================================
 
-// Colors
+// Farben
 // ----------------------------------------------------------------------------
 
 $black:                    #000000;
@@ -10,49 +10,60 @@ $white:                    #FFFFFF;
 $dark-grey:                #333333;
 $light-grey:               #DDDDDD;
 
-// Keyboard
-$keyboard-border:          #CCCCCC;
-$keyboard-background:      #F7F7F7;
+// Header
+$header-background:        #84A2AA; // THEME
+$header-border-top-color:  #20310E; // THEME
 
-// Sample
-$sample-color:             $white;
-$sample-background:        $dark-grey;
-
-// Definition
-$definition-color:         #999999;
-
-// Table
-$table-border-color:       #DDDDDD;
-$table-striped-background: #F9F9F9;
-
-// Image
-$image-border-color:       #CCCCCC;
-
-// Navigation
-$nav-background:           #0C0C0C;
-$nav-link-color:           rgba($white, 0.5);
-$nav-link-color-hover:     #89B46B; // THEME (Matching to image)
-$nav-link-color-active:    $white;
+// Content
+$content-background:       #EEEEEE;
 
 // Footer
 $footer-link-color:        rgba($white, 0.5);
 $footer-link-color-active: $white;
 
-// Selection
-$selection-background:     #89B46B; // THEME
-$selection-color:          $white; // THEME
+// Navigation
+$nav-background:           #0C0C0C;
+$nav-link-color:           rgba($white, 0.5);
+$nav-link-color-hover:     #89B46B; // THEME
+$nav-link-color-active:    $white;
 
-// Animations
+// Tastatur (kbd)
+$keyboard-border:          #CCCCCC;
+$keyboard-background:      #F7F7F7;
+
+// Beispiel (samp)
+$sample-color:             $white;
+$sample-background:        $dark-grey;
+
+// Definition (dfn)
+$definition-color:         #999999;
+
+// Tabellen
+$table-border-color:       #DDDDDD;
+$table-striped-background: #F9F9F9;
+
+// Bilder
+$image-border-color:       #CCCCCC;
+
+// ::selection
+$selection-background:     #89B46B; // THEME
+$selection-color:          $white;  // THEME
+
+// Pfade
 // ----------------------------------------------------------------------------
 
-// Curves
+$header-background-url:    "/images/css/header/test-header.jpg"; // THEME
+
+// Animationen
+// ----------------------------------------------------------------------------
+
+// Animations-Kurven
 $cubic-bezier-bouncing: cubic-bezier(0.205, 0.010, 0.005, 1.000);
 
-
-// Animations
+// Animationen-Timings
 $animation-off-screen-menu: transform 500ms $cubic-bezier-bouncing;
 
-// Typography
+// Typographie
 // ----------------------------------------------------------------------------
 
 /* Modular Scale
@@ -65,20 +76,20 @@ $animation-off-screen-menu: transform 500ms $cubic-bezier-bouncing;
  *
  */
 
-$ratio:         golden(); // Default
+$ratio:         golden(); // Standard
 $base-size:     16px 18px;
 
-// Font Weights
+// Schriftstärken
 $normal:        400;
 $bold:          700;
 
-// Font Families
+// Schriftarten
 $base-font-family:           'Gentium Basic', serif;
 $base-font-sans:             'Yanone Kaffeesatz', Arial, Helvetica, sans-serif;
 $base-font-mono:             Menlo, Monaco, 'Andale Mono', 'Lucida console', 'Courier New', monospace;
 $base-font-japanese:         'Hiragino Maru Gothic Pro', sans-serif;
 
-// Base sizes and line-height
+// Grundgrößen und Zeilenhöhe
 $base-font-size:             modular-scale(1);
 $base-line-height:           24px;
 $base-font-weight:           $normal;
@@ -88,7 +99,7 @@ $base-rhythm-unit:           $base-line-height / $base-font-size * $font-unit;
 $relative-font-sizing:       true;
 $round-to-nearest-half-line: true; // Verhindert zu große Lücken zwischen den Zeilen
 
-// Headline Font Sizes
+// Überschrift-Schriftgrößen
 $font-scale-h1:              modular-scale(6); // 68px
 $font-scale-h2:              modular-scale(4); // 42px
 $font-scale-h3:              modular-scale(2); // 29px
@@ -97,7 +108,7 @@ $font-scale-h5:              modular-scale(2); // 29px
 $font-scale-h6:              modular-scale(2); // 29px
 $font-scale-small:           14px;
 
-// Fonts
+// Schriften
 %base {
   font-family: $base-font-family;
 }

@@ -7,7 +7,6 @@
   @include box-sizing(border-box);
 }
 
-
 body {
   @extend %base;
   @include font-smoothing(subpixel-antialiased);
@@ -58,7 +57,7 @@ p {
   @include adjust-font-size-to(22px);
 }
 
-// Horizontal borders
+// Horizontale Trenner
 // ----------------------------------------------------------------------------
 hr {
   height: 0;
@@ -178,7 +177,7 @@ kbd {
   @include box-shadow(0 1px 0 rgba($black, 0.2), 0 0 0 2px $white inset);
 }
 
-// Superscript/subscript
+// Superscript/Subscript
 // ----------------------------------------------------------------------------
 sup, sub {
   position: relative;
@@ -193,7 +192,7 @@ sub {
   top: 0.8ex;
 }
 
-// Italicised/Emboldened
+// Italic/Fett
 // ----------------------------------------------------------------------------
 i {
   font-style: italic;
@@ -203,7 +202,7 @@ b {
   font-weight: $bold;
 }
 
-// Marked
+// Markiert
 // ----------------------------------------------------------------------------
 mark {
   position: relative;
@@ -234,7 +233,7 @@ mark {
   }
 }
 
-// Edits
+// Bearbeitungen
 // ----------------------------------------------------------------------------
 ins {
   text-decoration: underline;
@@ -244,7 +243,7 @@ del {
   text-decoration: line-through;
 }
 
-// Lists
+// Listen
 // ----------------------------------------------------------------------------
 ol {
   list-style: decimal;
@@ -282,7 +281,7 @@ dd {
   margin-left: 0;
 }
 
-// Quotes
+// Zitate
 // ----------------------------------------------------------------------------
 blockquote {
   margin-left: $base-rhythm-unit;
@@ -320,7 +319,7 @@ q:after {
   content: close-quote;
 }
 
-// Images
+// Bilder
 // ----------------------------------------------------------------------------
 img {
   border: 3px solid $image-border-color;
@@ -329,7 +328,7 @@ img {
   width: auto\9; /* ie8 */
 }
 
-// Figure
+// Abbildungen
 // ----------------------------------------------------------------------------
 
 figcaption {
@@ -347,7 +346,7 @@ video {
   @include trailer(1);
 }
 
-// Tables
+// Tabellen
 // ----------------------------------------------------------------------------
 caption, th, td {
   font-weight: $normal;

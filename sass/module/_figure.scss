@@ -1,8 +1,8 @@
 // ============================================================================
-// Figures & Images
+// Abbildungen und Bilder
 // ============================================================================
 
-// Grid overrides (to break free of main column)
+// Grid-Erweiterungen (nötig, um aus der Hauptspalte auszubrechen)
 %grid-12-of-8-break-out {
   width: columns(12, 8);
   margin-left: -(gutter(8) + columns(2, 8));
@@ -13,20 +13,20 @@
   margin-left: -(gutter(8) + columns(1, 8));
 }
 
-// Layout on div and margin to the bottom
+// Layout für das div um die Abbildung
 div.figure {
   @include trailer(1);
   clear: both;
   float: left;
 }
 
-// Fullsize image reaching from edge to edge
+// Abbildung in voller Breite (Untertitel darunter zentriert)
 // ----------------------------------------------------------------------------
 .figure--fullsize {
   @extend %grid-12-of-8-break-out;
 }
 
-// Image left aligned with caption to the right
+// Abbildung links ausgerichtet (Untertitel rechts daneben)
 // ----------------------------------------------------------------------------
 .figure--hangleft {
   @extend %grid-12-of-8-break-out;
@@ -42,7 +42,7 @@ div.figure {
   }
 }
 
-// Image right aligned with caption to the left
+// Abbildung rechts ausgerichtet (Untertitel links daneben)
 // ----------------------------------------------------------------------------
 .figure--hangright {
   @extend %grid-12-of-8-break-out;
@@ -58,13 +58,13 @@ div.figure {
   }
 }
 
-// Image centered with caption below
+// Abbildung zentriert, ragt in beide Ränder hinein (Untertitel darunter)
 // ----------------------------------------------------------------------------
 .figure--center {
   @extend %grid-10-of-8-break-out;
 }
 
-// Figure with a long caption
+// Abbildung mit einem langen Untertitel
 // ----------------------------------------------------------------------------
 .figure--longcaption {
   figcaption {
@@ -72,16 +72,16 @@ div.figure {
   }
 }
 
-// Figure with a border
+// Abbildung mit einer Umrandung
 // ----------------------------------------------------------------------------
-// Border is now a default, but there might be images which need a border
-// (white/bright background). These should become an additional class attribute
-// for a border.
+// Eine Umrandung ist derzeit Standard, aber es gibt Bilder, wo ein Rand nötig
+// ist, da es sonst schlecht aussieht. Diese sollten zusätzlich noch das
+// Klassen-Attribut für eine Umrandung bekommen.
 .figure--border img {
   border: 3px solid $image-border-color;
 }
 
-// Figure with a shadow
+// Abbildung mit einem Schatten
 // ----------------------------------------------------------------------------
 .figure--shadow img {
   @include box-shadow(0 1px 3px rgba($black, 0.5));

@@ -1,5 +1,5 @@
 // ============================================================================
-// Tables
+// Tabellen
 // ============================================================================
 
 %table {
@@ -37,7 +37,7 @@
   @extend %table;
 }
 
-// Tables with zebra stripes
+// Tabellen mit Zebra-Streifen
 // ----------------------------------------------------------------------------
 .table--striped {
   @extend %table;
@@ -48,7 +48,7 @@
   }
 }
 
-// Tables with a border
+// Tabellen mit Umrandung
 // ----------------------------------------------------------------------------
 .table--bordered {
   @extend %table;
@@ -62,7 +62,7 @@
   }
 }
 
-// Tables which are more condensed
+// Tabellen, die enger sind
 // ----------------------------------------------------------------------------
 .table--condensed {
   @extend %table;
@@ -72,7 +72,7 @@
   }
 }
 
-// Tables with a hover style
+// Tabellen mit Hover-Status
 // ----------------------------------------------------------------------------
 .table--hover {
   @extend %table;

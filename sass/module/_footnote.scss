@@ -1,12 +1,11 @@
 // ============================================================================
-// Footnotes
+// Fußnoten
 // ============================================================================
 //
-// To set a footnote do this syntax[^1]
+// Um eine Fußnote zu setzen wird diese Syntax verwendet[^1]
 //
-// To describe a footnote use this:
-//
-// [^1]: Description of the footnote
+// Um eine Fußnote zu beschreiben wird diese Syntax verwendet:
+// [^1]: Beschreibung der Fußnote
 
 sup a[rel="footnote"] {
   @extend %sans;
