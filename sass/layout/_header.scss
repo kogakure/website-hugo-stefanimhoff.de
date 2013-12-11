@@ -28,8 +28,15 @@ header#top {
   }
 
   h1 {
+    @include text-shadow(0 2px 3px $black);
     color: white;
-    @include text-shadow(0 2px 3px black);
+    margin-bottom: 0;
+  }
+
+  h2 {
+    @include adjust-font-size-to($font-scale-h3);
+    @include text-shadow(0 2px 5px $black);
+    color: lighten($slightly-desaturated-green, 15);
   }
 }
 
