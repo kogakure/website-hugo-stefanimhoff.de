@@ -16,9 +16,15 @@ header#top {
   // * mit translate3d verwendet werden.
 
   .nav-btn {
+    @extend %sans;
+    @include adjust-font-size-to(18px);
+    @include link-colors($white, $nav-link-color-hover, $white, $white, $white);
+    @include text-shadow(0 1px 1px $black);
     border: 0;
+    letter-spacing: 1px;
     position: absolute;
     right: 1em;
+    text-transform: uppercase;
     top: 1em;
     z-index: 100;
   }

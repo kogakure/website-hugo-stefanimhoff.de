@@ -131,6 +131,7 @@
     @include transition($animation-navigation-link-hover);
     border: 0;
     text-decoration: none;
+    line-height: 1;
   }
 }
 
@@ -149,11 +150,15 @@
   color: $nav-link-color-active;
 }
 
-
 // Styling für aktiven Navigationspunkt
 // ----------------------------------------------------------------------------
 .nav-item-external a:hover {
   &:after {
-    content: " →"; // @TODO: Den Pfeil mit einem hübschen Vektor-Icon-Pfeil ersetzen
+    content: " \f103";
+    font-family: "iconfont";
+    font-size: 14px;
+    line-height: 1;
+    position: relative;
+    top: -1px;
   }
 }
