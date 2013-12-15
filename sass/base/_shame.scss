@@ -11,3 +11,35 @@
   height: 300px;
   color: $white;
 }
+
+.about {
+  @include span-columns(6);
+}
+
+.social-networks {
+  @include span-columns(6 omega);
+  font-size: 25px;
+  list-style: none;
+  text-align: left;
+
+  li {
+    display: inline-block;
+    margin: 0 0 20px 20px;
+  }
+
+  a {
+    @include link-colors($social-icon-color, $social-icon-hover, $social-icon-color, $social-icon-color, $social-icon-color);
+    @include text-shadow($black -1px -1px 0);
+    border: 0;
+
+    &:hover {
+      border: 0;
+    }
+  }
+
+  a span {
+    @extend %visually-hidden;
+  }
+
+
+}
