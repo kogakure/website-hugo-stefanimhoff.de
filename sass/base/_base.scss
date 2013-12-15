@@ -333,9 +333,10 @@ q:after {
 // Bilder
 // ----------------------------------------------------------------------------
 img {
-  border: 3px solid $image-border-color;
+  border: $image-border-size solid $image-border-color;
   max-width: 100%;
   height: auto !important;
+  vertical-align: bottom;
   width: auto\9; /* ie8 */
 }
 

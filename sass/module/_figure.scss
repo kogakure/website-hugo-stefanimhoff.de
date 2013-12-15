@@ -78,7 +78,7 @@ div.figure {
 // ist, da es sonst schlecht aussieht. Diese sollten zusätzlich noch das
 // Klassen-Attribut für eine Umrandung bekommen.
 .figure--border img {
-  border: 3px solid $image-border-color;
+  border: $image-border-size solid $image-border-color;
 }
 
 // Abbildung mit einem Schatten

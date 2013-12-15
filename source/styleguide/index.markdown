@@ -920,6 +920,22 @@ Es ist auch möglich Abbildungen zentriert (`figure--center`) zu setzen, so dass
 {% endfigure %}{% endraw %}
 ```
 
+Abbildungen mit Quellenangabe
+-----------------------------
+
+{% figure attribution %}
+<img src="http://lorempixel.com/680/408/fashion/" alt="Example image">
+<p class="attribution__text">Dieses Foto stammt von <a href="http://lorempixel.com">lorempixel.com</a></p>
+{% endfigure %}
+
+```html
+{% figure attribution %}
+<img src="http://lorempixel.com/680/408/fashion/" alt="Example image">
+<p class="attribution__text">Dieses Foto stammt von <a href="http://lorempixel.com">lorempixel.com</a></p>
+{% endfigure %}
+```
+
+
 Videos
 ------
 
