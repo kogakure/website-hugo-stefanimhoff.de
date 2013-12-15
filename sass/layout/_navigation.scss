@@ -64,7 +64,19 @@
     width: 250px;
 
     .nav-close-btn {
-      display: none; // @TODO: Ersetzen mit Vektor-Icon "X"
+      @extend %sans;
+      @include adjust-font-size-to(12px);
+      @include link-colors($white, $nav-link-color-hover, $white, $white, $white);
+      @include text-shadow(0 1px 1px $black);
+      border: 0;
+      display: block;
+      position: absolute;
+      right: 2em;
+      top: 30px;
+
+      span {
+        @extend %visually-hidden;
+      }
     }
   }
 
@@ -154,7 +166,7 @@
 // ----------------------------------------------------------------------------
 .nav-item-external a:hover {
   &:after {
-    content: " \f103";
+    content: " \f104"; // @TODO: Prüfen nach Icon-Font-Kompilierung, ändert sich
     font-family: "iconfont";
     font-size: 14px;
     line-height: 1;
