@@ -33,24 +33,29 @@ $(function() {
     event.preventDefault();
   });
 
-  // Close navigation by clicking somewhere in main column
-  $(".main").on("click", function() {
-    $("body").removeClass("navigation-is-open");
+  // Close navigation by clicking somewhere in the content
+  // but not on link or if navigation is closed
+  $(".container").on("click", function(event) {
+    if ($("body.navigation-is-open").length > 0) {
+      if(event.target.className != "nav-btn") {
+        $("body").removeClass("navigation-is-open");
+      }
+    }
   });
 
   // Close navigation after 1.5s after leaving the navigation
-  $("#nav").on("mouseleave", function() {
-    timer = window.setTimeout(function() {
-      $("body").removeClass("navigation-is-open");
-    }, 1500);
-  });
+  // $("#nav").on("mouseleave", function() {
+  //   timer = window.setTimeout(function() {
+  //     $("body").removeClass("navigation-is-open");
+  //   }, 1500);
+  // });
 
   // Stop timeout that closes the navigation when entering the navigation (again)
-  $("#nav").on("mouseenter", function() {
-    if (timer) {
-      clearTimeout(timer);
-    }
-  });
+  // $("#nav").on("mouseenter", function() {
+  //   if (timer) {
+  //     clearTimeout(timer);
+  //   }
+  // });
 
 
   // Hightlight current navigation item
