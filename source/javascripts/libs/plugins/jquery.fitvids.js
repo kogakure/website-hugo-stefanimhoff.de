@@ -23,7 +23,7 @@
 
       var div = document.createElement('div'),
           ref = document.getElementsByTagName('base')[0] || document.getElementsByTagName('script')[0],
-          cssStyles = '&shy;<style>.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style>';
+          cssStyles = '&shy;<style>.is-fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.is-fluid-width-video-wrapper iframe,.is-fluid-width-video-wrapper object,.is-fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style>';
 
       div.className = 'fit-vids-style';
       div.id = 'fit-vids-style';
@@ -57,7 +57,7 @@
 
       $allVideos.each(function(){
         var $this = $(this);
-        if (this.tagName.toLowerCase() === 'embed' && $this.parent('object').length || $this.parent('.fluid-width-video-wrapper').length) { return; }
+        if (this.tagName.toLowerCase() === 'embed' && $this.parent('object').length || $this.parent('.is-fluid-width-video-wrapper').length) { return; }
         var height = ( this.tagName.toLowerCase() === 'object' || ($this.attr('height') && !isNaN(parseInt($this.attr('height'), 10))) ) ? parseInt($this.attr('height'), 10) : $this.height(),
             width = !isNaN(parseInt($this.attr('width'), 10)) ? parseInt($this.attr('width'), 10) : $this.width(),
             aspectRatio = height / width;
@@ -65,7 +65,7 @@
           var videoID = 'fitvid' + Math.floor(Math.random()*999999);
           $this.attr('id', videoID);
         }
-        $this.wrap('<div class="fluid-width-video-wrapper"></div>').parent('.fluid-width-video-wrapper').css('padding-top', (aspectRatio * 100)+"%");
+        $this.wrap('<div class="is-fluid-width-video-wrapper"></div>').parent('.is-fluid-width-video-wrapper').css('padding-top', (aspectRatio * 100)+"%");
         $this.removeAttr('height').removeAttr('width');
       });
     });

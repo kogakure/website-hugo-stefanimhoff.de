@@ -6,6 +6,19 @@
 // 2. State styles indicate a JavaScript dependency.
 
 // Class provides by FitVid
-.fluid-width-video-wrapper {
+// ------------------------
+.is-fluid-width-video-wrapper {
   @include trailer(1);
+}
+
+// Global visibility: hidden
+// -------------------------
+.is-invisible {
+  visibility: hidden;
+}
+
+// Global display: none
+// --------------------
+.is-hidden {
+  display: none;
 }
