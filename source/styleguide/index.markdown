@@ -929,10 +929,10 @@ Abbildungen mit Quellenangabe
 {% endfigure %}
 
 ```html
-{% figure attribution %}
+{% raw %}{% figure attribution %}
 <img src="http://lorempixel.com/680/408/fashion/" alt="Example image">
 <p class="attribution__text">Dieses Foto stammt von <a href="http://lorempixel.com">lorempixel.com</a></p>
-{% endfigure %}
+{% endfigure %}{% endraw %}
 ```
 
 
