@@ -68,3 +68,49 @@
     }
   }
 }
+
+.footer {
+  // Über mich Sektion
+  .about {
+    @include span-columns(6);
+
+    h3 {
+      color: rgba($white, 0.85);
+    }
+  }
+
+  // Social Network Icons
+  .social-networks {
+    @include span-columns(6 omega);
+
+    h3 {
+      color: rgba($white, 0.85);
+      margin-left: 20px;
+    }
+
+    ul {
+      list-style: none;
+      font-size: 25px;
+      text-align: left;
+    }
+
+    li {
+      display: inline-block;
+      margin: 0 0 20px 20px;
+    }
+
+    a {
+      @include link-colors($social-icon-color, $social-icon-hover, $social-icon-color, $social-icon-color, $social-icon-color);
+      @include text-shadow($black -1px -1px 0);
+      border: 0;
+
+      &:hover {
+        border: 0;
+      }
+    }
+
+    a span {
+      @extend %visually-hidden;
+    }
+  }
+}

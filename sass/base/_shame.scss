@@ -14,13 +14,25 @@
 
 .about {
   @include span-columns(6);
+
+  h3 {
+    color: rgba($white, 0.85);
+  }
 }
 
 .social-networks {
   @include span-columns(6 omega);
-  font-size: 25px;
-  list-style: none;
-  text-align: left;
+
+  h3 {
+    color: rgba($white, 0.85);
+    margin-left: 20px;
+  }
+
+  ul {
+    list-style: none;
+    font-size: 25px;
+    text-align: left;
+  }
 
   li {
     display: inline-block;
@@ -40,6 +52,5 @@
   a span {
     @extend %visually-hidden;
   }
-
-
 }
+
