@@ -26,6 +26,7 @@ group :development do
   gem 'closure-compiler', '~> 1.1.8' # Google Closure
   gem 'gsl', '~> 1.14.7'             # LSI support for tags, needs to be 1.14.x with Homebrew GSL 1.14
   gem 'fontcustom', '~> 1.2.0'       # Compiling vector icons
+  gem 'colorize'                     # Farbige Consolen-Ausgaben
 end
 
 gem 'sinatra', '~> 1.4.2'
