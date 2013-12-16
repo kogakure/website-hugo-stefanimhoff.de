@@ -66,3 +66,16 @@
     z-index: 999;
   }
 }
+
+[data-tooltip]:after,
+[data-tooltip]:before {
+  bottom: 100%;
+  margin: 0 0 5px;
+  top: auto;
+}
+
+[data-tooltip]:before {
+  border-color: #000 transparent transparent transparent;
+  margin: 0 0 -5px 5px;
+}
+
