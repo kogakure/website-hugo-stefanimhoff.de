@@ -166,8 +166,8 @@
 // ----------------------------------------------------------------------------
 .nav-item-external a:hover {
   &:after {
+    @extend %iconfont;
     content: " \f104"; // @TODO: Prüfen nach Icon-Font-Kompilierung, ändert sich
-    font-family: "iconfont";
     font-size: 14px;
     line-height: 1;
     position: relative;

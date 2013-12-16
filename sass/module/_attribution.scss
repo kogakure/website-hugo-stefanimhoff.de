@@ -37,19 +37,18 @@
 }
 
 %attribution-before {
-  @extend %sans;
+  @extend %iconfont;
   @include border-radius(10px);
   @include transition(all 0.6s ease);
+  font-size: 10px;
   background: $white;
-  background: rgba($white, 0.5);
+  background: rgba($white, 0.7);
   color: $black;
-  content: "?";
-  font-weight: 800;
+  content: "\f10d";
   height: 20px;
   line-height: 20px;
   position: absolute;
   text-align: center;
-  text-shadow: 0 0 3px $white;
   width: 20px;
 }
 
