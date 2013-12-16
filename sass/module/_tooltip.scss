@@ -1,0 +1,68 @@
+// ============================================================================
+// Tooltip
+// ============================================================================
+
+[data-tooltip] {
+  position: relative;
+  text-decoration: none !important;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:after, &:before {
+    @extend %sans;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 100%;
+  }
+
+  &:before {
+    border: 5px solid;
+    border-color: transparent transparent #000 transparent;
+    content: " ";
+    height: 0;
+    left: 10px;
+    margin-top: -5px;
+    width: 0;
+    overflow: hidden;
+  }
+
+  &:after {
+    background: #000;
+    border-radius: 3px;
+    color: #fff;
+    content: attr(data-tooltip);
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 200;
+    left: -5px;
+    line-height: 17px;
+    margin: 5px 0 0;
+    max-width: 250px;
+    padding: 3px 5px 2px;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    text-overflow: ellipsis;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+
+    word-wrap: break-word;
+    height: 17px;
+    white-space: nowrap;
+  }
+
+  &:focus:before, &:focus:after,
+  &:hover:before, &:hover:after {
+    opacity: 1;
+    -webkit-transform: translateZ(0); /* webkit flicker fix */
+    -webkit-transition: opacity 0.15s ease-out;
+    -moz-transition: opacity 0.15s ease-out;
+    -o-transition: opacity 0.15s ease-out;
+    transition: opacity 0.15s ease-out;
+    z-index: 999;
+  }
+}
