@@ -1,6 +1,8 @@
+# encoding: utf-8
 require "rubygems"
 require "bundler/setup"
 require "stringex"
+require "colorize"
 
 ## -- Rsync Deploy config -- ##
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
@@ -364,6 +366,23 @@ task :setup_github_pages, :repo do |t, args|
     end
   end
   puts "\n---\n## Now you can deploy to #{repo_url} with `rake deploy` ##"
+end
+
+namespace :fonts do
+  desc "Generate custom webfonts and SCSS"
+  task :compile do
+    system 'git status ./vectors | grep -E "modified|untracked"'
+    if $?.exitstatus == 0
+      system 'fontcustom compile'
+      if $?.exitstatus == 0
+        puts "✔ Successfully generated vector font".green
+      else
+        puts "✘ FAILED to generate vector font!".white.on_red
+      end
+    else
+      puts "⌁ Nothing changed, won’t run.".yellow
+    end
+  end
 end
 
 def ok_failed(condition)
