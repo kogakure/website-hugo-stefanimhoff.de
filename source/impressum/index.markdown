@@ -19,7 +19,7 @@ E-Mail: kogakure [at] gmail [punkt] com
 </p>
 </div>
 
-Inhaltlich Verantwortlicher gemäß § 10 Absatz 3 MDStV: Stefan Imhoff (Anschrift wie oben)
+Inhaltlich Verantwortlicher gemäß § 10 Absatz 3 MDStV:<br> Stefan Imhoff (Anschrift wie oben)
 
 ### Haftungshinweis
 
@@ -43,10 +43,10 @@ Die nachfolgende Erklärung gibt Ihnen einen Überblick darüber, wie ich diesen
 
 stefanimhoff.de erhebt und speichert automatisch in ihren Server Log Files Informationen, die Ihr Browser an mich übermittelt. Dies sind unter anderem:
 
-- Browsertyp/ -version
+- Browsertyp/-version
 - verwendetes Betriebssystem
 - Referrer URL (die zuvor besuchte Seite)
-- Hostname des zugreifenden Rechners (IP Adresse)
+- Hostname des zugreifenden Rechners (IP-Adresse)
 - Uhrzeit der Serveranfrage.
 - Diese Daten sind für mich nicht bestimmten Personen zuordenbar. Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen.
 
