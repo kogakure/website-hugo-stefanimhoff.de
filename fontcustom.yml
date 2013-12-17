@@ -25,7 +25,7 @@ quiet:             false
 
 input:
   vectors: vectors # required
-  # templates: app/assets/fonts/fontcustom/templates
+  templates: vectors/templates
 
 output:
   fonts:   source/fonts # required
@@ -43,4 +43,5 @@ output:
 #   referenced by their base file name.
 # --------------------------------------------------------------------------- #
 
-templates: [ scss, preview ]
+templates: [ scss, preview, _iconfont_vars.scss ]
+# templates: [ scss, preview ]
