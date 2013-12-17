@@ -43,5 +43,6 @@ output:
 #   referenced by their base file name.
 # --------------------------------------------------------------------------- #
 
-templates: [ scss, preview, _iconfont_vars.scss ]
+templates: [ _iconfont.scss, preview ]
+# templates: [ scss, preview, _iconfont_vars.scss ]
 # templates: [ scss, preview ]

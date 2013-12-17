@@ -2,6 +2,9 @@
 @import "base/vars";
 @import "base/mixins";
 
+// Vektor-Fonts
+@import "base/iconfont";
+
 // Theme
 @import "theme/bonsai";
 
@@ -18,9 +21,6 @@
 // Syntax-Highlighting
 @import "base/solarized";
 @import "base/syntax";
-
-// Vektor-Fonts
-@import "base/iconfont";
 
 // Modules/States
 @import "module/**/*";

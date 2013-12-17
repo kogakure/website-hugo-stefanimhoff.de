@@ -1,6 +1,34 @@
+// ============================================================================
+// Icon-Font (iconfont)
+// ============================================================================
 //
-// Icon Font: iconfont
-//
+// Diese Datei wird automatisch kompiliert, daher keine Änderungen
+// direkt darin machen, sondern diese im Ordner für Templates unter
+// `vectors/templates/_iconfont.scss` ändern.
+
+// Variables für die Nutzung in content
+// ------------------------------------
+
+$icon-arrow-up: "\f100";
+$icon-balance: "\f101";
+$icon-cc: "\f102";
+$icon-close: "\f103";
+$icon-external: "\f104";
+$icon-facebook: "\f105";
+$icon-feed: "\f106";
+$icon-flickr: "\f107";
+$icon-github: "\f108";
+$icon-google-plus: "\f109";
+$icon-menu: "\f10a";
+$icon-palette: "\f10b";
+$icon-pinterest: "\f10c";
+$icon-question: "\f10d";
+$icon-tumblr: "\f10e";
+$icon-twitter: "\f10f";
+$icon-xing: "\f110";
+
+// Font-Face
+// ---------
 
 @font-face {
   font-family: "iconfont";
@@ -12,6 +40,9 @@
   font-weight: normal;
   font-style: normal;
 }
+
+// Styling für Icon-Fonts
+// ----------------------
 
 [data-icon]:before { content: attr(data-icon); }
 
@@ -33,16 +64,20 @@
 .icon-tumblr:before,
 .icon-twitter:before,
 .icon-xing:before {
+  display: inline-block;
   font-family: "iconfont";
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
-  text-transform: none;
   line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  display: inline-block;
   text-decoration: inherit;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
+
+// Einzelne Klassen-Attribute
+// --------------------------
 
 .icon-arrow-up:before { content: "\f100"; }
 .icon-balance:before { content: "\f101"; }

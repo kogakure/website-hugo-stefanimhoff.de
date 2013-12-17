@@ -167,7 +167,7 @@
 .nav-item-external a:hover {
   &:after {
     @extend %iconfont;
-    content: " \f104"; // @TODO: Prüfen nach Icon-Font-Kompilierung, ändert sich
+    content: " #{$icon-external}"; // @TODO: Prüfen nach Icon-Font-Kompilierung, ändert sich
     font-size: 14px;
     line-height: 1;
     position: relative;
