@@ -153,7 +153,7 @@ task :new_page, :filename do |t, args|
       page.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"
       page.puts "comments: false"
       page.puts "sharing: false"
-      page.puts "footer: true"
+      page.puts "footer: false"
       page.puts "---"
     end
   else
@@ -376,6 +376,7 @@ namespace :fonts do
       system 'fontcustom compile'
       if $?.exitstatus == 0
         puts "✔ Successfully generated vector font".green
+        puts "⚠  Make sure you compile your assets, too.\n   Otherwise you'll end up with a missing font!".yellow
       else
         puts "✘ FAILED to generate vector font!".white.on_red
       end
