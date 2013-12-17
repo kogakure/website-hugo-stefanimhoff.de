@@ -1,1 +1,10 @@
-Test
+Test2
+<%
+
+%>
+
+<% @glyphs.each_with_index do |name, index| %>
+  <%= name %>
+<% end %>
+
+<%= @opts.font_name %>
