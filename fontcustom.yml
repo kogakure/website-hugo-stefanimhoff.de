@@ -8,9 +8,8 @@ font_name:         iconfont
 css_prefix:        icon-
 preprocessor_path: "/fonts"
 autowidth:         false
-# no_hash:           false
-# debug:             false
 quiet:             false
+# debug:             false
 
 
 # --------------------------------------------------------------------------- #
@@ -20,9 +19,6 @@ quiet:             false
 #   hashes or file types / names.
 # --------------------------------------------------------------------------- #
 
-#project_root: some/other/place
-#manifest: tmp/fontcustom
-
 input:
   vectors: vectors # required
   templates: vectors/templates
@@ -31,7 +27,6 @@ output:
   fonts:   source/fonts # required
   css:     sass/base
   preview: docs
-  # my-custom-template.yml: config
 
 
 # --------------------------------------------------------------------------- #
@@ -44,5 +39,3 @@ output:
 # --------------------------------------------------------------------------- #
 
 templates: [ _iconfont.scss, preview ]
-# templates: [ scss, preview, _iconfont_vars.scss ]
-# templates: [ scss, preview ]

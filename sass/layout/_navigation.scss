@@ -32,10 +32,17 @@
   z-index: 200;
 
   .nav-close-btn {
+    @extend %sans;
+    @include link-colors($white, $nav-link-color-hover, $white, $white, $white);
+    border: 0;
     display: none;
     position: absolute;
-    right: 1em;
-    top: 1em;
+    right: 2em;
+    top: 30px;
+
+    span {
+      @extend %visually-hidden;
+    }
   }
 
   // Wenn nicht das Ziel, dann lass das Menü verschwinden
@@ -167,7 +174,7 @@
 .nav-item-external a:hover {
   &:after {
     @extend %iconfont;
-    content: " #{$icon-external}"; // @TODO: Prüfen nach Icon-Font-Kompilierung, ändert sich
+    content: " #{$icon-external}";
     font-size: 14px;
     line-height: 1;
     position: relative;
