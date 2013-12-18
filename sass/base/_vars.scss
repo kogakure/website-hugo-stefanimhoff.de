@@ -10,6 +10,9 @@ $white:                         #FFFFFF;
 $dark-grey:                     #333333;
 $light-grey:                    #DDDDDD;
 
+// Body
+$body-background:               #0A0A0A;
+
 // Header
 $header-background:             $dark-grey; // THEME
 $header-border-top-color:       $black;     // THEME
@@ -20,6 +23,8 @@ $content-background:            #EEEEEE;
 // Footer
 $footer-link-color:             rgba($white, 0.5);
 $footer-link-color-active:      $white;
+$footer-meta-background:        #292A2C;
+$footer-small-background:       #0A0A0A;
 
 // Navigation
 $nav-background:                #0C0C0C;

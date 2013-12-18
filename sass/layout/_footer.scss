@@ -5,6 +5,7 @@
 .footer {
   @extend %sans;
   @include background-size(102px 102px);
+  background-color: $footer-meta-background;
   background-image: inline-image("css/patterns/classy_fabric_@2X.png");
   color: rgba(white, 0.25);
   padding-top: $base-rhythm-unit;
@@ -15,11 +16,12 @@
   }
 
   small {
-    color: rgba($white, 0.3);
-    margin-top: $base-rhythm-unit;
-    display: block;
-    background-image: inline-image("css/patterns/dark_stripes_@2X.png");
     @include background-size(50px 50px);
+    background-color: $footer-small-background;
+    background-image: inline-image("css/patterns/dark_stripes_@2X.png");
+    color: rgba($white, 0.3);
+    display: block;
+    margin-top: $base-rhythm-unit;
     padding: 0.5em 0;
 
     a {
