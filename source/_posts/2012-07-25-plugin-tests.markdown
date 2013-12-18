@@ -9,6 +9,7 @@ categories:
 tags:
 - test
 custom_css: "custom_demo"
+robots: "noindex, follow"
 ---
 
 ## Testing des Markdown-Parser

@@ -31,7 +31,7 @@
   <meta http-equiv="cleartype" content="on">
 
   <!-- Robots -->
-  <meta name="robots" content="all">
+  {% if page.robots %}<meta name="robots" content="{{ page.robots }}">{% else %}<meta name="robots" content="all">{% endif %}
   {% capture description %}{% if page.description %}{{ page.description }}{% else %}{{ content | raw_content }}{% endif %}{% endcapture %}
   <!-- Description -->
   <meta name="description" content="{{ description | strip_html | condense_spaces | truncate:150 }}">
