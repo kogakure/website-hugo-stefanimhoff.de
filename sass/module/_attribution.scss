@@ -37,19 +37,27 @@
 }
 
 %attribution-before {
-  @extend %iconfont;
+  @extend %mono;
   @include border-radius(10px);
   @include transition(all 0.6s ease);
-  font-size: 10px;
   background: $white;
   background: rgba($white, 0.7);
   color: $black;
-  content: "#{$icon-question}";
+  content: "?";
+  font-size: 14px;
+  font-weight: bold;
   height: 20px;
   line-height: 20px;
   position: absolute;
   text-align: center;
   width: 20px;
+}
+
+%attribution-before-fontface {
+  @extend %iconfont;
+  content: "#{$icon-question}";
+  font-size: 10px;
+  font-weight: 200;
 }
 
 // Attribution
@@ -77,6 +85,10 @@
   bottom: 10px;
   opacity: 0.75;
   left: 10px;
+
+  .fontface & {
+    @extend %attribution-before-fontface;
+  }
 }
 
 // Versteckt beim Einblenden des Attribution-Textes das Fragezeichen
@@ -114,7 +126,7 @@
 }
 
 .attribution--main__anchor {
-  @extend %sans;
+  // @extend %sans;
   @include transition(all 0.6s ease);
   height: 34px;
   opacity: 0.5;
@@ -127,5 +139,9 @@
     @extend %attribution-before;
     bottom: 7px;
     left: 7px;
+
+    .fontface & {
+      @extend %attribution-before-fontface;
+    }
   }
 }
