@@ -371,7 +371,7 @@ end
 namespace :fonts do
   desc "Generate custom webfonts and SCSS"
   task :compile do
-    system 'git status ./vectors | grep -E "modified|untracked"'
+    system 'git status ./vectors | grep -E "modified|untracked|deleted"'
     if $?.exitstatus == 0
       system 'fontcustom compile'
       if $?.exitstatus == 0
