@@ -4,12 +4,9 @@
 
 // Hintergrund-Muster für den Content-Bereich
 // ----------------------------------------------------------------------------
-main.main {
-  background-color: $content-background;
-}
-
 .container {
   background-image: inline-image("css/patterns/billie_holiday_@2X.png");
+  background-color: $content-background;
   @include background-size(100px 100px);
 }
 
