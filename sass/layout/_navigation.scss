@@ -43,6 +43,10 @@
     span {
       @extend %visually-hidden;
     }
+
+    .no-fontface & i {
+      display: none;
+    }
   }
 
   // Wenn nicht das Ziel, dann lass das Menü verschwinden

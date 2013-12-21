@@ -27,6 +27,10 @@ header#top {
     text-transform: uppercase;
     top: 1em;
     z-index: 100;
+
+    .no-fontface & i {
+      display: none;
+    }
   }
 
   .home & {
