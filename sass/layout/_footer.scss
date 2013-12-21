@@ -106,7 +106,8 @@
     }
 
     // Sprites (wenn Fontface nicht verfügbar)
-    .no-fontface & a {
+    .no-fontface & a,
+    .no-js & a {
       display: inline-block;
       height: 30px;
       transition: none;
