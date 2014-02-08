@@ -90,7 +90,7 @@
   {% capture is_preview %}{% preview %}{% endcapture %}
   {% if is_preview == 'true' %}
   <!-- Stylesheets -->
-  <link href="{{ root_url }}/stylesheets/application.css" rel="stylesheet">
+  <link href="{{ root_url }}/assets/stylesheets/application.css" rel="stylesheet">
   {% if page.custom_css %}<link href="{{ root_url }}/stylesheets/{{page.custom_css}}.css" rel="stylesheet">{% endif %}
   {% else %}
   <!-- Stylesheets -->
@@ -102,7 +102,7 @@
   <![endif]-->
 
   <!-- Modernizer -->
-  <script src="{{ root_url }}/javascripts/libs/modernizr-2.6.2.min.js"></script>
+  <script src="{{ root_url }}/assets/javascripts/libs/modernizr-2.6.2.min.js"></script>
 
   <!-- Feeds -->
   <link href="{{ site.subscribe_rss }}" rel="alternate" title="{{site.title}}" type="application/atom+xml">

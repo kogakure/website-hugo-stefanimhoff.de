@@ -12,13 +12,13 @@ http_path = "/"
 http_images_path = "/images"
 http_generated_images_path = "/images"
 http_fonts_path = "/fonts"
-css_dir = "public/stylesheets"
+css_dir = "public/assets/stylesheets"
 
 # Local development paths
 sass_dir = "sass"
-images_dir = "source/images"
-fonts_dir = "source/fonts"
-generated_images_dir = "source/images"
+images_dir = "source/assets/images"
+fonts_dir = "source/assets/fonts"
+generated_images_dir = "source/assets/images"
 
 output_style = :expanded
 line_comments = true

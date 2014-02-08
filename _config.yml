@@ -23,9 +23,9 @@ assets:
   dirname: assets
   # baseurl: //my.super-cool-cdn.com/
   sources:
-    - stylesheets
-    - javascripts
-    - images
+    - assets/stylesheets
+    - assets/javascripts
+    - assets/images
   compress:
     js: closure # uglify, yui
     css: sass   # yui
@@ -36,7 +36,7 @@ source:       source              # source file directory
 destination:  public              # compiled site directory
 plugins:      plugins
 code_dir:     downloads/code
-images_dir:   /images/
+images_dir:   /assets/images/
 
 titlecase: false                  # Converts page and post titles to titlecase
 

@@ -6,7 +6,7 @@
 
 font_name:         iconfont
 css_prefix:        icon-
-preprocessor_path: "/fonts"
+preprocessor_path: "/assets/fonts"
 autowidth:         false
 quiet:             false
 # debug:             false
@@ -24,7 +24,7 @@ input:
   templates: vectors/templates
 
 output:
-  fonts:   source/fonts # required
+  fonts:   source/assets/fonts # required
   css:     sass/base
   preview: docs
 
