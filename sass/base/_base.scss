@@ -47,12 +47,12 @@ h1 {
 
 h2 {
   @include adjust-font-size-to($font-scale-h2);
-  @include trailer(1, $font-scale-h2, margin);
+  @include trailer(0.5, $font-scale-h2, margin);
 }
 
 h3, h4, h5, h6 {
   @include adjust-font-size-to($font-scale-h4);
-  @include trailer(1, $font-scale-h3, margin);
+  @include trailer(0.3, $font-scale-h3, margin);
 }
 
 // Paragraphs
@@ -63,6 +63,7 @@ p {
 
 .article-body > p:first-child {
   @include adjust-font-size-to($font-scale-intro);
+  @include trailer(0.5, $font-scale-h3, margin);
 }
 
 // Horizontale Trenner
