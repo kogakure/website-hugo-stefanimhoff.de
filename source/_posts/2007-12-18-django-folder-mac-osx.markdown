@@ -15,7 +15,7 @@ tags:
 
 Bei Wishingline gibt es zwei schöne Folder-Icons von [Rails und Lighttpd](http://scottboms.com/2007/12/railslighttpdiconsforleopard/). Diese Idee habe ich mir zum Anlass genommen einen Ordner für Django zu erstellen.
 
-{% figure %}
+{% figure figure--noborder %}
 <a href="/downloads/django-osx-folder.zip"><img src="{{ site.images_dir }}django-osx-folders.png" alt="Django Folder"></a>
 {% endfigure %}
 

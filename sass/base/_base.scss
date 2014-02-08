@@ -63,7 +63,7 @@ p {
 
 .article-body > p:first-child {
   @include adjust-font-size-to($font-scale-intro);
-  @include trailer(0.5, $font-scale-h3, margin);
+  @include trailer(1, $font-scale-h3, margin);
 }
 
 // Horizontale Trenner
