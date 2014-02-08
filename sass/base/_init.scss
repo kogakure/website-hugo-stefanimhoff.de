@@ -3,16 +3,12 @@
 // ============================================================================
 
 @charset "UTF-8";
-@-ms-viewport {
+
+@include viewport {
   width: device-width;
 }
 
-@viewport {
-  width: device-width;
-}
-
-// Kein Auto-Adjust beim Drehen des iPhones
-@media screen and (max-width: 480px) {
+@include breakpoint($iphone-width) {
   html {
     -webkit-text-size-adjust: none;
   }
@@ -23,17 +19,12 @@ html, body {
   min-height: 100%;
 }
 
-.outer-container {
-  min-height: 100%;
+// Vertical-Rythm Fonts einstellen
+@include establish-baseline();
+
+// Alle Elemente so einstellen, dass Padding nicht dazu gerechnet wird
+* {
+  @include box-sizing(border-box);
 }
 
-// Import
-// ----------------------------------------------------------------------------
-@import "compass";
-@import "compass/reset";
-@import "compass/css3/user-interface";
-@import "modular-scale";
 
-// Vertical Rhythm
-// ----------------------------------------------------------------------------
-@include establish-baseline();

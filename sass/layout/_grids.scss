@@ -2,34 +2,54 @@
 // Grids
 // ============================================================================
 
-@import "susy";
-
-// Susy & Compass benutzen HTML hacks um IE 6 und 7 zu unterstützen
-$legacy-support-for-ie6: true;
-$legacy-support-for-ie7: true;
+@import "singularitygs";
 
 // Grid-Einstellungen
 // ----------------------------------------------------------------------------
-$total-columns: 12;
-$column-width:  4em;
-$gutter-width:  1em;
-$grid-padding:  $gutter-width;
 
-$show-grid-backgrounds:       true;
-$default-rhythm-border-style: solid;
+// Base Grid
+$grids: 12;
+$gutters: 0.25;
+$output: 'isolation';
+
+$mobile-first: false;
+$breakpoint-default-feature: max-width;
+
+// Breakpoint-Grids
+// $grids: add-grid(1 2 3 4 at 600px);
+// $grids: add-grid(2 8 2 at 500px);
+
+// $grids: add-grid(2 8 2 at 1100px);
+// $grids: add-grid(12 at 900px);
+// $grids: add-grid(6 at 700px);
+// $grids: add-grid(3 at 500px);
+// $grids: 1 3 5 7 9;
+
+// Breakpoint-Gutters
+// $gutters: add-gutter(1/3 at 900px);
 
 // Extends
+%container {
+  @include clearfix;
+  margin: 0 auto;
+  max-width: 920px;
+}
+
 %main-grid {
-  @include span-columns(8);
-  @include squish(2, 2);
+  @include grid-span(8, 3);
 }
 
 // Grids
 // ----------------------------------------------------------------------------
+
+.outer-container {
+  min-height: 100%;
+}
+
 .page .main,
 .post .main,
 .wrap {
-  @include container;
+  @extend %container;
 }
 
 .post .article,
@@ -48,11 +68,12 @@ footer {
 }
 
 .article-title {
-  @include container;
+  @extend %container;
 }
 
 .article-title h1 {
   @extend %main-grid;
+  float: none;
 }
 
 .article-title h2 {

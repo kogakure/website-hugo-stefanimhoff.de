@@ -9,7 +9,7 @@ p, li {
     border: 1px solid #ddd;
     color: #555;
     display: inline-block;
-    font-size: .8em;
+    font-size: 0.8em;
     line-height: 1.5em;
     margin: -1px 0;
     padding: 0 .3em;
@@ -30,7 +30,7 @@ pre, figure.code table {
   background: $pre-bg;
   border: 1px solid $pre-border;
   color: $pre-color;
-  font-size: 13px;
+  font-size: $base-font-size * 0.8125;
   line-height: 1.45em;
   margin-bottom: 2.1em;
   overflow-x: auto;
@@ -64,7 +64,7 @@ figure.code {
   figcaption {
     @extend %sans;
     background-color: #aaaaaa;
-    font-size: 13px;
+    font-size: $base-font-size * 0.8125;
     font-weight: normal;
     line-height: 2em;
     margin-bottom: 0;
@@ -94,6 +94,7 @@ figure.code {
       text-shadow: #fff 0 1px 0;
     }
     a {
+      border: 0;
       color: inherit;
       padding-left: 3em;
       position: absolute; right: .8em;
@@ -136,7 +137,7 @@ figure .highlight {
   [data-line]:before { content: attr(data-line); }
 
   td {
-    font-size: 13px;
+    font-size: $base-font-size * 0.8125;
     line-height: 1.45em;
     pre { padding: .8em; }
   }

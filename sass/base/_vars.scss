@@ -59,7 +59,7 @@ $definition-color:              #999999;
 
 // Tabellen
 $table-border-color:            #DDDDDD;
-$table-striped-background:      #F9F9F9;
+$table-striped-background:      rgba(#F9F9F9, 0.5);
 
 // Bilder
 $image-border-color:            #CCCCCC;
@@ -72,6 +72,11 @@ $selection-color:               $white;     // THEME
 // ----------------------------------------------------------------------------
 
 $header-background-url: ""; // THEME
+
+// Media-Queries
+// ----------------------------------------------------------------------------
+
+$iphone-width: (screen) (max-width 480px);
 
 // Abstände und Maße
 // ----------------------------------------------------------------------------
@@ -117,7 +122,8 @@ $base-font-japanese:         'Hiragino Maru Gothic Pro', sans-serif;
 
 // Grundgrößen und Zeilenhöhe
 $base-font-size:             modular-scale(1);
-$base-line-height:           24px;
+$base-line-height-count:     1.5;
+$base-line-height:           $base-font-size * $base-line-height-count;
 $base-font-weight:           $normal;
 $base-rhythm-unit:           $base-line-height / $base-font-size * $font-unit;
 
@@ -128,11 +134,13 @@ $round-to-nearest-half-line: true; // Verhindert zu große Lücken zwischen den 
 // Überschrift-Schriftgrößen
 $font-scale-h1:              modular-scale(6); // 68px
 $font-scale-h2:              modular-scale(4); // 42px
-$font-scale-h3:              modular-scale(2); // 29px
-$font-scale-h4:              modular-scale(2); // 29px
-$font-scale-h5:              modular-scale(2); // 29px
-$font-scale-h6:              modular-scale(2); // 29px
+$font-scale-h3:              modular-scale(2); // 26px
+$font-scale-h4:              modular-scale(2); // 26px
+$font-scale-h5:              modular-scale(2); // 26px
+$font-scale-h6:              modular-scale(2); // 26px
 $font-scale-small:           14px;
+$font-scale-intro:           $base-font-size * 1.375;
+$font-scale-kbd:             $base-font-size * 0.75;
 
 // Schriften
 %base {

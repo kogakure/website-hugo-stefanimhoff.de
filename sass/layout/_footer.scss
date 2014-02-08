@@ -36,7 +36,7 @@
 
     .copyright b {
       @extend %mono;
-      font-size: 20px;
+      font-size: $base-font-size * 1.25;
       font-weight: 200;
       position: relative;
       top: 2px;
@@ -78,7 +78,7 @@
 .footer {
   // Über mich Sektion
   .about {
-    @include span-columns(6);
+    @include grid-span(6);
 
     h3 {
       color: rgba($white, 0.85);
@@ -87,7 +87,7 @@
 
   // Social Network Icons
   .social-networks {
-    @include span-columns(6 omega);
+    @include grid-span(6, 7);
 
     h3 {
       color: rgba($white, 0.85);

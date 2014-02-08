@@ -5,7 +5,7 @@
 %aside {
   @include adjust-font-size-to($font-scale-small);
   margin-top: 0.5em;
-  width: columns(2, 8);
+  width: column-span(2, 1, 8);
 
   h4 {
     @include adjust-font-size-to($font-scale-h4);
@@ -15,11 +15,11 @@
 .aside {
   @extend %aside;
   float: left;
-  margin-left: -(gutter(8) + columns(2, 8));
+  margin-left: -(grid-span(2, 1, 8));
 }
 
 .aside--left {
   @extend %aside;
   float: right;
-  margin-right: -(gutter(8) + columns(2, 8));
+  margin-right: -(grid-span(2, 1, 8));
 }

@@ -4,7 +4,7 @@
 
 // Debugging des Grids
 // ----------------------------------------------------------------------------
-// .page .main, .post .main { @include susy-grid-background; }
+// .page .main, .post .main { @include background-grid($color: green); }
 
 // Vertical Alignment Grid
 // ----------------------------------------------------------------------------

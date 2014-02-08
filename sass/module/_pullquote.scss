@@ -30,17 +30,23 @@ blockquote.pullquote[lang|=ja] {
   @extend %pullquote;
   border: 0;
   content: attr(data-pullquote);
+  display: inline-block;
   float: right;
-  margin: 0 columns(-3) $base-rhythm-unit $base-rhythm-unit;
+  margin-bottom: $base-rhythm-unit;
+  margin-left: $base-rhythm-unit;
+  margin-right: -(grid-span(1, 1, 8));
+  margin-top: 0;
   padding: 0;
   position: relative;
-  top: 10px;
-  width: columns(4, 8);
+  top: 15px;
+  width: column-span(4, 1, 8);
 }
 
 .pullquote--left:before {
   float: left;
-  margin: 0 $base-rhythm-unit $base-rhythm-unit columns(-3);
+  margin-bottom: $base-rhythm-unit;
+  margin-left: -(grid-span(1, 1, 8));
+  margin-right: $base-rhythm-unit;
+  margin-top: 0;
   text-align: right;
-  width: columns(4, 8);
 }

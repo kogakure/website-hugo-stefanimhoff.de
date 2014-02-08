@@ -2,11 +2,6 @@
 // Base
 // ============================================================================
 
-// Alle Elemente so einstellen, dass Padding nicht dazu gerechnet wird
-* {
-  @include box-sizing(border-box);
-}
-
 body {
   @extend %base;
   @include background-size(50px 50px);
@@ -41,6 +36,8 @@ a {
 // ----------------------------------------------------------------------------
 h1, h2, h3, h4, h5, h6 {
   @extend %sans;
+  @include enable-ligatures;
+  clear: both;
 }
 
 h1 {
@@ -63,8 +60,9 @@ h3, h4, h5, h6 {
 p {
   @include trailer(1);
 }
+
 .article-body > p:first-child {
-  @include adjust-font-size-to(22px);
+  @include adjust-font-size-to($font-scale-intro);
 }
 
 // Horizontale Trenner
@@ -143,7 +141,8 @@ pre {
 
 figure.code {
   @extend %grid-10-of-8-break-out;
-  clear: both;
+  float: none !important;
+  clear: both !important;
 }
 
 // Variable
@@ -160,7 +159,7 @@ samp {
   background: $sample-background;
   border: 1px solid #ddd;
   display: inline-block;
-  font-size: .8em;
+  font-size: 0.8em;
   line-height: 1.5em;
   margin: -1px 0;
   padding: 0 .3em;
@@ -182,7 +181,7 @@ kbd {
   line-height: 1.4 !important;
   text-shadow: 0 1px 0 $white;
   white-space: nowrap;
-  @include adjust-font-size-to(12px);
+  @include adjust-font-size-to($font-scale-kbd);
   @include border-radius(3px);
   @include box-shadow(0 1px 0 rgba($black, 0.2), 0 0 0 2px $white inset);
 }

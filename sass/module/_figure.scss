@@ -4,13 +4,13 @@
 
 // Grid-Erweiterungen (nötig, um aus der Hauptspalte auszubrechen)
 %grid-12-of-8-break-out {
-  width: columns(12, 8);
-  margin-left: -(gutter(8) + columns(2, 8));
+  @include grid-span(12, 1, 8);
+  margin-left: -(grid-span(2, 1, 8));
 }
 
 %grid-10-of-8-break-out {
-  width: columns(10, 8);
-  margin-left: -(gutter(8) + columns(1, 8));
+  @include grid-span(10, 1, 8);
+  margin-left: -(grid-span(1, 1, 8));
 }
 
 // Layout für das div um die Abbildung
@@ -32,12 +32,11 @@ div.figure {
   @extend %grid-12-of-8-break-out;
 
   img {
-    @include span-columns(10);
-    float: left;
+    @include grid-span(10);
   }
 
   figcaption {
-    @include span-columns(2 omega, 12);
+    @include grid-span(2, 11);
     text-align: left;
   }
 }
@@ -48,12 +47,11 @@ div.figure {
   @extend %grid-12-of-8-break-out;
 
   img {
-    @include span-columns(10 omega);
-    float: right;
+    @include grid-span(10, 3);
   }
 
   figcaption {
-    @include span-columns(2, 12);
+    @include grid-span(2, 1);
     text-align: right;
   }
 }

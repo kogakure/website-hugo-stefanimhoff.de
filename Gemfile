@@ -9,7 +9,7 @@ group :development do
   gem 'RedCloth', '~> 4.2.9'
   gem 'haml', '~> 3.1.7'
   gem 'compass', '~> 0.12.2'
-  gem 'sass', '~> 3.2'
+  gem 'sass', '~> 3.2.0'
   gem 'sass-globbing', '~> 1.0.0'
   gem 'rubypants', '~> 0.2.0'
   gem 'rb-fsevent', '~> 0.9.3'
@@ -18,8 +18,10 @@ group :development do
   gem 'directory_watcher', '1.4.1'
 
   # Custom Gems
-  gem 'susy', '~> 1.0.9'             # Grid system
-  gem 'modular-scale'                # Font scale
+  gem 'singularitygs', '~> 1.1.2'    # Grids without limits
+  gem 'color-schemer'                # A sassy way to build color schemes
+  gem 'toolkit'                      # Toolkit for Responsive Web Design and Progressive Enhancement
+  gem 'modular-scale'                # Modular scale calculator build into your Sass
   gem 'jekyll-assets', '~> 0.3.5'    # Asset pipeline
   gem 'i18n', '~> 0.6.4'             # Localizing dates
   gem 'uglifier'                     # UglifyJS
