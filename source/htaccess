@@ -23,24 +23,24 @@ Redirect Gone /notiz/chris-jordan-zeigt-unsere-masslosigkeit-in-erschreckenden-b
 Redirect Gone /notiz/bash_profile-striptease
 Redirect Gone /notiz/platzsparend-browser-bookmark-unicode
 Redirect Gone /notiz/textmate-snippet-dummy-image-generator
+Redirect Gone /notiz/django-und-das-framework-ding
 
 # Redirects (Permanent)
-Redirect 301 /+/ https://plus.google.com/104687479698350625994/                                      # Shortlink zu Google+
+Redirect 301 /+/                                                https://plus.google.com/104687479698350625994/ # Shortlink zu Google+
 
-Redirect 301 /notiz/das-koi-design-inspiration-und-idee /koi-design                                  # Der alte Titel war schlecht
-Redirect 301 /notiz/django-und-das-framework-ding /django                                            # Der alte Titel war peinlich
-Redirect 301 /notiz/django-folder-fuer-mac-os-x /django-folder-mac-osx                               # Titel verbessert
-Redirect 301 /notiz/blender-folder-fuer-mac-os-x-leopard /blender-folder-mac-osx                     # Titel verbessert
-Redirect 301 /notiz/theme-kaijin-fuer-das-moinmoin-wiki /theme-kaijin-moinmoin-wiki                  # Titel verbessert
-Redirect 301 /notiz/terminal-stoeckchen /notiz/terminal-most-used-commands                           # Der alte Titel war Blödsinn
-Redirect 301 /notiz/django-relaunch-von-kogakure-de /django-relaunch-kogakure-de                     # Titel verbessert
-Redirect 301 /notiz/server-verwaltung-mit-capistrano /server-verwaltung-capistrano                   # Titel verbessert
-Redirect 301 /notiz/grundlagen-von-python-django-fuer-anfaenger /grundlagen-python-django-anfaenger  # Titel verbessert
-Redirect 301 /notiz/kostenlose-vektorkarten-mit-openstreetmap /kostenlose-vektorkarten-openstreetmap # Titel verbessert
-Redirect 301 /notiz/django-fuer-webdesigner /django-webdesigner                                      # Titel verbessert
+Redirect 301 /notiz/das-koi-design-inspiration-und-idee         /2007/koi-design                               # Der alte Titel war schlecht
+Redirect 301 /notiz/django-folder-fuer-mac-os-x                 /2007/django-folder-mac-osx                    # Titel verbessert
+Redirect 301 /notiz/blender-folder-fuer-mac-os-x-leopard        /2008/blender-folder-mac-osx                   # Titel verbessert
+Redirect 301 /notiz/theme-kaijin-fuer-das-moinmoin-wiki         /2008/theme-kaijin-moinmoin-wiki               # Titel verbessert
+Redirect 301 /notiz/terminal-stoeckchen                         /2008/notiz/terminal-most-used-commands        # Der alte Titel war Blödsinn
+Redirect 301 /notiz/django-relaunch-von-kogakure-de             /2008/django-relaunch-kogakure-de              # Titel verbessert
+Redirect 301 /notiz/server-verwaltung-mit-capistrano            /2008/server-verwaltung-capistrano             # Titel verbessert
+Redirect 301 /notiz/grundlagen-von-python-django-fuer-anfaenger /2008/grundlagen-python-django-anfaenger       # Titel verbessert
+Redirect 301 /notiz/kostenlose-vektorkarten-mit-openstreetmap   /2008/kostenlose-vektorkarten-openstreetmap    # Titel verbessert
+Redirect 301 /notiz/django-fuer-webdesigner                     /2009/django-webdesigner                       # Titel verbessert
 
 Redirect 301 /notizbuch /
-Redirect 301 /notiz /                                                                                # Catch all with same url (should be last)
+Redirect 301 /notiz     / # Catch all with same url (should be last)
 
 # ##############################################################################
 # # ERRORS                                                                     #

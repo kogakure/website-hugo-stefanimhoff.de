@@ -31,7 +31,7 @@ assets:
     css: sass   # yui
 
 root:         /
-permalink:    /:title/            # /blog/:title/, /notebook/:year/:month/:day/:title/
+permalink:    /:year/:title/      # /blog/:title/, /notebook/:year/:month/:day/:title/
 source:       source              # source file directory
 destination:  public              # compiled site directory
 plugins:      plugins
