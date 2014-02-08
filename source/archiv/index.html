@@ -12,7 +12,7 @@ body_class: archive
   {% assign year = this_year %}
   <h2>{{ year }}</h2>
 {% endunless %}
-<article {% if linklog %}data-linklog{% endif %}>
+<article>
   {% include archive_post.html %}
 </article>
 {% endfor %}
