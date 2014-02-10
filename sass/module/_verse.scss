@@ -2,9 +2,13 @@
 // Verse
 // ============================================================================
 
+.verse {
+  @include grid-span(8, 1, 8);
+  margin: 0;
+  padding: 0;
+}
+
 .verse pre {
-  display: table;
   font-family: inherit;
-  margin: 0 auto;
-  width: auto;
+  @include grid-span(4, 3, 8);
 }
