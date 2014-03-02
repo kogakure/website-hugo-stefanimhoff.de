@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Impressum & Datenschutz"
+title: "Impressum"
 author: "Stefan Imhoff"
 date: 2013-12-17 09:12
 comments: false
