@@ -9,7 +9,7 @@ header#top {
   background-position: center left;
   background-size: cover;
   border-top: 10px solid $header-border-top-color;
-  padding: 80px 0 20px 0;
+  padding: 40px 0 60px 0;
   // background-attachment: fixed;
   // * @FIXME: Ein Fehler in Google Chrome/Opera
   // * Im Moment kann dieses nicht in Kombination
@@ -34,12 +34,14 @@ header#top {
   }
 
   .home & {
-    padding: 80px 0 200px 0;
+    padding: 40px 0 160px 0;
   }
 
   h1 {
+    @include grid-span(7, 4);
     @include text-shadow(0 2px 3px $black);
-    color: white;
+    color: $white;
+    float: none;
 
     .home & {
       margin-bottom: 0;
@@ -48,8 +50,30 @@ header#top {
 
   h2 {
     @include adjust-font-size-to($font-scale-h3);
+    @include grid-span(7, 4);
     @include text-shadow(0 2px 5px $black);
+    clear: both;
     color: lighten($slightly-desaturated-green, 15);
+    position: relative;
+    top: -40px;
+  }
+
+  .logo {
+    @include grid-span(2, 2);
+
+    .icon-logo {
+      display: block;
+      @include text-shadow(0 1px 2px $black);
+      color: $logo-color;
+      font-size: 70px;
+      border: 0;
+      text-align: right;
+      padding: 10px 0 5px 10px;
+
+      .home & {
+        font-size: 90px;
+      }
+    }
   }
 }
 
