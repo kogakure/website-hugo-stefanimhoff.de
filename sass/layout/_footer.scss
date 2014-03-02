@@ -78,16 +78,30 @@
 .footer {
   // Über mich Sektion
   .about {
-    @include grid-span(6);
+    @include grid-span(8);
 
     h3 {
       color: rgba($white, 0.85);
+    }
+
+    p {
+      background: url("/assets/images/photo.png") no-repeat 0 0;
+      padding-left: 100px;
+    }
+
+    em {
+      color: rgba($white, 0.8);
+      font-style: normal;
+    }
+
+    a:hover {
+      color: rgba($white, 0.8);
     }
   }
 
   // Social Network Icons
   .social-networks {
-    @include grid-span(6, 7);
+    @include grid-span(4, 9);
 
     h3 {
       color: rgba($white, 0.85);
@@ -102,7 +116,8 @@
 
     li {
       display: inline-block;
-      margin: 0 0 20px 20px;
+      margin: 0 0 20px 25px;
+      font-size: 30px;
     }
 
     // Sprites (wenn Fontface nicht verfügbar)

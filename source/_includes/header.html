@@ -3,14 +3,17 @@
   {% include attribution.html %}
 
   <div class="article-title">
-    <div class="logo">
-      <a href="{{ site.root }}" class="icon-logo"></a>
-    </div>
     {% if page.homepage %}
-    <h1>{{ site.title }}</h1>
-    <h2>{{ site.description }}</h2>
+      <div class="logo">
+        <i class="icon-logo"></i>
+      </div>
+      <h1>{{ site.title }}</h1>
+      <h2>{{ site.description }}</h2>
     {% else %}
-    <h1>{% if page.title or post.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+      <div class="logo">
+        <a href="{{ site.root }}" class="icon-logo"></a>
+      </div>
+      <h1>{% if page.title or post.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
     {% endif %}
   </div>
   <a href="#nav" class="nav-btn">Navigation <i class="icon-menu"></i></a>
