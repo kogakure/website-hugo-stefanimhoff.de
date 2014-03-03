@@ -40,7 +40,7 @@ header#top {
   h1 {
     @include grid-span(7, 4);
     @include text-shadow(0 2px 3px $black);
-    color: $white;
+    color: $header-headline;
     float: none;
 
     .home & {
@@ -53,7 +53,7 @@ header#top {
     @include grid-span(7, 4);
     @include text-shadow(0 2px 5px $black);
     clear: both;
-    color: lighten($slightly-desaturated-green, 15);
+    color: $header-subheadline;
     position: relative;
     top: -47px;
   }

@@ -13,6 +13,8 @@ $very-dark-orange:           #352414;
 // Header
 $header-background:          $dark-grayish-cyan;
 $header-border-top-color:    $very-dark-orange;
+$header-headline:            $white;
+$header-subheadline:         lighten($slightly-desaturated-green, 15);
 
 // Logo
 $logo-color:                 #b42b2c;

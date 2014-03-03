@@ -14,28 +14,3 @@
   display: none;
 }
 
-// Image-Replacement (Kellum Method)
-// ---------------------------------
-// http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/
-%text-hidden {
-  overflow: hidden;
-  text-indent: 100%;
-  white-space: nowrap;
-}
-
-.text-hidden {
-  @extend %text-hidden;
-}
-
-// Hide text visually
-// ---------------------------------
-%visually-hidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}

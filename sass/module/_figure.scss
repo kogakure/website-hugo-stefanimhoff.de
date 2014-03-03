@@ -2,17 +2,6 @@
 // Abbildungen und Bilder
 // ============================================================================
 
-// Grid-Erweiterungen (nötig, um aus der Hauptspalte auszubrechen)
-%grid-12-of-8-break-out {
-  @include grid-span(12, 1, 8);
-  margin-left: -(grid-span(2, 1, 8));
-}
-
-%grid-10-of-8-break-out {
-  @include grid-span(10, 1, 8);
-  margin-left: -(grid-span(1, 1, 8));
-}
-
 // Layout für das div um die Abbildung
 div.figure {
   @include trailer(1);

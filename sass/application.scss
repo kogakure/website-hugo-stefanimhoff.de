@@ -1,13 +1,19 @@
-@import "base/imports";
-@import "base/vars";
-@import "base/init";
-@import "base/mixins";
+// Helpers
+@import "helpers/imports";
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/placeholders";
+
+// Theme
+@import "theme/bonsai";
 
 // Vektor-Fonts
 @import "base/iconfont";
 
-// Theme
-@import "theme/bonsai";
+// Base
+@import "base/init";
+@import "base/base";
+@import "base/sprites";
 
 // Layout
 @import "layout/grids";
@@ -16,21 +22,21 @@
 @import "layout/footer";
 @import "layout/navigation";
 
-// Base
-@import "base/base";
-
-@import "base/sprites";
-
 // Syntax-Highlighting
-@import "base/solarized";
-@import "base/syntax";
+@import "vendor/solarized";
+@import "vendor/syntax";
 
-// Modules/States
+// Modules
 @import "module/**/*";
+
+// States
 @import "state/state";
 
+// Pages
+@import "pages/home";
+
 // Debugging
-@import "base/debug";
+@import "helpers/debug";
 
 // Nur für schnelle Test und Fixes!
 @import "base/shame";

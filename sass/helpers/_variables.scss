@@ -14,8 +14,13 @@ $light-grey:                    #DDDDDD;
 $body-background:               #0A0A0A;
 
 // Header
-$header-background:             $dark-grey; // THEME
-$header-border-top-color:       $black;     // THEME
+$header-background:             $dark-grey;  // THEME
+$header-border-top-color:       $black;      // THEME
+$header-headline:               $white;      // THEME
+$header-subheadline:            $light-grey; // THEME
+
+// Logo
+$logo-color:                    $white; // THEME
 
 // Content
 $content-background:            #EEEEEE;
@@ -25,9 +30,6 @@ $footer-link-color:             rgba($white, 0.5);
 $footer-link-color-active:      $white;
 $footer-meta-background:        #292A2C;
 $footer-small-background:       #0A0A0A;
-
-// Logo
-$logo-color:                    $white; // THEME
 
 // Navigation
 $nav-background:                #0C0C0C;
@@ -144,24 +146,3 @@ $font-scale-h6:              modular-scale(2); // 26px
 $font-scale-small:           14px;
 $font-scale-intro:           $base-font-size * 1.375;
 $font-scale-kbd:             $base-font-size * 0.75;
-
-// Schriften
-%base {
-  font-family: $base-font-family;
-}
-
-%sans {
-  font-family: $base-font-sans;
-}
-
-%mono {
-  font-family: $base-font-mono;
-}
-
-%japanese {
-  font-family: $base-font-japanese;
-}
-
-%iconfont {
-  font-family: "iconfont";
-}
