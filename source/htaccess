@@ -35,21 +35,23 @@ Redirect Gone /notiz/textmate-snippet-dummy-image-generator
 Redirect Gone /notiz/django-und-das-framework-ding
 
 # Redirects (Permanent)
-Redirect 301 /+/                                                https://plus.google.com/104687479698350625994/ # Shortlink zu Google+
+Redirect 301 /+/                                                https://plus.google.com/104687479698350625994/
 
-Redirect 301 /notiz/das-koi-design-inspiration-und-idee         /2007/koi-design                               # Der alte Titel war schlecht
-Redirect 301 /notiz/django-folder-fuer-mac-os-x                 /2007/django-folder-mac-osx                    # Titel verbessert
-Redirect 301 /notiz/blender-folder-fuer-mac-os-x-leopard        /2008/blender-folder-mac-osx                   # Titel verbessert
-Redirect 301 /notiz/theme-kaijin-fuer-das-moinmoin-wiki         /2008/theme-kaijin-moinmoin-wiki               # Titel verbessert
-Redirect 301 /notiz/terminal-stoeckchen                         /2008/notiz/terminal-most-used-commands        # Der alte Titel war Blödsinn
-Redirect 301 /notiz/django-relaunch-von-kogakure-de             /2008/django-relaunch-kogakure-de              # Titel verbessert
-Redirect 301 /notiz/server-verwaltung-mit-capistrano            /2008/server-verwaltung-capistrano             # Titel verbessert
-Redirect 301 /notiz/grundlagen-von-python-django-fuer-anfaenger /2008/grundlagen-python-django-anfaenger       # Titel verbessert
-Redirect 301 /notiz/kostenlose-vektorkarten-mit-openstreetmap   /2008/kostenlose-vektorkarten-openstreetmap    # Titel verbessert
-Redirect 301 /notiz/django-fuer-webdesigner                     /2009/django-webdesigner                       # Titel verbessert
+Redirect 301 /notiz/das-koi-design-inspiration-und-idee         /2007/koi-design
+Redirect 301 /notiz/django-folder-fuer-mac-os-x                 /2007/django-folder-mac-osx
+Redirect 301 /notiz/blender-folder-fuer-mac-os-x-leopard        /2008/blender-folder-mac-osx
+Redirect 301 /notiz/theme-kaijin-fuer-das-moinmoin-wiki         /2008/theme-kaijin-moinmoin-wiki
+Redirect 301 /notiz/terminal-stoeckchen                         /2008/notiz/terminal-most-used-commands
+Redirect 301 /notiz/django-relaunch-von-kogakure-de             /2008/django-relaunch-kogakure-de
+Redirect 301 /notiz/server-verwaltung-mit-capistrano            /2008/server-verwaltung-capistrano
+Redirect 301 /notiz/grundlagen-von-python-django-fuer-anfaenger /2008/grundlagen-python-django-anfaenger
+Redirect 301 /notiz/kostenlose-vektorkarten-mit-openstreetmap   /2008/kostenlose-vektorkarten-openstreetmap
+Redirect 301 /notiz/django-fuer-webdesigner                     /2009/django-webdesigner
 
 Redirect 301 /notizbuch /
-Redirect 301 /notiz     / # Catch all with same url (should be last)
+
+# Catch all with same url (should be last)
+Redirect 301 /notiz     /
 
 # ##############################################################################
 # # ERRORS                                                                     #
@@ -196,12 +198,12 @@ AddDefaultCharset utf-8
 # | Append slash to URL                                                        |
 # ------------------------------------------------------------------------------
 
-<IfModule mod_rewrite.c>
-  RewriteCond %{REQUEST_FILENAME} !-f # Ignore files
-  RewriteCond %{REQUEST_URI} !/$      # Ignore urls with appended slash
-  RewriteCond %{REQUEST_URI} !(.*)/$  # Ignore any url with appended slash
-  RewriteRule ^(.*)$ $1/ [L,R=301]    # Append slash and redirect permanent 301
-</IfModule>
+# <IfModule mod_rewrite.c>
+#   RewriteCond %{REQUEST_FILENAME} !-f # Ignore files
+#   RewriteCond %{REQUEST_URI} !/$      # Ignore urls with appended slash
+#   RewriteCond %{REQUEST_URI} !(.*)/$  # Ignore any url with appended slash
+#   RewriteRule ^(.*)$ $1/ [L,R=301]    # Append slash and redirect permanent 301
+# </IfModule>
 
 # ------------------------------------------------------------------------------
 # | Suppressing the "www." at the beginning of URLs                  |
@@ -337,53 +339,53 @@ FileETag None
 # control versioning with filename-based cache busting, consider lowering the
 # cache time for resources like CSS and JS to something like 1 week.
 
-<IfModule mod_expires.c>
+# <IfModule mod_expires.c>
 
-  ExpiresActive on
-  ExpiresDefault                                      "access plus 1 month"
+#   ExpiresActive on
+#   ExpiresDefault                                      "access plus 1 month"
 
-  # CSS
-  ExpiresByType text/css                              "access plus 1 year"
+#   # CSS
+#   ExpiresByType text/css                              "access plus 1 year"
 
-  # Data interchange
-  ExpiresByType application/json                      "access plus 0 seconds"
-  ExpiresByType application/xml                       "access plus 0 seconds"
-  ExpiresByType text/xml                              "access plus 0 seconds"
+#   # Data interchange
+#   ExpiresByType application/json                      "access plus 0 seconds"
+#   ExpiresByType application/xml                       "access plus 0 seconds"
+#   ExpiresByType text/xml                              "access plus 0 seconds"
 
-  # Favicon (cannot be renamed!)
-  ExpiresByType image/x-icon                          "access plus 1 week"
+#   # Favicon (cannot be renamed!)
+#   ExpiresByType image/x-icon                          "access plus 1 week"
 
-  # HTML components (HTCs)
-  ExpiresByType text/x-component                      "access plus 1 month"
+#   # HTML components (HTCs)
+#   ExpiresByType text/x-component                      "access plus 1 month"
 
-  # HTML
-  ExpiresByType text/html                             "access plus 0 seconds"
+#   # HTML
+#   ExpiresByType text/html                             "access plus 0 seconds"
 
-  # JavaScript
-  ExpiresByType application/javascript                "access plus 1 year"
+#   # JavaScript
+#   ExpiresByType application/javascript                "access plus 1 year"
 
-  # Manifest files
-  ExpiresByType application/x-web-app-manifest+json   "access plus 0 seconds"
-  ExpiresByType text/cache-manifest                   "access plus 0 seconds"
+#   # Manifest files
+#   ExpiresByType application/x-web-app-manifest+json   "access plus 0 seconds"
+#   ExpiresByType text/cache-manifest                   "access plus 0 seconds"
 
-  # Media
-  ExpiresByType audio/ogg                             "access plus 1 month"
-  ExpiresByType image/gif                             "access plus 1 month"
-  ExpiresByType image/jpeg                            "access plus 1 month"
-  ExpiresByType image/png                             "access plus 1 month"
-  ExpiresByType video/mp4                             "access plus 1 month"
-  ExpiresByType video/ogg                             "access plus 1 month"
-  ExpiresByType video/webm                            "access plus 1 month"
+#   # Media
+#   ExpiresByType audio/ogg                             "access plus 1 month"
+#   ExpiresByType image/gif                             "access plus 1 month"
+#   ExpiresByType image/jpeg                            "access plus 1 month"
+#   ExpiresByType image/png                             "access plus 1 month"
+#   ExpiresByType video/mp4                             "access plus 1 month"
+#   ExpiresByType video/ogg                             "access plus 1 month"
+#   ExpiresByType video/webm                            "access plus 1 month"
 
-  # Web feeds
-  ExpiresByType application/atom+xml                  "access plus 1 hour"
-  ExpiresByType application/rss+xml                   "access plus 1 hour"
+#   # Web feeds
+#   ExpiresByType application/atom+xml                  "access plus 1 hour"
+#   ExpiresByType application/rss+xml                   "access plus 1 hour"
 
-  # Web fonts
-  ExpiresByType application/font-woff                 "access plus 1 month"
-  ExpiresByType application/vnd.ms-fontobject         "access plus 1 month"
-  ExpiresByType application/x-font-ttf                "access plus 1 month"
-  ExpiresByType font/opentype                         "access plus 1 month"
-  ExpiresByType image/svg+xml                         "access plus 1 month"
+#   # Web fonts
+#   ExpiresByType application/font-woff                 "access plus 1 month"
+#   ExpiresByType application/vnd.ms-fontobject         "access plus 1 month"
+#   ExpiresByType application/x-font-ttf                "access plus 1 month"
+#   ExpiresByType font/opentype                         "access plus 1 month"
+#   ExpiresByType image/svg+xml                         "access plus 1 month"
 
-</IfModule>
+# </IfModule>
