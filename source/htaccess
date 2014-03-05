@@ -4,6 +4,15 @@ permalink: .htaccess
 ---
 
 # ------------------------------------------------------------------------------
+# | Protecting the website                                                     |
+# ------------------------------------------------------------------------------
+
+AuthType Basic
+AuthName "Beta-Testing"
+AuthUserFile /home/kogakure/webapps/beta_stefanimhoff/.htpasswd
+require valid-user
+
+# ------------------------------------------------------------------------------
 # | Redirecting/Removing sites                                                 |
 # ------------------------------------------------------------------------------
 
