@@ -198,12 +198,12 @@ AddDefaultCharset utf-8
 # | Append slash to URL                                                        |
 # ------------------------------------------------------------------------------
 
-# <IfModule mod_rewrite.c>
-#   RewriteCond %{REQUEST_FILENAME} !-f # Ignore files
-#   RewriteCond %{REQUEST_URI} !/$      # Ignore urls with appended slash
-#   RewriteCond %{REQUEST_URI} !(.*)/$  # Ignore any url with appended slash
-#   RewriteRule ^(.*)$ $1/ [L,R=301]    # Append slash and redirect permanent 301
-# </IfModule>
+<IfModule mod_rewrite.c>
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_URI} !/$
+  RewriteCond %{REQUEST_URI} !(.*)/$
+  RewriteRule ^(.*)$ $1/ [L,R=301]
+</IfModule>
 
 # ------------------------------------------------------------------------------
 # | Suppressing the "www." at the beginning of URLs                  |
