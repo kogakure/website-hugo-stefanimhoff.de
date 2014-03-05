@@ -9,7 +9,7 @@ permalink: .htaccess
 
 AuthType Basic
 AuthName "Beta-Testing"
-AuthUserFile /home/kogakure/webapps/beta_stefanimhoff/.htpasswd
+AuthUserFile {{ site.server_path }}/.htpasswd
 require valid-user
 
 # ------------------------------------------------------------------------------
@@ -48,10 +48,10 @@ Redirect 301 /notiz/grundlagen-von-python-django-fuer-anfaenger /2008/grundlagen
 Redirect 301 /notiz/kostenlose-vektorkarten-mit-openstreetmap   /2008/kostenlose-vektorkarten-openstreetmap
 Redirect 301 /notiz/django-fuer-webdesigner                     /2009/django-webdesigner
 
-Redirect 301 /notizbuch /
+Redirect 301 /notizbuch                                         {{ site.url }}
 
 # Catch all with same url (should be last)
-Redirect 301 /notiz     /
+Redirect 301 /notiz                                             {{ site.url }}
 
 # ##############################################################################
 # # ERRORS                                                                     #
