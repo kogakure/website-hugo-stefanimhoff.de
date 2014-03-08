@@ -2,6 +2,7 @@
 layout: page
 title: "Impressum"
 author: "Stefan Imhoff"
+description: Impressum
 date: 2013-12-17 09:12
 comments: false
 sharing: false
