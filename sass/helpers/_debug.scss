@@ -4,7 +4,11 @@
 
 // Debugging des Grids
 // ----------------------------------------------------------------------------
-// .page .main, .post .main { @include background-grid($color: green); }
+// .page .main, .post .main, .wrap {
+//   @include background-grid($color: green);
+//   padding-left: 0;
+//   padding-right: 0;
+// }
 
 // Vertical Alignment Grid
 // ----------------------------------------------------------------------------

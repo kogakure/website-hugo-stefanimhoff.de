@@ -61,6 +61,12 @@ $breakpoint-default-feature: max-width;
 .post .main,
 .wrap {
   @extend %container;
+
+  // Grids need some padding on the outside, or content will look bad when
+  // reaching from side to side.
+  $grid-padding: gutter-span();
+  padding-left: $grid-padding;
+  padding-right: $grid-padding;
 }
 
 .post .article,
