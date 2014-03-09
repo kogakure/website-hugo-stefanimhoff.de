@@ -7,11 +7,12 @@
 {% endcapture %}
 
 {% unless category == '0' %}
-<span class="tags">
+<div class="tags">
+  <i class="icon-tag"></i>
   {% if post %}
-    {{ post.tags | tag_links }}
+    {{ post.tags | tag_links | replace: ',','' }}
   {% else %}
-    {{ page.tags | tag_links }}
+    {{ page.tags | tag_links | replace: ',','' }}
   {% endif %}
-</span>
+</div>
 {% endunless %}

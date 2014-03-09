@@ -6,12 +6,19 @@
   <footer class="article-footer">
     {% if page.date or page.author %}
       {% unless page.meta == false %}
-        <p class="meta">
-          {% if page.author %}{% include post/author.html %}{% endif %}
-          {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
+        <div class="meta">
+          <span class="author">
+            <i class="icon-quill"></i>
+            {% if page.author %}<em>von</em> {% include post/author.html %}{% endif %}
+          </span>
+          <span class="publication">
+            {% include post/date.html %}{% if updated %}{{ time }}{{ updated }}{% else %}{{ time }}{% endif %}
+          </span>
+        </div>
+        <div class="classification">
           {% if page.categories %}{% include post/categories.html %}{% endif %}
           {% if page.tags %}{% include post/tags.html %}{% endif %}
-        </p>
+        </div>
       {% endunless %}
     {% endif %}
   </footer>

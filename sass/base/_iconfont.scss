@@ -9,33 +9,37 @@
 // Variables für die Nutzung in content
 // ------------------------------------
 
-$icon-cc: "\f100";
-$icon-close: "\f101";
-$icon-download: "\f102";
-$icon-external: "\f103";
-$icon-facebook: "\f104";
-$icon-feed: "\f105";
-$icon-flickr: "\f106";
-$icon-github: "\f107";
-$icon-google-plus: "\f108";
-$icon-logo: "\f109";
-$icon-menu: "\f10a";
-$icon-pinterest: "\f10b";
-$icon-question: "\f10c";
-$icon-tumblr: "\f10d";
-$icon-twitter: "\f10e";
-$icon-xing: "\f10f";
+$icon-calendar: "\f100";
+$icon-cc: "\f101";
+$icon-close: "\f102";
+$icon-download: "\f103";
+$icon-external: "\f104";
+$icon-facebook: "\f105";
+$icon-feed: "\f106";
+$icon-flickr: "\f107";
+$icon-folder: "\f108";
+$icon-github: "\f109";
+$icon-google-plus: "\f10a";
+$icon-logo: "\f10b";
+$icon-menu: "\f10c";
+$icon-pinterest: "\f10d";
+$icon-question: "\f10e";
+$icon-quill: "\f10f";
+$icon-tag: "\f110";
+$icon-tumblr: "\f111";
+$icon-twitter: "\f112";
+$icon-xing: "\f113";
 
 // Font-Face
 // ---------
 
 @font-face {
   font-family: "iconfont";
-  src: url("/assets/fonts/iconfont_9e080dd47b1db2e036a9d316e85163a5.eot");
-  src: url("/assets/fonts/iconfont_9e080dd47b1db2e036a9d316e85163a5.eot?#iefix") format("embedded-opentype"),
-       url("/assets/fonts/iconfont_9e080dd47b1db2e036a9d316e85163a5.woff") format("woff"),
-       url("/assets/fonts/iconfont_9e080dd47b1db2e036a9d316e85163a5.ttf") format("truetype"),
-       url("/assets/fonts/iconfont_9e080dd47b1db2e036a9d316e85163a5.svg#iconfont") format("svg");
+  src: url("/assets/fonts/iconfont_e47d802e385f7a229530fcbd535ca491.eot");
+  src: url("/assets/fonts/iconfont_e47d802e385f7a229530fcbd535ca491.eot?#iefix") format("embedded-opentype"),
+       url("/assets/fonts/iconfont_e47d802e385f7a229530fcbd535ca491.woff") format("woff"),
+       url("/assets/fonts/iconfont_e47d802e385f7a229530fcbd535ca491.ttf") format("truetype"),
+       url("/assets/fonts/iconfont_e47d802e385f7a229530fcbd535ca491.svg#iconfont") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -46,6 +50,7 @@ $icon-xing: "\f10f";
 [data-icon]:before { content: attr(data-icon); }
 
 [data-icon]:before,
+.icon-calendar:before,
 .icon-cc:before,
 .icon-close:before,
 .icon-download:before,
@@ -53,12 +58,15 @@ $icon-xing: "\f10f";
 .icon-facebook:before,
 .icon-feed:before,
 .icon-flickr:before,
+.icon-folder:before,
 .icon-github:before,
 .icon-google-plus:before,
 .icon-logo:before,
 .icon-menu:before,
 .icon-pinterest:before,
 .icon-question:before,
+.icon-quill:before,
+.icon-tag:before,
 .icon-tumblr:before,
 .icon-twitter:before,
 .icon-xing:before {
@@ -77,19 +85,23 @@ $icon-xing: "\f10f";
 // Einzelne Klassen-Attribute
 // --------------------------
 
-.icon-cc:before { content: "\f100"; }
-.icon-close:before { content: "\f101"; }
-.icon-download:before { content: "\f102"; }
-.icon-external:before { content: "\f103"; }
-.icon-facebook:before { content: "\f104"; }
-.icon-feed:before { content: "\f105"; }
-.icon-flickr:before { content: "\f106"; }
-.icon-github:before { content: "\f107"; }
-.icon-google-plus:before { content: "\f108"; }
-.icon-logo:before { content: "\f109"; }
-.icon-menu:before { content: "\f10a"; }
-.icon-pinterest:before { content: "\f10b"; }
-.icon-question:before { content: "\f10c"; }
-.icon-tumblr:before { content: "\f10d"; }
-.icon-twitter:before { content: "\f10e"; }
-.icon-xing:before { content: "\f10f"; }
+.icon-calendar:before { content: "\f100"; }
+.icon-cc:before { content: "\f101"; }
+.icon-close:before { content: "\f102"; }
+.icon-download:before { content: "\f103"; }
+.icon-external:before { content: "\f104"; }
+.icon-facebook:before { content: "\f105"; }
+.icon-feed:before { content: "\f106"; }
+.icon-flickr:before { content: "\f107"; }
+.icon-folder:before { content: "\f108"; }
+.icon-github:before { content: "\f109"; }
+.icon-google-plus:before { content: "\f10a"; }
+.icon-logo:before { content: "\f10b"; }
+.icon-menu:before { content: "\f10c"; }
+.icon-pinterest:before { content: "\f10d"; }
+.icon-question:before { content: "\f10e"; }
+.icon-quill:before { content: "\f10f"; }
+.icon-tag:before { content: "\f110"; }
+.icon-tumblr:before { content: "\f111"; }
+.icon-twitter:before { content: "\f112"; }
+.icon-xing:before { content: "\f113"; }

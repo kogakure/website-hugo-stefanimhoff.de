@@ -335,7 +335,7 @@ q:after {
 
 // Bilder
 // ----------------------------------------------------------------------------
-img {
+img, a img {
   border: $image-border-size solid $image-border-color;
   max-width: 100%;
   height: auto !important;

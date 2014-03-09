@@ -15,3 +15,28 @@
 .article * {
   @include selection($selection-background, $selection-color);
 }
+
+// Meta-Footer
+// ----------------------------------------------------------------------------
+.meta {
+  font-size: modular-scale(0);
+  color: rgba($dark-grey, 0.3);
+
+  .author {
+    margin-right: 15px;
+  }
+
+  .published {
+    margin-right: 15px;
+  }
+}
+
+// Tags & Kategorien
+// ----------------------------------------------------------------------------
+.classification {
+  @include trailer();
+
+  .categories {
+    margin-right: 15px;
+  }
+}

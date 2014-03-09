@@ -7,11 +7,12 @@
 {% endcapture %}
 
 {% unless category == '0' %}
-<span class="categories">
+<div class="categories">
+  <i class="icon-folder"></i>
   {% if post %}
-    {{ post.categories | category_links }}
+    {{ post.categories | category_links | replace: ',','' }}
   {% else %}
-    {{ page.categories | category_links }}
+    {{ page.categories | category_links | replace: ',','' }}
   {% endif %}
-</span>
+</div>
 {% endunless %}

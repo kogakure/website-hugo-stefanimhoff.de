@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Grundlagen von Python & Django für Anfänger"
+title: "Grundlagen von Python und Django für Anfänger"
 author: "Stefan Imhoff"
 date: 2008-08-01 15:00
 description: "Einführung in die Grundlagen von Python & Django für Anfänger."
