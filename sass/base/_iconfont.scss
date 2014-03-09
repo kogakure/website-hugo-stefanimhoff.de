@@ -9,37 +9,39 @@
 // Variables für die Nutzung in content
 // ------------------------------------
 
-$icon-calendar: "\f100";
-$icon-cc: "\f101";
-$icon-close: "\f102";
-$icon-download: "\f103";
-$icon-external: "\f104";
-$icon-facebook: "\f105";
-$icon-feed: "\f106";
-$icon-flickr: "\f107";
-$icon-folder: "\f108";
-$icon-github: "\f109";
-$icon-google-plus: "\f10a";
-$icon-logo: "\f10b";
-$icon-menu: "\f10c";
-$icon-pinterest: "\f10d";
-$icon-question: "\f10e";
-$icon-quill: "\f10f";
-$icon-tag: "\f110";
-$icon-tumblr: "\f111";
-$icon-twitter: "\f112";
-$icon-xing: "\f113";
+$icon-arrow-left: "\f100";
+$icon-arrow-right: "\f101";
+$icon-calendar: "\f102";
+$icon-cc: "\f103";
+$icon-close: "\f104";
+$icon-download: "\f105";
+$icon-external: "\f106";
+$icon-facebook: "\f107";
+$icon-feed: "\f108";
+$icon-flickr: "\f109";
+$icon-folder: "\f10a";
+$icon-github: "\f10b";
+$icon-google-plus: "\f10c";
+$icon-logo: "\f10d";
+$icon-menu: "\f10e";
+$icon-pinterest: "\f10f";
+$icon-question: "\f110";
+$icon-quill: "\f111";
+$icon-tag: "\f112";
+$icon-tumblr: "\f113";
+$icon-twitter: "\f114";
+$icon-xing: "\f115";
 
 // Font-Face
 // ---------
 
 @font-face {
   font-family: "iconfont";
-  src: url("/assets/fonts/iconfont_e47d802e385f7a229530fcbd535ca491.eot");
-  src: url("/assets/fonts/iconfont_e47d802e385f7a229530fcbd535ca491.eot?#iefix") format("embedded-opentype"),
-       url("/assets/fonts/iconfont_e47d802e385f7a229530fcbd535ca491.woff") format("woff"),
-       url("/assets/fonts/iconfont_e47d802e385f7a229530fcbd535ca491.ttf") format("truetype"),
-       url("/assets/fonts/iconfont_e47d802e385f7a229530fcbd535ca491.svg#iconfont") format("svg");
+  src: url("/assets/fonts/iconfont_d161cef2c4062057df237c215d61a0de.eot");
+  src: url("/assets/fonts/iconfont_d161cef2c4062057df237c215d61a0de.eot?#iefix") format("embedded-opentype"),
+       url("/assets/fonts/iconfont_d161cef2c4062057df237c215d61a0de.woff") format("woff"),
+       url("/assets/fonts/iconfont_d161cef2c4062057df237c215d61a0de.ttf") format("truetype"),
+       url("/assets/fonts/iconfont_d161cef2c4062057df237c215d61a0de.svg#iconfont") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -50,6 +52,8 @@ $icon-xing: "\f113";
 [data-icon]:before { content: attr(data-icon); }
 
 [data-icon]:before,
+.icon-arrow-left:before,
+.icon-arrow-right:before,
 .icon-calendar:before,
 .icon-cc:before,
 .icon-close:before,
@@ -85,23 +89,25 @@ $icon-xing: "\f113";
 // Einzelne Klassen-Attribute
 // --------------------------
 
-.icon-calendar:before { content: "\f100"; }
-.icon-cc:before { content: "\f101"; }
-.icon-close:before { content: "\f102"; }
-.icon-download:before { content: "\f103"; }
-.icon-external:before { content: "\f104"; }
-.icon-facebook:before { content: "\f105"; }
-.icon-feed:before { content: "\f106"; }
-.icon-flickr:before { content: "\f107"; }
-.icon-folder:before { content: "\f108"; }
-.icon-github:before { content: "\f109"; }
-.icon-google-plus:before { content: "\f10a"; }
-.icon-logo:before { content: "\f10b"; }
-.icon-menu:before { content: "\f10c"; }
-.icon-pinterest:before { content: "\f10d"; }
-.icon-question:before { content: "\f10e"; }
-.icon-quill:before { content: "\f10f"; }
-.icon-tag:before { content: "\f110"; }
-.icon-tumblr:before { content: "\f111"; }
-.icon-twitter:before { content: "\f112"; }
-.icon-xing:before { content: "\f113"; }
+.icon-arrow-left:before { content: "\f100"; }
+.icon-arrow-right:before { content: "\f101"; }
+.icon-calendar:before { content: "\f102"; }
+.icon-cc:before { content: "\f103"; }
+.icon-close:before { content: "\f104"; }
+.icon-download:before { content: "\f105"; }
+.icon-external:before { content: "\f106"; }
+.icon-facebook:before { content: "\f107"; }
+.icon-feed:before { content: "\f108"; }
+.icon-flickr:before { content: "\f109"; }
+.icon-folder:before { content: "\f10a"; }
+.icon-github:before { content: "\f10b"; }
+.icon-google-plus:before { content: "\f10c"; }
+.icon-logo:before { content: "\f10d"; }
+.icon-menu:before { content: "\f10e"; }
+.icon-pinterest:before { content: "\f10f"; }
+.icon-question:before { content: "\f110"; }
+.icon-quill:before { content: "\f111"; }
+.icon-tag:before { content: "\f112"; }
+.icon-tumblr:before { content: "\f113"; }
+.icon-twitter:before { content: "\f114"; }
+.icon-xing:before { content: "\f115"; }
