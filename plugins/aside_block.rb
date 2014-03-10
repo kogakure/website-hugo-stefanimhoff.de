@@ -35,7 +35,7 @@ module Jekyll
       content = content.strip
 
       if @class
-        source = "<aside class=\"#{@class}\">\n"
+        source = "<aside class=\"#{@class}\" role=\"complementary\">\n"
       else
         source = "<aside>\n"
       end
