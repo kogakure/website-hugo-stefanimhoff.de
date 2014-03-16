@@ -5,6 +5,10 @@
 .categories {
   display: inline-block;
 
+  li {
+    display: inline-block;
+  }
+
   .category {
     @extend %sans;
     @include border-radius(5px);

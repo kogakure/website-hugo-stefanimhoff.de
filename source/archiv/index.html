@@ -1,9 +1,28 @@
 ---
-layout: page
+layout: base
 title: Blog-Archiv
 footer: false
 body_class: archive
 ---
+
+<main class="main" role="main">
+  <div class="archive-posts">
+    Archive
+  </div>
+
+  <div class="archive-categories">
+    <h2>Kategorien</h2>
+    <ul class="categories">
+      {% category_list %}
+    </ul>
+
+    <h2>Tags</h2>
+    <ul class="tags">
+      {% tag_list %}
+    </ul>
+  </div>
+</main>
+
 
 <div class="blog-archives">
 {% for post in site.posts reverse %}

@@ -5,6 +5,10 @@
 .tags {
   display: inline-block;
 
+  li {
+    display: inline-block;
+  }
+
   .tag {
     @extend %sans;
     @include border-radius(5px);

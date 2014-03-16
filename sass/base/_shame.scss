@@ -12,3 +12,14 @@
   color: $white;
 }
 
+
+// Archive-Seite
+.archive-posts {
+  background: rgba(blue, 0.3);
+  @include grid-span(8, 1, 12);
+}
+
+.archive-categories {
+  background: rgba(red, 0.3);
+  @include grid-span(4, 9, 12);
+}

@@ -59,6 +59,7 @@ $breakpoint-default-feature: max-width;
 
 .page .main,
 .post .main,
+.archive .main,
 .wrap {
   @extend %container;
 
