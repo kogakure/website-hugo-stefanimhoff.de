@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Theme <cite>Kaijin</cite> für das MoinMoin-Wiki"
+title: "Theme Kaijin für das MoinMoin-Wiki"
 author: "Stefan Imhoff"
 date: 2008-02-14 20:58
 description: "MoinMoin-Theme zum Download."
