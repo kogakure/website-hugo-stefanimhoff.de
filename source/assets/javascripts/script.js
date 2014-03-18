@@ -25,12 +25,14 @@ $(function() {
   $(".nav-btn").on("click", function(event) {
     $("body").toggleClass("navigation-is-open");
     event.preventDefault();
+    event.stopImmediatePropagation();
   });
 
   // Close navigation by clicking on "close"
   $(".nav-close-btn").on("click", function(event) {
     $("body").removeClass("navigation-is-open");
     event.preventDefault();
+    event.stopImmediatePropagation();
   });
 
   // Close navigation by clicking somewhere in the content
@@ -42,20 +44,6 @@ $(function() {
       }
     }
   });
-
-  // Close navigation after 1.5s after leaving the navigation
-  // $("#nav").on("mouseleave", function() {
-  //   timer = window.setTimeout(function() {
-  //     $("body").removeClass("navigation-is-open");
-  //   }, 1500);
-  // });
-
-  // Stop timeout that closes the navigation when entering the navigation (again)
-  // $("#nav").on("mouseenter", function() {
-  //   if (timer) {
-  //     clearTimeout(timer);
-  //   }
-  // });
 
 
   // Hightlight current navigation item
