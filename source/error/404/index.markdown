@@ -2,6 +2,7 @@
 layout: error
 title: Nicht gefunden!
 footer: false
+error_page_404: true
 ---
 
 ## Neee du, das gibt’s hier nich’ …
