@@ -1,10 +1,34 @@
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+{% if page.error_page_404 %}
+<!-- <script> -->
+<!--   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ -->
+<!--   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), -->
+<!--   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) -->
+<!--   })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); -->
 
-  ga('create', 'UA-83074-6', 'stefanimhoff.de');
-  ga('set', 'anonymizeIp', true);
-  ga('send', 'pageview');
-</script>
+<!--   ga('create', 'UA-83074-6', 'stefanimhoff.de'); -->
+<!--   ga('set', 'anonymizeIp', true); -->
+<!--   ga('send', 'event', 'Error', '404', 'Seite: ' + document.location.pathname + document.location.search + ' Verweis: ' + document.referrer); -->
+<!-- </script> -->
+{% elsif page.error_page_500 %}
+<!-- <script> -->
+<!--   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ -->
+<!--   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), -->
+<!--   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) -->
+<!--   })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); -->
+
+<!--   ga('create', 'UA-83074-6', 'stefanimhoff.de'); -->
+<!--   ga('set', 'anonymizeIp', true); -->
+<!--   ga('send', 'event', 'Error', '500', 'Seite: ' + document.location.pathname + document.location.search + ' Verweis: ' + document.referrer); -->
+<!-- </script> -->
+{% else %}
+<!-- <script> -->
+<!--   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ -->
+<!--   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), -->
+<!--   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) -->
+<!--   })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); -->
+
+<!--   ga('create', 'UA-83074-6', 'stefanimhoff.de'); -->
+<!--   ga('set', 'anonymizeIp', true); -->
+<!--   ga('send', 'pageview'); -->
+<!-- </script> -->
+{% endif %}

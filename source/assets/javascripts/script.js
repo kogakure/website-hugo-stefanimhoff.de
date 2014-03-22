@@ -28,12 +28,14 @@ $(function() {
     event.stopImmediatePropagation();
   });
 
+
   // Close navigation by clicking on "close"
   $(".nav-close-btn").on("click", function(event) {
     $("body").removeClass("navigation-is-open");
     event.preventDefault();
     event.stopImmediatePropagation();
   });
+
 
   // Close navigation by clicking somewhere in the content
   // but not on link or if navigation is closed
@@ -49,16 +51,14 @@ $(function() {
   // Hightlight current navigation item
   // ==================================
   $('#nav a').filter(function() {
-      return this.href == url;
+    return this.href == url;
   }).closest("li").addClass('nav-is-active');
 
 
   // Scroll smoothly to the top of the page
   // ======================================
   $("#top-link").on("click", function(event) {
-
-    // debugger;
-    position = $(window).scrollTop(); // Get the scroll position
+    var position = $(window).scrollTop(); // Get the scroll position
 
     // Set the body top margin
     $("body").css({
@@ -81,6 +81,16 @@ $(function() {
       $("body").css("transition", "none");
     });
 
+    event.preventDefault();
+  });
+
+  // Tracking von Downloads
+  // ==================================
+  $("body").on("click", ".download a", function(event) {
+    ga('send', 'event', 'Download', event.target.href);
+    setTimeout(function() {
+      location.href = event.target.href;
+    }, 200);
     event.preventDefault();
   });
 
