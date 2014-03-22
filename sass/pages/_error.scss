@@ -1,0 +1,25 @@
+// ============================================================================
+// Error-Seiten
+// ============================================================================
+
+body.error {
+  .main {
+    @include clearfix;
+    position: relative;
+  }
+
+  .error-body {
+    @include grid-span(6, 6, 12);
+    @include leader(2);
+    min-height: 415px;
+    position: relative;
+  }
+
+  .error-image {
+    @include grid-span(5, 1, 12);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    border: 0;
+  }
+}
