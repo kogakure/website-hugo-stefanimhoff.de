@@ -22,9 +22,12 @@
   <meta name="format-detection" content="telephone=no">
   <meta name="format-detection" content="address=no">
 
-  <!-- Prefetch DNS -->
+  <!-- Prefetch -->
   <link rel="dns-prefetch" href="//fonts.googleapis.com">
   <link rel="dns-prefetch" href="//www.google-analytics.com">
+  {% unless page.homepage %}<link rel="prerender" href="{{ site.url }}">{% endunless %}
+  {% if page.previous.url %}<link rel="prefetch" href="{{ site.url }}{{page.previous.url}}">{% endif %}
+  {% if page.next.url %}<link rel="prefetch" href="{{ site.url }}{{page.next.url}}">{% endif %}
 
   <!-- Fonts -->
   <link href='http://fonts.googleapis.com/css?family=Gentium+Basic:400,700,400italic|Yanone+Kaffeesatz:400,200' rel='stylesheet' type='text/css'>
