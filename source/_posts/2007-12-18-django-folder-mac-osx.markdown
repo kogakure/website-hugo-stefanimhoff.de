@@ -5,7 +5,7 @@ author: "Stefan Imhoff"
 date: 2007-12-18 22:10
 description: "Django-Ordner-Icon für Mac OS X zum Download."
 categories:
-- Downloads
+- Download
 tags:
 - django
 - design

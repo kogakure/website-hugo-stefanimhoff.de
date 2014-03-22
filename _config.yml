@@ -59,8 +59,8 @@ email:
 
 # Categories
 category_feeds: true
-category_dir: thema
-category_title_prefix: "Thema: "
+category_dir: kategorie
+category_title_prefix: "Kategorie: "
 
 # Tags
 tag_feeds: true
@@ -69,6 +69,7 @@ tag_title_prefix: "Tags: "
 
 include:
   - .htaccess
+  - .htpasswd
 
 # Markdown
 markdown: rdiscount
@@ -76,16 +77,6 @@ rdiscount:
   extensions:
     - autolink
     - footnotes
-# markdown: redcarpet
-# redcarpet:
-#   extensions:
-#     - autolink
-#     - strikethrough
-#     - lax_spacing
-#     - superscript
-#     - underline
-#     - highlight
-#     - footnotes
 
 pygments:     false        # Jekyll's default Python Pygments have been replaced by pygments.rb.
 lsi:          true         # Related posts

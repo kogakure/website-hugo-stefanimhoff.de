@@ -5,7 +5,7 @@ author: "Stefan Imhoff"
 date: 2008-01-05 13:00
 description: "Blender-Ordner-Icon für Mac OS X zum Download."
 categories:
-- Downloads
+- Download
 tags:
 - blender
 - design

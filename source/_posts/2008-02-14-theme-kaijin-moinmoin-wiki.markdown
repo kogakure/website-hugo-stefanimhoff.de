@@ -5,7 +5,7 @@ author: "Stefan Imhoff"
 date: 2008-02-14 20:58
 description: "MoinMoin-Theme zum Download."
 categories:
-- Downloads
+- Download
 tags:
 - theme
 - customize

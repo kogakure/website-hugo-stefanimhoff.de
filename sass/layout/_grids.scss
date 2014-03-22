@@ -77,6 +77,11 @@ $breakpoint-default-feature: max-width;
   @include trailer(2);
 }
 
+.archive .archive-posts {
+  @include leader(1);
+  @include trailer(2);
+}
+
 header {
   clear: both;
 }

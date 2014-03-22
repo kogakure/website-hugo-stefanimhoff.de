@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Things & Evernote: GTD mit dem Mac"
+title: "Things und Evernote: GTD mit dem Mac"
 author: "Stefan Imhoff"
 date: 2009-05-22 16:45
 description: "Eine Einführung in meine Arbeitsweise mit GTD am Mac und welche Tools ich dafür verwende."

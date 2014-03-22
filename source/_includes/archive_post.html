@@ -1,6 +1,2 @@
-<h2><a href="{{ root_url }}{{ post.url }}">{{ post.title | ampersand }}</a></h2>
-<time datetime="{{ post.date | datetime | date_to_xmlschema }}" pubdate>{{ post.date | date: "%d.%m.%Y"}}</time>
-<div class="classification">
-  {% if post.categories %}{% include post/categories.html %}{% endif %}
-  {% if post.tags %}{% include post/tags.html %}{% endif %}
-</div>
+<h2><a href="{{ root_url }}{{ post.url }}">{{ post.title }}</a></h2>
+<time datetime="{{ post.date | datetime | date_to_xmlschema }}" pubdate>{{ post.date | localize: "%-d. %B %Y"}}</time>

@@ -1,38 +1,11 @@
 ---
-layout: base
+layout: archive
 title: Blog-Archiv
 footer: false
-body_class: archive
 ---
 
-<main class="main" role="main">
-  <div class="archive-posts">
-    Archive
-  </div>
-
-  <div class="archive-categories">
-    <h2>Kategorien</h2>
-    <ul class="categories">
-      {% category_list %}
-    </ul>
-
-    <h2>Tags</h2>
-    <ul class="tags">
-      {% tag_list %}
-    </ul>
-  </div>
-</main>
-
-
-<div class="blog-archives">
 {% for post in site.posts reverse %}
-{% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
-{% unless year == this_year %}
-  {% assign year = this_year %}
-  <h2>{{ year }}</h2>
-{% endunless %}
 <article>
   {% include archive_post.html %}
 </article>
 {% endfor %}
-</div>

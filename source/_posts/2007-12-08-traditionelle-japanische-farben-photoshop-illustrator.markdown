@@ -6,7 +6,7 @@ date: 2007-12-08 21:05
 description: "Traditionelle, japanische Farben als Farbpalette für Photoshop und Illustrator zum Download."
 categories:
 - Design
-- Downloads
+- Download
 tags:
 - photoshop
 - illustrator
