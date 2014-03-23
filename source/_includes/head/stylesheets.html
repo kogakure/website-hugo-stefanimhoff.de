@@ -1,0 +1,12 @@
+{% if is_preview == 'true' %}
+  <!-- Stylesheets -->
+  <link href="{{ root_url }}/assets/stylesheets/application.css" rel="stylesheet">
+{% if page.custom_css %}<link href="{{ root_url }}/stylesheets/{{page.custom_css}}.css" rel="stylesheet">{% endif %}
+{% else %}
+  <!-- Stylesheets -->
+  {% stylesheet application %}
+  {% if page.custom_css %}{{ page.custom_css | stylesheet }}{% endif %}
+{% endif %}
+  <!--[if lt IE 9]>
+  <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <![endif]-->

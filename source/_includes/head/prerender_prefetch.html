@@ -1,0 +1,6 @@
+<!-- Prefetch -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//www.google-analytics.com">
+  {% unless page.homepage %}<link rel="prerender" href="{{ site.url }}">{% endunless %}
+  {% if page.previous.url %}<link rel="prefetch" href="{{ site.url }}{{page.previous.url}}">{% endif %}
+  {% if page.next.url %}<link rel="prefetch" href="{{ site.url }}{{page.next.url}}">{% endif %}

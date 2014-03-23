@@ -12,3 +12,4 @@ vendor/bundle/
 node_modules
 .fontcustom-manifest.json
 source/assets/stylesheets
+.preview-mode
