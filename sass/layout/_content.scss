@@ -5,9 +5,12 @@
 // Hintergrund-Muster für den Content-Bereich
 // ----------------------------------------------------------------------------
 .container {
-  background-image: inline-image("css/patterns/billie_holiday_@2X.png");
+  // background-image: inline-image("css/patterns/billie_holiday_@2X.png");
+  // background-color: $content-background;
+  // @include background-size(100px 100px);
+  background-image: inline-image("css/patterns/light_grey_@2X.png");
   background-color: $content-background;
-  @include background-size(100px 100px);
+  @include background-size(301px 621px);
 }
 
 // Active/Inactive-Fenster Selection
