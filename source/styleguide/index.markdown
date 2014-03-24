@@ -334,11 +334,11 @@ Manchmal soll eine Liste auch Blockelemente enthalten, üblicherweise einen Absa
 * JavaScript ist eine Programmiersprache, die verwendet wird um Interaktionen zu einer Website hinzuzufügen oder ganze Programme für das Internet zu schreiben.
 
 ```html
-* HTML ist eine Auszeichnungssprache die verwendet wird, um die semantische …
+* HTML ist eine Auszeichnungssprache die verwendet wird, um …
 
-* CSS ist eine deklarive Sprache für Stilvorlagen. Damit wird das visuelle …
+* CSS ist eine deklarive Sprache für Stilvorlagen. Damit wird …
 
-* JavaScript ist eine Programmiersprache, die verwendet wird um Interaktionen …
+* JavaScript ist eine Programmiersprache, die verwendet wird um …
 ```
 
 ### Definitionslisten
@@ -469,10 +469,10 @@ Wenn <var>n</var> Rohre zur Eiscreme-Fabrik führen, dann erwarte …
 
 Das Element `samp` wird verwendet um beispielhafte Ausgaben von Programmen oder Computer-Systemen zu kennzeichnen.
 
-Der Computer sagte <samp>Fehler -1</samp>, aber ich weiß nicht, was das bedeutet.
+Der Computer gab <samp>Fehler -1</samp> auf dem Bildschirm aus, aber ich weiß nicht, was das bedeutet.
 
 ```html
-Der Computer sagte <samp>Fehler -1</samp>, aber ich weiß nicht, was das bedeutet.
+Der Computer gab <samp>Fehler -1</samp> auf dem Bildschirm aus, aber …
 ```
 
 ### Keyboard-Tasten
@@ -527,7 +527,7 @@ Das Element `mark` wird verwendet um einen <mark>Textmarker</mark> zu repräsent
 Mit <mark>mark</mark> kann man Worte markieren.
 ```
 
-### Edits
+### Bearbeitungen
 
 Das Element `del` wird verwendet um Text zu markieren, der nicht mehr gültig ist und entfernt werden müsste, aber aus bestimmten Gründen auf der Seite stehen bleiben muss. Sein Gegenstück, das Element `ins` markiert Text, der hinzugefügt wurde. Es kann optional ein Zeitstempel hinzugefügt werden, der anzeigt, wann die Änderung durchgeführt wurde.
 
@@ -870,7 +870,7 @@ Um besonders große Fotos einzusetzen, kann das Klassen-Attribut `figure--fullsi
 {% endfigure %}{% endraw %}
 ```
 
-#### Hanging Left
+#### Links gesetzte Abbildungen
 
 Abbildungen können in den Rand geschoben werden, wahlweise links (`figure--hangleft`) oder rechts (`figure--hangright`). Der Untertitel steht dann im Rand neben dem Foto. Fotos dieser Art sollten mindestens 850 Pixel breit sein.
 
@@ -888,7 +888,7 @@ Abbildungen können in den Rand geschoben werden, wahlweise links (`figure--hang
 {% endfigure %}{% endraw %}
 ```
 
-#### Hanging Right
+#### Rechts gesetzte Abbildungen
 
 {% figure figure--hangright %}
 <img src="http://lorempixel.com/900/400/animals/" alt="Example image">
@@ -904,7 +904,7 @@ Abbildungen können in den Rand geschoben werden, wahlweise links (`figure--hang
 {% endfigure %}{% endraw %}
 ```
 
-#### Centered
+#### Zentriert gesetzte Abbildungen
 
 Es ist auch möglich Abbildungen zentriert (`figure--center`) zu setzen, so dass sie in beide Ränder hineinragen.
 
