@@ -6,15 +6,53 @@ homepage: true
 ---
 
 <div class="blog">
-  <div class="wrap">Blog-Beiträge</div>
+  <div class="wrap">
+    <h2>Die neusten Artikel</h2>
+    <p>[1 Artikel mit Anriss, 2-3 Artikel mit Überschrift]</p>
+  </div>
 </div>
 
 <div class="work">
-  <div class="wrap">XING</div>
+  <div class="wrap">
+    <h2>Ich arbeite als Frontend Engineer für XING</h2>
+    <p>[Ein paar Absätze zu XING und der Arbeit als Frontend-Engineer]</p>
+  </div>
+</div>
+
+<div class="introvert">
+  <div class="wrap">
+    <h2>Ich bin introvertiert …</h2>
+    <p>[Ein paar Absätze]</p>
+    <blockquote>
+      <p>能ある鷹は爪を隠す。</p>
+      <p>Der Falke mit Talent versteckt seine Krallen.</p>
+      <p>Stille Wasser sind tief.</p>
+    </blockquote>
+
+    <h3>Artikel:</h3>
+    <ul>
+      <li>How to piss off an introvert: http://matadornetwork.com/life/piss-introvert/</li>
+      <li>Comic about Introversion: http://heyluchie.tumblr.com/post/53461087106/my-comic-introversion-is-finished-please-go-to</li>
+      <li>15 Things You Might Have Misunderstood About Introverts: http://www.lifehack.org/articles/communication/15-things-you-might-have-misunderstood-about-introverts.html</li>
+      <li>How to live with introverts: http://halfblog.net/2012/12/30/how-to-live-with-introverts/</li>
+      <li>10 Vorurteile über Introvertierte: http://alex-rubenbauer.de/persoenlichkeitsentwicklung/810/10-vorurteile-ueber-introvertierte/</li>
+      <li>10 Myths About Introverts: http://www.carlkingdom.com/10-myths-about-introverts</li>
+      <li>Revenge of the Introvert: http://www.psychologytoday.com/articles/201008/revenge-the-introvert</li>
+    </ul>
+
+    <h3>Bücher</h3>
+    <ul>
+      <li>Still: Die Kraft der Introvertierten: http://www.amazon.de/Still-Kraft-Introvertierten-Susan-Cain/dp/3442157641/</li>
+      <li>The Introvert Advantage: How to Thrive in an Extrovert World: http://www.amazon.de/Marti-Olsen-Laney/e/B001H6J1JW/</li>
+    </ul>
+  </div>
 </div>
 
 <div class="sport">
-  <div class="wrap">Ninjutsu</div>
+  <div class="wrap">
+    <h2>Ich liebe Ninjutsu und Ninja</h2>
+    <p>[Ein paar Absätze]</p>
+  </div>
 </div>
 
 <div class="recommendations">
@@ -22,28 +60,28 @@ homepage: true
 </div>
 
 <!-- <ul class="article-list"> -->
-<!--   {% for post in paginator.posts %} -->
-<!--   {% assign content = post.content %} -->
-<!--   <li> -->
-<!--     <article class="article"> -->
-<!--       <header class="article-header"> -->
-<!--         <h1 class="article-title"> -->
-<!--           <a class="article-link" href="{{ root_url }}{{ post.url }}">{{ post.title | ampersand }}</a> -->
-<!--         </h1> -->
-<!--         <time class="article-date" datetime="{{ post.date | datetime | date_to_xmlschema }}">{{ post.date | localize: "%B %Y" }}</time> -->
-<!--       </header> -->
-<!--     </article> -->
-<!--   </li> -->
-<!--   {% endfor %} -->
-<!-- </ul> -->
+  <!--   {% for post in paginator.posts %} -->
+  <!--   {% assign content = post.content %} -->
+  <!--   <li> -->
+    <!--     <article class="article"> -->
+      <!--       <header class="article-header"> -->
+        <!--         <h1 class="article-title"> -->
+          <!--           <a class="article-link" href="{{ root_url }}{{ post.url }}">{{ post.title | ampersand }}</a> -->
+          <!--         </h1> -->
+        <!--         <time class="article-date" datetime="{{ post.date | datetime | date_to_xmlschema }}">{{ post.date | localize: "%B %Y" }}</time> -->
+        <!--       </header> -->
+      <!--     </article> -->
+    <!--   </li> -->
+  <!--   {% endfor %} -->
+  <!-- </ul> -->
 
 <!-- {% if paginator.next_page || paginator.previous_page %} -->
 <!-- <div class="pagination"> -->
-<!--   {% if paginator.next_page %} -->
-<!--     <a class="prev" href="{{ paginator.next_page }}">&larr; Ältere Beiträge</a> -->
-<!--   {% endif %} -->
-<!--   {% if paginator.previous_page %} -->
-<!--     <a class="next" href="{{ paginator.previous_page }}">Neuere Beiträge &rarr;</a> -->
-<!--   {% endif %} -->
-<!-- </div> -->
+  <!--   {% if paginator.next_page %} -->
+  <!--     <a class="prev" href="{{ paginator.next_page }}">&larr; Ältere Beiträge</a> -->
+  <!--   {% endif %} -->
+  <!--   {% if paginator.previous_page %} -->
+  <!--     <a class="next" href="{{ paginator.previous_page }}">Neuere Beiträge &rarr;</a> -->
+  <!--   {% endif %} -->
+  <!-- </div> -->
 <!-- {% endif %} -->
