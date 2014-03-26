@@ -9,11 +9,11 @@ homepage: true
   <div class="wrap">
     <h2>Die neusten Artikel</h2>
     <ul class="article-list">
-      {% for post in site.posts limit:3 %}
+      {% for post in site.posts limit:5 %}
       <li>
         {% if forloop.first %}
         <a href="{{ root_url }}{{ post.url }}">{{ post.title }}</a>
-        <p>{{post.content | strip_html | truncate: 100 }}</p>
+        <p>{{post.content | strip_html | truncate: 200 }}</p>
         {% else %}
         <a href="{{ root_url }}{{ post.url }}">{{ post.title }}</a>
         {% endif %}
@@ -70,18 +70,20 @@ homepage: true
   <div class="wrap">Empfehlungen</div>
 </div>
 
-<!-- <ul class="article-list"> -->
-  <!--   {% for post in paginator.posts %} -->
-  <!--   {% assign content = post.content %} -->
-  <!--   <li> -->
-    <!--     <article class="article"> -->
-      <!--       <header class="article-header"> -->
-        <!--         <h1 class="article-title"> -->
-          <!--           <a class="article-link" href="{{ root_url }}{{ post.url }}">{{ post.title | ampersand }}</a> -->
-          <!--         </h1> -->
-        <!--         <time class="article-date" datetime="{{ post.date | datetime | date_to_xmlschema }}">{{ post.date | localize: "%B %Y" }}</time> -->
-        <!--       </header> -->
-      <!--     </article> -->
-    <!--   </li> -->
-  <!--   {% endfor %} -->
-  <!-- </ul> -->
+{% comment %}
+<ul class="article-list">
+    {% for post in paginator.posts %}
+    {% assign content = post.content %}
+    <li>
+        <article class="article">
+            <header class="article-header">
+                <h1 class="article-title">
+                    <a class="article-link" href="{{ root_url }}{{ post.url }}">{{ post.title | ampersand }}</a>
+                  </h1>
+                <time class="article-date" datetime="{{ post.date | datetime | date_to_xmlschema }}">{{ post.date | localize: "%B %Y" }}</time>
+              </header>
+          </article>
+      </li>
+    {% endfor %}
+  </ul>
+{% endcomment %}
