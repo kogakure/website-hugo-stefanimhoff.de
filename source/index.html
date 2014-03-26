@@ -12,10 +12,10 @@ homepage: true
       {% for post in site.posts limit:3 %}
       <li>
         {% if forloop.first %}
-        <a href="{{ root_url }}{{ post.url }}">{{post.title}}</a>
+        <a href="{{ root_url }}{{ post.url }}">{{ post.title }}</a>
         <p>{{post.content | strip_html | truncate: 100 }}</p>
         {% else %}
-        <a href="{{ root_url }}{{ post.url }}">{{post.title}}</a>
+        <a href="{{ root_url }}{{ post.url }}">{{ post.title }}</a>
         {% endif %}
       </li>
       {% endfor %}
