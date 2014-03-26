@@ -20,6 +20,10 @@
 
 .home .introvert {
   // background: brown;
+  .japanese {
+    @extend %japanese;
+    font-style: normal;
+  }
 }
 
 .home .ninjutsu {
