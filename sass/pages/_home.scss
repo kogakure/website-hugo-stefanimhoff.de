@@ -26,8 +26,10 @@
 
   // Arbeit
   .work {
+    background-color: #c4cacd;
+    background-image: url(/assets/images/css/header/office.jpg);
+    background-position: center center;
     background-size: cover;
-    background: #c4cacd url(/assets/images/css/header/office.jpg) center center;
     border-top: 1px solid rgba($dark-grey, 0.2);
 
     .grid {
@@ -87,8 +89,10 @@
   .martial-arts {
     $martial-arts-color: #f8cf73;
 
+    background-color: #1f130c;
+    background-image: url(/assets/images/css/header/bushi.jpg);
+    background-position: center top;
     background-size: cover;
-    background: #1f130c url(/assets/images/css/header/bushi.jpg) center top;
     color: $white;
 
     a {
@@ -113,7 +117,9 @@
     $book-lover-color: tint(#a46746, 25);
 
     color: $white;
-    background: #351610 url(/assets/images/css/header/library.jpg) center bottom;
+    background-color: #351610;
+    background-image: url(/assets/images/css/header/library.jpg);
+    background-position: center bottom;
     background-size: cover;
 
     h2 {
