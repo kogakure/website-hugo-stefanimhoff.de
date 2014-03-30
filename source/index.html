@@ -5,127 +5,14 @@ description: "Frontend Engineer @ XING, Designer, Martial Artist and hobby philo
 homepage: true
 ---
 
-<div class="blog section">
-  <div class="wrap">
-    <h2>Blogger.</h2>
-    <p>Ich schreibe in meinem Blog in über Design, Technik, Programmierung und was mich sonst noch so interessiert. Hier sind die letzten Beiträge zu finden, eine Übersicht aller Artikel findet sich im <a href="/archiv/">Archiv</a>.</p>
-
-    <div class="grid-latest">
-      {% for post in site.posts limit:1 %}
-      <a href="{{ root_url }}{{ post.url }}"><h3>{{ post.title }}</h3></a>
-      <p>{{post.content | strip_html | truncate: 200 }}</p>
-      {% endfor %}
-    </div>
-
-    <div class="grid-recently">
-      <h3>Ältere Beiträge</h3>
-      <ul>
-        {% for post in site.posts limit:3 offset:1 %}
-        <li>
-          <a href="{{ root_url }}{{ post.url }}">{{ post.title }}</a>
-        </li>
-        {% endfor %}
-      </ul>
-    </div>
-  </div>
-</div>
-</div>
-
-<div class="work section">
-  <div class="wrap">
-    <div class="grid">
-      <h2>Designer &amp; Entwickler.</h2>
-      <p>Ich arbeite als <strong>Frontend Engineer</strong> für <strong>XING</strong> und habe dort bereits an <strong>Jobs</strong> (Vereinfachtes Design, Überarbeitung der Suche), <strong>Mobile</strong> (Touch und iPad-Hybrid-App), <strong>Profil</strong> und den neuen <strong>Gruppen</strong> mitgearbeitet.</p>
-      <p>Bei der Entwicklung der XING-<strong>Projekte</strong>, einer Projektbörse für Selbstständige, war ich von Anfang an in mehreren Innovationswochen aktiv dabei und habe geholfen dieses Projekt in das XING-Betalab zu bringen.</p>
-      <p>Ich wurde ausgezeichnet als Gewinner der <strong>Prototyping Days 2013</strong> in der Kategorie <em>Best Smart Tools & Services</em>.</p>
-    </div>
-  </div>
-</div>
-
-<div class="martial-arts section attribution--main">
-  <div class="wrap">
-    <div class="grid">
-      <h2>Kampfkünstler.</h2>
-      <p>Ich liebe die Kampfkünste, insbesondere die Japanischen. Nachdem ich sieben Jahre Shotokan-Karate betrieben hatte, wechselte ich zu <strong>Bujinkan Budo Taijutsu</strong>.</p>
-      <p>Im Bujinkan werden <strong>neun verschiedene Schulen</strong> trainiert, sechs der <strong>Samurai</strong> und drei der <strong>Ninja</strong>, die ältesten dieser Schulen sind über <strong>900 Jahre</strong> alt und wurden seit Generationen vom Meister an seine Schüler weitergegeben.</p>
-      <p>Diese Künste sind keine Sportarten, sondern hocheffiziente Kampfsysteme, die sich auf den Schlachtfeldern des alten Japans bewährt haben.</p>
-      <p>Ich betreibe zu diesem Thema seit über 11 Jahren eine <a href="http://kogakure.de/">Website</a>, die Interessierten einen Einblick in die wirkliche Welt der Ninja ermöglicht.</p>
-    </div>
-  </div>
-  {% include attribution_martial_arts.html %}
-</div>
-
-<div class="introvert section">
-  <div class="wrap">
-    <div class="grid">
-      <h2>Introvertiert.</h2>
-      <p>Ich bin introvertiert. Laut einer Studie kommt auf drei extravertierte Personen eine introvertierte Person, wir sind also immer in der Unterzahl. Introvertierte denken anders, unser Gehirn verarbeitet Informationen anders. Wir sind nicht schüchtern, seltsam, Spaßbremsen oder Langweiler. Wir sind einfach introvertiert.</p>
-    </div>
-
-    <div class="grid-quote">
-      <blockquote>
-        <p class="japanese">能ある鷹は爪を隠す</p>
-      </blockquote>
-      <p>Der Falke mit Talent versteckt seine Krallen.</p>
-      <p>(Stille Wasser sind tief)</p>
-    </div>
-
-    <div class="grid-links">
-      <h3>Bücher:</h3>
-      <ul>
-        <li><a href="http://www.amazon.de/Still-Kraft-Introvertierten-Susan-Cain/dp/3442157641/">Still: Die Kraft der Introvertierten</a></li>
-        <li><a href="http://www.amazon.de/Marti-Olsen-Laney/e/B001H6J1JW/">The Introvert Advantage: How to Thrive in an Extrovert World</a></li>
-      </ul>
-
-      <h3>Comics:</h3>
-      <ul>
-        <li><a href="http://halfblog.net/2012/12/30/how-to-live-with-introverts/">How to live with introverts</a></li>
-        <li><a href="http://heyluchie.tumblr.com/post/53461087106/my-comic-introversion-is-finished-please-go-to">Luchie’s Sketches &amp; Comics</a></li>
-      </ul>
-
-      <h3>Artikel:</h3>
-      <ul>
-        <li><a href="http://www.carlkingdom.com/10-myths-about-introverts">10 Myths About Introverts</a></li>
-        <li><a href="http://www.lifehack.org/articles/communication/15-things-you-might-have-misunderstood-about-introverts.html">15 Things You Might Have Misunderstood About Introverts</a></li>
-        <li><a href="http://matadornetwork.com/life/piss-introvert/">How to piss off an introvert</a></li>
-      </ul>
-
-    </div>
-  </div>
-</div>
-
-<div class="book-lover section attribution--main">
-  <div class="wrap">
-    <div class="grid">
-      <h2>Bücherliebhaber.</h2>
-      <p>Ich liebe Bücher, und zwar die richtigen aus Papier. Ein Wohnzimmer ohne Bücherregal könnte ich mir kaum vorstellen.</p>
-      <p>Vermutlich ist dies erblich, denn mein Großvater hatte über 4000 Bücher in seiner Bibliothek, ich habe erst ca. 1000 Bücher bei mir stehen. Neben Klassikern lesen ich auch gerne Bücher über Philosophie, Kampfkunst, Kunst &amp; Design, Architektur, Typographie und hin und wieder auch Romane.</p>
-      <p>Fachbücher lese ich aber auch digital, denn die veralten viel zu schnell und sind meist weder schön gestaltet noch gut gebunden.</p>
-    </div>
-  </div>
-  {% include attribution_books.html %}
-</div>
+{% include home/blog.html %}
+{% include home/work.html %}
+{% include home/martial_arts.html %}
+{% include home/introvert.html %}
+{% include home/books.html %}
 
 <div class="recommendations section">
   <div class="wrap">
     <h2>Empfehlungen</h2>
   </div>
 </div>
-
-{% comment %}
-<ul class="article-list">
-  {% for post in paginator.posts %}
-  {% assign content = post.content %}
-  <li>
-    <article class="article">
-      <header class="article-header">
-        <h1 class="article-title">
-          <a class="article-link" href="{{ root_url }}{{ post.url }}">{{ post.title | ampersand }}</a>
-        </h1>
-        <time class="article-date" datetime="{{ post.date | datetime | date_to_xmlschema }}">{{ post.date | localize: "%B %Y" }}</time>
-      </header>
-    </article>
-  </li>
-  {% endfor %}
-</ul>
-{% endcomment %}
