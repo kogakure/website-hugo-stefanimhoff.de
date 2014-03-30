@@ -2,34 +2,120 @@
 // Homepage
 // ============================================================================
 
-// @TODO: Ein schneller Test, um meine Idee für die Startseite zu testen
-.home .intro {
-  background: #5EA459 url(/assets/images/styleguide/kelp-demo-1.jpg) center top no-repeat;
-  background-size: cover;
-  height: 300px;
-  color: $white;
-}
+.home .section {
+  @extend %sans;
+  padding: 1.5em 0;
 
-.home .blog {
-
-}
-
-.home .work {
-  // background: green;
-}
-
-.home .introvert {
-  // background: brown;
-  .japanese {
-    @extend %japanese;
-    font-style: normal;
+  p {
+    font-weight: 200;
+    font-size: 1.1em;
+    line-height: 1.5;
   }
 }
 
-.home .ninjutsu {
-  // background: black;
+.home .blog {
+  .grid-latest {
+    @include grid-span(7, 1, 12);
+  }
+  .grid-recently {
+    @include grid-span(4, 9, 12);
+  }
+}
+
+.home .work {
+  border-top: 1px solid rgba($dark-grey, 0.2);
+  p {
+    color: rgba($dark-grey, 0.8);
+  }
+
+  background: #c4cacd url(/assets/images/css/header/office.jpg) center center;
+  background-size: cover;
+
+  .grid {
+    @include grid-span(8, 1, 12);
+  }
+}
+
+.home .introvert {
+  line-height: 1.5;
+  @extend %paper-background;
+  .japanese {
+    @extend %japanese;
+    font-size: 2em;
+    margin-bottom: 0;
+    font-style: normal;
+  }
+  .grid {
+    @include grid-span(6, 1, 12);
+  }
+  .grid-quote {
+    color: rgba($dark-grey, 0.5);
+    blockquote {
+      margin: 0;
+    }
+    @include grid-span(6, 7, 12);
+    text-align: right;
+    > p {
+      font-style: normal;
+      margin-bottom: 0;
+    }
+  }
+  .grid-links {
+    clear: both;
+    h3, ul, li {
+      display: inline;
+    }
+
+    h3 {
+      font-size: 1em;
+      margin-right: 0.25em;
+    }
+
+    li {
+      margin-right: 0.5em;
+    }
+  }
+}
+
+.home .martial-arts {
+  $martial-arts-color: #f8cf73;
+  a {
+    @include link-colors($martial-arts-color, $white, $martial-arts-color, $martial-arts-color, $martial-arts-color);
+    &:hover {
+      border-color: $martial-arts-color;
+    }
+  }
+  h2 {
+    color: #f8cf73;
+  }
+  background: #1f130c url(/assets/images/css/header/bushi.jpg) center top;
+  color: $white;
+  background-size: cover;
+
+  .grid {
+    @include grid-span(6, 1, 12);
+  }
+}
+
+.home .book-lover {
+  $book-lover-color: tint(#a46746, 25);
+  h2 {
+    color: $book-lover-color;
+  }
+  color: $white;
+  background: #351610 url(/assets/images/css/header/library.jpg) center bottom;
+  background-size: cover;
+  .grid {
+    @include grid-span(8, 1, 12);
+  }
+  a {
+    @include link-colors($book-lover-color, $white, $book-lover-color, $book-lover-color, $book-lover-color);
+    &:hover {
+      border-color: $book-lover-color;
+    }
+  }
 }
 
 .home .recommendations {
-
+  @extend %paper-background;
 }
