@@ -13,7 +13,7 @@
     <div class="grid-recently">
       <h3>Ältere Beiträge</h3>
       <ul>
-        {% for post in site.posts limit:3 offset:1 %}
+        {% for post in site.posts limit:4 offset:1 %}
         <li>
           <a href="{{ root_url }}{{ post.url }}">{{ post.title }}</a>
         </li>
