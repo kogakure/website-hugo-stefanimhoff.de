@@ -37,8 +37,12 @@
 @import "pages/archive";
 @import "pages/error";
 
+// Responsive Layout
+@import "layout/responsive";
+
 // Debugging
 @import "helpers/debug";
 
 // Nur für schnelle Test und Fixes!
 @import "base/shame";
+
