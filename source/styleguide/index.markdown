@@ -1045,10 +1045,10 @@ Verschiedene Beispiele mit unterschiedlichen Programmier- und Auszeichnungssprac
 {% codeblock lang:ruby %}
 namespace :images do
 
-  desc "Crush all PNGs and JPEGs"
+  desc "Crush all images"
   task :crush do
-    IPad::Application.config.assets.paths.each do |directory|
-      ImageDiminish.optimize({
+    App::Application.config.assets.paths.each do |directory|
+      ImageCrusher.optimize({
         directory: directory,
         quantize: true
       })
