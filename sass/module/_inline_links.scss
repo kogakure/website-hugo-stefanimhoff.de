@@ -10,6 +10,10 @@
   h3 {
     font-size: 1em;
     margin-right: 0.25em;
+
+    &:after {
+      content: ":";
+    }
   }
 
   li {
