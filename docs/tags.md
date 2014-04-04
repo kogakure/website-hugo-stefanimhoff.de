@@ -5,9 +5,6 @@ apple
 appletv
 automatisierung
 blender
-macosx
-hardware
-software
 buch
 business
 capistrano
@@ -19,6 +16,8 @@ django
 dokumentation
 domain
 download
+dry
+erb
 essen
 evernote
 fabric
@@ -29,7 +28,10 @@ git
 github
 gitweb
 gtd
+hardware
+homebrew
 hosting
+html
 i18n
 illustrator
 inspiration
@@ -71,6 +73,3 @@ vim
 vokabel
 weiterleitung
 wiki
-erb
-dry
-html
