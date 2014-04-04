@@ -55,7 +55,7 @@ Als besonderes Extra gibt es seit kurzem einen Generator, der diese Dateien auto
 
 Die [Software](https://github.com/seethroughtrees/homebrew-dotfile-generator) ist einfach zu installieren:
 
-```sh
+```bash
 git clone https://github.com/seethroughtrees/homebrew-dotfile-generator.git
 cd homebrew-dotfile-generator
 npm install
@@ -63,13 +63,13 @@ npm install
 
 Vor dem Erzeugen des Abbilds sollten natürlich alle Pakete auf dem neusten Stand gebracht werden:
 
-```sh
+```bash
 brew update
 ```
 
 Die in Node.js (`brew install node`) geschriebene App wird dann einfach so gestartet:
 
-```sh
+```bash
 node app
 ```
 
