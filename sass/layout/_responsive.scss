@@ -11,8 +11,8 @@
 // ----------------------------------------------------------------------------
 
 // High resolution image of my face
-@include breakpoint($hi-resolution) {
-  .footer .about p {
+.footer .about p {
+  @include breakpoint($hi-resolution) {
     background-image: url("/assets/images/css/footer/stefan-imhoff@2X.png");
     background-position: 0 0;
     background-repeat: no-repeat;
