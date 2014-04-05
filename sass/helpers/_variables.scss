@@ -113,8 +113,12 @@ $animation-navigation-link-hover: all 100ms linear;
  *
  */
 
-$ratio:         golden(); // Standard
-$base-size:     16px 18px;
+$ms-base:     16px 18px;
+$ms-ratio:    $golden; // Standard
+
+// Vertical rhythm
+$relative-font-sizing:       true;
+$round-to-nearest-half-line: true; // Verhindert zu große Lücken zwischen den Zeilen
 
 // Schriftstärken
 $normal:        400;
@@ -127,15 +131,12 @@ $base-font-mono:             Menlo, Monaco, 'Andale Mono', 'Lucida console', 'Co
 $base-font-japanese:         'Hiragino Maru Gothic Pro', sans-serif;
 
 // Grundgrößen und Zeilenhöhe
-$base-font-size:             modular-scale(1);
+$font-unit:                  1.0em;
+$base-font-size:             modular-scale(1); // 18px
 $base-line-height-count:     1.5;
-$base-line-height:           $base-font-size * $base-line-height-count;
+$base-line-height:           $base-font-size * $base-line-height-count; // 27px
 $base-font-weight:           $normal;
 $base-rhythm-unit:           $base-line-height / $base-font-size * $font-unit;
-
-// Vertical rhythm
-$relative-font-sizing:       true;
-$round-to-nearest-half-line: true; // Verhindert zu große Lücken zwischen den Zeilen
 
 // Überschrift-Schriftgrößen
 $font-scale-h1:              modular-scale(6); // 68px

@@ -234,8 +234,8 @@ figure .highlight {
 $solar-scroll-bg: rgba(#fff, .15);
 $solar-scroll-thumb: rgba(#fff, .2);
 @if lightness($base03) > lightness(#555) {
-  $solar-scroll-bg: rgba(#000, .15);
-  $solar-scroll-thumb: rgba(#000, .15);
+  $solar-scroll-bg: rgba(#000, .15) !global;
+  $solar-scroll-thumb: rgba(#000, .15) !global;
 }
 
 pre, figure .highlight {

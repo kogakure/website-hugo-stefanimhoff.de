@@ -23,8 +23,12 @@ $base3:                           default !default;
 
 @if $solarized == light {
   // I prefer white and gray for the light theme
-  @if $base2 == default { $base2: #e5e5e5; } // light gray
-  @if $base3 == default { $base3: #fbfbfb; } // white
+  @if $base2 == default {
+    $base2: #e5e5e5 !global;
+  } // light gray
+  @if $base3 == default {
+    $base3: #fbfbfb !global;
+  } // white
 }
 
 $solar-yellow:    #b58900 !default;
@@ -38,41 +42,41 @@ $solar-green:     #859900 !default;
 
 @if $solarized == light {
   // Flipping the colors, This is the magic of Solarized.
-  $_base03: $base03;
-  $_base02: $base02;
-  $_base01: $base01;
-  $_base00: $base00;
-  $_base0:  $base0;
-  $_base1:  $base1;
-  $_base2:  $base2;
-  $_base3:  $base3;
+  $_base03: $base03 !global;
+  $_base02: $base02 !global;
+  $_base01: $base01 !global;
+  $_base00: $base00 !global;
+  $_base0:  $base0 !global;
+  $_base1:  $base1 !global;
+  $_base2:  $base2 !global;
+  $_base3:  $base3 !global;
 
-  $base03:  $_base3;
-  $base02:  $_base2;
-  $base01:  $_base1;
-  $base00:  $_base0;
-  $base0:   $_base00;
-  $base1:   $_base01;
-  $base2:   $_base02;
-  $base3:   $_base03;
+  $base03:  $_base3 !global;
+  $base02:  $_base2 !global;
+  $base01:  $_base1 !global;
+  $base00:  $_base0 !global;
+  $base0:   $_base00 !global;
+  $base1:   $_base01 !global;
+  $base2:   $_base02 !global;
+  $base3:   $_base03 !global;
 }
 
 /* non highlighted code colors */
 @if $pre-bg == default {
-  $pre-bg: $base03;
+  $pre-bg: $base03 !global;
 } @else if $pre-bg != $base03 {
-  $base03: $pre-bg;
-  $base02: lighten($base03, 5);
+  $base03: $pre-bg !global;
+  $base02: lighten($base03, 5) !global;
 }
 
 $pre-border: darken($base02, 5) !default;
 $pre-color: $base1 !default;
 
 @if $pre-border != darken($base02, 5) {
-  $base02: lighten($pre-border, 5);
+  $base02: lighten($pre-border, 5) !global;
 }
 @if $pre-color != $base1 {
-  $base1: $pre-color;
+  $base1: $pre-color !global;
 }
 
 $marker:               rgba(#00baff, .5) !default;

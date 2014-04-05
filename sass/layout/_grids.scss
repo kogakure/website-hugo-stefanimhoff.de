@@ -2,17 +2,15 @@
 // Grids
 // ============================================================================
 
-@import "singularitygs";
-
 // Grid-Einstellungen
 // ----------------------------------------------------------------------------
 
 // Base Grid
-$grids: 12;
-$gutters: 0.25;
-$output: 'isolation';
+@include add-grid(12);
+@include add-gutter(1/4);
+// $output: 'isolation';
 
-$mobile-first: false;
+// $mobile-first: false;
 $breakpoint-default-feature: max-width;
 
 // Breakpoint-Grids

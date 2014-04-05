@@ -87,6 +87,13 @@
     p {
       background: url("/assets/images/css/footer/stefan-imhoff.png") no-repeat 0 0;
       padding-left: 100px;
+
+      @include breakpoint($hi-resolution) {
+        background-image: url("/assets/images/css/footer/stefan-imhoff@2X.png");
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        background-size: 84px 84px;
+      }
     }
 
     em {

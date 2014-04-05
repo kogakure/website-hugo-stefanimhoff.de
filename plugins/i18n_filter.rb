@@ -1,5 +1,7 @@
 require 'i18n'
 
+I18n.enforce_available_locales = false
+
 LOCALE = :de # set your locale
 
 # Create folder "_locales" and put some locale file from https://github.com/svenfuchs/rails-i18n/tree/master/rails/locale
