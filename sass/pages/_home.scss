@@ -7,7 +7,7 @@
     @extend %sans;
     padding: 1.5em 0;
 
-    @include breakpoint($screen-450) {
+    @include breakpoint($screen-480) {
       padding: 1em 0;
     }
 

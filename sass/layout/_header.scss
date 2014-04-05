@@ -48,11 +48,11 @@ header#top {
       padding-bottom: 30px;
     }
 
-    @include breakpoint($screen-450) {
+    @include breakpoint($screen-480) {
       padding-bottom: 85px;
     }
 
-    @include breakpoint($screen-390) {
+    @include breakpoint($screen-430) {
       padding-bottom: 60px;
     }
   }
@@ -68,14 +68,14 @@ header#top {
       padding-top: 10px;
     }
 
-    @include breakpoint($screen-450) {
+    @include breakpoint($screen-480) {
       @include grid-span(8, 4);
       line-height: 1em;
       padding: 10px 0 0;
       top: 2em;
     }
 
-    @include breakpoint($screen-390) {
+    @include breakpoint($screen-430) {
       @include grid-span(7, 5);
     }
 
@@ -104,7 +104,7 @@ header#top {
       top: -1.2em;
     }
 
-    @include breakpoint($screen-390) {
+    @include breakpoint($screen-430) {
       @include grid-span(7, 5);
       font-size: 1.0em;
       top: 2.5em;
@@ -114,7 +114,7 @@ header#top {
   .logo {
     @include grid-span(2, 2);
 
-    @include breakpoint($screen-390) {
+    @include breakpoint($screen-430) {
       @include grid-span(3, 2);
     }
 
@@ -127,11 +127,11 @@ header#top {
       text-align: right;
       padding: 10px 0 5px 10px;
 
-      @include breakpoint($screen-390) {
+      @include breakpoint($screen-430) {
         padding: 10px 0 0;
       }
 
-      @include breakpoint($screen-450) {
+      @include breakpoint($screen-480) {
         padding: 10px 0 0;
       }
 
