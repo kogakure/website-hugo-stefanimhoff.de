@@ -20,6 +20,12 @@
 
   // Artikel
   .blog {
+    @include breakpoint($homepage-sections-fullsize) {
+      h3 {
+        line-height: 1.2;
+      }
+    }
+
     .grid-latest {
       @include grid-span(7, 1, 12);
 
