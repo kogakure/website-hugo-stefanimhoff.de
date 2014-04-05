@@ -2,10 +2,12 @@
 // Debugging
 // ============================================================================
 
+@include sgs-change("debug", true);
+
 // Debugging des Grids
 // ----------------------------------------------------------------------------
 // .page .main, .post .main, .archive .main, .wrap {
-//   @include background-grid($color: blue);
+//   @include background-grid;
 //   padding-left: 0;
 //   padding-right: 0;
 // }

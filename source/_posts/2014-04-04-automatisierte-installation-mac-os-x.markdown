@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Automatisierte Installation für Mac OS X"
+title: "Automatisierte Installation für Mac&nbsp;OS&nbsp;X"
 author: "Stefan Imhoff"
 date: 2014-04-04 21:09
 comments: false

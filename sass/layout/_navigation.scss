@@ -36,9 +36,10 @@
     @include link-colors($white, $nav-link-color-hover, $white, $white, $white);
     border: 0;
     display: none;
+    padding: 15px;
     position: absolute;
-    right: 2em;
-    top: 30px;
+    right: 1em;
+    top: 15px;
 
     span {
       @extend %visually-hidden;
@@ -81,9 +82,10 @@
       @include text-shadow(0 1px 1px $black);
       border: 0;
       display: block;
+      padding: 15px;
       position: absolute;
-      right: 2em;
-      top: 30px;
+      right: 1em;
+      top: 15px;
 
       span {
         @extend %visually-hidden;

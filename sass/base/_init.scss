@@ -8,8 +8,8 @@
   width: device-width;
 }
 
-@include breakpoint($iphone-width) {
-  html {
+html {
+  @include breakpoint($iphone-width) {
     -webkit-text-size-adjust: none;
   }
 }
@@ -26,6 +26,3 @@ html, body {
 * {
   @include box-sizing(border-box);
 }
-
-
-

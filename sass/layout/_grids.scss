@@ -5,26 +5,30 @@
 // Grid-Einstellungen
 // ----------------------------------------------------------------------------
 
-// Base Grid
-@include add-grid(12);
-@include add-gutter(1/4);
-// $output: 'isolation';
-
-// $mobile-first: false;
+$breakpoint-to-ems: true;
 $breakpoint-default-feature: max-width;
 
-// Breakpoint-Grids
-// $grids: add-grid(1 2 3 4 at 600px);
-// $grids: add-grid(2 8 2 at 500px);
+// Base Grid
+@include add-grid(12);
+// @include add-grid(6);
+// @include add-grid(9 at 675px);
+// @include add-grid(12 at 850px);
+// @include add-grid(15 at 1075px);
+// @include add-grid(18 at 1200px);
+@include add-gutter(1/4);
 
-// $grids: add-grid(2 8 2 at 1100px);
-// $grids: add-grid(12 at 900px);
-// $grids: add-grid(6 at 700px);
-// $grids: add-grid(3 at 500px);
-// $grids: 1 3 5 7 9;
+// Breakpoint-Grids
+// @include add-grid(1 2 3 4 at 600px);
+// @include add-grid(2 8 2 at 500px);
+
+// @include add-grid(2 8 2 at 1100px);
+// @include add-grid(12 at 900px);
+// @include add-grid(6 at 700px);
+// @include add-grid(3 at 500px);
+// @include 1 3 5 7 9;
 
 // Breakpoint-Gutters
-// $gutters: add-gutter(1/3 at 900px);
+// @include add-gutter(1/3 at 900px);
 
 // Extends
 %container {
