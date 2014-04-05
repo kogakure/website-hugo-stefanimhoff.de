@@ -86,10 +86,6 @@ $breakpoint-default-feature: max-width;
 .archive .archive-posts {
   @include leader(1);
   @include trailer(2);
-
-  @include breakpoint($screen-700) {
-    margin: 0;
-  }
 }
 
 header {
