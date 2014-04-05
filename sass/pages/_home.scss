@@ -7,6 +7,10 @@
     @extend %sans;
     padding: 1.5em 0;
 
+    @include breakpoint($screen-450) {
+      padding: 1em 0;
+    }
+
     p {
       font-size: 1.1em;
       font-weight: 200;
