@@ -83,17 +83,23 @@ $header-background-url: ""; // THEME
 
 $iphone-width: (screen) (max-width 480px);
 
+// Screen Breakpoints
 $screen-430: 430px;
 $screen-480: 480px;
 $screen-500: 500px;
 $screen-700: 700px;
 $screen-880: 880px;
+
+// Homepage
 $homepage-sections-fullsize: 650px;
+
+// Archive
+$archive-two-lines: 550px;
 
 // Footer
 $hi-resolution: min-resolution 1.5dppx;
 $meta-footer-two-lines: 640px;
-$meta-footer-no-image: 450px;
+$meta-footer-image-new-line: 450px;
 $footer-two-lines: 850px;
 
 // Abstände und Maße

@@ -77,11 +77,19 @@ $breakpoint-default-feature: max-width;
   @extend %main-grid;
   @include leader(1);
   @include trailer(2);
+
+  @include breakpoint($screen-700) {
+    @include trailer(1);
+  }
 }
 
 .archive .archive-posts {
   @include leader(1);
   @include trailer(2);
+
+  @include breakpoint($screen-700) {
+    margin: 0;
+  }
 }
 
 header {

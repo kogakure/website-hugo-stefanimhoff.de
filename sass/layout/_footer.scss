@@ -10,6 +10,14 @@
   color: rgba(white, 0.25);
   padding-top: $base-rhythm-unit;
 
+  @include breakpoint($screen-700) {
+    padding-top: 1em;
+  }
+
+  @include breakpoint($screen-500) {
+    padding-top: 0.5em;
+  }
+
   .wrap {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
@@ -105,9 +113,14 @@
         background-size: 84px 84px;
       }
 
-      @include breakpoint($meta-footer-no-image) {
-        background: none;
+      @include breakpoint($meta-footer-image-new-line) {
+        background-image: url("/assets/images/css/footer/stefan-imhoff@2X.png");
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        background-size: 84px 84px;
+        // background: none;
         padding-left: 0;
+        padding-top: 100px;
       }
     }
 
