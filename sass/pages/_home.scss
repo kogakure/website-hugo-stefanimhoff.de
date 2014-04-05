@@ -45,6 +45,10 @@
     background-size: cover;
     border-top: 1px solid rgba($dark-grey, 0.2);
 
+    @include breakpoint($homepage-sections-fullsize) {
+      background-image: url(/assets/images/css/home/office-small.jpg);
+    }
+
     .grid {
       @include grid-span(8, 1, 12);
 
@@ -113,6 +117,10 @@
     background-size: cover;
     color: $white;
 
+    @include breakpoint($homepage-sections-fullsize) {
+      background-image: url(/assets/images/css/home/bushi-small.jpg);
+    }
+
     a {
       @include link-colors($martial-arts-color, $white, $martial-arts-color, $martial-arts-color, $martial-arts-color);
 
@@ -143,6 +151,10 @@
     background-image: url(/assets/images/css/home/library.jpg);
     background-position: center bottom;
     background-size: cover;
+
+    @include breakpoint($homepage-sections-fullsize) {
+      background-image: url(/assets/images/css/home/library-small.jpg);
+    }
 
     h2 {
       color: $book-lover-color;
