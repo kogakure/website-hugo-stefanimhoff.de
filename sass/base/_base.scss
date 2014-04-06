@@ -18,6 +18,15 @@ body {
   @extend %japanese;
 }
 
+// Meldung für alte Browser
+// ----------------------------------------------------------------------------
+
+.chromeframe {
+  color: $white;
+  padding: 5px;
+  text-align: center;
+}
+
 // Links
 // ----------------------------------------------------------------------------
 a {
