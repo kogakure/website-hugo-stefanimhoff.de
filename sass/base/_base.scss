@@ -142,9 +142,16 @@ pre {
 }
 
 figure.code {
-  @extend %grid-10-of-8-break-out;
-  float: none !important;
-  clear: both !important;
+  @include grid-span(12);
+  float: right !important;
+  clear: none !important;
+
+  @include breakpoint($content-medium-code) {
+    @include grid-span(10, 1, 8);
+    margin-left: -(grid-span(1, 1, 8));
+    float: none !important;
+    clear: both !important;
+  }
 }
 
 // Variable
@@ -261,8 +268,16 @@ del {
 // Listen
 // ----------------------------------------------------------------------------
 ol {
-  list-style: decimal;
   @include trailer(1);
+  list-style: decimal;
+
+  .article-body & {
+    margin-left: $base-rhythm-unit;
+  }
+
+  @include breakpoint($content-medium) {
+    margin-left: 0;
+  }
 }
 
 ol ol {
@@ -271,8 +286,16 @@ ol ol {
 }
 
 ul {
-  list-style: disc;
   @include trailer(1);
+  list-style: disc;
+
+  .article-body & {
+    margin-left: $base-rhythm-unit;
+  }
+
+  @include breakpoint($content-medium) {
+    margin-left: 0;
+  }
 }
 
 ul ul {

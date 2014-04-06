@@ -16,43 +16,81 @@ div.figure {
 // Abbildung in voller Breite (Untertitel darunter zentriert)
 // ----------------------------------------------------------------------------
 .figure--fullsize {
-  @extend %grid-12-of-8-break-out;
+  @include grid-span(12, 1, 8);
+  margin-left: -(grid-span(2, 1, 8));
+
+  @include breakpoint($content-medium) {
+    @include grid-span(8, 1, 8);
+  }
 }
 
 // Abbildung links ausgerichtet (Untertitel rechts daneben)
 // ----------------------------------------------------------------------------
 .figure--hangleft {
-  @extend %grid-12-of-8-break-out;
+  @include grid-span(12, 1, 8);
+  margin-left: -(grid-span(2, 1, 8));
+
+  @include breakpoint($content-medium) {
+    @include grid-span(8, 1, 8);
+  }
 
   img {
     @include grid-span(10);
+
+    @include breakpoint($content-medium) {
+      @include grid-span(12);
+    }
   }
 
   figcaption {
     @include grid-span(2, 11);
     text-align: left;
+
+    @include breakpoint($content-medium) {
+      @include grid-span(12);
+      text-align: center;
+    }
   }
 }
 
 // Abbildung rechts ausgerichtet (Untertitel links daneben)
 // ----------------------------------------------------------------------------
 .figure--hangright {
-  @extend %grid-12-of-8-break-out;
+  @include grid-span(12, 1, 8);
+  margin-left: -(grid-span(2, 1, 8));
+
+  @include breakpoint($content-medium) {
+    @include grid-span(8, 1, 8);
+  }
 
   img {
     @include grid-span(10, 3);
+
+    @include breakpoint($content-medium) {
+      @include grid-span(12);
+    }
   }
 
   figcaption {
     @include grid-span(2, 1);
     text-align: right;
+
+    @include breakpoint($content-medium) {
+      @include grid-span(12);
+      text-align: center;
+    }
   }
 }
 
 // Abbildung zentriert, ragt in beide Ränder hinein (Untertitel darunter)
 // ----------------------------------------------------------------------------
 .figure--center {
-  @extend %grid-10-of-8-break-out;
+  @include grid-span(10, 1, 8);
+  margin-left: -(grid-span(1, 1, 8));
+
+  @include breakpoint($content-medium) {
+    @include grid-span(12);
+  }
 }
 
 // Abbildung mit einem langen Untertitel

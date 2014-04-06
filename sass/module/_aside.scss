@@ -16,10 +16,38 @@
   @extend %aside;
   float: left;
   margin-left: -(grid-span(2, 1, 8));
+
+  @include breakpoint($content-aside-inline) {
+    @include box-shadow(rgba($black, .06) 0 0 10px);
+    background: $light-grey;
+    border: 1px solid rgba($dark-grey, 0.2);
+    float: none;
+    margin: 0 0 $base-rhythm-unit;
+    padding: 1em;
+    width: 100%;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .aside--left {
   @extend %aside;
   float: right;
   margin-right: -(grid-span(2, 1, 8));
+
+  @include breakpoint($content-aside-inline) {
+    @include box-shadow(rgba($black, .06) 0 0 10px);
+    background: $light-grey;
+    border: 1px solid rgba($dark-grey, 0.2);
+    float: none;
+    margin: 0 0 $base-rhythm-unit;
+    padding: 1em;
+    width: 100%;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
 }

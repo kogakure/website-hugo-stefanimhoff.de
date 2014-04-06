@@ -41,17 +41,6 @@ $breakpoint-default-feature: max-width;
   @include grid-span(8, 3);
 }
 
-// Grid-Erweiterungen (nötig, um aus der Hauptspalte auszubrechen)
-%grid-12-of-8-break-out {
-  @include grid-span(12, 1, 8);
-  margin-left: -(grid-span(2, 1, 8));
-}
-
-%grid-10-of-8-break-out {
-  @include grid-span(10, 1, 8);
-  margin-left: -(grid-span(1, 1, 8));
-}
-
 // Grids
 // ----------------------------------------------------------------------------
 
@@ -79,6 +68,15 @@ $breakpoint-default-feature: max-width;
   @include trailer(2);
 
   @include breakpoint($screen-700) {
+    @include trailer(1);
+  }
+
+  @include breakpoint($content-medium) {
+    @include grid-span(12);
+  }
+
+  @include breakpoint($content-small) {
+    margin-top: 0.5em;
     @include trailer(1);
   }
 }

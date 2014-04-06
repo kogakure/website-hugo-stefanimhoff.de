@@ -40,6 +40,19 @@ blockquote.pullquote[lang|=ja] {
   position: relative;
   top: 15px;
   width: column-span(4, 1, 8);
+
+  @include breakpoint($content-medium) {
+    margin-right: 0;
+  }
+
+  @include breakpoint($content-pullquote-inline) {
+    clear: both;
+    float: none;
+    margin: $base-rhythm-unit 0;
+    position: static;
+    text-align: center;
+    width: 100%;
+  }
 }
 
 .pullquote--left:before {
@@ -49,4 +62,17 @@ blockquote.pullquote[lang|=ja] {
   margin-right: $base-rhythm-unit;
   margin-top: 0;
   text-align: right;
+
+  @include breakpoint($content-medium) {
+    margin-left: 0;
+  }
+
+  @include breakpoint($content-pullquote-inline) {
+    clear: both;
+    float: none;
+    margin: $base-rhythm-unit 0;
+    position: static;
+    text-align: center;
+    width: 100%;
+  }
 }
