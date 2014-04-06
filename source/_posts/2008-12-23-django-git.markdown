@@ -26,7 +26,7 @@ Ich schaue mir [reStructuredText](http://docutils.sourceforge.net/rst.html "reSt
 
 Das Internetportal [TED](http://www.ted.com/ "TED: Ideas worth spreading") schlägt mich auch weiter in seinen Bann und nach einigen Vorträgen über Bionik recherchiere ich mehr zu diesem interessanten Thema.
 
-Zeitgleich stolpere ich im Januar auch über [Git](http://git-scm.com/), was langsam bekannter wird. Ich bringe mir Git über die Grundlagen hinaus durch diverse Tutorial und Screencasts ([GitCasts](http://gitcasts.com/), [PeepCode: Git](https://peepcode.com/products/git) selber bei.
+Zeitgleich stolpere ich im Januar auch über [Git](http://git-scm.com/), was langsam bekannter wird. Ich bringe mir Git über die Grundlagen hinaus durch diverse Tutorial und Screencasts (GitCasts, [PeepCode: Git](https://peepcode.com/products/git) selber bei.
 
 Ich setzte meinen eigenen [Gitweb](https://git.wiki.kernel.org/index.php/Gitweb)-Server auf und schaue auch die Integration mit Subversion ([git-svn](http://www.kernel.org/pub/software/scm/git/docs/git-svn.html "git-svn(1)")) an.
 
@@ -122,7 +122,7 @@ Microsoft sorgt für Lacher mit seinem The Mojave Experiment. In der *wissenscha
 
 Mein Preis für die beste Werbung 2008 geht schon im August an Nokia für ihre Werbung [Nokia: The 4th Screen](http://www.youtube.com/watch?v=XpeNk3E36YU "YouTube - Nokia: Go Play - 4th Screen").
 
-Im August fällt mir auch auf, das kein [Sumo](http://www.sumo.or.jp/eng/ "Nihon Sumo Kyokai Official Grand Sumo Home Page") mehr auf Eurosport kommt. Ich recherchiere und finde heraus, das Eurosport sich entschieden hat dafür kein Geld mehr auszugeben. Die senden jetzt nur noch richtigen Sport, wie z. B. Pokern.
+Im August fällt mir auch auf, das kein [Sumo](http://www.sumo.or.jp/ "Nihon Sumo Kyokai Official Grand Sumo") mehr auf Eurosport kommt. Ich recherchiere und finde heraus, das Eurosport sich entschieden hat dafür kein Geld mehr auszugeben. Die senden jetzt nur noch richtigen Sport, wie z. B. Pokern.
 
 ## September
 

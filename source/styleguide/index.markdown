@@ -1029,13 +1029,13 @@ In diesem Beispiel wird die Programmiersprache über die Dateiendung erkannt:
 
 Beipsiel, das zusätzlich noch auf eine URL verlinkt:
 
-{% codeblock Got pain? painreleif.sh http://site.com/painreleief.sh %}
+{% codeblock Got pain? painreleif.sh http://stefanimhoff.de %}
 $ rm -rf ~/PAIN
 # Über Codeendung sh erkannt mit Link ohne Titel
 {% endcodeblock %}
 
 ```html
-{% raw %}{% codeblock painreleif.sh http://site.com/painreleief.sh %}
+{% raw %}{% codeblock painreleif.sh http://stefanimhoff.de %}
 …
 {% endcodeblock %}{% endraw %}
 ```

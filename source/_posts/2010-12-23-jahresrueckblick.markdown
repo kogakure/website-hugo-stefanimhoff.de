@@ -40,7 +40,7 @@ Mein absolutes Hightlight von 2010 war aber [Vim](http://www.vim.org/) (genauer 
 
 Ich habe Vim mit 35 Plugins ausgestattet, meine [Konfigurationsdatei](https://gist.github.com/kogakure/33992) hat 1047 Zeilen (inklusive Kommentaren), ich verwende das gleiche Theme wie bei TextMate (diese lassen sich einfach konvertieren) und konnte 100 % meiner täglichen Arbeit mit TextMate reproduzieren oder durch bessere Arbeitsweisen ersetzen.
 
-Das der Umstieg so leicht von Statten ging und auch noch wahnsinnigen Spaß gemacht hat, verdanke ich den fantastischen [Screencasts von Derek Wyatt](http://www.derekwyatt.org/vim/vim-tutorial-videos/).
+Das der Umstieg so leicht von Statten ging und auch noch wahnsinnigen Spaß gemacht hat, verdanke ich den fantastischen [Screencasts von Derek Wyatt](http://derekwyatt.org/vim/tutorials/).
 
 Vim zieht seine wirklich Macht aus den verschiedenen Modi (Normal, Insert, Replace, Visual, …). Es gibt sogar drei verschiedene visuelle Modi. Es ist für den Anfang wichtig die Grundlagen zu lernen, also die Bewegungs- und Bearbeitungsbefehle. Das Beste ist dabei, die schlechten Angewohnheiten der anderen Editoren (soweit das noch geht) vollständig zu vergessen. In Vim tippt man nicht mehr wie ein gestörter auf den Pfeiltasten herum, sondern lässt die Finger schön dort, wo sie hingehören. Irgendwo habe ich ein Zitat gelesen, das Vim mit der Arbeit eines Chirurgen vergleicht – zu Recht. Der Text oder Code wird punktgenau anvisiert und bearbeitet. Wer die Maus benutzt, macht etwas falsch; wer Zeichenweise oder Zeilenweise durch die Datei navigiert, macht etwas falsch; wer öfter im Eingabemodus ist, als im normalen Modus, macht etwas falsch. Ich rate wirklich jedem Programmierer, Webdesigner oder Autoren sich Vim anzusehen.
 

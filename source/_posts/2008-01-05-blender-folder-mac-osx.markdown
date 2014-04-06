@@ -27,7 +27,7 @@ Mit Blender kann man auf professionellem Niveau arbeiten. Es ist genauso gut, wi
 
 Wer lernen möchte mit einer solchen 3D-Software zu arbeiten oder von einer der kommerziellen Lösungen wechseln möchte, dem kann ich diese Software wärmstens Empfehlen.
 
-Das Blender es lässig mit den teuren Mitbewerbern aufnehmen kann, kann man in der [Showcase-Galerie](http://www.blender.org/features-gallery/gallery/art-gallery/) sehen oder in Projekten wie [Elephants Dream](http://orange.blender.org/ "Elephants Dream"), Peach oder  [Pumiferos](http://www.plumiferos.com/) bewundern.
+Das Blender es lässig mit den teuren Mitbewerbern aufnehmen kann, kann man in der Sektion [Features](http://www.blender.org/features/) sehen oder auch in den bereits erstellten [Projekten](http://www.blender.org/features/projects/).
 
 ## Folder-Icon
 
