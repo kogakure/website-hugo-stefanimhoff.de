@@ -128,15 +128,15 @@ $animation-navigation-link-hover: all 100ms linear;
 // Typographie
 // ----------------------------------------------------------------------------
 
-/* Modular Scale
- * ----------------------
- * 18px @ 1:1.618
- * 16px @ 1:1.618i
- * ----------------------
- *
- * http://modularscale.com/scale/?px1=18&px2=16&ra1=1.618&ra2=0
- *
- */
+//* Modular Scale
+//* ----------------------
+//* 18px @ 1:1.618
+//* 16px @ 1:1.618i
+//* ----------------------
+//*
+//* http://modularscale.com/scale/?px1=18&px2=16&ra1=1.618&ra2=0
+//*
+//*
 
 $ms-base:     16px 18px;
 $ms-ratio:    $golden; // Standard
