@@ -5,12 +5,15 @@
 url: http://beta.stefanimhoff.de
 # url: http://stefanimhoff.de
 server_path: /home/kogakure/webapps/beta_stefanimhoff
+
 title: Stefan Imhoff
 author: "Stefan Imhoff"
 description: "Frontend Engineer @ XING, Developer, Designer &amp; Martial Artist."
 keywords: "Stefan Imhoff, Hamburg, Frontend, Engineer"
+
 twitter: "@kogakure"
 googleplus: "104687479698350625994"
+
 geo_latitude: "53.596835"
 geo_longitude: "10.102015"
 
