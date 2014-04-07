@@ -22,9 +22,7 @@
 // Dieses Navigationsmenü verwendet einen Trick über CSS mit :target und :not
 // und ist oben am Rand der Seite.
 #nav {
-  @include background-size(46px 23px);
-  background-color: $nav-background;
-  background-image: inline-image("css/patterns/pw_maze_black_@2X.png");
+  @extend %pattern-pw-maze-black;
   overflow: hidden;
   position: absolute;
   top: 0;

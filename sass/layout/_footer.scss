@@ -4,9 +4,7 @@
 
 .footer {
   @extend %sans;
-  @include background-size(102px 102px);
-  background-color: $footer-meta-background;
-  background-image: inline-image("css/patterns/classy_fabric_@2X.png");
+  @extend %pattern-classy-fabric;
   color: rgba(white, 0.25);
   padding-top: $base-rhythm-unit;
 
@@ -24,9 +22,7 @@
   }
 
   small {
-    @include background-size(50px 50px);
-    background-color: $footer-small-background;
-    background-image: inline-image("css/patterns/dark_stripes_@2X.png");
+    @extend %pattern-classy-fabric;
     color: rgba($white, 0.3);
     display: block;
     margin-top: $base-rhythm-unit;

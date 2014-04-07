@@ -5,7 +5,7 @@
 // Hintergrund-Muster für den Content-Bereich
 // ----------------------------------------------------------------------------
 .container {
-  @extend %paper-background;
+  @extend %pattern-light-grey;
 }
 
 // Active/Inactive-Fenster Selection

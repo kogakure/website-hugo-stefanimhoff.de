@@ -22,6 +22,42 @@
 %iconfont {
   font-family: "iconfont";
 }
+// Background-Patterns
+// ---------------------------------
+// 200x200, 14 KB
+%pattern-billie-holiday {
+  @include background-size(100px 100px);
+  background-color: $content-background;
+  background-image: inline-image("css/patterns/billie_holiday_@2X.png");
+}
+
+// 204x204, 12 KB
+%pattern-classy-fabric {
+  @include background-size(102px 102px);
+  background-color: $footer-meta-background;
+  background-image: inline-image("css/patterns/classy_fabric_@2X.png");
+}
+
+// 100x100, 1 KB
+%pattern-dark-stripes {
+  @include background-size(50px 50px);
+  background-color: $body-background;
+  background-image: inline-image("css/patterns/dark_stripes_@2X.png");
+}
+
+// 602x1242, 4 KB
+%pattern-light-grey {
+  @include background-size(301px 621px);
+  background-color: $content-background;
+  background-image: inline-image("css/patterns/light_grey_@2X.png");
+}
+
+// 92x46, < 1 KB
+%pattern-pw-maze-black {
+  @include background-size(46px 23px);
+  background-color: $nav-background;
+  background-image: inline-image("css/patterns/pw_maze_black_@2X.png");
+}
 
 // Image-Replacement (Kellum Method)
 // ---------------------------------
@@ -47,16 +83,4 @@
   padding: 0;
   position: absolute;
   width: 1px;
-}
-
-%paper-background {
-  @include background-size(301px 621px);
-  background-color: $content-background;
-  background-image: inline-image("css/patterns/light_grey_@2X.png");
-}
-
-%dark-paper-background {
-  @include background-size(100px 100px);
-  background-color: $content-background;
-  background-image: inline-image("css/patterns/billie_holiday_@2X.png");
 }

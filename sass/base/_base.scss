@@ -4,11 +4,9 @@
 
 body {
   @extend %base;
-  @include background-size(50px 50px);
+  @extend %pattern-dark-stripes;
   @include font-smoothing(subpixel-antialiased);
   @include hyphens(auto);
-  background-color: $body-background;
-  background-image: inline-image("css/patterns/dark_stripes_@2X.png");
   color: $dark-grey;
   font-style: normal;
   font-weight: $normal;

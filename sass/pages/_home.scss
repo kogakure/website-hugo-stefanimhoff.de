@@ -74,7 +74,7 @@
 
   // Introvertiert
   .introvert {
-    @extend %paper-background;
+    @extend %pattern-light-grey;
 
     .japanese {
       @extend %japanese;
@@ -189,6 +189,6 @@
 
   // Empfehlungen
   .recommendations {
-    @extend %paper-background;
+    @extend %pattern-light-grey;
   }
 }
