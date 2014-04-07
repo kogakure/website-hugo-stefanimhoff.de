@@ -31,6 +31,13 @@
   background-image: inline-image("css/patterns/billie_holiday_@2X.png");
 }
 
+// 48x44, < 1 KB
+%pattern-carbon-fibre {
+  @include background-size(24px 22px);
+  background-color: transparent; // @TODO: Background-Color
+  background-image: inline-image("css/patterns/carbon_fibre_@2X.png");
+}
+
 // 204x204, 12 KB
 %pattern-classy-fabric {
   @include background-size(102px 102px);
@@ -45,6 +52,13 @@
   background-image: inline-image("css/patterns/dark_stripes_@2X.png");
 }
 
+// 824x824, 4 KB
+%pattern-geometry {
+  @include background-size(412px 412px);
+  background-color: transparent; // @TODO: Background-Color
+  background-image: inline-image("css/patterns/geometry_@2X.png");
+}
+
 // 602x1242, 4 KB
 %pattern-light-grey {
   @include background-size(301px 621px);
@@ -52,11 +66,60 @@
   background-image: inline-image("css/patterns/light_grey_@2X.png");
 }
 
+// 16x16, < 1 KB
+%pattern-p5 {
+  @include background-size(8px 8px);
+  background-color: transparent; // @TODO: Background-Color
+  background-image: inline-image("css/patterns/p5_@2X.png");
+}
+
 // 92x46, < 1 KB
 %pattern-pw-maze-black {
   @include background-size(46px 23px);
   background-color: $nav-background;
   background-image: inline-image("css/patterns/pw_maze_black_@2X.png");
+}
+
+// 92x46, < 1 KB
+%pattern-pw-maze-white {
+  @include background-size(46px 23px);
+  background-color: transparent; // @TODO: Background-Color
+  background-image: inline-image("css/patterns/pw_maze_white_@2X.png");
+}
+
+// 400x400, 65 KB
+%pattern-skulls {
+  @include background-size(200px 200px); // ??? Check it
+  background-color: transparent; // @TODO: Background-Color
+  background-image: inline-image("css/patterns/skulls.png");
+}
+
+// 300x222, 14 KB
+%pattern-sneaker-mesh-fabric {
+  @include background-size(150px 111px);
+  background-color: transparent; // @TODO: Background-Color
+  background-image: inline-image("css/patterns/sneaker_mesh_fabric_@2X.png");
+}
+
+// 400x400, 32 KB
+%pattern-squairy-light {
+  @include background-size(200px 200px);
+  background-color: transparent; // @TODO: Background-Color
+  background-image: inline-image("css/patterns/squairy_light_@2X.png");
+}
+
+// 264x264, 9 KB
+%pattern-squared-metal {
+  @include background-size(132px 132px);
+  background-color: transparent; // @TODO: Background-Color
+  background-image: inline-image("css/patterns/squared_metal_@2X.png");
+}
+
+// 200x200, 2 KB
+%pattern-wavegrid {
+  @include background-size(100px 100px);
+  background-color: transparent; // @TODO: Background-Color
+  background-image: inline-image("css/patterns/wavegrid_@2X.png");
 }
 
 // Image-Replacement (Kellum Method)
