@@ -18,6 +18,15 @@
     }
   }
 
+  .content {
+    @include column-count(2);
+    @include column-gap(30px);
+
+    @include breakpoint($homepage-sections-fullsize) {
+      @include column-count(1);
+    }
+  }
+
   // Artikel
   .blog {
     @include breakpoint($homepage-sections-fullsize) {
@@ -51,18 +60,6 @@
   .work {
     border-top: 1px solid rgba($dark-grey, 0.2);
     @extend %pattern-geometry;
-
-    .grid {
-      @include grid-span(8, 1, 12);
-
-      @include breakpoint($homepage-sections-fullsize) {
-        @include grid-span(12);
-
-        p:last-child {
-          margin-bottom: 0;
-        }
-      }
-    }
   }
 
   // Introvertiert
@@ -128,14 +125,6 @@
     h2 {
       color: $martial-arts-color;
     }
-
-    .grid {
-      @include grid-span(7, 1, 12);
-
-      @include breakpoint($homepage-sections-fullsize) {
-        @include grid-span(12);
-      }
-    }
   }
 
   // Bücherliebhaber
@@ -148,14 +137,6 @@
 
     h2 {
       color: $book-lover-color;
-    }
-
-    .grid {
-      @include grid-span(9, 1, 12);
-
-      @include breakpoint($homepage-sections-fullsize) {
-        @include grid-span(12);
-      }
     }
 
     a {
@@ -177,14 +158,6 @@
 
     h2 {
       color: $movie-lover-color;
-    }
-
-    .grid {
-      @include grid-span(9, 1, 12);
-
-      @include breakpoint($homepage-sections-fullsize) {
-        @include grid-span(12);
-      }
     }
 
     a {
