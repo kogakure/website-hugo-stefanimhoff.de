@@ -49,15 +49,8 @@
 
   // Arbeit
   .work {
-    background-color: #c4cacd;
-    background-image: url(/assets/images/css/home/office.jpg);
-    background-position: center center;
-    background-size: cover;
     border-top: 1px solid rgba($dark-grey, 0.2);
-
-    @include breakpoint($homepage-sections-fullsize) {
-      background-image: url(/assets/images/css/home/office-small.jpg);
-    }
+    @extend %pattern-geometry;
 
     .grid {
       @include grid-span(8, 1, 12);
@@ -74,7 +67,7 @@
 
   // Introvertiert
   .introvert {
-    @extend %pattern-light-grey;
+    @extend %pattern-wavegrid;
 
     .japanese {
       @extend %japanese;
@@ -93,7 +86,7 @@
 
     .grid-quote {
       @include grid-span(6, 7, 12);
-      color: rgba($dark-grey, 0.5);
+      color: rgba($dark-grey, 0.8);
       text-align: right;
 
       @include breakpoint($homepage-sections-fullsize) {
@@ -119,17 +112,10 @@
 
   // Kampfkunst
   .martial-arts {
-    $martial-arts-color: #f8cf73;
+    $martial-arts-color: #be0202;
 
-    background-color: #1f130c;
-    background-image: url(/assets/images/css/home/bushi.jpg);
-    background-position: center top;
-    background-size: cover;
+    @extend %pattern-nami;
     color: $white;
-
-    @include breakpoint($homepage-sections-fullsize) {
-      background-image: url(/assets/images/css/home/bushi-small.jpg);
-    }
 
     a {
       @include link-colors($martial-arts-color, $white, $martial-arts-color, $martial-arts-color, $martial-arts-color);
@@ -154,17 +140,11 @@
 
   // Bücherliebhaber
   .book-lover {
-    $book-lover-color: tint(#a46746, 25);
+    $book-lover-color: #616161;
 
+    border-top: 1px solid rgba($dark-grey, 0.2);
+    @extend %pattern-type;
     color: $white;
-    background-color: #351610;
-    background-image: url(/assets/images/css/home/library.jpg);
-    background-position: center bottom;
-    background-size: cover;
-
-    @include breakpoint($homepage-sections-fullsize) {
-      background-image: url(/assets/images/css/home/library-small.jpg);
-    }
 
     h2 {
       color: $book-lover-color;
@@ -187,8 +167,38 @@
     }
   }
 
+  // Filmliebhaber
+  .movie-lover {
+    $movie-lover-color: #e8c53d;
+
+    border-top: 1px solid rgba($dark-grey, 0.2);
+    @extend %pattern-px;
+    color: $white;
+
+    h2 {
+      color: $movie-lover-color;
+    }
+
+    .grid {
+      @include grid-span(9, 1, 12);
+
+      @include breakpoint($homepage-sections-fullsize) {
+        @include grid-span(12);
+      }
+    }
+
+    a {
+      @include link-colors($movie-lover-color, $white, $movie-lover-color, $movie-lover-color, $movie-lover-color);
+
+      &:hover {
+        border-color: $movie-lover-color;
+      }
+    }
+  }
+
+
   // Empfehlungen
   .recommendations {
-    @extend %pattern-light-grey;
+    @extend %pattern-wavegrid;
   }
 }

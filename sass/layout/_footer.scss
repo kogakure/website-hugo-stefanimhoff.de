@@ -22,7 +22,7 @@
   }
 
   small {
-    @extend %pattern-classy-fabric;
+    @extend %pattern-dark-stripes;
     color: rgba($white, 0.3);
     display: block;
     margin-top: $base-rhythm-unit;
