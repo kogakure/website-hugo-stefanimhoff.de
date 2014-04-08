@@ -5,6 +5,7 @@
 .home {
   .section {
     @extend %sans;
+    margin-bottom: 0;
     padding: 1.5em 0;
 
     @include breakpoint($screen-480) {
