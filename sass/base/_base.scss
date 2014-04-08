@@ -142,9 +142,9 @@ pre {
     text-align: right;
     padding: .8em;
     text-shadow: #eaeaea 0 -1px;
-    -webkit-box-shadow: white -1px 0 inset;
-    -moz-box-shadow: white -1px 0 inset;
-    box-shadow: white -1px 0 inset;
+    -webkit-box-shadow: $white -1px 0 inset;
+    -moz-box-shadow: $white -1px 0 inset;
+    box-shadow: $white -1px 0 inset;
   }
 }
 

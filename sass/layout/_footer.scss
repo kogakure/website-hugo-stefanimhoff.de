@@ -5,7 +5,7 @@
 .footer {
   @extend %sans;
   @extend %pattern-classy-fabric;
-  color: rgba(white, 0.25);
+  color: rgba($white, 0.25);
   padding-top: $base-rhythm-unit;
 
   @include breakpoint($screen-700) {
