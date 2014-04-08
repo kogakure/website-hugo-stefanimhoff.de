@@ -15,8 +15,9 @@ tags:
 So ähnlich lautete der Spruch des Superhelden *He-Man* aus den 80er Jahren, kurz bevor er seine Superkräfte bekam. Und ungefähr genauso lange gibt es auch Vim: nämlich 22 Jahre. Und das ältere Vi, auf dem Vim basiert, gibt es sogar schon länger als ich lebe. Wenn also ein *simpler* Texteditor seit so langer Zeit existiert und solche *Kraft* verleiht, muss einfach etwas Besonderes daran sein.
 
 {% figure "Vim - Scheuermittel und Poliermittel. Erhellt das Heim und das Alter." %}
-<img src="{{ site.images_dir }}vim-vintage.jpg" alt="Vim, Reinigungs- und Poliermittel.">
+<img src="{{ 'artikel/vim-vintage.jpg' | asset_path }}" alt="Vim, Reinigungs- und Poliermittel.">
 {% endfigure %}
+
 
 Das erste Mal bin ich vor einigen Jahren über Vim (oder Vi) gestolpert, als ich zum ersten Mal irgendeine Datei auf einem Server bearbeiten musste und dort keiner meiner schicken Editoren funktionierte. Das erste Mal, als ich mit Vi(m) arbeitete, war meine natürliche Reaktion: <q>WTF, was soll der Scheiß, ich kann erst tippen, wenn ich i gedrückt habe? Wer denkt sich denn so einen Mist aus?</q>.
 
