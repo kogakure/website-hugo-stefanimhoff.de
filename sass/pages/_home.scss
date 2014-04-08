@@ -28,6 +28,10 @@
     }
   }
 
+  .content + .inline-links {
+    @include leader();
+  }
+
   // Artikel
   .blog {
     @include breakpoint($homepage-sections-fullsize) {
@@ -61,6 +65,10 @@
   .work {
     border-top: 1px solid rgba($dark-grey, 0.2);
     @extend %pattern-geometry;
+
+    .inline-links h3 {
+      color: $link-color;
+    }
   }
 
   // Introvertiert
@@ -114,6 +122,10 @@
 
     @extend %pattern-nami;
     color: $white;
+
+    .inline-links h3 {
+      color: $martial-arts-color;
+    }
 
     a {
       @include link-colors($martial-arts-color, $white, $martial-arts-color, $martial-arts-color, $martial-arts-color);
