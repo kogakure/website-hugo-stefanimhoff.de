@@ -11,8 +11,8 @@ project_type = :stand_alone
 
 # Publishing paths
 http_path = "/"
-http_images_path = "/images"
-http_generated_images_path = "/images"
+http_images_path = "/assets/images"
+http_generated_images_path = "/assets/images"
 http_fonts_path = "/fonts"
 css_dir = "public/assets/stylesheets"
 
@@ -24,3 +24,8 @@ generated_images_dir = "source/assets/images"
 
 output_style = :expanded
 line_comments = true
+
+# MD5 Hash for images cache key
+asset_cache_buster do |_, file|
+  Digest::MD5.hexdigest(File.read(file.path))
+end

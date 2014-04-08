@@ -5,7 +5,7 @@
 header#top {
   z-index: 100;
   background-color: $header-background;
-  background-image: url($header-background-url);
+  background-image: image-url($header-background-url, false, true);
   background-position: center left;
   background-size: cover;
   border-top: 10px solid $header-border-top-color;
