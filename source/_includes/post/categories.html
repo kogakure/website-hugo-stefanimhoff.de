@@ -1,18 +1,8 @@
-{% capture category %}
-  {% if post %}
-    {{ post.categories | category_links | size }}
-  {% else %}
-    {{ page.categories | category_links | size }}
-  {% endif %}
-{% endcapture %}
+{% capture category %}{{ page.categories | size }}{% endcapture %}
 
-{% unless category == '0' %}
+{% unless category == "0" %}
 <div class="categories">
   <i class="icon-folder"></i>
-  {% if post %}
-    {{ post.categories | category_links | replace: ',','' }}
-  {% else %}
-    {{ page.categories | category_links | replace: ',','' }}
-  {% endif %}
+  {{ page.categories | category_links | replace: ',','' }}
 </div>
 {% endunless %}

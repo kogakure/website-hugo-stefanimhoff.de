@@ -5,9 +5,7 @@ author: "Stefan Imhoff"
 date: 2012-07-25 14:00
 description: "@TODO: Dies ist nur ein Test und wird noch gelöscht"
 categories:
-- Persoenlich
 tags:
-- test
 custom_css: "custom_demo"
 robots: "noindex, follow"
 published: false

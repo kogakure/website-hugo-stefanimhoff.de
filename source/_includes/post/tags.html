@@ -1,18 +1,8 @@
-{% capture tag %}
-  {% if post %}
-    {{ post.tags | tag_links | size }}
-  {% else %}
-    {{ page.tags | tag_links | size }}
-  {% endif %}
-{% endcapture %}
+{% capture tag %}{{ page.tags | size }}{% endcapture %}
 
 {% unless tag == '0' %}
 <div class="tags">
   <i class="icon-tag"></i>
-  {% if post %}
-    {{ post.tags | tag_links | replace: ',','' }}
-  {% else %}
-    {{ page.tags | tag_links | replace: ',','' }}
-  {% endif %}
+  {{ page.tags | tag_links | replace: ',','' }}
 </div>
 {% endunless %}
