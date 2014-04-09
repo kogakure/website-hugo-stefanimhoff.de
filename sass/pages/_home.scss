@@ -16,11 +16,9 @@
       font-size: 1.1em;
       font-weight: 400;
       line-height: 1.5;
-      opacity: 0.85;
 
       @include breakpoint($hi-resolution) {
         font-weight: 200;
-        opacity: 1.0;
       }
     }
   }
