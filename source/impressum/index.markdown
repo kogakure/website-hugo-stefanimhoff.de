@@ -24,20 +24,25 @@ Inhaltlich Verantwortlicher gemäß § 10 Absatz 3 MDStV:<br> Stefan Imhoff (Ans
 
 ### Verwendete Grafiken und Fotos
 
-Diese Seite verwendet einige Patterns von [Subtle Patterns](http://subtlepatterns.com/). Ich danke der Website und den Designern für die schönen Muster.
+Diese Seite verwendet ein Foto für den Kopfbereich und einige Hintergrundmuster von [Subtle Patterns](http://subtlepatterns.com/). Ich danke der Website und den Designern für die schönen Muster.
 
 <div class="inline-links section">
+  <h3>Foto</h3>
+  <ul>
+    <li><a href="http://www.flickr.com/photos/garrettmurray/500399977/in/set-72157623829940325"><cite>Bonsai Trees VII</cite> von Garrett Murray</a></li>
+  </ul>
+
   <h3>Patterns</h3>
   <ul>
-  <li><a href="http://www.purtypixels.com/"><cite>Classy Fabric</cite> von Richard Tabor</a></li>
-  <li><a href="http://www.facebook.com/stefanaleksic88"><cite>Dark stripes</cite> von Stefan Aleksić</a></li>
-  <li><a href="http://www.pdmb.org/work"><cite>Inspiration Geometry</cite> von Welsley</a></li>
-  <li><a href="http://poisones.tumblr.com/"><cite>Light gray</cite> von Brenda Lay</a></li>
-  <li><a href="http://30.nl/"><cite>Nami</cite> von Dertig Media</a></li>
-  <li><a href="http://www.peax-webdesign.com/"><cite>Maze black</cite> von Peax</a></li>
-  <li><a href="http://gre3g.livejournal.com/"><cite>3px tile</cite> von Gre3g</a></li>
-  <li><a href="http://atlemo.com/"><cite>Type</cite> von Atle Mo</a></li>
-  <li><a href="http://www.domainsinfo.org/"><cite>Wave Grind</cite> von DomainsInfo</a></li>
+    <li><a href="http://www.purtypixels.com/"><cite>Classy Fabric</cite> von Richard Tabor</a></li>
+    <li><a href="http://www.facebook.com/stefanaleksic88"><cite>Dark stripes</cite> von Stefan Aleksić</a></li>
+    <li><a href="http://www.pdmb.org/work"><cite>Inspiration Geometry</cite> von Welsley</a></li>
+    <li><a href="http://poisones.tumblr.com/"><cite>Light gray</cite> von Brenda Lay</a></li>
+    <li><a href="http://30.nl/"><cite>Nami</cite> von Dertig Media</a></li>
+    <li><a href="http://www.peax-webdesign.com/"><cite>Maze black</cite> von Peax</a></li>
+    <li><a href="http://gre3g.livejournal.com/"><cite>3px tile</cite> von Gre3g</a></li>
+    <li><a href="http://atlemo.com/"><cite>Type</cite> von Atle Mo</a></li>
+    <li><a href="http://www.domainsinfo.org/"><cite>Wave Grind</cite> von DomainsInfo</a></li>
   </ul>
 </div>
 
