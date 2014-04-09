@@ -1,0 +1,15 @@
+.bundle
+.DS_Store
+.sass-cache
+.gist-cache
+.pygments-cache
+_deploy
+public
+sass.old
+source.old
+source/_stash
+vendor/bundle/
+node_modules
+.fontcustom-manifest.json
+source/assets/stylesheets
+.preview-mode

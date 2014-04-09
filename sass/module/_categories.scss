@@ -1,0 +1,29 @@
+// ============================================================================
+// Kategorien
+// ============================================================================
+
+.categories {
+  display: inline;
+  margin-bottom: 0;
+
+  li {
+    display: inline-block;
+  }
+
+  .category {
+    @extend %sans;
+    @include border-radius(5px);
+    background: $dark-grey;
+    border: 0;
+    color: $white;
+    font-size: $font-scale-small;
+    letter-spacing: 0.1em;
+    padding: 3px 5px 2px 5px;
+    text-transform: uppercase;
+
+    &:hover {
+      background: $link-color;
+    }
+  }
+}
+
