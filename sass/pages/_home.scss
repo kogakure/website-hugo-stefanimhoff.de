@@ -93,12 +93,14 @@
     .grid-quote {
       @include grid-span(6, 7, 12);
       color: rgba($dark-grey, 0.8);
-      text-align: right;
+      text-align: left;
+      padding: 6em 3em 2em;
 
       @include breakpoint($homepage-sections-fullsize) {
         @include grid-span(12);
         @include trailer();
         text-align: left;
+        padding: 0;
       }
 
       blockquote {
