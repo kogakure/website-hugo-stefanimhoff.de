@@ -1,13 +1,20 @@
 ---
 layout: post
-title: "Relaunch meiner Website mit Responsive Web Design"
+title: "Relaunch mit Responsive Web Design"
 author: "Stefan Imhoff"
 date: 2014-04-08 20:43
 comments: false
 categories:
-- ###
+- Design
+- Code
+- Website
 tags:
-- ###
+- design
+- relaunch
+- typographie
+- rwd
+- octopress
+- jekyll
 ---
 
 Alles neu macht der Mai! Zwar ist es erst Mitte April, aber trotzdem erscheint diese Website ab heute in komplett neuem Design. Und nicht nur das, auch technisch ist alles neu. Keine einzige Zeile des alten Codes habe ich übernommen.
