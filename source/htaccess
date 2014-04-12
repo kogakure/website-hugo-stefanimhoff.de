@@ -7,10 +7,10 @@ permalink: .htaccess
 # | Protecting the website                                                     |
 # ------------------------------------------------------------------------------
 
-AuthType Basic
-AuthName "Protected Area"
-AuthUserFile {{ site.server_path }}/.htpasswd
-require valid-user
+# AuthType Basic
+# AuthName "Protected Area"
+# AuthUserFile {{ site.server_path }}/.htpasswd
+# require valid-user
 
 # ------------------------------------------------------------------------------
 # | Redirecting/Removing sites                                                 |
