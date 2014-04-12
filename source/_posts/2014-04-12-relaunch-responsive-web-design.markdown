@@ -49,10 +49,10 @@ Für alle Piktogramme und Icons setze ich komplett auf **Vektorfonts**. Dabei wi
 ### Logo und Icons
 Mein Logo, das ich komplett neu gestaltet habe wird ebenfalls als Vektorfont ausgeliefert und lässt sich daher auf jede beliebige Größe skalieren und bleibt immer glasklar.
 
-Aber auch ein komplett neues Favicon, Apple Touch Icons und Windows&nbsp;8-Tiles gibt es jetzt.
+Aber auch ein komplett neues Favicon, Apple Touch Icons und ein Windows&nbsp;8-Tile gibt es jetzt.
 
 ### Off-Canvas-Menü
-Da auf meiner Seite wenig bis gar keine Navigation benötigt wird, habe ich von Anfang an entschieden, keine immer sichtbare, eigenständige Navigation zu gestalten, sondern das Menü – wie auf kleinen Displays üblich – zu verbergen. Dies wird aber auch auf großen Monitoren beibehalten und die Navigation wird durch ein Off-Canvas-Menü verborgen und wird bei bedarf eingeblendet.
+Da auf meiner Seite wenig bis gar keine Navigation benötigt wird, habe ich von Anfang an entschieden, keine immer sichtbare, eigenständige Navigation zu gestalten, sondern das Menü – wie auf kleinen Displays üblich – zu verbergen. Dies wird aber auch auf großen Monitoren beibehalten und die Navigation wird durch ein Off-Canvas-Menü verborgen und wird bei Bedarf eingeblendet.
 
 ### Styleguide
 Damit auch jeder mögliche Inhalt optimal gestaltet ist, habe ich von Anfang an mit einem Styleguide gearbeitet. Dieser Styleguide ist auch [online für jeden verfügbar](/styleguide/). So können andere gerne schauen, wie ich einzelne Elemente technisch umgesetzt habe.
