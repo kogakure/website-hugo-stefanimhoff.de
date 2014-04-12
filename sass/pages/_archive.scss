@@ -1,0 +1,38 @@
+// ============================================================================
+// Archiv-Seite
+// ============================================================================
+
+.archive-posts {
+  article {
+    @include clearfix;
+
+    h2 {
+      @include adjust-font-size-to($font-scale-h4);
+      @include grid-span(9, 4, 12);
+
+      @include breakpoint($archive-two-lines) {
+        @include grid-span(12);
+        line-height: 1;
+        margin-bottom: 1em;
+      }
+    }
+
+    a {
+      border: 0;
+    }
+
+    time {
+      @extend %sans;
+      @include grid-span(3, 1, 12);
+      color: rgba($dark-grey, 0.3);
+      text-align: right;
+      line-height: 2.2;
+
+      @include breakpoint($archive-two-lines) {
+        @include grid-span(12);
+        line-height: 1;
+        text-align: left;
+      }
+    }
+  }
+}

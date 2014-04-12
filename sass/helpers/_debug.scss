@@ -1,0 +1,23 @@
+// ============================================================================
+// Debugging
+// ============================================================================
+
+@include sgs-change("debug", true);
+
+// Debugging des Grids
+// ----------------------------------------------------------------------------
+// .page .main, .post .main, .archive .main, .wrap {
+//   @include background-grid;
+//   padding-left: 0;
+//   padding-right: 0;
+// }
+
+// Vertical Alignment Grid
+// ----------------------------------------------------------------------------
+// html { @include debug-vertical-alignment(); }
+// body { background-color: transparent !important; }
+// body { background-image: none !important; }
+
+// Modular Scale (Debug-Ausgabe in der Console)
+// ----------------------------------------------------------------------------
+// @debug ms-list();

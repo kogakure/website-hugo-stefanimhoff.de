@@ -1,0 +1,26 @@
+// ============================================================================
+// Verse
+// ============================================================================
+
+.verse {
+  @include grid-span(8, 1, 8);
+  margin: 0;
+  padding: 0;
+
+  @include breakpoint($content-medium) {
+    @include grid-span(12);
+  }
+}
+
+.verse pre {
+  font-family: inherit;
+  @include grid-span(4, 3, 8);
+
+  @include breakpoint($content-medium) {
+    @include grid-span(10, 2, 12);
+  }
+
+  @include breakpoint($content-small) {
+    @include grid-span(12);
+  }
+}

@@ -1,0 +1,148 @@
+// ============================================================================
+// Header
+// ============================================================================
+
+header#top {
+  z-index: 100;
+  background-color: $header-background;
+  background-image: image-url($header-background-url, false, true);
+  background-position: center left;
+  background-size: cover;
+  border-top: 10px solid $header-border-top-color;
+  padding: 40px 0 60px 0;
+  // background-attachment: fixed;
+  // * @FIXME: Ein Fehler in Google Chrome/Opera
+  // * Im Moment kann dieses nicht in Kombination
+  // * mit translate3d verwendet werden.
+
+  .nav-btn {
+    @extend %sans;
+    @include adjust-font-size-to(18px);
+    @include link-colors($white, $nav-link-color-hover, $white, $white, $white);
+    @include text-shadow(0 1px 1px $black);
+    border: 0;
+    letter-spacing: 1px;
+    position: absolute;
+    right: 1em;
+    text-transform: uppercase;
+    top: 1em;
+    z-index: 100;
+
+    .no-fontface & i {
+      display: none;
+    }
+  }
+
+  .home & {
+    padding: 40px 0 160px 0;
+
+    @include breakpoint($screen-880) {
+      padding-bottom: 120px;
+    }
+
+    @include breakpoint($screen-700) {
+      padding-bottom: 100px;
+    }
+
+    @include breakpoint($screen-500) {
+      padding-bottom: 30px;
+    }
+
+    @include breakpoint($screen-480) {
+      padding-bottom: 85px;
+    }
+
+    @include breakpoint($screen-430) {
+      padding-bottom: 60px;
+    }
+  }
+
+  h1 {
+    @include grid-span(7, 4);
+    @include text-shadow(0 2px 3px $black);
+    color: $header-headline;
+    float: none;
+
+    @include breakpoint($screen-500) {
+      font-size: 2em;
+      padding-top: 10px;
+    }
+
+    @include breakpoint($screen-480) {
+      @include grid-span(8, 4);
+      line-height: 1em;
+      padding: 10px 0 0;
+      top: 2em;
+    }
+
+    @include breakpoint($screen-430) {
+      @include grid-span(7, 5);
+    }
+
+
+    .home & {
+      margin-bottom: 0;
+    }
+  }
+
+  h2 {
+    @include adjust-font-size-to($font-scale-h3);
+    @include grid-span(7, 4);
+    @include text-shadow(0 2px 5px $black);
+    clear: both;
+    color: $header-subheadline;
+    position: relative;
+    top: -1.7em;
+
+    @include breakpoint($screen-700) {
+      line-height: 1.2em;
+      top: -0.4em;
+    }
+
+    @include breakpoint($screen-500) {
+      font-size: 1.2em;
+      top: -1.2em;
+    }
+
+    @include breakpoint($screen-430) {
+      @include grid-span(7, 5);
+      font-size: 1.0em;
+      top: 2.5em;
+    }
+  }
+
+  .logo {
+    @include grid-span(2, 2);
+
+    @include breakpoint($screen-430) {
+      @include grid-span(3, 2);
+    }
+
+    .icon-logo {
+      display: block;
+      @include text-shadow(0 1px 2px $black);
+      color: $logo-color;
+      font-size: 70px;
+      border: 0;
+      text-align: right;
+      padding: 10px 0 5px 10px;
+
+      @include breakpoint($screen-430) {
+        padding: 10px 0 0;
+      }
+
+      @include breakpoint($screen-480) {
+        padding: 10px 0 0;
+      }
+
+      .home & {
+        font-size: 100px;
+
+        @include breakpoint($screen-700) {
+          font-size: 60px;
+        }
+      }
+    }
+  }
+}
+

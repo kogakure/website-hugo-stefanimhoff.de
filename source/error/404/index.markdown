@@ -1,0 +1,14 @@
+---
+layout: error
+title: Nicht gefunden!
+footer: false
+error_page_404: true
+---
+
+## Neee du, das gibt’s hier nich’ …
+
+### … heul’ doch
+
+Also hast du dich entweder *vertippt*, versucht irgendwas zu finden, was du nicht finden sollst oder auf einen *kaputten Link* irgendwo geklickt.
+
+Jetzt kannst **entweder** zurück auf die [Startseite](/) gehen **oder** im [Archiv](/archiv/) nachschauen, ob es das was du suchst überhaupt hier gibt. Oder *heul halt*.
