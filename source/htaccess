@@ -89,6 +89,7 @@ Redirect 301 /notiz/vim                                                         
 Redirect 301 /notiz/automatisierung-mit-keyboard-maestro                         /2011/automatisierung-mit-keyboard-maestro
 Redirect 301 /notiz/buchtipp-decodeunicode                                       /2011/buchtipp-decodeunicode
 Redirect 301 /notiz/duplikation-ist-in-ordnung                                   /2013/duplikation-ist-in-ordnung
+Redirect 301 /notiz/wichtig-website-neu/                                         /2014/relaunch-responsive-web-design/
 
 Redirect 301 /notizbuch                                                         {{ site.url }}/archiv
 
