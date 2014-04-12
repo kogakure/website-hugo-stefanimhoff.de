@@ -8,7 +8,7 @@
     margin-bottom: 0;
     padding: 1.5em 0;
 
-    @include breakpoint($screen-480) {
+    @include breakpoint(480px) {
       padding: 1em 0;
     }
 

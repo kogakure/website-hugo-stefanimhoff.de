@@ -8,11 +8,11 @@
   color: rgba($white, 0.25);
   padding-top: $base-rhythm-unit;
 
-  @include breakpoint($screen-700) {
+  @include breakpoint(700px) {
     padding-top: 1em;
   }
 
-  @include breakpoint($screen-500) {
+  @include breakpoint(500px) {
     padding-top: 0.5em;
   }
 

@@ -33,26 +33,27 @@ header#top {
     }
   }
 
+  // Breakpoints für das Header-Bild
   .home & {
     padding: 40px 0 160px 0;
 
-    @include breakpoint($screen-880) {
+    @include breakpoint(880px) {
       padding-bottom: 120px;
     }
 
-    @include breakpoint($screen-700) {
+    @include breakpoint(700px) {
       padding-bottom: 100px;
     }
 
-    @include breakpoint($screen-500) {
+    @include breakpoint(500px) {
       padding-bottom: 30px;
     }
 
-    @include breakpoint($screen-480) {
+    @include breakpoint(480px) {
       padding-bottom: 85px;
     }
 
-    @include breakpoint($screen-430) {
+    @include breakpoint(430px) {
       padding-bottom: 60px;
     }
   }
@@ -63,19 +64,19 @@ header#top {
     color: $header-headline;
     float: none;
 
-    @include breakpoint($screen-500) {
+    @include breakpoint(500px) {
       font-size: 2em;
       padding-top: 10px;
     }
 
-    @include breakpoint($screen-480) {
+    @include breakpoint(480px) {
       @include grid-span(8, 4);
       line-height: 1em;
       padding: 10px 0 0;
       top: 2em;
     }
 
-    @include breakpoint($screen-430) {
+    @include breakpoint(430px) {
       @include grid-span(7, 5);
     }
 
@@ -94,17 +95,17 @@ header#top {
     position: relative;
     top: -1.7em;
 
-    @include breakpoint($screen-700) {
+    @include breakpoint(700px) {
       line-height: 1.2em;
       top: -0.4em;
     }
 
-    @include breakpoint($screen-500) {
+    @include breakpoint(500px) {
       font-size: 1.2em;
       top: -1.2em;
     }
 
-    @include breakpoint($screen-430) {
+    @include breakpoint(430px) {
       @include grid-span(7, 5);
       font-size: 1.0em;
       top: 2.5em;
@@ -114,7 +115,7 @@ header#top {
   .logo {
     @include grid-span(2, 2);
 
-    @include breakpoint($screen-430) {
+    @include breakpoint(430px) {
       @include grid-span(3, 2);
     }
 
@@ -127,18 +128,18 @@ header#top {
       text-align: right;
       padding: 10px 0 5px 10px;
 
-      @include breakpoint($screen-430) {
+      @include breakpoint(430px) {
         padding: 10px 0 0;
       }
 
-      @include breakpoint($screen-480) {
+      @include breakpoint(480px) {
         padding: 10px 0 0;
       }
 
       .home & {
         font-size: 100px;
 
-        @include breakpoint($screen-700) {
+        @include breakpoint(700px) {
           font-size: 60px;
         }
       }
