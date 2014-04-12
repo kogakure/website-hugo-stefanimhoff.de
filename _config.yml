@@ -61,6 +61,7 @@ attribution_creative_commons: true
 
 # RSS / Email (optional) subscription links (change if using something like Feedburner)
 subscribe_rss: "/atom.xml"
+feedburner_url: "http://feeds.feedburner.com/stefanimhoff"
 subscribe_email:
 # RSS feeds can list your email address if you like
 email:
