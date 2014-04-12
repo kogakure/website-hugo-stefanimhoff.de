@@ -38,19 +38,19 @@ header#top {
     padding: 40px 0 160px 0;
 
     @include breakpoint(880px) {
-      padding-bottom: 120px;
+      padding-bottom: 80px;
     }
 
     @include breakpoint(700px) {
-      padding-bottom: 100px;
+      padding-bottom: 40px;
     }
 
     @include breakpoint(500px) {
-      padding-bottom: 30px;
+      padding-bottom: 20px;
     }
 
     @include breakpoint(480px) {
-      padding-bottom: 85px;
+      padding-bottom: 20px;
     }
 
     @include breakpoint(430px) {
@@ -98,6 +98,7 @@ header#top {
     @include breakpoint(700px) {
       line-height: 1.2em;
       top: -0.4em;
+      font-size: 1.4em;
     }
 
     @include breakpoint(500px) {
@@ -107,8 +108,8 @@ header#top {
 
     @include breakpoint(430px) {
       @include grid-span(7, 5);
-      font-size: 1.0em;
-      top: 2.5em;
+      font-size: 0.8em;
+      top: 3.0em;
     }
   }
 
