@@ -2,9 +2,8 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://beta.stefanimhoff.de
-# url: http://stefanimhoff.de
-server_path: /home/kogakure/webapps/beta_stefanimhoff
+url: http://stefanimhoff.de
+server_path: /home/kogakure/webapps/stefanimhoff
 
 title: Stefan Imhoff
 author: "Stefan Imhoff"
