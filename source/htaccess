@@ -8,7 +8,7 @@ permalink: .htaccess
 # ------------------------------------------------------------------------------
 
 AuthType Basic
-AuthName "Beta-Testing"
+AuthName "Protected Area"
 AuthUserFile {{ site.server_path }}/.htpasswd
 require valid-user
 
