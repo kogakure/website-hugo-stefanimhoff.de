@@ -55,10 +55,10 @@ linklog_marker_position_feed: after
 standard_post_marker:
 
 # Attribution
-attribution_name: "Bonsai Trees VII"
-attribution_url: "http://www.flickr.com/photos/garrettmurray/500399977/in/set-72157623829940325"
-attribution_author: "Garrett Murray"
-attribution_creative_commons: false
+attribution_name: "「大宮盆栽×タムロン」大宮盆栽美術館で盆栽撮影にチャレンジ！ブロガーイベント"
+attribution_url: "https://www.flickr.com/photos/norio-nakayama/9156103138"
+attribution_author: "Norio NAKAYAMA"
+attribution_creative_commons: true
 
 # RSS / Email (optional) subscription links (change if using something like Feedburner)
 subscribe_rss: "/atom.xml"

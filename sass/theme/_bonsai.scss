@@ -6,15 +6,17 @@
 // ----------------------------------------------------------------------------
 
 // Colors
-$dark-grayish-cyan:          #84A2AA;
-$slightly-desaturated-green: #89B46B;
-$very-dark-orange:           #352414;
+$mostly-desaturated-dark-orange: #a09278;
+$slightly-desaturated-green:     #89B46B;
+$very-dark-orange:               #100d09;
+$grayish-cyan:                   #c1c7c9;
+$very-dark-green:                #47691e;
 
 // Header
-$header-background:          $dark-grayish-cyan;
+$header-background:          $mostly-desaturated-dark-orange;
 $header-border-top-color:    $very-dark-orange;
 $header-headline:            $white;
-$header-subheadline:         lighten($slightly-desaturated-green, 15);
+$header-subheadline:         lighten($slightly-desaturated-green, 5);
 
 // Logo
 $logo-color:                 #b42b2c;
@@ -39,4 +41,4 @@ $selection-color:            $white;
 // Pfade
 // ----------------------------------------------------------------------------
 
-$header-background-url:      "/assets/images/css/header/bonsai--not-aproved.jpg";
+$header-background-url:      "/assets/images/css/header/bonsai.jpg";
