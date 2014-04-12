@@ -1144,16 +1144,6 @@ article > div {
 }
 ```
 
-### Gist-Datei
-
-Außerdem können Gist-Tags von GitHub direkt über die ID des Gists eingebunden werden:
-
-{% gist 1027674 gist_tag.rb %}
-
-```html
-{% raw %}{% gist 1027674 gist_tag.rb %}{% endraw %}
-```
-
 ### Code einbinden
 
 Es können auch Dateien aus dem Dateisystem angezeigt werde:
