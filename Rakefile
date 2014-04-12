@@ -8,7 +8,7 @@ require "colorize"
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
 ssh_user       = "kogakure@kogakure.webfactional.com"
 ssh_port       = "22"
-document_root  = "~/webapps/beta_stefanimhoff/"
+document_root  = "~/webapps/stefanimhoff/"
 rsync_delete   = true
 rsync_args     = ""  # Any extra arguments to pass to rsync
 deploy_default = "rsync"
