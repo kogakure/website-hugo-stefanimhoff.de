@@ -29,7 +29,7 @@ Diese Seite verwendet ein Foto für den Kopfbereich und einige Hintergrundmuster
 <div class="inline-links section">
   <h3>Foto</h3>
   <ul>
-    <li><a href="http://www.flickr.com/photos/garrettmurray/500399977/in/set-72157623829940325"><cite>Bonsai Trees VII</cite> von Garrett Murray</a></li>
+    <li><a href="{{ site.attribution_url }}"><cite>{{ site.attribution_name }}</cite> von {{ site.attribution_author }}</a></li>
   </ul>
 
   <h3>Patterns</h3>
