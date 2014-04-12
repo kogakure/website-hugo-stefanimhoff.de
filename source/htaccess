@@ -90,6 +90,7 @@ Redirect 301 /notiz/automatisierung-mit-keyboard-maestro                        
 Redirect 301 /notiz/buchtipp-decodeunicode                                       /2011/buchtipp-decodeunicode
 Redirect 301 /notiz/duplikation-ist-in-ordnung                                   /2013/duplikation-ist-in-ordnung
 Redirect 301 /notiz/wichtig-website-neu/                                         /2014/relaunch-responsive-web-design/
+Redirect 301 /versionskontrolle-mit-git/                                         /2007/versionskontrolle-mit-git/
 
 Redirect 301 /notizbuch                                                         {{ site.url }}/archiv
 
