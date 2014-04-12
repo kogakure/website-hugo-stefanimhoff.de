@@ -42,7 +42,7 @@ Redirect 301 /notiz/das-koi-design-inspiration-und-idee                         
 Redirect 301 /notiz/django-folder-fuer-mac-os-x                                  /2007/django-folder-mac-osx
 Redirect 301 /notiz/blender-folder-fuer-mac-os-x-leopard                         /2008/blender-folder-mac-osx
 Redirect 301 /notiz/theme-kaijin-fuer-das-moinmoin-wiki                          /2008/theme-kaijin-moinmoin-wiki
-Redirect 301 /notiz/terminal-stoeckchen                                          /2008/notiz/terminal-most-used-commands
+Redirect 301 /notiz/terminal-stoeckchen                                          /2008/terminal-most-used-commands
 Redirect 301 /notiz/django-relaunch-von-kogakure-de                              /2008/django-relaunch-kogakure-de
 Redirect 301 /notiz/server-verwaltung-mit-capistrano                             /2008/server-verwaltung-capistrano
 Redirect 301 /notiz/grundlagen-von-python-django-fuer-anfaenger                  /2008/grundlagen-python-django-anfaenger
