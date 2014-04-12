@@ -24,7 +24,7 @@ Inhaltlich Verantwortlicher gemäß § 10 Absatz 3 MDStV:<br> Stefan Imhoff (Ans
 
 ### Verwendete Grafiken und Fotos
 
-Diese Seite verwendet ein Foto für den Kopfbereich und einige Hintergrundmuster von [Subtle Patterns](http://subtlepatterns.com/). Ich danke der Website und den Designern für die schönen Muster.
+Diese Seite verwendet ein Foto für den Kopfbereich und einige Hintergrundmuster von [Subtle Patterns](http://subtlepatterns.com/). Ich danke den Fotografen und den Designern.
 
 <div class="inline-links section">
   <h3>Foto</h3>
