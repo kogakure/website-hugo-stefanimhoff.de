@@ -8,14 +8,18 @@
     margin-bottom: 0;
     padding: 1.5em 0;
 
-    @include breakpoint($screen-480) {
+    @include breakpoint(480px) {
       padding: 1em 0;
     }
 
     p {
       font-size: 1.1em;
-      font-weight: 200;
+      font-weight: 400;
       line-height: 1.5;
+
+      @include breakpoint($hi-resolution) {
+        font-weight: 200;
+      }
     }
   }
 

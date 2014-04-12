@@ -67,7 +67,7 @@ $breakpoint-default-feature: max-width;
   @include leader(1);
   @include trailer(2);
 
-  @include breakpoint($screen-700) {
+  @include breakpoint(700px) {
     @include trailer(1);
   }
 
