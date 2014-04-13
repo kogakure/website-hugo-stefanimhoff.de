@@ -2,6 +2,7 @@
 layout: nil
 ---
 User-agent: *
-Disallow: 
+Disallow:
+Disallow: /error/
 
-Sitemap: {{ site.url }}/sitemap.xml 
+Sitemap: {{ site.url }}/sitemap.xml
