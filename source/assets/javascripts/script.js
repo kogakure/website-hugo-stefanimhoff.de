@@ -85,13 +85,42 @@ $(function() {
   });
 
   // Tracking von Downloads
-  // ==================================
+  // ======================
   $("body").on("click", ".download a", function(event) {
-    ga('send', 'event', 'Download', event.target.href);
-    setTimeout(function() {
-      location.href = event.target.href;
-    }, 200);
-    event.preventDefault();
+    ga('send', 'event', 'Download', 'click', event.target.href);
   });
 
+  // Tracking von Links
+  // ==============================
+  $("body").on("click", ".icon-feed", function(event) {
+    ga('send', 'event', 'Feed', 'click', window.location.pathname);
+  });
+
+  $("body").on("click", ".martial-arts a", function(event) {
+    ga('send', 'event', 'Martial Arts', 'click', event.target.text + ": " + event.target.href);
+  });
+
+  $("body").on("click", ".introvert a", function(event) {
+    ga('send', 'event', 'Introvert', 'click', event.target.text + ": " + event.target.href);
+  });
+
+  $("body").on("click", ".movie-lover a", function(event) {
+    ga('send', 'event', 'Movie Lover', 'click', event.target.text + ": " + event.target.href);
+  });
+
+  $("body").on("click", ".book-lover a", function(event) {
+    ga('send', 'event', 'Book Lover', 'click', event.target.text + ": " + event.target.href);
+  });
+
+  $("body").on("click", ".recommendations a", function(event) {
+    ga('send', 'event', 'Recommendation', 'click', event.target.text + ": " + event.target.href);
+  });
+
+  $("body").on("click", ".footer .about a", function(event) {
+    ga('send', 'event', 'About Link', 'click', event.target.text + ": " + event.target.href);
+  });
+
+  $("body").on("click", ".footer .social-networks a", function(event) {
+    ga('send', 'event', 'Social-Networks', 'click', event.target.text + ": " + event.target.href);
+  });
 });
