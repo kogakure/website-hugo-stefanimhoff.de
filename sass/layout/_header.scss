@@ -92,6 +92,7 @@ header#top {
     @include text-shadow(0 2px 5px $black);
     clear: both;
     color: $header-subheadline;
+    line-height: 1.2;
     position: relative;
     top: -1.7em;
 
