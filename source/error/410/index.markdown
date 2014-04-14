@@ -2,7 +2,7 @@
 layout: error
 title: Seite verschwunden!
 footer: false
-error_page_404: true
+error_page_410: true
 ---
 
 ## Neee du, das was hier mal war, gibt’s nich’ mehr  …
