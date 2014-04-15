@@ -19,7 +19,9 @@ Für mich stand schon relativ früh fest, dass ich ein *Rakkan* anstelle eines m
 
 ## Rakkan
 
-[Foto Rakkan und Tinte]
+{% figure figure--fullsize %}
+<img src="{{ 'artikel/rakkan.jpg' | asset_path }}" alt="Rakkan unter mit Tinte geschriebenem Schriftzeichen">
+{% endfigure %}
 
 Ein Rakkan (oder Hanko) wird in Japan ein Siegel genannt, das meist in Stein geschnitzt, die Signatur eines Künstler darstellt und von diesem unter die Werke gestempelt wird, und damit wie eine Unterschrift funktioniert.
 
@@ -73,7 +75,9 @@ Ein solches Siegel lässt sich in zwei verschiedene Varianten erstellen: Yang od
 
 ### Bleistiftzeichnungen
 
-[Foto Moleskine mit Bleistiftzeichnungen]
+{% figure figure--fullsize %}
+<img src="{{ 'artikel/moleskine-bleistiftzeichnungen.jpg' | asset_path }}" alt="Moleskine mit Bleistiftzeichnungen von Schriftzeichen">
+{% endfigure %}
 
 Zuerst fertigte ich zahlreiche Bleistiftzeichnungen an, zuerst von einzelnen Zeichen, später in Kombination. Ich überlegte mir, wie ein Künstler bei einem traditionellen Stempel schnitzen würde, wie die Buchstaben sich berühren und stützen, um dem Siegel die nötige Stabilität zu geben.
 
