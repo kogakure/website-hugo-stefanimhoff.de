@@ -63,7 +63,7 @@ header#top {
     @include text-shadow(0 2px 3px $black);
     color: $header-headline;
     float: none;
-    line-height: 0.8;
+    line-height: 1.0;
 
     @include breakpoint(500px) {
       font-size: 2em;
