@@ -16,7 +16,7 @@ $very-dark-green:                #47691e;
 $header-background:          $mostly-desaturated-dark-orange;
 $header-border-top-color:    $very-dark-orange;
 $header-headline:            $white;
-$header-subheadline:         lighten($slightly-desaturated-green, 5);
+$header-subheadline:         tint($slightly-desaturated-green, 20);
 
 // Logo
 $logo-color:                 #b42b2c;
