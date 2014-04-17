@@ -78,13 +78,13 @@ Nachdem ich meine finale Variante entwickelt hatte, zeichnete ich die Bleistiftl
 
 Im nächsten Schritt habe ich das Rakkan dann digitalisiert und in Adobe Photoshop leicht korrigiert, um unschöne Teile zu entfernen oder die Linienführung etwas zu verbessern.
 
-Um aus diesem Pixelbild eine Vektorform zu erstellen, importierte ich das Bild in Adobe Illustrator und wandelte es in eine Vektorform um. Im Anschluss daran  exportierte ich das ganze als SVG-Datei.
+Um aus diesem Pixelbild eine Vektorform zu erstellen, importierte ich das Bild in Adobe Illustrator und wandelte es in eine Vektorform um, reduzierte danach die Anzahl der Vektorpunkte und exportierte das ganze als SVG-Datei.
 
 Um mein Logo als Vektorfont auf der Seite zu verwendet, habe ich [Font Custom](http://fontcustom.com/) verwendet, mit dem sich SVG-Grafiken in Webfonts umwandeln lassen. So werden mehrere Vektor-Grafiken als einzelne Schriftzeichen in einer Font-Datei zusammengefasst. Sobald die Schriftart geladen ist, können die Icons dann in jeder beliebigen Größe angezeigt werden und mit CSS beliebig gestylt werden.
 
 ## Die Schrift
 
-Jetzt lässt sich das Rakkan einfach als Schriftzeichen verwenden und einfach über ein CSS-Klassen-Attribut an einem beliebigen Element erzeugen. Dann kann das Zeichen nach belieben eingefärbt werden, eine beliebige Schriftgröße oder Texteffekte (wie z. B. eine Schattenkante) bekommen.
+Jetzt lässt sich das Rakkan einfach als Schriftzeichen verwenden und einfach über ein CSS-Klassen-Attribut an einem beliebigen Element erzeugen. Dann kann das Zeichen nach Belieben eingefärbt werden und eine gewünschte Schriftgröße oder Texteffekte (wie z. B. eine Schattenkante) bekommen.
 
 <i class="icon-logo" style="font-size: 50px; color: #41A738;"></i>
 <i class="icon-logo" style="font-size: 100px; color: #F00; text-shadow: 1px 1px 3px black;"></i>
