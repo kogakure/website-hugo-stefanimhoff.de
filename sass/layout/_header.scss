@@ -90,7 +90,7 @@ header#top {
   h2 {
     @include adjust-font-size-to($font-scale-h3);
     @include grid-span(7, 4);
-    @include text-shadow(0 0 5px $black);
+    @include text-shadow(0 0 5px $white, 0 0 5px $white, 0 0 5px $white);
     clear: both;
     color: $header-subheadline;
     line-height: 1.2;
