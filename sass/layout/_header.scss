@@ -60,7 +60,7 @@ header#top {
 
   h1 {
     @include grid-span(7, 4);
-    @include text-shadow(0 2px 3px $black);
+    @include text-shadow(0 0 6px $black);
     color: $header-headline;
     float: none;
     line-height: 1.0;
