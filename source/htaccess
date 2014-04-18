@@ -44,11 +44,15 @@ Redirect 301 /notiz/blender-folder-fuer-mac-os-x-leopard                        
 Redirect 301 /notiz/theme-kaijin-fuer-das-moinmoin-wiki                          /2008/theme-kaijin-moinmoin-wiki
 Redirect 301 /notiz/terminal-stoeckchen                                          /2008/terminal-most-used-commands
 Redirect 301 /notiz/django-relaunch-von-kogakure-de                              /2008/django-relaunch-kogakure-de
+Redirect 301 /notiz/django-relaunch-kogakure-de                                  /2008/django-relaunch-kogakure-de
 Redirect 301 /notiz/server-verwaltung-mit-capistrano                             /2008/server-verwaltung-capistrano
 Redirect 301 /notiz/grundlagen-von-python-django-fuer-anfaenger                  /2008/grundlagen-python-django-anfaenger
+Redirect 301 /notiz/grundlagen-python-django-anfaenger                           /2008/grundlagen-python-django-anfaenger
 Redirect 301 /notiz/kostenlose-vektorkarten-mit-openstreetmap                    /2008/kostenlose-vektorkarten-openstreetmap
+Redirect 301 /notiz/kostenlose-vektorkarten-openstreetmap                        /2008/kostenlose-vektorkarten-openstreetmap
 Redirect 301 /notiz/2008-django-git                                              /2008/django-git
 Redirect 301 /notiz/django-fuer-webdesigner                                      /2009/django-webdesigner
+Redirect 301 /notiz/django-webdesigner                                           /2009/django-webdesigner
 Redirect 301 /notiz/2010-jahresrueckblick                                        /2010/jahresrueckblick
 Redirect 301 /notiz/mein-setup-2013                                              /2013/mein-setup
 
