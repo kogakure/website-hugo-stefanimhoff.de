@@ -8,7 +8,7 @@
   ga('create', 'UA-83074-6', 'stefanimhoff.de');
   ga('require', 'displayfeatures');
   ga('set', 'anonymizeIp', true);
-  ga('send', 'event', 'Error', '404', 'Seite: ' + document.location.pathname + document.location.search + ' Verweis: ' + document.referrer);
+  ga('send', 'event', 'Error', '404', 'Seite: ' + document.location.pathname + document.location.search + ' Verweis: ' + decodeURIComponent(document.referrer));
 </script>
 {% elsif page.error_page_410 %}
 <script>
@@ -20,7 +20,7 @@
   ga('create', 'UA-83074-6', 'stefanimhoff.de');
   ga('require', 'displayfeatures');
   ga('set', 'anonymizeIp', true);
-  ga('send', 'event', 'Error', '410', 'Seite: ' + document.location.pathname + document.location.search + ' Verweis: ' + document.referrer);
+  ga('send', 'event', 'Error', '410', 'Seite: ' + document.location.pathname + document.location.search + ' Verweis: ' + decodeURIComponent(document.referrer));
 </script>
 {% elsif page.error_page_500 %}
 <script>
@@ -32,7 +32,7 @@
   ga('create', 'UA-83074-6', 'stefanimhoff.de');
   ga('require', 'displayfeatures');
   ga('set', 'anonymizeIp', true);
-  ga('send', 'event', 'Error', '500', 'Seite: ' + document.location.pathname + document.location.search + ' Verweis: ' + document.referrer);
+  ga('send', 'event', 'Error', '500', 'Seite: ' + document.location.pathname + document.location.search + ' Verweis: ' + decodeURIComponent(document.referrer));
 </script>
 {% else %}
 <script>
