@@ -92,35 +92,51 @@ $(function() {
 
   // Tracking von Links
   // ==============================
-  $("body").on("click", ".icon-feed", function(event) {
-    ga('send', 'event', 'Feed', 'click', window.location.pathname);
+  $("body").on("click", ".home .blog a", function(event) {
+    ga('send', 'event', 'Homepage (Blog)', 'click', event.target.text + ": " + event.target.href);
   });
 
-  $("body").on("click", ".martial-arts a", function(event) {
-    ga('send', 'event', 'Martial Arts', 'click', event.target.text + ": " + event.target.href);
+  $("body").on("click", ".home .work a", function(event) {
+    ga('send', 'event', 'Homepage (Work)', 'click', event.target.text + ": " + event.target.href);
   });
 
-  $("body").on("click", ".introvert a", function(event) {
-    ga('send', 'event', 'Introvert', 'click', event.target.text + ": " + event.target.href);
+  $("body").on("click", ".home .martial-arts a", function(event) {
+    ga('send', 'event', 'Homepage (Martial Arts)', 'click', event.target.text + ": " + event.target.href);
   });
 
-  $("body").on("click", ".movie-lover a", function(event) {
-    ga('send', 'event', 'Movie Lover', 'click', event.target.text + ": " + event.target.href);
+  $("body").on("click", ".home .introvert a", function(event) {
+    ga('send', 'event', 'Homepage (Introvert)', 'click', event.target.text + ": " + event.target.href);
   });
 
-  $("body").on("click", ".book-lover a", function(event) {
-    ga('send', 'event', 'Book Lover', 'click', event.target.text + ": " + event.target.href);
+  $("body").on("click", ".home .movie-lover a", function(event) {
+    ga('send', 'event', 'Homepage (Movie)', 'click', event.target.text + ": " + event.target.href);
   });
 
-  $("body").on("click", ".recommendations a", function(event) {
-    ga('send', 'event', 'Recommendation', 'click', event.target.text + ": " + event.target.href);
+  $("body").on("click", ".home .book-lover a", function(event) {
+    ga('send', 'event', 'Homepage(Book)', 'click', event.target.text + ": " + event.target.href);
+  });
+
+  $("body").on("click", ".home .recommendations a", function(event) {
+    ga('send', 'event', 'Homepage (Recommendation)', 'click', event.target.text + ": " + event.target.href);
   });
 
   $("body").on("click", ".footer .about a", function(event) {
-    ga('send', 'event', 'About Link', 'click', event.target.text + ": " + event.target.href);
+    ga('send', 'event', 'Footer (About)', 'click', event.target.text + ": " + event.target.href);
   });
 
   $("body").on("click", ".footer .social-networks a", function(event) {
-    ga('send', 'event', 'Social-Networks', 'click', event.target.text + ": " + event.target.href);
+    ga('send', 'event', 'Footer (Social)', 'click', event.target.text + ": " + event.target.href);
+  });
+
+  $("body").on("click", ".footer .icon-feed", function(event) {
+    ga('send', 'event', 'Footer (Feed)', 'click', window.location.pathname);
+  });
+
+  $("body").on("click", "#nav a", function(event) {
+    ga('send', 'event', 'Navigation', 'click', event.target.text + ": " + event.target.href);
+  });
+
+  $("body").on("click", ".article-body a", function(event) {
+    ga('send', 'event', 'Artikel', 'click', event.target.text + ": " + event.target.href);
   });
 });
