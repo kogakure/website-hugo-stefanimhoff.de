@@ -64,7 +64,7 @@ Für mein neues Rakkan habe ich die Schriftzeichen meines alten Rakkan übernomm
 
 Die zwei neuen Zeichen links daneben bedeuten 草 (Grass) und 刀 (Klinge) in der kleinen Siegelschrift. Die Zeichen ermöglichen zahlreiche Deutungs- und Interpretationsmöglichkeiten, auf die ich hier nicht näher eingehe, um niemanden zu langweilen.
 
-Ein solches Siegel lässt sich in zwei verschiedene Varianten erstellen: **Yin** oder **Yang**. Bei der Yin-Variante (wie ich es auf [kogakure.de](http://kogakure.de/) habe), werden nur die Buchstaben aus dem Stein geschnitzt, die Fläche bleibt bestehen. Dieses Mal wollte ich ein Rakkan in der Yang-Variante erstellen, bei der alles weggeschnitten wird, bis auf die Buchstaben (und einen Rand).
+Ein solches Siegel lässt sich in zwei verschiedene Varianten erstellen: **Yin** oder **Yang** (☯). Bei der Yin-Variante (wie ich es auf [kogakure.de](http://kogakure.de/) habe), werden nur die Buchstaben aus dem Stein geschnitzt, die Fläche bleibt bestehen. Dieses Mal wollte ich ein Rakkan in der Yang-Variante erstellen, bei der alles weggeschnitten wird, bis auf die Buchstaben (und einen Rand).
 
 ## Die Erstellung des Rakkan
 
