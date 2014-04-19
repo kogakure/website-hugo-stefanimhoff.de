@@ -2,8 +2,8 @@
 layout: post
 title: "Die Gestaltung meines neuen Logos"
 author: "Stefan Imhoff"
-date: 2014-04-19 12:00
-published: false
+date: 2014-04-18 19:00
+published: true
 comments: false
 categories:
 - Design
@@ -55,16 +55,16 @@ Ebenfalls zur gleichen Zeit entstand die Konzeptschrift, die auch [Grasschrift](
 
 Im 2. Jahrhundert n. Chr. entwickelten Schreiber, die weder die Konzept- oder Kanzleischrift mochten, die [Regelschrift](http://de.wikipedia.org/wiki/Regelschrift).
 
-Zum Ende der Han-Dynastie entwickelte sich neben der Grasschrift auch noch ein weiterer Stil für den privaten Gebrauch: die [Kursivschrift](http://de.wikipedia.org/wiki/Kursivschrift_(Chinesisch).
+Zum Ende der Han-Dynastie entwickelte sich neben der Grasschrift auch noch ein weiterer Stil für den privaten Gebrauch: die [Kursivschrift](http://de.wikipedia.org/wiki/Kursivschrift_(Chinesisch)).
 
 Die nächste signifikante Änderung fand erst 1956 statt, als die Regierung die Schrift vereinfachte. Es wurden dabei über 1000 Zeichen gestrichen und bei rund 2200 Zeichen die Strichzahl verringert. Dies sollte zu einer besseren Alphabetisierung der Bevölkerung führen.
 
 ## Die Bedeutung der Schriftzeichen auf meinem Rakkan
-Für mein neues Rakkan habe ich die Schriftzeichen meines alten Rakkan übernommen und dann noch zwei weitere Schriftzeichen hinzugefügt. Das alte Zeichen enthält die Schriftzeichen 木隠 (kogakure), was nicht nur der Name meines Kampfkunst-Portals ist, sondern auch seit einigen Jahren mein Pseudonym im Internet. Übersetzt bedeutet es <q>Versteckt hinter Bäumen und Blättern</q>.
+Für mein neues Rakkan habe ich die Schriftzeichen meines alten Rakkan übernommen und dann noch zwei weitere Schriftzeichen hinzugefügt. Das alte Zeichen enthält die Schriftzeichen 木隠 (kogakure), was nicht nur der Name meines Kampfkunst-Portals ist, sondern auch seit vielen Jahren mein Pseudonym im Internet. Übersetzt bedeutet es <q>Versteckt hinter Bäumen und Blättern</q>.
 
-Die zwei neuen Zeichen links daneben bedeuten 草 (Grass) und 刀 (Klinge) in der kleinen Siegelschrift. Die Zeichen ermöglichen zahlreiche Deutungs- und Interpretationsmöglichkeiten.
+Die zwei neuen Zeichen links daneben bedeuten 草 (Grass) und 刀 (Klinge) in der kleinen Siegelschrift. Die Zeichen ermöglichen zahlreiche Deutungs- und Interpretationsmöglichkeiten, auf die ich hier nicht näher eingehe, um niemanden zu langweilen.
 
-Ein solches Siegel lässt sich in zwei verschiedene Varianten erstellen: Yang oder Yin. Bei der Yin-Variante (wie ich es auf kogakure.de habe), werden nur die Buchstaben aus dem Stein geschnitzt, die Fläche bleibt bestehen. Dieses Mal wollte ich ein Rakkan in der Yang-Variante erstellen, bei der alles weggeschnitten wird, bis auf die Buchstaben (und einen Rand).
+Ein solches Siegel lässt sich in zwei verschiedene Varianten erstellen: **Yin** oder **Yang**. Bei der Yin-Variante (wie ich es auf [kogakure.de](http://kogakure.de/) habe), werden nur die Buchstaben aus dem Stein geschnitzt, die Fläche bleibt bestehen. Dieses Mal wollte ich ein Rakkan in der Yang-Variante erstellen, bei der alles weggeschnitten wird, bis auf die Buchstaben (und einen Rand).
 
 ## Die Erstellung des Rakkan
 
@@ -74,7 +74,7 @@ Zuerst fertigte ich zahlreiche Bleistiftzeichnungen an, erst von einzelnen Zeich
 <img src="{{ 'artikel/moleskine-bleistiftzeichnungen.jpg' | asset_path }}" alt="Moleskine mit Bleistiftzeichnungen von Schriftzeichen">
 {% endfigure %}
 
-Nachdem ich meine finale Variante entwickelt hatte, zeichnete ich die Bleistiftlinien einfach mit einem sehr dicken Textmarker nach. Die Struktur, die entsteht, wenn Tinte sich im Papier ausbreitet sah einer in Stein geschnitzten Kante sehr ähnlich.
+Nachdem ich meine finale Variante entwickelt hatte, zeichnete ich die Bleistiftlinien mit einem sehr dicken Textmarker nach (nicht ohne dabei fast meinen Bambustisch zu ruinieren, da ich *natürlich* aus Faulheit auf eine Unterlage verzichtete. Die Struktur, die entsteht, wenn Tinte sich im Papier ausbreitet sah einer in Stein geschnitzten Kante sehr ähnlich.
 
 Im nächsten Schritt habe ich das Rakkan dann digitalisiert und in Adobe Photoshop leicht korrigiert, um unschöne Teile zu entfernen oder die Linienführung etwas zu verbessern.
 
@@ -84,7 +84,7 @@ Um mein Logo als Vektorfont auf der Seite zu verwendet, habe ich [Font Custom](h
 
 ## Die Schrift
 
-Jetzt lässt sich das Rakkan einfach als Schriftzeichen verwenden und einfach über ein CSS-Klassen-Attribut an einem beliebigen Element erzeugen. Dann kann das Zeichen nach Belieben eingefärbt werden und eine gewünschte Schriftgröße oder Texteffekte (wie z. B. eine Schattenkante) bekommen.
+Jetzt lässt sich das Rakkan als Schriftzeichen verwenden und einfach über ein CSS-Klassen-Attribut an einem beliebigen Element erzeugen. Dann kann das Zeichen nach Belieben eingefärbt werden und eine gewünschte Schriftgröße oder Texteffekte (wie z. B. eine Schattenkante) bekommen.
 
 <i class="icon-logo" style="font-size: 50px; color: #41A738;"></i>
 <i class="icon-logo" style="font-size: 100px; color: #F00; text-shadow: 1px 1px 3px black;"></i>
