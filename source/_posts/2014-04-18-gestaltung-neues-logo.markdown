@@ -74,7 +74,7 @@ Zuerst fertigte ich zahlreiche Bleistiftzeichnungen an, erst von einzelnen Zeich
 <img src="{{ 'artikel/moleskine-bleistiftzeichnungen.jpg' | asset_path }}" alt="Moleskine mit Bleistiftzeichnungen von Schriftzeichen">
 {% endfigure %}
 
-Nachdem ich meine finale Variante entwickelt hatte, zeichnete ich die Bleistiftlinien mit einem sehr dicken Textmarker nach (nicht ohne dabei fast meinen Bambustisch zu ruinieren, da ich *natürlich* aus Faulheit auf eine Unterlage verzichtete. Die Struktur, die entsteht, wenn Tinte sich im Papier ausbreitet sah einer in Stein geschnitzten Kante sehr ähnlich.
+Nachdem ich meine finale Variante entwickelt hatte, zeichnete ich die Bleistiftlinien mit einem sehr dicken Textmarker nach (nicht ohne dabei fast meinen Bambustisch zu ruinieren, da ich *natürlich* aus Faulheit auf eine Unterlage verzichtete). Die Struktur, die entsteht, wenn Tinte sich im Papier ausbreitet sah einer in Stein geschnitzten Kante sehr ähnlich.
 
 Im nächsten Schritt habe ich das Rakkan dann digitalisiert und in Adobe Photoshop leicht korrigiert, um unschöne Teile zu entfernen oder die Linienführung etwas zu verbessern.
 
