@@ -55,7 +55,7 @@ Ebenfalls zur gleichen Zeit entstand die Konzeptschrift, die auch [Grasschrift](
 
 Im 2. Jahrhundert n. Chr. entwickelten Schreiber, die weder die Konzept- oder Kanzleischrift mochten, die [Regelschrift](http://de.wikipedia.org/wiki/Regelschrift).
 
-Zum Ende der Han-Dynastie entwickelte sich neben der Grasschrift auch noch ein weiterer Stil für den privaten Gebrauch: die [Kursivschrift](http://de.wikipedia.org/wiki/Kursivschrift_(Chinesisch)).
+Zum Ende der Han-Dynastie entwickelte sich neben der Grasschrift auch noch ein weiterer Stil für den privaten Gebrauch: die [Kursivschrift](http://de.wikipedia.org/wiki/Kursivschrift_(Chinesisch\)).
 
 Die nächste signifikante Änderung fand erst 1956 statt, als die Regierung die Schrift vereinfachte. Es wurden dabei über 1000 Zeichen gestrichen und bei rund 2200 Zeichen die Strichzahl verringert. Dies sollte zu einer besseren Alphabetisierung der Bevölkerung führen.
 
