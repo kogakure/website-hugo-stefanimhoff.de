@@ -139,4 +139,13 @@ $(function() {
   $("body").on("click", ".article-body a", function(event) {
     ga('send', 'event', 'Artikel', 'click', event.target.text + ": " + event.target.href);
   });
+
+  // Example with Timeout
+  // $("body").on("click", ".article-body a", function(event) {
+  //   event.preventDefault();
+  //   ga('send', 'event', 'Artikel', 'click', event.target.text + ": " + event.target.href);
+  //   setTimeout(function(event) {
+  //     location.href = event.href;
+  //   }, 100);
+  // });
 });
