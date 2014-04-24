@@ -87,65 +87,121 @@ $(function() {
   // Tracking von Downloads
   // ======================
   $("body").on("click", ".download a", function(event) {
+    var target = event.currentTarget;
+    event.preventDefault();
     ga('send', 'event', 'Download', 'click', event.target.href);
+    setTimeout(function() {
+      location.href = target.href;
+    }, 100);
   });
 
   // Tracking von Links
   // ==============================
-  $("body").on("click", ".home .blog a", function(event) {
+  $("body.home").on("click", ".blog a", function(event) {
+    var target = event.currentTarget;
+    event.preventDefault();
     ga('send', 'event', 'Homepage (Blog)', 'click', event.target.text + ": " + event.target.href);
+    setTimeout(function() {
+      location.href = target.href;
+    }, 100);
   });
 
-  $("body").on("click", ".home .work a", function(event) {
+  $("body.home").on("click", ".work a", function(event) {
+    var target = event.currentTarget;
+    event.preventDefault();
     ga('send', 'event', 'Homepage (Work)', 'click', event.target.text + ": " + event.target.href);
+    setTimeout(function() {
+      location.href = target.href;
+    }, 100);
   });
 
-  $("body").on("click", ".home .martial-arts a", function(event) {
+  $("body.home").on("click", ".martial-arts a", function(event) {
+    var target = event.currentTarget;
+    event.preventDefault();
     ga('send', 'event', 'Homepage (Martial Arts)', 'click', event.target.text + ": " + event.target.href);
+    setTimeout(function() {
+      location.href = target.href;
+    }, 100);
   });
 
-  $("body").on("click", ".home .introvert a", function(event) {
+  $("body.home").on("click", ".introvert a", function(event) {
+    var target = event.currentTarget;
+    event.preventDefault();
     ga('send', 'event', 'Homepage (Introvert)', 'click', event.target.text + ": " + event.target.href);
+    setTimeout(function() {
+      location.href = target.href;
+    }, 100);
   });
 
-  $("body").on("click", ".home .movie-lover a", function(event) {
+  $("body.home").on("click", ".movie-lover a", function(event) {
+    var target = event.currentTarget;
+    event.preventDefault();
     ga('send', 'event', 'Homepage (Movie)', 'click', event.target.text + ": " + event.target.href);
+    setTimeout(function() {
+      location.href = target.href;
+    }, 100);
   });
 
-  $("body").on("click", ".home .book-lover a", function(event) {
-    ga('send', 'event', 'Homepage(Book)', 'click', event.target.text + ": " + event.target.href);
+  $("body.home").on("click", ".book-lover a", function(event) {
+    var target = event.currentTarget;
+    event.preventDefault();
+    ga('send', 'event', 'Homepage (Book)', 'click', event.target.text + ": " + event.target.href);
+    setTimeout(function() {
+      location.href = target.href;
+    }, 100);
   });
 
-  $("body").on("click", ".home .recommendations a", function(event) {
+  $("body.home").on("click", ".recommendations a", function(event) {
+    var target = event.currentTarget;
+    event.preventDefault();
     ga('send', 'event', 'Homepage (Recommendation)', 'click', event.target.text + ": " + event.target.href);
+    setTimeout(function() {
+      location.href = target.href;
+    }, 100);
   });
 
   $("body").on("click", ".footer .about a", function(event) {
+    var target = event.currentTarget;
+    event.preventDefault();
     ga('send', 'event', 'Footer (About)', 'click', event.target.text + ": " + event.target.href);
+    setTimeout(function() {
+      location.href = target.href;
+    }, 100);
   });
 
   $("body").on("click", ".footer .social-networks a", function(event) {
+    var target = event.currentTarget;
+    event.preventDefault();
     ga('send', 'event', 'Footer (Social)', 'click', event.target.text + ": " + event.target.href);
+    setTimeout(function() {
+      location.href = target.href;
+    }, 100);
   });
 
   $("body").on("click", ".footer .icon-feed", function(event) {
+    var target = event.currentTarget;
+    event.preventDefault();
     ga('send', 'event', 'Footer (Feed)', 'click', window.location.pathname);
+    setTimeout(function() {
+      location.href = target.href;
+    }, 100);
   });
 
   $("body").on("click", "#nav a", function(event) {
+    var target = event.currentTarget;
+    event.preventDefault();
     ga('send', 'event', 'Navigation', 'click', event.target.text + ": " + event.target.href);
+    setTimeout(function() {
+      location.href = target.href;
+    }, 100);
   });
 
   $("body").on("click", ".article-body a", function(event) {
+    var target = event.currentTarget;
+    event.preventDefault();
     ga('send', 'event', 'Artikel', 'click', event.target.text + ": " + event.target.href);
+    setTimeout(function() {
+      location.href = target.href;
+    }, 100);
   });
-
-  // Example with Timeout
-  // $("body").on("click", ".article-body a", function(event) {
-  //   event.preventDefault();
-  //   ga('send', 'event', 'Artikel', 'click', event.target.text + ": " + event.target.href);
-  //   setTimeout(function(event) {
-  //     location.href = event.href;
-  //   }, 100);
-  // });
 });
