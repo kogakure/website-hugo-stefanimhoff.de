@@ -40,8 +40,10 @@ Redirect 301 /+/                                                                
 # Redirects mit URL-Änderung
 Redirect 301 /notiz/das-koi-design-inspiration-und-idee                          /2007/koi-design
 Redirect 301 /notiz/django-folder-fuer-mac-os-x                                  /2007/django-folder-mac-osx
+Redirect 301 /notiz/django-folder-mac-osx                                        /2007/django-folder-mac-osx
 Redirect 301 /notiz/blender-folder-fuer-mac-os-x-leopard                         /2008/blender-folder-mac-osx
 Redirect 301 /notiz/theme-kaijin-fuer-das-moinmoin-wiki                          /2008/theme-kaijin-moinmoin-wiki
+Redirect 301 /notiz/theme-kaijin-moinmoin-wiki                                   /2008/theme-kaijin-moinmoin-wiki
 Redirect 301 /notiz/terminal-stoeckchen                                          /2008/terminal-most-used-commands
 Redirect 301 /notiz/django-relaunch-von-kogakure-de                              /2008/django-relaunch-kogakure-de
 Redirect 301 /notiz/django-relaunch-kogakure-de                                  /2008/django-relaunch-kogakure-de
@@ -65,6 +67,7 @@ Redirect 301 /notiz/j2ee-vs-ruby-python-frameworks                              
 Redirect 301 /notiz/subversion-3-einrichten-des-repository                       /2007/subversion-3-einrichten-des-repository
 Redirect 301 /notiz/subversion-4-importieren-einer-projektstruktur               /2007/subversion-4-importieren-einer-projektstruktur
 Redirect 301 /notiz/versionskontrolle-mit-git                                    /2007/versionskontrolle-mit-git
+Redirect 301 /versionskontrolle-mit-git                                          /2007/versionskontrolle-mit-git
 Redirect 301 /notiz/lebensmittel-datenbank                                       /2007/lebensmittel-datenbank
 Redirect 301 /notiz/subversion-5-arbeiten-mit-subversion                         /2007/subversion-5-arbeiten-mit-subversion
 Redirect 301 /notiz/wunschliste-computerspiele-als-film                          /2007/wunschliste-computerspiele-als-film
@@ -93,8 +96,8 @@ Redirect 301 /notiz/vim                                                         
 Redirect 301 /notiz/automatisierung-mit-keyboard-maestro                         /2011/automatisierung-mit-keyboard-maestro
 Redirect 301 /notiz/buchtipp-decodeunicode                                       /2011/buchtipp-decodeunicode
 Redirect 301 /notiz/duplikation-ist-in-ordnung                                   /2013/duplikation-ist-in-ordnung
-Redirect 301 /notiz/wichtig-website-neu/                                         /2014/relaunch-responsive-web-design/
-Redirect 301 /versionskontrolle-mit-git/                                         /2007/versionskontrolle-mit-git/
+Redirect 301 /notiz/wichtig-website-neu                                          /2014/relaunch-responsive-web-design
+Redirect 301 /notiz/automatisierte-installation-mac-os-x                         /2014/automatisierte-installation-mac-os-x
 
 Redirect 301 /notizbuch                                                         {{ site.url }}/archiv
 
