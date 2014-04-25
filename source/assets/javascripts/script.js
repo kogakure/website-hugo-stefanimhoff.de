@@ -99,11 +99,13 @@ $(function() {
   //   });
   // });
 
+  // Tracking aller Links
+  // ====================
   $("a").on('click',function(event){
     var url = $(this).attr("href");
 
     if (event.currentTarget.host != window.location.host) {
-      ga('send', 'event', 'Ausgehender Link', 'click', event.target.href);
+      ga('send', 'event', 'Ausgehender Link', 'click', event.target.text + ": " + event.target.href);
 
       if (event.metaKey || event.ctrlKey || this.target == "_blank") {
         var newtab = true;
@@ -113,8 +115,9 @@ $(function() {
         event.preventDefault();
         setTimeout('document.location = "' + url + '"', 100);
       }
+
     } else {
-      ga('send', 'event', 'Interner Link', 'click', event.target.href);
+      ga('send', 'event', 'Interner Link', 'click', event.target.text + ": " + event.target.href);
     }
   });
 
