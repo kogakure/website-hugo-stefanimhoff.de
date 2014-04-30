@@ -17,7 +17,7 @@ Die Liste von Applikationen, die Eric vorstellt ist sehr interessant, und sollte
 * Suche: [Haystack](http://haystacksearch.org/)
 * Dokumentation: [Sphinx](http://sphinx-doc.org/)
 * Datenbank-Migration: [South](http://south.aeracode.org/)
-* Verzögerte Ausführung: [Celery](http://celeryproject.org/)
+* Verzögerte Ausführung: [Celery](http://www.celeryproject.org/)
 * Entfernte Ausführung: [Fabric](http://docs.fabfile.org/en/1.5/)
 * Deployment: [Gunicorn](http://gunicorn.org/) mit Nginx
 * Packaging: [Pip](http://www.pip-installer.org/en/latest/) und [Virtualenv](http://www.virtualenv.org/en/latest/)
@@ -44,7 +44,7 @@ Entfernte Ausführung mit Fabric setze ich schon seit geraumer Zeit ein. Nicht n
 
 ## Deployment mit Gunicorn
 
-Deployment mit Gunicorn war mir auch neu, im Moment ist das für mich aber auch kein Problem. Meine Websites liegen bei [Webfaction](http://www.webfaction.com/?affiliate=kogakure), die das Einrichten der Django-Umgebung vollständig automatisiert haben und mir diesbezüglich die Arbeit abnehmen.
+Deployment mit Gunicorn war mir auch neu, im Moment ist das für mich aber auch kein Problem. Meine Websites liegen bei [Webfaction](https://www.webfaction.com/?affiliate=kogakure), die das Einrichten der Django-Umgebung vollständig automatisiert haben und mir diesbezüglich die Arbeit abnehmen.
 
 ## Packaging mit Pip, Virtualenv (und Virtualenvwrapper)
 

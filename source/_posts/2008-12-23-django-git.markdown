@@ -26,9 +26,9 @@ Ich schaue mir [reStructuredText](http://docutils.sourceforge.net/rst.html "reSt
 
 Das Internetportal [TED](http://www.ted.com/ "TED: Ideas worth spreading") schlägt mich auch weiter in seinen Bann und nach einigen Vorträgen über Bionik recherchiere ich mehr zu diesem interessanten Thema.
 
-Zeitgleich stolpere ich im Januar auch über [Git](http://git-scm.com/), was langsam bekannter wird. Ich bringe mir Git über die Grundlagen hinaus durch diverse Tutorial und Screencasts (GitCasts, [PeepCode: Git](https://peepcode.com/products/git) selber bei.
+Zeitgleich stolpere ich im Januar auch über [Git](http://git-scm.com/), was langsam bekannter wird. Ich bringe mir Git über die Grundlagen hinaus durch diverse Tutorial und Screencasts (GitCasts, PeepCode) selber bei.
 
-Ich setzte meinen eigenen [Gitweb](https://git.wiki.kernel.org/index.php/Gitweb)-Server auf und schaue auch die Integration mit Subversion ([git-svn](http://www.kernel.org/pub/software/scm/git/docs/git-svn.html "git-svn(1)")) an.
+Ich setzte meinen eigenen [Gitweb](https://git.wiki.kernel.org/index.php/Gitweb)-Server auf und schaue auch die Integration mit Subversion ([git-svn](https://www.kernel.org/pub/software/scm/git/docs/git-svn.html "git-svn(1)")) an.
 
 Der Teilchenbeschleuniger des Kernforschungszentrums [CERN](http://de.wikipedia.org/wiki/CERN "CERN – Wikipedia") beunruhigt die Massen, da er im Herbst 2008 eingeschaltet werden soll. Aber nach einigen Missgeschicken wird er erst einmal bis 2009 abgeschaltet. Vorerst verschwinden wir also nicht im Schwarzen Loch. Das wäre ja auch zu früh: Die [Maya](http://de.wikipedia.org/wiki/Maya "Maya – Wikipedia") haben das Ende der bekannten Welt schließlich erst für den **21. Dezember 2012** vorausgesagt.
 
@@ -47,7 +47,7 @@ Ich setzte mir ein [MoinMoinWiki](http://moinmo.in/ "MoinMoinWiki - MoinMoin") a
 
 Ich schaue mir nochmal eine Alternative zu Git an: [Mercurial](http://mercurial.selenic.com/). Aber Git hat einfach ein paar nette Bonbons, die den Ausschlag geben.
 
-Ich frage bei Media Temple an, ob mein Django-Projekt auf einem [Dedicated Virtual Server](http://mediatemple.net/webhosting/dv/pricing.php "(mt) Media Temple - Web hosting - (dv) Dedicated-Virtual - Pricing") **(dv) BASE** laufen würde. Leider ist der Support frech und teilt mir mit, ich bräuchte mindestens einen **(dv) EXTREME**, vielleicht sogar zwei davon. WTF?! So verliert mich Media Temple als Kunden, ich sage *farewell* zum Grid und wechsele zu [Webfaction](http://www.webfaction.com/?affiliate=kogakure "Hosting for an agile web - WebFaction"). Dort bekommt man wenigstens was für sein Geld.
+Ich frage bei Media Temple an, ob mein Django-Projekt auf einem [Dedicated Virtual Server](http://mediatemple.net/webhosting/vps/hosting/) **(dv) BASE** laufen würde. Leider ist der Support frech und teilt mir mit, ich bräuchte mindestens einen **(dv) EXTREME**, vielleicht sogar zwei davon. WTF?! So verliert mich Media Temple als Kunden, ich sage *farewell* zum Grid und wechsele zu [Webfaction](https://www.webfaction.com/?affiliate=kogakure "Hosting for an agile web - WebFaction"). Dort bekommt man wenigstens was für sein Geld.
 
 ## März
 
@@ -83,9 +83,9 @@ Und der externe Dienstleister wirkt auf mich leider nicht sehr zuverlässig und 
 
 ## Juni
 
-Ich schaue mir mal das superduper Java-Framework [Spring](http://www.springsource.org/) an, weil damit wohl unser CMS erstellt werden soll. Ich mag Java nicht. Aufgeblasene Scheiße, das. Ein Änterpreis-Wäbdeweloping-Fräimwörk halt und nich so Spielzeug wie [Rails](http://rubyonrails.org/) oder [Django](https://www.djangoproject.com/). [Warum müssen Java-Programmierer eigentlich so elitäre Snobs sein](http://www.youtube.com/watch?v=PQbuyKUaKFo "YouTube - Ruby on Rails vs Java - RailsEnvy.com Commerical")? Meine Vermutung ist ja, das viele Java-Entwickler etwas <del>kompilieren</del> <ins>kompensieren</ins> müssen.
+Ich schaue mir mal das superduper Java-Framework [Spring](http://spring.io/) an, weil damit wohl unser CMS erstellt werden soll. Ich mag Java nicht. Aufgeblasene Scheiße, das. Ein Änterpreis-Wäbdeweloping-Fräimwörk halt und nich so Spielzeug wie [Rails](http://rubyonrails.org/) oder [Django](https://www.djangoproject.com/). [Warum müssen Java-Programmierer eigentlich so elitäre Snobs sein](http://www.youtube.com/watch?v=PQbuyKUaKFo "YouTube - Ruby on Rails vs Java - RailsEnvy.com Commerical")? Meine Vermutung ist ja, das viele Java-Entwickler etwas <del>kompilieren</del> <ins>kompensieren</ins> müssen.
 
-Ich amüsiere mich fantasisch über [The Website is Down](http://www.thewebsiteisdown.com/ "The Website Is Down") und [You suck at Photoshop](http://www.mydamnchannel.com/Big_Fat_Brain/You_Suck_at_Photoshop/YouSuckatPhotoshop1_398.aspx "My Damn Channel &raquo; You Suck at Photoshop: Season 1 &raquo; You Suck at Photoshop #1").
+Ich amüsiere mich fantasisch über [The Website is Down](http://www.thewebsiteisdown.com/ "The Website Is Down") und [You suck at Photoshop](http://www.mydamnchannel.com/Big_Fat_Brain/You_Suck_at_Photoshop/YouSuckatPhotoshop1_398).
 
 Im Juni installiere ich mir auch [Ubuntu](http://www.ubuntu.com/ "Ubuntu Home Page | Ubuntu") in einer Parallels-Partition, um mal mit einem richtig guten Linux-System rumzutesten.
 
@@ -128,7 +128,7 @@ Im August fällt mir auch auf, das kein [Sumo](http://www.sumo.or.jp/ "Nihon Sum
 
 [Django 1.0](https://www.djangoproject.com/weblog/2008/sep/03/1/) wird veröffentlicht! Und die erste DjangoCon findet statt. Die Vorträge der Keynote kann man bei [YouTube ansehen](http://www.youtube.com/results?search_query=djangocon+2008 "YouTube - djangocon 2008").
 
-Durch einen Vortrag auf der DjangoCon (<q lang="en">No, you can’t have a Pony</q>) und die Feststellung das Django ein Maskottchen benötigt, wird im Scherz die Idee des [Django Pony](http://djangopony.com/ "djangopony - Magic that can't be removed.") geboren. Jetzt **kann** Django ja nur noch erfolgreich werden ;)
+Durch einen Vortrag auf der DjangoCon (<q lang="en">No, you can’t have a Pony</q>) und die Feststellung das Django ein Maskottchen benötigt, wird im Scherz die Idee des [Django Pony](http://www.djangopony.com/ "djangopony - Magic that can't be removed.") geboren. Jetzt **kann** Django ja nur noch erfolgreich werden ;)
 
 Google bringt seinen neuen Browser [Google Chrome](https://www.google.com/intl/de/chrome/browser/) auf den Markt. Eine nette Idee, aber noch viel zu fehlerhaft. Meine eigene Website wird nicht richtig angezeigt, dabei validiert die penibel.
 

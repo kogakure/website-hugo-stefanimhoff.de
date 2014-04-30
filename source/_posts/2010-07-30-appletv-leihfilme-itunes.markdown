@@ -30,4 +30,4 @@ Also hört mir zu Studiobosse, und hört **aufmerksam** zu:
 
 Also, ich will Geld ausgeben, und würde mir auch mehrere Filme in der Woche aus<em>leihen</em>. Wobei hier die Betonung auf *Leihen* liegt. Bringt also bitte eure ganzen Filme auf iTunes, auch die, die kein Mainstream sind. Schon mal vom Long-Tail gehört? Ihr könne natürlich auch warten, bis eure Studios eingegangen sind, was bei solchem Geschäftsgebaren früher oder später passieren wird. Und *ihr* wundert euch, dass so viele Leute lieber ein Torrent saugen?
 
-Und solange ihr das nicht hinbekommt, lasse ich mir einfach für eine viel günstigere Gebühr Blu-ray-Discs und DVDs von [LoveFilm](http://www.lovefilm.de/) schicken oder streame viele Titel direkt auf mein iPad, PlayStation oder den Computer.
+Und solange ihr das nicht hinbekommt, lasse ich mir einfach für eine viel günstigere Gebühr Blu-ray-Discs und DVDs von [LoveFilm](https://www.lovefilm.de/) schicken oder streame viele Titel direkt auf mein iPad, PlayStation oder den Computer.

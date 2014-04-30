@@ -61,7 +61,7 @@ Ich schaue den Film <cite>[Snakes and  Rubies](https://www.djangoproject.com/sna
 
 Ein TextMate-Bundle für Django muss her, und auch [ReST](http://docutils.sourceforge.net/rst.html) als Markupsprache der Djangoseite zieht mein Interesse an.
 
-Logischerweise interessiere ich mich jetzt auch für  [Python](http://www.python.org/), die Programmiersprache, auf der Django basiert. Das Buch <cite>[Dive Into Python](http://www.diveintopython.org/)</cite>, das im Internet kostenlos verfügbar ist, lese ich in den nächsten Wochen komplett durch.
+Logischerweise interessiere ich mich jetzt auch für  [Python](https://www.python.org/), die Programmiersprache, auf der Django basiert. Das Buch <cite>[Dive Into Python](http://www.diveintopython.org/)</cite>, das im Internet kostenlos verfügbar ist, lese ich in den nächsten Wochen komplett durch.
 
 ## Juli
 
@@ -83,7 +83,7 @@ Und ich suche nach dem Film <cite>[Staplerfahrer Klaus](http://www.youtube.com/w
 
 Im August erkundige ich mich nach Googles PageRank, denn mittlerweile sind schon fast vier Monate vergangen, und ich habe immer noch einen PageRank von Null. Ich befürchte die böse Google Sandbox (zu recht, wie ich feststelle).
 
-In diesem Monat erkundige ich mich auch nach Django-Hostern und finde heraus, dass TextDrive jetzt [Joyent](http://joyent.com/) ist. Ich entscheide mich für [Webfaction](http://www.webfaction.com/?affiliate=kogakure) als neuen Webhoster.
+In diesem Monat erkundige ich mich auch nach Django-Hostern und finde heraus, dass TextDrive jetzt [Joyent](http://www.joyent.com/) ist. Ich entscheide mich für [Webfaction](https://www.webfaction.com/?affiliate=kogakure) als neuen Webhoster.
 
 Im August entdecke ich [Git](http://git-scm.com/) für mich, Linus Torvalds fantastisches Versionskontrollsystem. Git ist Subversion in vielen Punkten um Längen vorraus.
 
@@ -95,7 +95,7 @@ Auf meinem Nachttisch liegt laut Google Suche Machiavellis <cite>[Der Fürst](ht
 
 In der [Autostadt Wolfsburg](http://www.autostadt.de/) eröffnet ein neues japanisches Restaurant, das *Anan*, mit extra einflogenem, japanischem Meisterkoch.
 
-Das Sommerloch geht langsam zu Ende, also erkundige ich mich, was meine Lieblingsserien so machen, und wann die Staffeln wieder starten: [Lost](http://abc.go.com/shows/lost), [StarGate SG-1 und StarGate Atlantis](http://stargate.mgm.com/), [Monk](http://www.usanetwork.com/series/monk/) und [Battlestar Galactica](http://www.syfy.com/battlestar/).
+Das Sommerloch geht langsam zu Ende, also erkundige ich mich, was meine Lieblingsserien so machen, und wann die Staffeln wieder starten: [Lost](http://abc.go.com/shows/lost), [StarGate SG-1 und StarGate Atlantis](http://stargate.mgm.com/), [Monk](http://www2.usanetwork.com/series/monk/) und [Battlestar Galactica](http://www.syfy.com/battlestar/).
 
 ## September
 
@@ -103,7 +103,7 @@ Diesen Monat beschäftige ich mich vor allem LaTeX, Bibtex und Alphadin. Ich sch
 
 Auch mit SQLite3 schaue ich mir noch näher an. Eine wirklich feine, kleine und mächtige Datenbank.
 
-Mitte September will ich von Google wissen, wo eigentlich der Experimentalfilm [A Scanner Darkly](http://www.imdb.de/title/tt0405296/) bleibt. In den U.S.A. lief er schon vor über einem Jahr. Naja, lohnt wohl wieder nicht, so was in Deutsche Kinos zu bringen. Also muss *man* sich ja wieder woanders seinen Kinoeintritt holen. Selber schuld, die Filmstudios.
+Mitte September will ich von Google wissen, wo eigentlich der Experimentalfilm [A Scanner Darkly](http://www.imdb.com/title/tt0405296/) bleibt. In den U.S.A. lief er schon vor über einem Jahr. Naja, lohnt wohl wieder nicht, so was in Deutsche Kinos zu bringen. Also muss *man* sich ja wieder woanders seinen Kinoeintritt holen. Selber schuld, die Filmstudios.
 
 Eine ISO-Prüfung im Haus führt mich zu <cite>Dilbert</cite> und Dogbert, und ich kann den Bürokratiewahn mit einem lachenden Auge in der Comic lesend überstehen.
 
@@ -147,7 +147,7 @@ Ich überlege mir, ob ich zukünftig mit Markdown, Textile oder ReST als Markup-
 
 Ich stelle fest, dass bislang nur Safari 3 automatisch Worte trennt, doch die Alpha-Version von Firefox 3 bringt die freudige Erkenntnis: Man kann jetzt `&shy;` benutzen, um wenigstens modernen Browsern ordentliche Worttrennung zu liefern.
 
-Ich stelle fest, dass [Symphony 2](http://getsymphony.com/) im Anmarsch ist und freue mich darauf.
+Ich stelle fest, dass [Symphony 2](http://www.getsymphony.com/) im Anmarsch ist und freue mich darauf.
 
 Irgendwie würde ich gerne ASL lernen, aber mir fehlt die Zeit.
 
@@ -165,7 +165,7 @@ Ich setze jQuery jetzt in Kundenprojekten ein, und benutze es auch gleich für G
 
 Die neue Version von CandyBar kommt raus, und hat jetzt gleich Pixadex integriert. Natürlich muss ich gleich Leopards Aussehen mit neuen Icons und Dock versehen.
 
-Ich überlege mir von einem webbasierenden GTD-Werkzeug auf eine OS X Lösung umzusteigen und teste drei Wochen lang [Things](http://culturedcode.com/things/) und [OmniFocus](http://www.omnigroup.com/products/omnifocus/) zugleich.
+Ich überlege mir von einem webbasierenden GTD-Werkzeug auf eine OS X Lösung umzusteigen und teste drei Wochen lang [Things](http://culturedcode.com/things/) und [OmniFocus](http://www.omnigroup.com/omnifocus/) zugleich.
 
 Doch schon nach 14 Tagen steht für mich eigentlich fest: <cite>Things</cite> ist der Testsieger. Obwohl es derzeit noch weniger Funktionen als OmniFocus hat, fühlt es sich einfach *besser* an.
 
@@ -173,7 +173,7 @@ Irgendwie kann ich es nicht lassen und kaufe mir einen [iPod touch](http://www.a
 
 Auf ARTE sehe ich einen interessanten Beitrag über die [Haddsch](http://de.wikipedia.org/wiki/Haddsch) - die Pilgerfahrt nach Mekka – und google den genauen Verlauf nach. Diese Welt will sich mir einfach nicht erschließen. Den Teufel steinigen, auf einem Hügel sitzen und heulen, um einen Steinkasten wandern. Wem’s gefällt. Ach ja: Und ich trete aus der evangelischen Kirche aus.
 
-Ich lache mich tot, weil FileMaker ihr neues Datenbank-Produkt [Bentō](http://www.filemaker.de/products/bento/) nennt. Die dachten wohl, das heißt Box. Das heißt aber Mittagessen ;)
+Ich lache mich tot, weil FileMaker ihr neues Datenbank-Produkt Bentō nennt. Die dachten wohl, das heißt Box. Das heißt aber Mittagessen ;)
 
 Durch einen Artikel auf [praegnanz.de](http://praegnanz.de/weblog/ted) erfahre ich von der [TED](http://www.ted.com/) Website, die seit dem meine absolute Lieblingsseite ist. Dort kann man sich die Vorträge der TED-Konferenz ansehen, die es seit 1984 gibt. Bei TED sprechen außergewöhnliche Menschen über Forschung, Innovationen, Medien, Religion, Philosophie und vieles mehr. Eine Eintrittskarte kostet 6.000 $ und man kann sich nur für eine bewerben, ob man eingeladen wird, entscheidet TED. Jedenfalls habe ich mir alle 175 bislang veröffentlichten Beiträge schon mal heruntergeladen und eine Menge davon angesehen. Das ist wie ARTE hoch 10.
 

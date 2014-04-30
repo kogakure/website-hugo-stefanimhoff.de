@@ -19,7 +19,7 @@ Ich habe keine Ahnung, warum dieses Juwel so lange unbemerkt von mir bleiben kon
 <img src="{{ 'artikel/openstreetmap.jpg' | asset_path }}" alt="Die Autostadt Wolfsburg mit OpenStreetMap" />
 {% endfigure %}
 
-Der Leistungsumfang von [OpenStreetMap](http://www.openstreetmap.org/ "OpenStreetMap") ist atemberaubend. Es stehen Vektordaten für große Teile der Erde zu Verfügung, die in einigen Bereichen derart detailliert sind, dass nicht einmal [Google Maps](http://maps.google.de/ "Google Maps") da mithalten könnte. Fußwege, Trampelpfade, Ampeln, Stromleitungen. Auf OpenStreetMap ist geradezu alles eingezeichnet.
+Der Leistungsumfang von [OpenStreetMap](http://www.openstreetmap.org/ "OpenStreetMap") ist atemberaubend. Es stehen Vektordaten für große Teile der Erde zu Verfügung, die in einigen Bereichen derart detailliert sind, dass nicht einmal [Google Maps](https://maps.google.de/ "Google Maps") da mithalten könnte. Fußwege, Trampelpfade, Ampeln, Stromleitungen. Auf OpenStreetMap ist geradezu alles eingezeichnet.
 
 Und jeder ist dazu aufgerufen, Orte, Plätze oder Namen hinzuzufügen – oder wenn man ein GPS-Gerät sein Eigen nennt, auch Strecken abzufahren oder abzugehen und dann online zu stellen.
 

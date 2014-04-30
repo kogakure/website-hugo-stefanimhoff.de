@@ -13,10 +13,10 @@ tags:
 Da lag es im Briefkasten: mein Belegexemplar der aktuellen Ausgabe 07/2010 des Webstandards-Magazin. Für mich ist dies eine Premiere, denn ich habe meinen ersten Artikel für das Webstandards-Magazin geschrieben.
 
 {% figure "Mein Artikel über Django im  <cite>Webstandards-Magazin</cite>, Ausgabe 07/2010, Tools" %}
-<a href="http://www.webstandards-magazin.de/"><img src="{{ 'artikel/webstandards-magazin-django.jpg' | asset_path }}" alt="Webstandards-Magazin, Ausgabe 07/2010, Tools" /></a>
+<a href="http://www.screengui.de/"><img src="{{ 'artikel/webstandards-magazin-django.jpg' | asset_path }}" alt="Webstandards-Magazin, Ausgabe 07/2010, Tools" /></a>
 {% endfigure %}
 
-Drei Seiten sollte er einmal lang werden, jetzt sind es fast fünf geworden. Es war einfach nicht möglich, die ganze Faszination für Django, Codebeispiele und Grafiken auf so wenig Platz unterzubringen. Doch die Chefredakteure des [Webstandards-Magazin](http://www.webstandards-magazin.de/) Ansgar Hein und Jörg Morsbach waren sehr entgegenkommend und räumten mir mehr Platz ein. Vielen Dank noch einmal dafür! Ich bedanke mich auch recht herzlich bei den fleißigen Helfern, die meinen Artikel auf inhaltliche oder orthographische Fehler hin geprüft haben.
+Drei Seiten sollte er einmal lang werden, jetzt sind es fast fünf geworden. Es war einfach nicht möglich, die ganze Faszination für Django, Codebeispiele und Grafiken auf so wenig Platz unterzubringen. Doch die Chefredakteure des [Webstandards-Magazin](http://www.screengui.de/) Ansgar Hein und Jörg Morsbach waren sehr entgegenkommend und räumten mir mehr Platz ein. Vielen Dank noch einmal dafür! Ich bedanke mich auch recht herzlich bei den fleißigen Helfern, die meinen Artikel auf inhaltliche oder orthographische Fehler hin geprüft haben.
 
 Der Artikel ist eins nicht geworden: ein Tutorial mit Schritt-für-Schritt-Anleitung, dafür gibt es genügend gute andere Plätze im Internet. Ich wollte mit meinem Artikel eher verdeutlichen, warum ich Django so schätze und seit mehr als vier Jahren diesem Webframework treu geblieben bin, was nicht selbstverständlich ist, da ich schwer zufrieden zustellen bin. Ich habe schon <cite>TextPattern</cite>, <cite>WordPress</cite>, <cite>CodeIgniter</cite>, <cite>ExpressionEngine</cite>, <cite>ModX</cite>, <cite>Symphony</cite> und noch einige Webframeworks und CMS getestet und auch eingesetzt, doch erst seit ich Django benutze, habe ich auch wirklich das Gefühl, dass ich alles an meiner Website kontrolliere, verstehe und wieder finde.
 

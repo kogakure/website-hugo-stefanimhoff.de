@@ -19,7 +19,7 @@ Bei Wishingline gibt es zwei schöne Folder-Icons von [Rails und Lighttpd](http:
 <a href="/downloads/django-osx-folder.zip"><img src="{{ 'artikel/django-osx-folders.png' | asset_path }}" alt="Django Folder"></a>
 {% endfigure %}
 
-[Django](https://www.djangoproject.com/) ist ein Web-Framework, das auf [Python](http://www.python.org/ "Python Programming Language -- Official Website") basiert. Wer es noch nicht gesehen hat, dem empfehle ich mal einen Blick darauf zu werfen.
+[Django](https://www.djangoproject.com/) ist ein Web-Framework, das auf [Python](https://www.python.org/ "Python Programming Language -- Official Website") basiert. Wer es noch nicht gesehen hat, dem empfehle ich mal einen Blick darauf zu werfen.
 
 Die Icons sind in allen Größen von 16 Pixel bis 512 Pixel im Download vorhanden. Wer sie gebrauchen kann, kann sie gerne benutzen.
 

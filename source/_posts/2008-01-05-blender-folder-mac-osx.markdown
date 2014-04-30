@@ -13,7 +13,7 @@ tags:
 - customize
 ---
 
-Da mein [Django Folder-Icon](/django-folder-mac-osx/ "Django Folder für Mac OS X Leopard • Notizen • Stefan Imhoff"), das ich im Dezember veröffentlicht habe, ein riesiger Erfolg war und schon unzählige Male heruntergeladen wurde, habe ich einen neuen Ordner erstellt – dieses mal für Blender.
+Da mein [Django Folder-Icon](/2007/django-folder-mac-osx/ "Django Folder für Mac OS X Leopard • Notizen • Stefan Imhoff"), das ich im Dezember veröffentlicht habe, ein riesiger Erfolg war und schon unzählige Male heruntergeladen wurde, habe ich einen neuen Ordner erstellt – dieses mal für Blender.
 
 {% figure figure--noborder %}
 <a href="/downloads/blender-osx-folder.zip"><img src="{{ 'artikel/blender-osx-folders.png' | asset_path }}" alt="Blender Folder"></a>
@@ -23,7 +23,7 @@ Da mein [Django Folder-Icon](/django-folder-mac-osx/ "Django Folder für Mac OS 
 
 [Blender](http://www.blender.org/) ist ein fantastisches OpenSource 3D-Programm, das kostenlos für alle üblichen Betriebssysteme erhältlich ist.
 
-Mit Blender kann man auf professionellem Niveau arbeiten. Es ist genauso gut, wie z. B. Autodesk Maya, und bietet neben einem fantastischen Interface Rigging, Animation, UV Unwrapping, Physics und Particle, Realtime 3D/Game Creation, Modeling, Rendering und Shading auch noch Imaging und Compositing an. Blender benutzt [Python](http://www.python.org/ "Python Programming Language -- Official Website"), um spezielle Verhaltensweisen in Blender zu programmieren.
+Mit Blender kann man auf professionellem Niveau arbeiten. Es ist genauso gut, wie z. B. Autodesk Maya, und bietet neben einem fantastischen Interface Rigging, Animation, UV Unwrapping, Physics und Particle, Realtime 3D/Game Creation, Modeling, Rendering und Shading auch noch Imaging und Compositing an. Blender benutzt [Python](https://www.python.org/ "Python Programming Language -- Official Website"), um spezielle Verhaltensweisen in Blender zu programmieren.
 
 Wer lernen möchte mit einer solchen 3D-Software zu arbeiten oder von einer der kommerziellen Lösungen wechseln möchte, dem kann ich diese Software wärmstens Empfehlen.
 

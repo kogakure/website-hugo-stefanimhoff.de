@@ -19,7 +19,7 @@ Es ist soweit! Mein erstes Django-Projekt ist online: das seit 1999 bestehende K
 
 ## Web-Entwicklung für Perfektionisten
 
-Was ist Django? Django ist ein [Python](http://www.python.org/ "Python Programming Language -- Official Website")-Web-Framework, das schnelle, saubere Entwicklung von dynamischen Websites ermöglicht.
+Was ist Django? Django ist ein [Python](https://www.python.org/ "Python Programming Language -- Official Website")-Web-Framework, das schnelle, saubere Entwicklung von dynamischen Websites ermöglicht.
 
 Django wurde nach dem Jazz-Gitarristen Django Reinhardt benannt und wird [so ausgesprochen](http://red-bean.com/~adrian/django_pronunciation.mp3).
 
@@ -67,7 +67,7 @@ Zu allem Unglück kam es in der Vergangenheit immer wieder vor, dass Plugins nic
 
 Django benutzt Python-Module. Diese sind in Python programmiert und laufen auch außerhalb von Django. Und Python ist nebenbei bemerkt leicht zu lernen, gut zu lesen und weitaus länger als z. B. PHP am Markt. Google und Yahoo benutzen Python – um nur einige zu nennen.
 
-Ich habe schon eine Menge Content-Management-Systeme ausprobiert und jedes ist auf seine Art begrenzt und nur für einen einzigen Zweck geeignet (z. B. WordPress für einen Blog). Will man aber eine Website haben die nicht so einfach in eine Schublade gesteckt werden kann, oder die möglichst lange bestehen soll, hat man mit Content-Management-Systemen ein Problem. Zu oft hat man schon von diesen CMS-Hoppern gehört, die z. B. von [MovableType](http://www.movabletype.org/) zu [TextPattern](http://textpattern.com/ "Textpattern"), dann zu [WordPress](http://wordpress.org/ "WordPress › Blog Tool and Weblog Platform") und schließlich zu [ExpressionEngine](http://ellislab.com/expressionengine) gewechselt sind. Die haben einfach zu viel Zeit.
+Ich habe schon eine Menge Content-Management-Systeme ausprobiert und jedes ist auf seine Art begrenzt und nur für einen einzigen Zweck geeignet (z. B. WordPress für einen Blog). Will man aber eine Website haben die nicht so einfach in eine Schublade gesteckt werden kann, oder die möglichst lange bestehen soll, hat man mit Content-Management-Systemen ein Problem. Zu oft hat man schon von diesen CMS-Hoppern gehört, die z. B. von [MovableType](http://movabletype.org/) zu [TextPattern](http://textpattern.com/ "Textpattern"), dann zu [WordPress](http://wordpress.org/ "WordPress › Blog Tool and Weblog Platform") und schließlich zu [ExpressionEngine](http://ellislab.com/expressionengine) gewechselt sind. Die haben einfach zu viel Zeit.
 
 Frameworks haben mich bislang immer abgeschreckt, weil sie entweder mit PHP liefen (und ich mag PHP nicht sonderlich) oder man einfach zu viel selber Programmieren musste. Bei Django halten sich Programmierung und Design (Template) immer schön im Gleichgewicht.
 
@@ -95,7 +95,7 @@ Die Website kommt mit allem daher, was eine moderne Website so haben sollte: Fee
 
 ### Technische Details
 
-Die Website läuft auf einem [Apache 2 Server](http://httpd.apache.org/ "Welcome! - The Apache HTTP Server Project") mit [mod_python](http://www.modpython.org/ "Mod_python - Apache/Python Integration"), nutzt eine [PostgreSQL](http://www.postgresql.org/ "PostgreSQL")-Datenbank und [memcached](http://memcached.org/) zum Zwischenspeichern der Inhalte. Mit Hilfe von Git wird die Live-Website mit dem lokalen Entwicklungsserver abgeglichen. Der Einfachheit halber erledige ich das mit Hilfe von [Capistrano](http://capistranorb.com/) – ich bin halt faul.
+Die Website läuft auf einem [Apache 2 Server](http://httpd.apache.org/ "Welcome! - The Apache HTTP Server Project") mit [mod_python](http://modpython.org/ "Mod_python - Apache/Python Integration"), nutzt eine [PostgreSQL](http://www.postgresql.org/ "PostgreSQL")-Datenbank und [memcached](http://memcached.org/) zum Zwischenspeichern der Inhalte. Mit Hilfe von Git wird die Live-Website mit dem lokalen Entwicklungsserver abgeglichen. Der Einfachheit halber erledige ich das mit Hilfe von [Capistrano](http://capistranorb.com/) – ich bin halt faul.
 
 Der Entwicklungsserver nutzt übrigens eine [SQLite](http://www.sqlite.org/ "SQLite Home Page")-Datenbank. Die Website nutzt den Django-Trunk der über Git direkt mit dem Subversion-Trunk abgeglichen wird.
 
@@ -141,7 +141,7 @@ Um den Einstieg in Django zu erleichtern, habe ich nachfolgend eine Liste von in
 ### Lernen und Hilfe
 
 * [Google Groups Django users](http://groups.google.com/group/django-users "Django users | Google Groups") – Django Google Group, für Fragen und Antworten
-* [Django snippets](http://djangosnippets.org/) – Nützliche Sammlung von Filtern, Tags und Code-Schnipseln
+* [Django snippets](https://djangosnippets.org/) – Nützliche Sammlung von Filtern, Tags und Code-Schnipseln
 * [dpaste](http://dpaste.com/ "dpaste") – Zwischenablage für Code-Beispiele. Direkt in den IRC posten ist eine Todsünde.
 * [Django Resources](https://code.djangoproject.com/wiki/DjangoResources) – Riesige Liste von Django-Ressourcen: Applikationen, Projekte, Anleitungen, Präsentationen …
 
@@ -151,7 +151,7 @@ Um den Einstieg in Django zu erleichtern, habe ich nachfolgend eine Liste von in
 
 ### Showcases
 
-* [DjangoSites](http://www.djangosites.org/ "Latest Additions :: DjangoSites.org - Powered by Django") – Galerie mit Django-Websites
+* [DjangoSites](https://www.djangosites.org/ "Latest Additions :: DjangoSites.org - Powered by Django") – Galerie mit Django-Websites
 
 ### Merchandising
 
@@ -164,7 +164,7 @@ Um den Einstieg in Django zu erleichtern, habe ich nachfolgend eine Liste von in
 
 * [Adrian Holovarty](http://www.holovaty.com/ "Adrian Holovaty's Web site") – Entwickler von Django (Chicago, Illinois, US)
 * [Bryan Veloso: Avalonstar](http://avalonstar.com/ "avalonstar:distortion") – Designer und Blogger (Seattle, Washington, US)
-* [Jacob Kaplan-Moss](http://www.jacobian.org/ "jacobian.org : i got nothing") – Entwickler von Django (Lawrence, Kansas, US)
+* [Jacob Kaplan-Moss](http://jacobian.org/ "jacobian.org : i got nothing") – Entwickler von Django (Lawrence, Kansas, US)
 * [James Bennett: The B-List](http://www.b-list.org/ "The B-List: Latest entries") – Release Manager von Django (Lawrence, Kansas, US)
 * [Jeff Croft](http://jeffcroft.com/ "JeffCroft.com: Homepage") – Designer und Python Programmierer (Seattle, Washington, US)
 * [Nathan Borror](http://nthn.me/) – Designer (Lawrence, Kansas, US)
@@ -176,15 +176,13 @@ Um den Einstieg in Django zu erleichtern, habe ich nachfolgend eine Liste von in
 
 * [Django Blog](https://www.djangoproject.com/weblog/) – Der offizielle Django-Blog
 * [Django Community](https://www.djangoproject.com/community/) – Sammelt die Blogbeiträge von über 100 Django-Blogs
-* [Django Search](http://djangosearch.com/ "Django web framework search engine") – Django-Suchmaschine
 
 ### Hosting
 
 * [Django Friendly Webhosts](https://code.djangoproject.com/wiki/DjangoFriendlyWebHosts) – Liste von Hosts, die gut mit Django funktionieren
 * [Djangofriendly](http://djangofriendly.com/hosts/) – Digg-Style-Voting für Django-Hoster
 * [django-hosting.de](http://www.django-hosting.de/wiki/WikiIndex/) – Wiki mit verschiedenen Hosting-Anleitungen für Django
-* [Slicehost](http://www.slicehost.com/ "Slicehost - VPS Hosting") – Hoster für Entwickler
-* [Webfaction](http://www.webfaction.com/?affiliate=kogakure "Hosting for an agile web - WebFaction") – Hoster für Entwickler
+* [Webfaction](https://www.webfaction.com/?affiliate=kogakure "Hosting for an agile web - WebFaction") – Hoster für Entwickler
 
 ### Django-Sourcecode
 

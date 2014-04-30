@@ -47,7 +47,7 @@ Es stellt Verbindungen zur Datenbank her, verschickt E-Mails, speichert und läd
 
 ## Warum ist Django anders?
 
-Django ist ein [Python](http://www.python.org/)-Webframework und dennoch zeichnet es sich durch einige Unterschiede zu üblichen MVC-Webframeworks aus.
+Django ist ein [Python](https://www.python.org/)-Webframework und dennoch zeichnet es sich durch einige Unterschiede zu üblichen MVC-Webframeworks aus.
 
 Django ist in einer Umgebung von Zeitungen und Online-Portalen der Nachrichtenbranche entstanden, genauer gesagt für den Zeitungsverlag [Lawrence Journal-World](http://www2.ljworld.com/).
 
@@ -212,7 +212,7 @@ Eines darf natürlich nicht verschwiegen werden: Systeme die nicht PHP benutzen,
 
 Der Aufwand hält sich aber in Grenzen, schon das Modul *mod_python* reicht für Apache aus, um Django zum Laufen zu bringen, auch wenn es noch schnellere Möglichkeiten gibt. Es gibt mittlerweile gute [Dokumentationen](http://django-hosting.de/wiki/WikiIndex/) für die möglichen Arten der Produktionsumgebung.
 
-Daher ist es derzeit nicht denkbar, solche Systeme für den Fliesenleger von nebenan zu benutzen, denn ein eigener Server oder mindestens ein eigener VHost mit SSH-Zugang, und der Möglichkeit den Server selber zu konfigurieren, sollte schon vorliegen. Auf den üblichen Webhostingpaketen der Massenhoster läuft dies derzeit noch nicht. In den USA gibt es aber schon erste Angebote im sehr günstigen Bereich (z. B. [Webfaction](http://www.webfaction.com/?affiliate=kogakure), [Slicehost](http://www.slicehost.com/), [Mediatemple](http://mediatemple.net/webhosting/gs/) oder [Dreamhost](http://www.dreamhost.com/)), die den Einsatz von Django ermöglichen, ohne den Server selber konfigurieren zu müssen. Die Website [Djangofriendly](http://djangofriendly.com/hosts/) bietet eine große Liste mit Hostern, die Django schon unterstützten. Auf einem eigenen Server kann man es natürlich immer installieren.
+Daher ist es derzeit nicht denkbar, solche Systeme für den Fliesenleger von nebenan zu benutzen, denn ein eigener Server oder mindestens ein eigener VHost mit SSH-Zugang, und der Möglichkeit den Server selber zu konfigurieren, sollte schon vorliegen. Auf den üblichen Webhostingpaketen der Massenhoster läuft dies derzeit noch nicht. In den USA gibt es aber schon erste Angebote im sehr günstigen Bereich (z. B. [Webfaction](https://www.webfaction.com/?affiliate=kogakure), Slicehost, [Mediatemple](http://mediatemple.net/webhosting/shared/) oder [Dreamhost](http://www.dreamhost.com/)), die den Einsatz von Django ermöglichen, ohne den Server selber konfigurieren zu müssen. Die Website [Djangofriendly](http://djangofriendly.com/hosts/) bietet eine große Liste mit Hostern, die Django schon unterstützten. Auf einem eigenen Server kann man es natürlich immer installieren.
 
 Ob der Fliesenleger überhaupt ein CMS benötigt, steht auf einem anderen Blatt. Und bei Websites, die mehr seitenbasierenden Inhalt haben, ist ein System wie Typolight (jetzt [Contao](https://contao.org/de/)) mit Sicherheit die bessere Wahl.
 

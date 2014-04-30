@@ -24,11 +24,11 @@ Den mittlerweile veralteten Artikel von 2007 ersetze ich durch eine große Liste
 * [The Git Community Book](http://git-scm.com/book) – Das Community-Buch, online und als PDF herunterzuladen
 
 ### Kurze Anleitungen
-* [tryGit](http://try.github.com/levels/1/challenges/1) – Git interaktiv im Browser lernen
+* [tryGit](https://try.github.io/levels/1/challenges/1) – Git interaktiv im Browser lernen
 * [Git Immersion](http://gitimmersion.com/) – Sehr schön gestaltete Guided Tour durch die Grundlagen von Git.
-* [git – the simple guide](http://rogerdudler.github.com/git-guide/) – kurz und knapp auf einer langen Seite
-* [Offizielles Git Tutorial](http://www.kernel.org/pub/software/scm/git/docs/gittutorial.html "gittutorial(7)")
-* [Everyday Git](http://www.kernel.org/pub/software/scm/git/docs/everyday.html "Everyday GIT With 20 Commands Or So") – 20 Befehle, die für den Anfang nützlich sind
+* [git – the simple guide](http://rogerdudler.github.io/git-guide/) – kurz und knapp auf einer langen Seite
+* [Offizielles Git Tutorial](https://www.kernel.org/pub/software/scm/git/docs/gittutorial.html "gittutorial(7)")
+* [Everyday Git](https://www.kernel.org/pub/software/scm/git/docs/everyday.html "Everyday GIT With 20 Commands Or So") – 20 Befehle, die für den Anfang nützlich sind
 * [SVN Crash Course](http://git-scm.com/course/svn.html "Git - Fast Version Control System") – Ein Crash Course für Personen, die SVN bereits kennen
 * [Effectively Using Git With Subversion](http://viget.com/extend/effectively-using-git-with-subversion) – Eine gute Einführung, wie man Subversion (SVN) mit Git nutzt
 * [Git Ready](http://gitready.com/ "git ready &raquo; daily tips for the noob to the guru") – Kurze Git-Tipps für Beginner, Fortgeschrittene und Profis
@@ -38,29 +38,27 @@ Den mittlerweile veralteten Artikel von 2007 ersetze ich durch eine große Liste
 * [Git for Designers](http://hoth.entp.com/output/git_for_designers.html "Version Control for Designers") – Detailierter Anleitung für Einsteiger in Versionskontrolle
 * [Intro to Distributed Version Control (Illustrated)](http://betterexplained.com/articles/intro-to-distributed-version-control-illustrated/ "Intro to Distributed Version Control (Illustrated) | BetterExplained") – Detaillierte, illustrierte Erklärung von distributiver Versionskontrolle
 * [Git for Computer Scientists](http://eagain.net/articles/git-for-computer-scientists/ "Tv's cobweb: Git for Computer Scientists") – Eine schnelle Einführung in die technischen Details in Git
-* [Git User’s Manual](http://www.kernel.org/pub/software/scm/git/docs/user-manual.html "Git User's Manual (for version 1.5.3 or newer)") – Das offizielle Benutzerhandbuch
+* [Git User’s Manual](https://www.kernel.org/pub/software/scm/git/docs/user-manual.html "Git User's Manual (for version 1.5.3 or newer)") – Das offizielle Benutzerhandbuch
 * [Git Magic](http://www-cs-students.stanford.edu/~blynn/gitmagic/ "Git Magic - Preface") – Ein alternatives Buch
 * [The GitHub Guides](https://help.github.com/) – Diverse Tipps und Anleitungen für GitHub
-* [Git Internals](https://peepcode.com/products/git-internals-pdf) – PDF von Scott Chacon für $9.00
-* [An Illustrated Guide to Git on Windows](http://nathanj.github.com/gitguide/ "An Illustrated Guide to Git on Windows") – Schritt-für-Schritt-Anleitung für Windows-Nutzer
+* [An Illustrated Guide to Git on Windows](http://nathanj.github.io/gitguide/ "An Illustrated Guide to Git on Windows") – Schritt-für-Schritt-Anleitung für Windows-Nutzer
 * [vss2git](http://code.google.com/p/vss2git/) – Eine Windows-GUI, die ein existierendes Microsoft Visual SourceSafe 6.0 (VSS) Repository zu einem neuen Git-Repository exportiert.
 
 ## Referenzen
 
-* [Referenze-Handbuch](http://www.kernel.org/pub/software/scm/git/docs/ "git(1)") – Ausführliche Referenz aller Befehle
+* [Referenze-Handbuch](https://www.kernel.org/pub/software/scm/git/docs/ "git(1)") – Ausführliche Referenz aller Befehle
 * [Git Cheat Sheet](http://zrusin.blogspot.de/2007/09/git-cheat-sheet.html) – Ein nützliches Cheat Sheet
 
 ## Videos und Screencasts
 * [Offizielle Git-Screencasts](http://git-scm.com/videos)
 * [Google Tech Talk: Linus Torvalds on git](http://www.youtube.com/watch?v=4XpnKHJAok8) – Linus Torvalds präsentiert Git bei Google
 * [Google Tech Talk: Git](http://www.youtube.com/watch?v=8dhZ9BXQgc4 "YouTube - Git") – Randal Schwartz stellt Git eine Stunde lang vor
-* [Git Screencast](https://peepcode.com/products/git) – 60 Minuten Screencast von Scott Chacon für $9.00 (sehr detailliert)
 * [Git the basics](http://excess.org/article/2008/07/ogre-git-tutorial/ "OGRE Git Tutorial - excess.org") – Bart Trojanowski stellt Git vor (2 Teile)
 
 ## Git-Hosting
 * [GitHub](https://github.com/) – Kostenlose, öffentliche Repositorys bis <del>100</del> <ins>300</ins> MB, oder kommerzielle größere Angebote
 * [Bitbucket](https://bitbucket.org/) – Kostenlose, öffentliche und private Repositories für bis zu 5 Entwickler
-* [Gitorious](http://gitorious.org/ "Free open source project hosting - Gitorious") – Kostenlose, öffentliche Repositorys
+* [Gitorious](https://gitorious.org/ "Free open source project hosting - Gitorious") – Kostenlose, öffentliche Repositorys
 
 ## Software
 
@@ -76,7 +74,7 @@ Den mittlerweile veralteten Artikel von 2007 ersetze ich durch eine große Liste
 * [msysgit](http://code.google.com/p/msysgit/) – Eine Windows-Git-GUI
 * [Git Extensions](http://code.google.com/p/gitextensions/) – Eine schicke Windows-Git-GUI, mit 5 Screencasts zur Bedienung
 * [TortoiseGit](http://code.google.com/p/tortoisegit/ "tortoisegit - Google Code") – Git als Windows Explorer Shell-Erweiterung
-* [SmartGit](http://www.syntevo.com/smartgithg/index.html) – Kommerzielle Lösung für Windows, Mac OS X und Linux
+* [SmartGit](http://www.syntevo.com/smartgithg/) – Kommerzielle Lösung für Windows, Mac OS X und Linux
 
 ## Fazit
 
