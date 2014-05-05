@@ -100,7 +100,7 @@ Redirect 301 /notiz/duplikation-ist-in-ordnung                                  
 Redirect 301 /notiz/wichtig-website-neu                                          /2014/relaunch-responsive-web-design
 Redirect 301 /notiz/automatisierte-installation-mac-os-x                         /2014/automatisierte-installation-mac-os-x
 
-Redicect 301 /information/impressum                                             /impressum
+Redirect 301 /information/impressum                                             /impressum
 Redirect 301 /notizbuch                                                         {{ site.url }}/archiv
 
 # ##############################################################################
