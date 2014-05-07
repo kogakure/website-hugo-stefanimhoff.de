@@ -1,6 +1,7 @@
 # Tags
 
 37signals
+aliens
 apple
 appletv
 automatisierung
@@ -25,6 +26,7 @@ fabric
 farbe
 film
 game
+geschichte
 git
 github
 gitweb
@@ -56,7 +58,6 @@ praesentation
 python
 redirect
 relaunch
-relaunch
 responsive
 ruby
 rubyonrails
@@ -74,11 +75,10 @@ theme
 things
 tutorial
 typographie
-typographie
 unicode
-vektor
 vektor
 vim
 vokabel
 weiterleitung
 wiki
+wissenschaft
