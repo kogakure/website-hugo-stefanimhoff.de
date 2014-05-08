@@ -35,24 +35,28 @@ In dieser 3-stündigen Dokumentation beweisen die Autoren anhand von vielen, kla
 
 {% youtube j9w-i5oZqaQ %}
 
-In dieser Dokumentation kann man gut einige psychologische Konzepte beobachten und studieren.
+## Denkfehler der Kognitionspsychologie
+In dieser Dokumentation kann man gut einige psychologische Denkfehler beobachten und studieren, denen die Wissenschaftler von *Ancient Aliens* zum Opfer fallen.
 
-## Confirmation Bias
+### Confirmation Bias
 So lässt sich durchgehend *Confirmation Bias* (Betätigungsfehler) beobachten, die Autoren von *Ancient Aliens* ignorieren einfach alle Informationen, die nicht ihrer These von einer Besiedlung der Erde durch Aliens entsprechen. So gehen die Autoren von *Ancient Aliens* davon aus, dass die antike Stadt Baalbek eine Landeplattform für Ufos war, da die eingesetzten Steine so massiv sind, dass sie Menschen angeblich niemals hätten bewegen können. Anstatt also z. B. die Geologie der Region zu untersuchen und zu erkennen, dass das Sediment instabil ist und Bodenerosion ein großes Problem, und die Steine als Rückhaltemauer dienen, wird einfach ignoriert.
 
 Ein weiteres, interessantes Beispiel ist z. B. die Entdeckung der Maya. Als die ersten Städte im 19. und 20. Jahrhundert im Dschungel entdeckt wurden, waren viele Wissenschaftler so sehr voreingenommen vom Gedanken an den *edlen Wilden*, dass sich dieser Mythos bis Mitte des 20. Jahrhunderts hielt. Einige Mayaforscher weigerten sich bis zu ihrem Tod die neuen Erkenntnisse zu akzeptieren. Die Wandbilder mit Darstellungen von Krieg und Gräultaten waren auch früher schon gefunden worden, doch wurden sie anders interpretiert oder einfach ignoriert.
 
 Heute wissen wir, dass die Maya ein sehr kriegerisches Volk waren, die ihren Gegnern und Gefangenen grausames zufügten (z. B. Fingernägel ausreisen oder zu Bällen verschnüren und die Treppen hinunterzustoßen), die Natur gnadenlos ausbeuteten und am Ende durch exessiven Krieg und erschöpfte Ressourcen untergingen. Aber der Mythos vom weisen und edlen Sternenbeobachter, der in bunten Federn gekleidet Städte aus dem Dschungel wachsen lies, hört sich natürlich sehr schön an.
 
-## Texas Sharpshooter Fallacy
+### Texas Sharpshooter Fallacy
 Ebenfalls unterliegen die Wissenschaftler von *Ancient Aliens* diesem Denkfehler. Die *Texas Sharpshooter Fallacy* besagt, dass wir dazu neigen Muster zu erkennen und den Zufall zu ignorieren.
 
 Man lernt z. B. eine Person kennen und hört, dass diese auch einen bestimmten Film, Buch oder Sport mag. Sofort wird unser Gehirn aktiv und verbindet diese Gemeinsamkeiten und lässt uns glauben, wir wären der Person näher, auch wenn das Buch auch zehntausende andere Personen gelesen haben und dies möglicherweise gar nichts bedeutet.
 
-## Buchempfehlungen
-Wer mehr über unser Gehirn wissen möchte, dem empfehle ich diese beiden Bücher:
 
-- [You Are Not So Smart: Why Your Memory Is Mostly Fiction, Why You Have Too Many Friends On Facebook And 46 Other Ways You're Deluding Yourself]({% amazon 1851689397 %}), deutsche Übersetzung unter dem Titel [Ich denke, also irre ich: Wie unser Gehirn uns jeden Tag täuscht]({% amazon 3868822739 %})
-- [Thinking, Fast and Slow]({% amazon 0141033576 %}), deutsche Übersetzung unter dem Titel [Schnelles Denken, langsames Denken]({% amazon 3886808866 %})
+## Buchempfehlungen
+Es gibt noch mehr Beispiele in *Ancient Aliens*, wie z. B. die *Straw Man Fallacy*, die sogar direkt von den Produzenten der Dokumentation erwähnt wird. Wer mehr über unser Gehirn wissen möchte, dem empfehle ich diese beiden Bücher:
+
+<ul>
+<li><a href="{% amazon 1851689397 %}">You Are Not So Smart: Why Your Memory Is Mostly Fiction, Why You Have Too Many Friends On Facebook And 46 Other Ways You're Deluding Yourself</a>, deutsche Übersetzung unter dem Titel <a href="{% amazon 3868822739 %}">Ich denke, also irre ich: Wie unser Gehirn uns jeden Tag täuscht</a></li>
+<li><a href="{% amazon 0141033576 %}">Thinking, Fast and Slow</a>, deutsche Übersetzung unter dem Titel <a href="{% amazon 3886808866 %}">Schnelles Denken, langsames Denken</a></li>
+</ul>
 
 Beide Bücher erklären, warum unser Gehirn so funktionert, wie es ist und wo seine Schwächen liegen. Nach dem Studium dieser Bücher wird man zwar nicht immun gegen diese, aber kann möglicherweise hin und wieder in sich selbst oder bei anderen erkennen, wenn das Gehirn auf einen der untersuchten Denkfehler hereinfällt.
