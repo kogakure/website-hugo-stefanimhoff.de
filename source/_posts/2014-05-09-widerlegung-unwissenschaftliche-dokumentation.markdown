@@ -2,8 +2,8 @@
 layout: post
 title: "Widerlegung einer unwissenschaftlichen Dokumentation"
 author: "Stefan Imhoff"
-date: 2014-05-07 18:00
-published: false
+date: 2014-05-09 18:00
+published: true
 comments: false
 categories:
 - Film
