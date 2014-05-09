@@ -52,7 +52,7 @@ Ebenfalls unterliegen die Wissenschaftler von *Ancient Aliens* diesem Denkfehler
 
 Man lernt z. B. eine Person kennen und hört, dass diese auch einen bestimmten Film, Buch oder Sport mag. Sofort wird unser Gehirn aktiv und verbindet diese Gemeinsamkeiten und lässt uns glauben, wir wären der Person näher, auch wenn das Buch auch zehntausende andere Personen gelesen haben und dies möglicherweise gar nichts bedeutet.
 
-In der zuerst erwähnten Dokumentation wurde versucht, aus der Tatsache, dass sich in vielen Kulturen pyramidenähnliche Bauwerke finden, ein Muster und somit einen gemeinsamen Ursprung zu deuten (Aliens). Das dies aber rein zufällig ist, und leicht zu erklären wird einfach ignoriert. Die Pyramiden sind völlig verschiedener Bauweise und haben völlig verschiedene Funktionen. Einige dienen als Grabkammer, andere für rituelle Zwecke.
+In der zuerst erwähnten Dokumentation wurde versucht, aus der Tatsache, dass sich in vielen Kulturen pyramidenähnliche Bauwerke finden, ein Muster und somit einen gemeinsamen Ursprung herzuleiten (Aliens). Das dies aber rein zufällig ist, und leicht zu erklären, wird einfach ignoriert. Die Pyramiden sind völlig verschiedener Bauweise und haben unterschiedliche Funktionen. Einige dienen als Grabkammer, andere für rituelle Zwecke.
 
 Die chinesischen *Pyramiden* sind nicht aus Stein gebaut, sondern Grabhügel aus Erde. Menschen haben schon immer versucht, den Göttern näherzukommen und künstliche Hügel und hohe Bauwerke zu errichten. Die Pyramidenform ist einfach die stabilste Form für ein Bauwerk.
 
@@ -66,4 +66,4 @@ Es gibt noch mehr Beispiele in *Ancient Aliens*, wie z. B. die *Straw Man Fallac
 <li><a href="{% amazon 0141033576 %}">Thinking, Fast and Slow</a>, deutsche Übersetzung unter dem Titel <a href="{% amazon 3886808866 %}">Schnelles Denken, langsames Denken</a></li>
 </ul>
 
-Beide Bücher erklären, warum unser Gehirn so funktionert, wie es ist und wo seine Schwächen liegen. Nach dem Studium dieser Bücher wird man zwar nicht immun gegen diese, aber kann möglicherweise hin und wieder in sich selbst oder bei anderen erkennen, wenn das Gehirn auf einen der untersuchten Denkfehler hereinfällt.
+Beide Bücher erklären, warum unser Gehirn so funktionert, wie es ist und wo dessen Schwächen liegen. Nach dem Studium dieser Bücher wird man zwar nicht immun gegen diese, aber kann möglicherweise hin und wieder in sich selbst oder bei anderen erkennen, wenn das Gehirn auf einen der untersuchten Denkfehler hereinfällt.
