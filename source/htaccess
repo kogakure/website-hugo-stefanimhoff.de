@@ -254,24 +254,10 @@ AddDefaultCharset utf-8
   RewriteCond %{REQUEST_URI} !/$
   RewriteCond %{REQUEST_URI} !(.*)/$
   RewriteRule ^(.*)$ $1/ [L,R=301]
-</IfModule>
 
-# ------------------------------------------------------------------------------
-# | Suppressing the "www." at the beginning of URLs                  |
-# ------------------------------------------------------------------------------
-
-# The same content should never be available under two different URLs especially
-# not with and without "www." at the beginning. This can cause SEO problems
-# (duplicate content), therefore, you should choose one of the alternatives and
-# redirect the other one.
-
-# By default option 1 (no "www.") is activated:
-# http://no-www.org/faq.php?q=class_b
-
-<IfModule mod_rewrite.c>
-  RewriteCond %{HTTPS} !=on
-  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-  RewriteRule ^ http://%1%{REQUEST_URI} [R=301,L]
+  # Redirect (Aktion www.-freies Internet und Single Domain)
+  RewriteCond %{HTTP_HOST} !^stefanimhoff\.de$
+  RewriteRule ^(.*)$ {{ site.url }}/$1 [R=301,L]
 </IfModule>
 
 # ##############################################################################
