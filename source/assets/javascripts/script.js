@@ -9,11 +9,6 @@ $(function() {
   FastClick.attach(document.body);
 
 
-  // Widon't on all text
-  // ===================
-  // $(".article-title h1, .article-title h2, .page article h1, .post article h1, .page article h2, .post article h2, .page article h3, .post article h3").widont();
-
-
   // Fitvids
   // =======
   $(".container").fitVids();
