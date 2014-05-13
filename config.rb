@@ -1,7 +1,7 @@
 # Require any additional compass plugins here.
 require 'sass-globbing'
 require 'singularitygs'
-require 'singularity-extras'
+# require 'singularity-extras'
 require 'color-schemer'
 require 'toolkit'
 require 'modular-scale'

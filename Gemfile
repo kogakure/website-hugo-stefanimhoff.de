@@ -18,7 +18,7 @@ group :development do
 
   # Custom Gems
   gem 'singularitygs', '~> 1.2.1'              # Grids without limits
-  gem 'singularity-extras', '~> 1.0.0.alpha.3' # Singularity additional helper
+  # gem 'singularity-extras', '~> 1.0.0.alpha.3' # Singularity additional helper
   gem 'breakpoint'                             # Breakpoints
   gem 'color-schemer'                          # A sassy way to build color schemes
   gem 'toolkit'                                # Toolkit for Responsive Web Design and Progressive Enhancement
