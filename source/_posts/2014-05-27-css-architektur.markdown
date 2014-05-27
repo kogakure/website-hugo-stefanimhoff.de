@@ -24,7 +24,7 @@ Bei einem Webprojekt stellt insbesondere die Architektur der Stylesheets eine gr
 Die Verwendung eines CSS-Preprozessors wie [SASS](http://sass-lang.com/) ist mittlerweile eigentlich fast selbstverständlich. Ein solcher Preprozessor ermöglicht z. B. die Verwendung von Variablen, die Verschachtelung des CSS oder die Nutzung von Funktionen und Helfern.
 
 ## Compass
-Doch noch besser ist es ein CSS-Framework wie [Compass](http://compass-style.org/) zu verwenden. Der Vorteil liegt darin, dass diese schon mit einer großen Anzahl an fertigen Methoden kommen, und so Verhindern, dass das Rad neu erfunden werden muss. Mit Compass lassen sich z. B. sehr einfach Sprites generieren und viele CSS3-Methoden sorgen dafür, dass für alle Browser die korrekte Implementierung verwendet wird. Außerdem werden für Compass zahlreiche Erweiterungen angeboten.
+Doch noch besser ist es ein CSS-Framework wie [Compass](http://compass-style.org/) zu verwenden. Der Vorteil liegt darin, dass diese schon mit einer großen Anzahl an fertigen Methoden kommen, und so verhindern, dass das Rad neu erfunden werden muss. Mit Compass lassen sich sehr einfach Sprites generieren und viele CSS3-Methoden sorgen dafür, dass für alle Browser die korrekte Implementierung verwendet wird. Außerdem werden für Compass zahlreiche Erweiterungen angeboten.
 
 Ich verwende für meine Seite z. B. ein Gridsystem, Helfer für Typographie, Farben und Responsive Breakpoints.
 
@@ -77,13 +77,13 @@ Die Hauptdatei ist die `application.scss`. Diese Datei lädt alle weiteren Datei
 
 Außerdem liegt auf der Hauptebene noch das Print-Stylesheet, das steuert, wie die Website im Ausdruck aussieht.
 
-Im Ordner `base` befindet sich ein Partial, in dem die Basis-Stile definiert werden, also Grundlegende Dinge zu Typographie, Überschriften, Absätzen, Listen etc.
+Im Ordner `base` befindet sich ein Partial, in dem die Basis-Stile definiert werden, also grundlegende Dinge zu Typographie, Überschriften, Absätzen, Listen etc.
 
-Außerdem liegen hier noch Dateien für Sprites, Iconfonts und ähnliche Dinge.
+Außerdem liegen hier noch Dateien für Sprites, Icon-Fonts und ähnliche Dinge.
 
 Der Ordner `helpers` enthält Partials für Debugging, Import von Plugins, Mixins, Placeholder-Funktionen und Variablen, also z. B. Farben, Abstände, etc.
 
-Grundlegendes Styling von Container wie dem Header, Footer, der Navigation oder auch der Grids liegen im Ordner `layout`.
+Grundlegendes Styling von Containern wie dem Header, Footer, der Navigation oder auch der Grids liegen im Ordner `layout`.
 
 Eines der wichtigsten Konzepte von SMACSS ist das Schreiben von modularem SCSS. Diese Module liegen im Ordner `module`. Sobald sich ein Element als Modul identifizieren lässt wird es als eigene Datei abgelegt und alle Variationen des Moduls werden ebenfalls in der Datei des jeweiligen Moduls gepflegt. Module sollten eigenständig funktionieren und keine externen Abhängigkeiten zu anderen Teilen der Seite haben.
 
@@ -93,4 +93,4 @@ Das Konzept von `states` besagt, dort alle Stile abzulegen, die den Zustand eine
 
 Für meine Seite verwende ich auch Themes, die im Ordner `theme` abgelegt werden. Mit dem spezifischen Dateien in diesem Ordner überschreibe ich bestimmte Farben und Bilder, und kann so eine andere Anmutung meiner Seite erreichen. Durch den Aufruf einer anderen Theme-Datei sieht die Website dann plötzlich anders aus.
 
-Im Ordner `vendor` wird aller Code abgelegt, der von Extern kommt, also das CSS von Plugins oder z. B. das Solarized-Farbschema, mit dem ich meine Codebeispiele einfärbe.
+Im Ordner `vendor` wird aller Code abgelegt, der von Extern kommt, also das CSS von Plugins oder z. B. das [Solarized](http://ethanschoonover.com/solarized)-Farbschema, mit dem ich meine Codebeispiele einfärbe.
