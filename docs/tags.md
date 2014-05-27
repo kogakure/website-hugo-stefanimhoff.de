@@ -11,6 +11,7 @@ buch
 business
 capistrano
 command
+compass
 customize
 deployment
 design
@@ -62,9 +63,11 @@ responsive
 ruby
 rubyonrails
 rwd
+sass
 schrift
 screencast
 server
+smacss
 software
 sprache
 subversion
