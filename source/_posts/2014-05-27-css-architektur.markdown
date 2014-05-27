@@ -16,17 +16,17 @@ tags:
 
 Bei einem Webprojekt stellt insbesondere die Architektur der Stylesheets eine große Herausforderung dar. Denn CSS wird schnell unverständlich und ist schwer zu warten, wenn nicht von Anfang an eine saubere und modulare Struktur verwendet wird.
 
-{% figure "Peter Griffin CSS Meme. Das komplette GIF (ca. 2 MB) gibt es <a href='http://imgur.com/Q3cUg29'>hier</a>." %}
-<img src="{{ 'artikel/css-peter-griffin-meme.jpg' | asset_path }}" alt="Peter Griffin CSS Meme">
+{% figure "Peter Griffin CSS-Meme. Das komplette GIF (ca. 2 MB) gibt es <a href='http://imgur.com/Q3cUg29'>hier</a>." %}
+<img src="{{ 'artikel/css-peter-griffin-meme.jpg' | asset_path }}" alt="Peter Griffin CSS-Meme">
 {% endfigure %}
 
 ## Preprozessoren
 Die Verwendung eines CSS-Preprozessors wie [SASS](http://sass-lang.com/) ist mittlerweile eigentlich fast selbstverständlich. Ein solcher Preprozessor ermöglicht z. B. die Verwendung von Variablen, die Verschachtelung des CSS oder die Nutzung von Funktionen und Helfern.
 
 ## Compass
-Doch noch besser ist es ein CSS-Framework wie [Compass](http://compass-style.org/) zu verwenden. Der Vorteil liegt darin, dass diese schon mit einer großen Anzahl an fertigen Methoden kommen, und so verhindern, dass das Rad neu erfunden werden muss. Mit Compass lassen sich sehr einfach Sprites generieren und viele CSS3-Methoden sorgen dafür, dass für alle Browser die korrekte Implementierung verwendet wird. Außerdem werden für Compass zahlreiche Erweiterungen angeboten.
+Doch noch besser ist es ein CSS-Framework wie [Compass](http://compass-style.org/) zu verwenden. Der Vorteil liegt darin, dass diese schon mit einer großen Anzahl an fertigen Methoden kommen, und so verhindern, dass das Rad neu erfunden werden muss. Mit Compass lassen sich sehr einfach Sprites generieren und viele Methoden sorgen dafür, dass für die unterschiedlichen Browser die korrekte Implementierung verwendet wird. Außerdem werden für Compass zahlreiche Erweiterungen angeboten.
 
-Ich verwende für meine Seite z. B. ein Gridsystem, Helfer für Typographie, Farben und Responsive Breakpoints.
+Ich verwende für meine Seite z. B. ein [Gridsystem](http://singularity.gs/), Helfer für Typographie, Farben und Responsive Breakpoints.
 
 Doch auch Compass schlägt keine Strukturierung des SASS oder SCSS vor. Dafür gibt es aber einige Konzepte und Ideen, die bei der Architektur von Projekten helfen sollen. Eines dieser Konzepte ist [SMACSS](http://smacss.com/).
 
