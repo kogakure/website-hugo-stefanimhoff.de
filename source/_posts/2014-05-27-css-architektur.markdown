@@ -3,7 +3,7 @@ layout: post
 title: "Die CSS-Architektur meiner Website"
 author: "Stefan Imhoff"
 date: 2014-05-27 18:00
-published: false
+published: true
 comments: false
 categories:
 - Code
