@@ -70,7 +70,7 @@ Meine Dateistruktur sieht wie folgt aus:
 │   └── _bonsai.scss
 └── vendor
     ├── _solarized.scss
-        └── _syntax.scss
+    └── _syntax.scss
 ```
 
 Die Hauptdatei ist die `application.scss`. Diese Datei lädt alle weiteren Dateien und wird von der Asset-Pipeline später minimiert.
