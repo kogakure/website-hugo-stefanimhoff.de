@@ -20,6 +20,11 @@ Ob es sich dabei um historische Bauten, Kulturen, evolutionsbiologische Erkenntn
 
 Manche Personen, wie z. B. Erich von Däniken, haben ihr ganzes Leben solchen wirren Theorien gewidmet. Anstatt eine Sache mit wissenschaftlicher Genauigkeit zu untersuchen und zu hinterfragen, werden Theorien über völlig unglaubwürdige Vermutungen und Geschichten erdacht, Parallelen zwischen Kulturen  oder über Zeiten und Räume hinweg gezogen.
 
+{% figure attribution figure--hangleft "Kein antiker Raumfahrer, sondern der Maya-König K'inich Janaab' Pakal im Augenblick seines Todes. Im Hintergrund der Weltenbaum und die Unterwelt unter ihm." %}
+<img src="{{ 'artikel/pakals-grabplatte.jpg' | asset_path }}" alt="Pakal's Grabplatte">
+<p class="attribution__text"><i class="icon-cc"></i> malavodao, <a href="https://www.flickr.com/photos/malavoda/518538543">Pakal's Grabplatte</a></p>
+{% endfigure %}
+
 Wenn einzelne Dinge aus ihrem Kontext gerissen werden, klingt elektrisches Licht im alten Ägypten, Ufolandeplattformen auf antiken Bauwerken, Bilder von uralten Raumfahrern, Besuche von übermächtigen Wesen aus dem Weltall plötzlich als die *einzig plausible* Lösung für wissenschaftliche Fragen.
 
 Durch Zufall wurde ich kürzlich mal wieder auf ein *unglaubliches* und *fantastisches* Video hingewiesen, was die Wahrheit über ein uraltes Geheimnis aufdecken würde, das in den Pyramiden dieser Welt hinterlegt wäre und auf das Ende der Welt hinweisen würde.
