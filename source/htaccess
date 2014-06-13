@@ -34,6 +34,17 @@ Redirect Gone /notiz/textmate-snippet-dummy-image-generator
 Redirect Gone /notiz/warum-google-wave-kommunikation-veraendern-wird
 Redirect Gone /notiz/why-we-fight
 Redirect Gone /notiz/wie-marions-kochbuch-google-manipuliert
+Redirect Gone /projekte/
+Redirect Gone /information/
+Redirect Gone /notiz/django/
+Redirect Gone /main/kategorie/design/
+Redirect Gone /main/kategorie/screencast/
+Redirect Gone /archiv/P0/
+Redirect Gone /notizbuch/P0/
+Redirect Gone /projekte/praxis-elena-kohl/
+Redirect Gone /projekte/bewernick/
+Redirect Gone /projekte/mieterverein-hamburg/
+Redirect Gone /projekte/sushi-dreams/
 
 # Redirects (Permanent)
 Redirect 301 /+/                                                                 https://plus.google.com/104687479698350625994/
@@ -49,6 +60,7 @@ Redirect 301 /notiz/terminal-stoeckchen                                         
 Redirect 301 /notiz/django-relaunch-von-kogakure-de                              /2008/django-relaunch-kogakure-de
 Redirect 301 /notiz/django-relaunch-kogakure-de                                  /2008/django-relaunch-kogakure-de
 Redirect 301 /notiz/server-verwaltung-mit-capistrano                             /2008/server-verwaltung-capistrano
+Redirect 301 /notiz/server-verwaltung-capistrano                                 /2008/server-verwaltung-capistrano
 Redirect 301 /notiz/grundlagen-von-python-django-fuer-anfaenger                  /2008/grundlagen-python-django-anfaenger
 Redirect 301 /notiz/grundlagen-python-django-anfaenger                           /2008/grundlagen-python-django-anfaenger
 Redirect 301 /notiz/kostenlose-vektorkarten-mit-openstreetmap                    /2008/kostenlose-vektorkarten-openstreetmap
