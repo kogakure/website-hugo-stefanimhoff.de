@@ -60,7 +60,7 @@
   background-image: inline-image("css/patterns/nami_@2X.png");
 }
 
-// 16x16, < 1 KB
+// 16x16, < 1 KB (NICHT VERWENDET)
 %pattern-p5 {
   @include background-size(8px 8px);
   background-color: #F8F8F8;
@@ -81,7 +81,7 @@
   background-image: inline-image("css/patterns/px_@2X.png");
 }
 
-// 400x400, 65 KB
+// 400x400, 65 KB (NICHT VERWENDET)
 %pattern-skulls {
   @include background-size(400px 400px);
   background-color: #ECECD4;
