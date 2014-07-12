@@ -17,6 +17,12 @@ permalink: .htaccess
 # ------------------------------------------------------------------------------
 
 # Redirects (Gone)
+Redirect Gone /archiv/P0/
+Redirect Gone /information/
+Redirect Gone /main/kategorie/design/
+Redirect Gone /main/kategorie/fundstueck/
+Redirect Gone /main/kategorie/musik/
+Redirect Gone /main/kategorie/screencast/
 Redirect Gone /notiz/abmahnung-kogakure-zitat-karl-valentin
 Redirect Gone /notiz/bash_profile-striptease
 Redirect Gone /notiz/blender-animationsfilm-big-buck-bunny
@@ -24,6 +30,7 @@ Redirect Gone /notiz/chris-jordan-zeigt-unsere-masslosigkeit-in-erschreckenden-b
 Redirect Gone /notiz/cms-weblog-systeme-reloaded
 Redirect Gone /notiz/die-schatzinsel-bei-pro7
 Redirect Gone /notiz/django-und-das-framework-ding
+Redirect Gone /notiz/django/
 Redirect Gone /notiz/einfach-die-welt-veraendern
 Redirect Gone /notiz/expression-engine-2-sneak-preview
 Redirect Gone /notiz/glueckliche-mitarbeiter
@@ -34,16 +41,11 @@ Redirect Gone /notiz/textmate-snippet-dummy-image-generator
 Redirect Gone /notiz/warum-google-wave-kommunikation-veraendern-wird
 Redirect Gone /notiz/why-we-fight
 Redirect Gone /notiz/wie-marions-kochbuch-google-manipuliert
-Redirect Gone /projekte/
-Redirect Gone /information/
-Redirect Gone /notiz/django/
-Redirect Gone /main/kategorie/design/
-Redirect Gone /main/kategorie/screencast/
-Redirect Gone /archiv/P0/
 Redirect Gone /notizbuch/P0/
-Redirect Gone /projekte/praxis-elena-kohl/
+Redirect Gone /projekte/
 Redirect Gone /projekte/bewernick/
 Redirect Gone /projekte/mieterverein-hamburg/
+Redirect Gone /projekte/praxis-elena-kohl/
 Redirect Gone /projekte/sushi-dreams/
 
 # Redirects (Permanent)
@@ -111,6 +113,8 @@ Redirect 301 /notiz/buchtipp-decodeunicode                                      
 Redirect 301 /notiz/duplikation-ist-in-ordnung                                   /2013/duplikation-ist-in-ordnung
 Redirect 301 /notiz/wichtig-website-neu                                          /2014/relaunch-responsive-web-design
 Redirect 301 /notiz/automatisierte-installation-mac-os-x                         /2014/automatisierte-installation-mac-os-x
+Redirect 301 /main/kategorie/gtd                                                 /kategorie/produktivitaet/
+Redirect 301 /main/kategorie/python                                              /tag/python/
 
 Redirect 301 /information/impressum                                             /impressum
 Redirect 301 /notizbuch                                                         {{ site.url }}/archiv
