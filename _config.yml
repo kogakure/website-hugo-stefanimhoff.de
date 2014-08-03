@@ -54,9 +54,20 @@ linklog_marker_position_feed: after
 standard_post_marker:
 
 # Attribution
-attribution_name: "「大宮盆栽×タムロン」大宮盆栽美術館で盆栽撮影にチャレンジ！ブロガーイベント"
-attribution_url: "https://www.flickr.com/photos/norio-nakayama/9156103138"
-attribution_author: "Norio NAKAYAMA"
+# ===========
+
+# Bambus
+# ------
+# attribution_name: "「大宮盆栽×タムロン」大宮盆栽美術館で盆栽撮影にチャレンジ！ブロガーイベント"
+# attribution_url: "https://www.flickr.com/photos/norio-nakayama/9156103138"
+# attribution_author: "Norio NAKAYAMA"
+# attribution_creative_commons: true
+
+# Zitrone
+# -------
+attribution_name: "solo sunshine"
+attribution_url: "https://www.flickr.com/photos/suttonhoo22/328647662/"
+attribution_author: "Dayna Bateman"
 attribution_creative_commons: true
 
 # RSS / Email (optional) subscription links (change if using something like Feedburner)
