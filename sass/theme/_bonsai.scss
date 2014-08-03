@@ -6,40 +6,36 @@
 // ----------------------------------------------------------------------------
 
 // Colors
-$mostly-desaturated-dark-orange: #a09278;
-$slightly-desaturated-green:     #89B46B;
-$very-dark-orange:               #100d09;
-$grayish-cyan:                   #c1c7c9;
-$very-dark-green:                #47691e;
+$highlight-color:         #89B46B;
 
 // Header
-$header-background:          $mostly-desaturated-dark-orange;
-$header-border-top-color:    $very-dark-orange;
-$header-headline:            $white;
-// $header-subheadline:         tint($slightly-desaturated-green, 20);
-$header-subheadline:         $black;
+$header-background:       #a09278;
+$header-border-top-color: #100d09;
+$header-headline:         $white;
+// $header-subheadline:   tint($highlight-color, 20);
+$header-subheadline:      $black;
 
 // Logo
-$logo-color:                 #b42b2c;
+$logo-color:              #b42b2c;
 
 // Navigation
-$nav-link-color-hover:       $slightly-desaturated-green;
+$nav-link-color-hover:    $highlight-color;
 
 // Links
-$link-color:                 $slightly-desaturated-green;
-$link-hover-color:           $dark-grey;
-$link-active-color:          $dark-grey;
-$link-visited-color:         $slightly-desaturated-green;
-$link-focus-color:           $dark-grey;
+$link-color:              $highlight-color;
+$link-hover-color:        $dark-grey;
+$link-active-color:       $dark-grey;
+$link-visited-color:      $highlight-color;
+$link-focus-color:        $dark-grey;
 
-$link-border-color:          rgba($dark-grey, 0.2);
-$link-hover-border-color:    $slightly-desaturated-green;
+$link-border-color:       rgba($dark-grey, 0.2);
+$link-hover-border-color: $highlight-color;
 
 // ::selection
-$selection-background:       $slightly-desaturated-green;
-$selection-color:            $white;
+$selection-background:    $highlight-color;
+$selection-color:         $white;
 
 // Pfade
 // ----------------------------------------------------------------------------
 
-$header-background-url:      "/assets/images/css/header/bonsai.jpg";
+$header-background-url:   "/assets/images/css/header/bonsai.jpg";
