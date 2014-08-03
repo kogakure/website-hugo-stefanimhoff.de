@@ -1,10 +1,12 @@
 # Tags
 
 - 37signals
+- agrawissenschaft
 - aliens
 - apple
 - appletv
 - automatisierung
+- bauernhof
 - blender
 - bokeh
 - bonsai
@@ -30,6 +32,7 @@
 - film
 - foto
 - game
+- garten
 - geschichte
 - git
 - github
@@ -69,6 +72,7 @@
 - sass
 - schrift
 - screencast
+- selbstversorgung
 - server
 - smacss
 - software
