@@ -40,8 +40,6 @@ Bereits vor einigen Jahren stolperte ich über zwei interessante Vorträge von T
 
 {% vimeo 17079380 %}
 
-{% vimeo 56276418 %}
-
 Ich entschied mich mit der Auswahl einer Skala zu beginnen. Eine typographische Skala ist die Auswahl von harmonischen Proportionen, die danach auf Schriftgröße, Satzbreite und andere Teile angewendet wird.
 
 Die bekannteste Proportion ist der *Goldene Schnitt*, der ein Verhältnis von `1:1,618` hat. Aber es gibt noch viele andere Proportionen, die ihren Ursprung in Geometrie, Musik, Natur oder Geschichte haben. Tim Brown hat sogar extra die Website [Modular Scale](http://modularscale.com/) erstellt, auf der sich eine solche Skala errechnen lässt.
