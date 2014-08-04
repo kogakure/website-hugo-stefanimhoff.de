@@ -10,7 +10,7 @@
 #    Did gyre and gimble            in the wabe;
 #    All mimsy     were     the borogoves,
 #    And       the mome     raths            outgrabe.
-#   {% endblockquote %}
+#   {% endverse %}
 #   ...
 #   <blockquote class="verse">
 #   <pre>
