@@ -4,9 +4,8 @@
 @import "helpers/mixins";
 @import "helpers/placeholders";
 
-// Theme (Nicht vergessen das Copyright in _config.yml anzupassen!)
-// @import "theme/bonsai";
-@import "theme/zitrone";
+// Theme
+@import "theme/init";
 
 // Vektor-Fonts
 @import "base/iconfont";
