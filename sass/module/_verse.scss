@@ -13,14 +13,16 @@
 }
 
 .verse pre {
-  font-family: inherit;
   @include grid-span(4, 3, 8);
+  font-family: inherit;
 
   @include breakpoint($content-medium) {
     @include grid-span(10, 2, 12);
+    overflow-x: visible;
   }
 
   @include breakpoint($content-small) {
     @include grid-span(12);
+    overflow-x: auto;
   }
 }
