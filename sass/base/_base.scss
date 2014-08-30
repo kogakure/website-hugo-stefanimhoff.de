@@ -141,6 +141,7 @@ abbr.no-caps {
 // ----------------------------------------------------------------------------
 pre {
   @include trailer(1);
+  overflow-x: auto;
 }
 
 .code .gist .gist-file {
