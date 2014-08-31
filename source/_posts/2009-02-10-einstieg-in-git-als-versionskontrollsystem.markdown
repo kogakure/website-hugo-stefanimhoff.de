@@ -67,7 +67,7 @@ Den mittlerweile veralteten Artikel von 2007 ersetze ich durch eine große Liste
 * [OpenInGitGui](http://code.google.com/p/git-osx-installer/wiki/OpenInGitGui "OpenInGitGui - git-osx-installer - Google Code") – Ein Shortcut für den OSX Finder
 * [Git TextMate-Bundle](https://github.com/jcf/git-tmbundle) – TextMate-Bundle
 * [ProjectPlus](http://ciaranwal.sh/2008/08/05/textmate-plug-in-projectplus "Ciarán Walsh’s Blog &raquo; TextMate Plug-in: ProjectPlus") – TextMate Plug-In, das Git, Mercurial, Bazaar und SVN Statusflaggen unterstützt
-* [Gity](http://gityapp.com/) – Git-GUI mit vielen Funktionen im Snow Leopard Style (jetzt unter OpenSource!)
+* [Gity](https://github.com/beheadedmyway/gity) – Git-GUI mit vielen Funktionen im Snow Leopard Style (jetzt unter OpenSource!)
 * [GitX](http://gitx.frim.nl/ "GitX") – Schicke Git-GUI für Mac OS X
 
 ### Windows

@@ -36,4 +36,4 @@ Der Film soll die Zuschauer bewegen, damit sie darüber schreiben, ihre Regierun
 
 Der Film fährt mit harten Fakten und erschreckenden Bildern auf, die selbst gebildete und gut informierte Personen noch erschrecken werden, zeitweise kam ich mir wie im Film Matrix vor, nachdem Neo die rote Pille genommen hatte.
 
-Mehr Informationen gibt es auf der [offiziellen Website](http://www.homethemovie.org/). Den Film kann man in HD auf [YouTube](http://www.youtube.com/user/homeprojectDE) ansehen.
+Mehr Informationen gibt es auf der [Wikipedia-Seite](http://de.wikipedia.org/wiki/Home_(Dokumentarfilm\)). Den Film kann man in HD auf [YouTube](http://www.youtube.com/user/homeprojectDE) ansehen.
