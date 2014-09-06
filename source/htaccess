@@ -117,6 +117,8 @@ Redirect 301 /main/kategorie/gtd                                                
 Redirect 301 /main/kategorie/python                                              /tag/python
 
 Redirect 301 /information/impressum                                             /impressum
+Redirect 301 /main/kategorie/tutorial                                           /tag/tutorial
+Redirect 301 /main/kategorie/download                                           /tag/download
 Redirect 301 /notizbuch                                                         {{ site.url }}/archiv
 
 # ##############################################################################
