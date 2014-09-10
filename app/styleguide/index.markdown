@@ -12,36 +12,36 @@ Die Hauptüberschrift dieses Styleguides[^1] in eine `h1`. Jede Überschrift kan
 
 Die 2. Überschrift oben ist eine `h2`, die benutzt werden kann um Hauptsektionen auf Seitenebene zu markieren. Davon kann mehr als eine Überschrift pro Seite verwendet werden.
 
-```html
+{% highlight html %}
 ## Überschrift der zweiten Ordnung
-```
+{% endhighlight %}
 
 ### Überschrift der dritten Ordnung
 Die Überschrift oben ist eine `h3`, die benutzt werden kann für jede Überschrift die in der Hierarchie unter der `h2` ist.
 
-```html
+{% highlight html %}
 ### Überschrift der dritten Ordnung
-```
+{% endhighlight %}
 
 #### Überschrift der vierten Ordnung
 Die Überschrift oben ist eine `h4`, die benutzt werden kann für jede Überschrift die in der Hierarchie unter der `h3` ist.
 
-```html
+{% highlight html %}
 #### Überschrift der vierten Ordnung
-```
+{% endhighlight %}
 ##### Überschrift der fünften Ordnung
 Die Überschrift oben ist eine `h5`, die benutzt werden kann für jede Überschrift die in der Hierarchie unter der `h4` ist.
 
-```html
+{% highlight html %}
 ##### Überschrift der fünften Ordnung
-```
+{% endhighlight %}
 
 ###### Überschrift der sechsten Ordnung
 Die Überschrift oben ist eine `h6`, die benutzt werden kann für jede Überschrift die in der Hierarchie unter der `h5` ist.
 
-```html
+{% highlight html %}
 ###### Überschrift der sechsten Ordnung
-```
+{% endhighlight %}
 
 
 ## Absätze
@@ -50,11 +50,11 @@ Alle Absätze werden in `p` gewrappt. Zusätzlich können `p` auch in `blockquot
 
 Absätze sind in der Textgestaltung einen aus einem oder mehreren Sätzen bestehenden Abschnitt eines fortlaufenden Textes. Ein Absatz ist ein Sinnzusammenhang oder ein eigenes kleines Thema. Ist dieser Gedanke ausgeführt, folgt ein neuer Absatz.
 
-```html
+{% highlight html %}
 Dies ist ein Absatz.
 
 Dies ist ein zweiter Absatz.
-```
+{% endhighlight %}
 
 ## Sektionen-Trenner
 
@@ -68,13 +68,13 @@ Dudley was ninety-two, in his second life, and fast approaching time for another
 
 The Carlton AllLander drove Dudley home just after dawn. Like the astronomer, the vehicle was old and worn, but perfectly capable of doing its job. It had a cheap diesel engine, common enough on a semi-frontier world like Gralmond, although its drive array was a thoroughly modern photoneural processor. With its high suspension and deep-tread tyres it could plough along the dirt track to the observatory in all weather and seasons, including the metre-deep snow of Gralmond’s winters.
 
-```html
+{% highlight html %}
 Dudley was ninety-two, in his second life …
 
 ---------------------------------------
 
 The Carlton AllLander drove Dudley home just after dawn. …
-```
+{% endhighlight %}
 
 
 ## Preformatierter Text
@@ -90,11 +90,11 @@ a b c d e f g h i j k l m n o
 p q r s t u v w x y z { | } ~
 </pre>
 
-```html
+{% highlight html %}
 <pre>
 Dies    soll genau  S O  aussehen.
 </pre>
-```
+{% endhighlight %}
 
 
 ## Zitate
@@ -111,11 +111,11 @@ Zusätzlich dazu kann auch das Element `cite` verwendet werden, um ein Werk zu m
 Dies ist ein Zitat.
 {% endblockquote %}
 
-```html
+{% highlight html %}
 {% raw %}{% blockquote %}
 Dies ist ein Zitat.
 {% endblockquote %}{% endraw %}
-```
+{% endhighlight %}
 
 #### Zitat aus einem gedruckten Werk
 
@@ -127,11 +127,11 @@ Drei Ringe den Elben, hoch im Licht. Sieben den Zwergen in ihren Hallen aus Stei
 Flying is learning how to throw yourself at the ground and miss.
 {% endblockquote %}
 
-```html
+{% highlight html %}
 {% raw %}{% blockquote Douglas Adams, The Hichhikers Guide to the Galaxy %}
 …
 {% endblockquote %}{% endraw %}
-```
+{% endhighlight %}
 
 #### Zitat von Twitter
 
@@ -139,11 +139,11 @@ Flying is learning how to throw yourself at the ground and miss.
 Over the past 24 hours I've been reflecting on my life & I've realized only one thing. I need a medieval battle axe.
 {% endblockquote %}
 
-```html
+{% highlight html %}
 {% raw %}{% blockquote @allanbranch https://twitter.com/allanbranch/status/90766146063712256 %}
 …
 {% endblockquote %}{% endraw %}
-```
+{% endhighlight %}
 
 #### Zitat aus einem Artikel im Internet
 
@@ -155,11 +155,11 @@ Every interaction is both precious and an opportunity to delight.
 Many forms of Government have been tried, and will be tried in this world of sin and woe. No one pretends that democracy is perfect or all-wise. Indeed, it has been said that democracy is the worst form of government except all those other forms that have been tried from time to time.
 {% endblockquote %}
 
-```html
+{% highlight html %}
 {% raw %}{% blockquote Seth Godin http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html Welcome to Island Marketing %}
 …
 {% endblockquote %}{% endraw %}
-```
+{% endhighlight %}
 
 ### Pullquote
 
@@ -175,11 +175,11 @@ Wenn man sehr lange Absätze schreibt, ist es hilfreich ein herausgeschobenen Zi
 Wenn man sehr lange Absätze schreibt, ist es hilfreich ein herausgeschobenen Zitatblock zu verwenden, der einen wichtigen Teil des Abschnitts markiert. Einige benutzen vielleicht lieber viele Überschriften, was auch meistens gut funktioniert, aber weniger gut für lange Prosa geeignet ist. {" Wichtig anzumerken ist, dass die Pullquotes nur visuelle Präsentation sind und nicht zweimal im Code erscheinen. "} Deshalb werden CSS-Techniken angewandt, um das Zitat ein weiteres mal sichtbar zu machen. In Octopress kann man dieses sehr einfach mit dem Pullquote-Tag erreichen.
 {% endpullquote %}
 
-```html
+{% highlight html %}
 {% raw %}{% pullquote left %}
 Wenn man sehr lange Absätze schreibt, … {" Wichtig anzumerken ist … und nicht zweimal im Code erscheinen. "} Deshalb werden CSS-Techniken angewandt, um …
 {% endpullquote %}{% endraw %}
-```
+{% endhighlight %}
 
 #### Pullquote (zentriert)
 
@@ -189,43 +189,43 @@ Manchmal möchte man einen kurzen Zitatblock verwenden, der nicht im Text vorkom
 <p>No time for pessimism.</p>
 </blockquote>
 
-```html
+{% highlight html %}
 <blockquote lang="en" class="pullquote">
 <p>No time for pessimism.</p>
 </blockquote>
-```
+{% endhighlight %}
 
 ### Inline-Zitate
 
 Peter sagte <q>Sie soll mir das sofort hergeben</q> und war ziemlich sauer.
 
-```html
+{% highlight html %}
 Peter sagte <q>Sie soll mir das sofort hergeben</q> und war ziemlich sauer.
-```
+{% endhighlight %}
 
 #### Deutsche Zitate (verschachtelt)
 
 Luke führte weiter aus, <q>Und sie nannte ihn einen <q>total blöd-aussehenen Idioten</q>! Ich denke ich habe eine Chance!</q> Dieser arme Idiot …
 
-```html
+{% highlight html %}
 Luke führte weiter aus, <q>Und sie nannte ihn einen <q>total blöd-aussehenen Idioten</q>! Ich denke ich habe eine Chance!</q> Dieser arme Idiot …
-```
+{% endhighlight %}
 
 #### Englische Zitate (verschachtelt)
 
 <p lang="en">Luke conntinued, <q>And the she called him a <q>scruffy-looking nerf-herder</q>! I think I’ve got a chance!</q> The poor naive fool …</p>
 
-```html
+{% highlight html %}
 <p lang="en">Luke conntinued, <q>And the she called him a <q>scruffy-looking nerf-herder</q>! I think I’ve got a chance!</q> The poor naive fool …</p>
-```
+{% endhighlight %}
 
 #### Japanische Zitate (verschachtelt)
 
 <p lang="ja">彼女は<q>日本語に猫は<q>にゃん</q>と鳴く</q>と言った。</p>
 
-```html
+{% highlight html %}
 <p lang="ja">彼女は<q>日本語に猫は<q>にゃん</q>と鳴く</q>と言った。</p>
-```
+{% endhighlight %}
 
 
 ## Verse
@@ -239,14 +239,14 @@ All mimsy     were     the borogoves,
 And       the mome     raths            outgrabe.
 {% endverse %}
 
-```html
+{% highlight html %}
 {% raw %}{% verse Lewis Carroll, Jabberwocky (1832-98) %}
 ‘Twas brillig, and the slithy toves
 Did gyre and gimble            in the wabe;
 All mimsy     were     the borogoves,
 And       the mome     raths            outgrabe.
 {% endverse %}{% endraw %}
-```
+{% endhighlight %}
 
 ## Randbemerkungen
 
@@ -262,12 +262,12 @@ And       the mome     raths            outgrabe.
 
 Manchmal möchte man mitten im Text etwas erklären, was nicht direkt zum Text gehört, aber das zum Verständnis des Textes beitragen kann. Diese Randbemerkungen wurden im Print üblicherweise in den Rand der Publikation gedruckt und hatten eine kleinere Schrift. Manchmal kann man diese aber auch im Text selbst stehen sehen, und sie werden durch eine andere Farbe oder einen Rand als Nebenbemerkung gekennzeichnet. Auf dieser Website stehen die Randbemerkungen (`aside`) im Rand und zwar wahlweise im linken oder rechten Rand. Als Überschrift (wenn nötig) sollte minimal eine `h4` verwendet werden.
 
-```html
+{% highlight html %}
 {% raw %}{% aside aside--left %}
 <h4>Überschrift</h4>
 <p>Dies ist eine Anmerkung in der Seitenleiste im rechten Rand</p>
 {% endaside %}{% endraw %}
-```
+{% endhighlight %}
 
 ## Listen
 
@@ -281,13 +281,13 @@ Das Element `ol` kennzeichnet eine geordnete Lste, und durch CSS sind verschiede
    2. Sie hat zwei Einträge
 3. Dies ist der letzte Eintrag auf dieser Liste
 
-```html
+{% highlight html %}
 1. Dies ist eine geordnete Liste
 2. Dies ist der zweite Listeneintrag, der eine Unterliste enthält
    1. Dies ist die Unterliste, ebenfalls geordnet
    2. Sie hat zwei Einträge
 3. Dies ist der letzte Eintrag auf dieser Liste
-```
+{% endhighlight %}
 
 ### Ungeordnete Listen
 
@@ -304,7 +304,7 @@ Das Element `ul` kennzeichnet eine ungeordnete Liste (z. B. eine Liste von Eintr
   * Angular.js
   * Ember.js
 
-```html
+{% highlight html %}
 * HTML
 * CSS
   * Sass
@@ -315,7 +315,7 @@ Das Element `ul` kennzeichnet eine ungeordnete Liste (z. B. eine Liste von Eintr
   * Backbone.js
   * Angular.js
   * Ember.js
-```
+{% endhighlight %}
 
 Manchmal soll eine Liste auch Blockelemente enthalten, üblicherweise einen Absatz oder zwei.
 
@@ -325,13 +325,13 @@ Manchmal soll eine Liste auch Blockelemente enthalten, üblicherweise einen Absa
 
 * JavaScript ist eine Programmiersprache, die verwendet wird um Interaktionen zu einer Website hinzuzufügen oder ganze Programme für das Internet zu schreiben.
 
-```html
+{% highlight html %}
 * HTML ist eine Auszeichnungssprache die verwendet wird, um …
 
 * CSS ist eine deklarive Sprache für Stilvorlagen. Damit wird …
 
 * JavaScript ist eine Programmiersprache, die verwendet wird um …
-```
+{% endhighlight %}
 
 ### Definitionslisten
 
@@ -347,7 +347,7 @@ Das Element `dl` ist ein weiterer Typ von Liste, nämlich eine Defintionsliste. 
 <dd>Dies ist eine Definition für die beiden Bezeichnungen darüber.</dd>
 </dl>
 
-```html
+{% highlight html %}
 <dl>
 <dt>Dies ist eine Bezeichnung.</dt>
 <dd>Dies ist die Definition für die Bezeichnung.</dd>
@@ -357,7 +357,7 @@ Das Element `dl` ist ein weiterer Typ von Liste, nämlich eine Defintionsliste. 
 <dt>Dies ist eine Bezeichnung.</dt>
 <dd>Dies ist eine Definition für die beiden Bezeichnungen darüber.</dd>
 </dl>
-```
+{% endhighlight %}
 
 ## Inline-Text
 
@@ -371,9 +371,9 @@ Das Element `a` wird verwendet um Text zu verlinken, ob auf eine andere Seite, e
 
 Dies ist ein Link mit einem <a href="http://www.google.de/" data-tooltip="Dies ist der Text des Tooltips">Tooltip</a>.
 
-```html
+{% highlight html %}
 [Dies ist ein Link](http://kogakure.de)
-```
+{% endhighlight %}
 
 ### Betonte Texte
 
@@ -381,9 +381,9 @@ Das Element `em` wird benutzt, um Betonung für Text auszuzeichnen, also z. B. w
 
 Du *musst* einfach Negitoro Maki[^3] probieren!
 
-```html
+{% highlight html %}
 Du *musst* einfach Negitoro Maki probieren!
-```
+{% endhighlight %}
 
 ### Wichtige Texte
 
@@ -391,9 +391,9 @@ Das Element `strong` wird verwendet, um Text mit starker Wichtigkeit auszuzeichn
 
 Das Eis zu betreten ist **verboten**!
 
-```html
+{% highlight html %}
 Das Eis zu betreten ist **verboten**!
-```
+{% endhighlight %}
 
 ### Durchgestrichene Texte
 
@@ -402,9 +402,9 @@ Das Element `s` wird verwendet um Inhalte auszuzeichnen, die nicht länger aktur
 <s>Empfohlene Preisempfehlung: 3,99 € pro Flasche</s><br>
 <strong>Jetzt für nur noch 2,99 € pro Flasche! </strong>
 
-```html
+{% highlight html %}
 <s>Empfohlene Preisempfehlung: 3,99 € pro Flasche</s>
-```
+{% endhighlight %}
 
 ### Zitat-Quellen
 
@@ -412,9 +412,9 @@ Das Element `cite` wird verwendet um den Titel einer Arbeit (z. B. ein Buch, Auf
 
 <cite>Universal Declaration of Human Rights</cite>, United Nations, December 1948. Adopted by General Assembly resolution 217 A (III).
 
-```html
+{% highlight html %}
 <cite>Universal Declaration of Human Rights</cite>, United Nations, …
-```
+{% endhighlight %}
 
 ### Definitionen
 
@@ -422,9 +422,9 @@ Das Element `dfn` wird verwendet um Begriffe zu markieren, die erklärungsbedür
 
 Die <dfn title="geheime Person">Ninja</dfn> wurden im Zeitalter <dfn title="Zeitalter des Bürgerkriegs">Sengokujidai</dfn> von Japan als Spione, Kundschafter oder Attentäter eingesetzt, um Aufgaben zu erledigen, die den <dfn title="Kriegerkaste Japans">Samurai</dfn> aufgrund ihres Ehrenkodex nicht möglich war.
 
-```html
+{% highlight html %}
 Die <dfn title="geheime Person">Ninja</dfn> wurden im Zeitalter …
-```
+{% endhighlight %}
 
 ### Abkürzungen
 
@@ -432,9 +432,9 @@ Das Element `abbr` wird für abgekürzten Text verwenden, egal ob es sich um Akr
 
 BBC, HTML, and <abbr class="no-caps" title="Staffordshire">Staffs.</abbr>
 
-```html
+{% highlight html %}
 BBC, HTML, and <abbr class="no-caps" title="Staffordshire">Staffs.</abbr>
-```
+{% endhighlight %}
 
 ### Zeiten
 
@@ -442,9 +442,9 @@ Das Element `time` wird benutzt, um entweder die Zeit auf einer 24-Stunden-Uhr z
 
 Die Schlacht von Sekigahara[^4] am <time datetime="1600-10-21">21. Oktober 1600</time> stellte einen Wendepunkt der japanischen Geschichte dar. Durch den Sieg gelangt es dem Haus Tokugawa, die Vormachtstellung in Japan zu sichern.
 
-```html
+{% highlight html %}
 Die Schlacht von Sekigahara am <time datetime="1600-10-21">21. Oktober 1600</time> …
-```
+{% endhighlight %}
 
 ### Variablen
 
@@ -452,9 +452,9 @@ Das Element `var` wird verwendet, um Variablen in mathematischen Ausdrücken ode
 
 Wenn <var>n</var> Rohre zur Eiscreme-Fabrik führen, dann erwarte ich *wenigstens* <var>n</var> verschiedene Geschmacksrichtungen für den Verkauf!
 
-```html
+{% highlight html %}
 Wenn <var>n</var> Rohre zur Eiscreme-Fabrik führen, dann erwarte …
-```
+{% endhighlight %}
 
 ### Beispiel-Ausgabe
 
@@ -462,9 +462,9 @@ Das Element `samp` wird verwendet um beispielhafte Ausgaben von Programmen oder 
 
 Der Computer gab <samp>Fehler -1</samp> auf dem Bildschirm aus, aber ich weiß nicht, was das bedeutet.
 
-```html
+{% highlight html %}
 Der Computer gab <samp>Fehler -1</samp> auf dem Bildschirm aus, aber …
-```
+{% endhighlight %}
 
 ### Keyboard-Tasten
 
@@ -472,9 +472,9 @@ Mit dem Element `kbd` werden Benutzereingaben gekennzeichnet (üblicherweise üb
 
 Dies ist nur etwas zufälliger Text, um sicherzustellen, dass die Tastaturbefehle in der mitte des Absatz gezeigt werden, da so die korrekte Zeilenhöhe geprüft werden kann. Um einen Screenshot am Mac zu erstellen, drücke <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>3</kbd>. Und noch etwas Text danach, nur um sicherzugehen, das alles gut aussieht.
 
-```html
+{% highlight html %}
 Drücke <kbd>⌘ Cmd</kbd> + <kbd>⇧ Shift</kbd> + <kbd>3</kbd>
-```
+{% endhighlight %}
 
 ### Superskript und Subskript
 
@@ -484,11 +484,11 @@ Die Koordinate des <var>i</var>ten Punktes ist (<var>x<sub><var>i</var></sub></v
 
 Mathe ist eine nette Sache, manchmal möchte man mitten im Text eine Formel haben. Und sogar Berechnungen wie diese f(<var>x</var>, <var>n</var>) = log<sub>4</sub><var>x</var><sup><var>n</var></sup> sollte funktionieren und nicht die Zeilenhöhe verändern oder den Textfluß verändern.
 
-```html
+{% highlight html %}
 x<sub>i</sub>
 
 f(x, n) = log<sub>4</sub>x<sup>n</sup>
-```
+{% endhighlight %}
 
 ### Kursive Texte
 
@@ -496,9 +496,9 @@ Das Element `i` wird benutzt um eine andere Stimme oder Stimmung zu kennzeichnen
 
 Es liegt eine bestimmte <i lang="fr">je ne sais quoi</i> in der Luft.
 
-```html
+{% highlight html %}
 Es liegt eine bestimmte <i lang="fr">je ne sais quoi</i> in der Luft.
-```
+{% endhighlight %}
 
 ### Fette Texte
 
@@ -506,17 +506,17 @@ Das Element `b` wird verwendet um Worte vom Text abzuheben ohne ihnen extra Bede
 
 Du betrittst einen kleinen Raum. Dein <b>Schwert</b> leuchtet heller. Eine <b>Ratte</b> huscht an der Wand vorbei.
 
-```html
+{% highlight html %}
 Dein <b>Schwert</b> leuchtet heller. Eine <b>Ratte</b> huscht an der Wand vorbei.
-```
+{% endhighlight %}
 
 ### Markierte oder hervorgehobene Texte
 
 Das Element `mark` wird verwendet um einen <mark>Textmarker</mark> zu repräsentieren, der durch einen Text geht und stellen hervorhebt. Wenn es in einem Zitat verwendet wird, dann um eine Stelle <mark>hervorzuheben</mark>, die vorher nicht hervorgehoben war, aber auf die hingewiesen werden soll.
 
-```html
+{% highlight html %}
 Mit <mark>mark</mark> kann man Worte markieren.
-```
+{% endhighlight %}
 
 ### Bearbeitungen
 
@@ -524,9 +524,9 @@ Das Element `del` wird verwendet um Text zu markieren, der nicht mehr gültig is
 
 Sie kaufte <del datetime="2005-05-30T13:00:00">zwei</del> <ins datetime="2005-05-30T13:00:00">fünf</ins> Paar Schuhe.
 
-```html
+{% highlight html %}
 Sie kaufte <del datetime="2005-05-30T13:00:00">zwei</del> <ins datetime="2005-05-30T13:00:00">fünf</ins> Paar Schuhe.
-```
+{% endhighlight %}
 
 ### Ruby
 
@@ -536,9 +536,9 @@ Das Element `ruby` hat nichts mit der Programmiersprache <cite>Ruby</cite> zu tu
 
 Das Japanische Kino hat einige Meisterwerke hervorgebracht, sowohl in Farbe als auch in Schwarz/Weiß. Der bekannte Film 7 Samurai (<ruby>七人の侍<rp>（</rp><rt>しちにんのさむらい</rt><rp>）</rp></ruby>) von Akira Kurosawa ist einer der besten Filme der japanischen Geschichte. Der Film ist so gut, dass er sogar ein Remake erfahren hat: <cite>Die Glorreichen Sieben</cite>.
 
-```html
+{% highlight html %}
 <ruby>攻殻<rp>（</rp><rt>こうかく</rt><rp>）</rp>機動隊<rp>（</rp><rt>きどうたい</rt><rp>）</rp></ruby>
-```
+{% endhighlight %}
 
 ## Tabellen
 
@@ -579,7 +579,7 @@ Tabellen sollten verwendet werden, um tabellarische Daten anzuzeigen. Die Elemen
 </table>
 </figure>
 
-```html
+{% highlight html %}
 <figure class="table-figure">
 <table class="table">
   <thead>
@@ -612,7 +612,7 @@ Tabellen sollten verwendet werden, um tabellarische Daten anzuzeigen. Die Elemen
   </tbody>
 </table>
 </figure>
-```
+{% endhighlight %}
 
 ### Gestreifte Tabellen
 
@@ -649,13 +649,13 @@ Tabellen sollten verwendet werden, um tabellarische Daten anzuzeigen. Die Elemen
 </table>
 </figure>
 
-```html
+{% highlight html %}
 <figure class="table-figure">
 <table class="table--striped">
 …
 </table>
 </figure>
-```
+{% endhighlight %}
 
 ### Tabellen mit Rand
 
@@ -692,13 +692,13 @@ Tabellen sollten verwendet werden, um tabellarische Daten anzuzeigen. Die Elemen
 </table>
 </figure>
 
-```html
+{% highlight html %}
 <figure class="table-figure">
 <table class="table--bordered">
 …
 </table>
 </figure>
-```
+{% endhighlight %}
 
 ### Tabellen mit Hover-Interaktion
 
@@ -735,13 +735,13 @@ Tabellen sollten verwendet werden, um tabellarische Daten anzuzeigen. Die Elemen
 </table>
 </figure>
 
-```html
+{% highlight html %}
 <figure class="table-figure">
 <table class="table-hover">
 …
 </table>
 </figure>
-```
+{% endhighlight %}
 
 ### Verdichtete Tabellen
 
@@ -778,13 +778,13 @@ Tabellen sollten verwendet werden, um tabellarische Daten anzuzeigen. Die Elemen
 </table>
 </figure>
 
-```html
+{% highlight html %}
 <figure class="table-figure">
 <table class="table--condensed">
 …
 </table>
 </figure>
-```
+{% endhighlight %}
 
 
 ## Bilder
@@ -793,9 +793,9 @@ Ein einfaches Bild:
 
 <img src="http://lorempixel.com/680/408/nightlife/" alt="Example image">
 
-```html
+{% highlight html %}
 <img src="http://lorempixel.com/680/408/nightlife/" alt="Example image">
-```
+{% endhighlight %}
 
 
 ## Abbildungen
@@ -808,11 +808,11 @@ Das Element `figure` wird verwendet um mehrere Objekte in einer Abbildung mit ei
 <img src="http://lorempixel.com/680/408/fashion/" alt="Example image">
 {% endfigure %}
 
-```html
+{% highlight html %}
 {% raw %}{% figure %}
 <img src="http://lorempixel.com/680/408/fashion/" alt="Example image">
 {% endfigure %}{% endraw %}
-```
+{% endhighlight %}
 
 #### Abbildungen mit Untertitel
 
@@ -834,11 +834,11 @@ Abbildungen, die einen Schatten haben sollen, können das Klassen-Attribut `figu
 <img src="http://lorempixel.com/680/408/sports/" alt="Example image">
 {% endfigure %}
 
-```html
+{% highlight html %}
 {% raw %}{% figure figure--longcaption figure--border figure--shadow %}
 …
 {% endfigure %}{% endraw %}
-```
+{% endhighlight %}
 
 #### Abbildungen in maximaler Breite
 
@@ -852,11 +852,11 @@ Um besonders große Fotos einzusetzen, kann das Klassen-Attribut `figure--fullsi
 <img src="http://lorempixel.com/1200/500/nature/" alt="Example image">
 {% endfigure %}
 
-```html
+{% highlight html %}
 {% raw %}{% figure figure--fullsize %}
 …
 {% endfigure %}{% endraw %}
-```
+{% endhighlight %}
 
 #### Links gesetzte Abbildungen
 
@@ -870,11 +870,11 @@ Abbildungen können in den Rand geschoben werden, wahlweise links (`figure--hang
 <img src="http://lorempixel.com/900/400/food/" alt="Example image">
 {% endfigure %}
 
-```html
+{% highlight html %}
 {% raw %}{% figure figure--hangleft %}
 …
 {% endfigure %}{% endraw %}
-```
+{% endhighlight %}
 
 #### Rechts gesetzte Abbildungen
 
@@ -886,11 +886,11 @@ Abbildungen können in den Rand geschoben werden, wahlweise links (`figure--hang
 <img src="http://lorempixel.com/900/400/animals/" alt="Example image">
 {% endfigure %}
 
-```html
+{% highlight html %}
 {% raw %}{% figure figure--hangright %}
 …
 {% endfigure %}{% endraw %}
-```
+{% endhighlight %}
 
 #### Zentriert gesetzte Abbildungen
 
@@ -904,11 +904,11 @@ Es ist auch möglich Abbildungen zentriert (`figure--center`) zu setzen, so dass
 <img src="http://lorempixel.com/900/400/people/" alt="Example image">
 {% endfigure %}
 
-```html
+{% highlight html %}
 {% raw %}{% figure figure--center %}
 …
 {% endfigure %}{% endraw %}
-```
+{% endhighlight %}
 
 ## Abbildungen mit Quellenangabe
 
@@ -917,12 +917,12 @@ Es ist auch möglich Abbildungen zentriert (`figure--center`) zu setzen, so dass
 <p class="attribution__text">Dieses Foto stammt von <a href="http://lorempixel.com">lorempixel.com</a></p>
 {% endfigure %}
 
-```html
+{% highlight html %}
 {% raw %}{% figure attribution %}
 <img src="http://lorempixel.com/680/408/fashion/" alt="Example image">
 <p class="attribution__text">Dieses Foto stammt von <a href="http://lorempixel.com">lorempixel.com</a></p>
 {% endfigure %}{% endraw %}
-```
+{% endhighlight %}
 
 
 ## Videos
@@ -933,25 +933,25 @@ Es ist auch möglich Videos einzubetten, und zwar als natives HTML5, direkt von 
 
 {% video http://s3.imathis.com/video/zero-to-fancy-buttons.mp4 640 420 http://s3.imathis.com/video/zero-to-fancy-buttons.png %}
 
-```html
+{% highlight html %}
 {% raw %}{% video http://s3.imathis.com/video/zero-to-fancy-buttons.mp4 640 420 http://s3.imathis.com/video/zero-to-fancy-buttons.png %}{% endraw %}
-```
+{% endhighlight %}
 
 #### YouTube-Videos
 
 {% youtube TVblWq3tDwY %}
 
-```html
+{% highlight html %}
 {% raw %}{% youtube TVblWq3tDwY %}{% endraw %}
-```
+{% endhighlight %}
 
 #### Vimeo-Videos
 
 {% vimeo 45858333 %}
 
-```html
+{% highlight html %}
 {% raw %}{% vimeo 45858333 %}{% endraw %}
-```
+{% endhighlight %}
 
 
 ### Codeblöcke
