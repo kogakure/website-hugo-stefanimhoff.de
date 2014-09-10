@@ -92,23 +92,7 @@
   <!-- Canonical -->
   <link rel="canonical" href="{{ page_url }}">
 
-  {% if is_preview == 'true' %}
-    <!-- Stylesheets -->
-    <link href="{{ root_url }}/assets/stylesheets/application.css" rel="stylesheet">
-    {% if page.homepage %}<link rel="stylesheet" type="text/css" href="{{ root_url }}/assets/stylesheets/homepage.css">{% endif %}
-    {% if page.custom_css %}<link href="{{ root_url }}/assets/stylesheets/{{page.custom_css}}.css" rel="stylesheet">{% endif %}
-    <link href="{{ root_url }}/assets/stylesheets/print.css" rel="stylesheet" media="print">
-  {% else %}
-    <!-- Stylesheets -->
-    {% stylesheet application %}
-    {% if page.homepage %}<link rel="stylesheet" type="text/css" href="{{ root_url }}{{ 'homepage.css' | asset_path }}">{% endif %}
-    {% if page.custom_css %}{{ page.custom_css | stylesheet }}{% endif %}
-    <link rel="stylesheet" type="text/css" href="{{ root_url }}{{ 'print.css' | asset_path }}" media="print">
-  {% endif %}
-    <!--[if lt IE 9]>
-    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-    <style>header#top {background-image:none;}</style>
-    <![endif]-->
+  <!-- @TODO: Bring Stylesheets back -->
 
   <!-- Modernizr -->
   <script src="{{ root_url }}/assets/javascripts/libs/modernizr-2.6.2.min.js"></script>
