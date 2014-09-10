@@ -1,0 +1,98 @@
+// ============================================================================
+// Grids
+// ============================================================================
+
+// Grid-Einstellungen
+// ----------------------------------------------------------------------------
+
+$breakpoint-to-ems: true;
+$breakpoint-default-feature: max-width;
+
+// Base Grid
+@include add-grid(12);
+
+// @include add-grid(6);
+// @include add-grid(9 at 675px);
+// @include add-grid(12 at 850px);
+// @include add-grid(15 at 1075px);
+// @include add-grid(18 at 1200px);
+// @include add-grid(1 2 3 4 at 600px);
+// @include add-grid(2 8 2 at 500px);
+// @include add-grid(2 8 2 at 1100px);
+// @include add-grid(12 at 900px);
+// @include add-grid(6 at 700px);
+// @include add-grid(3 at 500px);
+
+// Breakpoint-Gutters
+@include add-gutter(1/4);
+
+// @include add-gutter(1/3 at 900px);
+
+// Extends
+%container {
+  @include clearfix;
+  margin: 0 auto;
+  max-width: 920px;
+}
+
+%main-grid {
+  @include grid-span(8, 3);
+}
+
+// Grids
+// ----------------------------------------------------------------------------
+
+.outer-container {
+  min-height: 100%;
+}
+
+.page .main,
+.post .main,
+.archive .main,
+.wrap {
+  @extend %container;
+
+  // Grids need some padding on the outside, or content will look bad when
+  // reaching from side to side.
+  $grid-padding: gutter-span();
+  padding-left: $grid-padding * 2;
+  padding-right: $grid-padding * 2;
+}
+
+.post .article,
+.page .article {
+  @extend %main-grid;
+  @include leader(1);
+  @include trailer(2);
+
+  @include breakpoint(700px) {
+    @include trailer(1);
+  }
+
+  @include breakpoint($content-medium) {
+    @include grid-span(12);
+  }
+
+  @include breakpoint($content-small) {
+    margin-top: 0.5em;
+    @include trailer(1);
+  }
+}
+
+.archive .archive-posts {
+  @include leader(1);
+  @include trailer(2);
+}
+
+header {
+  clear: both;
+}
+
+footer {
+  clear: both;
+}
+
+.article-title {
+  @extend %container;
+}
+

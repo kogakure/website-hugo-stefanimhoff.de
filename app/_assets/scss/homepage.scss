@@ -1,0 +1,21 @@
+// Imports
+@import "compass";
+@import "singularitygs";
+@import "toolkit";
+@import "breakpoint";
+@import "modular-scale";
+
+// Helpers
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/placeholders";
+
+// Theme
+@import "theme/init";
+
+// Grids
+@import "layout/grids";
+
+// Styles only on the homepage
+@import "pages/home";
+

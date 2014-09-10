@@ -1,0 +1,148 @@
+// ============================================================================
+// Attribution
+// ============================================================================
+
+// Attribution-Mixings
+// -------------------
+
+%attribution {
+  overflow: hidden;
+  position: relative;
+}
+
+%attribution__text {
+  @extend %sans;
+  @include transition(all 0.6s ease);
+  background: $black;
+  background: rgba($black, 0.75);
+  bottom: -30%;
+  color: $white;
+  font-size: 15px;
+  font-weight: 200;
+  margin: 0;
+  opacity: 0;
+  padding: 5px 10px;
+  position: absolute;
+  left: 0 + $image-border-size;
+
+  // Der Hover-Link darf nicht dunkel sein
+  a {
+    @include link-colors($link-color, $link-color, $link-active-color, $link-visited-color, $link-focus-color);
+  }
+
+  // Copyright-Zeichen
+  b {
+    @extend %mono;
+    font-weight: normal;
+  }
+}
+
+%attribution-before {
+  @extend %mono;
+  @include border-radius(10px);
+  @include transition(all 0.6s ease);
+  background: $white;
+  background: rgba($white, 0.7);
+  color: $black;
+  content: "?";
+  font-size: 14px;
+  font-weight: bold;
+  height: 20px;
+  line-height: 20px;
+  position: absolute;
+  text-align: center;
+  width: 20px;
+}
+
+%attribution-before-fontface {
+  @extend %iconfont;
+  content: "#{$icon-question}";
+  font-size: 10px;
+  font-weight: 200;
+}
+
+// Attribution
+// -----------
+
+// Der Container (beliebiges Element)
+.attribution {
+  @extend %attribution;
+}
+
+// Der Attribution-Text (Basis-Styling und verbergen)
+.attribution__text {
+  @extend %attribution__text;
+}
+
+// Der Attribution-Text (Aktiv)
+.attribution:hover .attribution__text {
+  bottom: 0 + $image-border-size;
+  opacity: 1;
+}
+
+// Das Fragezeichen
+.attribution:before {
+  @extend %attribution-before;
+  bottom: 10px;
+  opacity: 0.75;
+  left: 10px;
+
+  .fontface & {
+    @extend %attribution-before-fontface;
+  }
+}
+
+// Versteckt beim Einblenden des Attribution-Textes das Fragezeichen
+.attribution:hover:before {
+  opacity: 0;
+}
+
+// Attribution für Header-Bild
+// ---------------------------
+// Für ein Headerbild soll die Attribution nur gezeigt werden,
+// wenn über das Fragezeichen gehovert wird und nicht über dem
+// ganzen Bild.
+
+.attribution--main {
+  @extend %attribution;
+}
+
+.attribution--main__text {
+  @extend .attribution__text;
+  bottom: -30px;
+  height: 30px;
+  line-height: 30px;
+  opacity: 0.9;
+  padding: 0 10px;
+  left: 0;
+}
+
+.attribution--main__text:hover {
+  bottom: 0;
+  opacity: 1;
+
+  .attribution--main__anchor {
+    opacity: 0;
+  }
+}
+
+.attribution--main__anchor {
+  // @extend %sans;
+  @include transition(all 0.6s ease);
+  height: 34px;
+  opacity: 0.5;
+  position: absolute;
+  left: 0;
+  top: -34px;
+  width: 34px;
+
+  &:before {
+    @extend %attribution-before;
+    bottom: 7px;
+    left: 7px;
+
+    .fontface & {
+      @extend %attribution-before-fontface;
+    }
+  }
+}
