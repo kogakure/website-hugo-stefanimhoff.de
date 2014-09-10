@@ -3,17 +3,17 @@
 # ==================== #
 
 # Seiten-Einstellungen
-title:       kogakure.de – Ninja, Ninjutsu und Kampfkunst
-email:       mail@kogakure.de
-description: "Fachmagazin für Ninja, Ninjutsu und Kampfkunst."
-keywords:    "Ninjutsu, Ninja, Ninpo, Schattenkrieger, Shinobi, Kunoichi, Shadowwarrior, Tengu, Bujinkan, Budo, Taijutsu, BBD, Ryu, Ryuha, Sensei, Soke, Masaaki Hatsumi, Takamatsu, Toda, Hayes, Kampf, Kampfkunst, Krieger, Kriegskunst, Martial Arts, Selbstverteidigung, Sport, Geheimnis, Geschichte, Iga, Koga, Shidoshi, Shihan, Philosopie, Schwertkampf, Spionage, Sabotage, Guerilla, Verstecken, Waffen, Natur, Satori, Tradition, Japan, Asien, Inton, Erleuchtung, Goton-po, Budô, Bujin, Godai, Gogyo, Hojutsu, Junan Taiso, Jutsu, Jutte, Meditation, Meso, Mikkyo, Nahkampf, Shugendo, Tobi, Training, Ukemi, Waffen, Yamabushi, Sennin, Jônin, Chunin, Genin, Kamae, Kogakure, Bisento, Bo, Bokken, Kama, Ken, Kuji-in, Kuji-kiri, Kusarifundo, Kyoketsu Shoge, Metsubishi, Naginata, Kyoketsu Shoge, Shuko, Shuriken, Tanto, Tekagi, Tessen, Wurfstern, Yari, Zue"
+title:       Stefan Imhoff
+email:       stefan@imhoff.name
+description: "Frontend Engineer @ XING, Developer, Designer und Kampfkünstler."
+keywords:    "Stefan Imhoff, Hamburg, Frontend, Engineer"
 author:      Stefan Imhoff
 
 # URLs und Pfade
 baseurl:   ""
-url:       "http://0.0.0.0:8888"
+url:       "http://0.0.0.0:9999"
 root:      /
-permalink: /artikel/:title/
+permalink: /:year/:title/
 
 # Jekyll Pfade
 source:      ./app
@@ -23,7 +23,7 @@ destination: ./dist
 twitter_username: kogakure
 github_username:  kogakure
 subscribe_rss:    "/feed.xml"
-feedburner_url:   "http://feeds.feedburner.com/"
+feedburner_url:   "http://feeds.feedburner.com/stefanimhoff"
 
 # Veröffentlichungs-Einstellungen
 future:      true
@@ -57,6 +57,8 @@ exclude: [
   "**.png", "**.jpg", "**.jpeg", "**.gif", "**.webp", "**.svg", "**.ico"
 ]
 
+include: [".htaccess", ".htpasswd"]
+
 # Sitemap.xml Generator
 sitemap:
   file: "/sitemap.xml"
@@ -69,18 +71,6 @@ sitemap:
     - "/index.html"
   change_frequency_name: "change_frequency"
   priority_name: "priority"
-
-# Lunr Suche
-lunr_search:
-  excludes:
-    - rss.xml
-    - sitemap.xml
-    - /datenschutz/
-    - /faq/
-    - /impressum/
-    - /index.html
-  min_length: 3
-  stopwords: "stopwords.txt"
 
 # Jekyll Assets (Development)
 assets:
@@ -98,3 +88,60 @@ assets:
     - _assets/images
     - _assets/javascripts/libs
     - _bower_components
+
+# Attribution
+# ===========
+
+# Bambus
+# ------
+# attribution_name: "「大宮盆栽×タムロン」大宮盆栽美術館で盆栽撮影にチャレンジ！ブロガーイベント"
+# attribution_url: "https://www.flickr.com/photos/norio-nakayama/9156103138"
+# attribution_author: "Norio NAKAYAMA"
+# attribution_creative_commons: true
+
+# Zitrone
+# -------
+attribution_name: "solo sunshine"
+attribution_url: "https://www.flickr.com/photos/suttonhoo22/328647662/"
+attribution_author: "Dayna Bateman"
+attribution_creative_commons: true
+
+# -- Check: Do I need these? --
+url: http://stefanimhoff.de
+server_path: /home/kogakure/webapps/stefanimhoff
+
+twitter: "@kogakure"
+googleplus: "104687479698350625994"
+
+geo_latitude: "53.596835"
+geo_longitude: "10.102015"
+
+titlecase: false                  # Converts page and post titles to titlecase
+
+excerpt_link: "Weiterlesen &arr;" # "Continue reading" link text at the bottom of excerpted articles
+excerpt_in_feed: false            # Truncate excerpted articles in the atom feed
+permalink_label: "Permalink"
+permalink_label_feed: "★ Permalink"
+linklog_marker: "→"
+linklog_marker_position: after
+linklog_marker_position_feed: after
+standard_post_marker:
+
+
+# RSS / Email (optional) subscription links (change if using something like Feedburner)
+subscribe_rss: "/atom.xml"
+feedburner_url: "http://feeds.feedburner.com/stefanimhoff"
+
+# Categories
+category_feeds: true
+category_dir: kategorie
+category_title_prefix: "Kategorie: "
+
+# Tags
+tag_feeds: true
+tag_dir: tag
+tag_title_prefix: "Tags: "
+
+# Pagination
+paginate:       1000       # Posts per page on the blog index
+paginate_path:  :num       # default path for pagination, eg. page/2/

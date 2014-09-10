@@ -1,0 +1,29 @@
+# ==================== #
+# Jekyll-Einstellungen #
+# ==================== #
+# P R O D U C T I O N  #
+# ==================== #
+
+# URLs und Pfade
+url:         "http://stefanimhoff.de"
+server_path: /home/kogakure/webapps/stefanimhoff
+
+# Veröffentlichungs-Einstellungen
+future:      false
+show_drafts: false
+
+# Jekyll Assets (Production)
+assets:
+  dirname:        assets
+  baseurl:        /assets/
+  js_compressor:  uglifier
+  css_compressor: sass
+  cachebust:      hard
+  cache:          false
+  debug:          false
+  sources:
+    - _assets/stylesheets
+    - _assets/javascripts
+    - _assets/images
+    - _assets/javascripts/libs
+    - _bower_components
