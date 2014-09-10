@@ -345,10 +345,9 @@ module.exports = function(grunt) {
         limit: 5
       },
       server: [
-        'compass:server',
         'copy:stageCss',
         'copy:stageJs',
-        'copy:stageImg', // @TODO: Brauche ich das wirklich?
+        'copy:stageImg',
         'jekyll:server'
       ],
       dist: [
@@ -389,6 +388,7 @@ module.exports = function(grunt) {
 
     grunt.task.run([
       'clean:server',
+      'compass:server',
       'concurrent:server',
       'connect:livereload',
       'watch'
