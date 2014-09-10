@@ -15,4 +15,5 @@ gem 'color-schemer'               # A sassy way to build color schemes
 gem 'modular-scale', '~> 2.0.5'   # Modular scale calculator build into your Sass
 gem 'toolkit', '~> 2.5.2'         # Toolkit for Responsive Web Design and Progressive Enhancement
 gem 'i18n', '~> 0.6.11'           # Localizing dates
-gem 'rubypants', '~> 0.2.0' # Needed for "Pullquote" plugin
+# gem 'fontcustom', '~> 1.2.0'      # Compiling vector icons
+gem 'rubypants', '~> 0.2.0'       # Needed for "Pullquote" plugin

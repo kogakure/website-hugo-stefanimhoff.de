@@ -66,6 +66,10 @@ module.exports = function(grunt) {
         files: ['<%= config.app %>/_assets/images/**/*'],
         tasks: ['copy:stageImg']
       },
+      fonts: {
+        files: ['<%= config.app %>/_assets/fonts/**/*'],
+        tasks: ['copy:stageFont']
+      },
       jekyll: {
         files: [
           '<%= config.app %>/**/*.{html,yml,json,md,mkd,markdown,textile}',
@@ -166,7 +170,7 @@ module.exports = function(grunt) {
         javascriptsDir:          '<%= config.app %>/_assets/javascripts',
         relativeAssets:          false,
         httpImagesPath:          '/img',
-        httpGeneratedImagesPath: '/generated',
+        httpGeneratedImagesPath: '/assets/generated',
         outputStyle:             'expanded',
         debugInfo:               false,
         raw:                     'extensions_dir = "<%= config.app %>/_bower_components"\n'
@@ -227,6 +231,13 @@ module.exports = function(grunt) {
         expand: true,
         dot: true,
         cwd: '<%= config.app %>/_assets/images',
+        src: '**/*',
+        dest: '.tmp/assets'
+      },
+      stageFont: {
+        expand: true,
+        dot: true,
+        cwd: '<%= config.app %>/_assets/fonts',
         src: '**/*',
         dest: '.tmp/assets'
       },
@@ -348,6 +359,7 @@ module.exports = function(grunt) {
         'copy:stageCss',
         'copy:stageJs',
         'copy:stageImg',
+        'copy:stageFont',
         'jekyll:server'
       ],
       dist: [
