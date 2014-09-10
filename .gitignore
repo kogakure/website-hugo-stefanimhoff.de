@@ -1,15 +1,10 @@
-.bundle
-.DS_Store
-.sass-cache
-.gist-cache
-.pygments-cache
-_deploy
-public
-sass.old
-source.old
-source/_stash
+# .gitignore für stefanimhoff.de
+
+# Ignoriere verstecke Ordner
+.*/
+
+# Projekt
 vendor/bundle/
-node_modules
-.fontcustom-manifest.json
-source/assets/stylesheets
-.preview-mode
+node_modules/
+dist
+app/_bower_components/
