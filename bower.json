@@ -1,0 +1,11 @@
+{
+  "name": "stefanimhoff",
+  "private": true,
+  "dependencies": {
+    "jquery": "~1.11.1",
+    "fastclick": "~1.0.3",
+    "modernizr": "~2.8.3",
+    "loadcss": "~0.1.1"
+  },
+  "devDependencies": {}
+}
