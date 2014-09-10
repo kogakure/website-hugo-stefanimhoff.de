@@ -1,6 +1,6 @@
-# kogakure.de
+# stefanimhoff.de
 
-Dies ist der Relaunch von kogkure.de mit Jekyll & Octopress.
+Dies ist die Dokumentation von stefanimhoff.de.
 
 ## Entwicklung
 
