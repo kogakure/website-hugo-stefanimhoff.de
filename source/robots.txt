@@ -1,8 +1,0 @@
----
-layout: nil
----
-User-agent: *
-Disallow:
-Disallow: /error/
-
-Sitemap: {{ site.url }}/sitemap.xml

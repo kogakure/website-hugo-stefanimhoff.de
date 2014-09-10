@@ -1,34 +1,17 @@
 source "https://rubygems.org"
 
-group :development do
-  gem 'rake', '~> 0.9'
-  gem 'jekyll', '~> 0.12'
-  gem 'rdiscount', '~> 2.1.7'
-  gem 'redcarpet', '~> 3.0.0'
-  gem 'pygments.rb', '~> 0.3.4'
-  gem 'RedCloth', '~> 4.2.9'
-  gem 'compass'
-  gem 'sass'
-  gem 'sass-globbing', '~> 1.0.0'
-  gem 'rubypants', '~> 0.2.0'
-  gem 'rb-fsevent', '~> 0.9.3'
-  gem 'stringex', '~> 1.4.0'
-  gem 'liquid', '~> 2.3.0'
-  gem 'directory_watcher', '1.4.1'
-
-  # Custom Gems
-  gem 'singularitygs', '~> 1.2.1'              # Grids without limits
-  gem 'breakpoint'                             # Breakpoints
-  gem 'color-schemer'                          # A sassy way to build color schemes
-  gem 'toolkit'                                # Toolkit for Responsive Web Design and Progressive Enhancement
-  gem 'modular-scale'                          # Modular scale calculator build into your Sass
-  gem 'jekyll-assets', '~> 0.3.5'              # Asset pipeline
-  gem 'i18n', '~> 0.6.4'                       # Localizing dates
-  gem 'uglifier'                               # UglifyJS
-  gem 'closure-compiler', '~> 1.1.8'           # Google Closure
-  gem 'gsl', '~> 1.14.7'                       # LSI support for tags, needs to be 1.14.x with Homebrew GSL 1.14
-  gem 'fontcustom', '~> 1.2.0'                 # Compiling vector icons
-  gem 'colorize'                               # Farbige Consolen-Ausgaben
-end
-
-gem 'sinatra', '~> 1.4.2'
+gem 'octopress', '~> 3.0.0.rc.12' # Newest octopress version
+gem 'compass', '~> 1.0.0'         # Compass version
+gem 'compass-import-once', :require => 'compass/import-once/activate'
+gem 'gsl'                         # LSI support for faster related generation
+gem 'csscss', '~> 1.3'            # Check CSS for recursion
+gem 'jekyll-assets', '~> 0.9.2'   # Asset pipeline
+gem 'uglifier'                    # UglifyJS
+gem 'nokogiri', '~> 1.6.3.1'      # HTML, XML parser for lunr search
+gem 'json', '~> 1.8.1'            # JSON
+gem 'stringex', '~> 2.5.2'        # String operations on markdown
+gem 'singularitygs', '~> 1.3.0'   # Advanced responsive grid system
+gem 'color-schemer'               # A sassy way to build color schemes
+gem 'modular-scale', '~> 2.0.5'   # Modular scale calculator build into your Sass
+gem 'toolkit', '~> 2.5.2'         # Toolkit for Responsive Web Design and Progressive Enhancement
+gem 'rubypants', '~> 0.2.0' # Needed for "Pullquote" plugin

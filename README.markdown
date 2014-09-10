@@ -1,39 +1,145 @@
-## What is Octopress?
+# kogakure.de
 
-Octopress is [Jekyll](https://github.com/mojombo/jekyll) blogging at its finest.
+Dies ist der Relaunch von kogkure.de mit Jekyll & Octopress.
 
-1. **Octopress sports a clean responsive theme** written in semantic HTML5, focused on readability and friendliness toward mobile devices.
-2. **Code blogging is easy and beautiful.** Embed code (with [Solarized](http://ethanschoonover.com/solarized) styling) in your posts from gists, jsFiddle or from your filesystem.
-3. **Third party integration is simple** with built-in support for Pinboard, Delicious, GitHub Repositories, Disqus Comments and Google Analytics.
-4. **It's easy to use.** A collection of rake tasks simplifies development and makes deploying a cinch.
-5. **Ships with great plug-ins** some original and others from the Jekyll community &mdash; tested and improved.
+## Entwicklung
 
-**Note**: Octopress requires a minimum Ruby version of `1.9.3-p0`.
+### Entwicklungsserver starten
 
-## Documentation
+Um den lokalen Entwicklungsserver zu starten wird Grunt verwendet. Grunt sorgt dafür, dass alle nötigen Process wie Jekyll, Compass, das Kopieren von Dateien und Livereload gestartet werden.
 
-Check out [Octopress.org](http://octopress.org/docs) for guides and documentation.
+```sh
+grunt serve
+```
+
+### Produktionsseite bauen
+
+Um eine Version für die Produktionsumgebung zu erzeugen wird der Standard-Task von Grunt verwendet:
+
+```sh
+grunt
+```
+
+Dieser Task führt `grunt check`, `grunt test` und `grunt build` aus, die auch einzeln gestartet werden können. Der Task führt auch die Komprimierung von Stylesheets, JavaScript und Bildern durch und versieht alle Dateien mit einem Hash.
+
+Um zu prüfen, ob die Produktionsseite korrekt läuft kann der Server mit einem speziellen Parameter gestartet werden:
+
+```sh
+grunt serve:dist
+```
+
+### Prüfen
+
+Um zu prüfen, ob Jekyll, das JavaScript und die Stylesheets fehlerfrei sind, kann dieser Task ausgeführt werden:
+
+```sh
+grunt check
+```
+
+### Deployment
+
+Um die fertige Website auf den Server zu spielen, gibt es zwei Tasks. Der erste Task lädt nur den aktuellen Stand der Distrubution mit rsync auf den Server:
+
+```sh
+grunt upload
+```
+Der zweite Task führt alle Schritte des build-Tasks und den Upload aus:
+
+```sh
+grunt deploy
+```
+
+Dieser Task ist Teil des Produktions-Tasks.
+
+## Artikel und Seiten
+
+### Neuen Artikel erzeugen
+
+    $ bundle exec octopress new post "Mein Titel"
+
+Das erzeugt eine neue Datei in `_posts/YYYY-MM-DD-mein-titel.markdown` mit dem folgenden YAML front-matter hinzugefügt:
+
+```yaml
+layout: post
+title: "Mein Titel"
+date: YYYY-MM-DDTHH:MM:SS-00:00
+```
+
+Dies sind weitere Optionen, die hinzugefügt werden können:
+
+| Option               | Beschreibung                            |
+|:---------------------|:----------------------------------------|
+| `--template PATH`    | Use a template from PATH                |
+| `--date DATE`        | The date for the post. Should be parseable by [Time#parse](http://ruby-doc.org/stdlib-2.1.0/libdoc/time/rdoc/Time.html#method-i-parse) |
+| `--slug SLUG`        | Slug for the new post.                  |
+| `--dir DIR`          | Create post at _posts/DIR/.             |
+| `--force`            | Overwrite existing file.                |
 
 
-## Contributing
+### Neue Seite erzeugen
 
-[![Build Status](https://travis-ci.org/imathis/octopress.png?branch=master)](https://travis-ci.org/imathis/octopress)
+```sh
+$ bundle exec octopress new page some-page           # ./some-page.html
+$ bundle exec octopress new page docs/               # ./docs/index.html
+$ bundle exec octopress new page about.html          # ./about.html
+```
 
-We love to see people contributing to Octopress, whether it's a bug report, feature suggestion or a pull request. At the moment, we try to keep the core slick and lean, focusing on basic blogging needs, so some of your suggestions might not find their way into Octopress. For those ideas, we started a [list of 3rd party plug-ins](https://github.com/imathis/octopress/wiki/3rd-party-plugins), where you can link your own Octopress plug-in repositories. For the future, we're thinking about ways to easier add them them into our main releases.
-
-
-## License
-(The MIT License)
-
-Copyright © 2009-2013 Brandon Mathis
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the ‘Software’), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED ‘AS IS’, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+| Option               | Beschreibung                            |
+|:---------------------|:----------------------------------------|
+| `--template PATH`    | Use a template from <path>              |
+| `--title TITLE`      | The title of the new page               |
+| `--date DATE`        | The date for the page. Should be parseable by [Time#parse](http://ruby-doc.org/stdlib-2.1.0/libdoc/time/rdoc/Time.html#method-i-parse) |
+| `--force`            | Overwrite existing file.                |
 
 
-#### If you want to be awesome.
-- Proudly display the 'Powered by Octopress' credit in the footer.
-- Add your site to the Wiki so we can watch the community grow.
+### Neuer Entwurf
+
+```sh
+$ bundle exec octopress new draft "Mein Entwurf"
+```
+
+Dies erzeugt eine neue Datei im Verzeichnis `_drafts`.
+
+| Option             | Description                               |
+|:-------------------|:------------------------------------------|
+| `--template PATH`    | Use a template from <path>              |
+| `--date DATE`      | The date for the draft. Should be parseable by [Time#parse](http://ruby-doc.org/stdlib-2.1.0/libdoc/time/rdoc/Time.html#method-i-parse) (defaults to Time.now) |
+| `--slug SLUG`      | The slug for the new post.                |
+| `--force`          | Overwrite exsiting file.                  |
+
+### Entwurf veröffnetlichen
+
+```sh
+$ bundle exec octopress publish _drafts/mein-entwurf.markdown
+```
+
+Dies bewegt den Entwurf in das Verzeichnis `_posts` und benennt die Datei mit aktuellem Datum um.
+
+| Option             | Beschreibung                              |
+|:-------------------|:------------------------------------------|
+| `--date DATE`      | The date for the post. Should be parseable by [Time#parse](http://ruby-doc.org/stdlib-2.1.0/libdoc/time/rdoc/Time.html#method-i-parse) |
+| `--slug SLUG`      | Change the slug for the new post.         |
+| `--dir DIR`        | Create post at _posts/DIR/.               |
+| `--force`          | Overwrite existing file.                  |
+
+When publishing a draft, the new post will use the draft's date. Pass the option `--date now` to the publish command to set the new post date from your system clock. As usual, you can pass any compatible date string as well.
+
+### Templates
+
+Octopress post und page Templates sehen so aus:
+
+```yaml
+---
+layout: {{ layout }}
+title: {{ title }}
+---
+
+```
+
+Die YAML-Variablen werden mit dem richtigen inhalt ersetzt wenn eine Seite oder ein Artikel erzeugt wird. Um das Template zu bearbeiten erzeuge oder bearbeite die Datei `_templates/post`. Es ist möglich zusätzliche Meta-Daten hinzuzufügen oder ein eigenes Template beim Erzeugen einer Seite oder eines Artikel zu verwenden:
+
+```sh
+$ bundle exec octopress new post --template _templates/linkpost
+```
+
+
