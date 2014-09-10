@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem 'octopress', '~> 3.0.0.rc.12' # Newest octopress version
+gem 'octopress', '~> 3.0.0.rc.14' # Newest octopress version
 gem 'compass', '~> 1.0.0'         # Compass version
 gem 'compass-import-once', :require => 'compass/import-once/activate'
 gem 'gsl'                         # LSI support for faster related generation
@@ -15,5 +15,4 @@ gem 'color-schemer'               # A sassy way to build color schemes
 gem 'modular-scale', '~> 2.0.5'   # Modular scale calculator build into your Sass
 gem 'toolkit', '~> 2.5.2'         # Toolkit for Responsive Web Design and Progressive Enhancement
 gem 'i18n', '~> 0.6.11'           # Localizing dates
-# gem 'fontcustom', '~> 1.2.0'      # Compiling vector icons
 gem 'rubypants', '~> 0.2.0'       # Needed for "Pullquote" plugin
