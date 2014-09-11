@@ -12,11 +12,11 @@
       },
       {
         "text": "Kategorien",
-        "url": "/kategorien/"
+        "url": "/kategorie/"
       },
       {
         "text": "Tags",
-        "url": "/tags/"
+        "url": "/tag/"
       }
     ]
   },
