@@ -8,47 +8,15 @@
     </div>
 
     <div class="grid-links inline-links">
-      <h3>Code</h3>
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>SASS</li>
-        <li>Compass</li>
-        <li>RWD</li>
-        <li>JavaScript</li>
-        <li>jQuery</li>
-        <li>Ajax</li>
-        <li>Git</li>
-        <li>Ruby on Rails</li>
-        <li>Ruby</li>
-        <li>Grunt.js</li>
-      </ul>
+      {% for area in site.data.work %}
+        <h3>{{ area.name }}</h3>
+        <ul>
+          {% for skill in area.skills %}
+            <li>{{ skill }}</li>
+          {% endfor %}
+        </ul>
+      {% endfor %}
 
-      <h3>Design</h3>
-      <ul>
-        <li>Photoshop</li>
-        <li>Illustrator</li>
-        <li>Grafikdesign</li>
-        <li>Usability</li>
-        <li>Informationsarchitektur</li>
-      </ul>
-
-      <h3>Agile Methoden</h3>
-      <ul>
-        <li>Scrum</li>
-        <li>Kanban</li>
-      </ul>
-
-      <h3>Sonstiges</h3>
-      <ul>
-        <li>Vim</li>
-        <li>Zsh</li>
-        <li>Bash</li>
-        <li>tmux</li>
-        <li>SEO</li>
-        <li>Apache</li>
-        <li>SQL</li>
-      </ul>
     </div>
 
   </div>

@@ -1,39 +1,48 @@
 [
   {
-    "type": "main",
-    "items": [
-      {
-        "text": "Startseite",
-        "url": "/"
-      },
-      {
-        "text": "Archiv",
-        "url": "/archiv/"
-      },
-      {
-        "text": "Kategorien",
-        "url": "/kategorie/"
-      },
-      {
-        "text": "Tags",
-        "url": "/tag/"
-      }
+    "name": "Code",
+    "skills": [
+      "HTML",
+      "CSS",
+      "SASS",
+      "Compass",
+      "RWD",
+      "JavaScript",
+      "jQuery",
+      "Ajax",
+      "Git",
+      "Ruby on Rails",
+      "Ruby",
+      "Grunt.js"
     ]
   },
   {
-    "items": [
-      {
-        "text": "Styleguide",
-        "url": "/styleguide/"
-      },
-      {
-        "text": "Haiku",
-        "url": "/haiku/"
-      },
-      {
-        "text": "Impressum",
-        "url": "/impressum/"
-      }
+    "name": "Design",
+    "skills": [
+      "Photoshop",
+      "Illustrator",
+      "Grafikdesign",
+      "Usability",
+      "Informationsarchitektur"
+    ]
+  },
+  {
+    "name": "Agile Methoden",
+    "skills": [
+      "Scrum",
+      "Kanban"
+    ]
+  },
+  {
+    "name": "Sonstiges",
+    "skills": [
+      "Vim",
+      "Zsh",
+      "Bash",
+      "tmux",
+      "SEO",
+      "Apache",
+      "SQL"
     ]
   }
 ]
