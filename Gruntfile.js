@@ -70,6 +70,10 @@ module.exports = function(grunt) {
         files: ['<%= config.app %>/_assets/fonts/**/*'],
         tasks: ['copy:stageFont']
       },
+      vectors: {
+        files: ['vectors/*.svg'],
+        tasks: ['webfont']
+      },
       jekyll: {
         files: [
           '<%= config.app %>/**/*.{html,yml,json,md,mkd,markdown,textile}',
