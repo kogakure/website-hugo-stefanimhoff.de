@@ -50,7 +50,7 @@ Alle Absätze werden in `p` gewrappt. Zusätzlich können `p` auch in `blockquot
 
 Absätze sind in der Textgestaltung einen aus einem oder mehreren Sätzen bestehenden Abschnitt eines fortlaufenden Textes. Ein Absatz ist ein Sinnzusammenhang oder ein eigenes kleines Thema. Ist dieser Gedanke ausgeführt, folgt ein neuer Absatz.
 
-{% highlight html %}
+{% highlight html linenos %}
 Dies ist ein Absatz.
 
 Dies ist ein zweiter Absatz.

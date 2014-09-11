@@ -1,0 +1,25 @@
+// ============================================================================
+// Scrollbars
+// ============================================================================
+
+::-webkit-scrollbar {
+  background: $white;
+  height: 5px;
+  width: 5px;
+}
+
+// Track
+::-webkit-scrollbar-track {
+  @include border-radius(5px);
+  background: #fafafa;
+}
+
+// Handle
+::-webkit-scrollbar-thumb {
+  @include border-radius(5px);
+  background: #eeeeee;
+
+  &:hover {
+    background: #b8b8b8;
+  }
+}

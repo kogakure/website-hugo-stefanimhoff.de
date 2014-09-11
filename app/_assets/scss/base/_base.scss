@@ -156,13 +156,30 @@ pre {
     display: block;
     line-height: 1.2;
     overflow-x: auto;
-    padding: 0;
+    padding: 0 0 0.8em 0;
   }
 }
 
 .highlight {
   @include box-shadow(rgba(0,0,0,0.06) 0 0 10px);
   clear: both;
+  position: relative;
+
+  code {
+    &:after {
+      @include background-image(linear-gradient(to right, rgba($white, 0) 20%, rgba($white, 1) 50%, rgba($white, 1)));
+      content: " ";
+      height: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: $base-rhythm-unit * 3;
+    }
+  }
+
+  .lineno {
+    color: rgba($dark-grey, 0.15);
+  }
 }
 
 // Variable
