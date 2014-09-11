@@ -67,7 +67,7 @@ module.exports = function(grunt) {
         tasks: ['copy:stageImg']
       },
       fonts: {
-        files: ['<%= config.app %>/_assets/fonts/**/*'],
+        files: ['<%= config.app %>/_assets/fonts/*'],
         tasks: ['copy:stageFont']
       },
       vectors: {
