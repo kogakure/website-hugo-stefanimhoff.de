@@ -4,7 +4,7 @@
 
 .pagination {
   a {
-    @extend %sans;
+    @extend %sans-font;
     @include border-radius(5px);
     background: $dark-grey;
     border: 0;

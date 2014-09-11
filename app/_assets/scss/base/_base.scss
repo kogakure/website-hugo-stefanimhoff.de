@@ -3,7 +3,7 @@
 // ============================================================================
 
 body {
-  @extend %base;
+  @extend %base-font;
   @extend %pattern-dark-stripes;
   @include font-smoothing(subpixel-antialiased);
   @include hyphens(auto);
@@ -13,7 +13,7 @@ body {
 }
 
 :lang(ja) {
-  @extend %japanese;
+  @extend %japanese-font;
 }
 
 // Meldung für alte Browser
@@ -53,7 +53,7 @@ a {
 // Headlines
 // ----------------------------------------------------------------------------
 h1, h2, h3, h4, h5, h6 {
-  @extend %sans;
+  @extend %sans-font;
   @include enable-ligatures;
   @include hyphens(manual);
   clear: both;
@@ -139,37 +139,30 @@ abbr.no-caps {
 
 // Pre
 // ----------------------------------------------------------------------------
+code {
+  @extend %mono-font;
+  @include border-radius(3px);
+  background: $white;
+  @include adjust-font-size-to($font-scale-small);
+  padding: 0 0.3em;
+}
+
 pre {
   @include trailer(1);
-}
+  background: $white;
+  padding: $base-rhythm-unit;
 
-.code .gist .gist-file {
-  margin-bottom: 0;
-  border: 0;
-  .gist-data .line-numbers {
-    background: #fefefe;
-    border-right: 1px solid #e0e0e0;
-    color: rgba(#586e75, 0.25);
-    text-align: right;
-    padding: .8em;
-    text-shadow: #eaeaea 0 -1px;
-    -webkit-box-shadow: $white -1px 0 inset;
-    -moz-box-shadow: $white -1px 0 inset;
-    box-shadow: $white -1px 0 inset;
+  code {
+    display: block;
+    line-height: 1.2;
+    overflow-x: auto;
+    padding: 0;
   }
 }
 
-figure.code {
-  @include grid-span(12);
-  float: right !important;
-  clear: none !important;
-
-  @include breakpoint($content-medium-code) {
-    @include grid-span(10, 1, 8);
-    margin-left: -(grid-span(1, 1, 8));
-    float: none !important;
-    clear: both !important;
-  }
+.highlight {
+  @include box-shadow(rgba(0,0,0,0.06) 0 0 10px);
+  clear: both;
 }
 
 // Variable
@@ -181,7 +174,7 @@ var {
 // Sample output
 // ----------------------------------------------------------------------------
 samp {
-  @extend %mono;
+  @extend %mono-font;
   color: $sample-color;
   background: $sample-background;
   border: 1px solid #ddd;
@@ -197,7 +190,7 @@ samp {
 // Keyboard entry
 // ----------------------------------------------------------------------------
 kbd {
-  @extend %sans;
+  @extend %sans-font;
   display: inline-block;
   border: 1px solid $keyboard-border;
   margin: 0 0.1em;

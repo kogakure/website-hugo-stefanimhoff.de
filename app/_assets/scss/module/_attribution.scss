@@ -11,7 +11,7 @@
 }
 
 %attribution__text {
-  @extend %sans;
+  @extend %sans-font;
   @include transition(all 0.6s ease);
   background: $black;
   background: rgba($black, 0.75);
@@ -32,13 +32,13 @@
 
   // Copyright-Zeichen
   b {
-    @extend %mono;
+    @extend %mono-font;
     font-weight: normal;
   }
 }
 
 %attribution-before {
-  @extend %mono;
+  @extend %mono-font;
   @include border-radius(10px);
   @include transition(all 0.6s ease);
   background: $white;
@@ -55,7 +55,7 @@
 }
 
 %attribution-before-fontface {
-  @extend %iconfont;
+  @extend %icon-font;
   content: "#{$icon-question}";
   font-size: 10px;
   font-weight: 200;
@@ -127,7 +127,7 @@
 }
 
 .attribution--main__anchor {
-  // @extend %sans;
+  // @extend %sans-font;
   @include transition(all 0.6s ease);
   height: 34px;
   opacity: 0.5;

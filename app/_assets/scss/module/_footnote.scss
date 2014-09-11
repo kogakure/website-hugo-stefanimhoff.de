@@ -8,7 +8,7 @@
 // [^1]: Beschreibung der Fußnote
 
 sup a[rel="footnote"] {
-  @extend %sans;
+  @extend %sans-font;
   @include adjust-font-size-to(modular-scale(0));
   @include link-colors($dark-grey, $dark-grey, $dark-grey, $dark-grey, $dark-grey);
   cursor: help;
@@ -16,7 +16,7 @@ sup a[rel="footnote"] {
 }
 
 .footnotes {
-  @extend %sans;
+  @extend %sans-font;
   @include adjust-font-size-to(modular-scale(0));
   color: lighten($dark-grey, 40);
   clear: both;

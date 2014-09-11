@@ -30,7 +30,7 @@
   z-index: 200;
 
   .nav-close-btn {
-    @extend %sans;
+    @extend %sans-font;
     @include link-colors($white, $nav-link-color-hover, $white, $white, $white);
     border: 0;
     display: none;
@@ -74,7 +74,7 @@
     width: 250px;
 
     .nav-close-btn {
-      @extend %sans;
+      @extend %sans-font;
       @include adjust-font-size-to(12px);
       @include link-colors($white, $nav-link-color-hover, $white, $white, $white);
       @include text-shadow(0 1px 1px $black);
@@ -137,7 +137,7 @@
 // Styling der Navigationpunkte (Basis-Navigation)
 // ----------------------------------------------------------------------------
 .nav {
-  @extend %sans;
+  @extend %sans-font;
   font-size: 18px;
   font-weight: 200;
   letter-spacing: 0.1em;
@@ -177,7 +177,7 @@
 // ----------------------------------------------------------------------------
 .nav-item-external a:hover {
   &:after {
-    @extend %iconfont;
+    @extend %icon-font;
     content: " #{$icon-external}";
     font-size: 14px;
     line-height: 1;

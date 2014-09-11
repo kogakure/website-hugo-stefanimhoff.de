@@ -33,7 +33,7 @@
   }
 
   &:after, &:before {
-    @extend %sans;
+    @extend %sans-font;
     bottom: 100%;
     margin: 0 0 5px;
     opacity: 0;

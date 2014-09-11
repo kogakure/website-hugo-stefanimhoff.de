@@ -4,7 +4,7 @@
 
 p, li {
   code {
-    @extend %mono;
+    @extend %mono-font;
     background: #fff;
     border: 1px solid #ddd;
     color: #555;
@@ -26,7 +26,7 @@ pre, figure.code table {
 }
 
 .highlight pre {
-  @extend %mono;
+  @extend %mono-font;
   background: $pre-bg;
   border: 1px solid $pre-border;
   color: $pre-color;
@@ -62,7 +62,7 @@ figure.code {
     }
   }
   figcaption {
-    @extend %sans;
+    @extend %sans-font;
     background-color: #aaaaaa;
     font-size: $base-font-size * 0.8125;
     font-weight: normal;

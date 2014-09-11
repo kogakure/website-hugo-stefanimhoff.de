@@ -4,7 +4,7 @@
 
 .home {
   .section {
-    @extend %sans;
+    @extend %sans-font;
     margin-bottom: 0;
     padding: 1.5em 0;
 
@@ -80,7 +80,7 @@
     @extend %pattern-wavegrid;
 
     .japanese {
-      @extend %japanese;
+      @extend %japanese-font;
       font-size: 1.5em;
       font-style: normal;
       margin-bottom: 0;

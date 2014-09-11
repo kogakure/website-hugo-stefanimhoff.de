@@ -22,7 +22,7 @@
     }
 
     time {
-      @extend %sans;
+      @extend %sans-font;
       @include grid-span(3, 1, 12);
       color: rgba($dark-grey, 0.3);
       text-align: right;
