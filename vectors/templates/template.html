@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><%= fontBaseName %></title>
+    <style>
+      <% if (fontfaceStyles) { %>@font-face {
+          font-family: "<%= fontBaseName %>";<% if (fontSrc1) { %>
+          src: <%= fontSrc1 %>;<% }%>
+          src: <%= fontSrc2 %>;
+          font-weight: normal;
+          font-style: normal;
+        }
+      <% } %>
+
+      <% if (baseStyles) { %>.icon,<% for (var glyphIdx = 0; glyphIdx < glyphs.length; glyphIdx++) { %>
+        .icon-<%= glyphs[glyphIdx] %>:before,<% } %>
+        [data-icon]:before {
+          font-family: "<%= fontBaseName %>";
+          font-style: normal;
+          font-weight: normal;
+          font-variant: normal;
+          line-height: 1;
+          text-decoration: inherit;
+          text-transform: none;
+          -moz-osx-font-smoothing: grayscale;
+          -webkit-font-smoothing: antialiased;
+        }
+      <% } %>
+
+      <% if (iconsStyles) { %><% for (var glyphIdx = 0; glyphIdx < glyphs.length; glyphIdx++) { %>
+      .icon-<%= glyphs[glyphIdx] %>:before { content:"\<%= codepoints[glyphIdx] %>"; }<% } %><% } %>
+
+      body {
+        background: #fff;
+        color: #222;
+      }
+
+      h1, div {
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+      }
+
+      h1 {
+        font-size: 18px;
+      }
+
+      .icons {
+        -webkit-column-count: 5;
+        -moz-column-count: 5;
+        column-count: 5;
+        -webkit-column-gap: 20px;
+        -moz-column-gap: 20px;
+        column-gap: 20px;
+      }
+
+      .icons-item,
+      .icons-item i {
+        line-height: 2em;
+        cursor: pointer;
+      }
+
+      .icons-item:hover {
+        color: #800;
+      }
+
+      .icons-item i {
+        display: inline-block;
+        width: 32px;
+        text-align: center;
+      }
+
+      .icons-item:hover i {
+        -webkit-transform: scale(1.5);
+        -moz-transform: scale(1.5);
+        -ms-transform: scale(1.5);
+        -o-transform: scale(1.5);
+        transform: scale(1.5);
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1>Preview für "<%= fontBaseName %>"</h1>
+
+    <div class="icons" id="icons">
+      <% for (var glyphIdx = 0; glyphIdx < glyphs.length; glyphIdx++) { var glyph = glyphs[glyphIdx] %>
+      <div class="icons-item" data-name="<%= glyph %>"><i class="<%= baseClass %> <%= classPrefix %><%= glyph %>"></i> <%= classPrefix %><%= glyph %></div>
+      <% } %>
+    </div>
+
+    <h1>Benutzung</h1>
+    <pre>
+    <code>
+    &lt;i class=&quot;<%= classPrefix %><span id="name">name</span>&quot;&gt;&lt;/i&gt;
+    </code>
+    </pre>
+
+    <script>
+      (function() {
+        document.getElementById('icons').onclick = function(e) {
+          e = e || window.event;
+          document.getElementById('name').innerHTML = e.target.getAttribute('data-name') || e.target.parentNode.getAttribute('data-name');
+        }
+      })();
+    </script>
+  </body>
+</html>

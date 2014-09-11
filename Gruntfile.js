@@ -189,6 +189,35 @@ module.exports = function(grunt) {
       }
     },
 
+    // Webfonts
+    // --------
+    webfont: {
+      icons: {
+        src: 'vectors/*.svg',
+        dest: 'app/_assets/fonts',
+        destCss: 'app/_assets/scss/base',
+        options: {
+          font: 'iconfont',
+          relativeFontPath: '/assets/',
+          stylesheet: 'scss',
+          styles: 'font,icon',
+          htmlDemo: true,
+          destHtml: 'docs',
+          htmlDemoTemplate: 'vectors/templates/template.html',
+          ligatures: true,
+          hashes: true,
+          types: 'eot,woff,ttf,svg',
+          syntax: 'bootstrap',
+          template: 'vectors/templates/template.css',
+          templateOptions: {
+            baseClass: 'icon',
+            classPrefix: 'icon-',
+            mixinPrefix: 'icon-'
+          }
+        }
+      }
+    },
+
     // Copy
     // ----
     copy: {

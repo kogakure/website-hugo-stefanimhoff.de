@@ -1,0 +1,50 @@
+// ============================================================================
+// Icon-Font (<%= fontBaseName %>)
+// ============================================================================
+//
+// Diese Datei wird automatisch kompiliert, daher keine Änderungen
+// direkt darin machen, sondern diese im Ordner für Templates unter
+// `<%= template %>` ändern.
+
+// Variables für die Nutzung in content
+// ------------------------------------
+<% if (iconsStyles) { %><% for (var glyphIdx = 0; glyphIdx < glyphs.length; glyphIdx++) { %>
+$icon-<%= glyphs[glyphIdx] %>: "\<%= codepoints[glyphIdx] %>";<% } %><% } %>
+
+// Font-Face
+// ---------
+
+<% if (fontfaceStyles) { %>@font-face {
+  font-family: "<%= fontBaseName %>";<% if (fontSrc1) { %>
+  src: <%= fontSrc1 %>;<% }%>
+  src: <%= fontSrc2 %>;
+  font-weight: normal;
+  font-style: normal;
+  }
+<% } %>
+
+// Styling für Icon-Fonts
+// ----------------------
+
+[data-icon]:before { content: attr(data-icon); }
+
+<% if (baseStyles) { %>.icon,<% for (var glyphIdx = 0; glyphIdx < glyphs.length; glyphIdx++) { %>
+.icon-<%= glyphs[glyphIdx] %>:before,<% } %>
+[data-icon]:before {
+  display: inline-block;
+  font-family: "<%= fontBaseName %>";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+<% } %>
+
+// Einzelne Klassen-Attribute
+// --------------------------
+<% if (iconsStyles) { %><% for (var glyphIdx = 0; glyphIdx < glyphs.length; glyphIdx++) { %>
+.icon-<%= glyphs[glyphIdx] %>:before { content:"\<%= codepoints[glyphIdx] %>"; }<% } %><% } %>
