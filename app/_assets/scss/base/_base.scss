@@ -155,7 +155,6 @@ pre {
     display: block;
     line-height: 1.2;
     overflow-x: auto;
-    padding: 0 0 6px 0;
   }
 }
 
@@ -171,7 +170,7 @@ pre {
 
   code {
     border: 0;
-    padding: 0;
+    padding: 0 0 6px 0;
 
     &:after {
       @include background-image(linear-gradient(to right, rgba($white, 0) 20%, rgba($white, 1) 50%, rgba($white, 1)));

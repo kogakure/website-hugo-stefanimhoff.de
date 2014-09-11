@@ -68,7 +68,7 @@ Dudley was ninety-two, in his second life, and fast approaching time for another
 
 The Carlton AllLander drove Dudley home just after dawn. Like the astronomer, the vehicle was old and worn, but perfectly capable of doing its job. It had a cheap diesel engine, common enough on a semi-frontier world like Gralmond, although its drive array was a thoroughly modern photoneural processor. With its high suspension and deep-tread tyres it could plough along the dirt track to the observatory in all weather and seasons, including the metre-deep snow of Gralmond’s winters.
 
-{% highlight html %}
+{% highlight html linenos %}
 Dudley was ninety-two, in his second life …
 
 ---------------------------------------
@@ -90,7 +90,7 @@ a b c d e f g h i j k l m n o
 p q r s t u v w x y z { | } ~
 </pre>
 
-{% highlight html %}
+{% highlight html linenos %}
 <pre>
 Dies    soll genau  S O  aussehen.
 </pre>
@@ -111,7 +111,7 @@ Zusätzlich dazu kann auch das Element `cite` verwendet werden, um ein Werk zu m
 Dies ist ein Zitat.
 {% endblockquote %}
 
-{% highlight html %}
+{% highlight html linenos %}
 {% raw %}{% blockquote %}
 Dies ist ein Zitat.
 {% endblockquote %}{% endraw %}
@@ -127,7 +127,7 @@ Drei Ringe den Elben, hoch im Licht. Sieben den Zwergen in ihren Hallen aus Stei
 Flying is learning how to throw yourself at the ground and miss.
 {% endblockquote %}
 
-{% highlight html %}
+{% highlight html linenos %}
 {% raw %}{% blockquote Douglas Adams, The Hichhikers Guide to the Galaxy %}
 …
 {% endblockquote %}{% endraw %}
@@ -139,7 +139,7 @@ Flying is learning how to throw yourself at the ground and miss.
 Over the past 24 hours I've been reflecting on my life & I've realized only one thing. I need a medieval battle axe.
 {% endblockquote %}
 
-{% highlight html %}
+{% highlight html linenos %}
 {% raw %}{% blockquote @allanbranch https://twitter.com/allanbranch/status/90766146063712256 %}
 …
 {% endblockquote %}{% endraw %}
@@ -155,7 +155,7 @@ Every interaction is both precious and an opportunity to delight.
 Many forms of Government have been tried, and will be tried in this world of sin and woe. No one pretends that democracy is perfect or all-wise. Indeed, it has been said that democracy is the worst form of government except all those other forms that have been tried from time to time.
 {% endblockquote %}
 
-{% highlight html %}
+{% highlight html linenos %}
 {% raw %}{% blockquote Seth Godin http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html Welcome to Island Marketing %}
 …
 {% endblockquote %}{% endraw %}
@@ -175,7 +175,7 @@ Wenn man sehr lange Absätze schreibt, ist es hilfreich ein herausgeschobenen Zi
 Wenn man sehr lange Absätze schreibt, ist es hilfreich ein herausgeschobenen Zitatblock zu verwenden, der einen wichtigen Teil des Abschnitts markiert. Einige benutzen vielleicht lieber viele Überschriften, was auch meistens gut funktioniert, aber weniger gut für lange Prosa geeignet ist. {" Wichtig anzumerken ist, dass die Pullquotes nur visuelle Präsentation sind und nicht zweimal im Code erscheinen. "} Deshalb werden CSS-Techniken angewandt, um das Zitat ein weiteres mal sichtbar zu machen. In Octopress kann man dieses sehr einfach mit dem Pullquote-Tag erreichen.
 {% endpullquote %}
 
-{% highlight html %}
+{% highlight html linenos %}
 {% raw %}{% pullquote left %}
 Wenn man sehr lange Absätze schreibt, … {" Wichtig anzumerken ist … und nicht zweimal im Code erscheinen. "} Deshalb werden CSS-Techniken angewandt, um …
 {% endpullquote %}{% endraw %}
@@ -189,7 +189,7 @@ Manchmal möchte man einen kurzen Zitatblock verwenden, der nicht im Text vorkom
 <p>No time for pessimism.</p>
 </blockquote>
 
-{% highlight html %}
+{% highlight html linenos %}
 <blockquote lang="en" class="pullquote">
 <p>No time for pessimism.</p>
 </blockquote>
@@ -239,7 +239,7 @@ All mimsy     were     the borogoves,
 And       the mome     raths            outgrabe.
 {% endverse %}
 
-{% highlight html %}
+{% highlight html linenos %}
 {% raw %}{% verse Lewis Carroll, Jabberwocky (1832-98) %}
 ‘Twas brillig, and the slithy toves
 Did gyre and gimble            in the wabe;
@@ -262,7 +262,7 @@ And       the mome     raths            outgrabe.
 
 Manchmal möchte man mitten im Text etwas erklären, was nicht direkt zum Text gehört, aber das zum Verständnis des Textes beitragen kann. Diese Randbemerkungen wurden im Print üblicherweise in den Rand der Publikation gedruckt und hatten eine kleinere Schrift. Manchmal kann man diese aber auch im Text selbst stehen sehen, und sie werden durch eine andere Farbe oder einen Rand als Nebenbemerkung gekennzeichnet. Auf dieser Website stehen die Randbemerkungen (`aside`) im Rand und zwar wahlweise im linken oder rechten Rand. Als Überschrift (wenn nötig) sollte minimal eine `h4` verwendet werden.
 
-{% highlight html %}
+{% highlight html linenos %}
 {% raw %}{% aside aside--left %}
 <h4>Überschrift</h4>
 <p>Dies ist eine Anmerkung in der Seitenleiste im rechten Rand</p>
@@ -281,7 +281,7 @@ Das Element `ol` kennzeichnet eine geordnete Lste, und durch CSS sind verschiede
    2. Sie hat zwei Einträge
 3. Dies ist der letzte Eintrag auf dieser Liste
 
-{% highlight html %}
+{% highlight html linenos %}
 1. Dies ist eine geordnete Liste
 2. Dies ist der zweite Listeneintrag, der eine Unterliste enthält
    1. Dies ist die Unterliste, ebenfalls geordnet
@@ -304,7 +304,7 @@ Das Element `ul` kennzeichnet eine ungeordnete Liste (z. B. eine Liste von Eintr
   * Angular.js
   * Ember.js
 
-{% highlight html %}
+{% highlight html linenos %}
 * HTML
 * CSS
   * Sass
@@ -325,7 +325,7 @@ Manchmal soll eine Liste auch Blockelemente enthalten, üblicherweise einen Absa
 
 * JavaScript ist eine Programmiersprache, die verwendet wird um Interaktionen zu einer Website hinzuzufügen oder ganze Programme für das Internet zu schreiben.
 
-{% highlight html %}
+{% highlight html linenos %}
 * HTML ist eine Auszeichnungssprache die verwendet wird, um …
 
 * CSS ist eine deklarive Sprache für Stilvorlagen. Damit wird …
@@ -347,7 +347,7 @@ Das Element `dl` ist ein weiterer Typ von Liste, nämlich eine Defintionsliste. 
 <dd>Dies ist eine Definition für die beiden Bezeichnungen darüber.</dd>
 </dl>
 
-{% highlight html %}
+{% highlight html linenos %}
 <dl>
 <dt>Dies ist eine Bezeichnung.</dt>
 <dd>Dies ist die Definition für die Bezeichnung.</dd>
@@ -484,7 +484,7 @@ Die Koordinate des <var>i</var>ten Punktes ist (<var>x<sub><var>i</var></sub></v
 
 Mathe ist eine nette Sache, manchmal möchte man mitten im Text eine Formel haben. Und sogar Berechnungen wie diese f(<var>x</var>, <var>n</var>) = log<sub>4</sub><var>x</var><sup><var>n</var></sup> sollte funktionieren und nicht die Zeilenhöhe verändern oder den Textfluß verändern.
 
-{% highlight html %}
+{% highlight html linenos %}
 x<sub>i</sub>
 
 f(x, n) = log<sub>4</sub>x<sup>n</sup>
@@ -579,7 +579,7 @@ Tabellen sollten verwendet werden, um tabellarische Daten anzuzeigen. Die Elemen
 </table>
 </figure>
 
-{% highlight html %}
+{% highlight html linenos %}
 <figure class="table-figure">
 <table class="table">
   <thead>
@@ -649,7 +649,7 @@ Tabellen sollten verwendet werden, um tabellarische Daten anzuzeigen. Die Elemen
 </table>
 </figure>
 
-{% highlight html %}
+{% highlight html linenos %}
 <figure class="table-figure">
 <table class="table--striped">
 …
@@ -692,7 +692,7 @@ Tabellen sollten verwendet werden, um tabellarische Daten anzuzeigen. Die Elemen
 </table>
 </figure>
 
-{% highlight html %}
+{% highlight html linenos %}
 <figure class="table-figure">
 <table class="table--bordered">
 …
@@ -735,7 +735,7 @@ Tabellen sollten verwendet werden, um tabellarische Daten anzuzeigen. Die Elemen
 </table>
 </figure>
 
-{% highlight html %}
+{% highlight html linenos %}
 <figure class="table-figure">
 <table class="table-hover">
 …
@@ -778,7 +778,7 @@ Tabellen sollten verwendet werden, um tabellarische Daten anzuzeigen. Die Elemen
 </table>
 </figure>
 
-{% highlight html %}
+{% highlight html linenos %}
 <figure class="table-figure">
 <table class="table--condensed">
 …
@@ -808,7 +808,7 @@ Das Element `figure` wird verwendet um mehrere Objekte in einer Abbildung mit ei
 <img src="http://lorempixel.com/680/408/fashion/" alt="Example image">
 {% endfigure %}
 
-{% highlight html %}
+{% highlight html linenos %}
 {% raw %}{% figure %}
 <img src="http://lorempixel.com/680/408/fashion/" alt="Example image">
 {% endfigure %}{% endraw %}
@@ -834,7 +834,7 @@ Abbildungen, die einen Schatten haben sollen, können das Klassen-Attribut `figu
 <img src="http://lorempixel.com/680/408/sports/" alt="Example image">
 {% endfigure %}
 
-{% highlight html %}
+{% highlight html linenos %}
 {% raw %}{% figure figure--longcaption figure--border figure--shadow %}
 …
 {% endfigure %}{% endraw %}
@@ -852,7 +852,7 @@ Um besonders große Fotos einzusetzen, kann das Klassen-Attribut `figure--fullsi
 <img src="http://lorempixel.com/1200/500/nature/" alt="Example image">
 {% endfigure %}
 
-{% highlight html %}
+{% highlight html linenos %}
 {% raw %}{% figure figure--fullsize %}
 …
 {% endfigure %}{% endraw %}
@@ -870,7 +870,7 @@ Abbildungen können in den Rand geschoben werden, wahlweise links (`figure--hang
 <img src="http://lorempixel.com/900/400/food/" alt="Example image">
 {% endfigure %}
 
-{% highlight html %}
+{% highlight html linenos %}
 {% raw %}{% figure figure--hangleft %}
 …
 {% endfigure %}{% endraw %}
@@ -886,7 +886,7 @@ Abbildungen können in den Rand geschoben werden, wahlweise links (`figure--hang
 <img src="http://lorempixel.com/900/400/animals/" alt="Example image">
 {% endfigure %}
 
-{% highlight html %}
+{% highlight html linenos %}
 {% raw %}{% figure figure--hangright %}
 …
 {% endfigure %}{% endraw %}
@@ -904,7 +904,7 @@ Es ist auch möglich Abbildungen zentriert (`figure--center`) zu setzen, so dass
 <img src="http://lorempixel.com/900/400/people/" alt="Example image">
 {% endfigure %}
 
-{% highlight html %}
+{% highlight html linenos %}
 {% raw %}{% figure figure--center %}
 …
 {% endfigure %}{% endraw %}
@@ -917,7 +917,7 @@ Es ist auch möglich Abbildungen zentriert (`figure--center`) zu setzen, so dass
 <p class="attribution__text">Dieses Foto stammt von <a href="http://lorempixel.com">lorempixel.com</a></p>
 {% endfigure %}
 
-{% highlight html %}
+{% highlight html linenos %}
 {% raw %}{% figure attribution %}
 <img src="http://lorempixel.com/680/408/fashion/" alt="Example image">
 <p class="attribution__text">Dieses Foto stammt von <a href="http://lorempixel.com">lorempixel.com</a></p>
@@ -957,19 +957,6 @@ Es ist auch möglich Videos einzubetten, und zwar als natives HTML5, direkt von 
 ### Codeblöcke
 
 
-#### Ohne Highlighting
-
-Einfache Codeblöcke ohne Sprachangabe und Highlighting können so geschrieben werden:
-
-    Mein fantastischer Code
-
-{% highlight text %}
-    Mein fantastischer Code
-{% endhighlight %}
-
-Diese werden einfach in ein `<pre>` und ein `<code>` eingeschlossen.
-
-
 #### Mit Hightlighting
 
 {% highlight sh %}
@@ -995,7 +982,7 @@ end
 {% endraw %}{% endhighlight %}
 
 
-#### Mit Hightlighting und Zeilennummerierung
+#### Mit Zeilennummerierung
 
 {% highlight ruby linenos %}
 def index
@@ -1003,7 +990,7 @@ def index
 end
 {% endhighlight %}
 
-{% highlight html %}
+{% highlight html linenos %}
 {% raw %}
 {% highlight ruby linenos %}
 def index
@@ -1016,14 +1003,14 @@ end
 
 #### Längere Beispiele
 
-{% highlight ruby %}
+{% highlight ruby linenos %}
 namespace :images do
 
   desc "Crush all images"
   task :crush do
-    App::Application.config.assets.paths.each do |directory|
+    App::Application.config.assets.paths.each do |dir|
       ImageCrusher.optimize({
-        directory: directory,
+        directory: dir,
         quantize: true
       })
     end
@@ -1032,7 +1019,7 @@ namespace :images do
 end
 {% endhighlight %}
 
-{% highlight css %}
+{% highlight css linenos %}
 /**
  * CSS/Markup: Flexbox
  */
