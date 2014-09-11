@@ -141,22 +141,21 @@ abbr.no-caps {
 // ----------------------------------------------------------------------------
 code {
   @extend %mono-font;
+  @include adjust-font-size-to($font-scale-small);
   @include border-radius(3px);
   background: $white;
-  @include adjust-font-size-to($font-scale-small);
-  padding: 0 0.3em;
+  padding: 0.2em 0.4em;
+  border: 1px solid $light-grey;
 }
 
 pre {
   @include trailer(1);
-  background: $white;
-  padding: $base-rhythm-unit;
 
   code {
     display: block;
     line-height: 1.2;
     overflow-x: auto;
-    padding: 0 0 0.8em 0;
+    padding: 0 0 6px 0;
   }
 }
 
@@ -165,7 +164,15 @@ pre {
   clear: both;
   position: relative;
 
+  pre {
+    background: $white;
+    padding: $base-rhythm-unit;
+  }
+
   code {
+    border: 0;
+    padding: 0;
+
     &:after {
       @include background-image(linear-gradient(to right, rgba($white, 0) 20%, rgba($white, 1) 50%, rgba($white, 1)));
       content: " ";
