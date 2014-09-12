@@ -29,7 +29,7 @@ Jetzt musste ich nur noch herausfinden, wie denn der Fachbegriff für so ein Fot
 
 Doch es gibt tatsächlich einen Begriff für dieses Eigenschaft: [Bokeh](http://de.wikipedia.org/wiki/Bokeh).
 
-{% figure attribution figure--fullsize %}
+{% figure attribution image-figure-fullsize %}
 <img src="{{ 'artikel/josefina-bokeh.jpg' | asset_path }}" alt="Josefina with Bokeh">
 <p class="attribution__text"><i class="icon-cc"></i> Carlos Luis Camacho, <a href="http://www.flickr.com/photos/paseodelsur/51805888/">Josefina with Bokeh</a></p>
 {% endfigure %}

@@ -49,9 +49,9 @@ module Jekyll
       content = content.strip
 
       if @class
-        source = "<figure class=\"#{@class}\">\n"
+        source = "<figure class=\"image-figure #{@class}\">\n"
       else
-        source = "<figure>\n"
+        source = "<figure class=\"image-figure\">\n"
       end
 
       source += content
@@ -64,11 +64,7 @@ module Jekyll
 
       source += "\n</figure>"
 
-      output = "<div class=\"figure\">\n"
-      output += source
-      output += "\n</div>"
-
-      output
+      source
     end
 
   end

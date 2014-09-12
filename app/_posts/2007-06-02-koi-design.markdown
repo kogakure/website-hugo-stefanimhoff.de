@@ -51,7 +51,7 @@ Das Motiv, das ich für mein Design gewählt habe zeigt einen Koi (Karpfen), der
 
 Der Legende nach verwandelt sich ein Koi, dem es gelingt die magischen Wasserfälle hinaufzuschwimmen, in einen Drachen. Nach weiteren 500 Jahren verwandelt er sich dann in einen gehörnten Drachen und nach 1000 Jahren in einen geflügelten. Somit müsste das nächste Design wohl einen Drachen zeigen. Naja, mal sehen…
 
-{% figure figure--fullsize "Koi beim Hinaufschwimmen der Longmen Wassefälle. Es enthält typische Elemente wie Blätter, Blüten und Wellenkämme." %}
+{% figure image-figure-fullsize "Koi beim Hinaufschwimmen der Longmen Wassefälle. Es enthält typische Elemente wie Blätter, Blüten und Wellenkämme." %}
 <img src="{{ 'artikel/design-koi.jpg' | asset_path }}" alt="Design: Digitales Irezumi" title="Koi beim Hinaufschwimmen der Longmen Wassefälle. Es enthält typische Elemente wie Blätter, Blüten und Wellenkämme." />
 {% endfigure %}
 

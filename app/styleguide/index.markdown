@@ -816,96 +816,96 @@ Das Element `figure` wird verwendet um mehrere Objekte in einer Abbildung mit ei
 
 #### Abbildungen mit Untertitel
 
-Normalerweise sind die Untertitel zentriert ausgerichtet. Es gibt aber fälle, in denen der Untertitel zu lang ist und mehrzeiliger Text sieht zentriert nicht gut aus. Dafür gibt es das Klassen-Attribut `figure--longcaption`.
+Normalerweise sind die Untertitel zentriert ausgerichtet. Es gibt aber fälle, in denen der Untertitel zu lang ist und mehrzeiliger Text sieht zentriert nicht gut aus. Dafür gibt es das Klassen-Attribut `image-figure-longcaption`.
 
-{% figure figure--longcaption "Dies ist die Caption des Fotos, die ich etwas länger schreibe, nur damit ich testen kann, wie sie aussieht, wenn sie sich über mehrere Zeilen erstreckt. Diese verwendet <b>.figure--longcaption</b> als Klassen-Attribut." %}
+{% figure image-figure-longcaption "Dies ist die Caption des Fotos, die ich etwas länger schreibe, nur damit ich testen kann, wie sie aussieht, wenn sie sich über mehrere Zeilen erstreckt. Diese verwendet <b>.image-figure-longcaption</b> als Klassen-Attribut." %}
 <img src="http://lorempixel.com/680/408/sports/" alt="Example image">
 {% endfigure %}
 
-Im aktuellen Design haben zwar sowieso alle Abbildungen einen Rand, dies mag sich aber in Zukunft ändern. Bei Abbildungen, die also auf jeden Fall einen Rand benötigen, weil sie sonst nicht wirken oder schlecht aussehen, fügt man daher das Klassen-Attribut `figure--border` hinzu.
+Im aktuellen Design haben zwar sowieso alle Abbildungen einen Rand, dies mag sich aber in Zukunft ändern. Bei Abbildungen, die also auf jeden Fall einen Rand benötigen, weil sie sonst nicht wirken oder schlecht aussehen, fügt man daher das Klassen-Attribut `image-figure-border` hinzu.
 
-{% figure figure--border "Dies ist ein normales Foto in einer figure mit dem Klassen-Attribut <b>.figure--border</b>" %}
+{% figure image-figure-border "Dies ist ein normales Foto in einer figure mit dem Klassen-Attribut <b>.image-figure-border</b>" %}
 <img src="http://lorempixel.com/680/408/sports/" alt="Example image">
 {% endfigure %}
 
-Abbildungen, die einen Schatten haben sollen, können das Klassen-Attribut `figure--shadow` bekommen.
+Abbildungen, die einen Schatten haben sollen, können das Klassen-Attribut `image-figure-shadow` bekommen.
 
-{% figure figure--shadow "Dies ist ein normales Foto in einer figure mit dem Klassen-Attribut <b>.figure--shadow</b>" %}
+{% figure image-figure-shadow "Dies ist ein normales Foto in einer figure mit dem Klassen-Attribut <b>.image-figure-shadow</b>" %}
 <img src="http://lorempixel.com/680/408/sports/" alt="Example image">
 {% endfigure %}
 
 {% highlight html linenos %}
-{% raw %}{% figure figure--longcaption figure--border figure--shadow %}
+{% raw %}{% figure image-figure-longcaption image-figure-border image-figure-shadow %}
 …
 {% endfigure %}{% endraw %}
 {% endhighlight %}
 
 #### Abbildungen in maximaler Breite
 
-Um besonders große Fotos einzusetzen, kann das Klassen-Attribut `figure--fullsize` benutzt werden. Abbildungen in Vollbild sollten aber mindestens 1100 Pixel Breite aufweisen.
+Um besonders große Fotos einzusetzen, kann das Klassen-Attribut `image-figure-fullsize` benutzt werden. Abbildungen in Vollbild sollten aber mindestens 1100 Pixel Breite aufweisen.
 
-{% figure figure--fullsize %}
+{% figure image-figure-fullsize %}
 <img src="http://lorempixel.com/1200/500/nature/" alt="Example image">
 {% endfigure %}
 
-{% figure figure--fullsize "Figure mit dem Klassen-Attribut <b>.figure--fullsize</b> und Untertitel, das Bild sollte mindestens 1100 Pixel breit sein." %}
+{% figure image-figure-fullsize "Figure mit dem Klassen-Attribut <b>.image-figure-fullsize</b> und Untertitel, das Bild sollte mindestens 1100 Pixel breit sein." %}
 <img src="http://lorempixel.com/1200/500/nature/" alt="Example image">
 {% endfigure %}
 
 {% highlight html linenos %}
-{% raw %}{% figure figure--fullsize %}
+{% raw %}{% figure image-figure-fullsize %}
 …
 {% endfigure %}{% endraw %}
 {% endhighlight %}
 
 #### Links gesetzte Abbildungen
 
-Abbildungen können in den Rand geschoben werden, wahlweise links (`figure--hangleft`) oder rechts (`figure--hangright`). Der Untertitel steht dann im Rand neben dem Foto. Fotos dieser Art sollten mindestens 850 Pixel breit sein.
+Abbildungen können in den Rand geschoben werden, wahlweise links (`image-figure-left`) oder rechts (`image-figure-right`). Der Untertitel steht dann im Rand neben dem Foto. Fotos dieser Art sollten mindestens 850 Pixel breit sein.
 
-{% figure figure--hangleft %}
+{% figure image-figure-left %}
 <img src="http://lorempixel.com/900/400/food/" alt="Example image">
 {% endfigure %}
 
-{% figure figure--hangleft "Figure mit dem Klassen-Attribut <b>.figure--hangleft</b> und Untertitel, das Bild sollte mindestens 850 Pixel breit sein." %}
+{% figure image-figure-left "Figure mit dem Klassen-Attribut <b>.image-figure-left</b> und Untertitel, das Bild sollte mindestens 850 Pixel breit sein." %}
 <img src="http://lorempixel.com/900/400/food/" alt="Example image">
 {% endfigure %}
 
 {% highlight html linenos %}
-{% raw %}{% figure figure--hangleft %}
+{% raw %}{% figure image-figure-left %}
 …
 {% endfigure %}{% endraw %}
 {% endhighlight %}
 
 #### Rechts gesetzte Abbildungen
 
-{% figure figure--hangright %}
+{% figure image-figure-right %}
 <img src="http://lorempixel.com/900/400/animals/" alt="Example image">
 {% endfigure %}
 
-{% figure figure--hangright "Figure mit dem Klassen-Attribut <b>.figure--hangright</b> und Untertitel, das Bild sollte mindestens 850 Pixel breit sein." %}
+{% figure image-figure-right "Figure mit dem Klassen-Attribut <b>.image-figure-right</b> und Untertitel, das Bild sollte mindestens 850 Pixel breit sein." %}
 <img src="http://lorempixel.com/900/400/animals/" alt="Example image">
 {% endfigure %}
 
 {% highlight html linenos %}
-{% raw %}{% figure figure--hangright %}
+{% raw %}{% figure image-figure-right %}
 …
 {% endfigure %}{% endraw %}
 {% endhighlight %}
 
 #### Zentriert gesetzte Abbildungen
 
-Es ist auch möglich Abbildungen zentriert (`figure--center`) zu setzen, so dass sie in beide Ränder hineinragen.
+Es ist auch möglich Abbildungen zentriert (`image-figure-center`) zu setzen, so dass sie in beide Ränder hineinragen.
 
-{% figure figure--center %}
+{% figure image-figure-center %}
 <img src="http://lorempixel.com/900/400/people/" alt="Example image">
 {% endfigure %}
 
-{% figure figure--center "Figure mit dem Klassen-Attribut <b>.figure--center</b> und Untertitel, das Bild sollte mindestens 850 Pixel breit sein." %}
+{% figure image-figure-center "Figure mit dem Klassen-Attribut <b>.image-figure-center</b> und Untertitel, das Bild sollte mindestens 850 Pixel breit sein." %}
 <img src="http://lorempixel.com/900/400/people/" alt="Example image">
 {% endfigure %}
 
 {% highlight html linenos %}
-{% raw %}{% figure figure--center %}
+{% raw %}{% figure image-figure-center %}
 …
 {% endfigure %}{% endraw %}
 {% endhighlight %}
