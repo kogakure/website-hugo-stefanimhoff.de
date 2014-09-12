@@ -234,7 +234,6 @@ module.exports = function(grunt) {
           // Copy-Taks bewegen CSS, JavaScript und Bilder in Development
           // Assets-Pipeline bewegt CSS, JavaScript und Bilder in Production
           // Copy bewegt Assets und Verzeichnisse
-          'fonts/**/*',
           // Schließe Unterstrich-Verzeichnisse aus
           '!**/_*{,/**}',
           // Füge alle Dateien, die die Seite benötigt hier hinzu
@@ -281,6 +280,13 @@ module.exports = function(grunt) {
         dot: true,
         cwd: '<%= config.app %>/_assets/images',
         src: '**/*',
+        dest: '<%= config.dist %>/assets'
+      },
+      productionFont: {
+        expand: true,
+        dot: true,
+        cwd: '<%= config.app %>/_assets/fonts',
+        src: '*',
         dest: '<%= config.dist %>/assets'
       }
     },
@@ -398,7 +404,8 @@ module.exports = function(grunt) {
       ],
       dist: [
         'copy:dist',
-        'copy:productionImg'
+        'copy:productionImg',
+        'copy:productionFont'
       ]
     },
 
