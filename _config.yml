@@ -40,7 +40,7 @@ lsi:         true
 
 # Kramdown-Konfiguration
 kramdown:
-  auto_ids:                  true
+  auto_ids:                  false
   auto_id_prefix:            ""
   auto_id_stripping:         true
   transliterated_header_ids: true

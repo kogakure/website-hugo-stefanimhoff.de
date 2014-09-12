@@ -17,6 +17,7 @@ Ich finde es ziemlich interessant, im Nachhinein noch zu sehen, was man vor lang
 ## Januar
 
 Im Januar suche ich einiges zum Thema Weltreligionen. Auf ARTE kommt ein Beitrag über die verschiedenen Religionen, was mich zur Recherche treibt.
+
 Ich suche nach Scientology, aber nur um zu verstehen, an was für einen hanebüchenen Scheiß die glauben.
 
 In der Bildersuche suche ich nach einer Diskussion mit meinen Kollegen nach dem [Fiat Multipla](http://images.google.de/images?q=fiat+multipla), weil dies meiner Meinung nach das hässlichste Auto ist, das je hergestellt wurde.
