@@ -546,77 +546,37 @@ Tabellen sollten verwendet werden, um tabellarische Daten anzuzeigen. Die Elemen
 
 ### Einfache Tabellen
 
-<figure class="table-figure">
-<table class="table">
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>Vorname</th>
-      <th>Nachname</th>
-      <th>Benutzername</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
-</figure>
+\# | Vorname | Nachname | Benutzername
+-- | ------- | -------- | ------------
+1  | Mark    | Otto     | @mdo
+2  | Jacob   | Thronton | @fat
+3  | Larry   | the Bird | @twitter
 
-{% highlight html linenos %}
-<figure class="table-figure">
-<table class="table">
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>Vorname</th>
-      <th>Nachname</th>
-      <th>Benutzername</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
-</figure>
+{% highlight html %}
+\# | Vorname | Nachname | Benutzername
+-- | ------- | -------- | ------------
+1  | Mark    | Otto     | @mdo
+2  | Jacob   | Thronton | @fat
+3  | Larry   | the Bird | @twitter
 {% endhighlight %}
+
+| #  | Vorname | Nachname | Benutzername |
+| -- | ------- | -------- | ------------ |
+| 1  | Mark    | Otto     | @mdo         |
+| 2  | Jacob   | Thronton | @fat         |
+| 3  | Larry   | the Bird | @twitter     |
+
+{% highlight html %}
+| #  | Vorname | Nachname | Benutzername |
+| -- | ------- | -------- | ------------ |
+| 1  | Mark    | Otto     | @mdo         |
+| 2  | Jacob   | Thronton | @fat         |
+| 3  | Larry   | the Bird | @twitter     |
+{% endhighlight %}
+
 
 ### Gestreifte Tabellen
 
-<figure class="table-figure">
 <table class="table-zebra">
   <thead>
     <tr>
@@ -647,19 +607,15 @@ Tabellen sollten verwendet werden, um tabellarische Daten anzuzeigen. Die Elemen
     </tr>
   </tbody>
 </table>
-</figure>
 
 {% highlight html linenos %}
-<figure class="table-figure">
 <table class="table-zebra">
 …
 </table>
-</figure>
 {% endhighlight %}
 
 ### Tabellen mit Rand
 
-<figure class="table-figure">
 <table class="table-border">
   <thead>
     <tr>
@@ -690,19 +646,15 @@ Tabellen sollten verwendet werden, um tabellarische Daten anzuzeigen. Die Elemen
     </tr>
   </tbody>
 </table>
-</figure>
 
 {% highlight html linenos %}
-<figure class="table-figure">
 <table class="table-border">
 …
 </table>
-</figure>
 {% endhighlight %}
 
 ### Tabellen mit Hover-Interaktion
 
-<figure class="table-figure">
 <table class="table-hover">
   <thead>
     <tr>
@@ -733,19 +685,16 @@ Tabellen sollten verwendet werden, um tabellarische Daten anzuzeigen. Die Elemen
     </tr>
   </tbody>
 </table>
-</figure>
 
 {% highlight html linenos %}
-<figure class="table-figure">
 <table class="table-hover">
 …
 </table>
-</figure>
 {% endhighlight %}
+
 
 ### Verdichtete Tabellen
 
-<figure class="table-figure">
 <table class="table-condense">
   <thead>
     <tr>
@@ -776,14 +725,11 @@ Tabellen sollten verwendet werden, um tabellarische Daten anzuzeigen. Die Elemen
     </tr>
   </tbody>
 </table>
-</figure>
 
 {% highlight html linenos %}
-<figure class="table-figure">
 <table class="table-condense">
 …
 </table>
-</figure>
 {% endhighlight %}
 
 
