@@ -178,7 +178,7 @@ module.exports = function(grunt) {
         httpGeneratedImagesPath: '/assets/generated',
         outputStyle:             'expanded',
         debugInfo:               false,
-        raw:                     'extensions_dir = "<%= config.app %>/_bower_components"\n'
+        extensions_dir:          '<%= config.app %>/_bower_components'
       },
       dist:                   {
         options:              {
