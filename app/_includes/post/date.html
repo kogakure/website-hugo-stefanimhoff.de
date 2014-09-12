@@ -1,5 +1,5 @@
 {% capture date %}{{ page.date }}{{ post.date }}{% endcapture %}
-{% capture date_formatted %}{{ page.date }}{{ post.date }}{% endcapture %}
+{% capture date_formatted %}{{ page.date | date:"%d.%m.%Y" }}{{ post.date | date:"%d.%m.%Y" }}{% endcapture %}
 {% capture has_date %}{{ date | size }}{% endcapture %}
 
 {% capture updated %}{{ page.updated }}{{ post.updated }}{% endcapture %}
@@ -13,9 +13,3 @@
 {% if was_updated != '0' %}
 {% capture updated %}<span class="updated"><i class="icon-calendar"></i> <em>Bearbeitet am</em> <time datetime="{{ updated | datetime | date_to_xmlschema }}" class="updated">{{ updated_formatted }}</time></span>{% endcapture %}
 {% else %}{% assign updated = false %}{% endif %}
-
-DEBUG:
-page.date: {{ page.date }}<br>
-post.date: {{ post.date }}<br>
-date_formatted: {{ date_formatted }}<br>
-has_date: {{ has_date }}<br>
