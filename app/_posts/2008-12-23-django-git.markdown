@@ -87,7 +87,7 @@ Ich schaue mir mal das superduper Java-Framework [Spring](http://spring.io/) an,
 
 Ich amüsiere mich fantasisch über [The Website is Down](http://www.thewebsiteisdown.com/ "The Website Is Down") und [You suck at Photoshop](http://www.mydamnchannel.com/Big_Fat_Brain/You_Suck_at_Photoshop/YouSuckatPhotoshop1_398).
 
-Im Juni installiere ich mir auch [Ubuntu](http://www.ubuntu.com/ "Ubuntu Home Page | Ubuntu") in einer Parallels-Partition, um mal mit einem richtig guten Linux-System rumzutesten.
+Im Juni installiere ich mir auch [Ubuntu](http://www.ubuntu.com/) in einer Parallels-Partition, um mal mit einem richtig guten Linux-System rumzutesten.
 
 Ich versuche einige Abteilungen im Hause mal dazu zu bewegen, [CVS](http://de.wikipedia.org/wiki/Concurrent_Versions_System) vielleicht langsam einzumotten. Natürlich erfolglos.
 
@@ -112,7 +112,7 @@ Ich lerne, wie man [Vim](http://www.vim.org/ "welcome home : vim online") bedien
 
 Der größte Branch von Django (Newforms-Admin) wird in den Trunk migriert. Jetzt ist es nicht mehr weit, bis Django die Version 1.0 erreicht.
 
-Im Juli fällt mir im Einkaufsmarkt eine schwarze Tüte mit Tiefkühlbrötchen auf: [Panini Campagnoli](http://www.panexpert.de/de/valerian-retail.php "panExpert | Heinz Schmidt GmbH") von Valerian (panExpert). So was leckeres. Das Kühlfach ist in kürzester Zeit leergekauft. Die Brötchen machen süchtig, sogar in einem Drogenforum unterhalten sich Ex-Junkies darüber. Leider kann man die nicht selber bestellen, sondern nur als Großabnehmer :( Und in meinem Einkaufsmarkt sind die ständig ausverkauft.
+Im Juli fällt mir im Einkaufsmarkt eine schwarze Tüte mit Tiefkühlbrötchen auf: [Panini Campagnoli](http://www.panexpert.de/de/valerian-retail.php) von Valerian (panExpert). So was leckeres. Das Kühlfach ist in kürzester Zeit leergekauft. Die Brötchen machen süchtig, sogar in einem Drogenforum unterhalten sich Ex-Junkies darüber. Leider kann man die nicht selber bestellen, sondern nur als Großabnehmer :( Und in meinem Einkaufsmarkt sind die ständig ausverkauft.
 
 ## August
 

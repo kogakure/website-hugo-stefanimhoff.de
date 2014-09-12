@@ -58,9 +58,7 @@ Django unterstützt eine Vielzahl an Sprachen und bietet eine sehr gute Lokalisi
 Die Seite kogakure.de lief vorher mit [ExpressionEngine](http://ellislab.com/expressionengine), einem Publishing-Tool, das ich auch weiterhin sehr empfehlen kann.
 
 {% pullquote %}
-Doch jedes CMS (Content-Management-System) hat seine Begrenzungen, mit denen man leben muss oder sich mühsam nach Möglichkeiten umsehen muss, das System zu erweitern (Plugins, Extensions, Module). Da die meisten Erweiterungen einfach oben auf das CMS draufgesetzt werden, leidet darunter auch die Performance. So kann man nach dem Installieren eines Dutzend von [WordPress](http://wordpress.org/ "WordPress › Blog Tool and Weblog Platform")-Plugins leicht unzählige parallele Datenbankanfragen haben. Bei Django passiert so etwas nicht.
-
-Dies hat auch noch andere Nachteile: Man benutzt die Plugins, weiß aber meist nicht wie sie funktionieren oder ob sie überhaupt gut programmiert sind. {"Plugins bieten für Hacker eine besonders gute Angriffsfläche."}
+Doch jedes CMS (Content-Management-System) hat seine Begrenzungen, mit denen man leben muss oder sich mühsam nach Möglichkeiten umsehen muss, das System zu erweitern (Plugins, Extensions, Module). Da die meisten Erweiterungen einfach oben auf das CMS draufgesetzt werden, leidet darunter auch die Performance. So kann man nach dem Installieren eines Dutzend von [WordPress](http://wordpress.org/ "WordPress › Blog Tool and Weblog Platform")-Plugins leicht unzählige parallele Datenbankanfragen haben. Bei Django passiert so etwas nicht. Dies hat auch noch andere Nachteile: Man benutzt die Plugins, weiß aber meist nicht wie sie funktionieren oder ob sie überhaupt gut programmiert sind. {"Plugins bieten für Hacker eine besonders gute Angriffsfläche."}
 {% endpullquote %}
 
 Zu allem Unglück kam es in der Vergangenheit immer wieder vor, dass Plugins nicht weiterentwickelt wurden und mit neuen Versionen der CMS nicht mehr liefen.
@@ -125,7 +123,7 @@ Um den Einstieg in Django zu erleichtern, habe ich nachfolgend eine Liste von in
 * [Learn Django: Create a Wiki in 20 minutes](http://showmedo.com/videotutorials/video?name=1100000&amp;fromSeriesID=110) – Programmierung eines Wiki mit Django (1. Teil)
 * [Learn Django: Extending the wiki with wikiwords and search](http://showmedo.com/videotutorials/video?name=1100010&amp;fromSeriesID=110) – Programmierung eines Wiki mit Django (2. Teil)
 * [Learn Django: Adding tags to the wiki](http://showmedo.com/videotutorials/video?name=1100020&amp;fromSeriesID=110) – Programmierung eines Wiki mit Django (3. Teil)
-* [Django Screencast: Writing a simple todo list](http://turriate.com/media/video/tiddlylist.htm "Django Screencast: Writing a simple todo list") – Programmieren einer Todo-Liste mit Django
+* [Django Screencast: Writing a simple todo list](http://turriate.com/media/video/tiddlylist.htm) – Programmieren einer Todo-Liste mit Django
 
 ### Video-Präsentationen
 
@@ -135,14 +133,14 @@ Um den Einstieg in Django zu erleichtern, habe ich nachfolgend eine Liste von in
 ### Folien
 
 * [A fast-paced introduction to Django.](http://toys.jacobian.org/presentations/2007/pycon/tutorials/beginning/) – Folien von der PyCon2007, Jacob Kaplan-Moss
-* [The Django Web Application Framework](http://www.slideshare.net/simon/the-django-web-application-framework "The Django Web Application Framework &raquo; SlideShare") – Folien von ACCU, Python Track 2006, Simon Willison
-* [Doing Local Right](http://www.slideshare.net/simon/doing-local-right "Doing Local Right &raquo; SlideShare") – Folien von der @media 2007, Simon Willison
+* [The Django Web Application Framework](http://www.slideshare.net/simon/the-django-web-application-framework) – Folien von ACCU, Python Track 2006, Simon Willison
+* [Doing Local Right](http://www.slideshare.net/simon/doing-local-right) – Folien von der @media 2007, Simon Willison
 
 ### Lernen und Hilfe
 
-* [Google Groups Django users](http://groups.google.com/group/django-users "Django users | Google Groups") – Django Google Group, für Fragen und Antworten
+* [Google Groups Django users](http://groups.google.com/group/django-users) – Django Google Group, für Fragen und Antworten
 * [Django snippets](https://djangosnippets.org/) – Nützliche Sammlung von Filtern, Tags und Code-Schnipseln
-* [dpaste](http://dpaste.com/ "dpaste") – Zwischenablage für Code-Beispiele. Direkt in den IRC posten ist eine Todsünde.
+* [dpaste](http://dpaste.com/) – Zwischenablage für Code-Beispiele. Direkt in den IRC posten ist eine Todsünde.
 * [Django Resources](https://code.djangoproject.com/wiki/DjangoResources) – Riesige Liste von Django-Ressourcen: Applikationen, Projekte, Anleitungen, Präsentationen …
 
 ### Tutorials
@@ -151,7 +149,7 @@ Um den Einstieg in Django zu erleichtern, habe ich nachfolgend eine Liste von in
 
 ### Showcases
 
-* [DjangoSites](https://www.djangosites.org/ "Latest Additions :: DjangoSites.org - Powered by Django") – Galerie mit Django-Websites
+* [DjangoSites](https://www.djangosites.org/) – Galerie mit Django-Websites
 
 ### Merchandising
 
@@ -162,14 +160,14 @@ Um den Einstieg in Django zu erleichtern, habe ich nachfolgend eine Liste von in
 
 ### Django-Websites von Designern und Entwicklern
 
-* [Adrian Holovarty](http://www.holovaty.com/ "Adrian Holovaty's Web site") – Entwickler von Django (Chicago, Illinois, US)
-* [Bryan Veloso: Avalonstar](http://avalonstar.com/ "avalonstar:distortion") – Designer und Blogger (Seattle, Washington, US)
-* [Jacob Kaplan-Moss](http://jacobian.org/ "jacobian.org : i got nothing") – Entwickler von Django (Lawrence, Kansas, US)
-* [James Bennett: The B-List](http://www.b-list.org/ "The B-List: Latest entries") – Release Manager von Django (Lawrence, Kansas, US)
-* [Jeff Croft](http://jeffcroft.com/ "JeffCroft.com: Homepage") – Designer und Python Programmierer (Seattle, Washington, US)
+* [Adrian Holovarty](http://www.holovaty.com/) – Entwickler von Django (Chicago, Illinois, US)
+* [Bryan Veloso: Avalonstar](http://avalonstar.com/) – Designer und Blogger (Seattle, Washington, US)
+* [Jacob Kaplan-Moss](http://jacobian.org/) – Entwickler von Django (Lawrence, Kansas, US)
+* [James Bennett: The B-List](http://www.b-list.org/) – Release Manager von Django (Lawrence, Kansas, US)
+* [Jeff Croft](http://jeffcroft.com/) – Designer und Python Programmierer (Seattle, Washington, US)
 * [Nathan Borror](http://nthn.me/) – Designer (Lawrence, Kansas, US)
-* [Paul Bissex: E-Scribe](http://news.e-scribe.com/ "E-Scribe News : a programmer&#39;s blog") – Entwickler, Lehrer und Autor (Northampton, Massachusetts, US)
-* [Ross Poulton](http://www.rossp.org/ "rossp.org - Recent Updates") – Berater und Projektmanager, Entwickler von DjangoSites (Diamond Creek, Victoria, Australien)
+* [Paul Bissex: E-Scribe](http://news.e-scribe.com/) – Entwickler, Lehrer und Autor (Northampton, Massachusetts, US)
+* [Ross Poulton](http://www.rossp.org/) – Berater und Projektmanager, Entwickler von DjangoSites (Diamond Creek, Victoria, Australien)
 * [Wilson Miner](http://wilsonminer.com/) – Designer von EveryBlock, dem Django-Admin-Interface und der Django-Website (San Francisco, Kalifornien, US)
 
 ### Sonstiges
@@ -182,7 +180,7 @@ Um den Einstieg in Django zu erleichtern, habe ich nachfolgend eine Liste von in
 * [Django Friendly Webhosts](https://code.djangoproject.com/wiki/DjangoFriendlyWebHosts) – Liste von Hosts, die gut mit Django funktionieren
 * [Djangofriendly](http://djangofriendly.com/hosts/) – Digg-Style-Voting für Django-Hoster
 * [django-hosting.de](http://www.django-hosting.de/wiki/WikiIndex/) – Wiki mit verschiedenen Hosting-Anleitungen für Django
-* [Webfaction](https://www.webfaction.com/?affiliate=kogakure "Hosting for an agile web - WebFaction") – Hoster für Entwickler
+* [Webfaction](https://www.webfaction.com/?affiliate=kogakure) – Hoster für Entwickler
 
 ### Django-Sourcecode
 

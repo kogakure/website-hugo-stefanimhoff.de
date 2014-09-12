@@ -20,10 +20,12 @@ source:      ./app
 destination: ./dist
 
 # Social und RSS
-twitter_username: kogakure
-github_username:  kogakure
-subscribe_rss:    "/feed.xml"
 feedburner_url:   "http://feeds.feedburner.com/stefanimhoff"
+twitter: "@kogakure"
+googleplus: "104687479698350625994"
+
+geo_latitude: "53.596835"
+geo_longitude: "10.102015"
 
 # Veröffentlichungs-Einstellungen
 future:      true
@@ -33,10 +35,35 @@ limit_posts: 0
 
 # Server-Konfiguration
 date_format: "%d.%m.%Y"
+titlecase:   false
 port:        8888
 timezone:    local
 markdown:    kramdown
 lsi:         true
+
+# Feeds für individuelle Themen
+excerpt_link: "Weiterlesen &arr;"
+excerpt_in_feed: false
+permalink_label: "Permalink"
+permalink_label_feed: "★ Permalink"
+linklog_marker: "→"
+linklog_marker_position: after
+linklog_marker_position_feed: after
+standard_post_marker:
+
+# Categories
+category_feeds: true
+category_dir: kategorie
+category_title_prefix: "Kategorie: "
+
+# Tags
+tag_feeds: true
+tag_dir: tag
+tag_title_prefix: "Tags: "
+
+# Pagination
+paginate:       1000       # Posts per page on the blog index
+paginate_path:  :num       # default path for pagination, eg. page/2/
 
 # Kramdown-Konfiguration
 kramdown:
@@ -116,43 +143,3 @@ attribution_name: "solo sunshine"
 attribution_url: "https://www.flickr.com/photos/suttonhoo22/328647662/"
 attribution_author: "Dayna Bateman"
 attribution_creative_commons: true
-
-# -- Check: Do I need these? --
-url: http://stefanimhoff.de
-server_path: /home/kogakure/webapps/stefanimhoff
-
-twitter: "@kogakure"
-googleplus: "104687479698350625994"
-
-geo_latitude: "53.596835"
-geo_longitude: "10.102015"
-
-titlecase: false                  # Converts page and post titles to titlecase
-
-excerpt_link: "Weiterlesen &arr;" # "Continue reading" link text at the bottom of excerpted articles
-excerpt_in_feed: false            # Truncate excerpted articles in the atom feed
-permalink_label: "Permalink"
-permalink_label_feed: "★ Permalink"
-linklog_marker: "→"
-linklog_marker_position: after
-linklog_marker_position_feed: after
-standard_post_marker:
-
-
-# RSS / Email (optional) subscription links (change if using something like Feedburner)
-subscribe_rss: "/atom.xml"
-feedburner_url: "http://feeds.feedburner.com/stefanimhoff"
-
-# Categories
-category_feeds: true
-category_dir: kategorie
-category_title_prefix: "Kategorie: "
-
-# Tags
-tag_feeds: true
-tag_dir: tag
-tag_title_prefix: "Tags: "
-
-# Pagination
-paginate:       1000       # Posts per page on the blog index
-paginate_path:  :num       # default path for pagination, eg. page/2/

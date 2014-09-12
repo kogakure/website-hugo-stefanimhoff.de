@@ -52,7 +52,6 @@ Ich füge also zuerst das Gem zu meinem Gemfile hinzu:
 source "https://rubygems.org"
 
 group :development do
-  …
   gem 'modular-scale'
 end
 {% endhighlight %}

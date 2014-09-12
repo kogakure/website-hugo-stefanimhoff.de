@@ -168,6 +168,7 @@ pre {
   @include breakpoint($content-medium) {
     @include grid-span(10, 1, 8);
     margin-left: -(grid-span(1, 1, 8));
+    margin-right: 0;
     clear: both;
   }
 

@@ -10,7 +10,7 @@ tags:
 - terminal
 ---
 
-Für mich gehört ständige Verbesserung (<ruby>改善<rp>（</rp><rt>かいぜん</rt><rp>)<rp></ruby>, jap. Kaizen) zur täglichen Arbeit dazu. Was mich aber seit längerem gestört hat, ist wenn ich die Namen des zu klonenden Git-Repositorys per Hand tippen muss. Auto-Complete bietet hier eine Lösung.
+Für mich gehört ständige Verbesserung (<ruby>改善<rp>（</rp><rt>かいぜん</rt><rp>)</rp></ruby>, jap. Kaizen) zur täglichen Arbeit dazu. Was mich aber seit längerem gestört hat, ist wenn ich die Namen des zu klonenden Git-Repositorys per Hand tippen muss. Auto-Complete bietet hier eine Lösung.
 
 Ich klone die Jobs meiner Kunden über Gitosis von unserem Git-Server. Um mir Schreibarbeit zu sparen habe ich mir schon vor zwei Jahren ein kleines Bash-Skript `gcl` geschrieben, das als Parameter den Namen eine Repositorys erwartet und dieses dann an die richtige Position klont und auch gleich noch den Ordner im Finder für mich öffnet.
 
