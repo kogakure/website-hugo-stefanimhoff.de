@@ -255,7 +255,7 @@ And       the mome     raths            outgrabe.
 <p>Dies ist eine Anmerkung in der Seitenleiste im linken Rand</p>
 {% endaside %}
 
-{% aside aside--left %}
+{% aside aside-left %}
 <h4>Überschrift</h4>
 <p>Dies ist eine Anmerkung in der Seitenleiste im rechten Rand</p>
 {% endaside %}
@@ -263,7 +263,7 @@ And       the mome     raths            outgrabe.
 Manchmal möchte man mitten im Text etwas erklären, was nicht direkt zum Text gehört, aber das zum Verständnis des Textes beitragen kann. Diese Randbemerkungen wurden im Print üblicherweise in den Rand der Publikation gedruckt und hatten eine kleinere Schrift. Manchmal kann man diese aber auch im Text selbst stehen sehen, und sie werden durch eine andere Farbe oder einen Rand als Nebenbemerkung gekennzeichnet. Auf dieser Website stehen die Randbemerkungen (`aside`) im Rand und zwar wahlweise im linken oder rechten Rand. Als Überschrift (wenn nötig) sollte minimal eine `h4` verwendet werden.
 
 {% highlight html linenos %}
-{% raw %}{% aside aside--left %}
+{% raw %}{% aside aside-left %}
 <h4>Überschrift</h4>
 <p>Dies ist eine Anmerkung in der Seitenleiste im rechten Rand</p>
 {% endaside %}{% endraw %}
@@ -617,7 +617,7 @@ Tabellen sollten verwendet werden, um tabellarische Daten anzuzeigen. Die Elemen
 ### Gestreifte Tabellen
 
 <figure class="table-figure">
-<table class="table--striped">
+<table class="table-zebra">
   <thead>
     <tr>
       <th>#</th>
@@ -651,7 +651,7 @@ Tabellen sollten verwendet werden, um tabellarische Daten anzuzeigen. Die Elemen
 
 {% highlight html linenos %}
 <figure class="table-figure">
-<table class="table--striped">
+<table class="table-zebra">
 …
 </table>
 </figure>
@@ -660,7 +660,7 @@ Tabellen sollten verwendet werden, um tabellarische Daten anzuzeigen. Die Elemen
 ### Tabellen mit Rand
 
 <figure class="table-figure">
-<table class="table--bordered">
+<table class="table-border">
   <thead>
     <tr>
       <th>#</th>
@@ -694,7 +694,7 @@ Tabellen sollten verwendet werden, um tabellarische Daten anzuzeigen. Die Elemen
 
 {% highlight html linenos %}
 <figure class="table-figure">
-<table class="table--bordered">
+<table class="table-border">
 …
 </table>
 </figure>
@@ -703,7 +703,7 @@ Tabellen sollten verwendet werden, um tabellarische Daten anzuzeigen. Die Elemen
 ### Tabellen mit Hover-Interaktion
 
 <figure class="table-figure">
-<table class="table--hover">
+<table class="table-hover">
   <thead>
     <tr>
       <th>#</th>
@@ -746,7 +746,7 @@ Tabellen sollten verwendet werden, um tabellarische Daten anzuzeigen. Die Elemen
 ### Verdichtete Tabellen
 
 <figure class="table-figure">
-<table class="table--condensed">
+<table class="table-condense">
   <thead>
     <tr>
       <th>#</th>
@@ -780,7 +780,7 @@ Tabellen sollten verwendet werden, um tabellarische Daten anzuzeigen. Die Elemen
 
 {% highlight html linenos %}
 <figure class="table-figure">
-<table class="table--condensed">
+<table class="table-condense">
 …
 </table>
 </figure>
@@ -914,13 +914,13 @@ Es ist auch möglich Abbildungen zentriert (`image-figure-center`) zu setzen, so
 
 {% figure attribution %}
 <img src="http://lorempixel.com/680/408/fashion/" alt="Example image">
-<p class="attribution__text">Dieses Foto stammt von <a href="http://lorempixel.com">lorempixel.com</a></p>
+<p class="attribution-text">Dieses Foto stammt von <a href="http://lorempixel.com">lorempixel.com</a></p>
 {% endfigure %}
 
 {% highlight html linenos %}
 {% raw %}{% figure attribution %}
 <img src="http://lorempixel.com/680/408/fashion/" alt="Example image">
-<p class="attribution__text">Dieses Foto stammt von <a href="http://lorempixel.com">lorempixel.com</a></p>
+<p class="attribution-text">Dieses Foto stammt von <a href="http://lorempixel.com">lorempixel.com</a></p>
 {% endfigure %}{% endraw %}
 {% endhighlight %}
 

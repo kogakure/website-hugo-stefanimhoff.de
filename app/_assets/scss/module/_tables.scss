@@ -37,20 +37,22 @@
   @extend %table;
 }
 
+
 // Tabellen mit Zebra-Streifen
 // ----------------------------------------------------------------------------
-.table--striped {
+.table-zebra {
   @extend %table;
 
   tbody > tr:nth-child(odd) > td,
   tbody > tr:nth-child(odd) > th {
-    background-color: $table-striped-background;
+    background-color: $table-zebra-background;
   }
 }
 
+
 // Tabellen mit Umrandung
 // ----------------------------------------------------------------------------
-.table--bordered {
+.table-border {
   @extend %table;
 
   border: 1px solid $table-border-color;
@@ -62,9 +64,10 @@
   }
 }
 
+
 // Tabellen, die enger sind
 // ----------------------------------------------------------------------------
-.table--condensed {
+.table-condense {
   @extend %table;
 
   th, td {
@@ -72,13 +75,14 @@
   }
 }
 
+
 // Tabellen mit Hover-Status
 // ----------------------------------------------------------------------------
-.table--hover {
+.table-hover {
   @extend %table;
 
   tbody tr:hover > td,
   tbody tr:hover > th {
-    background-color: $table-striped-background;
+    background-color: $table-zebra-background;
   }
 }

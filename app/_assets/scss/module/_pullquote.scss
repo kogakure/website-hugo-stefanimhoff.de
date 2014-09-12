@@ -25,8 +25,8 @@ blockquote.pullquote[lang|=ja] {
   @include pullquote-quotes('「' '」' '『' '』');
 }
 
-.pullquote--right:before,
-.pullquote--left:before {
+.pullquote-right:before,
+.pullquote-left:before {
   @extend %pullquote;
   border: 0;
   content: attr(data-pullquote);
@@ -55,7 +55,7 @@ blockquote.pullquote[lang|=ja] {
   }
 }
 
-.pullquote--left:before {
+.pullquote-left:before {
   float: left;
   margin-bottom: $base-rhythm-unit;
   margin-left: -(grid-span(1, 1, 8));

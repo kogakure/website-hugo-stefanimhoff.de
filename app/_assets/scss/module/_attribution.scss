@@ -10,7 +10,7 @@
   position: relative;
 }
 
-%attribution__text {
+%attribution-text {
   @extend %sans-font;
   @include transition(all 0.6s ease);
   background: $black;
@@ -70,12 +70,12 @@
 }
 
 // Der Attribution-Text (Basis-Styling und verbergen)
-.attribution__text {
-  @extend %attribution__text;
+.attribution-text {
+  @extend %attribution-text;
 }
 
 // Der Attribution-Text (Aktiv)
-.attribution:hover .attribution__text {
+.attribution:hover .attribution-text {
   bottom: 0 + $image-border-size;
   opacity: 1;
 }
@@ -103,12 +103,12 @@
 // wenn über das Fragezeichen gehovert wird und nicht über dem
 // ganzen Bild.
 
-.attribution--main {
+.attribution-main {
   @extend %attribution;
 }
 
-.attribution--main__text {
-  @extend .attribution__text;
+.attribution-main-text {
+  @extend .attribution-text;
   bottom: -30px;
   height: 30px;
   line-height: 30px;
@@ -117,16 +117,16 @@
   left: 0;
 }
 
-.attribution--main__text:hover {
+.attribution-main-text:hover {
   bottom: 0;
   opacity: 1;
 
-  .attribution--main__anchor {
+  .attribution-main-anchor {
     opacity: 0;
   }
 }
 
-.attribution--main__anchor {
+.attribution-main-anchor {
   // @extend %sans-font;
   @include transition(all 0.6s ease);
   height: 34px;

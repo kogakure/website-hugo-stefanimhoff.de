@@ -32,7 +32,7 @@
   }
 }
 
-.aside--left {
+.aside-left {
   @extend %aside;
   float: right;
   margin-right: -(grid-span(2, 1, 8));
