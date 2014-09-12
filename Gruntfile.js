@@ -417,7 +417,7 @@ module.exports = function(grunt) {
       prod: {
         options: {
           src: 'dist/',
-          dest: '~/webapps/@FIXME',
+          dest: '~/webapps/stefanimhoff',
           host: 'kogakure@stefanimhoff.de',
           delete: true
         }
