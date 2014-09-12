@@ -48,42 +48,42 @@ Doch dies ist bei meinem Projekt gar nicht nötig gewesen, denn das Team-Sass bi
 
 Ich füge also zuerst das Gem zu meinem Gemfile hinzu:
 
-```ruby
+{% highlight ruby %}
 source "https://rubygems.org"
 
 group :development do
   …
   gem 'modular-scale'
 end
-```
+{% endhighlight %}
 
 Dann lade ich das Compass-Plugin in der `config.rb`:
 
-```ruby
+{% highlight ruby %}
 # Require any additional compass plugins here.
 require 'modular-scale'
-```
+{% endhighlight %}
 
 Im Anschluss muss nur noch das Modul von Compass geladen werden, bei mir in einem Partial `helpers/_imports.scss`:
 
-```scss
+{% highlight scss %}
 @import "compass";
 @import "compass/reset";
 @import "modular-scale";
-```
+{% endhighlight %}
 
 Ich habe mich entschlossen den *Goldenen Schnitt* zu verwenden und wähle dann die *ideale Textgröße* und eine *wichtige Zahl* aus:
 
-```scss
+{% highlight scss %}
 $ms-base: 16px 18px;
 $ms-ratio: $golden;
-```
+{% endhighlight %}
 
 Jetzt lassen sich überall im SCSS die Helfer des Gems verwenden. Anstatt also jetzt irgendwo manuell `42px` (`41.887px`) oder `2.618em` zu schreiben, schreibe ich einfach `modular-scale(4)` um den vierten Wert der Skala zu wählen:
 
-```scss
+{% highlight scss %}
 $font-scale-h1: modular-scale(4);
-```
+{% endhighlight %}
 
 ## Satzbreite
 Natürlich hätte ich auch mit der Wahl der Satzbreite (Zeilenlänge) beginnen können, und dann das Grid passend auswählen. Doch kann man, jetzt wo eine Skala ausgewählt wurde, diese auch für die richtige Satzbreite verwenden.
@@ -103,28 +103,28 @@ Sehr praktisch ist, dass die relativ lästige Mathematik hinter der Formel (die 
 
 Es werden einige Variablen konfiguriert:
 
-```scss
+{% highlight scss %}
 $base-font-size: modular-scale(1); // 18px
 $base-line-height-count: 1.5;
 $base-line-height: $base-font-size * $base-line-height-count; // 27px
 $relative-font-sizing: true; // Verwendet em und nicht px
 $round-to-nearest-half-line: true; // Verhindert zu große Lücken zwischen den Zeilen
-```
+{% endhighlight %}
 
 Mit einem einfachen Aufruf dieses Mixins wird der vertikale Rhythmus aktiviert:
 
-```scss
+{% highlight scss %}
 @include establish-baseline();
-```
+{% endhighlight %}
 
 Um eine Schriftgröße anzupassen verwendet man jetzt keine absoluten Werte mehr, sondern ein Mixin. Dieses lässt sich natürlich auch in Kombination mit dem Mixin von *Modular Scale* verwenden:
 
-```scss
+{% highlight scss %}
 h1 {
   @include adjust-font-size-to(modular-scale(6));
   @include trailer(1, modular-scale(6), margin);
 }
-```
+{% endhighlight %}
 
 Es werden auch nicht mehr direkt die Abstände über oder unter einem Element definiert, sondern Mixins verwendet, wie hier im Beispiel `trailer`.
 

@@ -44,14 +44,14 @@ Da meine Website auch ermöglicht, mit einigen wenigen Zeilen Code die Farben un
 ## Technische Implementierung
 Das Praktische an dem Foto ist, dass es ohne Probleme im Anschnitt verwendet werden kann, solange sichergestellt ist, dass das Hauptobjekt immer gut zu sehen ist. Da die genauen Ausmaße sich bei einem Responsive Design ändern können, ist es praktisch das Foto als Hintergrundbild mit der Skalierung `background-size: cover` zu verwenden:
 
-```css
+{% highlight css %}
 .header {
   background-color: $header-background;
   background-image: image-url($header-background-url, false, true);
   background-position: left center;
   background-size: cover;
 }
-```
+{% endhighlight %}
 
 Zuerst setze ich eine Hintergrundfarbe als Ersatz, die so lange angezeigt wird, bis das Foto vollständig geladen ist. Dann wird das Foto als Hintergrund-Bild mit `background-image` gesetzt. Ich positioniere das Foto so, dass der interessante Teil auf jeden Fall zu sehen ist, auf der x-Koordinate links ausgerichtet und auf der y-Koordinate zentriert. Mit `cover` wird festgelegt, dass das Foto so in der Größe verändert wird, dass beide Dimensionen größer oder gleich zur entsprechenden Größe des Containers sind. So wird sichergestellt, dass niemals der Hintergrund zu sehen ist, sondern das Foto, sofern es nicht in den Container passt, automatisch angeschnitten wird.
 

@@ -35,43 +35,43 @@ Ich verwende für meine Website dieses Konzept, habe es aber an meine Bedürfnis
 ## Dateistuktur des SCSS
 Meine Dateistruktur sieht wie folgt aus:
 
-```bash
+{% highlight bash %}
 ├── application.scss
 ├── base
-│   ├── _base.scss
-│   ├── _iconfont.scss
-│   ├── …
-│   └── _sprites.scss
+│   ├── _base.scss
+│   ├── _iconfont.scss
+│   ├── …
+│   └── _sprites.scss
 ├── helpers
-│   ├── _debug.scss
-│   ├── _imports.scss
-│   ├── _mixins.scss
-│   ├── _placeholders.scss
-│   └── _variables.scss
+│   ├── _debug.scss
+│   ├── _imports.scss
+│   ├── _mixins.scss
+│   ├── _placeholders.scss
+│   └── _variables.scss
 ├── layout
-│   ├── _content.scss
-│   ├── _footer.scss
-│   ├── _grids.scss
-│   ├── _header.scss
-│   └── _navigation.scss
+│   ├── _content.scss
+│   ├── _footer.scss
+│   ├── _grids.scss
+│   ├── _header.scss
+│   └── _navigation.scss
 ├── module
-│   ├── _aside.scss
-│   ├── _attribution.scss
-│   ├── …
-│   └── _verse.scss
+│   ├── _aside.scss
+│   ├── _attribution.scss
+│   ├── …
+│   └── _verse.scss
 ├── pages
-│   ├── _archive.scss
-│   ├── _error.scss
-│   └── _home.scss
+│   ├── _archive.scss
+│   ├── _error.scss
+│   └── _home.scss
 ├── print.scss
 ├── state
-│   └── _state.scss
+│   └── _state.scss
 ├── theme
-│   └── _bonsai.scss
+│   └── _bonsai.scss
 └── vendor
     ├── _solarized.scss
     └── _syntax.scss
-```
+{% endhighlight %}
 
 Die Hauptdatei ist die `application.scss`. Diese Datei lädt alle weiteren Dateien und wird von der Asset-Pipeline später minimiert.
 

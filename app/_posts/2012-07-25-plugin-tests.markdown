@@ -45,11 +45,11 @@ A footnote. [^1]
 
 [^1]: Footnote
 
-```ruby
+{% highlight ruby %}
 require 'redcarpet'
 markdown = Redcarpet.new("Hello World!")
 puts markdown.to_html
-```
+{% endhighlight %}
 
 ## Verse-Plugin
 {% verse %}
