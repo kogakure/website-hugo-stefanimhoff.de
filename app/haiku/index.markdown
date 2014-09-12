@@ -24,11 +24,15 @@ blauer Himmel und Sonne,
 ein Sonntag im Herbst.
 {% endverse %}
 
+-------------------------------------------------------------------------------
+
 {% verse %}
 Schneebedeckter Berg,
 am Hang fährt ein Skifahrer,
 die Lawine folgt.
 {% endverse %}
+
+-------------------------------------------------------------------------------
 
 {% verse %}
 Ein Windstoß, heftig,
@@ -36,11 +40,15 @@ reißt an der Zeitung so stark,
 in Fetzen dahin.
 {% endverse %}
 
+-------------------------------------------------------------------------------
+
 {% verse %}
 Flackernde Kerzen,
 schon endet das Lichterfest,
 so auch der Sommer.
 {% endverse %}
+
+-------------------------------------------------------------------------------
 
 {% verse %}
 Die Luft ist schon frisch,
@@ -48,11 +56,15 @@ Cirruswölkchen am Himmel,
 der Sommer endet.
 {% endverse %}
 
+-------------------------------------------------------------------------------
+
 {% verse %}
 Flüsternde Stimmen,
 Gespräche in dunkler Nacht,
 vom Sturm weggeweht.
 {% endverse %}
+
+-------------------------------------------------------------------------------
 
 {% verse %}
 Die Winterwinde,
@@ -60,17 +72,23 @@ das Hausdach, es knackt und knarrt,
 eisiger Regen.
 {% endverse %}
 
+-------------------------------------------------------------------------------
+
 {% verse %}
 Prasselnder Regen,
 eiligen Schrittes der Mann,
 dem Schirm folgt er nach.
 {% endverse %}
 
+-------------------------------------------------------------------------------
+
 {% verse %}
 Sturm in dunkler Nacht,
 Rascheln hoch in Baumkronen.
 Rauschende Stille.
 {% endverse %}
+
+-------------------------------------------------------------------------------
 
 {% verse %}
 Wolken, unbewegt,
