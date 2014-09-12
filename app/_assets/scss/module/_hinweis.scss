@@ -6,6 +6,7 @@
   @include border-radius(10px);
   @include trailer();
   background: $header-background;
+  color: $logo-color;
   padding: 10px 15px 10px 15px;
 
   p {
@@ -13,7 +14,7 @@
   }
 
   a {
-    @include link-colors($white, $dark-grey, $white, $white, $white);
+    @include link-colors($white, $logo-color, $white, $white, $white);
     border: 0;
   }
 }

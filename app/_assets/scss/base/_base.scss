@@ -160,12 +160,20 @@ pre {
 
 .highlight {
   @include box-shadow(rgba(0,0,0,0.06) 0 0 10px);
+  @include grid-span(12);
+  @include trailer();
   clear: both;
   position: relative;
 
+  @include breakpoint($content-medium) {
+    @include grid-span(10, 1, 8);
+    margin-left: -(grid-span(1, 1, 8));
+    clear: both;
+  }
+
   pre {
     background: $white;
-    padding: $base-rhythm-unit;
+    padding: $base-rhythm-unit $base-rhythm-unit 0;
   }
 
   code {

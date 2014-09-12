@@ -19,6 +19,7 @@ figure.image-figure {
 .image-figure-fullsize {
   @include grid-span(12, 1, 8);
   margin-left: -(grid-span(2, 1, 8));
+  margin-right: 0;
 
   @include breakpoint($content-medium) {
     @include grid-span(8, 1, 8);
