@@ -1,39 +1,16 @@
 [
   {
-    "type": "main",
-    "items": [
-      {
-        "text": "Startseite",
-        "url": "/"
-      },
-      {
-        "text": "Archiv",
-        "url": "/archiv/"
-      },
-      {
-        "text": "Kategorien",
-        "url": "/kategorie/"
-      },
-      {
-        "text": "Tags",
-        "url": "/tag/"
-      }
-    ]
-  },
-  {
-    "items": [
-      {
-        "text": "Styleguide",
-        "url": "/styleguide/"
-      },
-      {
-        "text": "Haiku",
-        "url": "/haiku/"
-      },
-      {
-        "text": "Impressum",
-        "url": "/impressum/"
-      }
+    "name": "Bujinkan-Stile",
+    "schools": [
+      "Togakure Rhû Ninpô Taijutsu",
+      "Gyokko Ryû Kosshi Jutsu",
+      "Kuki Shinden Happô Bikenjutsu",
+      "Koto Ryû Koppô Jutsu",
+      "Shinden Fudo Ryû Dakentai Jutsu",
+      "Takagi Yoshin Ryû Jûtai Jutsu",
+      "Gikan Ryû Koppô Jutsu",
+      "Gyokushin Ryû Ninpô",
+      "Kumogakure Ryû Ninpô"
     ]
   }
 ]

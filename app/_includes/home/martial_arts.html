@@ -9,18 +9,14 @@
     </div>
 
     <div class="grid-links inline-links">
-      <h3>Bujinkan-Stile</h3>
-      <ul>
-        <li>Togakure Rhû Ninpô Taijutsu</li>
-        <li>Gyokko Ryû Kosshi Jutsu</li>
-        <li>Kuki Shinden Happô Bikenjutsu</li>
-        <li>Koto Ryû Koppô Jutsu</li>
-        <li>Shinden Fudo Ryû Dakentai Jutsu</li>
-        <li>Takagi Yoshin Ryû Jûtai Jutsu</li>
-        <li>Gikan Ryû Koppô Jutsu</li>
-        <li>Gyokushin Ryû Ninpô</li>
-        <li>Kumogakure Ryû Ninpô</li>
-      </ul>
+      {% for topic in site.data.martialarts %}
+        <h3>{{ topic.name }}</h3>
+        <ul>
+          {% for school in topic.schools %}
+            <li>{{ school }}</li>
+          {% endfor %}
+        </ul>
+      {% endfor %}
     </div>
   </div>
 </div>
