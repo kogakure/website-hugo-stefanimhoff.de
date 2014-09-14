@@ -174,7 +174,7 @@ module.exports = function(grunt) {
         imagesDir:               '<%= config.app %>/_assets/images',
         javascriptsDir:          '<%= config.app %>/_assets/javascripts',
         relativeAssets:          false,
-        httpImagesPath:          '/img',
+        httpImagesPath:          '/assets',
         httpGeneratedImagesPath: '/assets/generated',
         outputStyle:             'expanded',
         debugInfo:               false,
