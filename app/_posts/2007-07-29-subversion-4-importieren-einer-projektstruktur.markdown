@@ -13,9 +13,9 @@ tags:
 
 Im nächsten Schritt erzeuge ich auf der Festplatte die Struktur meines Projektes. Diese Struktur ist nicht vorgegeben und kann nach beliebiger Struktur angelegt werden, wobei es ein paar Empfehlungen und Konventionen gibt.
 
-<div class="hinweis">
+{% aside hinweis %}
 <p>Der Inhalt dieses Artikels ist noch aktuell, doch kann ich nur dringend dazu raten, sich die fantastische Alternative zu Subversion anzusehen: <a href="/2007/versionskontrolle-mit-git/"><strong>Git</strong></a>.</p>
-</div>
+{% endaside %}
 
 Es wird grundsätzlich empfohlen mit den drei Ordnern `trunk`, `tags` und `branches` auf der obersten Ebene zu beginnen. Der Ordner `trunk` enthält den aktuellen Entwicklungsstand der Dateien. Der Ordner `tags` wird benutzt, um sich spezielle Stände mit sprechenden Namen zu merken (z. B. `Finale Version 1. Mai 2006`, `V1.02` etc.). Den Ordner `branches` lege ich normalerweise nicht an, dieser wird benutzt, um eine parallele Entwicklung eines Projektes zu entwickeln.
 

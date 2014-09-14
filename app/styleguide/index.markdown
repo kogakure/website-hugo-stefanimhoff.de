@@ -269,6 +269,20 @@ Manchmal möchte man mitten im Text etwas erklären, was nicht direkt zum Text g
 {% endaside %}{% endraw %}
 {% endhighlight %}
 
+## Hinweis
+
+Wenn etwas besonders wichtiges markiert werden soll, kann dafür eine spezielle Formatierung verwendet werden:
+
+{% aside hinweis %}
+<p>Dies ist ein wichtiger Hinweis. Und hier ist ein <a href="/">Link</a>.</p>
+{% endaside %}
+
+{% highlight html linenos %}
+{% raw %}{% aside hinweis %}
+<p>Dies ist ein wichtiger Hinweis. Und hier ist ein <a href="/">Link</a>.</p>
+{% endaside %}{% endraw %}
+{% endhighlight %}
+
 ## Listen
 
 ### Geordnete Listen
