@@ -31,6 +31,12 @@ header#top {
     .no-fontface & i {
       display: none;
     }
+
+    span {
+      @include breakpoint($content-medium) {
+        display: none;
+      }
+    }
   }
 
   // Breakpoints für das Header-Bild

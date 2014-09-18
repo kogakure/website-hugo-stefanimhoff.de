@@ -7,16 +7,9 @@
     <div class="social-networks">
       <h3>Social Networks</h3>
       <ul>
-        <li><a href="http://shinshinshingan.tumblr.com/" class="icon-tumblr"><span>Tumblr</span></a></li>
-        <li><a href="https://github.com/kogakure" class="icon-github"><span>GitHub</span></a></li>
-        <li><a href="https://plus.google.com/+stefanimhoff?rel=author" class="icon-google-plus"><span>Google+</span></a></li>
-        <li><a href="https://www.xing.com/profile/Stefan_Imhoff" class="icon-xing"><span>XING</span></a></li>
-        <li><a href="https://www.pinterest.com/kogakure/" class="icon-pinterest"><span>Pinterest</span></a></li>
-        <li><a href="https://twitter.com/kogakure" class="icon-twitter"><span>Twitter</span></a></li>
-        <li><a href="https://www.facebook.com/kogakure" class="icon-facebook"><span>Facebook</span></a></li>
-        <li><a href="https://www.linkedin.com/in/kogakure" class="icon-linkedin"><span>LinkedIn</span></a></li>
-        <li><a href="https://www.flickr.com/photos/kogakure" class="icon-flickr"><span>Flickr</span></a></li>
-        <li><a href="{{ site.feedburner_url }}" class="icon-feed"><span>Atom-Feed</span></a></li>
+        {% for link in site.data.social-links %}
+          <li><a href="{{ link.url | replace: '!FEEDBURNER_URL!', site.feedburner_url }}" class="{{ link.class }}"><span>{{ link.name }}</span></a></li>
+        {% endfor %}
       </ul>
     </div>
   </div>
