@@ -8,7 +8,7 @@ url:       "http://0.0.0.0:9999"
 root:      /
 permalink: /:year/:title/
 
-# Jekyll Pfade
+# Jekyll-Pfade
 source:      ./app
 destination: ./dist
 
