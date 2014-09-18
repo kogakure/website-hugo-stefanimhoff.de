@@ -12,6 +12,7 @@
 ::-webkit-scrollbar-track {
   @include border-radius(5px);
   background: #fafafa;
+
   &:vertical {
     background: $header-border-top-color;
   }
@@ -22,7 +23,16 @@
   @include border-radius(5px);
   background: #eeeeee;
 
+  &:vertical {
+    background: $header-headline;
+  }
+
   &:hover {
     background: #b8b8b8;
+
+    &:vertical {
+      background: $nav-link-color-hover;
+    }
   }
+
 }
