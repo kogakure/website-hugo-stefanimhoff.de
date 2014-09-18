@@ -2,13 +2,6 @@
 # Jekyll-Einstellungen #
 # ==================== #
 
-# Seiten-Einstellungen
-title:       Stefan Imhoff
-email:       stefan@imhoff.name
-description: "Frontend Engineer @ XING, Developer, Designer und Kampfkünstler."
-keywords:    "Stefan Imhoff, Hamburg, Frontend, Engineer"
-author:      Stefan Imhoff
-
 # URLs und Pfade
 baseurl:   ""
 url:       "http://0.0.0.0:9999"
@@ -18,14 +11,6 @@ permalink: /:year/:title/
 # Jekyll Pfade
 source:      ./app
 destination: ./dist
-
-# Social und RSS
-feedburner_url:   "http://feeds.feedburner.com/stefanimhoff"
-twitter: "@kogakure"
-googleplus: "104687479698350625994"
-
-geo_latitude: "53.596835"
-geo_longitude: "10.102015"
 
 # Veröffentlichungs-Einstellungen
 future:      true

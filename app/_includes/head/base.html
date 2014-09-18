@@ -16,7 +16,7 @@
 
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="{{ site.title }}">
+  <meta name="apple-mobile-web-app-title" content="{{ site.data.settings.title }}">
 
   <meta name="format-detection" content="telephone=no">
   <meta name="format-detection" content="address=no">
@@ -40,7 +40,7 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="{{ site.twitter }}">
+  <meta name="twitter:site" content="{{ site.data.settings.social.twitter }}">
   <meta name="twitter:url" content="{{ page_url }}">
   <meta name="twitter:title" content="{{ page_title }}">
   <meta name="twitter:description" content="{{ page_description }}">
@@ -53,7 +53,7 @@
   <meta property="og:image" content="{{ site.url }}/assets/images/og/rakkan.png">
 
   <!-- Google Authorship -->
-  <link href="https://plus.google.com/{{ site.googleplus }}" rel="publisher">
+  <link href="https://plus.google.com/{{ site.data.settings.social.googleplus }}" rel="publisher">
 
   <!-- Language -->
   <meta name="content-language" content="{{ language }}">
@@ -63,8 +63,8 @@
   <link type="text/plain" rel="author" href="{{ site.url }}/humans.txt">
 
   <!-- Geo -->
-  <meta name="icbm" content="{{ site.geo_latitude }},{{ site.geo_longitude }}">
-  <meta name="geo.position" content="{{ site.geo_latitude }};{{ site.geo_longitude }}">
+  <meta name="icbm" content="{{ site.data.settings.geo.latitude }},{{ site.data.settings.geo.longitude }}">
+  <meta name="geo.position" content="{{ site.data.settings.geo.latitude }};{{ site.data.settings.geo.longitude }}">
 
   <!-- Keywords -->
   <meta name="keywords" content="{{ keywords | strip_html | condense_spaces | truncate:2000 }}">
@@ -107,7 +107,7 @@
   {% javascript modernizr/modernizr %}
 
   <!-- Feeds -->
-  <link href="{{ site.feedburner_url }}" rel="alternate" title="{{ site.title }}" type="application/atom+xml">
+  <link href="{{ site.data.settings.social.feedburner_url }}" rel="alternate" title="{{ site.data.settings.title }}" type="application/atom+xml">
 
   <!-- OpenID -->
   <link rel="openid.server" href="http://www.myopenid.com/server">

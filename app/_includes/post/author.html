@@ -3,7 +3,7 @@
 {% elsif page.author %}
   {% assign author = page.author %}
 {% else %}
-  {% assign author = site.author %}
+  {% assign author = site.data.settings.author %}
 {% endif %}
 {% if author %}
   {{ author }}

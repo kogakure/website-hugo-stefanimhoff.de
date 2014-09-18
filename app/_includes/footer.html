@@ -8,7 +8,7 @@
       <h3>Social Networks</h3>
       <ul>
         {% for link in site.data.social-links %}
-          <li><a href="{{ link.url | replace: '!FEEDBURNER_URL!', site.feedburner_url }}" class="{{ link.class }}"><span>{{ link.name }}</span></a></li>
+          <li><a href="{{ link.url | replace: '!FEEDBURNER_URL!', site.data.settings.social.feedburner_url }}" class="{{ link.class }}"><span>{{ link.name }}</span></a></li>
         {% endfor %}
       </ul>
     </div>
