@@ -19,7 +19,7 @@ $(function() {
   // Navigation
   // ==========
   // Open navigation by clicking on 'open'
-  $('.nav-btn').on('click', function(event) {
+  $('.js-nav-btn').on('click', function(event) {
     $('body').toggleClass('navigation-is-open');
     event.preventDefault();
     event.stopImmediatePropagation();
@@ -27,7 +27,7 @@ $(function() {
 
 
   // Close navigation by clicking on 'close'
-  $('.nav-close-btn').on('click', function(event) {
+  $('.js-nav-close-btn').on('click', function(event) {
     $('body').removeClass('navigation-is-open');
     event.preventDefault();
     event.stopImmediatePropagation();
