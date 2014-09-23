@@ -75,7 +75,7 @@ cd subversion-1.4.3.tar.gz
 Jetzt werden nacheinander, jeweils einem nach dem anderen,  die folgenden Befehle eingeben. Nach dem vierten Befehl muss man sein Passwort zur Authenzifizierung eingeben.
 Wenn irgendeiner der Befehle mehrere schlimm-aussehende Fehler zurückgibt, lieber eine Binärdatei nehmen und installieren ;-)
 
-{% highlight sh %}
+{% highlight sh linenos %}
 ./autogen.sh
 ./configure
 make

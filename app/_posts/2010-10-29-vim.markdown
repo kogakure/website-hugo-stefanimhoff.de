@@ -47,7 +47,7 @@ Zuerst solltest du unbedingt deine kompletten Vim-Dateien und Plugins unter Vers
 
 Ich habe mir dazu ein Repository `dotfile` mit Git angelegt, in dem sich Unterordner für `bash`, `bin`, `git`, `vim` und einige andere Programme befinden. In meinem Vim-Unterordner befinden sich eine Datei `vimrc.vim` und `gvimrc.vim`, sowie verschiedene Vim-Ordner. Dieses simple Bash-Installationsskript installiert mir auf Wunsch meine Umgebung auf einem Rechner:
 
-{% highlight sh %}
+{% highlight sh linenos %}
 #!/bin/bash
 
 cd vim
@@ -69,7 +69,7 @@ Doch damit ist seit einiger Zeit Schluß. Tim Pope hat ein fantastisches Plugin 
 Pathogen ermöglicht es, Plugins als Bundles abzulegen, einzeln und als nettes Paket zusammengefasst. Alles was du dazu tun muss, ist [pathogen.vim](http://www.vim.org/scripts/script.php?script_id=2332) herunterzuladen und in den Vim-Ordner in einen Unterordner `autoload` (falls nicht vorhanden erstellen) abzulegen. Als nächsten Schritt legst du einen Ordner `bundle` im Vim-Ordner an und öffnest deine Datei `.vimrc`. Dort schreibst du ganz an den Anfang:
 
 ### .vimrc
-{% highlight vim %}
+{% highlight vim linenos %}
 silent! call pathogen#runtime_append_all_bundles()
 silent! call pathogen#helptags()
 {% endhighlight %}
@@ -80,7 +80,7 @@ Meine Empfehlung ist, komplett auf Git-Checkouts umzusteigen. Das geht seit kurz
 
 Einige Personen klonen sich die gewünschten Plugins als Submodule, ich verwende ein kleines Ruby-Skript von [Tammer Saleh](http://tammersaleh.com/posts/the-modern-vim-config-with-pathogen), mit dem ich meine Git-Repositorys aktualisiere:
 
-{% highlight ruby %}
+{% highlight ruby linenos %}
 #!/usr/bin/env ruby
 
 git_bundles = [

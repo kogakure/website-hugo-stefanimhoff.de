@@ -19,7 +19,7 @@ Die eigentliche Arbeit mit Subversion ist relativ leicht erklärt und gelernt. V
 
 Zuerst lege ich mir ein Arbeitsverzeichnis an, in dem ich künftig meine Projekte bearbeiten will, z. B. einen Ordner `Arbeit` im Heimatverzeichnis.
 
-{% highlight sh %}
+{% highlight sh linenos %}
 cd ~
 mkdir Arbeit
 cd Arbeit
@@ -29,7 +29,7 @@ Um jetzt an einem Projekt aus dem Repository arbeiten zu können, muss man es si
 
 Im Artikel <cite>[Subversion (4) – Importieren einer Projektstruktur](/2007/subversion-4-importieren-einer-projektstruktur/)</cite> hatte ich mir eine Beispielstruktur angelegt. Ich entscheide mich jetzt an der Website zu arbeiten und nur diesen Ordner und seine Unterordner auszuchecken. Natürlich könnte man genauso gut den kompletten `trunk` (die Hauptentwicklungslinie) in seinen Arbeitsordner holen.
 
-{% highlight sh %}
+{% highlight sh linenos %}
 mkdir meinewebsite
 cd meinewebsite
 svn co file:///Users/XYZ/Subversion/meinewebsite/trunk/Website .

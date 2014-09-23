@@ -25,7 +25,7 @@ Ich habe mich für die zweite Methode entschieden. Dies hat eine Menge Vorteile:
 
 Zuerst lege ich mir ein Verzeichnis an, das später meine Repositories enthalten wird. Dies lege ich in meinem Heimatverzeichnis an.
 
-{% highlight sh %}
+{% highlight sh linenos %}
 cd ~
 mkdir Subversion
 cd Subversion
@@ -35,7 +35,7 @@ cd Subversion
 
 Im nächsten Schritt lege ich für ein Projekt meiner Wahl das Repository an, hier im für Beispiel meine Website.
 
-{% highlight sh %}
+{% highlight sh linenos %}
 mkdir meinewebsite.de
 cd meinewebsite.de
 {% endhighlight %}

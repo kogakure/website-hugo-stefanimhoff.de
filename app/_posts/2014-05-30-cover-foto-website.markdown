@@ -44,7 +44,7 @@ Da meine Website auch ermöglicht, mit einigen wenigen Zeilen Code die Farben un
 ## Technische Implementierung
 Das Praktische an dem Foto ist, dass es ohne Probleme im Anschnitt verwendet werden kann, solange sichergestellt ist, dass das Hauptobjekt immer gut zu sehen ist. Da die genauen Ausmaße sich bei einem Responsive Design ändern können, ist es praktisch das Foto als Hintergrundbild mit der Skalierung `background-size: cover` zu verwenden:
 
-{% highlight css %}
+{% highlight css linenos %}
 .header {
   background-color: $header-background;
   background-image: image-url($header-background-url, false, true);

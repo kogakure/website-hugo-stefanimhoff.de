@@ -13,7 +13,7 @@ tags:
 
 Weil es grad alle machen: Ich weiß, was du letztens ins Terminal getippt hast.
 
-{% highlight sh %}
+{% highlight sh linenos %}
 history | awk '{print $2}' | sort | uniq -c | sort -rn | head -10
 
 172   cd
@@ -39,7 +39,7 @@ history | awk '{print $2}' | sort | uniq -c | sort -rn | head -10
 
 Beim reviewen des Artikels habe ich mich spontan entschlossen, das ganze noch einmal heute (Mai 2013) zu machen, um zu schauen, was sich verändert hat:
 
-{% highlight sh %}
+{% highlight sh linenos %}
 history | awk '{print $2}' | sort | uniq -c | sort -rn | head -10
 
 1113 git

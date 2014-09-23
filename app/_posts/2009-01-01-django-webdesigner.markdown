@@ -80,7 +80,7 @@ Wenn das Datenkonzept fertig gestellt ist, wird die Datenbank in einer einfach z
 Das folgende Beispiel (von der Django-Website) zeigt den Code von zwei Tabellen, einer `Reporter`-Tabelle und einer `Artikel`-Tabelle:
 
 ### models.py
-{% highlight python %}
+{% highlight python linenos %}
 class Reporter(models.Model):
     full_name = models.CharField(max_length=70)
 
@@ -117,7 +117,7 @@ Mit ein wenig Wissen um [Regular Expressions]( http://www.regular-expressions.in
 Dieses kurze Beispiel aus der Django-Dokumentation zeigt die Konfiguration einiger URLs:
 
 ### urls.py
-{% highlight python %}
+{% highlight python linenos %}
 from django.conf.urls.defaults import *
 
 urlpatterns = patterns('',
@@ -156,7 +156,7 @@ Wem die [Grundfunktionen der Templatesprache](https://docs.djangoproject.com/en/
 Ein Grundtemplate sieht in der Django-Dokumentation z. B. so aus:
 
 ### base.html
-{% highlight html %}
+{% highlight html linenos %}
 {% raw %}
 <html>
 <head>
@@ -174,7 +174,7 @@ Ein Grundtemplate sieht in der Django-Dokumentation z. B. so aus:
 Das niedrigere Template, hier eine Detailseite für einen Artikel, überschreibt dann die Blöcke nach Belieben und erbt den Rest des Grundtemplates:
 
 ### article.html
-{% highlight html %}
+{% highlight html linenos %}
 {% raw %}
 {% extends "base.html" %}
 
