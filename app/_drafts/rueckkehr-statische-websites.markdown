@@ -22,7 +22,7 @@ Anfang des Jahres entschloss ich mich, dass es Zeit sei, an einer Aktualisierung
 Was geschehen ist, wird wieder geschehen, was man getan hat, wird man wieder tun: Es gibt nichts Neues unter der Sonne.
 {% endblockquote %}
 
-Jekyll oder andere statische Seitengeneratoren haben im Moment einen ziemlich starken Zulauf, doch aufgrund der Vielzahl von Daten auf meiner Kampfkunst-Website hatte ich diesen Gedanken zunächst verworfen. Doch dann lernte ich die *Data Files* von [Jekyll](http://jekylrb.com) kennen.
+Jekyll oder andere statische Seitengeneratoren haben im Moment einen ziemlich starken Zulauf, doch aufgrund der Vielzahl von Daten auf meiner Kampfkunst-Website hatte ich diesen Gedanken zunächst verworfen. Doch dann lernte ich die *[Data Files](http://jekyllrb.com/docs/datafiles/)* von [Jekyll](http://jekylrb.com) kennen.
 
 ## Daten als YAML, JSON oder CSV
 Im November 2013 wurde der Support für YAML-Dateien hinzugefügt, später in 2014 für JSON und diesen Monat für CSV. *Data Files* ermöglichen es, über Dateien dieser Formate zu iterieren und so Daten automatisch in die statischen Seiten zu laden. Ob es einfache Konfigurationsvariablen, wie z. B. ein Twitter-Benutzername sind, die Menüpunkte einer Navigation, oder wie bei mir ein Lexikon mit über 500 Einträgen, mit *Data Files* ist dies kein Problem mehr.
@@ -47,7 +47,7 @@ Von Haus aus gibt es bei Jekyll Unterstützung für SCSS, Sass und CoffeeScript 
 
 Jekyll bietet auch ein robustes System für **Plugins**. Was immer man auch benötigt, es gibt höchstwahrscheinlich ein Plugin dafür. Wenn das nicht ausreichen sollte, können auch eigene Plugins mit Ruby programmiert werden - ich selbst habe mir ein halbes Dutzend einfache Plugins programmiert.
 
-## Einfaches Hosting dank statischer Seiten
+## Einfaches Hosting
 Besonders beim Hosting glänzen statische Seitengeneratoren. Denn sie spucken am Ende (wie der Name schon nahelegt) statische HTML-Seiten aus. Und diese lassen sich überall für geringes Geld oder kostenlos hosten. Es ist sogar möglich die eigene Jekyll-Seite direkt und kostenlos auf GitHub zu hosten. Jeder billige Webspace für ein paar Cent im Monat ist ausreichend für eine statische Website.
 
 Und statische Seiten sind sicher und ermöglichen eine sorgenfreie Freizeit. Es gibt nichts, was gehackt werden kann und keinen Teil der Website, der plötzlich nicht mehr läuft, weil irgendeine Software aktualisiert wurde.
@@ -68,3 +68,6 @@ Jekyll kommt zwar schon mit einem eigenen Webserver, der auch bei Änderungen au
 
 ## Octopress und Jekyll
 Im Zuge der Arbeiten an [kogakure.de](http://kogakure.de) habe ich auch gleich diese Website komplett auf die neuste Version von Jekyll (2.4.0) umgestellt. Octopress war ein aufgemotztes Jekyll mit zusätzlichen Plugins und für einen Blog typischer Ausstattung, war aber schon stark in die Jahre gekommen. Die Entwickler hatten sich entschlossen die besonderen Eigenschaften von Octopress (3.x) in ein [Gem](https://rubygems.org/gems/octopress) zu extrahieren und dieses als Zusatz für Jekyll anzubieten.
+
+## Fazit
+Mit Jekyll lassen sich Blogs, Portfolio-Websites oder ähnliche Projekte sehr schön und schnell umsetzen. Die Entwicklung macht sehr viel Spaß und Octopress kann jetzt zusätzlich zu einer normalen Installation von Jekyll verwendet werden. Dadurch bekommt man immer die neusten Features von Jekyll. Und da die Entwicklung an Jekyll sehr aktiv ist, sind das nicht wenige.
