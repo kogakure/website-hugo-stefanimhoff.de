@@ -5,29 +5,29 @@ title: "Die Rückkehr der statischen Websites"
 
 Seit kurzem arbeite ich am Redesign meiner Kampfkunst-Website [kogakure.de](http://kogakure.de). Wie die meisten Websites hat auch diese einmal als eine Sammlung von statischen HTML-Seiten begonnen.
 
+{% figure image-figure-center %}
+<img src="{{ 'artikel/i-love-jekyll.jpg' | asset_path }}" alt="I ♥  Jekyll">
+{% endfigure %}
+
 Als ich 1999 die erste Version live gestellt habe, waren mir Web-Programmierung oder dynamische Seiten noch völlig fremd.
 
 Auf meiner Website befinden sich neben einer Vielzahl von Artikeln auch ein Japanisch-Deutsches Lexikon mit Kampfkunst-Begriffen, eine Zitatensammlung und eine Reihe von Buch- und Film-Empfehlungen.
 
-Einige Jahre später waren dann große  Teile der Website in PHP geschrieben. Die aktuelle Website habe ich mit dem Python-Webframework **Django** programmiert und die Daten werden aus einer Datenbank geliefert.
+Einige Jahre später waren dann große  Teile der Website in PHP geschrieben. Die aktuelle Website habe ich mit dem Python-Webframework [Django](https://www.djangoproject.com/) [programmiert](https://github.com/kogakure/kogakure-de) und die Daten werden aus einer Datenbank geliefert.
 
-Wie jede Webapplikation hat auch diese Website ein *nicht* unkompliziertes System für das Caching (mit Memcached) und einen automatisierten Deployment-Prozess. So ein Technologie-Stack läuft natürlich nicht bei jedem Hoster und  erfordert eine Menge Fachwissen und Wartungsaufwand.
+Wie jede Webapplikation hat auch diese Website ein *nicht* unkompliziertes System für das Caching (mit [memcached](http://memcached.org/)) und einen automatisierten Deployment-Prozess. So ein Technologie-Stack läuft natürlich nicht bei jedem Hoster und  erfordert eine Menge Fachwissen und Wartungsaufwand.
 
-Da ich beruflich nicht mit Python und Django arbeite, sondern mit *Ruby on Rails*, wurde es für mich in den letzten Jahren immer aufwändiger, die Website am Laufen zu halten. Es macht wirklich wenig Spaß in der ohnehin kurz bemessenen Freizeit dafür zu sorgen, dass die Module und das MVC-Framework auf dem neusten Stand bleiben. Und wenn dies unterlassen wird, endet das Ganze schnell als Alptraum für  Sicherheit und Stabilität.
+Da ich beruflich nicht mit Python und Django arbeite, sondern mit [Ruby on Rails](http://rubyonrails.org/), wurde es für mich in den letzten Jahren immer aufwändiger, die Website am Laufen zu halten. Es macht wirklich wenig Spaß in der ohnehin kurz bemessenen Freizeit dafür zu sorgen, dass die Module und das MVC-Framework auf dem neusten Stand bleiben. Und wenn dies unterlassen wird, endet das Ganze schnell als Alptraum für  Sicherheit und Stabilität.
 
 ## Jekyll und andere statische Seitengeneratoren
 Anfang des Jahres entschloss ich mich, dass es Zeit sei, an einer Aktualisierung zu arbeiten. Zum einen, weil die Website dringend für mobile Geräte optimiert werden muss (Responsive Web Design), zum anderen um die Python-Technologie zu Gunsten von Ruby zu wechseln. Ursprünglich hatte ich geplant, die Website in *Ruby in Rails* zu erstellen, was aber nur die Technologie, nicht die Komplexität des Projektes verändert hätte.
-
-{% blockquote Prediger 1:9 %}
-Was geschehen ist, wird wieder geschehen, was man getan hat, wird man wieder tun: Es gibt nichts Neues unter der Sonne.
-{% endblockquote %}
 
 Jekyll oder andere statische Seitengeneratoren haben im Moment einen ziemlich starken Zulauf, doch aufgrund der Vielzahl von Daten auf meiner Kampfkunst-Website hatte ich diesen Gedanken zunächst verworfen. Doch dann lernte ich die *[Data Files](http://jekyllrb.com/docs/datafiles/)* von [Jekyll](http://jekylrb.com) kennen.
 
 ## Daten als YAML, JSON oder CSV
 Im November 2013 wurde der Support für YAML-Dateien hinzugefügt, später in 2014 für JSON und diesen Monat für CSV. *Data Files* ermöglichen es, über Dateien dieser Formate zu iterieren und so Daten automatisch in die statischen Seiten zu laden. Ob es einfache Konfigurationsvariablen, wie z. B. ein Twitter-Benutzername sind, die Menüpunkte einer Navigation, oder wie bei mir ein Lexikon mit über 500 Einträgen, mit *Data Files* ist dies kein Problem mehr.
 
-Ich hatte schon im April 2014 meine [eigene Website](http://stefanimhoff.de) mit Jekyll (0.12) und Octopress (2.5) neu erstellt und war schon damals von der Einfachheit begeistert gewesen, mit der es mir Möglich war, die Website neu zu erstellen. Ich musste mich nicht um die Programmierung und Wartung einer dynamischen Website kümmern, sondern konnte meine Aufmerksamkeit ganz auf die Dinge konzentrieren, die mir Spaß machen: eine moderne, responsive Website und ein ansprechendes Design zu erstellen.
+Ich hatte schon im April 2014 meine [eigene Website](http://stefanimhoff.de) mit Jekyll (0.12) und [Octopress](http://octopress.org/) (2.5) neu erstellt und war schon damals von der Einfachheit begeistert gewesen, mit der es mir möglich war, die Website neu zu erstellen. Ich musste mich nicht um die Programmierung und Wartung einer dynamischen Website kümmern, sondern konnte meine Aufmerksamkeit ganz auf die Dinge konzentrieren, die mir Spaß machen: eine moderne, responsive Website und ein ansprechendes Design zu erstellen.
 
 ## Besonderheiten von Jekyll
 Durch [statische Seitengeneratoren](http://www.staticgen.com) habe ich meinen Spaß an Nebenprojekten wiederentdeckt. Es dauert nur wenige Minuten und schon hat man so ein Projekt aufgesetzt. Selbst jemand mit wenig Erfahrung kann so schnell einen Prototypen erstellen oder sich einen Blog selbst bauen:
