@@ -48,7 +48,7 @@ Doch dies ist bei meinem Projekt gar nicht nötig gewesen, denn das Team-Sass bi
 
 Ich füge also zuerst das Gem zu meinem Gemfile hinzu:
 
-{% highlight ruby %}
+{% highlight ruby linenos %}
 source "https://rubygems.org"
 
 group :development do
@@ -58,14 +58,14 @@ end
 
 Dann lade ich das Compass-Plugin in der `config.rb`:
 
-{% highlight ruby %}
+{% highlight ruby linenos %}
 # Require any additional compass plugins here.
 require 'modular-scale'
 {% endhighlight %}
 
 Im Anschluss muss nur noch das Modul von Compass geladen werden, bei mir in einem Partial `helpers/_imports.scss`:
 
-{% highlight scss %}
+{% highlight scss linenos %}
 @import "compass";
 @import "compass/reset";
 @import "modular-scale";
@@ -73,7 +73,7 @@ Im Anschluss muss nur noch das Modul von Compass geladen werden, bei mir in eine
 
 Ich habe mich entschlossen den *Goldenen Schnitt* zu verwenden und wähle dann die *ideale Textgröße* und eine *wichtige Zahl* aus:
 
-{% highlight scss %}
+{% highlight scss linenos %}
 $ms-base: 16px 18px;
 $ms-ratio: $golden;
 {% endhighlight %}
@@ -102,7 +102,7 @@ Sehr praktisch ist, dass die relativ lästige Mathematik hinter der Formel (die 
 
 Es werden einige Variablen konfiguriert:
 
-{% highlight scss %}
+{% highlight scss linenos %}
 $base-font-size: modular-scale(1); // 18px
 $base-line-height-count: 1.5;
 $base-line-height: $base-font-size * $base-line-height-count; // 27px
@@ -118,7 +118,7 @@ Mit einem einfachen Aufruf dieses Mixins wird der vertikale Rhythmus aktiviert:
 
 Um eine Schriftgröße anzupassen verwendet man jetzt keine absoluten Werte mehr, sondern ein Mixin. Dieses lässt sich natürlich auch in Kombination mit dem Mixin von *Modular Scale* verwenden:
 
-{% highlight scss %}
+{% highlight scss linenos %}
 h1 {
   @include adjust-font-size-to(modular-scale(6));
   @include trailer(1, modular-scale(6), margin);

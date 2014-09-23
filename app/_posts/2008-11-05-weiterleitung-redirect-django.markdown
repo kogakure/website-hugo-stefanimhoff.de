@@ -29,7 +29,7 @@ Um diese Funktion zu aktivieren muss man in der `settings.py` die Einstellung `D
 Es ist zusätzlich noch möglich Anfänge und Endungen mitzugeben, die ignoriert werden sollen: `IGNORABLE_404_ENDS`, `IGNORABLE_404_STARTS`. In einem Array folgen dann einfach die gewünschten Endungen:
 
 ### settings.py
-{% highlight python %}
+{% highlight python linenos %}
 IGNORABLE_404_ENDS = ('favicon.ico','.php')
 IGNORABLE_404_STARTS = ('/cgi-bin/','/css/','/scripts/','/images/')
 {% endhighlight %}
@@ -48,7 +48,7 @@ In einer Diskussion mit [Martin Mahner](http://mahner.org/), habe ich aber die �
 
 Dafür richten man in seinem VHost einfach folgende Mod_Rewrite-Direktiven ein:
 
-{% highlight apacheconf %}
+{% highlight apacheconf linenos %}
 # Remove WWW
 RewriteCond %{HTTP_HOST} !^domain\.de$
 RewriteRule ^(.*)$ http://domain.de$1 [R=301,L]

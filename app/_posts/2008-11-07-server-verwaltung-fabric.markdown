@@ -41,7 +41,7 @@ Es gibt lediglich vier Fabric-Befehle:
 Variablen deklariert man einfach so:
 
 ### Fabfile
-{% highlight python %}
+{% highlight python linenos %}
 set(
     project = 'domain.de',
     project_type = 'websites',
@@ -59,7 +59,7 @@ Lediglich `fab_hosts` und `fab_user` werden in diesem Beispiel von Fabric gelief
 Später kann man dann auf die Variable mit der Syntax `$(varname)` zugreifen. Hier mein Beispielskript, dass den oben beschriebenen SVN-Workflow automatisiert:
 
 ### Fabfile
-{% highlight python %}
+{% highlight python linenos %}
 def create():
     """
     Erzeugt ein leeres Subversion-Repository auf dem SVN-Server,

@@ -27,7 +27,7 @@ Ein Programmierer hat eine Software entwickelt. Da er eigentlich nicht mal vor h
 
 ## Anlegen der Grundstruktur
 
-{% highlight sh %}
+{% highlight sh linenos %}
 cd ~
 cd Desktop
 mkdir Import
@@ -42,7 +42,7 @@ Dies erzeugt meine Grundstruktur, den Konventionen entsprechend. Der Ordner `Imp
 
 Hier ist mal eine Beispielstruktur, die ich überlicherweise verwende:
 
-{% highlight sh %}
+{% highlight sh linenos %}
 .
 ├── tags
 └── trunk
@@ -69,7 +69,7 @@ Der Vorteil bei einer tiefen Ordnerstruktur liegt darin, dass man nur das holen 
 
 Dieser Stand wird jetzt in das noch leere Repository importiert.
 
-{% highlight sh %}
+{% highlight sh linenos %}
 cd ~
 cd Desktop
 cd Import

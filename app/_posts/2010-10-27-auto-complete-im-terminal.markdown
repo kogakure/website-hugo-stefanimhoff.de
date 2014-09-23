@@ -25,7 +25,7 @@ Es ist möglich Auto-Complete an beliebige Befehle anzuhängen. Die Details sind
 Mit dem Auto-Complete für die bekannten SSH-Server fing meine Recherche an, wozu ich in einem Forum einen Codeschnipsel gefunden habe:
 
 ### Igendwo in die .bashrc oder .bash_profile stellen
-{% highlight sh %}
+{% highlight sh linenos %}
 SSH_COMPLETE=( $(cut -f1 -d' ' ~/.ssh/known_hosts |\
                   tr ',' '\n' |\
                   sort -u |\
@@ -42,7 +42,7 @@ Für mich reichte das als Denkanstoß, um eine Lösung für mein Problem zu erar
 
 In dieser definiert man, wer an welchem Job arbeiten darf. So ungefähr könnte eine Konfigurationsdatei von Gitosis aussehen:
 
-{% highlight text %}
+{% highlight text linenos %}
 [gitosis]
 gitweb = yes
 
@@ -52,18 +52,18 @@ writable = gitosis-admin
 
 [group entwickler]
 members = mueller meier schulze
-writeable = repo1 repo2 repo3
+writeable = repo-a repo-b repo-c
 
 [group praktikant]
 members = max maria
-writable = repo3
+writable = repo-c
 {% endhighlight %}
 
 Ich zeige den Aufbau nur, damit besser verstanden werden kann, was ich später erreichen will. Es werden Gruppen angelegt, in denen steht welche Person an welchem Job arbeiten darf. Die Repositorys müssen mit Leerzeichen getrennt sein und nacheinander folgend geschrieben werden.
 
 Folgendes Skript habe ich mir für das Problem erstellt:
 
-{% highlight sh %}
+{% highlight sh linenos %}
 GIT_JOBS_COMPLETE=( $(grep -i "writable" ~/Projekte/Administration/**/gitosis.conf |\
                   cut -d = -f 2 |\
                   tr ' ' '\n' |\

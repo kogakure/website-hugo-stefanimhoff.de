@@ -11,6 +11,7 @@ server_path: /home/kogakure/webapps/stefanimhoff
 # Veröffentlichungs-Einstellungen
 future:      false
 show_drafts: false
+limit_posts: 0
 
 # Jekyll Assets (Production)
 assets:

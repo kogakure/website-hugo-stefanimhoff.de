@@ -75,7 +75,7 @@ Der Einfachheit halber stehen alle meine Befehle direkt in der `Capfile`-Datei, 
 Ich habe in meiner Datei (`Capfile`) folgende Funktionen erstellt, die diverse Aufgaben für mich vereinfachen, wie z. B. das Neustarten des Webservers,  Caching-Servers oder das Aktualisieren eines Django-Projektes aus dem Repository.
 
 ### Capfile
-{% highlight ruby %}
+{% highlight ruby linenos %}
 set :hosts, "user@server.com"
 set :server_path, "/home/user/apps/apache2/bin/"
 set :project_path, "/home/user/apps/django/projekt/"

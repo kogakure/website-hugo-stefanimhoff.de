@@ -63,7 +63,7 @@ Um das System jetzt glauben zu lassen, Django wäre im Python `site-packages`-Ve
 
 Im gegebenen Beispiel liegt unser Ordner `django-trunk` auf dem Desktop (kein guter Ort im richtigen Fall!). Das `site-packages`-Verzeichnis liegt im Beispiel unter `/Library/Python/2.5/site-packages/`
 
-{% highlight sh %}
+{% highlight sh linenos %}
 cd /Library/Python/2.5/site-packages
 ln -s ~/Desktop/django-trunk/django django
 {% endhighlight %}

@@ -19,11 +19,11 @@ Schneller und komfortabler geht es so:
 
 ## Neustarten im Single-User Modus
 
-Im Single-User Modus starten, die Tastenkombination <kbd>⌘</kbd> + <kbd>S</kbd> (Apfel/Command + S) während des Bootens gedrückt halten.
+Im Single-User Modus starten, die Tastenkombination <kbd>⌘</kbd> + <kbd>S</kbd> während des Bootens gedrückt halten.
 
-Nach dem Booten im Single-User Modus gibt man im Terminal diese Befehle (nacheinander) ein. Jede Zeile mit <kbd>↩</kbd> (Return) bestätigen und warten bis der Befehl ausgeführt wurde.
+Nach dem Booten im Single-User Modus gibt man im Terminal diese Befehle (nacheinander) ein. Jede Zeile mit <kbd>↩</kbd> bestätigen und warten bis der Befehl ausgeführt wurde.
 
-{% highlight sh %}
+{% highlight sh linenos %}
 fsck -fy
 mount -uw
 reboot

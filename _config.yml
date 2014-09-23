@@ -13,10 +13,10 @@ source:      ./app
 destination: ./dist
 
 # Veröffentlichungs-Einstellungen
+encoding:    "utf-8"
 future:      true
 show_drafts: true
-encoding:    "utf-8"
-limit_posts: 0
+limit_posts: 5
 
 # Server-Konfiguration
 date_format: "%d.%m.%Y"

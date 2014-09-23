@@ -19,7 +19,7 @@ Doch wenn es um die View-Ebene geht, also um Templates und das Anzeigen von Cont
 
 Nehmen wir ein sehr vereinfachte Beispiel von Code, das wirklich stark gekürzt ist, denn üblicherweise reihen sich solche Beispiele aneinander, werden ineinander verschachtelt und sind meterlang. Anfangs ist die Anforderung an ein Projekt klein, doch mit jeder neuen Anforderung wächst die Komplexität und damit mutieren auch diese Verschachtelungen immer weiter.
 
-{% highlight erb %}
+{% highlight erb linenos %}
 <li class="mail <% if @page_context.user.logged_in? && (!current_user.can_add_as_contact?(page.id) && !is_preview?) %>selected<% end %>">
 …
 </li>
@@ -31,7 +31,7 @@ Das Mischen von Logik und Template ist schon schlimm genug, aber solche Wortkett
 
 Hier eine bessere Variante, die zwar Duplikation enthält, aber weitaus lesbarer ist:
 
-{% highlight erb %}
+{% highlight erb linenos %}
 <% if @page_context.user.logged_in? && (!current_user.can_add_as_contact?(page.id) && !is_preview?) %>
 <li class="mail selected">
 <% else %>
@@ -43,7 +43,7 @@ Hier eine bessere Variante, die zwar Duplikation enthält, aber weitaus lesbarer
 
 Doch dieser Code kann noch weiter verbessert werden, wenn diese ominöse Kombination an Anforderungen in einen Helper ausgelagert wird:
 
-{% highlight erb %}
+{% highlight erb linenos %}
 <% if user_logged_in_and_cannot_add_as_contact_and_not_preview? %>
 <li class="mail selected">
 <% else %>

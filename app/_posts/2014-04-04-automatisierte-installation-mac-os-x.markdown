@@ -45,7 +45,7 @@ Solange man nur wenige Programme hat und vielleicht nur alle 5-6 Jahre einen neu
 
 *Homebrew* und auch *Homebrew Cask* bieten seit kurzem die Möglichkeit einer Automatisierung an. Wie auch in der Entwicklung mit *Ruby* oder *Ruby on Rails*, bei denen es ein `Gemfile` gibt, in dem alle Abhängigkeiten definiert sind oder bei *Node.js*, wo eine `package.json` diese Aufgabe erledigt, gibt es die Möglichkeit ein `Brewfile` und `Caskfile` anzulegen und mit einem neuen Befehl automatisiert eine große Anzahl von Software zu installieren.
 
-{% highlight bash %}
+{% highlight bash linenos %}
 brew bundle Brewfile
 brew bundle Caskfile
 {% endhighlight %}
@@ -55,7 +55,7 @@ Als besonderes Extra gibt es seit kurzem einen Generator, der diese Dateien auto
 
 Die [Software](https://github.com/seethroughtrees/homebrew-dotfile-generator) ist einfach zu installieren:
 
-{% highlight bash %}
+{% highlight bash linenos %}
 git clone https://github.com/seethroughtrees/homebrew-dotfile-generator.git
 cd homebrew-dotfile-generator
 npm install
