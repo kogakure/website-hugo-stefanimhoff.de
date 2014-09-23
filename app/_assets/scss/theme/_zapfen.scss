@@ -1,0 +1,40 @@
+// ============================================================================
+// Theme: Zapfen
+// ============================================================================
+
+// Farben
+// ----------------------------------------------------------------------------
+
+// Colors
+$highlight-color:         #89B46B;
+
+// Header
+$header-background:       #a09278;
+$header-border-top-color: #a2c097;
+$header-headline:         $white;
+$header-subheadline:      $black;
+
+// Logo
+$logo-color:              #7e5d41;
+
+// Navigation
+$nav-link-color-hover:    $highlight-color;
+
+// Links
+$link-color:              $highlight-color;
+$link-hover-color:        #7e5d41;
+$link-active-color:       #7e5d41;
+$link-visited-color:      $highlight-color;
+$link-focus-color:        #7e5d41;
+
+$link-border-color:       rgba($dark-grey, 0.2);
+$link-hover-border-color: $highlight-color;
+
+// ::selection
+$selection-background:    $highlight-color;
+$selection-color:         $white;
+
+// Pfade
+// ----------------------------------------------------------------------------
+
+$header-background-url:   "/assets/css/header/zapfen.jpg";
