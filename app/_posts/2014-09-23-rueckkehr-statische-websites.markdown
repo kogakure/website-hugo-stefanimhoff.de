@@ -1,6 +1,16 @@
 ---
 layout: post
 title: "Die Rückkehr der statischen Websites"
+author: "Stefan Imhoff"
+date: 2014-09-23T20:15:52+02:00
+published: true
+comments: false
+categories:
+- Code
+- Empfehlung
+tags:
+- jekyll
+- octopress
 ---
 
 Seit kurzem arbeite ich am Redesign meiner Kampfkunst-Website [kogakure.de](http://kogakure.de). Wie die meisten Websites hat auch diese einmal als eine Sammlung von statischen HTML-Seiten begonnen.
