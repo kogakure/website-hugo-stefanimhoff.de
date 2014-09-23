@@ -27,7 +27,7 @@ Dieses Beispiel setzt auf dem Code für das offizielle Django-Tutorial auf und f
 Der Einfachheit halber lokalisiere ich nur vier dieser Dateien:
 
 ### admin.py
-{% highlight python %}
+{% highlight python linenos %}
 from django.contrib import admin
 
 from models import Poll, Choice
@@ -52,7 +52,7 @@ admin.site.register(Choice)
 {% endhighlight %}
 
 ### models.py
-{% highlight python %}
+{% highlight python linenos %}
 import datetime
 from django.db import models
 
@@ -81,7 +81,7 @@ class Choice(models.Model):
 {% endhighlight %}
 
 ### polls/poll_list.html
-{% highlight html %}
+{% highlight html linenos %}
 {% raw %}
 {% if object_list %}
     <ul>
@@ -96,7 +96,7 @@ class Choice(models.Model):
 {% endhighlight %}
 
 ### polls/results.html
-{% highlight html %}
+{% highlight html linenos %}
 {% raw %}
 <h1>{{ object.question }}</h1>
 
@@ -115,7 +115,7 @@ In jeder Python-Datei, die lokalisierte Zeichenketten enthalten soll, muss zuers
 In der `admin.py` wird am Anfang das erwähnte Submodul importiert. Jetzt werden alle Zeichenketten wie unten zu sehen geändert. Dabei ist es am besten, wenn alle Zeichenketten als Unicode mit dem kleinen `u` davor markiert werden. Die Zeichenketten müssen in Klammern eingefasst werden, da `ugetttext` eine Funktion ist.
 
 ### admin.py
-{% highlight python %}
+{% highlight python linenos %}
 ...
 from django.utils.translation import ugettext_lazy as _
 ...
@@ -131,7 +131,7 @@ fieldsets = [
 Django nimmt für die Felder im Admin-Backend automatisch den Datenmodellnamen mit einem Großbuchstaben als Label. Um diesen zu lokalisieren muss man ihn ausdrücklich angeben. Bei `ForeignKey`-Feldern ist es nötig den Namen mit `verbose_name` anzugeben.
 
 ### models.py
-{% highlight python %}
+{% highlight python linenos %}
 ...
 from django.utils.translation import ugettext_lazy as _
 ...
@@ -161,7 +161,7 @@ In den HTML-Templates wird eine etwas andere Syntax benutzt. Zuerst muss am Anfa
 Um eine einfache Zeichenkette zu markieren, benutzt man `{% raw %}{% trans "" %}{% endraw %}`. Es gibt auch Möglichkeiten Variablen oder lange Blöcke zu übersetzten. Hier verweise ich der Einfachheit halber auf die Dokumentation.
 
 ### polls/poll_list.html
-{% highlight html %}
+{% highlight html linenos %}
 {% raw %}
 {% load i18n %}
 
@@ -176,7 +176,7 @@ Um eine einfache Zeichenkette zu markieren, benutzt man `{% raw %}{% trans "" %}
 Die Pluralisierung funktioniert (leider) nicht mehr wie gewohnt, wenn man sie lokalisiert. Dafür muss man eine Abfrage im `{% raw %}{% if %}{% endraw %}`-ähnlichen Stil einbauen und die Menge eines Objektes abfragen.
 
 ### polls/result.html
-{% highlight html %}
+{% highlight html linenos %}
 {% raw %}
 {% load i18n %}
 

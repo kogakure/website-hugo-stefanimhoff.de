@@ -35,7 +35,7 @@ Ich verwende für meine Website dieses Konzept, habe es aber an meine Bedürfnis
 ## Dateistuktur des SCSS
 Meine Dateistruktur sieht wie folgt aus:
 
-{% highlight bash %}
+{% highlight bash linenos %}
 ├── application.scss
 ├── base
 │   ├── _base.scss
