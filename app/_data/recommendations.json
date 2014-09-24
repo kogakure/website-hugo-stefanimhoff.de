@@ -66,15 +66,15 @@
     ]
   },
   {
-    "category": "Design",
+    "category": "Code",
     "items": [
-      {
-        "text": "Octopress",
-        "url": "http://octopress.org/"
-      },
       {
         "text": "Jekyll",
         "url": "http://jekyllrb.com/"
+      },
+      {
+        "text": "Octopress",
+        "url": "http://octopress.org/"
       },
       {
         "text": "Yeoman",
@@ -83,7 +83,20 @@
     ]
   },
   {
-    "category": "Design",
+    "category": "Automation",
+    "items": [
+      {
+        "text": "Gulp",
+        "url": "http://gulpjs.com/"
+      },
+      {
+        "text": "Grunt",
+        "url": "http://gruntjs.com/"
+      }
+    ]
+  },
+  {
+    "category": "Hosting",
     "items": [
       {
         "text": "Webfaction",
