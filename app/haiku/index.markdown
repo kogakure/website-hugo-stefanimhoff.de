@@ -6,6 +6,7 @@ date: 2014-02-09 09:01
 comments: false
 sharing: false
 footer: false
+page_class: verse-list
 ---
 
 Auf dieser Seite sind einige meiner Haiku (<ruby>俳<rp>（</rp><rt>はい</rt><rp>）</rp>句<rp>（</rp><rt>く</rt><rp>）</rp></ruby>) zu finden, die ich im Laufe der Jahre geschrieben habe.

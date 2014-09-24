@@ -4,7 +4,7 @@ single: true
 body_class: post
 ---
 
-<main class="main" role="main">
+<main class="main{% if page.page_class %} {{ page.page_class }}{% endif %}" role="main">
   <article class="article" role="article">
     {% include article.html %}
     {% include related_posts.html %}

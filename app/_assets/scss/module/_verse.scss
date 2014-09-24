@@ -10,11 +10,15 @@
 
 .verse pre {
   font-family: inherit;
-  margin-bottom: 0;
+  margin-bottom: 1.5em;
   text-align: left;
   display: inline-block;
   *display: inline;
   zoom: 1;
+
+  .verse-list & {
+    margin-bottom: 0;
+  }
 
   @include breakpoint($content-medium) {
     overflow-x: visible;
