@@ -41,8 +41,8 @@ var app = (function() {
         if (event.target.className !== NAVIGATION_TRIGGER_CLASS) {
           classie.remove(body, NAVIGATION_OPEN_CLASS);
         }
+        event.preventDefault();
       }
-      event.preventDefault();
     }
 
     /**
@@ -124,9 +124,7 @@ var app = (function() {
       // Scroll smoothly to the top of the page
       topLink.addEventListener('click', scrollSmoothlyToTop);
 
-
       // Tracking aller Links
-
       for (var i = 0, len = trackingLinks.length; i < len; i++) {
         var trackingLink = trackingLinks[i];
 
