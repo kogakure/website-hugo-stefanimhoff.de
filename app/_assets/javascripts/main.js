@@ -29,6 +29,17 @@ if ('querySelector' in document && 'addEventListener' in window) {
     }
   }
 
+  /**
+  * Hightlight current navigation item
+  */
+  function currentNavigationItem() {
+    selectedNavigationItem = Array.prototype.filter.call(document.querySelectorAll("#nav a"), function(target) {
+      return target.href === url
+    });
+
+    return selectedNavigationItem[0];
+  }
+
 
   $(function() {
     FastClick.attach(document.body);
@@ -39,12 +50,8 @@ if ('querySelector' in document && 'addEventListener' in window) {
     closeButton.addEventListener('click', closeNavigation);
     container.addEventListener('click', closeNavigation);
 
-
-    // Hightlight current navigation item
-    // ==================================
-    $('#nav a').filter(function() {
-      return this.href === url;
-    }).closest('li').addClass('nav-is-active');
+    // Hightlighting of navigation item
+    classie.add(currentNavigationItem().parentElement, 'nav-is-active');
 
 
     // Scroll smoothly to the top of the page
