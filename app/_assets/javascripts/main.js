@@ -40,6 +40,7 @@ if ('querySelector' in document && 'addEventListener' in window) {
         classie.remove(body, NAVIGATION_OPEN_CLASS);
       }
     }
+    event.preventDefault();
   }
 
   /**
