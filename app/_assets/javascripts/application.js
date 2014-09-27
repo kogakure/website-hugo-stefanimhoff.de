@@ -1,4 +1,5 @@
 //= require fastclick
-//= require ios-rotate-scaling-fix
-//= require libs/plugins/jquery.fitvids
+//= require libs/classie
+//= require libs/ios-rotate-scaling-fix
+//= require libs/fitvids
 //= require main
