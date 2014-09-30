@@ -2,6 +2,19 @@ var src  = './app';
 var dest = './build';
 
 module.exports = {
+  browserSync: {
+    server: {
+      // We're serving the src folder as well
+      // for the sass sourcemap linking
+      baseDir: [dest, src]
+    },
+    port: 9999,
+    files: [
+      dest + '/**',
+      // Exclude Map files
+      '!' + dest + '/**.map'
+    ]
+  },
   jekyll: {
     src: src,
     dest: dest,
