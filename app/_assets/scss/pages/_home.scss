@@ -24,11 +24,11 @@
   }
 
   .content {
-    @include column-count(2);
-    @include column-gap(30px);
+    column-count: 2;
+    column-gap: 30px;
 
     @include breakpoint($homepage-sections-fullsize) {
-      @include column-count(1);
+      column-count: 1;
     }
   }
 

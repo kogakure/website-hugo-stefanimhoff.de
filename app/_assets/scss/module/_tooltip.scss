@@ -11,9 +11,8 @@
   }
 
   &:after {
-    @include border-radius(5px);
-    @include user-select(none);
     background: $dark-grey;
+    border-radius: 5px;
     color: $white;
     content: attr(data-tooltip);
     display: inline-block;
@@ -28,6 +27,7 @@
     overflow: hidden;
     padding: 6px 6px 0;
     text-overflow: ellipsis;
+    user-select: none;
     white-space: nowrap;
     word-wrap: break-word;
   }
@@ -56,8 +56,8 @@
   &:focus:before, &:focus:after,
   &:hover:before, &:hover:after {
     opacity: 1;
-    @include transform(translateZ(0));
-    @include transition(opacity 0.15s ease-out);
+    transform: translateZ(0);
+    transition: opacity 0.15s ease-out;
     z-index: 999;
   }
 }

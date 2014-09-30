@@ -130,5 +130,5 @@ figure.image-figure {
 // Abbildung mit einem Schatten
 // ----------------------------------------------------------------------------
 .image-figure-shadow img {
-  @include box-shadow(0 1px 3px rgba($black, 0.5));
+  box-shadow: 0 1px 3px rgba($black, 0.5);
 }

@@ -19,7 +19,7 @@ header#top {
     @extend %sans-font;
     @include adjust-font-size-to(18px);
     @include link-colors($white, $nav-link-color-hover, $white, $white, $white);
-    @include text-shadow(0 1px 1px $black);
+    text-shadow: 0 1px 1px $black;
     border: 0;
     letter-spacing: 1px;
     position: absolute;
@@ -66,10 +66,10 @@ header#top {
 
   h1 {
     @include grid-span(7, 4);
-    @include text-shadow(0 0 6px $black);
     color: $header-headline;
     float: none;
     line-height: 1.0;
+    text-shadow: 0 0 6px $black;
 
     @include breakpoint(500px) {
       font-size: 2em;
@@ -96,11 +96,11 @@ header#top {
   h2 {
     @include adjust-font-size-to($font-scale-h3);
     @include grid-span(7, 4);
-    @include text-shadow(0 0 5px $white, 0 0 5px $white, 0 0 5px $white);
     clear: both;
     color: $header-subheadline;
     line-height: 1.2;
     position: relative;
+    text-shadow: 0 0 5px $white, 0 0 5px $white, 0 0 5px $white;
     top: -1.7em;
 
     @include breakpoint(700px) {
@@ -129,13 +129,13 @@ header#top {
     }
 
     .icon-logo {
-      display: block;
-      @include text-shadow(0 1px 2px $black);
-      color: $logo-color;
-      font-size: 70px;
       border: 0;
-      text-align: right;
+      color: $logo-color;
+      display: block;
+      font-size: 70px;
       padding: 0 0 5px 10px;
+      text-align: right;
+      text-shadow: 0 1px 2px $black;
 
       @include breakpoint(430px) {
         padding: 10px 0 0;

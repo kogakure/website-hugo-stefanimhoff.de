@@ -14,10 +14,10 @@
 // Box mit Schatten
 // ----------------------------------------------------------------------------
 @mixin shadow-box($border: #fff .5em solid, $shadow: rgba(#000, .15) 0 1px 4px, $border-radius: .3em) {
+  border-radius: $border-radius;
   border: $border;
-  @include border-radius($border-radius);
-  @include box-shadow($shadow);
-  @include box-sizing(border-box);
+  box-shadow: $shadow;
+  box-sizing: border-box;
 }
 
 // ::selection
