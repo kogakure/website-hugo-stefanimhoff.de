@@ -19,5 +19,9 @@
   },
   "engines": {
     "node": ">=0.8.0"
+  },
+  "dependencies": {
+    "classie": "^0.1.0",
+    "fastclick": "^1.0.3"
   }
 }

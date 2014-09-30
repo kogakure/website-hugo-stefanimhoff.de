@@ -12,7 +12,7 @@ module.exports = {
     dest: dest + '/assets/css'
   },
   scripts: {
-    src: src + '/_assets/javascripts/*.js',
+    src: src + '/_assets/javascripts/application.js',
     dest: dest + '/assets/js'
   },
   autoprefixer: {
