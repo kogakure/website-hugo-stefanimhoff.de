@@ -182,7 +182,7 @@ pre {
     padding: 0 0 6px 0;
 
     &:after {
-      @include background-image(linear-gradient(to right, rgba($white, 0) 20%, rgba($white, 1) 50%, rgba($white, 1)));
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 20%, #ffffff 50%, #ffffff);
       content: " ";
       height: 100%;
       position: absolute;
@@ -207,16 +207,16 @@ var {
 // ----------------------------------------------------------------------------
 samp {
   @extend %mono-font;
-  color: $sample-color;
   background: $sample-background;
+  border-radius: 0.4em;
   border: 1px solid #ddd;
+  color: $sample-color;
   display: inline-block;
   font-size: 0.8em;
   line-height: 1.5em;
   margin: -1px 0;
   padding: 0 .3em;
   white-space: no-wrap;
-  @include border-radius(.4em);
 }
 
 // Keyboard entry
