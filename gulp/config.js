@@ -20,5 +20,8 @@ module.exports = {
       'opera 12.1'
     ],
     cascade: true
+  },
+  clean: {
+    src: dest
   }
 };
