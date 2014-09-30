@@ -1,7 +1,8 @@
-var gulp    = require('gulp');
-var sass    = require('gulp-ruby-sass'); // @TODO: Try RubyLib
-var plumber = require('gulp-plumber');
-var config  = require('../config').sass;
+var gulp         = require('gulp');
+var plumber      = require('gulp-plumber');
+var sass         = require('gulp-ruby-sass'); // @TODO: Try RubyLib
+var autoprefixer = require('gulp-autoprefixer');
+var config       = require('../config');
 
 var env = process.env.NODE_ENV || 'development'; // NODE_ENV=production gulp sass
 
@@ -23,8 +24,12 @@ gulp.task('sass', function() {
     sassConfig.sourcemap = false;
   }
 
-  return gulp.src(config.src)
+  return gulp.src(config.sass.src)
     .pipe(plumber())
     .pipe(sass(sassConfig))
-    .pipe(gulp.dest(config.dest));
+    .pipe(autoprefixer({
+      browsers: config.autoprefixer.browsers,
+      cascade: config.autoprefixer.cascade
+    }))
+    .pipe(gulp.dest(config.sass.dest));
 });
