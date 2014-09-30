@@ -93,12 +93,6 @@
   <link rel="canonical" href="{{ page_url }}">
 
   <!-- Stylesheets -->
-  {% stylesheet application %}
-  {% if page.homepage %}<link rel="stylesheet" type="text/css" href="{{ root_url }}{{ 'homepage.css' | asset_path }}">{% endif %}
-  {% if page.custom_css %}{{ page.custom_css | stylesheet }}{% endif %}
-  <link rel="stylesheet" type="text/css" href="{{ root_url }}{{ 'print.css' | asset_path }}" media="print">
-
-  <!-- NEU: -->
   <link rel="stylesheet" href="{{ root_url }}/assets/css/application.css">
   {% if page.homepage %}<link rel="stylesheet" type="text/css" href="{{ root_url }}/assets/css/homepage.css">{% endif %}
   {% if page.custom_css %}{<link rel="stylesheet" type="text/css" href="{{ root_url }}/assets/css/{{ page.custom_css }}.css">{% endif %}
