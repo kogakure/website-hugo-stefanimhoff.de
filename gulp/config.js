@@ -1,6 +1,10 @@
+var src  = './app';
 var dest = './build';
-var src = './app';
 
 module.exports = {
-
+  jekyll: {
+    src: src,
+    dest: dest,
+    config: '_config.yml'
+  }
 };
