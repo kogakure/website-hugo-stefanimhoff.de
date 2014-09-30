@@ -2,7 +2,7 @@ var gulp        = require('gulp');
 // var shell    = require('gulp-shell');
 var cp          = require('child_process');
 var browserSync = require('browser-sync');
-var jekyll      = require('../config').jekyll;
+var config      = require('../config').jekyll;
 
 /**
  * Build the Jekyll Site
@@ -13,6 +13,6 @@ var jekyll      = require('../config').jekyll;
 
 gulp.task('jekyll', function (done) {
   browserSync.notify('<span style="color: grey">Running:</span> $ jekyll build');
-  return cp.spawn('bundle', ['exec', 'jekyll', 'build', '-q', '--source=' + jekyll.src, '--destination=' + jekyll.dest, '--config=' + jekyll.config], {stdio: 'inherit'})
+  return cp.spawn('bundle', ['exec', 'jekyll', 'build', '-q', '--source=' + config.src, '--destination=' + config.dest, '--config=' + config.config], {stdio: 'inherit'})
   .on('close', done);
 });
