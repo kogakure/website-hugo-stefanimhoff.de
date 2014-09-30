@@ -11,6 +11,10 @@ module.exports = {
     src: src + '/_assets/scss/*.{sass,scss}',
     dest: dest + '/assets/css'
   },
+  scripts: {
+    src: src + '/_assets/javascripts/*.js',
+    dest: dest + '/assets/js'
+  },
   autoprefixer: {
     browsers: [
       'last 2 versions',
