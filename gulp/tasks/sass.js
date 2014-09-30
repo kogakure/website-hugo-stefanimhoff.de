@@ -1,5 +1,7 @@
 var gulp         = require('gulp');
 var plumber      = require('gulp-plumber');
+var browserSync  = require('browser-sync');
+var reload       = browserSync.reload;
 var sass         = require('gulp-ruby-sass'); // @TODO: Try RubyLib
 var autoprefixer = require('gulp-autoprefixer');
 var config       = require('../config');
@@ -31,5 +33,6 @@ gulp.task('sass', function() {
       browsers: config.autoprefixer.browsers,
       cascade: config.autoprefixer.cascade
     }))
-    .pipe(gulp.dest(config.sass.dest));
+    .pipe(gulp.dest(config.sass.dest))
+    .pipe(reload({stream: true}));
 });
