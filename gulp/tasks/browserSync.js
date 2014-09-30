@@ -5,6 +5,6 @@ var config      = require('../config').browserSync;
 /**
  * Start a server and watch changes with BrowserSync
  */
-gulp.task('browserSync', function() {
+gulp.task('browserSync', ['build'], function() {
   browserSync(config);
 });
