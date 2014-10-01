@@ -3,7 +3,9 @@ var plumber      = require('gulp-plumber');
 var browserSync  = require('browser-sync');
 var sass         = require('gulp-ruby-sass'); // @TODO: Try RubyLib
 var filter       = require('gulp-filter');
+var gulpif       = require('gulp-if');
 var autoprefixer = require('gulp-autoprefixer');
+var minifycss    = require('gulp-minify-css');
 var config       = require('../config');
 
 var env = process.env.NODE_ENV || 'development'; // NODE_ENV=production gulp sass
@@ -35,6 +37,9 @@ gulp.task('sass', function() {
       browsers: config.autoprefixer.browsers,
       cascade: config.autoprefixer.cascade
     }))
+    .pipe(gulpif(env === 'production', minifycss({
+      keepSpecialComments: 0
+    })))
     .pipe(gulp.dest(config.sass.dest))
     .pipe(filter('**/*.css'))
     .pipe(browserSync.reload({ stream: true }));

@@ -12,6 +12,7 @@
     "gulp-clean": "^0.3.1",
     "gulp-filter": "^1.0.2",
     "gulp-if": "^1.2.4",
+    "gulp-minify-css": "^0.3.10",
     "gulp-notify": "^1.8.0",
     "gulp-plumber": "^0.6.5",
     "gulp-ruby-sass": "^0.7.1",
