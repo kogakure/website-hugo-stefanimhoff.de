@@ -41,14 +41,14 @@ module.exports = {
     ],
     sass: src + '/_assets/scss/**/*.{sass,scss}',
     scripts: src + '/_assets/javascripts/**/*.js',
-    images: src + '/_assets/images/**'
+    images: src + '/_assets/images/**/*'
   },
   scripts: {
     src: src + '/_assets/javascripts/application.js',
     dest: tmp + '/assets/js'
   },
   images: {
-    src: src + '/_assets/images/**',
+    src: src + '/_assets/images/**/*',
     dest: tmp + '/assets/images'
   },
   autoprefixer: {
