@@ -9,15 +9,6 @@ var config      = require('../config').jekyll;
 gulp.task('jekyll', function (done) {
   browserSync.notify('Compiling Jekyll');
 
-  return cp.spawn('bundle', ['exec', 'jekyll', 'build', '-q', '--source=' + config.src, '--destination=' + config.dest, '--config=' + config.config], {stdio: 'inherit'})
+  return cp.spawn('bundle', ['exec', 'jekyll', 'build', '-q', '--source=' + config.src, '--destination=' + config.dest, '--config=' + config.config], { stdio: 'inherit' })
   .on('close', done);
 });
-
-/**
- * Alternative @TODO: Remove later
- */
-// var shell    = require('gulp-shell');
-
-// gulp.task('jekyll', shell.task([
-//   'bundle exec jekyll build -q --source app --destination build --config _config.yml'
-// ]));

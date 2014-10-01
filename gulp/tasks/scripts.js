@@ -4,6 +4,7 @@ var browserSync = require('browser-sync');
 var uglify      = require('gulp-uglify');
 var gulpif      = require('gulp-if');
 var browserify  = require('gulp-browserify');
+var size        = require('gulp-size');
 var config      = require('../config').scripts;
 
 var env = process.env.NODE_ENV || 'development'; // NODE_ENV=production gulp scripts
@@ -24,4 +25,5 @@ gulp.task('scripts', function() {
     }))
     .pipe(gulpif(env === 'production', uglify()))
     .pipe(gulp.dest(config.dest))
+    .pipe(size());
 });

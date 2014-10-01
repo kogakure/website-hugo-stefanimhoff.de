@@ -6,6 +6,7 @@ var filter       = require('gulp-filter');
 var gulpif       = require('gulp-if');
 var autoprefixer = require('gulp-autoprefixer');
 var minifycss    = require('gulp-minify-css');
+var size         = require('gulp-size');
 var config       = require('../config');
 
 var env = process.env.NODE_ENV || 'development'; // NODE_ENV=production gulp sass
@@ -43,5 +44,6 @@ gulp.task('sass', function() {
     })))
     .pipe(gulp.dest(config.sass.dest))
     .pipe(filter('**/*.css'))
+    .pipe(size())
     .pipe(browserSync.reload({ stream: true }));
 });
