@@ -1,8 +1,8 @@
 var gulp         = require('gulp');
 var plumber      = require('gulp-plumber');
 var browserSync  = require('browser-sync');
-var reload       = browserSync.reload;
 var sass         = require('gulp-ruby-sass'); // @TODO: Try RubyLib
+var filter       = require('gulp-filter');
 var autoprefixer = require('gulp-autoprefixer');
 var config       = require('../config');
 
@@ -26,6 +26,8 @@ gulp.task('sass', function() {
     sassConfig.sourcemap = false;
   }
 
+  browserSync.notify('Compiling Sass');
+
   return gulp.src(config.sass.src)
     .pipe(plumber())
     .pipe(sass(sassConfig))
@@ -34,5 +36,6 @@ gulp.task('sass', function() {
       cascade: config.autoprefixer.cascade
     }))
     .pipe(gulp.dest(config.sass.dest))
-    .pipe(reload({stream: true}));
+    .pipe(filter('**/*.css'))
+    .pipe(browserSync.reload({ stream: true }));
 });

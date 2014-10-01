@@ -22,7 +22,7 @@ module.exports = {
     config: '_config.yml'
   },
   sass: {
-    src: src + '/_assets/scss/*.{sass,scss}',
+    src: src + '/_assets/scss/**/*.{sass,scss}',
     dest: tmp + '/assets/css'
   },
   watch: {
