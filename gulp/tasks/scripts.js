@@ -18,7 +18,10 @@ gulp.task('scripts', function() {
 
   return gulp.src(config.src)
     .pipe(plumber())
-    .pipe(browserify({ debug: env === 'development' }))
+    .pipe(browserify({
+      debug: env === 'development',
+      onError: browserSync.notify
+    }))
     .pipe(gulpif(env === 'production', uglify()))
     .pipe(gulp.dest(config.dest))
 });

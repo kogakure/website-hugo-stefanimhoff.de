@@ -20,7 +20,8 @@ gulp.task('sass', function() {
     compass: true,
     bundleExec: true,
     sourcemap: true,
-    sourcemapPath: '../scss'
+    sourcemapPath: '../scss',
+    onError: browserSync.notify
   };
 
   if (env === 'production') {
