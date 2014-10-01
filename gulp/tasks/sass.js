@@ -3,6 +3,7 @@ var plumber      = require('gulp-plumber');
 var browserSync  = require('browser-sync');
 var sass         = require('gulp-ruby-sass'); // @TODO: Try RubyLib
 var filter       = require('gulp-filter');
+var changed     = require('gulp-changed');
 var gulpif       = require('gulp-if');
 var autoprefixer = require('gulp-autoprefixer');
 var minifycss    = require('gulp-minify-css');
@@ -34,6 +35,7 @@ gulp.task('sass', function() {
 
   return gulp.src(config.sass.src)
     .pipe(plumber())
+    .pipe(changed(config.sass.dest)) // Ignore unchanged files
     .pipe(sass(sassConfig))
     .pipe(autoprefixer({
       browsers: config.autoprefixer.browsers,
