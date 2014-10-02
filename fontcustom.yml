@@ -6,7 +6,7 @@
 
 font_name:         iconfont
 css_prefix:        icon-
-preprocessor_path: "/assets"
+preprocessor_path: "/assets/fonts"
 autowidth:         false
 quiet:             false
 # debug:             false

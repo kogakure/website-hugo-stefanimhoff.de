@@ -20,7 +20,7 @@ gulp.task('scripts', function() {
 
   return gulp.src(config.src)
     .pipe(plumber())
-    .pipe(changed(config.scripts.dest)) // Ignore unchanged files
+    .pipe(changed(config.dest)) // Ignore unchanged files
     .pipe(browserify({
       debug: env === 'development',
       onError: browserSync.notify
