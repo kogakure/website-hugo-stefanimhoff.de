@@ -32,7 +32,7 @@ Da ich beruflich nicht mit Python und Django arbeite, sondern mit [Ruby on Rails
 ## Jekyll und andere statische Seitengeneratoren
 Anfang des Jahres entschloss ich mich, dass es Zeit sei, an einer Aktualisierung zu arbeiten. Zum einen, weil die Website dringend für mobile Geräte optimiert werden muss (Responsive Web Design), zum anderen um die Python-Technologie zu Gunsten von Ruby zu wechseln. Ursprünglich hatte ich geplant, die Website in *Ruby in Rails* zu erstellen, was aber nur die Technologie, nicht die Komplexität des Projektes verändert hätte.
 
-Jekyll oder andere statische Seitengeneratoren haben im Moment einen ziemlich starken Zulauf, doch aufgrund der Vielzahl von Daten auf meiner Kampfkunst-Website hatte ich diesen Gedanken zunächst verworfen. Doch dann lernte ich die *[Data Files](http://jekyllrb.com/docs/datafiles/)* von [Jekyll](http://jekylrb.com) kennen.
+Jekyll oder andere statische Seitengeneratoren haben im Moment einen ziemlich starken Zulauf, doch aufgrund der Vielzahl von Daten auf meiner Kampfkunst-Website hatte ich diesen Gedanken zunächst verworfen. Doch dann lernte ich die *[Data Files](http://jekyllrb.com/docs/datafiles/)* von [Jekyll](http://jekyllrb.com) kennen.
 
 ## Daten als YAML, JSON oder CSV
 Im November 2013 wurde der Support für YAML-Dateien hinzugefügt, später in 2014 für JSON und diesen Monat für CSV. *Data Files* ermöglichen es, über Dateien dieser Formate zu iterieren und so Daten automatisch in die statischen Seiten zu laden. Ob es einfache Konfigurationsvariablen, wie z. B. ein Twitter-Benutzername sind, die Menüpunkte einer Navigation, oder wie bei mir ein Lexikon mit über 500 Einträgen, mit *Data Files* ist dies kein Problem mehr.
