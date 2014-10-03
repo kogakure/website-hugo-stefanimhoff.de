@@ -9,51 +9,57 @@
 // Variables für die Nutzung in content
 // ------------------------------------
 
-$icon-arrow-left: "\f101";
-$icon-arrow-right: "\f102";
-$icon-calendar: "\f103";
-$icon-cc: "\f104";
-$icon-close: "\f105";
-$icon-download: "\f106";
-$icon-external: "\f107";
-$icon-facebook: "\f108";
-$icon-feed: "\f109";
-$icon-flickr: "\f10a";
-$icon-folder: "\f10b";
-$icon-github: "\f10c";
-$icon-google-plus: "\f10d";
-$icon-linkedin: "\f10e";
-$icon-logo: "\f10f";
-$icon-menu: "\f110";
-$icon-pinterest: "\f111";
-$icon-question: "\f112";
-$icon-quill: "\f113";
-$icon-tag: "\f114";
-$icon-tumblr: "\f115";
-$icon-twitter: "\f116";
-$icon-xing: "\f117";
+$iconfont-arrow-left: "\f100";
+$iconfont-arrow-right: "\f101";
+$iconfont-calendar: "\f102";
+$iconfont-cc: "\f103";
+$iconfont-close: "\f104";
+$iconfont-download: "\f105";
+$iconfont-external: "\f106";
+$iconfont-facebook: "\f107";
+$iconfont-feed: "\f108";
+$iconfont-flickr: "\f109";
+$iconfont-folder: "\f10a";
+$iconfont-github: "\f10b";
+$iconfont-google-plus: "\f10c";
+$iconfont-linkedin: "\f10d";
+$iconfont-logo: "\f10e";
+$iconfont-menu: "\f10f";
+$iconfont-pinterest: "\f110";
+$iconfont-question: "\f111";
+$iconfont-quill: "\f112";
+$iconfont-tag: "\f113";
+$iconfont-tumblr: "\f114";
+$iconfont-twitter: "\f115";
+$iconfont-xing: "\f116";
 
 // Font-Face
 // ---------
 
 @font-face {
   font-family: "iconfont";
-  src: url("/assets/iconfont-36af5ef66bc564b29000a658522deb26.eot");
-  src: url("/assets/iconfont-36af5ef66bc564b29000a658522deb26.eot?#iefix") format("embedded-opentype"),
-		url("/assets/iconfont-36af5ef66bc564b29000a658522deb26.woff") format("woff"),
-		url("/assets/iconfont-36af5ef66bc564b29000a658522deb26.ttf") format("truetype"),
-		url("/assets/iconfont-36af5ef66bc564b29000a658522deb26.svg?#iconfont") format("svg");
+  src: url("../../fonts/iconfont_6b06847d7cf3394f118dbc8202f269b7.eot");
+  src: url("../../fonts/iconfont_6b06847d7cf3394f118dbc8202f269b7.eot?#iefix") format("embedded-opentype"),
+       url("../../fonts/iconfont_6b06847d7cf3394f118dbc8202f269b7.woff") format("woff"),
+       url("../../fonts/iconfont_6b06847d7cf3394f118dbc8202f269b7.ttf") format("truetype"),
+       url("../../fonts/iconfont_6b06847d7cf3394f118dbc8202f269b7.svg#iconfont") format("svg");
   font-weight: normal;
   font-style: normal;
-  }
+}
 
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "iconfont";
+    src: url("../../fonts/iconfont_6b06847d7cf3394f118dbc8202f269b7.svg#iconfont") format("svg");
+  }
+}
 
 // Styling für Icon-Fonts
 // ----------------------
 
 [data-icon]:before { content: attr(data-icon); }
 
-.icon,
+[data-icon]:before,
 .icon-arrow-left:before,
 .icon-arrow-right:before,
 .icon-calendar:before,
@@ -76,8 +82,7 @@ $icon-xing: "\f117";
 .icon-tag:before,
 .icon-tumblr:before,
 .icon-twitter:before,
-.icon-xing:before,
-[data-icon]:before {
+.icon-xing:before {
   display: inline-block;
   font-family: "iconfont";
   font-style: normal;
@@ -85,35 +90,36 @@ $icon-xing: "\f117";
   font-variant: normal;
   line-height: 1;
   text-decoration: inherit;
+  text-rendering: optimizeLegibility;
   text-transform: none;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
 }
-
 
 // Einzelne Klassen-Attribute
 // --------------------------
 
-.icon-arrow-left:before { content:"\f101"; }
-.icon-arrow-right:before { content:"\f102"; }
-.icon-calendar:before { content:"\f103"; }
-.icon-cc:before { content:"\f104"; }
-.icon-close:before { content:"\f105"; }
-.icon-download:before { content:"\f106"; }
-.icon-external:before { content:"\f107"; }
-.icon-facebook:before { content:"\f108"; }
-.icon-feed:before { content:"\f109"; }
-.icon-flickr:before { content:"\f10a"; }
-.icon-folder:before { content:"\f10b"; }
-.icon-github:before { content:"\f10c"; }
-.icon-google-plus:before { content:"\f10d"; }
-.icon-linkedin:before { content:"\f10e"; }
-.icon-logo:before { content:"\f10f"; }
-.icon-menu:before { content:"\f110"; }
-.icon-pinterest:before { content:"\f111"; }
-.icon-question:before { content:"\f112"; }
-.icon-quill:before { content:"\f113"; }
-.icon-tag:before { content:"\f114"; }
-.icon-tumblr:before { content:"\f115"; }
-.icon-twitter:before { content:"\f116"; }
-.icon-xing:before { content:"\f117"; }
+.icon-arrow-left:before { content: "\f100"; }
+.icon-arrow-right:before { content: "\f101"; }
+.icon-calendar:before { content: "\f102"; }
+.icon-cc:before { content: "\f103"; }
+.icon-close:before { content: "\f104"; }
+.icon-download:before { content: "\f105"; }
+.icon-external:before { content: "\f106"; }
+.icon-facebook:before { content: "\f107"; }
+.icon-feed:before { content: "\f108"; }
+.icon-flickr:before { content: "\f109"; }
+.icon-folder:before { content: "\f10a"; }
+.icon-github:before { content: "\f10b"; }
+.icon-google-plus:before { content: "\f10c"; }
+.icon-linkedin:before { content: "\f10d"; }
+.icon-logo:before { content: "\f10e"; }
+.icon-menu:before { content: "\f10f"; }
+.icon-pinterest:before { content: "\f110"; }
+.icon-question:before { content: "\f111"; }
+.icon-quill:before { content: "\f112"; }
+.icon-tag:before { content: "\f113"; }
+.icon-tumblr:before { content: "\f114"; }
+.icon-twitter:before { content: "\f115"; }
+.icon-xing:before { content: "\f116"; }

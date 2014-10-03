@@ -1,2 +1,6 @@
 var gulp = require('gulp');
-var fontcustom = require('gulp-fontcustom');
+var shell = require('gulp-shell');
+
+gulp.task('fontcustom', shell.task([
+  'fontcustom compile'
+]));

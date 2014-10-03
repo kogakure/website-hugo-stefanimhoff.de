@@ -14,23 +14,15 @@ debug: false
 quiet: false
 
 
-# --------------------------------------------------------------------------- #
-# Input Paths
-# --------------------------------------------------------------------------- #
-
 input:
   vectors: vectors
   templates: vectors/templates
 
 
-# --------------------------------------------------------------------------- #
-# Output Paths
-# --------------------------------------------------------------------------- #
-
 output:
-  fonts: build/assets/fonts
-  css: build/assets/scss/base
-  preview: build/docs
+  fonts: app/_assets/fonts
+  css: app/_assets/scss/base
+  preview: docs
 
 
 # --------------------------------------------------------------------------- #
