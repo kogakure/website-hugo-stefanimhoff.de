@@ -52,6 +52,10 @@ module.exports = {
     src: src + '/_assets/images/**/*',
     dest: tmp + '/assets/images'
   },
+  copyFonts: {
+    src: src + '/_assets/fonts/*',
+    dest: tmp + '/assets/fonts'
+  },
   autoprefixer: {
     browsers: [
       'last 2 versions',

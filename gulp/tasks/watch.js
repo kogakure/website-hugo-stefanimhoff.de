@@ -6,5 +6,5 @@ gulp.task('watch', ['browserSync'], function() {
   gulp.watch(config.watch.sass,    ['sass']);
   gulp.watch(config.watch.scripts, ['scripts']);
   gulp.watch(config.watch.images,  ['images']);
-  gulp.watch(config.watch.svg,     ['fontcustom']);
+  gulp.watch(config.watch.svg,     ['copyFonts']);
 });
