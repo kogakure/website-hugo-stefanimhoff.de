@@ -70,7 +70,7 @@ exclude: [
   "**.png", "**.jpg", "**.jpeg", "**.gif", "**.webp", "**.svg", "**.ico"
 ]
 
-include: [".htaccess", ".htpasswd"]
+include: [".htaccess", ".htpasswd", "favicon.ico"]
 
 # Sitemap.xml Generator
 sitemap:
