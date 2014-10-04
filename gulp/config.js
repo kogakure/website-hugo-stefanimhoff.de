@@ -1,6 +1,6 @@
-var src    = './app';
-var jekyll = './build';
-var tmp    = './.tmp'
+var src    = 'app';
+var jekyll = 'build';
+var tmp    = '.tmp'
 
 module.exports = {
   browserSync: {
@@ -41,7 +41,8 @@ module.exports = {
     ],
     sass: src + '/_assets/scss/**/*.{sass,scss}',
     scripts: src + '/_assets/javascripts/**/*.js',
-    images: src + '/_assets/images/**/*'
+    images: src + '/_assets/images/**/*',
+    svg: 'vectors/*.svg'
   },
   scripts: {
     src: src + '/_assets/javascripts/application.js',

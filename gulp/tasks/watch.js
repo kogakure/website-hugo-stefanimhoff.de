@@ -1,9 +1,10 @@
 var gulp = require('gulp');
-var config = require('../config').watch;
+var config = require('../config');
 
 gulp.task('watch', ['browserSync'], function() {
-  gulp.watch(config.jekyll,  ['jekyll'])
-  gulp.watch(config.sass,    ['sass']);
-  gulp.watch(config.scripts, ['scripts']);
-  gulp.watch(config.images,  ['images']);
+  gulp.watch(config.watch.jekyll,  ['jekyll'])
+  gulp.watch(config.watch.sass,    ['sass']);
+  gulp.watch(config.watch.scripts, ['scripts']);
+  gulp.watch(config.watch.images,  ['images']);
+  gulp.watch(config.watch.svg,     ['fontcustom']);
 });
