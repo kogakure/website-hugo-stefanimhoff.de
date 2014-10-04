@@ -178,7 +178,7 @@
 .nav-item-external a:hover {
   &:after {
     @extend %icon-font;
-    content: " #{$icon-external}";
+    content: " #{$iconfont-external}";
     font-size: 14px;
     line-height: 1;
     position: relative;

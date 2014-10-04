@@ -14,7 +14,7 @@ $<%= font_name %>-<%= name %>: "<%= "\\#{value[:codepoint].to_s(16)}" %>";<% end
 // Font-Face
 // ---------
 
-<%= font_face %>
+<%= font_face(:preprocessor) %>
 
 // Styling für Icon-Fonts
 // ----------------------
