@@ -25,6 +25,9 @@ module.exports = {
     src: src + '/_assets/scss/**/*.{sass,scss}',
     dest: assets + '/assets/css'
   },
+  css: {
+    src: assets + '/assets/css/*.css'
+  },
   watch: {
     jekyll: [
       '_config.yml',

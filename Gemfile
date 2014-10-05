@@ -6,6 +6,7 @@ gem 'compass', '~> 1.0.1'         # Compass version
 gem 'compass-import-once', :require => 'compass/import-once/activate'
 gem 'gsl'                         # LSI support for faster related generation
 gem 'csscss', '~> 1.3'            # Check CSS for recursion
+gem 'scss-lint'                   # Check SCSS syntax
 gem 'jekyll-assets', '~> 0.10.0'  # Asset pipeline
 gem 'uglifier'                    # UglifyJS
 gem 'nokogiri', '~> 1.6.3.1'      # HTML, XML parser for lunr search
