@@ -27,6 +27,7 @@ gulp.task('sass', function() {
     onError: browserSync.notify
   };
 
+  // Don’t write sourcemaps of sourcemaps
   var filter = gulpFilter(['*.css', '!*.map']);
 
   if (env === 'production') {
@@ -48,9 +49,9 @@ gulp.task('sass', function() {
     .pipe(gulpif(env === 'production', minifycss({
       keepSpecialComments: 0
     })))
-    .pipe(filter)
+    .pipe(filter) // Don’t write sourcemaps of sourcemaps
     .pipe(sourcemaps.write('.', { includeContent: false }))
-    .pipe(filter.restore())
+    .pipe(filter.restore()) // Restore original files
     .pipe(gulp.dest(config.sass.dest))
     .pipe(browserSync.reload({ stream: true }));
 });
