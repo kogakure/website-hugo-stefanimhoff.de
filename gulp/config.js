@@ -73,5 +73,22 @@ module.exports = {
   },
   clean: {
     src: [jekyll, assets]
+  },
+  browserify: {
+    // Enable source maps
+    debug: true,
+    // Additional file extensions to make optional
+    extensions: ['.coffee', '.hbs'],
+    // A separate bundle will be generated for each
+    // bundle config in the list below
+    bundleConfigs: [{
+      entries: './app/_assets/javascripts/application.js',
+      dest: 'build/assets/js',
+      outputName: 'application.js'
+    }, {
+      entries: './app/_assets/javascripts/head.js',
+      dest: 'build/assets/js',
+      outputName: 'head.js'
+    }]
   }
 };
