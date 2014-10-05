@@ -2,12 +2,13 @@ var gulp         = require('gulp');
 var plumber      = require('gulp-plumber');
 var browserSync  = require('browser-sync');
 var sass         = require('gulp-ruby-sass'); // @TODO: Try RubyLib
-var filter       = require('gulp-filter');
+var gulpFilter   = require('gulp-filter');
 var changed      = require('gulp-changed');
 var gulpif       = require('gulp-if');
 var autoprefixer = require('gulp-autoprefixer');
 var minifycss    = require('gulp-minify-css');
 var size         = require('gulp-size');
+var sourcemaps   = require('gulp-sourcemaps');
 var config       = require('../config');
 
 var env = process.env.NODE_ENV || 'development'; // NODE_ENV=production gulp sass
@@ -22,9 +23,11 @@ gulp.task('sass', function() {
     compass: true,
     bundleExec: true,
     sourcemap: true,
-    sourcemapPath: '../scss',
+    sourcemapPath: '../../_assets/scss',
     onError: browserSync.notify
   };
+
+  var filter = gulpFilter(['*.css', '!*.map']);
 
   if (env === 'production') {
     sassConfig.style = 'compressed';
@@ -37,6 +40,7 @@ gulp.task('sass', function() {
     .pipe(plumber())
     .pipe(changed(config.sass.dest)) // Ignore unchanged files
     .pipe(sass(sassConfig))
+    .pipe(sourcemaps.init())
     .pipe(autoprefixer({
       browsers: config.autoprefixer.browsers,
       cascade: config.autoprefixer.cascade
@@ -44,8 +48,9 @@ gulp.task('sass', function() {
     .pipe(gulpif(env === 'production', minifycss({
       keepSpecialComments: 0
     })))
+    .pipe(filter)
+    .pipe(sourcemaps.write('.', { includeContent: false }))
+    .pipe(filter.restore())
     .pipe(gulp.dest(config.sass.dest))
-    .pipe(filter('**/*.css'))
-    .pipe(size())
     .pipe(browserSync.reload({ stream: true }));
 });
