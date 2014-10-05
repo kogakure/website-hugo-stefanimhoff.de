@@ -1,13 +1,13 @@
 var src    = 'app';
-var jekyll = 'build';
-var tmp    = '.tmp'
+var jekyll = 'build/development';
+var assets    = 'build'
 
 module.exports = {
   browserSync: {
     server: {
       // We're serving the src folder as well
       // for the sass sourcemap linking
-      baseDir: [jekyll, tmp, src]
+      baseDir: [jekyll, assets, src]
     },
     port: 9999,
     files: [
@@ -23,7 +23,7 @@ module.exports = {
   },
   sass: {
     src: src + '/_assets/scss/**/*.{sass,scss}',
-    dest: tmp + '/assets/css'
+    dest: assets + '/assets/css'
   },
   watch: {
     jekyll: [
@@ -46,15 +46,15 @@ module.exports = {
   },
   scripts: {
     src: src + '/_assets/javascripts/application.js',
-    dest: tmp + '/assets/js'
+    dest: assets + '/assets/js'
   },
   images: {
     src: src + '/_assets/images/**/*',
-    dest: tmp + '/assets/images'
+    dest: assets + '/assets/images'
   },
   copyFonts: {
     src: src + '/_assets/fonts/*',
-    dest: tmp + '/assets/fonts'
+    dest: assets + '/assets/fonts'
   },
   autoprefixer: {
     browsers: [
@@ -69,6 +69,6 @@ module.exports = {
     cascade: true
   },
   clean: {
-    src: [jekyll, tmp]
+    src: [jekyll, assets]
   }
 };
