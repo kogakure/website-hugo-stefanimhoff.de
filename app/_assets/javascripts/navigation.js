@@ -1,3 +1,4 @@
+/* global classie:false */
 'use strict';
 
 var NAVIGATION_OPEN_CLASS    = 'navigation-is-open',

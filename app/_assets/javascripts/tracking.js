@@ -1,3 +1,4 @@
+/* global ga:false */
 'use strict';
 
 var url = window.location.href;

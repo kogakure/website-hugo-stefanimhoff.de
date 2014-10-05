@@ -1,4 +1,4 @@
-var gulp = require('gulp');
+var gulp   = require('gulp');
 var csscss = require('gulp-csscss');
 var config = require('../config');
 
@@ -8,6 +8,6 @@ var config = require('../config');
  * Check CSS syntax with CSSCSS
  */
 gulp.task('csscss', function() {
-  gulp.src(config.css.src)
+  return gulp.src(config.css.src)
     .pipe(csscss());
 })

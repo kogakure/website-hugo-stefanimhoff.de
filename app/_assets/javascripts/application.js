@@ -19,7 +19,7 @@
 var EventEmitter = require('events').EventEmitter;
 
 //create a new event emitter
-var emitter = new EventEmitter;
+var emitter = new EventEmitter();
 
 // set up a listener for the event
 emitter.on('pizza', function(message){

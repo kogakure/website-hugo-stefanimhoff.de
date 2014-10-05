@@ -1,3 +1,4 @@
+/* global addMultipleEventListeners:false */
 'use strict';
 
 var position = window.scrollY,
