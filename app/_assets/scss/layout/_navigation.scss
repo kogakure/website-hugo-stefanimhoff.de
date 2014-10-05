@@ -7,8 +7,8 @@
 // Der äußere Container hat nur den Zweck, dass keine Scrollleiste zu sehen ist,
 // der innere Container wird verschoben.
 .outer-container {
-  position: relative;
   overflow: hidden;
+  position: relative;
   width: 100%;
 }
 
@@ -50,8 +50,8 @@
 
   // Wenn nicht das Ziel, dann lass das Menü verschwinden
   &:not(:target) {
-    z-index: 1;
     height: 0;
+    z-index: 1;
   }
 
   // Wenn das Ziel, lass den Schließen-Button erscheinen
@@ -93,9 +93,10 @@
 
   .navigation-is-open {
     #nav {
-      right: 0;
       height: 100%;
+      right: 0;
     }
+
     .container {
       right: 250px;
     }
@@ -110,8 +111,8 @@
   #nav {
     backface-visibility: hidden;
     right: 0;
-    transform-origin: 50% 0%;
     transform: translate3d(250px, 0, 0);
+    transform-origin: 50% 0%;
     transition: $animation-off-screen-menu;
   }
 
@@ -136,7 +137,7 @@
 
 // Styling der Navigationpunkte (Basis-Navigation)
 // ----------------------------------------------------------------------------
-.nav {
+%nav {
   @extend %sans-font;
   font-size: 18px;
   font-weight: 200;
@@ -158,10 +159,14 @@
   }
 }
 
+.nav {
+  @extend %nav;
+}
+
 // Styling der Navigationpunkte (Hauptmenüpunkte)
 // ----------------------------------------------------------------------------
 .nav--main {
-  @extend .nav;
+  @extend %nav;
   font-weight: 400;
   text-transform: uppercase;
 }

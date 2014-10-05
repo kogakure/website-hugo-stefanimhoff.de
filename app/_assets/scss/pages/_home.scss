@@ -51,6 +51,7 @@
         @include grid-span(12);
       }
     }
+
     .grid-recently {
       @include grid-span(4, 9, 12);
 
@@ -58,8 +59,8 @@
         @include grid-span(12);
 
         ul {
-          margin-bottom: 0;
           list-style: none;
+          margin-bottom: 0;
         }
       }
     }
@@ -67,8 +68,8 @@
 
   // Arbeit
   .work {
-    border-top: 1px solid rgba($dark-grey, 0.2);
     @extend %pattern-geometry;
+    border-top: 1px solid rgba($dark-grey, 0.2);
 
     .inline-links h3 {
       color: $link-color;
@@ -97,14 +98,14 @@
     .grid-quote {
       @include grid-span(6, 7, 12);
       color: rgba($dark-grey, 0.8);
-      text-align: left;
       padding: 6em 3em 2em;
+      text-align: left;
 
       @include breakpoint($homepage-sections-fullsize) {
         @include grid-span(12);
         @include trailer();
-        text-align: left;
         padding: 0;
+        text-align: left;
       }
 
       blockquote {
@@ -150,8 +151,8 @@
   .book-lover {
     $book-lover-color: #616161;
 
-    border-top: 1px solid rgba($dark-grey, 0.2);
     @extend %pattern-type;
+    border-top: 1px solid rgba($dark-grey, 0.2);
     color: $white;
 
     h2 {
@@ -171,8 +172,8 @@
   .movie-lover {
     $movie-lover-color: #e8c53d;
 
-    border-top: 1px solid rgba($dark-grey, 0.2);
     @extend %pattern-px;
+    border-top: 1px solid rgba($dark-grey, 0.2);
     color: $white;
 
     h2 {

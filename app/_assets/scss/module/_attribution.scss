@@ -12,7 +12,6 @@
 
 %attribution-text {
   @extend %sans-font;
-  background: $black;
   background: rgba($black, 0.75);
   bottom: -30%;
   color: $white;
@@ -39,7 +38,6 @@
 
 %attribution-before {
   @extend %mono-font;
-  background: $white;
   background: rgba($white, 0.7);
   border-radius: 10px;
   color: $black;
@@ -84,8 +82,8 @@
 .attribution:before {
   @extend %attribution-before;
   bottom: 10px;
-  opacity: 0.75;
   left: 10px;
+  opacity: 0.75;
 
   .fontface & {
     @extend %attribution-before-fontface;
@@ -108,13 +106,13 @@
 }
 
 .attribution-main-text {
-  @extend .attribution-text;
+  @extend %attribution-text;
   bottom: -30px;
   height: 30px;
+  left: 0;
   line-height: 30px;
   opacity: 0.9;
   padding: 0 10px;
-  left: 0;
 }
 
 .attribution-main-text:hover {

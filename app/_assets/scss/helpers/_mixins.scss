@@ -4,7 +4,7 @@
 
 // Bildmasken
 // ----------------------------------------------------------------------------
-@mixin mask-image($img, $repeat: no-repeat){
+@mixin mask-image($img, $repeat: no-repeat) {
   width: image-width($img);
   height: image-height($img);
   @include experimental(mask-image, image-url($img), -webkit, -moz, -o, -ms);
@@ -13,7 +13,7 @@
 
 // Box mit Schatten
 // ----------------------------------------------------------------------------
-@mixin shadow-box($border: #fff .5em solid, $shadow: rgba(#000, .15) 0 1px 4px, $border-radius: .3em) {
+@mixin shadow-box($border: #ffffff .5em solid, $shadow: rgba(#000000, .15) 0 1px 4px, $border-radius: .3em) {
   border-radius: $border-radius;
   border: $border;
   box-shadow: $shadow;
@@ -22,7 +22,7 @@
 
 // ::selection
 // ----------------------------------------------------------------------------
-@mixin selection($bg, $color: inherit, $text-shadow: none){
+@mixin selection($bg, $color: inherit, $text-shadow: none) {
   * {
     &::-moz-selection { background: $bg; color: $color; text-shadow: $text-shadow; }
     &::-webkit-selection { background: $bg; color: $color; text-shadow: $text-shadow; }
@@ -34,6 +34,7 @@
 // ----------------------------------------------------------------------------
 @mixin pullquote-quotes($quotes) {
   quotes: $quotes;
+
   p:first-child:before {
     content: open-quote;
   }

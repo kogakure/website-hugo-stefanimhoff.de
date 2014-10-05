@@ -9,7 +9,7 @@ body {
   font-smoothing: subpixel-antialiased;
   font-style: normal;
   font-weight: $normal;
-  hypens: auto;
+  hyphens: auto;
 }
 
 :lang(ja) {
@@ -41,22 +41,29 @@ body {
 a {
   // normal, hover, active, visited, focus
   @include link-colors($link-color, $link-hover-color, $link-active-color, $link-visited-color, $link-focus-color);
-  text-decoration: none;
   border-bottom: 1px solid $link-border-color;
+  text-decoration: none;
   transition: $animation-link-hover;
 
-  &:hover, &:active, &:focus {
+  &:hover,
+  &:active,
+  &:focus {
     border-color: $link-hover-border-color;
   }
 }
 
 // Headlines
 // ----------------------------------------------------------------------------
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   @extend %sans-font;
   @include enable-ligatures;
-  hyphens: manual;
   clear: both;
+  hyphens: manual;
 }
 
 h1 {
@@ -69,7 +76,10 @@ h2 {
   @include trailer(0.5, $font-scale-h2, margin);
 }
 
-h3, h4, h5, h6 {
+h3,
+h4,
+h5,
+h6 {
   @include adjust-font-size-to($font-scale-h4);
   @include trailer(0.3, $font-scale-h3, margin);
 }
@@ -88,12 +98,12 @@ p {
 // Horizontale Trenner
 // ----------------------------------------------------------------------------
 hr {
-  height: 0;
-  border: 0;
-  margin: 0 $base-rhythm-unit;
-  color: rgba($light-grey, 0.9);
   @include trailer(2, $base-font-size, margin);
   @include trailing-border(3px);
+  border: 0;
+  color: rgba($light-grey, 0.9);
+  height: 0;
+  margin: 0 $base-rhythm-unit;
 }
 
 // Emphasis
@@ -121,14 +131,16 @@ dfn {
 
 // Abbrevations
 // ----------------------------------------------------------------------------
-abbr, acronym {
+abbr,
+acronym {
+  cursor: help;
   font-variant: small-caps;
   letter-spacing: 0.1em;
   text-transform: lowercase;
-  cursor: help;
 }
 
-abbr[title], acronym[title] {
+abbr[title],
+acronym[title] {
   border-bottom-width: 0;
 }
 
@@ -142,10 +154,10 @@ abbr.no-caps {
 code {
   @extend %mono-font;
   @include adjust-font-size-to($font-scale-small);
-  border-radius: 3px;
   background: $white;
-  padding: 0.2em 0.4em;
   border: 1px solid $light-grey;
+  border-radius: 3px;
+  padding: 0.2em 0.4em;
 }
 
 pre {
@@ -159,7 +171,7 @@ pre {
 }
 
 .highlight {
-  box-shadow: rgba(0,0,0,0.06) 0 0 10px;
+  box-shadow: rgba(0, 0, 0, 0.06) 0 0 10px;
   @include grid-span(12);
   @include trailer();
   clear: both;
@@ -167,9 +179,9 @@ pre {
 
   @include breakpoint($content-medium) {
     @include grid-span(10, 1, 8);
+    clear: both;
     margin-left: -(grid-span(1, 1, 8));
     margin-right: 0;
-    clear: both;
   }
 
   pre {
@@ -179,7 +191,7 @@ pre {
 
   code {
     border: 0;
-    padding: 0 0 6px 0;
+    padding: 0 0 6px;
 
     &:after {
       background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 20%, #ffffff 50%, #ffffff);
@@ -208,8 +220,8 @@ var {
 samp {
   @extend %mono-font;
   background: $sample-background;
+  border: 1px solid #dddddd;
   border-radius: 0.4em;
-  border: 1px solid #ddd;
   color: $sample-color;
   display: inline-block;
   font-size: 0.8em;
@@ -223,24 +235,25 @@ samp {
 // ----------------------------------------------------------------------------
 kbd {
   @extend %sans-font;
-  display: inline-block;
-  border: 1px solid $keyboard-border;
-  margin: 0 0.1em;
-  padding: 0.3em 0.6em 0.1em;
-  color: $dark-grey;
-  background-color: $keyboard-background;
-  font-weight: $bold;
-  line-height: 1.4 !important;
-  text-shadow: 0 1px 0 $white;
-  white-space: nowrap;
   @include adjust-font-size-to($font-scale-kbd);
+  background-color: $keyboard-background;
+  border: 1px solid $keyboard-border;
   border-radius: 3px;
   box-shadow: 0 1px 0 rgba($black, 0.2), 0 0 0 2px $white inset;
+  color: $dark-grey;
+  display: inline-block;
+  font-weight: $bold;
+  line-height: 1.4 !important;
+  margin: 0 0.1em;
+  padding: 0.3em 0.6em 0.1em;
+  text-shadow: 0 1px 0 $white;
+  white-space: nowrap;
 }
 
 // Superscript/Subscript
 // ----------------------------------------------------------------------------
-sup, sub {
+sup,
+sub {
   position: relative;
   vertical-align: 0;
 
@@ -276,7 +289,8 @@ mark {
   color: rgba($black, 0.75);
   position: relative;
 
-  &:before, &:after {
+  &:before,
+  &:after {
     background-repeat: no-repeat;
     background-size: 5px 21px;
     content: '';
@@ -287,15 +301,15 @@ mark {
   }
 
   &:before {
+    background-image: inline-image("css/mark-left.png");
     left: -5px;
     top: 0;
-    background-image: inline-image("css/mark-left.png");
   }
 
   &:after {
+    background-image: inline-image("css/mark-right.png");
     bottom: 0;
     right: -5px;
-    background-image: inline-image("css/mark-right.png");
   }
 }
 
@@ -366,11 +380,11 @@ dd {
 // Zitate
 // ----------------------------------------------------------------------------
 blockquote {
-  margin-left: $base-rhythm-unit;
-  margin-right: $base-rhythm-unit;
-  font-style: italic;
   @include leader();
   @include trailer();
+  font-style: italic;
+  margin-left: $base-rhythm-unit;
+  margin-right: $base-rhythm-unit;
 }
 
 cite {
@@ -378,9 +392,9 @@ cite {
 }
 
 blockquote cite:before {
+  content: '–';
   padding-left: 0.3em;
   padding-right: 0.3em;
-  content: '–';
 }
 
 // Inline quotes
@@ -397,18 +411,20 @@ q {
 q:before {
   content: open-quote;
 }
+
 q:after {
   content: close-quote;
 }
 
 // Bilder
 // ----------------------------------------------------------------------------
-img, a img {
+img,
+a img {
   border: $image-border-size solid $image-border-color;
-  max-width: 100%;
   height: auto !important;
+  max-width: 100%;
   vertical-align: bottom;
-  width: auto\9; /* ie8 */
+  width: auto\9; // ie8
 }
 
 // Abbildungen
@@ -422,16 +438,18 @@ figcaption {
 // Video
 // -----------------------------------------------------------------------------
 video {
+  @include trailer(1);
+  box-sizing: border-box;
   display: block;
   height: auto;
   width: 100%;
-  box-sizing: border-box;
-  @include trailer(1);
 }
 
 // Tabellen
 // ----------------------------------------------------------------------------
-caption, th, td {
+caption,
+th,
+td {
   font-weight: $normal;
   text-align: left;
   vertical-align: middle;

@@ -17,9 +17,9 @@ body.error {
 
   .error-image {
     @include grid-span(5, 1, 12);
+    border: 0;
     bottom: 0;
     left: 0;
     position: absolute;
-    border: 0;
   }
 }

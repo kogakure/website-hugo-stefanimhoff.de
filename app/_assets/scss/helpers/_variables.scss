@@ -6,12 +6,12 @@
 // ----------------------------------------------------------------------------
 
 $black:                         #000000;
-$white:                         #FFFFFF;
+$white:                         #ffffff;
 $dark-grey:                     #333333;
-$light-grey:                    #DDDDDD;
+$light-grey:                    #dddddd;
 
 // Body
-$body-background:               #0A0A0A;
+$body-background:               #0a0a0a;
 
 // Header
 $header-background:             $dark-grey;  // THEME
@@ -23,16 +23,16 @@ $header-subheadline:            $light-grey; // THEME
 $logo-color:                    $white; // THEME
 
 // Content
-$content-background:            #EEEEEE;
+$content-background:            #eeeeee;
 
 // Footer
 $footer-link-color:             rgba($white, 0.5);
 $footer-link-color-active:      $white;
-$footer-meta-background:        #292A2C;
-$footer-small-background:       #0A0A0A;
+$footer-meta-background:        #292a2c;
+$footer-small-background:       #0a0a0a;
 
 // Navigation
-$nav-background:                #0C0C0C;
+$nav-background:                #0c0c0c;
 $nav-link-color:                rgba($white, 0.5);
 $nav-link-color-hover:          $white; // THEME
 $nav-link-color-active:         $white;
@@ -52,8 +52,8 @@ $social-icon-color:             rgba($white, 0.5);
 $social-icon-hover:             rgba($white, 0.7);
 
 // Tastatur (kbd)
-$keyboard-border:               #CCCCCC;
-$keyboard-background:           #F7F7F7;
+$keyboard-border:               #cccccc;
+$keyboard-background:           #f7f7f7;
 
 // Beispiel (samp)
 $sample-color:                  $white;
@@ -63,11 +63,11 @@ $sample-background:             $dark-grey;
 $definition-color:              #999999;
 
 // Tabellen
-$table-border-color:            #DDDDDD;
-$table-zebra-background:        rgba(#FFFFFF, 0.8);
+$table-border-color:            #dddddd;
+$table-zebra-background:        rgba(#ffffff, 0.8);
 
 // Bilder
-$image-border-color:            #CCCCCC;
+$image-border-color:            #cccccc;
 
 // selection
 $selection-background:          $dark-grey; // THEME
@@ -111,7 +111,7 @@ $image-border-size: 3px;
 // ----------------------------------------------------------------------------
 
 // Animations-Kurven
-$cubic-bezier-bouncing:           cubic-bezier(0.205, 0.010, 0.005, 1.000);
+$cubic-bezier-bouncing:           cubic-bezier(0.205, 0.010, 0.005, 1);
 
 // Animationen-Timings
 $animation-off-screen-menu:       transform 500ms $cubic-bezier-bouncing;
@@ -149,7 +149,7 @@ $base-font-mono:             Menlo, Monaco, 'Andale Mono', 'Lucida console', 'Co
 $base-font-japanese:         'Hiragino Maru Gothic Pro', sans-serif;
 
 // Grundgrößen und Zeilenhöhe
-$font-unit:                  1.0em;
+$font-unit:                  1em;
 $base-font-size:             modular-scale(1); // 18px
 $base-line-height-count:     1.5;
 $base-line-height:           $base-font-size * $base-line-height-count; // 27px

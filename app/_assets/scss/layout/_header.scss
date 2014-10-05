@@ -2,14 +2,14 @@
 // Header
 // ============================================================================
 
-header#top {
-  z-index: 100;
+#top {
   background-color: $header-background;
   background-image: image-url($header-background-url, false, true);
   background-position: center left;
   background-size: cover;
   border-top: 3px solid $header-border-top-color;
-  padding: 40px 0 60px 0;
+  padding: 40px 0 60px;
+  z-index: 100;
   // background-attachment: fixed;
   // * @FIXME: Ein Fehler in Google Chrome/Opera
   // * Im Moment kann dieses nicht in Kombination
@@ -19,11 +19,11 @@ header#top {
     @extend %sans-font;
     @include adjust-font-size-to(18px);
     @include link-colors($white, $nav-link-color-hover, $white, $white, $white);
-    text-shadow: 0 1px 1px $black;
     border: 0;
     letter-spacing: 1px;
     position: absolute;
     right: 1em;
+    text-shadow: 0 1px 1px $black;
     text-transform: uppercase;
     top: 1em;
     z-index: 100;
@@ -41,7 +41,7 @@ header#top {
 
   // Breakpoints für das Header-Bild
   .home & {
-    padding: 40px 0 160px 0;
+    padding: 40px 0 160px;
 
     @include breakpoint(880px) {
       padding-bottom: 80px;
@@ -68,7 +68,7 @@ header#top {
     @include grid-span(7, 4);
     color: $header-headline;
     float: none;
-    line-height: 1.0;
+    line-height: 1;
     text-shadow: 0 0 6px $black;
 
     @include breakpoint(500px) {
@@ -104,9 +104,9 @@ header#top {
     top: -1.7em;
 
     @include breakpoint(700px) {
+      font-size: 1.4em;
       line-height: 1.2em;
       top: -0.4em;
-      font-size: 1.4em;
     }
 
     @include breakpoint(500px) {
@@ -117,7 +117,7 @@ header#top {
     @include breakpoint(430px) {
       @include grid-span(7, 5);
       font-size: 0.8em;
-      top: 3.0em;
+      top: 3em;
     }
   }
 
