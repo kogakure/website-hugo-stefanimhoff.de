@@ -5,12 +5,12 @@ gulp.task('buildProduction', function(callback) {
   // runSequence('clean', 'jekyllProduction', [
   runSequence('clean', 'jekyll', [
     'sass',
-    // 'scripts',
+    'scripts',
     // 'images',
     // 'copyFonts'
   ], [
     'optimizeCSS',
-    // 'optimizeJS',
+    'optimizeJS',
     // 'optimizeImages',
     // 'copyFontsProduction'
   ], 'revision', callback);
