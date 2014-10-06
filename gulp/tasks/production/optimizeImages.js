@@ -1,5 +1,4 @@
 var gulp     = require('gulp');
-var plumber  = require('gulp-plumber');
 var imagemin = require('gulp-imagemin');
 var size     = require('gulp-size');
 var config   = require('../../config');
@@ -10,7 +9,6 @@ var config   = require('../../config');
 gulp.task('optimizeImages', function() {
 
   return gulp.src(config.optimize.images.src)
-    .pipe(plumber())
     .pipe(imagemin({
       optimizationLevel: 3,
       progessive: true,
