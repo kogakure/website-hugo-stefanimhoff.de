@@ -1,25 +1,45 @@
-var src    = 'app';
+var src         = 'app';
+var assets      = 'build'
 var development = 'build/development';
-var assets    = 'build'
+var production  = 'build/production';
 
 module.exports = {
   browserSync: {
-    server: {
-      // We're serving the src folder as well
-      // for the sass sourcemap linking
-      baseDir: [development, assets, src]
+    development: {
+      server: {
+        // We're serving the src folder as well
+        // for the sass sourcemap linking
+        baseDir: [development, assets, src]
+      },
+      port: 9999,
+      files: [
+        development + '/**',
+        // Exclude Map files
+        '!' + development + '/**.map'
+      ]
     },
-    port: 9999,
-    files: [
-      development + '/**',
-      // Exclude Map files
-      '!' + development + '/**.map'
-    ]
+    production: {
+      server: {
+        baseDir: [production]
+      },
+      port: 9998,
+      files: [
+        production + '/**',
+        '!' + production + '/**.map'
+      ]
+    }
   },
   jekyll: {
-    src: src,
-    dest: development,
-    config: '_config.yml'
+    development: {
+      src: src,
+      dest: development,
+      config: '_config.yml'
+    },
+    production: {
+      src: src,
+      dest: production,
+      config: '_config.yml,_config.build.yml'
+    }
   },
   sass: {
     src: src + '/_assets/scss/**/*.{sass,scss}',
@@ -56,8 +76,14 @@ module.exports = {
     dest: assets + '/assets/images'
   },
   copyFonts: {
-    src: src + '/_assets/fonts/*',
-    dest: assets + '/assets/fonts'
+    development: {
+      src: src + '/_assets/fonts/*',
+      dest: assets + '/assets/fonts'
+    },
+    production: {
+      src: assets + '/assets/fonts/*',
+      dest: production + '/assets/fonts'
+    }
   },
   autoprefixer: {
     browsers: [
@@ -72,7 +98,21 @@ module.exports = {
     cascade: true
   },
   clean: {
-    src: [assets]
+    src: [assets + '/assets/']
+  },
+  optimize: {
+    css: {
+      src: assets + '/assets/css/*.css',
+      dest: production + '/assets/css/'
+    },
+    js: {
+      src: assets + '/assets/js/*.js',
+      dest: production + '/assets/js/'
+    },
+    images: {
+      src: assets + '/assets/images/**/*.{jpg,jpeg,png,gif}',
+      dest: production + '/assets/images/'
+    }
   },
   browserify: {
     // Enable source maps

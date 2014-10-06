@@ -1,5 +1,16 @@
-var gulp = require('gulp');
+var gulp        = require('gulp');
+var runSequence = require('run-sequence');
 
-gulp.task('production-build', function() {
-  console.log('Production Build');
+gulp.task('buildProduction', function(callback) {
+  runSequence('clean', 'jekyllProduction', [
+    'sass',
+    'scripts',
+    'images',
+    'copyFonts'
+  ], [
+    'optimizeCSS',
+    'optimizeJS',
+    'optimizeImages',
+    'copyFontsProduction'
+  ], callback);
 });
