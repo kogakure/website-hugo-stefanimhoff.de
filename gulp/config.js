@@ -1,5 +1,5 @@
 var src    = 'app';
-var jekyll = 'build/development';
+var development = 'build/development';
 var assets    = 'build'
 
 module.exports = {
@@ -7,18 +7,18 @@ module.exports = {
     server: {
       // We're serving the src folder as well
       // for the sass sourcemap linking
-      baseDir: [jekyll, assets, src]
+      baseDir: [development, assets, src]
     },
     port: 9999,
     files: [
-      jekyll + '/**',
+      development + '/**',
       // Exclude Map files
-      '!' + jekyll + '/**.map'
+      '!' + development + '/**.map'
     ]
   },
   jekyll: {
     src: src,
-    dest: jekyll,
+    dest: development,
     config: '_config.yml'
   },
   sass: {
@@ -72,7 +72,7 @@ module.exports = {
     cascade: true
   },
   clean: {
-    src: [jekyll, assets]
+    src: [assets]
   },
   browserify: {
     // Enable source maps
