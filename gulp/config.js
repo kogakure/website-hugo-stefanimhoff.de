@@ -97,7 +97,7 @@ module.exports = {
     ],
     cascade: true
   },
-  clean: {
+  delete: {
     src: [assets + '/assets/']
   },
   optimize: {

@@ -1,11 +1,10 @@
 var gulp   = require('gulp');
-var clean  = require('gulp-clean');
-var config = require('../config').clean;
+var del  = require('del');
+var config = require('../config').delete;
 
 /**
- * Clean folders and files
+ * Delete folders and files
  */
-gulp.task('clean', function() {
-  return gulp.src(config.src, { read: false })
-    .pipe(clean());
+gulp.task('delete', function(callback) {
+  del(config.src, callback);
 });
