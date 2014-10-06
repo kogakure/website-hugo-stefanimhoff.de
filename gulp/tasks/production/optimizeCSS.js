@@ -3,8 +3,10 @@ var plumber   = require('gulp-plumber');
 var rev = require('gulp-rev');
 var minifycss = require('gulp-minify-css');
 var size      = require('gulp-size');
-var clean = require('gulp-clean');
+var del = require('del');
 var config    = require('../../config');
+var filter = require('gulp-filter');
+var debug = require('gulp-debug');
 
 /**
  * Copy and minimize CSS files
@@ -20,11 +22,15 @@ gulp.task('optimizeCSS', function() {
     .pipe(size());
 });
 
-gulp.task('testRev', function() {
+gulp.task('revision', function() {
 
-  return gulp.src('build/production/assets/css/*.css')
-    .pipe(rev())
-    .pipe(clean())
-    .pipe(gulp.dest('build/production/assets/css/'));
+  return gulp.src([
+    'build/production/assets/css/*.css'
+    'build/production/assets/js/*.js',
+    'build/production/assets/images/**/*.*'
+  ], { base: 'build/production/assets' })
+  .pipe(rev())
+  .pipe(gulp.dest('build/production/assets'))
+  .pipe(rev.manifest())
+  .pipe(gulp.dest('build/production/assets'));
 });
-
