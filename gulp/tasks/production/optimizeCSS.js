@@ -21,16 +21,3 @@ gulp.task('optimizeCSS', function() {
     .pipe(gulp.dest(config.optimize.css.dest))
     .pipe(size());
 });
-
-gulp.task('revision', function() {
-
-  return gulp.src([
-    'build/production/assets/css/*.css'
-    'build/production/assets/js/*.js',
-    'build/production/assets/images/**/*.*'
-  ], { base: 'build/production/assets' })
-  .pipe(rev())
-  .pipe(gulp.dest('build/production/assets'))
-  .pipe(rev.manifest())
-  .pipe(gulp.dest('build/production/assets'));
-});

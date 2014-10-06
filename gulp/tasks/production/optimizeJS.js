@@ -1,5 +1,6 @@
 var gulp      = require('gulp');
 var plumber   = require('gulp-plumber');
+var rev = require('gulp-rev');
 var uglify    = require('gulp-uglify');
 var size      = require('gulp-size');
 var config    = require('../../config');
