@@ -6,7 +6,7 @@ var config   = require('../../config');
 /**
  * Copy and minimize image files
  */
-gulp.task('optimizeImages', function() {
+gulp.task('optimize:images', function() {
 
   return gulp.src(config.optimize.images.src)
     .pipe(imagemin({

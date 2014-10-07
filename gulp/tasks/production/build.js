@@ -1,16 +1,16 @@
 var gulp        = require('gulp');
 var runSequence = require('run-sequence');
 
-gulp.task('buildProduction', function(callback) {
-  runSequence('delete', 'jekyllProduction', [
+gulp.task('build:production', function(callback) {
+  runSequence('delete', 'jekyll:production', [
     'sass',
     'scripts',
     'images',
-    'copyFonts'
+    'copy:fonts'
   ], [
-    'optimizeCSS',
-    'optimizeJS',
-    'optimizeImages',
-    'copyFontsProduction'
+    'optimize:css',
+    'optimize:js',
+    'optimize:images',
+    'copy:fonts:production'
   ], 'revision', callback);
 });

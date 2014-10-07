@@ -1,6 +1,6 @@
 var gulp         = require('gulp');
 var plumber      = require('gulp-plumber');
-var browserSync  = require('browser-sync');
+var browsersync  = require('browser-sync');
 var sass         = require('gulp-ruby-sass'); // @TODO: Try RubyLib
 var gulpFilter   = require('gulp-filter');
 var changed      = require('gulp-changed');
@@ -19,13 +19,13 @@ gulp.task('sass', function() {
     bundleExec: true,
     sourcemap: true,
     sourcemapPath: '../../_assets/scss',
-    onError: browserSync.notify
+    onError: browsersync.notify
   };
 
   // Don’t write sourcemaps of sourcemaps
   var filter = gulpFilter(['*.css', '!*.map']);
 
-  browserSync.notify('Compiling Sass');
+  browsersync.notify('Compiling Sass');
 
   return gulp.src(config.sass.src)
     .pipe(plumber())
@@ -40,5 +40,5 @@ gulp.task('sass', function() {
     .pipe(sourcemaps.write('.', { includeContent: false }))
     .pipe(filter.restore()) // Restore original files
     .pipe(gulp.dest(config.sass.dest))
-    .pipe(browserSync.reload({ stream: true }));
+    .pipe(browsersync.reload({ stream: true }));
 });

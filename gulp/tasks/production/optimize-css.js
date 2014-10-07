@@ -6,7 +6,7 @@ var config    = require('../../config');
 /**
  * Copy and minimize CSS files
  */
-gulp.task('optimizeCSS', function() {
+gulp.task('optimize:css', function() {
 
   return gulp.src(config.optimize.css.src)
     .pipe(minifycss({

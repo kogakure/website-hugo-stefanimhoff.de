@@ -6,7 +6,7 @@ var config = require('../../config');
 /**
  * Copy and minimize JS files
  */
-gulp.task('optimizeJS', function() {
+gulp.task('optimize:js', function() {
 
   return gulp.src(config.optimize.js.src)
     .pipe(uglify())

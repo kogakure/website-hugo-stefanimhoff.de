@@ -7,6 +7,6 @@ gulp.task('build', function(callback) {
     'sass',
     'scripts',
     'images',
-    'copyFonts'
+    'copy:fonts'
   ], callback);
 });

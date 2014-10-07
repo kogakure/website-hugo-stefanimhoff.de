@@ -1,5 +1,5 @@
 var gulp         = require('gulp');
-var browserSync = require('browser-sync');
+var browsersync = require('browser-sync');
 var browserify   = require('browserify');
 var source       = require('vinyl-source-stream');
 var watchify     = require('watchify');
@@ -12,7 +12,7 @@ var config       = require('../config');
  */
 gulp.task('scripts', function(callback) {
 
-  browserSync.notify('Compiling JavaScript');
+  browsersync.notify('Compiling JavaScript');
 
   var bundleQueue = config.browserify.bundleConfigs.length;
 

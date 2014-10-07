@@ -4,7 +4,7 @@ var development = 'build/development';
 var production  = 'build/production';
 
 module.exports = {
-  browserSync: {
+  browsersync: {
     development: {
       server: {
         // We're serving the src folder as well
@@ -75,7 +75,7 @@ module.exports = {
     src: src + '/_assets/images/**/*',
     dest: assets + '/assets/images'
   },
-  copyFonts: {
+  copyfonts: {
     development: {
       src: src + '/_assets/fonts/*',
       dest: assets + '/assets/fonts'
