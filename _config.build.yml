@@ -12,19 +12,3 @@ server_path: /home/kogakure/webapps/stefanimhoff
 future:      false
 show_drafts: false
 limit_posts: 0
-
-# Jekyll Assets (Production)
-assets:
-  dirname:        assets
-  baseurl:        /assets/
-  js_compressor:  uglifier
-  css_compressor: sass
-  cachebust:      hard
-  cache:          false
-  debug:          false
-  sources:
-    - _assets/stylesheets
-    - _assets/javascripts
-    - _assets/images
-    - _assets/javascripts/libs
-    - _bower_components

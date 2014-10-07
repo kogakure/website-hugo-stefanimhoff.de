@@ -1,7 +1,4 @@
 require 'compass/import-once/activate'
-require 'jekyll-assets'
-require 'jekyll-assets/compass'
-require 'uglifier'
 require 'singularitygs'
 require 'color-schemer'
 require 'toolkit'

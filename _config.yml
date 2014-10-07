@@ -96,22 +96,6 @@ lunr_search:
   min_length: 3
   stopwords: "stopwords.txt"
 
-# Jekyll Assets (Development)
-assets:
-  dirname:        ../.tmp/assets
-  baseurl:        /assets/
-  js_compressor:  uglifier
-  css_compressor: sass
-  cachebust:      none
-  cache:          false
-  debug:          true
-  sources:
-    - ../.tmp/assets
-    - _assets/stylesheets
-    - _assets/javascripts
-    - _assets/images
-    - _assets/javascripts/libs
-    - _bower_components
 
 # Attribution
 # ===========
