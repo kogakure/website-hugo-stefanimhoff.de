@@ -21,7 +21,7 @@ Meine frühsten Erinnerungen an Bücher sind, dass ich auf dem Bauch im Wohnzimm
 Geboren 1914 in England, kam er dann in der Schweiz auf ein Internat und begann später Agrarwissenschaften zu studieren. Er ging mit 20 Jahren nach Afrika, um dort als Farmer zu arbeiten. Nach seinem Dienst im Zweiten Weltkrieg in Nordafrika und Asien kehrte er nach England zurück und zog 1957 mit seiner Familie in eine alte abgelegene Farm und begann ausschließlich von selbstangebauten Erzeugnissen zu leben. Nach einem Umzug auf eine Farm in Wales schrieb er in den 70er Jahren seine weltbekannten Bücher <cite><a href="{% amazon 3831015775 %}">Das große Buch vom Leben auf dem Lande</a></cite> und <cite><a href="{% amazon 3783161452 %}">Selbstversorgung aus dem Garten</a></cite>.
 
 {% figure "Illustration von Getreidearten aus einem von John Seymours’ Büchern" %}
-<img src="{{ 'artikel/john-seymour-illustration.jpg' | asset_path }}" alt="Illustration von Getreidearten">
+<img src="/assets/images/artikel/john-seymour-illustration.jpg" alt="Illustration von Getreidearten">
 {% endfigure %}
 
 ## Die Bücher
