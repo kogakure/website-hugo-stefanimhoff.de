@@ -12,5 +12,5 @@ gulp.task('build:production', function(callback) {
     'optimize:js',
     'optimize:images',
     'copy:fonts:production'
-  ], 'revision', callback);
+  ], 'revision', 'rev:collect', callback);
 });
