@@ -13,9 +13,7 @@ module.exports = {
       },
       port: 9999,
       files: [
-        development + '/**',
-        // Exclude Map files
-        '!' + development + '/**.map'
+        development + '/**'
       ]
     },
     production: {
@@ -24,8 +22,7 @@ module.exports = {
       },
       port: 9998,
       files: [
-        production + '/**',
-        '!' + production + '/**.map'
+        production + '/**'
       ]
     }
   },
