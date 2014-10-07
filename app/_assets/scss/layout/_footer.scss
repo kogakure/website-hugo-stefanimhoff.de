@@ -108,20 +108,20 @@
     }
 
     p {
-      background-image: image-url("css/footer/stefan-imhoff.png", false, true);
+      background-image: url("/assets/images/css/footer/stefan-imhoff.png");
       background-position: 0 0;
       background-repeat: no-repeat;
       padding-left: 100px;
 
       @include breakpoint($hi-resolution) {
-        background-image: image-url("css/footer/stefan-imhoff@2X.png", false, true);
+        background-image: url("/assets/images/css/footer/stefan-imhoff@2X.png");
         background-position: 0 0;
         background-repeat: no-repeat;
         background-size: 84px 84px;
       }
 
       @include breakpoint($meta-footer-image-new-line) {
-        background-image: image-url("css/footer/stefan-imhoff@2X.png", false, true);
+        background-image: url("/assets/images/css/footer/stefan-imhoff@2X.png");
         background-position: center 0;
         background-repeat: no-repeat;
         background-size: 84px 84px;

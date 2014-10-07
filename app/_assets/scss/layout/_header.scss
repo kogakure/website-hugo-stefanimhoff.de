@@ -4,7 +4,7 @@
 
 #top {
   background-color: $header-background;
-  background-image: image-url($header-background-url, false, true);
+  background-image: url($header-background-url);
   background-position: center left;
   background-size: cover;
   border-top: 3px solid $header-border-top-color;

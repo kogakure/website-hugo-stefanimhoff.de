@@ -47,7 +47,7 @@ Das Praktische an dem Foto ist, dass es ohne Probleme im Anschnitt verwendet wer
 {% highlight css linenos %}
 .header {
   background-color: $header-background;
-  background-image: image-url($header-background-url, false, true);
+  background-image: url($header-background-url);
   background-position: left center;
   background-size: cover;
 }
