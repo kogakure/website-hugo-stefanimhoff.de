@@ -141,6 +141,10 @@ module.exports = {
       dest: productionAssets + '/images/'
     }
   },
+  htmlmin: {
+    src: production + '/**/*.html',
+    dest: production
+  },
   browserify: {
     // Enable source maps
     debug: true,
