@@ -177,6 +177,10 @@ pre {
   clear: both;
   position: relative;
 
+  .code-figure & {
+    margin-bottom: 0;
+  }
+
   @include breakpoint($content-medium) {
     @include grid-span(10, 1, 8);
     clear: both;

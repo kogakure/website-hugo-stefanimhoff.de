@@ -15,7 +15,7 @@ tags:
 
 Seit kurzem arbeite ich am Redesign meiner Kampfkunst-Website [kogakure.de](http://kogakure.de). Wie die meisten Websites hat auch diese einmal als eine Sammlung von statischen HTML-Seiten begonnen.
 
-{% figure image-figure-center %}
+{% figure image-figure image-figure-center %}
 <img src="/assets/images/artikel/i-love-jekyll.jpg" alt="I ♥  Jekyll">
 {% endfigure %}
 

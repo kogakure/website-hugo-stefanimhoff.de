@@ -37,7 +37,7 @@ Neben Göttern, Fabelwesen und Dämonen ist die wichtigste Quelle für Motive di
 
 ## Die Räuber vom Liang-Shan Moor
 
-{% figure "Motiv aus dem <cite>Suikoden</cite> von Kunyoshi: Hauptmann Lu-Ta, der Blumenmönch, zerschlägt einen Baum mit einem Hieb, um eine Bande von Taugenichtsen zu beeindrucken." %}
+{% figure image-figure "Motiv aus dem <cite>Suikoden</cite> von Kunyoshi: Hauptmann Lu-Ta, der Blumenmönch, zerschlägt einen Baum mit einem Hieb, um eine Bande von Taugenichtsen zu beeindrucken." %}
 <img src="/assets/images/artikel/suikoden-luta.jpg" alt="Hauptmann Lu-Ta, der Blumenmönch" title="Motiv aus dem Suikoden von Kunyoshi: Hauptmann Lu-Ta, der Blumenmönch, zerschlägt einen Baum mit einem Hieb, um eine Bande von Taugenichtsen zu beeindrucken." />
 {% endfigure %}
 
@@ -51,7 +51,7 @@ Das Motiv, das ich für mein Design gewählt habe zeigt einen Koi (Karpfen), der
 
 Der Legende nach verwandelt sich ein Koi, dem es gelingt die magischen Wasserfälle hinaufzuschwimmen, in einen Drachen. Nach weiteren 500 Jahren verwandelt er sich dann in einen gehörnten Drachen und nach 1000 Jahren in einen geflügelten. Somit müsste das nächste Design wohl einen Drachen zeigen. Naja, mal sehen…
 
-{% figure image-figure-fullsize "Koi beim Hinaufschwimmen der Longmen Wassefälle. Es enthält typische Elemente wie Blätter, Blüten und Wellenkämme." %}
+{% figure image-figure image-figure-fullsize "Koi beim Hinaufschwimmen der Longmen Wassefälle. Es enthält typische Elemente wie Blätter, Blüten und Wellenkämme." %}
 <img src="/assets/images/artikel/design-koi.jpg" alt="Design: Digitales Irezumi" title="Koi beim Hinaufschwimmen der Longmen Wassefälle. Es enthält typische Elemente wie Blätter, Blüten und Wellenkämme." />
 {% endfigure %}
 

@@ -16,7 +16,7 @@ tags:
 
 Heute empfehle ich ein Buch, das ich vor kurzem erst beendet habe, und schon ein zweites Mal lese: <cite>Rework</cite> von <cite>37signals</cite>.
 
-{% figure border "37signals: <cite>Rework</cite> von Jason Fried & David Heinemeier Hansson" %}
+{% figure image-figure image-figure-border "37signals: <cite>Rework</cite> von Jason Fried & David Heinemeier Hansson" %}
 <a href="http://www.amazon.de/gp/product/0307463745?ie=UTF8&amp;tag=kogakurede-21&amp;linkCode=as2&amp;camp=1638&amp;creative=19454&amp;creativeASIN=0307463745"><img src="/assets/images/artikel/rework.jpg" alt="37signals: Rework" /></a>
 {% endfigure %}
 

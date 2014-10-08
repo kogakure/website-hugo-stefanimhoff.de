@@ -17,7 +17,7 @@ tags:
 
 Seit über einem Jahr benutze ich jetzt das [MoinMoin Wiki](http://moinmo.in/ "MoinMoinWiki - MoinMoin") für meine private Wissensdatenbank. MoinMoin wurde in [Python](https://www.python.org/ "Python Programming Language – Official Website") geschrieben und ist ein ziemlich gutes Wiki. Nur optisch sind so gut wie alle verfügbaren [Themes](http://moinmo.in/ThemeMarket "ThemeMarket – MoinMoin") für MoinMoin eine Zumutung. Daher habe ich mich in den letzten Wochen daran gesetzt, mir ein eigenes Theme zu erstellen.
 
-{% figure "MoinMoin Theme <cite>Kaijin</cite>" %}
+{% figure image-figure "MoinMoin Theme <cite>Kaijin</cite>" %}
 <a href="/downloads/moinmoin-kaijin-theme.zip"><img src="/assets/images/artikel/moinmoin-kaijin.png" alt="MoinMoin Theme Kaijin" /></a>
 {% endfigure %}
 

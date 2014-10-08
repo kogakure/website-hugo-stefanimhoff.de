@@ -33,26 +33,26 @@ Detailed instructions for installations are included in the package on GitHub.
 
 ## Screenshots
 
-{% figure border "Projektübersicht/Project view" %}
+{% figure image-figure image-figure-border "Projektübersicht/Project view" %}
 <img src="/assets/images/artikel/gitweb-theme-projects.png" alt="Projektübersicht" />
 {% endfigure %}
 
-{% figure border "Zusammenfassung/Summary" %}
+{% figure image-figure image-figure-border "Zusammenfassung/Summary" %}
 <img src="/assets/images/artikel/gitweb-theme-summary.png" alt="Zusammenfassung" />
 {% endfigure %}
 
-{% figure border "Commit" %}
+{% figure image-figure image-figure-border "Commit" %}
 <img src="/assets/images/artikel/gitweb-theme-commit.png" alt="Commit" />
 {% endfigure %}
 
-{% figure border "Commit-DIFF" %}
+{% figure image-figure image-figure-border "Commit-DIFF" %}
 <img src="/assets/images/artikel/gitweb-theme-commitdiff.png" alt="Commit-DIFF" />
 {% endfigure %}
 
-{% figure border "Historie/Log" %}
+{% figure image-figure image-figure-border "Historie/Log" %}
 <img src="/assets/images/artikel/gitweb-theme-log.png" alt="Historie" />
 {% endfigure %}
 
-{% figure border "Dateiansicht/Tree view" %}
+{% figure image-figure image-figure-border "Dateiansicht/Tree view" %}
 <img src="/assets/images/artikel/gitweb-theme-tree.png" alt="Dateiansicht" />
 {% endfigure %}

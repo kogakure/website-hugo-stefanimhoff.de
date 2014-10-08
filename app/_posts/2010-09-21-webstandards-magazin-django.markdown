@@ -12,7 +12,7 @@ tags:
 
 Da lag es im Briefkasten: mein Belegexemplar der aktuellen Ausgabe 07/2010 des Webstandards-Magazin. Für mich ist dies eine Premiere, denn ich habe meinen ersten Artikel für das Webstandards-Magazin geschrieben.
 
-{% figure "Mein Artikel über Django im  <cite>Webstandards-Magazin</cite>, Ausgabe 07/2010, Tools" %}
+{% figure image-figure "Mein Artikel über Django im  <cite>Webstandards-Magazin</cite>, Ausgabe 07/2010, Tools" %}
 <a href="http://www.screengui.de/"><img src="/assets/images/artikel/webstandards-magazin-django.jpg" alt="Webstandards-Magazin, Ausgabe 07/2010, Tools" /></a>
 {% endfigure %}
 

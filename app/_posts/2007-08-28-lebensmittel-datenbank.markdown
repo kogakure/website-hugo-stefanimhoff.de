@@ -21,7 +21,7 @@ Auf seinen Merkzettel schreibt man seine täglich verzehrten Nahrungsmittel, Gen
 
 Die Datenbank ist sehr umfangreich und enthält sogar eine große Auswahl an Markenprodukten. Falls ein verzehrtes Produkt trotzdem mal nicht in der Datenbank sein sollte, kann man dieses eintragen. Einfach die Daten von der Packung in das Formular eintragen, EAN-Nummer (Balkencode) und ein paar weitere Angaben, dann wird das Nahrunsmittel von der Redaktion aufgenommen (denke/hoffe ich).
 
-{% figure border "Der Detail-Screen eines Nahrungsmittels "%}
+{% figure image-figure image-figure-border "Der Detail-Screen eines Nahrungsmittels "%}
 <img src="/assets/images/artikel/fddb-info.png" alt="Screenshot von fddb.info" title="Der Detail-Screen eines Nahrungsmittels." />
 {% endfigure %}
 

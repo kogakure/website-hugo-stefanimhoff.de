@@ -15,7 +15,7 @@ tags:
 
 Ich habe keine Ahnung, warum dieses Juwel so lange unbemerkt von mir bleiben konnte, aber gestern hat mich ein Kollege auf den Kartendienst OpenStreetMap hingewiesen. Ähnlich wie bei Wikipedia wird dort von vielen Benutzern eine für jeden kostenlos verfügbare Karte zusammengetragen.
 
-{% figure border "Die Autostadt Wolfsburg mit OpenStreetMap" %}
+{% figure image-figure image-figure-border "Die Autostadt Wolfsburg mit OpenStreetMap" %}
 <img src="/assets/images/artikel/openstreetmap.jpg" alt="Die Autostadt Wolfsburg mit OpenStreetMap" />
 {% endfigure %}
 
