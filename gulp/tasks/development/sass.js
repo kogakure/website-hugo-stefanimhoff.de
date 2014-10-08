@@ -6,7 +6,7 @@ var gulpFilter   = require('gulp-filter');
 var changed      = require('gulp-changed');
 var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps   = require('gulp-sourcemaps');
-var config       = require('../config');
+var config       = require('../../config');
 
 /**
  * Generate CSS from SCSS

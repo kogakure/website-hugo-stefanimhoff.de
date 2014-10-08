@@ -1,6 +1,6 @@
 var gulp     = require('gulp');
 var scsslint = require('gulp-scss-lint');
-var config   = require('../config').sass;
+var config   = require('../../config').sass;
 
 /**
  * Lint SCSS files

@@ -1,6 +1,6 @@
 var gulp   = require('gulp');
 var csscss = require('gulp-csscss');
-var config = require('../config').css;
+var config = require('../../config').css;
 
 /**
  * Check CSS syntax with CSSCSS

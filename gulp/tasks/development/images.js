@@ -2,7 +2,7 @@ var gulp        = require('gulp');
 var changed     = require('gulp-changed');
 var browsersync = require('browser-sync');
 var size        = require('gulp-size');
-var config      = require('../config').images;
+var config      = require('../../config').images;
 
 /**
  * Copy images to build folder
