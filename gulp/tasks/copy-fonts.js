@@ -1,10 +1,10 @@
 var gulp   = require('gulp');
-var config = require('../config');
+var config = require('../config').copyfonts.development;
 
 /**
  * Copy fonts to folder
  */
 gulp.task('copy:fonts', ['fontcustom'], function() {
-  return gulp.src(config.copyfonts.development.src)
-    .pipe(gulp.dest(config.copyfonts.development.dest));
+  return gulp.src(config.src)
+    .pipe(gulp.dest(config.dest));
 });

@@ -3,7 +3,7 @@ var browsersync = require('browser-sync');
 var config      = require('../config').browsersync.development;
 
 /**
- * Start a server and watch changes with Browsersync
+ * Run the build task and start a server with BrowserSync
  */
 gulp.task('browsersync', ['build'], function() {
   browsersync(config);

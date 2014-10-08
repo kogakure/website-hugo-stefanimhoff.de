@@ -1,11 +1,11 @@
 var gulp         = require('gulp');
-var browsersync = require('browser-sync');
+var browsersync  = require('browser-sync');
 var browserify   = require('browserify');
 var source       = require('vinyl-source-stream');
 var watchify     = require('watchify');
 var bundleLogger = require('../util/bundleLogger');
 var handleErrors = require('../util/handleErrors');
-var config       = require('../config');
+var config       = require('../config').browserify;
 
 /**
  * Run JavaScript through Browserify
@@ -14,7 +14,7 @@ gulp.task('scripts', function(callback) {
 
   browsersync.notify('Compiling JavaScript');
 
-  var bundleQueue = config.browserify.bundleConfigs.length;
+  var bundleQueue = config.bundleConfigs.length;
 
   var browserifyThis = function(bundleConfig) {
 
@@ -24,9 +24,9 @@ gulp.task('scripts', function(callback) {
       // Specify the entry point of your app
       entries: bundleConfig.entries,
       // Add file extentions to make optional in your requires
-      extensions: config.browserify.extensions,
+      extensions: config.extensions,
       // Enable source maps!
-      debug: config.browserify.debug
+      debug: config.debug
     });
 
     var bundle = function() {
@@ -71,5 +71,5 @@ gulp.task('scripts', function(callback) {
   };
 
   // Start bundling with Browserify for each bundleConfig specified
-  config.browserify.bundleConfigs.forEach(browserifyThis);
+  config.bundleConfigs.forEach(browserifyThis);
 });

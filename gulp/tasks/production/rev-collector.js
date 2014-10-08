@@ -1,14 +1,19 @@
-var gulp = require('gulp');
+var gulp    = require('gulp');
 var collect = require('gulp-rev-collector');
+var config = require('../../config').collect;
 
+/**
+ * Replace all links to assets in files
+ * from a manifest file
+ */
 gulp.task('rev:collect', function() {
 
   return gulp.src([
-    'build/production/assets/manifest.json',
-    'build/production/**/*.{html,xml,txt,json,css,js}'
+    config.src.manifest,
+    config.src.files
   ])
   .pipe(collect())
-  .pipe(gulp.dest('build/production/'));
+  .pipe(gulp.dest(config.dest));
 });
 
 

@@ -6,7 +6,7 @@ var config      = require('../config').images;
 
 /**
  * Copy images to build folder
- * and optimize if production
+ * if not changed
  */
 gulp.task('images', function() {
   return gulp.src(config.src)

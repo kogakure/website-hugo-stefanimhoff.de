@@ -1,7 +1,10 @@
-var src         = 'app';
-var assets      = 'build'
-var development = 'build/development';
-var production  = 'build/production';
+var src               = 'app';
+var build             = 'build';
+var development       = 'build/development';
+var production        = 'build/production';
+var srcAssets         = 'app/_assets';
+var developmentAssets = 'build/assets';
+var productionAssets  = 'build/production/assets';
 
 module.exports = {
   browsersync: {
@@ -9,7 +12,7 @@ module.exports = {
       server: {
         // We're serving the src folder as well
         // for the sass sourcemap linking
-        baseDir: [development, assets, src]
+        baseDir: [development, build, src]
       },
       port: 9999,
       files: [
@@ -28,22 +31,22 @@ module.exports = {
   },
   jekyll: {
     development: {
-      src: src,
-      dest: development,
+      src:    src,
+      dest:   development,
       config: '_config.yml'
     },
     production: {
-      src: src,
-      dest: production,
+      src:    src,
+      dest:   production,
       config: '_config.yml,_config.build.yml'
     }
   },
   sass: {
-    src: src + '/_assets/scss/**/*.{sass,scss}',
-    dest: assets + '/assets/css'
+    src:  srcAssets + '/scss/**/*.{sass,scss}',
+    dest: developmentAssets + '/css'
   },
   css: {
-    src: assets + '/assets/css/*.css'
+    src: developmentAssets + '/css/*.css'
   },
   watch: {
     jekyll: [
@@ -59,28 +62,31 @@ module.exports = {
       src + '/**/*.{html,markdown,md,yml,json,txt,xml}',
       src + '/*'
     ],
-    sass: src + '/_assets/scss/**/*.{sass,scss}',
-    scripts: src + '/_assets/javascripts/**/*.js',
-    images: src + '/_assets/images/**/*',
-    svg: 'vectors/*.svg'
+    sass:    srcAssets + '/scss/**/*.{sass,scss}',
+    scripts: srcAssets + '/javascripts/**/*.js',
+    images:  srcAssets + '/images/**/*',
+    svg:     'vectors/*.svg'
   },
   scripts: {
-    src: src + '/_assets/javascripts/application.js',
-    dest: assets + '/assets/js'
+    src:  srcAssets + '/javascripts/application.js',
+    dest: developmentAssets + '/js'
   },
   images: {
-    src: src + '/_assets/images/**/*',
-    dest: assets + '/assets/images'
+    src:  srcAssets + '/images/**/*',
+    dest: developmentAssets + '/images'
   },
   copyfonts: {
     development: {
-      src: src + '/_assets/fonts/*',
-      dest: assets + '/assets/fonts'
+      src:  srcAssets + '/fonts/*',
+      dest: developmentAssets + '/fonts'
     },
     production: {
-      src: assets + '/assets/fonts/*',
-      dest: production + '/assets/fonts'
+      src:  developmentAssets + '/fonts/*',
+      dest: productionAssets + '/fonts'
     }
+  },
+  jshint: {
+    src: srcAssets + '/javascripts/*.js'
   },
   autoprefixer: {
     browsers: [
@@ -94,21 +100,45 @@ module.exports = {
     ],
     cascade: true
   },
+  revision: {
+    src: {
+      assets: [
+        productionAssets + '/css/*.css',
+        productionAssets + '/js/*.js',
+        productionAssets + '/images/**/*'
+      ],
+      base: production
+    },
+    dest: {
+      assets: production,
+      manifest: {
+        name: 'manifest.json',
+        path: productionAssets
+      }
+    }
+  },
+  collect: {
+    src: {
+      manifest: productionAssets + '/manifest.json',
+      files:  production + '/**/*.{html,xml,txt,json,css,js}'
+    },
+    dest: production
+  },
   delete: {
-    src: [assets + '/assets/']
+    src: [developmentAssets]
   },
   optimize: {
     css: {
-      src: assets + '/assets/css/*.css',
-      dest: production + '/assets/css/'
+      src:  developmentAssets + '/css/*.css',
+      dest: productionAssets + '/css/'
     },
     js: {
-      src: assets + '/assets/js/*.js',
-      dest: production + '/assets/js/'
+      src:  developmentAssets + '/js/*.js',
+      dest: productionAssets + '/js/'
     },
     images: {
-      src: assets + '/assets/images/**/*.{jpg,jpeg,png,gif}',
-      dest: production + '/assets/images/'
+      src:  developmentAssets + '/images/**/*.{jpg,jpeg,png,gif}',
+      dest: productionAssets + '/images/'
     }
   },
   browserify: {
@@ -119,12 +149,12 @@ module.exports = {
     // A separate bundle will be generated for each
     // bundle config in the list below
     bundleConfigs: [{
-      entries: './app/_assets/javascripts/application.js',
-      dest: 'build/assets/js',
+      entries:    './' + srcAssets + '/javascripts/application.js',
+      dest:       developmentAssets + '/js',
       outputName: 'application.js'
     }, {
-      entries: './app/_assets/javascripts/head.js',
-      dest: 'build/assets/js',
+      entries:    './' + srcAssets + '/javascripts/head.js',
+      dest:       developmentAssets + '/js',
       outputName: 'head.js'
     }]
   }
