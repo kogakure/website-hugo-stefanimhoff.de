@@ -161,5 +161,19 @@ module.exports = {
       dest:       developmentAssets + '/js',
       outputName: 'head.js'
     }]
+  },
+  rsync: {
+    destination: '~/webapps/stefanimhoff/@FIXME_NOTYET',
+    root: production,
+    hostname: 'stefanimhoff.de',
+    username: 'kogakure',
+    incremental: true,
+    progress: true,
+    relative: true,
+    emptyDirectories: true,
+    recursive: true,
+    clean: true,
+    exclude: ['.DS_Store'],
+    include: []
   }
 };
