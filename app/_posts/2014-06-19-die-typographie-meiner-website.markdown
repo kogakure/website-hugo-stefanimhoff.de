@@ -24,8 +24,8 @@ Einfache Dinge wie Lesbarkeit oder Kontrast entscheiden darüber, ob die Botscha
 
 Die richtige Wahl von Schriftart, Schriftgröße, Gewicht, Satzspiegel, Satzbreite, Zeilendurchschuss, Sperrsatz oder vieler anderer Dinge wirken unbewusst auf die Leser und transportieren so die Aussage. Die richtige Typographie kann eine Botschaft unterstützen und verstärken, die falsche eine Aussage sogar bedeutungslos oder lächerlich werden lassen.
 
-{% figure "<cite>The Elements of Typographic Style</cite> von Robert Bringhurst" %}
-<img src="{{ 'artikel/elements-of-typographic-style.jpg' | asset_path }}" alt="The Elements of Typographic Style">
+{% figure image-figure "<cite>The Elements of Typographic Style</cite> von Robert Bringhurst" %}
+<img src="/assets/images/artikel/elements-of-typographic-style.jpg" alt="The Elements of Typographic Style">
 {% endfigure %}
 
 Ich fand Typographie schon immer faszinierend, doch erst nachdem ich das Buch <cite>[The Elements *of* Typographic Style](http://www.amazon.de/gp/product/0881792128?ie=UTF8&camp=1638&creative=19454&creativeASIN=0881792128&linkCode=as2&tag=kogakurede-21)</cite> von *Robert Bringhurst* gelesen hatte beschäftigte ich mich tiefer mit der Materie. Es gibt eine auf das Web abgestimmte Version seines Buches auf der Website [The Elements *of* Typographic Style Applied *to the* Web](http://webtypography.net/).

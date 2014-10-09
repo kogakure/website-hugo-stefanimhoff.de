@@ -5,9 +5,9 @@
 .pagination {
   a {
     @extend %sans-font;
-    @include border-radius(5px);
     background: $dark-grey;
     border: 0;
+    border-radius: 5px;
     color: $white;
     display: inline-block;
     font-size: $font-scale-small;

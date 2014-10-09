@@ -9,11 +9,10 @@
 }
 
 .verse pre {
+  display: inline-block;
   font-family: inherit;
   margin-bottom: 1.5em;
   text-align: left;
-  display: inline-block;
-  *display: inline;
   zoom: 1;
 
   .verse-list & {

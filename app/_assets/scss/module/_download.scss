@@ -3,23 +3,23 @@
 // ============================================================================
 
 .download {
-  background: rgba($dark-grey, 0.1);
-  padding: 15px 20px 0 20px;
-  @include border-radius(3px);
   @include trailer(1);
+  background: rgba($dark-grey, 0.1);
+  border-radius: 3px;
+  padding: 15px 20px 0;
 
   a {
     border: 0;
-    line-height: $base-rhythm-unit * 2;
     display: inline-block;
+    line-height: $base-rhythm-unit * 2;
     vertical-align: top;
 
     .icon-download {
-      font-size: $base-rhythm-unit * 2;
       border: 0;
       color: rgba($white, 0.4);
-      @include text-shadow(-1px -1px 0 rgba($black, 0.5));
+      font-size: $base-rhythm-unit * 2;
       margin-right: 15px;
+      text-shadow: -1px -1px 0 rgba($black, 0.5);
     }
   }
 

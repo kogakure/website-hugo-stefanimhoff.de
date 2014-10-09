@@ -1,7 +1,7 @@
 // Rewritten version
 // By @mathias, @cheeaun and @jdalton
 
-(function(doc) {
+module.exports = (function(doc) {
 
   var addEvent = 'addEventListener',
       type = 'gesturestart',
@@ -16,7 +16,7 @@
 
   if ((meta = meta[meta.length - 1]) && addEvent in doc) {
     fix();
-    scales = [.25, 1.6];
+    scales = [0.25, 1.6];
     doc[addEvent](type, fix, true);
   }
 

@@ -44,13 +44,13 @@
   <meta name="twitter:url" content="{{ page_url }}">
   <meta name="twitter:title" content="{{ page_title }}">
   <meta name="twitter:description" content="{{ page_description }}">
-  <meta name="twitter:image" content="{{ site.url }}/assets/og/rakkan.png">
+  <meta name="twitter:image" content="{{ site.url }}/assets/images/og/rakkan.png">
 
   <!-- OpenGraph-->
   <meta property="og:url" content="{{ page_url }}">
   <meta property="og:title" content="{{ page_title }}">
   <meta property="og:description" content="{{ page_description }}">
-  <meta property="og:image" content="{{ site.url }}/assets/og/rakkan.png">
+  <meta property="og:image" content="{{ site.url }}/assets/images/og/rakkan.png">
 
   <!-- Google Authorship -->
   <link href="https://plus.google.com/{{ site.data.settings.social.googleplus }}" rel="publisher">
@@ -70,33 +70,33 @@
   <meta name="keywords" content="{{ keywords | strip_html | condense_spaces | truncate:2000 }}">
 
   <!-- Icons -->
-  <link rel="apple-touch-icon-precomposed" href="{{ site.url }}/assets/apple/touch-icon-iphone.png">
-  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="{{ site.url }}/assets/apple/touch-icon-ipad.png">
-  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="{{ site.url }}/assets/apple/touch-icon-iphone-retina.png">
-  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ site.url }}/assets/apple/touch-icon-ipad-retina.png">
+  <link rel="apple-touch-icon-precomposed" href="{{ site.url }}/assets/images/apple/touch-icon-iphone.png">
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="{{ site.url }}/assets/images/apple/touch-icon-ipad.png">
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="{{ site.url }}/assets/images/apple/touch-icon-iphone-retina.png">
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ site.url }}/assets/images/apple/touch-icon-ipad-retina.png">
 
-  <meta name="msapplication-TileImage" content="{{ site.url }}/assets/ms/metro-tile.png">
+  <meta name="msapplication-TileImage" content="{{ site.url }}/assets/images/ms/metro-tile.png">
   <meta name="msapplication-TileColor" content="#b42b2c">
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
-  <link rel="apple-touch-startup-image" href="{{ site.url }}/assets/apple/startup-ipad-landscape.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)">
-  <link rel="apple-touch-startup-image" href="{{ site.url }}/assets/apple/startup-ipad-landscape-retina.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio: 2)">
-  <link rel="apple-touch-startup-image" href="{{ site.url }}/assets/apple/startup-ipad-portrait.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">
-  <link rel="apple-touch-startup-image" href="{{ site.url }}/assets/apple/startup-ipad-portrait-retina.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) and (-webkit-min-device-pixel-ratio: 2)">
-  <link rel="apple-touch-startup-image" href="{{ site.url }}/assets/apple/startup-iphone-retina.png" media="screen and (max-device-width: 320px) and (max-device-height: 1136px) and (-webkit-min-device-pixel-ratio: 2)">
-  <link rel="apple-touch-startup-image" href="{{ site.url }}/assets/apple/startup-iphone-old.png" media="screen and (max-device-width: 320px) and (max-device-height: 460px)">
-  <link rel="apple-touch-startup-image" href="{{ site.url }}/assets/apple/startup-iphone-old-retina.png" media="screen and (max-device-width: 320px) and (max-device-height: 460px) and (-webkit-min-device-pixel-ratio: 2)">
+  <link rel="apple-touch-startup-image" href="{{ site.url }}/assets/images/apple/startup-ipad-landscape.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)">
+  <link rel="apple-touch-startup-image" href="{{ site.url }}/assets/images/apple/startup-ipad-landscape-retina.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) and (-webkit-min-device-pixel-ratio: 2)">
+  <link rel="apple-touch-startup-image" href="{{ site.url }}/assets/images/apple/startup-ipad-portrait.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)">
+  <link rel="apple-touch-startup-image" href="{{ site.url }}/assets/images/apple/startup-ipad-portrait-retina.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) and (-webkit-min-device-pixel-ratio: 2)">
+  <link rel="apple-touch-startup-image" href="{{ site.url }}/assets/images/apple/startup-iphone-retina.png" media="screen and (max-device-width: 320px) and (max-device-height: 1136px) and (-webkit-min-device-pixel-ratio: 2)">
+  <link rel="apple-touch-startup-image" href="{{ site.url }}/assets/images/apple/startup-iphone-old.png" media="screen and (max-device-width: 320px) and (max-device-height: 460px)">
+  <link rel="apple-touch-startup-image" href="{{ site.url }}/assets/images/apple/startup-iphone-old-retina.png" media="screen and (max-device-width: 320px) and (max-device-height: 460px) and (-webkit-min-device-pixel-ratio: 2)">
 
   <!-- Canonical -->
   <link rel="canonical" href="{{ page_url }}">
 
   <!-- Stylesheets -->
-  {% stylesheet application %}
-  {% if page.homepage %}<link rel="stylesheet" type="text/css" href="{{ root_url }}{{ 'homepage.css' | asset_path }}">{% endif %}
-  {% if page.custom_css %}{{ page.custom_css | stylesheet }}{% endif %}
-  <link rel="stylesheet" type="text/css" href="{{ root_url }}{{ 'print.css' | asset_path }}" media="print">
+  <link rel="stylesheet" href="{{ root_url }}/assets/css/application.css">
+  {% if page.homepage %}<link rel="stylesheet" type="text/css" href="{{ root_url }}/assets/css/homepage.css">{% endif %}
+  {% if page.custom_css %}{<link rel="stylesheet" type="text/css" href="{{ root_url }}/assets/css/{{ page.custom_css }}.css">{% endif %}
+  <link rel="stylesheet" type="text/css" href="{{ root_url }}/assets/css/print.css" media="print">
 
   <!--[if lt IE 9]>
   <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
@@ -104,7 +104,7 @@
   <![endif]-->
 
   <!-- Modernizr -->
-  {% javascript modernizr/modernizr %}
+  <script src="/assets/js/head.js"></script>
 
   <!-- Feeds -->
   <link href="{{ site.data.settings.social.feedburner_url }}" rel="alternate" title="{{ site.data.settings.title }}" type="application/atom+xml">

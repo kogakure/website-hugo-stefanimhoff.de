@@ -22,85 +22,86 @@
 %icon-font {
   font-family: "iconfont";
 }
+
 // Background-Patterns
 // ---------------------------------
 
 // 204x204, 12 KB (Meta-Footer)
 %pattern-classy-fabric {
-  @include background-size(102px 102px);
   background-color: $footer-meta-background;
   background-image: inline-image("css/patterns/classy_fabric_@2X.png");
+  background-size: 102px 102px;
 }
 
 // 100x100, 1 KB (Footer)
 %pattern-dark-stripes {
-  @include background-size(50px 50px);
   background-color: $body-background;
   background-image: inline-image("css/patterns/dark_stripes_@2X.png");
+  background-size: 50px 50px;
 }
 
 // 824x824, 4 KB (Homepage: Arbeit)
 %pattern-geometry {
-  @include background-size(412px 412px);
   background-color: #f9f9f9;
   background-image: inline-image("css/patterns/geometry_@2X.png");
+  background-size: 412px 412px;
 }
 
 // 602x1242, 4 KB (Content-Hintergrund)
 %pattern-light-grey {
-  @include background-size(301px 621px);
   background-color: $content-background;
   background-image: inline-image("css/patterns/light_grey_@2X.png");
+  background-size: 301px 621px;
 }
 
 // 32x32, < 1 KB (Homepage: Kampfkunst)
 %pattern-nami {
-  @include background-size(16px 16px);
   background-color: #090909;
   background-image: inline-image("css/patterns/nami_@2X.png");
+  background-size: 16px 16px;
 }
 
 // 16x16, < 1 KB (NICHT VERWENDET)
 %pattern-p5 {
-  @include background-size(8px 8px);
-  background-color: #F8F8F8;
+  background-color: #f8f8f8;
   background-image: inline-image("css/patterns/p5_@2X.png");
+  background-size: 8px 8px;
 }
 
 // 92x46, < 1 KB (Off-Canvas-Navigation)
 %pattern-pw-maze-black {
-  @include background-size(46px 23px);
   background-color: $nav-background;
   background-image: inline-image("css/patterns/pw_maze_black_@2X.png");
+  background-size: 46px 23px;
 }
 
 // 200x200, < 1 KB (Homepage: Filmliebhaber)
 %pattern-px {
-  @include background-size(100px 100px);
   background-color: #313131;
   background-image: inline-image("css/patterns/px_@2X.png");
+  background-size: 100px 100px;
 }
 
 // 400x400, 65 KB (NICHT VERWENDET)
 %pattern-skulls {
-  @include background-size(400px 400px);
-  background-color: #ECECD4;
+  background-color: #ececd4;
   background-image: inline-image("css/patterns/skulls.png");
+  background-size: 400px 400px;
 }
 
 // 400x400, < 15 KB (Homepage: Bücherliebhaber)
 %pattern-type {
-  @include background-size(200px 200px);
-  background-color: #1C1C1C;
+  background-color: #1c1c1c;
   background-image: inline-image("css/patterns/type_@2X.png");
+  background-size: 200px 200px;
 }
 
 
 // 200x200, 2 KB (Homepage: Introvert, Empfehlungen)
 %pattern-wavegrid {
-  @include background-size(100px 100px);
-  background-color: #EEEEEE;
+  background-color: #eeeeee;
   background-image: inline-image("css/patterns/wavegrid_@2X.png");
+  background-size: 100px 100px;
 }
 
 

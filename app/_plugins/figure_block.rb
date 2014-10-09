@@ -49,9 +49,9 @@ module Jekyll
       content = content.strip
 
       if @class
-        source = "<figure class=\"image-figure #{@class}\">\n"
+        source = "<figure class=\"#{@class}\">\n"
       else
-        source = "<figure class=\"image-figure\">\n"
+        source = "<figure>\n"
       end
 
       source += content

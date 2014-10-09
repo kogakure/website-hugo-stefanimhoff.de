@@ -15,8 +15,8 @@ tags:
 
 Da mein [Django Folder-Icon](/2007/django-folder-mac-osx/ "Django Folder für Mac OS X Leopard • Notizen • Stefan Imhoff"), das ich im Dezember veröffentlicht habe, ein riesiger Erfolg war und schon unzählige Male heruntergeladen wurde, habe ich einen neuen Ordner erstellt – dieses mal für Blender.
 
-{% figure image-figure-noborder %}
-<a href="/downloads/blender-osx-folder.zip"><img src="{{ 'artikel/blender-osx-folders.png' | asset_path }}" alt="Blender Folder"></a>
+{% figure image-figure image-figure-noborder %}
+<a href="/downloads/blender-osx-folder.zip"><img src="/assets/images/artikel/blender-osx-folders.png" alt="Blender Folder"></a>
 {% endfigure %}
 
 ## Blender

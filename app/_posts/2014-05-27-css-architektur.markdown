@@ -16,8 +16,8 @@ tags:
 
 Bei einem Webprojekt stellt insbesondere die Architektur der Stylesheets eine große Herausforderung dar. Denn CSS wird schnell unverständlich und ist schwer zu warten, wenn nicht von Anfang an eine saubere und modulare Struktur verwendet wird.
 
-{% figure "Peter Griffin CSS-Meme. Das komplette GIF (ca. 2 MB) gibt es <a href='http://imgur.com/Q3cUg29'>hier</a>." %}
-<img src="{{ 'artikel/css-peter-griffin-meme.jpg' | asset_path }}" alt="Peter Griffin CSS-Meme">
+{% figure image-figure "Peter Griffin CSS-Meme. Das komplette GIF (ca. 2 MB) gibt es <a href='http://imgur.com/Q3cUg29'>hier</a>." %}
+<img src="/assets/images/artikel/css-peter-griffin-meme.jpg" alt="Peter Griffin CSS-Meme">
 {% endfigure %}
 
 ## Preprozessoren

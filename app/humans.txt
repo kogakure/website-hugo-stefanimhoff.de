@@ -1,5 +1,5 @@
 ---
-layout: none
+layout: null
 permalink: humans.txt
 ---
 
@@ -18,5 +18,5 @@ Last update: {{ site.time | date: "%Y/%m/%d" }}
 Language:    German
 Doctype:     HTML5
 Standards:   HTML5, CSS3
-Components:  JavaScript, Modernizr, Jekyll, Octopress 3.x, Compass, Singularity.gs, Modular Scale, Breakpoint, FontCustom, UglifyJS, Sprockets, Markdown, Ruby ...
+Components:  Jekyll, Octopress 3.x, Compass, Singularity.gs, Modular Scale, Breakpoint, FontCustom, JavaScript, Modernizr, Gulp.js, UglifyJS, Markdown, Ruby ...
 Software:    Vim, Photoshop, Illustrator, iTerm 2, Git, Chrome Developer Tools

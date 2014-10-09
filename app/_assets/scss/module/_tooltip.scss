@@ -11,9 +11,8 @@
   }
 
   &:after {
-    @include border-radius(5px);
-    @include user-select(none);
     background: $dark-grey;
+    border-radius: 5px;
     color: $white;
     content: attr(data-tooltip);
     display: inline-block;
@@ -24,15 +23,17 @@
     line-height: 13px;
     margin: 5px 0 0;
     max-width: 250px;
-    overflow-wrap: break-word;
     overflow: hidden;
+    overflow-wrap: break-word;
     padding: 6px 6px 0;
     text-overflow: ellipsis;
+    user-select: none;
     white-space: nowrap;
     word-wrap: break-word;
   }
 
-  &:after, &:before {
+  &:after,
+  &:before {
     @extend %sans-font;
     bottom: 100%;
     margin: 0 0 5px;
@@ -44,20 +45,22 @@
 
   &:before {
     border: 5px solid;
-    border-color: $dark-grey transparent transparent transparent;
+    border-color: $dark-grey transparent transparent;
     content: " ";
     height: 0;
     left: 10px;
-    width: 0;
-    overflow: hidden;
     margin: 0 0 -5px 5px;
+    overflow: hidden;
+    width: 0;
   }
 
-  &:focus:before, &:focus:after,
-  &:hover:before, &:hover:after {
+  &:focus:before,
+  &:focus:after,
+  &:hover:before,
+  &:hover:after {
     opacity: 1;
-    @include transform(translateZ(0));
-    @include transition(opacity 0.15s ease-out);
+    transform: translateZ(0);
+    transition: opacity 0.15s ease-out;
     z-index: 999;
   }
 }

@@ -18,9 +18,9 @@ tags:
 
 Durch Zufall bin ich kürzlich auf ein Buch gestoßen, dass für alle an Typographie und Zeichen interessierten ein Kauftipp ist. Das Buch ist 656 Seiten stark, enthält alle derzeitigen 109.242 digitalen Schriftzeichen des Unicode-Zeichensatzes und wiegt fast 2 Kilogramm.
 
-{% figure "<cite>decodeunicode – Die Schriftzeichen der Welt</cite>" %}
+{% figure image-figure "<cite>decodeunicode – Die Schriftzeichen der Welt</cite>" %}
 <a href="http://www.amazon.de/gp/product/3874398137/ref=as_li_ss_tl?ie=UTF8&amp;tag=kogakurede-21&amp;linkCode=as2&amp;camp=1638&amp;creative=19454&amp;creativeASIN=3874398137">
-  <img src="{{ 'artikel/decodeunicode.jpg' | asset_path }}" alt="Decodeunicode: Die Schriftzeichen der Welt" />
+  <img src="/assets/images/artikel/decodeunicode.jpg" alt="Decodeunicode: Die Schriftzeichen der Welt" />
 </a>
 {% endfigure %}
 

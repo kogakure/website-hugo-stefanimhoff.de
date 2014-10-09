@@ -18,8 +18,8 @@ sup a.footnote {
 .footnotes {
   @extend %sans-font;
   @include adjust-font-size-to(modular-scale(0));
-  color: lighten($dark-grey, 40);
   clear: both;
+  color: lighten($dark-grey, 40);
 
   a.reversefootnote {
     @include link-colors($dark-grey, $dark-grey, $dark-grey, $dark-grey, $dark-grey);

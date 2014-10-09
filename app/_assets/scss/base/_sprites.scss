@@ -1,4 +1,127 @@
-$browsers-layout: horizontal;
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
 
-@import "sprites/icon/*.png";
-@include all-icon-sprites;
+```html
+<i class="icon-home"></i>
+```
+*/
+.icon-facebook:hover {
+  background-image: url(/assets/images/sprites/icon-sprite.png);
+  background-position: 0px -30px;
+  width: 30px;
+  height: 30px;
+}
+.icon-facebook {
+  background-image: url(/assets/images/sprites/icon-sprite.png);
+  background-position: 0px -300px;
+  width: 30px;
+  height: 30px;
+}
+.icon-feed:hover {
+  background-image: url(/assets/images/sprites/icon-sprite.png);
+  background-position: 0px -60px;
+  width: 30px;
+  height: 30px;
+}
+.icon-feed {
+  background-image: url(/assets/images/sprites/icon-sprite.png);
+  background-position: 0px -90px;
+  width: 30px;
+  height: 30px;
+}
+.icon-flickr:hover {
+  background-image: url(/assets/images/sprites/icon-sprite.png);
+  background-position: 0px -120px;
+  width: 30px;
+  height: 30px;
+}
+.icon-flickr {
+  background-image: url(/assets/images/sprites/icon-sprite.png);
+  background-position: 0px -150px;
+  width: 30px;
+  height: 30px;
+}
+.icon-github:hover {
+  background-image: url(/assets/images/sprites/icon-sprite.png);
+  background-position: 0px -180px;
+  width: 30px;
+  height: 30px;
+}
+.icon-github {
+  background-image: url(/assets/images/sprites/icon-sprite.png);
+  background-position: 0px -210px;
+  width: 30px;
+  height: 30px;
+}
+.icon-google-plus:hover {
+  background-image: url(/assets/images/sprites/icon-sprite.png);
+  background-position: 0px -240px;
+  width: 30px;
+  height: 30px;
+}
+.icon-google-plus {
+  background-image: url(/assets/images/sprites/icon-sprite.png);
+  background-position: 0px -270px;
+  width: 30px;
+  height: 30px;
+}
+.icon-linkedin:hover {
+  background-image: url(/assets/images/sprites/icon-sprite.png);
+  background-position: 0px 0px;
+  width: 30px;
+  height: 30px;
+}
+.icon-linkedin {
+  background-image: url(/assets/images/sprites/icon-sprite.png);
+  background-position: 0px -330px;
+  width: 30px;
+  height: 30px;
+}
+.icon-pinterest:hover {
+  background-image: url(/assets/images/sprites/icon-sprite.png);
+  background-position: 0px -360px;
+  width: 30px;
+  height: 30px;
+}
+.icon-pinterest {
+  background-image: url(/assets/images/sprites/icon-sprite.png);
+  background-position: 0px -390px;
+  width: 30px;
+  height: 30px;
+}
+.icon-tumblr:hover {
+  background-image: url(/assets/images/sprites/icon-sprite.png);
+  background-position: 0px -420px;
+  width: 30px;
+  height: 30px;
+}
+.icon-tumblr {
+  background-image: url(/assets/images/sprites/icon-sprite.png);
+  background-position: 0px -450px;
+  width: 30px;
+  height: 30px;
+}
+.icon-twitter:hover {
+  background-image: url(/assets/images/sprites/icon-sprite.png);
+  background-position: 0px -480px;
+  width: 30px;
+  height: 30px;
+}
+.icon-twitter {
+  background-image: url(/assets/images/sprites/icon-sprite.png);
+  background-position: 0px -510px;
+  width: 30px;
+  height: 30px;
+}
+.icon-xing:hover {
+  background-image: url(/assets/images/sprites/icon-sprite.png);
+  background-position: 0px -540px;
+  width: 30px;
+  height: 30px;
+}
+.icon-xing {
+  background-image: url(/assets/images/sprites/icon-sprite.png);
+  background-position: 0px -570px;
+  width: 30px;
+  height: 30px;
+}

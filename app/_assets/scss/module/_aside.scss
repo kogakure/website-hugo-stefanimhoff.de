@@ -18,9 +18,9 @@
   margin-left: -(grid-span(2, 1, 8));
 
   @include breakpoint($content-aside-inline) {
-    @include box-shadow(rgba($black, .06) 0 0 10px);
     background: $light-grey;
     border: 1px solid rgba($dark-grey, 0.2);
+    box-shadow: rgba($black, 0.06) 0 0 10px;
     float: none;
     margin: 0 0 $base-rhythm-unit;
     padding: 1em;
@@ -38,9 +38,9 @@
   margin-right: -(grid-span(2, 1, 8));
 
   @include breakpoint($content-aside-inline) {
-    @include box-shadow(rgba($black, .06) 0 0 10px);
     background: $light-grey;
     border: 1px solid rgba($dark-grey, 0.2);
+    box-shadow: rgba($black, 0.06) 0 0 10px;
     float: none;
     margin: 0 0 $base-rhythm-unit;
     padding: 1em;

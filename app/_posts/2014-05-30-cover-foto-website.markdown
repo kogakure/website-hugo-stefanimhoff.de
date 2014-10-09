@@ -29,8 +29,8 @@ Jetzt musste ich nur noch herausfinden, wie denn der Fachbegriff für so ein Fot
 
 Doch es gibt tatsächlich einen Begriff für dieses Eigenschaft: [Bokeh](http://de.wikipedia.org/wiki/Bokeh).
 
-{% figure attribution image-figure-fullsize %}
-<img src="{{ 'artikel/josefina-bokeh.jpg' | asset_path }}" alt="Josefina with Bokeh">
+{% figure image-figure image-figure-fullsize attribution %}
+<img src="/assets/images/artikel/josefina-bokeh.jpg" alt="Josefina with Bokeh">
 <p class="attribution-text"><i class="icon-cc"></i> Carlos Luis Camacho, <a href="http://www.flickr.com/photos/paseodelsur/51805888/">Josefina with Bokeh</a></p>
 {% endfigure %}
 
@@ -47,7 +47,7 @@ Das Praktische an dem Foto ist, dass es ohne Probleme im Anschnitt verwendet wer
 {% highlight css linenos %}
 .header {
   background-color: $header-background;
-  background-image: image-url($header-background-url, false, true);
+  background-image: url($header-background-url);
   background-position: left center;
   background-size: cover;
 }

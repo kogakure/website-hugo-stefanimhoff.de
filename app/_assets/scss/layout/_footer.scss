@@ -17,8 +17,8 @@
   }
 
   .wrap {
-    margin-top: 0.5em;
     margin-bottom: 0.5em;
+    margin-top: 0.5em;
   }
 
   small {
@@ -38,7 +38,8 @@
       text-decoration: none;
     }
 
-    ul, .copyright {
+    ul,
+    .copyright {
       @include adjust-font-size-to($base-font-size);
     }
 
@@ -50,14 +51,14 @@
       top: 2px;
     }
 
-   .no-fontface & .copyright i {
-     display: none;
-   }
+    .no-fontface & .copyright i {
+      display: none;
+    }
 
     ul {
       float: right;
-      margin: 0 0 0 0.5em;
       list-style: none;
+      margin: 0 0 0 0.5em;
       overflow: hidden;
 
       @include breakpoint($footer-two-lines) {
@@ -68,13 +69,13 @@
     }
 
     li {
-      white-space: nowrap;
       float: left;
       padding-right: 0.5em;
+      white-space: nowrap;
 
       &:after {
-        content: '·';
         color: rgba($white, 0.3);
+        content: '·';
         padding-left: 0.5em;
       }
 
@@ -107,20 +108,20 @@
     }
 
     p {
-      background-image: image-url("/assets/css/footer/stefan-imhoff.png", false, true);
-      background-repeat: no-repeat;
+      background-image: url("/assets/images/css/footer/stefan-imhoff.png");
       background-position: 0 0;
+      background-repeat: no-repeat;
       padding-left: 100px;
 
       @include breakpoint($hi-resolution) {
-        background-image: image-url("/assets/css/footer/stefan-imhoff@2X.png", false, true);
+        background-image: url("/assets/images/css/footer/stefan-imhoff@2X.png");
         background-position: 0 0;
         background-repeat: no-repeat;
         background-size: 84px 84px;
       }
 
       @include breakpoint($meta-footer-image-new-line) {
-        background-image: image-url("/assets/css/footer/stefan-imhoff@2X.png", false, true);
+        background-image: url("/assets/images/css/footer/stefan-imhoff@2X.png");
         background-position: center 0;
         background-repeat: no-repeat;
         background-size: 84px 84px;
@@ -165,8 +166,8 @@
     }
 
     ul {
-      list-style: none;
       font-size: 25px;
+      list-style: none;
       text-align: left;
 
       @include breakpoint($meta-footer-two-lines) {
@@ -176,8 +177,8 @@
 
     li {
       display: inline-block;
-      margin: 0 0 15px 15px;
       font-size: 30px;
+      margin: 0 0 15px 15px;
 
       @include breakpoint($meta-footer-two-lines) {
         margin: 0 15px 15px 0;

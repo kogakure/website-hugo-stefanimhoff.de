@@ -10,7 +10,8 @@ permalink: /:year/:title/
 
 # Jekyll-Pfade
 source:      ./app
-destination: ./dist
+# destination: ./dist
+destination: ./build
 
 # Veröffentlichungs-Einstellungen
 encoding:    "utf-8"
@@ -69,7 +70,7 @@ exclude: [
   "**.png", "**.jpg", "**.jpeg", "**.gif", "**.webp", "**.svg", "**.ico"
 ]
 
-include: [".htaccess", ".htpasswd"]
+include: [".htaccess", ".htpasswd", "favicon.ico"]
 
 # Sitemap.xml Generator
 sitemap:
@@ -95,22 +96,6 @@ lunr_search:
   min_length: 3
   stopwords: "stopwords.txt"
 
-# Jekyll Assets (Development)
-assets:
-  dirname:        ../.tmp/assets
-  baseurl:        /assets/
-  js_compressor:  uglifier
-  css_compressor: sass
-  cachebust:      none
-  cache:          false
-  debug:          true
-  sources:
-    - ../.tmp/assets
-    - _assets/stylesheets
-    - _assets/javascripts
-    - _assets/images
-    - _assets/javascripts/libs
-    - _bower_components
 
 # Attribution
 # ===========

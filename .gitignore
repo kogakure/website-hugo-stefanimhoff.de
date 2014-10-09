@@ -4,9 +4,9 @@
 .*/
 
 # Projekt
+build
 vendor/bundle/
 node_modules/
-dist
 app/_bower_components
 app/_assets/images/sprites/*.png
 .fontcustom-manifest.json
