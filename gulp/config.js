@@ -65,6 +65,7 @@ module.exports = {
     sass:    srcAssets + '/scss/**/*.{sass,scss}',
     scripts: srcAssets + '/javascripts/**/*.js',
     images:  srcAssets + '/images/**/*',
+    sprites: srcAssets + '/images/**/*.png',
     svg:     'vectors/*.svg'
   },
   scripts: {
