@@ -26,7 +26,7 @@ body {
 }
 
 .section {
-  @include trailer();
+  margin-bottom: 1.5em;
 }
 
 // Klasse, um Umbrechen zu verhindern
@@ -69,12 +69,12 @@ h6 {
 
 h1 {
   font-size: $font-scale-h1;
-  @include trailer(1, $font-scale-h1, margin);
+  margin-bottom: 0.5em;
 }
 
 h2 {
   font-size: $font-scale-h2;
-  @include trailer(0.5, $font-scale-h2, margin);
+  margin-bottom: 0.5em;
 }
 
 h3,
@@ -82,30 +82,29 @@ h4,
 h5,
 h6 {
   font-size: $font-scale-h4;
-  @include trailer(0.3, $font-scale-h3, margin);
+  margin-bottom: 0.3em;
 }
 
 // Paragraphs
 // ----------------------------------------------------------------------------
 p {
-  @include trailer(1);
+  margin-bottom: 1.5em;
 }
 
 .article-body > p:first-child {
   font-size: $font-scale-intro;
   line-height: 1.5;
-  @include trailer(1, $font-scale-h3, margin);
+  margin-bottom: 1em;
 }
 
 // Horizontale Trenner
 // ----------------------------------------------------------------------------
 hr {
-  @include trailer(2, $base-font-size, margin);
   @include trailing-border(3px);
   border: 0;
-  color: rgba($light-grey, 0.9);
+  border-bottom: 1px solid rgba($light-grey, 0.9);
   height: 0;
-  margin: 0 1.5em;
+  margin: 2em 1em 3em;
 }
 
 // Emphasis
@@ -164,7 +163,7 @@ code {
 }
 
 pre {
-  @include trailer(1);
+  margin-bottom: 1.5em;
 
   code {
     display: block;
@@ -174,10 +173,10 @@ pre {
 }
 
 .highlight {
-  box-shadow: rgba(0, 0, 0, 0.06) 0 0 10px;
   @include grid-span(12);
-  @include trailer();
+  box-shadow: rgba(0, 0, 0, 0.06) 0 0 10px;
   clear: both;
+  margin-bottom: 1.5em;
   position: relative;
 
   .code-figure & {
@@ -333,8 +332,8 @@ del {
 // Listen
 // ----------------------------------------------------------------------------
 ol {
-  @include trailer(1);
   list-style: decimal;
+  margin-bottom: 1.5em;
 
   .article-body & {
     margin-left: 1.5em;
@@ -351,8 +350,8 @@ ol ol {
 }
 
 ul {
-  @include trailer(1);
   list-style: disc;
+  margin-bottom: 1.5em;
 
   .article-body & {
     margin-left: 1.5em;
@@ -369,7 +368,7 @@ ul ul {
 }
 
 dl {
-  @include trailer(1);
+  margin-bottom: 1.5em;
 }
 
 dt {
@@ -377,7 +376,7 @@ dt {
 }
 
 dt + dd {
-  @include trailer(1);
+  margin-bottom: 1.5em;
 }
 
 dd {
@@ -388,8 +387,8 @@ dd {
 // ----------------------------------------------------------------------------
 blockquote {
   @include leader();
-  @include trailer();
   font-style: italic;
+  margin-bottom: 1.5em;
   margin-left: 1.5em;
   margin-right: 1.5em;
 }
@@ -446,10 +445,10 @@ figcaption {
 // Video
 // -----------------------------------------------------------------------------
 video {
-  @include trailer(1);
   box-sizing: border-box;
   display: block;
   height: auto;
+  margin-bottom: 1.5em;
   width: 100%;
 }
 

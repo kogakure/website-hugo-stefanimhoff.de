@@ -4,9 +4,9 @@
 
 // Layout für das div um die Abbildung
 figure.image-figure {
-  @include trailer(1);
   clear: both;
   float: left;
+  margin-bottom: 1.5em;
 
   a {
     border: 0;

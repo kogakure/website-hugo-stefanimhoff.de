@@ -63,10 +63,10 @@ $breakpoint-default-feature: max-width;
 .page .article {
   @extend %main-grid;
   @include leader(1);
-  @include trailer(2);
+  margin-bottom: 3em;
 
   @include breakpoint(700px) {
-    @include trailer(1);
+    margin-bottom: 1.5em;
   }
 
   @include breakpoint($content-medium) {
@@ -74,14 +74,14 @@ $breakpoint-default-feature: max-width;
   }
 
   @include breakpoint($content-small) {
+    margin-bottom: 1.5em;
     margin-top: 0.5em;
-    @include trailer(1);
   }
 }
 
 .archive .archive-posts {
   @include leader(1);
-  @include trailer(2);
+  margin-bottom: 3em;
 }
 
 header {
