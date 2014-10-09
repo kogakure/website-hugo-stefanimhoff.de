@@ -64,15 +64,16 @@ h6 {
   @include enable-ligatures;
   clear: both;
   hyphens: manual;
+  line-height: 1;
 }
 
 h1 {
-  @include adjust-font-size-to($font-scale-h1);
+  font-size: $font-scale-h1;
   @include trailer(1, $font-scale-h1, margin);
 }
 
 h2 {
-  @include adjust-font-size-to($font-scale-h2);
+  font-size: $font-scale-h2;
   @include trailer(0.5, $font-scale-h2, margin);
 }
 
@@ -80,7 +81,7 @@ h3,
 h4,
 h5,
 h6 {
-  @include adjust-font-size-to($font-scale-h4);
+  font-size: $font-scale-h4;
   @include trailer(0.3, $font-scale-h3, margin);
 }
 
@@ -91,7 +92,8 @@ p {
 }
 
 .article-body > p:first-child {
-  @include adjust-font-size-to($font-scale-intro);
+  font-size: $font-scale-intro;
+  line-height: 1.5;
   @include trailer(1, $font-scale-h3, margin);
 }
 
@@ -103,7 +105,7 @@ hr {
   border: 0;
   color: rgba($light-grey, 0.9);
   height: 0;
-  margin: 0 $base-rhythm-unit;
+  margin: 0 1.5em;
 }
 
 // Emphasis
@@ -153,10 +155,11 @@ abbr.no-caps {
 // ----------------------------------------------------------------------------
 code {
   @extend %mono-font;
-  @include adjust-font-size-to($font-scale-small);
   background: $white;
   border: 1px solid $light-grey;
   border-radius: 3px;
+  font-size: $font-scale-small;
+  line-height: 1.5;
   padding: 0.2em 0.4em;
 }
 
@@ -190,7 +193,7 @@ pre {
 
   pre {
     background: $white;
-    padding: $base-rhythm-unit $base-rhythm-unit 0;
+    padding: 1.5em 1.5em 0;
   }
 
   code {
@@ -204,7 +207,7 @@ pre {
       position: absolute;
       right: 0;
       top: 0;
-      width: $base-rhythm-unit * 3;
+      width: 1.5em * 3;
     }
   }
 
@@ -239,15 +242,15 @@ samp {
 // ----------------------------------------------------------------------------
 kbd {
   @extend %sans-font;
-  @include adjust-font-size-to($font-scale-kbd);
   background-color: $keyboard-background;
   border: 1px solid $keyboard-border;
   border-radius: 3px;
   box-shadow: 0 1px 0 rgba($black, 0.2), 0 0 0 2px $white inset;
   color: $dark-grey;
   display: inline-block;
+  font-size: $font-scale-kbd;
   font-weight: $bold;
-  line-height: 1.4 !important;
+  line-height: 1.4;
   margin: 0 0.1em;
   padding: 0.3em 0.6em 0.1em;
   text-shadow: 0 1px 0 $white;
@@ -334,7 +337,7 @@ ol {
   list-style: decimal;
 
   .article-body & {
-    margin-left: $base-rhythm-unit;
+    margin-left: 1.5em;
   }
 
   @include breakpoint($content-medium) {
@@ -344,7 +347,7 @@ ol {
 
 ol ol {
   list-style: lower-latin;
-  margin: 0 $base-rhythm-unit;
+  margin: 0 1.5em;
 }
 
 ul {
@@ -352,7 +355,7 @@ ul {
   list-style: disc;
 
   .article-body & {
-    margin-left: $base-rhythm-unit;
+    margin-left: 1.5em;
   }
 
   @include breakpoint($content-medium) {
@@ -362,7 +365,7 @@ ul {
 
 ul ul {
   list-style: circle;
-  margin: 0 $base-rhythm-unit;
+  margin: 0 1.5em;
 }
 
 dl {
@@ -387,8 +390,8 @@ blockquote {
   @include leader();
   @include trailer();
   font-style: italic;
-  margin-left: $base-rhythm-unit;
-  margin-right: $base-rhythm-unit;
+  margin-left: 1.5em;
+  margin-right: 1.5em;
 }
 
 cite {
@@ -435,7 +438,8 @@ a img {
 // ----------------------------------------------------------------------------
 
 figcaption {
-  @include adjust-font-size-to($font-scale-small);
+  font-size: $font-scale-small;
+  line-height: 1.5;
   text-align: center;
 }
 

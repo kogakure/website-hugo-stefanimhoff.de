@@ -154,7 +154,6 @@ $base-font-size:             modular-scale(1); // 18px
 $base-line-height-count:     1.5;
 $base-line-height:           $base-font-size * $base-line-height-count; // 27px
 $base-font-weight:           $normal;
-$base-rhythm-unit:           $base-line-height / $base-font-size * $font-unit;
 
 // Überschrift-Schriftgrößen
 $font-scale-h1:              modular-scale(6); // 68px

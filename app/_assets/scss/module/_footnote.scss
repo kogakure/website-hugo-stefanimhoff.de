@@ -9,17 +9,19 @@
 
 sup a.footnote {
   @extend %sans-font;
-  @include adjust-font-size-to(modular-scale(0));
   @include link-colors($dark-grey, $dark-grey, $dark-grey, $dark-grey, $dark-grey);
   cursor: help;
+  font-size: modular-scale(0);
+  line-height: 1.5;
   text-decoration: none;
 }
 
 .footnotes {
   @extend %sans-font;
-  @include adjust-font-size-to(modular-scale(0));
   clear: both;
   color: lighten($dark-grey, 40);
+  font-size: modular-scale(0);
+  line-height: 1.5;
 
   a.reversefootnote {
     @include link-colors($dark-grey, $dark-grey, $dark-grey, $dark-grey, $dark-grey);

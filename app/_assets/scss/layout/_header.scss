@@ -17,10 +17,11 @@
 
   .nav-btn {
     @extend %sans-font;
-    @include adjust-font-size-to(18px);
     @include link-colors($white, $nav-link-color-hover, $white, $white, $white);
     border: 0;
+    font-size: 18px;
     letter-spacing: 1px;
+    line-height: 1.5;
     position: absolute;
     right: 1em;
     text-shadow: 0 1px 1px $black;
@@ -94,10 +95,10 @@
   }
 
   h2 {
-    @include adjust-font-size-to($font-scale-h3);
     @include grid-span(7, 4);
     clear: both;
     color: $header-subheadline;
+    font-size: $font-scale-h3;
     line-height: 1.2;
     position: relative;
     text-shadow: 0 0 5px $white, 0 0 5px $white, 0 0 5px $white;

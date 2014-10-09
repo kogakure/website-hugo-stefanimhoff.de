@@ -6,7 +6,7 @@
   @extend %sans-font;
   @extend %pattern-classy-fabric;
   color: rgba($white, 0.25);
-  padding-top: $base-rhythm-unit;
+  padding-top: 1.5em;
 
   @include breakpoint(700px) {
     padding-top: 1em;
@@ -25,7 +25,7 @@
     @extend %pattern-dark-stripes;
     color: rgba($white, 0.3);
     display: block;
-    margin-top: $base-rhythm-unit;
+    margin-top: 1.5em;
     padding: 0.5em 0;
 
     @include breakpoint($content-small) {
@@ -40,7 +40,8 @@
 
     ul,
     .copyright {
-      @include adjust-font-size-to($base-font-size);
+      font-size: $base-font-size;
+      line-height: 1.5;
     }
 
     .copyright b {

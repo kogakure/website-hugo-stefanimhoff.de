@@ -113,6 +113,12 @@ module.exports = {
       dest: productionAssets + '/fonts'
     }
   },
+  scsslint: {
+    src: [
+      srcAssets + '/scss/**/*.{sass,scss}',
+      '!' + srcAssets + '/scss/base/_sprites.scss'
+    ]
+  },
   jshint: {
     src: srcAssets + '/javascripts/*.js'
   },

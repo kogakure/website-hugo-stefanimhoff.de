@@ -11,13 +11,13 @@
   a {
     border: 0;
     display: inline-block;
-    line-height: $base-rhythm-unit * 2;
+    line-height: 1.5em * 2;
     vertical-align: top;
 
     .icon-download {
       border: 0;
       color: rgba($white, 0.4);
-      font-size: $base-rhythm-unit * 2;
+      font-size: 1.5em * 2;
       margin-right: 15px;
       text-shadow: -1px -1px 0 rgba($black, 0.5);
     }

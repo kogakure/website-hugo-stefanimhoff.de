@@ -3,13 +3,14 @@
 // ============================================================================
 
 %pullquote {
-  @include adjust-font-size-to(25.888px);
+  font-size: 25px;
+  line-height: 1.2;
   font-style: italic;
 }
 
 blockquote.pullquote {
   @extend %pullquote;
-  @include adjust-font-size-to(41.887px);
+  font-size: 41px;
   text-align: center;
 }
 
@@ -32,8 +33,8 @@ blockquote.pullquote[lang|=ja] {
   content: attr(data-pullquote);
   display: inline-block;
   float: right;
-  margin-bottom: $base-rhythm-unit;
-  margin-left: $base-rhythm-unit;
+  margin-bottom: 1.5em;
+  margin-left: 1.5em;
   margin-right: -(grid-span(1, 1, 8));
   margin-top: 0;
   padding: 0;
@@ -48,7 +49,7 @@ blockquote.pullquote[lang|=ja] {
   @include breakpoint($content-pullquote-inline) {
     clear: both;
     float: none;
-    margin: $base-rhythm-unit 0;
+    margin: 1.5em 0;
     position: static;
     text-align: center;
     width: 100%;
@@ -57,9 +58,9 @@ blockquote.pullquote[lang|=ja] {
 
 .pullquote-left:before {
   float: left;
-  margin-bottom: $base-rhythm-unit;
+  margin-bottom: 1.5em;
   margin-left: -(grid-span(1, 1, 8));
-  margin-right: $base-rhythm-unit;
+  margin-right: 1.5em;
   margin-top: 0;
   text-align: right;
 
@@ -70,7 +71,7 @@ blockquote.pullquote[lang|=ja] {
   @include breakpoint($content-pullquote-inline) {
     clear: both;
     float: none;
-    margin: $base-rhythm-unit 0;
+    margin: 1.5em 0;
     position: static;
     text-align: center;
     width: 100%;

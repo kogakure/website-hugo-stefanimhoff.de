@@ -11,6 +11,10 @@ figure.image-figure {
   a {
     border: 0;
   }
+
+  img {
+    margin-bottom: 5px;
+  }
 }
 
 
@@ -137,4 +141,8 @@ figure.image-figure {
 // ----------------------------------------------------------------------------
 .code-figure {
   margin-bottom: 1.5em;
+
+  .highlight {
+    margin-bottom: 5px;
+  }
 }

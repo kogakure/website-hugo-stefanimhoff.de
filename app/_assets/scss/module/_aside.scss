@@ -3,12 +3,13 @@
 // ============================================================================
 
 %aside {
-  @include adjust-font-size-to($font-scale-small);
+  font-size: $font-scale-small;
+  line-height: 1.5;
   margin-top: 0.5em;
   width: column-span(2, 1, 8);
 
   h4 {
-    @include adjust-font-size-to($font-scale-h4);
+    font-size: $font-scale-h4;
   }
 }
 
@@ -22,7 +23,7 @@
     border: 1px solid rgba($dark-grey, 0.2);
     box-shadow: rgba($black, 0.06) 0 0 10px;
     float: none;
-    margin: 0 0 $base-rhythm-unit;
+    margin: 0 0 1.5em;
     padding: 1em;
     width: 100%;
 
@@ -42,7 +43,7 @@
     border: 1px solid rgba($dark-grey, 0.2);
     box-shadow: rgba($black, 0.06) 0 0 10px;
     float: none;
-    margin: 0 0 $base-rhythm-unit;
+    margin: 0 0 1.5em;
     padding: 1em;
     width: 100%;
 

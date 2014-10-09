@@ -7,8 +7,9 @@
     @include clearfix;
 
     h2 {
-      @include adjust-font-size-to($font-scale-h4);
       @include grid-span(9, 4, 12);
+      font-size: $font-scale-h4;
+      line-height: 1.5;
 
       @include breakpoint($archive-two-lines) {
         @include grid-span(12);
