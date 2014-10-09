@@ -2,8 +2,8 @@ source "https://rubygems.org"
 
 gem 'octopress', '~> 3.0.0.rc.14' # Newest octopress version
 gem 'sass', '>= 3.3'              # SASS
-gem 'compass', '~> 1.0.1'         # Compass version
-gem 'compass-import-once', :require => 'compass/import-once/activate'
+# gem 'compass', '~> 1.0.1'         # Compass version
+# gem 'compass-import-once', :require => 'compass/import-once/activate'
 gem 'gsl'                         # LSI support for faster related generation
 gem 'csscss', '~> 1.3'            # Check CSS for recursion
 gem 'scss-lint'                   # Check SCSS syntax

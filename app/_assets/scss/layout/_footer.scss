@@ -210,8 +210,8 @@
 
     a {
       @include link-colors($social-icon-color, $social-icon-hover, $social-icon-color, $social-icon-color, $social-icon-color);
-      @include text-shadow($black -1px -1px 0);
       border: 0;
+      text-shadow: $black -1px -1px 0;
 
       &:hover {
         border: 0;

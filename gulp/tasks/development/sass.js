@@ -15,7 +15,7 @@ var config       = require('../../config');
 gulp.task('sass', function() {
   var sassConfig = {
     noCache: true,
-    compass: true,
+    // compass: true,
     bundleExec: true,
     sourcemap: true,
     sourcemapPath: '../../_assets/scss',
