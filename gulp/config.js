@@ -29,7 +29,10 @@ module.exports = {
       port: 9998,
       files: [
         production + '/**'
-      ]
+      ],
+      notify: {
+        styles: [ 'display: hidden; padding: 15px; font-family: sans-serif; position: fixed; font-size: 0.9em; z-index: 9999; left: 0px; top: 0px; border-bottom-right-radius: 5px; margin: 0px; color: white; text-align: center; background-color: rgb(27, 32, 50);' ]
+      }
     }
   },
   jekyll: {
@@ -197,7 +200,7 @@ module.exports = {
     }]
   },
   rsync: {
-    destination: '~/webapps/stefanimhoff/@FIXME_NOTYET',
+    destination: '~/webapps/stefanimhoff/',
     root: production,
     hostname: 'stefanimhoff.de',
     username: 'kogakure',
