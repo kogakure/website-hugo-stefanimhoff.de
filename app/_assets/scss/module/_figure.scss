@@ -6,7 +6,7 @@
 figure.image-figure {
   clear: both;
   float: left;
-  margin-bottom: 1.5em;
+  margin-bottom: $default-margin-bottom;
 
   a {
     border: 0;
@@ -140,7 +140,7 @@ figure.image-figure {
 // Code-Beispiele
 // ----------------------------------------------------------------------------
 .code-figure {
-  margin-bottom: 1.5em;
+  margin-bottom: $default-margin-bottom;
 
   .highlight {
     margin-bottom: 5px;

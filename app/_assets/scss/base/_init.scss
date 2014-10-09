@@ -20,9 +20,6 @@ body {
   min-height: 100%;
 }
 
-// Vertical-Rythm Fonts einstellen
-@include establish-baseline();
-
 // Alle Elemente so einstellen, dass Padding nicht dazu gerechnet wird
 * {
   box-sizing: border-box;

@@ -10,7 +10,7 @@ body.error {
 
   .error-body {
     @include grid-span(6, 6, 12);
-    @include leader(2);
+    margin-top: $default-margin-top * 2;
     min-height: 415px;
     position: relative;
   }

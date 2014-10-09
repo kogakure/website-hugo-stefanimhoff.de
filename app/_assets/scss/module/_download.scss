@@ -5,7 +5,7 @@
 .download {
   background: rgba($dark-grey, 0.1);
   border-radius: 3px;
-  margin-bottom: 1.5em;
+  margin-bottom: $default-margin-bottom;
   padding: 15px 20px 0;
 
   a {

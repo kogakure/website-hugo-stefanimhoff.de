@@ -6,10 +6,12 @@ body {
   @extend %base-font;
   @extend %pattern-dark-stripes;
   color: $dark-grey;
+  font-size: modular-scale(1);
   font-smoothing: subpixel-antialiased;
   font-style: normal;
   font-weight: $normal;
   hyphens: auto;
+  line-height: 1.5;
 }
 
 :lang(ja) {
@@ -26,7 +28,7 @@ body {
 }
 
 .section {
-  margin-bottom: 1.5em;
+  margin-bottom: $default-margin-bottom;
 }
 
 // Klasse, um Umbrechen zu verhindern
@@ -65,16 +67,15 @@ h6 {
   clear: both;
   hyphens: manual;
   line-height: 1;
+  margin-bottom: 0.5em;
 }
 
 h1 {
   font-size: $font-scale-h1;
-  margin-bottom: 0.5em;
 }
 
 h2 {
   font-size: $font-scale-h2;
-  margin-bottom: 0.5em;
 }
 
 h3,
@@ -82,29 +83,27 @@ h4,
 h5,
 h6 {
   font-size: $font-scale-h4;
-  margin-bottom: 0.3em;
 }
 
 // Paragraphs
 // ----------------------------------------------------------------------------
 p {
-  margin-bottom: 1.5em;
+  margin-bottom: $default-margin-bottom;
 }
 
 .article-body > p:first-child {
   font-size: $font-scale-intro;
   line-height: 1.5;
-  margin-bottom: 1em;
+  margin-bottom: $default-margin-bottom;
 }
 
 // Horizontale Trenner
 // ----------------------------------------------------------------------------
 hr {
-  @include trailing-border(3px);
   border: 0;
   border-bottom: 1px solid rgba($light-grey, 0.9);
   height: 0;
-  margin: 2em 1em 3em;
+  margin: 2.5em;
 }
 
 // Emphasis
@@ -163,7 +162,7 @@ code {
 }
 
 pre {
-  margin-bottom: 1.5em;
+  margin-bottom: $default-margin-bottom;
 
   code {
     display: block;
@@ -176,7 +175,7 @@ pre {
   @include grid-span(12);
   box-shadow: rgba(0, 0, 0, 0.06) 0 0 10px;
   clear: both;
-  margin-bottom: 1.5em;
+  margin-bottom: $default-margin-bottom;
   position: relative;
 
   .code-figure & {
@@ -233,7 +232,7 @@ samp {
   font-size: 0.8em;
   line-height: 1.5em;
   margin: -1px 0;
-  padding: 0 .3em;
+  padding: 0 0.3em;
   white-space: no-wrap;
 }
 
@@ -333,10 +332,10 @@ del {
 // ----------------------------------------------------------------------------
 ol {
   list-style: decimal;
-  margin-bottom: 1.5em;
+  margin-bottom: $default-margin-bottom;
 
   .article-body & {
-    margin-left: 1.5em;
+    margin-left: $default-margin-left;
   }
 
   @include breakpoint($content-medium) {
@@ -351,10 +350,10 @@ ol ol {
 
 ul {
   list-style: disc;
-  margin-bottom: 1.5em;
+  margin-bottom: $default-margin-bottom;
 
   .article-body & {
-    margin-left: 1.5em;
+    margin-left: $default-margin-left;
   }
 
   @include breakpoint($content-medium) {
@@ -368,7 +367,7 @@ ul ul {
 }
 
 dl {
-  margin-bottom: 1.5em;
+  margin-bottom: $default-margin-bottom;
 }
 
 dt {
@@ -376,7 +375,7 @@ dt {
 }
 
 dt + dd {
-  margin-bottom: 1.5em;
+  margin-bottom: $default-margin-bottom;
 }
 
 dd {
@@ -386,11 +385,8 @@ dd {
 // Zitate
 // ----------------------------------------------------------------------------
 blockquote {
-  @include leader();
   font-style: italic;
-  margin-bottom: 1.5em;
-  margin-left: 1.5em;
-  margin-right: 1.5em;
+  margin: $default-margin;
 }
 
 cite {
@@ -448,7 +444,7 @@ video {
   box-sizing: border-box;
   display: block;
   height: auto;
-  margin-bottom: 1.5em;
+  margin-bottom: $default-margin-bottom;
   width: 100%;
 }
 

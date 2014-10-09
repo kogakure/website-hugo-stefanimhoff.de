@@ -81,31 +81,36 @@ $header-background-url: ""; // THEME
 // Media-Queries/Breakpoints
 // ----------------------------------------------------------------------------
 
-$iphone-width: (screen) (max-width 480px);
+$iphone-width:               (screen) (max-width 480px);
 
 // Content
-$content-medium: 650px;
-$content-medium-code: 651px;
-$content-small: 400px;
-$content-aside-inline: 770px;
-$content-pullquote-inline: 580px;
+$content-medium:             650px;
+$content-medium-code:        651px;
+$content-small:              400px;
+$content-aside-inline:       770px;
+$content-pullquote-inline:   580px;
 
 // Homepage
 $homepage-sections-fullsize: 650px;
 
 // Archive
-$archive-two-lines: 550px;
+$archive-two-lines:          550px;
 
 // Footer
-$hi-resolution: min-resolution 1.5dppx;
-$meta-footer-two-lines: 640px;
+$hi-resolution:              min-resolution 1.5dppx;
+$meta-footer-two-lines:      640px;
 $meta-footer-image-new-line: 450px;
-$footer-two-lines: 850px;
+$footer-two-lines:           850px;
 
 // Abstände und Maße
 // ----------------------------------------------------------------------------
 
-$image-border-size: 3px;
+$image-border-size:     3px;
+$default-margin:        1.5em;
+$default-margin-bottom: 1.5em;
+$default-margin-top:    1.5em;
+$default-margin-right:  1.5em;
+$default-margin-left:   1.5em;
 
 // Animationen
 // ----------------------------------------------------------------------------
@@ -131,38 +136,32 @@ $animation-navigation-link-hover: all 100ms linear;
 //*
 //*
 
-$ms-base:     16px 18px;
-$ms-ratio:    $golden; // Standard
-
-// Vertical rhythm
-$relative-font-sizing:       true;
-$round-to-nearest-half-line: true; // Verhindert zu große Lücken zwischen den Zeilen
+$ms-base:                     16px 18px;
+$ms-ratio:                    $golden; // Standard
 
 // Schriftstärken
-$normal:        400;
-$bold:          700;
+$normal:                      400;
+$bold:                        700;
 
 // Schriftarten
-$base-font-family:           'Gentium Basic', Georgia, serif;
-$base-font-sans:             'Yanone Kaffeesatz', Arial, Helvetica, sans-serif;
-$base-font-mono:             Menlo, Monaco, 'Andale Mono', 'Lucida console', 'Courier New', monospace;
-$base-font-japanese:         'Hiragino Maru Gothic Pro', sans-serif;
+$base-font-family:            'Gentium Basic', Georgia, serif;
+$base-font-sans:              'Yanone Kaffeesatz', Arial, Helvetica, sans-serif;
+$base-font-mono:              Menlo, Monaco, 'Andale Mono', 'Lucida console', 'Courier New', monospace;
+$base-font-japanese:          'Hiragino Maru Gothic Pro', sans-serif;
 
 // Grundgrößen und Zeilenhöhe
-$font-unit:                  1em;
-$base-font-size:             modular-scale(1); // 18px
-$base-line-height-count:     1.5;
-$base-line-height:           $base-font-size * $base-line-height-count; // 27px
-$base-font-weight:           $normal;
+$font-unit:                   1em;
+$base-font-size:              modular-scale(1); // 18px
+$base-line-height:            1.5;
+$base-font-weight:            $normal;
 
 // Überschrift-Schriftgrößen
-$font-scale-h1:              modular-scale(6); // 68px
-$font-scale-h2:              modular-scale(4); // 42px
-$font-scale-h3:              modular-scale(2); // 26px
-$font-scale-h4:              modular-scale(2); // 26px
-$font-scale-h5:              modular-scale(2); // 26px
-$font-scale-h6:              modular-scale(2); // 26px
-$font-scale-small:           14px;
-$font-scale-intro:           $base-font-size * 1.375;
-$font-scale-kbd:             $base-font-size * 0.75;
-
+$font-scale-h1:               modular-scale(6); // 68px
+$font-scale-h2:               modular-scale(4); // 42px
+$font-scale-h3:               modular-scale(2); // 26px
+$font-scale-h4:               modular-scale(2); // 26px
+$font-scale-h5:               modular-scale(2); // 26px
+$font-scale-h6:               modular-scale(2); // 26px
+$font-scale-small:            14px;
+$font-scale-intro:            $base-font-size * 1.375;
+$font-scale-kbd:              $base-font-size * 0.75;

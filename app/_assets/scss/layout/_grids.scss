@@ -62,11 +62,11 @@ $breakpoint-default-feature: max-width;
 .post .article,
 .page .article {
   @extend %main-grid;
-  @include leader(1);
-  margin-bottom: 3em;
+  margin-bottom: $default-margin-bottom * 2;
+  margin-top: $default-margin-top;
 
   @include breakpoint(700px) {
-    margin-bottom: 1.5em;
+    margin-bottom: $default-margin-bottom;
   }
 
   @include breakpoint($content-medium) {
@@ -74,14 +74,14 @@ $breakpoint-default-feature: max-width;
   }
 
   @include breakpoint($content-small) {
-    margin-bottom: 1.5em;
+    margin-bottom: $default-margin-bottom;
     margin-top: 0.5em;
   }
 }
 
 .archive .archive-posts {
-  @include leader(1);
-  margin-bottom: 3em;
+  margin-bottom: $default-margin-bottom * 2;
+  margin-top: $default-margin-top;
 }
 
 header {

@@ -33,7 +33,7 @@
   }
 
   .content + .inline-links {
-    @include leader();
+    margin-top: $default-margin-top;
   }
 
   // Artikel
@@ -103,7 +103,7 @@
 
       @include breakpoint($homepage-sections-fullsize) {
         @include grid-span(12);
-        margin-bottom: 1.5em;
+        margin-bottom: $default-margin-bottom;
         padding: 0;
         text-align: left;
       }

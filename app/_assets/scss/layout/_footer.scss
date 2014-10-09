@@ -25,7 +25,7 @@
     @extend %pattern-dark-stripes;
     color: rgba($white, 0.3);
     display: block;
-    margin-top: 1.5em;
+    margin-top: $default-margin-top;
     padding: 0.5em 0;
 
     @include breakpoint($content-small) {
