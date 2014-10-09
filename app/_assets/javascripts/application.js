@@ -1,30 +1,44 @@
-/*
-//= require libs/ios-rotate-scaling-fix
-//= require libs/fitvids
-//= require main
-*/
+require('fastclick');
+require('fitvids');
+require('classie');
+require('./vendor/ios-rotate-scaling-fix');
 
-// var classie = require('classie');
-// var addMultipleEventListeners = require('./addMultipleEventListeners');
+var navigation     = require('./libs/navigation');
+var smoothScroller = require('./libs/smoothScroller');
+var tracking       = require('./libs/tracking');
 
-// var fastclick = require('fastclick');
+var NAVIGATION_TRIGGER_CLASS = 'js-nav-btn',
+    NAVIGATION_CLOSE_CLASS   = 'js-nav-close-btn',
+    container                = document.querySelector('.container'),
+    triggerButton            = document.querySelector('.' + NAVIGATION_TRIGGER_CLASS),
+    closeButton              = document.querySelector('.' + NAVIGATION_CLOSE_CLASS),
+    topLink                  = document.querySelector('#top-link'),
+    trackingLinks            = document.querySelectorAll('a');
 
-// var navigation = require('./navigation');
-// var smoothScroller = require('./smoothScroller');
-// var tracking = require('./tracking');
+if ('querySelector' in document && 'addEventListener' in window) {
 
-// navigation.log('Test des navigation moduls');
+  document.addEventListener('DOMContentLoaded', function() {
+    FastClick.attach(document.body);
+    fitVids('.container');
 
-// require the core node events module
-var EventEmitter = require('events').EventEmitter;
+    // Navigation menu event listeners
+    triggerButton.addEventListener('click', navigation.toggleNavigation);
+    closeButton.addEventListener('click', navigation.closeNavigation);
+    container.addEventListener('click', navigation.closeNavigation);
 
-//create a new event emitter
-var emitter = new EventEmitter();
+    // Hightlighting of navigation item
+    if (navigation.currentNavigationItem()) {
+      classie.add(navigation.currentNavigationItem().parentElement, 'nav-is-active');
+    }
 
-// set up a listener for the event
-emitter.on('pizza', function(message){
-  console.log(message);
-});
+    // Scroll smoothly to the top of the page
+    topLink.addEventListener('click', smoothScroller.scrollSmoothlyToTop);
 
-// emit an event
-emitter.emit('pizza', 'pizza is extremely yummy');
+    // Tracking aller Links
+    for (var i = 0, len = trackingLinks.length; i < len; i++) {
+      var trackingLink = trackingLinks[i];
+
+      trackingLink.addEventListener('click', tracking.trackLinksWithGoogleAnalytics);
+    }
+  });
+}

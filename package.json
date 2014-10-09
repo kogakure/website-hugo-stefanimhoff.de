@@ -6,11 +6,15 @@
   "version": "0.1.0",
   "browser": {
     "modernizr": "./app/_bower_components/modernizr/modernizr.js",
-    "fastclick": "./app/_bower_components/fastclick/lib/fastclick.js"
+    "fastclick": "./app/_bower_components/fastclick/lib/fastclick.js",
+    "fitvids": "./app/_assets/javascripts/vendor/fitvids.js",
+    "classie": "./app/_assets/javascripts/vendor/classie.js"
   },
   "browserify-shim": {
     "modernizr": "Modernizr",
-    "fastclick": "FastClick"
+    "fastclick": "FastClick",
+    "fitvids": "fitVids",
+    "classie": "classie"
   },
   "browserify": {
     "transform": [

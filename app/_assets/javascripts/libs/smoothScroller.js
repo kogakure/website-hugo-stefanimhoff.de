@@ -4,6 +4,16 @@
 var position = window.scrollY,
     body     = document.querySelector('body');
 
+/**
+* Helper function to add multiple EventListeners
+*/
+function addMultipleEventListeners(el, s, fn) {
+  var evts = s.split(' ');
+  for (var i=0, iLen=evts.length; i<iLen; i++) {
+    el.addEventListener(evts[i], fn, false);
+  }
+}
+
 module.exports = {
   scrollSmoothlyToTop: function() {
     var position = window.scrollY; // Get the scroll position

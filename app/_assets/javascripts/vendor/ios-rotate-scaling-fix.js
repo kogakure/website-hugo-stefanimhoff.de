@@ -1,7 +1,7 @@
 // Rewritten version
 // By @mathias, @cheeaun and @jdalton
 
-(function(doc) {
+module.exports = (function(doc) {
 
   var addEvent = 'addEventListener',
       type = 'gesturestart',
