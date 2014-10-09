@@ -119,7 +119,8 @@ module.exports = {
   scsslint: {
     src: [
       srcAssets + '/scss/**/*.{sass,scss}',
-      '!' + srcAssets + '/scss/base/_sprites.scss'
+      '!' + srcAssets + '/scss/base/_sprites.scss',
+      '!' + srcAssets + '/scss/helpers/_meyer-reset.scss'
     ]
   },
   jshint: {

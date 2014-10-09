@@ -3,7 +3,6 @@
 // ============================================================================
 
 @import "compass"; // @TODO: Remove
-@import "compass/reset"; // @TODO: Add to a own file, Uses Eric Meyers Reset (Bower)
 @import "compass/css3/user-interface"; // @TODO: Remove
 @import "singularitygs"; // @TODO: Try libsass, needs full support of Ruby Sass 3.3 (Bower)
 @import "toolkit"; // @TODO: Do I even need this? Needs full support of Ruby Sass 3.3 (Bower)
