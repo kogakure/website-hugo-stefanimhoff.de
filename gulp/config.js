@@ -49,7 +49,14 @@ module.exports = {
   },
   sass: {
     src:  srcAssets + '/scss/**/*.{sass,scss}',
-    dest: developmentAssets + '/css'
+    dest: developmentAssets + '/css',
+    options: {
+      noCache: true,
+      compass: false,
+      bundleExec: true,
+      sourcemap: true,
+      sourcemapPath: '../../_assets/scss'
+    }
   },
   css: {
     src: developmentAssets + '/css/*.css'

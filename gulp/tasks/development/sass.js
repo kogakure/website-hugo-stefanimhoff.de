@@ -14,11 +14,11 @@ var config       = require('../../config');
  */
 gulp.task('sass', function() {
   var sassConfig = {
-    noCache: true,
-    // compass: true,
-    bundleExec: true,
-    sourcemap: true,
-    sourcemapPath: '../../_assets/scss',
+    noCache: config.sass.options.noCache,
+    compass: config.sass.options.compass,
+    bundleExec: config.sass.options.bundleExec,
+    sourcemap: config.sass.options.sourcemap,
+    sourcemapPath: config.sass.options.sourcemapPath,
     onError: browsersync.notify
   };
 
