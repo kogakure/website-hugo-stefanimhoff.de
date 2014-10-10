@@ -5,11 +5,14 @@ var runSequence = require('run-sequence');
  * Run all tasks needed for a build in defined order
  */
 gulp.task('build', function(callback) {
-  runSequence('delete', [
+  runSequence('delete',
+  [
     'jekyll',
     'sass',
     'scripts',
     'images',
     'copy:fonts'
-  ], 'base64', callback);
+  ],
+  'base64',
+  callback);
 });
