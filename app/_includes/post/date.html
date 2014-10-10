@@ -1,15 +1,31 @@
 {% capture date %}{{ page.date }}{{ post.date }}{% endcapture %}
-{% capture date_formatted %}{{ page.date | date:"%d.%m.%Y" }}{{ post.date | date:"%d.%m.%Y" }}{% endcapture %}
+{% capture date_formatted_de %}{{ page.date | date:"%d.%m.%Y" }}{{ post.date | date:"%d.%m.%Y" }}{% endcapture %}
+{% capture date_formatted_en %}{{ page.date | date:"%Y-%m-%d" }}{{ post.date | date:"%Y-%m-%d" }}{% endcapture %}
 {% capture has_date %}{{ date | size }}{% endcapture %}
 
 {% capture updated %}{{ page.updated }}{{ post.updated }}{% endcapture %}
-{% capture updated_formatted %}{{ page.updated_formatted }}{{ post.updated_formatted }}{% endcapture %}
+{% capture updated_formatted_de %}{{ page.updated_formatted }}{{ post.updated_formatted }}{% endcapture %}
+{% capture updated_formatted_en %}{{ page.updated_formatted }}{{ post.updated_formatted }}{% endcapture %}
 {% capture was_updated %}{{ updated | size }}{% endcapture %}
 
 {% if has_date != '0' %}
-{% capture time %}<span class="published"><i class="icon-calendar"></i> <em>Veröffentlicht am</em> <time datetime="{{ date | datetime | date_to_xmlschema }}" pubdate{% if updated %} data-updated="true"{% endif %}>{{ date_formatted }}</time></span>{% endcapture %}
+  {% capture time %}
+    {% if page.language == "de" %}
+    <span class="published"><i class="icon-calendar"></i> <em>Veröffentlicht am</em> <time datetime="{{ date | datetime | date_to_xmlschema }}" pubdate{% if updated %} data-updated="true"{% endif %}>{{ date_formatted_de }}</time></span>
+    {% endif %}
+    {% if page.language == "en" %}
+    <span class="published"><i class="icon-calendar"></i> <em>Published on</em> <time datetime="{{ date | datetime | date_to_xmlschema }}" pubdate{% if updated %} data-updated="true"{% endif %}>{{ date_formatted_en }}</time></span>
+    {% endif %}
+  {% endcapture %}
 {% endif %}
 
 {% if was_updated != '0' %}
-{% capture updated %}<span class="updated"><i class="icon-calendar"></i> <em>Bearbeitet am</em> <time datetime="{{ updated | datetime | date_to_xmlschema }}" class="updated">{{ updated_formatted }}</time></span>{% endcapture %}
+  {% capture updated %}
+    {% if page.language == "de" %}
+    <span class="updated"><i class="icon-calendar"></i> <em>Bearbeitet am</em> <time datetime="{{ updated | datetime | date_to_xmlschema }}" class="updated">{{ updated_formatted_de }}</time></span>
+    {% endif %}
+    {% if page.language == "en" %}
+    <span class="updated"><i class="icon-calendar"></i> <em>Edited on</em> <time datetime="{{ updated | datetime | date_to_xmlschema }}" class="updated">{{ updated_formatted_en }}</time></span>
+    {% endif %}
+  {% endcapture %}
 {% else %}{% assign updated = false %}{% endif %}
