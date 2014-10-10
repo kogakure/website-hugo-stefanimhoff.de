@@ -17,6 +17,14 @@
 
   .verse-list & {
     margin-bottom: 0;
+
+    p {
+      text-align: center;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
   }
 
   @include breakpoint($content-medium) {
