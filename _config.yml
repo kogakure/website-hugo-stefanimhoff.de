@@ -116,7 +116,14 @@ lunr_search:
 
 # Zapfen
 # ------
-attribution_name: "european larch"
-attribution_url: "https://www.flickr.com/photos/suttonhoo22/616628892/"
-attribution_author: "Dayna Bateman"
+# attribution_name: "european larch"
+# attribution_url: "https://www.flickr.com/photos/suttonhoo22/616628892/"
+# attribution_author: "Dayna Bateman"
+# attribution_creative_commons: true
+
+# Halloween
+# ---------
+attribution_name: "25/50"
+attribution_url: "https://www.flickr.com/photos/mmortah/5115158216"
+attribution_author: "Marian Hilditch"
 attribution_creative_commons: true
