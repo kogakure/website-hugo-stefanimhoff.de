@@ -2,17 +2,7 @@
 // Imports
 // ============================================================================
 
-// @import "compass"; // @TODO: Remove
-// @import "compass/css3/user-interface"; // @TODO: Remove
-// @import "singularitygs"; // @TODO: Try libsass, needs full support of Ruby Sass 3.3 (Bower)
-// @import "toolkit"; // @TODO: Do I even need this? Needs full support of Ruby Sass 3.3 (Bower)
-// @import "breakpoint"; // @TODO: Test, but should be compatible with libsass (Bower)
-// @import "modular-scale"; // @TODO: Works with libsass, try out (Bower)
-// @import "color-schemer"; // @TODO: Try (Bower)
-
 @import "../../_bower_components/singularity/stylesheets/singularitygs";
 @import "../../_bower_components/breakpoint-sass/stylesheets/breakpoint";
 @import "../../_bower_components/sass-toolkit/stylesheets/toolkit";
 @import "../../_bower_components/modular-scale/stylesheets/modular-scale";
-// @import "../../_bower_components/scss-blend-modes/stylesheets/blend-modes";
-// @import "../../_bower_components/color-schemer/stylesheets/color-schemer";
