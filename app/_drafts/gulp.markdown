@@ -140,7 +140,7 @@ I will create another folder within my `tasks` folder with the name `development
 
 {% figure code-figure "watch.js" %}
 {% highlight javascript %}
-var gulp   = require('gulp');
+var gulp = require('gulp');
 
 /**
  * Start browsersync task and then watch files for changes
