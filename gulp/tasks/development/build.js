@@ -11,5 +11,5 @@ gulp.task('build', function(callback) {
     'scripts',
     'images',
     'copy:fonts'
-  ], callback);
+  ], 'base64', callback);
 });

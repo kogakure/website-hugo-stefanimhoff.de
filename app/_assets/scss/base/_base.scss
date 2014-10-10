@@ -289,7 +289,7 @@ b {
 // ----------------------------------------------------------------------------
 mark {
   background-color: transparent;
-  background-image: inline-image("css/mark-center.png");
+  background-image: url("/assets/images/css/mark-center.png");
   background-size: 25px 21px;
   color: rgba($black, 0.75);
   position: relative;
@@ -306,13 +306,13 @@ mark {
   }
 
   &:before {
-    background-image: inline-image("css/mark-left.png");
+    background-image: url("/assets/images/css/mark-left.png");
     left: -5px;
     top: 0;
   }
 
   &:after {
-    background-image: inline-image("css/mark-right.png");
+    background-image: url("/assets/images/css/mark-right.png");
     bottom: 0;
     right: -5px;
   }
