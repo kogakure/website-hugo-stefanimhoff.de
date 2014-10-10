@@ -1,8 +1,7 @@
 var gulp         = require('gulp');
 var plumber      = require('gulp-plumber');
 var browsersync  = require('browser-sync');
-// var sass         = require('gulp-ruby-sass'); // @TODO: Try RubyLib
-var sass         = require('gulp-sass');
+var sass         = require('gulp-ruby-sass');
 var gulpFilter   = require('gulp-filter');
 var changed      = require('gulp-changed');
 var autoprefixer = require('gulp-autoprefixer');
@@ -28,28 +27,18 @@ gulp.task('sass', function() {
 
   browsersync.notify('Compiling Sass');
 
-  // return gulp.src(config.sass.src)
-  //   .pipe(plumber())
-  //   .pipe(changed(config.sass.dest)) // Ignore unchanged files
-  //   .pipe(sass(sassConfig))
-  //   .pipe(sourcemaps.init())
-  //   .pipe(autoprefixer({
-  //     browsers: config.autoprefixer.browsers,
-  //     cascade: config.autoprefixer.cascade
-  //   }))
-  //   .pipe(filter) // Don’t write sourcemaps of sourcemaps
-  //   .pipe(sourcemaps.write('.', { includeContent: false }))
-  //   .pipe(filter.restore()) // Restore original files
-  //   .pipe(gulp.dest(config.sass.dest))
-  //   .pipe(browsersync.reload({ stream: true }));
-
   return gulp.src(config.sass.src)
     .pipe(plumber())
-    .pipe(changed(config.sass.dest))
-    .pipe(sass())
+    .pipe(changed(config.sass.dest)) // Ignore unchanged files
+    .pipe(sass(sassConfig))
     .pipe(sourcemaps.init())
     .pipe(autoprefixer({
       browsers: config.autoprefixer.browsers,
       cascade: config.autoprefixer.cascade
     }))
+    .pipe(filter) // Don’t write sourcemaps of sourcemaps
+    .pipe(sourcemaps.write('.', { includeContent: false }))
+    .pipe(filter.restore()) // Restore original files
+    .pipe(gulp.dest(config.sass.dest))
+    .pipe(browsersync.reload({ stream: true }));
 });

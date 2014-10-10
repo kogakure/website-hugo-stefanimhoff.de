@@ -1,5 +1,0 @@
-require 'singularitygs'
-require 'color-schemer'
-require 'toolkit'
-require 'modular-scale'
-require 'breakpoint'
