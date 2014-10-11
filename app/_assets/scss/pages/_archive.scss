@@ -3,11 +3,16 @@
 // ============================================================================
 
 .archive-posts {
+  h1 {
+    @include grid-span(8, 3);
+  }
+
   article {
     @include clearfix;
+    clear: both;
 
     h2 {
-      @include grid-span(9, 4, 12);
+      @include grid-span(9, 3, 12);
       font-size: $font-scale-h4;
       line-height: 1.5;
 
@@ -24,7 +29,7 @@
 
     time {
       @extend %sans-font;
-      @include grid-span(3, 1, 12);
+      @include grid-span(2, 1, 12);
       color: rgba($dark-grey, 0.3);
       line-height: 2.2;
       text-align: right;

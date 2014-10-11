@@ -8,5 +8,4 @@ gem 'scss-lint'                   # Check SCSS syntax
 gem 'nokogiri', '~> 1.6.3.1'      # HTML, XML parser for lunr search
 gem 'json', '~> 1.8.1'            # JSON
 gem 'stringex', '~> 2.5.2'        # String operations on markdown
-gem 'i18n', '~> 0.6.11'           # Localizing dates
 gem 'rubypants', '~> 0.2.0'       # Needed for "Pullquote" plugin

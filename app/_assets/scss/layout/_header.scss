@@ -65,75 +65,11 @@
     }
   }
 
-  h1 {
-    @include grid-span(7, 4);
-    color: $header-headline;
-    float: none;
-    line-height: 1;
-    padding-top: 15px;
-    text-shadow: 0 0 6px $black;
-
-    @include breakpoint(700px) {
-      line-height: 1;
-      padding-top: 5px;
-    }
-
-    @include breakpoint(500px) {
-      font-size: 2em;
-      padding-left: 5px;
-      padding-top: 10px;
-    }
+  .logo {
+    @include grid-span(2, 1);
 
     @include breakpoint(480px) {
-      @include grid-span(8, 4);
-      line-height: 1em;
-      padding: 20px 0 0;
-      top: 2em;
-    }
-
-    @include breakpoint(430px) {
-      @include grid-span(7, 5);
-    }
-
-
-    .home & {
-      margin-bottom: 0;
-    }
-  }
-
-  h2 {
-    @include grid-span(7, 4);
-    clear: both;
-    color: $header-subheadline;
-    font-size: $font-scale-h3;
-    line-height: 1.2;
-    position: relative;
-    text-shadow: 0 0 5px $white, 0 0 5px $white, 0 0 5px $white;
-    top: -3em;
-
-    @include breakpoint(700px) {
-      font-size: 1.4em;
-      line-height: 1.2em;
-      top: -0.9em;
-    }
-
-    @include breakpoint(500px) {
-      font-size: 1.2em;
-      top: -2.2em;
-    }
-
-    @include breakpoint(430px) {
-      @include grid-span(7, 5);
-      font-size: 0.8em;
-      top: 3.8em;
-    }
-  }
-
-  .logo {
-    @include grid-span(2, 2);
-
-    @include breakpoint(430px) {
-      @include grid-span(3, 2);
+      @include grid-span(3, 1);
     }
 
     .icon-logo {
@@ -145,12 +81,9 @@
       text-align: right;
       text-shadow: 0 1px 2px $black;
 
-      @include breakpoint(430px) {
-        padding: 10px 0 0;
-      }
-
-      @include breakpoint(480px) {
-        padding: 10px 0 0;
+      @include breakpoint(340px) {
+        font-size: 60px;
+        margin-top: 5px;
       }
 
       .home & {
@@ -158,9 +91,77 @@
 
         @include breakpoint(700px) {
           font-size: 60px;
+          margin-top: 10px;
         }
       }
     }
   }
-}
 
+  .site-info {
+    @extend %sans-font;
+    @include enable-ligatures;
+    @include grid-span(8, 3);
+    color: $header-headline;
+    font-size: $font-scale-h1;
+    line-height: 1;
+    padding-top: 15px;
+    text-shadow: 0 0 6px $black;
+
+    @include breakpoint(480px) {
+      @include grid-span(7, 4);
+    }
+
+    a {
+      border: 0;
+      color: $header-headline;
+      text-decoration: none;
+      vertical-align: top;
+
+      @include breakpoint(480px) {
+        font-size: 50px;
+      }
+
+      @include breakpoint(380px) {
+        font-size: 40px;
+      }
+    }
+  }
+
+  .home & .site-info {
+    @include breakpoint(480px) {
+      @include grid-span(7, 4);
+    }
+
+    h1 {
+      margin-bottom: 0;
+
+      @include breakpoint(800px) {
+        font-size: 60px;
+        margin-top: 5px;
+      }
+
+      @include breakpoint(620px) {
+        font-size: 40px;
+      }
+
+      @include breakpoint(480px) {
+        font-size: 25px;
+      }
+    }
+
+    h2 {
+      color: $header-subheadline;
+      font-size: $font-scale-h3;
+      line-height: 1.2;
+      text-shadow: 0 0 5px $white, 0 0 5px $white, 0 0 5px $white;
+
+      @include breakpoint(800px) {
+        font-size: 20px;
+      }
+
+      @include breakpoint(620px) {
+        font-size: 15px;
+      }
+    }
+  }
+}
