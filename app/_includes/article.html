@@ -1,4 +1,5 @@
 {% unless index %}
+  <h1>{% if page.title or post.title %}{{ page.title }}{% else %}{{ site.data.settings.title }}{% endif %}</h1>
   <div class="article-body">{{ content | ampersand | abbr | nospace }}</div>
 {% endunless %}
 

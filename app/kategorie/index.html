@@ -5,4 +5,5 @@ footer: false
 body_class: archive
 ---
 
+<h1>{% if page.title or post.title %}{{ page.title }}{% else %}{{ site.data.settings.title }}{% endif %}</h1>
 {% include categories_list.html %}
