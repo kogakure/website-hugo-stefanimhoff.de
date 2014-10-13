@@ -7,7 +7,6 @@ var config = require('../../config').revision;
  * write a manifest file
  */
 gulp.task('revision', function() {
-
   return gulp.src(config.src.assets, { base: config.src.base })
     .pipe(gulp.dest(config.dest.assets))
     .pipe(rev())
