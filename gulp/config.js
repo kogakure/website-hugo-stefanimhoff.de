@@ -218,6 +218,7 @@ module.exports = {
     }]
   },
   rsync: {
+    src: 'build/production/**',
     destination: '~/webapps/stefanimhoff/',
     root: production,
     hostname: 'stefanimhoff.de',
