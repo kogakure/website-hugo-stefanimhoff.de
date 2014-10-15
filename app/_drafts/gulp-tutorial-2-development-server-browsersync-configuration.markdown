@@ -1,7 +1,7 @@
 ---
 layout: post
 language: "en"
-title: "Introduction to Gulp.js 2: Development Server with BrowserSync and Configuration"
+title: "Introduction to Gulp.js 2: Server with BrowserSync and Configuration"
 author: "Stefan Imhoff"
 excerpt: ""
 categories:
