@@ -1,21 +1,34 @@
 ---
 layout: post
 language: "en"
-title: "Introduction to Gulp.js (5) – JavaScript"
+title: "Introduction to Gulp.js 5: Bundling JavaScript with Browserify"
 author: "Stefan Imhoff"
 excerpt: ""
 categories:
+- Code
 tags:
+- gulp
+- tutorial
+- automation
+- javascript
+- browserify
+- commonjs
 ---
 
+This is the fifth part of my series *Introduction to Gulp.js*. Today I will show how to use Browserify to bundle your JavaScript and use CommonJS modules to run node modules in the Browser.
+
+[IMAGE]
+
 {% include articles/gulp-toc.html %}
-## JavaScript
-My scripts are a little more complex, because I use [Browserify](http://browserify.org/) to bundle my JavaScript. If this is too complex for your needs you may just use [gulp-concat](https://www.npmjs.org/package/gulp-concat) to concatenate all your JavaScript files into one file.
+
+## Browserify
+This task is a little more complex, because I use [Browserify](http://browserify.org/) to bundle my JavaScript. If this is too complex for your needs you may just use [gulp-concat](https://www.npmjs.org/package/gulp-concat) to concatenate all your JavaScript files into one file.
 
 Browserify is an awesome tool, which allows you to use node modules in your browser. Over 70% of the node modules will run right away! And it will bundle up all of your dependencies. If you want to find out more about writing CommonJS modules for Browserify have a look into the documentation.
 
-This task I saw in the [gulp-starter](https://github.com/greypants/gulp-starter). It’s quite long but clever. It allows to create multiple files with Browserify. I create two files. One file loaded in the head of my website containing Modernizr and one file with the rest of my JavaScript at the bottom.
+This task I saw in the [gulp-starter](https://github.com/greypants/gulp-starter). It’s quite long but clever. It allows to create multiple files with Browserify. I create two files. One file is loaded in the head of my website containing [Modernizr](http://modernizr.com/) and one file with the rest of my JavaScript at the bottom.
 
+## Creating JavaScript files with Browserify
 Install the node modules needed for this task:
 
 {% highlight sh %}
@@ -173,3 +186,106 @@ module.exports = function() {
 };
 {% endhighlight %}
 {% endfigure %}
+
+## Using CommonJS Modules
+Writing CommonJS modules is quite nice. You just export your function, object, string, integer or whatever you like to export as a module or just individually:
+
+{% figure code-figure "math.js" %}
+{% highlight javascript %}
+exports.add = function() {
+  var sum = 0, i = 0, args = arguments, 1 = args.length;
+  while (i < 1) {
+    sum += args[i++];
+  }
+  return sum;
+};
+{% endhighlight %}
+{% endfigure %}
+
+{% figure code-figure "navigation.js" %}
+{% highlight javascript %}
+module.exports = {
+  toggleNavigation: function() {
+    ...
+  }
+};
+{% endhighlight %}
+{% endfigure %}
+
+Later you import your modules and use them:
+
+{% figure code-figure "increment.js" %}
+{% highlight javascript %}
+var add = require('./math').add;
+
+exports.increment = function(val) {
+  return add(val, 1);
+};
+{% endhighlight %}
+{% endfigure %}
+
+{% figure code-figure "application.js" %}
+{% highlight javascript %}
+var navigation = require('./navigation.js');
+var triggerNavigation = document.querySelector('.toggle-navigation');
+
+document.addEventListener('DOMContentLoaded', function() {
+  triggerNavigation.addEventListener('click', navigation.toggleNavigation);
+});
+{% endhighlight %}
+{% endfigure %}
+
+## Loading non-CommonJS files
+But one problem remains: How do I use JavaScript files, which aren’t written in CommonJS syntax? Like Modernizr oder jQuery?
+
+I need to install `browserify-shim`:
+
+{% highlight sh %}
+$ npm install --save-dev browserify-shim
+{% endhighlight %}
+
+I open my `package.json` file and need to add a few lines:
+
+{% figure code-figure "package.json" %}
+{% highlight json %}
+{
+  ...
+  "browser": {
+    "modernizr": "./app/_bower_components/modernizr/modernizr.js",
+    "jquery": "./app/_bower_components/jquery/dist/jquery.js"
+  },
+  "browserify-shim": {
+    "modernizr": "Modernizr",
+    "jquery": "$"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "devDependencies": {
+    ...
+  }
+}
+{% endhighlight %}
+{% endfigure %}
+
+In the section `"browser"` you point Browserify-Shim to the assset you want to shim. I use [Bower](http://bower.io/) and have installed my packages into `app/_bower_components/`. The name you choose is the name you have to require later in your JavaScripts.
+
+Within `"browerify-shim"` you decide where to map this require to. To include jQuery or Modernizr later you would write:
+
+{% figure code-figure "application.js" %}
+{% highlight javascript %}
+require('jquery');
+require('modernizr');
+
+$(function() {
+  console.log("jQuery and Modernizr loaded");
+});
+{% endhighlight %}
+{% endfigure %}
+
+You have to run `npm install` once you added a new entry to your `package.json` file.
+
+## Conclusion
+This concludes the fifth part of my series *Introduction to Gulp.js*. We learned how to use Browserify to bundle JavaScript files, how to use CommonJS modules to run node in your Browser, and how to use non-CommonJS JavaScript files.
