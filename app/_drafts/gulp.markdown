@@ -426,7 +426,7 @@ And I run the CSS files through Autoprefixer, which will add vendor prefixes. I 
 You might have guessed: If you want to use Compass, just set the option `compass` to `true`.
 
 ## JavaScript
-My scripts are a little more complex, because I use [Browserify](http://browserify.org/) to bundle my JavaScript. If this is too complex for your needs you may just use [gulp-concat](https://www.npmjs.org/package/gulp-concat) to concatinate all your JavaScript files into one file.
+My scripts are a little more complex, because I use [Browserify](http://browserify.org/) to bundle my JavaScript. If this is too complex for your needs you may just use [gulp-concat](https://www.npmjs.org/package/gulp-concat) to concatenate all your JavaScript files into one file.
 
 Browserify is an awesome tool, which allows you to use node modules in your browser. Over 70% of the node modules will run right away! And it will bundle up all of your dependencies. If you want to find out more about writing CommonJS modules for Browserify have a look into the documentation.
 
@@ -676,9 +676,9 @@ gulp.task('fontcustom', shell.task([
 {% endfigure %}
 
 ## Base64 encoded images
-The last task executed by my `build` task is a task, which replaces the urls of small images in my CSS files with Base64 encoded images. This way the image gets embedded into the CSS file and doesn’t need an additional server request. If the images are not to large this will speed up loading a lot.
+The last task executed by my `build` task is a task, which replaces the URLs of small images in my CSS files with Base64 encoded images. This way the image gets embedded into the CSS file and doesn’t need an additional server request. If the images are not to large this will speed up loading a lot.
 
-I use a lot of small size patterns on my website because I doesn’t like the *Flat Design* approach a lot. The real world isn’t flat. Nowhere. There is always structure, pattern, shade and light. The patterns I use are from the fantastic website [Subtle Pattern](http://subtlepatterns.com/). The have a few hundret really nice subtle patterns.
+I use a lot of small size patterns on my website because I doesn’t like the *Flat Design* approach a lot. The real world isn’t flat. Nowhere. There is always structure, pattern, shade and light. The patterns I use are from the fantastic website [Subtle Pattern](http://subtlepatterns.com/). The have a few hundred really nice subtle patterns.
 
 To load the background pattern I use SCSS like this:
 
@@ -744,7 +744,7 @@ var base64 = require('gulp-base64');
 var config = require('../../config').base64;
 
 /**
- * Replace urls in CSS fies with base64 encoded data
+ * Replace URLs in CSS fies with base64 encoded data
  */
 gulp.task('base64', ['sass'], function() {
   return gulp.src(config.src)
@@ -1054,6 +1054,13 @@ gulp.task('build:production', function(callback) {
 A lot is going on in this task: I run tasks in a specific order with `run-sequence`. First I delete the assets folder for a fresh creation. Then I run the Jekyll build for production, create the development assets like I did in development. And after this is finished I start with optimizing my assets and revisioning of the files.
 
 ## Jekyll for Production
+The Jekyll task is quite similar except for two things: I create my site to the production folder and I add another config file `_config.build.yml` as an option (be carefull, add no space between two files).
+
+My Jekyll production config just overwrites some values as the `url`, hide future posts (`future: false`) or hide drafts (`show_drafts: false`).
+
+{% aside aside-hint %}
+<p>To speed up generation of your site in development, you may set <code>limit_post: 5</code>, which will only generate the last five posts. Additionally I set <code>future: true</code> and <code>show_drafts: true</code> to see Drafts and Posts with a future date.</p>
+{% endaside %}
 
 {% figure code-figure "config.js" %}
 {% highlight javascript %}
@@ -1089,9 +1096,6 @@ gulp.task('jekyll:production', function(done) {
 {% endhighlight %}
 {% endfigure %}
 
-The Jekyll tasks is quite similar except for two things: I create my site to the production folder and I add another config file `_config.build.yml` as an option (be carefull, add no space between two files).
-
-My Jekyll production config just overwrites some values as the `url`, hide future posts (`future: false`) or hide drafts (`show_drafts: false`).
 
 ## Optimize CSS
 Next I will write a task, which will optimize the CSS. Compass is able to minimize the CSS for production, but this Gulp task squeezed another 6 KB out of my files.
@@ -1176,10 +1180,10 @@ gulp.task('optimize:js', function() {
 {% endhighlight %}
 {% endfigure %}
 
-This tasks will take the JavaScript files, minimize and optimize them, put them to my production assets folder and output the size.
+This task will take the JavaScript files, minimize and optimize them, put them to my production assets folder and output the size.
 
 ## Optimize Images
-Next I will take care of the images. The need to be copied to the production assets folder and crunshed (reduce the size). This may take a file, depending on the size and amount of your images, that’s why I only optimize the images for production.
+Next I will take care of the images. They need to be copied to the production assets folder and crunshed (reduce the size). This may take a file, depending on the size and amount of your images, that’s why I only optimize the images for production.
 
 {% aside aside-hint %}
 <p>To get a more detailed output in Gulp you may add a flag to your command:<br> <code>gulp publish --verbose</code>. It will list each individual image for the optimize task and how much it was compressed.</p>
@@ -1234,7 +1238,7 @@ gulp.task('optimize:images', function() {
 This task will take my images, optimize them, copy them to the assets folder and output the size.
 
 ## Copy Vector Fonts for Production
-Another boring and short tasks, which is doing just one simple thing: Copy the fonts to the production assets folder. But that’s the way Gulp was build. Small tasks doing small things.
+Another boring and short tasks, which is doing just one simple thing: Copy the fonts to the production assets folder. But that’s the way Gulp was build. Have small tasks that do small things.
 
 {% figure code-figure "config.js" %}
 {% highlight javascript %}
@@ -1270,11 +1274,11 @@ Optimizing of my assets is done. But one important thing is missing: Revisioning
 
 For better performance one should always cache the assets for a very long time. Hard drives are huge these days but speed for requesting assets isn’t still that awesome (escpecially on mobile). But one problem occurs if you cache the assets on a hard drive of a visitor. If you update a file, the browser will still serve the old file. And if you cache it for 10 years the user will never get the new asset, unless s/he deletes the browser cache manually. But which user does this?
 
-That why we need to rename every file that has been changed to invalidate the cache. I remeber the days when we had to add a number by hand to our assets like `image_r1.png`, `image_r2.png`. This sucks. Today this is usually done by reading the content of a file and generating a hash checksum. This will be always the same, unless something gets changed.
+That’s why we need to rename every file that has been changed to invalidate the cache. I remember the days when we had to add a number by hand to our assets like `image_r1.png`, `image_r2.png`. This sucks. Now reading the content of a file and generating a hash achieve this. This will be always the same, unless something gets changed.
 
 My next tasks will rename all assets. This way the `application.css` will become `application-f084d03b.css`. If I change just one dot in this file it will get a new hash.
 
-I install `gulp-rev` which will handle this renaming of assets:
+I install `gulp-rev`, which will handle this renaming of assets:
 
 {% highlight sh %}
 $ npm install --save-dev gulp-rev
@@ -1369,7 +1373,7 @@ gulp.task('rev:collect', function() {
 {% endhighlight %}
 {% endfigure %}
 
-This task will look into the `manifest.json` file and replace every path to one of the assets in every HTML, CSS, JavaScript, Text etc.
+This task will look into the `manifest.json` file and replace every path to one of the assets in every HTML, CSS, JavaScript, and Text etc.
 
 Our production build is finished! Only one thing is missing to complete this series of tutorials about Gulp: Deploying the Website to my server.
 
@@ -1447,4 +1451,4 @@ gulp.task('rsync', function() {
 {% endfigure %}
 
 ## Conclusion
-Developing and deploying with Gulp is fun. I like the UNIX philosophy of Gulp, to have small files which do one task and connect these to larger workflows. And because I keeped my Gulp tasks small, pluggable and easily shareable, I was able to add Gulp to my second website in less than five minutes.
+Developing and deploying with Gulp is fun. I like the UNIX philosophy of Gulp, to have small files, which do one task and connect these to larger workflows. And because I keeped my Gulp tasks small, pluggable and easily shareable, I was able to add Gulp to my second website in less than five minutes.
