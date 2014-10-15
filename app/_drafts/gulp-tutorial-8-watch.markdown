@@ -8,6 +8,8 @@ categories:
 tags:
 ---
 
+{% include articles/gulp-toc.html %}
+
 ## Watch (2)
 Do you remember the `watch` task from the beginning? This just started BrowserSync and the development server, but didn’t watch for anything. I will write these watch tasks now.
 

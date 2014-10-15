@@ -8,6 +8,8 @@ categories:
 tags:
 ---
 
+{% include articles/gulp-toc.html %}
+
 ## Copy Vector Fonts for Production
 Another boring and short tasks, which is doing just one simple thing: Copy the fonts to the production assets folder. But that’s the way Gulp was build. Have small tasks that do small things.
 

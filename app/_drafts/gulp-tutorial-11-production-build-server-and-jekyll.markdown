@@ -8,6 +8,7 @@ categories:
 tags:
 ---
 
+{% include articles/gulp-toc.html %}
 
 ## Production
 In development I used the `default` Gulp tasks to run the development server, building the assets and watching for changes. For production I will need another entry point.

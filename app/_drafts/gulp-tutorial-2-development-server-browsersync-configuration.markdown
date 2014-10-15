@@ -1,23 +1,33 @@
 ---
 layout: post
 language: "en"
-title: "Introduction to Gulp.js (2) – Development Server and Configuration"
+title: "Introduction to Gulp.js 2: Development Server with BrowserSync and Configuration"
 author: "Stefan Imhoff"
 excerpt: ""
 categories:
+- Code
 tags:
+- gulp
+- tutorial
+- automation
 ---
 
+This is the seconds part of my series *Introduction to Gulp.js*. Today I will write the first few Gulp tasks and set up a development server with BrowserSync. And I will start to write a configuration file.
+
+[IMAGE]
+
+{% include articles/gulp-toc.html %}
+
 ## Installing Gulp
-To run our `gulpfile.js` I need to install gulp:
+To run my `gulpfile.js` I need to install gulp:
 
 {% highlight sh %}
 $ npm install --save-dev gulp
 {% endhighlight %}
 
-If you run the command `gulp` on you command line you’ll get an error message <samp>Task 'default' is not in your gulpfile</samp>. This is because I haven’t written a gulp task until now.
+If I run the command `gulp` on my command line I get an error message <samp>Task 'default' is not in your gulpfile</samp>. This is because I haven’t written a gulp task until now.
 
-Create inside the `gulp/tasks` folder a file `default.js` and write this code:
+I create inside the `gulp/tasks` folder a file `default.js` and write this code:
 
 {% figure code-figure "default.js" %}
 {% highlight javascript %}
@@ -31,7 +41,7 @@ gulp.task('default', function() {
 
 I know … I said I’m sick of *Hello World* tutorials, but this won’t last very long. I’ll soon replace it with some valuable code. So stay with me.
 
-If you execute the command `gulp` this gulp task will output <samp>Hello Gulp!</samp> to the console.
+If you execute the command `gulp` this Gulp task will output <samp>Hello Gulp!</samp> to the console.
 
 I will speed up the pace a little bit from now on.
 
@@ -46,7 +56,7 @@ gulp.task('default', ['watch']);
 {% endhighlight %}
 {% endfigure %}
 
-You may run multiple tasks at once, which is why I write our `watch` task in an Array. Be careful: These tasks will run in parallel, not in a sequential order. Later I will show you how to run tasks in a predefined order.
+It’s possible to run multiple tasks at once, which is why I write my `watch` task in an Array. Be careful: These tasks will run in parallel, not in a sequential order. Later I will show how to run tasks in a predefined order.
 
 I will create another folder within my `tasks` folder with the name `development` and put all tasks needed for development in this folder. This is not necessary, but I did so:
 
@@ -93,9 +103,9 @@ gulp.task('browsersync', ['build'], function() {
 {% endhighlight %}
 {% endfigure %}
 
-This code does needs some explanation: First I load Gulp and BrowserSync which are needed in this tasks. Then I load the config for BrowserSync. I will create this config file in a moment. Keeping all configurations out of our tasks will make it more usable and it can be easily shared between different projects.
+This code does needs some explanation: First I load Gulp and BrowserSync which are needed in this task. Then I load the configuration for BrowserSync. I will create this configuration file in a moment. Keeping all configurations out of the tasks will make them more usable and they can be easily shared between different projects.
 
-The second thing worth mentioning is `['build']`. This does mean before starting BrowserSync it first will run the `build` Gulp task (which I will write later).
+The second thing worth mentioning is `['build']`. This does mean before starting BrowserSync it first will run the `build` Gulp task (which I will write later). Ever Gulp task needs a name. As second parameter you can either add a JavaScript callback or tasks or both.
 
 ## Configuration
 I create a new file `config.js` in the main Gulp folder:
@@ -130,3 +140,5 @@ First I extract some paths needed over and over again later to variables and the
 
 Jekyll wipes out all files on recreation and to speed up development I have to be creative, because I don’t want to recreate all assets on every Jekyll build. That’s why I serve more than one folder. I serve the folder `build/development`, which will hold the files created by Jekyll. My assets I will generate into a different folder `build/assets` so Jekyll doesn’t wiped them out. And additionally the folder `app/_assets` to link source maps later.
 
+## Conclusion
+This concludes the second part of my series *Introduction to Gulp.js*. We learned how to install Gulp.js, how to write a Gulp task, run other tasks and set up a development server with BrowserSync.

@@ -8,6 +8,7 @@ categories:
 tags:
 ---
 
+{% include articles/gulp-toc.html %}
 ## JavaScript
 My scripts are a little more complex, because I use [Browserify](http://browserify.org/) to bundle my JavaScript. If this is too complex for your needs you may just use [gulp-concat](https://www.npmjs.org/package/gulp-concat) to concatenate all your JavaScript files into one file.
 

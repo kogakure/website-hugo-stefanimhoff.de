@@ -8,6 +8,8 @@ categories:
 tags:
 ---
 
+{% include articles/gulp-toc.html %}
+
 ## Base64 encoded images
 The last task executed by my `build` task is a task, which replaces the URLs of small images in my CSS files with Base64 encoded images. This way the image gets embedded into the CSS file and doesn’t need an additional server request. If the images are not to large this will speed up loading a lot.
 

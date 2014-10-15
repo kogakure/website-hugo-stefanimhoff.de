@@ -7,6 +7,7 @@ excerpt: ""
 categories:
 tags:
 ---
+{% include articles/gulp-toc.html %}
 
 ## Sass/CSS
 I use [Sass](http://sass-lang.com/) as preprocessor for my CSS files. If you like to use [Compass](http://compass-style.org/) you just have to set an option for this task.

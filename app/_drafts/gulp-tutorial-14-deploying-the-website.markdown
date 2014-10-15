@@ -8,6 +8,7 @@ categories:
 tags:
 ---
 
+{% include articles/gulp-toc.html %}
 
 ## Deploying the Website
 There are a lot of possibilites to get a website on the server. You may use FTP, SFTP, SCP, SCP2, Rsync or Git. I use Rsync because it’s fast and easy to use.

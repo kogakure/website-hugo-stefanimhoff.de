@@ -8,6 +8,7 @@ categories:
 tags:
 ---
 
+{% include articles/gulp-toc.html %}
 
 ## Linting SCSS and JavaScript
 I decided to Lint my SCSS files and not the CSS files, because it’s kind of pointless to lint generated CSS. But you can do this with [gulp-csslint](https://www.npmjs.org/package/gulp-csslint/).

@@ -8,6 +8,8 @@ categories:
 tags:
 ---
 
+{% include articles/gulp-toc.html %}
+
 ## Optimize CSS
 Next I will write a task, which will optimize the CSS. Compass is able to minimize the CSS for production, but this Gulp task squeezed another 6 KB out of my files.
 

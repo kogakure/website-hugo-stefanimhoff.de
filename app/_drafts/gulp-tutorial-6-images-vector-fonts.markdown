@@ -8,6 +8,7 @@ categories:
 tags:
 ---
 
+{% include articles/gulp-toc.html %}
 
 ## Images
 The image task is a simple one again. All it does for now is copying the images to the asset directory. We will optimize images later during the production build.

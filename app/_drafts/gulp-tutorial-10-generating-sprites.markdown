@@ -8,6 +8,7 @@ categories:
 tags:
 ---
 
+{% include articles/gulp-toc.html %}
 
 ## Generating Sprites
 You don’t need Compass to create sprites, Gulp is totally capable of achieving this tasks.
