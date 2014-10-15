@@ -13,7 +13,7 @@ tags:
 
 Die Installation von Subversion ist relativ leicht und schnell erledigt, für die Bedienung kann man eine der zahllosen grafischen Oberflächen oder das Terminal benutzten. In diesem Teil der Reihe stelle ich ein paar Programme vor und zeige wie man Subversion aus dem Quellcode selber kompiliert.
 
-{% aside hinweis %}
+{% aside aside-hint %}
 <p>Der Inhalt dieses Artikels ist noch aktuell, doch kann ich nur dringend dazu raten, sich die fantastische Alternative zu Subversion anzusehen: <a href="/2007/versionskontrolle-mit-git/">Git</a>.</p>
 {% endaside %}
 

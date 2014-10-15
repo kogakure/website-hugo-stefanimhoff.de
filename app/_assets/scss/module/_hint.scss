@@ -2,19 +2,17 @@
 // Hinweis
 // ============================================================================
 
-.hinweis {
-  background: $header-background;
-  border-radius: 10px;
+.aside-hint {
+  @extend %sans-font;
+  background: rgba($white, 0.5);
+  border-radius: 5px;
+  border: 2px solid $white;
   color: $logo-color;
+  font-size: modular-scale(1);
   margin-bottom: $default-margin-bottom;
   padding: 10px 15px;
 
-  p {
+  p:last-child {
     margin-bottom: 0;
-  }
-
-  a {
-    @include link-colors($white, $logo-color, $white, $white, $white);
-    border: 0;
   }
 }

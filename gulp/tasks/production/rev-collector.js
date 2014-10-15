@@ -14,5 +14,3 @@ gulp.task('rev:collect', function() {
   .pipe(collect())
   .pipe(gulp.dest(config.dest));
 });
-
-

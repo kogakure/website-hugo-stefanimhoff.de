@@ -13,7 +13,7 @@ tags:
 
 Die eigentliche Arbeit mit Subversion ist relativ leicht erklärt und gelernt. Von größeren Aktionen wie `merge` mal abgesehen.
 
-{% aside hinweis %}
+{% aside aside-hint %}
 <p>Der Inhalt dieses Artikels ist noch aktuell, doch kann ich nur dringend dazu raten, sich die fantastische Alternative zu Subversion anzusehen: <a href="/2007/versionskontrolle-mit-git/">Git</a>.</p>
 {% endaside %}
 

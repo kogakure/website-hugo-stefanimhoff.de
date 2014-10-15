@@ -17,7 +17,7 @@ module.exports = {
       port: 9999,
       files: [
         development + '/**'
-
+      ],
       notify: {
         styles: [ 'display: hidden; padding: 5px 15px; font-family: sans-serif; position: fixed; font-size: 0.9em; z-index: 9999; left: 0px; top: 0px; border-bottom-right-radius: 5px; margin: 0px; color: white; text-align: center; background-color: rgb(27, 32, 50);' ]
       }

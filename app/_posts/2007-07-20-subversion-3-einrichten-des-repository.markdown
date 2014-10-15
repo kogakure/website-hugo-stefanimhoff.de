@@ -13,7 +13,7 @@ tags:
 
 Um mit Subversion zu arbeiten, muss man sich zuerst ein *Repository* (eine Ablage/Depot) erstellen, in dem das spätere Projekt liegt.
 
-{% aside hinweis %}
+{% aside aside-hint  %}
 <p>Der Inhalt dieses Artikels ist noch aktuell, doch kann ich nur dringend dazu raten, sich die fantastische Alternative zu Subversion anzusehen: <a href="/2007/versionskontrolle-mit-git/">Git</a>.</p>
 {% endaside %}
 
