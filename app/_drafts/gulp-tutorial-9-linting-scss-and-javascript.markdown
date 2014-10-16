@@ -16,7 +16,7 @@ tags:
 - syntax
 ---
 
-This is the 9th part of my series *Introduction to Gulp.js*. Today I will use Gulp to automatically check my SCSS and JavaScript files for syntax errors and warnings.
+This is the 9th part of my series *Introduction to Gulp.js*. Today I will use Gulp.js to automatically check my SCSS and JavaScript files for syntax errors and warnings.
 
 [IMAGE]
 
@@ -87,4 +87,4 @@ gulp.task('jshint', function() {
 {% endaside %}
 
 ## Conclusion
-This concludes the 9th part of my series *Introduction to Gulp.js*. Today we learned how to use Gulp to check the syntax of SCSS and JavaScript files. This task will run continuously while I write my files and print out errors to my console the moment I created them.
+This concludes the 9th part of my series *Introduction to Gulp.js*. Today we learned how to use Gulp.js to check the syntax of SCSS and JavaScript files. This task will run continuously while I write my files and print out errors to my console the moment I created them.

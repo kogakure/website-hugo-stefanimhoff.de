@@ -12,13 +12,13 @@ tags:
 - automation
 ---
 
-This is the 2nd part of my series *Introduction to Gulp.js*. Today I will write the first few Gulp tasks and set up a development server with BrowserSync. And I will start to write a configuration file.
+This is the 2nd part of my series *Introduction to Gulp.js*. Today I will write the first few Gulp.js tasks and set up a development server with BrowserSync. And I will start to write a configuration file.
 
 [IMAGE]
 
 {% include articles/gulp-toc.html %}
 
-## Installing Gulp
+## Installing Gulp.js
 To run my `gulpfile.js` I need to install gulp:
 
 {% highlight sh %}
@@ -34,14 +34,14 @@ I create inside the `gulp/tasks` folder a file `default.js` and write this code:
 var gulp = require('gulp');
 
 gulp.task('default', function() {
-  console.log('Hello Gulp!');
+  console.log('Hello Gulp.js!');
 });
 {% endhighlight %}
 {% endfigure %}
 
 I know … I said I’m sick of *Hello World* tutorials, but this won’t last very long. I’ll soon replace it with some valuable code. So stay with me.
 
-If you execute the command `gulp` this Gulp task will output <samp>Hello Gulp!</samp> to the console.
+If you execute the command `gulp` this Gulp.js task will output <samp>Hello Gulp.js!</samp> to the console.
 
 I will speed up the pace a little bit from now on.
 
@@ -80,7 +80,7 @@ You might have heard of [LiveReload](http://livereload.com/), a tool that is wat
 
 But [BrowserSync](http://www.browsersync.io/) is even better: It does all LiveReload does, but you don’t need a browser plugin and it syncs your actions like scroll, click, refresh or filling out forms to all browsers connected. This works even with mobile devices. And BrowserSync even has support for a build in development server. That’s why I will need nothing more than BrowserSync to get a development server with live reloading.
 
-But first I install Gulp and BrowserSync:
+But first I install Gulp.js and BrowserSync:
 
 {% highlight sh %}
 $ npm install --save-dev gulp browser-sync
@@ -103,12 +103,12 @@ gulp.task('browsersync', ['build'], function() {
 {% endhighlight %}
 {% endfigure %}
 
-This code does needs some explanation: First I load Gulp and BrowserSync which are needed in this task. Then I load the configuration for BrowserSync. I will create this configuration file in a moment. Keeping all configurations out of the tasks will make them more usable and they can be easily shared between different projects.
+This code does needs some explanation: First I load Gulp.js and BrowserSync which are needed in this task. Then I load the configuration for BrowserSync. I will create this configuration file in a moment. Keeping all configurations out of the tasks will make them more usable and they can be easily shared between different projects.
 
-The second thing worth mentioning is `['build']`. This does mean before starting BrowserSync it first will run the `build` Gulp task (which I will write later). Ever Gulp task needs a name. As second parameter you can either add a JavaScript callback or tasks or both.
+The second thing worth mentioning is `['build']`. This does mean before starting BrowserSync it first will run the `build` Gulp.js task (which I will write later). Every Gulp.js task needs a name. As second parameter you can either add a JavaScript callback or tasks or both.
 
 ## Configuration
-I create a new file `config.js` in the main Gulp folder:
+I create a new file `config.js` in the main Gulp.js folder:
 
 {% figure code-figure "config.js" %}
 {% highlight javascript %}
@@ -146,4 +146,4 @@ Jekyll wipes out all files on recreation and to speed up development I have to b
 BrowserSync watches only my asset files, in order that my browser won’t reload like hell, everytime Jekyll creates one file. I will later write one task, which reloads the Browser one time after the Jekyll build is complete.
 
 ## Conclusion
-This concludes the 2nd part of my series *Introduction to Gulp.js*. We learned how to install Gulp.js, how to write a Gulp task, run other tasks and set up a development server with BrowserSync.
+This concludes the 2nd part of my series *Introduction to Gulp.js*. We learned how to install Gulp.js, how to write a Gulp.js task, run other tasks and set up a development server with BrowserSync.

@@ -23,9 +23,9 @@ This is the 12th part of my series *Introduction to Gulp.js*. Today I will write
 Every Kilobyte, which has to be loaded will slow down the loading of my website. That’s why I will minimize all my CSS and JavaScript and run my images through an optimizer, to remove as many bytes as possible. I will also add a task for minimizing HTML, but I don’t use this task, because the reduction is minimal.
 
 ## Optimize CSS
-Next I will write a task, which will optimize the CSS. Compass is able to minimize the CSS for production, but this Gulp task squeezed another 6 KB out of my files.
+Next I will write a task, which will optimize the CSS. Compass is able to minimize the CSS for production, but this Gulp.js task squeezed another 6 KB out of my files.
 
-I install the needed Gulp plugins:
+I install the needed Gulp.js plugins:
 
 {% highlight sh %}
 $ npm install --save-dev gulp-minify-css gulp-size
@@ -66,7 +66,7 @@ gulp.task('optimize:css', function() {
 This task will copy the CSS files from the assets folder, minimize them, remove comments, output the size of the file and copy them to the production assets folder.
 
 ## Optimize JavaScript
-Now the CSS is minimized and the same has to be done to the JavaScript files. I use UglifyJS for this task. If you don’t like it, go ahead and use a Google Closure or YUI compressor Gulp task.
+Now the CSS is minimized and the same has to be done to the JavaScript files. I use UglifyJS for this task. If you don’t like it, go ahead and use a Google Closure or YUI compressor Gulp.js task.
 
 {% highlight sh %}
 $ npm install --save-dev gulp-uglify
@@ -112,7 +112,7 @@ Next I will take care of the images. They need to be copied to the production as
 
 {% aside aside-hint %}
 <h4>Show more details</h4>
-<p>To get a more detailed output in Gulp you may add a flag to your command:<br> <code>gulp publish --verbose</code>. It will list each individual image for the optimize task and how much it was compressed.</p>
+<p>To get a more detailed output in Gulp.js you may add a flag to your command:<br> <code>gulp publish --verbose</code>. It will list each individual image for the optimize task and how much it was compressed.</p>
 {% endaside %}
 
 I’ll need `gulp-imagemin` for my task, which is able to minify PNG, JPG, GIF and SVG images:

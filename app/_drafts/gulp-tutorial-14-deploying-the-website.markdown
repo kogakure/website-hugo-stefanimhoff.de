@@ -92,4 +92,4 @@ gulp.task('rsync', function() {
 {% endfigure %}
 
 ## Conclusion
-This concludes the series *Introduction to Gulp.js*. Developing and deploying with Gulp is fun. I like the UNIX philosophy of Gulp: Having small files, which do one task and connect these to larger workflows. And because I keeped my Gulp tasks small, pluggable and easily shareable, I was able to add Gulp to my second website in less than five minutes.
+This concludes the series *Introduction to Gulp.js*. Developing and deploying with Gulp.js is fun. I like the UNIX philosophy of Gulp.js: Having small files, which do one task and connect these to larger workflows. And because I keeped my Gulp.js tasks small, pluggable and easily shareable, I was able to add Gulp.js to my second website in less than five minutes.

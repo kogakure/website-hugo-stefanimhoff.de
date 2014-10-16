@@ -20,7 +20,7 @@ This is the 3rd part of my series *Introduction to Gulp.js*. Today I will write 
 {% include articles/gulp-toc.html %}
 
 ## Build
-Now I create a `build` task. This task will run all other tasks, which are needed to create the site. By default Gulp runs all tasks in parallel. That’s why I will get a problem if a specific order is needed. I will need a node module which runs tasks in a sequence:
+Now I create a `build` task. This task will run all other tasks, which are needed to create the site. By default Gulp.js runs all tasks in parallel. That’s why I will get a problem if a specific order is needed. I will need a node module which runs tasks in a sequence:
 
 {% highlight sh %}
 $ npm install --save-dev run-sequence

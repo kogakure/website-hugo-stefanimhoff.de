@@ -14,7 +14,7 @@ tags:
 - base64
 ---
 
-This is the 7th part of my series *Introduction to Gulp.js*. Today I will use Gulp to replace a lot of my URLs to small images with Base64 encoded images.
+This is the 7th part of my series *Introduction to Gulp.js*. Today I will use Gulp.js to replace a lot of my URLs to small images with Base64 encoded images.
 
 [IMAGE]
 
@@ -59,7 +59,7 @@ After the task ran, the CSS will look like this:
 }
 {% endhighlight %}
 
-For this task I will need another Gulp plugin:
+For this task I will need another Gulp.js plugin:
 
 {% highlight sh %}
 $ npm install --save-dev gulp-base64

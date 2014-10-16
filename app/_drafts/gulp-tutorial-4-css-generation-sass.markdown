@@ -107,7 +107,7 @@ gulp.task('sass', function() {
 {% endhighlight %}
 {% endfigure %}
 
-I load all my files with the suffix of `*.sass` or `*.scss`. First I pipe the files through *Plumber*. It will keep Gulp running if I create a syntax error in one of my files. Gulp would normally just crash with an error. The next step creates the CSS files, running the `sass` command. I create source maps and finally put the CSS files to it’s destination.
+I load all my files with the suffix of `*.sass` or `*.scss`. First I pipe the files through *Plumber*. It will keep Gulp.js running if I create a syntax error in one of my files. It would normally just crash with an error. The next step creates the CSS files, running the `sass` command. I create source maps and finally put the CSS files to it’s destination.
 
 {% aside aside-hint %}
 <h4>F#*k!ng Source Maps</h4>
@@ -119,4 +119,4 @@ And I run the CSS files through Autoprefixer, which will add vendor prefixes. I 
 You might have guessed: If you want to use Compass, just set the option `compass` to `true`.
 
 ## Conclusion
-This concludes the 4th part of my series *Introduction to Gulp.js*. We learned how to keep Gulp running, even when we produce errors, how to preprocess SCSS files with Sass, create Source Maps and add vendor prefixes to the CSS files.
+This concludes the 4th part of my series *Introduction to Gulp.js*. We learned how to keep Gulp.js running, even when we produce errors, how to preprocess SCSS files with Sass, create Source Maps and add vendor prefixes to the CSS files.

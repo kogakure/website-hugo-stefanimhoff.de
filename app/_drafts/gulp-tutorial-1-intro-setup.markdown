@@ -25,10 +25,10 @@ This is the first part in a series of 14 articles where I describe my whole buil
 
 And it’s the first series of articles I write in English, which is not my native language. So if you find some spelling mistakes or false grammer, just drop me a message.
 
-Fortunately I stumbled upon a GitHub project called [gulp-starter](https://github.com/greypants/gulp-starter) that helped me a lot to structure my code and understand Gulp. So my process is partly derived from this fantastic project.
+Fortunately I stumbled upon a GitHub project called [gulp-starter](https://github.com/greypants/gulp-starter) that helped me a lot to structure my code and understand Gulp.js. So my process is partly derived from this fantastic project.
 
-## What is Gulp?
-Gulp is *the streaming build system* and its main focus is speed, efficiency and simplicity. Where Grunt.js uses a lot of configuration with the actual process hidden in plugins, Gulp uses a simple and minimal API. You code your own build process by yourself and use JavaScript as the language. Of course you don’t have to program everything by yourself, there are nearly 800 plugins ready for Gulp. But even more Node.js modules can be used to build the perfect build and development process for **your** needs.
+## What is Gulp.js?
+Gulp.js is *the streaming build system* and its main focus is speed, efficiency and simplicity. Where Grunt.js uses a lot of configuration with the actual process hidden in plugins, Gulp.js uses a simple and minimal API. You code your own build process by yourself and use JavaScript as the language. Of course you don’t have to program everything by yourself, there are nearly 800 plugins ready for Gulp.js. But even more Node.js modules can be used to build the perfect build and development process for **your** needs.
 
 ## Why do I want this at all?
 As a front-end developer you will most likely need a lot of things to build a modern website. A development server, a preprocessor for your [Sass](http://sass-lang.com/), [Less](http://lesscss.org/) or [Stylus](http://learnboost.github.io/stylus/) files, some automation to bundle your JavaScript, tools to optimize your code, to compress, compile or move things around. And if you change something, you want your files to update automatically, refresh the browser and so on. You don’t want to do this by hand, don’t you?
@@ -39,7 +39,7 @@ It’s 2014 and we don’t copy our files per drag-and-drop on a server via a FT
 Gulp and all plugins are written in JavaScript and use the Node.js® platform. You don’t have to know Node.js (but it will help a lot), but basic JavaScript skills are required to follow along. To start with my tutorial you need to install Node.js on your computer. This can be done by installing the package on the [Node.js website](http://nodejs.org/). Advanced users may install Node.js with their favorite package installer (Homebrew etc.).
 
 ## Gulpfile
-As with Grunt.js, all you need to start is a main file. In Gulp this file is called `gulpfile.js`. The first thing I learned from `gulp-starter` was to write my project in small parts and don’t use a large monolithic file with everything in it. This way I can easily share my Gulp files with other projects or just pass individual tasks around.
+As with Grunt.js, all you need to start is a main file. In Gulp.js this file is called `gulpfile.js`. The first thing I learned from `gulp-starter` was to write my project in small parts and don’t use a large monolithic file with everything in it. This way I can easily share my Gulp.js files with other projects or just pass individual tasks around.
 
 So my base `gulpfile.js` is very short:
 

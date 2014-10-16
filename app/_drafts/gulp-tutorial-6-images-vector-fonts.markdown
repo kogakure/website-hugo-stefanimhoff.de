@@ -52,7 +52,7 @@ gulp.task('images', function() {
 ## Vector Fonts
 I use vector fonts for my website. Vector fonts are one option to include high quality icons on a website. Another option is using SVG directly or to use high resolution images.
 
-I use [Font Custom](http://fontcustom.com/) to generate my vector fonts. There is a [gulp plugin](https://www.npmjs.org/package/gulp-fontcustom/) for this, but I couldn’t get it running. But I’m totally fine with running this task with a shell command (via Gulp). I will use Gulp later to watch the folder containing the SVG files and recreate the vector fonts if needed.
+I use [Font Custom](http://fontcustom.com/) to generate my vector fonts. There is a [gulp plugin](https://www.npmjs.org/package/gulp-fontcustom/) for this, but I couldn’t get it running. But I’m totally fine with running this task with a shell command (via Gulp.js). I will use Gulp.js later to watch the folder containing the SVG files and recreate the vector fonts if needed.
 
 
 {% figure code-figure "config.js" %}
@@ -85,7 +85,7 @@ As you may have seen, before copying the fonts to the asset folder another task 
 
 Font Custom checks the files for changes and doesn’t generate anything if the files are still the same.
 
-To execute a shell command I use the Gulp plugin `gulp-shell`:
+To execute a shell command I use the Gulp.js plugin `gulp-shell`:
 
 {% highlight sh %}
 $ npm install --save-dev gulp-shell
@@ -103,4 +103,4 @@ gulp.task('fontcustom', shell.task([
 {% endfigure %}
 
 ## Conclusion
-This concludes the 6th part of my series *Introduction to Gulp.js*. We learned how to move files with Gulp (and don’t even need a plugin for that), and how I create my vector fonts. Nothing special, but the next part will be more interesting again.
+This concludes the 6th part of my series *Introduction to Gulp.js*. We learned how to move files with Gulp.js (and don’t even need a plugin for that), and how I create my vector fonts. Nothing special, but the next part will be more interesting again.

@@ -13,7 +13,7 @@ tags:
 - sprites
 ---
 
-This is the 10th part of my series *Introduction to Gulp.js*. Today I will use Gulp to create CSS image sprites.
+This is the 10th part of my series *Introduction to Gulp.js*. Today I will use Gulp.js to create CSS image sprites.
 
 [IMAGE]
 
@@ -23,7 +23,7 @@ Just to be sure everybody knows what I’m talking about: A CSS image sprite is 
 
 CSS images sprites are not used that often any more, because of SVG or vector fonts. But I still use them as a fallback for browsers incapable of displaying vector fonts.
 
-I will need a Spritesmith plugin for Gulp:
+I will need a Spritesmith plugin for Gulp.js:
 
 {% highlight sh %}
 $ npm install --save-dev gulp.spritesmith
@@ -95,4 +95,4 @@ All development tasks are done now. We have got a running development server, ta
 Next I will write the tasks needed to get production ready code.
 
 ## Conclusion
-This concludes the 10th part of my series *Introduction to Gulp.js*. Today we learned how to create CSS image sprites with Gulp and Spritesmith.
+This concludes the 10th part of my series *Introduction to Gulp.js*. Today we learned how to create CSS image sprites with Gulp.js and Spritesmith.

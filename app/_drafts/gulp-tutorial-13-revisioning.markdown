@@ -22,7 +22,7 @@ This is the 13th part of my series *Introduction to Gulp.js*. Today I will write
 Before I can work on the fun part of revisioning my asset files I first have to write a task to copy my vector fonts. Boring, but it has to be done.
 
 ## Copy Vector Fonts for Production
-Another boring and short task, which is doing just one simple thing: Copy the fonts to the production assets folder. But that’s the way Gulp was build. Have small tasks that do small things.
+Another boring and short task, which is doing just one simple thing: Copy the fonts to the production assets folder. But that’s the way Gulp.js was build. Have small tasks that do small things.
 
 {% figure code-figure "config.js" %}
 {% highlight javascript %}
@@ -159,7 +159,7 @@ gulp.task('rev:collect', function() {
 
 This task will look into the `manifest.json` file and replace every path to one of the assets in every HTML, CSS, JavaScript, and Text etc.
 
-The production build is finished! Only one thing is missing to complete this series of tutorials about Gulp: Deploying the Website to my server.
+The production build is finished! Only one thing is missing to complete this series of tutorials about Gulp.js: Deploying the Website to my server.
 
 ## Conclusion
 This concludes the 13th part of my series *Introduction to Gulp.js*. Today we learned how to revision the asset files and replace links to these files.
