@@ -16,7 +16,10 @@ module.exports = {
       },
       port: 9999,
       files: [
-        development + '/**'
+        developmentAssets + '/css/*.css',
+        developmentAssets + '/js/*.js',
+        developmentAssets + '/images/**',
+        developmentAssets + '/fonts/*'
       ],
       notify: {
         styles: [ 'display: hidden; padding: 5px 15px; font-family: sans-serif; position: fixed; font-size: 0.9em; z-index: 9999; left: 0px; top: 0px; border-bottom-right-radius: 5px; margin: 0px; color: white; text-align: center; background-color: rgb(27, 32, 50);' ]
@@ -27,9 +30,6 @@ module.exports = {
         baseDir: [production]
       },
       port: 9998,
-      files: [
-        production + '/**'
-      ],
       notify: {
         styles: [ 'display: hidden; padding: 5px 15px; font-family: sans-serif; position: fixed; font-size: 0.9em; z-index: 9999; left: 0px; top: 0px; border-bottom-right-radius: 5px; margin: 0px; color: white; text-align: center; background-color: rgb(27, 32, 50);' ]
       }
@@ -48,7 +48,7 @@ module.exports = {
     }
   },
   sass: {
-    src:  srcAssets + '/scss/**/*.{sass,scss}',
+    src:  srcAssets + '/scss/*.{sass,scss}',
     dest: developmentAssets + '/css',
     options: {
       noCache: true,
