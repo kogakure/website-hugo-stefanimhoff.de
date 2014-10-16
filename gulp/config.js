@@ -54,6 +54,7 @@ module.exports = {
       noCache: true,
       compass: false,
       bundleExec: true,
+      lineNumbers: true,
       sourcemap: true,
       sourcemapPath: '../../_assets/scss'
     }

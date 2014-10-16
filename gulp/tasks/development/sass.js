@@ -17,6 +17,7 @@ gulp.task('sass', function() {
     noCache: config.sass.options.noCache,
     compass: config.sass.options.compass,
     bundleExec: config.sass.options.bundleExec,
+    lineNumbers: config.sass.options.lineNumbers,
     sourcemap: config.sass.options.sourcemap,
     sourcemapPath: config.sass.options.sourcemapPath,
     onError: browsersync.notify
