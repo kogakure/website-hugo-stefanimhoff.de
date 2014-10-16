@@ -249,7 +249,7 @@ I open my `package.json` file and need to add a few lines:
 {% figure code-figure "package.json" %}
 {% highlight json %}
 {
-  ...
+  "...": "...",
   "browser": {
     "modernizr": "./app/_bower_components/modernizr/modernizr.js",
     "jquery": "./app/_bower_components/jquery/dist/jquery.js"
@@ -264,7 +264,7 @@ I open my `package.json` file and need to add a few lines:
     ]
   },
   "devDependencies": {
-    ...
+    "...": "..."
   }
 }
 {% endhighlight %}

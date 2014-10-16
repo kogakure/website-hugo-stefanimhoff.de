@@ -1,12 +1,23 @@
 ---
 layout: post
 language: "en"
-title: "Introduction to Gulp.js (6) – Images and Vector Fonts"
+title: "Introduction to Gulp.js 6: Images and Vector Fonts"
 author: "Stefan Imhoff"
 excerpt: ""
 categories:
+- Code
 tags:
+- gulp
+- tutorial
+- automation
+- javascript
+- browserify
+- commonjs
 ---
+
+This is the sixth part of my series *Introduction to Gulp.js*. The last article was very long...
+
+[IMAGE]
 
 {% include articles/gulp-toc.html %}
 
