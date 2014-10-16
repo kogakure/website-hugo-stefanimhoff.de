@@ -3,7 +3,6 @@ layout: post
 language: "en"
 title: "Introduction to Gulp.js 6: Images and Vector Fonts"
 author: "Stefan Imhoff"
-excerpt: "Gulp.js Tutorial - Moving Images and creating Vector Fonts"
 categories:
 - Code
 tags:

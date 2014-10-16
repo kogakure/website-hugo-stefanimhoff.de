@@ -3,7 +3,6 @@ layout: post
 language: "en"
 title: "Introduction to Gulp.js 4: Creating CSS with Sass (and Compass)"
 author: "Stefan Imhoff"
-excerpt: "Gulp.js Tutorial - Write the build task, the delete task and the Jekyll build task"
 categories:
 - Code
 tags:

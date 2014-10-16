@@ -3,7 +3,6 @@ layout: post
 language: "en"
 title: "Introduction to Gulp.js 9: Checking the Syntax of SCSS and JavaScript"
 author: "Stefan Imhoff"
-excerpt: "Gulp.js Tutorial - Syntax checking of SCSS and JavaScript"
 categories:
 - Code
 tags:

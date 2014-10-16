@@ -3,7 +3,6 @@ layout: post
 language: "en"
 title: "Introduction to Gulp.js 2: Server with BrowserSync and Configuration"
 author: "Stefan Imhoff"
-excerpt: "Gulp.js Tutorial - How to setup a Development Server with BrowserSync and add a configuration file"
 categories:
 - Code
 tags:

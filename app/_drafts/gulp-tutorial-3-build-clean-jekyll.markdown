@@ -3,7 +3,6 @@ layout: post
 language: "en"
 title: "Introduction to Gulp.js 3: Build, Clean and Jekyll"
 author: "Stefan Imhoff"
-excerpt: "Gulp.js Tutorial - Write the build task, the delete task and the Jekyll build task"
 categories:
 - Code
 tags:

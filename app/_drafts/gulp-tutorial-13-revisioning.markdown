@@ -3,7 +3,6 @@ layout: post
 language: "en"
 title: "Introduction to Gulp.js 13: Revisioning"
 author: "Stefan Imhoff"
-excerpt: "Gulp.js Tutorial - Revisioning of asset URLs"
 categories:
 - Code
 tags:

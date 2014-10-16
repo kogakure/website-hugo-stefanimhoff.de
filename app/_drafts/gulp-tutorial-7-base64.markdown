@@ -3,7 +3,6 @@ layout: post
 language: "en"
 title: "Introduction to Gulp.js 7: Base64 Encoded Images"
 author: "Stefan Imhoff"
-excerpt: "Gulp.js Tutorial - Encode images with Base64"
 categories:
 - Code
 tags:

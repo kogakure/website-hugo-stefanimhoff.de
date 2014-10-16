@@ -3,7 +3,6 @@ layout: post
 language: "en"
 title: "Introduction to Gulp.js 1: Intro and Setup"
 author: "Stefan Imhoff"
-excerpt: "Gulp.js Tutorial - Introduction and how to setup the project"
 categories:
 - Code
 tags:

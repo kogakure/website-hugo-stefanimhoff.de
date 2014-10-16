@@ -3,7 +3,6 @@ layout: post
 language: "en"
 title: "Introduction to Gulp.js 12: Optimize CSS, JavaScript and Images"
 author: "Stefan Imhoff"
-excerpt: "Gulp.js Tutorial - Optimize and Minimize CSS and JavaScript and Crunch Images"
 categories:
 - Code
 tags:

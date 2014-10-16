@@ -3,7 +3,6 @@ layout: post
 language: "en"
 title: "Introduction to Gulp.js 5: Bundling JavaScript with Browserify"
 author: "Stefan Imhoff"
-excerpt: "Gulp.js Tutorial - Bundling JavaScript files with Browserify"
 categories:
 - Code
 tags:

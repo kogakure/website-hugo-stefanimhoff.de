@@ -3,7 +3,6 @@ layout: post
 language: "en"
 title: "Introduction to Gulp.js 14: Deploying the Website with Rsync"
 author: "Stefan Imhoff"
-excerpt: "Gulp.js Tutorial - Syncing the Jekyll website with Rsync to the webserver"
 categories:
 - Code
 tags:

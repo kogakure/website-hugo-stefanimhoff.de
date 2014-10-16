@@ -2,7 +2,6 @@
 layout: {{ layout }}
 title: {{ title }}
 author: "Stefan Imhoff"
-excerpt: ""
 categories:
 tags:
 ---

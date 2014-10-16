@@ -3,7 +3,6 @@ layout: post
 language: "en"
 title: "Introduction to Gulp.js 8: Watch for Changes"
 author: "Stefan Imhoff"
-excerpt: "Gulp.js Tutorial - Write the watch task, which watches for changes, deletion or creation of files"
 categories:
 - Code
 tags:

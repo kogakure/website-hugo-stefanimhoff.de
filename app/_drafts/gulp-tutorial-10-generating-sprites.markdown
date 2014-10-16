@@ -3,7 +3,6 @@ layout: post
 language: "en"
 title: "Introduction to Gulp.js 10: Generating CSS Image Sprites"
 author: "Stefan Imhoff"
-excerpt: "Gulp.js Tutorial - Creating a CSS Images Sprite with Gulp.js"
 categories:
 - Code
 tags:

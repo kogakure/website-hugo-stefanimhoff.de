@@ -3,7 +3,6 @@ layout: post
 language: "en"
 title: "Introduction to Gulp.js 11: Production Build, Server and Jekyll"
 author: "Stefan Imhoff"
-excerpt: "Gulp.js Tutorial - Writing the production build task, creating a production server and generating the Jekyll production site"
 categories:
 - Code
 tags:
