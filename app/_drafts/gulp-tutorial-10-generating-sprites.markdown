@@ -3,7 +3,7 @@ layout: post
 language: "en"
 title: "Introduction to Gulp.js 10: Generating CSS Image Sprites"
 author: "Stefan Imhoff"
-excerpt: ""
+excerpt: "Gulp.js Tutorial - Creating a CSS Images Sprite with Gulp.js"
 categories:
 - Code
 tags:
@@ -15,7 +15,10 @@ tags:
 
 This is the 10th part of my series *Introduction to Gulp.js*. Today I will use Gulp.js to create CSS image sprites.
 
-[IMAGE]
+{% figure image-figure attribution %}
+<img src="/assets/images/artikel/gulp-tutorial-10.jpg" alt="A Double Gulp">
+<p class="attribution-text"><i class="icon-cc"></i> Fabienne Wassermann, <a href="https://www.flickr.com/photos/fabi_k/5119690026">double gulp</a></p>
+{% endfigure %}
 
 {% include articles/gulp-toc.html %}
 

@@ -3,7 +3,7 @@ layout: post
 language: "en"
 title: "Introduction to Gulp.js 7: Base64 Encoded Images"
 author: "Stefan Imhoff"
-excerpt: ""
+excerpt: "Gulp.js Tutorial - Encode images with Base64"
 categories:
 - Code
 tags:
@@ -16,7 +16,10 @@ tags:
 
 This is the 7th part of my series *Introduction to Gulp.js*. Today I will use Gulp.js to replace a lot of my URLs to small images with Base64 encoded images.
 
-[IMAGE]
+{% figure image-figure attribution %}
+<img src="/assets/images/artikel/gulp-tutorial-7.jpg" alt="Big Gulp at the beach">
+<p class="attribution-text"><i class="icon-cc"></i> The HI Life w/ Lime, <a href="https://www.flickr.com/photos/bi11jon/445799182">Big Gulp</a></p>
+{% endfigure %}
 
 {% include articles/gulp-toc.html %}
 

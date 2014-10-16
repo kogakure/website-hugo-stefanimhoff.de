@@ -3,7 +3,7 @@ layout: post
 language: "en"
 title: "Introduction to Gulp.js 8: Watch for Changes"
 author: "Stefan Imhoff"
-excerpt: ""
+excerpt: "Gulp.js Tutorial - Write the watch task, which watches for changes, deletion or creation of files"
 categories:
 - Code
 tags:
@@ -14,7 +14,10 @@ tags:
 
 This is the 8th part of my series *Introduction to Gulp.js*. Today I will set up watch tasks for many different files with Gulp.js.
 
-[IMAGE]
+{% figure image-figure attribution %}
+<img src="/assets/images/artikel/gulp-tutorial-8.jpg" alt="Man with a Double Gulp is sleeping">
+<p class="attribution-text"><i class="icon-cc"></i> Erin Nekervis, <a href="https://www.flickr.com/photos/theeerin/4701912791">Funtime!</a></p>
+{% endfigure %}
 
 {% include articles/gulp-toc.html %}
 

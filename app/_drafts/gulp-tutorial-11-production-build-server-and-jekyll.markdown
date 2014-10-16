@@ -3,7 +3,7 @@ layout: post
 language: "en"
 title: "Introduction to Gulp.js 11: Production Build, Server and Jekyll"
 author: "Stefan Imhoff"
-excerpt: ""
+excerpt: "Gulp.js Tutorial - Writing the production build task, creating a production server and generating the Jekyll production site"
 categories:
 - Code
 tags:
@@ -15,7 +15,10 @@ tags:
 
 This is the 11th part of my series *Introduction to Gulp.js*. Today I will start writing the production build task, set up a server to view the production code and build the production site with Jekyll.
 
-[IMAGE]
+{% figure image-figure attribution %}
+<img src="/assets/images/artikel/gulp-tutorial-11.jpg" alt="A Girl looking on a Double Gulp">
+<p class="attribution-text"><i class="icon-cc"></i> Hannah, <a href="https://www.flickr.com/photos/girlaphid/4570474834">118/365</a></p>
+{% endfigure %}
 
 {% include articles/gulp-toc.html %}
 

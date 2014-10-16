@@ -3,7 +3,7 @@ layout: post
 language: "en"
 title: "Introduction to Gulp.js 5: Bundling JavaScript with Browserify"
 author: "Stefan Imhoff"
-excerpt: ""
+excerpt: "Gulp.js Tutorial - Bundling JavaScript files with Browserify"
 categories:
 - Code
 tags:
@@ -17,7 +17,10 @@ tags:
 
 This is the fifth part of my series *Introduction to Gulp.js*. Today I will show how to use Browserify to bundle your JavaScript and use CommonJS modules to run node modules in the Browser.
 
-[IMAGE]
+{% figure image-figure attribution %}
+<img src="/assets/images/artikel/gulp-tutorial-5.jpg" alt="Ultimate Gulp and X-Treme Gulp">
+<p class="attribution-text"><i class="icon-cc"></i> Keegan Berry, <a href="https://www.flickr.com/photos/superdeathsquid/535131057">DSCN8833</a></p>
+{% endfigure %}
 
 {% include articles/gulp-toc.html %}
 

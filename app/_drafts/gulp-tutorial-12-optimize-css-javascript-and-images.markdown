@@ -3,7 +3,7 @@ layout: post
 language: "en"
 title: "Introduction to Gulp.js 12: Optimize CSS, JavaScript and Images"
 author: "Stefan Imhoff"
-excerpt: ""
+excerpt: "Gulp.js Tutorial - Optimize and Minimize CSS and JavaScript and Crunch Images"
 categories:
 - Code
 tags:
@@ -16,7 +16,10 @@ tags:
 
 This is the 12th part of my series *Introduction to Gulp.js*. Today I will write tasks to optimize the assets of my website: CSS, JavaScript and Images.
 
-[IMAGE]
+{% figure image-figure attribution %}
+<img src="/assets/images/artikel/gulp-tutorial-12.jpg" alt="A woman with a Double Gulp">
+<p class="attribution-text"><i class="icon-cc"></i> Reed, <a href="https://www.flickr.com/photos/ishatter/3614672744">picnic</a></p>
+{% endfigure %}
 
 {% include articles/gulp-toc.html %}
 

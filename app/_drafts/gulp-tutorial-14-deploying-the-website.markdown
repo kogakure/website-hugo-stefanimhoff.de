@@ -3,7 +3,7 @@ layout: post
 language: "en"
 title: "Introduction to Gulp.js 14: Deploying the Website with Rsync"
 author: "Stefan Imhoff"
-excerpt: ""
+excerpt: "Gulp.js Tutorial - Syncing the Jekyll website with Rsync to the webserver"
 categories:
 - Code
 tags:
@@ -14,7 +14,10 @@ tags:
 
 This is the 14th and last part of my series *Introduction to Gulp.js*. Today I will write a task to sync the files of my website to my webserver.
 
-[IMAGE]
+{% figure image-figure attribution %}
+<img src="/assets/images/artikel/gulp-tutorial-14.jpg" alt="A fluffy bunny with a Big Gulp">
+<p class="attribution-text"><i class="icon-cc"></i> Jayanta Debnath, <a href="https://www.flickr.com/photos/jkdsphotography/13786076413">BIG GULP!</a></p>
+{% endfigure %}
 
 {% include articles/gulp-toc.html %}
 

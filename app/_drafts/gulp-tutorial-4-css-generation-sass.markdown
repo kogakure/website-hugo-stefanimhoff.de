@@ -3,7 +3,7 @@ layout: post
 language: "en"
 title: "Introduction to Gulp.js 4: Creating CSS with Sass (and Compass)"
 author: "Stefan Imhoff"
-excerpt: ""
+excerpt: "Gulp.js Tutorial - Write the build task, the delete task and the Jekyll build task"
 categories:
 - Code
 tags:
@@ -18,7 +18,10 @@ tags:
 
 This is the 4th part of my series *Introduction to Gulp.js*. Today I will show how to use Sass (and Compass if you want) to create CSS files. Furthermore I will add vendor prefixes with Autoprefixer and create Source Maps for easier debugging of the Sass files.
 
-[IMAGE]
+{% figure image-figure attribution %}
+<img src="/assets/images/artikel/gulp-tutorial-4.jpg" alt="Sarah Palin holding a Big Gulp">
+<p class="attribution-text"><i class="icon-cc"></i> Gage Skidmore, <a href="https://www.flickr.com/photos/gageskidmore/8571336210">Sarah Palin</a></p>
+{% endfigure %}
 
 {% include articles/gulp-toc.html %}
 

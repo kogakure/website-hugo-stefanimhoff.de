@@ -3,7 +3,7 @@ layout: post
 language: "en"
 title: "Introduction to Gulp.js 13: Revisioning"
 author: "Stefan Imhoff"
-excerpt: ""
+excerpt: "Gulp.js Tutorial - Revisioning of asset URLs"
 categories:
 - Code
 tags:
@@ -15,7 +15,10 @@ tags:
 
 This is the 13th part of my series *Introduction to Gulp.js*. Today I will write the task to revision my static assets.
 
-[IMAGE]
+{% figure image-figure attribution %}
+<img src="/assets/images/artikel/gulp-tutorial-13.jpg" alt="A woman dumping a Double Gulp on herself">
+<p class="attribution-text"><i class="icon-cc"></i> Reed, <a href="https://www.flickr.com/photos/ishatter/3614680378">dump it</a></p>
+{% endfigure %}
 
 {% include articles/gulp-toc.html %}
 

@@ -3,7 +3,7 @@ layout: post
 language: "en"
 title: "Introduction to Gulp.js 1: Intro and Setup"
 author: "Stefan Imhoff"
-excerpt: ""
+excerpt: "Gulp.js Tutorial - Introduction and how to setup the project"
 categories:
 - Code
 tags:
@@ -14,7 +14,9 @@ tags:
 
 My website is running Jekyll now since the beginning of 2014. But I wasn’t quite happy with my build and development process.
 
-[IMAGE]
+{% figure image-figure %}
+<img src="/assets/images/artikel/gulp-tutorial-1.png" alt="Gulp.js Logo">
+{% endfigure %}
 
 {% include articles/gulp-toc.html %}
 
