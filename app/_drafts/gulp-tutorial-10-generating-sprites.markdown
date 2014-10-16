@@ -1,17 +1,29 @@
 ---
 layout: post
 language: "en"
-title: "Introduction to Gulp.js (10) – Generating Sprites"
+title: "Introduction to Gulp.js 10: Generating CSS Image Sprites"
 author: "Stefan Imhoff"
 excerpt: ""
 categories:
+- Code
 tags:
+- gulp
+- tutorial
+- automation
+- sprites
 ---
+
+This is the 10th part of my series *Introduction to Gulp.js*. Today I will use Gulp to create CSS image sprites.
+
+[IMAGE]
 
 {% include articles/gulp-toc.html %}
 
-## Generating Sprites
-You don’t need Compass to create sprites, Gulp is totally capable of achieving this tasks.
+Just to be sure everybody knows what I’m talking about: A CSS image sprite is a collection of images put into a single image. This way fewer requests are needed and the website will load faster. The CSS file will move the image for each sprite to the correct position.
+
+CSS images sprites are not used that often any more, because of SVG or vector fonts. But I still use them as a fallback for browsers incapable of displaying vector fonts.
+
+I will need a Spritesmith plugin for Gulp:
 
 {% highlight sh %}
 $ npm install --save-dev gulp.spritesmith
@@ -81,3 +93,6 @@ In the end I get two files: a partial `_sprites.scss` containing the class attri
 All development tasks are done now. We have got a running development server, tasks to create the Jekyll site and all assets and tasks for linting, sprite and vector font creation.
 
 Next I will write the tasks needed to get production ready code.
+
+## Conclusion
+This concludes the 10th part of my series *Introduction to Gulp.js*. Today we learned how to create CSS image sprites with Gulp and Spritesmith.

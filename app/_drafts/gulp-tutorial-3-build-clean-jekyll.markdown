@@ -13,7 +13,7 @@ tags:
 - jekyll
 ---
 
-This is the third part of my series *Introduction to Gulp.js*. Today I will write the build task, which will execute all other tasks needed for a build, the task to delete assets for a fresh start, and the task to create my Jekyll site.
+This is the 3rd part of my series *Introduction to Gulp.js*. Today I will write the build task, which will execute all other tasks needed for a build, the task to delete assets for a fresh start, and the task to create my Jekyll site.
 
 [IMAGE]
 
@@ -123,6 +123,10 @@ gulp.task('jekyll', function(done) {
   return cp.spawn('bundle', ['exec', 'jekyll', 'build', '-q', '--source=' + config.src, '--destination=' + config.dest, '--config=' + config.config], { stdio: 'inherit' })
   .on('close', done);
 });
+
+gulp.task('jekyll-rebuild', ['jekyll'], function() {
+  browsersync.reload();
+});
 {% endhighlight %}
 {% endfigure %}
 
@@ -130,5 +134,7 @@ There is a gulp plugin for Jekyll, but it’s alpha and was blacklisted, because
 
 All this task is doing is running `jekyll build` with some options. I use `app` as the source folder, `build/development` as the target and point to my `_config.yml`.
 
+I have a second Jekyll build task `jekyll-rebuild`, which is only a wrapper for a rebuild. All it does is reloading the Browser when the build is completed.
+
 ## Conclusion
-This concludes the third part of my series *Introduction to Gulp.js*. We learned how to run files in a specified order with `run-sequence`, how to delete files and folders and how to execute a shell task like Jekyll.
+This concludes the 3rd part of my series *Introduction to Gulp.js*. We learned how to run files in a specified order with `run-sequence`, how to delete files and folders and how to execute a shell task like Jekyll.

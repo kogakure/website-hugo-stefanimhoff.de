@@ -16,7 +16,7 @@ tags:
 - sourcemaps
 ---
 
-This is the fourth part of my series *Introduction to Gulp.js*. Today I will show how to use Sass (and Compass if you want) to create CSS files. Furthermore I will add vendor prefixes with Autoprefixer and create Source Maps for easier debugging of the Sass files.
+This is the 4th part of my series *Introduction to Gulp.js*. Today I will show how to use Sass (and Compass if you want) to create CSS files. Furthermore I will add vendor prefixes with Autoprefixer and create Source Maps for easier debugging of the Sass files.
 
 [IMAGE]
 
@@ -68,7 +68,6 @@ var plumber      = require('gulp-plumber');
 var browsersync  = require('browser-sync');
 var sass         = require('gulp-ruby-sass');
 var gulpFilter   = require('gulp-filter');
-var changed      = require('gulp-changed');
 var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps   = require('gulp-sourcemaps');
 var config       = require('../../config');
@@ -94,7 +93,6 @@ gulp.task('sass', function() {
 
   return gulp.src(config.sass.src)
     .pipe(plumber())
-    .pipe(changed(config.sass.dest)) // Ignore unchanged files
     .pipe(sass(sassConfig))
     .pipe(sourcemaps.init())
     .pipe(autoprefixer({
@@ -104,17 +102,21 @@ gulp.task('sass', function() {
     .pipe(filter) // Don’t write sourcemaps of sourcemaps
     .pipe(sourcemaps.write('.', { includeContent: false }))
     .pipe(filter.restore()) // Restore original files
-    .pipe(gulp.dest(config.sass.dest))
-    .pipe(browsersync.reload({ stream: true }));
+    .pipe(gulp.dest(config.sass.dest));
 });
 {% endhighlight %}
 {% endfigure %}
 
-I load all my files with the suffix of `*.sass` or `*.scss`. First I pipe the files through *Plumber*. It will keep Gulp running if I create a syntax error in one of my files. Gulp would normally just crash with an error. Then I pipe the files through a module which only processes files that where changed. The next step creates the CSS files, running the `sass` command. I create source maps and finally put the CSS files to it’s destination.
+I load all my files with the suffix of `*.sass` or `*.scss`. First I pipe the files through *Plumber*. It will keep Gulp running if I create a syntax error in one of my files. Gulp would normally just crash with an error. The next step creates the CSS files, running the `sass` command. I create source maps and finally put the CSS files to it’s destination.
+
+{% aside aside-hint %}
+<h4>F#*k!ng Source Maps</h4>
+<p>Generating source maps, which actually work and point to the correct file is <em>a real pain</em>. There is a <a href="https://github.com/sindresorhus/gulp-ruby-sass/issues/17">known bug</a> in sass, which will mess up the paths. It took me literally hours to find out how to use <code>gulp-ruby-sass</code> and <code>gulp-sourcemaps</code> in combination to get working source maps.</p>
+{% endaside %}
 
 And I run the CSS files through Autoprefixer, which will add vendor prefixes. I used the Mixins of Compass a long time, but stopped now and write pure CSS. All vendor prefixes are added later for the Browsers I want to support.
 
 You might have guessed: If you want to use Compass, just set the option `compass` to `true`.
 
 ## Conclusion
-This concludes the fourth part of my series *Introduction to Gulp.js*. We learned how to keep Gulp running, even when we produce errors, how to preprocess SCSS files with Sass, create Source Maps and add vendor prefixes to the CSS files.
+This concludes the 4th part of my series *Introduction to Gulp.js*. We learned how to keep Gulp running, even when we produce errors, how to preprocess SCSS files with Sass, create Source Maps and add vendor prefixes to the CSS files.

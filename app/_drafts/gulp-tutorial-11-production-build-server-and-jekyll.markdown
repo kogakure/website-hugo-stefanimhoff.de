@@ -1,19 +1,27 @@
 ---
 layout: post
 language: "en"
-title: "Introduction to Gulp.js (11) – Production Build, Server and Jekyll"
+title: "Introduction to Gulp.js 11: Production Build, Server and Jekyll"
 author: "Stefan Imhoff"
 excerpt: ""
 categories:
+- Code
 tags:
+- gulp
+- tutorial
+- automation
+- sprites
 ---
+
+This is the 11th part of my series *Introduction to Gulp.js*. Today I will start writing the production build task, set up a server to view the production code and build the production site with Jekyll.
+
+[IMAGE]
 
 {% include articles/gulp-toc.html %}
 
-## Production
 In development I used the `default` Gulp tasks to run the development server, building the assets and watching for changes. For production I will need another entry point.
 
-I decided to name my task `publish`. So later I am able to get a production build with `gulp publish`. Name the task whatever you like.
+I decided to name my task `publish`. Later I am able to get a production build with the command `gulp publish`.
 
 {% figure code-figure "publish.js" %}
 {% highlight javascript %}
@@ -29,7 +37,7 @@ gulp.task('publish', ['browsersync:production']);
 I put this file on same level as the `default.js` file. This task is short and sweet: It does only one thing. Start a BrowserSync tasks for production. This way I can have a look on the production site before deploying it to my server.
 
 ## BrowserSync for Production
-All production tasks will live in a folder `production/` inside of `gulp/tasks/`. I name the tasks of development and production the same but put them in different folders. You are free to change this to whatever you like.
+All production tasks will live in a folder `production/` inside of `gulp/tasks/`. I name the tasks of development and production the same but put them in different folders.
 
 {% figure code-figure "config.js" %}
 {% highlight javascript %}
@@ -41,10 +49,7 @@ browsersync: {
     server: {
       baseDir: [production]
     },
-    port: 9998,
-    files: [
-      production + '/**'
-    ]
+    port: 9998
   }
 }
 {% endhighlight %}
@@ -69,7 +74,7 @@ gulp.task('browsersync:production', ['build:production'], function() {
 
 This task is boring. It just starts the production build.
 
-## Build for Production
+## Build Task for Production
 
 {% figure code-figure "build.js" %}
 {% highlight javascript %}
@@ -109,6 +114,7 @@ The Jekyll task is quite similar except for two things: I create my site to the 
 My Jekyll production config just overwrites some values as the `url`, hide future posts (`future: false`) or hide drafts (`show_drafts: false`).
 
 {% aside aside-hint %}
+<h4>Speed up development with Jekyll</h4>
 <p>To speed up generation of your site in development, you may set <code>limit_post: 5</code>, which will only generate the last five posts. Additionally I set <code>future: true</code> and <code>show_drafts: true</code> to see Drafts and Posts with a future date.</p>
 {% endaside %}
 
@@ -145,3 +151,6 @@ gulp.task('jekyll:production', function(done) {
 });
 {% endhighlight %}
 {% endfigure %}
+
+## Conclusion
+This concludes the 11th part of my series *Introduction to Gulp.js*. Today I started to work on the production part of my website, including a server to view the production site, and generate a production build of my Jekyll site.

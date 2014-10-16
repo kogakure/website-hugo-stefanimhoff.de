@@ -1,17 +1,28 @@
 ---
 layout: post
 language: "en"
-title: "Introduction to Gulp.js (9) – Linting SCSS and JavaScript"
+title: "Introduction to Gulp.js 9: Checking the Syntax of SCSS and JavaScript"
 author: "Stefan Imhoff"
 excerpt: ""
 categories:
+- Code
 tags:
+- gulp
+- tutorial
+- automation
+- lint
+- scss
+- javascript
+- syntax
 ---
+
+This is the 9th part of my series *Introduction to Gulp.js*. Today I will use Gulp to automatically check my SCSS and JavaScript files for syntax errors and warnings.
+
+[IMAGE]
 
 {% include articles/gulp-toc.html %}
 
-## Linting SCSS and JavaScript
-I decided to Lint my SCSS files and not the CSS files, because it’s kind of pointless to lint generated CSS. But you can do this with [gulp-csslint](https://www.npmjs.org/package/gulp-csslint/).
+I decided to lint my SCSS files and not the CSS files, because it’s kind of pointless to lint generated CSS. But you can do this with [gulp-csslint](https://www.npmjs.org/package/gulp-csslint/).
 
 {% highlight sh %}
 $ npm install --save-dev gulp-scss-lint gulp-jshint jshint-stylish
@@ -70,6 +81,10 @@ gulp.task('jshint', function() {
 {% endfigure %}
 
 {% aside aside-hint %}
+<h4>Configuration of Syntax Check Tools</h4>
 <p>You may change the rules for linting SCSS or JavaScript by adding a hidden file <code>.scss-lint.yml</code> for SCSS lint and <code>.jshintrc</code> for JSHint to your project root.</p>
 <p>To find out which options are available look into the documentation of <a href="https://github.com/causes/scss-lint">SCSS-Lint</a> and <a href="http://jshint.com/docs/">JSHint</a>.</p>
 {% endaside %}
+
+## Conclusion
+This concludes the 9th part of my series *Introduction to Gulp.js*. Today we learned how to use Gulp to check the syntax of SCSS and JavaScript files. This task will run continuously while I write my files and print out errors to my console the moment I created them.

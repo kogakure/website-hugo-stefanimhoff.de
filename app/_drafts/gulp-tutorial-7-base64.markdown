@@ -1,17 +1,27 @@
 ---
 layout: post
 language: "en"
-title: "Introduction to Gulp.js (7) – Base64"
+title: "Introduction to Gulp.js 7: Base64 Encoded Images"
 author: "Stefan Imhoff"
 excerpt: ""
 categories:
+- Code
 tags:
+- gulp
+- tutorial
+- automation
+- css
+- base64
 ---
+
+This is the 7th part of my series *Introduction to Gulp.js*. Today I will use Gulp to replace a lot of my URLs to small images with Base64 encoded images.
+
+[IMAGE]
 
 {% include articles/gulp-toc.html %}
 
 ## Base64 encoded images
-The last task executed by my `build` task is a task, which replaces the URLs of small images in my CSS files with Base64 encoded images. This way the image gets embedded into the CSS file and doesn’t need an additional server request. If the images are not to large this will speed up loading a lot.
+The last task executed by my `build` task is a task, which replaces the URLs of small images in my CSS files with Base64 encoded images. This way the image gets embedded into the CSS file and doesn’t need an additional server request. If the images are not to large this will speed up loading my website a lot.
 
 I use a lot of small size patterns on my website because I doesn’t like the *Flat Design* approach a lot. The real world isn’t flat. Nowhere. There is always structure, pattern, shade and light. The patterns I use are from the fantastic website [Subtle Pattern](http://subtlepatterns.com/). The have a few hundred really nice subtle patterns.
 
@@ -72,6 +82,8 @@ base64: {
 {% endhighlight %}
 {% endfigure %}
 
+I only replace images with the ending PNG and only if maximal 20 KB of size. This way my high resolution images don’t get embedded into the CSS file.
+
 {% figure code-figure "base64.js" %}
 {% highlight javascript %}
 var gulp   = require('gulp');
@@ -94,4 +106,7 @@ gulp.task('base64', ['sass'], function() {
 {% endhighlight %}
 {% endfigure %}
 
-We are now finished with the development `build` task. Lets rewind a bit and go back to the `watch` task.
+We are now finished with the development `build` task.
+
+## Conclusion
+This concludes the 7th part of my series *Introduction to Gulp.js*. We learned how to replace URLs to PNG images with Base64 encoded images. And we are now finished with our `build` task.

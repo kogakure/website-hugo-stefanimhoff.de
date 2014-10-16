@@ -109,4 +109,4 @@ $ jekyll serve
 {% endhighlight %}
 
 ## Conclusion
-This concludes the first part of my series *Introduction to Gulp.js*. We learned what Gulp.js is used for and created the basic folder structure for the project.
+This concludes the 1st part of my series *Introduction to Gulp.js*. We learned what Gulp.js is used for and created the basic folder structure for the project.

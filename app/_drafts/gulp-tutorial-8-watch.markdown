@@ -1,17 +1,24 @@
 ---
 layout: post
 language: "en"
-title: "Introduction to Gulp.js (8) – Watch"
+title: "Introduction to Gulp.js 8: Watch for Changes"
 author: "Stefan Imhoff"
 excerpt: ""
 categories:
+- Code
 tags:
+- gulp
+- tutorial
+- automation
 ---
+
+This is the 8th part of my series *Introduction to Gulp.js*. Today I will set up watch tasks for many different files with Gulp.
+
+[IMAGE]
 
 {% include articles/gulp-toc.html %}
 
-## Watch (2)
-Do you remember the `watch` task from the beginning? This just started BrowserSync and the development server, but didn’t watch for anything. I will write these watch tasks now.
+Do you remember the `watch` task from the beginning? This task just started BrowserSync and the development server until now, but didn’t watch for anything. I will write these watch tasks now.
 
 `Watch` is part of the API of gulp. It will watch a folder or files for changes, addition or deletion and trigger tasks.
 
@@ -53,17 +60,17 @@ var config = require('../../config').watch;
  * Start browsersync task and then watch files for changes
  */
 gulp.task('watch', ['browsersync'], function() {
-  gulp.watch(config.jekyll,   ['jekyll'])
-  gulp.watch(config.sass,     ['sass', 'scsslint']);
-  gulp.watch(config.scripts,  ['scripts', 'jshint']);
-  gulp.watch(config.images,   ['images']);
-  gulp.watch(config.svg,      ['copy:fonts']);
-  gulp.watch(config.sprites,  ['sprites']);
+  gulp.watch(config.jekyll,  ['jekyll-rebuild'])
+  gulp.watch(config.sass,    ['sass', 'scsslint']);
+  gulp.watch(config.scripts, ['scripts', 'jshint']);
+  gulp.watch(config.images,  ['images']);
+  gulp.watch(config.svg,     ['copy:fonts']);
+  gulp.watch(config.sprites, ['sprites']);
 });
 {% endhighlight %}
 {% endfigure %}
 
-I set up six watch tasks. Whenever a file of the Jekyll watch gets changed, deleted or added, the `jekyll` task gets executed.
+I set up six watch tasks. Whenever a file of the Jekyll watch gets changed, deleted or added, the `jekyll-rebuild` task gets executed. This task will run the Jekyll build and after it’s finished reload the page.
 
 For `SCSS` files I run the `sass` tasks and additionally I run a `scsslint` task, which will check my files for syntax errors.
 
@@ -71,4 +78,7 @@ Changes on JavaScript files trigger the `scripts` tasks and a `jshint` task, whi
 
 If I add, modify or delete a SVG file my vector fonts get recreated. And as a fallback for browsers without vector font support I create a PNG sprite map, whenever I change an image of the sprite. It would be possible to auto create the PNG files of the SVG files with [gulp-svg2png](https://www.npmjs.org/package/gulp-svg2png/), but I have some additional design on the sprite images, that’s why I didn’t use it.
 
-I miss now three tasks for `watch`: `scsslint`, `jshint` and `sprites`.
+I miss now three tasks: `scsslint`, `jshint` and `sprites`.
+
+## Conclusion
+This concludes the 8th part of my series *Introduction to Gulp.js*. We learned how to use Gulp to watch for changes, deletion or creation of files and how to trigger tasks. And the best part: This is part of the Gulp API. We don’t need any plugin.

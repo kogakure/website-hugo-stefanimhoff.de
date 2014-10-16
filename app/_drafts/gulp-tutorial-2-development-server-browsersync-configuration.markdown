@@ -12,7 +12,7 @@ tags:
 - automation
 ---
 
-This is the seconds part of my series *Introduction to Gulp.js*. Today I will write the first few Gulp tasks and set up a development server with BrowserSync. And I will start to write a configuration file.
+This is the 2nd part of my series *Introduction to Gulp.js*. Today I will write the first few Gulp tasks and set up a development server with BrowserSync. And I will start to write a configuration file.
 
 [IMAGE]
 
@@ -128,7 +128,10 @@ module.exports = {
       },
       port: 9999,
       files: [
-        development + '/**'
+        developmentAssets + '/css/*.css',
+        developmentAssets + '/js/*.js',
+        developmentAssets + '/images/**',
+        developmentAssets + '/fonts/*'
       ]
     }
   }
@@ -140,5 +143,7 @@ First I extract some paths needed over and over again later to variables and the
 
 Jekyll wipes out all files on recreation and to speed up development I have to be creative, because I don’t want to recreate all assets on every Jekyll build. That’s why I serve more than one folder. I serve the folder `build/development`, which will hold the files created by Jekyll. My assets I will generate into a different folder `build/assets` so Jekyll doesn’t wiped them out. And additionally the folder `app/_assets` to link source maps later.
 
+BrowserSync watches only my asset files, in order that my browser won’t reload like hell, everytime Jekyll creates one file. I will later write one task, which reloads the Browser one time after the Jekyll build is complete.
+
 ## Conclusion
-This concludes the second part of my series *Introduction to Gulp.js*. We learned how to install Gulp.js, how to write a Gulp task, run other tasks and set up a development server with BrowserSync.
+This concludes the 2nd part of my series *Introduction to Gulp.js*. We learned how to install Gulp.js, how to write a Gulp task, run other tasks and set up a development server with BrowserSync.
