@@ -11,7 +11,7 @@ tags:
 - automation
 ---
 
-My website is running Jekyll now since the beginning of 2014. But I wasn’t quite happy with my build and development process.
+My website is running [Jekyll](http://jekyllrb.com/) now since the beginning of 2014. But I wasn’t quite happy with my build and development process. I started out with Rake tasks and chose later [Grunt.js](http://gruntjs.com/) as my build system, but parts of the process where left in Ruby. I used [Compass](http://compass-style.org/) a lot and [Jekyll Assets](http://ixti.net/jekyll-assets/) was handling my versioning. But Grunt.js and the Jekyll Asset Pipeline didn’t play well together. Then a new solution came along: [Gulp.js](http://gulpjs.com/).
 
 {% figure image-figure %}
 <img src="/assets/images/artikel/gulp-tutorial-1.png" alt="Gulp.js Logo">
@@ -19,12 +19,10 @@ My website is running Jekyll now since the beginning of 2014. But I wasn’t qui
 
 {% include articles/gulp-toc.html %}
 
-I started out with Rake tasks and chose later [Grunt.js](http://gruntjs.com/) as my build system, but parts of the process where left in Ruby. I used [Compass](http://compass-style.org/) a lot and [Jekyll Assets](http://ixti.net/jekyll-assets/) was handling my versioning. And Grunt.js and the Jekyll Asset Pipeline didn’t play well together. But then a new solution came along: [Gulp.js](http://gulpjs.com/).
-
 ## The Tutorial
-This is the first part in a series of 14 articles where I describe my whole build and development process step-by-step from start to finish. I am sick of all these *Hello World* tutorials spreading around the Internet, describing just the basics and don’t show a whole process, go deeper or share things learned during the process.
+This is the first part in a series of 14 articles where I describe my whole development and build process step-by-step from start to finish. I am sick of all these *Hello World* tutorials spreading around the Internet, describing just the basics and don’t show a whole process, go deeper or share things learned during the process.
 
-And it’s the first series of articles I write in English, which is not my native language. So if you find some spelling mistakes or false grammer, just drop me a message.
+And it’s the first series of articles I write in English, which is not my native language. So if you find some spelling mistakes or false grammer, just send me a message.
 
 Fortunately I stumbled upon a GitHub project called [gulp-starter](https://github.com/greypants/gulp-starter) that helped me a lot to structure my code and understand Gulp.js. So my process is partly derived from this fantastic project.
 
@@ -32,7 +30,7 @@ Fortunately I stumbled upon a GitHub project called [gulp-starter](https://githu
 Gulp.js is *the streaming build system* and its main focus is speed, efficiency and simplicity. Where Grunt.js uses a lot of configuration with the actual process hidden in plugins, Gulp.js uses a simple and minimal API. You code your own build process by yourself and use JavaScript as the language. Of course you don’t have to program everything by yourself, there are nearly 800 plugins ready for Gulp.js. But even more Node.js modules can be used to build the perfect build and development process for **your** needs.
 
 ## Why do I want this at all?
-As a front-end developer you will most likely need a lot of things to build a modern website. A development server, a preprocessor for your [Sass](http://sass-lang.com/), [Less](http://lesscss.org/) or [Stylus](http://learnboost.github.io/stylus/) files, some automation to bundle your JavaScript, tools to optimize your code, to compress, compile or move things around. And if you change something, you want your files to update automatically, refresh the browser and so on. You don’t want to do this by hand, don’t you?
+As a front-end developer or web designer you will most likely need a lot of things to build a modern website: a development server, a preprocessor for your [Sass](http://sass-lang.com/), [Less](http://lesscss.org/) or [Stylus](http://learnboost.github.io/stylus/) files, some automation to bundle your JavaScript, tools to optimize your code, to compress, compile or move things around. And if you change something, you want your files to update automatically, refresh the browser and so on. You don’t want to do this by hand, don’t you?
 
 It’s 2014 and we don’t copy our files per drag-and-drop on a server via a FTP program, reload our browser by hitting continuously <kbd>F5</kbd> or crunch our images for a smaller file size by hand. Right? **We don’t**!
 
