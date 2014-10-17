@@ -2,6 +2,7 @@
 layout: post
 language: "en"
 title: "Introduction to Gulp.js 1: Intro and Setup"
+date: 2014-10-18T09:10:47+02:00
 author: "Stefan Imhoff"
 categories:
 - Code

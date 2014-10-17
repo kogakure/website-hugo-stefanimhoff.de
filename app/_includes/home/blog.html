@@ -6,7 +6,7 @@
     <div class="grid-latest">
       {% for post in site.posts limit:1 %}
       <a href="{{ root_url }}{{ post.url }}"><h3>{{ post.title }}</h3></a>
-      <p>{{post.content | strip_html | truncate: 250 }}</p>
+      <p>{{post.content | strip_html | truncate: 500 }}</p>
       {% endfor %}
     </div>
 
