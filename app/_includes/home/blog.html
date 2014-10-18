@@ -5,7 +5,7 @@
 
     <div class="grid-latest">
       {% for post in site.posts limit:1 %}
-      {% capture excerpt %}{% if post.excerpt %}{{ post.excerpt }}{% else %}{{ post.content | strip_html | truncate: 350 }}{% endif %}{% endcapture %}<div class="blog section">
+      {% capture excerpt %}{% if post.excerpt %}{{ post.excerpt }}{% else %}{{ post.content | strip_html | truncate: 350 }}{% endif %}{% endcapture %}
       <a href="{{ root_url }}{{ post.url }}"><h3>{{ post.title }}</h3></a>
       <p>{{ excerpt }}</p>
       {% endfor %}
