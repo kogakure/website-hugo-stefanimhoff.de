@@ -15,7 +15,7 @@ tags:
 My website is running [Jekyll](http://jekyllrb.com/) now since the beginning of 2014. But I wasn’t quite happy with my build and development process. I started out with Rake tasks and chose later [Grunt.js](http://gruntjs.com/) as my build system, but parts of the process where left in Ruby. I used [Compass](http://compass-style.org/) a lot and [Jekyll Assets](http://ixti.net/jekyll-assets/) was handling my versioning. But Grunt.js and the Jekyll Asset Pipeline didn’t play well together. Then a new solution came along: [Gulp.js](http://gulpjs.com/).
 
 {% figure image-figure %}
-<img src="/assets/images/artikel/gulp-tutorial-1.png" alt="Gulp.js Logo">
+<img src="{{ site.url }}/assets/images/artikel/gulp-tutorial-1.png" alt="Gulp.js Logo">
 {% endfigure %}
 
 {% include articles/gulp-toc.html %}

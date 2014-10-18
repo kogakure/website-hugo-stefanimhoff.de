@@ -20,7 +20,7 @@ Durch Zufall bin ich kürzlich auf ein Buch gestoßen, dass für alle an Typogra
 
 {% figure image-figure "<cite>decodeunicode – Die Schriftzeichen der Welt</cite>" %}
 <a href="http://www.amazon.de/gp/product/3874398137/ref=as_li_ss_tl?ie=UTF8&amp;tag=kogakurede-21&amp;linkCode=as2&amp;camp=1638&amp;creative=19454&amp;creativeASIN=3874398137">
-  <img src="/assets/images/artikel/decodeunicode.jpg" alt="Decodeunicode: Die Schriftzeichen der Welt" />
+  <img src="{{ site.url }}/assets/images/artikel/decodeunicode.jpg" alt="Decodeunicode: Die Schriftzeichen der Welt" />
 </a>
 {% endfigure %}
 
