@@ -10,7 +10,6 @@ permalink: /:year/:title/
 
 # Jekyll-Pfade
 source:      ./app
-# destination: ./dist
 destination: ./build
 
 # Veröffentlichungs-Einstellungen
