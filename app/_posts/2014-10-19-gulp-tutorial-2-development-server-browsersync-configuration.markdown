@@ -2,6 +2,7 @@
 layout: post
 language: "en"
 title: "Introduction to Gulp.js 2: Server with BrowserSync and Configuration"
+date: 2014-10-19T10:00:07+02:00
 author: "Stefan Imhoff"
 categories:
 - Code
@@ -48,7 +49,7 @@ If you execute the command `gulp` this Gulp.js task will output <samp>Hello Gulp
 I will speed up the pace a little bit from now on.
 
 ## Watch
-Instead of calling a function and output some text to the console I can execute tasks. I decided to execute the watch task when running `gulp`. These tasks will later watch for changes in files and update my files.
+Instead of calling a function and output some text to the console I can execute tasks. I decided to execute the watch task when running `gulp`. This task will later watch for changes in files and update my files.
 
 {% figure code-figure "default.js" %}
 {% highlight javascript %}
@@ -105,7 +106,7 @@ gulp.task('browsersync', ['build'], function() {
 {% endhighlight %}
 {% endfigure %}
 
-This code does needs some explanation: First I load Gulp.js and BrowserSync which are needed in this task. Then I load the configuration for BrowserSync. I will create this configuration file in a moment. Keeping all configurations out of the tasks will make them more usable and they can be easily shared between different projects.
+This code does needs some explanation: First I load Gulp.js and BrowserSync which are needed in this task. Then I load the configuration for BrowserSync. I will create this configuration file in a moment. Keeping all configuration out of the tasks will make them more usable and they can be easily shared between different projects.
 
 The second thing worth mentioning is `['build']`. This does mean before starting BrowserSync it first will run the `build` Gulp.js task (which I will write later). Every Gulp.js task needs a name. As second parameter you can either add a JavaScript callback or tasks or both.
 
