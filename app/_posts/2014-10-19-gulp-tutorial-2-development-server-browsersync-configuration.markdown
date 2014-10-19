@@ -44,7 +44,7 @@ gulp.task('default', function() {
 
 I know … I said I’m sick of *Hello World* tutorials, but this won’t last very long. I’ll soon replace it with some valuable code. So stay with me.
 
-If you execute the command `gulp` this Gulp.js task will output <samp>Hello Gulp.js!</samp> to the console.
+If you execute the command `gulp`, this Gulp.js task will output <samp>Hello Gulp.js!</samp> to the console.
 
 I will speed up the pace a little bit from now on.
 
@@ -81,7 +81,7 @@ I will come back later to write the `watch` task. For now the function will be e
 ## BrowserSync
 You might have heard of [LiveReload](http://livereload.com/), a tool that is watching for changes in your files and automatically reloads the server. With Stylesheets even reloading is not needed. The page refreshes with the changes instantly.
 
-But [BrowserSync](http://www.browsersync.io/) is even better: It does all LiveReload does, but you don’t need a browser plugin and it syncs your actions like scroll, click, refresh or filling out forms to all browsers connected. This works even with mobile devices. And BrowserSync even has support for a build in development server. That’s why I will need nothing more than BrowserSync to get a development server with live reloading.
+But [BrowserSync](http://www.browsersync.io/) is even better: It does all LiveReload does, but you don’t need a browser plugin and it syncs your actions like scroll, click, refresh or filling out forms to all browsers connected. This works even with mobile devices. And BrowserSync has even support for a development server. That’s why I will need nothing more than BrowserSync to get a development server with live reloading.
 
 But first I install Gulp.js and BrowserSync:
 
@@ -106,7 +106,7 @@ gulp.task('browsersync', ['build'], function() {
 {% endhighlight %}
 {% endfigure %}
 
-This code does needs some explanation: First I load Gulp.js and BrowserSync which are needed in this task. Then I load the configuration for BrowserSync. I will create this configuration file in a moment. Keeping all configuration out of the tasks will make them more usable and they can be easily shared between different projects.
+This code does need some explanation: First I load Gulp.js and BrowserSync, which are needed in this task. Then I load the configuration for BrowserSync. I will create this configuration file in a moment. Keeping all configuration out of the tasks will make them more usable and they can be easily shared between different projects.
 
 The second thing worth mentioning is `['build']`. This does mean before starting BrowserSync it first will run the `build` Gulp.js task (which I will write later). Every Gulp.js task needs a name. As second parameter you can either add a JavaScript callback or tasks or both.
 
