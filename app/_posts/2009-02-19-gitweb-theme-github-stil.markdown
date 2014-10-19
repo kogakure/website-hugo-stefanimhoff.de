@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "Gitweb-Theme im GitHub-Stil"
 author: "Stefan Imhoff"
 date: 2009-02-19 20:00

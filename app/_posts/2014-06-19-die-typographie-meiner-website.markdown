@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "Die Typographie meiner Website"
 author: "Stefan Imhoff"
 date: 2014-06-19 10:30

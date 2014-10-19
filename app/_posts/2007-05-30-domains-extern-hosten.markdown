@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "Domains extern hosten"
 author: "Stefan Imhoff"
 date: 2007-05-30 23:55

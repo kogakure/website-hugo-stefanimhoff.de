@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "2010 – ein Jahresrückblick"
 author: "Stefan Imhoff"
 date: 2010-12-23 13:00

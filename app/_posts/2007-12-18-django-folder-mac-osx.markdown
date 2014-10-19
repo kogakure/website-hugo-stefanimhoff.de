@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "Django Folder für Mac&nbsp;OS&nbsp;X"
 author: "Stefan Imhoff"
 date: 2007-12-18 22:10

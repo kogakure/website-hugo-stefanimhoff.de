@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "Theme Kaijin für das MoinMoin-Wiki"
 author: "Stefan Imhoff"
 date: 2008-02-14 20:58

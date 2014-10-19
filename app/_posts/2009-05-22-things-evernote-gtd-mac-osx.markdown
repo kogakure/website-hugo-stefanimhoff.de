@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "Things und Evernote: GTD mit dem Mac"
 author: "Stefan Imhoff"
 date: 2009-05-22 16:45

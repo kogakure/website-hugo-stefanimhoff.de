@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "Die Rückkehr der statischen Websites"
 author: "Stefan Imhoff"
 date: 2014-09-23T20:15:52+02:00

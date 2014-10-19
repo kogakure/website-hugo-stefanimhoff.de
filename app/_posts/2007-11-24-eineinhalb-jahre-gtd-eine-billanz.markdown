@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "Eineinhalb Jahre GTD – Eine Billanz"
 author: "Stefan Imhoff"
 date: 2007-11-24 01:15

@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "Widerlegung einer unwissenschaftlichen Dokumentation"
 author: "Stefan Imhoff"
 date: 2014-05-09 18:00

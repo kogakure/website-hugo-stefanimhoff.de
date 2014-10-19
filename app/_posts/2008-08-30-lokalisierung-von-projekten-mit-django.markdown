@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "Lokalisierung von Projekten mit Django"
 author: "Stefan Imhoff"
 date: 2008-08-30 15:25

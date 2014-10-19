@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "John Seymours Bücher über Selbstversorgung"
 author: "Stefan Imhoff"
 date: 2014-08-03 16:00

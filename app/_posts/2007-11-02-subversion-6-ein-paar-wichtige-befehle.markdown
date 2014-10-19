@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "Subversion (6) – Ein paar wichtige Befehle"
 author: "Stefan Imhoff"
 date: 2007-11-02 19:24

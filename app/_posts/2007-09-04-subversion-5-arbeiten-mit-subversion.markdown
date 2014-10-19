@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "Subversion (5) – Arbeiten mit Subversion"
 author: "Stefan Imhoff"
 date: 2007-09-04 18:45

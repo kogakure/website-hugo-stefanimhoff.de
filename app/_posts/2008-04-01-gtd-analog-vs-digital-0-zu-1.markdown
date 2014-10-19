@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "GTD: Analog vs. Digital – 0:1"
 author: "Stefan Imhoff"
 date: 2008-04-01 17:40

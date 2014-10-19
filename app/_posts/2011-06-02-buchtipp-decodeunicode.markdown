@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "Buchtipp: Decodeunicode"
 author: "Stefan Imhoff"
 date: 2011-06-02 18:38

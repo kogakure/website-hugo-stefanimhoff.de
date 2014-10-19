@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "ProVoc – Vokabeln lernen unter Mac OS X"
 author: "Stefan Imhoff"
 date: 2007-11-16 07:00

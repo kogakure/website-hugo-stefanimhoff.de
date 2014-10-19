@@ -25,6 +25,7 @@ port:        8888
 timezone:    local
 markdown:    kramdown
 lsi:         true
+language:    "en"
 
 # Feeds für individuelle Themen
 excerpt_link: "Weiterlesen &arr;"
@@ -38,8 +39,8 @@ standard_post_marker:
 
 # Categories
 category_feeds: true
-category_dir: kategorie
-category_title_prefix: "Kategorie: "
+category_dir: category
+category_title_prefix: "Category: "
 
 # Tags
 tag_feeds: true

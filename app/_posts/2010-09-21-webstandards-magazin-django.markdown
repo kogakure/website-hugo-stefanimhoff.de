@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "Webstandards-Magazin: Artikel über Django"
 author: "Stefan Imhoff"
 date: 2010-09-21 09:25

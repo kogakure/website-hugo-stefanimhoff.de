@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "5 gefährliche Dinge, die jedes Kind gemacht haben sollte"
 author: "Stefan Imhoff"
 date: 2008-02-03 12:34

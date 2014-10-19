@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "Styleguide"
+language: "de"
 footer: false
 ---
 

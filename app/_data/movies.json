@@ -1,6 +1,6 @@
 [
   {
-    "name": "Lieblingsfilme",
+    "name": "Favorite Movies",
     "items": [
       {
         "text": "Fight Club",
@@ -15,7 +15,7 @@
         "id": "tt0169547"
       },
       {
-        "text": "Die fabelhafte Welt der Amélie",
+        "text": "Le fabuleux destin d'Amélie Poulain",
         "id": "tt0211915"
       },
       {
@@ -31,7 +31,7 @@
         "id": "tt0080979"
       },
       {
-        "text": "Tatsächlich… Liebe",
+        "text": "Love Actually",
         "id": "tt0314331"
       },
       {
@@ -39,7 +39,7 @@
         "id": "tt0078788"
       },
       {
-        "text": "Die letzten Glühwürmchen",
+        "text": "Hotaru no haka",
         "id": "tt0095327"
       },
       {
@@ -47,15 +47,15 @@
         "id": "tt0133093"
       },
       {
-        "text": "Der Herr der Ringe - Die Gefährten",
+        "text": "The Lord of the Rings: The Fellowship of the Ring",
         "id": "tt0120737"
       },
       {
-        "text": "Der Herr der Ringe - Die zwei Türme",
+        "text": "The Lord of the Rings: The Two Towers",
         "id": "tt0167261"
       },
       {
-        "text": "Der Herr der Ringe - Die Rückkehr des Königs",
+        "text": "The Lord of the Rings: The Return of the King",
         "id": "tt0167260"
       },
       {
@@ -93,7 +93,7 @@
     ]
   },
   {
-    "name": "Lieblingsserien",
+    "name": "Favorite TV Shows",
     "items": [
       {
         "text": "Pushing Daisies",

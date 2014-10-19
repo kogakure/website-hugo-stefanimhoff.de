@@ -13,6 +13,10 @@ body.error {
     margin-top: $default-margin-top * 2;
     min-height: 415px;
     position: relative;
+
+    @include breakpoint($error-image-new-line) {
+      @include grid-span(12, 1, 12);
+    }
   }
 
   .error-image {
@@ -21,5 +25,9 @@ body.error {
     bottom: 0;
     left: 0;
     position: absolute;
+
+    @include breakpoint($error-image-new-line) {
+      @include grid-span(6, 4, 12);
+    }
   }
 }

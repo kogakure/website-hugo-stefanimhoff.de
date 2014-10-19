@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "Subversion (3) – Einrichten des Repository"
 author: "Stefan Imhoff"
 date: 2007-07-20 09:00

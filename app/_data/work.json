@@ -22,20 +22,20 @@
     "skills": [
       "Photoshop",
       "Illustrator",
-      "Grafikdesign",
+      "Graphic Design",
       "Usability",
-      "Informationsarchitektur"
+      "Information Architecture"
     ]
   },
   {
-    "name": "Agile Methoden",
+    "name": "Agile Methods",
     "skills": [
       "Scrum",
       "Kanban"
     ]
   },
   {
-    "name": "Sonstiges",
+    "name": "Misc",
     "skills": [
       "Vim",
       "Zsh",

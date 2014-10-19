@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "Buchtipp: Rework von 37signals"
 author: "Stefan Imhoff"
 date: 2010-04-27 16:30

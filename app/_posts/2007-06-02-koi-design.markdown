@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "Das Koi-Design: Inspiration und Idee"
 author: "Stefan Imhoff"
 date: 2007-06-02 02:00

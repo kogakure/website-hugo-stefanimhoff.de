@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "Die Gestaltung meines neuen Logos"
 author: "Stefan Imhoff"
 date: 2014-04-18 19:00

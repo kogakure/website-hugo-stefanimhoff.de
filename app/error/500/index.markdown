@@ -1,12 +1,12 @@
 ---
 layout: error
-title: Serverfehler!
+title: Server Error!
 footer: false
 error_page_500: true
 ---
 
-## Irgendwas ist ganz dolle kaputt hier. Warst **du** das etwa?
+## Doh! Something broke really badly! Did **you** do this?
 
-Du kannst **versuchen** zurück auf die [Startseite](/) zu gehen. Wenn das auch nicht geht, ist hier irgendwas richtig im Arsch. Du *könntest* aber so nett sein, und mir [bescheid zu sagen](/impressum/), damit ich das reparieren kann.
+Go back to the [Homepage](/) **or** look at my [Articles](/articles/) or be a nice person and [drop me a mail](/impressum/) and tell me about this thing.
 
 {% youtube uRGljemfwUE %}

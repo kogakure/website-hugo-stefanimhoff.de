@@ -1,14 +1,12 @@
 ---
 layout: error
-title: Seite verschwunden!
+title: Page missing!
 footer: false
 error_page_410: true
 ---
 
-## Neee du, das was hier mal war, gibt’s nich’ mehr  …
+## Doh! This stuff is missing!
 
-### … heul’ doch
+The content of this page is gone. And it won’t come back. Deal with it.
 
-Der Inhalt dieser Seite ist weg. Für immer. Ja wirklich. Und kommt auch nich’ mehr wieder.
-
-Jetzt kannst **entweder** zurück auf die [Startseite](/) gehen **oder** im [Archiv](/archiv/) nach etwas anderem suchen. Oder *heul halt*.
+Go back to the [Homepage](/) **or** look at my [Articles](/articles/) or sit down and cry.

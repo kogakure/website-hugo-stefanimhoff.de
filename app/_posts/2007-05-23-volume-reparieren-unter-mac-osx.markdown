@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "Volume reparieren unter Mac&nbsp;OS X"
 author: "Stefan Imhoff"
 date: 2007-05-23 11:40

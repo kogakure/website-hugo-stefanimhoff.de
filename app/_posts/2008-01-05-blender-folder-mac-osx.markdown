@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "Blender Folder für Mac&nbsp;OS&nbsp;X"
 author: "Stefan Imhoff"
 date: 2008-01-05 13:00

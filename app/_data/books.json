@@ -1,6 +1,6 @@
 [
   {
-    "name": "Lieblingsbücher",
+    "name": "Favorite Books",
     "items": [
       {
         "text": "Ilias. Odyssee",
@@ -73,7 +73,7 @@
     ]
   },
   {
-    "name": "Lieblingscomics",
+    "name": "Favorite Comics",
     "items": [
       {
         "text": "Prinz Eisenherz",

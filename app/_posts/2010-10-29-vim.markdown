@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "Bei der Macht von Vim – ich habe die Kraft"
 author: "Stefan Imhoff"
 date: 2010-10-29 19:00

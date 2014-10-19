@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "Git-Präsentation"
 author: "Stefan Imhoff"
 date: 2009-08-08 13:00

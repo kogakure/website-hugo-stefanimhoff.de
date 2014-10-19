@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "Einstieg in Git als Versionskontrollsystem"
 author: "Stefan Imhoff"
 date: 2009-02-10 20:00

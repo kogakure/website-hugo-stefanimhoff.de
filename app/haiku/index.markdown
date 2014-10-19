@@ -1,6 +1,7 @@
 ---
 layout: page
 title: "Haiku"
+language: "de"
 author: "Stefan Imhoff"
 date: 2014-02-09 09:01
 comments: false

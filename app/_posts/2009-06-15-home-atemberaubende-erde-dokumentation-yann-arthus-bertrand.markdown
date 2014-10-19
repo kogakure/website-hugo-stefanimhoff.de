@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "HOME – Atemberaubende Dokumentation über unsere Erde"
 author: "Stefan Imhoff"
 date: 2009-06-15 17:23

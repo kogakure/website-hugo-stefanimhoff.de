@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "Zeige deine am häufigsten benutzen Terminal-Befehle"
 author: "Stefan Imhoff"
 date: 2008-04-18 07:00

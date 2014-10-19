@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "Das Cover-Foto auf meiner Website"
 author: "Stefan Imhoff"
 date: 2014-05-30 10:00

@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "Duplikation ist in Ordnung"
 author: "Stefan Imhoff"
 date: 2013-11-27 12:45

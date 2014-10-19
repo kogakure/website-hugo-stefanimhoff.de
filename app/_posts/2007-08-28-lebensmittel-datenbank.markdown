@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "Lebensmittel-Datenbank"
 author: "Stefan Imhoff"
 date: 2007-08-28 08:24

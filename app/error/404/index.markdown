@@ -1,14 +1,12 @@
 ---
 layout: error
-title: Nicht gefunden!
+title: Not found!
 footer: false
 error_page_404: true
 ---
 
-## Neee du, das gibt’s hier nich’ …
+## Doh! This page can not be found.
 
-### … heul’ doch
+Maybe you *misspelled* something, trying to find stuff not supposed for your eyes or followed a *broken* link.
 
-Also hast du dich entweder *vertippt*, versucht irgendwas zu finden, was du nicht finden sollst oder auf einen *kaputten Link* irgendwo geklickt.
-
-Jetzt kannst **entweder** zurück auf die [Startseite](/) gehen **oder** im [Archiv](/archiv/) nachschauen, ob es das was du suchst überhaupt hier gibt. Oder *heul halt*.
+Go back to the [Homepage](/) **or** look at my [Articles](/articles/) or sit down and cry.

@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "Subversion (4) – Importieren einer Projektstruktur"
 author: "Stefan Imhoff"
 date: 2007-07-29 13:00
