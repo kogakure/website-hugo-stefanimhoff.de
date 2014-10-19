@@ -2,7 +2,7 @@
 layout: post
 language: "en"
 title: "Introduction to Gulp.js 2: Server with BrowserSync and Configuration"
-date: 2014-10-19T10:00:07+02:00
+date: 2014-10-19T10:17:00+02:00
 author: "Stefan Imhoff"
 categories:
 - Code
