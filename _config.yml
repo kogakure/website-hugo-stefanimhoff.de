@@ -16,7 +16,7 @@ destination: ./build
 encoding:    "utf-8"
 future:      true
 show_drafts: true
-limit_posts: 5
+limit_posts: 20
 
 # Server-Konfiguration
 date_format: "%d.%m.%Y"

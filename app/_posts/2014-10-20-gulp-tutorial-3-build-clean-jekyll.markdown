@@ -2,6 +2,7 @@
 layout: post
 language: "en"
 title: "Introduction to Gulp.js 3: Build, Clean and Jekyll"
+date: 2014-10-20T10:00:00+02:00
 author: "Stefan Imhoff"
 categories:
 - Code
@@ -95,7 +96,7 @@ gulp.task('delete', function(callback) {
 {% endfigure %}
 
 ## Jekyll
-Next I will write the config and task to create the Jekyll site:
+Next I will write the configuration and the task to create the Jekyll site:
 
 {% figure code-figure "config.js" %}
 {% highlight javascript %}
