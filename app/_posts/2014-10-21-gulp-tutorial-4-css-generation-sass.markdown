@@ -2,6 +2,7 @@
 layout: post
 language: "en"
 title: "Introduction to Gulp.js 4: Creating CSS with Sass (and Compass)"
+date: 2014-10-21T08:00:00+02:00
 author: "Stefan Imhoff"
 categories:
 - Code
@@ -116,7 +117,7 @@ I load all my files with the suffix of `*.sass` or `*.scss`. First I pipe the fi
 <p>Generating source maps, which actually work and point to the correct file is <em>a real pain</em>. There is a <a href="https://github.com/sindresorhus/gulp-ruby-sass/issues/17">known bug</a> in sass, which will mess up the paths. It took me literally hours to find out how to use <code>gulp-ruby-sass</code> and <code>gulp-sourcemaps</code> in combination to get working source maps.</p>
 {% endaside %}
 
-And I run the CSS files through Autoprefixer, which will add vendor prefixes. I used the Mixins of Compass a long time, but stopped now and write pure CSS. All vendor prefixes are added later for the Browsers I want to support.
+And I run the CSS files through Autoprefixer, which will add vendor prefixes. I used the Mixins of Compass a long time, but stopped now and write pure CSS. All vendor prefixes are added later for the browsers I want to support.
 
 You might have guessed: If you want to use Compass, just set the option `compass` to `true`.
 
