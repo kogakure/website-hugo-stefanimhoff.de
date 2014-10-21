@@ -2,7 +2,7 @@
 layout: post
 language: "en"
 title: "Introduction to Gulp.js 5: Bundling JavaScript with Browserify"
-date: 2014-10-21T10:49:37+02:00
+date: 2014-10-21T10:00:00+02:00
 author: "Stefan Imhoff"
 categories:
 - Code
@@ -142,7 +142,7 @@ gulp.task('scripts', function(callback) {
 {% endhighlight %}
 {% endfigure %}
 
-This task has some additional utilities for handling errors and logging the bundling process. Put these into a `utils` folder in your `gulp` folder:
+This task has some additional utilities for handling errors and logging the bundling process. Put these into a `util` folder in your `gulp` folder:
 
 {% figure code-figure "bundleLogger.js" %}
 {% highlight javascript %}
