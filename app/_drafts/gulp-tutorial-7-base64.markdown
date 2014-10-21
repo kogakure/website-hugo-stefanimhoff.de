@@ -32,7 +32,7 @@ To load the background pattern I use SCSS like this:
 {% highlight scss %}
 %pattern-light-grey {
   background-color: $content-background;
-  background-image: url('/assets/images/css/patterns/light_grey_@2X.png');
+  background-image: url('/assets/images/patterns/light_grey.png');
   background-size: 301px 621px;
 }
 
@@ -46,7 +46,7 @@ The generated CSS looks like this:
 {% highlight css %}
 .container {
   background-color: #eeeeee;
-  background-image: url("/assets/images/css/patterns/light_grey_@2X.png");
+  background-image: url("/assets/images/patterns/light_grey.png");
   background-size: 301px 621px;
 }
 {% endhighlight %}
