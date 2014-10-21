@@ -2,7 +2,7 @@
 layout: post
 language: "en"
 title: "Introduction to Gulp.js 5: Bundling JavaScript with Browserify"
-date: 2014-10-22T10:00:00+02:00
+date: 2014-10-21T10:49:37+02:00
 author: "Stefan Imhoff"
 categories:
 - Code
