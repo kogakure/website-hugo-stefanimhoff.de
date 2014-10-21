@@ -86,7 +86,7 @@ But [BrowserSync](http://www.browsersync.io/) is even better: It does all LiveRe
 But first I install Gulp.js and BrowserSync:
 
 {% highlight sh %}
-$ npm install --save-dev gulp browser-sync
+$ npm install --save-dev browser-sync
 {% endhighlight %}
 
 I create a new file `browser-sync.js` in `gulp/tasks/development/`. This file will start BrowserSync and the development server.
