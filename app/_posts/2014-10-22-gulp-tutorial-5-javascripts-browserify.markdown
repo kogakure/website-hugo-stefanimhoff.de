@@ -277,10 +277,15 @@ In the section `"browser"` you point Browserify-Shim to the assset you want to s
 
 Within `"browerify-shim"` you decide where to map this require to. To include jQuery or Modernizr later you would write:
 
+{% figure code-figure "head.js" %}
+{% highlight javascript %}
+require('modernizr');
+{% endhighlight %}
+{% endfigure %}
+
 {% figure code-figure "application.js" %}
 {% highlight javascript %}
 require('jquery');
-require('modernizr');
 
 $(function() {
   console.log("jQuery and Modernizr loaded");
