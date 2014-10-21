@@ -49,7 +49,7 @@ sprites: {
         }
       }
     },
-    dest: srcAssets + '/scss/base/',
+    dest: srcAssets + '/scss/',
   },
   image: {
     imgName: 'icon-sprite.png',
