@@ -110,5 +110,7 @@ gulp.task('base64', ['sass'], function() {
 
 We are now finished with the development `build` task.
 
+{% include articles/gulp-code.html %}
+
 ## Conclusion
 This concludes the 7th part of my series *Introduction to Gulp.js*. We learned how to replace URLs to PNG images with Base64 encoded images. And we are now finished with our `build` task.

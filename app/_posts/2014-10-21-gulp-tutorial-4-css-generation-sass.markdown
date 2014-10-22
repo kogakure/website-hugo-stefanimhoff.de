@@ -121,5 +121,7 @@ And I run the CSS files through Autoprefixer, which will add vendor prefixes. I 
 
 You might have guessed: If you want to use Compass, just set the option `compass` to `true`.
 
+{% include articles/gulp-code.html %}
+
 ## Conclusion
 This concludes the 4th part of my series *Introduction to Gulp.js*. We learned how to keep Gulp.js running, even when we produce errors, how to preprocess SCSS files with Sass, create Source Maps and add vendor prefixes to the CSS files.

@@ -295,5 +295,7 @@ $(function() {
 
 You have to run `npm install` once you added a new entry to your `package.json` file.
 
+{% include articles/gulp-code.html %}
+
 ## Conclusion
 This concludes the 5th part of my series *Introduction to Gulp.js*. We learned how to use Browserify to bundle JavaScript files, how to use CommonJS modules to run node in your Browser, and how to use non-CommonJS JavaScript files.

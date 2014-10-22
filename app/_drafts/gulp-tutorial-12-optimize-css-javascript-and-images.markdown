@@ -200,5 +200,7 @@ gulp.task('htmlmin', function() {
 {% endhighlight %}
 {% endfigure %}
 
+{% include articles/gulp-code.html %}
+
 ## Conclusion
 This concludes the 12th part of my series *Introduction to Gulp.js*. Today we learned how to minimize CSS and JavaScript files and reduce the size of images.

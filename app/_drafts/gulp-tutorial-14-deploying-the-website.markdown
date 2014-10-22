@@ -93,5 +93,7 @@ gulp.task('rsync', function() {
 {% endhighlight %}
 {% endfigure %}
 
+{% include articles/gulp-code.html %}
+
 ## Conclusion
 This concludes the series *Introduction to Gulp.js*. Developing and deploying with Gulp.js is fun. I like the UNIX philosophy of Gulp.js: Having small files, which do one task and connect these to larger workflows. And because I keeped my Gulp.js tasks small, pluggable and easily shareable, I was able to add Gulp.js to my second website in less than five minutes.

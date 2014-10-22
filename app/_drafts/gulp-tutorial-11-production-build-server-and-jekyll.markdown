@@ -154,5 +154,7 @@ gulp.task('jekyll:production', function(done) {
 {% endhighlight %}
 {% endfigure %}
 
+{% include articles/gulp-code.html %}
+
 ## Conclusion
 This concludes the 11th part of my series *Introduction to Gulp.js*. Today I started to work on the production part of my website, including a server to view the production site, and generate a production build of my Jekyll site.

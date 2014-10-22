@@ -111,5 +111,7 @@ gulp.task('fontcustom', shell.task([
 {% endhighlight %}
 {% endfigure %}
 
+{% include articles/gulp-code.html %}
+
 ## Conclusion
 This concludes the 6th part of my series *Introduction to Gulp.js*. We learned how to move files with Gulp.js (and don’t even need a plugin for that), and how I create my vector fonts. Nothing special, but the next part will be more interesting again.

@@ -163,5 +163,7 @@ This task will look into the `manifest.json` file and replace every path to one 
 
 The production build is finished! Only one thing is missing to complete this series of tutorials about Gulp.js: Deploying the Website to my server.
 
+{% include articles/gulp-code.html %}
+
 ## Conclusion
 This concludes the 13th part of my series *Introduction to Gulp.js*. Today we learned how to revision the asset files and replace links to these files.

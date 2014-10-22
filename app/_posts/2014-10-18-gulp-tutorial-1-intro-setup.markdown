@@ -108,5 +108,7 @@ $ cd app
 $ jekyll serve
 {% endhighlight %}
 
+{% include articles/gulp-code.html %}
+
 ## Conclusion
 This concludes the 1st part of my series *Introduction to Gulp.js*. We learned what Gulp.js is used for and created the basic folder structure for the project.

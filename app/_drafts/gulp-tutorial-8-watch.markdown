@@ -82,5 +82,7 @@ If I add, modify or delete a SVG file my vector fonts get recreated. And as a fa
 
 I miss now three tasks: `scsslint`, `jshint` and `sprites`.
 
+{% include articles/gulp-code.html %}
+
 ## Conclusion
 This concludes the 8th part of my series *Introduction to Gulp.js*. We learned how to use Gulp.js to watch for changes, deletion or creation of files and how to trigger tasks. And the best part: This is part of the Gulp.js API. We don’t need any plugin.

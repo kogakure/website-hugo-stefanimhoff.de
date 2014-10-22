@@ -148,5 +148,7 @@ Jekyll wipes out all files on recreation and to speed up development I have to b
 
 BrowserSync watches only my asset files, in order that my browser won’t reload like hell, everytime Jekyll creates one file. I will later write one task, which reloads the Browser one time after the Jekyll build is complete.
 
+{% include articles/gulp-code.html %}
+
 ## Conclusion
 This concludes the 2nd part of my series *Introduction to Gulp.js*. We learned how to install Gulp.js, how to write a Gulp.js task, run other tasks and set up a development server with BrowserSync.

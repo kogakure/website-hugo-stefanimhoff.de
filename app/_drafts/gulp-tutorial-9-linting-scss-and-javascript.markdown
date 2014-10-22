@@ -88,5 +88,7 @@ gulp.task('jshint', function() {
 <p>To find out which options are available look into the documentation of <a href="https://github.com/causes/scss-lint">SCSS-Lint</a> and <a href="http://jshint.com/docs/">JSHint</a>.</p>
 {% endaside %}
 
+{% include articles/gulp-code.html %}
+
 ## Conclusion
 This concludes the 9th part of my series *Introduction to Gulp.js*. Today we learned how to use Gulp.js to check the syntax of SCSS and JavaScript files. This task will run continuously while I write my files and print out errors to my console the moment I created them.

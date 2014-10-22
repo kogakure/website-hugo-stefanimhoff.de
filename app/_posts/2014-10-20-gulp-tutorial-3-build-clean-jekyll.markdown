@@ -139,5 +139,7 @@ All this task is doing is running `jekyll build` with some options. I use `app` 
 
 I have a second Jekyll build task `jekyll-rebuild`, which is only a wrapper for a rebuild. All it does is reloading the Browser when the build is completed.
 
+{% include articles/gulp-code.html %}
+
 ## Conclusion
 This concludes the 3rd part of my series *Introduction to Gulp.js*. We learned how to run files in a specified order with `run-sequence`, how to delete files and folders and how to execute a shell task like Jekyll.

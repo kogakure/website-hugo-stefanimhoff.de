@@ -96,5 +96,7 @@ All development tasks are done now. We have got a running development server, ta
 
 Next I will write the tasks needed to get production ready code.
 
+{% include articles/gulp-code.html %}
+
 ## Conclusion
 This concludes the 10th part of my series *Introduction to Gulp.js*. Today we learned how to create CSS image sprites with Gulp.js and Spritesmith.
