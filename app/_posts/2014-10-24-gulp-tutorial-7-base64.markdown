@@ -2,6 +2,7 @@
 layout: post
 language: "en"
 title: "Introduction to Gulp.js 7: Base64 Encoded Images"
+date: 2014-10-24T08:00:00+02:00
 author: "Stefan Imhoff"
 categories:
 - Code

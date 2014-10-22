@@ -2,6 +2,7 @@
 layout: post
 language: "en"
 title: "Introduction to Gulp.js 8: Watch for Changes"
+date: 2014-10-25T08:00:00+02:00
 author: "Stefan Imhoff"
 categories:
 - Code

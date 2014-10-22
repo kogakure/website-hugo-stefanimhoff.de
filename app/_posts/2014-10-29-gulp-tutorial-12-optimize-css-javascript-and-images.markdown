@@ -2,6 +2,7 @@
 layout: post
 language: "en"
 title: "Introduction to Gulp.js 12: Optimize CSS, JavaScript and Images"
+date: 2014-10-29T08:00:00+02:00
 author: "Stefan Imhoff"
 categories:
 - Code

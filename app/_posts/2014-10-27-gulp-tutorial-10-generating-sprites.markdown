@@ -2,6 +2,7 @@
 layout: post
 language: "en"
 title: "Introduction to Gulp.js 10: Generating CSS Image Sprites"
+date: 2014-10-27T08:00:00+02:00
 author: "Stefan Imhoff"
 categories:
 - Code
