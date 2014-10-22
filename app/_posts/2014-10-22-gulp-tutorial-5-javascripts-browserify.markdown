@@ -2,7 +2,7 @@
 layout: post
 language: "en"
 title: "Introduction to Gulp.js 5: Bundling JavaScript with Browserify"
-date: 2014-10-21T10:00:00+02:00
+date: 2014-10-22T08:00:00+02:00
 author: "Stefan Imhoff"
 categories:
 - Code
@@ -15,7 +15,7 @@ tags:
 - commonjs
 ---
 
-This is the fifth part of my series *Introduction to Gulp.js*. Today I will show how to use Browserify to bundle your JavaScript and use CommonJS modules to run node modules in the Browser.
+This is the 5th part of my series *Introduction to Gulp.js*. Today I will show how to use Browserify to bundle your JavaScript and use CommonJS modules to run node modules in the Browser.
 
 {% figure image-figure attribution %}
 <img src="/assets/images/artikel/gulp-tutorial-5.jpg" alt="Ultimate Gulp and X-Treme Gulp">
@@ -229,7 +229,7 @@ exports.increment = function(val) {
 
 {% figure code-figure "application.js" %}
 {% highlight javascript %}
-var navigation = require('./navigation.js');
+var navigation = require('./navigation');
 var triggerNavigation = document.querySelector('.toggle-navigation');
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -273,7 +273,7 @@ I open my `package.json` file and need to add a few lines:
 {% endhighlight %}
 {% endfigure %}
 
-In the section `"browser"` you point Browserify-Shim to the assset you want to shim. I use [Bower](http://bower.io/) and have installed my packages into `app/_bower_components/`. The name you choose is the name you have to require later in your JavaScripts.
+In the section `"browser"` you point `browserify-shim` to the assset you want to shim. I use [Bower](http://bower.io/) and have installed my packages into `app/_bower_components/`. The name you choose is the name you have to require later in your JavaScripts.
 
 Within `"browerify-shim"` you decide where to map this require to. To include jQuery or Modernizr later you would write:
 
