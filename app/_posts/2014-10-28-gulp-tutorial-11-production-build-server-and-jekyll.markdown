@@ -26,7 +26,7 @@ In development I used the `default` Gulp.js tasks to run the development server,
 
 I decided to name my task `publish`. Later I am able to get a production build with the command `gulp publish`.
 
-{% figure code-figure "publish.js" %}
+{% figure code-figure "gulp/tasks/publish.js" %}
 {% highlight javascript %}
 var gulp = require('gulp');
 
@@ -42,7 +42,7 @@ I put this file on same level as the `default.js` file. This task is short and s
 ## BrowserSync for Production
 All production tasks will live in a folder `production/` inside of `gulp/tasks/`. I name the tasks of development and production the same but put them in different folders.
 
-{% figure code-figure "config.js" %}
+{% figure code-figure "gulp/config.js" %}
 {% highlight javascript %}
 browsersync: {
   development: {
@@ -60,7 +60,7 @@ browsersync: {
 
 The only differences to the `browsersync` of `development` are these: I serve only the production folder and use a different port for the server. This way I can run `development` and `production` in parallel.
 
-{% figure code-figure "browser-sync.js" %}
+{% figure code-figure "gulp/tasks/production/browser-sync.js" %}
 {% highlight javascript %}
 var gulp        = require('gulp');
 var browsersync = require('browser-sync');
@@ -79,7 +79,7 @@ This task is boring. It just starts the production build.
 
 ## Build Task for Production
 
-{% figure code-figure "build.js" %}
+{% figure code-figure "gulp/tasks/production/build.js" %}
 {% highlight javascript %}
 var gulp        = require('gulp');
 var runSequence = require('run-sequence');
@@ -121,7 +121,7 @@ My Jekyll production config just overwrites some values as the `url`, hide futur
 <p>To speed up generation of your site in development, you may set <code>limit_post: 5</code>, which will only generate the last five posts. Additionally I set <code>future: true</code> and <code>show_drafts: true</code> to see Drafts and Posts with a future date.</p>
 {% endaside %}
 
-{% figure code-figure "config.js" %}
+{% figure code-figure "gulp/config.js" %}
 {% highlight javascript %}
 jekyll: {
   development: {
@@ -136,7 +136,7 @@ jekyll: {
 {% endhighlight %}
 {% endfigure %}
 
-{% figure code-figure "jekyll.js" %}
+{% figure code-figure "gulp/tasks/production/jekyll.js" %}
 {% highlight javascript %}
 var gulp        = require('gulp');
 var cp          = require('child_process');

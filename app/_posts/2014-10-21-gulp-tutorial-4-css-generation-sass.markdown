@@ -36,7 +36,7 @@ $ npm install --save-dev gulp-plumber gulp-ruby-sass gulp-filter gulp-changed gu
 
 That’s a lot, but this task will do a lot.
 
-{% figure code-figure "config.js" %}
+{% figure code-figure "gulp/config.js" %}
 {% highlight javascript %}
 sass: {
   src:  srcAssets + '/scss/**/*.{sass,scss}',
@@ -64,7 +64,7 @@ autoprefixer: {
 {% endhighlight %}
 {% endfigure %}
 
-{% figure code-figure "sass.js" %}
+{% figure code-figure "gulp/task/development/sass.js" %}
 {% highlight javascript %}
 var gulp         = require('gulp');
 var plumber      = require('gulp-plumber');

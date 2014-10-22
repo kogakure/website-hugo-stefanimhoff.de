@@ -26,7 +26,7 @@ There are a lot of possibilites to get a website on the server. You may use FTP,
 
 I write another tasks as entry point: `deploy`
 
-{% figure code-figure "deploy.js" %}
+{% figure code-figure "gulp/tasks/deploy.js" %}
 {% highlight javascript %}
 var gulp = require('gulp');
 
@@ -43,7 +43,7 @@ This will just start the `rsync` task. But I could add more tasks, for example a
 $ npm install --save-dev gulp-rsync
 {% endhighlight %}
 
-{% figure code-figure "config.js" %}
+{% figure code-figure "gulp/config.js" %}
 {% highlight javascript %}
 rsync: {
   src: 'build/production/**',
@@ -65,7 +65,7 @@ rsync: {
 
 This task will grab all files in my production folder, connect to my server and copy all files recursively to my website root. It will delete old files and just add changes to the server.
 
-{% figure code-figure "rsync.js" %}
+{% figure code-figure "gulp/tasks/production/rsync.js" %}
 {% highlight javascript %}
 var gulp = require('gulp');
 var rsync = require('gulp-rsync');

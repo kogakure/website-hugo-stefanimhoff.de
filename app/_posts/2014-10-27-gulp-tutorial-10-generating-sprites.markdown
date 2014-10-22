@@ -32,7 +32,7 @@ I will need a Spritesmith plugin for Gulp.js:
 $ npm install --save-dev gulp.spritesmith
 {% endhighlight %}
 
-{% figure code-figure "config.js" %}
+{% figure code-figure "gulp/config.js" %}
 {% highlight javascript %}
 sprites: {
   src: srcAssets + '/images/sprites/icon/*.png',
@@ -63,7 +63,7 @@ sprites: {
 
 I split my config into three subsections: The source files (individual icons for the sprite), the output of the CSS file and the output of the image sprite. I use a custom `cssClass` which will generate `:hover` states by naming the hover sprites with `-hover`.
 
-{% figure code-figure "sprites.js" %}
+{% figure code-figure "gulp/tasks/development/sprites.js" %}
 {% highlight javascript %}
 var gulp        = require('gulp');
 var spritesmith = require('gulp.spritesmith');

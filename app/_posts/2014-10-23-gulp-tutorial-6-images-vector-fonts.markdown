@@ -24,7 +24,7 @@ This is the 6th part of my series *Introduction to Gulp.js*. The last article wa
 ## Images
 The image task is a simple one again. All it does for now is copying the images to the asset directory. I will optimize my images later during the production build.
 
-{% figure code-figure "config.js" %}
+{% figure code-figure "gulp/config.js" %}
 {% highlight javascript %}
 images: {
   src:  srcAssets + '/images/**/*',
@@ -33,7 +33,7 @@ images: {
 {% endhighlight %}
 {% endfigure %}
 
-{% figure code-figure "images.js" %}
+{% figure code-figure "gulp/tasks/development/images.js" %}
 {% highlight javascript %}
 var gulp        = require('gulp');
 var changed     = require('gulp-changed');
@@ -58,7 +58,7 @@ I use vector fonts for my website. Vector fonts are one option to include high q
 I use [Font Custom](http://fontcustom.com/) to generate my vector fonts. There is a [gulp plugin](https://www.npmjs.org/package/gulp-fontcustom/) for this, but I couldn’t get it running. But I’m totally fine with running this task with a shell command (via Gulp.js). I will use Gulp.js later to watch the folder containing the SVG files and recreate the vector fonts if needed.
 
 
-{% figure code-figure "config.js" %}
+{% figure code-figure "gulp/config.js" %}
 {% highlight javascript %}
 copyfonts: {
   development: {
@@ -69,7 +69,7 @@ copyfonts: {
 {% endhighlight %}
 {% endfigure %}
 
-{% figure code-figure "copy-fonts.js" %}
+{% figure code-figure "gulp/tasks/development/copy-fonts.js" %}
 {% highlight javascript %}
 var gulp   = require('gulp');
 var config = require('../../config').copyfonts.development;
@@ -94,7 +94,7 @@ To execute a shell command I use the Gulp.js plugin `gulp-shell`:
 $ npm install --save-dev gulp-shell
 {% endhighlight %}
 
-{% figure code-figure "fontcustom.js" %}
+{% figure code-figure "gulp/tasks/development/fontcustom.js" %}
 {% highlight javascript %}
 var gulp  = require('gulp');
 var shell = require('gulp-shell');

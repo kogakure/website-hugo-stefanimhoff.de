@@ -31,7 +31,7 @@ I decided to lint my SCSS files and not the CSS files, because it’s kind of po
 $ npm install --save-dev gulp-scss-lint gulp-jshint jshint-stylish
 {% endhighlight %}
 
-{% figure code-figure "config.js" %}
+{% figure code-figure "gulp/config.js" %}
 {% highlight javascript %}
 scsslint: {
   src: [
@@ -48,7 +48,7 @@ jshint: {
 
 I ignore some files from checking (by adding a `!` in front of the path), because I didn’t write them or don’t have control over the syntax.
 
-{% figure code-figure "scss-lint.js" %}
+{% figure code-figure "gulp/tasks/development/scss-lint.js" %}
 {% highlight javascript %}
 var gulp     = require('gulp');
 var scsslint = require('gulp-scss-lint');
@@ -65,7 +65,7 @@ gulp.task('scsslint', function() {
 {% endhighlight %}
 {% endfigure %}
 
-{% figure code-figure "jshint.js" %}
+{% figure code-figure "gulp/tasks/development/jshint.js" %}
 {% highlight javascript %}
 var gulp    = require('gulp');
 var jshint  = require('gulp-jshint');

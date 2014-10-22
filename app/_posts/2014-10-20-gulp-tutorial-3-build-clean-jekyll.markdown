@@ -31,7 +31,7 @@ $ npm install --save-dev run-sequence
 
 Next I create the task:
 
-{% figure code-figure "build.js" %}
+{% figure code-figure "gulp/tasks/development/build.js" %}
 {% highlight javascript %}
 var gulp        = require('gulp');
 var runSequence = require('run-sequence');
@@ -65,7 +65,7 @@ $ npm install --save-dev del
 
 I need to add a config for deleting:
 
-{% figure code-figure "config.js" %}
+{% figure code-figure "gulp/config.js" %}
 {% highlight javascript %}
 browsersync: {
 ...
@@ -80,7 +80,7 @@ I will shorten all configuration options from now on. Every task will have a own
 
 The actuall task will look like this:
 
-{% figure code-figure "delete.js" %}
+{% figure code-figure "gulp/tasks/development/delete.js" %}
 {% highlight javascript %}
 var gulp   = require('gulp');
 var del    = require('del');
@@ -98,7 +98,7 @@ gulp.task('delete', function(callback) {
 ## Jekyll
 Next I will write the configuration and the task to create the Jekyll site:
 
-{% figure code-figure "config.js" %}
+{% figure code-figure "gulp/config.js" %}
 {% highlight javascript %}
 jekyll: {
   development: {
@@ -110,7 +110,7 @@ jekyll: {
 {% endhighlight %}
 {% endfigure %}
 
-{% figure code-figure "jekyll.js" %}
+{% figure code-figure "gulp/config/development/jekyll.js" %}
 {% highlight javascript %}
 var gulp        = require('gulp');
 var cp          = require('child_process');

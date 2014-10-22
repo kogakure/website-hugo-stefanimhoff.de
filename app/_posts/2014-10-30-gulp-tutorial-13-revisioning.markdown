@@ -27,7 +27,7 @@ Before I can work on the fun part of revisioning my asset files I first have to 
 ## Copy Vector Fonts for Production
 Another boring and short task, which is doing just one simple thing: Copy the fonts to the production assets folder. But that’s the way Gulp.js was build. Have small tasks that do small things.
 
-{% figure code-figure "config.js" %}
+{% figure code-figure "gulp/config.js" %}
 {% highlight javascript %}
 copyfonts: {
   development: {
@@ -41,7 +41,7 @@ copyfonts: {
 {% endhighlight %}
 {% endfigure %}
 
-{% figure code-figure "copy-fonts.js" %}
+{% figure code-figure "gulp/tasks/production/copy-fonts.js" %}
 {% highlight javascript %}
 var gulp   = require('gulp');
 var config = require('../../config').copyfonts.production;
@@ -71,7 +71,7 @@ I install `gulp-rev`, which will handle this renaming of assets:
 $ npm install --save-dev gulp-rev
 {% endhighlight %}
 
-{% figure code-figure "config.js" %}
+{% figure code-figure "gulp/config.js" %}
 {% highlight javascript %}
 revision: {
   src: {
@@ -95,7 +95,7 @@ revision: {
 
 This task will rename all assets and create a JSON file containing all files, which where renamed and their old and new file names.
 
-{% figure code-figure "revision.js" %}
+{% figure code-figure "gulp/tasks/production/revision.js" %}
 {% highlight javascript %}
 var gulp   = require('gulp');
 var rev    = require('gulp-rev');
@@ -125,7 +125,7 @@ This task will need `gulp-rev-collector` to replace the paths names to assets:
 $ npm install --save-dev gulp-rev-collector
 {% endhighlight %}
 
-{% figure code-figure "config.js" %}
+{% figure code-figure "gulp/config.js" %}
 {% highlight javascript %}
 collect: {
   src: {
@@ -139,7 +139,7 @@ collect: {
 
 I replace these paths only in files I know they could contain paths to assets. Don’t include any images or binary files. Revision collector will try to open them and destroy most binary files.
 
-{% figure code-figure "rev-collector.js" %}
+{% figure code-figure "gulp/tasks/production/rev-collector.js" %}
 {% highlight javascript %}
 var gulp    = require('gulp');
 var collect = require('gulp-rev-collector');

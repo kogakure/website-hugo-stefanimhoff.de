@@ -34,7 +34,7 @@ I install the needed Gulp.js plugins:
 $ npm install --save-dev gulp-minify-css gulp-size
 {% endhighlight %}
 
-{% figure code-figure "config.js" %}
+{% figure code-figure "gulp/config.js" %}
 {% highlight javascript %}
 optimize: {
   css: {
@@ -45,7 +45,7 @@ optimize: {
 {% endhighlight %}
 {% endfigure %}
 
-{% figure code-figure "optimize-css.js" %}
+{% figure code-figure "gulp/tasks/production/optimize-css.js" %}
 {% highlight javascript %}
 var gulp      = require('gulp');
 var minifycss = require('gulp-minify-css');
@@ -75,7 +75,7 @@ Now the CSS is minimized and the same has to be done to the JavaScript files. I 
 $ npm install --save-dev gulp-uglify
 {% endhighlight %}
 
-{% figure code-figure "config.js" %}
+{% figure code-figure "gulp/config.js" %}
 {% highlight javascript %}
 optimize: {
   css: {
@@ -89,7 +89,7 @@ optimize: {
 {% endhighlight %}
 {% endfigure %}
 
-{% figure code-figure "optimize-js.js" %}
+{% figure code-figure "gulp/tasks/production/optimize-js.js" %}
 {% highlight javascript %}
 var gulp   = require('gulp');
 var uglify = require('gulp-uglify');
@@ -124,7 +124,7 @@ I’ll need `gulp-imagemin` for my task, which is able to minify PNG, JPG, GIF a
 $ npm install --save-dev gulp-imagemin
 {% endhighlight %}
 
-{% figure code-figure "config.js" %}
+{% figure code-figure "gulp/config.js" %}
 {% highlight javascript %}
 optimize: {
   css: {
@@ -141,7 +141,7 @@ optimize: {
 {% endhighlight %}
 {% endfigure %}
 
-{% figure code-figure "optimize-images.js" %}
+{% figure code-figure "gulp/tasks/production/optimize-images.js" %}
 {% highlight javascript %}
 var gulp     = require('gulp');
 var imagemin = require('gulp-imagemin');
@@ -173,7 +173,7 @@ As said before I wrote this task but don’t use it, because the reduction is mi
 $ npm install --save-dev gulp-htmlmin
 {% endhighlight %}
 
-{% figure code-figure "config.js" %}
+{% figure code-figure "gulp/config.js" %}
 {% highlight javascript %}
 htmlmin: {
   src: production + '/**/*.html',
@@ -182,7 +182,7 @@ htmlmin: {
 {% endhighlight %}
 {% endfigure %}
 
-{% figure code-figure "htmlmin.js" %}
+{% figure code-figure "gulp/tasks/production/htmlmin.js" %}
 {% highlight javascript %}
 var gulp    = require('gulp');
 var htmlmin = require('gulp-htmlmin');

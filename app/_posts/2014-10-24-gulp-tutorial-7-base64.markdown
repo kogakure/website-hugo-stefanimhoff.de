@@ -70,7 +70,7 @@ $ npm install --save-dev gulp-base64
 
 I add a new configuration entry and create the task:
 
-{% figure code-figure "config.js" %}
+{% figure code-figure "gulp/config.js" %}
 {% highlight javascript %}
 base64: {
   src: developmentAssets + '/css/*.css',
@@ -87,7 +87,7 @@ base64: {
 
 I only replace images with the ending PNG and only if maximal 20 KB of size. This way my high resolution images don’t get embedded into the CSS file.
 
-{% figure code-figure "base64.js" %}
+{% figure code-figure "gulp/tasks/development/base64.js" %}
 {% highlight javascript %}
 var gulp   = require('gulp');
 var base64 = require('gulp-base64');

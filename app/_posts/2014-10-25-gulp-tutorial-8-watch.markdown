@@ -25,7 +25,7 @@ Do you remember the `watch` task from the beginning? This task just started Brow
 
 `Watch` is part of the API of gulp. It will watch a folder or files for changes, addition or deletion and trigger tasks.
 
-{% figure code-figure "config.js" %}
+{% figure code-figure "gulp/config.js" %}
 {% highlight javascript %}
 watch: {
   jekyll: [
@@ -54,7 +54,7 @@ For Jekyll I watch for changes in a lot of files. Changes in configuration files
 
 The Sass task will watch for changes in files with the suffix `sass` or `scss`. JavaScript gets triggered if I change some JavaScript file. You get the point.
 
-{% figure code-figure "watch.js" %}
+{% figure code-figure "gulp/tasks/development/watch.js" %}
 {% highlight javascript %}
 var gulp   = require('gulp');
 var config = require('../../config').watch;

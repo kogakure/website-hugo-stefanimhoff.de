@@ -40,7 +40,7 @@ $ npm install --save-dev browserify vinyl-source-stream watchify gulp-util prett
 
 Create the entry in the `config.js` file:
 
-{% figure code-figure "config.js" %}
+{% figure code-figure "gulp/config.js" %}
 {% highlight javascript %}
 browserify: {
   // Enable source maps
@@ -62,7 +62,7 @@ browserify: {
 {% endhighlight %}
 {% endfigure %}
 
-{% figure code-figure "scripts.js" %}
+{% figure code-figure "gulp/tasks/development/scripts.js" %}
 {% highlight javascript %}
 var gulp         = require('gulp');
 var browsersync  = require('browser-sync');
@@ -144,7 +144,7 @@ gulp.task('scripts', function(callback) {
 
 This task has some additional utilities for handling errors and logging the bundling process. Put these into a `util` folder in your `gulp` folder:
 
-{% figure code-figure "bundleLogger.js" %}
+{% figure code-figure "gulp/util/bundleLogger.js" %}
 {% highlight javascript %}
 /* bundleLogger
    ------------
@@ -170,7 +170,7 @@ module.exports = {
 {% endhighlight %}
 {% endfigure %}
 
-{% figure code-figure "handleErrors.js" %}
+{% figure code-figure "gulp/util/handleErrors.js" %}
 {% highlight javascript %}
 var notify = require("gulp-notify");
 
@@ -277,13 +277,13 @@ In the section `"browser"` you point `browserify-shim` to the assset you want to
 
 Within `"browerify-shim"` you decide where to map this require to. To include jQuery or Modernizr later you would write:
 
-{% figure code-figure "head.js" %}
+{% figure code-figure "app/_assets/javascripts/head.js" %}
 {% highlight javascript %}
 require('modernizr');
 {% endhighlight %}
 {% endfigure %}
 
-{% figure code-figure "application.js" %}
+{% figure code-figure "app/_assets/javascripts/application.js" %}
 {% highlight javascript %}
 require('jquery');
 

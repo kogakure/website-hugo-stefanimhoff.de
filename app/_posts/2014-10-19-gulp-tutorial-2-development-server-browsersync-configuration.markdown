@@ -32,7 +32,7 @@ If I run the command `gulp` on my command line I get an error message <samp>Task
 
 I create inside the `gulp/tasks` folder a file `default.js` and write this code:
 
-{% figure code-figure "default.js" %}
+{% figure code-figure "gulp/tasks/default.js" %}
 {% highlight javascript %}
 var gulp = require('gulp');
 
@@ -51,7 +51,7 @@ I will speed up the pace a little bit from now on.
 ## Watch
 Instead of calling a function and output some text to the console I can execute tasks. I decided to execute the watch task when running `gulp`. This task will later watch for changes in files and update my files.
 
-{% figure code-figure "default.js" %}
+{% figure code-figure "gulp/tasks/default.js" %}
 {% highlight javascript %}
 var gulp = require('gulp');
 
@@ -63,7 +63,7 @@ It’s possible to run multiple tasks at once, which is why I write my `watch` t
 
 I will create another folder within my `tasks` folder with the name `development` and put all tasks needed for development in this folder. This is not necessary, but I did so:
 
-{% figure code-figure "watch.js" %}
+{% figure code-figure "gulp/tasks/development/watch.js" %}
 {% highlight javascript %}
 var gulp = require('gulp');
 
@@ -91,7 +91,7 @@ $ npm install --save-dev browser-sync
 
 I create a new file `browser-sync.js` in `gulp/tasks/development/`. This file will start BrowserSync and the development server.
 
-{% figure code-figure "browser-sync.js" %}
+{% figure code-figure "gulp/tasks/development/browser-sync.js" %}
 {% highlight javascript %}
 var gulp        = require('gulp');
 var browsersync = require('browser-sync');
@@ -113,7 +113,7 @@ The second thing worth mentioning is `['build']`. This does mean before starting
 ## Configuration
 I create a new file `config.js` in the main Gulp.js folder:
 
-{% figure code-figure "config.js" %}
+{% figure code-figure "gulp/config.js" %}
 {% highlight javascript %}
 var src               = 'app';
 var build             = 'build';
