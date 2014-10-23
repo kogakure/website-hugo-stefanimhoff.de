@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "J2EE versus ruby/python-Frameworks"
 author: "Stefan Imhoff"
 date: 2007-06-13 01:34

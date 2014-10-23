@@ -1,16 +1,12 @@
 ---
 layout: page
-title: "Publikationen"
+title: "Publications"
 author: "Stefan Imhoff"
 date: 2014-03-22 20:05
 comments: false
 sharing: false
 footer: false
 ---
-
-Auf dieser Seite sind meine Publikationen (Text/Foto) zu finden.
-
--------------------------------------------------------------------------------
 
 ## Web
 

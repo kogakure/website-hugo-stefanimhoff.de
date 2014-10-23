@@ -10,7 +10,11 @@
         <div class="meta">
           <span class="author">
             <i class="icon-quill"></i>
-            {% if page.author %}<em>von</em> {% include post/author.html %}{% endif %}
+            {% if page.language == "en" %}
+              {% if page.author %}<em>by</em> {% include post/author.html %}{% endif %}
+            {% else %}
+              {% if page.author %}<em>von</em> {% include post/author.html %}{% endif %}
+            {% endif %}
           </span>
           <span class="publication">
             {% include post/date.html %}{% if updated %}{{ time }}{{ updated }}{% else %}{{ time }}{% endif %}

@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "Gitweb-Theme im GitHub-Stil"
 author: "Stefan Imhoff"
 date: 2009-02-19 20:00
@@ -34,25 +35,25 @@ Detailed instructions for installations are included in the package on GitHub.
 ## Screenshots
 
 {% figure image-figure image-figure-border "Projektübersicht/Project view" %}
-<img src="/assets/images/artikel/gitweb-theme-projects.png" alt="Projektübersicht" />
+<img src="{{ site.url }}/assets/images/artikel/gitweb-theme-projects.png" alt="Projektübersicht" />
 {% endfigure %}
 
 {% figure image-figure image-figure-border "Zusammenfassung/Summary" %}
-<img src="/assets/images/artikel/gitweb-theme-summary.png" alt="Zusammenfassung" />
+<img src="{{ site.url }}/assets/images/artikel/gitweb-theme-summary.png" alt="Zusammenfassung" />
 {% endfigure %}
 
 {% figure image-figure image-figure-border "Commit" %}
-<img src="/assets/images/artikel/gitweb-theme-commit.png" alt="Commit" />
+<img src="{{ site.url }}/assets/images/artikel/gitweb-theme-commit.png" alt="Commit" />
 {% endfigure %}
 
 {% figure image-figure image-figure-border "Commit-DIFF" %}
-<img src="/assets/images/artikel/gitweb-theme-commitdiff.png" alt="Commit-DIFF" />
+<img src="{{ site.url }}/assets/images/artikel/gitweb-theme-commitdiff.png" alt="Commit-DIFF" />
 {% endfigure %}
 
 {% figure image-figure image-figure-border "Historie/Log" %}
-<img src="/assets/images/artikel/gitweb-theme-log.png" alt="Historie" />
+<img src="{{ site.url }}/assets/images/artikel/gitweb-theme-log.png" alt="Historie" />
 {% endfigure %}
 
 {% figure image-figure image-figure-border "Dateiansicht/Tree view" %}
-<img src="/assets/images/artikel/gitweb-theme-tree.png" alt="Dateiansicht" />
+<img src="{{ site.url }}/assets/images/artikel/gitweb-theme-tree.png" alt="Dateiansicht" />
 {% endfigure %}

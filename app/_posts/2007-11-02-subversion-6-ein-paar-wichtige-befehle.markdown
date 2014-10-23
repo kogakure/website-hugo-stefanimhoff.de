@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "Subversion (6) – Ein paar wichtige Befehle"
 author: "Stefan Imhoff"
 date: 2007-11-02 19:24
@@ -13,7 +14,7 @@ tags:
 
 Es gibt in Subversion noch ein paar nützliche und notwendige Befehle, die man im täglichen Umgang brauchen wird.
 
-{% aside hinweis %}
+{% aside aside-hint %}
 <p>Der Inhalt dieses Artikels ist noch aktuell, doch kann ich nur dringend dazu raten, sich die fantastische Alternative zu Subversion anzusehen: <a href="/2007/versionskontrolle-mit-git/"><strong>Git</strong></a>.</p>
 {% endaside %}
 

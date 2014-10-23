@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "Kostenlose Vektorkarten mit OpenStreetMap"
 author: "Stefan Imhoff"
 date: 2008-09-06 18:59
@@ -16,7 +17,7 @@ tags:
 Ich habe keine Ahnung, warum dieses Juwel so lange unbemerkt von mir bleiben konnte, aber gestern hat mich ein Kollege auf den Kartendienst OpenStreetMap hingewiesen. Ähnlich wie bei Wikipedia wird dort von vielen Benutzern eine für jeden kostenlos verfügbare Karte zusammengetragen.
 
 {% figure image-figure image-figure-border "Die Autostadt Wolfsburg mit OpenStreetMap" %}
-<img src="/assets/images/artikel/openstreetmap.jpg" alt="Die Autostadt Wolfsburg mit OpenStreetMap" />
+<img src="{{ site.url }}/assets/images/artikel/openstreetmap.jpg" alt="Die Autostadt Wolfsburg mit OpenStreetMap" />
 {% endfigure %}
 
 Der Leistungsumfang von [OpenStreetMap](http://www.openstreetmap.org/ "OpenStreetMap") ist atemberaubend. Es stehen Vektordaten für große Teile der Erde zu Verfügung, die in einigen Bereichen derart detailliert sind, dass nicht einmal [Google Maps](https://maps.google.de/ "Google Maps") da mithalten könnte. Fußwege, Trampelpfade, Ampeln, Stromleitungen. Auf OpenStreetMap ist geradezu alles eingezeichnet.

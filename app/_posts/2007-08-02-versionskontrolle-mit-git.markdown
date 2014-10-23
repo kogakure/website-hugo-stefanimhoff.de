@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "Versionskontrolle mit Git"
 author: "Stefan Imhoff"
 date: 2007-08-02 17:53

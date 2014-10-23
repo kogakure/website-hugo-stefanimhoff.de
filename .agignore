@@ -1,2 +1,4 @@
 public/
 app/_assets/stylesheets/
+build/
+app/_bower_components/

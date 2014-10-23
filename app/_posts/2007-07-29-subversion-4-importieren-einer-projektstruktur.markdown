@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "Subversion (4) – Importieren einer Projektstruktur"
 author: "Stefan Imhoff"
 date: 2007-07-29 13:00
@@ -13,7 +14,7 @@ tags:
 
 Im nächsten Schritt erzeuge ich auf der Festplatte die Struktur meines Projektes. Diese Struktur ist nicht vorgegeben und kann nach beliebiger Struktur angelegt werden, wobei es ein paar Empfehlungen und Konventionen gibt.
 
-{% aside hinweis %}
+{% aside aside-hint %}
 <p>Der Inhalt dieses Artikels ist noch aktuell, doch kann ich nur dringend dazu raten, sich die fantastische Alternative zu Subversion anzusehen: <a href="/2007/versionskontrolle-mit-git/"><strong>Git</strong></a>.</p>
 {% endaside %}
 

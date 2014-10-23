@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "Server-Verwaltung mit Fabric"
 author: "Stefan Imhoff"
 date: 2008-11-07 12:00

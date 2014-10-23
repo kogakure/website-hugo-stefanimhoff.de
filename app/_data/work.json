@@ -13,7 +13,8 @@
       "Git",
       "Ruby on Rails",
       "Ruby",
-      "Grunt.js"
+      "Grunt.js",
+      "Gulp.js"
     ]
   },
   {
@@ -21,20 +22,20 @@
     "skills": [
       "Photoshop",
       "Illustrator",
-      "Grafikdesign",
+      "Graphic Design",
       "Usability",
-      "Informationsarchitektur"
+      "Information Architecture"
     ]
   },
   {
-    "name": "Agile Methoden",
+    "name": "Agile Methods",
     "skills": [
       "Scrum",
       "Kanban"
     ]
   },
   {
-    "name": "Sonstiges",
+    "name": "Misc",
     "skills": [
       "Vim",
       "Zsh",

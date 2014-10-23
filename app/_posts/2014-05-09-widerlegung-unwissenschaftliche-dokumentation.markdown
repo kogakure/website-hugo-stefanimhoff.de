@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "Widerlegung einer unwissenschaftlichen Dokumentation"
 author: "Stefan Imhoff"
 date: 2014-05-09 18:00
@@ -21,7 +22,7 @@ Ob es sich dabei um historische Bauten, Kulturen, evolutionsbiologische Erkenntn
 Manche Personen, wie z. B. Erich von Däniken, haben ihr ganzes Leben solchen wirren Theorien gewidmet. Anstatt eine Sache mit wissenschaftlicher Genauigkeit zu untersuchen und zu hinterfragen, werden Theorien über völlig unglaubwürdige Vermutungen und Geschichten erdacht, Parallelen zwischen Kulturen  oder über Zeiten und Räume hinweg gezogen.
 
 {% figure image-figure image-figure-left attribution "Kein antiker Raumfahrer, sondern der Maya-König K'inich Janaab' Pakal im Augenblick seines Todes. Im Hintergrund der Weltenbaum und die Unterwelt unter ihm." %}
-<img src="/assets/images/artikel/pakals-grabplatte.jpg" alt="Pakal's Grabplatte">
+<img src="{{ site.url }}/assets/images/artikel/pakals-grabplatte.jpg" alt="Pakal's Grabplatte">
 <p class="attribution-text"><i class="icon-cc"></i> malavodao, <a href="https://www.flickr.com/photos/malavoda/518538543">Pakal's Grabplatte</a></p>
 {% endfigure %}
 

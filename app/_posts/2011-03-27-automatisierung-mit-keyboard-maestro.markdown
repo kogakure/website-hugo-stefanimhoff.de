@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "Automatisierung mit Keyboard Maestro"
 author: "Stefan Imhoff"
 date: 2011-03-27 12:58

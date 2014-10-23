@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "Subversion (1) – Theorie und Funktionsweise"
 author: "Stefan Imhoff"
 date: 2007-05-28 18:04
@@ -13,7 +14,7 @@ tags:
 
 Dieser erste Teil der Reihe *Subversion* beschäftigt sich mit der nötigen Theorie und Funktionsweise von Subversion.
 
-{% aside hinweis %}
+{% aside aside-hint %}
 <p>Der Inhalt dieses Artikels ist noch aktuell, doch kann ich nur dringend dazu raten, sich die fantastische Alternative zu Subversion anzusehen: <a href="/2007/versionskontrolle-mit-git/">Git</a>.</p>
 {% endaside %}
 

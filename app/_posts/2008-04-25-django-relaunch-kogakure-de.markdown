@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "Django-Relaunch von kogakure.de"
 author: "Stefan Imhoff"
 date: 2008-04-25 18:00

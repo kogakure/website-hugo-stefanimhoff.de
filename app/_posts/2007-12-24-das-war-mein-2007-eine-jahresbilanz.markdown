@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "Das war mein 2007 – eine Jahresbilanz"
 author: "Stefan Imhoff"
 date: 2007-12-24 14:00

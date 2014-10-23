@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "Weiterleitungen in Django"
 author: "Stefan Imhoff"
 date: 2008-11-05 07:00

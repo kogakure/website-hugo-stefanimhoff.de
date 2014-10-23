@@ -1,3 +1,5 @@
+/* global FastClick:false, fitVids:false, classie:false */
+
 require('fastclick');
 require('fitvids');
 require('classie');

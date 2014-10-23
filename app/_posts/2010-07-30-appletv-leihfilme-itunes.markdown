@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "AppleTV und die Leihfilme auf iTunes"
 author: "Stefan Imhoff"
 date: 2010-07-30 07:00

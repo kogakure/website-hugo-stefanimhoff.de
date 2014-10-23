@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "Gelöste Django-Probleme"
 author: "Stefan Imhoff"
 date: 2010-09-11 16:00

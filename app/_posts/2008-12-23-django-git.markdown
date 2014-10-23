@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "2008 war Django (und Git)"
 author: "Stefan Imhoff"
 date: 2008-12-23 15:00

@@ -39,9 +39,5 @@ module.exports = {
     });
 
     return selectedNavigationItem[0];
-  },
-
-  log: function(string) {
-    if (console) console.log(string);
   }
 };

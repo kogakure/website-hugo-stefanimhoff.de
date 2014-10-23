@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "Django für Webdesigner"
 author: "Stefan Imhoff"
 date: 2009-01-01 11:00

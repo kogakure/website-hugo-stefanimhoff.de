@@ -1,6 +1,6 @@
 [
   {
-    "name": "Videos",
+    "name": "Movies",
     "items": [
       {
         "text": "Susan Cain: The power of introverts",
@@ -30,7 +30,7 @@
     ]
   },
   {
-    "name": "Artikel",
+    "name": "Articles",
     "items": [
       {
         "text": "10 Myths About Introverts",
@@ -47,11 +47,11 @@
     ]
   },
   {
-    "name": "Bücher",
+    "name": "Books",
     "items": [
       {
-        "text": "Still: Die Kraft der Introvertierten",
-        "url": "http://www.amazon.de/Still-Kraft-Introvertierten-Susan-Cain/dp/3442157641/"
+        "text": "Quiet: The Power of Introverts in a World That Can't Stop Talking",
+        "url": "http://www.amazon.de/Quiet-Power-Introverts-World-Talking/dp/0307352145/"
       },
       {
         "text": "The Introvert Advantage: How to Thrive in an Extrovert World",

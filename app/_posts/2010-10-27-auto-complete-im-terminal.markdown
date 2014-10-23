@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "Auto-Complete im Terminal"
 author: "Stefan Imhoff"
 date: 2010-10-27 18:30

@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "Das Cover-Foto auf meiner Website"
 author: "Stefan Imhoff"
 date: 2014-05-30 10:00
@@ -30,7 +31,7 @@ Jetzt musste ich nur noch herausfinden, wie denn der Fachbegriff für so ein Fot
 Doch es gibt tatsächlich einen Begriff für dieses Eigenschaft: [Bokeh](http://de.wikipedia.org/wiki/Bokeh).
 
 {% figure image-figure image-figure-fullsize attribution %}
-<img src="/assets/images/artikel/josefina-bokeh.jpg" alt="Josefina with Bokeh">
+<img src="{{ site.url }}/assets/images/artikel/josefina-bokeh.jpg" alt="Josefina with Bokeh">
 <p class="attribution-text"><i class="icon-cc"></i> Carlos Luis Camacho, <a href="http://www.flickr.com/photos/paseodelsur/51805888/">Josefina with Bokeh</a></p>
 {% endfigure %}
 

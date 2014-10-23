@@ -4,7 +4,9 @@
 .*/
 
 # Projekt
-build
+build/assets/
+build/development/
+build/production/
 vendor/bundle/
 node_modules/
 app/_bower_components

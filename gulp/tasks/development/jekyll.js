@@ -12,3 +12,7 @@ gulp.task('jekyll', function(done) {
   return cp.spawn('bundle', ['exec', 'jekyll', 'build', '-q', '--source=' + config.src, '--destination=' + config.dest, '--config=' + config.config], { stdio: 'inherit' })
   .on('close', done);
 });
+
+gulp.task('jekyll-rebuild', ['jekyll'], function() {
+  browsersync.reload();
+});

@@ -1,8 +1,8 @@
 ---
 layout: {{ layout }}
+language: "de"
 title: {{ title }}
 author: "Stefan Imhoff"
-excerpt: ""
 categories:
 tags:
 ---

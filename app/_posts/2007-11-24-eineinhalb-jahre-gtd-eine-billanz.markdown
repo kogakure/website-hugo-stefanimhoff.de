@@ -1,5 +1,6 @@
 ---
 layout: post
+language: "de"
 title: "Eineinhalb Jahre GTD – Eine Billanz"
 author: "Stefan Imhoff"
 date: 2007-11-24 01:15
@@ -13,7 +14,7 @@ tags:
 Seit genau eineinhalb Jahren benutze ich jetzt die Prinzipien des *GTD* (<em>Getting Things Done</em>®), nach dem gleichnamigen Buch von *David Allen* um meine alltäglichen Aufgaben zu organisieren.
 
 {% figure image-figure "So sah die Inbox aus, bevor ich alle losen Enden sortiert hatte" %}
-<img src="/assets/images/artikel/gtd-vorher.jpg" alt="Mein Schreibtisch vorher" title="So sah die Inbox aus, bevor ich alle losen Enden sortiert hatte">
+<img src="{{ site.url }}/assets/images/artikel/gtd-vorher.jpg" alt="Mein Schreibtisch vorher" title="So sah die Inbox aus, bevor ich alle losen Enden sortiert hatte">
 {% endfigure %}
 
 David Allen stellt in seinem Buch ein interessantes System vor, mit dem man seine täglichen Aufgaben effektiv und effizient erledigen kann.
@@ -41,7 +42,7 @@ Aufgaben kann man auch delegieren oder bestimmten Zeitpunkten zuweisen. Wenn man
 ## GTD im Alltag
 
 {% figure image-figure "So sah die Inbox aus, nachdem ich alle losen Enden sortiert hatte" %}
-<img src="/assets/images/artikel/gtd-nachher.jpg" alt="Mein Schreibtisch danach" title="So sah die Inbox aus, nachdem ich alle losen Enden sortiert hatte" />
+<img src="{{ site.url }}/assets/images/artikel/gtd-nachher.jpg" alt="Mein Schreibtisch danach" title="So sah die Inbox aus, nachdem ich alle losen Enden sortiert hatte" />
 {% endfigure %}
 
 Auf den ersten Blick sieht GTD vielleicht kompliziert oder umständlich aus, doch hilft es ungemein, den Kopf von belastendem Grübeln freizuhalten.

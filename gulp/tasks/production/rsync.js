@@ -7,8 +7,7 @@ var config = require('../../config').rsync;
  * via rsync
  */
 gulp.task('rsync', function() {
-
-  return gulp.src('build/production/**')
+  return gulp.src(config.src)
     .pipe(rsync({
       destination: config.destination,
       root: config.root,
