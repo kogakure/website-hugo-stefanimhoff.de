@@ -130,7 +130,7 @@ module Jekyll
 ===============================================
  Error for category_generator.rb plugin
 -----------------------------------------------
- No 'category_index.html' in source/_layouts/
+ No 'categories.html' in source/_layouts/
  Perhaps you haven't installed a theme yet.
 ===============================================
 
@@ -190,7 +190,7 @@ ERR
       dir = @context.registers[:site].config['category_dir']
       url = slug.to_url
       url = "#{dir}/#{url}" unless dir.nil? or dir.empty?
-      "<a class='category' href='/#{url}/'>#{title}</a>"
+      "<a class=\"category\" href=\"/#{url}/\">#{title}</a>"
     end
 
     # Outputs the post.date as formatted html, with hooks for CSS styling.
