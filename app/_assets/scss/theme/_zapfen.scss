@@ -37,4 +37,8 @@ $selection-color:         $white;
 // Pfade
 // ----------------------------------------------------------------------------
 
-$header-background-url:   "/assets/images/css/header/zapfen.jpg";
+$header-filename:            "zapfen";
+$header-background-url:      "#{$header-path}/#{$header-filename}.jpg";
+$header-background-url-m:    "#{$header-path}/#{$header-filename}-m.jpg";
+$header-background-url-s:    "#{$header-path}/#{$header-filename}-s.jpg";
+$header-background-position: center left;
