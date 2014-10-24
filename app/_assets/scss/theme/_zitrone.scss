@@ -37,4 +37,7 @@ $selection-color:         $white;
 // Pfade
 // ----------------------------------------------------------------------------
 
-$header-background-url:      "/assets/images/css/header/zitrone.jpg";
+$header-filename:         "zitrone";
+$header-background-url:   "#{$header-path}/#{$header-filename}.jpg";
+$header-background-url-m: "#{$header-path}/#{$header-filename}-m.jpg";
+$header-background-url-s: "#{$header-path}/#{$header-filename}-s.jpg";

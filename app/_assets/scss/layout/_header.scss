@@ -15,6 +15,14 @@
   // * Im Moment kann dieses nicht in Kombination
   // * mit translate3d verwendet werden.
 
+  @include breakpoint(600px) {
+    background-image: url($header-background-url-m);
+  }
+
+  @include breakpoint(400px) {
+    background-image: url($header-background-url-s);
+  }
+
   .nav-btn {
     @extend %sans-font;
     @include link-colors($white, $nav-link-color-hover, $white, $white, $white);
