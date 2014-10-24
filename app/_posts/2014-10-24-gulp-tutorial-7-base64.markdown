@@ -26,7 +26,7 @@ This is the 7th part of my series *Introduction to Gulp.js*. Today I will use Gu
 ## Base64 encoded images
 The last task executed by my `build` task is a task, which replaces the URLs of small images in my CSS files with Base64 encoded images. This way the image gets embedded into the CSS file and doesn’t need an additional server request. If the images are not to large this will speed up loading my website a lot.
 
-I use a lot of small size patterns on my website because I doesn’t like the *Flat Design* approach a lot. The real world isn’t flat. Nowhere. There is always structure, pattern, shade and light. The patterns I use are from the fantastic website [Subtle Pattern](http://subtlepatterns.com/). The have a few hundred really nice subtle patterns.
+I use a lot of small size patterns on my website because I doesn’t like the *Flat Design* approach a lot. The real world isn’t flat. Nowhere. There is always structure, pattern, shade and light. The patterns I use are from the fantastic website [Subtle Pattern](http://subtlepatterns.com/). They have a few hundred really nice subtle patterns.
 
 To load the background pattern I use SCSS like this:
 
