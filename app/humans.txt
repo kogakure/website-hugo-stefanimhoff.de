@@ -7,10 +7,10 @@ permalink: humans.txt
 /* humanstxt.org */
 
 /* TEAM */
-Designer:    Stefan Imhoff
-Developer:   Stefan Imhoff
+Designer:    {{ site.author }}
+Developer:   {{ site.author }}
 Site:        stefan [at] imhoff.name
-Twitter:     @kogakure
+Twitter:     {{ site.data.settings.social.twitter }}
 Location:    Hamburg, Germany
 
 /* SITE */

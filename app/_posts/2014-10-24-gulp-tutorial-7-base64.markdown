@@ -2,7 +2,7 @@
 layout: post
 language: "en"
 title: "Introduction to Gulp.js 7: Base64 Encoded Images"
-date: 2014-10-24T08:00:00+02:00
+date: 2014-10-24T07:30:00+02:00
 author: "Stefan Imhoff"
 categories:
 - Code
@@ -24,9 +24,9 @@ This is the 7th part of my series *Introduction to Gulp.js*. Today I will use Gu
 {% include articles/gulp-toc.html %}
 
 ## Base64 encoded images
-The last task executed by my `build` task is a task, which replaces the URLs of small images in my CSS files with Base64 encoded images. This way the image gets embedded into the CSS file and doesn’t need an additional server request. If the images are not to large this will speed up loading my website a lot.
+The last task executed by my `build` task is one, which replaces the URLs of small images in my CSS files with Base64 encoded images. This way the images get embedded into the CSS file and don’t need an additional server request. If the images are not too large this will speed up loading my website a lot.
 
-I use a lot of small size patterns on my website because I doesn’t like the *Flat Design* approach a lot. The real world isn’t flat. Nowhere. There is always structure, pattern, shade and light. The patterns I use are from the fantastic website [Subtle Pattern](http://subtlepatterns.com/). The have a few hundred really nice subtle patterns.
+I use a lot of small size patterns on my website because I doesn’t like the *Flat Design* approach a lot. The real world isn’t flat. Nowhere. There is always structure, pattern, shade and light. The patterns I use are from the fantastic website [Subtle Pattern](http://subtlepatterns.com/). They have a few hundred really nice subtle patterns.
 
 To load the background pattern I use SCSS like this:
 
@@ -91,20 +91,17 @@ I only replace images with the ending PNG and only if maximal 20 KB of size. Thi
 {% highlight javascript %}
 var gulp   = require('gulp');
 var base64 = require('gulp-base64');
-var config = require('../../config').base64;
+var config = require('../../config');
 
 /**
- * Replace URLs in CSS fies with base64 encoded data
+ * Replace urls in CSS fies with base64 encoded data
  */
 gulp.task('base64', ['sass'], function() {
-  return gulp.src(config.src)
-    .pipe(base64({
-      baseDir: config.options.baseDir,
-      extensions: config.options.extensions,
-      debug: config.options.debug,
-      maxImageSize: config.options.maxImageSize // bytes
-    }))
-    .pipe(gulp.dest(config.dest));
+  var base64Config = config.base64.options;
+
+  return gulp.src(config.base64.src)
+    .pipe(base64(base64Config))
+    .pipe(gulp.dest(config.base64.dest));
 });
 {% endhighlight %}
 {% endfigure %}

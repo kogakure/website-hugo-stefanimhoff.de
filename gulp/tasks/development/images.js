@@ -1,5 +1,6 @@
 var gulp        = require('gulp');
 var changed     = require('gulp-changed');
+var plumber     = require('gulp-plumber');
 var browsersync = require('browser-sync');
 var config      = require('../../config').images;
 
@@ -9,6 +10,7 @@ var config      = require('../../config').images;
  */
 gulp.task('images', function() {
   return gulp.src(config.src)
+    .pipe(plumber())
     .pipe(changed(config.dest)) // Ignore unchanged files
     .pipe(gulp.dest(config.dest));
 });

@@ -21,9 +21,9 @@ This is the 8th part of my series *Introduction to Gulp.js*. Today I will set up
 
 {% include articles/gulp-toc.html %}
 
-Do you remember the `watch` task from the beginning? This task just started BrowserSync and the development server until now, but didn’t watch for anything. I will write these watch tasks now.
+Do you remember the `watch` task from the beginning? It just started BrowserSync and the development server until now, but didn’t watch for anything. I will write these watch tasks now.
 
-`Watch` is part of the API of gulp. It will watch a folder or files for changes, addition or deletion and trigger tasks.
+`Watch` is part of the API of gulp. It will watch files for changes, addition or deletion and trigger tasks.
 
 {% figure code-figure "gulp/config.js" %}
 {% highlight javascript %}
@@ -31,11 +31,9 @@ watch: {
   jekyll: [
     '_config.yml',
     '_config.build.yml',
-    'stopwords.txt',
     src + '/_data/**/*.{json,yml,csv}',
     src + '/_includes/**/*.{html,xml}',
     src + '/_layouts/*.html',
-    src + '/_locales/*.yml',
     src + '/_plugins/*.rb',
     src + '/_posts/*.{markdown,md}',
     src + '/**/*.{html,markdown,md,yml,json,txt,xml}',
@@ -50,7 +48,7 @@ watch: {
 {% endhighlight %}
 {% endfigure %}
 
-For Jekyll I watch for changes in a lot of files. Changes in configuration files, data files, layouts, includes, plugin, posts etc.
+I watch for a lot of different file types for Jekyll. Changes in configuration files, data files, layouts, includes, plugin, posts etc.
 
 The Sass task will watch for changes in files with the suffix `sass` or `scss`. JavaScript gets triggered if I change some JavaScript file. You get the point.
 
@@ -79,7 +77,7 @@ For `SCSS` files I run the `sass` tasks and additionally I run a `scsslint` task
 
 Changes on JavaScript files trigger the `scripts` tasks and a `jshint` task, which will check my files for syntax errors.
 
-If I add, modify or delete a SVG file my vector fonts get recreated. And as a fallback for browsers without vector font support I create a PNG sprite map, whenever I change an image of the sprite. It would be possible to auto create the PNG files of the SVG files with [gulp-svg2png](https://www.npmjs.org/package/gulp-svg2png/), but I have some additional design on the sprite images, that’s why I didn’t use it.
+If I add, modify or delete a SVG file my vector fonts get recreated. And as a fallback for browsers without vector font support I create a PNG sprite map, whenever I change an image of the sprite. It would be possible to auto create the PNG files of the SVG files with [gulp-svg2png](https://www.npmjs.org/package/gulp-svg2png/), but I have some additional design on the sprite images, that’s why I don’t use it.
 
 I miss now three tasks: `scsslint`, `jshint` and `sprites`.
 
