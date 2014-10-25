@@ -199,7 +199,7 @@ optimize: {
 {% endhighlight %}
 {% endfigure %}
 
-{% figure code-figure "gulp/tasks/production/htmlmin.js" %}
+{% figure code-figure "gulp/tasks/production/optimize-html.js" %}
 {% highlight javascript %}
 var gulp    = require('gulp');
 var htmlmin = require('gulp-htmlmin');
