@@ -382,6 +382,10 @@ ol {
 ol ol {
   list-style: lower-latin;
   margin: 0 1.5em;
+
+  .article-body & {
+    margin: 0 1.5em;
+  }
 }
 
 ul {
@@ -400,6 +404,10 @@ ul {
 ul ul {
   list-style: circle;
   margin: 0 1.5em;
+
+  .article-body & {
+    margin: 0 1.5em;
+  }
 }
 
 dl {

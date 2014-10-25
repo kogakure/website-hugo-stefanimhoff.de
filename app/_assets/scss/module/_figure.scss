@@ -8,12 +8,17 @@ figure.image-figure {
   float: left;
   margin-bottom: $default-margin-bottom;
 
-  a {
-    border: 0;
+  figcaption {
+    margin-top: 5px;
   }
 
-  img {
-    margin-bottom: 5px;
+  .figure-content {
+    overflow: hidden;
+    position: relative;
+  }
+
+  a {
+    border: 0;
   }
 }
 
@@ -38,16 +43,20 @@ figure.image-figure {
   margin-left: -(grid-span(2, 1, 8));
   margin-right: 0;
 
-  @include breakpoint($content-medium) {
-    @include grid-span(8, 1, 8);
-  }
-
-  img {
+  .figure-content {
     @include grid-span(10);
 
     @include breakpoint($content-medium) {
       @include grid-span(12);
     }
+  }
+
+  @include breakpoint($content-medium) {
+    @include grid-span(8, 1, 8);
+  }
+
+  img {
+    @include grid-span(12);
   }
 
   figcaption {
@@ -73,12 +82,16 @@ figure.image-figure {
     @include grid-span(8, 1, 8);
   }
 
-  img {
+  .figure-content {
     @include grid-span(10, 3);
 
     @include breakpoint($content-medium) {
       @include grid-span(12);
     }
+  }
+
+  img {
+    @include grid-span(12);
   }
 
   figcaption {
