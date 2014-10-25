@@ -36,7 +36,11 @@ $ npm install --save-dev gulp.spritesmith
 {% highlight javascript %}
 sprites: {
   src: srcAssets + '/images/sprites/icon/*.png',
-  css: {
+  dest: {
+    css: srcAssets + '/scss/base/',
+    image: srcAssets + '/images/sprites/'
+  },
+  options: {
     cssName: '_sprites.scss',
     cssFormat: 'css',
     cssOpts: {
@@ -50,18 +54,14 @@ sprites: {
         }
       }
     },
-    dest: srcAssets + '/scss/',
-  },
-  image: {
     imgName: 'icon-sprite.png',
     imgPath: '/assets/images/sprites/icon-sprite.png',
-    dest: srcAssets + '/images/sprites/'
   }
 }
 {% endhighlight %}
 {% endfigure %}
 
-I split my config into three subsections: The source files (individual icons for the sprite), the output of the CSS file and the output of the image sprite. I use a custom `cssClass` which will generate `:hover` states by naming the hover sprites with `-hover`.
+I split my config into three subsections: The source files (individual icons for the sprite), the destination for the sprite and the css partial and the options for the image sprite. I use a custom `cssClass` which will generate `:hover` states by naming the hover sprites with `-hover`.
 
 {% figure code-figure "gulp/tasks/development/sprites.js" %}
 {% highlight javascript %}
@@ -74,19 +74,13 @@ var config      = require('../../config').sprites;
  */
 gulp.task('sprites', function() {
 
-  var spriteData = gulp.src(config.src).pipe(spritesmith({
-    imgName: config.image.imgName,
-    imgPath: config.image.imgPath,
-    cssName: config.css.cssName,
-    cssFormat: config.css.cssFormat,
-    cssOpts: config.css.cssOpts
-  }));
+  var spriteData = gulp.src(config.src).pipe(spritesmith(config.options));
 
   spriteData.img
-    .pipe(gulp.dest(config.image.dest));
+    .pipe(gulp.dest(config.dest.image));
 
   spriteData.css
-    .pipe(gulp.dest(config.css.dest));
+    .pipe(gulp.dest(config.dest.css));
 });
 {% endhighlight %}
 {% endfigure %}
