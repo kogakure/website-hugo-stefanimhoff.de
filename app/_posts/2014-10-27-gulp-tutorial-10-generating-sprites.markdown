@@ -55,7 +55,7 @@ sprites: {
       }
     },
     imgName: 'icon-sprite.png',
-    imgPath: '/assets/images/sprites/icon-sprite.png',
+    imgPath: '/assets/images/sprites/icon-sprite.png'
   }
 }
 {% endhighlight %}

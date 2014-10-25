@@ -39,7 +39,10 @@ $ npm install --save-dev gulp-minify-css gulp-size
 optimize: {
   css: {
     src:  developmentAssets + '/css/*.css',
-    dest: productionAssets + '/css/'
+    dest: productionAssets + '/css/',
+    options: {
+      keepSpecialComments: 0
+    }
   }
 }
 {% endhighlight %}
@@ -57,9 +60,7 @@ var config    = require('../../config').optimize.css;
  */
 gulp.task('optimize:css', function() {
   return gulp.src(config.src)
-    .pipe(minifycss({
-      keepSpecialComments: 0
-    }))
+    .pipe(minifycss(config.options))
     .pipe(gulp.dest(config.dest))
     .pipe(size());
 });
@@ -83,7 +84,8 @@ optimize: {
   },
   js: {
     src:  developmentAssets + '/js/*.js',
-    dest: productionAssets + '/js/'
+    dest: productionAssets + '/js/',
+    options: {}
   }
 }
 {% endhighlight %}
@@ -101,7 +103,7 @@ var config = require('../../config').optimize.js;
  */
 gulp.task('optimize:js', function() {
   return gulp.src(config.src)
-    .pipe(uglify())
+    .pipe(uglify(config.options))
     .pipe(gulp.dest(config.dest))
     .pipe(size());
 });
@@ -135,7 +137,12 @@ optimize: {
   },
   images: {
     src:  developmentAssets + '/images/**/*.{jpg,jpeg,png,gif}',
-    dest: productionAssets + '/images/'
+    dest: productionAssets + '/images/',
+    options: {
+      optimizationLevel: 3,
+      progessive: true,
+      interlaced: true
+    }
   }
 }
 {% endhighlight %}
@@ -153,11 +160,7 @@ var config   = require('../../config').optimize.images;
  */
 gulp.task('optimize:images', function() {
   return gulp.src(config.src)
-    .pipe(imagemin({
-      optimizationLevel: 3,
-      progessive: true,
-      interlaced: true
-    }))
+    .pipe(imagemin(config.options))
     .pipe(gulp.dest(config.dest))
     .pipe(size());
 });
@@ -175,9 +178,23 @@ $ npm install --save-dev gulp-htmlmin
 
 {% figure code-figure "gulp/config.js" %}
 {% highlight javascript %}
-htmlmin: {
-  src: production + '/**/*.html',
-  dest: production
+optimize: {
+  css: {
+    ...
+  },
+  js: {
+    ...
+  },
+  images: {
+    ...
+  },
+  html: {
+    src: production + '/**/*.html',
+    dest: production,
+    options: {
+      collapseWhitespace: true
+    }
+  }
 }
 {% endhighlight %}
 {% endfigure %}
@@ -186,16 +203,14 @@ htmlmin: {
 {% highlight javascript %}
 var gulp    = require('gulp');
 var htmlmin = require('gulp-htmlmin');
-var config  = require('../../config').optimize.htmlmin;
+var config  = require('../../config').optimize.html;
 
 /**
  * Minimize HTML
  */
-gulp.task('htmlmin', function() {
+gulp.task('optimize:html', function() {
   return gulp.src(config.src)
-    .pipe(htmlmin({
-      collapseWhitespace: true
-    }))
+    .pipe(htmlmin(config.options))
     .pipe(gulp.dest(config.dest));
 });
 {% endhighlight %}
