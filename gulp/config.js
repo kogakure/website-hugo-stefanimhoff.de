@@ -102,7 +102,11 @@ module.exports = {
   },
   sprites: {
     src: srcAssets + '/images/sprites/icon/*.png',
-    css: {
+    dest: {
+      css: srcAssets + '/scss/base/',
+      image: srcAssets + '/images/sprites/'
+    },
+    options: {
       cssName: '_sprites.scss',
       cssFormat: 'css',
       cssOpts: {
@@ -116,12 +120,8 @@ module.exports = {
           }
         }
       },
-      dest: srcAssets + '/scss/base/',
-    },
-    image: {
       imgName: 'icon-sprite.png',
       imgPath: '/assets/images/sprites/icon-sprite.png',
-      dest: srcAssets + '/images/sprites/'
     }
   },
   copyfonts: {
