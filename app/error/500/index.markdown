@@ -1,7 +1,6 @@
 ---
 layout: error
 title: Server Error!
-footer: false
 error_page_500: true
 ---
 

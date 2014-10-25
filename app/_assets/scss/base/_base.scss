@@ -73,6 +73,10 @@ h6 {
 h1 {
   font-size: 40px;
 
+  .article & {
+    text-align: center;
+  }
+
   @include breakpoint(650px) {
     font-size: 45px;
   }
@@ -368,10 +372,10 @@ ol {
 
   .article-body & {
     margin-left: $default-margin-left;
-  }
 
-  @include breakpoint($content-medium) {
-    margin-left: 0;
+    @include breakpoint($content-medium) {
+      margin-left: 0;
+    }
   }
 }
 
@@ -386,10 +390,10 @@ ul {
 
   .article-body & {
     margin-left: $default-margin-left;
-  }
 
-  @include breakpoint($content-medium) {
-    margin-left: 0;
+    @include breakpoint($content-medium) {
+      margin-left: 0;
+    }
   }
 }
 

@@ -4,8 +4,8 @@ language: "de"
 title: "Die CSS-Architektur meiner Website"
 author: "Stefan Imhoff"
 date: 2014-05-27 18:00
+updated: 2014-10-25 13:46
 published: true
-comments: false
 categories:
 - Code
 - Website
@@ -36,7 +36,7 @@ Ich verwende für meine Website dieses Konzept, habe es aber an meine Bedürfnis
 ## Dateistuktur des SCSS
 Meine Dateistruktur sieht wie folgt aus:
 
-{% highlight bash linenos %}
+{% highlight bash %}
 ├── application.scss
 ├── base
 │   ├── _base.scss

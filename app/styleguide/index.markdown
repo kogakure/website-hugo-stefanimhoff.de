@@ -1,8 +1,9 @@
 ---
 layout: page
 title: "Styleguide"
+author: "Stefan Imhoff"
 language: "de"
-footer: false
+header: false
 ---
 
 Dieses Dokument ist der Styleguide für diese Website. Dies ist der erste Absatz des Artikels und als dieser wird er anders gestaltet. Der weitere Text hier ist nur geschrieben worden, damit man sehen kann, wie der erste Absatz in weitere Zeilen umbricht.

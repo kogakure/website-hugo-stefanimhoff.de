@@ -1,7 +1,6 @@
 ---
 layout: error
 title: Page missing!
-footer: false
 error_page_410: true
 ---
 

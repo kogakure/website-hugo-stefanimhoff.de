@@ -1,9 +1,10 @@
 ---
 layout: post
 language: "de"
-title: "Subversion (3) – Einrichten des Repository"
+title: "Subversion 3: Einrichten des Repository"
 author: "Stefan Imhoff"
 date: 2007-07-20 09:00
+updated: 2014-10-25 12:28
 description: "Ein Repository mit Subversion einrichten."
 categories:
 - Versionskontrolle
@@ -15,6 +16,7 @@ tags:
 Um mit Subversion zu arbeiten, muss man sich zuerst ein *Repository* (eine Ablage/Depot) erstellen, in dem das spätere Projekt liegt.
 
 {% aside aside-hint  %}
+<h4>Versionkontrolle mit Git</h4>
 <p>Der Inhalt dieses Artikels ist noch aktuell, doch kann ich nur dringend dazu raten, sich die fantastische Alternative zu Subversion anzusehen: <a href="/2007/versionskontrolle-mit-git/">Git</a>.</p>
 {% endaside %}
 
@@ -26,25 +28,25 @@ Ich habe mich für die zweite Methode entschieden. Dies hat eine Menge Vorteile:
 
 Zuerst lege ich mir ein Verzeichnis an, das später meine Repositories enthalten wird. Dies lege ich in meinem Heimatverzeichnis an.
 
-{% highlight sh linenos %}
-cd ~
-mkdir Subversion
-cd Subversion
+{% highlight sh %}
+$ cd ~
+$ mkdir Subversion
+$ cd Subversion
 {% endhighlight %}
 
 ## Repository für ein Projekt anlegen
 
 Im nächsten Schritt lege ich für ein Projekt meiner Wahl das Repository an, hier im für Beispiel meine Website.
 
-{% highlight sh linenos %}
-mkdir meinewebsite.de
-cd meinewebsite.de
+{% highlight sh %}
+$ mkdir meinewebsite.de
+$ cd meinewebsite.de
 {% endhighlight %}
 
 Jetzt wird mit einem Befehl das leere Repository erzeugt.
 
 {% highlight sh %}
-svnadmin create --fs-type fsfs .
+$ svnadmin create --fs-type fsfs .
 {% endhighlight %}
 
 ## Anmerkungen

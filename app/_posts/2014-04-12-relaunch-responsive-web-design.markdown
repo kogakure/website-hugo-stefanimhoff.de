@@ -4,7 +4,6 @@ language: "de"
 title: "Relaunch mit Responsive Web Design"
 author: "Stefan Imhoff"
 date: 2014-04-12 15:00
-comments: false
 categories:
 - Design
 - Code

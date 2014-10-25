@@ -4,8 +4,8 @@ language: "de"
 title: "Die Typographie meiner Website"
 author: "Stefan Imhoff"
 date: 2014-06-19 10:30
+updated: 2014-10-25 13:47
 published: true
-comments: false
 categories:
 - Design
 - Code
@@ -49,6 +49,7 @@ Doch dies ist bei meinem Projekt gar nicht nötig gewesen, denn das Team-Sass bi
 
 Ich füge also zuerst das Gem zu meinem Gemfile hinzu:
 
+{% figure code-figure "Gemfile" %}
 {% highlight ruby linenos %}
 source "https://rubygems.org"
 
@@ -56,21 +57,26 @@ group :development do
   gem 'modular-scale'
 end
 {% endhighlight %}
+{% endfigure %}
 
 Dann lade ich das Compass-Plugin in der `config.rb`:
 
+{% figure code-figure "config.rb" %}
 {% highlight ruby linenos %}
 # Require any additional compass plugins here.
 require 'modular-scale'
 {% endhighlight %}
+{% endfigure %}
 
-Im Anschluss muss nur noch das Modul von Compass geladen werden, bei mir in einem Partial `helpers/_imports.scss`:
+Im AnschlusL muss nur noch das Modul von Compass geladen werden, bei mir in einem Partial:
 
+{% figure code-figure "helpers/_imports.scss" %}
 {% highlight scss linenos %}
 @import "compass";
 @import "compass/reset";
 @import "modular-scale";
 {% endhighlight %}
+{% endfigure %}
 
 Ich habe mich entschlossen den *Goldenen Schnitt* zu verwenden und wähle dann die *ideale Textgröße* und eine *wichtige Zahl* aus:
 

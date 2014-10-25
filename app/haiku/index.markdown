@@ -4,9 +4,8 @@ title: "Haiku"
 language: "de"
 author: "Stefan Imhoff"
 date: 2014-02-09 09:01
-comments: false
-sharing: false
-footer: false
+updated: 2014-02-09 19:01
+header: true
 page_class: verse-list
 ---
 

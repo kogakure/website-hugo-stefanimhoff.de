@@ -69,11 +69,12 @@ Doch damit ist seit einiger Zeit Schluß. Tim Pope hat ein fantastisches Plugin 
 
 Pathogen ermöglicht es, Plugins als Bundles abzulegen, einzeln und als nettes Paket zusammengefasst. Alles was du dazu tun muss, ist [pathogen.vim](http://www.vim.org/scripts/script.php?script_id=2332) herunterzuladen und in den Vim-Ordner in einen Unterordner `autoload` (falls nicht vorhanden erstellen) abzulegen. Als nächsten Schritt legst du einen Ordner `bundle` im Vim-Ordner an und öffnest deine Datei `.vimrc`. Dort schreibst du ganz an den Anfang:
 
-### .vimrc
+{% figure code-figure ".vimrc" %}
 {% highlight vim linenos %}
 silent! call pathogen#runtime_append_all_bundles()
 silent! call pathogen#helptags()
 {% endhighlight %}
+{% endfigure %}
 
 Plugins werden ab jetzt nicht entpackt und kompliziert in die richtigen Unterordner verschoben, sondern einfach pro Plugin in einen eigenen Ordner unter `bundle` gestellt. Für Vim gibt es nämlich leider einige, verschiedene Möglichkeiten Erweiterungen zu installieren, einfache Skripte, automatische Installer und seit kurzem gottseidank auch Git-Checkouts.
 

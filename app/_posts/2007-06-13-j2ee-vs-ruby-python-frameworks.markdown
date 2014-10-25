@@ -1,9 +1,10 @@
 ---
 layout: post
 language: "de"
-title: "J2EE versus ruby/python-Frameworks"
+title: "J2EE versus Ruby/Python-Frameworks"
 author: "Stefan Imhoff"
 date: 2007-06-13 01:34
+updated: 2014-10-25 12:27
 description: "Argumente für oder gegen das eine oder andere Webframework."
 categories:
 - Code

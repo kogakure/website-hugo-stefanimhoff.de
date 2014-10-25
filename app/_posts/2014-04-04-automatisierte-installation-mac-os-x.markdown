@@ -4,7 +4,7 @@ language: "de"
 title: "Automatisierte Installation für Mac&nbsp;OS&nbsp;X"
 author: "Stefan Imhoff"
 date: 2014-04-04 21:09
-comments: false
+updated: 2014-10-25 13:38
 categories:
 - Empfehlung
 - Software
@@ -27,7 +27,7 @@ Dann trat [Homebrew](http://brew.sh/) auf die Bühne, eine Software die sich sel
 Mit *Homebrew* lassen sich Pakete einfach über das Terminal installieren:
 
 {% highlight bash %}
-brew install vim
+$ brew install vim
 {% endhighlight %}
 
 Doch neben Software-Packages verwendet man auch noch eine Vielzahl von *Programmen*, die sich nicht über *Homebrew* installieren lassen (z. B. Browser, Grafik-, Sound- oder Videobearbeitungsprogramme, Hilfsprogramme etc.).
@@ -36,7 +36,7 @@ Doch neben Software-Packages verwendet man auch noch eine Vielzahl von *Programm
 Hierzu wurde [Homebrew Cask](http://caskroom.io/) entwickelt. Diese Software lässt sich eben so einfach wie *Homebrew* installieren und funktioniert sehr ähnlich, nur mit dem Unterschied, dass Programme damit installiert werden können, die dann in den Anwendungsordner von Mac OS X verlinkt werden.
 
 {% highlight bash %}
-brew cask install google-chrome
+$ brew cask install google-chrome
 {% endhighlight %}
 
 Unter den mittlerweile 1375 Software-Paketen, die sich mit *Cask* installieren lassen ist so gut wie jede bekannte Software dabei, auch viele kommerzielle Produkte.
@@ -46,9 +46,9 @@ Solange man nur wenige Programme hat und vielleicht nur alle 5-6 Jahre einen neu
 
 *Homebrew* und auch *Homebrew Cask* bieten seit kurzem die Möglichkeit einer Automatisierung an. Wie auch in der Entwicklung mit *Ruby* oder *Ruby on Rails*, bei denen es ein `Gemfile` gibt, in dem alle Abhängigkeiten definiert sind oder bei *Node.js*, wo eine `package.json` diese Aufgabe erledigt, gibt es die Möglichkeit ein `Brewfile` und `Caskfile` anzulegen und mit einem neuen Befehl automatisiert eine große Anzahl von Software zu installieren.
 
-{% highlight bash linenos %}
-brew bundle Brewfile
-brew bundle Caskfile
+{% highlight bash %}
+$ brew bundle Brewfile
+$ brew bundle Caskfile
 {% endhighlight %}
 
 ## Automatische Generierung einer Installationsdatei
@@ -56,22 +56,22 @@ Als besonderes Extra gibt es seit kurzem einen Generator, der diese Dateien auto
 
 Die [Software](https://github.com/seethroughtrees/homebrew-dotfile-generator) ist einfach zu installieren:
 
-{% highlight bash linenos %}
-git clone https://github.com/seethroughtrees/homebrew-dotfile-generator.git
-cd homebrew-dotfile-generator
-npm install
+{% highlight bash %}
+$ git clone https://github.com/seethroughtrees/homebrew-dotfile-generator.git
+$ cd homebrew-dotfile-generator
+$ npm install
 {% endhighlight %}
 
 Vor dem Erzeugen des Abbilds sollten natürlich alle Pakete auf dem neusten Stand gebracht werden:
 
 {% highlight bash %}
-brew update
+$ brew update
 {% endhighlight %}
 
 Die in Node.js (`brew install node`) geschriebene App wird dann einfach so gestartet:
 
 {% highlight bash %}
-node app
+$ node app
 {% endhighlight %}
 
 Dabei werden drei Dateien erzeugt:

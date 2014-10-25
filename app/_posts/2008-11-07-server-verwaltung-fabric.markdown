@@ -41,7 +41,7 @@ Es gibt lediglich vier Fabric-Befehle:
 
 Variablen deklariert man einfach so:
 
-### Fabfile
+{% figure code-figure "Fabfile" %}
 {% highlight python linenos %}
 set(
     project = 'domain.de',
@@ -54,12 +54,13 @@ set(
     fab_user = 'username',
 )
 {% endhighlight %}
+{% endfigure %}
 
 Lediglich `fab_hosts` und `fab_user` werden in diesem Beispiel von Fabric geliefert, die anderen sind frei gewählt.
 
 Später kann man dann auf die Variable mit der Syntax `$(varname)` zugreifen. Hier mein Beispielskript, dass den oben beschriebenen SVN-Workflow automatisiert:
 
-### Fabfile
+{% figure code-figure "Fabfile" %}
 {% highlight python linenos %}
 def create():
     """
@@ -121,6 +122,7 @@ def create():
             mkdir Website;'
       )
 {% endhighlight %}
+{% endfigure %}
 
 
 Um ein neues Repository anzulegen, muss ich einfach nur noch in den Einstellungen einige Pfade anpassen (meistens nur einen) und dann auf dem Terminal den Befehl `fab create` ausführen.

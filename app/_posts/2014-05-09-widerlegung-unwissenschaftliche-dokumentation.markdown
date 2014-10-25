@@ -4,8 +4,9 @@ language: "de"
 title: "Widerlegung einer unwissenschaftlichen Dokumentation"
 author: "Stefan Imhoff"
 date: 2014-05-09 18:00
+updated: 2014-10-25 13:41
 published: true
-comments: false
+widont: false
 categories:
 - Film
 - Empfehlung
