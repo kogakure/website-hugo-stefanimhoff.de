@@ -2,7 +2,7 @@
 layout: post
 language: "en"
 title: "Introduction to Gulp.js 9: Checking the Syntax of SCSS and JavaScript"
-date: 2014-10-26T08:00:00+02:00
+date: 2014-10-26T08:10:00+02:00
 author: "Stefan Imhoff"
 categories:
 - Code
