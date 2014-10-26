@@ -20,6 +20,8 @@ Um mit Subversion zu arbeiten, muss man sich zuerst ein *Repository* (eine Ablag
 <p>Der Inhalt dieses Artikels ist noch aktuell, doch kann ich nur dringend dazu raten, sich die fantastische Alternative zu Subversion anzusehen: <a href="/2007/versionskontrolle-mit-git/">Git</a>.</p>
 {% endaside %}
 
+{% include articles/subversion-toc.html %}
+
 Hier kann man auf verschiedene Möglichkeiten arbeiten: Entweder man legt ein Repository für alle seine Projekte an, oder man legt für jedes Projekt ein eigenes an.
 
 Ich habe mich für die zweite Methode entschieden. Dies hat eine Menge Vorteile: Zum einen ist die Revisionsnummer, die ein Projekt hat, auch wirklich nur durch das eine Projekt erzeugt worden, zum anderen kann man ein nicht mehr gebrauchtes Projekt leicht löschen oder archivieren. Ein Projekt aus dem Repository zu löschen bringt nämlich nichts, die Daten der alten Stände verbleiben für immer darin.

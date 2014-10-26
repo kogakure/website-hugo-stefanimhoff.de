@@ -20,6 +20,8 @@ Es gibt in Subversion noch ein paar nützliche und notwendige Befehle, die man i
 <p>Der Inhalt dieses Artikels ist noch aktuell, doch kann ich nur dringend dazu raten, sich die fantastische Alternative zu Subversion anzusehen: <a href="/2007/versionskontrolle-mit-git/"><strong>Git</strong></a>.</p>
 {% endaside %}
 
+{% include articles/subversion-toc.html %}
+
 ## Tags anlegen
 
 Tags sind Lesezeichen oder Schlagworte, mit denen man sich eine bestimmte Versionsnummer durch einen leicht zu merkenden Namen, wie z. B. *version-1.2.5* oder *Finale-Version* markieren kann.
