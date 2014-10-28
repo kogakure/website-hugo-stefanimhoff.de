@@ -5,7 +5,6 @@ title: "Die Gestaltung meines neuen Logos"
 author: "Stefan Imhoff"
 date: 2014-04-18 19:00
 published: true
-comments: false
 categories:
 - Design
 tags:

@@ -4,6 +4,7 @@ language: "de"
 title: "Volume reparieren unter Mac&nbsp;OS X"
 author: "Stefan Imhoff"
 date: 2007-05-23 11:40
+updated: 2012-10-25 12:40
 description: "Wie man eine Boot-Festplatte unter Mac OS X ohne die Installations-CD repariert, im Single-User Modus und mit Terminalbefehlen."
 categories:
 - Hilfe
@@ -24,10 +25,10 @@ Im Single-User Modus starten, die Tastenkombination <kbd>⌘</kbd> + <kbd>S</kbd
 
 Nach dem Booten im Single-User Modus gibt man im Terminal diese Befehle (nacheinander) ein. Jede Zeile mit <kbd>↩</kbd> bestätigen und warten bis der Befehl ausgeführt wurde.
 
-{% highlight sh linenos %}
-fsck -fy
-mount -uw
-reboot
+{% highlight sh %}
+$ fsck -fy
+$ mount -uw
+$ reboot
 {% endhighlight %}
 
 Diese Befehle prüfen die Festplatte, verbinden sie wieder und starten den Rechner neu.

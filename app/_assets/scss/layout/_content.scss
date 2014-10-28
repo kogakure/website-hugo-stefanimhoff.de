@@ -19,13 +19,14 @@
 .meta {
   color: rgba($dark-grey, 0.3);
   font-size: modular-scale(0);
+  text-align: center;
 
   .author {
     margin-right: 15px;
   }
 
-  .published {
-    margin-right: 15px;
+  .updated {
+    margin-left: 15px;
   }
 }
 
@@ -33,6 +34,7 @@
 // ----------------------------------------------------------------------------
 .classification {
   margin-bottom: $default-margin-bottom;
+  text-align: center;
 
   .categories {
     margin-right: 15px;

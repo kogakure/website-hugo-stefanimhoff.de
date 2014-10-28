@@ -19,9 +19,9 @@
 {% if was_updated != '0' %}
   {% capture updated %}
     {% if page.language == "en" %}
-      <span class="updated"><i class="icon-calendar"></i> <em>Edited on</em> <time datetime="{{ updated | datetime | date_to_xmlschema }}" class="updated">{{ updated_formatted }}</time></span>
+      <span class="updated"><i class="icon-calendar"></i> <em>Edited on</em> <time datetime="{{ updated | datetime | date_to_xmlschema }}">{{ updated_formatted }}</time></span>
     {% else %}
-      <span class="updated"><i class="icon-calendar"></i> <em>Bearbeitet am</em> <time datetime="{{ updated | datetime | date_to_xmlschema }}" class="updated">{{ updated_formatted }}</time></span>
+      <span class="updated"><i class="icon-calendar"></i> <em>Bearbeitet am</em> <time datetime="{{ updated | datetime | date_to_xmlschema }}">{{ updated_formatted }}</time></span>
     {% endif %}
   {% endcapture %}
 {% else %}{% assign updated = false %}{% endif %}

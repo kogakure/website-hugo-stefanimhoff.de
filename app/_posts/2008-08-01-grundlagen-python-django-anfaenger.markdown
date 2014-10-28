@@ -4,6 +4,7 @@ language: "de"
 title: "Grundlagen von Python und Django für Anfänger"
 author: "Stefan Imhoff"
 date: 2008-08-01 15:00
+updated: 2014-10-25 13:10
 description: "Einführung in die Grundlagen von Python & Django für Anfänger."
 categories:
 - Code
@@ -35,7 +36,7 @@ Um ein Modul eines Drittanbieters (wie z. B. Django) zu benutzen, muss es dem Sy
 Um den genauen Pfad auf seinem Computer herauszubekommen, kann man im Terminal folgenden Befehl ausführen:
 
 {% highlight sh %}
-python -c "from distutils.sysconfig import get_python_lib; print get_python_lib()"
+$ python -c "from distutils.sysconfig import get_python_lib; print get_python_lib()"
 {% endhighlight %}
 
 Für diesen Befehl muss Python auf dem Rechner installiert sein.
@@ -55,7 +56,7 @@ Ein symbolischer Link ist ein Zeiger auf einen anderen Ordner des Computers, äh
 Üblich ist es, dass man sich den Quellcode von Django mit dem Versionskontrollsystem *Subversion* in einen Ordner seiner Wahl holt:
 
 {% highlight sh %}
-svn co http://code.djangoproject.com/svn/django/trunk/ django-trunk
+$ svn co http://code.djangoproject.com/svn/django/trunk/ django-trunk
 {% endhighlight %}
 
 Der neu erzeugte Ordner `django-trunk` enthält neben dem Modul `django` noch Dokumentationen, Lizenzbedingungen, Test-Programme und einiges mehr.
@@ -64,9 +65,9 @@ Um das System jetzt glauben zu lassen, Django wäre im Python `site-packages`-Ve
 
 Im gegebenen Beispiel liegt unser Ordner `django-trunk` auf dem Desktop (kein guter Ort im richtigen Fall!). Das `site-packages`-Verzeichnis liegt im Beispiel unter `/Library/Python/2.5/site-packages/`
 
-{% highlight sh linenos %}
-cd /Library/Python/2.5/site-packages
-ln -s ~/Desktop/django-trunk/django django
+{% highlight sh %}
+$ cd /Library/Python/2.5/site-packages
+$ ln -s ~/Desktop/django-trunk/django django
 {% endhighlight %}
 
 Damit ist das Modul Django installiert und kann benutzt werden. Mit einem Update des Subversion-Verzeichnisses kann man seine Version von Django immer auf dem aktuellsten Stand halten, ohne neue Installationspakete herunterladen und installieren zu müssen.

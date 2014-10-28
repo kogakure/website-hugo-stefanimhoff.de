@@ -5,9 +5,7 @@ author: "Stefan Imhoff"
 language: "de"
 description: Impressum
 date: 2013-12-17 09:12
-comments: false
-sharing: false
-footer: false
+header: false
 ---
 
 ### Ansprechpartner

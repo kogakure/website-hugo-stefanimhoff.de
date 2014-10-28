@@ -46,19 +46,21 @@ $ npm install --save-dev gulp-rsync
 {% figure code-figure "gulp/config.js" %}
 {% highlight javascript %}
 rsync: {
-  src: 'build/production/**',
-  destination: '~/path/to/my/website/root/',
-  root: production,
-  hostname: 'mydomain.com',
-  username: 'user',
-  incremental: true,
-  progress: true,
-  relative: true,
-  emptyDirectories: true,
-  recursive: true,
-  clean: true,
-  exclude: ['.DS_Store'],
-  include: []
+  src: production + '/**',
+  options: {
+    destination: '~/path/to/my/website/root/',
+    root: production,
+    hostname: 'mydomain.com',
+    username: 'user',
+    incremental: true,
+    progress: true,
+    relative: true,
+    emptyDirectories: true,
+    recursive: true,
+    clean: true,
+    exclude: ['.DS_Store'],
+    include: []
+  }
 }
 {% endhighlight %}
 {% endfigure %}
@@ -77,19 +79,7 @@ var config = require('../../config').rsync;
  */
 gulp.task('rsync', function() {
   return gulp.src(config.src)
-    .pipe(rsync({
-      destination: config.destination,
-      root: config.root,
-      hostname: config.hostname,
-      username: config.username,
-      incremental: config.incremental,
-      progress: config.progress,
-      emptyDirectories: config.emptyDirectories,
-      recursive: config.recursive,
-      clean: config.clean,
-      exclude: config.exclude,
-      include: config.include
-    }));
+    .pipe(rsync(config.options));
 });
 {% endhighlight %}
 {% endfigure %}

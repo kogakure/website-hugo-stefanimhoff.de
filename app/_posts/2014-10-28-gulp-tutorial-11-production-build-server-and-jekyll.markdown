@@ -2,7 +2,7 @@
 layout: post
 language: "en"
 title: "Introduction to Gulp.js 11: Production Build, Server and Jekyll"
-date: 2014-10-28T08:00:00+02:00
+date: 2014-10-28T07:30:00+02:00
 author: "Stefan Imhoff"
 categories:
 - Code
@@ -100,6 +100,7 @@ gulp.task('build:production', function(callback) {
     'optimize:css',
     'optimize:js',
     'optimize:images',
+    'optimize:html',
     'copy:fonts:production'
   ],
   'revision',

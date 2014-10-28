@@ -1,7 +1,6 @@
 ---
 layout: error
 title: Not found!
-footer: false
 error_page_404: true
 ---
 

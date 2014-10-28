@@ -18,8 +18,8 @@
   .line-numbers,
   .article-related,
   .pagination,
-  .article-footer .categories,
-  .article-footer .tags,
+  .article-header .categories,
+  .article-header .tags,
   footer.footer,
   .attribution-main-text {
     display: none;
@@ -80,7 +80,7 @@
     border-bottom: 2px solid #bbbbbb;
   }
 
-  .article-footer {
+  .article-header {
     border-top: 2px solid #bbbbbb;
     padding-top: 5pt;
   }

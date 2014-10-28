@@ -22,7 +22,7 @@ Ich habe aber ebenso wieder einen Blick auf [Ruby on Rails](http://rubyonrails.o
 
 Die Arbeit mit [Git](http://git-scm.com/) macht auch jetzt immer noch Spass, viel Neues habe ich nicht gelernt, aber trotzdem waren Git- und [Redmine](http://www.redmine.org/)-Suchtreffer häufig vertreten.
 
-Dieses Jahr habe ich auch von [Homebrew](http://mxcl.github.io/homebrew/) erfahren, mit dem leicht Unix-Pakete installieren kann. Alle anderen Paketmanager für Mac OS X, die ich vorher getestet habe, hatten Ansätze, die mir nicht gefielen. Ich möchte meine Installationen an Standardorten liegen haben (oder einen symbolischen Link vom Standardort) und nicht ein zweiten System irgendwo unter "/opt/" aufbauen.
+Dieses Jahr habe ich auch von [Homebrew](http://mxcl.github.io/homebrew/) erfahren, mit dem leicht Unix-Pakete installieren kann. Alle anderen Paketmanager für Mac OS X, die ich vorher getestet habe, hatten Ansätze, die mir nicht gefielen. Ich möchte meine Installationen an Standardorten liegen haben (oder einen symbolischen Link vom Standardort) und nicht ein zweiten System irgendwo unter `/opt/` aufbauen.
 
 Mitte des Jahres habe ich Safari als Standard-Surfbrowser durch [Google Chrome](https://www.google.com/intl/de/chrome/browser/) ausgewechselt. Die Geschwindigkeit, Integration der Google-Suche in die URL-Zeile, schicke Erweiterungen und Synchronisation aller Browserdaten über mehrere Computer haben die Entscheidung leicht gemacht.
 

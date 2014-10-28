@@ -1,9 +1,10 @@
 ---
 layout: post
 language: "de"
-title: "Subversion (4) – Importieren einer Projektstruktur"
+title: "Subversion 4: Importieren einer Projektstruktur"
 author: "Stefan Imhoff"
 date: 2007-07-29 13:00
+updated: 2014-10-25 12:29
 description: "Mit Subversion eine Projektstruktur einrichten."
 categories:
 - Versionskontrolle
@@ -15,8 +16,11 @@ tags:
 Im nächsten Schritt erzeuge ich auf der Festplatte die Struktur meines Projektes. Diese Struktur ist nicht vorgegeben und kann nach beliebiger Struktur angelegt werden, wobei es ein paar Empfehlungen und Konventionen gibt.
 
 {% aside aside-hint %}
+<h4>Versionkontrolle mit Git</h4>
 <p>Der Inhalt dieses Artikels ist noch aktuell, doch kann ich nur dringend dazu raten, sich die fantastische Alternative zu Subversion anzusehen: <a href="/2007/versionskontrolle-mit-git/"><strong>Git</strong></a>.</p>
 {% endaside %}
+
+{% include articles/subversion-toc.html %}
 
 Es wird grundsätzlich empfohlen mit den drei Ordnern `trunk`, `tags` und `branches` auf der obersten Ebene zu beginnen. Der Ordner `trunk` enthält den aktuellen Entwicklungsstand der Dateien. Der Ordner `tags` wird benutzt, um sich spezielle Stände mit sprechenden Namen zu merken (z. B. `Finale Version 1. Mai 2006`, `V1.02` etc.). Den Ordner `branches` lege ich normalerweise nicht an, dieser wird benutzt, um eine parallele Entwicklung eines Projektes zu entwickeln.
 
@@ -28,13 +32,13 @@ Ein Programmierer hat eine Software entwickelt. Da er eigentlich nicht mal vor h
 
 ## Anlegen der Grundstruktur
 
-{% highlight sh linenos %}
-cd ~
-cd Desktop
-mkdir Import
-cd Import
-mkdir trunk
-mkdir tags
+{% highlight sh %}
+$ cd ~
+$ cd Desktop
+$ mkdir Import
+$ cd Import
+$ mkdir trunk
+$ mkdir tags
 {% endhighlight %}
 
 Dies erzeugt meine Grundstruktur, den Konventionen entsprechend. Der Ordner `Import` (frei gewählter Name) liegt auf dem Desktop und dient nur für den Importierungsvorgang. Danach kann er gelöscht werden. Innerhalb von `trunk` lege ich jetzt eine für mein Projekt passende Struktur an. Als Hilfe ist es wichtig zu erwähnen, dass mit Subversion nur Ordner ausgecheckt werden können, keine einzelnen Dateien. Daher ist es wichtig, die Struktur mit möglichst logischen und strukturierten Ordnern und Unterordnern anzulegen.
@@ -43,7 +47,7 @@ Dies erzeugt meine Grundstruktur, den Konventionen entsprechend. Der Ordner `Imp
 
 Hier ist mal eine Beispielstruktur, die ich überlicherweise verwende:
 
-{% highlight sh linenos %}
+{% highlight sh %}
 .
 ├── tags
 └── trunk
@@ -70,11 +74,11 @@ Der Vorteil bei einer tiefen Ordnerstruktur liegt darin, dass man nur das holen 
 
 Dieser Stand wird jetzt in das noch leere Repository importiert.
 
-{% highlight sh linenos %}
-cd ~
-cd Desktop
-cd Import
-svn import . file:///Users/XYZ/Subversion/meinewebsite/ -m "Import des Projektes"
+{% highlight sh %}
+$ cd ~
+$ cd Desktop
+$ cd Import
+$ svn import . file:///Users/XYZ/Subversion/meinewebsite/ -m "Import des Projektes"
 {% endhighlight %}
 
 An der Stelle, wo `XYZ` steht muss der Name eures Benutzerordners stehen. Der Parameter `-m` ist vorgeschrieben und erwartet eine Beschreibung dessen, was man gemacht hat.

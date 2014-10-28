@@ -79,11 +79,12 @@
 }
 
 // Das Fragezeichen
-.attribution:before {
+.attribution .figure-content:before {
   @extend %attribution-before;
-  bottom: 15px;
+  bottom: 10px;
   left: 10px;
   opacity: 0.75;
+  z-index: 5;
 
   .fontface & {
     @extend %attribution-before-fontface;
@@ -91,7 +92,7 @@
 }
 
 // Versteckt beim Einblenden des Attribution-Textes das Fragezeichen
-.attribution:hover:before {
+.attribution .figure-content:hover:before {
   opacity: 0;
 }
 

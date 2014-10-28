@@ -2,7 +2,7 @@
 layout: post
 language: "en"
 title: "Introduction to Gulp.js 8: Watch for Changes"
-date: 2014-10-25T08:00:00+02:00
+date: 2014-10-25T10:00:00+02:00
 author: "Stefan Imhoff"
 categories:
 - Code
@@ -14,7 +14,7 @@ tags:
 
 This is the 8th part of my series *Introduction to Gulp.js*. Today I will set up watch tasks for many different files with Gulp.js.
 
-{% figure image-figure attribution %}
+{% figure image-figure attribution "Not even <strong>Double Gulp</strong> helped to have a Funtime" %}
 <img src="/assets/images/artikel/gulp-tutorial-8.jpg" alt="Man with a Double Gulp is sleeping">
 <p class="attribution-text"><i class="icon-cc"></i> Erin Nekervis, <a href="https://www.flickr.com/photos/theeerin/4701912791">Funtime!</a></p>
 {% endfigure %}

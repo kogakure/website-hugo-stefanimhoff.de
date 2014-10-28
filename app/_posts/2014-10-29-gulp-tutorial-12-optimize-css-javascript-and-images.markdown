@@ -26,7 +26,7 @@ This is the 12th part of my series *Introduction to Gulp.js*. Today I will write
 Every Kilobyte, which has to be loaded will slow down the loading of my website. That’s why I will minimize all my CSS and JavaScript and run my images through an optimizer, to remove as many bytes as possible. I will also add a task for minimizing HTML, but I don’t use this task, because the reduction is minimal.
 
 ## Optimize CSS
-Next I will write a task, which will optimize the CSS. Compass is able to minimize the CSS for production, but this Gulp.js task squeezed another 6 KB out of my files.
+First I will write a task, which will optimize the CSS. Compass is able to minimize the CSS for production, but this Gulp.js task squeezed another 6 KB out of my files.
 
 I install the needed Gulp.js plugins:
 
@@ -39,7 +39,10 @@ $ npm install --save-dev gulp-minify-css gulp-size
 optimize: {
   css: {
     src:  developmentAssets + '/css/*.css',
-    dest: productionAssets + '/css/'
+    dest: productionAssets + '/css/',
+    options: {
+      keepSpecialComments: 0
+    }
   }
 }
 {% endhighlight %}
@@ -57,9 +60,7 @@ var config    = require('../../config').optimize.css;
  */
 gulp.task('optimize:css', function() {
   return gulp.src(config.src)
-    .pipe(minifycss({
-      keepSpecialComments: 0
-    }))
+    .pipe(minifycss(config.options))
     .pipe(gulp.dest(config.dest))
     .pipe(size());
 });
@@ -83,7 +84,8 @@ optimize: {
   },
   js: {
     src:  developmentAssets + '/js/*.js',
-    dest: productionAssets + '/js/'
+    dest: productionAssets + '/js/',
+    options: {}
   }
 }
 {% endhighlight %}
@@ -101,7 +103,7 @@ var config = require('../../config').optimize.js;
  */
 gulp.task('optimize:js', function() {
   return gulp.src(config.src)
-    .pipe(uglify())
+    .pipe(uglify(config.options))
     .pipe(gulp.dest(config.dest))
     .pipe(size());
 });
@@ -111,7 +113,7 @@ gulp.task('optimize:js', function() {
 This task will take the JavaScript files, minimize and optimize them, put them to my production assets folder and output the size.
 
 ## Optimize Images
-Next I will take care of the images. They need to be copied to the production assets folder and crunshed (reduce the size). This may take a file, depending on the size and amount of your images, that’s why I only optimize the images for production.
+Next I will take care of the images. They need to be copied to the production assets folder and crunshed (reduce the size). This may take a while, depending on the size and amount of your images, that’s why I only optimize the images for production.
 
 {% aside aside-hint %}
 <h4>Show more details</h4>
@@ -135,7 +137,12 @@ optimize: {
   },
   images: {
     src:  developmentAssets + '/images/**/*.{jpg,jpeg,png,gif}',
-    dest: productionAssets + '/images/'
+    dest: productionAssets + '/images/',
+    options: {
+      optimizationLevel: 3,
+      progessive: true,
+      interlaced: true
+    }
   }
 }
 {% endhighlight %}
@@ -153,11 +160,7 @@ var config   = require('../../config').optimize.images;
  */
 gulp.task('optimize:images', function() {
   return gulp.src(config.src)
-    .pipe(imagemin({
-      optimizationLevel: 3,
-      progessive: true,
-      interlaced: true
-    }))
+    .pipe(imagemin(config.options))
     .pipe(gulp.dest(config.dest))
     .pipe(size());
 });
@@ -167,7 +170,7 @@ gulp.task('optimize:images', function() {
 This task will take my images, optimize them, copy them to the assets folder and output the size.
 
 ## Minimize HTML
-As said before I wrote this task but don’t use it, because the reduction is minimal and not worth the messy markup. I like to keep it readable so other people can learn from it.
+As said before I wrote this task, so you can see how to do it, but I don’t use it, because the reduction is minimal and not worth the messy markup. I like to keep it readable so other people can learn from it.
 
 {% highlight sh %}
 $ npm install --save-dev gulp-htmlmin
@@ -175,27 +178,39 @@ $ npm install --save-dev gulp-htmlmin
 
 {% figure code-figure "gulp/config.js" %}
 {% highlight javascript %}
-htmlmin: {
-  src: production + '/**/*.html',
-  dest: production
+optimize: {
+  css: {
+    ...
+  },
+  js: {
+    ...
+  },
+  images: {
+    ...
+  },
+  html: {
+    src: production + '/**/*.html',
+    dest: production,
+    options: {
+      collapseWhitespace: true
+    }
+  }
 }
 {% endhighlight %}
 {% endfigure %}
 
-{% figure code-figure "gulp/tasks/production/htmlmin.js" %}
+{% figure code-figure "gulp/tasks/production/optimize-html.js" %}
 {% highlight javascript %}
 var gulp    = require('gulp');
 var htmlmin = require('gulp-htmlmin');
-var config  = require('../../config').optimize.htmlmin;
+var config  = require('../../config').optimize.html;
 
 /**
  * Minimize HTML
  */
-gulp.task('htmlmin', function() {
+gulp.task('optimize:html', function() {
   return gulp.src(config.src)
-    .pipe(htmlmin({
-      collapseWhitespace: true
-    }))
+    .pipe(htmlmin(config.options))
     .pipe(gulp.dest(config.dest));
 });
 {% endhighlight %}

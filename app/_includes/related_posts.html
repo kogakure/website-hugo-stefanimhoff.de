@@ -1,9 +1,9 @@
 {% unless site.related_posts == empty %}
   <section class="article-related">
     {% if page.language == "en" %}
-    <h3>Related Articles</h3>
+    <h2>Related Articles</h2>
     {% else %}
-    <h3>Ähnliche Beiträge</h3>
+    <h2>Ähnliche Beiträge</h2>
     {% endif %}
     <ul class="posts">
       {% for post in site.related_posts limit:5 %}

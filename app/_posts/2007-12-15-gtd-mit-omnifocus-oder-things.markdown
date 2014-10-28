@@ -87,7 +87,8 @@ Die Liste von zukünftigen Verbesserungen ist lang und lässt noch auf großes H
 
 Ich habe Things und OmniFocus jetzt über einen Zeitraum von vierzehn Tagen ausgiebig getestet und mein Kandidat steht fest: **Things**.
 
-{% pullquote %}
+{% pullquote %}{"CulturedCode ist eine deutsche Firma, und somit macht es gleich doppelt soviel Spaß innovative Ideen und Softwarelösungen aus dem eigenen Land zu unterstützen."}{% endpullquote %}
+
 Obwohl es derzeit noch weniger Funktionen hat und auch ein Preis noch nicht feststeht, habe ich mich aus verschiedenen Gründen für Things entschieden.
 
 Die Arbeit mit Things fühlt sich einfach *besser* an und macht mehr Spaß, die Oberfläche ist aufgeräumt und übersichtlich. Kleine Dinge, wie Animationen ähnlich auf dem iPhone sorgen für ein gutes Gefühl.
@@ -95,6 +96,3 @@ Die Arbeit mit Things fühlt sich einfach *besser* an und macht mehr Spaß, die 
 OmniFocus kommt mit dem typischen Pillendesign daher, was ich persönlich weder schön, noch nützlich finde. Vieles ist viel zu klein, oder es muss an bestimmten Punkte gezogen werden, um etwas zu bewegen. Things nutzt die Möglichkeiten von Leopard um ein Vielfaches besser. Die Programmierer/Designer von CulturedCode haben meiner Meinung nach ein besseres Verständnis für Interface-Design.
 
 Da eine solche Software täglich sehr oft benutzt wird, ist das Handling und das Aussehen enorm wichtig. Bei OmniFocus fühlt man sich eher, als ob man seine kreativen Ideen in Excel-Tabellen zwängt, die Bedienung macht einfach weniger Spaß.
-
-{"Außerdem ist CulturedCode eine deutsche Firma, und somit macht es gleich doppelt soviel Spaß innovative Ideen und Softwarelösungen aus dem eigenen Land zu unterstützen."}
-{% endpullquote %}

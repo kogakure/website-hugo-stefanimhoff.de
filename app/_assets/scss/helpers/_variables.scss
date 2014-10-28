@@ -76,10 +76,10 @@ $selection-color:               $white;     // THEME
 // Pfade
 // ----------------------------------------------------------------------------
 
-$header-path:                "/assets/images/css/header";
-$header-background-url:      ""; // THEME
-$header-background-url-m:    ""; // THEME
-$header-background-url-s:    ""; // THEME
+$header-path:             "/assets/images/css/header";
+$header-background-url:   ""; // THEME
+$header-background-url-m: ""; // THEME
+$header-background-url-s: ""; // THEME
 $header-background-position: left center; // THEME
 
 // Media-Queries/Breakpoints
@@ -123,7 +123,7 @@ $default-margin-left:   1.5em;
 // ----------------------------------------------------------------------------
 
 // Animations-Kurven
-$cubic-bezier-bouncing:           cubic-bezier(0.205, 0.010, 0.005, 1);
+$cubic-bezier-bouncing:           cubic-bezier(0.205, 0.01, 0.005, 1);
 
 // Animationen-Timings
 $animation-off-screen-menu:       transform 500ms $cubic-bezier-bouncing;

@@ -4,8 +4,8 @@ language: "de"
 title: "Die Rückkehr der statischen Websites"
 author: "Stefan Imhoff"
 date: 2014-09-23T20:15:52+02:00
+updated: 2014-10-25T13:51:00+02:00
 published: true
-comments: false
 categories:
 - Code
 - Empfehlung
@@ -43,11 +43,11 @@ Ich hatte schon im April 2014 meine [eigene Website](http://stefanimhoff.de) mit
 ## Besonderheiten von Jekyll
 Durch [statische Seitengeneratoren](http://www.staticgen.com) habe ich meinen Spaß an Nebenprojekten wiederentdeckt. Es dauert nur wenige Minuten und schon hat man so ein Projekt aufgesetzt. Selbst jemand mit wenig Erfahrung kann so schnell einen Prototypen erstellen oder sich einen Blog selbst bauen:
 
-{% highlight sh linenos %}
-gem install jekyll
-jekyll new myblog
-cd myblog
-jekyll serve
+{% highlight sh %}
+$ gem install jekyll
+$ jekyll new myblog
+$ cd myblog
+$ jekyll serve
 {% endhighlight %}
 
 Statische Seitengeneratoren bieten so gut wie alles, was man sich wünschen kann: einen **Entwicklungsserver**, Unterstützung für **Markdown**, Textile und pures HTML. Seiten und Posts (wie bei einem Blog) mit einer Möglichkeit für Meta-Informationen (im YAML-Format).

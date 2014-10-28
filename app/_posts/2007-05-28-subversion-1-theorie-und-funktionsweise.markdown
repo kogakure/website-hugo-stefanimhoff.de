@@ -1,9 +1,10 @@
 ---
 layout: post
 language: "de"
-title: "Subversion (1) – Theorie und Funktionsweise"
+title: "Subversion 1: Theorie und Funktionsweise"
 author: "Stefan Imhoff"
 date: 2007-05-28 18:04
+updated: 2014-10-25 12:22
 description: "Theorie und Funktionsweise von Subversion."
 categories:
 - Versionskontrolle
@@ -15,8 +16,11 @@ tags:
 Dieser erste Teil der Reihe *Subversion* beschäftigt sich mit der nötigen Theorie und Funktionsweise von Subversion.
 
 {% aside aside-hint %}
+<h4>Versionkontrolle mit Git</h4>
 <p>Der Inhalt dieses Artikels ist noch aktuell, doch kann ich nur dringend dazu raten, sich die fantastische Alternative zu Subversion anzusehen: <a href="/2007/versionskontrolle-mit-git/">Git</a>.</p>
 {% endaside %}
+
+{% include articles/subversion-toc.html %}
 
 ## Was ist Versionskontrolle?
 

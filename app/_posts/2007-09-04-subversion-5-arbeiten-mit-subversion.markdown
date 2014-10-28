@@ -1,9 +1,10 @@
 ---
 layout: post
 language: "de"
-title: "Subversion (5) – Arbeiten mit Subversion"
+title: "Subversion 5: Arbeiten mit Subversion"
 author: "Stefan Imhoff"
 date: 2007-09-04 18:45
+updated: 2014-10-25 12:36
 description: "Grundlegende Arbeitsschritte mit Subversion."
 categories:
 - Versionskontrolle
@@ -15,25 +16,28 @@ tags:
 Die eigentliche Arbeit mit Subversion ist relativ leicht erklärt und gelernt. Von größeren Aktionen wie `merge` mal abgesehen.
 
 {% aside aside-hint %}
+<h4>Versionkontrolle mit Git</h4>
 <p>Der Inhalt dieses Artikels ist noch aktuell, doch kann ich nur dringend dazu raten, sich die fantastische Alternative zu Subversion anzusehen: <a href="/2007/versionskontrolle-mit-git/">Git</a>.</p>
 {% endaside %}
 
+{% include articles/subversion-toc.html %}
+
 Zuerst lege ich mir ein Arbeitsverzeichnis an, in dem ich künftig meine Projekte bearbeiten will, z. B. einen Ordner `Arbeit` im Heimatverzeichnis.
 
-{% highlight sh linenos %}
-cd ~
-mkdir Arbeit
-cd Arbeit
+{% highlight sh %}
+$ cd ~
+$ mkdir Arbeit
+$ cd Arbeit
 {% endhighlight %}
 
 Um jetzt an einem Projekt aus dem Repository arbeiten zu können, muss man es sich in einen Arbeitsordner *auschecken*, also eine Kopie der Dateien auf seine Festplatte holen.
 
 Im Artikel <cite>[Subversion (4) – Importieren einer Projektstruktur](/2007/subversion-4-importieren-einer-projektstruktur/)</cite> hatte ich mir eine Beispielstruktur angelegt. Ich entscheide mich jetzt an der Website zu arbeiten und nur diesen Ordner und seine Unterordner auszuchecken. Natürlich könnte man genauso gut den kompletten `trunk` (die Hauptentwicklungslinie) in seinen Arbeitsordner holen.
 
-{% highlight sh linenos %}
-mkdir meinewebsite
-cd meinewebsite
-svn co file:///Users/XYZ/Subversion/meinewebsite/trunk/Website .
+{% highlight sh %}
+$ mkdir meinewebsite
+$ cd meinewebsite
+$ svn co file:///Users/XYZ/Subversion/meinewebsite/trunk/Website .
 {% endhighlight %}
 
 So wird der Inhalt des Ordners `Website` in mein Projektvereichnis `meinewebsite` entpackt. Wenn man auch noch den Ordner `Website` darin selber haben möchte lässt man einfach den `.` am Ende weg.
@@ -45,7 +49,7 @@ Der Befehl `svn status` bringt als Ergebnis, dass man die Version 1 ausgecheckt 
 Im ersten Schritt lege ich jetzt eine Datei in meinem Hauptverzeichnis (index.html) an und kopiere ein Testbild in den Ordner `img` (test.jpg). Der Befehl `svn status` erzeugt jetzt zwei Zeilen, die die beiden neuen Dateien anzeigen, mit jeweils einem Fragezeichen davor. Das Fragezeichen zeigt an, dass diese Dateien unbekannt sind, sich also nicht im Repository befinden. Subversion überträgt keine Dateien automatisch ins Verzeichnis, außer man markiert sie dafür. Das mache ich jetzt:
 
 {% highlight sh %}
-svn add index.html img/test.jpg
+$ svn add index.html img/test.jpg
 {% endhighlight %}
 
 Wie gesehen kann man hier mehrere Dateien in einem Befehl hinzufügen, es funktioniert auch UNIX-Syntax, wie z. B. der *Asterisk* (Stern) für alle Dateien. In der Ausgabe dieses Befehls sieht man jetzt ein `A` neben der jeweiligen Datei, das steht für `Added` (hinzugefügt).
@@ -55,7 +59,7 @@ Wie gesehen kann man hier mehrere Dateien in einem Befehl hinzufügen, es funkti
 Diese Änderungen/Neueinfügungen spiele ich nun ins Repository zurück.
 
 {% highlight sh %}
-svn ci -m "Dateien hinzugefuegt"
+$ svn ci -m "Dateien hinzugefuegt"
 {% endhighlight %}
 
 Die Zeichenkette nach dem Parameter `-m` ist für die Log-Datei gedacht. Hier sollte man seine Änderungen beschreiben. Wir bekommen die Meldung zurück, dass die Dateien hinzugefügt wurden und der Revisionsstand nun `2` ist.
@@ -69,7 +73,7 @@ Wenn man Dateien über die normale Löschfunktion des Computers entfernt, erfäh
 Besser ist es also die Datei über Subversion zu löschen (das macht man aber in der Regel aus Faulheit nicht):
 
 {% highlight sh %}
-svn del img/test.jpg
+$ svn del img/test.jpg
 {% endhighlight %}
 
 Das Ergebnis dieses Befehls ist ein `D` neben der Datei, was `Deleted` (gelöscht) bedeutet. Beim nächsten Commit wird diese Datei entfernt.
@@ -79,7 +83,7 @@ Doch vorher führe ich noch eine Änderung an der `index.html` durch, indem ich 
 Mit dem Commit-Befehl spiele ich jetzt die beiden Änderungen ins Repository:
 
 {% highlight sh %}
-svn ci -m "Bild geloescht, index.html bearbeitet"
+$ svn ci -m "Bild geloescht, index.html bearbeitet"
 {% endhighlight %}
 
 Im nächsten Teil der Reihe erkläre ich, wie man Dateien so markieren kann, dass sie nie ins Repository übertragen werden und wie man einige erweiterte Befehle benutzt.
