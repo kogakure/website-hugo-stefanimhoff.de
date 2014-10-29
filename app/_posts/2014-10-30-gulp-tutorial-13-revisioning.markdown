@@ -22,10 +22,8 @@ This is the 13th part of my series *Introduction to Gulp.js*. Today I will write
 
 {% include articles/gulp-toc.html %}
 
-Before I can work on the fun part of revisioning my asset files I first have to write a task to copy my vector fonts. Boring, but it has to be done.
-
 ## Copy Vector Fonts for Production
-Another boring and short task, which is doing just one simple thing: Copy the fonts to the production assets folder. But that’s the way Gulp.js was build. Have small tasks that do small things.
+Before I can work on the fun part of revisioning my asset files I first have to write another boring and short task, which is doing just one simple thing: Copy the fonts to the production assets folder.
 
 {% figure code-figure "gulp/config.js" %}
 {% highlight javascript %}
