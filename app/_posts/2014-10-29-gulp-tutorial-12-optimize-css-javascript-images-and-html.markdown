@@ -1,7 +1,7 @@
 ---
 layout: post
 language: "en"
-title: "Introduction to Gulp.js 12: Optimize CSS, JavaScript and Images"
+title: "Introduction to Gulp.js 12: Optimize CSS, JavaScript, Images and HTML"
 date: 2014-10-29T08:00:00+02:00
 author: "Stefan Imhoff"
 categories:
@@ -14,7 +14,7 @@ tags:
 - minimize
 ---
 
-This is the 12th part of my series *Introduction to Gulp.js*. Today I will write tasks to optimize the assets of my website: CSS, JavaScript and Images.
+This is the 12th part of my series *Introduction to Gulp.js*. Today I will write tasks to optimize the assets of my website: CSS, JavaScript, Images and HTML.
 
 {% figure image-figure attribution %}
 <img src="/assets/images/artikel/gulp-tutorial-12.jpg" alt="A woman with a Double Gulp">
@@ -25,7 +25,7 @@ This is the 12th part of my series *Introduction to Gulp.js*. Today I will write
 
 Every Kilobyte, which has to be loaded will slow down the loading of my website. That’s why I will minimize all my CSS and JavaScript and run my images through an optimizer, to remove as many bytes as possible. I will also add a task for minimizing HTML, but I don’t use this task, because the reduction is minimal.
 
-## Optimize CSS
+## CSS
 First I will write a task, which will optimize the CSS. Compass is able to minimize the CSS for production, but this Gulp.js task squeezed another 6 KB out of my files.
 
 I install the needed Gulp.js plugins:
@@ -69,7 +69,7 @@ gulp.task('optimize:css', function() {
 
 This task will copy the CSS files from the assets folder, minimize them, remove comments, output the size of the file and copy them to the production assets folder.
 
-## Optimize JavaScript
+## JavaScript
 Now the CSS is minimized and the same has to be done to the JavaScript files. I use UglifyJS for this task. If you don’t like it, go ahead and use a Google Closure or YUI compressor Gulp.js task.
 
 {% highlight sh %}
@@ -112,7 +112,7 @@ gulp.task('optimize:js', function() {
 
 This task will take the JavaScript files, minimize and optimize them, put them to my production assets folder and output the size.
 
-## Optimize Images
+## Images
 Next I will take care of the images. They need to be copied to the production assets folder and crunshed (reduce the size). This may take a while, depending on the size and amount of your images, that’s why I only optimize the images for production.
 
 {% aside aside-hint %}
@@ -169,7 +169,7 @@ gulp.task('optimize:images', function() {
 
 This task will take my images, optimize them, copy them to the assets folder and output the size.
 
-## Minimize HTML
+## HTML
 As said before I wrote this task, so you can see how to do it, but I don’t use it, because the reduction is minimal and not worth the messy markup. I like to keep it readable so other people can learn from it.
 
 {% highlight sh %}
