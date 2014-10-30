@@ -2,7 +2,7 @@
 layout: post
 language: "en"
 title: "Introduction to Gulp.js 13: Revisioning"
-date: 2014-10-30T08:00:00+02:00
+date: 2014-10-30T07:45:00+02:00
 author: "Stefan Imhoff"
 categories:
 - Code
@@ -22,10 +22,8 @@ This is the 13th part of my series *Introduction to Gulp.js*. Today I will write
 
 {% include articles/gulp-toc.html %}
 
-Before I can work on the fun part of revisioning my asset files I first have to write a task to copy my vector fonts. Boring, but it has to be done.
-
 ## Copy Vector Fonts for Production
-Another boring and short task, which is doing just one simple thing: Copy the fonts to the production assets folder. But that’s the way Gulp.js was build. Have small tasks that do small things.
+Before I can work on the fun part of revisioning my asset files I first have to write another boring and short task, which is doing just one simple thing: Copy the fonts to the production assets folder.
 
 {% figure code-figure "gulp/config.js" %}
 {% highlight javascript %}
@@ -63,7 +61,7 @@ For better performance one should always cache the assets for a very long time. 
 
 That’s why we need to rename every file that has been changed to invalidate the cache. I remember the days when we had to add a number by hand to our assets like `image_r1.png`, `image_r2.png`. This sucks. Today reading the content of a file and generating a checksum can achieve this easier. This checksum will be always the same, unless something gets changed.
 
-My next tasks will rename all assets. This way the `application.css` will become `application-f084d03b.css`. If I change just one dot in this file it will get a new filename.
+My next task will rename all assets. This way the `application.css` will become `application-f084d03b.css`. If I change just one dot in this file it will get a new filename.
 
 I install `gulp-rev`, which will handle this renaming of assets:
 
