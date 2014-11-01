@@ -3,6 +3,7 @@ layout: post
 language: "en"
 title: "Introduction to Gulp.js 13: Revisioning"
 date: 2014-10-30T07:45:00+02:00
+updated: 2014-11-01T10:36:00+02:00
 author: "Stefan Imhoff"
 categories:
 - Code
@@ -126,10 +127,11 @@ $ npm install --save-dev gulp-rev-collector
 {% figure code-figure "gulp/config.js" %}
 {% highlight javascript %}
 collect: {
-  src: {
-    manifest: productionAssets + '/manifest.json',
-    files:  production + '/**/*.{html,xml,txt,json,css,js}'
-  },
+  src: [
+    productionAssets + '/manifest.json',
+    production + '/**/*.{html,xml,txt,json,css,js}',
+    '!' + production + '/feed.xml'
+  ],
   dest: production
 }
 {% endhighlight %}
@@ -148,10 +150,7 @@ var config  = require('../../config').collect;
  * from a manifest file
  */
 gulp.task('rev:collect', function() {
-  return gulp.src([
-    config.src.manifest,
-    config.src.files
-  ])
+  return gulp.src(config.src)
   .pipe(collect())
   .pipe(gulp.dest(config.dest));
 });
