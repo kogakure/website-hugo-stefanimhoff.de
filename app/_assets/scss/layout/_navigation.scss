@@ -70,8 +70,8 @@
   #nav {
     box-shadow: inset 5px 5px 10px rgba($black, 0.85);
     height: 100%;
-    right: -250px;
-    width: 250px;
+    right: -230px;
+    width: 230px;
 
     .nav-close-btn {
       @extend %sans-font;
@@ -99,7 +99,7 @@
     }
 
     .container {
-      right: 250px;
+      right: 230px;
     }
   }
 }
@@ -112,7 +112,7 @@
   #nav {
     backface-visibility: hidden;
     right: 0;
-    transform: translate3d(250px, 0, 0);
+    transform: translate3d(230px, 0, 0);
     transform-origin: 50% 0%;
     transition: $animation-off-screen-menu;
   }
@@ -131,7 +131,7 @@
     }
 
     .container {
-      transform: translate3d(-250px, 0, 0);
+      transform: translate3d(-230px, 0, 0);
     }
   }
 }

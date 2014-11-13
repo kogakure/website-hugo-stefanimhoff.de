@@ -80,6 +80,13 @@
       @include grid-span(3, 1);
     }
 
+    @include breakpoint($header-centered) {
+      clear: both;
+      float: none;
+      margin: 0;
+      width: 100%;
+    }
+
     .icon-logo {
       border: 0;
       color: $logo-color;
@@ -89,9 +96,13 @@
       text-align: right;
       text-shadow: 0 1px 2px $black;
 
-      @include breakpoint(340px) {
+      @include breakpoint($header-centered) {
         font-size: 60px;
-        margin-top: 5px;
+        height: 80px;
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+        width: 80px;
       }
 
       .home & {
@@ -119,6 +130,14 @@
       @include grid-span(7, 4);
     }
 
+    @include breakpoint($header-centered) {
+      font-size: $font-scale-h2;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      width: 100%;
+    }
+
     a {
       border: 0;
       color: $header-headline;
@@ -140,6 +159,13 @@
       @include grid-span(7, 4);
     }
 
+    @include breakpoint($header-centered) {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      width: 100%;
+    }
+
     h1 {
       margin-bottom: 0;
 
@@ -154,6 +180,10 @@
 
       @include breakpoint(480px) {
         font-size: 25px;
+      }
+
+      @include breakpoint($header-centered) {
+        font-size: 35px;
       }
     }
 
