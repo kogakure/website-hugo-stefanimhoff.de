@@ -24,14 +24,14 @@
   border-radius: 5px;
 
   &:vertical {
-    background: $header-headline;
+    background: $scroll-handle-color;
   }
 
   &:hover {
     background: #b8b8b8;
 
     &:vertical {
-      background: $nav-link-color-hover;
+      background: $scroll-handle-hover-color;
     }
   }
 

@@ -6,33 +6,37 @@
 // ----------------------------------------------------------------------------
 
 // Colors
-$highlight-color:         #f77d14;
+$highlight-color:           #f77d14;
 
 // Header
-$header-background:       #d9a55f;
-$header-border-top-color: #d04200;
-$header-headline:         $white;
-$header-subheadline:      $black;
+$header-background:         #d9a55f;
+$header-border-top-color:   #d04200;
+$header-headline:           $white;
+$header-subheadline:        $black;
 
 // Logo
-$logo-color:              #d04200;
+$logo-color:                #d04200;
 
 // Navigation
-$nav-link-color-hover:    $highlight-color;
+$nav-link-color-hover:      $highlight-color;
 
 // Links
-$link-color:              $highlight-color;
-$link-hover-color:        #d04200;
-$link-active-color:       #d04200;
-$link-visited-color:      $highlight-color;
-$link-focus-color:        #d04200;
+$link-color:                $highlight-color;
+$link-hover-color:          #d04200;
+$link-active-color:         #d04200;
+$link-visited-color:        $highlight-color;
+$link-focus-color:          #d04200;
 
-$link-border-color:       rgba($dark-grey, 0.2);
-$link-hover-border-color: $highlight-color;
+$link-border-color:         rgba($dark-grey, 0.2);
+$link-hover-border-color:   $highlight-color;
+
+// Scrollbars
+$scroll-handle-color:       $black;
+$scroll-handle-hover-color: $white;
 
 // ::selection
-$selection-background:    $highlight-color;
-$selection-color:         $white;
+$selection-background:      $highlight-color;
+$selection-color:           $white;
 
 // Pfade
 // ----------------------------------------------------------------------------
