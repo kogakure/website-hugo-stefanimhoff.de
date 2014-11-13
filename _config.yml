@@ -105,10 +105,10 @@ lunr_search:
 
 # Bambus
 # ------
-# attribution_name: "「大宮盆栽×タムロン」大宮盆栽美術館で盆栽撮影にチャレンジ！ブロガーイベント"
-# attribution_url: "https://www.flickr.com/photos/norio-nakayama/9156103138"
-# attribution_author: "Norio NAKAYAMA"
-# attribution_creative_commons: true
+attribution_name: "「大宮盆栽×タムロン」大宮盆栽美術館で盆栽撮影にチャレンジ！ブロガーイベント"
+attribution_url: "https://www.flickr.com/photos/norio-nakayama/9156103138"
+attribution_author: "Norio NAKAYAMA"
+attribution_creative_commons: true
 
 # Zitrone
 # -------
@@ -126,7 +126,7 @@ lunr_search:
 
 # Halloween
 # ---------
-attribution_name: "25/50"
-attribution_url: "https://www.flickr.com/photos/mmortah/5115158216"
-attribution_author: "Marian Hilditch"
-attribution_creative_commons: true
+# attribution_name: "25/50"
+# attribution_url: "https://www.flickr.com/photos/mmortah/5115158216"
+# attribution_author: "Marian Hilditch"
+# attribution_creative_commons: true
