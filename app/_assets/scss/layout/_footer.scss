@@ -52,6 +52,7 @@
       top: 2px;
     }
 
+    // Modernizr: fontface
     .no-fontface & .copyright i {
       display: none;
     }
@@ -187,6 +188,7 @@
     }
 
     // Sprites (wenn Fontface nicht verfügbar)
+    // Modernizr: fontface, js
     .no-fontface & a,
     .no-js & a {
       display: inline-block;
@@ -200,6 +202,7 @@
     }
 
     // Vektor-Fonts (wenn Fontface verfügbar, Sprite ausblenden)
+    // Modernizr: fontface
     .fontface & a {
       background: transparent;
       display: inline-block;

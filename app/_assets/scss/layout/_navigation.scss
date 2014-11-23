@@ -43,6 +43,7 @@
       @extend %visually-hidden;
     }
 
+    // Modernizr: fontface
     .no-fontface & i {
       display: none;
     }
@@ -66,6 +67,7 @@
 // ----------------------------------------------------------------------------
 // Sobald der Browser JavaScript unterstützt bekommt der User das Off-Canvas-
 // Menü zu sehen.
+// Modernizr: js
 .js {
   #nav {
     box-shadow: inset 5px 5px 10px rgba($black, 0.85);
@@ -108,6 +110,7 @@
 // ----------------------------------------------------------------------------
 // Wenn CSS-Transform3D und CSS-Transitions unterstützt werden, wird das
 // Off-Canvas-Menü animiert.
+// Modernizr: csstransform3d, csstransitions
 .csstransforms3d.csstransitions.js {
   #nav {
     backface-visibility: hidden;
