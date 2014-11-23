@@ -1,5 +1,5 @@
 /* Modernizr 2.8.3 (Custom Build) | MIT & BSD
- * Build: http://modernizr.com/download/#-fontface-csstransforms-csstransforms3d-csstransitions-shiv-cssclasses-teststyles-testprop-testallprops-prefixes-domprefixes-load
+ * Build: http://modernizr.com/download/#-fontface-csstransforms3d-csstransitions-shiv-cssclasses-teststyles-testprop-testallprops-prefixes-domprefixes-load
  */
 ;
 
@@ -195,15 +195,7 @@ window.Modernizr = (function( window, document, undefined ) {
           props = (prop + ' ' + (domPrefixes).join(ucProp + ' ') + ucProp).split(' ');
           return testDOMProps(props, prefixed, elem);
         }
-    }
-
-
-    tests['csstransforms'] = function() {
-        return !!testPropsAll('transform');
-    };
-
-
-    tests['csstransforms3d'] = function() {
+    }    tests['csstransforms3d'] = function() {
 
         var ret = !!testPropsAll('perspective');
 

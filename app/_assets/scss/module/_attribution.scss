@@ -126,7 +126,6 @@
 }
 
 .attribution-main-anchor {
-  // @extend %sans-font;
   height: 34px;
   left: 0;
   opacity: 0.5;
@@ -140,6 +139,7 @@
     bottom: 7px;
     left: 7px;
 
+    // Modernizr: fontface
     .fontface & {
       @extend %attribution-before-fontface;
     }
