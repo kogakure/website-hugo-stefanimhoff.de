@@ -23,7 +23,7 @@ My website is running [Jekyll](http://jekyllrb.com/) now since the beginning of 
 ## The Tutorial
 This is the first part in a series of 14 articles where I describe my whole development and build process step-by-step from start to finish. I am sick of all these *Hello World* tutorials spreading around the Internet, describing just the basics and don’t show a whole process, go deeper or share things learned during the process.
 
-And it’s the first series of articles I write in English, which is not my native language. So if you find some spelling mistakes or false grammer, just send me a message.
+It’s the first series of articles I write in English, which is not my native language. So if you find some spelling mistakes or false grammar, just send me a message.
 
 Fortunately I stumbled upon a GitHub project called [gulp-starter](https://github.com/greypants/gulp-starter) that helped me a lot to structure my code and understand Gulp.js. So my process is partly derived from this fantastic project.
 
