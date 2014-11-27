@@ -3,6 +3,7 @@ layout: post
 language: "en"
 title: "Introduction to Gulp.js 3: Build, Clean and Jekyll"
 date: 2014-10-20T10:00:00+02:00
+updated: 2014-11-27T11:41:00+02:00
 author: "Stefan Imhoff"
 categories:
 - Code
@@ -136,6 +137,11 @@ gulp.task('jekyll-rebuild', ['jekyll'], function() {
 There is a gulp plugin for Jekyll, but it’s alpha and was blacklisted, because it’s not needed as you can run shell tasks with node. But I have to send the `done` status, when the task is finished.
 
 All this task is doing is running `jekyll build` with some options. I use `app` as the source folder, `build/development` as the target and point to my `_config.yml`.
+
+{% aside aside-hint %}
+<h4>To bundle or not to bundle</h4>
+<p><strong>Be carefull</strong>: If you didn’t install Jekyll with a Gemfile you’ll have to change the Jekyll tasks and remove the <code>bundle exec</code> part. Instead of <code>return cp.spawn('bundle', ['exec', 'jekyll' …</code> you write <code>return cp.spawn('jekyll', ['build', '-q' …</code>. All other options stay the same.</p>
+{% endaside %}
 
 I have a second Jekyll build task `jekyll-rebuild`, which is only a wrapper for a rebuild. All it does is reloading the Browser when the build is completed.
 

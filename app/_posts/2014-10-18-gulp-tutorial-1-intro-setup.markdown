@@ -3,6 +3,7 @@ layout: post
 language: "en"
 title: "Introduction to Gulp.js 1: Intro and Setup"
 date: 2014-10-18T08:35:47+02:00
+updated: 2014-11-27T11:39:00+02:00
 author: "Stefan Imhoff"
 categories:
 - Code
@@ -99,6 +100,8 @@ My Jekyll website lives in a folder called `app`. All my tasks will be placed in
 └── package.json
 {% endhighlight %}
 
+## Jekyll
+
 You don’t need a [Jekyll](http://jekyllrb.com/) website to follow along, but if you want just follow along the installation process of Jekyll that is short and sweet:
 
 {% highlight sh %}
@@ -106,6 +109,31 @@ $ gem install jekyll
 $ jekyll new app
 $ cd app
 $ jekyll serve
+{% endhighlight %}
+
+But I actually don’t install Jekyll globally, but with [Bundler](http://bundler.io/). This way all my Gems will be installed with my project and I don’t have to be concerned about the correct version.
+
+I install Bundler globally:
+
+{% highlight sh %}
+$ gem install bundler
+{% endhighlight %}
+
+Now I create an empty file in my projects folder with the name `Gemfile` and add these lines:
+
+{% highlight ruby %}
+source "https://rubygems.org"
+
+gem 'octopress', '~> 3.0.0.rc.14'
+gem 'sass', '>= 3.3'
+{% endhighlight %}
+
+You may wonder, why I don’t add Jekyll to my Gemfile. I added Octopress, which is a Gem for Jekyll blogging. It comes with some nice command line tools to create pages, posts, publishing drafts and creating post or page templates. The reason why I don’t have to add Jekyll is, that it’s a dependency of Octopress and will be installed automatically.
+
+No I install the Gems by typing:
+
+{% highlight sh %}
+$ bundle install
 {% endhighlight %}
 
 {% include articles/gulp-code.html %}
