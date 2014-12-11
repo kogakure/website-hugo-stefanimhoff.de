@@ -9,7 +9,6 @@ categories:
 tags:
 - gulp
 - tutorial
-- automation
 - sass
 - compass
 - autoprefixer

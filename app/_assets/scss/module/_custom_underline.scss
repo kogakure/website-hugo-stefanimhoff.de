@@ -58,8 +58,9 @@
 }
 
 .custom-underline.martial-arts a {
-  background: linear-gradient(to bottom, transparent 49%, #be0202 50%) repeat-x;
+  background-image: linear-gradient(to bottom, transparent 49%, #be0202 50%);
   background-position: 0 88%;
+  background-repeat: repeat-x;
   background-size: 1px 1px;
   text-shadow: 2px 0 #030303, 1px 0 #030303, -1px 0 #030303, -2px 0 #030303;
 
@@ -69,8 +70,9 @@
 }
 
 .custom-underline.movie-lover a {
-  background: linear-gradient(to bottom, transparent 49%, #e8c53d 50%) repeat-x;
+  background-image: linear-gradient(to bottom, transparent 49%, #e8c53d 50%);
   background-position: 0 88%;
+  background-repeat: repeat-x;
   background-size: 1px 1px;
   text-shadow: 2px 0 #282828, 1px 0 #282828, -1px 0 #282828, -2px 0 #282828;
 
@@ -80,8 +82,9 @@
 }
 
 .custom-underline.book-lover a {
-  background: linear-gradient(to bottom, transparent 49%, #616161 50%) repeat-x;
+  background-image: linear-gradient(to bottom, transparent 49%, #616161 50%);
   background-position: 0 88%;
+  background-repeat: repeat-x;
   background-size: 1px 1px;
   text-shadow: 2px 0 #1c1c1c, 1px 0 #1c1c1c, -1px 0 #1c1c1c, -2px 0 #1c1c1c;
 
@@ -92,4 +95,16 @@
 
 .custom-underline.about a {
   text-shadow: 2px 0 #2a2c2d, 1px 0 #2a2c2d, -1px 0 #2a2c2d, -2px 0 #2a2c2d;
+}
+
+.custom-underline .aside-hint a {
+  background-image: linear-gradient(to bottom, transparent 49%, $logo-color 50%);
+  background-position: 0 88%;
+  background-repeat: repeat-x;
+  background-size: 1px 1px;
+  color: $logo-color;
+
+  &:hover {
+    color: darken($logo-color, 20%);
+  }
 }

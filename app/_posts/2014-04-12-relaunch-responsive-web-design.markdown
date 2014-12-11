@@ -13,7 +13,6 @@ tags:
 - relaunch
 - typographie
 - rwd
-- octopress
 - jekyll
 ---
 
