@@ -214,6 +214,7 @@
     a {
       @include link-colors($social-icon-color, $social-icon-hover, $social-icon-color, $social-icon-color, $social-icon-color);
       border: 0;
+      text-decoration: none;
       text-shadow: $black -1px -1px 0;
 
       &:hover {

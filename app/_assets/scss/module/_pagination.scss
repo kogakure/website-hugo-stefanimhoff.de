@@ -21,3 +21,14 @@
     }
   }
 }
+
+.custom-underline .pagination a {
+  background: $dark-grey;
+  color: $white;
+  text-shadow: none;
+
+  &:hover {
+    background: $link-color;
+    color: $white;
+  }
+}

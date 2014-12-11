@@ -43,14 +43,14 @@ body {
 a {
   // normal, hover, active, visited, focus
   @include link-colors($link-color, $link-hover-color, $link-active-color, $link-visited-color, $link-focus-color);
-  border-bottom: 1px solid $link-border-color;
-  text-decoration: none;
+  // border-bottom: 1px solid $link-border-color;
+  // text-decoration: none;
   transition: $animation-link-hover;
 
   &:hover,
   &:active,
   &:focus {
-    border-color: $link-hover-border-color;
+    // border-color: $link-hover-border-color;
   }
 }
 

@@ -72,6 +72,14 @@
   @extend %attribution-text;
 }
 
+.custom-underline .attribution-text a {
+  text-shadow: none;
+
+  &:hover {
+    color: $white;
+  }
+}
+
 // Der Attribution-Text (Aktiv)
 .attribution:hover .attribution-text {
   bottom: 0 + $image-border-size;
