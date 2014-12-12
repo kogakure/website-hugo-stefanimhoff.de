@@ -45,7 +45,11 @@
 // ----------------------------------------------------------------------------
 .article-related {
   .related {
-    list-style: none;
+    list-style: disc;
+
+    &:only-child {
+      list-style: none;
+    }
   }
 }
 
