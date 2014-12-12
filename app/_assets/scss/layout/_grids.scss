@@ -14,19 +14,6 @@ $breakpoint-default-feature: max-width;
 // Breakpoint-Gutters
 @include add-gutter(1/4);
 
-// @include add-gutter(1/3 at 900px);
-
-// Extends
-%container {
-  @include clearfix;
-  margin: 0 auto;
-  max-width: 920px;
-}
-
-%main-grid {
-  @include grid-span(8, 3);
-}
-
 // Grids
 // ----------------------------------------------------------------------------
 
@@ -34,23 +21,19 @@ $breakpoint-default-feature: max-width;
   min-height: 100%;
 }
 
-.page .main,
-.post .main,
-.archive .main,
-.article-title,
 .wrap {
-  @extend %container;
+  @include clearfix;
+  margin: 0 auto;
+  max-width: 920px;
 
-  // Grids need some padding on the outside, or content will look bad when
-  // reaching from side to side.
-  $grid-padding: gutter-span();
-  padding-left: $grid-padding * 2;
-  padding-right: $grid-padding * 2;
+  @include breakpoint(950px) {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
 }
 
-.post .article,
-.page .article {
-  @extend %main-grid;
+.article {
+  @include grid-span(8, 3);
   margin-bottom: $default-margin-bottom * 2;
   margin-top: $default-margin-top;
 
@@ -80,8 +63,3 @@ header {
 footer {
   clear: both;
 }
-
-.article-title {
-  @extend %container;
-}
-

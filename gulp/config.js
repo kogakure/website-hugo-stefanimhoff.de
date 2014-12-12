@@ -15,6 +15,7 @@ module.exports = {
         baseDir: [development, build, src]
       },
       port: 9999,
+      open: false,
       files: [
         developmentAssets + '/css/*.css',
         developmentAssets + '/js/*.js',
@@ -30,6 +31,7 @@ module.exports = {
         baseDir: [production]
       },
       port: 9998,
+      open: false,
       notify: {
         styles: [ 'display: hidden; padding: 5px 15px; font-family: sans-serif; position: fixed; font-size: 0.9em; z-index: 9999; left: 0px; top: 0px; border-bottom-right-radius: 5px; margin: 0px; color: white; text-align: center; background-color: rgb(27, 32, 50);' ]
       }
