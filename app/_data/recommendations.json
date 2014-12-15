@@ -103,5 +103,142 @@
         "url": "https://www.webfaction.com/?affiliate=kogakure"
       }
     ]
+  },
+  {
+    "category": "Social Profiles",
+    "items": [
+      {
+        "text": "XING",
+        "url": "https://www.xing.com/profile/Stefan_Imhoff"
+      },
+      {
+        "text": "LinkedIn",
+        "url": "https://www.linkedin.com/in/kogakure"
+      },
+      {
+        "text": "About.me",
+        "url": "http://about.me/kogakure/"
+      },
+      {
+        "text": "Facebook",
+        "url": "https://www.facebook.com/kogakure"
+      },
+      {
+        "text": "Google+",
+        "url": "https://plus.google.com/+stefanimhoff/"
+      },
+      {
+        "text": "Twitter",
+        "url": "https://twitter.com/kogakure"
+      },
+      {
+        "text": "Pinterest",
+        "url": "https://www.pinterest.com/kogakure/"
+      },
+      {
+        "text": "Ello",
+        "url": "https://ello.co/kogakure"
+      },
+      {
+        "text": "OkCupid",
+        "url": "http://www.okcupid.com/profile/stefanI97B"
+      },
+      {
+        "text": "Tumblr",
+        "url": "http://shinshinshingan.tumblr.com/"
+      },
+      {
+        "text": "Tumblr",
+        "url": "http://kogakure.tumblr.com/"
+      },
+      {
+        "text": "Tumblr ",
+        "url": "http://irezumi-tebori.tumblr.com/"
+      },
+      {
+        "text": "Bit.ly",
+        "url": "https://bitly.com/u/kogakure"
+      },
+      {
+        "text": "Instagram",
+        "url": "http://instagram.com/kogakure/"
+      },
+      {
+        "text": "Flickr",
+        "url": "https://www.flickr.com/photos/kogakure/"
+      },
+      {
+        "text": "Google Maps Views",
+        "url": "https://www.google.com/maps/views/profile/104687479698350625994"
+      },
+      {
+        "text": "Fitbit",
+        "url": "https://www.fitbit.com/user/234BKN"
+      },
+      {
+        "text": "Fitocracy",
+        "url": "https://www.fitocracy.com/profile/kogakure/"
+      },
+      {
+        "text": "Dribbble",
+        "url": "https://dribbble.com/kogakure"
+      },
+      {
+        "text": "Behance.net",
+        "url": "https://www.behance.net/kogakure"
+      },
+      {
+        "text": "Pixelapse",
+        "url": "https://www.pixelapse.com/kogakure"
+      },
+      {
+        "text": "GitHub",
+        "url": "https://github.com/kogakure"
+      },
+      {
+        "text": "Bitbucket",
+        "url": "https://bitbucket.org/kogakure"
+      },
+      {
+        "text": "Coderwall",
+        "url": "https://coderwall.com/kogakure"
+      },
+      {
+        "text": "Slideshare",
+        "url": "https://slideshare.net/kogakure"
+      },
+      {
+        "text": "Speaker Deck",
+        "url": "https://speakerdeck.com/kogakure"
+      },
+      {
+        "text": "Last.fm",
+        "url": "http://www.lastfm.de/user/kogakure"
+      },
+      {
+        "text": "SoundCloud",
+        "url": "https://soundcloud.com/kogakure"
+      },
+      {
+        "text": "YouTube",
+        "url": "https://www.youtube.com/channel/UCwzOIyXBFg2jNKMcLOwu8Jw"
+      },
+      {
+        "text": "Vimeo",
+        "url": "https://vimeo.com/kogakure"
+      },
+      {
+        "text": "IMDb",
+        "url": "http://www.imdb.com/user/ur15936207/"
+      },
+      {
+        "text": "Good Reads",
+        "url": "http://goodreads.com/kogakure"
+      },
+      {
+        "text": "Kiva",
+        "url": "http://www.kiva.org/lender/kogakure"
+      }
+    ]
   }
 ]
