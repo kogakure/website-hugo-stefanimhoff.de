@@ -1,33 +1,8 @@
 [
   {
-    "name": "Tumblr",
-    "url": "http://shinshinshingan.tumblr.com/",
-    "class": "icon-tumblr"
-  },
-  {
-    "name": "GitHub",
-    "url": "https://github.com/kogakure",
-    "class": "icon-github"
-  },
-  {
-    "name": "Google+",
-    "url": "https://plus.google.com/+stefanimhoff?rel=author",
-    "class": "icon-google-plus"
-  },
-  {
     "name": "XING",
     "url": "https://www.xing.com/profile/Stefan_Imhoff",
     "class": "icon-xing"
-  },
-  {
-    "name": "Pinterest",
-    "url": "https://www.pinterest.com/kogakure/",
-    "class": "icon-pinterest"
-  },
-  {
-    "name": "Twitter",
-    "url": "https://twitter.com/kogakure",
-    "class": "icon-twitter"
   },
   {
     "name": "Facebook",
@@ -35,14 +10,9 @@
     "class": "icon-facebook"
   },
   {
-    "name": "LinkedIn",
-    "url": "https://www.linkedin.com/in/kogakure",
-    "class": "icon-linkedin"
-  },
-  {
-    "name": "Flickr",
-    "url": "https://www.flickr.com/photos/kogakure",
-    "class": "icon-flickr"
+    "name": "GitHub",
+    "url": "https://github.com/kogakure",
+    "class": "icon-github"
   },
   {
     "name": "Atom-Feed",
