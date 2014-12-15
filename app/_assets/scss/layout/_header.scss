@@ -38,11 +38,6 @@
     top: 1em;
     z-index: 100;
 
-    // Modernizr: fontface
-    .no-fontface & i {
-      display: none;
-    }
-
     span {
       @include breakpoint($content-medium) {
         display: none;

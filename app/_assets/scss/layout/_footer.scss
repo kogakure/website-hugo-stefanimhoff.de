@@ -52,11 +52,6 @@
       top: 2px;
     }
 
-    // Modernizr: fontface
-    .no-fontface & .copyright i {
-      display: none;
-    }
-
     ul {
       float: right;
       list-style: none;
@@ -185,30 +180,6 @@
       @include breakpoint($meta-footer-two-lines) {
         margin: 0 15px 15px 0;
       }
-    }
-
-    // Sprites (wenn Fontface nicht verfügbar)
-    // Modernizr: fontface, js
-    .no-fontface & a,
-    .no-js & a {
-      display: inline-block;
-      height: 30px;
-      transition: none;
-      width: 30px;
-
-      &:before {
-        content: none;
-      }
-    }
-
-    // Vektor-Fonts (wenn Fontface verfügbar, Sprite ausblenden)
-    // Modernizr: fontface
-    .fontface & a {
-      background: transparent;
-      display: inline-block;
-      height: 30px;
-      text-align: center;
-      width: 30px;
     }
 
     a {

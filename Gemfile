@@ -9,3 +9,4 @@ gem 'nokogiri', '~> 1.6.3.1'      # HTML, XML parser for lunr search
 gem 'json', '~> 1.8.1'            # JSON
 gem 'stringex', '~> 2.5.2'        # String operations on markdown
 gem 'rubypants', '~> 0.2.0'       # Needed for "Pullquote" plugin
+gem 'fontcustom', '~> 1.3.3'

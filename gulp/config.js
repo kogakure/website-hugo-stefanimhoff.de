@@ -91,7 +91,6 @@ module.exports = {
     sass:    srcAssets + '/scss/**/*.{sass,scss}',
     scripts: srcAssets + '/javascripts/**/*.js',
     images:  srcAssets + '/images/**/*',
-    sprites: srcAssets + '/images/**/*.png',
     svg:     'vectors/*.svg'
   },
   scripts: {
@@ -101,30 +100,6 @@ module.exports = {
   images: {
     src:  srcAssets + '/images/**/*',
     dest: developmentAssets + '/images'
-  },
-  sprites: {
-    src: srcAssets + '/images/sprites/icon/*.png',
-    dest: {
-      css: srcAssets + '/scss/base/',
-      image: srcAssets + '/images/sprites/'
-    },
-    options: {
-      cssName: '_sprites.scss',
-      cssFormat: 'css',
-      cssOpts: {
-        cssClass: function (item) {
-          // If this is a hover sprite, name it as a hover one (e.g. 'home-hover' -> 'home:hover')
-          if (item.name.indexOf('-hover') !== -1) {
-            return '.icon-' + item.name.replace('-hover', ':hover');
-            // Otherwise, use the name as the selector (e.g. 'home' -> 'home')
-          } else {
-            return '.icon-' + item.name;
-          }
-        }
-      },
-      imgName: 'icon-sprite.png',
-      imgPath: '/assets/images/sprites/icon-sprite.png'
-    }
   },
   copyfonts: {
     development: {
@@ -139,7 +114,6 @@ module.exports = {
   scsslint: {
     src: [
       srcAssets + '/scss/**/*.{sass,scss}',
-      '!' + srcAssets + '/scss/base/_sprites.scss',
       '!' + srcAssets + '/scss/helpers/_meyer-reset.scss'
     ]
   },

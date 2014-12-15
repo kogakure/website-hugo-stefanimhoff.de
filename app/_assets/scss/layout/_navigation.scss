@@ -42,11 +42,6 @@
     span {
       @extend %visually-hidden;
     }
-
-    // Modernizr: fontface
-    .no-fontface & i {
-      display: none;
-    }
   }
 
   // Wenn nicht das Ziel, dann lass das Menü verschwinden

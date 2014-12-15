@@ -10,27 +10,20 @@
 // ------------------------------------
 
 $iconfont-arrow-left: "\f117";
-$iconfont-arrow-right: "\f118";
-$iconfont-calendar: "\f119";
-$iconfont-cc: "\f11a";
+$iconfont-arrow-right: "\f101";
+$iconfont-calendar: "\f102";
+$iconfont-cc: "\f103";
 $iconfont-close: "\f104";
 $iconfont-download: "\f105";
-$iconfont-external: "\f106";
-$iconfont-facebook: "\f107";
+$iconfont-external: "\f118";
 $iconfont-feed: "\f108";
-$iconfont-flickr: "\f109";
 $iconfont-folder: "\f10a";
 $iconfont-github: "\f10b";
-$iconfont-google-plus: "\f10c";
-$iconfont-linkedin: "\f10d";
 $iconfont-logo: "\f10e";
 $iconfont-menu: "\f10f";
-$iconfont-pinterest: "\f110";
 $iconfont-question: "\f111";
 $iconfont-quill: "\f112";
 $iconfont-tag: "\f113";
-$iconfont-tumblr: "\f114";
-$iconfont-twitter: "\f115";
 $iconfont-xing: "\f116";
 
 // Font-Face
@@ -38,11 +31,11 @@ $iconfont-xing: "\f116";
 
 @font-face {
   font-family: "iconfont";
-  src: font-url("/assets/fonts/iconfont_ad8f99f118109abbee7dfa6ee150e380.eot");
-  src: font-url("/assets/fonts/iconfont_ad8f99f118109abbee7dfa6ee150e380.eot?#iefix") format("embedded-opentype"),
-       font-url("/assets/fonts/iconfont_ad8f99f118109abbee7dfa6ee150e380.woff") format("woff"),
-       font-url("/assets/fonts/iconfont_ad8f99f118109abbee7dfa6ee150e380.ttf") format("truetype"),
-       font-url("/assets/fonts/iconfont_ad8f99f118109abbee7dfa6ee150e380.svg#iconfont") format("svg");
+  src: url("/assets/fonts/iconfont_2bd7bd1c9678b0bc474da311cce8ecda.eot");
+  src: url("/assets/fonts/iconfont_2bd7bd1c9678b0bc474da311cce8ecda.eot?#iefix") format("embedded-opentype"),
+       url("/assets/fonts/iconfont_2bd7bd1c9678b0bc474da311cce8ecda.woff") format("woff"),
+       url("/assets/fonts/iconfont_2bd7bd1c9678b0bc474da311cce8ecda.ttf") format("truetype"),
+       url("/assets/fonts/iconfont_2bd7bd1c9678b0bc474da311cce8ecda.svg#iconfont") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -50,7 +43,7 @@ $iconfont-xing: "\f116";
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: "iconfont";
-    src: font-url("/assets/fonts/iconfont_ad8f99f118109abbee7dfa6ee150e380.svg#iconfont") format("svg");
+    src: url("/assets/fonts/iconfont_2bd7bd1c9678b0bc474da311cce8ecda.svg#iconfont") format("svg");
   }
 }
 
@@ -67,21 +60,14 @@ $iconfont-xing: "\f116";
 .icon-close:before,
 .icon-download:before,
 .icon-external:before,
-.icon-facebook:before,
 .icon-feed:before,
-.icon-flickr:before,
 .icon-folder:before,
 .icon-github:before,
-.icon-google-plus:before,
-.icon-linkedin:before,
 .icon-logo:before,
 .icon-menu:before,
-.icon-pinterest:before,
 .icon-question:before,
 .icon-quill:before,
 .icon-tag:before,
-.icon-tumblr:before,
-.icon-twitter:before,
 .icon-xing:before {
   display: inline-block;
   font-family: "iconfont";
@@ -101,25 +87,18 @@ $iconfont-xing: "\f116";
 // --------------------------
 
 .icon-arrow-left:before { content: "\f117"; }
-.icon-arrow-right:before { content: "\f118"; }
-.icon-calendar:before { content: "\f119"; }
-.icon-cc:before { content: "\f11a"; }
+.icon-arrow-right:before { content: "\f101"; }
+.icon-calendar:before { content: "\f102"; }
+.icon-cc:before { content: "\f103"; }
 .icon-close:before { content: "\f104"; }
 .icon-download:before { content: "\f105"; }
-.icon-external:before { content: "\f106"; }
-.icon-facebook:before { content: "\f107"; }
+.icon-external:before { content: "\f118"; }
 .icon-feed:before { content: "\f108"; }
-.icon-flickr:before { content: "\f109"; }
 .icon-folder:before { content: "\f10a"; }
 .icon-github:before { content: "\f10b"; }
-.icon-google-plus:before { content: "\f10c"; }
-.icon-linkedin:before { content: "\f10d"; }
 .icon-logo:before { content: "\f10e"; }
 .icon-menu:before { content: "\f10f"; }
-.icon-pinterest:before { content: "\f110"; }
 .icon-question:before { content: "\f111"; }
 .icon-quill:before { content: "\f112"; }
 .icon-tag:before { content: "\f113"; }
-.icon-tumblr:before { content: "\f114"; }
-.icon-twitter:before { content: "\f115"; }
 .icon-xing:before { content: "\f116"; }
