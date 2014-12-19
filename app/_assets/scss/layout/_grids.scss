@@ -27,8 +27,8 @@ $breakpoint-default-feature: max-width;
   max-width: 920px;
 
   @include breakpoint(950px) {
-    margin-right: 15px;
     margin-left: 15px;
+    margin-right: 15px;
   }
 }
 
