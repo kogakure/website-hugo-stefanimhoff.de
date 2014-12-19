@@ -3,6 +3,7 @@ layout: post
 language: "en"
 title: "Introduction to Gulp.js 9: Checking the Syntax of SCSS and JavaScript"
 date: 2014-10-26T08:10:00+02:00
+updated: 2014-12-19T12:49:00+02:00
 author: "Stefan Imhoff"
 categories:
 - Code
@@ -31,6 +32,21 @@ I decided to lint my SCSS files and not the CSS files, because it’s kind of po
 $ npm install --save-dev gulp-scss-lint gulp-jshint jshint-stylish
 {% endhighlight %}
 
+Additionally you’ll need to install the `scss-lint` Gem and run `bundle install`:
+
+{% figure code-figure "Gemfile" %}
+{% highlight ruby %}
+source "https://rubygems.org"
+
+gem 'jekyll', '~> 2.5.2'
+gem 'sass', '>= 3.3'
+gem 'scss-lint', '~> 0.31.0'
+gem 'fontcustom', '~> 1.3.7'
+{% endhighlight %}
+{% endfigure %}
+
+Add some options for `jshint` and `scss-lint`:
+
 {% figure code-figure "gulp/config.js" %}
 {% highlight javascript %}
 scsslint: {
@@ -38,7 +54,10 @@ scsslint: {
     srcAssets + '/scss/**/*.{sass,scss}',
     '!' + srcAssets + '/scss/base/_sprites.scss',
     '!' + srcAssets + '/scss/helpers/_meyer-reset.scss'
-  ]
+    ],
+    options: {
+      bundleExec: true
+    }
 },
 jshint: {
   src: srcAssets + '/javascripts/*.js'
@@ -60,7 +79,7 @@ var config   = require('../../config').scsslint;
  */
 gulp.task('scsslint', function() {
   return gulp.src(config.src)
-    .pipe(scsslint());
+    .pipe(scsslint(config.options));
 });
 {% endhighlight %}
 {% endfigure %}

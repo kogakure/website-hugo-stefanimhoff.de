@@ -3,6 +3,7 @@ layout: post
 language: "en"
 title: "Introduction to Gulp.js 6: Images and Vector Fonts"
 date: 2014-10-23T08:00:00+02:00
+updated: 2014-12-19T12:45:00+02:00
 author: "Stefan Imhoff"
 categories:
 - Code
@@ -103,13 +104,26 @@ var shell = require('gulp-shell');
  * Generate fonts with Fontcustom
  * `brew install fontforge --with-python`
  * `brew install eot-utils`
- * `gem install fontcustom -v "1.2.0"` needed
  */
 gulp.task('fontcustom', shell.task([
-  'fontcustom compile'
+  'bundle exec fontcustom compile'
 ]));
 {% endhighlight %}
 {% endfigure %}
+
+Fontcustom is a Ruby Gem and you’ll need to install the Gem either globally or in your Gemfile (if you install it globally you need to drop the `bundle exec` from your command). I choose to install it with my Gemfile:
+
+{% figure code-figure "Gemfile" %}
+{% highlight ruby %}
+source "https://rubygems.org"
+
+gem 'jekyll', '~> 2.5.2'
+gem 'sass', '>= 3.3'
+gem 'fontcustom', '~> 1.3.7'
+{% endhighlight %}
+{% endfigure %}
+
+After you add the line for `fontcustom` you will need to run `bundle install` again.
 
 {% include articles/gulp-code.html %}
 

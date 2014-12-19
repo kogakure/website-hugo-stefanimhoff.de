@@ -3,6 +3,7 @@ layout: post
 language: "en"
 title: "Introduction to Gulp.js 8: Watch for Changes"
 date: 2014-10-25T10:00:00+02:00
+updated: 2014-12-19T12:46:00+02:00
 author: "Stefan Imhoff"
 categories:
 - Code
@@ -61,7 +62,7 @@ var config = require('../../config').watch;
  * Start browsersync task and then watch files for changes
  */
 gulp.task('watch', ['browsersync'], function() {
-  gulp.watch(config.jekyll,  ['jekyll-rebuild'])
+  gulp.watch(config.jekyll,  ['jekyll-rebuild']);
   gulp.watch(config.sass,    ['sass', 'scsslint']);
   gulp.watch(config.scripts, ['scripts', 'jshint']);
   gulp.watch(config.images,  ['images']);
