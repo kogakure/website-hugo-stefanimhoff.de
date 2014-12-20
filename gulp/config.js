@@ -106,6 +106,11 @@ module.exports = {
     dest: productionAssets + '/images/',
     options: {}
   },
+  gzip: {
+    src: production + '/**/*.{html,xml,json,css,js}',
+    dest: production,
+    options: {}
+  },
   copyfonts: {
     development: {
       src:  srcAssets + '/fonts/*',
