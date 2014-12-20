@@ -21,5 +21,6 @@ gulp.task('build:production', function(callback) {
   ],
   'revision',
   'rev:collect',
+  'webp',
   callback);
 });
