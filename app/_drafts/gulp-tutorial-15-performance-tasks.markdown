@@ -22,7 +22,7 @@ This is the 15th part of my series *Introduction to Gulp.js*. Today I’ll add s
 {% include articles/gulp-toc.html %}
 
 ## Using WebP for images
-WebP is a new image format developed by Google. With WebP it’s possible to achieve a much better compression with a better quality as with JPEG. Multiple Browser like **Google Chrome**, **Opera** or **Konquerer** support already this image format.
+[WebP](https://developers.google.com/speed/webp/) is a new image format developed by Google. With WebP it’s possible to achieve a much better compression with a better quality as with JPEG. Multiple browsers like **Google Chrome**, **Opera** or **Konquerer** support already this image format.
 
 On my website I use a header image which is in JPEG format **69 KB** in size, the same image is in WebP only **44 KB**. WebP is able to reduce the size of images by **25-34%**, which is a lot.
 
@@ -65,7 +65,7 @@ gulp.task('webp', function() {
 {% endhighlight %}
 {% endfigure %}
 
-This task needs to be run only for productionn and has the be executed after the revisioning of the images is finished, because the server will just deliver a WebP image of the same name to the browser.
+This task needs to be run only for production and has to be executed after the revisioning of the images is finished, because the server will just deliver a WebP image of the same name to the browser.
 
 {% figure code-figure "gulp/tasks/production/build.js" %}
 {% highlight javascript %}
@@ -110,19 +110,19 @@ AddType image/webp .webp
 {% endhighlight %}
 {% endfigure %}
 
-It is possible to use an `.htaccess` file and include it in `_config.yml` in the `include` section. Otherwise Jekyll would ignore the file and don’t copy it to the target directory.
+It is possible to use an `.htaccess` file and include it in `_config.yml` in the `include` section. Otherwise Jekyll will ignore hidden files and don’t copy them to the target directory.
 
-But I like it more to add Yaml Frontmatter and create the file this way. Another advantage is the file isn’t invisible.
-
-{% aside aside-hint %}
-<h4>It isn’t working …</h4>
-<p>Don’t wonder, the <code>.htaccess</code> file won’t work with the development server. It will need a server with support for <code>mod_rewrite</code> and <code>mod_headers</code> and of course support <code>.htaccess</code> files.</p>
-{% endaside %}
+But I like it more to add [Yaml Front Matter](http://jekyllrb.com/docs/frontmatter/) and create the file this way. Another advantage is that the file isn’t invisible.
 
 If you sync your production website to a server it will deliver to browsers, which support WebP the Webp format when requesting a JPEG or PNG.
 
+{% aside aside-hint %}
+<h4>It isn’t working …</h4>
+<p>Don’t wonder: The <code>.htaccess</code> file won’t work with the development server. It will need a server with support for <code>mod_rewrite</code> and <code>mod_headers</code> and of course support <code>.htaccess</code> files.</p>
+{% endaside %}
+
 ## Gzip text files
-Many servers compress files by default with Gzip before sending them to the server. But it is always good to pre-gzip the files, because it will be faster, as the server doesn’t need to compress the file on every request, the server will need less CPU and the compression rate will be much better with pre-gzipped files, because most servers don’t use the maximum compression rate.
+Many servers compress files by default with Gzip before sending them to the server. But it is always good to pre-gzip the files because it will be faster, as the server doesn’t need to compress the file on every request, the server will need less CPU and the compression rate will be much better with pre-gzipped files, because most servers don’t use the maximum compression rate.
 
 First I install the Gulp.js module:
 
@@ -150,6 +150,9 @@ var gulp   = require('gulp');
 var gzip   = require('gulp-gzip');
 var config = require('../../config').gzip;
 
+/**
+ * Gzip text files
+ */
 gulp.task('gzip', function() {
   return gulp.src(config.src)
     .pipe(gzip(config.options))
@@ -158,7 +161,7 @@ gulp.task('gzip', function() {
 {% endhighlight %}
 {% endfigure %}
 
-I add the task to my production build file and add it to an array together with the `webp` task, because this task and the Gzip task may run in parallel, because WebP only works with images and Gzip only with text files.
+I add the task to my production build file to an JavaScript Array together with the `webp` task, because this task and the Gzip task may run in parallel; WebP works only with images and Gzip only with text files.
 
 {% figure code-figure "gulp/tasks/production/build.js" %}
 {% highlight javascript %}
@@ -184,3 +187,6 @@ gulp.task('build:production', function(callback) {
 
 
 {% include articles/gulp-code.html %}
+
+## Conclusion
+This concludes the 15th part of my series *Introduction to Gulp.js*. We learned how to convert images to the WebP format and how to compress text files with Gzip. Every byte we can reduce will increase the speed of the website.
