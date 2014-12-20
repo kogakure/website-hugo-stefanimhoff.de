@@ -47,8 +47,13 @@
   .related {
     list-style: disc;
 
+    @include breakpoint($content-medium) {
+      margin-left: $default-margin-left;
+    }
+
     &:only-child {
       list-style: none;
+      margin-left: 0;
     }
   }
 }
