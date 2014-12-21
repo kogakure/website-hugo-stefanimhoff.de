@@ -1,6 +1,12 @@
 {% unless page.comments == false %}
 <div class="comments">
-  <h2>Comments</h2>
+  <h2>
+    {% if page.language == "en" %}
+      Comments
+    {% else %}
+      Kommentare
+    {% endif %}
+  </h2>
 
   <div id="disqus_thread"></div>
   <script type="text/javascript">
