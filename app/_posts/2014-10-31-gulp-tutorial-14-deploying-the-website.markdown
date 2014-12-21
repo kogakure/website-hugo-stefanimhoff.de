@@ -71,8 +71,8 @@ This task will grab all files in my production folder, connect to my server and 
 
 {% figure code-figure "gulp/tasks/production/rsync.js" %}
 {% highlight javascript %}
-var gulp = require('gulp');
-var rsync = require('gulp-rsync');
+var gulp   = require('gulp');
+var rsync  = require('gulp-rsync');
 var config = require('../../config').rsync;
 
 /**
