@@ -1,7 +1,7 @@
 ---
 layout: post
 language: "en"
-title: "Introduction to Gulp.js 15: Performance improvements with WebP and Gzip"
+title: "Introduction to Gulp.js 15: Performance Improvements with WebP and Gzip"
 date: 2014-12-21T11:15:00+01:00
 author: "Stefan Imhoff"
 categories:
