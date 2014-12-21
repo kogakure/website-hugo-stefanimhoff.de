@@ -13,6 +13,7 @@ gulp.task('build:production', function(callback) {
     'copy:fonts'
   ],
   'base64',
+  'combine:mediaqueries',
   [
     'optimize:css',
     'optimize:js',

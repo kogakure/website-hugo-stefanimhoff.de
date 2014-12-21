@@ -111,6 +111,13 @@ module.exports = {
     dest: production,
     options: {}
   },
+  combinemediaqueries: {
+    src: developmentAssets + '/css/*.css',
+    dest: developmentAssets+ '/css/',
+    options: {
+      log: true
+    }
+  },
   copyfonts: {
     development: {
       src:  srcAssets + '/fonts/*',
