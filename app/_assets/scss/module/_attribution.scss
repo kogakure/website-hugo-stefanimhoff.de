@@ -112,6 +112,14 @@
 
 .attribution-main {
   @extend %attribution;
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      color: $white;
+    }
+  }
 }
 
 .attribution-main-text {
