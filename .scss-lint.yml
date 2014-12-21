@@ -10,7 +10,7 @@ linters:
   DebugStatement:
     enabled: true
   DeclarationOrder:
-    enabled: true
+    enabled: false
   DuplicateProperty:
     enabled: true
   EmptyLineBetweenBlocks:
@@ -23,6 +23,8 @@ linters:
     enabled: true
   IdWithExtraneousSelector:
     enabled: true
+  IdSelector:
+    enabled: false
   Indentation:
     enabled: true
   LeadingZero:
@@ -31,10 +33,18 @@ linters:
     enabled: false
   NameFormat:
     enabled: true
+  NestingDepth:
+    max_depth: 5
   PlacehodlerInExtend:
     enabled: true
   PropertySpelling:
     enabled: true
+    extra_properties:
+      - text-size-adjust
+  QualifyingElement:
+    allow_element_with_class: true
+    allow_element_with_attribute: true
+    allow_element_with_id: true
   SelectorDepth:
     enabled: true
     max_depth: 5
