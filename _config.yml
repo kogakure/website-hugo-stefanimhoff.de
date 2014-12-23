@@ -88,17 +88,6 @@ sitemap:
   change_frequency_name: "change_frequency"
   priority_name: "priority"
 
-# Lunr Suche
-lunr_search:
-  excludes:
-    - rss.xml
-    - sitemap.xml
-    - /error/
-    - /impressum/
-    - /index.html
-  min_length: 3
-  stopwords: "stopwords.txt"
-
 
 # Attribution
 # ===========
