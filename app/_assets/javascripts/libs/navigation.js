@@ -12,7 +12,7 @@ module.exports = {
   /**
    * Open or close navigation menu
    */
-  toggleNavigation: function() {
+  toggleNavigation: function(event) {
     classie.toggle(body, NAVIGATION_OPEN_CLASS);
     event.preventDefault();
     event.stopImmediatePropagation();
@@ -21,7 +21,7 @@ module.exports = {
   /**
    * Close navigation menu
    */
-  closeNavigation: function() {
+  closeNavigation: function(event) {
     if (classie.has(body, NAVIGATION_OPEN_CLASS)) {
       if (event.target.className !== NAVIGATION_TRIGGER_CLASS) {
         classie.remove(body, NAVIGATION_OPEN_CLASS);
