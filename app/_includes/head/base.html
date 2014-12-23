@@ -29,7 +29,7 @@
   {% if page.next.url %}<link rel="prefetch" href="{{ site.url }}{{page.next.url}}">{% endif %}
 
   <!-- Fonts -->
-  <link href='http://fonts.googleapis.com/css?family=Gentium+Basic:400,700,400italic|Yanone+Kaffeesatz:400,200' rel='stylesheet' type='text/css'>
+  {% include fonts.html %}
   <meta http-equiv="cleartype" content="on">
 
   <!-- Robots -->
