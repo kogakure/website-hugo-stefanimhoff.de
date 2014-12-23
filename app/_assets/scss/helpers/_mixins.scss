@@ -24,8 +24,6 @@
 // ----------------------------------------------------------------------------
 @mixin selection($bg, $color: inherit, $text-shadow: none) {
   * {
-    &::-moz-selection { background: $bg; color: $color; text-shadow: $text-shadow; }
-    &::-webkit-selection { background: $bg; color: $color; text-shadow: $text-shadow; }
     &::selection { background: $bg; color: $color; text-shadow: $text-shadow; }
   }
 }
@@ -67,7 +65,7 @@
 // Werte: none, antialiased (default), subpixel-antialiased
 //
 @mixin font-smoothing($value: antialiased) {
-  -webkit-font-smoothing: $value !important;
+  font-smoothing: $value !important;
 }
 
 // Link-Colors (kopiert von Compass)

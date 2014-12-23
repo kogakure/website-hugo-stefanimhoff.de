@@ -10,7 +10,7 @@
 
 html {
   @include breakpoint($iphone-width) {
-    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
   }
 }
 
