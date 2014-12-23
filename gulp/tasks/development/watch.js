@@ -10,6 +10,6 @@ gulp.task('watch', ['browsersync'], function() {
   gulp.watch(config.scripts,     ['scripts', 'jshint']);
   gulp.watch(config.images,      ['images']);
   gulp.watch(config.svg,         ['copy:fonts']);
-  gulp.watch(config.loadcss,     ['loadcss']);
-  gulp.watch(config.criticalcss, ['criticalcss']);
+  gulp.watch(config.loadcss,     ['loadcss', 'jekyll-rebuild']);
+  gulp.watch(config.criticalcss, ['criticalcss', 'jekyll-rebuild']);
 });
