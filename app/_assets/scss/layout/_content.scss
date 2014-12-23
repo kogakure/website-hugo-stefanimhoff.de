@@ -14,6 +14,11 @@
   padding: 1.5em 0;
 }
 
+// Hide attribution until module is loaded
+.attribution-main-text {
+  visibility: hidden;
+}
+
 
 // Active/Inactive-Fenster Selection
 // ----------------------------------------------------------------------------
