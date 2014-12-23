@@ -13,7 +13,6 @@ gulp.task('build', function(callback) {
     'images',
     'copy:fonts'
   ],
-  'criticalcss',
   'base64',
   'combine:mediaqueries',
   callback);
