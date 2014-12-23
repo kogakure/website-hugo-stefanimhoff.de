@@ -5,8 +5,15 @@
 // Hintergrund-Muster für den Content-Bereich
 // ----------------------------------------------------------------------------
 .container {
-  @extend %pattern-light-grey;
+  background-color: $content-background;
 }
+
+// Homepage (Base Styling for Critical)
+.home .section {
+  margin-bottom: 0;
+  padding: 1.5em 0;
+}
+
 
 // Active/Inactive-Fenster Selection
 // ----------------------------------------------------------------------------

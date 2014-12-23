@@ -91,7 +91,9 @@ module.exports = {
     sass:    srcAssets + '/scss/**/*.{sass,scss}',
     scripts: srcAssets + '/javascripts/**/*.js',
     images:  srcAssets + '/images/**/*',
-    svg:     'vectors/*.svg'
+    svg:     'vectors/*.svg',
+    loadcss: src + '/_bower_components/loadcss/loadCSS.js',
+    criticalcss: developmentAssets + '/css/critical.css'
   },
   scripts: {
     src:  srcAssets + '/javascripts/application.js',
@@ -176,6 +178,18 @@ module.exports = {
   },
   delete: {
     src: [developmentAssets]
+  },
+  loadcss: {
+    src: src + '/_bower_components/loadcss/loadCSS.js',
+    dest: src + '/_includes/critical/',
+    options: {}
+  },
+  criticalcss: {
+    src: developmentAssets + '/css/critical.css',
+    dest: src + '/_includes/critical/',
+    options: {
+      keepSpecialComments: 0
+    }
   },
   optimize: {
     css: {
