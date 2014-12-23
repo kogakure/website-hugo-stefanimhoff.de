@@ -15,6 +15,7 @@ gulp.task('build:production', function(callback) {
   'base64',
   'combine:mediaqueries',
   [
+    'optimize:html',
     'optimize:css',
     'optimize:js',
     'optimize:images',

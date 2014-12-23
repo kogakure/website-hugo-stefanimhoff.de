@@ -203,7 +203,11 @@ module.exports = {
       src: production + '/**/*.html',
       dest: production,
       options: {
-        collapseWhitespace: true
+        collapseWhitespace: true,
+        conservativeCollapse: true,
+        removeComments: true,
+        minifyJS: true,
+        minifyCSS: true
       }
     }
   },

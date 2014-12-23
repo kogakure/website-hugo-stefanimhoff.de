@@ -55,12 +55,20 @@
     .grid-recently {
       @include grid-span(4, 9, 12);
 
+      ul {
+        line-height: 1.2;
+      }
+
+      li {
+        margin-bottom: 0.5em;
+      }
+
       @include breakpoint($homepage-sections-fullsize) {
         @include grid-span(12);
 
         ul {
+          line-height: 1.2;
           list-style: none;
-          margin-bottom: 0;
         }
       }
     }
