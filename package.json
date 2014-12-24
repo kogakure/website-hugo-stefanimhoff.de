@@ -5,13 +5,11 @@
   "private": true,
   "version": "0.1.0",
   "browser": {
-    "modernizr": "./app/_assets/javascripts/vendor/modernizr.custom.js",
     "fastclick": "./app/_bower_components/fastclick/lib/fastclick.js",
     "fitvids": "./app/_assets/javascripts/vendor/fitvids.js",
     "classie": "./app/_assets/javascripts/vendor/classie.js"
   },
   "browserify-shim": {
-    "modernizr": "Modernizr",
     "fastclick": "FastClick",
     "fitvids": "fitVids",
     "classie": "classie"

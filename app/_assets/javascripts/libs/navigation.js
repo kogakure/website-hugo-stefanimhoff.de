@@ -4,8 +4,10 @@
 var NAVIGATION_OPEN_CLASS    = 'navigation-is-open',
     NAVIGATION_TRIGGER_CLASS = 'js-nav-btn',
     NAVIGATION_CLOSE_CLASS   = 'js-nav-close-btn',
+    INVISIBLE                = 'invisible',
     navigationLinks          = '#nav a',
     url                      = window.location.href,
+    navigationHandle         = document.querySelector('.js-nav-btn'),
     body                     = document.querySelector('body');
 
 module.exports = {
@@ -39,5 +41,14 @@ module.exports = {
     });
 
     return selectedNavigationItem[0];
+  },
+
+  /**
+   * Make navigation handle visible
+   */
+  showNavigationHandle: function() {
+    if (classie.has(navigationHandle, INVISIBLE)) {
+      classie.remove(navigationHandle, INVISIBLE);
+    }
   }
 };

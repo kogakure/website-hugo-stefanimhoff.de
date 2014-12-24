@@ -8,7 +8,6 @@
     "modular-scale": "~2.0.5",
     "color-schemer": "~0.2.8",
     "scss-blend-modes": "~0.0.2",
-    "sass-toolkit": "~2.6.0",
-    "jacket": "~1.1.1"
+    "sass-toolkit": "~2.6.0"
   }
 }
