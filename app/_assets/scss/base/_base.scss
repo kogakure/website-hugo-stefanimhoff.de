@@ -12,7 +12,13 @@ body {
   font-weight: $normal;
   hyphens: auto;
   line-height: 1.5;
+  text-rendering: optimizeLegibility;
+
+  @include breakpoint($iphone-width) {
+    text-rendering: optimizeSpeed;
+  }
 }
+
 
 :lang(ja) {
   @extend %japanese-font;

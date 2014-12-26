@@ -87,7 +87,7 @@ $header-background-position: left center; // THEME
 // Media-Queries/Breakpoints
 // ----------------------------------------------------------------------------
 
-$iphone-width:               (screen) (max-width 480px);
+$iphone-width:               (screen) (max-device-width 480px);
 
 // Content
 $content-medium:             650px;
