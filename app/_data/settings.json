@@ -37,7 +37,7 @@
       }
     },
     "books": {
-      "headline": "Book Lover",
+      "headline": "Bookworm",
       "text": "I love [books](https://www.goodreads.com/review/list/28460819), to be precice I love *paper* books. I can not imagine a living room without shelves of books.\n\nMost likly I inherited this passion from my grandfather, who owned over **4000** books. My books count roughly a  **1000**. I buy books ahead and my desks are always stuffed with unread books. I like classics, books about philosophy, martial arts, art &amp; desgin, architecture, typography and novels.\n\nWork-related books I read mostly digital, because they get old too fast and don’t look nice in most cases."
     },
     "introvert": {
@@ -54,14 +54,14 @@
     },
     "movies": {
       "headline": "Movie Fan",
-      "text": "I love movies and TV shows. Most of my space on shelves is occupied by my books, that’s why I don’t own a lot of movies. But I regularly use LoveFilm, Netflix, Watchever and Amazon Prime. I love every genre except horror movies. This is my [IMDb profile](http://www.imdb.com/user/ur15936207/) and my [ratings](http://www.imdb.com/user/ur15936207/ratings)."
+      "text": "I love movies and TV shows. Most of my space on shelves is occupied by my books, that’s why I don’t own a lot of movies. But I regularly use LoveFilm, Netflix, Watchever and Amazon Prime. I love all genre, especially Action, Comedy, Sci-Fi and Fantasy, but no horror movies. This is my [IMDb profile](http://www.imdb.com/user/ur15936207/) and my [ratings](http://www.imdb.com/user/ur15936207/ratings)."
     },
     "recommendations": {
       "headline": "Link Recommendations"
     },
     "work": {
       "headline": "Designer &amp; Developer",
-      "text": "I work as **Front-End Engineer** at **XING** and contributed to **Jobs** (simplified design, new search), **Mobile** ([Touch](https://touch.xing.com/) and iPad hybrid app), **Profile** and the new **Groups**.\n\nI am co-creator of the idea for **XING Projects**, a job platform for freelancer. I worked on this innovation project from the beginning and helped bringing it to the XING BetaLabs program.\n\nI won the award *Best Smart Tools & Services* at the **Prototyping Days 2013**."
+      "text": "I work as **Front-End Engineer** at **XING** and contributed to **Jobs** (simplified design, new search), **Mobile** ([Touch](https://touch.xing.com/) and iPad hybrid app), **Profile** and the new **Groups**.\n\nI am co-creator of the idea for **XING Projects**, a job platform for freelancer. I worked on this innovation project from the beginning and helped bringing it to the XING BetaLabs program. Later it became a product on the XING platform and was build by a <abbr title=\"Dedicated Standing Team\">DST</abbr>.\n\nI won the award *Best Smart Tools & Services* at the **Prototyping Days 2013**."
     }
   }
 }

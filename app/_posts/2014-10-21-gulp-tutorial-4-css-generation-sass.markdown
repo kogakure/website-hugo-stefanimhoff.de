@@ -3,6 +3,7 @@ layout: post
 language: "en"
 title: "Introduction to Gulp.js 4: Creating CSS with Sass (and Compass)"
 date: 2014-10-21T10:30:00+02:00
+updated: 2014-12-26T11:05:00+02:00
 author: "Stefan Imhoff"
 categories:
 - Code
@@ -25,7 +26,7 @@ This is the 4th part of my series *Introduction to Gulp.js*. Today I will show h
 {% include articles/gulp-toc.html %}
 
 ## Sass and Autoprefixer
-I use [Sass](http://sass-lang.com/) as preprocessor for my CSS files. If you like to use [Compass](http://compass-style.org/) you just have to set an option for this task.
+I use [Sass](http://sass-lang.com/) as preprocessor for my CSS files. If you like to use [Compass](http://compass-style.org/), you just have to set an option for this task.
 
 Go ahead and install the npm modules needed:
 
