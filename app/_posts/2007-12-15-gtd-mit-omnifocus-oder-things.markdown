@@ -4,6 +4,7 @@ language: "de"
 title: "GTD mit OmniFocus oder Things?"
 author: "Stefan Imhoff"
 date: 2007-12-15 19:57
+updated: 2015-01-02 19:10
 description: "OmniFocus und Things im Vergleich als GTD-Tool für Mac OS X."
 categories:
 - Produktivitaet
@@ -53,7 +54,7 @@ Things hat eine moderne, übersichtliche Oberfläche, die ganz im Leopard-Look g
 
 Da es noch eine sehr frühe Alpha-Version ist, war es im Test noch etwas unstabil und stürzte hin- und wieder mal ab.
 
-Einen offizellen Screencast gibt es noch nicht, doch Ian Beck von tagamac.com hat einen [Screencast](http://culturedcode.com/things/screencast.html "Things - task management on the Mac") erstellt, der bei CulturedCode eingebunden ist.
+Einen offizellen Screencast gibt es noch nicht, doch Ian Beck von tagamac.com hat einen Screencast erstellt, <del>der bei CulturedCode eingebunden ist</del>.
 
 Die Version ist auch noch nicht offiziell herunterzuladen, nur einer ausgewählten Anzahl von Testern ist bislang der Zugriff auf Wiki, Blog und Software erlaubt.
 
