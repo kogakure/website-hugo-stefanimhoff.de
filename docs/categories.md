@@ -4,7 +4,6 @@
 - Code
 - Design
 - Download
-- Downloads
 - Empfehlung
 - Film
 - Hilfe
