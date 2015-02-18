@@ -2,6 +2,7 @@
 layout: post
 language: "en"
 title: "How to get your Mobile Website fast"
+date: 2015-02-18T09:10:00+01:00
 author: "Stefan Imhoff"
 categories:
 - Code
