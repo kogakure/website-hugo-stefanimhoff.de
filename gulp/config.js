@@ -15,6 +15,12 @@ module.exports = {
         baseDir: [development, build, src]
       },
       port: 9999,
+      ui: {
+        port: 9997,
+        weinre: {
+          port: 9996
+        }
+      },
       open: false,
       files: [
         developmentAssets + '/css/*.css',
