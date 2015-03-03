@@ -3,7 +3,7 @@ source "https://rubygems.org"
 gem 'octopress', '~> 3.0.0.rc.34' # Newest octopress version
 gem 'sass', '>= 3.3'              # SASS
 
-# gem 'gsl', '~> 1.14.7'            # LSI support for faster related generation
+gem 'gsl'                         # LSI support for faster related generation
 
 gem 'nokogiri', '~> 1.6.3.1'      # HTML, XML parser for lunr search
 gem 'json', '~> 1.8.1'            # JSON
