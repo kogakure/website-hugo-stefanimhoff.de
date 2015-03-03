@@ -1,13 +1,13 @@
 <?xml version="1.0" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <!--
-2014-12-16: Created with FontForge (http://fontforge.org)
+2015-3-3: Created with FontForge (http://fontforge.org)
 -->
-<svg xmlns="http://www.w3.org/2000/svg">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20141216 at Tue Dec 16 19:28:41 2014
+Created by FontForge 20141231 at Tue Mar  3 15:04:12 2015
  By Stefan Imhoff
-Copyright (c) 2014, Stefan Imhoff
+Copyright (c) 2015, Stefan Imhoff
 </metadata>
 <defs>
 <font id="iconfont" horiz-adv-x="512" >
@@ -16,15 +16,17 @@ Copyright (c) 2014, Stefan Imhoff
     font-weight="400"
     font-stretch="normal"
     units-per-em="512"
-    panose-1="2 0 5 9 0 0 0 0 0 0"
+    panose-1="2 0 5 3 0 0 0 0 0 0"
     ascent="448"
     descent="-64"
     bbox="0 -64.001 512.001 448"
     underline-thickness="25.6"
     underline-position="-51.2"
-    unicode-range="U+F100-F10F"
+    unicode-range="U+0020-F10F"
   />
     <missing-glyph />
+    <glyph glyph-name="space" unicode=" " horiz-adv-x="200" 
+ />
     <glyph glyph-name="uniF107" unicode="&#xf107;" 
 d="M426.67 448c46.9385 0 85.3301 -38.4062 85.3301 -85.3438v-341.314c0 -46.9678 -38.3916 -85.3418 -85.3301 -85.3418h-341.326c-46.9375 0 -85.3438 38.375 -85.3438 85.3418v341.314c0 46.9375 38.4053 85.3438 85.3428 85.3438h341.327zM139.472 32.376
 c24.0781 0 43.5293 19.3467 43.5303 43.3135c0 23.8428 -19.4512 43.4053 -43.5303 43.4053c-23.9854 0 -43.4717 -19.5625 -43.4717 -43.4053c0 -23.9668 19.4873 -43.3135 43.4717 -43.3135zM248.734 32.002v0l62.8809 0.000976562

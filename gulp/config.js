@@ -63,7 +63,6 @@ module.exports = {
       compass: false,
       bundleExec: true,
       lineNumbers: true,
-      sourcemap: true,
       sourcemapPath: '../../_assets/scss'
     }
   },
