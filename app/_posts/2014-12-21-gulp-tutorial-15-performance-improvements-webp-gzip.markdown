@@ -3,6 +3,7 @@ layout: post
 language: "en"
 title: "Introduction to Gulp.js 15: Performance Improvements with WebP and Gzip"
 date: 2014-12-21T11:15:00+01:00
+updated: 2015-03-09T12:35:00+01:00
 author: "Stefan Imhoff"
 categories:
 - Code
@@ -32,7 +33,7 @@ That’s why I will create a task, which creates WebP images of my PNG and JPEG 
 First I install the Gulp.js module for WebP:
 
 {% highlight sh %}
-$ npm install --save-dev gulp-webp
+$ npm install --save-dev gulp-webp@2.1.1
 {% endhighlight %}
 
 I add an entry to the configuration file:
@@ -128,7 +129,7 @@ Many servers compress files by default with Gzip before sending them to the brow
 First I install the Gulp.js module:
 
 {% highlight sh %}
-$ npm install --save-dev gulp-gzip
+$ npm install --save-dev gulp-gzip@0.0.8
 {% endhighlight %}
 
 I add an entry to the configuration file:

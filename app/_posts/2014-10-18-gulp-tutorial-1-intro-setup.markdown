@@ -3,7 +3,7 @@ layout: post
 language: "en"
 title: "Introduction to Gulp.js 1: Intro and Setup"
 date: 2014-10-18T08:35:47+02:00
-updated: 2014-12-19T12:35:00+02:00
+updated: 2015-03-09T12:35:00+02:00
 author: "Stefan Imhoff"
 categories:
 - Code
@@ -74,7 +74,7 @@ You may use the installation helper by typing the command `npm init`. But I find
 Now I am able to install Node modules and save them to this file for later reinstallation. Go ahead and install `require-dir`:
 
 {% highlight sh %}
-$ npm install --save-dev require-dir
+$ npm install --save-dev require-dir@0.1.0
 {% endhighlight %}
 
 This will install our first Node module and place it into a folder with the name `node_modules`. So don’t delete this folder or you will have to reinstall all modules again. This can be done later with `npm install`. The command will install all modules in the `package.json` file.

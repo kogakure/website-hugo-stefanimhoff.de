@@ -3,6 +3,7 @@ layout: post
 language: "en"
 title: "Introduction to Gulp.js 14: Deploying the Website with Rsync"
 date: 2014-10-31T08:00:00+02:00
+updated: 2015-03-09T12:30:00+02:00
 author: "Stefan Imhoff"
 categories:
 - Code
@@ -42,7 +43,7 @@ gulp.task('deploy', ['rsync']);
 This will just start the `rsync` task. But I could add more tasks, for example a task, which creates a zip archive of the build and copies it to a backup on my harddrive.
 
 {% highlight sh %}
-$ npm install --save-dev gulp-rsync
+$ npm install --save-dev gulp-rsync@0.0.4
 {% endhighlight %}
 
 {% figure code-figure "gulp/config.js" %}

@@ -3,7 +3,7 @@ layout: post
 language: "en"
 title: "Introduction to Gulp.js 13: Revisioning"
 date: 2014-10-30T07:45:00+02:00
-updated: 2014-11-01T10:36:00+02:00
+updated: 2015-03-09T12:36:00+02:00
 author: "Stefan Imhoff"
 categories:
 - Code
@@ -67,7 +67,7 @@ My next task will rename all assets. This way the `application.css` will become 
 I install `gulp-rev`, which will handle this renaming of assets:
 
 {% highlight sh %}
-$ npm install --save-dev gulp-rev
+$ npm install --save-dev gulp-rev@2.0.1
 {% endhighlight %}
 
 {% figure code-figure "gulp/config.js" %}
@@ -121,7 +121,7 @@ The last step of my production build is to replace all occurrences of assets wit
 This task will need `gulp-rev-collector` to replace the paths names to assets:
 
 {% highlight sh %}
-$ npm install --save-dev gulp-rev-collector
+$ npm install --save-dev gulp-rev-collector@0.1.1
 {% endhighlight %}
 
 {% figure code-figure "gulp/config.js" %}

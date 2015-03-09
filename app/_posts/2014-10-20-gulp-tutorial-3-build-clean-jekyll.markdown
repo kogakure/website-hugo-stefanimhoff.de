@@ -3,7 +3,7 @@ layout: post
 language: "en"
 title: "Introduction to Gulp.js 3: Build, Clean and Jekyll"
 date: 2014-10-20T10:00:00+02:00
-updated: 2014-12-26T11:02:00+02:00
+updated: 2015-03-09T12:32:00+02:00
 author: "Stefan Imhoff"
 categories:
 - Code
@@ -27,7 +27,7 @@ This is the 3rd part of my series *Introduction to Gulp.js*. Today I will write 
 Now I create a `build` task. This task will run all other tasks, which are needed to create the site. By default Gulp.js runs all tasks in parallel. That’s why I will get a problem if a specific order is needed. I will need a node module which runs tasks in a sequence:
 
 {% highlight sh %}
-$ npm install --save-dev run-sequence
+$ npm install --save-dev run-sequence@1.0.1
 {% endhighlight %}
 
 Next I create the task:
@@ -63,7 +63,7 @@ You should comment out tasks, we haven’t written until know, or Gulp can not r
 To wipe out all files in the asset folder I use the node module `del`.
 
 {% highlight sh %}
-$ npm install --save-dev del
+$ npm install --save-dev del@0.1.3
 {% endhighlight %}
 
 I need to add a config for deleting:

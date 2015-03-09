@@ -3,6 +3,7 @@ layout: post
 language: "en"
 title: "Introduction to Gulp.js 7: Base64 Encoded Images"
 date: 2014-10-24T07:30:00+02:00
+updated: 2015-03-09T12:30:00+02:00
 author: "Stefan Imhoff"
 categories:
 - Code
@@ -65,7 +66,7 @@ body {
 For this task I will need another Gulp.js plugin:
 
 {% highlight sh %}
-$ npm install --save-dev gulp-base64
+$ npm install --save-dev gulp-base64@0.1.2
 {% endhighlight %}
 
 I add a new configuration entry and create the task:

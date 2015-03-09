@@ -3,7 +3,7 @@ layout: post
 language: "en"
 title: "Introduction to Gulp.js 4: Creating CSS with Sass (and Compass)"
 date: 2014-10-21T10:30:00+02:00
-updated: 2014-12-26T11:05:00+02:00
+updated: 2015-03-09T12:35:00+02:00
 author: "Stefan Imhoff"
 categories:
 - Code
@@ -30,8 +30,9 @@ I use [Sass](http://sass-lang.com/) as preprocessor for my CSS files. If you lik
 
 Go ahead and install the npm modules needed:
 
+
 {% highlight sh %}
-$ npm install --save-dev gulp-plumber gulp-ruby-sass gulp-filter gulp-changed gulp-autoprefixer gulp-sourcemaps
+$ npm install --save-dev gulp-plumber@0.6.6 gulp-ruby-sass@0.7.1 gulp-filter@1.0.2 gulp-changed@1.0.0 gulp-autoprefixer@1.0.1 gulp-sourcemaps@1.2.4
 {% endhighlight %}
 
 That’s a lot, but this task will do a lot.

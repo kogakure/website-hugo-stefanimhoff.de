@@ -3,6 +3,7 @@ layout: post
 language: "en"
 title: "Introduction to Gulp.js 5: Bundling JavaScript with Browserify"
 date: 2014-10-22T08:00:00+02:00
+updated: 2015-03-09T12:30:00+02:00
 author: "Stefan Imhoff"
 categories:
 - Code
@@ -35,7 +36,7 @@ This task I saw in the [gulp-starter](https://github.com/greypants/gulp-starter)
 Install the node modules needed for this task:
 
 {% highlight sh %}
-$ npm install --save-dev browserify vinyl-source-stream watchify gulp-util pretty-hrtime gulp-notify
+$ npm install --save-dev browserify@6.1.0 vinyl-source-stream@1.0.0 watchify@2.0.0 gulp-util@3.0.1 pretty-hrtime@0.2.2 gulp-notify@2.0.0
 {% endhighlight %}
 
 Create the entry in the `config.js` file:
@@ -244,7 +245,7 @@ But one problem remains: How do I use JavaScript files, which aren’t written i
 I need to install `browserify-shim`:
 
 {% highlight sh %}
-$ npm install --save-dev browserify-shim
+$ npm install --save-dev browserify-shim@3.8.0
 {% endhighlight %}
 
 I open my `package.json` file and need to add a few lines:
