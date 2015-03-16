@@ -50,7 +50,7 @@
     },
     "martialarts": {
       "headline": "Martial Artist",
-      "text": "I love martial arts, especially the Japanese. I practised Shotokan Karate for seven years and then began training **Bujinkan Budo Taijutsu**.\n\nIn [Bujinkan](http://de.wikipedia.org/wiki/Bujinkan) we train **nine different schools**: six **Samurai** and three **Ninja** schools, the oldest of these school is **{% since_year 618 %} years** old and the traditions where given from master to scholar for generations.\n\nThese martial arts aren’t sports, but highly efficient fighting systems, proven on the battlefields of ancient Japan.\n\nI run [a website](http://kogakure.de/) on this topic for more than {% since_year 1999 %} years. I collected knowledge about the history, arts, tools, weapons, philosophy and life of the Ninja."
+      "text": "I love martial arts, especially the Japanese. I practised Shotokan Karate for seven years and then began training **Bujinkan Budo Taijutsu**.\n\nIn [Bujinkan](http://wikipedia.org/wiki/Bujinkan) we train **nine different schools**: six **Samurai** and three **Ninja** schools, the oldest of these school is **{% since_year 618 %} years** old and the traditions where given from master to scholar for generations.\n\nThese martial arts aren’t sports, but highly efficient fighting systems, proven on the battlefields of ancient Japan.\n\nI run [a website](http://kogakure.de/) on this topic for more than {% since_year 1999 %} years. I collected knowledge about the history, arts, tools, weapons, philosophy and life of the Ninja."
     },
     "movies": {
       "headline": "Movie Fan",
