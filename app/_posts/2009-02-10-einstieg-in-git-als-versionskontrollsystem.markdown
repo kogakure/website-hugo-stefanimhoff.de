@@ -36,7 +36,6 @@ Den mittlerweile veralteten Artikel von 2007 ersetze ich durch eine große Liste
 * [Sei (k)ein Blödmann und nimm Git: Einführung in Versionskontrolle mit Git](http://goo.gl/Aea52) – deutschsprachige Präsentation über Git
 
 ### Anleitungen mit mehr Detail
-* [Git for Designers](http://hoth.entp.com/output/git_for_designers.html "Version Control for Designers") – Detailierter Anleitung für Einsteiger in Versionskontrolle
 * [Intro to Distributed Version Control (Illustrated)](http://betterexplained.com/articles/intro-to-distributed-version-control-illustrated/) – Detaillierte, illustrierte Erklärung von distributiver Versionskontrolle
 * [Git for Computer Scientists](http://eagain.net/articles/git-for-computer-scientists/ "Tv's cobweb: Git for Computer Scientists") – Eine schnelle Einführung in die technischen Details in Git
 * [Git User’s Manual](https://www.kernel.org/pub/software/scm/git/docs/user-manual.html "Git User's Manual (for version 1.5.3 or newer)") – Das offizielle Benutzerhandbuch

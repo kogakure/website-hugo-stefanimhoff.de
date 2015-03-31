@@ -18,7 +18,7 @@ Der NASA-Mitarbeiter Sean Kelly lässt Web-Frameworks in einem halbstündigen Ma
 
 Brauchst du noch eine überzeugende Stimme, um deinem CEO zu erklären, wieso du seinen Java- und JSP-Dreck nicht haben willst? Wollen die Entwickler in deiner Firma einfach nicht verstehen, dass Webentwicklung schnell und einfach sein muss, um auf Wünsche JIT reagieren zu können?
 
-Dann schau dir das halbstündige (36:18), sehr lustige und überzeugende Video <cite>[Better Web App Development](http://oodt.jpl.nasa.gov/better-web-app.mov)</cite> des NASA-Mitarbeiters Sean Kelly an.
+Dann schau dir das halbstündige (36:18), sehr lustige und überzeugende Video <cite>[Better Web App Development](https://www.youtube.com/watch?v=DWODIO6aCUE)</cite> des NASA-Mitarbeiters Sean Kelly an.
 
 {% youtube DWODIO6aCUE %}
 

@@ -76,7 +76,7 @@ Der Sourcecode dafür ist frei verfügbar und kann bei [GitHub heruntergeladen w
 
 ## Mai
 
-Ich versuche meinen Arbeitgeber davon zu überzeugen, dass die Wahl eines Java-Frameworks für unser neues hauseigenes CMS nicht die beste Idee ist. Leider vergeblich. Selbst [Sean Kelly](http://oodt.jpl.nasa.gov/better-web-app.mov), ein Mitarbeiter der NASA überzeugt die werten Herren nicht. Zwar meckern alle Programmierer des Hauses über den Rückschritt zu Java, aber was wissen die schon ;)
+Ich versuche meinen Arbeitgeber davon zu überzeugen, dass die Wahl eines Java-Frameworks für unser neues hauseigenes CMS nicht die beste Idee ist. Leider vergeblich. Selbst [Sean Kelly](https://www.youtube.com/watch?v=DWODIO6aCUE), ein Mitarbeiter der NASA überzeugt die werten Herren nicht. Zwar meckern alle Programmierer des Hauses über den Rückschritt zu Java, aber was wissen die schon ;)
 
 Und der externe Dienstleister wirkt auf mich leider nicht sehr zuverlässig und professionell. Aber was weiß ich schon …
 
