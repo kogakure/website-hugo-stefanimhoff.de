@@ -5,6 +5,7 @@ title: "Git-Präsentation"
 author: "Stefan Imhoff"
 date: 2009-08-08 13:00
 description: "Git-Präsentation 'Sei (k)ein Blödmann und nimm Git!'."
+og_image: "/assets/images/artikel/git-praesentation.jpg"
 categories:
 - Versionskontrolle
 - Praesentation

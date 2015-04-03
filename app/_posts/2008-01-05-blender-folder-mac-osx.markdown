@@ -5,6 +5,7 @@ title: "Blender Folder für Mac&nbsp;OS&nbsp;X"
 author: "Stefan Imhoff"
 date: 2008-01-05 13:00
 description: "Blender-Ordner-Icon für Mac OS X zum Download."
+og_image: "/assets/images/artikel/blender-osx-folders.png"
 categories:
 - Download
 tags:

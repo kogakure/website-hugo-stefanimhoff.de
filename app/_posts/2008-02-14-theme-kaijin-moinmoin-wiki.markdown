@@ -5,6 +5,7 @@ title: "Theme Kaijin für das MoinMoin-Wiki"
 author: "Stefan Imhoff"
 date: 2008-02-14 20:58
 description: "MoinMoin-Theme zum Download."
+og_image: "/assets/images/artikel/moinmoin-kaijin.png"
 categories:
 - Download
 tags:

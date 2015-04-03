@@ -5,6 +5,7 @@ title: "Introduction to Gulp.js 14: Deploying the Website with Rsync"
 date: 2014-10-31T08:00:00+02:00
 updated: 2015-03-09T12:30:00+02:00
 author: "Stefan Imhoff"
+og_image: "/assets/images/artikel/gulp-tutorial-14.jpg"
 categories:
 - Code
 tags:

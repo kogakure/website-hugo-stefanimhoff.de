@@ -5,7 +5,7 @@ title: "Die Typographie meiner Website"
 author: "Stefan Imhoff"
 date: 2014-06-19 10:30
 updated: 2014-10-25 13:47
-published: true
+og_image: "/assets/images/artikel/elements-of-typographic-style.jpg"
 categories:
 - Design
 - Code

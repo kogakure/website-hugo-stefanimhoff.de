@@ -5,6 +5,7 @@ title: "Introduction to Gulp.js 12: Optimize CSS, JavaScript, Images and HTML"
 date: 2014-10-29T08:00:00+02:00
 updated: 2015-03-09T12:30:00+02:00
 author: "Stefan Imhoff"
+og_image: "/assets/images/artikel/gulp-tutorial-12.jpg"
 categories:
 - Code
 tags:

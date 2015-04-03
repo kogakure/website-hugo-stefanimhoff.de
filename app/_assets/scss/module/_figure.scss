@@ -16,6 +16,14 @@
   .figure-content {
     overflow: hidden;
     position: relative;
+
+    a {
+      background: transparent;
+
+      &:hover {
+         background: transparent;
+      }
+    }
   }
 
   a {

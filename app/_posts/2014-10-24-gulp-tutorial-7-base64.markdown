@@ -5,6 +5,7 @@ title: "Introduction to Gulp.js 7: Base64 Encoded Images"
 date: 2014-10-24T07:30:00+02:00
 updated: 2015-03-09T12:30:00+02:00
 author: "Stefan Imhoff"
+og_image: "/assets/images/artikel/gulp-tutorial-7.jpg"
 categories:
 - Code
 tags:

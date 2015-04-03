@@ -4,7 +4,7 @@ language: "de"
 title: "Das Cover-Foto auf meiner Website"
 author: "Stefan Imhoff"
 date: 2014-05-30 10:00
-published: true
+og_image: "/assets/images/artikel/josefina-bokeh.jpg"
 categories:
 - Design
 - Website

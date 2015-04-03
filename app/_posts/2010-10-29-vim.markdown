@@ -5,6 +5,7 @@ title: "Bei der Macht von Vim – ich habe die Kraft"
 author: "Stefan Imhoff"
 date: 2010-10-29 19:00
 description: "Warum Vim so genial ist, und wie man am besten in Vim einsteigt."
+og_image: "/assets/images/artikel/vim-vintage.jpg"
 categories:
 - Code
 - Software

@@ -5,7 +5,8 @@ title: "Widerlegung einer unwissenschaftlichen Dokumentation"
 author: "Stefan Imhoff"
 date: 2014-05-09 18:00
 updated: 2014-10-25 13:41
-published: true
+description: "Eine interessante Dokumentation, die eine unwissenschaftliche Dokumentationsreihe widerlegt."
+og_image: "/assets/images/artikel/pakals-grabplatte.jpg"
 widont: false
 categories:
 - Film

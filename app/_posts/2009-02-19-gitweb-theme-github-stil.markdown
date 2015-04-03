@@ -5,6 +5,7 @@ title: "Gitweb-Theme im GitHub-Stil"
 author: "Stefan Imhoff"
 date: 2009-02-19 20:00
 description: "Ein Theme für GitWeb zum Download, damit es GitHub ähnlicher sieht und nicht mehr so hässlich ist."
+og_image: "/assets/images/artikel/gitweb-theme-summary.png"
 categories:
 - Download
 tags:

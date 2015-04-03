@@ -5,6 +5,7 @@ title: "Django Folder für Mac&nbsp;OS&nbsp;X"
 author: "Stefan Imhoff"
 date: 2007-12-18 22:10
 description: "Django-Ordner-Icon für Mac OS X zum Download."
+og_image: "/assets/images/artikel/django-osx-folders.png"
 categories:
 - Download
 tags:

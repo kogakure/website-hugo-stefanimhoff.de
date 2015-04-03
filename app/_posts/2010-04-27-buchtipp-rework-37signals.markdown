@@ -5,6 +5,7 @@ title: "Buchtipp: Rework von 37signals"
 author: "Stefan Imhoff"
 date: 2010-04-27 16:30
 description: "Leseempfehlung für das neue Buch von 37signals: Rework."
+og_image: "/assets/images/artikel/rework.jpg"
 categories:
 - Empfehlung
 - Buch

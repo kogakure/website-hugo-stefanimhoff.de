@@ -5,7 +5,7 @@ title: "Die Rückkehr der statischen Websites"
 author: "Stefan Imhoff"
 date: 2014-09-23T20:15:52+02:00
 updated: 2014-10-25T13:51:00+02:00
-published: true
+og_image: "/assets/images/artikel/i-love-jekyll.jpg"
 categories:
 - Code
 - Empfehlung

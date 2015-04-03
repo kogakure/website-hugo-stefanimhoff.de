@@ -5,6 +5,7 @@ title: "Introduction to Gulp.js 8: Watch for Changes"
 date: 2014-10-25T10:00:00+02:00
 updated: 2014-12-19T12:46:00+02:00
 author: "Stefan Imhoff"
+og_image: "/assets/images/artikel/gulp-tutorial-8.jpg"
 categories:
 - Code
 tags:

@@ -5,6 +5,7 @@ title: "Introduction to Gulp.js 3: Build, Clean and Jekyll"
 date: 2014-10-20T10:00:00+02:00
 updated: 2015-03-09T12:32:00+02:00
 author: "Stefan Imhoff"
+og_image: "/assets/images/artikel/gulp-tutorial-3.jpg"
 categories:
 - Code
 tags:

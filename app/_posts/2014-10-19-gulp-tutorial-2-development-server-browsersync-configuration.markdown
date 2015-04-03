@@ -5,6 +5,7 @@ title: "Introduction to Gulp.js 2: Server with BrowserSync and Configuration"
 date: 2014-10-19T10:17:00+02:00
 updated: 2015-03-09T12:30:00+02:00
 author: "Stefan Imhoff"
+og_image: "/assets/images/artikel/gulp-tutorial-2.jpg"
 categories:
 - Code
 tags:

@@ -5,6 +5,7 @@ title: "Introduction to Gulp.js 6: Images and Vector Fonts"
 date: 2014-10-23T08:00:00+02:00
 updated: 2015-03-09T12:45:00+02:00
 author: "Stefan Imhoff"
+og_image: "/assets/images/artikel/gulp-tutorial-6.jpg"
 categories:
 - Code
 tags:

@@ -5,13 +5,13 @@ title: "Buchtipp: Decodeunicode"
 author: "Stefan Imhoff"
 date: 2011-06-02 18:38
 description: "Empfehlung für alle an Schrift und Zeichen Interessierten: decodeunicode – Die Schriftzeichen der Welt."
+og_image: "/assets/images/artikel/decodeunicode.jpg"
 categories:
 - Empfehlung
 - Buch
 - Typographie
 tags:
 - buch
-- unicode
 - schrift
 - typographie
 - sprache

@@ -5,6 +5,7 @@ title: "Eineinhalb Jahre GTD – Eine Billanz"
 author: "Stefan Imhoff"
 date: 2007-11-24 01:15
 description: "Einführung in GTD (Getting Things Done)."
+og_image: "/assets/images/artikel/gtd-vorher.jpg"
 categories:
 - Produktivitaet
 tags:

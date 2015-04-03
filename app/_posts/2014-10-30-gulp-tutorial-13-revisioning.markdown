@@ -5,6 +5,7 @@ title: "Introduction to Gulp.js 13: Revisioning"
 date: 2014-10-30T07:45:00+02:00
 updated: 2015-03-09T12:36:00+02:00
 author: "Stefan Imhoff"
+og_image: "/assets/images/artikel/gulp-tutorial-13.jpg"
 categories:
 - Code
 tags:

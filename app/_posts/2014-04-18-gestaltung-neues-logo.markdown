@@ -4,7 +4,8 @@ language: "de"
 title: "Die Gestaltung meines neuen Logos"
 author: "Stefan Imhoff"
 date: 2014-04-18 19:00
-published: true
+description: "Einblick in die Gestaltung meines neuen Logos."
+og_image: "/assets/images/artikel/rakkan.jpg"
 categories:
 - Design
 tags:

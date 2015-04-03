@@ -5,6 +5,7 @@ title: "Introduction to Gulp.js 10: Generating CSS Image Sprites"
 date: 2014-10-27T07:40:00+02:00
 updated: 2015-03-09T12:30:00+02:00
 author: "Stefan Imhoff"
+og_image: "/assets/images/artikel/gulp-tutorial-10.jpg"
 categories:
 - Code
 tags:
