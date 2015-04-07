@@ -2,6 +2,7 @@
 layout: post
 language: "en"
 title: "Responsive Relaunch of my Martial Arts Website"
+date: 2015-04-07T22:00:00+00:00
 author: "Stefan Imhoff"
 og_image: "/assets/images/artikel/kogakure-de-relaunch.jpg"
 categories:
