@@ -1,37 +1,33 @@
-// ============================================================================
-// Theme: Zitrone
-// ============================================================================
+//====================================
+//  Theme: Zapfen
+//====================================
 
-// Farben
-// ----------------------------------------------------------------------------
-
-// Colors
-$highlight-color:           #d87c03;
+$highlight-color:           #89b46b;
 
 // Header
-$header-background:         #2e2b26;
-$header-border-top-color:   #100d09;
+$header-background:         #a09278;
+$header-border-top-color:   #a2c097;
 $header-headline:           $white;
 $header-subheadline:        $black;
 
 // Logo
-$logo-color:                #fb9c04;
+$logo-color:                #7e5d41;
 
 // Navigation
 $nav-link-color-hover:      $highlight-color;
 
 // Links
 $link-color:                $highlight-color;
-$link-hover-color:          $dark-grey;
-$link-active-color:         $dark-grey;
+$link-hover-color:          #7e5d41;
+$link-active-color:         #7e5d41;
 $link-visited-color:        $highlight-color;
-$link-focus-color:          $dark-grey;
+$link-focus-color:          #7e5d41;
 
 $link-border-color:         rgba($dark-grey, 0.2);
 $link-hover-border-color:   $highlight-color;
 
 // Scrollbars
-$scroll-handle-color:       $highlight-color;
+$scroll-handle-color:       $black;
 $scroll-handle-hover-color: $white;
 
 // ::selection
@@ -39,9 +35,7 @@ $selection-background:      $highlight-color;
 $selection-color:           $white;
 
 // Pfade
-// ----------------------------------------------------------------------------
-
-$header-filename:            "zitrone";
+$header-filename:            "zapfen";
 $header-background-url:      "#{$header-path}/#{$header-filename}.jpg";
 $header-background-url-m:    "#{$header-path}/#{$header-filename}-m.jpg";
 $header-background-url-s:    "#{$header-path}/#{$header-filename}-s.jpg";

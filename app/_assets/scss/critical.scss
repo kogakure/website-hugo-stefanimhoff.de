@@ -11,10 +11,10 @@
 @import "tools.mixins";
 @import "tools.functions";
 @import "tools.placeholders";
-// ==================> Refactored ^ / not refactored v
 
 // Theme
-@import "theme/init";
+@import "theme.init";
+// ==================> Refactored ^ / not refactored v
 
 // Vektor-Fonts
 @import "base/iconfont";

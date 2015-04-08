@@ -1,11 +1,7 @@
-// ============================================================================
-// Theme: Zapfen
-// ============================================================================
+//====================================
+//  Theme: Halloween
+//====================================
 
-// Farben
-// ----------------------------------------------------------------------------
-
-// Colors
 $highlight-color:           #f77d14;
 
 // Header
@@ -39,8 +35,6 @@ $selection-background:      $highlight-color;
 $selection-color:           $white;
 
 // Pfade
-// ----------------------------------------------------------------------------
-
 $header-filename:         "halloween";
 $header-background-url:   "#{$header-path}/#{$header-filename}.jpg";
 $header-background-url-m: "#{$header-path}/#{$header-filename}-m.jpg";

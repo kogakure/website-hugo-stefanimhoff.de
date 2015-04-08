@@ -1,21 +1,17 @@
-// ============================================================================
-// Theme: Bambus
-// ============================================================================
+//====================================
+//  Theme: Zitrone
+//====================================
 
-// Farben
-// ----------------------------------------------------------------------------
-
-// Colors
-$highlight-color:           #89b46b;
+$highlight-color:           #d87c03;
 
 // Header
-$header-background:         #a09278;
+$header-background:         #2e2b26;
 $header-border-top-color:   #100d09;
 $header-headline:           $white;
 $header-subheadline:        $black;
 
 // Logo
-$logo-color:                #b42b2c;
+$logo-color:                #fb9c04;
 
 // Navigation
 $nav-link-color-hover:      $highlight-color;
@@ -39,10 +35,8 @@ $selection-background:      $highlight-color;
 $selection-color:           $white;
 
 // Pfade
-// ----------------------------------------------------------------------------
-
-$header-filename:            "bonsai";
+$header-filename:            "zitrone";
 $header-background-url:      "#{$header-path}/#{$header-filename}.jpg";
 $header-background-url-m:    "#{$header-path}/#{$header-filename}-m.jpg";
 $header-background-url-s:    "#{$header-path}/#{$header-filename}-s.jpg";
-$header-background-position: center center;
+$header-background-position: center left;
