@@ -1,7 +1,12 @@
 // Helpers
 @import "settings.imports";
+@import "settings.colors";
+@import "settings.paths";
+@import "settings.media-queries";
+@import "settings.dimensions";
+@import "settings.animations";
+@import "settings.typography";
 // ==================> Refactored ^ / not refactored v
-@import "helpers/variables";
 @import "helpers/mixins";
 @import "helpers/functions";
 @import "helpers/placeholders";

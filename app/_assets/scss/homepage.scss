@@ -1,11 +1,12 @@
-// Imports
-@import "../../_bower_components/singularity/stylesheets/singularitygs";
-@import "../../_bower_components/breakpoint-sass/stylesheets/breakpoint";
-@import "../../_bower_components/sass-toolkit/stylesheets/toolkit";
-@import "../../_bower_components/modular-scale/stylesheets/modular-scale";
-
 // Helpers
-@import "helpers/variables";
+@import "settings.imports";
+@import "settings.colors";
+@import "settings.paths";
+@import "settings.media-queries";
+@import "settings.dimensions";
+@import "settings.animations";
+@import "settings.typography";
+// ==================> Refactored ^ / not refactored v
 @import "helpers/mixins";
 @import "helpers/placeholders";
 
