@@ -138,8 +138,12 @@ module.exports = {
   scsslint: {
     src: [
       srcAssets + '/scss/**/*.{sass,scss}',
-      '!' + srcAssets + '/scss/helpers/_meyer-reset.scss'
-    ]
+      '!' + srcAssets + '/scss/helpers/_meyer-reset.scss', // @TODO: Change path
+      '!' + srcAssets + '/scss/vendor/_syntax.scss'        // @TODO: Change path
+    ],
+    options: {
+      bundleExec: true
+    }
   },
   jshint: {
     src: srcAssets + '/javascripts/*.js'

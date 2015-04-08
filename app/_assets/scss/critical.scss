@@ -1,6 +1,7 @@
 // Helpers
-@import "helpers/meyer-reset";
-@import "helpers/imports";
+@import "vendor.meyer-reset";
+@import "settings.imports";
+// ==================> Refactored ^ / not refactored v
 @import "helpers/variables";
 @import "helpers/mixins";
 @import "helpers/functions";
