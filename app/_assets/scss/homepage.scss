@@ -13,10 +13,10 @@
 
 // Theme
 @import "theme.init";
-// ==================> Refactored ^ / not refactored v
 
 // Grids
-@import "layout/grids";
+@import "base.grids";
+// ==================> Refactored ^ / not refactored v
 
 // Styles only on the homepage
 @import "pages/home";

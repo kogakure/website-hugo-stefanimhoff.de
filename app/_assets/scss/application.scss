@@ -16,10 +16,10 @@
 
 // Vektor-Fonts
 @import "base.iconfont";
-// ==================> Refactored ^ / not refactored v
 
 // Layout
-@import "layout/grids";
+@import "base.grids";
+// ==================> Refactored ^ / not refactored v
 @import "layout/patterns";
 @import "layout/footer";
 
@@ -55,4 +55,4 @@
 @import "tools.shame";
 
 // Print
-@import "base/print";
+@import "base.print";

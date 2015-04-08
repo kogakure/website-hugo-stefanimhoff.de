@@ -1,6 +1,6 @@
-// ============================================================================
-// Init
-// ============================================================================
+//====================================
+//  Page
+//====================================
 
 @charset "UTF-8";
 
@@ -20,10 +20,12 @@ body {
   min-height: 100%;
 }
 
+
 // Alle Elemente so einstellen, dass Padding nicht dazu gerechnet wird
 * {
   box-sizing: border-box;
 }
+
 
 // Homepage (Base Styling for Critical)
 .home .section {
@@ -31,10 +33,12 @@ body {
   padding: 1.5em 0;
 }
 
+
 // Hide attribution until module is loaded
 .attribution-main-text {
   visibility: hidden;
 }
+
 
 // Noscript Navigation
 .navigation-noscript {

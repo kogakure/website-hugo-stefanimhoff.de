@@ -17,14 +17,14 @@
 
 // Vektor-Fonts
 @import "base.iconfont";
-// ==================> Refactored ^ / not refactored v
 
 // Base
-@import "base/init";
+@import "base.page";
+// ==================> Refactored ^ / not refactored v
 @import "base/base";
 
 // Layout
-@import "layout/grids";
+@import "base.grids";
 @import "layout/header";
 @import "layout/content";
 @import "layout/navigation";
