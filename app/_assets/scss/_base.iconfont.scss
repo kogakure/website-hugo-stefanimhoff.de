@@ -1,5 +1,5 @@
 //====================================
-//  Icon-Font (<%= font_name %>)
+//  Icon-Font (iconfont)
 //====================================
 //
 // Diese Datei wird automatisch kompiliert, daher keine Änderungen
@@ -31,11 +31,11 @@ $iconfont-xing: "\f10f";
 
 @font-face {
   font-family: "iconfont";
-  src: url("/assets/fonts/iconfont_2bd7bd1c9678b0bc474da311cce8ecda.eot");
-  src: url("/assets/fonts/iconfont_2bd7bd1c9678b0bc474da311cce8ecda.eot?#iefix") format("embedded-opentype"),
-       url("/assets/fonts/iconfont_2bd7bd1c9678b0bc474da311cce8ecda.woff") format("woff"),
-       url("/assets/fonts/iconfont_2bd7bd1c9678b0bc474da311cce8ecda.ttf") format("truetype"),
-       url("/assets/fonts/iconfont_2bd7bd1c9678b0bc474da311cce8ecda.svg#iconfont") format("svg");
+  src: url("/assets/fonts/iconfont_e8f9173c8c2d44d22641adebd6c24c73.eot");
+  src: url("/assets/fonts/iconfont_e8f9173c8c2d44d22641adebd6c24c73.eot?#iefix") format("embedded-opentype"),
+       url("/assets/fonts/iconfont_e8f9173c8c2d44d22641adebd6c24c73.woff") format("woff"),
+       url("/assets/fonts/iconfont_e8f9173c8c2d44d22641adebd6c24c73.ttf") format("truetype"),
+       url("/assets/fonts/iconfont_e8f9173c8c2d44d22641adebd6c24c73.svg#iconfont") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -43,7 +43,7 @@ $iconfont-xing: "\f10f";
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: "iconfont";
-    src: url("/assets/fonts/iconfont_2bd7bd1c9678b0bc474da311cce8ecda.svg#iconfont") format("svg");
+    src: url("/assets/fonts/iconfont_e8f9173c8c2d44d22641adebd6c24c73.svg#iconfont") format("svg");
   }
 }
 
