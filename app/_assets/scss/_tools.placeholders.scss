@@ -1,6 +1,6 @@
-// ============================================================================
-// Placeholders
-// ============================================================================
+//====================================
+//  Placeholders
+//====================================
 
 // Schriften
 %base-font {
@@ -23,8 +23,8 @@
   font-family: "iconfont";
 }
 
+
 // Background-Patterns
-// ---------------------------------
 
 // 204x204, 12 KB (Meta-Footer)
 %pattern-classy-fabric {
@@ -99,8 +99,8 @@
   background-image: url("/assets/images/css/mark-right.png");
 }
 
+
 // Image-Replacement (Kellum Method)
-// ---------------------------------
 // http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/
 %text-hidden {
   overflow: hidden;
@@ -112,8 +112,8 @@
   @extend %text-hidden;
 }
 
+
 // Hide text visually
-// ---------------------------------
 %visually-hidden {
   border: 0;
   clip: rect(0 0 0 0);

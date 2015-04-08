@@ -6,10 +6,11 @@
 @import "settings.dimensions";
 @import "settings.animations";
 @import "settings.typography";
+
+@import "tools.mixins";
+@import "tools.functions";
+@import "tools.placeholders";
 // ==================> Refactored ^ / not refactored v
-@import "helpers/mixins";
-@import "helpers/functions";
-@import "helpers/placeholders";
 
 // Theme
 @import "theme/init";
@@ -48,10 +49,10 @@
 @import "pages/error";
 
 // Debugging
-@import "helpers/debug";
+@import "tools.debug";
 
 // Nur für schnelle Test und Fixes!
-@import "base/shame";
+@import "tools.shame";
 
 // Print
 @import "base/print";

@@ -1,9 +1,8 @@
-// ============================================================================
-// Mixins
-// ============================================================================
+//====================================
+//  Mixins
+//====================================
 
 // Bildmasken
-// ----------------------------------------------------------------------------
 @mixin mask-image($img, $repeat: no-repeat) {
   width: image-width($img);
   height: image-height($img);
@@ -11,8 +10,8 @@
   @include experimental(mask-repeat, $repeat, -webkit, -moz, -o, -ms);
 }
 
+
 // Box mit Schatten
-// ----------------------------------------------------------------------------
 @mixin shadow-box($border: #ffffff .5em solid, $shadow: rgba(#000000, .15) 0 1px 4px, $border-radius: .3em) {
   border-radius: $border-radius;
   border: $border;
@@ -20,16 +19,16 @@
   box-sizing: border-box;
 }
 
+
 // ::selection
-// ----------------------------------------------------------------------------
 @mixin selection($bg, $color: inherit, $text-shadow: none) {
   * {
     &::selection { background: $bg; color: $color; text-shadow: $text-shadow; }
   }
 }
 
+
 // Zitatzeichen für `blockquote` in verschiedenen Sprachen
-// ----------------------------------------------------------------------------
 @mixin pullquote-quotes($quotes) {
   quotes: $quotes;
 
@@ -42,8 +41,8 @@
   }
 }
 
+
 // Zitatzeichen für `q` in verschiedenen Sprachen
-// ----------------------------------------------------------------------------
 @mixin q-quotes($language, $quotes) {
   :lang(#{$language}) > q,
   .article-body q[lang|=#{$language}] {
@@ -54,8 +53,8 @@
   }
 }
 
+
 // WebKit font-smoothing
-// ----------------------------------------------------------------------------
 //
 // Referenzen:
 //
@@ -63,13 +62,12 @@
 // 2. http://maxvoltar.com/archive/-webkit-font-smoothing
 //
 // Werte: none, antialiased (default), subpixel-antialiased
-//
 @mixin font-smoothing($value: antialiased) {
   font-smoothing: $value !important;
 }
 
+
 // Link-Colors (kopiert von Compass)
-// ----------------------------------------------------------------------------
 @mixin link-colors($normal, $hover: false, $active: false, $visited: false, $focus: false) {
   color: $normal;
   @if $visited {
@@ -93,4 +91,3 @@
     }
   }
 }
-

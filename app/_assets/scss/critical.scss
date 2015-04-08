@@ -7,10 +7,11 @@
 @import "settings.dimensions";
 @import "settings.animations";
 @import "settings.typography";
+
+@import "tools.mixins";
+@import "tools.functions";
+@import "tools.placeholders";
 // ==================> Refactored ^ / not refactored v
-@import "helpers/mixins";
-@import "helpers/functions";
-@import "helpers/placeholders";
 
 // Theme
 @import "theme/init";
