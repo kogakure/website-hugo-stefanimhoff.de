@@ -27,8 +27,11 @@ $link-border-color:         rgba($dark-grey, 0.2);
 $link-hover-border-color:   $highlight-color;
 
 // Scrollbars
-$scroll-handle-color:       $highlight-color;
-$scroll-handle-hover-color: $white;
+$scroll-background:              #fafafa;
+$scroll-handle-background:       #eeeeee;
+$scroll-handle-background-hover: #b8b8b8;
+$scroll-handle-color:            $highlight-color;
+$scroll-handle-hover-color:      $white;
 
 // ::selection
 $selection-background:      $highlight-color;
