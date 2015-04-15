@@ -2,7 +2,7 @@
 // Mixins
 // ============================================================================
 
-// Bildmasken
+// Image masks
 // ----------------------------------------------------------------------------
 @mixin mask-image($img, $repeat: no-repeat) {
   width: image-width($img);
@@ -11,7 +11,7 @@
   @include experimental(mask-repeat, $repeat, -webkit, -moz, -o, -ms);
 }
 
-// Box mit Schatten
+// Box with shadow
 // ----------------------------------------------------------------------------
 @mixin shadow-box($border: #ffffff .5em solid, $shadow: rgba(#000000, .15) 0 1px 4px, $border-radius: .3em) {
   border-radius: $border-radius;
@@ -28,7 +28,7 @@
   }
 }
 
-// Zitatzeichen für `blockquote` in verschiedenen Sprachen
+// Quotes for `blockquote` in different languages
 // ----------------------------------------------------------------------------
 @mixin pullquote-quotes($quotes) {
   quotes: $quotes;
@@ -42,7 +42,7 @@
   }
 }
 
-// Zitatzeichen für `q` in verschiedenen Sprachen
+// Quotes for `q` in different languages
 // ----------------------------------------------------------------------------
 @mixin q-quotes($language, $quotes) {
   :lang(#{$language}) > q,
@@ -57,18 +57,18 @@
 // WebKit font-smoothing
 // ----------------------------------------------------------------------------
 //
-// Referenzen:
+// References:
 //
 // 1. http://maxvoltar.com/sandbox/fontsmoothing/
 // 2. http://maxvoltar.com/archive/-webkit-font-smoothing
 //
-// Werte: none, antialiased (default), subpixel-antialiased
+// Values: none, antialiased (default), subpixel-antialiased
 //
 @mixin font-smoothing($value: antialiased) {
   font-smoothing: $value !important;
 }
 
-// Link-Colors (kopiert von Compass)
+// Link Colors (copied from Compass)
 // ----------------------------------------------------------------------------
 @mixin link-colors($normal, $hover: false, $active: false, $visited: false, $focus: false) {
   color: $normal;
@@ -93,4 +93,3 @@
     }
   }
 }
-

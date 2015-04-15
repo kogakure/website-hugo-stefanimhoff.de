@@ -1,13 +1,12 @@
 // ============================================================================
-// Icon-Font (iconfont)
+// Icon Font (iconfont)
 // ============================================================================
 //
-// Diese Datei wird automatisch kompiliert, daher keine Änderungen
-// direkt darin machen, sondern diese im Ordner für Templates unter
-// `vectors/templates/template.css` ändern.
+// This file get created automatically. Do not edit it! Change the template in
+// `vectors/templates/_iconfont.scss`.
 
-// Variables für die Nutzung in content
-// ------------------------------------
+// Variables for usage in content
+// ------------------------------
 
 $iconfont-arrow-left: "\f100";
 $iconfont-arrow-right: "\f101";
@@ -47,7 +46,7 @@ $iconfont-xing: "\f10f";
   }
 }
 
-// Styling für Icon-Fonts
+// Styling for Icon Fonts
 // ----------------------
 
 [data-icon]:before { content: attr(data-icon); }
@@ -83,8 +82,8 @@ $iconfont-xing: "\f10f";
   font-smoothing: antialiased;
 }
 
-// Einzelne Klassen-Attribute
-// --------------------------
+// Individual Class attributes
+// ---------------------------
 
 .icon-arrow-left:before { content: "\f100"; }
 .icon-arrow-right:before { content: "\f101"; }

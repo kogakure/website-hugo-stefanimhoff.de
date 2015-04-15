@@ -2,8 +2,8 @@
 // Attribution
 // ============================================================================
 
-// Attribution-Mixings
-// -------------------
+// Attribution Mixins
+// ------------------
 
 %attribution {
   overflow: hidden;
@@ -24,12 +24,11 @@
   position: absolute;
   transition: all 0.6s ease;
 
-  // Der Hover-Link darf nicht dunkel sein
   a {
     @include link-colors($link-color, $link-color, $link-active-color, $link-visited-color, $link-focus-color);
   }
 
-  // Copyright-Zeichen
+  // Copyright
   b {
     @extend %mono-font;
     font-weight: normal;
@@ -62,12 +61,10 @@
 // Attribution
 // -----------
 
-// Der Container (beliebiges Element)
 .attribution {
   @extend %attribution;
 }
 
-// Der Attribution-Text (Basis-Styling und verbergen)
 .attribution-text {
   @extend %attribution-text;
 }
@@ -80,13 +77,11 @@
   }
 }
 
-// Der Attribution-Text (Aktiv)
 .attribution:hover .attribution-text {
   bottom: 0 + $image-border-size;
   opacity: 1;
 }
 
-// Das Fragezeichen
 .attribution .figure-content:before {
   @extend %attribution-before;
   bottom: 10px;
@@ -99,16 +94,12 @@
   }
 }
 
-// Versteckt beim Einblenden des Attribution-Textes das Fragezeichen
 .attribution .figure-content:hover:before {
   opacity: 0;
 }
 
-// Attribution für Header-Bild
+// Attribution header image
 // ---------------------------
-// Für ein Headerbild soll die Attribution nur gezeigt werden,
-// wenn über das Fragezeichen gehovert wird und nicht über dem
-// ganzen Bild.
 
 .attribution-main {
   @extend %attribution;

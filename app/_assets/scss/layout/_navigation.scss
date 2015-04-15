@@ -2,7 +2,7 @@
 // Navigation
 // ============================================================================
 
-// Container für Off-Canvas-Navigation
+// Container for Off canvas navigation
 // ----------------------------------------------------------------------------
 // Der äußere Container hat nur den Zweck, dass keine Scrollleiste zu sehen ist,
 // der innere Container wird verschoben.
@@ -21,7 +21,7 @@
   width: 100%;
 }
 
-// Navigationsmenü
+// Navigation (Basis Version without JavaScript)
 // ----------------------------------------------------------------------------
 #nav {
   backface-visibility: hidden;
@@ -57,7 +57,7 @@
   }
 }
 
-// Styling der Navigationpunkte (Basis-Navigation)
+// Styling of Navigation (Base navigation)
 // ----------------------------------------------------------------------------
 %nav {
   @extend %sans-font;
@@ -85,7 +85,7 @@
   @extend %nav;
 }
 
-// Styling der Navigationpunkte (Hauptmenüpunkte)
+// Styling of Navigation (Main menu)
 // ----------------------------------------------------------------------------
 .nav--main {
   @extend %nav;
@@ -93,14 +93,14 @@
   text-transform: uppercase;
 }
 
-// Styling für aktiven Navigationspunkt
+// Styling for active navigation
 // ----------------------------------------------------------------------------
-// Dieses State-Klassenattribut wird über JavaScript gesetzt.
+// Set with JavaScript
 #nav .nav-is-active a {
   color: $nav-link-color-active;
 }
 
-// Styling für aktiven Navigationspunkt
+// Styling for hover navigation
 // ----------------------------------------------------------------------------
 .nav-item-external a:hover {
   &:after {

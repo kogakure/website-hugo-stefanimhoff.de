@@ -2,7 +2,7 @@
 // Grids
 // ============================================================================
 
-// Grid-Einstellungen
+// Grid settings
 // ----------------------------------------------------------------------------
 
 $breakpoint-to-ems: true;
@@ -11,7 +11,7 @@ $breakpoint-default-feature: max-width;
 // Base Grid
 @include add-grid(12);
 
-// Breakpoint-Gutters
+// Breakpoint Gutters
 @include add-gutter(1/4);
 
 // Grids

@@ -1,8 +1,7 @@
 // ============================================================================
-// Abbildungen und Bilder
+// Figures with images
 // ============================================================================
 
-// Layout für das div um die Abbildung
 .image-figure {
   @include grid-span(8, 1, 8);
   clear: both;
@@ -32,7 +31,7 @@
 }
 
 
-// Abbildung in voller Breite (Untertitel darunter zentriert)
+// Figures full width
 // ----------------------------------------------------------------------------
 .image-figure-fullsize {
   @include grid-span(12, 1, 8);
@@ -45,7 +44,7 @@
 }
 
 
-// Abbildung links ausgerichtet (Untertitel rechts daneben)
+// Figures left
 // ----------------------------------------------------------------------------
 .image-figure-left {
   @include grid-span(12, 1, 8);
@@ -80,7 +79,7 @@
 }
 
 
-// Abbildung rechts ausgerichtet (Untertitel links daneben)
+// Figures right
 // ----------------------------------------------------------------------------
 .image-figure-right {
   @include grid-span(12, 1, 8);
@@ -115,7 +114,7 @@
 }
 
 
-// Abbildung zentriert, ragt in beide Ränder hinein (Untertitel darunter)
+// Figures centered
 // ----------------------------------------------------------------------------
 .image-figure-center {
   @include grid-span(10, 1, 8);
@@ -127,7 +126,7 @@
   }
 }
 
-// Abbildung mit einem langen Untertitel
+// Figures with long captions
 // ----------------------------------------------------------------------------
 .image-figure-longcaption {
   figcaption {
@@ -136,30 +135,27 @@
 }
 
 
-// Abbildung mit einer Umrandung
+// Figures with border
 // ----------------------------------------------------------------------------
-// Eine Umrandung ist derzeit Standard, aber es gibt Bilder, wo ein Rand nötig
-// ist, da es sonst schlecht aussieht. Diese sollten zusätzlich noch das
-// Klassen-Attribut für eine Umrandung bekommen.
 .image-figure-border img {
   border: $image-border-size solid $image-border-color;
 }
 
 
-// Abbildung ohne Umrandung
+// Figures without border
 // ----------------------------------------------------------------------------
 .image-figure-noborder img {
   border: 0;
 }
 
 
-// Abbildung mit einem Schatten
+// Figures with a shadow
 // ----------------------------------------------------------------------------
 .image-figure-shadow img {
   box-shadow: 0 1px 3px rgba($black, 0.5);
 }
 
-// Code-Beispiele
+// Code examples
 // ----------------------------------------------------------------------------
 .code-figure {
   margin-bottom: $default-margin-bottom;

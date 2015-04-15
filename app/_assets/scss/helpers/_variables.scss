@@ -1,8 +1,8 @@
 // ============================================================================
-// Variablen
+// Variables
 // ============================================================================
 
-// Farben
+// Colors
 // ----------------------------------------------------------------------------
 
 $black:                         #000000;
@@ -49,33 +49,33 @@ $link-hover-border-color:       $dark-grey;            // THEME
 
 $custom-underline-background:   #f2f2f2;
 
-// Social-Icon Links
+// Social Icon Links
 $social-icon-color:             rgba($white, 0.5);
 $social-icon-hover:             rgba($white, 0.7);
 
-// Tastatur (kbd)
+// Keyboard (kbd)
 $keyboard-border:               #cccccc;
 $keyboard-background:           #f7f7f7;
 
-// Beispiel (samp)
+// Sample (samp)
 $sample-color:                  $white;
 $sample-background:             $dark-grey;
 
 // Definition (dfn)
 $definition-color:              #999999;
 
-// Tabellen
+// Tables
 $table-border-color:            #dddddd;
 $table-zebra-background:        rgba(#ffffff, 0.8);
 
-// Bilder
+// Images
 $image-border-color:            #cccccc;
 
-// selection
+// Selection
 $selection-background:          $dark-grey; // THEME
 $selection-color:               $white;     // THEME
 
-// Pfade
+// Paths
 // ----------------------------------------------------------------------------
 
 $header-path:             "/assets/images/css/header";
@@ -84,7 +84,7 @@ $header-background-url-m: ""; // THEME
 $header-background-url-s: ""; // THEME
 $header-background-position: left center; // THEME
 
-// Media-Queries/Breakpoints
+// Media Queries, Breakpoints
 // ----------------------------------------------------------------------------
 
 $iphone-width:               (screen) (max-device-width 480px);
@@ -112,7 +112,7 @@ $footer-two-lines:           850px;
 // Error
 $error-image-new-line:       450px;
 
-// Abstände und Maße
+// Spacing, measures
 // ----------------------------------------------------------------------------
 
 $image-border-size:     3px;
@@ -122,18 +122,18 @@ $default-margin-top:    1.5em;
 $default-margin-right:  1.5em;
 $default-margin-left:   1.5em;
 
-// Animationen
+// Animations
 // ----------------------------------------------------------------------------
 
-// Animations-Kurven
+// Animation curves
 $cubic-bezier-bouncing:           cubic-bezier(0.205, 0.01, 0.005, 1);
 
-// Animationen-Timings
+// Animationen timings
 $animation-off-screen-menu:       transform 500ms $cubic-bezier-bouncing;
 $animation-link-hover:            all 500ms linear;
 $animation-navigation-link-hover: all 100ms linear;
 
-// Typographie
+// Typography
 // ----------------------------------------------------------------------------
 
 //* Modular Scale
@@ -149,23 +149,23 @@ $animation-navigation-link-hover: all 100ms linear;
 $ms-base:                     16px 18px;
 $ms-ratio:                    $golden; // Standard
 
-// Schriftstärken
+// Font weights
 $normal:                      400;
 $bold:                        700;
 
-// Schriftarten
+// Typefaces
 $base-font-family:            'Gentium Basic', 'Palatino', 'Georgia', 'Droid Serif', serif;
 $base-font-sans:              'Yanone Kaffeesatz', 'DIN Condensed', 'Roboto Condensed', 'Droid Sans', 'Segoe UI 8', Arial, Helvetica, sans-serif;
 $base-font-mono:              'Menlo', Monaco, 'Droid Sans Mono', 'Andale Mono', 'Lucida Console', 'Courier New', monospace;
 $base-font-japanese:          'Hiragino Maru Gothic Pro', sans-serif;
 
-// Grundgrößen und Zeilenhöhe
+// Base size and line-height
 $font-unit:                   1em;
 $base-font-size:              modular-scale(1); // 18px
 $base-line-height:            1.5;
 $base-font-weight:            $normal;
 
-// Überschrift-Schriftgrößen
+// Headline sizes
 $font-scale-h1:               modular-scale(6); // 68px
 $font-scale-h2:               modular-scale(4); // 42px
 $font-scale-h3:               modular-scale(2); // 26px
