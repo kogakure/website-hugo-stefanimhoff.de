@@ -1,8 +1,8 @@
 #
 # Author: Stefan Imhoff
-# 
+#
 # Based on blockquote.rb of: Brandon Mathis
-# 
+#
 # Outputs a string with a given attribution as a quote and preserves the layout (for a verse)
 #
 #   {% verse Lewis Carroll, Jabberwocky (1832-98)  %}

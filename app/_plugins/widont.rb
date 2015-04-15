@@ -20,7 +20,7 @@ module WidontFilter
     text[text.rindex(' '), 1] = '&nbsp;' if text.rindex(' ')
     return text
   end
-    
+
 end
 
 Liquid::Template.register_filter(WidontFilter)

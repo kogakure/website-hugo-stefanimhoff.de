@@ -292,7 +292,6 @@ AddDefaultCharset utf-8
   RewriteCond %{REQUEST_URI} !(.*)/$
   RewriteRule ^(.*)$ $1/ [L,R=301]
 
-  # Redirect (Aktion www.-freies Internet und Single Domain)
   RewriteCond %{HTTP_HOST} !^stefanimhoff\.de$
   RewriteRule ^(.*)$ {{ site.url }}/$1 [R=301,L]
 </IfModule>
