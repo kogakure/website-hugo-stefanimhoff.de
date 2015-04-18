@@ -5,7 +5,7 @@ title: "John Seymours Bücher über Selbstversorgung"
 author: "Stefan Imhoff"
 date: 2014-08-03 16:00
 og_image: "/assets/images/artikel/john-seymour-illustration.jpg"
-description: "Über John Seymours fantastischen Bücher zu Selbstversorgung, Landwirtschaft und Handwerk"
+description: "Über John Seymours fantastische, wunderschön illustrierte Bücher zu Selbstversorgung, Landwirtschaft und Handwerk. Die optimale Ausrüstung für eine kommende Zombie-Apokalypse."
 categories:
 - Buch
 - Empfehlung

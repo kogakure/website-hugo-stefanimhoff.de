@@ -2,10 +2,10 @@
 layout: post
 language: "de"
 title: "Grundlagen von Python und Django für Anfänger"
+description: "Wer mit Django arbeiten möchte, muss die Grundlangen von Python kennen. Eine Einführung in Python & Django für Anfänger."
 author: "Stefan Imhoff"
 date: 2008-08-01 15:00
 updated: 2014-10-25 13:10
-description: "Einführung in die Grundlagen von Python & Django für Anfänger."
 categories:
 - Code
 tags:

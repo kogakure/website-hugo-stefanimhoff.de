@@ -6,7 +6,7 @@ author: "Stefan Imhoff"
 date: 2014-05-27 18:00
 updated: 2014-10-25 13:46
 og_image: "/assets/images/artikel/css-peter-griffin-meme.jpg"
-description: "Über die auf dieser Website eingesetzte CSS-Architektur: SMACSS"
+description: "Über die auf dieser Website eingesetzte CSS-Architektur, Sass, Compass, das Grid-System Singularity, die Dateistruktur und SMACSS."
 categories:
 - Code
 - Website
@@ -23,7 +23,7 @@ Bei einem Webprojekt stellt insbesondere die Architektur der Stylesheets eine gr
 {% endfigure %}
 
 ## Preprozessoren
-Die Verwendung eines CSS-Preprozessors wie [SASS](http://sass-lang.com/) ist mittlerweile eigentlich fast selbstverständlich. Ein solcher Preprozessor ermöglicht z. B. die Verwendung von Variablen, die Verschachtelung des CSS oder die Nutzung von Funktionen und Helfern.
+Die Verwendung eines CSS-Preprozessors wie [Sass](http://sass-lang.com/) ist mittlerweile eigentlich fast selbstverständlich. Ein solcher Preprozessor ermöglicht z. B. die Verwendung von Variablen, die Verschachtelung des CSS oder die Nutzung von Funktionen und Helfern.
 
 ## Compass
 Doch noch besser ist es ein CSS-Framework wie [Compass](http://compass-style.org/) zu verwenden. Der Vorteil liegt darin, dass diese schon mit einer großen Anzahl an fertigen Methoden kommen, und so verhindern, dass das Rad neu erfunden werden muss. Mit Compass lassen sich sehr einfach Sprites generieren und viele Methoden sorgen dafür, dass für die unterschiedlichen Browser die korrekte Implementierung verwendet wird. Außerdem werden für Compass zahlreiche Erweiterungen angeboten.

@@ -5,7 +5,7 @@ title: "How to get your Mobile Website fast"
 date: 2015-02-18T09:10:00+01:00
 author: "Stefan Imhoff"
 og_image: "/assets/images/artikel/developer-tools-network.jpg"
-description: "How to optimize the critical render path and get your mobile website fast"
+description: "Your responsive website is slow? How to optimize the critical render path and get your mobile website fast."
 categories:
 - Code
 - Website

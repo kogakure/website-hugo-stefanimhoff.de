@@ -16,8 +16,8 @@ destination: ./build
 encoding:    "utf-8"
 future:      true
 show_drafts: true
-limit_posts: 5
-# limit_posts: 0
+# limit_posts: 5
+limit_posts: 0
 
 # Server
 date_format: "%d.%m.%Y"
@@ -42,11 +42,13 @@ standard_post_marker:
 category_feeds: true
 category_dir: category
 category_title_prefix: "Category: "
+category_meta_description_prefix: "This site has an overview of all articles you can find on this website in the category: "
 
 # Tags
 tag_feeds: true
 tag_dir: tag
 tag_title_prefix: "Tags: "
+tag_meta_description_prefix: "This site has an overview of all articles you can find on this website, which are tagged with: "
 
 # Pagination
 paginate:       1000       # Posts per page on the blog index

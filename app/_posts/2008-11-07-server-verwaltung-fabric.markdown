@@ -2,9 +2,9 @@
 layout: post
 language: "de"
 title: "Server-Verwaltung mit Fabric"
+description: "Es muss nicht immer Capistrano sein: Die Python-Welt hat Fabric als Tools zur Serververwaltung und für das Deployment. Aber Fabric kann noch für viele mehr verwendet werden."
 author: "Stefan Imhoff"
 date: 2008-11-07 12:00
-description: "Einführung in Serververwaltung mit Fabric."
 categories:
 - Server
 - Code

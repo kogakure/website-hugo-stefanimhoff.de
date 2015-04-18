@@ -1,9 +1,9 @@
 ---
 layout: page
 title: "Styleguide"
+description: "Der Styleguide dieser Website: Ein umfangreicher Überblick in das Design von Überschriften, Absätze, Sektionen-Trenner, preformatierter Text, Zitate, Randbemerkungen, Listen, Textgestaltung, Tabellen, Bilder und Abbildungen, Codeblöcke und Fußnoten auf dieser Website."
 author: "Stefan Imhoff"
 language: "de"
-description: "Styleguide dieser Website"
 header: false
 ---
 

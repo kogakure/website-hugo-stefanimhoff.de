@@ -6,7 +6,7 @@ date: 2014-10-24T07:30:00+02:00
 updated: 2015-03-09T12:30:00+02:00
 author: "Stefan Imhoff"
 og_image: "/assets/images/artikel/gulp-tutorial-7.jpg"
-description: "Gulp.js tutorial: How to replace small images with base64 encoded images"
+description: "The ultimative tutorial and guide for Gulp.js: How to replace small images with base64 encoded images."
 categories:
 - Code
 tags:

@@ -2,6 +2,7 @@
 layout: post
 language: "de"
 title: "Duplikation ist in Ordnung"
+description: "Auch wenn DRY (Don’t Repeat Yourself) in der Entwicklung ein grundlegendes Prinzip ist, so sieht es beim Templating nicht ganz so aus. Hier gilt Lesbarkeit vor Vermeidung von Duplikation."
 author: "Stefan Imhoff"
 date: 2013-11-27 12:45
 categories:
@@ -15,7 +16,7 @@ tags:
 
 Immer wieder wird Entwicklern das Prinzip von DRY eingetrichtert, was im Prinzip besagt, dass duplizierter Code schlecht ist. Und das stimmt auch so für Code.
 
-Doch wenn es um die View-Ebene geht, also um Templates und das Anzeigen von Content, Markup und Logik, ist dieses Prinzip angewendet ein schwerer Fehler. Hier gilt: **Lesbarkeit vor Duplikation**!
+Doch wenn es um die View-Ebene geht, also um Templates und das Anzeigen von Content, Markup und Logik, ist dieses Prinzip angewendet ein schwerer Fehler. Hier gilt: **Lesbarkeit vor Vermeidung von Duplikation**!
 
 Nehmen wir ein sehr vereinfachte Beispiel von Code, das wirklich stark gekürzt ist, denn üblicherweise reihen sich solche Beispiele aneinander, werden ineinander verschachtelt und sind meterlang. Anfangs ist die Anforderung an ein Projekt klein, doch mit jeder neuen Anforderung wächst die Komplexität und damit mutieren auch diese Verschachtelungen immer weiter.
 

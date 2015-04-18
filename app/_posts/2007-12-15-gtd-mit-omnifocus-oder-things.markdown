@@ -2,10 +2,10 @@
 layout: post
 language: "de"
 title: "GTD mit OmniFocus oder Things?"
+description: "Ich vergleiche zwei beliebte Tools für GTD (Getting Things Done) für Mac OS X: OmniFocus und Things."
 author: "Stefan Imhoff"
 date: 2007-12-15 19:57
 updated: 2015-01-02 19:10
-description: "OmniFocus und Things im Vergleich als GTD-Tool für Mac OS X."
 categories:
 - Produktivitaet
 tags:

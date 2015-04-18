@@ -2,9 +2,9 @@
 layout: post
 language: "de"
 title: "ProVoc – Vokabeln lernen unter Mac OS X"
+description: "Wer Fremdsprachen lernen möchte, muss Vokabeln lernen. Aber womit lernt man am besten? Mit der kostenlosen Software 'ProVoc' lernt es sich unter Mac OS X ziemlich gut."
 author: "Stefan Imhoff"
 date: 2007-11-16 07:00
-description: "Vokabeln lernen unter Mac OS X mit der Software ProVoc."
 categories:
 - Empfehlung
 - Software

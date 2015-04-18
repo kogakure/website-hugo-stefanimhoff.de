@@ -5,7 +5,7 @@ title: "Widerlegung einer unwissenschaftlichen Dokumentation"
 author: "Stefan Imhoff"
 date: 2014-05-09 18:00
 updated: 2014-10-25 13:41
-description: "Eine interessante Dokumentation, die eine unwissenschaftliche Dokumentationsreihe widerlegt."
+description: "Eine sehr interessante Dokumentation, die 'Ancient Aliens', eine unwissenschaftliche Dokumentationsreihe, widerlegt."
 og_image: "/assets/images/artikel/pakals-grabplatte.jpg"
 widont: false
 categories:

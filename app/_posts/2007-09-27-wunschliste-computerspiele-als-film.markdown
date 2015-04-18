@@ -2,9 +2,9 @@
 layout: post
 language: "de"
 title: "Wunschliste: Computerspiele als Film"
+description: "Meine persönliche Wunschliste für Computerspiele, die ich gerne verfilmt sehen würde: Max Payne, Half-Life, The Dig, Outcast, Far Cry und Deus Ex."
 author: "Stefan Imhoff"
 date: 2007-09-27 20:00
-description: "Meine persönliche Wunschliste, für Computerspiele, die ich gerne verfilmt sehen würde."
 categories:
 - Persoenlich
 tags:
@@ -57,6 +57,7 @@ Auch <cite>[Far Cry](http://far-cry.ubi.com/fc-portal/de-DE/home/)</cite> bietet
 
 
 Und meinen Recherchen zufolge ist ein Film zu <cite>[Far Cry](http://www.imdb.com/title/tt0400426/)</cite> abgedreht und kommt 2008 in die Kinos. Ich befürchte jedoch der wird nix, da die Regie Uwe Boll übernommen hat, der auch für die <cite>[Alone in the Dark](http://www.imdb.com/title/tt0369226/)</cite> Umsetzung verantwortlich ist. Till Schweiger ist Jack Carver, Emmanuelle Vaugier spielt Valerie Cardinal und Udo Kier spielt Dr. Krieger. Kier halte ich ungesehen für eine Superbesetzung, aber Til Schweiger als Jack? Ralf Möller hat auch eine Rolle, ich tippe mal auf einen bösen Söldner. <ins datetime="2012-08-16T18:00">Nachtrag: Wie zu erwarten ist der Film gefloppt und hat *sagenhafte* 3,2 Sterne auf IMDb bekommen.</ins>
+
 ## Deus Ex
 
 [<cite>Deus Ex</cite>, <cite>Deus Ex: Invisible War</cite> und <cite>Deus Ex: Human Revolution</cite>](http://www.deusex.com/) sind die spannendsten Spiele überhaupt. Eine halb-lineare Handlung und mehrere Lösungsmöglichkeiten; dazu konnte man selber wählen, ob man mit purer Gewalt ans Ziel kommen wollte, oder vollkommen ungesehen alle Schwierigkeiten umging.

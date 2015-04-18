@@ -2,10 +2,10 @@
 layout: post
 language: "de"
 title: "Subversion 1: Theorie und Funktionsweise"
+description: "Ein umfangreiches Tutorial für Subversion: Was ist Versionskontrolle? Theorie und Funktionsweise von Subversion."
 author: "Stefan Imhoff"
 date: 2007-05-28 18:04
 updated: 2014-10-25 12:22
-description: "Theorie und Funktionsweise von Subversion."
 categories:
 - Versionskontrolle
 tags:

@@ -6,7 +6,7 @@ date: 2014-10-30T07:45:00+02:00
 updated: 2015-03-09T12:36:00+02:00
 author: "Stefan Imhoff"
 og_image: "/assets/images/artikel/gulp-tutorial-13.jpg"
-description: "Gulp.js tutorial: How to generate revisioning for all assets and replace the file names"
+description: "The ultimative tutorial and guide for Gulp.js: How to use revisioning to allow long caching of your assets and replace them  with hashed file names, that can be cache busted."
 categories:
 - Code
 tags:

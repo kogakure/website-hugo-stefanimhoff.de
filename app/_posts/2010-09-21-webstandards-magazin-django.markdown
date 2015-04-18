@@ -2,9 +2,9 @@
 layout: post
 language: "de"
 title: "Webstandards-Magazin: Artikel über Django"
+description: "Ich durfte einen mehrseitigen Artikel über Django im  Webstandards-Magazin schreiben. Wie ich darüber schreibe, was ich an Django schätze und warum ich es einsetze."
 author: "Stefan Imhoff"
 date: 2010-09-21 09:25
-description: "Mein Artikel für das Webstandards-Magazin zum Thema Django."
 og_image: "/assets/images/artikel/webstandards-magazin-django.jpg"
 categories:
 - Publikation
