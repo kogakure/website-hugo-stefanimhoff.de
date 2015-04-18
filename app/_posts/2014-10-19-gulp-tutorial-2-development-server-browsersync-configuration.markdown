@@ -6,6 +6,7 @@ date: 2014-10-19T10:17:00+02:00
 updated: 2015-03-09T12:30:00+02:00
 author: "Stefan Imhoff"
 og_image: "/assets/images/artikel/gulp-tutorial-2.jpg"
+description: "Gulp.js tutorial: How to set up a development server with BrowserSync"
 categories:
 - Code
 tags:

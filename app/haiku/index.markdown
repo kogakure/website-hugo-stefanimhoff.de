@@ -5,6 +5,7 @@ language: "de"
 author: "Stefan Imhoff"
 date: 2014-02-09 09:01
 updated: 2015-01-16 19:16
+description: "Sammlung meiner eigenen Haiku, traditioneller, japanischer Gedichte."
 header: true
 page_class: verse-list
 ---

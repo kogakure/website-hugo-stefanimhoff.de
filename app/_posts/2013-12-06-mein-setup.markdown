@@ -4,6 +4,7 @@ language: "de"
 title: "Mein Setup 2013"
 author: "Stefan Imhoff"
 date: 2013-12-06 20:45
+description: "Einblick in meine Arbeitsumgebung, in Tools, Hardware und Software, die ich einsetze."
 categories:
 - Empfehlung
 - Technik

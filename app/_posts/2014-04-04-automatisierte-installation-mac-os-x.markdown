@@ -5,6 +5,7 @@ title: "Automatisierte Installation für Mac&nbsp;OS&nbsp;X"
 author: "Stefan Imhoff"
 date: 2014-04-04 21:09
 updated: 2014-10-25 13:38
+description: "Mit Homebrew und Homebrew Cask automatisiert Software unter Mac OS X installieren"
 categories:
 - Empfehlung
 - Software

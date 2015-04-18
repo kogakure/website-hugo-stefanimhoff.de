@@ -6,6 +6,7 @@ date: 2014-10-21T10:30:00+02:00
 updated: 2015-03-09T12:35:00+02:00
 author: "Stefan Imhoff"
 og_image: "/assets/images/artikel/gulp-tutorial-4.jpg"
+description: "Gulp.js tutorial: How to create CSS and sourcemaps with Sass and Compass"
 categories:
 - Code
 tags:

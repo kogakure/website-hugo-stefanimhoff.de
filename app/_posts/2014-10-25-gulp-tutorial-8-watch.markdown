@@ -6,6 +6,7 @@ date: 2014-10-25T10:00:00+02:00
 updated: 2014-12-19T12:46:00+02:00
 author: "Stefan Imhoff"
 og_image: "/assets/images/artikel/gulp-tutorial-8.jpg"
+description: "Gulp.js tutorial: How to set up a watch task, which triggers other tasks on file changes"
 categories:
 - Code
 tags:

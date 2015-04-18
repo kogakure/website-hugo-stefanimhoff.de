@@ -5,6 +5,7 @@ title: "Das Cover-Foto auf meiner Website"
 author: "Stefan Imhoff"
 date: 2014-05-30 10:00
 og_image: "/assets/images/artikel/josefina-bokeh.jpg"
+description: "Über die Wahl meines Fotosstils bei meiner neuen Website: Bokeh"
 categories:
 - Design
 - Website

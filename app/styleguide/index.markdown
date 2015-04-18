@@ -3,6 +3,7 @@ layout: page
 title: "Styleguide"
 author: "Stefan Imhoff"
 language: "de"
+description: "Styleguide dieser Website"
 header: false
 ---
 

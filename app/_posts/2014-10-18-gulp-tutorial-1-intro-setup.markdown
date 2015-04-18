@@ -6,6 +6,7 @@ date: 2014-10-18T08:35:47+02:00
 updated: 2015-03-09T12:35:00+02:00
 author: "Stefan Imhoff"
 og_image: "/assets/images/artikel/gulp-tutorial-1.png"
+description: "Gulp.js tutorial: About Gulp.js, how to install Gulp and Jekyll"
 categories:
 - Code
 tags:

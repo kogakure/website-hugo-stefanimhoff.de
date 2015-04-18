@@ -6,6 +6,7 @@ date: 2014-10-31T08:00:00+02:00
 updated: 2015-03-09T12:30:00+02:00
 author: "Stefan Imhoff"
 og_image: "/assets/images/artikel/gulp-tutorial-14.jpg"
+description: "Gulp.js tutorial: How to deploy the website wit rsync to the server"
 categories:
 - Code
 tags:
