@@ -24,7 +24,6 @@
   }
 
   .nav-btn {
-    @extend %sans-font;
     @include link-colors($white, $nav-link-color-hover, $white, $white, $white);
     border: 0;
     font-size: 18px;
@@ -37,10 +36,6 @@
     text-transform: uppercase;
     top: 1em;
     z-index: 100;
-
-    .wf-active & {
-      @extend %sans-font-wf;
-    }
 
     span {
       @include breakpoint($content-medium) {
@@ -119,7 +114,6 @@
   }
 
   .site-info {
-    @extend %sans-font;
     @include enable-ligatures;
     @include grid-span(8, 3);
     color: $header-headline;
@@ -127,10 +121,6 @@
     line-height: 1;
     padding-top: 15px;
     text-shadow: 0 0 6px $black;
-
-    .wf-active & {
-      @extend %sans-font-wf;
-    }
 
     @include breakpoint(480px) {
       @include grid-span(7, 4);

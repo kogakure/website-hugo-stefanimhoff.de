@@ -6,7 +6,6 @@
   overflow: hidden;
 
   a {
-    @extend %sans-font;
     background: $dark-grey;
     border: 0;
     border-radius: 5px;
@@ -22,10 +21,6 @@
     text-overflow: ellipsis;
     text-transform: uppercase;
     white-space: nowrap;
-
-    .wf-active & {
-      @extend %sans-font-wf;
-    }
 
     &:hover {
       background: $link-color;

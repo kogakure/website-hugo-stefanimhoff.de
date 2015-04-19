@@ -35,17 +35,12 @@
 
   &:after,
   &:before {
-    @extend %sans-font;
     bottom: 100%;
     margin: 0 0 5px;
     opacity: 0;
     pointer-events: none;
     position: absolute;
     top: auto;
-
-    .wf-active & {
-      @extend %sans-font-wf;
-    }
   }
 
   &:before {

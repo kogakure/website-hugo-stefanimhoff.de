@@ -3,7 +3,7 @@
 // ============================================================================
 
 body {
-  @extend %base-font;
+  @extend %sans-font;
   background-color: $body-background;
   color: $dark-grey;
   font-size: modular-scale(1);
@@ -15,7 +15,7 @@ body {
   text-rendering: optimizeLegibility;
 
   .wf-active & {
-    @extend %base-font-wf;
+    @extend %sans-font-wf;
   }
 
   @include breakpoint($iphone-width) {
@@ -23,8 +23,24 @@ body {
   }
 }
 
+.article-body p,
+.article-body blockquote,
+.article-body ol,
+.article-body ul,
+.article-body dl,
+.article-body table,
+.article-body figure,
+.article-header .meta {
+  @extend %serif-font;
 
-:lang(ja) {
+  .wf-active & {
+    @extend %serif-font-wf;
+  }
+}
+
+
+:lang(ja),
+ruby {
   @extend %japanese-font;
 }
 
@@ -72,16 +88,11 @@ h3,
 h4,
 h5,
 h6 {
-  @extend %sans-font;
   @include enable-ligatures;
   clear: both;
   hyphens: manual;
   line-height: 1;
   margin-bottom: 0.5em;
-
-  .wf-active & {
-    @extend %sans-font-wf;
-  }
 }
 
 h1 {

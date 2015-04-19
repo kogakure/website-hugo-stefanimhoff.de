@@ -4,13 +4,8 @@
 
 .home {
   .section {
-    @extend %sans-font;
     margin-bottom: 0;
     padding: 1.5em 0;
-
-    .wf-active & {
-      @extend %sans-font-wf;
-    }
 
     @include breakpoint(480px) {
       padding: 1em 0;

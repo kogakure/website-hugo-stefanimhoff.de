@@ -3,7 +3,6 @@
 // ============================================================================
 
 .aside-hint {
-  @extend %sans-font;
   background: rgba($white, 0.5);
   border: 2px solid $white;
   border-radius: 5px;
@@ -11,10 +10,6 @@
   font-size: modular-scale(1);
   margin-bottom: $default-margin-bottom;
   padding: 10px 15px;
-
-  .wf-active & {
-    @extend %sans-font-wf;
-  }
 
   p:last-child {
     margin-bottom: 0;
