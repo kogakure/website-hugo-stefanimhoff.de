@@ -8,6 +8,10 @@
   color: rgba($white, 0.25);
   padding-top: 1.5em;
 
+  .wf-active & {
+    @extend %sans-font-wf;
+  }
+
   @include breakpoint(700px) {
     padding-top: 1em;
   }

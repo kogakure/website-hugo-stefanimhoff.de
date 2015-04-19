@@ -12,6 +12,10 @@
   margin-bottom: $default-margin-bottom;
   padding: 10px 15px;
 
+  .wf-active & {
+    @extend %sans-font-wf;
+  }
+
   p:last-child {
     margin-bottom: 0;
   }

@@ -16,6 +16,10 @@ sup a.footnote {
   line-height: 1.5;
   text-decoration: none;
 
+  .wf-active & {
+    @extend %sans-font-wf;
+  }
+
   &:hover {
     background: transparent;
   }
@@ -27,6 +31,10 @@ sup a.footnote {
   color: lighten($dark-grey, 40);
   font-size: modular-scale(0);
   line-height: 1.5;
+
+  .wf-active & {
+    @extend %sans-font-wf;
+  }
 
   a.reversefootnote {
     @include link-colors($dark-grey, $dark-grey, $dark-grey, $dark-grey, $dark-grey);

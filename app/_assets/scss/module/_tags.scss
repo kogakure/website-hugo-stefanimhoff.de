@@ -31,6 +31,10 @@
     text-transform: uppercase;
     white-space: nowrap;
 
+    .wf-active & {
+      @extend %sans-font-wf;
+    }
+
     &:hover {
       background: $link-color;
       color: $white;

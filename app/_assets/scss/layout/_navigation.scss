@@ -42,6 +42,10 @@
     text-shadow: 0 1px 1px $black;
     top: 15px;
 
+    .wf-active & {
+      @extend %sans-font-wf;
+    }
+
     span {
       @extend %visually-hidden;
     }
@@ -64,6 +68,10 @@
   letter-spacing: 0.1em;
   list-style: none;
   margin: 22px 40px;
+
+  .wf-active & {
+    @extend %sans-font-wf;
+  }
 
   li {
     margin-bottom: 0.3em;

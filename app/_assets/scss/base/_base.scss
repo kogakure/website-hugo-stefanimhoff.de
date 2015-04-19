@@ -14,6 +14,10 @@ body {
   line-height: 1.5;
   text-rendering: optimizeLegibility;
 
+  .wf-active & {
+    @extend %base-font-wf;
+  }
+
   @include breakpoint($iphone-width) {
     text-rendering: optimizeSpeed;
   }
@@ -74,6 +78,10 @@ h6 {
   hyphens: manual;
   line-height: 1;
   margin-bottom: 0.5em;
+
+  .wf-active & {
+    @extend %sans-font-wf;
+  }
 }
 
 h1 {
@@ -295,6 +303,10 @@ kbd {
   padding: 0.3em 0.6em 0.1em;
   text-shadow: 0 1px 0 $white;
   white-space: nowrap;
+
+  .wf-active & {
+    @extend %sans-font-wf;
+  }
 }
 
 // Superscript/Subscript

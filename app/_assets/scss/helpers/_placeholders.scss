@@ -3,8 +3,16 @@
 // ============================================================================
 
 // Font
+%base-font-wf {
+  font-family: $base-font-family-wf;
+}
+
 %base-font {
   font-family: $base-font-family;
+}
+
+%sans-font-wf {
+  font-family: $base-font-sans-wf;
 }
 
 %sans-font {

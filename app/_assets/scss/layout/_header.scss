@@ -38,6 +38,10 @@
     top: 1em;
     z-index: 100;
 
+    .wf-active & {
+      @extend %sans-font-wf;
+    }
+
     span {
       @include breakpoint($content-medium) {
         display: none;
@@ -123,6 +127,10 @@
     line-height: 1;
     padding-top: 15px;
     text-shadow: 0 0 6px $black;
+
+    .wf-active & {
+      @extend %sans-font-wf;
+    }
 
     @include breakpoint(480px) {
       @include grid-span(7, 4);

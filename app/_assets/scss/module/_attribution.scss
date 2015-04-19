@@ -24,6 +24,10 @@
   position: absolute;
   transition: all 0.6s ease;
 
+  .wf-active & {
+    @extend %sans-font-wf;
+  }
+
   a {
     @include link-colors($link-color, $link-color, $link-active-color, $link-visited-color, $link-focus-color);
   }

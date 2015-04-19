@@ -42,6 +42,10 @@
     pointer-events: none;
     position: absolute;
     top: auto;
+
+    .wf-active & {
+      @extend %sans-font-wf;
+    }
   }
 
   &:before {
