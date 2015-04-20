@@ -9,69 +9,6 @@
 }
 
 
-// Paragraphs
-// ----------------------------------------------------------------------------
-p {
-  margin-bottom: $default-margin-bottom;
-}
-
-.article-body > p:first-child {
-  font-size: $font-scale-intro;
-  line-height: 1.5;
-  margin-bottom: $default-margin-bottom;
-}
-
-// Horizontale Trenner
-// ----------------------------------------------------------------------------
-hr {
-  border: 0;
-  border-bottom: 1px solid rgba($light-grey, 0.9);
-  height: 0;
-  margin: 2.5em;
-}
-
-// Emphasis
-// ----------------------------------------------------------------------------
-em {
-  font-style: italic;
-}
-
-strong {
-  font-weight: $bold;
-}
-
-// Strikethrough
-// ----------------------------------------------------------------------------
-s {
-  text-decoration: line-through;
-}
-
-// Definition
-// ----------------------------------------------------------------------------
-dfn {
-  border-bottom: 1px dotted $definition-color;
-  cursor: help;
-}
-
-// Abbrevations
-// ----------------------------------------------------------------------------
-abbr,
-acronym {
-  cursor: help;
-  font-variant: small-caps;
-  letter-spacing: 0.1em;
-  text-transform: lowercase;
-}
-
-abbr[title],
-acronym[title] {
-  border-bottom-width: 0;
-}
-
-abbr.no-caps {
-  font-variant: normal;
-  text-transform: none;
-}
 
 // Pre
 // ----------------------------------------------------------------------------
