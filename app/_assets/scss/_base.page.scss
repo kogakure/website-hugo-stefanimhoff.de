@@ -20,10 +20,32 @@ body {
   min-height: 100%;
 }
 
+body {
+  @extend %base-font;
+  background-color: $body-background;
+  color: $dark-grey;
+  font-size: modular-scale(1);
+  font-smoothing: subpixel-antialiased;
+  font-style: normal;
+  font-weight: $normal;
+  hyphens: auto;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+
+  @include breakpoint($iphone-width) {
+    text-rendering: optimizeSpeed;
+  }
+}
+
 
 // Alle Elemente so einstellen, dass Padding nicht dazu gerechnet wird
 * {
   box-sizing: border-box;
+}
+
+
+:lang(ja) {
+  @extend %japanese-font;
 }
 
 
@@ -65,4 +87,17 @@ body {
     display: inline-block;
     margin-right: 10px;
   }
+}
+
+
+.section {
+  margin-bottom: $default-margin-bottom;
+}
+
+
+// Meldung für alte Browser
+.chromeframe {
+  color: $white;
+  padding: 5px;
+  text-align: center;
 }

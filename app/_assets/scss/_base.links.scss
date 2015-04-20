@@ -1,0 +1,9 @@
+//====================================
+//  Links
+//====================================
+
+a {
+  // normal, hover, active, visited, focus
+  @include link-colors($link-color, $link-hover-color, $link-active-color, $link-visited-color, $link-focus-color);
+  transition: $animation-link-hover;
+}
