@@ -1,0 +1,68 @@
+//====================================
+//  Headlines
+//====================================
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @extend %sans-font;
+  @include enable-ligatures;
+  clear: both;
+  hyphens: manual;
+  line-height: 1;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 40px;
+
+  .article & {
+    text-align: center;
+  }
+
+  @include breakpoint(650px) {
+    font-size: 45px;
+  }
+
+  @include breakpoint(700px) {
+    font-size: 50px;
+  }
+
+  @include breakpoint(800px) {
+    font-size: 60px;
+  }
+
+  @include breakpoint(920px) {
+    font-size: $font-scale-h1;
+  }
+}
+
+h2 {
+  font-size: 30px;
+
+  @include breakpoint(650px) {
+    font-size: 35px;
+  }
+
+  @include breakpoint(700px) {
+    font-size: 40px;
+  }
+
+  @include breakpoint(800px) {
+    font-size: 50px;
+  }
+
+  @include breakpoint(920px) {
+    font-size: $font-scale-h2;
+  }
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: $font-scale-h4;
+}
