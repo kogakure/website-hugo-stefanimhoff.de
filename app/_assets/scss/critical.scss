@@ -23,8 +23,14 @@
 @import "base.links";
 @import "base.headlines";
 @import "base.text";
+@import "base.code";
+@import "base.lists";
+@import "base.quotes";
+@import "base.images";
+@import "base.figures";
+@import "base.videos";
+@import "base.tables";
 // ==================> Refactored ^ / not refactored v
-@import "base/base";
 
 // Layout
 @import "base.grids";

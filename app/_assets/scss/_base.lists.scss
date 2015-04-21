@@ -1,0 +1,63 @@
+//====================================
+//  Lists
+//====================================
+
+ol {
+  list-style: decimal;
+  margin-bottom: $default-margin-bottom;
+
+  .article-body & {
+    margin-left: $default-margin-left;
+
+    @include breakpoint($content-medium) {
+      margin-left: 0;
+    }
+  }
+}
+
+ol ol {
+  list-style: lower-latin;
+  margin: 0 1.5em;
+
+  .article-body & {
+    margin: 0 1.5em;
+  }
+}
+
+ul {
+  list-style: disc;
+  margin-bottom: $default-margin-bottom;
+
+  .article-body & {
+    margin-left: $default-margin-left;
+
+    @include breakpoint($content-medium) {
+      margin-left: 0;
+    }
+  }
+}
+
+ul ul {
+  list-style: circle;
+  margin: 0 1.5em;
+
+  .article-body & {
+    margin: 0 1.5em;
+  }
+}
+
+dl {
+  margin-bottom: $default-margin-bottom;
+}
+
+dt {
+  font-weight: $bold;
+}
+
+dt + dd {
+  margin-bottom: $default-margin-bottom;
+}
+
+dd {
+  margin-left: 0;
+}

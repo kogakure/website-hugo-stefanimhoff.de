@@ -1,0 +1,89 @@
+//====================================
+//  Code
+//====================================
+
+// Pre
+code {
+  @extend %mono-font;
+  background: $white;
+  border: 1px solid $light-grey;
+  border-radius: 3px;
+  font-size: $font-scale-small;
+  line-height: 1.5;
+  padding: 0.2em 0.4em;
+}
+
+pre {
+  margin-bottom: $default-margin-bottom;
+
+  code {
+    display: block;
+    line-height: 1.2;
+    overflow-x: auto;
+  }
+}
+
+.highlight {
+  @include grid-span(12);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 0 10px;
+  clear: both;
+  margin-bottom: $default-margin-bottom;
+  position: relative;
+
+  .code-figure & {
+    margin-bottom: 0;
+  }
+
+  @include breakpoint($content-medium) {
+    @include grid-span(10, 1, 8);
+    clear: both;
+    margin-left: -(grid-span(1, 1, 8));
+    margin-right: 0;
+  }
+
+  pre {
+    background: $white;
+    padding: 1.5em 1.5em 0;
+  }
+
+  code {
+    border: 0;
+    padding: 0 20px 6px 0;
+
+    &:after {
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 20%, #ffffff 50%, #ffffff);
+      content: " ";
+      height: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 1.5em * 3;
+    }
+  }
+
+  .lineno {
+    color: rgba($dark-grey, 0.15);
+  }
+}
+
+
+// Variable
+var {
+  font-style: italic;
+}
+
+
+// Sample output
+samp {
+  @extend %mono-font;
+  background: $sample-background;
+  border: 1px solid #dddddd;
+  border-radius: 0.4em;
+  color: $sample-color;
+  display: inline-block;
+  font-size: 0.8em;
+  line-height: 1.5em;
+  margin: -1px 0;
+  padding: 0 0.3em;
+  white-space: no-wrap;
+}

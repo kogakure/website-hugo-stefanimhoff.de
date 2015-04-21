@@ -120,3 +120,8 @@ body {
   padding: 5px;
   text-align: center;
 }
+
+// Prevent text from breaking to the new line
+.nobr {
+  white-space: nowrap;
+}
