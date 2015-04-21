@@ -226,7 +226,8 @@ module.exports = {
         conservativeCollapse: true,
         removeComments: true,
         minifyJS: true,
-        minifyCSS: true
+        minifyCSS: true,
+        processScripts: ['application/ld+json']
       }
     }
   },
