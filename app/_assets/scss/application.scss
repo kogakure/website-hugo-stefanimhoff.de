@@ -14,7 +14,7 @@
 // Theme
 @import "theme.init";
 
-// Vektor-Fonts
+// Vektor Fonts
 @import "base.iconfont";
 
 // Layout
@@ -22,7 +22,7 @@
 @import "base.patterns";
 @import "base.footer";
 
-// Syntax-Highlighting
+// Syntax Highlighting
 @import "vendor.syntax";
 
 // ==================> Refactored ^ / not refactored v
@@ -51,7 +51,7 @@
 // Debugging
 @import "tools.debug";
 
-// Nur für schnelle Test und Fixes!
+// Fast fixes and tests
 @import "tools.shame";
 
 // Print

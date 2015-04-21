@@ -2,10 +2,10 @@
 layout: post
 language: "de"
 title: "Subversion 6: Ein paar wichtige Befehle"
+description: "Ein umfangreiches Tutorial für Subversion: Nützliche und Notwendige Befehle für den täglichen Gebrauch in Subversion."
 author: "Stefan Imhoff"
 date: 2007-11-02 19:24
 updated: 2014-10-25 12:39
-description: "Nützliche und Notwendige Befehle für den täglichen Gebrauch in Subversion."
 categories:
 - Versionskontrolle
 tags:

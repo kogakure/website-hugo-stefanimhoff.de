@@ -2,9 +2,9 @@
 layout: post
 language: "de"
 title: "2008 war Django (und Git)"
+description: "Mein persönlicher Jahresrückblick für 2008: Ich kaufe mir einen iPod Touch, beschäftige mich intensiv mit Django, Kündige bei Media Temple, bringe meine Martial Arts Website kogakure.de mit Django online."
 author: "Stefan Imhoff"
 date: 2008-12-23 15:00
-description: "Mein persönlicher Jahresrückblick für 2008."
 categories:
 - Persoenlich
 tags:

@@ -1,14 +1,14 @@
-# ==================== #
-# Jekyll-Einstellungen #
-# ==================== #
-# P R O D U C T I O N  #
-# ==================== #
+# =============== #
+# Jekyll Settings #
+# =============== #
+#   PRODUCTION    #
+# =============== #
 
-# URLs und Pfade
+# URLs/Paths
 url:         "http://stefanimhoff.de"
 server_path: /home/kogakure/webapps/stefanimhoff
 
-# Veröffentlichungs-Einstellungen
+# Publishing
 future:      false
 show_drafts: false
 limit_posts: 0

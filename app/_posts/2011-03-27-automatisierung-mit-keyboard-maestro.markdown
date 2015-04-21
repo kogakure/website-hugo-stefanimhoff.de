@@ -2,9 +2,9 @@
 layout: post
 language: "de"
 title: "Automatisierung mit Keyboard Maestro"
+description: "Keyboard Maestro ist ein mächtiges Werkzeug zum automatisieren von Prozessen unter Mac OS X."
 author: "Stefan Imhoff"
 date: 2011-03-27 12:58
-description: "Keyboard Maestro als mächtige Werkzeug zum automatisieren von Prozessen unter Mac OS X."
 categories:
 - Empfehlung
 - Software

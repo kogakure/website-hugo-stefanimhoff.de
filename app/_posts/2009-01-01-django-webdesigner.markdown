@@ -2,9 +2,9 @@
 layout: post
 language: "de"
 title: "Django für Webdesigner"
+description: "Einführung in Django für Webdesigner. Warum Django dank der fantastischen Template-Sprache besonders für Webdesigner gut geeignet ist."
 author: "Stefan Imhoff"
 date: 2009-01-01 11:00
-description: "Einführung in Django für Webdesigner"
 categories:
 - Code
 tags:

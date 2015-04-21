@@ -2,10 +2,10 @@
 layout: post
 language: "de"
 title: "Subversion 2: Installation"
+description: "Ein umfangreiches Tutorial für Subversion: Wie wird Subversion installiert und was für Programmoberflächen gibt es?"
 author: "Stefan Imhoff"
 date: 2007-06-08 01:00
 updated: 2014-10-25 12:22
-description: "Installation von Subversion."
 categories:
 - Versionskontrolle
 tags:

@@ -2,9 +2,9 @@
 layout: post
 language: "de"
 title: "Gitweb-Theme im GitHub-Stil"
+description: "Mein beliebtes Theme für GitWeb zum kostenlosen Download. So sieht GitWeb GitHub etwas ähnlicher und ist nicht mehr so hässlich."
 author: "Stefan Imhoff"
 date: 2009-02-19 20:00
-description: "Ein Theme für GitWeb zum Download, damit es GitHub ähnlicher sieht und nicht mehr so hässlich ist."
 og_image: "/assets/images/artikel/gitweb-theme-summary.png"
 categories:
 - Download

@@ -2,9 +2,9 @@
 layout: post
 language: "de"
 title: "Einstieg in Git als Versionskontrollsystem"
+description: "Eine umfangreiche Sammlung von Links zu Anleitungen, Tutorials, Screencasts und Dokumentationen zu Git."
 author: "Stefan Imhoff"
 date: 2009-02-10 20:00
-description: "Eine umfangreiche Sammlung von Links zu Anleitungen, Tutorials, Screencasts und Dokumentationen zu Git."
 categories:
 - Versionskontrolle
 tags:

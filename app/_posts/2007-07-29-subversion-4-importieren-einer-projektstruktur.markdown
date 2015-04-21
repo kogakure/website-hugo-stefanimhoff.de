@@ -2,10 +2,10 @@
 layout: post
 language: "de"
 title: "Subversion 4: Importieren einer Projektstruktur"
+description: "Ein umfangreiches Tutorial für Subversion: Mit Subversion eine Projektstruktur einrichten und ein bestehendes Projekt importieren."
 author: "Stefan Imhoff"
 date: 2007-07-29 13:00
 updated: 2014-10-25 12:29
-description: "Mit Subversion eine Projektstruktur einrichten."
 categories:
 - Versionskontrolle
 tags:

@@ -1,3 +1,10 @@
+# Author: Stefan Imhoff
+#
+# Output years since a specific year
+#
+# Usage: {% since_year 1999 %}
+#
+
 require 'date'
 
 class SinceYear < Liquid::Tag

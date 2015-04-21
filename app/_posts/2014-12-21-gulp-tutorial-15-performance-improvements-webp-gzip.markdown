@@ -6,6 +6,7 @@ date: 2014-12-21T11:15:00+01:00
 updated: 2015-03-09T12:35:00+01:00
 author: "Stefan Imhoff"
 og_image: "/assets/images/artikel/gulp-tutorial-15.jpg"
+description: "The ultimative tutorial and guide for Gulp.js: How to improve the speed and performance of your website with WebP and Gzip."
 categories:
 - Code
 tags:

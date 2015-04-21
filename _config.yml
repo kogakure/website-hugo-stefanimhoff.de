@@ -1,25 +1,25 @@
-# ==================== #
-# Jekyll-Einstellungen #
-# ==================== #
+# =============== #
+# Jekyll Settings #
+# =============== #
 
-# URLs und Pfade
+# URLs/Paths
 baseurl:   ""
 url:       "http://0.0.0.0:9999"
 root:      /
 permalink: /:year/:title/
 
-# Jekyll-Pfade
+# Jekyll
 source:      ./app
 destination: ./build
 
-# Veröffentlichungs-Einstellungen
+# Publishing
 encoding:    "utf-8"
 future:      true
 show_drafts: true
 limit_posts: 5
 # limit_posts: 0
 
-# Server-Konfiguration
+# Server
 date_format: "%d.%m.%Y"
 titlecase:   false
 port:        8888
@@ -28,8 +28,8 @@ markdown:    kramdown
 lsi:         true
 language:    "en"
 
-# Feeds für individuelle Themen
-excerpt_link: "Weiterlesen &arr;"
+# Feeds
+excerpt_link: "Read more &arr;"
 excerpt_in_feed: false
 permalink_label: "Permalink"
 permalink_label_feed: "★ Permalink"
@@ -42,17 +42,19 @@ standard_post_marker:
 category_feeds: true
 category_dir: category
 category_title_prefix: "Category: "
+category_meta_description_prefix: "This site has an overview of all articles you can find on this website in the category: "
 
 # Tags
 tag_feeds: true
 tag_dir: tag
 tag_title_prefix: "Tags: "
+tag_meta_description_prefix: "This site has an overview of all articles you can find on this website, which are tagged with: "
 
 # Pagination
 paginate:       1000       # Posts per page on the blog index
 paginate_path:  :num       # default path for pagination, eg. page/2/
 
-# Kramdown-Konfiguration
+# Markdown
 kramdown:
   auto_ids:                  false
   auto_id_prefix:            ""
@@ -65,7 +67,7 @@ kramdown:
   smart_quotes:              sbquo,lsquo,bdquo,ldquo, # ‚‘ „“
   # smart_quotes:              apos,apos,quot,quot # '' ""
 
-# Dateien ausschließen, Grunt kümmert sich um Assets
+# Exclude files, Gulp.js handles the assets
 exclude: [
   "vendor", "Gemfile", "Gemfile.lock", "README.markdown", "fonts",
   "**.png", "**.jpg", "**.jpeg", "**.gif", "**.webp", "**.svg", "**.ico"
@@ -73,7 +75,7 @@ exclude: [
 
 include: [".htaccess", ".htpasswd", "favicon.ico"]
 
-# Sitemap.xml Generator
+# Sitemap.xml generator
 sitemap:
   file: "/sitemap.xml"
   exclude:

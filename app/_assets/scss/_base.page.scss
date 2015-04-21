@@ -21,7 +21,7 @@ body {
 }
 
 body {
-  @extend %base-font;
+  @extend %sans-font;
   background-color: $body-background;
   color: $dark-grey;
   font-size: modular-scale(1);
@@ -32,8 +32,27 @@ body {
   line-height: 1.5;
   text-rendering: optimizeLegibility;
 
+  .wf-active & {
+    @extend %sans-font-wf;
+  }
+
   @include breakpoint($iphone-width) {
     text-rendering: optimizeSpeed;
+  }
+}
+
+.article-body p,
+.article-body blockquote,
+.article-body ol,
+.article-body ul,
+.article-body dl,
+.article-body table,
+.article-body figure,
+.article-header .meta {
+  @extend %serif-font;
+
+  .wf-active & {
+    @extend %serif-font-wf;
   }
 }
 
@@ -95,7 +114,7 @@ body {
 }
 
 
-// Meldung für alte Browser
+// Message for older browsers
 .chromeframe {
   color: $white;
   padding: 5px;

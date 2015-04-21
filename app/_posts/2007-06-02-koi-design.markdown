@@ -2,9 +2,9 @@
 layout: post
 language: "de"
 title: "Das Koi-Design: Inspiration und Idee"
+description: "Irezumi (Japanische Tätorwierung) als Inspiration für meine Website und über die Entstehung meines Designs."
 author: "Stefan Imhoff"
 date: 2007-06-02 02:00
-description: "Irezumi (Japanische Tätorwierung) als Inspiration für meine Website und über die Entstehung meines Designs."
 og_image: "/assets/images/artikel/design-koi.jpg"
 categories:
 - Design

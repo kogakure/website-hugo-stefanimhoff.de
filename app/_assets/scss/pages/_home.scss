@@ -4,7 +4,6 @@
 
 .home {
   .section {
-    @extend %sans-font;
     margin-bottom: 0;
     padding: 1.5em 0;
 
@@ -36,7 +35,7 @@
     margin-top: $default-margin-top;
   }
 
-  // Artikel
+  // Blog Article
   .blog {
     @include breakpoint($homepage-sections-fullsize) {
       h3 {
@@ -74,7 +73,7 @@
     }
   }
 
-  // Arbeit
+  // Work
   .work {
     @extend %pattern-geometry;
     border-top: 1px solid rgba($dark-grey, 0.2);
@@ -84,7 +83,7 @@
     }
   }
 
-  // Introvertiert
+  // Introvert
   .introvert {
     @extend %pattern-wavegrid;
 
@@ -131,7 +130,7 @@
     }
   }
 
-  // Kampfkunst
+  // Martial Arts
   .martial-arts {
     $martial-arts-color: #be0202;
 
@@ -155,7 +154,7 @@
     }
   }
 
-  // Bücherliebhaber
+  // Books
   .books {
     $books-color: #616161;
 
@@ -176,7 +175,7 @@
     }
   }
 
-  // Filmliebhaber
+  // Movies
   .movies {
     $movies-color: #e8c53d;
 
@@ -198,7 +197,7 @@
   }
 
 
-  // Empfehlungen
+  // Recommendations
   .recommendations {
     @extend %pattern-wavegrid;
   }

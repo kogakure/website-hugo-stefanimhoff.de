@@ -2,9 +2,9 @@
 layout: post
 language: "de"
 title: "Versionskontrolle mit Git"
+description: "Warum Git eine Menge Vorzüge gegenüber anderen Versionskontrollsystemen bietet und es sich lohnt das relative neue VCS näher anzusehen."
 author: "Stefan Imhoff"
 date: 2007-08-02 17:53
-description: "Vorzüge von Git gegenüber anderen Versionskontrollsystemen."
 categories:
 - Versionskontrolle
 tags:

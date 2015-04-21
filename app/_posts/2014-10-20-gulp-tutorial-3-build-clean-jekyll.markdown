@@ -6,6 +6,7 @@ date: 2014-10-20T10:00:00+02:00
 updated: 2015-03-09T12:32:00+02:00
 author: "Stefan Imhoff"
 og_image: "/assets/images/artikel/gulp-tutorial-3.jpg"
+description: "The ultimative tutorial and guide for Gulp.js: How to write tasks for cleaning files and folders, generating the build and the website with Jekyll."
 categories:
 - Code
 tags:

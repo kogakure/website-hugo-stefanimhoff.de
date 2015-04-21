@@ -1,14 +1,13 @@
 // ============================================================================
-// Fußnoten
+// Footnote
 // ============================================================================
 
-// Um eine Fußnote zu setzen wird diese Syntax verwendet[^1]
+// Create a footnote[^1]
 
-// Um eine Fußnote zu beschreiben wird diese Syntax verwendet:
-// [^1]: Beschreibung der Fußnote
+// Use a footnote
+// [^1]: Description
 
 sup a.footnote {
-  @extend %sans-font;
   @include link-colors($dark-grey, $dark-grey, $dark-grey, $dark-grey, $dark-grey);
   background: transparent;
   cursor: help;
@@ -22,7 +21,6 @@ sup a.footnote {
 }
 
 .footnotes {
-  @extend %sans-font;
   clear: both;
   color: lighten($dark-grey, 40);
   font-size: modular-scale(0);

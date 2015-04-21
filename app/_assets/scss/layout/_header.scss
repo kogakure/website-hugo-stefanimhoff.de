@@ -11,9 +11,9 @@
   padding: 40px 0 60px;
   z-index: 100;
   // background-attachment: fixed;
-  // * @FIXME: Ein Fehler in Google Chrome/Opera
-  // * Im Moment kann dieses nicht in Kombination
-  // * mit translate3d verwendet werden.
+  // * @FIXME: A bug in Google Chrome/Opera
+  // * prevents using `translate3d` in combination
+  // * with `background-attachment: fixed` at the moment
 
   @include breakpoint(600px) {
     background-image: url($header-background-url-m);
@@ -24,7 +24,6 @@
   }
 
   .nav-btn {
-    @extend %sans-font;
     @include link-colors($white, $nav-link-color-hover, $white, $white, $white);
     border: 0;
     font-size: 18px;
@@ -45,7 +44,7 @@
     }
   }
 
-  // Breakpoints für das Header-Bild
+  // Breakpoints header image
   .home & {
     padding: 40px 0 160px;
 
@@ -115,7 +114,6 @@
   }
 
   .site-info {
-    @extend %sans-font;
     @include enable-ligatures;
     @include grid-span(8, 3);
     color: $header-headline;

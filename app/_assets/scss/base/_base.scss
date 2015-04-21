@@ -114,6 +114,10 @@ kbd {
   padding: 0.3em 0.6em 0.1em;
   text-shadow: 0 1px 0 $white;
   white-space: nowrap;
+
+  .wf-active & {
+    @extend %sans-font-wf;
+  }
 }
 
 // Superscript/Subscript
@@ -136,7 +140,7 @@ sub {
   top: 0.8ex;
 }
 
-// Italic/Fett
+// Italic/Bold
 // ----------------------------------------------------------------------------
 i {
   font-style: italic;
@@ -146,7 +150,7 @@ b {
   font-weight: $bold;
 }
 
-// Markiert
+// Mark
 // ----------------------------------------------------------------------------
 mark {
   background-color: transparent;
@@ -175,7 +179,7 @@ mark {
   }
 }
 
-// Bearbeitungen
+// Editing
 // ----------------------------------------------------------------------------
 ins {
   text-decoration: underline;
@@ -185,7 +189,7 @@ del {
   text-decoration: line-through;
 }
 
-// Listen
+// Lists
 // ----------------------------------------------------------------------------
 ol {
   list-style: decimal;
@@ -247,7 +251,7 @@ dd {
   margin-left: 0;
 }
 
-// Zitate
+// Quotes
 // ----------------------------------------------------------------------------
 blockquote {
   font-style: italic;
@@ -269,7 +273,7 @@ q {
   font-style: italic;
 }
 
-// @include q-quotes(de, '„' '“' '‚' '‘'); // Alternative, deutsche Schreibweise
+// @include q-quotes(de, '„' '“' '‚' '‘'); // Alternative German quotes
 @include q-quotes(de, '»' '«' '›' '‹');
 @include q-quotes(en, '“' '”' '‘' '’');
 @include q-quotes(fr, '« ' ' »' '“' '”');
@@ -283,7 +287,7 @@ q:after {
   content: close-quote;
 }
 
-// Bilder
+// Images
 // ----------------------------------------------------------------------------
 img,
 a img {
@@ -294,7 +298,7 @@ a img {
   width: auto\9; // ie8
 }
 
-// Abbildungen
+// Figures
 // ----------------------------------------------------------------------------
 
 figcaption {
@@ -313,7 +317,7 @@ video {
   width: 100%;
 }
 
-// Tabellen
+// Tables
 // ----------------------------------------------------------------------------
 caption,
 th,

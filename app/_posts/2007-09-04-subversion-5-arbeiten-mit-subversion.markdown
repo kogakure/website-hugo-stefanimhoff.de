@@ -2,10 +2,10 @@
 layout: post
 language: "de"
 title: "Subversion 5: Arbeiten mit Subversion"
+description: "Ein umfangreiches Tutorial für Subversion: Grundlegende Arbeitsschritte mit Subversion. Dateien anlegen, löschen und in das Repository einchecken."
 author: "Stefan Imhoff"
 date: 2007-09-04 18:45
 updated: 2014-10-25 12:36
-description: "Grundlegende Arbeitsschritte mit Subversion."
 categories:
 - Versionskontrolle
 tags:

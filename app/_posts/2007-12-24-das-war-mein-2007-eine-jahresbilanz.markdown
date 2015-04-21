@@ -2,9 +2,9 @@
 layout: post
 language: "de"
 title: "Das war mein 2007 – eine Jahresbilanz"
+description: "Mein persönlicher Jahresrückblick für 2007: ExpressionEngine, Subversion, Django, Python, LaTeX. Und ich entdecke die TED-Talks."
 author: "Stefan Imhoff"
 date: 2007-12-24 14:00
-description: "Mein persönlicher Jahresrückblick für 2007."
 categories:
 - Persoenlich
 tags:

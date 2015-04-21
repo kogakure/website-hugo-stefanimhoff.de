@@ -2,10 +2,10 @@
 layout: post
 language: "de"
 title: "Server-Verwaltung mit Capistrano"
+description: "Einführung in Serververwaltung mit Capistrano: Wie Capistrano installiert und eingesetzt wird und man damit ein Web-Projekt deployt."
 author: "Stefan Imhoff"
 date: 2008-05-01 18:18
 updated: 2014-10-25 13:08
-description: "Einführung in Serververwaltung mit Capistrano."
 categories:
 - Server
 - Code
