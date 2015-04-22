@@ -36,12 +36,12 @@
 @import "base.header";
 @import "base.meta-footer";
 
-// ==================> Refactored ^ / not refactored v
 // Modules
-@import "module/scrollbars";
+@import "components.scrollbars";
 @import "components.navigation";
 @import "components.categories";
 @import "components.related-links";
 @import "components.comments";
-@import "module/tags";
+@import "components.tags";
+// ==================> Refactored ^ / not refactored v
 @import "module/custom_underline";
