@@ -6,7 +6,6 @@
 // `vectors/templates/_iconfont.scss`.
 
 // Variables for usage in content
-// ------------------------------
 
 $iconfont-arrow-left: "\f100";
 $iconfont-arrow-right: "\f101";
@@ -27,15 +26,13 @@ $iconfont-twitter: "\f110";
 $iconfont-xing: "\f10f";
 
 // Font Face
-// ---------
-
 @font-face {
   font-family: "iconfont";
-  src: url("/assets/fonts/iconfont_947f566ff969405cc514c0148da1763b.eot");
-  src: url("/assets/fonts/iconfont_947f566ff969405cc514c0148da1763b.eot?#iefix") format("embedded-opentype"),
-       url("/assets/fonts/iconfont_947f566ff969405cc514c0148da1763b.woff") format("woff"),
-       url("/assets/fonts/iconfont_947f566ff969405cc514c0148da1763b.ttf") format("truetype"),
-       url("/assets/fonts/iconfont_947f566ff969405cc514c0148da1763b.svg#iconfont") format("svg");
+  src: url("/assets/fonts/iconfont_b6e939acec2fe6ba0641a252be670b9b.eot");
+  src: url("/assets/fonts/iconfont_b6e939acec2fe6ba0641a252be670b9b.eot?#iefix") format("embedded-opentype"),
+       url("/assets/fonts/iconfont_b6e939acec2fe6ba0641a252be670b9b.woff") format("woff"),
+       url("/assets/fonts/iconfont_b6e939acec2fe6ba0641a252be670b9b.ttf") format("truetype"),
+       url("/assets/fonts/iconfont_b6e939acec2fe6ba0641a252be670b9b.svg#iconfont") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -43,13 +40,11 @@ $iconfont-xing: "\f10f";
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: "iconfont";
-    src: url("/assets/fonts/iconfont_947f566ff969405cc514c0148da1763b.svg#iconfont") format("svg");
+    src: url("/assets/fonts/iconfont_b6e939acec2fe6ba0641a252be670b9b.svg#iconfont") format("svg");
   }
 }
 
 // Styling for Icon Fonts
-// ----------------------
-
 [data-icon]:before { content: attr(data-icon); }
 
 [data-icon]:before,
@@ -85,8 +80,6 @@ $iconfont-xing: "\f10f";
 }
 
 // Individual Class attributes
-// ---------------------------
-
 .icon-arrow-left:before { content: "\f100"; }
 .icon-arrow-right:before { content: "\f101"; }
 .icon-calendar:before { content: "\f102"; }
