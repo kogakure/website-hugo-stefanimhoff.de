@@ -135,3 +135,13 @@ body {
 .article * {
   @include selection($selection-background, $selection-color);
 }
+
+// Global visibility: hidden
+.invisible {
+  visibility: hidden;
+}
+
+// Global display: none
+.hidden {
+  display: none;
+}
