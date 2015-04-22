@@ -30,16 +30,18 @@
 @import "base.figures";
 @import "base.videos";
 @import "base.tables";
-// ==================> Refactored ^ / not refactored v
 
 // Layout
 @import "base.grids";
-@import "layout/header";
-@import "layout/content";
+@import "base.header";
+@import "base.meta-footer";
+// ==================> Refactored ^ / not refactored v
 @import "layout/navigation";
 
 // Modules
 @import "module/scrollbars";
-@import "module/categories";
+@import "components.categories";
+@import "components.related-links";
+@import "components.comments";
 @import "module/tags";
 @import "module/custom_underline";

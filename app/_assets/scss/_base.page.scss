@@ -125,3 +125,13 @@ body {
 .nobr {
   white-space: nowrap;
 }
+
+// Content Background
+.container {
+  background-color: $content-background;
+}
+
+// Active/Inactive Selection
+.article * {
+  @include selection($selection-background, $selection-color);
+}
