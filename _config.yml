@@ -80,7 +80,6 @@ sitemap:
   file: "/sitemap.xml"
   exclude:
     - "/atom.xml"
-    - "/feed.xml"
     - "/htaccess"
     - "/htpasswd"
     - "/error/404/index.markdown"
