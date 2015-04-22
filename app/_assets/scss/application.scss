@@ -17,7 +17,7 @@
 // Vektor Fonts
 @import "base.iconfont";
 
-// Layout
+// Base
 @import "base.grid";
 @import "base.pattern";
 @import "base.footer";
@@ -25,28 +25,25 @@
 // Syntax Highlighting
 @import "vendor.syntax";
 
-// Modules
+// Components
+@import "components.archive-post";
 @import "components.aside";
-@import "components.download";
-@import "components.image-figure";
+@import "components.attribution";
 @import "components.code-figure";
+@import "components.download";
+@import "components.error";
 @import "components.footnote";
-@import "components.inline-link";
 @import "components.hint";
+@import "components.image-figure";
+@import "components.inline-link";
 @import "components.pagination";
 @import "components.pullquote";
 @import "components.table";
 @import "components.tooltip";
-@import "components.attribution";
 @import "components.verse";
-// ==================> Refactored ^ / not refactored v
 
 // States
-@import "state/state";
-
-// Pages
-@import "pages/archive";
-@import "pages/error";
+@import "state";
 
 // Debugging
 @import "tools.debug";

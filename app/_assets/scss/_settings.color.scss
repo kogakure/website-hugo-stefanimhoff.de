@@ -1,5 +1,5 @@
 //====================================
-//  Colors
+//  Color
 //====================================
 
 $black:                         #000000;
@@ -11,13 +11,13 @@ $light-grey:                    #dddddd;
 $body-background:               #0a0a0a;
 
 // Header
-$header-background:             $dark-grey;  // THEME
-$header-border-top-color:       $black;      // THEME
-$header-headline:               $white;      // THEME
-$header-subheadline:            $light-grey; // THEME
+$header-background:             $dark-grey;            // THEME
+$header-border-top-color:       $black;                // THEME
+$header-headline:               $white;                // THEME
+$header-subheadline:            $light-grey;           // THEME
 
 // Logo
-$logo-color:                    $white; // THEME
+$logo-color:                    $white;                // THEME
 
 // Content
 $content-background:            #eeeeee;
@@ -31,43 +31,43 @@ $footer-small-background:       #0a0a0a;
 // Navigation
 $nav-background:                #0c0c0c;
 $nav-link-color:                rgba($white, 0.5);
-$nav-link-color-hover:          $white; // THEME
+$nav-link-color-hover:          $white;                // THEME
 $nav-link-color-active:         $white;
 
 // Links
-$link-color:                    $dark-grey; // THEME
-$link-hover-color:              $dark-grey; // THEME
-$link-active-color:             $dark-grey; // THEME
-$link-visited-color:            $dark-grey; // THEME
-$link-focus-color:              $dark-grey; // THEME
+$link-color:                    $dark-grey;            // THEME
+$link-hover-color:              $dark-grey;            // THEME
+$link-active-color:             $dark-grey;            // THEME
+$link-visited-color:            $dark-grey;            // THEME
+$link-focus-color:              $dark-grey;            // THEME
 
 $link-border-color:             rgba($dark-grey, 0.2); // THEME
 $link-hover-border-color:       $dark-grey;            // THEME
 
 $custom-underline-background:   #f2f2f2;
 
-// Social-Icon Links
+// Social Icon Links
 $social-icon-color:             rgba($white, 0.5);
 $social-icon-hover:             rgba($white, 0.7);
 
-// Tastatur (kbd)
+// Keyboard (kbd)
 $keyboard-border:               #cccccc;
 $keyboard-background:           #f7f7f7;
 
-// Beispiel (samp)
+// Samples (samp)
 $sample-color:                  $white;
 $sample-background:             $dark-grey;
 
-// Definition (dfn)
+// Definitions (dfn)
 $definition-color:              #999999;
 
-// Tabellen
+// Tables
 $table-border-color:            #dddddd;
 $table-zebra-background:        rgba(#ffffff, 0.8);
 
-// Bilder
+// Images
 $image-border-color:            #cccccc;
 
-// selection
-$selection-background:          $dark-grey; // THEME
-$selection-color:               $white;     // THEME
+// Selection
+$selection-background:          $dark-grey;            // THEME
+$selection-color:               $white;                // THEME
