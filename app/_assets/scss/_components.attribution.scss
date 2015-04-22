@@ -1,10 +1,8 @@
-// ============================================================================
-// Attribution
-// ============================================================================
+//====================================
+//  Attribution
+//====================================
 
 // Attribution Mixins
-// ------------------
-
 %attribution {
   overflow: hidden;
   position: relative;
@@ -58,8 +56,6 @@
 }
 
 // Attribution
-// -----------
-
 .attribution {
   @extend %attribution;
 }
@@ -98,8 +94,6 @@
 }
 
 // Attribution header image
-// ---------------------------
-
 .attribution-main {
   @extend %attribution;
 
@@ -145,10 +139,5 @@
     @extend %attribution-before;
     bottom: 7px;
     left: 7px;
-
-    // Modernizr: fontface
-    .fontface & {
-      @extend %attribution-before-fontface;
-    }
   }
 }

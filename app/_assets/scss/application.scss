@@ -32,14 +32,14 @@
 @import "components.code-figure";
 @import "components.footnote";
 @import "components.inline-link";
+@import "components.hint";
+@import "components.pagination";
+@import "components.pullquote";
+@import "components.table";
+@import "components.tooltip";
+@import "components.attribution";
+@import "components.verse";
 // ==================> Refactored ^ / not refactored v
-@import "module/hint";
-@import "module/pagination";
-@import "module/pullquote";
-@import "module/tables";
-@import "module/tooltip";
-@import "module/attribution";
-@import "module/verse";
 
 // States
 @import "state/state";
