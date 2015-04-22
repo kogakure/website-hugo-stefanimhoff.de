@@ -1,6 +1,6 @@
-// ============================================================================
-// Figures with images
-// ============================================================================
+//====================================
+//  Figures with images
+//====================================
 
 .image-figure {
   @include grid-span(8, 1, 8);
@@ -32,7 +32,6 @@
 
 
 // Figures full width
-// ----------------------------------------------------------------------------
 .image-figure-fullsize {
   @include grid-span(12, 1, 8);
   margin-left: -(grid-span(2, 1, 8));
@@ -45,7 +44,6 @@
 
 
 // Figures left
-// ----------------------------------------------------------------------------
 .image-figure-left {
   @include grid-span(12, 1, 8);
   margin-left: -(grid-span(2, 1, 8));
@@ -80,7 +78,6 @@
 
 
 // Figures right
-// ----------------------------------------------------------------------------
 .image-figure-right {
   @include grid-span(12, 1, 8);
   margin-left: -(grid-span(2, 1, 8));
@@ -115,7 +112,6 @@
 
 
 // Figures centered
-// ----------------------------------------------------------------------------
 .image-figure-center {
   @include grid-span(10, 1, 8);
   margin-left: -(grid-span(1, 1, 8));
@@ -127,7 +123,6 @@
 }
 
 // Figures with long captions
-// ----------------------------------------------------------------------------
 .image-figure-longcaption {
   figcaption {
     text-align: left;
@@ -136,31 +131,18 @@
 
 
 // Figures with border
-// ----------------------------------------------------------------------------
 .image-figure-border img {
   border: $image-border-size solid $image-border-color;
 }
 
 
 // Figures without border
-// ----------------------------------------------------------------------------
 .image-figure-noborder img {
   border: 0;
 }
 
 
 // Figures with a shadow
-// ----------------------------------------------------------------------------
 .image-figure-shadow img {
   box-shadow: 0 1px 3px rgba($black, 0.5);
-}
-
-// Code examples
-// ----------------------------------------------------------------------------
-.code-figure {
-  margin-bottom: $default-margin-bottom;
-
-  .highlight {
-    margin-bottom: 5px;
-  }
 }
