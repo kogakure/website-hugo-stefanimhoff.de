@@ -1,0 +1,13 @@
+//====================================
+//  Debugging
+//====================================
+
+@include sgs-change("debug", true);
+
+// Debugging of the Grid
+// .wrap {
+//   @include background-grid;
+// }
+
+// Modular Scale (Debugging to Console)
+// @debug ms-list();

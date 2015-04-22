@@ -1,30 +1,46 @@
 // Helpers
-@import "helpers/meyer-reset";
-@import "helpers/imports";
-@import "helpers/variables";
-@import "helpers/mixins";
-@import "helpers/functions";
-@import "helpers/placeholders";
+@import "vendor.meyer-reset";
+@import "settings.import";
+@import "settings.color";
+@import "settings.path";
+@import "settings.media-query";
+@import "settings.dimension";
+@import "settings.animation";
+@import "settings.typography";
+
+@import "tools.mixin";
+@import "tools.function";
+@import "tools.placeholder";
 
 // Theme
-@import "theme/init";
+@import "theme.init";
 
 // Vektor-Fonts
-@import "base/iconfont";
+@import "base.iconfont";
 
 // Base
-@import "base/init";
-@import "base/base";
+@import "base.page";
+@import "base.link";
+@import "base.headline";
+@import "base.text";
+@import "base.code";
+@import "base.list";
+@import "base.quote";
+@import "base.image";
+@import "base.figure";
+@import "base.video";
+@import "base.table";
+@import "base.grid";
+@import "base.header";
+@import "base.meta-footer";
 
-// Layout
-@import "layout/grids";
-@import "layout/header";
-@import "layout/content";
-@import "layout/navigation";
-
-// Modules
-@import "module/scrollbars";
-@import "module/categories";
-@import "module/tags";
+// Components
+@import "components.category";
+@import "components.comment";
+@import "components.custom-underline";
+@import "components.navigation";
+@import "components.related-link";
+@import "components.scrollbar";
+@import "components.tag";
 @import "module/tables";
 @import "module/custom_underline";

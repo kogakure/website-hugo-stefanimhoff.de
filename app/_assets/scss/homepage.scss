@@ -1,19 +1,21 @@
-// Imports
-@import "../../_bower_components/singularity/stylesheets/singularitygs";
-@import "../../_bower_components/breakpoint-sass/stylesheets/breakpoint";
-@import "../../_bower_components/sass-toolkit/stylesheets/toolkit";
-@import "../../_bower_components/modular-scale/stylesheets/modular-scale";
-
 // Helpers
-@import "helpers/variables";
-@import "helpers/mixins";
-@import "helpers/placeholders";
+@import "settings.import";
+@import "settings.color";
+@import "settings.path";
+@import "settings.media-query";
+@import "settings.dimension";
+@import "settings.animation";
+@import "settings.typography";
+
+@import "tools.mixin";
+@import "tools.function";
+@import "tools.placeholder";
 
 // Theme
-@import "theme/init";
+@import "theme.init";
 
-// Grids
-@import "layout/grids";
+// Base
+@import "base.grid";
 
-// Styles only on the homepage
-@import "pages/home";
+// Homepage
+@import "components.homepage";

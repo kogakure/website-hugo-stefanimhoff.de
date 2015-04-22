@@ -54,7 +54,7 @@ tag_meta_description_prefix: "This site has an overview of all articles you can 
 paginate:       1000       # Posts per page on the blog index
 paginate_path:  :num       # default path for pagination, eg. page/2/
 
-# Kramdown
+# Markdown
 kramdown:
   auto_ids:                  false
   auto_id_prefix:            ""

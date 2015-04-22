@@ -21,7 +21,7 @@ input:
 
 output:
   fonts: app/_assets/fonts
-  css: app/_assets/scss/base
+  css: app/_assets/scss
   preview: docs
 
 
@@ -33,5 +33,5 @@ output:
 # --------------------------------------------------------------------------- #
 
 templates:
- - _iconfont.scss
+ - _base.iconfont.scss
  - preview

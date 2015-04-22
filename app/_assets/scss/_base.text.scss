@@ -1,0 +1,158 @@
+//====================================
+//  Text
+//====================================
+
+// Paragraphs
+p {
+  margin-bottom: $default-margin-bottom;
+}
+
+.article-body > p:first-child {
+  font-size: $font-scale-intro;
+  line-height: 1.5;
+  margin-bottom: $default-margin-bottom;
+}
+
+
+// Horizontale Trenner
+hr {
+  border: 0;
+  border-bottom: 1px solid rgba($light-grey, 0.9);
+  height: 0;
+  margin: 2.5em;
+}
+
+
+// Emphasis
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: $bold;
+}
+
+
+// Strikethrough
+s {
+  text-decoration: line-through;
+}
+
+
+// Definition
+dfn {
+  border-bottom: 1px dotted $definition-color;
+  cursor: help;
+}
+
+
+// Abbrevations
+abbr,
+acronym {
+  cursor: help;
+  font-variant: small-caps;
+  letter-spacing: 0.1em;
+  text-transform: lowercase;
+}
+
+abbr[title],
+acronym[title] {
+  border-bottom-width: 0;
+}
+
+abbr.no-caps {
+  font-variant: normal;
+  text-transform: none;
+}
+
+
+// Keyboard entry
+kbd {
+  @extend %sans-font;
+  background-color: $keyboard-background;
+  border: 1px solid $keyboard-border;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba($black, 0.2), 0 0 0 2px $white inset;
+  color: $dark-grey;
+  display: inline-block;
+  font-size: $font-scale-kbd;
+  font-weight: $bold;
+  line-height: 1.4;
+  margin: 0 0.1em;
+  padding: 0.3em 0.6em 0.1em;
+  text-shadow: 0 1px 0 $white;
+  white-space: nowrap;
+
+  .wf-active & {
+    @extend %sans-font-wf;
+  }
+}
+
+
+// Superscript/Subscript
+sup,
+sub {
+  position: relative;
+  vertical-align: 0;
+
+  a {
+    border: 0;
+  }
+}
+
+sup {
+  bottom: 1ex;
+}
+
+sub {
+  top: 0.8ex;
+}
+
+
+// Italic/Bold
+i {
+  font-style: italic;
+}
+
+b {
+  font-weight: $bold;
+}
+
+
+// Mark
+mark {
+  background-color: transparent;
+  color: rgba($black, 0.75);
+  position: relative;
+
+  &:before,
+  &:after {
+    background-repeat: no-repeat;
+    background-size: 5px 21px;
+    content: '';
+    display: block;
+    height: 21px;
+    position: absolute;
+    width: 5px;
+  }
+
+  &:before {
+    left: -5px;
+    top: 0;
+  }
+
+  &:after {
+    bottom: 0;
+    right: -5px;
+  }
+}
+
+
+// Editing
+ins {
+  text-decoration: underline;
+}
+
+del {
+  text-decoration: line-through;
+}

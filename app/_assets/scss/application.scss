@@ -1,50 +1,55 @@
 // Helpers
-@import "helpers/imports";
-@import "helpers/variables";
-@import "helpers/mixins";
-@import "helpers/functions";
-@import "helpers/placeholders";
+@import "settings.import";
+@import "settings.color";
+@import "settings.path";
+@import "settings.media-query";
+@import "settings.dimension";
+@import "settings.animation";
+@import "settings.typography";
+
+@import "tools.mixin";
+@import "tools.function";
+@import "tools.placeholder";
 
 // Theme
-@import "theme/init";
+@import "theme.init";
 
 // Vektor Fonts
-@import "base/iconfont";
+@import "base.iconfont";
 
-// Layout
-@import "layout/grids";
-@import "layout/patterns";
-@import "layout/footer";
+// Base
+@import "base.grid";
+@import "base.pattern";
+@import "base.footer";
 
 // Syntax Highlighting
-@import "vendor/syntax";
+@import "vendor.syntax";
 
-// Modules
-@import "module/base";
-@import "module/aside";
-@import "module/download";
-@import "module/figure";
-@import "module/footnote";
-@import "module/inline_links";
-@import "module/hint";
-@import "module/pagination";
-@import "module/pullquote";
-@import "module/tooltip";
-@import "module/attribution";
-@import "module/verse";
+// Components
+@import "components.archive-post";
+@import "components.aside";
+@import "components.attribution";
+@import "components.code-figure";
+@import "components.download";
+@import "components.error";
+@import "components.footnote";
+@import "components.hint";
+@import "components.image-figure";
+@import "components.inline-link";
+@import "components.pagination";
+@import "components.pullquote";
+@import "components.table";
+@import "components.tooltip";
+@import "components.verse";
 
 // States
-@import "state/state";
-
-// Pages
-@import "pages/archive";
-@import "pages/error";
+@import "state";
 
 // Debugging
-@import "helpers/debug";
+@import "tools.debug";
 
 // Fast fixes and tests
-@import "base/shame";
+@import "tools.shame";
 
 // Print
-@import "base/print";
+@import "base.print";

@@ -1,0 +1,11 @@
+//====================================
+//  Animation
+//====================================
+
+// Animation Curves
+$cubic-bezier-bouncing:           cubic-bezier(0.205, 0.01, 0.005, 1);
+
+// Animationen Timings
+$animation-off-screen-menu:       transform 500ms $cubic-bezier-bouncing;
+$animation-link-hover:            all 500ms linear;
+$animation-navigation-link-hover: all 100ms linear;

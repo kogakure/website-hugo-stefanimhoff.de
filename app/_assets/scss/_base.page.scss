@@ -1,0 +1,147 @@
+//====================================
+//  Page
+//====================================
+
+@charset "UTF-8";
+
+@include viewport {
+  width: device-width;
+}
+
+html {
+  @include breakpoint($iphone-width) {
+    text-size-adjust: none;
+  }
+}
+
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  @extend %sans-font;
+  background-color: $body-background;
+  color: $dark-grey;
+  font-size: modular-scale(1);
+  font-smoothing: subpixel-antialiased;
+  font-style: normal;
+  font-weight: $normal;
+  hyphens: auto;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+
+  .wf-active & {
+    @extend %sans-font-wf;
+  }
+
+  @include breakpoint($iphone-width) {
+    text-rendering: optimizeSpeed;
+  }
+}
+
+.article-body p,
+.article-body blockquote,
+.article-body ol,
+.article-body ul,
+.article-body dl,
+.article-body table,
+.article-body figure,
+.article-header .meta {
+  @extend %serif-font;
+
+  .wf-active & {
+    @extend %serif-font-wf;
+  }
+}
+
+
+// Alle Elemente so einstellen, dass Padding nicht dazu gerechnet wird
+* {
+  box-sizing: border-box;
+}
+
+
+:lang(ja) {
+  @extend %japanese-font;
+}
+
+
+// Homepage (Base Styling for Critical)
+.home .section {
+  margin-bottom: 0;
+  padding: 1.5em 0;
+}
+
+
+// Hide attribution until module is loaded
+.attribution-main-text {
+  visibility: hidden;
+}
+
+
+// Noscript Navigation
+.navigation-noscript {
+  padding: 5px 5px 0;
+  text-align: center;
+
+  .nav,
+  .nav--main {
+    display: inline-block;
+    margin: 0;
+  }
+
+  .nav--main {
+    margin-right: 10px;
+    text-transform: none;
+
+    &:after {
+      color: $white;
+      content: '✿';
+    }
+  }
+
+  li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+}
+
+
+.section {
+  margin-bottom: $default-margin-bottom;
+}
+
+
+// Message for older browsers
+.chromeframe {
+  color: $white;
+  padding: 5px;
+  text-align: center;
+}
+
+// Prevent text from breaking to the new line
+.nobr {
+  white-space: nowrap;
+}
+
+// Content Background
+.container {
+  background-color: $content-background;
+}
+
+// Active/Inactive Selection
+.article * {
+  @include selection($selection-background, $selection-color);
+}
+
+// Global visibility: hidden
+.invisible {
+  visibility: hidden;
+}
+
+// Global display: none
+.hidden {
+  display: none;
+}
