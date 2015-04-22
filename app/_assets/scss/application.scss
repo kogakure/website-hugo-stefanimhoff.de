@@ -30,9 +30,9 @@
 @import "components.download";
 @import "components.image-figure";
 @import "components.code-figure";
+@import "components.footnote";
+@import "components.inline-link";
 // ==================> Refactored ^ / not refactored v
-@import "module/footnote";
-@import "module/inline_links";
 @import "module/hint";
 @import "module/pagination";
 @import "module/pullquote";
