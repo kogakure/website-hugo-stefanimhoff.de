@@ -16,8 +16,6 @@
 
 // Grids
 @import "base.grids";
-// ==================> Refactored ^ / not refactored v
 
-// Styles only on the homepage
-@import "pages/home";
-
+// Homepage
+@import "components.homepage";
