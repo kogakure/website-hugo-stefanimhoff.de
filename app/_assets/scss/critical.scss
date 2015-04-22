@@ -30,18 +30,15 @@
 @import "base.figures";
 @import "base.videos";
 @import "base.tables";
-
-// Layout
 @import "base.grids";
 @import "base.header";
 @import "base.meta-footer";
 
-// Modules
-@import "components.scrollbars";
-@import "components.navigation";
+// Components
 @import "components.categories";
-@import "components.related-links";
 @import "components.comments";
+@import "components.custom-underline";
+@import "components.navigation";
+@import "components.related-links";
+@import "components.scrollbars";
 @import "components.tags";
-// ==================> Refactored ^ / not refactored v
-@import "module/custom_underline";
