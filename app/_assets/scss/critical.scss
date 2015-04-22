@@ -1,16 +1,16 @@
 // Helpers
 @import "vendor.meyer-reset";
-@import "settings.imports";
-@import "settings.colors";
-@import "settings.paths";
-@import "settings.media-queries";
-@import "settings.dimensions";
-@import "settings.animations";
+@import "settings.import";
+@import "settings.color";
+@import "settings.path";
+@import "settings.media-query";
+@import "settings.dimension";
+@import "settings.animation";
 @import "settings.typography";
 
-@import "tools.mixins";
-@import "tools.functions";
-@import "tools.placeholders";
+@import "tools.mixin";
+@import "tools.function";
+@import "tools.placeholder";
 
 // Theme
 @import "theme.init";
@@ -20,25 +20,25 @@
 
 // Base
 @import "base.page";
-@import "base.links";
-@import "base.headlines";
+@import "base.link";
+@import "base.headline";
 @import "base.text";
 @import "base.code";
-@import "base.lists";
-@import "base.quotes";
-@import "base.images";
-@import "base.figures";
-@import "base.videos";
-@import "base.tables";
-@import "base.grids";
+@import "base.list";
+@import "base.quote";
+@import "base.image";
+@import "base.figure";
+@import "base.video";
+@import "base.table";
+@import "base.grid";
 @import "base.header";
 @import "base.meta-footer";
 
 // Components
-@import "components.categories";
-@import "components.comments";
+@import "components.category";
+@import "components.comment";
 @import "components.custom-underline";
 @import "components.navigation";
-@import "components.related-links";
-@import "components.scrollbars";
-@import "components.tags";
+@import "components.related-link";
+@import "components.scrollbar";
+@import "components.tag";

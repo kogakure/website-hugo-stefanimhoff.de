@@ -1,15 +1,15 @@
 // Helpers
-@import "settings.imports";
-@import "settings.colors";
-@import "settings.paths";
-@import "settings.media-queries";
-@import "settings.dimensions";
-@import "settings.animations";
+@import "settings.import";
+@import "settings.color";
+@import "settings.path";
+@import "settings.media-query";
+@import "settings.dimension";
+@import "settings.animation";
 @import "settings.typography";
 
-@import "tools.mixins";
-@import "tools.functions";
-@import "tools.placeholders";
+@import "tools.mixin";
+@import "tools.function";
+@import "tools.placeholder";
 
 // Theme
 @import "theme.init";
@@ -18,17 +18,17 @@
 @import "base.iconfont";
 
 // Layout
-@import "base.grids";
-@import "base.patterns";
+@import "base.grid";
+@import "base.pattern";
 @import "base.footer";
 
 // Syntax Highlighting
 @import "vendor.syntax";
 
 // Modules
-@import "components.asides";
+@import "components.aside";
+@import "components.download";
 // ==================> Refactored ^ / not refactored v
-@import "module/download";
 @import "module/figure";
 @import "module/footnote";
 @import "module/inline_links";
