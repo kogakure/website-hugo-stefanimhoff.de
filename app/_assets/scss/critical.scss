@@ -35,11 +35,11 @@
 @import "base.grids";
 @import "base.header";
 @import "base.meta-footer";
-// ==================> Refactored ^ / not refactored v
-@import "layout/navigation";
 
+// ==================> Refactored ^ / not refactored v
 // Modules
 @import "module/scrollbars";
+@import "components.navigation";
 @import "components.categories";
 @import "components.related-links";
 @import "components.comments";

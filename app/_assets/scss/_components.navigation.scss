@@ -1,9 +1,8 @@
-// ============================================================================
-// Navigation
-// ============================================================================
+//====================================
+//  Navigation
+//====================================
 
 // Container for Off canvas navigation
-// ----------------------------------------------------------------------------
 .outer-container {
   overflow: hidden;
   position: relative;
@@ -20,7 +19,6 @@
 }
 
 // Navigation (Basis Version without JavaScript)
-// ----------------------------------------------------------------------------
 #nav {
   backface-visibility: hidden;
   background-color: $nav-background;
@@ -55,7 +53,6 @@
 }
 
 // Styling of Navigation (Base navigation)
-// ----------------------------------------------------------------------------
 %nav {
   font-size: 18px;
   font-weight: 200;
@@ -82,22 +79,18 @@
 }
 
 // Styling of Navigation (Main menu)
-// ----------------------------------------------------------------------------
 .nav--main {
   @extend %nav;
   font-weight: 400;
   text-transform: uppercase;
 }
 
-// Styling for active navigation
-// ----------------------------------------------------------------------------
-// Set with JavaScript
+// Styling for active navigation, set with JavaScript
 #nav .nav-is-active a {
   color: $nav-link-color-active;
 }
 
 // Styling for hover navigation
-// ----------------------------------------------------------------------------
 .nav-item-external a:hover {
   &:after {
     @extend %icon-font;
