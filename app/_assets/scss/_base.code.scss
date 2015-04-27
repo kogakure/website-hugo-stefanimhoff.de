@@ -10,7 +10,6 @@ code {
   border-style: solid;
   border-width: 1px;
   font-size: $font-scale-small;
-  line-height: 1.5;
   padding-bottom: 0.2em;
   padding-left: 0.4em;
   padding-right: 0.4em;
@@ -89,21 +88,14 @@ var {
 samp {
   @extend %mono-font;
   background: $sample-background;
-  border-color: $light-grey;
   border-radius: 0.4em;
-  border-style: solid;
-  border-width: 1px;
   color: $sample-color;
   display: inline-block;
   font-size: 0.8em;
-  line-height: 1.5em;
-  margin-bottom: -1px;
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: -1px;
+  line-height: $base-line-height;
   padding-bottom: 0;
   padding-left: 0.3em;
   padding-right: 0.3em;
   padding-top: 0;
-  white-space: no-wrap;
+  white-space: nowrap;
 }

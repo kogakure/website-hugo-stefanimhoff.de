@@ -16,7 +16,7 @@
     p {
       font-size: 1.1em;
       font-weight: 400;
-      line-height: 1.5;
+      line-height: $base-line-height;
 
       @include breakpoint($hi-resolution) {
         font-weight: 200;

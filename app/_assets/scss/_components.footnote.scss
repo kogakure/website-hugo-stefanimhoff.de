@@ -12,7 +12,7 @@ sup a.footnote {
   background: transparent;
   cursor: help;
   font-size: modular-scale(0);
-  line-height: 1.5;
+  line-height: $base-line-height;
   text-decoration: none;
 
   &:hover {
@@ -24,7 +24,7 @@ sup a.footnote {
   clear: both;
   color: lighten($dark-grey, 40);
   font-size: modular-scale(0);
-  line-height: 1.5;
+  line-height: $base-line-height;
 
   a.reversefootnote {
     @include link-colors($dark-grey, $dark-grey, $dark-grey, $dark-grey, $dark-grey);

@@ -11,7 +11,7 @@
   a {
     border: 0;
     display: inline-block;
-    line-height: 1.5em * 2;
+    line-height: $base-line-height * 2;
     vertical-align: top;
 
     .icon-download {

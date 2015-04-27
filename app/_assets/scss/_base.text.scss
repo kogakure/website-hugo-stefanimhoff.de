@@ -9,7 +9,7 @@ p {
 
 .article-body > p:first-child {
   font-size: $font-scale-intro;
-  line-height: 1.5;
+  line-height: $base-line-height;
   margin-bottom: $default-spacing-bottom;
 }
 
