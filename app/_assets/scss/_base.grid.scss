@@ -32,11 +32,11 @@ $breakpoint-default-feature: max-width;
 
 .article {
   @include grid-span(8, 3);
-  margin-bottom: $default-margin-bottom * 2;
-  margin-top: $default-margin-top;
+  margin-bottom: $default-spacing-bottom * 2;
+  margin-top: $default-spacing-top;
 
   @include breakpoint(700px) {
-    margin-bottom: $default-margin-bottom;
+    margin-bottom: $default-spacing-bottom;
   }
 
   @include breakpoint($content-medium) {
@@ -44,14 +44,14 @@ $breakpoint-default-feature: max-width;
   }
 
   @include breakpoint($content-small) {
-    margin-bottom: $default-margin-bottom;
+    margin-bottom: $default-spacing-bottom;
     margin-top: 0.5em;
   }
 }
 
 .archive .archive-posts {
-  margin-bottom: $default-margin-bottom * 2;
-  margin-top: $default-margin-top;
+  margin-bottom: $default-spacing-bottom * 2;
+  margin-top: $default-spacing-top;
 }
 
 header {

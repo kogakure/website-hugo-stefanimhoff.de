@@ -10,7 +10,7 @@
     @include grid-span(10, 2);
     clear: both;
     display: block;
-    margin-bottom: $default-margin-bottom * 2;
+    margin-bottom: $default-spacing-bottom * 2;
   }
 
   li {

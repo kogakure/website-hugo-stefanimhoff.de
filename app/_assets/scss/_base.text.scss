@@ -4,13 +4,13 @@
 
 // Paragraphs
 p {
-  margin-bottom: $default-margin-bottom;
+  margin-bottom: $default-spacing-bottom;
 }
 
 .article-body > p:first-child {
   font-size: $font-scale-intro;
   line-height: 1.5;
-  margin-bottom: $default-margin-bottom;
+  margin-bottom: $default-spacing-bottom;
 }
 
 

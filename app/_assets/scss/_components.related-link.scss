@@ -7,7 +7,7 @@
     list-style: disc;
 
     @include breakpoint($content-medium) {
-      margin-left: $default-margin-left;
+      margin-left: $default-spacing-left;
     }
 
     &:only-child {

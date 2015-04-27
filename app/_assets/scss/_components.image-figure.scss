@@ -6,7 +6,7 @@
   @include grid-span(8, 1, 8);
   clear: both;
   float: left;
-  margin-bottom: $default-margin-bottom;
+  margin-bottom: $default-spacing-bottom;
 
   figcaption {
     margin-top: 5px;

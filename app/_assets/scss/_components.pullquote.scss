@@ -34,8 +34,8 @@ blockquote.pullquote[lang|=ja] {
   content: attr(data-pullquote);
   display: inline-block;
   float: right;
-  margin-bottom: $default-margin-bottom;
-  margin-left: $default-margin-left;
+  margin-bottom: $default-spacing-bottom;
+  margin-left: $default-spacing-left;
   margin-right: -(grid-span(1, 1, 8));
   margin-top: 0;
   padding: 0;
@@ -59,9 +59,9 @@ blockquote.pullquote[lang|=ja] {
 
 .pullquote-left:before {
   float: left;
-  margin-bottom: $default-margin-bottom;
+  margin-bottom: $default-spacing-bottom;
   margin-left: -(grid-span(1, 1, 8));
-  margin-right: $default-margin-right;
+  margin-right: $default-spacing-right;
   margin-top: 0;
   text-align: right;
 

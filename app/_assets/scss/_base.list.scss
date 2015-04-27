@@ -4,10 +4,10 @@
 
 ol {
   list-style: decimal;
-  margin-bottom: $default-margin-bottom;
+  margin-bottom: $default-spacing-bottom;
 
   .article-body & {
-    margin-left: $default-margin-left;
+    margin-left: $default-spacing-left;
 
     @include breakpoint($content-medium) {
       margin-left: 0;
@@ -26,10 +26,10 @@ ol ol {
 
 ul {
   list-style: disc;
-  margin-bottom: $default-margin-bottom;
+  margin-bottom: $default-spacing-bottom;
 
   .article-body & {
-    margin-left: $default-margin-left;
+    margin-left: $default-spacing-left;
 
     @include breakpoint($content-medium) {
       margin-left: 0;
@@ -47,7 +47,7 @@ ul ul {
 }
 
 dl {
-  margin-bottom: $default-margin-bottom;
+  margin-bottom: $default-spacing-bottom;
 }
 
 dt {
@@ -55,7 +55,7 @@ dt {
 }
 
 dt + dd {
-  margin-bottom: $default-margin-bottom;
+  margin-bottom: $default-spacing-bottom;
 }
 
 dd {

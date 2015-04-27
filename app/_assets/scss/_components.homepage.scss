@@ -34,7 +34,7 @@
   }
 
   .content + .inline-links {
-    margin-top: $default-margin-top;
+    margin-top: $default-spacing-top;
   }
 
   // Blog Article
@@ -112,7 +112,7 @@
 
       @include breakpoint($homepage-sections-fullsize) {
         @include grid-span(12);
-        margin-bottom: $default-margin-bottom;
+        margin-bottom: $default-spacing-bottom;
         padding: 0;
         text-align: left;
       }
