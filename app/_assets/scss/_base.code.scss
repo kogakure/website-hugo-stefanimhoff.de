@@ -5,12 +5,17 @@
 // Pre
 code {
   @extend %mono-font;
-  background: $white;
-  border: 1px solid $light-grey;
+  background-color: $white;
+  border-color: $light-grey;
   border-radius: 3px;
+  border-style: solid;
+  border-width: 1px;
   font-size: $font-scale-small;
   line-height: 1.5;
-  padding: 0.2em 0.4em;
+  padding-bottom: 0.2em;
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+  padding-top: 0.2em;
 }
 
 pre {
@@ -43,15 +48,21 @@ pre {
 
   pre {
     background: $white;
-    padding: 1.5em 1.5em 0;
+    padding-bottom: 0;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    padding-top: 1.5em;
   }
 
   code {
     border: 0;
-    padding: 0 20px 6px 0;
+    padding-bottom: 6px;
+    padding-left: 0;
+    padding-right: 20px;
+    padding-top: 0;
 
     &:after {
-      background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 20%, #ffffff 50%, #ffffff);
+      background-image: linear-gradient(to right, rgba($white, 0) 20%, $white 50%, $white);
       content: " ";
       height: 100%;
       position: absolute;
@@ -77,13 +88,21 @@ var {
 samp {
   @extend %mono-font;
   background: $sample-background;
-  border: 1px solid #dddddd;
+  border-color: $light-grey;
   border-radius: 0.4em;
+  border-style: solid;
+  border-width: 1px;
   color: $sample-color;
   display: inline-block;
   font-size: 0.8em;
   line-height: 1.5em;
-  margin: -1px 0;
-  padding: 0 0.3em;
+  margin-bottom: -1px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: -1px;
+  padding-bottom: 0;
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+  padding-top: 0;
   white-space: no-wrap;
 }
