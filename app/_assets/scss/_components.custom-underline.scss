@@ -93,8 +93,12 @@
   }
 }
 
-.custom-underline.about a {
+.custom-underline.footer-about a {
   text-shadow: 2px 0 #2a2c2d, 1px 0 #2a2c2d, -1px 0 #2a2c2d, -2px 0 #2a2c2d;
+
+  &:hover {
+    color: rgba($white, 0.8);
+  }
 }
 
 .custom-underline .aside-hint a {
