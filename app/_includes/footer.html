@@ -21,19 +21,11 @@
       </ul>
     </div>
   </div>
+
+  {% include navigation.html %}
+
   <small class="footer-legal">
     <div class="wrap">
-      <ul class="footer-legal-list">
-        <li class="footer-legal-list-item">
-          <a class="footer-legal-link" href="/impressum/">Impressum</a>
-        </li>
-        <li class="footer-legal-list-item">
-          <a class="footer-legal-link" href="/styleguide/">Styleguide</a>
-        </li>
-        <li class="footer-legal-list-item">
-          <a class="footer-legal-link" href="#top" id="top-link">Scroll up</a>
-        </li>
-      </ul>
       <div class="footer-legal-copyright">
         <b class="footer-legal-copyright-sign">©</b>
         <span class="nobr">2006-{{ site.time | date: "%Y" }}</span>,
@@ -43,8 +35,8 @@
           <a class="footer-legal-link" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">
             <i class="icon-cc"></i> Creative Commons
           </a>
+          Licence.
         </span>
-        Licence.
       </div>
     </div>
   </small>

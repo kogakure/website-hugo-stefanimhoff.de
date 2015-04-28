@@ -3,8 +3,8 @@
 //====================================
 
 body,
-.footer small {
-  @extend %pattern-dark-stripes;
+.footer-legal {
+  @extend %pattern-pw-maze-black;
 }
 
 .container {
@@ -13,10 +13,6 @@ body,
 
 .footer {
   @extend %pattern-classy-fabric;
-}
-
-#nav {
-  @extend %pattern-pw-maze-black;
 }
 
 mark {

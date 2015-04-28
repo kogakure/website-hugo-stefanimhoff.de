@@ -2,102 +2,63 @@
 //  Navigation
 //====================================
 
-// Container for Off canvas navigation
-.outer-container {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-}
-
-.container {
-  backface-visibility: hidden;
-  position: relative;
-  right: 0;
-  transform: translate3d(0, 0, 0);
-  transition: $animation-off-screen-menu;
-  width: 100%;
-}
-
-// Navigation (Basis Version without JavaScript)
-#nav {
-  backface-visibility: hidden;
-  background-color: $nav-background;
-  overflow: hidden;
-  position: absolute;
-  right: 0;
-  width: 230px;
-
-  .nav-close-btn {
-    @include link-colors($white, $nav-link-color-hover, $white, $white, $white);
-    border: 0;
-    display: block;
-    font-size: 12px;
-    line-height: 2.25;
-    padding: 5px 15px;
-    position: absolute;
-    right: 1em;
-    text-shadow: 0 1px 1px $black;
-    top: 15px;
-
-    span {
-      @extend %visually-hidden;
-    }
-  }
-}
-
-// Navigation is open
-.navigation-is-open {
-  .container {
-    transform: translate3d(-230px, 0, 0);
-  }
-}
-
-// Styling of Navigation (Base navigation)
-%nav {
+%nav-list {
+  display: inline-block;
   font-size: 18px;
-  font-weight: 200;
   letter-spacing: 0.1em;
   list-style: none;
-  margin: 22px 40px;
+  margin-bottom: 0.5em;
 
-  li {
-    margin-bottom: 0.3em;
-  }
-
-  a {
-    @include link-colors($nav-link-color, $nav-link-color-hover, $nav-link-color-active, $nav-link-color, $nav-link-color-active);
-    border: 0;
-    line-height: 1;
-    text-decoration: none;
-    text-shadow: 0 0 5px $black;
-    transition: $animation-navigation-link-hover;
+  @include breakpoint($meta-footer-two-lines) {
+    display: block;
   }
 }
 
 .nav {
-  @extend %nav;
+  padding-bottom: 0;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  text-align: center;
 }
 
-// Styling of Navigation (Main menu)
-.nav--main {
-  @extend %nav;
-  font-weight: 400;
-  text-transform: uppercase;
+.nav-list {
+  @extend %nav-list;
+}
+
+.nav-list-main {
+  @extend %nav-list;
+  margin-right: 10px;
+
+  @include breakpoint($meta-footer-two-lines) {
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+
+  &:after {
+    color: $white;
+    content: '✿';
+
+    @include breakpoint($meta-footer-two-lines) {
+      display: block;
+    }
+  }
+}
+
+.nav-list-item {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.nav-link {
+  @include link-colors($nav-link-color, $nav-link-color-hover, $nav-link-color-active, $nav-link-color, $nav-link-color-active);
+  border: 0;
+  line-height: 1;
+  text-decoration: none;
+  text-shadow: 0 0 5px $black;
+  transition: $animation-navigation-link-hover;
 }
 
 // Styling for active navigation, set with JavaScript
-#nav .nav-is-active a {
+.nav-is-active .nav-link {
   color: $nav-link-color-active;
-}
-
-// Styling for hover navigation
-.nav-item-external a:hover {
-  &:after {
-    @extend %icon-font;
-    content: " #{$iconfont-external}";
-    font-size: 14px;
-    line-height: 1;
-    position: relative;
-    top: -1px;
-  }
 }

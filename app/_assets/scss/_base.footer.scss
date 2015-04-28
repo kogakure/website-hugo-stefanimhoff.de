@@ -22,12 +22,13 @@
 }
 
 .footer-legal {
+  text-align: center;
   background-color: $body-background;
   color: rgba($white, 0.3);
   display: block;
   font-size: $base-font-size;
   line-height: $base-line-height;
-  margin-top: $default-spacing-top;
+  margin-top: 0.5em;
   padding-bottom: 0.5em;
   padding-top: 0.5em;
 
@@ -131,7 +132,7 @@
 .footer-about-headline {
   color: rgba($white, 0.85);
 
-  @include breakpoint($meta-footer-image-new-line) {
+  @include breakpoint($meta-footer-two-lines) {
     text-align: center;
   }
 }
@@ -152,6 +153,7 @@
 
   @include breakpoint($meta-footer-two-lines) {
     margin-left: 0;
+    text-align: center;
   }
 
   @include breakpoint($meta-footer-image-new-line) {
@@ -166,6 +168,7 @@
 
   @include breakpoint($meta-footer-two-lines) {
     margin-bottom: 0;
+    text-align: center;
   }
 }
 

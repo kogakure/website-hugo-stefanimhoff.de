@@ -81,34 +81,6 @@ body {
 }
 
 
-// Noscript Navigation
-.navigation-noscript {
-  padding: 5px 5px 0;
-  text-align: center;
-
-  .nav,
-  .nav--main {
-    display: inline-block;
-    margin: 0;
-  }
-
-  .nav--main {
-    margin-right: 10px;
-    text-transform: none;
-
-    &:after {
-      color: $white;
-      content: '✿';
-    }
-  }
-
-  li {
-    display: inline-block;
-    margin-right: 10px;
-  }
-}
-
-
 .section {
   margin-bottom: $default-spacing-bottom;
 }
