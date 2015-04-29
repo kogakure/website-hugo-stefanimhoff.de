@@ -2,18 +2,15 @@
 //  Header
 //====================================
 
-#top {
+.header {
   background-color: $header-background;
   background-image: url($header-background-url);
   background-position: $header-background-position;
   background-size: cover;
   border-top: 3px solid $header-border-top-color;
-  padding: 40px 0 60px;
+  padding-bottom: 60px;
+  padding-top: 40px;
   z-index: 100;
-  // background-attachment: fixed;
-  // * @FIXME: A bug in Google Chrome/Opera
-  // * prevents using `translate3d` in combination
-  // * with `background-attachment: fixed` at the moment
 
   @include breakpoint(600px) {
     background-image: url($header-background-url-m);
@@ -23,30 +20,9 @@
     background-image: url($header-background-url-s);
   }
 
-  .nav-btn {
-    @include link-colors($white, $nav-link-color-hover, $white, $white, $white);
-    border: 0;
-    font-size: 18px;
-    letter-spacing: 1px;
-    line-height: $base-line-height;
-    position: absolute;
-    right: 1em;
-    text-decoration: none;
-    text-shadow: 0 1px 1px $black;
-    text-transform: uppercase;
-    top: 1em;
-    z-index: 100;
-
-    span {
-      @include breakpoint($content-medium) {
-        display: none;
-      }
-    }
-  }
-
-  // Breakpoints header image
   .home & {
-    padding: 40px 0 160px;
+    padding-bottom: 160px;
+    padding-top: 40px;
 
     @include breakpoint(880px) {
       padding-bottom: 80px;
@@ -55,149 +31,90 @@
     @include breakpoint(700px) {
       padding-bottom: 40px;
     }
+  }
+}
 
-    @include breakpoint(500px) {
-      padding-bottom: 10px;
-    }
+.header-logo {
+  @include grid-span(2, 1);
 
-    @include breakpoint(480px) {
-      padding-bottom: 20px;
-    }
-
-    @include breakpoint(430px) {
-      padding-bottom: 60px;
-    }
+  @include breakpoint(480px) {
+    @include grid-span(3, 1);
   }
 
-  .logo {
-    @include grid-span(2, 1);
+  @include breakpoint($header-centered) {
+    @include grid-span(12, 1);
+  }
+}
 
-    @include breakpoint(480px) {
-      @include grid-span(3, 1);
-    }
+.header-logo-image {
+  border: 0;
 
-    @include breakpoint($header-centered) {
-      clear: both;
-      float: none;
-      margin: 0;
-      width: 100%;
-    }
+  @include breakpoint($header-centered) {
+    @include grid-span(4, 5);
+    margin-bottom: 10px;
+  }
+}
 
-    .icon-logo {
-      border: 0;
-      color: $logo-color;
-      display: block;
-      font-size: 70px;
-      padding: 0 0 5px 10px;
-      text-align: right;
-      text-decoration: none;
-      text-shadow: 0 1px 2px $black;
+.header-info {
+  @include enable-ligatures;
+  @include grid-span(9, 3);
+  color: $header-headline;
+  font-size: $font-scale-h1;
+  line-height: 1;
+  padding-top: 10px;
+  text-shadow: 0 0 6px $black;
 
-      @include breakpoint($header-centered) {
-        font-size: 60px;
-        height: 80px;
-        margin: 0 auto;
-        padding: 0;
-        text-align: center;
-        width: 80px;
-      }
-
-      .home & {
-        font-size: 100px;
-
-        @include breakpoint(700px) {
-          font-size: 60px;
-          margin-top: 10px;
-        }
-      }
-    }
+  @include breakpoint(700px) {
+    padding-top: 5px;
   }
 
-  .site-info {
-    @include enable-ligatures;
-    @include grid-span(8, 3);
-    color: $header-headline;
-    font-size: $font-scale-h1;
-    line-height: 1;
-    padding-top: 15px;
-    text-shadow: 0 0 6px $black;
-
-    @include breakpoint(480px) {
-      @include grid-span(7, 4);
-    }
-
-    @include breakpoint($header-centered) {
-      font-size: $font-scale-h2;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-      width: 100%;
-    }
-
-    a {
-      border: 0;
-      color: $header-headline;
-      text-decoration: none;
-      vertical-align: top;
-
-      @include breakpoint(480px) {
-        font-size: 50px;
-      }
-
-      @include breakpoint(380px) {
-        font-size: 40px;
-      }
-    }
+  @include breakpoint(480px) {
+    @include grid-span(7, 4);
   }
 
-  .home & .site-info {
-    padding-top: 25px;
+  @include breakpoint($header-centered) {
+    @include grid-span(12, 1);
+    font-size: $font-scale-h2;
+    text-align: center;
+  }
+}
 
-    @include breakpoint(480px) {
-      @include grid-span(7, 4);
-    }
+.header-info-title {
+  margin-bottom: 0;
 
-    @include breakpoint($header-centered) {
-      margin: 0;
-      padding: 0;
-      text-align: center;
-      width: 100%;
-    }
+  @include breakpoint(800px) {
+    font-size: 60px;
+  }
 
-    h1 {
-      margin-bottom: 0;
+  @include breakpoint(620px) {
+    font-size: 40px;
+  }
 
-      @include breakpoint(800px) {
-        font-size: 60px;
-        margin-top: 5px;
-      }
+  @include breakpoint($header-centered) {
+    font-size: 35px;
+  }
+}
 
-      @include breakpoint(620px) {
-        font-size: 40px;
-      }
+.header-info-tagline {
+  color: $header-subheadline;
+  font-size: $font-scale-h3;
+  line-height: 1.2;
+  text-shadow: 0 0 5px $white, 0 0 5px $white, 0 0 5px $white;
 
-      @include breakpoint(480px) {
-        font-size: 25px;
-      }
+  @include breakpoint(800px) {
+    font-size: 20px;
+  }
+}
 
-      @include breakpoint($header-centered) {
-        font-size: 35px;
-      }
-    }
+.header-info-title-link {
+  @include link-colors($white, $white, $white, $white, $white);
+  text-decoration: none;
 
-    h2 {
-      color: $header-subheadline;
-      font-size: $font-scale-h3;
-      line-height: 1.2;
-      text-shadow: 0 0 5px $white, 0 0 5px $white, 0 0 5px $white;
+  @include breakpoint(480px) {
+    font-size: 50px;
+  }
 
-      @include breakpoint(800px) {
-        font-size: 20px;
-      }
-
-      @include breakpoint(620px) {
-        font-size: 15px;
-      }
-    }
+  @include breakpoint(380px) {
+    font-size: 40px;
   }
 }
