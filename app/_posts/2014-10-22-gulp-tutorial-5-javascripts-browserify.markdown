@@ -28,7 +28,7 @@ This is the 5th part of my series *Introduction to Gulp.js*. Today I will show h
 {% include articles/gulp-toc.html %}
 
 ## Browserify
-This task is a little more complex, because I use [Browserify](http://browserify.org/) to bundle my JavaScript. If this is too complex for your needs you may just use [gulp-concat](https://www.npmjs.org/package/gulp-concat) to concatenate all your JavaScript files into one file.
+This task is a little more complex, because I use [Browserify](http://browserify.org/) to bundle my JavaScript. If this is too complex for your needs you may just use [gulp-concat](https://www.npmjs.com/package/gulp-concat) to concatenate all your JavaScript files into one file.
 
 Browserify is an awesome tool, which allows you to use node modules in your browser. Over 70% of the node modules will run right away! And it will bundle up all of your dependencies. If you want to find out more about writing CommonJS modules for Browserify have a look into the documentation.
 

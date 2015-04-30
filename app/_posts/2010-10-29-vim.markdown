@@ -147,7 +147,7 @@ Der eine mag es grell, der andere hell, einer mag es dunkel und einer beige. Fü
 
 ## Und wo fange ich jetzt an?
 
-Wenn du eineeinhalb Stunden Zeit hast, schau dir doch das Video vom GoogleTechTalk an, in dem der Entwickler von Vim, der Niederländer Bram Moolenaar zeigt in [7 Habits For Effective Text Editing 2.0](http://www.youtube.com/watch?v=p6K4iIMlouI) was an Vim so beeindruckend ist.
+Wenn du eineeinhalb Stunden Zeit hast, schau dir doch das Video vom GoogleTechTalk an, in dem der Entwickler von Vim, der Niederländer Bram Moolenaar zeigt in [7 Habits For Effective Text Editing 2.0](https://www.youtube.com/watch?v=p6K4iIMlouI) was an Vim so beeindruckend ist.
 
 Es gibt außerdem zwei fantastische Artikel, die ich unbedingt empfehlen kann: [Coming Home to Vim](http://stevelosh.com/blog/2010/09/coming-home-to-vim/) von Steve Losh und [How I boosted my Vim](http://nvie.com/posts/how-i-boosted-my-vim/) von Vincent Driessen.
 

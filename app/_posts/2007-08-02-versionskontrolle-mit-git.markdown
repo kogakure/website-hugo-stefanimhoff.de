@@ -18,9 +18,9 @@ Seit fast einem Jahr arbeite ich nun mit Subversion – und bin ziemlich zufried
 
 *CVS* habe ich nicht kennengelernt und das scheint auch gut zu sein, bei allen grausigen Meldungen, die man über CVS hört.
 
-Linus Torvalds sieht das wohl etwas anders, wie er in Googles <cite>[Tech Talk: Linus Torvalds on git](http://www.youtube.com/watch?v=4XpnKHJAok8)</cite> deutlich macht:
+Linus Torvalds sieht das wohl etwas anders, wie er in Googles <cite>[Tech Talk: Linus Torvalds on git](https://www.youtube.com/watch?v=4XpnKHJAok8)</cite> deutlich macht:
 
-{% blockquote Linus Torvalds http://www.youtube.com/watch?v=4XpnKHJAok8 Tech Talk: Linus Torvalds on git %}
+{% blockquote Linus Torvalds https://www.youtube.com/watch?v=4XpnKHJAok8 Tech Talk: Linus Torvalds on git %}
 I see Subversion as being the most pointless project ever started, because the slogan for Subversion for a while was: <q lang="en">CVS done right</q> […]. And if you start with that kind of slogan, there is nowhere you can go. There’s no way to do CVS right.
 {% endblockquote %}
 
@@ -50,6 +50,6 @@ Ist seine Arbeit gut, und andere Personen finden sie auch gut, können diese die
 
 *Git* ist sehr einfach und effizient zu bedienen, schon nach kurzer Zeit konnte ich damit umgehen. Man kann Git z. B. auch zusätzlich zu SVN oder CVS auf seinem Rechner nutzen. Das man kein zentrales Repository <del>hat</del> <ins>haben muss</ins>, ist ein echter Vorzug.
 
-Neben dem [fantastischen Vortrag](http://www.youtube.com/watch?v=4XpnKHJAok8) von Linus Torvalds auf *Google Tech Talk* gibt es auf der [offiziellen Seite von Git](http://git-scm.com/) gute Handbücher und Tutorials.
+Neben dem [fantastischen Vortrag](https://www.youtube.com/watch?v=4XpnKHJAok8) von Linus Torvalds auf *Google Tech Talk* gibt es auf der [offiziellen Seite von Git](http://git-scm.com/) gute Handbücher und Tutorials.
 
 Ich werde Git in der nächsten Zeit in meinen Projekten testen und meine Erfahrungen hier veröffentlichen.

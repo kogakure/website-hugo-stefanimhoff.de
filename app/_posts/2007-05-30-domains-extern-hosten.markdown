@@ -69,4 +69,4 @@ Monatsverträge, üppige Traffic- und Speicherplatzangebote, modernste Technik u
 
 Deutschlands Webhoster werden es auch noch lernen, doch das dauert hier bekanntlich ja alles etwas länger.
 
-Es gibt einen guten [Screencast](http://css-tricks.com/video-screencasts/46-domains-dns-hosting-and-google-apps/) auf CSS-Tricks, wie man mit externen Domains, DNS-Servern und ähnlichen Dingen arbeitet.
+Es gibt einen guten [Screencast](https://css-tricks.com/video-screencasts/46-domains-dns-hosting-and-google-apps/) auf CSS-Tricks, wie man mit externen Domains, DNS-Servern und ähnlichen Dingen arbeitet.

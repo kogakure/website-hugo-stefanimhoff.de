@@ -56,17 +56,17 @@ Django unterstützt eine Vielzahl an Sprachen und bietet eine sehr gute Lokalisi
 
 ### Warum ein Framework?
 
-Die Seite kogakure.de lief vorher mit [ExpressionEngine](http://ellislab.com/expressionengine), einem Publishing-Tool, das ich auch weiterhin sehr empfehlen kann.
+Die Seite kogakure.de lief vorher mit [ExpressionEngine](https://ellislab.com/expressionengine), einem Publishing-Tool, das ich auch weiterhin sehr empfehlen kann.
 
 {% pullquote %}
-Doch jedes CMS (Content-Management-System) hat seine Begrenzungen, mit denen man leben muss oder sich mühsam nach Möglichkeiten umsehen muss, das System zu erweitern (Plugins, Extensions, Module). Da die meisten Erweiterungen einfach oben auf das CMS draufgesetzt werden, leidet darunter auch die Performance. So kann man nach dem Installieren eines Dutzend von [WordPress](http://wordpress.org/ "WordPress › Blog Tool and Weblog Platform")-Plugins leicht unzählige parallele Datenbankanfragen haben. Bei Django passiert so etwas nicht. Dies hat auch noch andere Nachteile: Man benutzt die Plugins, weiß aber meist nicht wie sie funktionieren oder ob sie überhaupt gut programmiert sind. {"Plugins bieten für Hacker eine besonders gute Angriffsfläche."}
+Doch jedes CMS (Content-Management-System) hat seine Begrenzungen, mit denen man leben muss oder sich mühsam nach Möglichkeiten umsehen muss, das System zu erweitern (Plugins, Extensions, Module). Da die meisten Erweiterungen einfach oben auf das CMS draufgesetzt werden, leidet darunter auch die Performance. So kann man nach dem Installieren eines Dutzend von [WordPress](https://wordpress.org/ "WordPress › Blog Tool and Weblog Platform")-Plugins leicht unzählige parallele Datenbankanfragen haben. Bei Django passiert so etwas nicht. Dies hat auch noch andere Nachteile: Man benutzt die Plugins, weiß aber meist nicht wie sie funktionieren oder ob sie überhaupt gut programmiert sind. {"Plugins bieten für Hacker eine besonders gute Angriffsfläche."}
 {% endpullquote %}
 
 Zu allem Unglück kam es in der Vergangenheit immer wieder vor, dass Plugins nicht weiterentwickelt wurden und mit neuen Versionen der CMS nicht mehr liefen.
 
 Django benutzt Python-Module. Diese sind in Python programmiert und laufen auch außerhalb von Django. Und Python ist nebenbei bemerkt leicht zu lernen, gut zu lesen und weitaus länger als z. B. PHP am Markt. Google und Yahoo benutzen Python – um nur einige zu nennen.
 
-Ich habe schon eine Menge Content-Management-Systeme ausprobiert und jedes ist auf seine Art begrenzt und nur für einen einzigen Zweck geeignet (z. B. WordPress für einen Blog). Will man aber eine Website haben die nicht so einfach in eine Schublade gesteckt werden kann, oder die möglichst lange bestehen soll, hat man mit Content-Management-Systemen ein Problem. Zu oft hat man schon von diesen CMS-Hoppern gehört, die z. B. von [MovableType](https://movabletype.org/) zu [TextPattern](http://textpattern.com/ "Textpattern"), dann zu [WordPress](http://wordpress.org/ "WordPress › Blog Tool and Weblog Platform") und schließlich zu [ExpressionEngine](http://ellislab.com/expressionengine) gewechselt sind. Die haben einfach zu viel Zeit.
+Ich habe schon eine Menge Content-Management-Systeme ausprobiert und jedes ist auf seine Art begrenzt und nur für einen einzigen Zweck geeignet (z. B. WordPress für einen Blog). Will man aber eine Website haben die nicht so einfach in eine Schublade gesteckt werden kann, oder die möglichst lange bestehen soll, hat man mit Content-Management-Systemen ein Problem. Zu oft hat man schon von diesen CMS-Hoppern gehört, die z. B. von [MovableType](https://movabletype.org/) zu [TextPattern](http://textpattern.com/ "Textpattern"), dann zu [WordPress](https://wordpress.org/ "WordPress › Blog Tool and Weblog Platform") und schließlich zu [ExpressionEngine](https://ellislab.com/expressionengine) gewechselt sind. Die haben einfach zu viel Zeit.
 
 Frameworks haben mich bislang immer abgeschreckt, weil sie entweder mit PHP liefen (und ich mag PHP nicht sonderlich) oder man einfach zu viel selber Programmieren musste. Bei Django halten sich Programmierung und Design (Template) immer schön im Gleichgewicht.
 
@@ -106,7 +106,7 @@ Der Einstieg in Django ist (auch für Nichtprogrammierer) leicht, da es sehr gut
 
 Da mir die Community von Django durch Hilfe im #IRC (#django oder #django-de), in Groups und Foren, mit wunderbaren Screencasts und Tutorials so viel geholfen hat, will ich meinen Source-Code auch frei zu Verfügung stellen. Der Code ist frei verfügbar und darf zu Lernzwecken oder für eigene Projekte gerne benutzt werden. Das Design der Seite liegt bei, doch dies ist natürlich rechtlich geschützt und darf nur für Schulungszwecke benutzt werden. Als Ninja fallen mir natürlich zahlreiche Möglichkeiten ein einen Dieb ins Jenseits zu befördern ;)
 
-{% download https://github.com/kogakure/kogakure-de "Source code (GitHub)" %}
+{% download https://github.com/kogakure/kogakure.de-django "Source code (GitHub)" %}
 
 ## Django-Ressourcen
 
@@ -128,7 +128,7 @@ Um den Einstieg in Django zu erleichtern, habe ich nachfolgend eine Liste von in
 
 ### Video-Präsentationen
 
-* [Django: Web Development for Perfectionists with Deadlines](http://www.youtube.com/watch?v=n8KnFywpXOE) – Jacob Kaplan-Moss stellt Django bei Google TechTalks vor (sehenswert!)
+* [Django: Web Development for Perfectionists with Deadlines](https://www.youtube.com/watch?v=n8KnFywpXOE) – Jacob Kaplan-Moss stellt Django bei Google TechTalks vor (sehenswert!)
 * [Snakes and Rubies](https://www.djangoproject.com/snakesandrubies/) – Die berühmte Diskussion von Ruby on Rails (David Heinemeier Hansson) und Django (Adrian Holovaty) über Gemeinsamkeiten und Unterschiede der beiden Frameworkds (sehenswert!)
 
 ### Folien
@@ -168,7 +168,7 @@ Um den Einstieg in Django zu erleichtern, habe ich nachfolgend eine Liste von in
 * [Jeff Croft](http://jeffcroft.com/) – Designer und Python Programmierer (Seattle, Washington, US)
 * [Nathan Borror](http://nthn.me/) – Designer (Lawrence, Kansas, US)
 * [Paul Bissex: E-Scribe](http://news.e-scribe.com/) – Entwickler, Lehrer und Autor (Northampton, Massachusetts, US)
-* [Ross Poulton](http://www.rossp.org/) – Berater und Projektmanager, Entwickler von DjangoSites (Diamond Creek, Victoria, Australien)
+* [Ross Poulton](https://www.rossp.org/) – Berater und Projektmanager, Entwickler von DjangoSites (Diamond Creek, Victoria, Australien)
 * [Wilson Miner](http://wilsonminer.com/) – Designer von EveryBlock, dem Django-Admin-Interface und der Django-Website (San Francisco, Kalifornien, US)
 
 ### Sonstiges

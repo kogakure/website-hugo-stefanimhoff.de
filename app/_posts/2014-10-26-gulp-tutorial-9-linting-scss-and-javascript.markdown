@@ -28,7 +28,7 @@ This is the 9th part of my series *Introduction to Gulp.js*. Today I will use Gu
 
 {% include articles/gulp-toc.html %}
 
-I decided to lint my SCSS files and not the CSS files, because it’s kind of pointless to lint generated CSS. But you can do this with [gulp-csslint](https://www.npmjs.org/package/gulp-csslint/).
+I decided to lint my SCSS files and not the CSS files, because it’s kind of pointless to lint generated CSS. But you can do this with [gulp-csslint](https://www.npmjs.com/package/gulp-csslint/).
 
 {% highlight sh %}
 $ npm install --save-dev gulp-scss-lint@0.1.4 gulp-jshint@1.8.5 jshint-stylish@1.0.0
@@ -107,7 +107,7 @@ gulp.task('jshint', function() {
 {% aside aside-hint %}
 <h4>Configuration of Syntax Check Tools</h4>
 <p>You may change the rules for linting SCSS or JavaScript by adding a hidden file <code>.scss-lint.yml</code> for SCSS lint and <code>.jshintrc</code> for JSHint to your project root.</p>
-<p>To find out which options are available look into the documentation of <a href="https://github.com/causes/scss-lint">SCSS-Lint</a> and <a href="http://jshint.com/docs/">JSHint</a>.</p>
+<p>To find out which options are available look into the documentation of <a href="https://github.com/brigade/scss-lint">SCSS-Lint</a> and <a href="http://jshint.com/docs/">JSHint</a>.</p>
 {% endaside %}
 
 {% include articles/gulp-code.html %}

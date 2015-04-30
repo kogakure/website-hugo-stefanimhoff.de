@@ -44,7 +44,7 @@ Ich schaue mir [RegularExpressions](http://www.regular-expressions.info/ "Regula
 
 Da Django ein Python-Framework ist, finde ich, dass es nicht schaden kann nebenbei etwas [Python](http://diveintopython.org/) zu lernen. Eine wirklich edle und effiziente Sprache, die fast ohne Satzzeichen und Klammern auskommt, was bei mir bei PHP immer 90 % aller Fehler verursacht hat. Weniger Satzzeichen, mehr Ordnung im Code, gut zu lesen, kann sogar ein Laie lesen und verstehen. Und 5 Jahre länger als PHP ist Python auch schon auf dem Markt. PHP ist nur so erfolgreich, weil da <q>draufknallen auf den Server – läuft</q> ausreicht. Mit Python hat man aber ein eindeutig besseres Werkzeug, das wissen auch Google und Yahoo.
 
-Ich setzte mir ein [MoinMoinWiki](http://moinmo.in/ "MoinMoinWiki - MoinMoin") auf, um Notizen und Wissen für mich persönlich online zu hinterlegen. Und weil die ganzen verfügbaren Themes grottenhäßlich sind, [gestalte ich mir fix selbst eines](https://github.com/kogakure/moinmoin-theme-kaijin).
+Ich setzte mir ein [MoinMoinWiki](https://moinmo.in/) auf, um Notizen und Wissen für mich persönlich online zu hinterlegen. Und weil die ganzen verfügbaren Themes grottenhäßlich sind, [gestalte ich mir fix selbst eines](https://github.com/kogakure/moinmoin-theme-kaijin).
 
 Ich schaue mir nochmal eine Alternative zu Git an: [Mercurial](http://mercurial.selenic.com/). Aber Git hat einfach ein paar nette Bonbons, die den Ausschlag geben.
 
@@ -72,7 +72,7 @@ Ich setzte mir Memcached auf, um direkt im Arbeitsspeicher des Servers zu cachen
 
 Ich automatisiere viele Prozesse mit Cronjobs und schalte mein Projekt in der letzten Aprilwoche live.
 
-Der Sourcecode dafür ist frei verfügbar und kann bei [GitHub heruntergeladen werden](https://github.com/kogakure/kogakure-de).
+Der Sourcecode dafür ist frei verfügbar und kann bei [GitHub heruntergeladen werden](https://github.com/kogakure/kogakure.de-django).
 
 ## Mai
 
@@ -80,11 +80,11 @@ Ich versuche meinen Arbeitgeber davon zu überzeugen, dass die Wahl eines Java-F
 
 Und der externe Dienstleister wirkt auf mich leider nicht sehr zuverlässig und professionell. Aber was weiß ich schon …
 
-[ExpressionEngine](http://ellislab.com/expressionengine) 2 lässt auf sich warten. Gähn. Wieso dauert das bloß so lange?
+[ExpressionEngine](https://ellislab.com/expressionengine) 2 lässt auf sich warten. Gähn. Wieso dauert das bloß so lange?
 
 ## Juni
 
-Ich schaue mir mal das superduper Java-Framework [Spring](http://spring.io/) an, weil damit wohl unser CMS erstellt werden soll. Ich mag Java nicht. Aufgeblasene Scheiße, das. Ein Änterpreis-Wäbdeweloping-Fräimwörk halt und nich so Spielzeug wie [Rails](http://rubyonrails.org/) oder [Django](https://www.djangoproject.com/). [Warum müssen Java-Programmierer eigentlich so elitäre Snobs sein](http://www.youtube.com/watch?v=PQbuyKUaKFo "YouTube - Ruby on Rails vs Java - RailsEnvy.com Commerical")? Meine Vermutung ist ja, das viele Java-Entwickler etwas <del>kompilieren</del> <ins>kompensieren</ins> müssen.
+Ich schaue mir mal das superduper Java-Framework [Spring](http://spring.io/) an, weil damit wohl unser CMS erstellt werden soll. Ich mag Java nicht. Aufgeblasene Scheiße, das. Ein Änterpreis-Wäbdeweloping-Fräimwörk halt und nich so Spielzeug wie [Rails](http://rubyonrails.org/) oder [Django](https://www.djangoproject.com/). [Warum müssen Java-Programmierer eigentlich so elitäre Snobs sein](https://www.youtube.com/watch?v=PQbuyKUaKFo "YouTube - Ruby on Rails vs Java - RailsEnvy.com Commerical")? Meine Vermutung ist ja, das viele Java-Entwickler etwas <del>kompilieren</del> <ins>kompensieren</ins> müssen.
 
 Ich amüsiere mich fantasisch über [The Website is Down](http://www.thewebsiteisdown.com/ "The Website Is Down") und [You suck at Photoshop](http://www.mydamnchannel.com/Big_Fat_Brain/You_Suck_at_Photoshop/YouSuckatPhotoshop1_398).
 
@@ -121,13 +121,13 @@ Ich testen [django-robots](http://code.google.com/p/django-robots/ "django-robot
 
 Microsoft sorgt für Lacher mit seinem The Mojave Experiment. In der *wissenschaftlichen* Studie versucht Microsoft einigen US-Midwest-Landeiern zu beweisen, dass sie Windows Vista eigentlich ganz toll finden. Auf perfekten Systemen, mit perfekten Treibern führt ein Microsoft-Profi diese Landeier durch Vista und erntet so lustige Kommentare wie: <q lang="en">Really, this is Vista? I **LOVE** it</q>.
 
-Mein Preis für die beste Werbung 2008 geht schon im August an Nokia für ihre Werbung [Nokia: The 4th Screen](http://www.youtube.com/watch?v=XpeNk3E36YU "YouTube - Nokia: Go Play - 4th Screen").
+Mein Preis für die beste Werbung 2008 geht schon im August an Nokia für ihre Werbung [Nokia: The 4th Screen](https://www.youtube.com/watch?v=XpeNk3E36YU "YouTube - Nokia: Go Play - 4th Screen").
 
 Im August fällt mir auch auf, das kein [Sumo](http://www.sumo.or.jp/ "Nihon Sumo Kyokai Official Grand Sumo") mehr auf Eurosport kommt. Ich recherchiere und finde heraus, das Eurosport sich entschieden hat dafür kein Geld mehr auszugeben. Die senden jetzt nur noch richtigen Sport, wie z. B. Pokern.
 
 ## September
 
-[Django 1.0](https://www.djangoproject.com/weblog/2008/sep/03/1/) wird veröffentlicht! Und die erste DjangoCon findet statt. Die Vorträge der Keynote kann man bei [YouTube ansehen](http://www.youtube.com/results?search_query=djangocon+2008 "YouTube - djangocon 2008").
+[Django 1.0](https://www.djangoproject.com/weblog/2008/sep/03/1/) wird veröffentlicht! Und die erste DjangoCon findet statt. Die Vorträge der Keynote kann man bei [YouTube ansehen](https://www.youtube.com/results?search_query=djangocon+2008 "YouTube - djangocon 2008").
 
 Durch einen Vortrag auf der DjangoCon (<q lang="en">No, you can’t have a Pony</q>) und die Feststellung das Django ein Maskottchen benötigt, wird im Scherz die Idee des [Django Pony](http://www.djangopony.com/ "djangopony - Magic that can't be removed.") geboren. Jetzt **kann** Django ja nur noch erfolgreich werden ;)
 
@@ -135,7 +135,7 @@ Google bringt seinen neuen Browser [Google Chrome](https://www.google.com/intl/d
 
 Ein neuer Film erweckt meine Aufmerksamkeit: [Watchmen](http://www.imdb.com/title/tt0409459/). Ich kaufe mir die <del>Comic</del> <ins>Graphic Novell</ins>, die laut Time-Magazine zu den einflussreichsten 100 Novellen unserer Zeit gehören. Zu recht. Ich freue mich schon auf die Verfilmung die im März 2009 anlaufen wird.
 
-Ich kaufe mir auch gleich noch Allan Moores andere, bekannte Comic: [V wie Vendetta](http://wwws.warnerbros.de/vforvendetta/ "V wie Vendetta") und den dazugehörigen Film. Beängstigend wie nah die Comic an der [britischen Realität](http://www.heise.de/newsticker/meldung/Britische-Regierung-will-Internetueberwachung-ausbauen-211529.html) bald sein könnte. Und wenn es nach dem paranoiden Rollstuhlfahrer geht, hier wohl demnächst auch.
+Ich kaufe mir auch gleich noch Allan Moores andere, bekannte Comic: *V wie Vendetta* und den dazugehörigen Film. Beängstigend wie nah die Comic an der [britischen Realität](http://www.heise.de/newsticker/meldung/Britische-Regierung-will-Internetueberwachung-ausbauen-211529.html) bald sein könnte. Und wenn es nach dem paranoiden Rollstuhlfahrer geht, hier wohl demnächst auch.
 
 Ich stoße auf Typolight (jetzt [Contao](https://contao.org/de/)), das einzige CMS, dass bislang meiner Meinung nach für den breiten Einsatz bei unseren Kunden geeignet ist.
 
@@ -151,7 +151,7 @@ Ich tausche Capistrano als Deployment-Tool gegen das leichtgewichtige [Fabric](h
 
 Endlich erhältlich, die Kult-Serie aus den 80ern: [Die Rebellen vom Liang Shan Po](http://www.amazon.de/dp/B001BBEFEE/ "Die Rebellen vom Liang Shan Po (alle Folgen auf 12 einzelnen DVDs (eingeschwei&szlig;t) - exklusiv bei Amazon.de): Atsuo Nakamura, Sanae Tsuchida, Kei Sato: Amazon.de: DVD und Blu-ray"). Das ist die Serienverfilmung des chinesischen Klassikers <cite>Shuǐhǔ Zhuàn</cite> (水滸傳), auf japanisch <cite>Suikoden</cite>, im deutschen als die <cite>Wasserufergeschichte</cite> oder als <cite>Die Rebellen vom Liang Shan Po</cite> bekannt.
 
-[Dexter](http://www.sho.com/sho/dexter/home), [Californication](http://www.sho.com/sho/californication/home) und [Heroes](http://www.nbc.com/heroes/) erfreuen mich im Feierabend. Solche Spitzenformate könnten sie öfter bringen.
+[Dexter](http://www.sho.com/sho/dexter/home), [Californication](http://www.sho.com/sho/californication/home) und *Heroes* erfreuen mich im Feierabend. Solche Spitzenformate könnten sie öfter bringen.
 
 Und was ist eigentlich wieder dieses [Fever](http://feedafever.com/ "Fever&deg; Red hot. Well read.") von Shauninman? Ich weiß zwar nicht, was das ist, will aber trotzdem Beta-Tester sein! :(
 
@@ -174,7 +174,7 @@ Ich suche mal nach Datenbankmigrations-Applikationen und teste [django-evolution
 
 Es gelingt mir meine VHosts auch unter Parallels anzusprechen, was überraschend leicht geht. Man muss nur den VHost in die hosts-Datei von Windows eintragen und die IP des Parallels NAT eintragen.
 
-Als passenden Abschluss zum Jahresende schaue ich mir noch den Vortrag von Jacob Kaplan-Moss auf Google TechTalks an: [Django: The First Five Years](http://www.youtube.com/watch?v=aJ_7KtjIVLQ). Darin erklärt er die Entwicklung von Django in den letzten 5 Jahren.
+Als passenden Abschluss zum Jahresende schaue ich mir noch den Vortrag von Jacob Kaplan-Moss auf Google TechTalks an: [Django: The First Five Years](https://www.youtube.com/watch?v=aJ_7KtjIVLQ). Darin erklärt er die Entwicklung von Django in den letzten 5 Jahren.
 
 ## Happy Holidays!
 

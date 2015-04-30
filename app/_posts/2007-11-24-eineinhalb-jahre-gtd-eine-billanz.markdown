@@ -78,7 +78,7 @@ In der ganzen Zeit bin ich zeitweise auch mal zweigleisig gefahren, um ein neues
 
 ## Tracks
 
-[Tracks](http://getontracks.org/) ist eine mit [Ruby on Rails](http://rubyonrails.org/ "Ruby on Rails") programmierte Web-Applikation, die die Prinzipien von David Allens GTD auf einfache und effiziente Weise nutzt.
+[Tracks](http://www.getontracks.org/) ist eine mit [Ruby on Rails](http://rubyonrails.org/ "Ruby on Rails") programmierte Web-Applikation, die die Prinzipien von David Allens GTD auf einfache und effiziente Weise nutzt.
 
 Die Anwendung basiert zwar auf Ruby on Rails, erfordert aber keine Programmierkenntnisse in Ruby und läuft relativ schnell und leicht mit sqlite3. Alternativ können auch mächtigere Datenbanken benutzt werden.
 

@@ -23,7 +23,7 @@ Ich suche nach Scientology, aber nur um zu verstehen, an was für einen hanebüc
 
 In der Bildersuche suche ich nach einer Diskussion mit meinen Kollegen nach dem [Fiat Multipla](http://images.google.de/images?q=fiat+multipla), weil dies meiner Meinung nach das hässlichste Auto ist, das je hergestellt wurde.
 
-Außerdem suche ich viel nach [ExpressionEngine](http://ellislab.com/expressionengine), da die Umsetzung meiner eigenen [Website](http://stefanimhoff.de/) im Januar voll im Gange ist. Besonders `segment_1`, `url_segments` und `conditional_variable` bestimmen diesen Monat.
+Außerdem suche ich viel nach [ExpressionEngine](https://ellislab.com/expressionengine), da die Umsetzung meiner eigenen [Website](http://stefanimhoff.de/) im Januar voll im Gange ist. Besonders `segment_1`, `url_segments` und `conditional_variable` bestimmen diesen Monat.
 
 ## Februar
 
@@ -79,13 +79,13 @@ Ich erkundige mich, ob Jean-Yves Mitton, ein französischer Zeichner, mal wieder
 
 In diesem Monat schaue ich mir im Fernsehen vermutlich [Thoughtcrimes](http://www.imdb.com/title/tt0339785/) an, einen Film, der irgendwie gar nicht so schlecht war, auch wenn die Story etwas seltsam daherkommt.
 
-Und ich suche nach dem Film <cite>[Staplerfahrer Klaus](http://www.youtube.com/watch?v=YvdkvBXBAcw)</cite>, ein Klassiker, den man einfach gesehen haben muss.
+Und ich suche nach dem Film <cite>[Staplerfahrer Klaus](https://www.youtube.com/watch?v=YvdkvBXBAcw)</cite>, ein Klassiker, den man einfach gesehen haben muss.
 
 ## August
 
 Im August erkundige ich mich nach Googles PageRank, denn mittlerweile sind schon fast vier Monate vergangen, und ich habe immer noch einen PageRank von Null. Ich befürchte die böse Google Sandbox (zu recht, wie ich feststelle).
 
-In diesem Monat erkundige ich mich auch nach Django-Hostern und finde heraus, dass TextDrive jetzt [Joyent](http://www.joyent.com/) ist. Ich entscheide mich für [Webfaction](https://www.webfaction.com/?affiliate=kogakure) als neuen Webhoster.
+In diesem Monat erkundige ich mich auch nach Django-Hostern und finde heraus, dass TextDrive jetzt [Joyent](https://www.joyent.com/) ist. Ich entscheide mich für [Webfaction](https://www.webfaction.com/?affiliate=kogakure) als neuen Webhoster.
 
 Im August entdecke ich [Git](http://git-scm.com/) für mich, Linus Torvalds fantastisches Versionskontrollsystem. Git ist Subversion in vielen Punkten um Längen vorraus.
 
@@ -117,7 +117,7 @@ Im September arbeite ich mich im Detail in die Befehlssyntax von git ein, was ab
 
 Immer noch beschäftigt mich LaTeX, es ist einfach cool, was man mit einem puren Texteditor erstellen kann.
 
-Ich setze mir ein neues Wiki auf, DokuWiki nervt irgendwie. Das neue Wiki heißt [MoinMoin](http://moinmo.in/) und basiert auf Python.
+Ich setze mir ein neues Wiki auf, DokuWiki nervt irgendwie. Das neue Wiki heißt [MoinMoin](https://moinmo.in/) und basiert auf Python.
 
 Ich schaue mir die <cite>PostgreSQL</cite>-Datenbank an, und stelle fest, das MySQL dagegen ja fast ein Kinderspielzeug ist. So ein Glück, dass Postgres die von Django favorisierte Datenbank ist.
 
@@ -167,7 +167,7 @@ Ich setze jQuery jetzt in Kundenprojekten ein, und benutze es auch gleich für G
 
 Die neue Version von CandyBar kommt raus, und hat jetzt gleich Pixadex integriert. Natürlich muss ich gleich Leopards Aussehen mit neuen Icons und Dock versehen.
 
-Ich überlege mir von einem webbasierenden GTD-Werkzeug auf eine OS X Lösung umzusteigen und teste drei Wochen lang [Things](http://culturedcode.com/things/) und [OmniFocus](http://www.omnigroup.com/omnifocus/) zugleich.
+Ich überlege mir von einem webbasierenden GTD-Werkzeug auf eine OS X Lösung umzusteigen und teste drei Wochen lang [Things](http://culturedcode.com/things/) und [OmniFocus](https://www.omnigroup.com/omnifocus/) zugleich.
 
 Doch schon nach 14 Tagen steht für mich eigentlich fest: <cite>Things</cite> ist der Testsieger. Obwohl es derzeit noch weniger Funktionen als OmniFocus hat, fühlt es sich einfach *besser* an.
 

@@ -39,7 +39,7 @@ As a front-end developer or web designer you will most likely need a lot of thin
 It’s 2014 and we don’t copy our files per drag-and-drop on a server via a FTP program, reload our browser by hitting continuously <kbd>F5</kbd> or crunch our images for a smaller file size by hand. Right? **We don’t**!
 
 ## Node.js
-Gulp and all plugins are written in JavaScript and use the Node.js® platform. You don’t have to know Node.js (but it will help a lot), but basic JavaScript skills are required to follow along. To start with my tutorial you need to install Node.js on your computer. This can be done by installing the package on the [Node.js website](http://nodejs.org/). Advanced users may install Node.js with their favorite package installer (Homebrew etc.).
+Gulp and all plugins are written in JavaScript and use the Node.js® platform. You don’t have to know Node.js (but it will help a lot), but basic JavaScript skills are required to follow along. To start with my tutorial you need to install Node.js on your computer. This can be done by installing the package on the [Node.js website](https://nodejs.org/). Advanced users may install Node.js with their favorite package installer (Homebrew etc.).
 
 ## Gulpfile
 As with Grunt.js, all you need to start is a main file. In Gulp.js this file is called `gulpfile.js`. The first thing I learned from `gulp-starter` was to write my project in small parts and don’t use a large monolithic file with everything in it. This way I can easily share my Gulp.js files with other projects or just pass individual tasks around.

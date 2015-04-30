@@ -1,7 +1,7 @@
 /**
 * Vanilla FitVids v0.1.0
 * Let your videos be fluid.
-* http://github.com/rosszurowski/vanilla-fitvids/
+* https://github.com/rosszurowski/vanilla-fitvids/
 *
 * Licensed under the WTFPL license
 */

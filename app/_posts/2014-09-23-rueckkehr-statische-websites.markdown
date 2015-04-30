@@ -25,7 +25,7 @@ Als ich 1999 die erste Version live gestellt habe, waren mir Web-Programmierung 
 
 Auf meiner Website befinden sich neben einer Vielzahl von Artikeln auch ein Japanisch-Deutsches Lexikon mit Kampfkunst-Begriffen, eine Zitatensammlung und eine Reihe von Buch- und Film-Empfehlungen.
 
-Einige Jahre später waren dann große  Teile der Website in PHP geschrieben. Die aktuelle Website habe ich mit dem Python-Webframework [Django](https://www.djangoproject.com/) [programmiert](https://github.com/kogakure/kogakure-de) und die Daten werden aus einer Datenbank geliefert.
+Einige Jahre später waren dann große  Teile der Website in PHP geschrieben. Die aktuelle Website habe ich mit dem Python-Webframework [Django](https://www.djangoproject.com/) [programmiert](https://github.com/kogakure/kogakure.de-django) und die Daten werden aus einer Datenbank geliefert.
 
 Wie jede Webapplikation hat auch diese Website ein *nicht* unkompliziertes System für das Caching (mit [memcached](http://memcached.org/)) und einen automatisierten Deployment-Prozess. So ein Technologie-Stack läuft natürlich nicht bei jedem Hoster und  erfordert eine Menge Fachwissen und Wartungsaufwand.
 

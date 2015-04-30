@@ -80,7 +80,7 @@ For `SCSS` files I run the `sass` tasks and additionally I run a `scsslint` task
 
 Changes on JavaScript files trigger the `scripts` tasks and a `jshint` task, which will check my files for syntax errors.
 
-If I add, modify or delete a SVG file my vector fonts get recreated. And as a fallback for browsers without vector font support I create a PNG sprite map, whenever I change an image of the sprite. It would be possible to auto create the PNG files of the SVG files with [gulp-svg2png](https://www.npmjs.org/package/gulp-svg2png/), but I have some additional design on the sprite images, that’s why I don’t use it.
+If I add, modify or delete a SVG file my vector fonts get recreated. And as a fallback for browsers without vector font support I create a PNG sprite map, whenever I change an image of the sprite. It would be possible to auto create the PNG files of the SVG files with [gulp-svg2png](https://www.npmjs.com/package/gulp-svg2png/), but I have some additional design on the sprite images, that’s why I don’t use it.
 
 I miss now three tasks: `scsslint`, `jshint` and `sprites`.
 

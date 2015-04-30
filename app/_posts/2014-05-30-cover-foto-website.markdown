@@ -32,7 +32,7 @@ Doch es gibt tatsächlich einen Begriff für dieses Eigenschaft: [Bokeh](http://
 
 {% figure image-figure image-figure-fullsize attribution %}
 <img src="{{ site.url }}/assets/images/artikel/josefina-bokeh.jpg" alt="Josefina with Bokeh">
-<p class="attribution-text"><svg class="attribution-icon-cc"><use xlink:href="#cc"></use></svg> Carlos Luis Camacho, <a href="http://www.flickr.com/photos/paseodelsur/51805888/">Josefina with Bokeh</a></p>
+<p class="attribution-text"><svg class="attribution-icon-cc"><use xlink:href="#cc"></use></svg> Carlos Luis Camacho, <a href="https://www.flickr.com/photos/paseodelsur/51805888/">Josefina with Bokeh</a></p>
 {% endfigure %}
 
 Bokeh ist vom japanischen Wort *boke* (暈け oder ボケ) abgeleitet, und bedeutet *Unschärfe* oder *Nebel*. Es gibt eine ganze Fangemeinde von Liebhabern und eine  recht genaue Definitionen, was eine gute Bokeh ausmacht. Fotografen diskutieren hitzig darüber mit welchem Objektiv denn das bessere Bokeh gemacht werden könne.

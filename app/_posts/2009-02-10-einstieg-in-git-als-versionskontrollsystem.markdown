@@ -51,8 +51,8 @@ Den mittlerweile veralteten Artikel von 2007 ersetze ich durch eine große Liste
 
 ## Videos und Screencasts
 * [Offizielle Git-Screencasts](http://git-scm.com/videos)
-* [Google Tech Talk: Linus Torvalds on git](http://www.youtube.com/watch?v=4XpnKHJAok8) – Linus Torvalds präsentiert Git bei Google
-* [Google Tech Talk: Git](http://www.youtube.com/watch?v=8dhZ9BXQgc4 "YouTube - Git") – Randal Schwartz stellt Git eine Stunde lang vor
+* [Google Tech Talk: Linus Torvalds on git](https://www.youtube.com/watch?v=4XpnKHJAok8) – Linus Torvalds präsentiert Git bei Google
+* [Google Tech Talk: Git](https://www.youtube.com/watch?v=8dhZ9BXQgc4 "YouTube - Git") – Randal Schwartz stellt Git eine Stunde lang vor
 * [Git the basics](http://excess.org/article/2008/07/ogre-git-tutorial/ "OGRE Git Tutorial - excess.org") – Bart Trojanowski stellt Git vor (2 Teile)
 
 ## Git-Hosting
@@ -74,7 +74,7 @@ Den mittlerweile veralteten Artikel von 2007 ersetze ich durch eine große Liste
 * [msysgit](http://code.google.com/p/msysgit/) – Eine Windows-Git-GUI
 * [Git Extensions](http://code.google.com/p/gitextensions/) – Eine schicke Windows-Git-GUI, mit 5 Screencasts zur Bedienung
 * [TortoiseGit](http://code.google.com/p/tortoisegit/ "tortoisegit - Google Code") – Git als Windows Explorer Shell-Erweiterung
-* [SmartGit](http://www.syntevo.com/smartgithg/) – Kommerzielle Lösung für Windows, Mac OS X und Linux
+* [SmartGit](http://www.syntevo.com/smartgit/) – Kommerzielle Lösung für Windows, Mac OS X und Linux
 
 ## Fazit
 

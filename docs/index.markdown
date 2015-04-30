@@ -4,7 +4,7 @@
 
 This website uses a modular scale with the golden ration and base sizes of 16/18px:
 
-[Modular Scale](http://modularscale.com/scale/?px1=18&px2=16&ra1=1.618&ra2=0)
+[Modular Scale](http://www.modularscale.com/?16&px&1.778&web&table)
 
 ### Pygments Syntax Highlighting
 

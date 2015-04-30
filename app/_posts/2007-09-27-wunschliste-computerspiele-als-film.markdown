@@ -60,7 +60,7 @@ Und meinen Recherchen zufolge ist ein Film zu <cite>[Far Cry](http://www.imdb.co
 
 ## Deus Ex
 
-[<cite>Deus Ex</cite>, <cite>Deus Ex: Invisible War</cite> und <cite>Deus Ex: Human Revolution</cite>](http://www.deusex.com/) sind die spannendsten Spiele überhaupt. Eine halb-lineare Handlung und mehrere Lösungsmöglichkeiten; dazu konnte man selber wählen, ob man mit purer Gewalt ans Ziel kommen wollte, oder vollkommen ungesehen alle Schwierigkeiten umging.
+[<cite>Deus Ex</cite>, <cite>Deus Ex: Invisible War</cite> und <cite>Deus Ex: Human Revolution</cite>](https://www.deusex.com/) sind die spannendsten Spiele überhaupt. Eine halb-lineare Handlung und mehrere Lösungsmöglichkeiten; dazu konnte man selber wählen, ob man mit purer Gewalt ans Ziel kommen wollte, oder vollkommen ungesehen alle Schwierigkeiten umging.
 
 Die Story wahr schon ziemlich schwere Kost, und setzte ein erhöhtes Bildungslevel voraus, um aus allen Geheimorganisationen, Verschwörungen und Parteien schlau zu werden.
 

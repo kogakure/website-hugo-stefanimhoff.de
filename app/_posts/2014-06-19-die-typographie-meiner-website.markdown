@@ -44,9 +44,9 @@ Bereits vor einigen Jahren stolperte ich über zwei interessante Vorträge von T
 
 Ich entschied mich mit der Auswahl einer Skala zu beginnen. Eine typographische Skala ist die Auswahl von harmonischen Proportionen, die danach auf Schriftgröße, Satzbreite und andere Teile angewendet wird.
 
-Die bekannteste Proportion ist der *Goldene Schnitt*, der ein Verhältnis von `1:1,618` hat. Aber es gibt noch viele andere Proportionen, die ihren Ursprung in Geometrie, Musik, Natur oder Geschichte haben. Tim Brown hat sogar extra die Website [Modular Scale](http://modularscale.com/) erstellt, auf der sich eine solche Skala errechnen lässt.
+Die bekannteste Proportion ist der *Goldene Schnitt*, der ein Verhältnis von `1:1,618` hat. Aber es gibt noch viele andere Proportionen, die ihren Ursprung in Geometrie, Musik, Natur oder Geschichte haben. Tim Brown hat sogar extra die Website [Modular Scale](http://www.modularscale.com/) erstellt, auf der sich eine solche Skala errechnen lässt.
 
-Doch dies ist bei meinem Projekt gar nicht nötig gewesen, denn das Team-Sass bietet dafür eine [SASS-Erweiterung](https://github.com/Team-Sass/modular-scale) an.
+Doch dies ist bei meinem Projekt gar nicht nötig gewesen, denn das Team-Sass bietet dafür eine [SASS-Erweiterung](https://github.com/modularscale/modularscale-sass) an.
 
 Ich füge also zuerst das Gem zu meinem Gemfile hinzu:
 
@@ -150,7 +150,7 @@ Ich schaute mich erst bei Typekit um, wählte dann aber zwei kostenlose Schrifte
 Gentium Basic ist eine sehr ansprechende Schrift mit Serifen und einem kursiven Schriftschnitt, während Yanone Kaffeesatz eine serifenlose Schrift ist. Beide Schriften in Kombination bieten ein harmonisches Bild.
 
 ## Schriftgröße
-Als am 17. November 2006 Oliver Reichenstein im Blog von Information Architects über den [100% Easy-2-Read Standard](http://ia.net/blog/100e2r), war dieses Konzept noch völlig neu. Damals wurde die Schrift auf Websites durchgehend zu klein eingestellt. Der Browser-Standard war schon immer `16px`. Doch die meisten Seiten nutzen damals Werte zwischen 10 und 12 Pixeln.
+Als am 17. November 2006 Oliver Reichenstein im Blog von Information Architects über den [100% Easy-2-Read Standard](http://ia.net/know-how/100e2r), war dieses Konzept noch völlig neu. Damals wurde die Schrift auf Websites durchgehend zu klein eingestellt. Der Browser-Standard war schon immer `16px`. Doch die meisten Seiten nutzen damals Werte zwischen 10 und 12 Pixeln.
 
 Nach diesem Blog-Artikel fingen Designer an, die Grundschriftgröße zu erhöhen. Ich verwende für meine Fließtextschrift sogar 18px.
 
@@ -173,11 +173,11 @@ Für alle die jetzt neugierig auf Typographie geworden sind, habe ich eine klein
 - [Butterick’s Practical Typography](http://practicaltypography.com/)
 - [Interactive Guide to Blog Typography](http://www.kaikkonendesign.fi/typography/)
 - [type basics](http://www.typeworkshop.com/index.php?id1=type-basics)
-- [Web Design is 95% Typography](http://ia.net/blog/the-web-is-all-about-typography-period)
+- [Web Design is 95% Typography](http://ia.net/know-how/the-web-is-all-about-typography-period)
 - [Five simple steps to better typography](http://markboulton.co.uk/journal/five-simple-steps-to-better-typography)
 - [Nice Web Type](http://nicewebtype.com/)
 - [More MeaningFull Typography](http://alistapart.com/article/more-meaningful-typography)
 - [A List Apart: Typographie](http://alistapart.com/topics/design/typography/)
 - [Kerntype](http://type.method.ac/)
-- [Modular Scale](http://modularscale.com/)
-- [Helvetica – A Documentary Film by Gary Hustwit](http://www.helveticafilm.com/)
+- [Modular Scale](http://www.modularscale.com/)
+- [Helvetica – A Documentary Film by Gary Hustwit](http://www.hustwit.com/category/helvetica/)

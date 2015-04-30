@@ -30,7 +30,7 @@ Doch noch besser ist es ein CSS-Framework wie [Compass](http://compass-style.org
 
 Ich verwende für meine Seite z. B. ein [Gridsystem](http://singularity.gs/), Helfer für Typographie, Farben und Responsive Breakpoints.
 
-Doch auch Compass schlägt keine Strukturierung des SASS oder SCSS vor. Dafür gibt es aber einige Konzepte und Ideen, die bei der Architektur von Projekten helfen sollen. Eines dieser Konzepte ist [SMACSS](http://smacss.com/).
+Doch auch Compass schlägt keine Strukturierung des SASS oder SCSS vor. Dafür gibt es aber einige Konzepte und Ideen, die bei der Architektur von Projekten helfen sollen. Eines dieser Konzepte ist [SMACSS](https://smacss.com/).
 
 Ich verwende für meine Website dieses Konzept, habe es aber an meine Bedürfnisse angepasst.
 

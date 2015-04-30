@@ -21,7 +21,7 @@ Die Liste von Applikationen, die Eric vorstellt ist sehr interessant, und sollte
 * Verzögerte Ausführung: [Celery](http://www.celeryproject.org/)
 * Entfernte Ausführung: [Fabric](http://docs.fabfile.org/en/1.5/)
 * Deployment: [Gunicorn](http://gunicorn.org/) mit Nginx
-* Packaging: [Pip](http://www.pip-installer.org/en/latest/) und [Virtualenv](http://www.virtualenv.org/en/latest/)
+* Packaging: [Pip](https://pip.pypa.io/en/latest/) und [Virtualenv](https://virtualenv.pypa.io/en/latest/)
 
 ## Volltextsuche mit Haystack
 

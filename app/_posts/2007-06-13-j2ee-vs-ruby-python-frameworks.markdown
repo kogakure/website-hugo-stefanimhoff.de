@@ -24,7 +24,7 @@ Dann schau dir das halbstündige (36:18), sehr lustige und überzeugende Video <
 
 Er berichtet von seiner Arbeit in den 90ern für einen Wetterdienst. Damals waren alle Applikationen des Dienstes in C++ geschrieben. C++ ist eine sehr gute Sprache zur Anwendungsentwicklung, versagt aber völlig bei der Benutzerschnittstelle, weil der Code nach jeder Änderung neu kompiliert werden muss. So ist ein schnelles Reagieren und Interagieren mit Wünschen von Außen kaum möglich.
 
-Kelly leitet über in die heutige Zeit und lässt in einem zweiteiligen Match J2EE, [Ruby on Rails](http://rubyonrails.org/), [Zope](http://www.zope.org/), [TurboGears](http://www.turbogears.org/ "TurboGears: Front-to-Back Web Development"), [django](https://www.djangoproject.com/) und [JBoss](http://www.redhat.com/products/jbossenterprisemiddleware/) gegeneinander antreten.
+Kelly leitet über in die heutige Zeit und lässt in einem zweiteiligen Match J2EE, [Ruby on Rails](http://rubyonrails.org/), [Zope](http://www.zope.org/), [TurboGears](http://www.turbogears.org/ "TurboGears: Front-to-Back Web Development"), [django](https://www.djangoproject.com/) und [JBoss](http://www.redhat.com/en/technologies/jboss-middleware) gegeneinander antreten.
 
 Die Bewertungskriterien sind unter anderem:
 

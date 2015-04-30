@@ -11,7 +11,7 @@ tags:
 - tedtalk
 ---
 
-Ich bin gerade auf [TED](http://www.ted.com/) über den Vortrag [5 dangerous things you should let your kids do](http://www.youtube.com/watch?v=NXhddUqNNjo) von Gever Tulley gestoßen, der darin sogar 6 gefährliche Dinge vorstellt, die jedes Kind gemacht haben sollte.
+Ich bin gerade auf [TED](http://www.ted.com/) über den Vortrag [5 dangerous things you should let your kids do](https://www.youtube.com/watch?v=NXhddUqNNjo) von Gever Tulley gestoßen, der darin sogar 6 gefährliche Dinge vorstellt, die jedes Kind gemacht haben sollte.
 
 Er zeigt in seinem Vortrag wo uns der Sicherheitswahn hingebracht hat, wenn man auf Kaffeebecher schreiben muss, sie könnten heiße Getränke enthalten.
 
