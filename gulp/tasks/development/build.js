@@ -10,8 +10,7 @@ gulp.task('build', function(callback) {
     'jekyll',
     'sass',
     'scripts',
-    'images',
-    'copy:fonts'
+    'images'
   ],
   'base64',
   'combine:mediaqueries',

@@ -12,5 +12,3 @@ gem 'stringex', '~> 2.5.2'        # String operations on markdown
 
 gem 'csscss', '~> 1.3'            # Check CSS for recursion
 gem 'scss-lint'                   # Check SCSS syntax
-
-gem 'fontcustom', '~> 1.3.7'      # Vector Fonts

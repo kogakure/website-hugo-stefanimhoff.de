@@ -20,7 +20,7 @@ This is the 15th part of my series *Introduction to Gulp.js*. Today I’ll add s
 
 {% figure image-figure attribution %}
 <img src="/assets/images/artikel/gulp-tutorial-15.jpg" alt="A oversized Captain America holding a Big Gulp">
-<p class="attribution-text"><i class="icon-cc"></i> Jess, <a href="https://www.flickr.com/photos/lundgrenphotography/8050895411">CAPTAIN AMERCIA</a></p>
+<p class="attribution-text"><svg class="attribution-icon-cc"><use xlink:href="#cc"></use></svg> Jess, <a href="https://www.flickr.com/photos/lundgrenphotography/8050895411">CAPTAIN AMERCIA</a></p>
 {% endfigure %}
 
 {% include articles/gulp-toc.html %}

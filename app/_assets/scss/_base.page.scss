@@ -86,11 +86,11 @@ body {
 }
 
 
-// Message for older browsers
-.chromeframe {
-  color: $white;
-  padding: 5px;
-  text-align: center;
+// SVG sprites
+.svg-icons {
+  left: -9999px;
+  position: absolute;
+  top: -9999px;
 }
 
 // Prevent text from breaking to the new line

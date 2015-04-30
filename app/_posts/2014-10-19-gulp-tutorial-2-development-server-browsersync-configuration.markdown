@@ -19,7 +19,7 @@ This is the 2nd part of my series *Introduction to Gulp.js*. Today I will write 
 
 {% figure image-figure attribution "Create your own flavor" %}
 <img src="{{ site.url }}/assets/images/artikel/gulp-tutorial-2.jpg" alt="How to create your own flavour. Gulp machine.">
-<p class="attribution-text"><i class="icon-cc"></i> Jordan Dawe, <a href="https://www.flickr.com/photos/freedryk/477742788">2007_04_24__20_31_27</a></p>
+<p class="attribution-text"><svg class="attribution-icon-cc"><use xlink:href="#cc"></use></svg> Jordan Dawe, <a href="https://www.flickr.com/photos/freedryk/477742788">2007_04_24__20_31_27</a></p>
 {% endfigure %}
 
 {% include articles/gulp-toc.html %}

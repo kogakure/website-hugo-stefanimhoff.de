@@ -21,7 +21,7 @@ This is the 12th part of my series *Introduction to Gulp.js*. Today I will write
 
 {% figure image-figure attribution %}
 <img src="/assets/images/artikel/gulp-tutorial-12.jpg" alt="A woman with a Double Gulp">
-<p class="attribution-text"><i class="icon-cc"></i> Reed, <a href="https://www.flickr.com/photos/ishatter/3614672744">picnic</a></p>
+<p class="attribution-text"><svg class="attribution-icon-cc"><use xlink:href="#cc"></use></svg> Reed, <a href="https://www.flickr.com/photos/ishatter/3614672744">picnic</a></p>
 {% endfigure %}
 
 {% include articles/gulp-toc.html %}

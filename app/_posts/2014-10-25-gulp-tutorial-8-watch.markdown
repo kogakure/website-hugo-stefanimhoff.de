@@ -19,7 +19,7 @@ This is the 8th part of my series *Introduction to Gulp.js*. Today I will set up
 
 {% figure image-figure attribution "Not even <strong>Double Gulp</strong> helped to have a Funtime" %}
 <img src="/assets/images/artikel/gulp-tutorial-8.jpg" alt="Man with a Double Gulp is sleeping">
-<p class="attribution-text"><i class="icon-cc"></i> Erin Nekervis, <a href="https://www.flickr.com/photos/theeerin/4701912791">Funtime!</a></p>
+<p class="attribution-text"><svg class="attribution-icon-cc"><use xlink:href="#cc"></use></svg> Erin Nekervis, <a href="https://www.flickr.com/photos/theeerin/4701912791">Funtime!</a></p>
 {% endfigure %}
 
 {% include articles/gulp-toc.html %}

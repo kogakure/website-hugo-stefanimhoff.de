@@ -23,7 +23,7 @@ This is the 9th part of my series *Introduction to Gulp.js*. Today I will use Gu
 
 {% figure image-figure attribution %}
 <img src="/assets/images/artikel/gulp-tutorial-9.jpg" alt="Girl drinking a Big Gulp">
-<p class="attribution-text"><i class="icon-cc"></i> Shelly Munkberg, <a href="https://www.flickr.com/photos/zingersb/501372181">5.16.07</a></p>
+<p class="attribution-text"><svg class="attribution-icon-cc"><use xlink:href="#cc"></use></svg> Shelly Munkberg, <a href="https://www.flickr.com/photos/zingersb/501372181">5.16.07</a></p>
 {% endfigure %}
 
 {% include articles/gulp-toc.html %}

@@ -21,8 +21,8 @@ This is the 14th and (for now) last part of my series *Introduction to Gulp.js*.
 
 {% figure image-figure attribution %}
 <img src="/assets/images/artikel/gulp-tutorial-14.jpg" alt="A fluffy bunny with a Big Gulp">
-<p class="attribution-text"><i class="icon-cc"></i> Jayanta Debnath, <a href="https://www.flickr.com/photos/jkdsphotography/13786076413">BIG GULP!</a></p>
 {% endfigure %}
+<p class="attribution-text"><svg class="attribution-icon-cc"><use xlink:href="#cc"></use></svg> Jayanta Debnath, <a href="https://www.flickr.com/photos/jkdsphotography/13786076413">BIG GULP!</a></p>
 
 {% include articles/gulp-toc.html %}
 

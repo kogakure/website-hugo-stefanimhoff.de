@@ -20,7 +20,7 @@ This is the 10th part of my series *Introduction to Gulp.js*. Today I will use G
 
 {% figure image-figure attribution %}
 <img src="/assets/images/artikel/gulp-tutorial-10.jpg" alt="A Double Gulp">
-<p class="attribution-text"><i class="icon-cc"></i> Fabienne Wassermann, <a href="https://www.flickr.com/photos/fabi_k/5119690026">double gulp</a></p>
+<p class="attribution-text"><svg class="attribution-icon-cc"><use xlink:href="#cc"></use></svg> Fabienne Wassermann, <a href="https://www.flickr.com/photos/fabi_k/5119690026">double gulp</a></p>
 {% endfigure %}
 
 {% include articles/gulp-toc.html %}

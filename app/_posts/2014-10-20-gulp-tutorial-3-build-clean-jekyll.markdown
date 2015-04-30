@@ -20,7 +20,7 @@ This is the 3rd part of my series *Introduction to Gulp.js*. Today I will write 
 
 {% figure image-figure attribution %}
 <img src="/assets/images/artikel/gulp-tutorial-3.jpg" alt="Boy drinking a very big cup of water">
-<p class="attribution-text"><i class="icon-cc"></i> Rudy Eng, <a href="https://www.flickr.com/photos/mac-ash/3628500632">A Very Big Cup of Water!</a></p>
+<p class="attribution-text"><svg class="attribution-icon-cc"><use xlink:href="#cc"></use></svg> Rudy Eng, <a href="https://www.flickr.com/photos/mac-ash/3628500632">A Very Big Cup of Water!</a></p>
 {% endfigure %}
 
 {% include articles/gulp-toc.html %}

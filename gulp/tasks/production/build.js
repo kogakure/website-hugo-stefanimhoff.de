@@ -9,8 +9,7 @@ gulp.task('build:production', function(callback) {
   [
     'sass',
     'scripts',
-    'images',
-    'copy:fonts'
+    'images'
   ],
   'base64',
   'combine:mediaqueries',
@@ -18,8 +17,7 @@ gulp.task('build:production', function(callback) {
     'optimize:html',
     'optimize:css',
     'optimize:js',
-    'optimize:images',
-    'copy:fonts:production'
+    'optimize:images'
   ],
   'revision',
   'rev:collect',

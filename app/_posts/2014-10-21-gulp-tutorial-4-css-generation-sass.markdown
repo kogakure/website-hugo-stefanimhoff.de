@@ -22,7 +22,7 @@ This is the 4th part of my series *Introduction to Gulp.js*. Today I will show h
 
 {% figure image-figure attribution %}
 <img src="/assets/images/artikel/gulp-tutorial-4.jpg" alt="Sarah Palin holding a Big Gulp">
-<p class="attribution-text"><i class="icon-cc"></i> Gage Skidmore, <a href="https://www.flickr.com/photos/gageskidmore/8571336210">Sarah Palin</a></p>
+<p class="attribution-text"><svg class="attribution-icon-cc"><use xlink:href="#cc"></use></svg> Gage Skidmore, <a href="https://www.flickr.com/photos/gageskidmore/8571336210">Sarah Palin</a></p>
 {% endfigure %}
 
 {% include articles/gulp-toc.html %}

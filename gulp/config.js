@@ -25,8 +25,7 @@ module.exports = {
       files: [
         developmentAssets + '/css/*.css',
         developmentAssets + '/js/*.js',
-        developmentAssets + '/images/**',
-        developmentAssets + '/fonts/*'
+        developmentAssets + '/images/**'
       ],
       notify: {
         styles: [ 'display: hidden; padding: 5px 15px; font-family: sans-serif; position: fixed; font-size: 0.9em; z-index: 9999; left: 0px; top: 0px; border-bottom-right-radius: 5px; margin: 0px; color: white; text-align: center; background-color: rgb(27, 32, 50);' ]
@@ -125,14 +124,20 @@ module.exports = {
       log: true
     }
   },
-  copyfonts: {
-    development: {
-      src:  srcAssets + '/fonts/*',
-      dest: developmentAssets + '/fonts'
-    },
-    production: {
-      src:  developmentAssets + '/fonts/*',
-      dest: productionAssets + '/fonts'
+  svg: {
+    src: 'vectors/*.svg',
+    dest: src + '/_includes',
+    options: {
+      mode: {
+        symbol: {
+          dest: 'svg',
+          sprite: 'icons.svg'
+        }
+      },
+      svg: {
+        xmlDeclaration: false,
+        doctypeDeclaration: false
+      }
     }
   },
   scsslint: {

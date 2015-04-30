@@ -13,8 +13,8 @@
       <ul class="footer-social-list">
         {% for link in site.data.social-links %}
           <li class="footer-social-list-item">
-            <a href="{{ link.url | replace: '!FEEDBURNER_URL!', site.data.settings.social.feedburner_url }}" class="footer-social-link {{ link.class }}">
-              <span class="footer-social-link-text">{{ link.name }}</span>
+            <a href="{{ link.url | replace: '!FEEDBURNER_URL!', site.data.settings.social.feedburner_url }}" class="footer-social-link">
+              <svg class="footer-social-icon"><use xlink:href="#{{ link.class }}"></use></svg><span class="footer-social-link-text">{{ link.name }}</span>
             </a>
           </li>
         {% endfor %}
@@ -33,7 +33,7 @@
         The content of this page is published under a
         <span class="nobr">
           <a class="footer-legal-link" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
-            <i class="icon-cc"></i> Creative Commons
+            <svg class="footer-legal-icon-cc"><use xlink:href="#cc"></use></svg> Creative Commons
           </a>
           Licence.
         </span>

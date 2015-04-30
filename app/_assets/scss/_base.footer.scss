@@ -83,8 +83,22 @@
 
 .footer-legal-link {
   @include link-colors($footer-link-color, $footer-link-color-active, $footer-link-color-active, $footer-link-color, $footer-link-color-active);
+  background: transparent;
   border: 0;
   text-decoration: none;
+
+  &:hover .footer-legal-icon-cc {
+    fill: $white;
+  }
+}
+
+.footer-legal-icon-cc {
+  fill: rgba($white, 0.5);
+  height: 21px;
+  position: relative;
+  top: 4px;
+  transition: $animation-link-hover;
+  width: 18px;
 }
 
 
@@ -192,7 +206,19 @@
 
   &:hover {
     border: 0;
+
+    .footer-social-icon {
+      fill: rgba($white, 0.7);
+    }
   }
+}
+
+.footer-social-icon {
+  fill: rgba($white, 0.5);
+  height: 30px;
+  transition: $animation-link-hover;
+  width: 30px;
+  filter: drop-shadow(-1px -1px 0 $black);
 }
 
 .footer-social-link-text {
