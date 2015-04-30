@@ -38,7 +38,7 @@ Und genau da setzt Capistrano an.
 
 ## Installation
 
-Um Capistrano zu installieren muss man zuerst [Ruby](https://www.ruby-lang.org/de/) und [RubyGems](http://rubygems.org/) auf seinem lokalen Computer installieren. Capistrano benötigt keine Installationen von Software auf den Servern.
+Um Capistrano zu installieren muss man zuerst [Ruby](https://www.ruby-lang.org/de/) und [RubyGems](https://rubygems.org/) auf seinem lokalen Computer installieren. Capistrano benötigt keine Installationen von Software auf den Servern.
 
 Zur Installation gibt man einfach ins Terminal folgenden Befehl ein:
 

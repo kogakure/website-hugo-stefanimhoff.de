@@ -29,7 +29,7 @@ Zuhause setze ich allerhand Festplatten ein, da ich seit einem Datenverlust irge
 
 Zuhause habe ich das **[Apple Wireless Keyboard](http://www.apple.com/de/keyboard/)**, das **[Magic Trackpad](http://www.apple.com/de/magictrackpad/)** und die **[Magic Mouse](http://www.apple.com/de/magicmouse/)** ein, alles mit Akkus betrieben. Auf der Arbeit tippe ich auf dem Apple Keyboard mit Kabel und habe irgendeine Microsoft-Maus mit Kabel von der IT bekommen.
 
-Mein MacBook Pro Zuhause steht fast immer geschlossen auf dem **[BookArc Pro](https://www.twelvesouth.com/products/bookarc-for-macbook-pro-retina)**, bei dem guten Monitor benötige ich das Display des MacBook Pro nicht. In der Firma steht mein geöffnetes MacBook Pro auf einem **[Griffin Elevator](https://store.griffintechnology.com/elevator)**, da ich auf dem Hauptmonitor nicht genug Platz habe, um zu entwickeln.
+Mein MacBook Pro Zuhause steht fast immer geschlossen auf dem **[BookArc Pro](https://www.twelvesouth.com/product/bookarc-for-macbook-pro-retina)**, bei dem guten Monitor benötige ich das Display des MacBook Pro nicht. In der Firma steht mein geöffnetes MacBook Pro auf einem **[Griffin Elevator](https://store.griffintechnology.com/elevator)**, da ich auf dem Hauptmonitor nicht genug Platz habe, um zu entwickeln.
 
 ## Software
 Selbstverständlich setze ich mehr Software ein, als hier in der Liste aufgezählt, nur die hier Erwähnten sind besonders nützlich.
