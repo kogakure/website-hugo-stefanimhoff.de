@@ -4,7 +4,9 @@
 
 img,
 a img {
-  border: $image-border-size solid $image-border-color;
+  border-color: $image-border-color;
+  border-style: solid;
+  border-width: $image-border-size;
   height: auto !important;
   max-width: 100%;
   vertical-align: bottom;
