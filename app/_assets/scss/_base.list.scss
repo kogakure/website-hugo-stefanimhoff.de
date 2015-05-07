@@ -17,10 +17,12 @@ ol {
 
 ol ol {
   list-style: lower-latin;
-  margin: 0 1.5em;
+  margin-bottom: 0;
+  margin-left: $default-spacing-left;
 
   .article-body & {
-    margin: 0 1.5em;
+    margin-bottom: 0;
+    margin-left: $default-spacing-left;
   }
 }
 
@@ -39,10 +41,12 @@ ul {
 
 ul ul {
   list-style: circle;
-  margin: 0 1.5em;
+  margin-bottom: 0;
+  margin-left: $default-spacing-left;
 
   .article-body & {
-    margin: 0 1.5em;
+    margin-bottom: 0;
+    margin-left: $default-spacing-left;
   }
 }
 
