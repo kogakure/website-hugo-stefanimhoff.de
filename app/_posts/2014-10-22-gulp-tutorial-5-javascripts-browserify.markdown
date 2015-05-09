@@ -21,7 +21,7 @@ tags:
 This is the 5th part of my series *Introduction to Gulp.js*. Today I will show how to use Browserify to bundle your JavaScript and use CommonJS modules to run node modules in the Browser.
 
 {% figure image-figure attribution "If <em>Double Gulp</em> isn’t enough, try <strong>Ultimate Gulp</strong> or <strong>Xtreme Gulp</strong>" %}
-<img src="/assets/images/artikel/gulp-tutorial-5.jpg" alt="Ultimate Gulp and X-Treme Gulp">
+<img src="{{ site.url }}/assets/images/artikel/gulp-tutorial-5.jpg" alt="Ultimate Gulp and X-Treme Gulp">
 <p class="attribution-text"><svg class="attribution-icon-cc"><use xlink:href="#cc"></use></svg> Keegan Berry, <a href="https://www.flickr.com/photos/superdeathsquid/535131057">DSCN8833</a></p>
 {% endfigure %}
 

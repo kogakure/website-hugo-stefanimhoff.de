@@ -20,7 +20,7 @@ tags:
 This is the 14th and (for now) last part of my series *Introduction to Gulp.js*. I may come back later to this series to add additional tasks. Today I will write a task to sync the files of my Jekyll site to my webserver.
 
 {% figure image-figure attribution %}
-<img src="/assets/images/artikel/gulp-tutorial-14.jpg" alt="A fluffy bunny with a Big Gulp">
+<img src="{{ site.url }}/assets/images/artikel/gulp-tutorial-14.jpg" alt="A fluffy bunny with a Big Gulp">
 {% endfigure %}
 <p class="attribution-text"><svg class="attribution-icon-cc"><use xlink:href="#cc"></use></svg> Jayanta Debnath, <a href="https://www.flickr.com/photos/jkdsphotography/13786076413">BIG GULP!</a></p>
 

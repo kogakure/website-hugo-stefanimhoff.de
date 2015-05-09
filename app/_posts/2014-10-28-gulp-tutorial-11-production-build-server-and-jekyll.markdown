@@ -18,7 +18,7 @@ tags:
 This is the 11th part of my series *Introduction to Gulp.js*. Today I will start writing the production build task, set up a server to view the production code and build the production site with Jekyll.
 
 {% figure image-figure attribution %}
-<img src="/assets/images/artikel/gulp-tutorial-11.jpg" alt="A Girl looking on a Double Gulp">
+<img src="{{ site.url }}/assets/images/artikel/gulp-tutorial-11.jpg" alt="A Girl looking on a Double Gulp">
 <p class="attribution-text"><svg class="attribution-icon-cc"><use xlink:href="#cc"></use></svg> Hannah, <a href="https://www.flickr.com/photos/girlaphid/4570474834">118/365</a></p>
 {% endfigure %}
 

@@ -19,7 +19,7 @@ tags:
 This is the 15th part of my series *Introduction to Gulp.js*. Today I’ll add some tasks for performance improvement of the website with WebP for images and Gzip for text files.
 
 {% figure image-figure attribution %}
-<img src="/assets/images/artikel/gulp-tutorial-15.jpg" alt="A oversized Captain America holding a Big Gulp">
+<img src="{{ site.url }}/assets/images/artikel/gulp-tutorial-15.jpg" alt="A oversized Captain America holding a Big Gulp">
 <p class="attribution-text"><svg class="attribution-icon-cc"><use xlink:href="#cc"></use></svg> Jess, <a href="https://www.flickr.com/photos/lundgrenphotography/8050895411">CAPTAIN AMERCIA</a></p>
 {% endfigure %}
 

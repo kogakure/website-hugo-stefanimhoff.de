@@ -20,7 +20,7 @@ tags:
 This is the 7th part of my series *Introduction to Gulp.js*. Today I will use Gulp.js to replace a lot of my URLs to small images with Base64 encoded images.
 
 {% figure image-figure attribution %}
-<img src="/assets/images/artikel/gulp-tutorial-7.jpg" alt="Big Gulp at the beach">
+<img src="{{ site.url }}/assets/images/artikel/gulp-tutorial-7.jpg" alt="Big Gulp at the beach">
 <p class="attribution-text"><svg class="attribution-icon-cc"><use xlink:href="#cc"></use></svg> The HI Life w/ Lime, <a href="https://www.flickr.com/photos/bi11jon/445799182">Big Gulp</a></p>
 {% endfigure %}
 

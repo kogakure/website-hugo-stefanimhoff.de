@@ -19,7 +19,7 @@ tags:
 This is the 3rd part of my series *Introduction to Gulp.js*. Today I will write the build task, which will execute all other tasks needed for a build, the task to delete assets for a fresh start, and the task to create my Jekyll site.
 
 {% figure image-figure attribution %}
-<img src="/assets/images/artikel/gulp-tutorial-3.jpg" alt="Boy drinking a very big cup of water">
+<img src="{{ site.url }}/assets/images/artikel/gulp-tutorial-3.jpg" alt="Boy drinking a very big cup of water">
 <p class="attribution-text"><svg class="attribution-icon-cc"><use xlink:href="#cc"></use></svg> Rudy Eng, <a href="https://www.flickr.com/photos/mac-ash/3628500632">A Very Big Cup of Water!</a></p>
 {% endfigure %}
 

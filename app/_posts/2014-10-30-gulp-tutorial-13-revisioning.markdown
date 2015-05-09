@@ -19,7 +19,7 @@ tags:
 This is the 13th part of my series *Introduction to Gulp.js*. Today I will write the task to revision my static assets.
 
 {% figure image-figure attribution %}
-<img src="/assets/images/artikel/gulp-tutorial-13.jpg" alt="A woman dumping a Double Gulp on herself">
+<img src="{{ site.url }}/assets/images/artikel/gulp-tutorial-13.jpg" alt="A woman dumping a Double Gulp on herself">
 <p class="attribution-text"><svg class="attribution-icon-cc"><use xlink:href="#cc"></use></svg> Reed, <a href="https://www.flickr.com/photos/ishatter/3614680378">dump it</a></p>
 {% endfigure %}
 
