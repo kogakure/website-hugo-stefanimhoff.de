@@ -32,7 +32,7 @@ $ cd Arbeit
 
 Um jetzt an einem Projekt aus dem Repository arbeiten zu können, muss man es sich in einen Arbeitsordner *auschecken*, also eine Kopie der Dateien auf seine Festplatte holen.
 
-Im Artikel <cite>[Subversion (4) – Importieren einer Projektstruktur](/2007/subversion-4-importieren-einer-projektstruktur/)</cite> hatte ich mir eine Beispielstruktur angelegt. Ich entscheide mich jetzt an der Website zu arbeiten und nur diesen Ordner und seine Unterordner auszuchecken. Natürlich könnte man genauso gut den kompletten `trunk` (die Hauptentwicklungslinie) in seinen Arbeitsordner holen.
+Im Artikel <cite>[Subversion (4) – Importieren einer Projektstruktur]({{ site.url }}/2007/subversion-4-importieren-einer-projektstruktur/)</cite> hatte ich mir eine Beispielstruktur angelegt. Ich entscheide mich jetzt an der Website zu arbeiten und nur diesen Ordner und seine Unterordner auszuchecken. Natürlich könnte man genauso gut den kompletten `trunk` (die Hauptentwicklungslinie) in seinen Arbeitsordner holen.
 
 {% highlight sh %}
 $ mkdir meinewebsite

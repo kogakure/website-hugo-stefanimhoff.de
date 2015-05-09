@@ -88,7 +88,7 @@ I really hate Adobes cloud solution and pricing and had decided some month ago n
 I had decided on [Jekyll](http://jekyllrb.com/) very early on, because I had used it on this website and it was a lot of fun and very comfortable to create a website with Jekyll.
 
 ### Automation
-As with this website I used [Gulp.js](http://gulpjs.com/) again to automate everything from development to production. I wrote a [series on Gulp.js](/tag/gulp/) if you would like to know more.
+As with this website I used [Gulp.js](http://gulpjs.com/) again to automate everything from development to production. I wrote a [series on Gulp.js]({{ site.url }}/tag/gulp/) if you would like to know more.
 
 ### Search
 One problem, which is common on a static site, is that it’s hard to have dynamic content. Most of my website is quite static, why Jekyll is a good fit. But creating a search without dynamically created pages and a database is not an easy task.
