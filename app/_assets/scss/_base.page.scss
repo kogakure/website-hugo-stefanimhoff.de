@@ -30,14 +30,10 @@ body {
   font-weight: $normal;
   hyphens: auto;
   line-height: $base-line-height;
-  text-rendering: optimizeLegibility;
+  text-rendering: optimizeSpeed;
 
   .wf-active & {
     @extend %sans-font-wf;
-  }
-
-  @include breakpoint($iphone-width) {
-    text-rendering: optimizeSpeed;
   }
 }
 
