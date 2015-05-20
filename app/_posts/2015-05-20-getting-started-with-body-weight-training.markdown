@@ -2,7 +2,7 @@
 layout: post
 language: "en"
 title: "Getting Started with Body Weight Training"
-date: 2015-05-20T09:43:05+00:00
+date: 2015-05-20T21:45:00+00:00
 description: "Learning Body Weight Training is possible for everybody. It’s free, you can do it anywhere, you need no gym or expensive equipment to train and you can improve constantly."
 og_image: "/assets/images/artikel/calisthenics-human-flag.jpg"
 author: "Stefan Imhoff"
