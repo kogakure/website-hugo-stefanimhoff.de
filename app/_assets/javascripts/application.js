@@ -12,7 +12,6 @@ var container     = document.querySelector('.container'),
     trackingLinks = document.querySelectorAll('a');
 
 if ('querySelector' in document && 'addEventListener' in window) {
-
   document.addEventListener('DOMContentLoaded', function() {
     FastClick.attach(document.body);
     fitVids('.container');
