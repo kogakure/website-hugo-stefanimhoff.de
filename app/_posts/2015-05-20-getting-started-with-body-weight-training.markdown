@@ -123,7 +123,7 @@ All exercises are shown as simple silhouettes, no fancy videos or photos. Simple
 
 Before starting your workout, you can choose the rest time between exercises and sets.
 
-I found the app really useful, because it will make sure you don’t do to much or to little rest time. 15 seconds before the next exercise a voice will mention the end of the rest time, enough to get into position for the next exercise. A counter with a voice will count down from 5 until you start your next exercise.
+I found the app really useful, because it will make sure you don’t do too much or too little rest time. 15 seconds before the next exercise a voice will mention the end of the rest time, enough time to get into position for the next exercise. A counter with a voice will count down from 5 until you start your next exercise.
 
 {% figure image-figure image-figure-fullsize "Workout Counter and Rest Counter" %}
 <img src="{{ site.url }}/assets/images/artikel/madbarz-4.jpg" alt="Workout Counter and Rest Counter">
