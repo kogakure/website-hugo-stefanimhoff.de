@@ -40,7 +40,6 @@ images: {
 {% highlight javascript %}
 var gulp        = require('gulp');
 var changed     = require('gulp-changed');
-var browsersync = require('browser-sync');
 var config      = require('../../config').images;
 
 /**
