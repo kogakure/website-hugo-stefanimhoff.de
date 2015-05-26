@@ -59,7 +59,7 @@ gulp.task('build', function(callback) {
 
 This task will first delete the assets folder (Jekyll is deleted by default), then create in parallel the Jekyll site, CSS files from SASS files, bundle the JavaScript files, copy images to the assets folder and copy vector fonts. After the `sass` task is finished I replace links to small PNG files with Base64 encoding to inline them in my CSS files.
 
-You should comment out tasks, we haven’t written until know, or Gulp can not run. I just included them so we don’t need to come back for each task we write and add a line.
+You should comment out tasks, we haven’t written until now, or Gulp can not run. I just included them so we don’t need to come back for each task we write and add a line.
 
 ## Delete Assets
 To wipe out all files in the asset folder I use the node module `del`.
