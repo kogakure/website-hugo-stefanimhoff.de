@@ -133,7 +133,6 @@ Um den Einstieg in Django zu erleichtern, habe ich nachfolgend eine Liste von in
 
 ### Folien
 
-* [A fast-paced introduction to Django.](http://toys.jacobian.org/presentations/2007/pycon/tutorials/beginning/) – Folien von der PyCon2007, Jacob Kaplan-Moss
 * [The Django Web Application Framework](http://www.slideshare.net/simon/the-django-web-application-framework) – Folien von ACCU, Python Track 2006, Simon Willison
 * [Doing Local Right](http://www.slideshare.net/simon/doing-local-right) – Folien von der @media 2007, Simon Willison
 
