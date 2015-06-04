@@ -81,7 +81,7 @@ Plugins werden ab jetzt nicht entpackt und kompliziert in die richtigen Unterord
 
 Meine Empfehlung ist, komplett auf Git-Checkouts umzusteigen. Das geht seit kurzem sehr leicht, denn irgend ein fleißiger Wichtel hat einen Mirror der meisten Skripte unter [vim-scripts](https://github.com/vim-scripts) auf Github eingestellt und ermöglicht so das automatische Update der Plugins über Git.
 
-Einige Personen klonen sich die gewünschten Plugins als Submodule, ich verwende ein kleines Ruby-Skript von [Tammer Saleh](http://tammersaleh.com/posts/the-modern-vim-config-with-pathogen), mit dem ich meine Git-Repositorys aktualisiere:
+Einige Personen klonen sich die gewünschten Plugins als Submodule, ich verwende ein kleines Ruby-Skript von [Tammer Saleh](http://tammersaleh.com/posts/the-modern-vim-config-with-pathogen/), mit dem ich meine Git-Repositorys aktualisiere:
 
 {% highlight ruby linenos %}
 #!/usr/bin/env ruby
@@ -135,7 +135,7 @@ Einfach unabdingbar ist auch das Plugin [surround.vim](https://github.com/tpope/
 
 TextMate war wahrscheinlich das erste Programm, das Snippets im Großen Umfang eingeführt hat. Ich arbeite seit Jahren mit TextMate und könnte ohne Snippets nicht mehr vernünftig arbeiten. Vim bietet sogar mehrere Implementationen für Snippets. Ich persönlich nutze [snipmate](https://github.com/msanders/snipmate.vim) auch wenn es für Poweruser noch ein mächtigeres (aber auch komplizierteres Plugin) gibt. Snipmate bietet fast alle Funktionen, die auch TextMate hatte, die Snippets können fast kopiert werden und mit wenigen Änderungen angepasst werden.
 
-Peteris Krumin stellt auf seinem Blog [sieben Vim-Plugins](http://www.catonmat.net/blog/vim-plugins-surround-vim) vor, die du unbedingt kennen solltest.
+Peteris Krumin stellt auf seinem Blog [sieben Vim-Plugins](http://www.catonmat.net/blog/vim-plugins-surround-vim/) vor, die du unbedingt kennen solltest.
 
 ## Omnicomplete-Power
 

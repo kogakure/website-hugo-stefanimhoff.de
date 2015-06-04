@@ -42,7 +42,7 @@ Den mittlerweile veralteten Artikel von 2007 ersetze ich durch eine große Liste
 * [Git Magic](http://www-cs-students.stanford.edu/~blynn/gitmagic/ "Git Magic - Preface") – Ein alternatives Buch
 * [The GitHub Guides](https://help.github.com/) – Diverse Tipps und Anleitungen für GitHub
 * [An Illustrated Guide to Git on Windows](http://nathanj.github.io/gitguide/ "An Illustrated Guide to Git on Windows") – Schritt-für-Schritt-Anleitung für Windows-Nutzer
-* [vss2git](http://code.google.com/p/vss2git/) – Eine Windows-GUI, die ein existierendes Microsoft Visual SourceSafe 6.0 (VSS) Repository zu einem neuen Git-Repository exportiert.
+* [vss2git](https://github.com/trevorr/vss2git) – Eine Windows-GUI, die ein existierendes Microsoft Visual SourceSafe 6.0 (VSS) Repository zu einem neuen Git-Repository exportiert.
 
 ## Referenzen
 

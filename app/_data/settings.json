@@ -39,7 +39,7 @@
     },
     "books": {
       "headline": "Bookworm",
-      "text": "I love [books](https://www.goodreads.com/review/list/28460819), to be precice I love *paper* books. I can not imagine a living room without shelves of books.\n\nMost likly I inherited this passion from my grandfather, who owned over **4000** books. My books count roughly a  **1000**. I buy books ahead and my desks are always stuffed with unread books. I like classics, books about philosophy, martial arts, art &amp; desgin, architecture, typography and novels.\n\nWork-related books I read mostly digital, because they get old too fast and don’t look nice in most cases."
+      "text": "I love [books](https://www.goodreads.com/review/list/28460819-stefan), to be precice I love *paper* books. I can not imagine a living room without shelves of books.\n\nMost likly I inherited this passion from my grandfather, who owned over **4000** books. My books count roughly a  **1000**. I buy books ahead and my desks are always stuffed with unread books. I like classics, books about philosophy, martial arts, art &amp; desgin, architecture, typography and novels.\n\nWork-related books I read mostly digital, because they get old too fast and don’t look nice in most cases."
     },
     "introvert": {
       "headline": "Introvert" ,
@@ -51,7 +51,7 @@
     },
     "martialarts": {
       "headline": "Martial Artist",
-      "text": "I love martial arts, especially the Japanese. I practised Shotokan Karate for seven years and then began training **Bujinkan Budo Taijutsu**.\n\nIn [Bujinkan](http://wikipedia.org/wiki/Bujinkan) we train **nine different schools**: six **Samurai** and three **Ninja** schools, the oldest of these school is **{% since_year 618 %} years** old and the traditions where given from master to scholar for generations.\n\nThese martial arts aren’t sports, but highly efficient fighting systems, proven on the battlefields of ancient Japan.\n\nI run [a website](http://kogakure.de/) on this topic for more than {% since_year 1999 %} years. I collected knowledge about the history, arts, tools, weapons, philosophy and life of the Ninja."
+      "text": "I love martial arts, especially the Japanese. I practised Shotokan Karate for seven years and then began training **Bujinkan Budo Taijutsu**.\n\nIn [Bujinkan](http://www.wikipedia.org/wiki/Bujinkan) we train **nine different schools**: six **Samurai** and three **Ninja** schools, the oldest of these school is **{% since_year 618 %} years** old and the traditions where given from master to scholar for generations.\n\nThese martial arts aren’t sports, but highly efficient fighting systems, proven on the battlefields of ancient Japan.\n\nI run [a website](http://kogakure.de/) on this topic for more than {% since_year 1999 %} years. I collected knowledge about the history, arts, tools, weapons, philosophy and life of the Ninja."
     },
     "movies": {
       "headline": "Movie Fan",
