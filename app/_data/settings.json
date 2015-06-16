@@ -5,10 +5,15 @@
   "author": "Stefan Imhoff",
   "seo": {
     "keywords": "Stefan Imhoff, Hamburg, Frontend, Engineer",
-    "description": "Front-End Engineer @ XING, Developer, Designer and Martial&nbsp;Artist."
+    "description": "Front-End Engineer @ XING, Developer, Designer and Martial&nbsp;Artist.",
+    "description_de": "Frontend Engineer @ XING, Entwickler, Designer und Kampfkünstler."
   },
   "social": {
     "feedburner_url": "http://feeds.feedburner.com/stefanimhoff",
+    "feed_title_en": "Stefan Imhoff (English Entries)",
+    "feedburner_url_en": "http://feeds.feedburner.com/stefanimhoff/en",
+    "feed_title_de": "Stefan Imhoff (Deutsche Beiträge)",
+    "feedburner_url_de": "http://feeds.feedburner.com/stefanimhoff/de",
     "twitter": "@kogakure",
     "googleplus": "104687479698350625994"
   },
