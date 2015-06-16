@@ -16,8 +16,12 @@ p {
 
 // Horizontale Trenner
 hr {
-  border: 0;
-  border-bottom: 1px solid rgba($light-grey, 0.9);
+  border-bottom-width: 1px;
+  border-color: rgba($light-grey, 0.9);
+  border-left-width: 0;
+  border-right-width: 0;
+  border-style: solid;
+  border-top-width: 0;
   height: 0;
   margin: 2.5em;
 }
@@ -70,16 +74,20 @@ abbr.no-caps {
 kbd {
   @extend %sans-font;
   background-color: $keyboard-background;
-  border: 1px solid $keyboard-border;
+  border-color: $keyboard-border;
   border-radius: 3px;
+  border-style: solid;
+  border-width: 1px;
   box-shadow: 0 1px 0 rgba($black, 0.2), 0 0 0 2px $white inset;
   color: $dark-grey;
   display: inline-block;
   font-size: $font-scale-kbd;
   font-weight: $bold;
   line-height: 1.4;
-  margin: 0 0.1em;
-  padding: 0.3em 0.6em 0.1em;
+  padding-bottom: 0.1em;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+  padding-top: 0.3em;
   text-shadow: 0 1px 0 $white;
   white-space: nowrap;
 
