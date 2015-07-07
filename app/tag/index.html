@@ -6,5 +6,12 @@ body_class: archive
 robots: "noindex,follow"
 ---
 
-<h1>{% if page.title or post.title %}{{ page.title }}{% else %}{{ site.data.settings.title }}{% endif %}</h1>
+<h1 class="archive-headline">
+  {% if page.title or post.title %}
+    {{ page.title }}
+  {% else %}
+    {{ site.data.settings.title }}
+  {% endif %}
+</h1>
+
 {% include tags_list.html %}
