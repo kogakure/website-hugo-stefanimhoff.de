@@ -120,6 +120,7 @@ Redirect 301 /notiz/wichtig-website-neu                                         
 Redirect 301 /notiz/automatisierte-installation-mac-os-x                         /2014/automatisierte-installation-mac-os-x
 Redirect 301 /main/kategorie/gtd                                                 /category/produktivitaet
 Redirect 301 /main/kategorie/python                                              /tag/python
+Redirect 301 /main/kategorie/django                                              /tag/django
 
 Redirect 301 /information/impressum                                             /impressum
 Redirect 301 /main/kategorie/tutorial                                           /tag/tutorial
