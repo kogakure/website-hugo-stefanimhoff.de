@@ -28,7 +28,7 @@ Im Prinzip wollte ich ein Foto, dass ein natürliches Objekt zeigt, am besten ir
 
 Jetzt musste ich nur noch herausfinden, wie denn der Fachbegriff für so ein Foto war. *Objekt-im-Vordergrund-scharf-und-Hintergrund-unscharf* war kein guter Suchbegriff.
 
-Doch es gibt tatsächlich einen Begriff für dieses Eigenschaft: [Bokeh](http://de.wikipedia.org/wiki/Bokeh).
+Doch es gibt tatsächlich einen Begriff für dieses Eigenschaft: [Bokeh](https://de.wikipedia.org/wiki/Bokeh).
 
 {% figure image-figure image-figure-fullsize attribution %}
 <img src="{{ site.url }}/assets/images/artikel/josefina-bokeh.jpg" alt="Josefina with Bokeh">

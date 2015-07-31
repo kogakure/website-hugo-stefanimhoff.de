@@ -29,13 +29,13 @@ Im Irezumi werden nicht wahllos irgendwelche Dinge auf den Körper tätowiert, d
 
 ## Yakuza
 
-Am bekanntesten ist die Tätowierung durch ihre bedeutensten Träger – die Mitglieder der japanischen Verbrecherorganisation [Yakuza](http://de.wikipedia.org/wiki/Yakuza "Yakuza - Wikipedia") – geworden, doch werden Irezumi heute auch von Geschäftsmännern und sogar Hausfrauen getragen.
+Am bekanntesten ist die Tätowierung durch ihre bedeutensten Träger – die Mitglieder der japanischen Verbrecherorganisation [Yakuza](https://de.wikipedia.org/wiki/Yakuza "Yakuza - Wikipedia") – geworden, doch werden Irezumi heute auch von Geschäftsmännern und sogar Hausfrauen getragen.
 
-Die Verbindungen zur japanischen Kunst des [Ukiyo-e](http://de.wikipedia.org/wiki/Ukiyo-e "Ukiyo-e - Wikipedia") (Holzschnitt) sind fließend und die Motive sind oft die gleichen.
+Die Verbindungen zur japanischen Kunst des [Ukiyo-e](https://de.wikipedia.org/wiki/Ukiyo-e "Ukiyo-e - Wikipedia") (Holzschnitt) sind fließend und die Motive sind oft die gleichen.
 
 ## Motive
 
-Neben Göttern, Fabelwesen und Dämonen ist die wichtigste Quelle für Motive die alte chinesische Novelle <cite>[Shuǐhǔ Zhuàn](http://de.wikipedia.org/wiki/Die_R%C3%A4uber_vom_Liang-Schan-Moor)</cite> (Wasserufergeschichte), in Japan als <cite>Suikoden</cite> bekannt. Sie gehört zu einem der vier klassischen Bücher der chinesischen Literatur. Die deutsche Übersetzung dieses sehr unterhaltsamen Buches heißt <cite>[Die Räuber vom Liang Schan Moor](http://www.amazon.de/gp/product/3458318917?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=3458318917 "Amazon.de: Die Räuber vom Liang Schan Moor, Franz Kuhn")</cite>.
+Neben Göttern, Fabelwesen und Dämonen ist die wichtigste Quelle für Motive die alte chinesische Novelle <cite>[Shuǐhǔ Zhuàn](https://de.wikipedia.org/wiki/Die_R%C3%A4uber_vom_Liang-Schan-Moor)</cite> (Wasserufergeschichte), in Japan als <cite>Suikoden</cite> bekannt. Sie gehört zu einem der vier klassischen Bücher der chinesischen Literatur. Die deutsche Übersetzung dieses sehr unterhaltsamen Buches heißt <cite>[Die Räuber vom Liang Schan Moor](http://www.amazon.de/gp/product/3458318917?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=3458318917 "Amazon.de: Die Räuber vom Liang Schan Moor, Franz Kuhn")</cite>.
 
 ## Die Räuber vom Liang-Shan Moor
 

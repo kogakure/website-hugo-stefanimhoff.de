@@ -15,7 +15,7 @@ tags:
 
 Computerspiele bieten oft eine interessante und spannende Story, doch leider gelingt die Umsetzung im Film nur selten. Hier ist meine persönliche Wunschliste von Computerspielen, die ich gerne verfilmt sehen würde.
 
-Da am 13. Dezember 2007 mit <cite>[Hitman](http://de.wikipedia.org/wiki/Hitman_(Computerspiel\))</cite> ein Computerspiel aus meinen Gamer-Zeiten [ins Kino kommt](http://www.imdb.com/title/tt0465494/), will ich in diesem Artikel meine Lieblings-Computerspiele, die eine gute Filmvorlage liefern könnten,  aufzählen.
+Da am 13. Dezember 2007 mit <cite>[Hitman](https://de.wikipedia.org/wiki/Hitman_(Computerspiel\))</cite> ein Computerspiel aus meinen Gamer-Zeiten [ins Kino kommt](http://www.imdb.com/title/tt0465494/), will ich in diesem Artikel meine Lieblings-Computerspiele, die eine gute Filmvorlage liefern könnten,  aufzählen.
 
 <cite>Hitman</cite> stand auf meiner Liste, und ich hoffe, dass der Film gut wird; der Trailer sieht jedenfalls sehr vielversprechend aus.
 
@@ -41,11 +41,11 @@ Wie ich bei meiner Recherche gelesen habe, scheint es irgendwelche Gerüchte zu 
 
 Wissenschaftler gelangen auf einen verlassenen Planeten einer untergegangenen Zivilisation, dazu gab es fantastische Musik von Richard Wagner und atemberaubende Kulissen.
 
-<cite>[The Dig](http://de.wikipedia.org/wiki/The_Dig)</cite> sollte sogar ursprünglich ein Kinofilm werden, und stammt aus der Feder von Stephen Spielberg. Nur wurde der Film in den 1980ern aufgrund des unzureichenden Technologiestandes nicht realisiert, erst zurückgestellt und dann ganz gestrichen. Eigentlich schade, denn das Skript ist toll.
+<cite>[The Dig](https://de.wikipedia.org/wiki/The_Dig)</cite> sollte sogar ursprünglich ein Kinofilm werden, und stammt aus der Feder von Stephen Spielberg. Nur wurde der Film in den 1980ern aufgrund des unzureichenden Technologiestandes nicht realisiert, erst zurückgestellt und dann ganz gestrichen. Eigentlich schade, denn das Skript ist toll.
 
 ## Outcast
 
-Ähnlich wie <cite>The Dig</cite> führt <cite>[Outcast](http://de.wikipedia.org/wiki/Outcast)</cite> die Hauptfiguren in eine fremde, außerirdische Welt. Das Paralleluniversum, in das die Helden reisen, hat mich damals vor allem wegen seiner immensen Größe und fantastischen Landschaften beeindruckt.
+Ähnlich wie <cite>The Dig</cite> führt <cite>[Outcast](https://de.wikipedia.org/wiki/Outcast)</cite> die Hauptfiguren in eine fremde, außerirdische Welt. Das Paralleluniversum, in das die Helden reisen, hat mich damals vor allem wegen seiner immensen Größe und fantastischen Landschaften beeindruckt.
 
 Die Geschichte spielt auf interessante Weise mit dem Zeitsprung-Paradoxon, was auch zu einer interessanten Auflösung am Ende führte.
 

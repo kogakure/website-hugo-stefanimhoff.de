@@ -31,7 +31,7 @@ Zeitgleich stolpere ich im Januar auch über [Git](http://git-scm.com/), was lan
 
 Ich setzte meinen eigenen [Gitweb](https://git.wiki.kernel.org/index.php/Gitweb)-Server auf und schaue auch die Integration mit Subversion ([git-svn](https://www.kernel.org/pub/software/scm/git/docs/git-svn.html "git-svn(1)")) an.
 
-Der Teilchenbeschleuniger des Kernforschungszentrums [CERN](http://de.wikipedia.org/wiki/CERN "CERN – Wikipedia") beunruhigt die Massen, da er im Herbst 2008 eingeschaltet werden soll. Aber nach einigen Missgeschicken wird er erst einmal bis 2009 abgeschaltet. Vorerst verschwinden wir also nicht im Schwarzen Loch. Das wäre ja auch zu früh: Die [Maya](http://de.wikipedia.org/wiki/Maya "Maya – Wikipedia") haben das Ende der bekannten Welt schließlich erst für den **21. Dezember 2012** vorausgesagt.
+Der Teilchenbeschleuniger des Kernforschungszentrums [CERN](https://de.wikipedia.org/wiki/CERN "CERN – Wikipedia") beunruhigt die Massen, da er im Herbst 2008 eingeschaltet werden soll. Aber nach einigen Missgeschicken wird er erst einmal bis 2009 abgeschaltet. Vorerst verschwinden wir also nicht im Schwarzen Loch. Das wäre ja auch zu früh: Die [Maya](https://de.wikipedia.org/wiki/Maya "Maya – Wikipedia") haben das Ende der bekannten Welt schließlich erst für den **21. Dezember 2012** vorausgesagt.
 
 ## Februar
 
@@ -48,7 +48,7 @@ Ich setzte mir ein [MoinMoinWiki](https://moinmo.in/) auf, um Notizen und Wissen
 
 Ich schaue mir nochmal eine Alternative zu Git an: [Mercurial](http://mercurial.selenic.com/). Aber Git hat einfach ein paar nette Bonbons, die den Ausschlag geben.
 
-Ich frage bei Media Temple an, ob mein Django-Projekt auf einem [Dedicated Virtual Server](http://mediatemple.net/webhosting/vps/hosting/) **(dv) BASE** laufen würde. Leider ist der Support frech und teilt mir mit, ich bräuchte mindestens einen **(dv) EXTREME**, vielleicht sogar zwei davon. WTF?! So verliert mich Media Temple als Kunden, ich sage *farewell* zum Grid und wechsele zu [Webfaction](https://www.webfaction.com/?affiliate=kogakure "Hosting for an agile web - WebFaction"). Dort bekommt man wenigstens was für sein Geld.
+Ich frage bei Media Temple an, ob mein Django-Projekt auf einem [Dedicated Virtual Server](https://mediatemple.net/webhosting/vps/hosting/) **(dv) BASE** laufen würde. Leider ist der Support frech und teilt mir mit, ich bräuchte mindestens einen **(dv) EXTREME**, vielleicht sogar zwei davon. WTF?! So verliert mich Media Temple als Kunden, ich sage *farewell* zum Grid und wechsele zu [Webfaction](https://www.webfaction.com/?affiliate=kogakure "Hosting for an agile web - WebFaction"). Dort bekommt man wenigstens was für sein Geld.
 
 ## März
 
@@ -90,7 +90,7 @@ Ich amüsiere mich fantasisch über [The Website is Down](http://www.thewebsitei
 
 Im Juni installiere ich mir auch [Ubuntu](http://www.ubuntu.com/) in einer Parallels-Partition, um mal mit einem richtig guten Linux-System rumzutesten.
 
-Ich versuche einige Abteilungen im Hause mal dazu zu bewegen, [CVS](http://de.wikipedia.org/wiki/Concurrent_Versions_System) vielleicht langsam einzumotten. Natürlich erfolglos.
+Ich versuche einige Abteilungen im Hause mal dazu zu bewegen, [CVS](https://de.wikipedia.org/wiki/Concurrent_Versions_System) vielleicht langsam einzumotten. Natürlich erfolglos.
 
 * **Die**: <q>Wir können nicht wechseln, wir dürfen unsere History nicht verlieren</q>.
 * **Ich**: <q>Schon mal was von Git-CVS gehört?</q>
@@ -107,7 +107,7 @@ Ich erfahre, was Django Manager sind und lerne, wie man sie benutzt.
 
 MobileMe ist ein echter Flop, trotzt erweiterter Test-Phase kündige ich meinen Account vorzeitig. So bringt mir das alles nichts, ohne ordentliche Live-Synchronisation. Da fahre ich mit [Spanning Sync](http://spanningsync.com/ "Spanning Sync - Sync iCal and Google Calendar") und Google besser.
 
-Ich wechsele von meinem Wiki zu [Evernote](http://evernote.com/intl/de/). So lässt sich all das *Zeug* wirklich komfortabel ablegen. Markieren, reinziehen, verschlagworten, synchronisieren. Evernote ist genau das fehlende Stück Software, dass ich für meinen GTD-Prozess noch brauchte. [Things](http://culturedcode.com/things/) benutze ich für die Aufgaben und Evernote für das *Zeug*.
+Ich wechsele von meinem Wiki zu [Evernote](https://evernote.com/intl/de/). So lässt sich all das *Zeug* wirklich komfortabel ablegen. Markieren, reinziehen, verschlagworten, synchronisieren. Evernote ist genau das fehlende Stück Software, dass ich für meinen GTD-Prozess noch brauchte. [Things](http://culturedcode.com/things/) benutze ich für die Aufgaben und Evernote für das *Zeug*.
 
 Ich lerne, wie man [Vim](http://www.vim.org/ "welcome home : vim online") bedient. Und zwar mal richtig und nicht nur `i`, `:wq`. Immerhin hat man [TextMate](http://macromates.com/ "TextMate — The Missing Editor for Mac OS X") ja nicht auf dem Server dabei.
 

@@ -33,7 +33,7 @@ Termingebundene Aufgaben lassen sich mit <cite>Things</cite> ebenfalls sehr gut 
 Ein weiterer großer Bereich, den David Allen anspricht ist das Zeug, das weder eine Aufgabe, noch ein Termin ist – das Referenzmaterial. Da ich kein Fan von riesigen Aktenschränken, Bergen von Zetteln oder Ordnern bin, versuche ich möglichst alle Dinge digital zu halten.
 Alle Notizen, Bilder, Inspirationen, Rezepte, Witze, Codeschnipsel etc. die anfallen brauchen einen Ort, an dem sie abgelegt werden.
 
-Für mich war dabei ein wichtiges Kriterium, dass es egal ist, wo ich mich befinde, wenn ich diese Dinge erfasse. Für diesen Zweck benutze ich [Evernote](http://evernote.com/intl/de/).
+Für mich war dabei ein wichtiges Kriterium, dass es egal ist, wo ich mich befinde, wenn ich diese Dinge erfasse. Für diesen Zweck benutze ich [Evernote](https://evernote.com/intl/de/).
 
 Denn <cite>Evernote</cite> bietet genau diese Möglichkeit. Die Software ist sowohl für Mac OS X, für Windows, iPhone und diverse mobile Geräte verfügbar. Natürlich ist sie auch über das Internet erreichbar. Dort können die Dinge, die täglich anfallen, in digitale Notizbücher einordnet und mit Schlagworten versehen werden. Diese werden über das Internet mit allen anderen Geräten synchronisiert. Monatlich sind 40 MB an Datensynchronisierung frei, wobei nur das Einstellen in die Datenbank gezählt wird, nicht das (auch mehrfache) Abrufen. Für einen geringen Beitrag (5 $/Monat) wird dieses Volumen sogar auf 500 MB erweitert.
 

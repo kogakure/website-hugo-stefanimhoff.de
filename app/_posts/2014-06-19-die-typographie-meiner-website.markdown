@@ -150,7 +150,7 @@ Ich schaute mich erst bei Typekit um, wählte dann aber zwei kostenlose Schrifte
 Gentium Basic ist eine sehr ansprechende Schrift mit Serifen und einem kursiven Schriftschnitt, während Yanone Kaffeesatz eine serifenlose Schrift ist. Beide Schriften in Kombination bieten ein harmonisches Bild.
 
 ## Schriftgröße
-Als am 17. November 2006 Oliver Reichenstein im Blog von Information Architects über den [100% Easy-2-Read Standard](http://ia.net/know-how/100e2r), war dieses Konzept noch völlig neu. Damals wurde die Schrift auf Websites durchgehend zu klein eingestellt. Der Browser-Standard war schon immer `16px`. Doch die meisten Seiten nutzen damals Werte zwischen 10 und 12 Pixeln.
+Als am 17. November 2006 Oliver Reichenstein im Blog von Information Architects über den [100% Easy-2-Read Standard](https://ia.net/know-how/100e2r), war dieses Konzept noch völlig neu. Damals wurde die Schrift auf Websites durchgehend zu klein eingestellt. Der Browser-Standard war schon immer `16px`. Doch die meisten Seiten nutzen damals Werte zwischen 10 und 12 Pixeln.
 
 Nach diesem Blog-Artikel fingen Designer an, die Grundschriftgröße zu erhöhen. Ich verwende für meine Fließtextschrift sogar 18px.
 
@@ -173,7 +173,7 @@ Für alle die jetzt neugierig auf Typographie geworden sind, habe ich eine klein
 - [Butterick’s Practical Typography](http://practicaltypography.com/)
 - [Interactive Guide to Blog Typography](http://www.kaikkonendesign.fi/typography/)
 - [type basics](http://www.typeworkshop.com/index.php?id1=type-basics)
-- [Web Design is 95% Typography](http://ia.net/know-how/the-web-is-all-about-typography-period)
+- [Web Design is 95% Typography](https://ia.net/know-how/the-web-is-all-about-typography-period)
 - [Five simple steps to better typography](http://markboulton.co.uk/journal/five-simple-steps-to-better-typography)
 - [Nice Web Type](http://nicewebtype.com/)
 - [More MeaningFull Typography](http://alistapart.com/article/more-meaningful-typography)

@@ -12,7 +12,7 @@ tags:
 - subversion
 ---
 
-Vor ein paar Wochen bin ich über *Git* gestolpert, das Versionskontrollsystem von [Linus Torvalds](http://en.wikipedia.org/wiki/Linus_Torvalds "Linus Torvalds - Wikipedia, the free encyclopedia"). Git wird zur Zeit von Junio Hamano entwickelt.
+Vor ein paar Wochen bin ich über *Git* gestolpert, das Versionskontrollsystem von [Linus Torvalds](https://en.wikipedia.org/wiki/Linus_Torvalds "Linus Torvalds - Wikipedia, the free encyclopedia"). Git wird zur Zeit von Junio Hamano entwickelt.
 
 Seit fast einem Jahr arbeite ich nun mit Subversion – und bin ziemlich zufrieden. Meine Ansprüche sind aber auch nicht sehr hoch, da ich kein Software-Entwickler bin, oder riesige Mengen Code zu bewältigen habe. Bei mir gab es bislang auch noch keinen `branch` in einem meiner Projekte
 

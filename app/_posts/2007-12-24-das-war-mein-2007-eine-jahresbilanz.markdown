@@ -55,7 +55,7 @@ Außerdem suche ich nach den Lyrics meiner neuen Alben von den [Poets of the Fal
 
 ## Juni
 
-Im Juni lese ich das Buch <cite>[Robinson Crusoe](http://de.wikipedia.org/wiki/Robinson_Crusoe)</cite> und informiere mich mehr über die Hintergründe der Geschichte.
+Im Juni lese ich das Buch <cite>[Robinson Crusoe](https://de.wikipedia.org/wiki/Robinson_Crusoe)</cite> und informiere mich mehr über die Hintergründe der Geschichte.
 
 Sonst kommt mir in diesem Monat [Django](https://www.djangoproject.com/) erneut in meine Gedanken, ich hatte mich schon mal im Herbst des Vorjahres damit beschäftigt, war aber an der Installation gescheitert.
 
@@ -91,7 +91,7 @@ Im August entdecke ich [Git](http://git-scm.com/) für mich, Linus Torvalds fant
 
 Der [Mister Wong](http://www.mister-wong.de/)-Skandal im August ist mal wieder typisch und sehr lustig. Irgendein asiatisch-amerikanischer Typ regt sich **unglaublich** über die Karikatur eines Chinesen im Logo des Bookmark-Dienstes Mister Wong auf. Faschisten, ihr alle! Hier kommt die braune Keule! Man kann sich auch künstlich aufregen … Tsssss. Jedenfalls muss ein neues Logo her. Die Community soll aushelfen.
 
-Zum ersten mal in meinem Leben beschäftige ich mich im späten August mit [LaTeX](http://de.wikipedia.org/wiki/LaTeX). Einige Studenten aus unserer Firma haben mich darauf gestoßen. Muss ich können, tu ich lernen. Mein Motto ;)
+Zum ersten mal in meinem Leben beschäftige ich mich im späten August mit [LaTeX](https://de.wikipedia.org/wiki/LaTeX). Einige Studenten aus unserer Firma haben mich darauf gestoßen. Muss ich können, tu ich lernen. Mein Motto ;)
 
 Auf meinem Nachttisch liegt laut Google Suche Machiavellis <cite>[Der Fürst](http://www.amazon.de/gp/product/3458344721/ref=as_li_ss_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=3458344721&linkCode=as2&tag=kogakurede-21)</cite>.
 
@@ -173,7 +173,7 @@ Doch schon nach 14 Tagen steht für mich eigentlich fest: <cite>Things</cite> is
 
 Irgendwie kann ich es nicht lassen und kaufe mir einen [iPod touch](http://www.apple.com/de/ipod-touch/), den ich mit <cite>Jailbreak</cite> befreien will, was aber erstmal nicht klappt, weil Apple ein Update rausbringt, das die Sicherheitslücke schließt.
 
-Auf ARTE sehe ich einen interessanten Beitrag über die [Haddsch](http://de.wikipedia.org/wiki/Haddsch) - die Pilgerfahrt nach Mekka – und google den genauen Verlauf nach. Diese Welt will sich mir einfach nicht erschließen. Den Teufel steinigen, auf einem Hügel sitzen und heulen, um einen Steinkasten wandern. Wem’s gefällt. Ach ja: Und ich trete aus der evangelischen Kirche aus.
+Auf ARTE sehe ich einen interessanten Beitrag über die [Haddsch](https://de.wikipedia.org/wiki/Haddsch) - die Pilgerfahrt nach Mekka – und google den genauen Verlauf nach. Diese Welt will sich mir einfach nicht erschließen. Den Teufel steinigen, auf einem Hügel sitzen und heulen, um einen Steinkasten wandern. Wem’s gefällt. Ach ja: Und ich trete aus der evangelischen Kirche aus.
 
 Ich lache mich tot, weil FileMaker ihr neues Datenbank-Produkt Bentō nennt. Die dachten wohl, das heißt Box. Das heißt aber Mittagessen ;)
 

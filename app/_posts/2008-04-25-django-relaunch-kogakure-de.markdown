@@ -50,7 +50,7 @@ Django liefert gleich eine riesige Auswahl an Caching-Möglichkeiten mit, ob im 
 
 ### Internationalisierung
 
-Django unterstützt eine Vielzahl an Sprachen und bietet eine sehr gute Lokalisierung und Internationalisierung der Anwendungen. Kein Wunder, denn [laut Jacob Kaplan-Moss](http://jacobian.org/writing/arc/) hat Django einen Großteil seiner Benutzer aus nicht-englisch-sprechenden Ländern. Mittlerweile gibt es sogar Django-Entwickler in Nepal oder auf Fiji.
+Django unterstützt eine Vielzahl an Sprachen und bietet eine sehr gute Lokalisierung und Internationalisierung der Anwendungen. Kein Wunder, denn [laut Jacob Kaplan-Moss](https://jacobian.org/writing/arc/) hat Django einen Großteil seiner Benutzer aus nicht-englisch-sprechenden Ländern. Mittlerweile gibt es sogar Django-Entwickler in Nepal oder auf Fiji.
 
 ## Die Entwicklung von kogakure.de
 
@@ -162,7 +162,7 @@ Um den Einstieg in Django zu erleichtern, habe ich nachfolgend eine Liste von in
 
 * [Adrian Holovarty](http://www.holovaty.com/) – Entwickler von Django (Chicago, Illinois, US)
 * [Bryan Veloso: Avalonstar](http://avalonstar.com/) – Designer und Blogger (Seattle, Washington, US)
-* [Jacob Kaplan-Moss](http://jacobian.org/) – Entwickler von Django (Lawrence, Kansas, US)
+* [Jacob Kaplan-Moss](https://jacobian.org/) – Entwickler von Django (Lawrence, Kansas, US)
 * [James Bennett: The B-List](http://www.b-list.org/) – Release Manager von Django (Lawrence, Kansas, US)
 * [Jeff Croft](http://jeffcroft.com/) – Designer und Python Programmierer (Seattle, Washington, US)
 * [Nathan Borror](http://nthn.me/) – Designer (Lawrence, Kansas, US)

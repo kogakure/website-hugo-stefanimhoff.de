@@ -25,7 +25,7 @@ Also will ich seine Liste mal durchgehen und schauen, ob ich das alles als Kind 
 
 2.  **Besitze ein Taschenmesser**
 
-    Auf jeden Fall! Im Laufe meiner Kindheit hatte ich diverse Schweizer Messer, später Butterfly-Messer, dann Kampfmesser und sogar ein [Kukri](http://de.wikipedia.org/wiki/Kukri). Und mit zwölf habe ich zu Weihnachten meine erste (stumpfe) [Katana](http://de.wikipedia.org/wiki/Katana) bekommen. Es folgten diverse Schwerter aus Japan und China. Heute bin ich bei einer einzigen, handgeschmiedeten Katana aus Kohlenstoffstahl angelangt.
+    Auf jeden Fall! Im Laufe meiner Kindheit hatte ich diverse Schweizer Messer, später Butterfly-Messer, dann Kampfmesser und sogar ein [Kukri](https://de.wikipedia.org/wiki/Kukri). Und mit zwölf habe ich zu Weihnachten meine erste (stumpfe) [Katana](https://de.wikipedia.org/wiki/Katana) bekommen. Es folgten diverse Schwerter aus Japan und China. Heute bin ich bei einer einzigen, handgeschmiedeten Katana aus Kohlenstoffstahl angelangt.
 
 3. **Wirf einen Speer**
 

@@ -40,23 +40,23 @@ Die meisten Stempel benutzen mehrere Zeichen, oft vier oder sogar mehr. Es gibt 
 Als nächstes galt es, die passende Schriftart auszuwählen. Als Schrift wählen die meisten Künstler die *Kleine Siegelschrift*, die vom chinesischen Kaiser Qin Shi Huang vor ca. 2200 Jahren eingeführt wurde.
 
 ## Exkurs in Chinesische Schriften
-Erste chinesischen Schriftzeichen wurden vor 6000 Jahren auf Tonscherben gekratzt. Die so genannte [Orakelschrift](http://de.wikipedia.org/wiki/Orakelknochen) wurde vor 3400 Jahren während der Shang-Dynastie entwickelt und diente zur Weissagung mit Tierknochen-Orakel.
+Erste chinesischen Schriftzeichen wurden vor 6000 Jahren auf Tonscherben gekratzt. Die so genannte [Orakelschrift](https://de.wikipedia.org/wiki/Orakelknochen) wurde vor 3400 Jahren während der Shang-Dynastie entwickelt und diente zur Weissagung mit Tierknochen-Orakel.
 
-Als die Bronzegusstechnik um das 11. Jahrhundert v. Chr. entwickelt wurde entstand die [Bronzeschrift](http://de.wikipedia.org/wiki/Bronzeinschrift), die benutzt wurde, um damit Texte für Politik, Handel, Militär, Verwaltung und Orakel zu schreiben.
+Als die Bronzegusstechnik um das 11. Jahrhundert v. Chr. entwickelt wurde entstand die [Bronzeschrift](https://de.wikipedia.org/wiki/Bronzeinschrift), die benutzt wurde, um damit Texte für Politik, Handel, Militär, Verwaltung und Orakel zu schreiben.
 
 Zur Zeit der *Streitenden Reiche* (475-221 v. Chr.) wurden Pinsel und Tinte erfunden und damit auf Bambus, Holz und Seide geschrieben.
 
-Doch gab es viele verschiedene Schreibweisen der Zeichen, was für Austausch und Handel nicht förderlich war. König Zhou Xuanwang versuchte dieses Problem durch die *Große Siegelschrift* zu lösen, was ihm aber nicht gelang. Erst als Kaiser Qin Shin Huang das Reich 221 v. Chr. einte, befahl er eine einheitliche Schrift. Kanzler Li Si beseitigte Zeichen und verringerte Striche und begründete damit die [Kleine Siegelschrift](http://de.wikipedia.org/wiki/Siegelschrift).
+Doch gab es viele verschiedene Schreibweisen der Zeichen, was für Austausch und Handel nicht förderlich war. König Zhou Xuanwang versuchte dieses Problem durch die *Große Siegelschrift* zu lösen, was ihm aber nicht gelang. Erst als Kaiser Qin Shin Huang das Reich 221 v. Chr. einte, befahl er eine einheitliche Schrift. Kanzler Li Si beseitigte Zeichen und verringerte Striche und begründete damit die [Kleine Siegelschrift](https://de.wikipedia.org/wiki/Siegelschrift).
 
 {% pullquote %}
-{"Die kleine Siegelschrift ist zwar durch ihre geschwungenen Striche schön, aber war im täglichen Gebrauch zu umständlich zu schreiben."} Zu Beginn der Han-Dynastie kam die [Kanzleischrift](http://de.wikipedia.org/wiki/Chinesische_Kanzleischrift) auf, die viel geradere Striche hatte und somit einfacher und schneller zu schreiben war. Viele Zeichen wurden durch diese Schrift weiter abstrahiert.
+{"Die kleine Siegelschrift ist zwar durch ihre geschwungenen Striche schön, aber war im täglichen Gebrauch zu umständlich zu schreiben."} Zu Beginn der Han-Dynastie kam die [Kanzleischrift](https://de.wikipedia.org/wiki/Chinesische_Kanzleischrift) auf, die viel geradere Striche hatte und somit einfacher und schneller zu schreiben war. Viele Zeichen wurden durch diese Schrift weiter abstrahiert.
 {% endpullquote %}
 
-Ebenfalls zur gleichen Zeit entstand die Konzeptschrift, die auch [Grasschrift](http://de.wikipedia.org/wiki/Grasschrift) genannt wird. Sie wurde für den privaten Schriftverkehr verwendet, aber auch vom einfachen Volk geschrieben. Bei dieser Schrift sind die Striche häufig verbunden, so dass es oft aussieht, als wäre der Pinsel nicht vom Papier abgehoben worden.
+Ebenfalls zur gleichen Zeit entstand die Konzeptschrift, die auch [Grasschrift](https://de.wikipedia.org/wiki/Grasschrift) genannt wird. Sie wurde für den privaten Schriftverkehr verwendet, aber auch vom einfachen Volk geschrieben. Bei dieser Schrift sind die Striche häufig verbunden, so dass es oft aussieht, als wäre der Pinsel nicht vom Papier abgehoben worden.
 
-Im 2. Jahrhundert n. Chr. entwickelten Schreiber, die weder die Konzept- oder Kanzleischrift mochten, die [Regelschrift](http://de.wikipedia.org/wiki/Regelschrift).
+Im 2. Jahrhundert n. Chr. entwickelten Schreiber, die weder die Konzept- oder Kanzleischrift mochten, die [Regelschrift](https://de.wikipedia.org/wiki/Regelschrift).
 
-Zum Ende der Han-Dynastie entwickelte sich neben der Grasschrift auch noch ein weiterer Stil für den privaten Gebrauch: die [Kursivschrift](http://de.wikipedia.org/wiki/Kursivschrift_(Chinesisch\)).
+Zum Ende der Han-Dynastie entwickelte sich neben der Grasschrift auch noch ein weiterer Stil für den privaten Gebrauch: die [Kursivschrift](https://de.wikipedia.org/wiki/Kursivschrift_(Chinesisch\)).
 
 Die nächste signifikante Änderung fand erst 1956 statt, als die Regierung die Schrift vereinfachte. Es wurden dabei über 1000 Zeichen gestrichen und bei rund 2200 Zeichen die Strichzahl verringert. Dies sollte zu einer besseren Alphabetisierung der Bevölkerung führen.
 

@@ -69,7 +69,7 @@ In *April 2008* I relaunched the 5th edition of my website with **Django** and r
 After I finished the relaunch of this website in April 2014 I started working on the new design of kogakure.de in early summer 2014. I stopped creating full-featured designs in Photoshop some years ago, but still use it to create mood boards and quickly try iterations of different ideas. Very early on I was sure I wanted to keep the bamboo and my Rakkan and decided to keep my style and don’t create something completely different.
 
 ### Typography
-I always start with Typography and selected a modular scale and  a typeface very early on. I found a typeface on [Google Fonts](http://www.google.com/fonts) (Exo), which matched perfectly my style and the topic of kogakure.de and was good to read.
+I always start with Typography and selected a modular scale and  a typeface very early on. I found a typeface on [Google Fonts](https://www.google.com/fonts) (Exo), which matched perfectly my style and the topic of kogakure.de and was good to read.
 
 ### Vector Graphics
 More and more displays have a high pixel density now, which is the reason I decided to use as much vector graphics as possible. I recently read and heard a lot about SVG and decided to use SVG as my vector technique on kogakure.de. SVG is more capable and future-proof compared to vector fonts.
