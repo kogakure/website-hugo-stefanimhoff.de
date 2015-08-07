@@ -21,6 +21,14 @@ Haiku (jap. 俳句, dt. „lustiger Vers“; Plural: Haiku, auch: Haikus) ist ei
 -------------------------------------------------------------------------------
 
 {% verse %}
+Wind in den Blättern,
+wie das Rauschen von Regen
+hoch in den Wipfeln.
+{% endverse %}
+
+-------------------------------------------------------------------------------
+
+{% verse %}
 Kaum Tag, lange Nacht.
 Regenströme vom Himmel.
 Ende doch, Winter!
