@@ -12,26 +12,40 @@
     display: block;
     margin-bottom: $default-spacing-bottom * 2;
   }
+}
 
-  li {
-    display: inline-block;
+.tags-item {
+  display: inline-block;
+}
+
+.tags-link {
+  background: $dark-grey;
+  border: 0;
+  border-radius: 5px;
+  color: $white;
+  font-size: $font-scale-small;
+  letter-spacing: 0.1em;
+  padding-bottom: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 3px;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  &:hover {
+    background: $link-color;
+    color: $white;
   }
 
-  .tag {
-    background: $dark-grey;
-    border: 0;
-    border-radius: 5px;
+  .custom-underline & {
+    background-image: none;
     color: $white;
-    font-size: $font-scale-small;
-    letter-spacing: 0.1em;
-    padding: 3px 5px 2px;
-    text-decoration: none;
     text-shadow: none;
-    text-transform: uppercase;
-    white-space: nowrap;
 
     &:hover {
-      background: $link-color;
+      background-image: none;
       color: $white;
     }
   }
