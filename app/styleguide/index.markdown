@@ -253,21 +253,21 @@ And       the mome     raths            outgrabe.
 
 ## Randbemerkungen
 
-{% aside aside %}
-<h4>Überschrift</h4>
+{% aside aside-left %}
+<h4 class="aside-headline">Überschrift</h4>
 <p>Dies ist eine Anmerkung in der Seitenleiste im linken Rand</p>
 {% endaside %}
 
-{% aside aside-left %}
-<h4>Überschrift</h4>
+{% aside aside-right %}
+<h4 class="aside-headline">Überschrift</h4>
 <p>Dies ist eine Anmerkung in der Seitenleiste im rechten Rand</p>
 {% endaside %}
 
 Manchmal möchte man mitten im Text etwas erklären, was nicht direkt zum Text gehört, aber das zum Verständnis des Textes beitragen kann. Diese Randbemerkungen wurden im Print üblicherweise in den Rand der Publikation gedruckt und hatten eine kleinere Schrift. Manchmal kann man diese aber auch im Text selbst stehen sehen, und sie werden durch eine andere Farbe oder einen Rand als Nebenbemerkung gekennzeichnet. Auf dieser Website stehen die Randbemerkungen (`aside`) im Rand und zwar wahlweise im linken oder rechten Rand. Als Überschrift (wenn nötig) sollte minimal eine `h4` verwendet werden.
 
 {% highlight html linenos %}
-{% raw %}{% aside aside-left %}
-<h4>Überschrift</h4>
+{% raw %}{% aside aside-right %}
+<h4 class="aside-headline">Überschrift</h4>
 <p>Dies ist eine Anmerkung in der Seitenleiste im rechten Rand</p>
 {% endaside %}{% endraw %}
 {% endhighlight %}
