@@ -7,23 +7,22 @@
   line-height: $base-line-height;
   margin-top: 0.5em;
   width: column-span(2, 1, 8);
-
-  h4 {
-    font-size: modular-scale(1);
-  }
 }
 
-.aside {
+.aside-left {
   @extend %aside;
   float: left;
   margin-left: -(grid-span(2, 1, 8));
 
   @include breakpoint($content-aside-inline) {
     background: $light-grey;
-    border: 1px solid rgba($dark-grey, 0.2);
+    border-color: rgba($dark-grey, 0.2);
+    border-style: solid;
+    border-width: 1px;
     box-shadow: rgba($black, 0.06) 0 0 10px;
     float: none;
-    margin: 0 0 1.5em;
+    margin-bottom: $default-spacing-bottom;
+    margin-left: 0;
     padding: 1em;
     width: 100%;
 
@@ -33,17 +32,20 @@
   }
 }
 
-.aside-left {
+.aside-right {
   @extend %aside;
   float: right;
   margin-right: -(grid-span(2, 1, 8));
 
   @include breakpoint($content-aside-inline) {
     background: $light-grey;
-    border: 1px solid rgba($dark-grey, 0.2);
+    border-color: rgba($dark-grey, 0.2);
+    border-style: solid;
+    border-width: 1px;
     box-shadow: rgba($black, 0.06) 0 0 10px;
     float: none;
-    margin: 0 0 1.5em;
+    margin-bottom: $default-spacing-bottom;
+    margin-right: 0;
     padding: 1em;
     width: 100%;
 
@@ -51,4 +53,8 @@
       margin-bottom: 0;
     }
   }
+}
+
+.aside-headline {
+  font-size: modular-scale(1);
 }
