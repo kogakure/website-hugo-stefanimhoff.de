@@ -17,7 +17,10 @@
   left: 0 + $image-border-size;
   margin: 0;
   opacity: 0;
-  padding: 5px 10px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
   position: absolute;
   transition: all 0.6s ease;
 
@@ -102,7 +105,10 @@
   left: 0;
   line-height: 30px;
   opacity: 0.9;
-  padding: 0 10px;
+  padding-bottom: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 0;
 }
 
 .attribution-main-text:hover {
@@ -150,23 +156,23 @@
 .attribution-main-icon-cc {
   fill: $white;
   height: 15px;
-  width: 15px;
   position: relative;
   top: 2px;
+  width: 15px;
 }
 
 .attribution-icon-cc {
   fill: $white;
   height: 15px;
-  width: 15px;
   position: relative;
   top: 4px;
+  width: 15px;
 }
 
 .attribution-main-icon-question {
-  width: 10px;
   height: 10px;
-  position: absolute;
   left: 5px;
+  position: absolute;
   top: 5px;
+  width: 10px;
 }
