@@ -5,6 +5,11 @@
 blockquote {
   font-style: italic;
   margin: $default-spacing;
+
+  footer strong:before {
+    content: "❦ ";
+    font-style: normal;
+  }
 }
 
 cite {

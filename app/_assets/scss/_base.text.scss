@@ -132,27 +132,8 @@ mark {
   background-color: transparent;
   color: rgba($black, 0.75);
   position: relative;
-
-  &:before,
-  &:after {
-    background-repeat: no-repeat;
-    background-size: 5px 21px;
-    content: '';
-    display: block;
-    height: 21px;
-    position: absolute;
-    width: 5px;
-  }
-
-  &:before {
-    left: -5px;
-    top: 0;
-  }
-
-  &:after {
-    bottom: 0;
-    right: -5px;
-  }
+  padding-left: 2px;
+  padding-right: 2px;
 }
 
 
