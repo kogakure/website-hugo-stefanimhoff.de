@@ -15,12 +15,12 @@
       <p>{{ site.data.settings.homepage.introvert.quote.translation }}</p>
     </div>
 
-    <div class="grid-links inline-links">
+    <div class="grid-links inline-container">
       {% for topic in site.data.introvert %}
-        <h3>{{ topic.name }}</h3>
-        <ul>
+        <h3 class="inline-container-headline">{{ topic.name }}</h3>
+        <ul class="inline-container-list">
           {% for item in topic.items %}
-            <li><a href="{{ item.url }}">{{ item.text }}</a></li>
+            <li class="inline-container-item"><a class="inline-container-link" href="{{ item.url }}">{{ item.text }}</a></li>
           {% endfor %}
         </ul>
       {% endfor %}

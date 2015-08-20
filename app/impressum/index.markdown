@@ -25,7 +25,7 @@ Inhaltlich Verantwortlicher gemäß § 10 Absatz 3 MDStV:<br> Stefan Imhoff (Ans
 
 Diese Seite verwendet ein Foto für den Kopfbereich und einige Hintergrundmuster von [Subtle Patterns](http://subtlepatterns.com/). Ich danke den Fotografen und den Designern.
 
-<div class="inline-links section">
+<div class="inline-container section">
   <h3>Foto</h3>
   <ul>
     <li><a href="{{ site.attribution_url }}"><cite>{{ site.attribution_name }}</cite> von {{ site.attribution_author }}</a></li>

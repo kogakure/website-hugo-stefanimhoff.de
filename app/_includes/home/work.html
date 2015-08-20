@@ -5,12 +5,12 @@
       {{ site.data.settings.homepage.work.text | markdownify }}
     </div>
 
-    <div class="grid-links inline-links">
+    <div class="grid-links inline-container">
       {% for area in site.data.work %}
-        <h3>{{ area.name }}</h3>
-        <ul>
+        <h3 class="inline-container-headline">{{ area.name }}</h3>
+        <ul class="inline-container-list">
           {% for skill in area.skills %}
-            <li>{{ skill }}</li>
+            <li class="inline-container-item">{{ skill }}</li>
           {% endfor %}
         </ul>
       {% endfor %}

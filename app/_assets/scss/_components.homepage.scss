@@ -33,7 +33,7 @@
     }
   }
 
-  .content + .inline-links {
+  .content + .inline-container {
     margin-top: $default-spacing-top;
   }
 
@@ -80,7 +80,7 @@
     @extend %pattern-geometry;
     border-top: 1px solid rgba($dark-grey, 0.2);
 
-    .inline-links h3 {
+    .inline-container h3 {
       color: $link-color;
     }
   }
@@ -139,7 +139,7 @@
     @extend %pattern-nami;
     color: $white;
 
-    .inline-links h3 {
+    .inline-container h3 {
       color: $martial-arts-color;
     }
 

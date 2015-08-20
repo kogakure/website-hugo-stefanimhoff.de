@@ -5,12 +5,12 @@
       {{ site.data.settings.homepage.martialarts.text | markdownify | liquify }}
     </div>
 
-    <div class="grid-links inline-links">
+    <div class="grid-links inline-container">
       {% for topic in site.data.martialarts %}
-        <h3>{{ topic.name }}</h3>
-        <ul>
+        <h3 class="inline-container-headline">{{ topic.name }}</h3>
+        <ul class="inline-container-list">
           {% for school in topic.schools %}
-            <li>{{ school }}</li>
+            <li class="inline-container-item">{{ school }}</li>
           {% endfor %}
         </ul>
       {% endfor %}
