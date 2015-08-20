@@ -2,6 +2,15 @@
 //  Custom Underline
 //====================================
 
+$custom-underline-work-shadow:           #fafafa;
+$custom-underline-martial-arts-shadow:   #030303;
+$custom-underline-martial-arts-gradient: #be0202;
+$custom-underline-movies-arts-shadow:    #282828;
+$custom-underline-movies-arts-gradient:  #e8c53d;
+$custom-underline-books-arts-shadow:     #1c1c1c;
+$custom-underline-books-arts-gradient:   #616161;
+$custom-underline-footer-shadow:         #2a2c2d;
+
 .custom-underline {
   a {
     // Underline via gradient background
@@ -54,15 +63,15 @@
 }
 
 .custom-underline.work a {
-  text-shadow: 2px 0 #fafafa, 1px 0 #fafafa, -1px 0 #fafafa, -2px 0 #fafafa;
+  text-shadow: 2px 0 $custom-underline-work-shadow, 1px 0 $custom-underline-work-shadow, -1px 0 $custom-underline-work-shadow, -2px 0 $custom-underline-work-shadow;
 }
 
 .custom-underline.martial-arts a {
-  background-image: linear-gradient(to bottom, transparent 49%, #be0202 50%);
+  background-image: linear-gradient(to bottom, transparent 49%, $custom-underline-martial-arts-gradient 50%);
   background-position: 0 88%;
   background-repeat: repeat-x;
   background-size: 1px 1px;
-  text-shadow: 2px 0 #030303, 1px 0 #030303, -1px 0 #030303, -2px 0 #030303;
+  text-shadow: 2px 0 $custom-underline-martial-arts-shadow, 1px 0 $custom-underline-martial-arts-shadow, -1px 0 $custom-underline-martial-arts-shadow, -2px 0 $custom-underline-martial-arts-shadow;
 
   @include breakpoint(max-resolution 1.49dppx, max-resolution 143dpi) {
     background-size: 1px 2px;
@@ -70,11 +79,11 @@
 }
 
 .custom-underline.movies a {
-  background-image: linear-gradient(to bottom, transparent 49%, #e8c53d 50%);
+  background-image: linear-gradient(to bottom, transparent 49%, $custom-underline-movies-arts-gradient 50%);
   background-position: 0 88%;
   background-repeat: repeat-x;
   background-size: 1px 1px;
-  text-shadow: 2px 0 #282828, 1px 0 #282828, -1px 0 #282828, -2px 0 #282828;
+  text-shadow: 2px 0 $custom-underline-movies-arts-shadow, 1px 0 $custom-underline-movies-arts-shadow, -1px 0 $custom-underline-movies-arts-shadow, -2px 0 $custom-underline-movies-arts-shadow;
 
   @include breakpoint(max-resolution 1.49dppx, max-resolution 143dpi) {
     background-size: 1px 2px;
@@ -82,11 +91,11 @@
 }
 
 .custom-underline.books a {
-  background-image: linear-gradient(to bottom, transparent 49%, #616161 50%);
+  background-image: linear-gradient(to bottom, transparent 49%, $custom-underline-books-arts-gradient 50%);
   background-position: 0 88%;
   background-repeat: repeat-x;
   background-size: 1px 1px;
-  text-shadow: 2px 0 #1c1c1c, 1px 0 #1c1c1c, -1px 0 #1c1c1c, -2px 0 #1c1c1c;
+  text-shadow: 2px 0 $custom-underline-books-arts-shadow, 1px 0 $custom-underline-books-arts-shadow, -1px 0 $custom-underline-books-arts-shadow, -2px 0 $custom-underline-books-arts-shadow;
 
   @include breakpoint(max-resolution 1.49dppx, max-resolution 143dpi) {
     background-size: 1px 2px;
@@ -94,7 +103,7 @@
 }
 
 .custom-underline.footer-about a {
-  text-shadow: 2px 0 #2a2c2d, 1px 0 #2a2c2d, -1px 0 #2a2c2d, -2px 0 #2a2c2d;
+  text-shadow: 2px 0 $custom-underline-footer-shadow, 1px 0 $custom-underline-footer-shadow, -1px 0 $custom-underline-footer-shadow, -2px 0 $custom-underline-footer-shadow;
 
   &:hover {
     color: rgba($white, 0.8);
