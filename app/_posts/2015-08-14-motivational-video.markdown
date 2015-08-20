@@ -2,6 +2,7 @@
 layout: post
 language: "en"
 title: Motivational Video
+date: 2015-08-14T18:15:00+00:00
 description: "Last week I found a really inspirational film on YouTube, focusing on Motivation. But because it was poorly quoted, I tried to find the quotes and fix the issue."
 og_image: "/assets/images/artikel/motivational-video.jpg"
 author: "Stefan Imhoff"
