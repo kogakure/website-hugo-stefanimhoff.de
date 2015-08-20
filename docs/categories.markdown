@@ -12,6 +12,7 @@
 - Praesentation
 - Produktivitaet
 - Publikation
+- Quote
 - Rant
 - Server
 - Software
