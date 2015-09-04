@@ -39,7 +39,11 @@
   <meta name="description" content="{{ page_description }}">
 
   <!-- Twitter Card -->
+  {% if page.homepage %}
   <meta name="twitter:card" content="summary">
+  {% else %}
+  <meta name="twitter:card" content="summary_large_image">
+  {% endif %}
   <meta name="twitter:site" content="{{ site.data.settings.social.twitter }}">
   <meta name="twitter:url" content="{{ page_url }}">
   <meta name="twitter:title" content="{{ page_title }}">
