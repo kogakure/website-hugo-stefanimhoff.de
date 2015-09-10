@@ -6,6 +6,7 @@
   background-color: rgba($dark-grey, 0.1);
   border-radius: 3px;
   margin-bottom: $default-spacing-bottom;
+  padding-bottom: 15px;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 15px;
@@ -13,17 +14,17 @@
 
 .download-link {
   border: 0;
-  display: inline-block;
-  height: 4em;
-  line-height: 3.5em;
-  vertical-align: top;
+  display: table;
 }
 
 .download-text {
+  display: table-cell;
   margin: 0;
+  vertical-align: middle;
 }
 
 .download-icon {
+  display: table-cell;
   fill: $download-icon-fill-color;
   filter: drop-shadow(-1px -1px 0 rgba($black, 0.5));
   height: 62px;
