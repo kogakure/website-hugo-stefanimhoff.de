@@ -129,11 +129,12 @@ b {
 
 // Mark
 mark {
-  background-color: transparent;
+  background-color: #e6f028;
+  border-radius: 5px;
   color: rgba($black, 0.75);
+  padding-left: 5px;
+  padding-right: 5px;
   position: relative;
-  padding-left: 2px;
-  padding-right: 2px;
 }
 
 

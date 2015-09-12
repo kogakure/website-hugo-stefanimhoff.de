@@ -14,15 +14,3 @@ body,
 .footer {
   @extend %pattern-classy-fabric;
 }
-
-mark {
-  @extend %pattern-mark-center;
-
-  &:before {
-    @extend %pattern-mark-left;
-  }
-
-  &:after {
-    @extend %pattern-mark-right;
-  }
-}
