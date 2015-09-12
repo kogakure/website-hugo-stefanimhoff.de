@@ -4,7 +4,16 @@
       <h3 class="footer-about-headline">
         {{ site.data.settings.about.headline }}
       </h3>
-      {{ site.data.settings.about.text | markdownify }}
+      <div class="footer-about-table">
+        <div class="footer-about-image-table-cell">
+          <div class="footer-about-image-shadow">
+            <img class="footer-about-image" src="/assets/images/css/footer/stefan-imhoff.jpg" alt="Stefan Imhoff">
+          </div>
+        </div>
+      <div class="footer-about-text">
+        {{ site.data.settings.about.text | markdownify }}
+      </div>
+      </div>
     </div>
     <div class="footer-social">
       <h3 class="footer-social-headline">

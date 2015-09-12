@@ -110,31 +110,55 @@
     @include grid-span(12);
   }
 
-  p {
-    background-image: url("/assets/images/css/footer/stefan-imhoff.png");
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    padding-left: 100px;
+  .footer-about-table {
+    display: table;
+  }
 
-    @include breakpoint($hi-resolution) {
-      background-image: url("/assets/images/css/footer/stefan-imhoff@2X.png");
-      background-position: 0 0;
-      background-repeat: no-repeat;
-      background-size: 84px 84px;
-    }
+  .footer-about-image-table-cell {
+    display: table-cell;
+    vertical-align: top;
+    width: 100px;
 
     @include breakpoint($meta-footer-image-new-line) {
-      background-image: url("/assets/images/css/footer/stefan-imhoff@2X.png");
-      background-position: center 0;
-      background-repeat: no-repeat;
-      background-size: 84px 84px;
-      padding-left: 0;
-      padding-top: 100px;
+      display: block;
+      margin-bottom: $default-spacing-bottom;
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  .footer-about-text {
+    display: table-cell;
+    vertical-align: top;
+
+    @include breakpoint($meta-footer-image-new-line) {
+      display: block;
     }
 
     @include breakpoint($content-small) {
       margin-bottom: 0.5em;
     }
+  }
+
+  .footer-about-image-shadow {
+    display: inline-block;
+    position: relative;
+
+    &::before {
+      border-radius: 50%;
+      box-shadow: inset 0 0 8px 5px rgba($black, 0.6);
+      content: '';
+      height: 85px;
+      position: absolute;
+      width: 85px;
+    }
+  }
+
+  .footer-about-image {
+    border-radius: 50%;
+    border-width: 0;
+    height: 85px;
+    width: 85px;
   }
 
   em {
