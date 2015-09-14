@@ -3,35 +3,35 @@
 //====================================
 
 ::-webkit-scrollbar {
-  background: $scroll-background;
+  background-color: $scroll-background;
   height: 5px;
   width: 5px;
 }
 
 // Track
 ::-webkit-scrollbar-track {
-  background: $scroll-background;
+  background-color: $scroll-background;
   border-radius: 5px;
 
   &:vertical {
-    background: $header-border-top-color;
+    background-color: $header-border-top-color;
   }
 }
 
 // Handle
 ::-webkit-scrollbar-thumb {
-  background: $scroll-handle-background;
+  background-color: $scroll-handle-background;
   border-radius: 5px;
 
   &:vertical {
-    background: $scroll-handle-color;
+    background-color: $scroll-handle-color;
   }
 
   &:hover {
-    background: $scroll-handle-background-hover;
+    background-color: $scroll-handle-background-hover;
 
     &:vertical {
-      background: $scroll-handle-hover-color;
+      background-color: $scroll-handle-hover-color;
     }
   }
 }
