@@ -2,17 +2,15 @@
 //  Related Link
 //====================================
 
-.article-related {
-  .related {
-    list-style: disc;
+.article-related-item {
+  list-style: disc;
 
-    @include breakpoint($content-medium) {
-      margin-left: $default-spacing-left;
-    }
+  @include breakpoint($content-medium) {
+    margin-left: $default-spacing-left;
+  }
 
-    &:only-child {
-      list-style: none;
-      margin-left: 0;
-    }
+  &:only-child {
+    list-style: none;
+    margin-left: 0;
   }
 }
