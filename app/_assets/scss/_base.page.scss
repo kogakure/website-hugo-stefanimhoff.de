@@ -67,7 +67,8 @@ body {
 // Homepage (Base Styling for Critical)
 .home .section {
   margin-bottom: 0;
-  padding: 1.5em 0;
+  padding-bottom: $default-spacing-bottom;
+  padding-top: $default-spacing-top;
 }
 
 
