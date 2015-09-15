@@ -24,7 +24,7 @@
 }
 
 %japanese-font {
-  font-family: $base-font-japanese !important;
+  font-family: $base-font-japanese;
 }
 
 %icon-font {
@@ -54,42 +54,42 @@
 
 // 92x46, < 1 KB (Off-Canvas Navigation)
 %pattern-pw-maze-black {
-  background-color: #0c0c0c;
+  background-color: $pattern-pw-maze-black-background;
   background-image: url("/assets/images/css/patterns/pw_maze_black_@2X.png");
   background-size: 46px 23px;
 }
 
 // 824x824, 4 KB (Homepage: Work)
 %pattern-geometry {
-  background-color: #f9f9f9;
+  background-color: $pattern-geometry-background;
   background-image: url("/assets/images/css/patterns/geometry_@2X.png");
   background-size: 412px 412px;
 }
 
 // 32x32, < 1 KB (Homepage: Martial Arts)
 %pattern-nami {
-  background-color: #090909;
+  background-color: $pattern-nami-background;
   background-image: url("/assets/images/css/patterns/nami_@2X.png");
   background-size: 16px 16px;
 }
 
 // 200x200, < 1 KB (Homepage: Movies)
 %pattern-px {
-  background-color: #313131;
+  background-color: $pattern-px-background;
   background-image: url("/assets/images/css/patterns/px_@2X.png");
   background-size: 100px 100px;
 }
 
 // 400x400, < 15 KB (Homepage: Books)
 %pattern-type {
-  background-color: #1c1c1c;
+  background-color: $pattern-type-background;
   background-image: url("/assets/images/css/patterns/type_@2X.png");
   background-size: 200px 200px;
 }
 
 // 200x200, 2 KB (Homepage: Introvert/Recommendations)
 %pattern-wavegrid {
-  background-color: #eeeeee;
+  background-color: $pattern-wavegrid-background;
   background-image: url("/assets/images/css/patterns/wavegrid_@2X.png");
   background-size: 100px 100px;
 }

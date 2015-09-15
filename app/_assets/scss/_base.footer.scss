@@ -22,7 +22,6 @@
 }
 
 .footer-legal {
-  text-align: center;
   background-color: $body-background;
   color: rgba($white, 0.3);
   display: block;
@@ -31,6 +30,7 @@
   margin-top: 0.5em;
   padding-bottom: 0.5em;
   padding-top: 0.5em;
+  text-align: center;
 
   @include breakpoint($content-small) {
     margin-top: 0.5em;
@@ -239,10 +239,10 @@
 
 .footer-social-icon {
   fill: rgba($white, 0.5);
+  filter: drop-shadow(-1px -1px 0 $black);
   height: 30px;
   transition: $animation-link-hover;
   width: 30px;
-  filter: drop-shadow(-1px -1px 0 $black);
 }
 
 .footer-social-link-text {

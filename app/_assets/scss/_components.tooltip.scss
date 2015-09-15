@@ -4,7 +4,7 @@
 
 [data-tooltip] {
   position: relative;
-  text-decoration: none !important;
+  text-decoration: none;
 
   &:focus {
     outline: 0;
@@ -23,8 +23,8 @@
     line-height: 13px;
     margin-top: 5px;
     max-width: 250px;
-    overflow-wrap: break-word;
     overflow: hidden;
+    overflow-wrap: break-word;
     padding-left: 6px;
     padding-right: 6px;
     padding-top: 6px;

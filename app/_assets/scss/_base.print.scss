@@ -69,18 +69,18 @@
   }
 
   .home .article-title h1 + h2 {
-    color: #808080;
+    color: $print-headline-color;
     font-size: 18pt;
     margin-top: 0;
   }
 
   // Header, Footer
   .article-title {
-    border-bottom: 2px solid #bbbbbb;
+    border-bottom: 2px solid $print-border-color;
   }
 
   .article-header {
-    border-top: 2px solid #bbbbbb;
+    border-top: 2px solid $print-border-color;
     padding-top: 5pt;
   }
 
@@ -110,7 +110,7 @@
 
   // Links
   a {
-    color: #000000;
+    color: $black;
   }
 
   p a {
@@ -137,8 +137,8 @@
 
   // Aside
   aside {
-    border-bottom: 1px solid #bbbbbb;
-    border-top: 1px solid #bbbbbb;
+    border-bottom: 1px solid $print-border-color;
+    border-top: 1px solid $print-border-color;
     display: block;
     margin-top: 30px;
     page-break-before: always;
