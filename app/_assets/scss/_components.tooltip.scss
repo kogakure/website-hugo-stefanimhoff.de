@@ -11,7 +11,7 @@
   }
 
   &:after {
-    background: $dark-grey;
+    background-color: $dark-grey;
     border-radius: 5px;
     color: $white;
     content: attr(data-tooltip);
@@ -21,11 +21,13 @@
     height: 20px;
     left: -5px;
     line-height: 13px;
-    margin: 5px 0 0;
+    margin-top: 5px;
     max-width: 250px;
-    overflow: hidden;
     overflow-wrap: break-word;
-    padding: 6px 6px 0;
+    overflow: hidden;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 6px;
     text-overflow: ellipsis;
     text-shadow: none;
     user-select: none;
@@ -36,7 +38,7 @@
   &:after,
   &:before {
     bottom: 100%;
-    margin: 0 0 5px;
+    margin-bottom: 5px;
     opacity: 0;
     pointer-events: none;
     position: absolute;
@@ -44,12 +46,14 @@
   }
 
   &:before {
-    border: 5px solid;
     border-color: $dark-grey transparent transparent;
+    border-style: solid;
+    border-width: 5px;
     content: " ";
     height: 0;
     left: 10px;
-    margin: 0 0 -5px 5px;
+    margin-bottom: -5px;
+    margin-left: 5px;
     overflow: hidden;
     width: 0;
   }
