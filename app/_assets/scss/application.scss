@@ -15,9 +15,7 @@
 @import "theme.init";
 
 // Base
-@import "base.grid";
 @import "base.pattern";
-@import "base.footer";
 
 // Syntax Highlighting
 @import "vendor.syntax";
@@ -31,7 +29,6 @@
 @import "components.footnote";
 @import "components.hint";
 @import "components.image-figure";
-@import "components.navigation";
 @import "components.pagination";
 @import "components.pullquote";
 @import "components.table";

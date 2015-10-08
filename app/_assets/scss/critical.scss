@@ -15,27 +15,31 @@
 // Theme
 @import "theme.init";
 
-// Base
-@import "base.page";
-@import "base.link";
-@import "base.headline";
-@import "base.text";
-@import "base.code";
-@import "base.list";
-@import "base.quote";
-@import "base.image";
-@import "base.figure";
-@import "base.video";
-@import "base.table";
+// Grid
 @import "base.grid";
+
+// Base
+@import "base.code";
+@import "base.figure";
+@import "base.footer";
 @import "base.header";
+@import "base.headline";
+@import "base.image";
+@import "base.link";
+@import "base.list";
 @import "base.meta-footer";
+@import "base.page";
+@import "base.quote";
+@import "base.table";
+@import "base.text";
+@import "base.video";
 
 // Components
 @import "components.attribution";
 @import "components.category";
 @import "components.comment";
 @import "components.custom-underline";
+@import "components.navigation";
 @import "components.related-link";
 @import "components.scrollbar";
 @import "components.table";

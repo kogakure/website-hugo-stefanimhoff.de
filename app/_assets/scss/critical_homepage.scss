@@ -15,27 +15,30 @@
 // Theme
 @import "theme.init";
 
-// Base
-@import "base.page";
-@import "base.link";
-@import "base.headline";
-@import "base.text";
-@import "base.list";
-@import "base.image";
+// Grid
 @import "base.grid";
+
+// Base
+@import "base.footer";
 @import "base.header";
+@import "base.headline";
+@import "base.image";
+@import "base.link";
+@import "base.list";
+@import "base.page";
+@import "base.text";
 
 // Stripe Sections
 @import "components.attribution";
 @import "components.custom-underline";
-@import "components.scrollbar";
 @import "components.inline-container";
-
+@import "components.navigation";
+@import "components.scrollbar";
 @import "components.stripe";
 @import "components.stripe-blog";
-@import "components.stripe-work";
-@import "components.stripe-martial-arts";
-@import "components.stripe-introvert";
-@import "components.stripe-movies";
 @import "components.stripe-books";
+@import "components.stripe-introvert";
+@import "components.stripe-martial-arts";
+@import "components.stripe-movies";
 @import "components.stripe-recommendations";
+@import "components.stripe-work";
