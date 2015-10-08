@@ -97,7 +97,7 @@ module.exports = {
     images:  srcAssets + '/images/**/*',
     svg:     'vectors/*.svg',
     loadcss: src + '/_bower_components/loadcss/loadCSS.js',
-    criticalcss: developmentAssets + '/css/critical.css'
+    criticalcss: developmentAssets + '/css/critical*.css'
   },
   scripts: {
     src:  srcAssets + '/javascripts/application.js',
@@ -199,7 +199,7 @@ module.exports = {
     options: {}
   },
   criticalcss: {
-    src: developmentAssets + '/css/critical.css',
+    src: developmentAssets + '/css/critical*.css',
     dest: src + '/_includes/critical/',
     options: {
       keepSpecialComments: 0

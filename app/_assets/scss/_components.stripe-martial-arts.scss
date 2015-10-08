@@ -3,7 +3,7 @@
 //====================================
 
 .stripe-martial-arts {
-  @extend %pattern-nami;
+  background-color: $pattern-nami-background;
   color: $white;
 
   .inline-container-headline {

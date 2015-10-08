@@ -3,7 +3,7 @@
 //====================================
 
 .stripe-introvert {
-  @extend %pattern-wavegrid;
+  background-color: $pattern-wavegrid-background;
 }
 
 .stripe-introvert-text {
