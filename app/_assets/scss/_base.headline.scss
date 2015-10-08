@@ -16,46 +16,46 @@ h6 {
 }
 
 h1 {
-  font-size: 40px;
+  font-size: $font-scale-h1;
 
   .article & {
     text-align: center;
   }
 
-  @include breakpoint(650px) {
-    font-size: 45px;
-  }
-
-  @include breakpoint(700px) {
-    font-size: 50px;
-  }
-
-  @include breakpoint(800px) {
+  @include breakpoint(920px) {
     font-size: 60px;
   }
 
-  @include breakpoint(920px) {
-    font-size: $font-scale-h1;
+  @include breakpoint(800px) {
+    font-size: 50px;
+  }
+
+  @include breakpoint(700px) {
+    font-size: 45px;
+  }
+
+  @include breakpoint(650px) {
+    font-size: 40px;
   }
 }
 
 h2 {
-  font-size: 30px;
+  font-size: $font-scale-h2;
 
-  @include breakpoint(650px) {
-    font-size: 35px;
-  }
-
-  @include breakpoint(700px) {
-    font-size: 40px;
-  }
-
-  @include breakpoint(800px) {
+  @include breakpoint(920px) {
     font-size: 50px;
   }
 
-  @include breakpoint(920px) {
-    font-size: $font-scale-h2;
+  @include breakpoint(800px) {
+    font-size: 40px;
+  }
+
+  @include breakpoint(700px) {
+    font-size: 35px;
+  }
+
+  @include breakpoint(650px) {
+    font-size: 30px;
   }
 }
 

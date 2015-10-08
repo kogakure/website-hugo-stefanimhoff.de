@@ -7,10 +7,10 @@ ol {
   margin-bottom: $default-spacing-bottom;
 
   .article-body & {
-    margin-left: $default-spacing-left;
+    margin-left: 0;
 
     @include breakpoint($content-medium) {
-      margin-left: 0;
+      margin-left: $default-spacing-left;
     }
   }
 }
@@ -31,10 +31,10 @@ ul {
   margin-bottom: $default-spacing-bottom;
 
   .article-body & {
-    margin-left: $default-spacing-left;
+    margin-left: 0;
 
     @include breakpoint($content-medium) {
-      margin-left: 0;
+      margin-left: $default-spacing-left;
     }
   }
 }
