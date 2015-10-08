@@ -1,0 +1,17 @@
+//====================================
+//  Stripe: Books
+//====================================
+
+.stripe-books {
+  @extend %pattern-type;
+  border-top: 1px solid rgba($dark-grey, 0.2);
+  color: $white;
+
+  a {
+    @include link-colors($stripe-books-color, $white, $stripe-books-color, $stripe-books-color, $stripe-books-color);
+  }
+}
+
+.stripe-books-headline {
+  color: $stripe-books-color;
+}

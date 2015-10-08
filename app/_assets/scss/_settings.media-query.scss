@@ -2,20 +2,20 @@
 //  Media-Query
 //====================================
 
-$iphone-width:               (screen) (max-device-width 480px);
+$iphone-width: (screen) (max-device-width 480px);
 
 // Content
-$content-medium:             650px;
-$content-medium-code:        651px;
-$content-small:              400px;
-$content-aside-inline:       770px;
-$content-pullquote-inline:   580px;
+$content-medium:           650px;
+$content-medium-code:      651px;
+$content-small:            400px;
+$content-aside-inline:     770px;
+$content-pullquote-inline: 580px;
 
 // Homepage
 $homepage-sections-fullsize: 650px;
 
 // Archive
-$archive-two-lines:          550px;
+$archive-two-lines: 550px;
 
 // Footer
 $hi-resolution:              min-resolution 1.5dppx;
@@ -25,4 +25,4 @@ $meta-footer-image-new-line: 450px;
 $footer-two-lines:           850px;
 
 // Error
-$error-image-new-line:       450px;
+$error-image-new-line: 450px;

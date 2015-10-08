@@ -2,6 +2,10 @@
 //  Inline Container
 //====================================
 
+.inline-container {
+  clear: both;
+}
+
 .inline-container-headline,
 .inline-container-list,
 .inline-container-item {

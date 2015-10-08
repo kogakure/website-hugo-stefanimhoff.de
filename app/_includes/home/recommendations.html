@@ -1,4 +1,4 @@
-<div class="recommendations section band inline-container custom-underline">
+<section class="stripe stripe-recommendations inline-container custom-underline">
   <div class="wrap">
     <h2>{{ site.data.settings.homepage.recommendations.headline }}</h2>
 
@@ -6,9 +6,13 @@
       <h3 class="inline-container-headline">{{ topic.category }}</h3>
       <ul class="inline-container-list">
         {% for recommendation in topic.items %}
-          <li class="inline-container-item"><a class="inline-container-link" href="{{ recommendation.url }}">{{ recommendation.text }}</a></li>
+          <li class="inline-container-item">
+            <a class="inline-container-link" href="{{ recommendation.url }}">
+              {{ recommendation.text }}
+            </a>
+          </li>
         {% endfor %}
       </ul>
     {% endfor %}
   </div>
-</div>
+</section>

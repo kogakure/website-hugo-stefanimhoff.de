@@ -2,15 +2,6 @@
 //  Custom Underline
 //====================================
 
-$custom-underline-work-shadow:           #fafafa;
-$custom-underline-martial-arts-shadow:   #030303;
-$custom-underline-martial-arts-gradient: #be0202;
-$custom-underline-movies-arts-shadow:    #282828;
-$custom-underline-movies-arts-gradient:  #e8c53d;
-$custom-underline-books-arts-shadow:     #1c1c1c;
-$custom-underline-books-arts-gradient:   #616161;
-$custom-underline-footer-shadow:         #2a2c2d;
-
 .custom-underline {
   a {
     // Underline via gradient background
@@ -62,15 +53,17 @@ $custom-underline-footer-shadow:         #2a2c2d;
   }
 }
 
-.custom-underline.work a {
+.custom-underline.stripe-work a {
   text-shadow: 2px 0 $custom-underline-work-shadow, 1px 0 $custom-underline-work-shadow, -1px 0 $custom-underline-work-shadow, -2px 0 $custom-underline-work-shadow;
 }
 
-.custom-underline.martial-arts a {
+.custom-underline.stripe-martial-arts a {
+  @include link-colors($stripe-martial-arts-color, $white, $stripe-martial-arts-color, $stripe-martial-arts-color, $stripe-martial-arts-color);
   background-image: linear-gradient(to bottom, transparent 49%, $custom-underline-martial-arts-gradient 50%);
   background-position: 0 88%;
   background-repeat: repeat-x;
   background-size: 1px 1px;
+  color: $stripe-martial-arts-color;
   text-shadow: 2px 0 $custom-underline-martial-arts-shadow, 1px 0 $custom-underline-martial-arts-shadow, -1px 0 $custom-underline-martial-arts-shadow, -2px 0 $custom-underline-martial-arts-shadow;
 
   @include breakpoint(max-resolution 1.49dppx, max-resolution 143dpi) {
@@ -78,11 +71,13 @@ $custom-underline-footer-shadow:         #2a2c2d;
   }
 }
 
-.custom-underline.movies a {
+.custom-underline.stripe-movies a {
+  @include link-colors($stripe-movies-color, $white, $stripe-movies-color, $stripe-movies-color, $stripe-movies-color);
   background-image: linear-gradient(to bottom, transparent 49%, $custom-underline-movies-arts-gradient 50%);
   background-position: 0 88%;
   background-repeat: repeat-x;
   background-size: 1px 1px;
+  color: $stripe-movies-color;
   text-shadow: 2px 0 $custom-underline-movies-arts-shadow, 1px 0 $custom-underline-movies-arts-shadow, -1px 0 $custom-underline-movies-arts-shadow, -2px 0 $custom-underline-movies-arts-shadow;
 
   @include breakpoint(max-resolution 1.49dppx, max-resolution 143dpi) {
@@ -90,11 +85,13 @@ $custom-underline-footer-shadow:         #2a2c2d;
   }
 }
 
-.custom-underline.books a {
+.custom-underline.stripe-books a {
+  @include link-colors($stripe-books-color, $white, $stripe-books-color, $stripe-books-color, $stripe-books-color);
   background-image: linear-gradient(to bottom, transparent 49%, $custom-underline-books-arts-gradient 50%);
   background-position: 0 88%;
   background-repeat: repeat-x;
   background-size: 1px 1px;
+  color: $stripe-books-color;
   text-shadow: 2px 0 $custom-underline-books-arts-shadow, 1px 0 $custom-underline-books-arts-shadow, -1px 0 $custom-underline-books-arts-shadow, -2px 0 $custom-underline-books-arts-shadow;
 
   @include breakpoint(max-resolution 1.49dppx, max-resolution 143dpi) {
