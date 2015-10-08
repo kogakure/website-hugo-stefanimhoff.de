@@ -347,7 +347,7 @@ AddDefaultCharset utf-8
 
 # mod_pagespeed
 ModPagespeed On
-ModPagespeedDisableFilters rewrite_css
+ModPagespeedDisableFilters rewrite_css,rewrite_images,rewrite_javascript,combine_css,combine_javascript,extend_cache
 
 <IfModule mod_pagespeed.c>
   SetOutputFilter MOD_PAGESPEED_OUTPUT_FILTER
