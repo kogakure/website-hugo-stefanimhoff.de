@@ -19,8 +19,11 @@
     {% if page.custom_css %}<link rel="stylesheet" href="{{ root_url }}/assets/css/{{ page.custom_css }}.css">{% endif %}
   </noscript>
 {% else %}
-  <link rel="stylesheet" href="{{ root_url }}/assets/css/critical_homepage.css">
-  <link rel="stylesheet" href="{{ root_url }}/assets/css/critical.css">
+  {% if page.homepage %}
+    <link rel="stylesheet" href="{{ root_url }}/assets/css/critical_homepage.css">
+  {% else %}
+    <link rel="stylesheet" href="{{ root_url }}/assets/css/critical.css">
+  {% endif %}
   <link rel="stylesheet" href="{{ root_url }}/assets/css/application.css">
   {% if page.custom_css %}<link rel="stylesheet" href="{{ root_url }}/assets/css/{{ page.custom_css }}.css">{% endif %}
 {% endif %}
