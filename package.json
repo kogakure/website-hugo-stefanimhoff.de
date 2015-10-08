@@ -56,8 +56,8 @@
     "pretty-hrtime": "^0.2.2",
     "require-dir": "^0.1.0",
     "run-sequence": "^1.0.0",
-    "vinyl-source-stream": "^1.0.0",
-    "watchify": "^1.0.6"
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.4.0"
   },
   "engines": {
     "node": ">=0.8.0"
