@@ -9,6 +9,7 @@ url:         "http://stefanimhoff.de"
 server_path: /home/kogakure/webapps/stefanimhoff
 
 # Publishing
+criticalcss: true
 future:      false
 show_drafts: false
 limit_posts: 0
