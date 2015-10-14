@@ -4,52 +4,39 @@ Dies ist die Dokumentation von stefanimhoff.de.
 
 ## Entwicklung
 
-### Entwicklungsserver starten
+## Zusätzliche Installationen
 
-Um den lokalen Entwicklungsserver zu starten wird Grunt verwendet. Grunt sorgt dafür, dass alle nötigen Process wie Jekyll, Compass, das Kopieren von Dateien und Livereload gestartet werden.
+Durch ein Problem mit Node.js und Binaries müssen folgende Packete derzeit manuel installiert werden:
 
 ```sh
-grunt serve
+npm install optipng-bin
+npm install jpegtran-bin
+npm install cwebp-bin
+```
+
+### Entwicklungsserver starten
+
+Um den lokalen Entwicklungsserver zu starten wird Gulp verwendet. Gulp sorgt dafür, dass alle nötigen Process wie Jekyll, Assets, das Kopieren von Dateien und Livereload gestartet werden.
+
+```sh
+gulp
 ```
 
 ### Produktionsseite bauen
 
-Um eine Version für die Produktionsumgebung zu erzeugen wird der Standard-Task von Grunt verwendet:
+Um eine Version für die Produktionsumgebung zu erzeugen wird der Publish-Task von Gulp verwendet:
 
 ```sh
-grunt
-```
-
-Dieser Task führt `grunt check`, `grunt test` und `grunt build` aus, die auch einzeln gestartet werden können. Der Task führt auch die Komprimierung von Stylesheets, JavaScript und Bildern durch und versieht alle Dateien mit einem Hash.
-
-Um zu prüfen, ob die Produktionsseite korrekt läuft kann der Server mit einem speziellen Parameter gestartet werden:
-
-```sh
-grunt serve:dist
-```
-
-### Prüfen
-
-Um zu prüfen, ob Jekyll, das JavaScript und die Stylesheets fehlerfrei sind, kann dieser Task ausgeführt werden:
-
-```sh
-grunt check
+gulp publish
 ```
 
 ### Deployment
 
-Um die fertige Website auf den Server zu spielen, gibt es zwei Tasks. Der erste Task lädt nur den aktuellen Stand der Distrubution mit rsync auf den Server:
+Um die fertige Website auf den Server zu spielen, wird dieser Task verwenet:
 
 ```sh
-grunt upload
+gulp deploy
 ```
-Der zweite Task führt alle Schritte des build-Tasks und den Upload aus:
-
-```sh
-grunt deploy
-```
-
-Dieser Task ist Teil des Produktions-Tasks.
 
 ## Artikel und Seiten
 
@@ -141,5 +128,3 @@ Die YAML-Variablen werden mit dem richtigen inhalt ersetzt wenn eine Seite oder 
 ```sh
 $ bundle exec octopress new post --template _templates/linkpost
 ```
-
-

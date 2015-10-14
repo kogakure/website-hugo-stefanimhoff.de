@@ -27,9 +27,7 @@ Diese Seite verwendet ein Foto für den Kopfbereich und einige Hintergrundmuster
 
 <div class="inline-container section">
   <h3>Foto</h3>
-  <ul>
-    <li><a href="{{ site.attribution_url }}"><cite>{{ site.attribution_name }}</cite> von {{ site.attribution_author }}</a></li>
-  </ul>
+  <p><a href="{{ site.attribution_url }}"><cite lang="ja">{{ site.attribution_name }}</cite> von {{ site.attribution_author }}</a></p>
 
   <h3>Patterns</h3>
   <ul>
