@@ -2,6 +2,14 @@
 /*  Tag                                 */
 /* ==================================== */
 
+.classification {
+  .tags {
+    @media screen and (width <= $header-centered) {
+      display: block;
+    }
+  }
+}
+
 .tags {
   display: inline;
   margin-bottom: 0;

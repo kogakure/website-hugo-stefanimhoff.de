@@ -75,6 +75,7 @@ blockquote.pullquote[lang|=ja] {
 
   @media screen and (width <= $content-medium) {
     margin-left: 0;
+    margin-right: $default-spacing-right;
   }
 
   @media screen and (width <= $content-pullquote-inline) {

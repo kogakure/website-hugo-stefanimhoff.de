@@ -5,6 +5,13 @@
 .classification {
   margin-bottom: $default-spacing-bottom;
   text-align: center;
+  
+  .categories {
+    @media screen and (width <= $header-centered) {
+      display: block;
+      margin: 0;
+    }
+  }
 }
 
 .classification-icon {
