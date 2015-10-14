@@ -15,6 +15,11 @@
     "class": "github"
   },
   {
+    "name": "Pinterest",
+    "url": "https://www.pinterest.com/kogakure/",
+    "class": "pinterest"
+  },
+  {
     "name": "Atom-Feed",
     "url": "!FEEDBURNER_URL!",
     "class": "feed"
