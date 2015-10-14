@@ -9,7 +9,6 @@ rsync -v -r --delete \
             --exclude 'node_modules/' \
             --exclude 'README.markdown' \
             --exclude 'docs/categories.markdown' \
-            --exclude 'docs/index.markdown' \
             --exclude 'docs/tags.markdown' \
             --exclude 'vendor/' \
             --exclude 'build/' \
