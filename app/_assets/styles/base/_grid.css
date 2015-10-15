@@ -34,7 +34,7 @@
 
   @media screen and (width <= $content-small) {
     margin-bottom: $default-spacing-bottom;
-    margin-top: 0.5em;
+    margin-top: 1em;
   }
 }
 
