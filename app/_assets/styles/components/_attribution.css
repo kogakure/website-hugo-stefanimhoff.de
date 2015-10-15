@@ -25,26 +25,13 @@
   transition: all 0.6s ease;
 
   a {
-    @mixin link-colors
-      $link-color,
-      $link-color,
-      $link-active-color,
-      $link-visited-color,
-      $link-focus-color;
+    @mixin link-colors $link-color, $link-color, $link-active-color, $link-visited-color, $link-focus-color;
   }
 
   /* Copyright */
   b {
     @extend mono-font;
     font-weight: normal;
-  }
-}
-
-.custom-underline .attribution-text a {
-  text-shadow: none;
-
-  &:hover {
-    color: $white;
   }
 }
 
@@ -83,11 +70,8 @@
   position: relative;
 
   a {
+    @mixin link-colors $white, $white, $white, $white, $white;
     text-decoration: none;
-
-    &:hover {
-      color: $white;
-    }
   }
 }
 
@@ -107,7 +91,7 @@
   transition: all 0.6s ease;
 
   a {
-    @mixin link-colors $link-color, $link-color, $link-active-color, $link-visited-color, $link-focus-color;
+    @mixin link-colors $link-color, $white, $link-active-color, $link-visited-color, $link-focus-color;
   }
 
   /* Copyright */

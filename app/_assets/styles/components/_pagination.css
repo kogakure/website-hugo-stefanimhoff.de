@@ -53,14 +53,3 @@
   position: absolute;
   width: 15px;
 }
-
-.custom-underline .pagination .pagination-link {
-  background: $dark-grey;
-  color: $white;
-  text-shadow: none;
-
-  &:hover {
-    background: $link-color;
-    color: $white;
-  }
-}

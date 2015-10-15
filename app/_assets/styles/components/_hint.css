@@ -16,6 +16,14 @@
   padding-right: 15px;
   padding-top: 10px;
 
+  a {
+    color: $logo-color;
+
+    &:hover {
+      color: $dark-grey;
+    }
+  }
+
   p:last-child {
     margin-bottom: 0;
   }

@@ -31,12 +31,3 @@
   margin-right: 15px;
   width: 54px;
 }
-
-.custom-underline .download .download-link {
-  background: transparent;
-  text-shadow: none;
-
-  &:hover {
-    background: transparent;
-  }
-}

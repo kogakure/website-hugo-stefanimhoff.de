@@ -11,12 +11,7 @@
   }
 
   a {
-    @mixin link-colors
-      $stripe-martial-arts-color,
-      $white,
-      $stripe-martial-arts-color,
-      $stripe-martial-arts-color,
-      $stripe-martial-arts-color;
+    @mixin link-colors $stripe-martial-arts-color, $white, $stripe-martial-arts-color, $stripe-martial-arts-color, $stripe-martial-arts-color;
   }
 }
 

@@ -82,12 +82,7 @@
 }
 
 .footer-legal-link {
-  @mixin link-colors
-    $footer-link-color,
-    $footer-link-color-active,
-    $footer-link-color-active,
-    $footer-link-color,
-    $footer-link-color-active;
+  @mixin link-colors $footer-link-color, $footer-link-color-active, $footer-link-color-active, $footer-link-color, $footer-link-color-active;
   background: transparent;
   border: 0;
   text-decoration: none;
@@ -110,6 +105,10 @@
 /* About me */
 .footer-about {
   lost-column: 8/12;
+
+  a:hover {
+    color: rgba($white, 0.8);
+  }
 
   @media screen and (width <= $meta-footer-two-lines) {
     lost-column: 12/12;
@@ -233,12 +232,8 @@
   text-decoration: none;
   text-shadow: $black -1px -1px 0;
 
-  &:hover {
-    border: 0;
-
-    .footer-social-icon {
-      fill: rgba($white, 0.7);
-    }
+  &:hover .footer-social-icon {
+    fill: rgba($white, 0.7);
   }
 }
 

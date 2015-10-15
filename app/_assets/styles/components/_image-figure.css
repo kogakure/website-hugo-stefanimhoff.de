@@ -11,22 +11,6 @@
   figcaption {
     margin-top: 5px;
   }
-
-  .figure-content {
-    position: relative;
-
-    a {
-      background: transparent;
-
-      &:hover {
-        background: transparent;
-      }
-    }
-  }
-
-  a {
-    border: 0;
-  }
 }
 
 

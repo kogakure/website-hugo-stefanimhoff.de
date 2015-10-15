@@ -5,7 +5,7 @@
 .classification {
   margin-bottom: $default-spacing-bottom;
   text-align: center;
-  
+
   .categories {
     @media screen and (width <= $header-centered) {
       display: block;
@@ -72,16 +72,5 @@
   &:hover {
     background: $link-color;
     color: $white;
-  }
-
-  .custom-underline & {
-    background-image: none;
-    color: $white;
-    text-shadow: none;
-
-    &:hover {
-      background-image: none;
-      color: $white;
-    }
   }
 }

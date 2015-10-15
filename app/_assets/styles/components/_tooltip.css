@@ -4,7 +4,6 @@
 
 [data-tooltip] {
   position: relative;
-  text-decoration: none;
 
   &:focus {
     outline: 0;

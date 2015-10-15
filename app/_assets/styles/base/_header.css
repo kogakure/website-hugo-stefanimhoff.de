@@ -36,11 +36,11 @@
 
 .header-logo {
   lost-column: 2/12 0 10px;
-  
+
   @media screen and (width > $header-centered) and (width <= 480px) {
     lost-column: 3/12 0 10px;
   }
-  
+
   @media screen and (width <= $header-centered) {
     lost-column: 12/12;
   }
@@ -108,12 +108,7 @@
 }
 
 .header-info-title-link {
-  @mixin link-colors
-    $white,
-    $white,
-    $white,
-    $white,
-    $white;
+  @mixin link-colors $white, $white, $white, $white, $white;
   text-decoration: none;
 
   @media screen and (width <= 480px) {
