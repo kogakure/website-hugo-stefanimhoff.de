@@ -53,6 +53,7 @@
 }
 
 .categories-link {
+  @mixin link-colors $white, $white, $white, $white, $white;
   background: $dark-grey;
   border-radius: 5px;
   border-width: 0;

@@ -37,6 +37,7 @@
 }
 
 .tags-link {
+  @mixin link-colors $white, $white, $white, $white, $white;
   background: $dark-grey;
   border: 0;
   border-radius: 5px;
