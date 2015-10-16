@@ -17,7 +17,7 @@ tags:
 - rsync
 ---
 
-This is the 14th and (for now) last part of my series *Introduction to Gulp.js*. I may come back later to this series to add additional tasks. Today I will write a task to sync the files of my Jekyll site to my webserver.
+This is the 14th of my series *Introduction to Gulp.js*. Today I will write a task to sync the files of my Jekyll site to my webserver.
 
 {% figure image-figure attribution %}
 <img src="{{ site.url }}/assets/images/artikel/gulp-tutorial-14.jpg" alt="A fluffy bunny with a Big Gulp">
