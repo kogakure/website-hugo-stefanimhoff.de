@@ -3,7 +3,7 @@ layout: post
 language: "en"
 title: "Introduction to Gulp.js 15: Performance Improvements with WebP and Gzip"
 date: 2014-12-21T11:15:00+01:00
-updated: 2015-03-09T12:35:00+01:00
+updated: 2015-10-21T12:35:00+01:00
 author: "Stefan Imhoff"
 og_image: "/assets/images/artikel/gulp-tutorial-15.jpg"
 description: "The ultimative tutorial and guide for Gulp.js: How to improve the speed and performance of your website with WebP and Gzip."
@@ -131,7 +131,7 @@ Many servers compress files by default with Gzip before sending them to the brow
 First I install the Gulp.js module:
 
 {% highlight sh %}
-$ npm install --save-dev gulp-gzip@0.0.8
+$ npm install --save-dev gulp-gzip@1.2.0
 {% endhighlight %}
 
 I add an entry to the configuration file:

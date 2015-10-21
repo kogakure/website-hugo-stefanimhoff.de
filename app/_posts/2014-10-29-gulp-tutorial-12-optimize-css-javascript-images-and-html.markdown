@@ -3,7 +3,7 @@ layout: post
 language: "en"
 title: "Introduction to Gulp.js 12: Optimize CSS, JavaScript, Images and HTML"
 date: 2014-10-29T08:00:00+02:00
-updated: 2015-03-09T12:30:00+02:00
+updated: 2015-10-21T12:30:00+02:00
 author: "Stefan Imhoff"
 og_image: "/assets/images/artikel/gulp-tutorial-12.jpg"
 description: "The ultimative tutorial and guide for Gulp.js: How to optimize CSS, JavaScript, images and HTML to speed up your website."
@@ -34,7 +34,7 @@ First I will write a task, which will optimize the CSS. Compass is able to minim
 I install the needed Gulp.js plugins:
 
 {% highlight sh %}
-$ npm install --save-dev gulp-minify-css@0.3.11 gulp-size@1.1.0
+$ npm install --save-dev gulp-minify-css@1.2.1 gulp-size@2.0.0
 {% endhighlight %}
 
 {% figure code-figure "gulp/config.js" %}
@@ -126,7 +126,7 @@ Next I will take care of the images. They need to be copied to the production as
 I’ll need `gulp-imagemin` for my task, which is able to minify PNG, JPG, GIF and SVG images:
 
 {% highlight sh %}
-$ npm install --save-dev gulp-imagemin@1.1.0
+$ npm install --save-dev gulp-imagemin@2.3.0
 {% endhighlight %}
 
 {% figure code-figure "gulp/config.js" %}
@@ -176,7 +176,7 @@ This task will take my images, optimize them, copy them to the assets folder and
 As said before I wrote this task, so you can see how to do it, but I don’t use it, because the reduction is minimal and not worth the messy markup. I like to keep it readable so other people can learn from it.
 
 {% highlight sh %}
-$ npm install --save-dev gulp-htmlmin@0.2.0
+$ npm install --save-dev gulp-htmlmin@1.2.0
 {% endhighlight %}
 
 {% figure code-figure "gulp/config.js" %}

@@ -3,7 +3,7 @@ layout: post
 language: "en"
 title: "Introduction to Gulp.js 2: Server with BrowserSync and Configuration"
 date: 2014-10-19T10:17:00+02:00
-updated: 2015-03-09T12:30:00+02:00
+updated: 2015-10-21T12:30:00+02:00
 author: "Stefan Imhoff"
 og_image: "/assets/images/artikel/gulp-tutorial-2.jpg"
 description: "The ultimative tutorial and guide for Gulp.js: How to set up a development server with BrowserSync."
@@ -28,7 +28,7 @@ This is the 2nd part of my series *Introduction to Gulp.js*. Today I will write 
 To run my `gulpfile.js` I need to install gulp:
 
 {% highlight sh %}
-$ npm install --save-dev gulp@3.8.8
+$ npm install --save-dev gulp@3.9.0
 {% endhighlight %}
 
 If I run the command `gulp` on my command line I get an error message <samp>Task 'default' is not in your gulpfile</samp>. This is because I haven’t written a gulp task until now.
@@ -89,7 +89,7 @@ But [BrowserSync](http://www.browsersync.io/) is even better: It does all LiveRe
 But first I install BrowserSync:
 
 {% highlight sh %}
-$ npm install --save-dev browser-sync@1.5.2
+$ npm install --save-dev browser-sync@2.9.11
 {% endhighlight %}
 
 I create a new file `browser-sync.js` in `gulp/tasks/development/`. This file will start BrowserSync and the development server.

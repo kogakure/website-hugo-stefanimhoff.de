@@ -3,7 +3,7 @@ layout: post
 language: "en"
 title: "Introduction to Gulp.js 10: Generating CSS Image Sprites"
 date: 2014-10-27T07:40:00+02:00
-updated: 2015-03-09T12:30:00+02:00
+updated: 2015-10-21T12:30:00+02:00
 author: "Stefan Imhoff"
 og_image: "/assets/images/artikel/gulp-tutorial-10.jpg"
 description: "The ultimative tutorial and guide for Gulp.js: How to generate image sprite maps with Spritesmith."
@@ -32,7 +32,7 @@ CSS images sprites are not used that often any more, because of SVG or vector fo
 I will need a Spritesmith plugin for Gulp.js:
 
 {% highlight sh %}
-$ npm install --save-dev gulp.spritesmith@1.4.0
+$ npm install --save-dev gulp.spritesmith@4.1.1
 {% endhighlight %}
 
 {% figure code-figure "gulp/config.js" %}

@@ -3,7 +3,7 @@ layout: post
 language: "en"
 title: "Introduction to Gulp.js 4: Creating CSS with Sass (and Compass)"
 date: 2014-10-21T10:30:00+02:00
-updated: 2015-03-09T12:35:00+02:00
+updated: 2015-10-21T12:35:00+02:00
 author: "Stefan Imhoff"
 og_image: "/assets/images/artikel/gulp-tutorial-4.jpg"
 description: "The ultimative tutorial and guide for Gulp.js: How to create CSS and Source Maps with Sass and Compass."
@@ -34,7 +34,7 @@ Go ahead and install the npm modules needed:
 
 
 {% highlight sh %}
-$ npm install --save-dev gulp-plumber@0.6.6 gulp-ruby-sass@0.7.1 gulp-filter@1.0.2 gulp-changed@1.0.0 gulp-autoprefixer@1.0.1 gulp-sourcemaps@1.2.4
+$ npm install --save-dev gulp-plumber@1.0.1 gulp-ruby-sass@2.0.4 gulp-filter@3.0.1 gulp-changed@1.0.0 gulp-autoprefixer@3.0.2 gulp-sourcemaps@1.6.0
 {% endhighlight %}
 
 That’s a lot, but this task will do a lot.

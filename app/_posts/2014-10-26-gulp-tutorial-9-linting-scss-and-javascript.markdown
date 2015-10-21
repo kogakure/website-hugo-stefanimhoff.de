@@ -3,7 +3,7 @@ layout: post
 language: "en"
 title: "Introduction to Gulp.js 9: Checking the Syntax of SCSS and JavaScript"
 date: 2014-10-26T08:10:00+02:00
-updated: 2015-03-09T12:49:00+02:00
+updated: 2015-10-21T12:49:00+02:00
 author: "Stefan Imhoff"
 og_image: "/assets/images/artikel/gulp-tutorial-9.jpg"
 description: "The ultimative tutorial and guide for Gulp.js: How to check the syntax of SCSS and JavaScript files."
@@ -31,7 +31,7 @@ This is the 9th part of my series *Introduction to Gulp.js*. Today I will use Gu
 I decided to lint my SCSS files and not the CSS files, because it’s kind of pointless to lint generated CSS. But you can do this with [gulp-csslint](https://www.npmjs.com/package/gulp-csslint/).
 
 {% highlight sh %}
-$ npm install --save-dev gulp-scss-lint@0.1.4 gulp-jshint@1.8.5 jshint-stylish@1.0.0
+$ npm install --save-dev gulp-scss-lint@0.3.6 gulp-jshint@1.8.5 jshint-stylish@2.0.1
 {% endhighlight %}
 
 Additionally you’ll need to install the `scss-lint` Gem and run `bundle install`:

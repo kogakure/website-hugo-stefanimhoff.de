@@ -3,7 +3,7 @@ layout: post
 language: "en"
 title: "Introduction to Gulp.js 6: Images and Vector Fonts"
 date: 2014-10-23T08:00:00+02:00
-updated: 2015-03-09T12:45:00+02:00
+updated: 2015-10-21T12:45:00+02:00
 author: "Stefan Imhoff"
 og_image: "/assets/images/artikel/gulp-tutorial-6.jpg"
 description: "The ultimative tutorial and guide for Gulp.js: How to move images and generate vector fonts from SVG."
@@ -93,7 +93,7 @@ Font Custom checks the files for changes and doesn’t generate anything if the 
 To execute a shell command I use the Gulp.js plugin `gulp-shell`:
 
 {% highlight sh %}
-$ npm install --save-dev gulp-shell@0.2.10
+$ npm install --save-dev gulp-shell@0.5.0
 {% endhighlight %}
 
 {% figure code-figure "gulp/tasks/development/fontcustom.js" %}
