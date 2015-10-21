@@ -40,7 +40,7 @@
   opacity: 1;
 }
 
-.attribution-caption:hover .attribution-text {
+.attribution.attribution-caption:hover .attribution-text {
   bottom: calc($image-border-size + 26);
 }
 
@@ -64,7 +64,7 @@
   z-index: 5;
 }
 
-.attribution-caption .figure-content:before {
+.attribution.attribution-caption .figure-content:before {
   bottom: 35px;
 }
 
