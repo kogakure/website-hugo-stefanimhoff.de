@@ -17,7 +17,7 @@ tags:
 
 This is the 8th part of my series *Introduction to Gulp.js*. Today I will set up watch tasks for many different files with Gulp.js.
 
-{% figure image-figure attribution "Not even <strong>Double Gulp</strong> helped to have a Funtime" %}
+{% figure image-figure attribution attribution-caption "Not even <strong>Double Gulp</strong> helped to have a Funtime" %}
 <img src="{{ site.url }}/assets/images/artikel/gulp-tutorial-8.jpg" alt="Man with a Double Gulp is sleeping">
 <p class="attribution-text"><svg class="attribution-icon-cc"><use xlink:href="#cc"></use></svg> Erin Nekervis, <a href="https://www.flickr.com/photos/theeerin/4701912791">Funtime!</a></p>
 {% endfigure %}

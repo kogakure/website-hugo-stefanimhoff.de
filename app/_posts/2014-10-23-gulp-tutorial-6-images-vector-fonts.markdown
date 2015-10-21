@@ -17,7 +17,7 @@ tags:
 
 This is the 6th part of my series *Introduction to Gulp.js*. The last article was very long and complicated. This time it’s a easier one: I will show how I move my images and generate vector fonts.
 
-{% figure image-figure attribution "Today we will only take a <strong>Mini Gulp</strong>" %}
+{% figure image-figure attribution attribution-caption "Today we will only take a <strong>Mini Gulp</strong>" %}
 <img src="{{ site.url }}/assets/images/artikel/gulp-tutorial-6.jpg" alt="A Mini Gulp with water">
 <p class="attribution-text"><svg class="attribution-icon-cc"><use xlink:href="#cc"></use></svg> 世書 名付, <a href="https://www.flickr.com/photos/nseika/9477122568">Mini Gulp</a></p>
 {% endfigure %}

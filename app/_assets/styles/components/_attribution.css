@@ -40,6 +40,10 @@
   opacity: 1;
 }
 
+.attribution-caption:hover .attribution-text {
+  bottom: calc($image-border-size + 26);
+}
+
 .attribution .figure-content:before {
   @extend mono-font;
   background: rgba($white, 0.7);
@@ -58,6 +62,10 @@
   transition: all 0.6s ease;
   width: 20px;
   z-index: 5;
+}
+
+.attribution-caption .figure-content:before {
+  bottom: 35px;
 }
 
 .attribution .figure-content:hover:before {
