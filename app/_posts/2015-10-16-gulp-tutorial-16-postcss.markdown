@@ -109,7 +109,7 @@ function onError (err) {
 }
 
 /**
- * Rund CSS through PostCSS and it's plugins
+ * Run CSS through PostCSS and it's plugins
  * Build sourcemaps and minimize
  */
 var processors = [
