@@ -136,6 +136,14 @@ Now I install the Gems by typing:
 $ bundle install
 {% endhighlight %}
 
+If you installed Jekyll with Bundler run inside of your project directory:
+
+{% highlight sh %}
+$ bundle exec jekyll new app
+{% endhighlight %}
+
+Did you install it globally? Then just drop the `bundle exec` from the command.
+
 {% include articles/gulp-code.html %}
 
 ## Conclusion
