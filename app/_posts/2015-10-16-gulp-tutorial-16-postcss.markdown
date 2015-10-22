@@ -118,7 +118,7 @@ var processors = [
   mqpacker(config.styles.options.mqpacker)
 ];
 
-gulp.task('styles', function () {
+gulp.task('styles', function() {
   browsersync.notify('Transforming CSS with PostCSS');
 
   return gulp.src(config.styles.src)
@@ -288,7 +288,7 @@ var stylelint = require('stylelint');
 var reporter  = require('postcss-reporter');
 var config    = require('../../config');
 
-gulp.task('lint-styles', function () {
+gulp.task('lint-styles', function() {
   return gulp.src(config.lintStyles.src)
   .pipe(postcss([
     stylelint(config.lintStyles.options.stylelint),
