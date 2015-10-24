@@ -276,7 +276,7 @@ I open my `package.json` file and need to add a few lines:
 {% endhighlight %}
 {% endfigure %}
 
-In the section `"browser"` you point `browserify-shim` to the assset you want to shim. I use [Bower](http://bower.io/) and have installed my packages into `app/_bower_components/`. The name you choose is the name you have to require later in your JavaScripts.
+In the section `"browser"` you point `browserify-shim` to the asset you want to shim. I use [Bower](http://bower.io/) and have installed my packages into `app/_bower_components/`. The name you choose is the name you have to require later in your JavaScripts.
 
 Within `"browerify-shim"` you decide where to map this require to. To include jQuery or Modernizr later you would write:
 
