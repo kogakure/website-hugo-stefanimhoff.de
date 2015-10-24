@@ -21,8 +21,8 @@ This is the 14th of my series *Introduction to Gulp.js*. Today I will write a ta
 
 {% figure image-figure attribution %}
 <img src="{{ site.url }}/assets/images/artikel/gulp-tutorial-14.jpg" alt="A fluffy bunny with a Big Gulp">
-{% endfigure %}
 <p class="attribution-text"><svg class="attribution-icon-cc"><use xlink:href="#cc"></use></svg> Jayanta Debnath, <a href="https://www.flickr.com/photos/jkdsphotography/13786076413">BIG GULP!</a></p>
+{% endfigure %}
 
 {% include articles/gulp-toc.html %}
 
