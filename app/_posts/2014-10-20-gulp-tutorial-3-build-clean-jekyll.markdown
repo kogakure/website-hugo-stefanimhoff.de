@@ -100,6 +100,8 @@ gulp.task('delete', function(callback) {
 {% endhighlight %}
 {% endfigure %}
 
+If you use a newer version of `del` or run into trouble, because `del` doesn’t finish, try deleting the `callback` from the function.
+
 ## Jekyll
 Next I will write the configuration and the task to create the Jekyll site:
 
@@ -141,6 +143,8 @@ gulp.task('jekyll-rebuild', ['jekyll'], function() {
 There is a gulp plugin for Jekyll, but it’s alpha and was blacklisted, because it’s not needed as you can run shell tasks with node. But I have to send the `done` status, when the task is finished.
 
 All this task is doing is running `jekyll build` with some options. I use `app` as the source folder, `build/development` as the target and point to my `_config.yml`.
+
+I put my `_config.yml` and other configuration files always at the root of my project. If you don’t like that, you need to update the configuration to point to the location of your `_config.yml`.
 
 {% aside aside-hint %}
 <h4>To bundle or not to bundle</h4>
