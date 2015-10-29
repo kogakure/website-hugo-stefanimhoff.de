@@ -3,7 +3,7 @@ layout: post
 language: "en"
 title: "Introduction to Gulp.js 4: Creating CSS with Sass (and Compass)"
 date: 2014-10-21T10:30:00+02:00
-updated: 2015-10-21T12:35:00+02:00
+updated: 2015-10-29T16:22:00+02:00
 author: "Stefan Imhoff"
 og_image: "/assets/images/artikel/gulp-tutorial-4.jpg"
 description: "The ultimative tutorial and guide for Gulp.js: How to create CSS and Source Maps with Sass and Compass."
