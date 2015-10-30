@@ -54,7 +54,7 @@ dl {
 }
 
 dt {
-  font-weight: $bold;
+  font-weight: $weight-bold;
 }
 
 dt + dd {

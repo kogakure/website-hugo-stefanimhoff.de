@@ -32,7 +32,7 @@ em {
 }
 
 strong {
-  font-weight: $bold;
+  font-weight: $weight-bold;
 }
 
 
@@ -81,7 +81,7 @@ kbd {
   color: $dark-grey;
   display: inline-block;
   font-size: $font-scale-kbd;
-  font-weight: $bold;
+  font-weight: $weight-bold;
   line-height: 1.4;
   padding-bottom: 0.1em;
   padding-left: 0.6em;
@@ -118,7 +118,7 @@ i {
 }
 
 b {
-  font-weight: $bold;
+  font-weight: $weight-bold;
 }
 
 

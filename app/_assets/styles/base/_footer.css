@@ -39,7 +39,7 @@
 .footer-legal-copyright-sign {
   @extend mono-font;
   font-size: calc($base-font-size * 1.25);
-  font-weight: $light;
+  font-weight: $weight-light;
   position: relative;
   top: 2px;
 }
