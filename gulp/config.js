@@ -78,7 +78,11 @@ module.exports = {
     dest: src + '/_includes/critical/'
   },
   delete: {
-    src: [developmentAssets]
+    src: [
+      developmentAssets + '/css/*',
+      developmentAssets + '/images/**/*',
+      developmentAssets + '/js/*',
+    ]
   },
   gzip: {
     src: production + '/**/*.{html,xml,json,css,js}',
@@ -143,7 +147,7 @@ module.exports = {
           'selector-combinator-space-after': [2, 'always'],
           'selector-list-comma-newline-after': [2, 'always'],
           'rule-no-duplicate-properties': 2,
-          'rule-non-nested-empty-line-before': [2, 'always', { 
+          'rule-non-nested-empty-line-before': [2, 'always', {
             ignore: ['after-comment']
           }],
           'rule-properties-order': [2, 'alphabetical'],
@@ -256,7 +260,7 @@ module.exports = {
       responsiveType: {},
       lost: {},
       hexRGBA: {},
-      mqpacker: {}      
+      mqpacker: {}
     }
   },
   svg: {
