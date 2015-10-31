@@ -232,7 +232,7 @@
   text-shadow: $black -1px -1px 0;
 
   &:hover .footer-social-icon {
-    fill: rgba($white, 0.7);
+    fill: $link-color;
   }
 }
 
