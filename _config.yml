@@ -10,14 +10,18 @@ permalink: /:year/:title/
 
 # Jekyll
 source:      ./app
-destination: ./build
+destination: ./build/development
+
+# Gems
+gems:
+  - jekyll-paginate
 
 # Publishing
 encoding:    "utf-8"
 criticalcss: false
 future:      true
 show_drafts: true
-limit_posts: 5
+limit_posts: 20
 # limit_posts: 0
 
 # Server
@@ -75,23 +79,6 @@ exclude: [
 ]
 
 include: [".htaccess", ".htpasswd", "favicon.ico"]
-
-# Sitemap.xml generator
-sitemap:
-  file: "/sitemap.xml"
-  exclude:
-    - "/atom.xml"
-    - "/atom-de.xml"
-    - "/atom-en.xml"
-    - "/htaccess"
-    - "/htpasswd"
-    - "/error/404/index.markdown"
-    - "/error/410/index.markdown"
-    - "/error/500/index.markdown"
-  include_posts:
-    - "/index.html"
-  change_frequency_name: "change_frequency"
-  priority_name: "priority"
 
 
 # Attribution

@@ -82,6 +82,8 @@ module.exports = {
       developmentAssets + '/css/*',
       developmentAssets + '/images/**/*',
       developmentAssets + '/js/*',
+      development + '/**/*',
+      production + '/**/*'
     ]
   },
   gzip: {
@@ -283,7 +285,6 @@ module.exports = {
     jekyll: [
       '_config.yml',
       '_config.build.yml',
-      'stopwords.txt',
       src + '/_data/**/*.{json,yml,csv}',
       src + '/_includes/**/*.{html,xml}',
       src + '/_layouts/*.html',
