@@ -177,7 +177,7 @@ Für alle die jetzt neugierig auf Typographie geworden sind, habe ich eine klein
 - [Five simple steps to better typography](http://markboulton.co.uk/journal/five-simple-steps-to-better-typography)
 - [Nice Web Type](http://nicewebtype.com/)
 - [More MeaningFull Typography](http://alistapart.com/article/more-meaningful-typography)
-- [A List Apart: Typographie](http://alistapart.com/topics/design/typography/)
+- [A List Apart: Typographie](http://alistapart.com/topic/design/typography/)
 - [Kerntype](http://type.method.ac/)
 - [Modular Scale](http://www.modularscale.com/)
 - [Helvetica – A Documentary Film by Gary Hustwit](http://www.hustwit.com/category/helvetica/)

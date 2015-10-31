@@ -164,7 +164,7 @@ Um den Einstieg in Django zu erleichtern, habe ich nachfolgend eine Liste von in
 * [Bryan Veloso: Avalonstar](http://avalonstar.com/) – Designer und Blogger (Seattle, Washington, US)
 * [Jacob Kaplan-Moss](https://jacobian.org/) – Entwickler von Django (Lawrence, Kansas, US)
 * [James Bennett: The B-List](http://www.b-list.org/) – Release Manager von Django (Lawrence, Kansas, US)
-* [Jeff Croft](http://jeffcroft.com/) – Designer und Python Programmierer (Seattle, Washington, US)
+* *Jeff Croft* – Designer und Python Programmierer (Seattle, Washington, US)
 * [Nathan Borror](http://nthn.me/) – Designer (Lawrence, Kansas, US)
 * [Paul Bissex: E-Scribe](http://news.e-scribe.com/) – Entwickler, Lehrer und Autor (Northampton, Massachusetts, US)
 * [Ross Poulton](https://www.rossp.org/) – Berater und Projektmanager, Entwickler von DjangoSites (Diamond Creek, Victoria, Australien)

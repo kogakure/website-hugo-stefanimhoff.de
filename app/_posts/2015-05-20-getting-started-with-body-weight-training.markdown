@@ -71,7 +71,7 @@ I keep track of my workouts in a diary and can easily see the training days in a
 <img src="{{ site.url }}/assets/images/artikel/calisthenics-best-dad-ever.jpg" alt="Man doing a Pull-Up with 3 children as additional weight">
 {% endfigure %}
 
-And I am patient. It’s more about the journey, than about the goal. It’s still an effort to train every day, to convince me to do my workout, even if the day isn’t a good one. Personally I decided to **train early in the morning**, a few minutes after I got up. This way I don’t need as much willpower as I would in the evening. Unfortunately we are all victims to [Ego Depletion](http://en.wikipedia.org/wiki/Ego_depletion), and later in the day it may be completely gone.
+And I am patient. It’s more about the journey, than about the goal. It’s still an effort to train every day, to convince me to do my workout, even if the day isn’t a good one. Personally I decided to **train early in the morning**, a few minutes after I got up. This way I don’t need as much willpower as I would in the evening. Unfortunately we are all victims to [Ego Depletion](https://en.wikipedia.org/wiki/Ego_depletion), and later in the day it may be completely gone.
 
 ## Training Sites and Equipment
 

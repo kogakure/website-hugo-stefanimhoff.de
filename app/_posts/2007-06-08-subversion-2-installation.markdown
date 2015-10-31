@@ -5,7 +5,7 @@ title: "Subversion 2: Installation"
 description: "Ein umfangreiches Tutorial für Subversion: Wie wird Subversion installiert und was für Programmoberflächen gibt es?"
 author: "Stefan Imhoff"
 date: 2007-06-08 01:00
-updated: 2014-10-25 12:22
+updated: 2015-10-31 12:22
 categories:
 - Versionskontrolle
 tags:
@@ -32,7 +32,7 @@ Für Windows ist dies die beste Version, die verfügbar ist, und TortoiseSVN ist
 
 Für Mac OS X gibt es unter anderem die Programme [svnX](http://code.google.com/p/svnx/), [rapidsvn](http://rapidsvn.tigris.org/ "rapidsvn.tigris.org") und eine TortoiseSVN ähnliche Menüintegration durch das [SCPlugin](http://scplugin.tigris.org/ "scplugin.tigris.org"). Diese ist aber bei weitem nicht so intuitiv und mächtig wie die Windows-Variante.
 
-Weiter gibt es noch eine Vielzahl anderer Programme für verschiedenste Plattformen und auch plattformübergreifende Programme, kostenlose und Profiversionen für teures Geld. Ein guter Anwärter für eine hübsche OS X Software scheint mir [Versions](http://www.versionsapp.com/) von [Sofa](http://www.madebysofa.com/) zu sein, das aber bislang nur angekündigt wurde.
+Weiter gibt es noch eine Vielzahl anderer Programme für verschiedenste Plattformen und auch plattformübergreifende Programme, kostenlose und Profiversionen für teures Geld. Ein guter Anwärter für eine hübsche OS X Software scheint mir [Versions](http://www.versionsapp.com/) zu sein, das aber bislang nur angekündigt wurde.
 
 Viele Editoren und Entwicklungsumgebungen für Programmierer und Webentwickler kommen schon mit Subversion eingebaut, wie z.B. [TextMate](http://macromates.com/ "TextMate — The Missing Editor for Mac OS X") oder [Aptana](http://www.aptana.com/ "Aptana: The Web IDE").
 

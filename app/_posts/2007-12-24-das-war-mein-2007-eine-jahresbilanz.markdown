@@ -135,7 +135,7 @@ Diverse Suchen nach <cite>Kuehne und Nagel Logistics</cite> und einem *Leopard W
 
 MySQL und PostgreSQL muss ich mir selber kompilieren, aber Apache 2 und PHP sind schon bei Leopard dabei. Außerdem stelle ich fest, dass mein G5 zu langsam für die neuen iChat-Videohintergründe ist. Schade.
 
-[Manuela Hoffmann](http://www.surfgarden.de/blog/2007-10/die-dinge-wirklich-mal-geregelt-kriegen/) bringt mich auf [TaskPaper](http://www.hogbaysoftware.com/products/taskpaper) als GTD-Werkzeug, was ich zwei Wochen teste, dann aber wieder entferne, weil mir einfach noch zu viele Dinge fehlen.
+[Manuela Hoffmann](http://www.pixelgraphix.de/) bringt mich auf [TaskPaper](http://www.hogbaysoftware.com/products/taskpaper) als GTD-Werkzeug, was ich zwei Wochen teste, dann aber wieder entferne, weil mir einfach noch zu viele Dinge fehlen.
 
 ## November
 

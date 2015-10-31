@@ -117,7 +117,7 @@ Im Juli fällt mir im Einkaufsmarkt eine schwarze Tüte mit Tiefkühlbrötchen a
 
 ## August
 
-Ich testen [django-robots](http://code.google.com/p/django-robots/ "django-robots - Google Code") und [django-mobileadmin](http://code.google.com/p/django-mobileadmin/ "django-mobileadmin - Google Code"). Wahnsinn, was [Jannis Leidel](http://jannisleidel.com/ "Jannis Leidel") für [Django-Projekte](http://code.google.com/u/leidel/ "Google Code") entwickelt. Hast du eigentlich noch Freizeit? ;)
+Ich testen [django-robots](http://code.google.com/p/django-robots/ "django-robots - Google Code") und [django-mobileadmin](http://code.google.com/p/django-mobileadmin/ "django-mobileadmin - Google Code"). Wahnsinn, was Jannis Leidel für [Django-Projekte](http://code.google.com/u/leidel/ "Google Code") entwickelt. Hast du eigentlich noch Freizeit? ;)
 
 Microsoft sorgt für Lacher mit seinem The Mojave Experiment. In der *wissenschaftlichen* Studie versucht Microsoft einigen US-Midwest-Landeiern zu beweisen, dass sie Windows Vista eigentlich ganz toll finden. Auf perfekten Systemen, mit perfekten Treibern führt ein Microsoft-Profi diese Landeier durch Vista und erntet so lustige Kommentare wie: <q lang="en">Really, this is Vista? I **LOVE** it</q>.
 
@@ -180,6 +180,6 @@ Als passenden Abschluss zum Jahresende schaue ich mir noch den Vortrag von Jacob
 
 Hier war es im letzten halben Jahr etwas ruhiger, denn ich überlege mir gerade, wie ich diese Website mit Django neu erstelle. ExpressionEngine ist zwar ein Spitzen-CMS, aber wer einmal Django gesehen hat … Außerdem zerfällt mein Code irgendwie langsam. Das Tagging hat auch nach einem Update plötzlich den Geist aufgegeben. Und ExpressionEngine 2 kommt halt erst irgendwann. Bei Django mache ich meine Ideen, meine Daten gehören mir und ich weiß, wie alles funktioniert.
 
-Viel Django dieses Jahr, aber das hat ja auch schon der Titel vorausgesagt. Und ja, ich melde mich freiwillig für den *Django-Evangelist Germany*-Posten ;) Den Job haben in den U.S.A. ja bereits [Jeff Croft](http://jeffcroft.com/) und [Bryan Veloso](http://avalonstar.com/) übernommen.
+Viel Django dieses Jahr, aber das hat ja auch schon der Titel vorausgesagt. Und ja, ich melde mich freiwillig für den *Django-Evangelist Germany*-Posten ;) Den Job haben in den U.S.A. ja bereits *Jeff Croft* und [Bryan Veloso](http://avalonstar.com/) übernommen.
 
 Zwar ist es ja noch eine Woche bis zum Jahreswechsel hin, aber da wird schon nix spannendes mehr passieren. Ich wünsche schöne Feiertage und einen guten Rutsch und melde mich bis zum neuen Jahr ab.
