@@ -30,6 +30,7 @@ titlecase:   false
 port:        8888
 timezone:    local
 markdown:    kramdown
+highlighter: pygments
 lsi:         true
 language:    "en"
 
