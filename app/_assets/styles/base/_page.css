@@ -3,7 +3,7 @@
 
 @charset "UTF-8";
 
-@include viewport {
+@viewport {
   width: device-width;
 }
 
