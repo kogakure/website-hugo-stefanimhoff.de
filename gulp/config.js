@@ -262,6 +262,14 @@ module.exports = {
       responsiveType: {},
       lost: {},
       hexRGBA: {},
+      pxtorem: {
+        root_value: 18,
+        unit_precision: 5,
+        prop_white_list: ['font', 'font-size', 'line-height', 'letter-spacing'],
+        selector_black_list: [],
+        replace: true,
+        media_query: true
+      },
       mqpacker: {}
     }
   },
