@@ -2,9 +2,16 @@
  **************/
 
 .code-figure {
+  lost-column: 10/8;
+  lost-move: -1/8;
   margin-bottom: $default-spacing-bottom;
 
   .highlight {
+    lost-utility: clearfix;
     margin-bottom: 5px;
+
+    code {
+      padding-bottom: 0;
+    }
   }
 }
