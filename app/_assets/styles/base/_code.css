@@ -16,8 +16,6 @@ code {
 }
 
 pre {
-  margin-bottom: $default-spacing-bottom;
-
   code {
     display: block;
     line-height: 1.2;
@@ -30,6 +28,8 @@ pre {
 .highlight {
   box-shadow: rgba(0, 0, 0, 0.06) 0 0 10px;
   clear: both;
+  lost-column: 10/8;
+  lost-move: -1/8;
   margin-bottom: $default-spacing-bottom;
   margin-right: 0;
   position: relative;
