@@ -59,7 +59,7 @@ pre {
     padding-right: 20px;
     padding-top: 0;
 
-    &:after {
+    &::after {
       background-image: linear-gradient(to right, rgba($white, 0) 20%, $white 50%, $white);
       content: " ";
       height: 100%;

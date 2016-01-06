@@ -116,7 +116,7 @@
     word-wrap: break-word;
   }
 
-  p a:after {
+  p a::after {
     font-size: 90%;
   }
 
@@ -125,11 +125,11 @@
     content: " (" attr(href) ")";
   }
 
-  p a:after {
+  p a::after {
     content: " (http://stefanimhoff.de/" attr(href) ")";
   }
 
-  p a[href^="#"]:after {
+  p a[href^="#"]::after {
     display: none;
   }
 

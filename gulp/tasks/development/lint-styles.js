@@ -7,7 +7,7 @@ var config    = require('../../config');
 gulp.task('lint-styles', function() {
   return gulp.src(config.lintStyles.src)
   .pipe(postcss([
-    stylelint(config.lintStyles.options.stylelint),
+    stylelint(),
     reporter(config.lintStyles.options.reporter)
   ]));
 });

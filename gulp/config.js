@@ -77,7 +77,7 @@ module.exports = {
     src: developmentAssets + '/css/critical*.css',
     dest: src + '/_includes/critical/'
   },
-  delete: {
+  deleteAssets: {
     src: [
       developmentAssets + '/css/*',
       developmentAssets + '/images/**/*',
@@ -117,47 +117,6 @@ module.exports = {
       '!' + srcAssets + '/styles/vendor/_syntax.css'
     ],
     options: {
-      stylelint: {
-        'rules': {
-          'string-quotes': [2, 'double'],
-          'color-hex-case': [2, 'lower'],
-          'color-hex-length': [2, 'long'],
-          'color-no-invalid-hex': 2,
-          'number-leading-zero': [2, 'always'],
-          'number-max-precision': 0,
-          'number-no-trailing-zeros': 2,
-          'number-zero-length-no-unit': 2,
-          'function-comma-space-after': [2, 'always'],
-          'function-comma-space-before': [2, 'never'],
-          'function-parentheses-space-inside': [2, 'never'],
-          'function-space-after': [2, 'always'],
-          'function-url-quotes': [2, 'none'],
-          'value-no-vendor-prefix': 2,
-          'value-list-comma-newline-after': [2, 'never-multi-line'],
-          'value-list-comma-newline-before': [2, 'never-multi-line'],
-          'value-list-comma-space-after': [2, 'always'],
-          'value-list-comma-space-before': [2, 'never'],
-          'property-no-vendor-prefix': 2,
-          'declaration-bang-space-after': [2, 'never'],
-          'declaration-bang-space-before': [2, 'always'],
-          'declaration-colon-space-before': [2, 'never'],
-          'declaration-no-important': 0,
-          'nesting-block-opening-brace-space-before': [2, 'always'],
-          'block-no-empty': 2,
-          'block-opening-brace-newline-after': [2, 'always'],
-          'block-opening-brace-space-before': [2, 'always'],
-          'selector-combinator-space-after': [2, 'always'],
-          'selector-list-comma-newline-after': [2, 'always'],
-          'rule-no-duplicate-properties': 2,
-          'rule-non-nested-empty-line-before': [2, 'always', {
-            ignore: ['after-comment']
-          }],
-          'rule-properties-order': [2, 'alphabetical'],
-          'rule-trailing-semicolon': [2, 'always'],
-          'indentation': [2, 2],
-          'no-missing-eof-newline': 2
-        }
-      },
       reporter: {
         clearMessages: true
       }
