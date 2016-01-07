@@ -104,7 +104,7 @@ My Jekyll website lives in a folder called `app`. All my tasks will be placed in
 
 ## Jekyll
 
-You don’t need a [Jekyll](http://jekyllrb.com/) website to follow along, but if you want just follow along the installation process of Jekyll that is short and sweet:
+This tutorial uses [Jekyll](http://jekyllrb.com/) to build the HTML of the website. Creating a new Jekyll website is fast and easy:
 
 {% highlight sh %}
 $ gem install jekyll
