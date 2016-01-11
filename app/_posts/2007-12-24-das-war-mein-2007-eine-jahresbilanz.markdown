@@ -63,7 +63,7 @@ Ich schaue den Film <cite>[Snakes and  Rubies](https://www.djangoproject.com/sna
 
 Ein TextMate-Bundle für Django muss her, und auch [ReST](http://docutils.sourceforge.net/rst.html) als Markupsprache der Djangoseite zieht mein Interesse an.
 
-Logischerweise interessiere ich mich jetzt auch für  [Python](https://www.python.org/), die Programmiersprache, auf der Django basiert. Das Buch <cite>[Dive Into Python](http://www.diveintopython.org/)</cite>, das im Internet kostenlos verfügbar ist, lese ich in den nächsten Wochen komplett durch.
+Logischerweise interessiere ich mich jetzt auch für  [Python](https://www.python.org/), die Programmiersprache, auf der Django basiert. Das Buch <cite>[Dive Into Python](http://www.diveintopython.net/)</cite>, das im Internet kostenlos verfügbar ist, lese ich in den nächsten Wochen komplett durch.
 
 ## Juli
 
