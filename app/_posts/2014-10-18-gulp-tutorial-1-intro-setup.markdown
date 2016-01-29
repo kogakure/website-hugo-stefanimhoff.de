@@ -3,7 +3,7 @@ layout: post
 language: "en"
 title: "Introduction to Gulp.js 1: Intro and Setup"
 date: 2014-10-18T08:35:47+02:00
-updated: 2015-10-21T12:35:00+02:00
+updated: 2016-01-29T13:30:00+02:00
 author: "Stefan Imhoff"
 og_image: "/assets/images/artikel/gulp-tutorial-1.png"
 description: "The ultimative tutorial and guide for Gulp.js: The first part of my series on Gulp.js. What is Gulp.js? Why to use it? And how to install Gulp and Jekyll."
@@ -23,12 +23,14 @@ My website is running [Jekyll](http://jekyllrb.com/) now since the beginning of 
 
 {% include articles/gulp-toc.html %}
 
-## The Tutorial
-This is the first part in a series of 14 articles where I describe my whole development and build process step-by-step from start to finish. I am sick of all these *Hello World* tutorials spreading around the Internet, describing just the basics and don’t show a whole process, go deeper or share things learned during the process.
+## What to expect from this Tutorial
+This is the first part in a series of articles where I describe my whole development and build process step-by-step from start to finish. I am sick of all these *Hello World* tutorials spreading around the Internet, describing just the basics and don’t show a whole process, go deeper or share things learned during the process.
+
+I’ll describe everything **step-by-step** and provide **specific version numbers** for modules, to make sure you’ll have no problem in getting it running on your computer. Whenever you have problems feel free to compare your code to the finished [GitHub repository](https://github.com/kogakure/gulp-tutorial). Each tutorial builds on the stuff done before, so if you need some specific thing better look at the final code base. You’ll learn how I created my complete development and build process, which I use on this website and my [Ninja & Ninjutsu website](http://kogakure.de). Both websites sources can be found on my [GitHub account](https://github.com/kogakure).
 
 It’s the first series of articles I write in English, which is not my native language. So if you find some spelling mistakes or false grammar, just send me a message.
 
-Fortunately I stumbled upon a GitHub project called [gulp-starter](https://github.com/vigetlabs/gulp-starter) that helped me a lot to structure my code and understand Gulp.js. So my process is partly derived from this fantastic project.
+When I started with Gulp.js, I fortunately stumbled upon a GitHub project called [gulp-starter](https://github.com/vigetlabs/gulp-starter), that helped me a lot to structure my code and understand Gulp.js. So my process is partly derived from this fantastic project.
 
 ## What is Gulp.js?
 Gulp.js is *the streaming build system* and its main focus is speed, efficiency and simplicity. Where Grunt.js uses a lot of configuration with the actual process hidden in plugins, Gulp.js uses a simple and minimal API. You code your own build process by yourself and use JavaScript as the language. Of course you don’t have to program everything by yourself, there are nearly 800 plugins ready for Gulp.js. But even more Node.js modules can be used to build the perfect build and development process for **your** needs.
