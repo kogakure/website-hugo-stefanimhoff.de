@@ -26,7 +26,7 @@ From time to time – but not very often – a TV Show gets released, which real
 
 It’s a story about a young girl called **Mayuko** (**Mirei Kiritani**), coming from a small town, who finished her studies in fabric design at the university and starts her first job at an exclusive custom tailoring lingerie store called **Emotion** in Ginza, Tokyo. It’s a small shop with a few designers, some salesmen and the owner of the workshop, who is a women in her 50s (**Mao Daichi**), honorary named *Shachou* (President) by her employees.
 
-The *Atelier*, a french word for a **workshop** or **studio**, a place, where professional artists work together and produce pieces of art, has multiple rooms, seperated by doors, leading from the entrance hall, where customers get served, to the inner rooms of the owner. Additionally it has a cellar with tons of fabric, accessories and documents.
+The *Atelier*, a french word for a **workshop** or **studio**, a place, where professional artists work together and produce pieces of art, has multiple rooms, separated by doors, leading from the entrance hall, where customers get served, to the inner rooms of the owner. Additionally it has a cellar with tons of fabric, accessories and documents.
 
 {% youtube 7Rl_VGYWEqs %}
 
