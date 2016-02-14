@@ -2,7 +2,8 @@
 layout: post
 language: "en"
 title: "Human – A film by Yann Arthus-Bertrand"
-date: 2015-09-29T19:07:20+00:00
+date: 2015-09-29T19:07:20+02:00
+updated: 2016-02-14T08:28:20+02:00
 excerpt: "Yann Arthus-Bertrand, the filmmaker of Home, artist, photographer and specialist for aerial photography worked 3 years on his new movie: Human. He collected real-life stories from more than 2000 women and men in 60 countries."
 description: "Human, the new movie of Yann Arthus-Bertrand is a moving film made out of real-life stories from more than 2000 women and men in 60 countries mixed with stunning aerial photography and ground photography."
 og_image: "/assets/images/artikel/human.jpg"
@@ -13,6 +14,7 @@ categories:
 tags:
 - documentary
 - humanity
+- film
 ---
 
 Yann Arthus-Bertrand, the filmmaker of [Home](https://www.youtube.com/watch?v=jqxENMKaeCU), artist, photographer and specialist for aerial photography worked 3 years on his new movie: [Human](http://www.human-themovie.org/).
