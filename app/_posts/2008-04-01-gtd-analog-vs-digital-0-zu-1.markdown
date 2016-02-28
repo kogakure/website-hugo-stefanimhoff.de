@@ -48,7 +48,7 @@ Hätte ich nicht gedacht, es heißt ja immer <q>mit dem Stift geht es immer noch
 
 Sicher: Ein Moleskine kostet nur 10 €, ein iPod touch mindestens 279 €. Aber den kauft man ja nicht nur zum notieren.
 
-Wenn im Juni die iPod touch-Version von [Things](http://culturedcode.com/things/) herauskommt, wird der Abstand zum guten alten Notizbuch noch größer.
+Wenn im Juni die iPod touch-Version von [Things](https://culturedcode.com/things/) herauskommt, wird der Abstand zum guten alten Notizbuch noch größer.
 
 Auf das Notizbuch werde ich zukünftig also nur noch zugreifen, wenn ich was skizzieren möchte oder die Gedanken mehr *Wert* haben und nicht bloße Notizen sind. Denn für längerfristige Notizen bleibe ich weiterhin beim Papier. Das ist ja bekanntlich geduldig.
 

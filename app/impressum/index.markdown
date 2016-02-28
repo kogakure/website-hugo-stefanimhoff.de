@@ -36,7 +36,7 @@ Diese Seite verwendet ein Foto für den Kopfbereich und einige Hintergrundmuster
   <ul>
     <li><a href="http://purtypixels.com/"><cite>Classy Fabric</cite> von Richard Tabor</a></li>
     <li><a href="https://www.facebook.com/stefanaleksic88"><cite>Dark stripes</cite> von Stefan Aleksić</a></li>
-    <li><a href="http://www.pdmb.org/work"><cite>Inspiration Geometry</cite> von Welsley</a></li>
+    <li><cite>Inspiration Geometry</cite> von Welsley</li>
     <li><a href="http://poisones.tumblr.com/"><cite>Light gray</cite> von Brenda Lay</a></li>
     <li><a href="https://www.30.nl/"><cite>Nami</cite> von Dertig Media</a></li>
     <li><a href="http://www.peax-webdesign.com/"><cite>Maze black</cite> von Peax</a></li>

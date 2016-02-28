@@ -139,7 +139,7 @@ MySQL und PostgreSQL muss ich mir selber kompilieren, aber Apache 2 und PHP sind
 
 ## November
 
-Im November rege ich mich über Alias/Autodesk auf, und darüber, dass ich meine arschteure Maya-Lizenz unter Leopard nicht mehr weiterbenutzen kann. Ich schaue mir das geniale [Blender 3D](http://www.blender.org/) an und bereue es, Maya überhaupt gekauft zu haben.
+Im November rege ich mich über Alias/Autodesk auf, und darüber, dass ich meine arschteure Maya-Lizenz unter Leopard nicht mehr weiterbenutzen kann. Ich schaue mir das geniale [Blender 3D](https://www.blender.org/) an und bereue es, Maya überhaupt gekauft zu haben.
 
 Ich werde endlich *Django-Profi* (haha, Scherz!) und checke mir die neuste Subversion-Version aus. Mein Projekt passe ich an die neue Unicode-Syntax an.
 
@@ -167,7 +167,7 @@ Ich setze jQuery jetzt in Kundenprojekten ein, und benutze es auch gleich für G
 
 Die neue Version von CandyBar kommt raus, und hat jetzt gleich Pixadex integriert. Natürlich muss ich gleich Leopards Aussehen mit neuen Icons und Dock versehen.
 
-Ich überlege mir von einem webbasierenden GTD-Werkzeug auf eine OS X Lösung umzusteigen und teste drei Wochen lang [Things](http://culturedcode.com/things/) und [OmniFocus](https://www.omnigroup.com/omnifocus/) zugleich.
+Ich überlege mir von einem webbasierenden GTD-Werkzeug auf eine OS X Lösung umzusteigen und teste drei Wochen lang [Things](https://culturedcode.com/things/) und [OmniFocus](https://www.omnigroup.com/omnifocus/) zugleich.
 
 Doch schon nach 14 Tagen steht für mich eigentlich fest: <cite>Things</cite> ist der Testsieger. Obwohl es derzeit noch weniger Funktionen als OmniFocus hat, fühlt es sich einfach *besser* an.
 
@@ -177,7 +177,7 @@ Auf ARTE sehe ich einen interessanten Beitrag über die [Haddsch](https://de.wik
 
 Ich lache mich tot, weil FileMaker ihr neues Datenbank-Produkt Bentō nennt. Die dachten wohl, das heißt Box. Das heißt aber Mittagessen ;)
 
-Durch einen Artikel auf [praegnanz.de](http://praegnanz.de/weblog/ted) erfahre ich von der [TED](http://www.ted.com/) Website, die seit dem meine absolute Lieblingsseite ist. Dort kann man sich die Vorträge der TED-Konferenz ansehen, die es seit 1984 gibt. Bei TED sprechen außergewöhnliche Menschen über Forschung, Innovationen, Medien, Religion, Philosophie und vieles mehr. Eine Eintrittskarte kostet 6.000 $ und man kann sich nur für eine bewerben, ob man eingeladen wird, entscheidet TED. Jedenfalls habe ich mir alle 175 bislang veröffentlichten Beiträge schon mal heruntergeladen und eine Menge davon angesehen. Das ist wie ARTE hoch 10.
+Durch einen Artikel auf [praegnanz.de](https://praegnanz.de/weblog/ted) erfahre ich von der [TED](http://www.ted.com/) Website, die seit dem meine absolute Lieblingsseite ist. Dort kann man sich die Vorträge der TED-Konferenz ansehen, die es seit 1984 gibt. Bei TED sprechen außergewöhnliche Menschen über Forschung, Innovationen, Medien, Religion, Philosophie und vieles mehr. Eine Eintrittskarte kostet 6.000 $ und man kann sich nur für eine bewerben, ob man eingeladen wird, entscheidet TED. Jedenfalls habe ich mir alle 175 bislang veröffentlichten Beiträge schon mal heruntergeladen und eine Menge davon angesehen. Das ist wie ARTE hoch 10.
 
 Kurz vor Weihnachten setze ich mich 1-2 Stunden hin und gestalte in Photoshop ein Mac OS X Leopard-Icon für Django-Projekte. Dies führt zu einem unglaublichen Feedback aus der ganzen Django-Szene und lässt meine Besucherzahlen explodieren. Ich entdecke die deutsche Community und nehme mir vor mich im neuen Jahr an der Übersetzung der englischen Dokumentation zu beteiligen.
 

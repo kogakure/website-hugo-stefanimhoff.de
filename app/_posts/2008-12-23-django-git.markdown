@@ -42,11 +42,11 @@ Fixtures sind eine feine Sache, bei der man Datenbanken ins JSON- oder XML-Forma
 
 Ich schaue mir [RegularExpressions](http://www.regular-expressions.info/ "Regular-Expressions.info - Regex Tutorial, Examples and Reference - Regexp Patterns") etwas näher an, da sie bei Django die URL-Konfiguration bilden. Ist alles einfacher, als gedacht.
 
-Da Django ein Python-Framework ist, finde ich, dass es nicht schaden kann nebenbei etwas [Python](http://diveintopython.net/) zu lernen. Eine wirklich edle und effiziente Sprache, die fast ohne Satzzeichen und Klammern auskommt, was bei mir bei PHP immer 90 % aller Fehler verursacht hat. Weniger Satzzeichen, mehr Ordnung im Code, gut zu lesen, kann sogar ein Laie lesen und verstehen. Und 5 Jahre länger als PHP ist Python auch schon auf dem Markt. PHP ist nur so erfolgreich, weil da <q>draufknallen auf den Server – läuft</q> ausreicht. Mit Python hat man aber ein eindeutig besseres Werkzeug, das wissen auch Google und Yahoo.
+Da Django ein Python-Framework ist, finde ich, dass es nicht schaden kann nebenbei etwas [Python](http://www.diveintopython.net/) zu lernen. Eine wirklich edle und effiziente Sprache, die fast ohne Satzzeichen und Klammern auskommt, was bei mir bei PHP immer 90 % aller Fehler verursacht hat. Weniger Satzzeichen, mehr Ordnung im Code, gut zu lesen, kann sogar ein Laie lesen und verstehen. Und 5 Jahre länger als PHP ist Python auch schon auf dem Markt. PHP ist nur so erfolgreich, weil da <q>draufknallen auf den Server – läuft</q> ausreicht. Mit Python hat man aber ein eindeutig besseres Werkzeug, das wissen auch Google und Yahoo.
 
 Ich setzte mir ein [MoinMoinWiki](https://moinmo.in/) auf, um Notizen und Wissen für mich persönlich online zu hinterlegen. Und weil die ganzen verfügbaren Themes grottenhäßlich sind, [gestalte ich mir fix selbst eines](https://github.com/kogakure/moinmoin-theme-kaijin).
 
-Ich schaue mir nochmal eine Alternative zu Git an: [Mercurial](http://mercurial.selenic.com/). Aber Git hat einfach ein paar nette Bonbons, die den Ausschlag geben.
+Ich schaue mir nochmal eine Alternative zu Git an: [Mercurial](https://www.mercurial-scm.org/). Aber Git hat einfach ein paar nette Bonbons, die den Ausschlag geben.
 
 Ich frage bei Media Temple an, ob mein Django-Projekt auf einem [Dedicated Virtual Server](https://mediatemple.net/webhosting/vps/hosting/) **(dv) BASE** laufen würde. Leider ist der Support frech und teilt mir mit, ich bräuchte mindestens einen **(dv) EXTREME**, vielleicht sogar zwei davon. WTF?! So verliert mich Media Temple als Kunden, ich sage *farewell* zum Grid und wechsele zu [Webfaction](https://www.webfaction.com/?affiliate=kogakure "Hosting for an agile web - WebFaction"). Dort bekommt man wenigstens was für sein Geld.
 
@@ -107,7 +107,7 @@ Ich erfahre, was Django Manager sind und lerne, wie man sie benutzt.
 
 MobileMe ist ein echter Flop, trotzt erweiterter Test-Phase kündige ich meinen Account vorzeitig. So bringt mir das alles nichts, ohne ordentliche Live-Synchronisation. Da fahre ich mit [Spanning Sync](http://spanningsync.com/ "Spanning Sync - Sync iCal and Google Calendar") und Google besser.
 
-Ich wechsele von meinem Wiki zu [Evernote](https://evernote.com/intl/de/). So lässt sich all das *Zeug* wirklich komfortabel ablegen. Markieren, reinziehen, verschlagworten, synchronisieren. Evernote ist genau das fehlende Stück Software, dass ich für meinen GTD-Prozess noch brauchte. [Things](http://culturedcode.com/things/) benutze ich für die Aufgaben und Evernote für das *Zeug*.
+Ich wechsele von meinem Wiki zu [Evernote](https://evernote.com/intl/de/). So lässt sich all das *Zeug* wirklich komfortabel ablegen. Markieren, reinziehen, verschlagworten, synchronisieren. Evernote ist genau das fehlende Stück Software, dass ich für meinen GTD-Prozess noch brauchte. [Things](https://culturedcode.com/things/) benutze ich für die Aufgaben und Evernote für das *Zeug*.
 
 Ich lerne, wie man [Vim](http://www.vim.org/ "welcome home : vim online") bedient. Und zwar mal richtig und nicht nur `i`, `:wq`. Immerhin hat man [TextMate](http://macromates.com/ "TextMate — The Missing Editor for Mac OS X") ja nicht auf dem Server dabei.
 
@@ -164,7 +164,7 @@ Ich überlege, ob ich mir nicht mal langsam ein iPhone holen soll. Selbstredend 
 
 Das Java-CMS-Projekt scheitert (zu meiner Freude) endgültig. Details darf ich wohl leider nicht ausplaudern, aber da hätte ich was zu erzählen :D Sachen gibt’s, die glaubt man einfach nicht. Wie sagt man so schön: Wer nicht hören will, der muss fühlen.
 
-Ich wechsele von [Things](http://culturedcode.com/things/) zu [Remember the milk](http://www.rememberthemilk.com/ "Remember The Milk: Online to do list and task management"). Things ist zwar fein, aber irgendwie wird es immer langsamer bei all dem Zeug, das ich mir merke. Und als <cite>Remember the milk</cite> auch eine iPod-Version auf den Markt bringt, bin ich überzeugt.
+Ich wechsele von [Things](https://culturedcode.com/things/) zu [Remember the milk](https://www.rememberthemilk.com/ "Remember The Milk: Online to do list and task management"). Things ist zwar fein, aber irgendwie wird es immer langsamer bei all dem Zeug, das ich mir merke. Und als <cite>Remember the milk</cite> auch eine iPod-Version auf den Markt bringt, bin ich überzeugt.
 
 ## Dezember
 

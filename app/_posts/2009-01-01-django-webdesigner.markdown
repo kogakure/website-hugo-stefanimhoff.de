@@ -68,7 +68,7 @@ Ich selber zähle mich zur Gruppe der durchschnittlichen Webdesigner, auch wenn 
 
 Aus eigener Erfahrung kann ich sagen, dass ich als Webdesigner mit 90 % der auftretenden Wünsche gut zurechtkam.
 
-Django hat eine sehr aktive Community: Diverse Blogs von Django-Entwicklern, eine [fantastische Dokumentation](https://docs.djangoproject.com/en/1.4/), Tutorials, Foren/Groups oder IRC-Chat. Selbst bei Wünschen, die nicht von Haus aus zu lösen sind, und für die es noch kein Modul von Drittanbietern gibt, ist es sehr wahrscheinlich schnell eine Lösung zu finden.
+Django hat eine sehr aktive Community: Diverse Blogs von Django-Entwicklern, eine [fantastische Dokumentation](https://docs.djangoproject.com/), Tutorials, Foren/Groups oder IRC-Chat. Selbst bei Wünschen, die nicht von Haus aus zu lösen sind, und für die es noch kein Modul von Drittanbietern gibt, ist es sehr wahrscheinlich schnell eine Lösung zu finden.
 
 ## Datenbank und Daten
 

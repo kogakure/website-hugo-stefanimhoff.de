@@ -25,7 +25,7 @@ Two years ago I stumbled upon a new training concept founded by some guys in Mun
 
 ## Freeletics and Crossfit
 
-I also had heard of [Crossfit](http://www.crossfit.com/), which is quite popular in the USA. I bought the Freeletics training guide, which included a 15 week training. But Freeletics is a <abbr title="High-Intensity Interval Training">HIIT</abbr> course and was far to extreme for me. I couldn’t even walk a few hundred meters, after the first few trainings, so bad were my muscle aches.
+I also had heard of [Crossfit](https://www.crossfit.com/), which is quite popular in the USA. I bought the Freeletics training guide, which included a 15 week training. But Freeletics is a <abbr title="High-Intensity Interval Training">HIIT</abbr> course and was far to extreme for me. I couldn’t even walk a few hundred meters, after the first few trainings, so bad were my muscle aches.
 
 And reading more about these extreme sports I found out they come with the danger of getting [Rhabdomyolysis](https://medium.com/@ericrobertson/crossfits-dirty-little-secret-97bcce70356d), which is a very dangerous degenerative muscle injury. It destroys the muscles and can even lead to death. The body of beginners may be not capable to do high intensive training sessions that long or hard, as they are done in Crossfit or Freeletics.
 

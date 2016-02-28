@@ -57,7 +57,7 @@ Im nächsten Abschnitt der Präsentation geht Eric Holscher auf einige Applikati
 
 Die [Django Debug Toolbar](https://github.com/robhudson/django-debug-toolbar) ist eine wirklich nützliche Applikation, die ich in jedem Django-Projekt gleich als erstes installiere.
 
-Das Filtern im Frontend mit [django-filter](https://github.com/alex/django-filter) war mir noch nicht bekannt, hört sich aber sehr interessant aus und wird mit hoher Wahrscheinlichkeit in die neue Website integriert.
+Das Filtern im Frontend mit [django-filter](https://github.com/carltongibson/django-filter) war mir noch nicht bekannt, hört sich aber sehr interessant aus und wird mit hoher Wahrscheinlichkeit in die neue Website integriert.
 
 Auch für das Problem, die beste Applikation für ein Problem zu finden gab es bislang nur weniger gute Lösungen: eine Suche auf Google Code nach Projekten mit *django-* oder eine Suche auf Github. Das Projekt Django Pluggables, das Bryan Veloso gestartet hat wurde beendet und leitet jetzt direkt auf das von Eric Holscher erwähnt [Django Packages](https://www.djangopackages.com/) weiter.
 

@@ -115,7 +115,7 @@ Um den Einstieg in Django zu erleichtern, habe ich nachfolgend eine Liste von in
 ### Dokumentationen
 
 * [The Django Book](http://www.djangobook.com/en/2.0/index.html) – Das kostenlose Django-Handbuch
-* [Django Dokumentation](https://docs.djangoproject.com/en/1.4/) – Die offizielle Django-Dokumentation
+* [Django Dokumentation](https://docs.djangoproject.com/) – Die offizielle Django-Dokumentation
 * [Installation von Django](https://docs.djangoproject.com/en/dev/topics/install/) – Anleitung für die Installation von Django
 * [Einsteiger-Tutorial](https://docs.djangoproject.com/en/dev/intro/tutorial01/) – Offizielles 4-teiliges Einsteigertutorial
 
@@ -156,7 +156,7 @@ Um den Einstieg in Django zu erleichtern, habe ich nachfolgend eine Liste von in
 * [Official Django Logos](https://www.djangoproject.com/community/logos/) – Das Django-Logo im Vektorformat
 * [Django Badges](https://www.djangoproject.com/community/badges/) – Django-Plaketten für die eigene Website
 * [Django Desktop Wallpaper](https://www.djangoproject.com/weblog/2005/nov/11/desktops/) – Desktop-Wallpaper
-* [Django Cheat Sheet](http://www.mercurytide.co.uk/news/article/django-cheat-sheet/) – Django Cheat Sheet als PDF oder Wallpaper
+* [Django Cheat Sheet](https://www.mercurytide.co.uk/news/article/django-cheat-sheet/) – Django Cheat Sheet als PDF oder Wallpaper
 
 ### Django-Websites von Designern und Entwicklern
 

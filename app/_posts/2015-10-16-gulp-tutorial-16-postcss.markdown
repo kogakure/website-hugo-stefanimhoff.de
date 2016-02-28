@@ -45,7 +45,7 @@ With PostCSS you can choose what you need from currently over [200 plugins](http
 
 **You get it all**: Variables, Mixins, Extends, Color Helpers, Fallbacks, Optimizations, Grids … you choose. You can even start using future CSS syntax today, let PostCSS transpile it for you.
 
-I swapped out *Ruby Sass* with PostCSS and my CSS is now transformed in 2-3 seconds. Go and take a look at my [beautiful new code](https://github.com/kogakure/stefanimhoff.de-jekyll/). I use a Responsive Typography, Autoprefixer, and the awesome [LostGrid](https://github.com/corysimmons/lost).
+I swapped out *Ruby Sass* with PostCSS and my CSS is now transformed in 2-3 seconds. Go and take a look at my [beautiful new code](https://github.com/kogakure/stefanimhoff.de-jekyll/). I use a Responsive Typography, Autoprefixer, and the awesome [LostGrid](https://github.com/peterramsing/lost).
 
 ## PostCSS
 
@@ -227,7 +227,7 @@ After I updated the FontCustom config file I have to run the task for creating t
 $ gulp fontcustom
 {% endhighlight %}
 
-The syntax of the different PostCSS plugins is different. I use [PreCSS](https://github.com/jonathantneal/precss), which is a lot like Sass, but some things look a little bit different. To write down all of the changes I made to the CSS would extend the scope of this tutorial too much, as it’s a very long file. But you can have a look, how I refactored all CSS files with updated syntax in my [GitHub repository](https://github.com/kogakure/gulp-tutorial/commit/fc2398d933e2094832a00ac123b30c772269e08c). If you are interested how I replaced [Singularity](http://singularity.gs/) (which is still the best Sass grid available) with [LostGrid](https://github.com/corysimmons/lost) and all the other things, look into [my websites source code](https://github.com/kogakure/stefanimhoff.de-jekyll/).
+The syntax of the different PostCSS plugins is different. I use [PreCSS](https://github.com/jonathantneal/precss), which is a lot like Sass, but some things look a little bit different. To write down all of the changes I made to the CSS would extend the scope of this tutorial too much, as it’s a very long file. But you can have a look, how I refactored all CSS files with updated syntax in my [GitHub repository](https://github.com/kogakure/gulp-tutorial/commit/fc2398d933e2094832a00ac123b30c772269e08c). If you are interested how I replaced [Singularity](http://singularity.gs/) (which is still the best Sass grid available) with [LostGrid](https://github.com/peterramsing/lost) and all the other things, look into [my websites source code](https://github.com/kogakure/stefanimhoff.de-jekyll/).
 
 You can run `gulp` again now, and PostCSS will process the styles.
 
