@@ -93,6 +93,6 @@ Finding resources on how to do the movements is an easy task. YouTube is filled 
 
 {% youtube mvJHw64fxgQ %}
 
-Other good channels to follow are [Strength Project](https://www.youtube.com/user/strengthproject), [OfficialBarstarzz](https://www.youtube.com/user/OfficialBarstarzz), [Brendan Meyers](https://www.youtube.com/user/leftyjrpro), [BaristiWorkout](https://www.youtube.com/user/baristiworkout), [Corey Hall](https://www.youtube.com/user/cth38881), [Al Kavadlo](https://www.youtube.com/user/alkavadlo) or [Cornelia Ritzke](https://www.youtube.com/user/ConnyBerlin).
+Other good channels to follow are [Strength Project](https://www.youtube.com/user/strengthproject), [OfficialBarstarzz](https://www.youtube.com/user/OfficialBarstarzz), [Brendan Meyers](https://www.youtube.com/user/leftyjrpro), [BaristiWorkout](https://www.youtube.com/user/baristiworkout), [Corey Hall](https://www.youtube.com/user/cth38881), [Al Kavadlo](https://www.youtube.com/user/alkavadlo), [Calisthenic Movement](https://www.youtube.com/user/Calisthenicmovement) or [Cornelia Ritzke](https://www.youtube.com/user/ConnyBerlin).
 
 So, and now get started with Body Weight Training.
