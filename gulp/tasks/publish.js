@@ -1,6 +1,9 @@
-var gulp = require('gulp');
+var gulp        = require('gulp');
+var runSequence = require('run-sequence');
 
 /**
- * Run task browsersync:production
+ * 
  */
-gulp.task('publish', ['production:browsersync']);
+gulp.task('publish', function(callback) {
+  runSequence('production:build', 'rsync', 'open-browser', callback);
+});
