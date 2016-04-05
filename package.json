@@ -6,8 +6,9 @@
   "version": "0.1.0",
   "scripts": {
     "dev": "gulp",
-    "build": "gulp publish",
-    "deploy": "gulp deploy"
+    "preview": "gulp preview",
+    "publish": "gulp publish",
+    "build": "gulp production:build"
   },
   "browser": {
     "fastclick": "./app/_bower_components/fastclick/lib/fastclick.js",
