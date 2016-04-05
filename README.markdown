@@ -19,7 +19,7 @@ npm install cwebp-bin
 Um den lokalen Entwicklungsserver zu starten wird Gulp verwendet. Gulp sorgt dafür, dass alle nötigen Process wie Jekyll, Assets, das Kopieren von Dateien und Livereload gestartet werden.
 
 ```sh
-gulp
+npm run dev
 ```
 
 ### Produktionsseite bauen
@@ -27,7 +27,7 @@ gulp
 Um eine Version für die Produktionsumgebung zu erzeugen wird der Publish-Task von Gulp verwendet:
 
 ```sh
-gulp publish
+npm run build
 ```
 
 ### Deployment
@@ -35,7 +35,7 @@ gulp publish
 Um die fertige Website auf den Server zu spielen, wird dieser Task verwenet:
 
 ```sh
-gulp deploy
+npm run deploy
 ```
 
 ## Artikel und Seiten

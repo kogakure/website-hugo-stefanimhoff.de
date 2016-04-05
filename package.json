@@ -4,6 +4,11 @@
   "author": "Stefan Imhoff",
   "private": true,
   "version": "0.1.0",
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp publish",
+    "deploy": "gulp deploy"
+  },
   "browser": {
     "fastclick": "./app/_bower_components/fastclick/lib/fastclick.js",
     "fitvids": "./app/_assets/javascripts/vendor/fitvids.js",
