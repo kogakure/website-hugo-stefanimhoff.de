@@ -8,7 +8,8 @@
     "dev": "gulp",
     "preview": "gulp preview",
     "publish": "gulp publish",
-    "build": "gulp production:build"
+    "build": "gulp production:build",
+    "deploy": "gulp deploy"
   },
   "browser": {
     "fastclick": "./app/_bower_components/fastclick/lib/fastclick.js",
