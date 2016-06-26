@@ -97,7 +97,7 @@ Auf meinem Nachttisch liegt laut Google Suche Machiavellis <cite>[Der Fürst](ht
 
 In der [Autostadt Wolfsburg](http://www.autostadt.de/) eröffnet ein neues japanisches Restaurant, das *Anan*, mit extra einflogenem, japanischem Meisterkoch.
 
-Das Sommerloch geht langsam zu Ende, also erkundige ich mich, was meine Lieblingsserien so machen, und wann die Staffeln wieder starten: [Lost](http://abc.go.com/shows/lost), [StarGate SG-1 und StarGate Atlantis](http://stargate.mgm.com/), [Monk](http://www2.usanetwork.com/series/monk/) und [Battlestar Galactica](http://www.syfy.com/battlestargalactica).
+Das Sommerloch geht langsam zu Ende, also erkundige ich mich, was meine Lieblingsserien so machen, und wann die Staffeln wieder starten: [Lost](http://www.imdb.com/title/tt0411008/), [StarGate SG-1 und StarGate Atlantis](http://stargate.mgm.com/), [Monk](http://www2.usanetwork.com/series/monk/) und [Battlestar Galactica](http://www.syfy.com/battlestargalactica).
 
 ## September
 

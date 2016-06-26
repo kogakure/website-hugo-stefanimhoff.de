@@ -86,7 +86,7 @@ Und der externe Dienstleister wirkt auf mich leider nicht sehr zuverlässig und 
 
 Ich schaue mir mal das superduper Java-Framework [Spring](http://spring.io/) an, weil damit wohl unser CMS erstellt werden soll. Ich mag Java nicht. Aufgeblasene Scheiße, das. Ein Änterpreis-Wäbdeweloping-Fräimwörk halt und nich so Spielzeug wie [Rails](http://rubyonrails.org/) oder [Django](https://www.djangoproject.com/). [Warum müssen Java-Programmierer eigentlich so elitäre Snobs sein](https://www.youtube.com/watch?v=PQbuyKUaKFo "YouTube - Ruby on Rails vs Java - RailsEnvy.com Commerical")? Meine Vermutung ist ja, das viele Java-Entwickler etwas <del>kompilieren</del> <ins>kompensieren</ins> müssen.
 
-Ich amüsiere mich fantasisch über [The Website is Down](http://www.thewebsiteisdown.com/ "The Website Is Down") und [You suck at Photoshop](http://www.mydamnchannel.com/Big_Fat_Brain/You_Suck_at_Photoshop/YouSuckatPhotoshop1_398).
+Ich amüsiere mich fantasisch über [The Website is Down](http://www.thewebsiteisdown.com/ "The Website Is Down") und [You suck at Photoshop](https://www.youtube.com/show/yousuckatphotoshop).
 
 Im Juni installiere ich mir auch [Ubuntu](http://www.ubuntu.com/) in einer Parallels-Partition, um mal mit einem richtig guten Linux-System rumzutesten.
 

@@ -35,7 +35,7 @@ Ich persönlich finde aber, dass wir gerade eine wunderbare Max Payne Adaption i
 
 [<cite>Half-Life</cite> und <cite>Half-Life 2</cite>](http://orange.half-life2.com/) bieten meiner Meinung nach vor allem guten Stoff, weil der Haupcharakter Gordon Freeman ein Antiheld ist, ein Otto-Normalbüger, der auf den Scheiß eigentlich keinen Bock hat. Die Heldenrolle wird ihm quasi aufgezwungen.
 
-Wie ich bei meiner Recherche gelesen habe, scheint es irgendwelche Gerüchte zu einer Umsetzung zu geben, angeblich sogar schon letztes Jahr. Auf einer [Computerspielseite](http://gameservercheck.de/news,276,Half-Life_2_Der_FILM_eventuell_2006_im_Kino.html) werden auch schon ein paar mögliche Besetzungen diskutiert.
+Wie ich bei meiner Recherche gelesen habe, scheint es irgendwelche Gerüchte zu einer Umsetzung zu geben, angeblich sogar schon letztes Jahr.
 
 ## The Dig
 
