@@ -1,5 +1,3 @@
----
-layout: post
 language: "en"
 title: "Introduction to Gulp.js 12: Optimize CSS, JavaScript, Images and HTML"
 date: 2014-10-29T08:00:00+02:00
@@ -8,7 +6,7 @@ author: "Stefan Imhoff"
 og_image: "/assets/images/artikel/gulp-tutorial-12.jpg"
 description: "The ultimative tutorial and guide for Gulp.js: How to optimize CSS, JavaScript, images and HTML to speed up your website."
 categories:
-- Code
+- code
 tags:
 - gulp
 - tutorial
@@ -19,10 +17,12 @@ tags:
 
 This is the 12th part of my series *Introduction to Gulp.js*. Today I will write tasks to optimize the assets of my website: CSS, JavaScript, Images and HTML.
 
-{% figure image-figure attribution %}
-<img src="{{ site.url }}/assets/images/artikel/gulp-tutorial-12.jpg" alt="A woman with a Double Gulp">
-<p class="attribution-text"><svg class="attribution-icon-cc"><use xlink:href="#cc"></use></svg> Reed, <a href="https://www.flickr.com/photos/ishatter/3614672744">picnic</a></p>
-{% endfigure %}
+<figure class="image-figure attribution">
+  <div class="figure-content">
+    <img src="{{ site.url }}/assets/images/artikel/gulp-tutorial-12.jpg" alt="A woman with a Double Gulp">
+    <p class="attribution-text"><svg class="attribution-icon-cc"><use xlink:href="#cc"></use></svg> Reed, <a href="https://www.flickr.com/photos/ishatter/3614672744">picnic</a></p>
+  </div>
+</figure>
 
 {% include articles/gulp-toc.html %}
 
@@ -33,12 +33,11 @@ First I will write a task, which will optimize the CSS. Compass is able to minim
 
 I install the needed Gulp.js plugins:
 
-{% highlight sh %}
+```sh
 $ npm install --save-dev gulp-minify-css@1.2.1 gulp-size@2.0.0
-{% endhighlight %}
+```
 
-{% figure code-figure "gulp/config.js" %}
-{% highlight javascript %}
+```javascript
 optimize: {
   css: {
     src:  developmentAssets + '/css/*.css',
@@ -48,11 +47,11 @@ optimize: {
     }
   }
 }
-{% endhighlight %}
-{% endfigure %}
+```
 
-{% figure code-figure "gulp/tasks/production/optimize-css.js" %}
-{% highlight javascript %}
+<p class="code-meta">gulp/config.js</p>
+
+```javascript
 var gulp      = require('gulp');
 var minifycss = require('gulp-minify-css');
 var size      = require('gulp-size');
@@ -67,20 +66,20 @@ gulp.task('optimize:css', function() {
     .pipe(gulp.dest(config.dest))
     .pipe(size());
 });
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">gulp/tasks/production/optimize-css.js</p>
 
 This task will copy the CSS files from the assets folder, minimize them, remove comments, output the size of the file and copy them to the production assets folder.
 
 ## JavaScript
 Now the CSS is minimized and the same has to be done to the JavaScript files. I use UglifyJS for this task. If you don’t like it, go ahead and use a Google Closure or YUI compressor Gulp.js task.
 
-{% highlight sh %}
+```sh
 $ npm install --save-dev gulp-uglify@1.0.1
-{% endhighlight %}
+```
 
-{% figure code-figure "gulp/config.js" %}
-{% highlight javascript %}
+```javascript
 optimize: {
   css: {
     ...
@@ -91,11 +90,11 @@ optimize: {
     options: {}
   }
 }
-{% endhighlight %}
-{% endfigure %}
+```
 
-{% figure code-figure "gulp/tasks/production/optimize-js.js" %}
-{% highlight javascript %}
+<p class="code-meta">gulp/config.js</p>
+
+```javascript
 var gulp   = require('gulp');
 var uglify = require('gulp-uglify');
 var size   = require('gulp-size');
@@ -110,27 +109,27 @@ gulp.task('optimize:js', function() {
     .pipe(gulp.dest(config.dest))
     .pipe(size());
 });
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">gulp/tasks/production/optimize-js.js</p>
 
 This task will take the JavaScript files, minimize and optimize them, put them to my production assets folder and output the size.
 
 ## Images
 Next I will take care of the images. They need to be copied to the production assets folder and crunshed (reduce the size). This may take a while, depending on the size and amount of your images, that’s why I only optimize the images for production.
 
-{% aside aside-hint %}
+<aside class="aside-hint" role="complementary">
 <h4>Show more details</h4>
 <p>To get a more detailed output in Gulp.js you may add a flag to your command:<br> <code>gulp publish --verbose</code>. It will list each individual image for the optimize task and how much it was compressed.</p>
-{% endaside %}
+</aside>
 
 I’ll need `gulp-imagemin` for my task, which is able to minify PNG, JPG, GIF and SVG images:
 
-{% highlight sh %}
+```sh
 $ npm install --save-dev gulp-imagemin@2.3.0
-{% endhighlight %}
+```
 
-{% figure code-figure "gulp/config.js" %}
-{% highlight javascript %}
+```javascript
 optimize: {
   css: {
     ...
@@ -148,11 +147,11 @@ optimize: {
     }
   }
 }
-{% endhighlight %}
-{% endfigure %}
+```
 
-{% figure code-figure "gulp/tasks/production/optimize-images.js" %}
-{% highlight javascript %}
+<p class="code-meta">gulp/config.js</p>
+
+```javascript
 var gulp     = require('gulp');
 var imagemin = require('gulp-imagemin');
 var size     = require('gulp-size');
@@ -167,20 +166,20 @@ gulp.task('optimize:images', function() {
     .pipe(gulp.dest(config.dest))
     .pipe(size());
 });
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">gulp/tasks/production/optimize-images.js</p>
 
 This task will take my images, optimize them, copy them to the assets folder and output the size.
 
 ## HTML
 As said before I wrote this task, so you can see how to do it, but I don’t use it, because the reduction is minimal and not worth the messy markup. I like to keep it readable so other people can learn from it.
 
-{% highlight sh %}
+```sh
 $ npm install --save-dev gulp-htmlmin@1.2.0
-{% endhighlight %}
+```
 
-{% figure code-figure "gulp/config.js" %}
-{% highlight javascript %}
+```javascript
 optimize: {
   css: {
     ...
@@ -199,11 +198,11 @@ optimize: {
     }
   }
 }
-{% endhighlight %}
-{% endfigure %}
+```
 
-{% figure code-figure "gulp/tasks/production/optimize-html.js" %}
-{% highlight javascript %}
+<p class="code-meta">gulp/config.js</p>
+
+```javascript
 var gulp    = require('gulp');
 var htmlmin = require('gulp-htmlmin');
 var config  = require('../../config').optimize.html;
@@ -216,8 +215,9 @@ gulp.task('optimize:html', function() {
     .pipe(htmlmin(config.options))
     .pipe(gulp.dest(config.dest));
 });
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">gulp/tasks/production/optimize-html.js</p>
 
 {% include articles/gulp-code.html %}
 

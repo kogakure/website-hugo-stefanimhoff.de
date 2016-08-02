@@ -7,7 +7,7 @@ author: "Stefan Imhoff"
 date: 2008-01-05 13:00
 og_image: "/assets/images/artikel/blender-osx-folders.png"
 categories:
-- Download
+- download
 tags:
 - blender
 - design
@@ -17,9 +17,13 @@ tags:
 
 Da mein [Django Folder-Icon]({{ site.url }}/2007/django-folder-mac-osx/ "Django Folder für Mac OS X Leopard • Notizen • Stefan Imhoff"), das ich im Dezember veröffentlicht habe, ein riesiger Erfolg war und schon unzählige Male heruntergeladen wurde, habe ich einen neuen Ordner erstellt – dieses mal für Blender.
 
-{% figure image-figure image-figure-noborder %}
-<a href="/downloads/blender-osx-folder.zip"><img src="{{ site.url }}/assets/images/artikel/blender-osx-folders.png" alt="Blender Folder"></a>
-{% endfigure %}
+<figure class="image-figure image-figure-noborder">
+  <div class="figure-content">
+    <a href="/downloads/blender-osx-folder.zip">
+      <img src="{{ site.url }}/assets/images/artikel/blender-osx-folders.png" alt="Blender Folder">
+    </a>
+  </div>
+</figure>
 
 ## Blender
 
@@ -39,4 +43,9 @@ Die Icons sind in allen Größen von 16 Pixel bis 512 Pixel im Download vorhande
 
 ## Download
 
-{% download /downloads/blender-osx-folder.zip "Blender-Folder (814 KB)" %}
+<div class="download">
+  <a href="/downloads/blender-osx-folder.zip" class="download-link">
+    <svg class="download-icon"><use xlink:href="#download"></use></svg>
+    <span class="download-text">Blender-Folder (814 KB)</span>
+  </a>
+</div>

@@ -7,7 +7,7 @@ author: "Stefan Imhoff"
 date: 2007-07-20 09:00
 updated: 2014-10-25 12:28
 categories:
-- Versionskontrolle
+- versionskontrolle
 tags:
 - subversion
 - tutorial
@@ -15,10 +15,10 @@ tags:
 
 Um mit Subversion zu arbeiten, muss man sich zuerst ein *Repository* (eine Ablage/Depot) erstellen, in dem das spätere Projekt liegt.
 
-{% aside aside-hint  %}
+<aside class="aside-hint" role="complementary">
 <h4>Versionkontrolle mit Git</h4>
 <p>Der Inhalt dieses Artikels ist noch aktuell, doch kann ich nur dringend dazu raten, sich die fantastische Alternative zu Subversion anzusehen: <a href="/2007/versionskontrolle-mit-git/">Git</a>.</p>
-{% endaside %}
+</aside>
 
 {% include articles/subversion-toc.html %}
 
@@ -30,26 +30,26 @@ Ich habe mich für die zweite Methode entschieden. Dies hat eine Menge Vorteile:
 
 Zuerst lege ich mir ein Verzeichnis an, das später meine Repositories enthalten wird. Dies lege ich in meinem Heimatverzeichnis an.
 
-{% highlight sh %}
+```sh
 $ cd ~
 $ mkdir Subversion
 $ cd Subversion
-{% endhighlight %}
+```
 
 ## Repository für ein Projekt anlegen
 
 Im nächsten Schritt lege ich für ein Projekt meiner Wahl das Repository an, hier im für Beispiel meine Website.
 
-{% highlight sh %}
+```sh
 $ mkdir meinewebsite.de
 $ cd meinewebsite.de
-{% endhighlight %}
+```
 
 Jetzt wird mit einem Befehl das leere Repository erzeugt.
 
-{% highlight sh %}
+```sh
 $ svnadmin create --fs-type fsfs .
-{% endhighlight %}
+```
 
 ## Anmerkungen
 

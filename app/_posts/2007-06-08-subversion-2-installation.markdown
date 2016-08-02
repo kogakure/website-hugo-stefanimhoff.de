@@ -7,7 +7,7 @@ author: "Stefan Imhoff"
 date: 2007-06-08 01:00
 updated: 2015-10-31 12:22
 categories:
-- Versionskontrolle
+- versionskontrolle
 tags:
 - subversion
 - tutorial
@@ -15,10 +15,10 @@ tags:
 
 Die Installation von Subversion ist relativ leicht und schnell erledigt, für die Bedienung kann man eine der zahllosen grafischen Oberflächen oder das Terminal benutzten. In diesem Teil der Reihe stelle ich ein paar Programme vor und zeige wie man Subversion aus dem Quellcode selber kompiliert.
 
-{% aside aside-hint %}
+<aside class="aside-hint" role="complementary">
 <h4>Versionkontrolle mit Git</h4>
 <p>Der Inhalt dieses Artikels ist noch aktuell, doch kann ich nur dringend dazu raten, sich die fantastische Alternative zu Subversion anzusehen: <a href="/2007/versionskontrolle-mit-git/">Git</a>.</p>
-{% endaside %}
+</aside>
 
 {% include articles/subversion-toc.html %}
 
@@ -59,33 +59,33 @@ Dann öffnet man das Programm *Terminal* aus dem Anwendungsordner.
 
 Ich gehe davon aus, dass der Download auf dem Desktop liegt, sonst muss dies entweder noch geschehen oder der Pfad muss angepasst werden. Mit dem folgenden Befehl wechselt man auf den Desktop:
 
-{% highlight sh %}
+```sh
 $ cd ~/Desktop/
-{% endhighlight %}
+```
 
 Jetzt wird die Datei entpackt, der Dateiname muss natürlich an die richtige Version angepasst werden.
 
 Dazu noch ein kleiner Tipp für Anfänger: Man muss nicht immer alles komplett tippen, es reichen ein paar Buchstaben und dann kann man einfach die Tab-Taste betätigen, was den Rest des Pfades oder Dateinamens ergänzt.
 
-{% highlight sh %}
+```sh
 $ tar -xzvf subversion-1.4.3.tar.gz
-{% endhighlight %}
+```
 
 Wechsel in das Verzeichnis hinein:
 
-{% highlight sh %}
+```sh
 $ cd subversion-1.4.3.tar.gz
-{% endhighlight %}
+```
 
 Jetzt werden nacheinander, jeweils einem nach dem anderen,  die folgenden Befehle eingeben. Nach dem vierten Befehl muss man sein Passwort zur Authenzifizierung eingeben.
 Wenn irgendeiner der Befehle mehrere schlimm-aussehende Fehler zurückgibt, lieber eine Binärdatei nehmen und installieren ;-)
 
-{% highlight sh %}
+```sh
 $ ./autogen.sh
 $ ./configure
 $ make
 $ sudo make install
 $ make clean
-{% endhighlight %}
+```
 
 Auf dem Terminal sollte man jetzt mit dem Befehl `svn --version` eine Rückgabe erhalten, dass Subversion in der Version 1.4.3 auf dem System installiert ist.

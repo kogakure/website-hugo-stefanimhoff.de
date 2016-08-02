@@ -9,8 +9,8 @@ description: "Human, the new movie of Yann Arthus-Bertrand is a moving film made
 og_image: "/assets/images/artikel/human.jpg"
 author: "Stefan Imhoff"
 categories:
-- Recommendation
-- Film
+- recommendation
+- film
 tags:
 - documentary
 - humanity
@@ -19,9 +19,11 @@ tags:
 
 Yann Arthus-Bertrand, the filmmaker of [Home](https://www.youtube.com/watch?v=jqxENMKaeCU), artist, photographer and specialist for aerial photography worked 3 years on his new movie: [Human](http://www.human-themovie.org/).
 
-{% figure image-figure %}
-<img src="{{ site.url }}/assets/images/artikel/human.jpg" alt="">
-{% endfigure %}
+<figure class="image-figure">
+  <div class="figure-content">
+    <img src="{{ site.url }}/assets/images/artikel/human.jpg" alt="">
+  </div>
+</figure>
 
 He collected real-life stories from more than **2000 women and men** in **60 countries**. Stories about topics, which matter to us all: poverty, war, homophobia, the future of the planet, love and happiness. It’s a beautiful mix of moving stories, impressive aerial images and ground photography.
 

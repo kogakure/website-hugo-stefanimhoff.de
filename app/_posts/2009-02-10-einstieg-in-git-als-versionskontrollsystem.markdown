@@ -6,7 +6,7 @@ description: "Eine umfangreiche Sammlung von Links zu Anleitungen, Tutorials, Sc
 author: "Stefan Imhoff"
 date: 2009-02-10 20:00
 categories:
-- Versionskontrolle
+- versionskontrolle
 tags:
 - git
 - subversion

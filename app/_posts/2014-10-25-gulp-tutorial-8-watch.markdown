@@ -8,7 +8,7 @@ author: "Stefan Imhoff"
 og_image: "/assets/images/artikel/gulp-tutorial-8.jpg"
 description: "The ultimative tutorial and guide for Gulp.js: How to set up a watch task, which triggers other tasks on file changes."
 categories:
-- Code
+- code
 tags:
 - gulp
 - tutorial
@@ -17,10 +17,12 @@ tags:
 
 This is the 8th part of my series *Introduction to Gulp.js*. Today I will set up watch tasks for many different files with Gulp.js.
 
-{% figure image-figure attribution attribution-caption "Not even <strong>Double Gulp</strong> helped to have a Funtime" %}
-<img src="{{ site.url }}/assets/images/artikel/gulp-tutorial-8.jpg" alt="Man with a Double Gulp is sleeping">
-<p class="attribution-text"><svg class="attribution-icon-cc"><use xlink:href="#cc"></use></svg> Erin Nekervis, <a href="https://www.flickr.com/photos/theeerin/4701912791">Funtime!</a></p>
-{% endfigure %}
+<figure class="image-figure attribution attribution-caption">
+  <div class="figure-content">
+    <img src="{{ site.url }}/assets/images/artikel/gulp-tutorial-8.jpg" alt="Man with a Double Gulp is sleeping">
+    <p class="attribution-text"><svg class="attribution-icon-cc"><use xlink:href="#cc"></use></svg> Erin Nekervis, <a href="https://www.flickr.com/photos/theeerin/4701912791">Funtime!</a></p>
+  </div>
+  <figcaption>Not even <strong>Double Gulp</strong> helped to have a Funtime</figcaption>
 
 {% include articles/gulp-toc.html %}
 
@@ -28,8 +30,7 @@ Do you remember the `watch` task from the beginning? It just started BrowserSync
 
 `Watch` is part of the API of gulp. It will watch files for changes, addition or deletion and trigger tasks.
 
-{% figure code-figure "gulp/config.js" %}
-{% highlight javascript %}
+```javascript
 watch: {
   jekyll: [
     '_config.yml',
@@ -48,15 +49,15 @@ watch: {
   sprites: srcAssets + '/images/**/*.png',
   svg:     'vectors/*.svg'
 }
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">gulp/config.js</p>
 
 I watch for a lot of different file types for Jekyll. Changes in configuration files, data files, layouts, includes, plugin, posts etc.
 
 The Sass task will watch for changes in files with the suffix `sass` or `scss`. JavaScript gets triggered if I change some JavaScript file. You get the point.
 
-{% figure code-figure "gulp/tasks/development/watch.js" %}
-{% highlight javascript %}
+```javascript
 var gulp   = require('gulp');
 var config = require('../../config').watch;
 
@@ -71,8 +72,9 @@ gulp.task('watch', ['browsersync'], function() {
   gulp.watch(config.svg,     ['copy:fonts']);
   gulp.watch(config.sprites, ['sprites']);
 });
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">gulp/tasks/development/watch.js</p>
 
 I set up six watch tasks. Whenever a file of the Jekyll watch gets changed, deleted or added, the `jekyll-rebuild` task gets executed. This task will run the Jekyll build and after it’s finished reload the page.
 

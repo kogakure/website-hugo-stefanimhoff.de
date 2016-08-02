@@ -7,7 +7,7 @@ author: "Stefan Imhoff"
 date: 2007-06-13 01:34
 updated: 2014-10-25 12:27
 categories:
-- Code
+- code
 tags:
 - django
 - rubyonrails

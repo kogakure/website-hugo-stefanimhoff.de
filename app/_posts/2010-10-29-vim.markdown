@@ -7,19 +7,21 @@ author: "Stefan Imhoff"
 date: 2010-10-29 19:00
 og_image: "/assets/images/artikel/vim-vintage.jpg"
 categories:
-- Code
-- Software
-- Empfehlung
+- code
+- software
+- empfehlung
 tags:
 - vim
 ---
 
 So ähnlich lautete der Spruch des Superhelden *He-Man* aus den 80er Jahren, kurz bevor er seine Superkräfte bekam. Und ungefähr genauso lange gibt es auch Vim: nämlich 22 Jahre. Und das ältere Vi, auf dem Vim basiert, gibt es sogar schon länger als ich lebe. Wenn also ein *simpler* Texteditor seit so langer Zeit existiert und solche *Kraft* verleiht, muss einfach etwas Besonderes daran sein.
 
-{% figure image-figure "Vim - Scheuermittel und Poliermittel. Erhellt das Heim und das Alter." %}
-<img src="{{ site.url }}/assets/images/artikel/vim-vintage.jpg" alt="Vim, Reinigungs- und Poliermittel.">
-{% endfigure %}
-
+<figure class="image-figure">
+  <div class="figure-content">
+    <img src="{{ site.url }}/assets/images/artikel/vim-vintage.jpg" alt="Vim, Reinigungs- und Poliermittel.">
+  </div>
+  <figcaption>Vim - Scheuermittel und Poliermittel. Erhellt das Heim und das Alter.</figcaption>
+</figure>
 
 Das erste Mal bin ich vor einigen Jahren über Vim (oder Vi) gestolpert, als ich zum ersten Mal irgendeine Datei auf einem Server bearbeiten musste und dort keiner meiner schicken Editoren funktionierte. Das erste Mal, als ich mit Vi(m) arbeitete, war meine natürliche Reaktion: <q>WTF, was soll der Scheiß, ich kann erst tippen, wenn ich i gedrückt habe? Wer denkt sich denn so einen Mist aus?</q>.
 
@@ -49,7 +51,7 @@ Zuerst solltest du unbedingt deine kompletten Vim-Dateien und Plugins unter Vers
 
 Ich habe mir dazu ein Repository `dotfile` mit Git angelegt, in dem sich Unterordner für `bash`, `bin`, `git`, `vim` und einige andere Programme befinden. In meinem Vim-Unterordner befinden sich eine Datei `vimrc.vim` und `gvimrc.vim`, sowie verschiedene Vim-Ordner. Dieses simple Bash-Installationsskript installiert mir auf Wunsch meine Umgebung auf einem Rechner:
 
-{% highlight sh linenos %}
+```sh
 #!/bin/bash
 
 cd vim
@@ -58,7 +60,7 @@ cd
 ln -nfs $VIM_SRC .vim
 ln -nfs $VIM_SRC/vimrc.vim .vimrc
 ln -nfs $VIM_SRC/gvimrc.vim .gvimrc
-{% endhighlight %}
+```
 
 Dieses Skript verlinkt meine Konfigurationsdateien als symbolischen Link in das Home-Verzeichnis, wo Vim sie erwartet.
 
@@ -70,12 +72,12 @@ Doch damit ist seit einiger Zeit Schluß. Tim Pope hat ein fantastisches Plugin 
 
 Pathogen ermöglicht es, Plugins als Bundles abzulegen, einzeln und als nettes Paket zusammengefasst. Alles was du dazu tun muss, ist [pathogen.vim](http://www.vim.org/scripts/script.php?script_id=2332) herunterzuladen und in den Vim-Ordner in einen Unterordner `autoload` (falls nicht vorhanden erstellen) abzulegen. Als nächsten Schritt legst du einen Ordner `bundle` im Vim-Ordner an und öffnest deine Datei `.vimrc`. Dort schreibst du ganz an den Anfang:
 
-{% figure code-figure ".vimrc" %}
-{% highlight vim linenos %}
+```vim
 silent! call pathogen#runtime_append_all_bundles()
 silent! call pathogen#helptags()
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">.vimrc</p>
 
 Plugins werden ab jetzt nicht entpackt und kompliziert in die richtigen Unterordner verschoben, sondern einfach pro Plugin in einen eigenen Ordner unter `bundle` gestellt. Für Vim gibt es nämlich leider einige, verschiedene Möglichkeiten Erweiterungen zu installieren, einfache Skripte, automatische Installer und seit kurzem gottseidank auch Git-Checkouts.
 
@@ -83,7 +85,7 @@ Meine Empfehlung ist, komplett auf Git-Checkouts umzusteigen. Das geht seit kurz
 
 Einige Personen klonen sich die gewünschten Plugins als Submodule, ich verwende ein kleines Ruby-Skript von [Tammer Saleh](http://tammersaleh.com/posts/the-modern-vim-config-with-pathogen/), mit dem ich meine Git-Repositorys aktualisiere:
 
-{% highlight ruby linenos %}
+```ruby
 #!/usr/bin/env ruby
 
 git_bundles = [
@@ -103,7 +105,7 @@ git_bundles.each do |url|
   dir = File.join(bundle_dir, dirname)
   `cd #{dir} 2>/dev/null && git pull || git clone #{url} #{dir}
 end
-{% endhighlight %}
+```
 
 Dieses tolle Skript klont von verschiedenen Stellen (Github, meine eigener Server) meine Bundles oder aktualisiert sie. Der Vorteil ist, dass ich so in meinem Repository immer alles dabei habe und nicht erst durch einen Submodule-Befehl holen muss.
 
@@ -117,9 +119,9 @@ Meine Datei ist in einige Bereiche geteilt: Zuerst kommen die grundlegenden Eins
 
 Mein größtes Problem war irgendwann, dass meine Tastatur keine Tasten mehr übrig hatte, so gut wie alle Funktionstasten und fast alle anderen Tasten waren irgendwie belegt. Die Folge davon war, dass ich ständig herausfinden musste, welche Funktion, welches Plugin oder Mapping jetzt einen Konflikt erzeugt. Doch es gibt Gott sei Dank den ominösen `Leader`, eine Taste die du drücken kannst und danach eine beliebige Tastenkombination drücken kannst. Standardmäßig liegt diese Taste auf dem <kbd>\\</kbd> und ist somit nicht gut zu erreichen, weshalb die meisten Personen sie auf das Komma legen:
 
-{% highlight vim %}
+```vim
 let mapleader=','
-{% endhighlight %}
+```
 
 Durch drücken des Komma im NORMAL-Modus, gefolgt von meinen Tastaturkürzeln kann ich beliebige Befehle leicht ausführen.
 

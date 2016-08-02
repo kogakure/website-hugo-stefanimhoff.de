@@ -6,7 +6,7 @@ description: "GTD (Getting Things Done) digital vs. analog. Was ist effizienter 
 author: "Stefan Imhoff"
 date: 2008-04-01 17:40
 categories:
-- Produktivitaet
+- produktivitaet
 tags:
 - gtd
 ---

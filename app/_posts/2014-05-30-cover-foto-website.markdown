@@ -7,8 +7,8 @@ date: 2014-05-30 10:00
 og_image: "/assets/images/artikel/josefina-bokeh.jpg"
 description: "Über die Wahl meines Fotostils bei meiner neuen Website und wie ich herausfand, dass die Technik eines unscharfen Hintergrunds in der Fachwelt 'Bokeh' genannt wird. Außerdem zeige ich, wie ich mein Foto auf der Website technisch implementiere."
 categories:
-- Design
-- Website
+- design
+- website
 tags:
 - bokeh
 - foto
@@ -30,10 +30,13 @@ Jetzt musste ich nur noch herausfinden, wie denn der Fachbegriff für so ein Fot
 
 Doch es gibt tatsächlich einen Begriff für dieses Eigenschaft: [Bokeh](https://de.wikipedia.org/wiki/Bokeh).
 
-{% figure image-figure image-figure-fullsize attribution %}
-<img src="{{ site.url }}/assets/images/artikel/josefina-bokeh.jpg" alt="Josefina with Bokeh">
-<p class="attribution-text"><svg class="attribution-icon-cc"><use xlink:href="#cc"></use></svg> Carlos Luis Camacho, <a href="https://www.flickr.com/photos/paseodelsur/51805888/">Josefina with Bokeh</a></p>
-{% endfigure %}
+<figure class="image-figure image-figure-fullsize attribution">
+  <div class="figure-content">
+    <img src="{{ site.url }}/assets/images/artikel/josefina-bokeh.jpg" alt="Josefina with Bokeh">
+    <p class="attribution-text"><svg class="attribution-icon-cc"><use xlink:href="#cc"></use></svg> Carlos Luis Camacho, <a href="https://www.flickr.com/photos/paseodelsur/51805888/">Josefina with Bokeh</a></p>
+  </div>
+  <figcaption></figcaption>
+</figure>
 
 Bokeh ist vom japanischen Wort *boke* (暈け oder ボケ) abgeleitet, und bedeutet *Unschärfe* oder *Nebel*. Es gibt eine ganze Fangemeinde von Liebhabern und eine  recht genaue Definitionen, was eine gute Bokeh ausmacht. Fotografen diskutieren hitzig darüber mit welchem Objektiv denn das bessere Bokeh gemacht werden könne.
 
@@ -45,14 +48,14 @@ Da meine Website auch ermöglicht, mit einigen wenigen Zeilen Code die Farben un
 ## Technische Implementierung
 Das Praktische an dem Foto ist, dass es ohne Probleme im Anschnitt verwendet werden kann, solange sichergestellt ist, dass das Hauptobjekt immer gut zu sehen ist. Da die genauen Ausmaße sich bei einem Responsive Design ändern können, ist es praktisch das Foto als Hintergrundbild mit der Skalierung `background-size: cover` zu verwenden:
 
-{% highlight css linenos %}
+```css
 .header {
   background-color: $header-background;
   background-image: url($header-background-url);
   background-position: left center;
   background-size: cover;
 }
-{% endhighlight %}
+```
 
 Zuerst setze ich eine Hintergrundfarbe als Ersatz, die so lange angezeigt wird, bis das Foto vollständig geladen ist. Dann wird das Foto als Hintergrund-Bild mit `background-image` gesetzt. Ich positioniere das Foto so, dass der interessante Teil auf jeden Fall zu sehen ist, auf der x-Koordinate links ausgerichtet und auf der y-Koordinate zentriert. Mit `cover` wird festgelegt, dass das Foto so in der Größe verändert wird, dass beide Dimensionen größer oder gleich zur entsprechenden Größe des Containers sind. So wird sichergestellt, dass niemals der Hintergrund zu sehen ist, sondern das Foto, sofern es nicht in den Container passt, automatisch angeschnitten wird.
 

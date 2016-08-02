@@ -17,3 +17,10 @@
     }
   }
 }
+
+.code-meta {
+  font-size: $font-scale-small;
+  position: relative;
+  text-align: center;
+  top: -$default-spacing-bottom;
+}

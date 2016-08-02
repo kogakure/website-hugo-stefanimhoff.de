@@ -8,10 +8,10 @@ updated: 2014-10-25 13:47
 og_image: "/assets/images/artikel/elements-of-typographic-style.jpg"
 description: "Über die Typographie meiner neuen Website: Skala, Schriftart, vertikaler Rhythmus, Schriftstärke, Schriftgröße und Satzbreite."
 categories:
-- Design
-- Code
-- Website
-- Typographie
+- design
+- code
+- website
+- typographie
 tags:
 - typographie
 - schrift
@@ -26,9 +26,12 @@ Einfache Dinge wie Lesbarkeit oder Kontrast entscheiden darüber, ob die Botscha
 
 Die richtige Wahl von Schriftart, Schriftgröße, Gewicht, Satzspiegel, Satzbreite, Zeilendurchschuss, Sperrsatz oder vieler anderer Dinge wirken unbewusst auf die Leser und transportieren so die Aussage. Die richtige Typographie kann eine Botschaft unterstützen und verstärken, die falsche eine Aussage sogar bedeutungslos oder lächerlich werden lassen.
 
-{% figure image-figure "<cite>The Elements of Typographic Style</cite> von Robert Bringhurst" %}
-<img src="{{ site.url }}/assets/images/artikel/elements-of-typographic-style.jpg" alt="The Elements of Typographic Style">
-{% endfigure %}
+<figure class="image-figure">
+  <div class="figure-content">
+    <img src="{{ site.url }}/assets/images/artikel/elements-of-typographic-style.jpg" alt="The Elements of Typographic Style">
+  </div>
+  <figcaption><cite>The Elements of Typographic Style</cite> von Robert Bringhurst</figcaption>
+</figure>
 
 Ich fand Typographie schon immer faszinierend, doch erst nachdem ich das Buch <cite>[The Elements *of* Typographic Style](http://www.amazon.de/gp/product/0881792128?ie=UTF8&camp=1638&creative=19454&creativeASIN=0881792128&linkCode=as2&tag=kogakurede-21)</cite> von *Robert Bringhurst* gelesen hatte beschäftigte ich mich tiefer mit der Materie. Es gibt eine auf das Web abgestimmte Version seines Buches auf der Website [The Elements *of* Typographic Style Applied *to the* Web](http://webtypography.net/).
 
@@ -50,47 +53,47 @@ Doch dies ist bei meinem Projekt gar nicht nötig gewesen, denn das Team-Sass bi
 
 Ich füge also zuerst das Gem zu meinem Gemfile hinzu:
 
-{% figure code-figure "Gemfile" %}
-{% highlight ruby linenos %}
+```ruby
 source "https://rubygems.org"
 
 group :development do
   gem 'modular-scale'
 end
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">Gemfile</p>
 
 Dann lade ich das Compass-Plugin in der `config.rb`:
 
-{% figure code-figure "config.rb" %}
-{% highlight ruby linenos %}
+```ruby
 # Require any additional compass plugins here.
 require 'modular-scale'
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">config.rb</p>
 
 Im AnschlusL muss nur noch das Modul von Compass geladen werden, bei mir in einem Partial:
 
-{% figure code-figure "helpers/_imports.scss" %}
-{% highlight scss linenos %}
+```scss
 @import "compass";
 @import "compass/reset";
 @import "modular-scale";
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">helpers/_imports.scss</p>
 
 Ich habe mich entschlossen den *Goldenen Schnitt* zu verwenden und wähle dann die *ideale Textgröße* und eine *wichtige Zahl* aus:
 
-{% highlight scss linenos %}
+```scss
 $ms-base: 16px 18px;
 $ms-ratio: $golden;
-{% endhighlight %}
+```
 
 Jetzt lassen sich überall im SCSS die Helfer des Gems verwenden. Anstatt also jetzt irgendwo manuell `42px` (`41.887px`) oder `2.618em` zu schreiben, schreibe ich einfach `modular-scale(4)` um den vierten Wert der Skala zu wählen:
 
-{% highlight scss %}
+```scss
 $font-scale-h1: modular-scale(4);
-{% endhighlight %}
+```
 
 ## Satzbreite
 Natürlich hätte ich auch mit der Wahl der Satzbreite (Zeilenlänge) beginnen können, und dann das Grid passend auswählen. Doch kann man, jetzt wo eine Skala ausgewählt wurde, diese auch für die richtige Satzbreite verwenden.
@@ -110,28 +113,28 @@ Sehr praktisch ist, dass die relativ lästige Mathematik hinter der Formel (die 
 
 Es werden einige Variablen konfiguriert:
 
-{% highlight scss linenos %}
+```scss
 $base-font-size: modular-scale(1); // 18px
 $base-line-height-count: 1.5;
 $base-line-height: $base-font-size * $base-line-height-count; // 27px
 $relative-font-sizing: true; // Verwendet em und nicht px
 $round-to-nearest-half-line: true; // Verhindert zu große Lücken zwischen den Zeilen
-{% endhighlight %}
+```
 
 Mit einem einfachen Aufruf dieses Mixins wird der vertikale Rhythmus aktiviert:
 
-{% highlight scss %}
+```scss
 @include establish-baseline();
-{% endhighlight %}
+```
 
 Um eine Schriftgröße anzupassen verwendet man jetzt keine absoluten Werte mehr, sondern ein Mixin. Dieses lässt sich natürlich auch in Kombination mit dem Mixin von *Modular Scale* verwenden:
 
-{% highlight scss linenos %}
+```scss
 h1 {
   @include adjust-font-size-to(modular-scale(6));
   @include trailer(1, modular-scale(6), margin);
 }
-{% endhighlight %}
+```
 
 Es werden auch nicht mehr direkt die Abstände über oder unter einem Element definiert, sondern Mixins verwendet, wie hier im Beispiel `trailer`.
 

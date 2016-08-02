@@ -8,7 +8,7 @@ author: "Stefan Imhoff"
 og_image: "/assets/images/artikel/gulp-tutorial-10.jpg"
 description: "The ultimative tutorial and guide for Gulp.js: How to generate image sprite maps with Spritesmith."
 categories:
-- Code
+- code
 tags:
 - gulp
 - tutorial
@@ -18,10 +18,12 @@ tags:
 
 This is the 10th part of my series *Introduction to Gulp.js*. Today I will use Gulp.js to create CSS image sprites.
 
-{% figure image-figure attribution %}
-<img src="{{ site.url }}/assets/images/artikel/gulp-tutorial-10.jpg" alt="A Double Gulp">
-<p class="attribution-text"><svg class="attribution-icon-cc"><use xlink:href="#cc"></use></svg> Fabienne Wassermann, <a href="https://www.flickr.com/photos/fabi_k/5119690026">double gulp</a></p>
-{% endfigure %}
+<figure class="image-figure attribution">
+  <div class="figure-content">
+    <img src="{{ site.url }}/assets/images/artikel/gulp-tutorial-10.jpg" alt="A Double Gulp">
+    <p class="attribution-text"><svg class="attribution-icon-cc"><use xlink:href="#cc"></use></svg> Fabienne Wassermann, <a href="https://www.flickr.com/photos/fabi_k/5119690026">double gulp</a></p>
+  </div>
+</figure>
 
 {% include articles/gulp-toc.html %}
 
@@ -31,12 +33,11 @@ CSS images sprites are not used that often any more, because of SVG or vector fo
 
 I will need a Spritesmith plugin for Gulp.js:
 
-{% highlight sh %}
+```sh
 $ npm install --save-dev gulp.spritesmith@4.1.1
-{% endhighlight %}
+```
 
-{% figure code-figure "gulp/config.js" %}
-{% highlight javascript %}
+```javascript
 sprites: {
   src: srcAssets + '/images/sprites/icon/*.png',
   dest: {
@@ -61,13 +62,13 @@ sprites: {
     imgPath: '/assets/images/sprites/icon-sprite.png'
   }
 }
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">gulp/config.js</p>
 
 I split my config into three subsections: The source files (individual icons for the sprite), the destination for the sprite and the css partial and the options for the image sprite. I use a custom `cssClass` which will generate `:hover` states by naming the hover sprites with `-hover`.
 
-{% figure code-figure "gulp/tasks/development/sprites.js" %}
-{% highlight javascript %}
+```javascript
 var gulp        = require('gulp');
 var spritesmith = require('gulp.spritesmith');
 var config      = require('../../config').sprites;
@@ -85,8 +86,9 @@ gulp.task('sprites', function() {
   spriteData.css
     .pipe(gulp.dest(config.dest.css));
 });
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">gulp/tasks/development/sprites.js</p>
 
 In the end I get two files: a partial `_sprites.scss` containing the class attributes and a sprite `icon-sprite.png` containing all images.
 

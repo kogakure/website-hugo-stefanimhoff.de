@@ -8,7 +8,7 @@ author: "Stefan Imhoff"
 og_image: "/assets/images/artikel/gulp-tutorial-15.jpg"
 description: "The ultimative tutorial and guide for Gulp.js: How to improve the speed and performance of your website with WebP and Gzip."
 categories:
-- Code
+- code
 tags:
 - gulp
 - tutorial
@@ -18,10 +18,12 @@ tags:
 
 This is the 15th part of my series *Introduction to Gulp.js*. Today I’ll add some tasks for performance improvement of the website with WebP for images and Gzip for text files.
 
-{% figure image-figure attribution %}
-<img src="{{ site.url }}/assets/images/artikel/gulp-tutorial-15.jpg" alt="A oversized Captain America holding a Big Gulp">
-<p class="attribution-text"><svg class="attribution-icon-cc"><use xlink:href="#cc"></use></svg> Jess, <a href="https://www.flickr.com/photos/lundgrenphotography/8050895411">CAPTAIN AMERCIA</a></p>
-{% endfigure %}
+<figure class="image-figure attribution">
+  <div class="figure-content">
+    <img src="{{ site.url }}/assets/images/artikel/gulp-tutorial-15.jpg" alt="A oversized Captain America holding a Big Gulp">
+    <p class="attribution-text"><svg class="attribution-icon-cc"><use xlink:href="#cc"></use></svg> Jess, <a href="https://www.flickr.com/photos/lundgrenphotography/8050895411">CAPTAIN AMERCIA</a></p>
+  </div>
+</figure>
 
 {% include articles/gulp-toc.html %}
 
@@ -34,26 +36,25 @@ That’s why I will create a task, which creates WebP images of my PNG and JPEG 
 
 First I install the Gulp.js module for WebP:
 
-{% highlight sh %}
+```sh
 $ npm install --save-dev gulp-webp@2.1.1
-{% endhighlight %}
+```
 
 I add an entry to the configuration file:
 
-{% figure code-figure "gulp/config.js" %}
-{% highlight javascript %}
+```javascript
 webp: {
   src: productionAssets + '/images/**/*.{jpg,jpeg,png}',
   dest: productionAssets + '/images/',
   options: {}
 },
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">gulp/config.js</p>
 
 The task is short and straight forward:
 
-{% figure code-figure "gulp/tasks/production/webp.js" %}
-{% highlight javascript %}
+```javascript
 var gulp   = require('gulp');
 var webp   = require('gulp-webp');
 var config = require('../../config').webp;
@@ -66,13 +67,13 @@ gulp.task('webp', function() {
     .pipe(webp(config.options))
     .pipe(gulp.dest(config.dest));
 });
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">gulp/tasks/production/webp.js</p>
 
 This task needs to be run only for production and has to be executed after the revisioning of the images is finished, because the server will just deliver a WebP image of the same name to the browser.
 
-{% figure code-figure "gulp/tasks/production/build.js" %}
-{% highlight javascript %}
+```javascript
 var gulp        = require('gulp');
 var runSequence = require('run-sequence');
 
@@ -87,13 +88,13 @@ gulp.task('build:production', function(callback) {
   'webp',
   callback);
 });
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">gulp/tasks/production/build.js</p>
 
 It’s neccessary to tell the server to rewrite the URLs of our images. There are multiple techniques for this, but I’ll use a `.htaccess` file:
 
-{% figure code-figure "app/htaccess" %}
-{% highlight apache %}
+```apache
 ---
 layout: null
 permalink: .htaccess
@@ -111,8 +112,9 @@ permalink: .htaccess
 </IfModule>
 
 AddType image/webp .webp
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">app/htaccess</p>
 
 It is possible to use an `.htaccess` file and include in the [configuration file](http://jekyllrb.com/docs/configuration/) as to be included. Otherwise Jekyll will ignore hidden files and don’t copy them to the target directory.
 
@@ -120,36 +122,35 @@ But I like it more to add [Yaml Front Matter](http://jekyllrb.com/docs/frontmatt
 
 If you sync your production website to a server it will deliver to browsers, which support WebP the Webp format when requesting a JPEG or PNG.
 
-{% aside aside-hint %}
+<aside class="aside-hint" role="complementary">
 <h4>It isn’t working …</h4>
 <p>Don’t wonder: The <code>.htaccess</code> file won’t work with the development server. It will need a server with support for <code>mod_rewrite</code> and <code>mod_headers</code> and of course support <code>.htaccess</code> files.</p>
-{% endaside %}
+</aside>
 
 ## Gzip text files
 Many servers compress files by default with Gzip before sending them to the browser. But it is always good to pre-gzip the files because it will be faster, as the server doesn’t need to compress the file on every request, it will need less CPU and the compression rate will be much higher with pre-gzipped files, because most servers don’t use the maximum compression rate.
 
 First I install the Gulp.js module:
 
-{% highlight sh %}
+```sh
 $ npm install --save-dev gulp-gzip@1.2.0
-{% endhighlight %}
+```
 
 I add an entry to the configuration file:
 
-{% figure code-figure "gulp/config.js" %}
-{% highlight javascript %}
+```javascript
 gzip: {
   src: production + '/**/*.{html,xml,json,css,js}',
   dest: production,
   options: {}
 },
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">gulp/config.js</p>
 
 Next I create the task, which is short:
 
-{% figure code-figure "gulp/tasks/production/gzip.js" %}
-{% highlight javascript %}
+```javascript
 var gulp   = require('gulp');
 var gzip   = require('gulp-gzip');
 var config = require('../../config').gzip;
@@ -162,13 +163,13 @@ gulp.task('gzip', function() {
     .pipe(gzip(config.options))
     .pipe(gulp.dest(config.dest));
 });
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">gulp/tasks/production/gzip.js</p>
 
 I add the task in my production build file to an JavaScript Array together with the `webp` task, because this task and the Gzip task may run in parallel; WebP works only with images and Gzip only with text files.
 
-{% figure code-figure "gulp/tasks/production/build.js" %}
-{% highlight javascript %}
+```javascript
 var gulp        = require('gulp');
 var runSequence = require('run-sequence');
 
@@ -186,8 +187,9 @@ gulp.task('build:production', function(callback) {
   ],
   callback);
 });
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">gulp/tasks/production/build.js</p>
 
 
 {% include articles/gulp-code.html %}

@@ -8,8 +8,8 @@ og_image: "/assets/images/artikel/motivational-video.jpg"
 author: "Stefan Imhoff"
 widont: false
 categories:
-- Film
-- Quote
+- film
+- quote
 tags:
 - motivation
 ---

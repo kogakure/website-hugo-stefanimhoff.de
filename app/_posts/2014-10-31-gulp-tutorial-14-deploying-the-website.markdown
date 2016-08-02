@@ -8,7 +8,7 @@ author: "Stefan Imhoff"
 og_image: "/assets/images/artikel/gulp-tutorial-14.jpg"
 description: "The ultimative tutorial and guide for Gulp.js: How to deploy your website with rsync to your server."
 categories:
-- Code
+- code
 tags:
 - gulp
 - tutorial
@@ -19,10 +19,12 @@ tags:
 
 This is the 14th of my series *Introduction to Gulp.js*. Today I will write a task to sync the files of my Jekyll site to my webserver.
 
-{% figure image-figure attribution %}
-<img src="{{ site.url }}/assets/images/artikel/gulp-tutorial-14.jpg" alt="A fluffy bunny with a Big Gulp">
-<p class="attribution-text"><svg class="attribution-icon-cc"><use xlink:href="#cc"></use></svg> Jayanta Debnath, <a href="https://www.flickr.com/photos/jkdsphotography/13786076413">BIG GULP!</a></p>
-{% endfigure %}
+<figure class="image-figure attribution">
+  <div class="figure-content">
+    <img src="{{ site.url }}/assets/images/artikel/gulp-tutorial-14.jpg" alt="A fluffy bunny with a Big Gulp">
+    <p class="attribution-text"><svg class="attribution-icon-cc"><use xlink:href="#cc"></use></svg> Jayanta Debnath, <a href="https://www.flickr.com/photos/jkdsphotography/13786076413">BIG GULP!</a></p>
+  </div>
+</figure>
 
 {% include articles/gulp-toc.html %}
 
@@ -31,25 +33,24 @@ There are a lot of possibilites to get a website on the server. You may use FTP,
 
 I write another tasks as entry point: `deploy`
 
-{% figure code-figure "gulp/tasks/deploy.js" %}
-{% highlight javascript %}
+```javascript
 var gulp = require('gulp');
 
 /**
  * Start rsync task
  */
 gulp.task('deploy', ['rsync']);
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">gulp/tasks/deploy.js</p>
 
 This will just start the `rsync` task. But I could add more tasks, for example a task, which creates a zip archive of the build and copies it to a backup on my harddrive.
 
-{% highlight sh %}
+```sh
 $ npm install --save-dev gulp-rsync@0.0.5
-{% endhighlight %}
+```
 
-{% figure code-figure "gulp/config.js" %}
-{% highlight javascript %}
+```javascript
 rsync: {
   src: production + '/**',
   options: {
@@ -67,13 +68,13 @@ rsync: {
     include: []
   }
 }
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">gulp/config.js</p>
 
 This task will grab all files in my production folder, connect to my server and copy all files recursively to my website root. It will delete old files and just add changes to the server.
 
-{% figure code-figure "gulp/tasks/production/rsync.js" %}
-{% highlight javascript %}
+```javascript
 var gulp   = require('gulp');
 var rsync  = require('gulp-rsync');
 var config = require('../../config').rsync;
@@ -86,8 +87,9 @@ gulp.task('rsync', function() {
   return gulp.src(config.src)
     .pipe(rsync(config.options));
 });
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">gulp/tasks/production/rsync.js</p>
 
 {% include articles/gulp-code.html %}
 

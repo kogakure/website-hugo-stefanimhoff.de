@@ -6,7 +6,7 @@ description: "Mein persönlicher Jahresrückblick für 2010: Django, Homebrew un
 author: "Stefan Imhoff"
 date: 2010-12-23 13:00
 categories:
-- Persoenlich
+- persoenlich
 tags:
 - vim
 - jahresrueckblick

@@ -6,7 +6,7 @@ description: "Warum Git eine Menge Vorzüge gegenüber anderen Versionskontrolls
 author: "Stefan Imhoff"
 date: 2007-08-02 17:53
 categories:
-- Versionskontrolle
+- versionskontrolle
 tags:
 - git
 - subversion

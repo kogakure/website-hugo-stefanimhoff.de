@@ -8,7 +8,7 @@ author: "Stefan Imhoff"
 og_image: "/assets/images/artikel/gulp-tutorial-1.png"
 description: "The ultimative tutorial and guide for Gulp.js: The first part of my series on Gulp.js. What is Gulp.js? Why to use it? And how to install Gulp and Jekyll."
 categories:
-- Code
+- code
 tags:
 - gulp
 - tutorial
@@ -17,9 +17,11 @@ tags:
 
 My website is running [Jekyll](http://jekyllrb.com/) now since the beginning of 2014. But I wasn’t quite happy with my build and development process. I started out with Rake tasks and chose later [Grunt.js](http://gruntjs.com/) as my build system, but parts of the process where left in Ruby. I used [Compass](http://compass-style.org/) a lot and [Jekyll Assets](http://ixti.net/jekyll-assets/) was handling my versioning. But Grunt.js and the Jekyll Asset Pipeline didn’t play well together. Then a new solution came along: [Gulp.js](http://gulpjs.com/).
 
-{% figure image-figure %}
-<img src="{{ site.url }}/assets/images/artikel/gulp-tutorial-1.png" alt="Gulp.js Logo">
-{% endfigure %}
+<figure class="image-figure">
+  <div class="figure-content">
+    <img src="{{ site.url }}/assets/images/artikel/gulp-tutorial-1.png" alt="Gulp.js Logo">
+  </div>
+</figure>
 
 {% include articles/gulp-toc.html %}
 
@@ -48,14 +50,14 @@ As with Grunt.js, all you need to start is a main file. In Gulp.js this file is 
 
 So my base `gulpfile.js` is very short:
 
-{% figure code-figure "gulpfile.js" %}
-{% highlight javascript %}
+```javascript
 var requireDir = require('require-dir');
 
 // Require all tasks in gulp/tasks, including subfolders
 requireDir('./gulp/tasks', { recurse: true });
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">gulpfile.js</p>
 
 All this task is doing is loading all tasks that live in `./gulp/tasks` or in any subfolder.
 
@@ -64,28 +66,28 @@ The first thing to do is installing the required Node module `require-dir`. To r
 
 You may use the installation helper by typing the command `npm init`. But I find it faster to create a new file `package.json` and fill it with these values:
 
-{% figure code-figure "package.json" %}
-{% highlight json %}
+```json
 {
   "name": "gulp-build",
   "version": "0.0.1",
   "description": "The build process of my website with Gulp.js",
   "private": true
 }
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">package.json</p>
 
 Now I am able to install Node modules and save them to this file for later reinstallation. Go ahead and install `require-dir`:
 
-{% highlight sh %}
+```sh
 $ npm install --save-dev require-dir@0.3.0
-{% endhighlight %}
+```
 
 This will install our first Node module and place it into a folder with the name `node_modules`. So don’t delete this folder or you will have to reinstall all modules again. This can be done later with `npm install`. The command will install all modules in the `package.json` file.
 
 My Jekyll website lives in a folder called `app`. All my tasks will be placed in folder with the name `gulp`. Go a head and create a folder and within a subfolder with the name `tasks`. After installing the first module the structure of our project will look like this:
 
-{% highlight sh %}
+```sh
 .
 ├── app
 │   ├── _assets
@@ -102,47 +104,47 @@ My Jekyll website lives in a folder called `app`. All my tasks will be placed in
 ├── node_modules
 │   └── require-dir
 └── package.json
-{% endhighlight %}
+```
 
 ## Jekyll
 
 This tutorial uses [Jekyll](http://jekyllrb.com/) to build the HTML of the website. Creating a new Jekyll website is fast and easy:
 
-{% highlight sh %}
+```sh
 $ gem install jekyll
 $ jekyll new app
 $ cd app
 $ jekyll serve
-{% endhighlight %}
+```
 
 But I actually don’t install Jekyll globally, but with [Bundler](http://bundler.io/). This way all my Gems will be installed with my project and I don’t have to be concerned about the correct version.
 
 I install Bundler globally:
 
-{% highlight sh %}
+```sh
 $ gem install bundler
-{% endhighlight %}
+```
 
 Now I create an empty file in my projects folder with the name `Gemfile` and add these lines:
 
-{% highlight ruby %}
+```ruby
 source "https://rubygems.org"
 
 gem 'jekyll', '~> 2.5.2'
 gem 'sass', '>= 3.3'
-{% endhighlight %}
+```
 
 Now I install the Gems by typing:
 
-{% highlight sh %}
+```sh
 $ bundle install
-{% endhighlight %}
+```
 
 If you installed Jekyll with Bundler run inside of your project directory:
 
-{% highlight sh %}
+```sh
 $ bundle exec jekyll new app
-{% endhighlight %}
+```
 
 Did you install it globally? Then just drop the `bundle exec` from the command.
 

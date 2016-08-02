@@ -8,7 +8,7 @@ author: "Stefan Imhoff"
 og_image: "/assets/images/artikel/gulp-tutorial-5.jpg"
 description: "The ultimative tutorial and guide for Gulp.js: How to bundle JavaScript files with Browserify and use CommonJS modules to structure and organize your code."
 categories:
-- Code
+- code
 tags:
 - gulp
 - tutorial
@@ -20,10 +20,13 @@ tags:
 
 This is the 5th part of my series *Introduction to Gulp.js*. Today I will show how to use Browserify to bundle your JavaScript and use CommonJS modules to run node modules in the Browser.
 
-{% figure image-figure attribution attribution-caption "If <em>Double Gulp</em> isn’t enough, try <strong>Ultimate Gulp</strong> or <strong>Xtreme Gulp</strong>" %}
-<img src="{{ site.url }}/assets/images/artikel/gulp-tutorial-5.jpg" alt="Ultimate Gulp and X-Treme Gulp">
-<p class="attribution-text"><svg class="attribution-icon-cc"><use xlink:href="#cc"></use></svg> Keegan Berry, <a href="https://www.flickr.com/photos/superdeathsquid/535131057">DSCN8833</a></p>
-{% endfigure %}
+<figure class="image-figure attribution attribution-caption">
+  <div class="figure-content">
+    <img src="{{ site.url }}/assets/images/artikel/gulp-tutorial-5.jpg" alt="Ultimate Gulp and X-Treme Gulp">
+    <p class="attribution-text"><svg class="attribution-icon-cc"><use xlink:href="#cc"></use></svg> Keegan Berry, <a href="https://www.flickr.com/photos/superdeathsquid/535131057">DSCN8833</a></p>
+  </div>
+  <figcaption>If <em>Double Gulp</em> isn’t enough, try <strong>Ultimate Gulp</strong> or <strong>Xtreme Gulp</strong></figcaption>
+</figure>
 
 {% include articles/gulp-toc.html %}
 
@@ -37,14 +40,13 @@ This task I saw in the [gulp-starter](https://github.com/vigetlabs/gulp-starter)
 ## Creating JavaScript files with Browserify
 Install the node modules needed for this task:
 
-{% highlight sh %}
+```sh
 $ npm install --save-dev browserify@11.2.0 vinyl-source-stream@1.0.0 watchify@3.4.0 gulp-util@3.0.1 pretty-hrtime@1.0.1 gulp-notify@2.0.0
-{% endhighlight %}
+```
 
 Create the entry in the `config.js` file:
 
-{% figure code-figure "gulp/config.js" %}
-{% highlight javascript %}
+```javascript
 browserify: {
   // Enable source maps
   debug: true,
@@ -62,11 +64,11 @@ browserify: {
     outputName: 'head.js'
   }]
 }
-{% endhighlight %}
-{% endfigure %}
+```
 
-{% figure code-figure "gulp/tasks/development/scripts.js" %}
-{% highlight javascript %}
+<p class="code-meta">gulp/config.js</p>
+
+```javascript
 var gulp         = require('gulp');
 var browsersync  = require('browser-sync');
 var browserify   = require('browserify');
@@ -142,13 +144,13 @@ gulp.task('scripts', function(callback) {
   // Start bundling with Browserify for each bundleConfig specified
   config.bundleConfigs.forEach(browserifyThis);
 });
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">gulp/tasks/development/scripts.js</p>
 
 This task has some additional utilities for handling errors and logging the bundling process. Put these into a `util` folder in your `gulp` folder:
 
-{% figure code-figure "gulp/util/bundleLogger.js" %}
-{% highlight javascript %}
+```javascript
 /* bundleLogger
    ------------
    Provides gulp style logs to the bundle method in browserify.js
@@ -170,11 +172,11 @@ module.exports = {
     gutil.log('Bundled', gutil.colors.green(filepath), 'in', gutil.colors.magenta(prettyTime));
   }
 };
-{% endhighlight %}
-{% endfigure %}
+```
 
-{% figure code-figure "gulp/util/handleErrors.js" %}
-{% highlight javascript %}
+<p class="code-meta">gulp/util/bundleLogger.js</p>
+
+```javascript
 var notify = require("gulp-notify");
 
 module.exports = function() {
@@ -190,14 +192,14 @@ module.exports = function() {
   // Keep gulp from hanging on this task
   this.emit('end');
 };
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">gulp/util/handleErrors.js</p>
 
 ## Using CommonJS Modules
 Writing CommonJS modules is quite nice. You just export your function, object, string, integer or whatever you like to export as a module or just individually:
 
-{% figure code-figure "math.js" %}
-{% highlight javascript %}
+```javascript
 exports.add = function() {
   var sum = 0, i = 0, args = arguments, 1 = args.length;
   while (i < 1) {
@@ -205,55 +207,55 @@ exports.add = function() {
   }
   return sum;
 };
-{% endhighlight %}
-{% endfigure %}
+```
 
-{% figure code-figure "navigation.js" %}
-{% highlight javascript %}
+<p class="code-meta">math.js</p>
+
+```javascript
 module.exports = {
   toggleNavigation: function() {
     ...
   }
 };
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">navigation.js</p>
 
 Later you import your modules and use them:
 
-{% figure code-figure "increment.js" %}
-{% highlight javascript %}
+```javascript
 var add = require('./math').add;
 
 exports.increment = function(val) {
   return add(val, 1);
 };
-{% endhighlight %}
-{% endfigure %}
+```
 
-{% figure code-figure "application.js" %}
-{% highlight javascript %}
+<p class="code-meta">increment.js</p>
+
+```javascript
 var navigation = require('./navigation');
 var triggerNavigation = document.querySelector('.toggle-navigation');
 
 document.addEventListener('DOMContentLoaded', function() {
   triggerNavigation.addEventListener('click', navigation.toggleNavigation);
 });
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">application.js</p>
 
 ## Loading non-CommonJS files
 But one problem remains: How do I use JavaScript files, which aren’t written in CommonJS syntax? Like Modernizr oder jQuery?
 
 I need to install `browserify-shim`:
 
-{% highlight sh %}
+```sh
 $ npm install --save-dev browserify-shim@3.8.0
-{% endhighlight %}
+```
 
 I open my `package.json` file and need to add a few lines:
 
-{% figure code-figure "package.json" %}
-{% highlight json %}
+```json
 {
   "...": "...",
   "browser": {
@@ -273,28 +275,29 @@ I open my `package.json` file and need to add a few lines:
     "...": "..."
   }
 }
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">package.json</p>
 
 In the section `"browser"` you point `browserify-shim` to the asset you want to shim. I use [Bower](http://bower.io/) and have installed my packages into `app/_bower_components/`. The name you choose is the name you have to require later in your JavaScripts.
 
 Within `"browerify-shim"` you decide where to map this require to. To include jQuery or Modernizr later you would write:
 
-{% figure code-figure "app/_assets/javascripts/head.js" %}
-{% highlight javascript %}
+```javascript
 require('modernizr');
-{% endhighlight %}
-{% endfigure %}
+```
 
-{% figure code-figure "app/_assets/javascripts/application.js" %}
-{% highlight javascript %}
+<p class="code-meta">app/assets/javascripts/head.js</p>
+
+```javascript
 require('jquery');
 
 $(function() {
   console.log("jQuery and Modernizr loaded");
 });
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">app/_assets/javascripts/application.js</p>
 
 You have to run `npm install` once you added a new entry to your `package.json` file.
 

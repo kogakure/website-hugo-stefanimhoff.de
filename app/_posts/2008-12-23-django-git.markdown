@@ -6,7 +6,7 @@ description: "Mein persönlicher Jahresrückblick für 2008: Ich kaufe mir einen
 author: "Stefan Imhoff"
 date: 2008-12-23 15:00
 categories:
-- Persoenlich
+- persoenlich
 tags:
 - django
 - git

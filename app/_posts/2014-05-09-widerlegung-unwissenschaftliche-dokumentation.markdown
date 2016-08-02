@@ -9,8 +9,8 @@ description: "Eine sehr interessante Dokumentation, die 'Ancient Aliens', eine u
 og_image: "/assets/images/artikel/pakals-grabplatte.jpg"
 widont: false
 categories:
-- Film
-- Empfehlung
+- film
+- empfehlung
 tags:
 - wissenschaft
 - aliens
@@ -23,10 +23,13 @@ Ob es sich dabei um historische Bauten, Kulturen, evolutionsbiologische Erkenntn
 
 Manche Personen, wie z. B. Erich von Däniken, haben ihr ganzes Leben solchen wirren Theorien gewidmet. Anstatt eine Sache mit wissenschaftlicher Genauigkeit zu untersuchen und zu hinterfragen, werden Theorien über völlig unglaubwürdige Vermutungen und Geschichten erdacht, Parallelen zwischen Kulturen  oder über Zeiten und Räume hinweg gezogen.
 
-{% figure image-figure image-figure-left attribution "Kein antiker Raumfahrer, sondern der Maya-König K'inich Janaab' Pakal im Augenblick seines Todes. Im Hintergrund der Weltenbaum und die Unterwelt unter ihm." %}
-<img src="{{ site.url }}/assets/images/artikel/pakals-grabplatte.jpg" alt="Pakal's Grabplatte">
-<p class="attribution-text"><svg class="attribution-icon-cc"><use xlink:href="#cc"></use></svg> malavodao, <a href="https://www.flickr.com/photos/malavoda/518538543">Pakal's Grabplatte</a></p>
-{% endfigure %}
+<figure class="image-figure image-figure-left attribution">
+  <div class="figure-content">
+    <img src="{{ site.url }}/assets/images/artikel/pakals-grabplatte.jpg" alt="Pakal's Grabplatte">
+    <p class="attribution-text"><svg class="attribution-icon-cc"><use xlink:href="#cc"></use></svg> malavodao, <a href="https://www.flickr.com/photos/malavoda/518538543">Pakal's Grabplatte</a></p>
+  </div>
+  <figcaption>Kein antiker Raumfahrer, sondern der Maya-König K'inich Janaab' Pakal im Augenblick seines Todes. Im Hintergrund der Weltenbaum und die Unterwelt unter ihm.</figcaption>
+</figure>
 
 Wenn einzelne Dinge aus ihrem Kontext gerissen werden, klingt elektrisches Licht im alten Ägypten, Ufolandeplattformen auf antiken Bauwerken, Bilder von uralten Raumfahrern, Besuche von übermächtigen Wesen aus dem Weltall plötzlich als die *einzig plausible* Lösung für wissenschaftliche Fragen.
 
@@ -70,8 +73,8 @@ Bei den Maya lässt sich diese Entwicklung sogar geschichtlich nachweisen: Die e
 Es gibt noch mehr Beispiele in *Ancient Aliens*, wie z. B. die *Straw Man Fallacy*, die sogar direkt von den Produzenten der Dokumentation erwähnt wird. Wer mehr über unser Gehirn wissen möchte, dem empfehle ich diese beiden Bücher:
 
 <ul>
-<li><a href="{% amazon 1851689397 %}">You Are Not So Smart: Why Your Memory Is Mostly Fiction, Why You Have Too Many Friends On Facebook And 46 Other Ways You're Deluding Yourself</a>, deutsche Übersetzung unter dem Titel <a href="{% amazon 3868822739 %}">Ich denke, also irre ich: Wie unser Gehirn uns jeden Tag täuscht</a></li>
-<li><a href="{% amazon 0141033576 %}">Thinking, Fast and Slow</a>, deutsche Übersetzung unter dem Titel <a href="{% amazon 3886808866 %}">Schnelles Denken, langsames Denken</a></li>
+<li><a href="http://www.amazon.de/gp/product/1851689397?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=1851689397">You Are Not So Smart: Why Your Memory Is Mostly Fiction, Why You Have Too Many Friends On Facebook And 46 Other Ways You're Deluding Yourself</a>, deutsche Übersetzung unter dem Titel <a href="http://www.amazon.de/gp/product/3868822739?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=3868822739">Ich denke, also irre ich: Wie unser Gehirn uns jeden Tag täuscht</a></li>
+<li><a href="http://www.amazon.de/gp/product/0141033576?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=0141033576">Thinking, Fast and Slow</a>, deutsche Übersetzung unter dem Titel <a href="http://www.amazon.de/gp/product/3886808866?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=3886808866">Schnelles Denken, langsames Denken</a></li>
 </ul>
 
 Beide Bücher erklären, warum unser Gehirn so funktionert, wie es ist und wo dessen Schwächen liegen. Nach dem Studium dieser Bücher wird man zwar nicht immun gegen diese, aber kann möglicherweise hin und wieder in sich selbst oder bei anderen erkennen, wenn das Gehirn auf einen der untersuchten Denkfehler hereinfällt.

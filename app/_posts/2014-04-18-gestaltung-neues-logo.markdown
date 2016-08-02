@@ -7,7 +7,7 @@ date: 2014-04-18 19:00
 description: "Einblick in die Gestaltung meines neuen Logos und Rakkan: Idee, Recherche und ein kurzer Exkurs über die Chinesische Schrift."
 og_image: "/assets/images/artikel/rakkan.jpg"
 categories:
-- Design
+- design
 tags:
 - rakkan
 - hanko
@@ -26,9 +26,12 @@ Für mich stand schon relativ früh fest, dass ich ein *Rakkan* anstelle eines m
 
 Ein Rakkan (oder Hanko) wird in Japan ein Siegel genannt, das meist in Stein geschnitzt, die Signatur eines Künstler darstellt und von diesem unter die Werke gestempelt wird, und damit wie eine Unterschrift funktioniert.
 
-{% figure image-figure image-figure-fullsize "Abdruck meines Rakkan unter einem von mir geschriebenem Symbol für 忍 (Shinobi)." %}
-<img src="{{ site.url }}/assets/images/artikel/rakkan.jpg" alt="Rakkan unter mit Tinte geschriebenem Schriftzeichen">
-{% endfigure %}
+<figure class="image-figure image-figure-fullsize">
+  <div class="figure-content">
+    <img src="{{ site.url }}/assets/images/artikel/rakkan.jpg" alt="Rakkan unter mit Tinte geschriebenem Schriftzeichen">
+  </div>
+  <figcaption>Abdruck meines Rakkan unter einem von mir geschriebenem Symbol für 忍 (Shinobi).</figcaption>
+</figure>
 
 Auch schon bei meinem [Kampfkunst-Portal](http://kogakure.de/) verwende ich als Logo ein solches Siegel, nur dort war die Vorlage für dieses Logo damals mein wirkliches Siegel, das ich bei einem Künstler in Auftrag gegeben hatte.
 
@@ -71,9 +74,12 @@ Ein solches Siegel lässt sich in zwei verschiedene Varianten erstellen: **Yin**
 
 Zuerst fertigte ich zahlreiche Bleistiftzeichnungen an, erst von einzelnen Zeichen, die mir gefielen, später von Kombinationen. Ich überlegte mir, wie ein Künstler einen traditionellen Stempel schnitzen würde, wie die Buchstaben sich berühren und stützen, um dem Siegel die nötige Stabilität zu geben.
 
-{% figure image-figure image-figure-fullsize "Doppelseite aus meinem Moleskine mit Bleistiftzeichnungen verschiedener Zeichen." %}
-<img src="{{ site.url }}/assets/images/artikel/moleskine-bleistiftzeichnungen.jpg" alt="Moleskine mit Bleistiftzeichnungen von Schriftzeichen">
-{% endfigure %}
+<figure class="image-figure image-figure-fullsize">
+  <div class="figure-content">
+    <img src="{{ site.url }}/assets/images/artikel/moleskine-bleistiftzeichnungen.jpg" alt="Moleskine mit Bleistiftzeichnungen von Schriftzeichen">
+  </div>
+  <figcaption>Doppelseite aus meinem Moleskine mit Bleistiftzeichnungen verschiedener Zeichen.</figcaption>
+</figure>
 
 Nachdem ich meine finale Variante entwickelt hatte, zeichnete ich die Bleistiftlinien mit einem sehr dicken Textmarker nach (nicht ohne dabei fast meinen Bambustisch zu ruinieren, da ich *natürlich* aus Faulheit auf eine Unterlage verzichtete). Die Struktur, die entsteht, wenn Tinte sich im Papier ausbreitet sah einer in Stein geschnitzten Kante sehr ähnlich.
 

@@ -6,7 +6,7 @@ description: "Mein persönlicher Jahresrückblick für 2007: ExpressionEngine, S
 author: "Stefan Imhoff"
 date: 2007-12-24 14:00
 categories:
-- Persoenlich
+- persoenlich
 tags:
 - jahresrueckblick
 ---

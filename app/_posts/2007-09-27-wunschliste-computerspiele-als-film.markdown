@@ -6,7 +6,7 @@ description: "Meine persönliche Wunschliste für Computerspiele, die ich gerne 
 author: "Stefan Imhoff"
 date: 2007-09-27 20:00
 categories:
-- Persoenlich
+- persoenlich
 tags:
 - kino
 - film

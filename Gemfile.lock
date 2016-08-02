@@ -54,10 +54,6 @@ GEM
       octopress-hooks (~> 2.0)
     octopress-hooks (2.6.1)
       jekyll (>= 2.0)
-    posix-spawn (0.3.11)
-    pygments.rb (0.6.3)
-      posix-spawn (~> 0.3.6)
-      yajl-ruby (~> 1.2.0)
     rb-fsevent (0.9.6)
     rb-gsl (1.16.0.6)
       gsl
@@ -70,7 +66,6 @@ GEM
     sass (3.4.19)
     stringex (2.5.2)
     titlecase (0.1.1)
-    yajl-ruby (1.2.1)
 
 PLATFORMS
   ruby
@@ -83,10 +78,9 @@ DEPENDENCIES
   json (~> 1.8.3)
   narray!
   octopress
-  pygments.rb (~> 0.6.3)
   rb-gsl (~> 1.16, >= 1.16.0.6)
   rubypants (~> 0.2.0)
   stringex (~> 2.5.2)
 
 BUNDLED WITH
-   1.10.6
+   1.12.5

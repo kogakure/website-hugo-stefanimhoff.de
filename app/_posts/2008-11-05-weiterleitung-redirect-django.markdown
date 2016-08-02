@@ -6,7 +6,7 @@ description: "Einführung in das Modul für Weiterleitung von Django: Mit diesem
 author: "Stefan Imhoff"
 date: 2008-11-05 07:00
 categories:
-- Code
+- code
 tags:
 - django
 - redirect
@@ -29,12 +29,12 @@ Um diese Funktion zu aktivieren muss man in der `settings.py` die Einstellung `D
 
 Es ist zusätzlich noch möglich Anfänge und Endungen mitzugeben, die ignoriert werden sollen: `IGNORABLE_404_ENDS`, `IGNORABLE_404_STARTS`. In einem Array folgen dann einfach die gewünschten Endungen:
 
-{% figure code-figure "settings.py" %}
-{% highlight python linenos %}
+```python
 IGNORABLE_404_ENDS = ('favicon.ico','.php')
 IGNORABLE_404_STARTS = ('/cgi-bin/','/css/','/scripts/','/images/')
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">settings.py</p>
 
 Benachrichtigt werden alle Empfänger, die unter der Einstellung `ADMINS` eingetragen sind.
 
@@ -50,7 +50,7 @@ In einer Diskussion mit [Martin Mahner](http://mahner.org/), habe ich aber die �
 
 Dafür richten man in seinem VHost einfach folgende Mod_Rewrite-Direktiven ein:
 
-{% highlight apacheconf linenos %}
+```apacheconf
 # Remove WWW
 RewriteCond %{HTTP_HOST} !^domain\.de$
 RewriteRule ^(.*)$ http://domain.de$1 [R=301,L]
@@ -59,7 +59,7 @@ RewriteRule ^(.*)$ http://domain.de$1 [R=301,L]
 RewriteCond $1 !/$
 RewriteCond %{REQUEST_URI} !^(/sitemap(.*)\.xml$|/robots\.txt$|(.*)\.html$|(.*)\.htm$|(.*)\.jpg$|(.*)\.png$|(.*)\.gif$|(.*)\.ico$)
 RewriteRule (.+) http://domain.de$1/ [R=301,L]
-{% endhighlight %}
+```
 
 Diese Direktiven entfernen das *www* und hängen ans Ende der URL einen Slash an, außer bei bestimmten zu definierenden Endungen.
 

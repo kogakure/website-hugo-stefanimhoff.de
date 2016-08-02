@@ -6,7 +6,7 @@ description: "Mittlerweile gibt es gute Lösungen für alltägliche Probleme mit
 author: "Stefan Imhoff"
 date: 2010-09-11 16:00
 categories:
-- Code
+- code
 tags:
 - django
 ---

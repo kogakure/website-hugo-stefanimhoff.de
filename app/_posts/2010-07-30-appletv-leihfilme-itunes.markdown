@@ -6,7 +6,7 @@ description: "In diesem Artikel rege ich mich über die Auswahl der Leihfilme au
 author: "Stefan Imhoff"
 date: 2010-07-30 07:00
 categories:
-- Rant
+- rant
 tags:
 - apple
 - appletv

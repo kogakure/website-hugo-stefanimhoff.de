@@ -8,8 +8,8 @@ updated: 2014-10-25T13:51:00+02:00
 og_image: "/assets/images/artikel/i-love-jekyll.jpg"
 description: "Über statische Seitengeneratoren und warum sie eine mächtige Alternative zu Systemen wie WordPress darstellen."
 categories:
-- Code
-- Empfehlung
+- code
+- empfehlung
 tags:
 - jekyll
 - octopress
@@ -17,9 +17,11 @@ tags:
 
 Seit kurzem arbeite ich am Redesign meiner Kampfkunst-Website [kogakure.de](http://kogakure.de). Wie die meisten Websites hat auch diese einmal als eine Sammlung von statischen HTML-Seiten begonnen.
 
-{% figure image-figure image-figure-center %}
-<img src="{{ site.url }}/assets/images/artikel/i-love-jekyll.jpg" alt="I ♥  Jekyll">
-{% endfigure %}
+<figure class="image-figure image-figure-center">
+  <div class="figure-content">
+    <img src="{{ site.url }}/assets/images/artikel/i-love-jekyll.jpg" alt="I ♥  Jekyll">
+  </div>
+</figure>
 
 Als ich 1999 die erste Version live gestellt habe, waren mir Web-Programmierung oder dynamische Seiten noch völlig fremd.
 
@@ -44,12 +46,12 @@ Ich hatte schon im April 2014 meine [eigene Website](http://stefanimhoff.de) mit
 ## Besonderheiten von Jekyll
 Durch [statische Seitengeneratoren](http://www.staticgen.com) habe ich meinen Spaß an Nebenprojekten wiederentdeckt. Es dauert nur wenige Minuten und schon hat man so ein Projekt aufgesetzt. Selbst jemand mit wenig Erfahrung kann so schnell einen Prototypen erstellen oder sich einen Blog selbst bauen:
 
-{% highlight sh %}
+```sh
 $ gem install jekyll
 $ jekyll new myblog
 $ cd myblog
 $ jekyll serve
-{% endhighlight %}
+```
 
 Statische Seitengeneratoren bieten so gut wie alles, was man sich wünschen kann: einen **Entwicklungsserver**, Unterstützung für **Markdown**, Textile und pures HTML. Seiten und Posts (wie bei einem Blog) mit einer Möglichkeit für Meta-Informationen (im YAML-Format).
 

@@ -7,7 +7,7 @@ author: "Stefan Imhoff"
 date: 2008-04-18 07:00
 updated: 2014-10-25 13:06
 categories:
-- Empfehlung
+- empfehlung
 tags:
 - terminal
 - command
@@ -15,7 +15,7 @@ tags:
 
 Weil es grad alle machen: Ich weiß, was du letztens ins Terminal getippt hast.
 
-{% highlight sh %}
+```sh
 $ history | awk '{print $2}' | sort | uniq -c | sort -rn | head -10
 
 172   cd
@@ -28,7 +28,7 @@ $ history | awk '{print $2}' | sort | uniq -c | sort -rn | head -10
  10   ssh
  10   gba
   9   gp
-{% endhighlight %}
+```
 
 ### Legende
 
@@ -41,7 +41,7 @@ $ history | awk '{print $2}' | sort | uniq -c | sort -rn | head -10
 
 Beim reviewen des Artikels habe ich mich spontan entschlossen, das ganze noch einmal heute (Mai 2013) zu machen, um zu schauen, was sich verändert hat:
 
-{% highlight sh %}
+```sh
 $ history | awk '{print $2}' | sort | uniq -c | sort -rn | head -10
 
 1113 git
@@ -54,4 +54,4 @@ $ history | awk '{print $2}' | sort | uniq -c | sort -rn | head -10
  218 npm
  216 sudo
  183 bundle
-{% endhighlight %}
+```

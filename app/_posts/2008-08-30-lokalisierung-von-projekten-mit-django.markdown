@@ -7,7 +7,7 @@ author: "Stefan Imhoff"
 date: 2008-08-30 15:25
 updated: 2014-10-25 13:11
 categories:
-- Code
+- code
 tags:
 - django
 - lokalisierung
@@ -28,8 +28,7 @@ Dieses Beispiel setzt auf dem Code für das offizielle Django-Tutorial auf und f
 
 Der Einfachheit halber lokalisiere ich nur vier dieser Dateien:
 
-{% figure code-figure "admin.py" %}
-{% highlight python linenos %}
+```python
 from django.contrib import admin
 
 from models import Poll, Choice
@@ -51,12 +50,12 @@ class PollAdmin(admin.ModelAdmin):
 
 admin.site.register(Poll, PollAdmin)
 admin.site.register(Choice)
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">admin.py</p>
 
 
-{% figure code-figure "models.py" %}
-{% highlight python linenos %}
+```python
 import datetime
 from django.db import models
 
@@ -82,11 +81,11 @@ class Choice(models.Model):
     def __unicode__(self):
         return self.choice
 
-{% endhighlight %}
-{% endfigure %}
+```
 
-{% figure code-figure "polls/poll_list.html" %}
-{% highlight html linenos %}
+<p class="code-meta">models.py</p>
+
+```html
 {% raw %}
 {% if object_list %}
     <ul>
@@ -98,11 +97,11 @@ class Choice(models.Model):
     <p>No polls are available.</p>
 {% endif %}
 {% endraw %}
-{% endhighlight %}
-{% endfigure %}
+```
 
-{% figure code-figure "polls/results.html" %}
-{% highlight html linenos %}
+<p class="code-meta">polls/poll_list.html</p>
+
+```html
 {% raw %}
 <h1>{{ object.question }}</h1>
 
@@ -112,8 +111,9 @@ class Choice(models.Model):
 {% endfor %}
 </ul>
 {% endraw %}
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">polls/results.html</p>
 
 ## Lokalisierung der Python-Dateien
 
@@ -121,8 +121,7 @@ In jeder Python-Datei, die lokalisierte Zeichenketten enthalten soll, muss zuers
 
 In der `admin.py` wird am Anfang das erwähnte Submodul importiert. Jetzt werden alle Zeichenketten wie unten zu sehen geändert. Dabei ist es am besten, wenn alle Zeichenketten als Unicode mit dem kleinen `u` davor markiert werden. Die Zeichenketten müssen in Klammern eingefasst werden, da `ugetttext` eine Funktion ist.
 
-{% figure code-figure "admin.py" %}
-{% highlight python linenos %}
+```python
 ...
 from django.utils.translation import ugettext_lazy as _
 ...
@@ -133,13 +132,13 @@ fieldsets = [
     (_(u'Date information'), {'fields': ['pub_date'], 'classes': ['collapse']}),
 ]
 ...
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">admin.py</p>
 
 Django nimmt für die Felder im Admin-Backend automatisch den Datenmodellnamen mit einem Großbuchstaben als Label. Um diesen zu lokalisieren muss man ihn ausdrücklich angeben. Bei `ForeignKey`-Feldern ist es nötig den Namen mit `verbose_name` anzugeben.
 
-{% figure code-figure "models.py" %}
-{% highlight python linenos %}
+```python
 ...
 from django.utils.translation import ugettext_lazy as _
 ...
@@ -160,8 +159,9 @@ choice = models.CharField(\_(u'Choice'), max_length=200)
 votes = models.IntegerField(\_(u'Votes'))
 
 ...
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">models.py</p>
 
 ## Lokalisierung der HTML-Templates
 
@@ -169,8 +169,7 @@ In den HTML-Templates wird eine etwas andere Syntax benutzt. Zuerst muss am Anfa
 
 Um eine einfache Zeichenkette zu markieren, benutzt man `{% raw %}{% trans "" %}{% endraw %}`. Es gibt auch Möglichkeiten Variablen oder lange Blöcke zu übersetzten. Hier verweise ich der Einfachheit halber auf die Dokumentation.
 
-{% figure code-figure "polls/poll_list.html" %}
-{% highlight html linenos %}
+```html
 {% raw %}
 {% load i18n %}
 
@@ -180,13 +179,13 @@ Um eine einfache Zeichenkette zu markieren, benutzt man `{% raw %}{% trans "" %}
     <p>{% trans "No polls are available." %}</p>
 {% endif %}
 {% endraw %}
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">polls/poll_list.html</p>
 
 Die Pluralisierung funktioniert (leider) nicht mehr wie gewohnt, wenn man sie lokalisiert. Dafür muss man eine Abfrage im `{% raw %}{% if %}{% endraw %}`-ähnlichen Stil einbauen und die Menge eines Objektes abfragen.
 
-{% figure code-figure "polls/result.html" %}
-{% highlight html linenos %}
+```html
 {% raw %}
 {% load i18n %}
 
@@ -198,8 +197,9 @@ Die Pluralisierung funktioniert (leider) nicht mehr wie gewohnt, wenn man sie lo
 {% endfor %}
 </ul>
 {% endraw %}
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">polls/result.html</p>
 
 ## Erzeugen der Sprachdateien
 
@@ -207,9 +207,9 @@ Um jetzt eine Übersetzung für die Applikation oder das Projekt zu erzeugen, mu
 
 Im Terminal bewegt man sich jetzt in den Projekt-Root (oder in einen Applikations-Root) und führt diesen Befehl aus:
 
-{% highlight sh %}
+```sh
 $ django-admin.py makemessages -l de
-{% endhighlight %}
+```
 
 Damit wird die Sprachdatei für "Deutsch" angelegt. Diese findet man in einem Unterordner von `locale`.
 
@@ -217,9 +217,9 @@ Mit einem einfachen Texteditor oder einem `.po`-Editor kann man diese jetzt übe
 
 Wenn man damit fertig ist, führt man im Terminal diesen Befehl aus:
 
-{% highlight sh %}
+```sh
 $ django-admin.py compilemessages
-{% endhighlight %}
+```
 
 Dadurch wird die Datei in eine `.mo`-Datei umgewandelt.
 

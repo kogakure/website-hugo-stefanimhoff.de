@@ -8,7 +8,7 @@ author: "Stefan Imhoff"
 og_image: "/assets/images/artikel/gulp-tutorial-13.jpg"
 description: "The ultimative tutorial and guide for Gulp.js: How to use revisioning to allow long caching of your assets and replace them  with hashed file names, that can be cache busted."
 categories:
-- Code
+- code
 tags:
 - gulp
 - tutorial
@@ -18,18 +18,20 @@ tags:
 
 This is the 13th part of my series *Introduction to Gulp.js*. Today I will write the task to revision my static assets.
 
-{% figure image-figure attribution %}
-<img src="{{ site.url }}/assets/images/artikel/gulp-tutorial-13.jpg" alt="A woman dumping a Double Gulp on herself">
-<p class="attribution-text"><svg class="attribution-icon-cc"><use xlink:href="#cc"></use></svg> Reed, <a href="https://www.flickr.com/photos/ishatter/3614680378">dump it</a></p>
-{% endfigure %}
+<figure class="image-figure attribution">
+  <div class="figure-content">
+    <img src="{{ site.url }}/assets/images/artikel/gulp-tutorial-13.jpg" alt="A woman dumping a Double Gulp on herself">
+    <p class="attribution-text"><svg class="attribution-icon-cc"><use xlink:href="#cc"></use></svg> Reed, <a href="https://www.flickr.com/photos/ishatter/3614680378">dump it</a></p>
+  </div>
+  <figcaption></figcaption>
+</figure>
 
 {% include articles/gulp-toc.html %}
 
 ## Copy Vector Fonts for Production
 Before I can work on the fun part of revisioning my asset files I first have to write another boring and short task, which is doing just one simple thing: Copy the fonts to the production assets folder.
 
-{% figure code-figure "gulp/config.js" %}
-{% highlight javascript %}
+```javascript
 copyfonts: {
   development: {
     ...
@@ -39,11 +41,11 @@ copyfonts: {
     dest: productionAssets + '/fonts'
   }
 }
-{% endhighlight %}
-{% endfigure %}
+```
 
-{% figure code-figure "gulp/tasks/production/copy-fonts.js" %}
-{% highlight javascript %}
+<p class="code-meta">gulp/config.js</p>
+
+```javascript
 var gulp   = require('gulp');
 var config = require('../../config').copyfonts.production;
 
@@ -54,8 +56,9 @@ gulp.task('copy:fonts:production', function() {
   return gulp.src(config.src)
     .pipe(gulp.dest(config.dest));
 });
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">gulp/tasks/production/copy-fonts.js</p>
 
 ## Revisioning
 Optimizing of my assets is done. But one important thing is missing: Revisioning.
@@ -68,12 +71,11 @@ My next task will rename all assets. This way the `application.css` will become 
 
 I install `gulp-rev`, which will handle this renaming of assets:
 
-{% highlight sh %}
+```sh
 $ npm install --save-dev gulp-rev@2.0.1
-{% endhighlight %}
+```
 
-{% figure code-figure "gulp/config.js" %}
-{% highlight javascript %}
+```javascript
 revision: {
   src: {
     assets: [
@@ -91,13 +93,13 @@ revision: {
     }
   }
 }
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">gulp/config.js</p>
 
 This task will rename all assets and create a JSON file containing all files, which where renamed and their old and new file names.
 
-{% figure code-figure "gulp/tasks/production/revision.js" %}
-{% highlight javascript %}
+```javascript
 var gulp   = require('gulp');
 var rev    = require('gulp-rev');
 var config = require('../../config').revision;
@@ -114,20 +116,20 @@ gulp.task('revision', function() {
     .pipe(rev.manifest({ path: config.dest.manifest.name }))
     .pipe(gulp.dest(config.dest.manifest.path));
 });
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">gulp/tasks/production/revision.js</p>
 
 ## Replacing Paths to Assets
 The last step of my production build is to replace all occurrences of assets with a revisioned file name in all files.
 
 This task will need `gulp-rev-collector` to replace the paths names to assets:
 
-{% highlight sh %}
+```sh
 $ npm install --save-dev gulp-rev-collector@0.1.1
-{% endhighlight %}
+```
 
-{% figure code-figure "gulp/config.js" %}
-{% highlight javascript %}
+```javascript
 collect: {
   src: [
     productionAssets + '/manifest.json',
@@ -136,13 +138,13 @@ collect: {
   ],
   dest: production
 }
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">gulp/config.js</p>
 
 I replace these paths only in files I know they could contain paths to assets. Don’t include any images or binary files. Revision collector will try to open them and destroy most binary files.
 
-{% figure code-figure "gulp/tasks/production/rev-collector.js" %}
-{% highlight javascript %}
+```javascript
 var gulp    = require('gulp');
 var collect = require('gulp-rev-collector');
 var config  = require('../../config').collect;
@@ -156,8 +158,9 @@ gulp.task('rev:collect', function() {
   .pipe(collect())
   .pipe(gulp.dest(config.dest));
 });
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">gulp/tasks/production/rev-collector.js</p>
 
 This task will look into the `manifest.json` file and replace every path to one of the assets in every HTML, CSS, JavaScript, and Text etc.
 

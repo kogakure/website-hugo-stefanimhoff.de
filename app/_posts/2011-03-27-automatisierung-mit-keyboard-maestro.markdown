@@ -6,8 +6,8 @@ description: "Keyboard Maestro ist ein mächtiges Werkzeug zum automatisieren vo
 author: "Stefan Imhoff"
 date: 2011-03-27 12:58
 categories:
-- Empfehlung
-- Software
+- empfehlung
+- software
 tags:
 - software
 - macosx

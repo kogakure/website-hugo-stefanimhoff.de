@@ -7,7 +7,7 @@ author: "Stefan Imhoff"
 date: 2007-05-28 18:04
 updated: 2014-10-25 12:22
 categories:
-- Versionskontrolle
+- versionskontrolle
 tags:
 - tutorial
 - subversion
@@ -15,10 +15,10 @@ tags:
 
 Dieser erste Teil der Reihe *Subversion* beschäftigt sich mit der nötigen Theorie und Funktionsweise von Subversion.
 
-{% aside aside-hint %}
+<aside class="aside-hint" role="complementary">
 <h4>Versionkontrolle mit Git</h4>
 <p>Der Inhalt dieses Artikels ist noch aktuell, doch kann ich nur dringend dazu raten, sich die fantastische Alternative zu Subversion anzusehen: <a href="/2007/versionskontrolle-mit-git/">Git</a>.</p>
-{% endaside %}
+</aside>
 
 {% include articles/subversion-toc.html %}
 

@@ -6,7 +6,7 @@ description: "Eine Einführung in meine Arbeitsweise mit GTD (Getting Things Don
 author: "Stefan Imhoff"
 date: 2009-05-22 16:45
 categories:
-- Produktivitaet
+- produktivitaet
 tags:
 - things
 - evernote

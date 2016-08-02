@@ -7,7 +7,7 @@ author: "Stefan Imhoff"
 date: 2007-12-15 19:57
 updated: 2015-01-02 19:10
 categories:
-- Produktivitaet
+- produktivitaet
 tags:
 - gtd
 - macosx

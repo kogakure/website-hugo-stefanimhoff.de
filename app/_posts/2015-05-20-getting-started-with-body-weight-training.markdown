@@ -7,7 +7,7 @@ description: "Learning Body Weight Training is possible for everybody. It’s fr
 og_image: "/assets/images/artikel/calisthenics-human-flag.jpg"
 author: "Stefan Imhoff"
 categories:
-- Fitness
+- fitness
 tags:
 - calisthenics
 - body weight training
@@ -17,9 +17,12 @@ tags:
 
 I’m doing body weight training for almost a year now and really like it. It’s free, you can do it anywhere, all you need is something to push from and to pull to, and it’s fun.
 
-{% figure image-figure "Human Flag" %}
-<img src="{{ site.url }}/assets/images/artikel/calisthenics-human-flag.jpg" alt="Human Flag">
-{% endfigure %}
+<figure class="image-figure">
+  <div class="figure-content">
+    <img src="{{ site.url }}/assets/images/artikel/calisthenics-human-flag.jpg" alt="Human Flag">
+  </div>
+  <figcaption>Human Flag</figcaption>
+</figure>
 
 Two years ago I stumbled upon a new training concept founded by some guys in Munich: [Freeletics](https://www.freeletics.com/). They only trained with body weight and had a quite impressive physique.
 
@@ -33,9 +36,12 @@ And reading more about these extreme sports I found out they come with the dange
 
 Body weight training is also called *Street Workout*, *Ghetto Fitness* or *Calisthenics*. The word **Calisthenics** comes from the greek words καλός (kalos), which means *beautiful* and σθένος (sthenos), which means *strength*.
 
-{% figure image-figure "Arm Elbow Lever on Beer Bottles" %}
-<img src="{{ site.url }}/assets/images/artikel/calisthenics-arm-elbow-lever.jpg" alt="Arm Elbow Lever on Beer Bottles">
-{% endfigure %}
+<figure class="image-figure">
+  <div class="figure-content">
+    <img src="{{ site.url }}/assets/images/artikel/calisthenics-arm-elbow-lever.jpg" alt="Arm Elbow Lever on Beer Bottles">
+  </div>
+  <figcaption>Arm Elbow Lever on Beer Bottles</figcaption>
+</figure>
 
 With Calisthenics you use some basic movements like *Lunges*, *Crunches*, *Push-ups*, *Pull-ups*, *Squats*, *Dips* to strengthen your body. You **gradually** improve your skills and proceed to more difficult exercises. That’s why it’s called *Progressive Calisthenics*.
 
@@ -67,9 +73,12 @@ To reach a big goal like doing a *Human Flag* (which I haven’t reached jet) ne
 
 I keep track of my workouts in a diary and can easily see the training days in a calendar, to see if I missed too often.
 
-{% figure image-figure "Best dad ever. What is your excuse for not working out?" %}
-<img src="{{ site.url }}/assets/images/artikel/calisthenics-best-dad-ever.jpg" alt="Man doing a Pull-Up with 3 children as additional weight">
-{% endfigure %}
+<figure class="image-figure">
+  <div class="figure-content">
+    <img src="{{ site.url }}/assets/images/artikel/calisthenics-best-dad-ever.jpg" alt="Man doing a Pull-Up with 3 children as additional weight">
+  </div>
+  <figcaption>Best dad ever. What is your excuse for not working out?</figcaption>
+</figure>
 
 And I am patient. It’s more about the journey, than about the goal. It’s still an effort to train every day, to convince me to do my workout, even if the day isn’t a good one. Personally I decided to **train early in the morning**, a few minutes after I got up. This way I don’t need as much willpower as I would in the evening. Unfortunately we are all victims to [Ego Depletion](https://en.wikipedia.org/wiki/Ego_depletion), and later in the day it may be completely gone.
 

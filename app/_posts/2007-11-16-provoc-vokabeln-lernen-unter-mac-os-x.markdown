@@ -6,8 +6,8 @@ description: "Wer Fremdsprachen lernen möchte, muss Vokabeln lernen. Aber womit
 author: "Stefan Imhoff"
 date: 2007-11-16 07:00
 categories:
-- Empfehlung
-- Software
+- empfehlung
+- software
 tags:
 - macosx
 - sprache

@@ -8,7 +8,7 @@ author: "Stefan Imhoff"
 og_image: "/assets/images/artikel/gulp-tutorial-4.jpg"
 description: "The ultimative tutorial and guide for Gulp.js: How to create CSS and Source Maps with Sass and Compass."
 categories:
-- Code
+- code
 tags:
 - gulp
 - tutorial
@@ -20,10 +20,12 @@ tags:
 
 This is the 4th part of my series *Introduction to Gulp.js*. Today I will show how to use Sass (and Compass if you want) to create CSS files. Furthermore I will add vendor prefixes with Autoprefixer and create Source Maps for easier debugging of the Sass files.
 
-{% figure image-figure attribution %}
-<img src="{{ site.url }}/assets/images/artikel/gulp-tutorial-4.jpg" alt="Sarah Palin holding a Big Gulp">
-<p class="attribution-text"><svg class="attribution-icon-cc"><use xlink:href="#cc"></use></svg> Gage Skidmore, <a href="https://www.flickr.com/photos/gageskidmore/8571336210">Sarah Palin</a></p>
-{% endfigure %}
+<figure class="image-figure attribution">
+  <div class="figure-content">
+    <img src="{{ site.url }}/assets/images/artikel/gulp-tutorial-4.jpg" alt="Sarah Palin holding a Big Gulp">
+    <p class="attribution-text"><svg class="attribution-icon-cc"><use xlink:href="#cc"></use></svg> Gage Skidmore, <a href="https://www.flickr.com/photos/gageskidmore/8571336210">Sarah Palin</a></p>
+  </div>
+</figure>
 
 {% include articles/gulp-toc.html %}
 
@@ -33,14 +35,13 @@ I use [Sass](http://sass-lang.com/) as preprocessor for my CSS files. If you lik
 Go ahead and install the npm modules needed:
 
 
-{% highlight sh %}
+```sh
 $ npm install --save-dev gulp-plumber@1.0.1 gulp-ruby-sass@2.0.4 gulp-filter@3.0.1 gulp-changed@1.0.0 gulp-autoprefixer@3.0.2 gulp-sourcemaps@1.6.0
-{% endhighlight %}
+```
 
 That’s a lot, but this task will do a lot.
 
-{% figure code-figure "gulp/config.js" %}
-{% highlight javascript %}
+```javascript
 sass: {
   src:  srcAssets + '/scss/**/*.{sass,scss}',
   dest: developmentAssets + '/css',
@@ -63,11 +64,11 @@ autoprefixer: {
   ],
   cascade: true
 }
-{% endhighlight %}
-{% endfigure %}
+```
 
-{% figure code-figure "gulp/task/development/sass.js" %}
-{% highlight javascript %}
+<p class="code-meta">gulp/config.js</p>
+
+```javascript
 var gulp         = require('gulp');
 var plumber      = require('gulp-plumber');
 var browsersync  = require('browser-sync');
@@ -100,8 +101,9 @@ gulp.task('sass', function() {
     .pipe(filter.restore) // Restore original files
     .pipe(gulp.dest(config.sass.dest));
 });
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">gulp/task/development/sass.js</p>
 
 I load all my files with the suffix of `*.sass` or `*.scss`. First I pipe the files through *Plumber*. It will keep Gulp.js running if I create a syntax error in one of my files. It would normally just crash with an error. The next step creates the CSS files, running the `sass` command. I create source maps and finally put the CSS files to it’s destination.
 

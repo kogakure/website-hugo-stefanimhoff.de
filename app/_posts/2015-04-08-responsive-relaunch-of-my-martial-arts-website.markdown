@@ -7,9 +7,9 @@ date: 2015-04-07T22:00:00+01:00
 author: "Stefan Imhoff"
 og_image: "/assets/images/artikel/kogakure-de-relaunch.jpg"
 categories:
-- Design
-- Code
-- Website
+- design
+- code
+- website
 tags:
 - design
 - relaunch
@@ -21,9 +21,12 @@ tags:
 
 After 62 days of work, I relaunched today my martial arts website [kogakure.de](http://kogakure.de/) in a brand new, mobile optimized design and with a complete rewritten code base. And I have still some time left until the end of April, when Google will start to punish websites, which are not mobile-optimized.
 
-{% figure image-figure image-figure-fullsize %}
-<img src="{{ site.url }}/assets/images/artikel/kogakure-de-relaunch.jpg" alt="kogakure.de v6">
-{% endfigure %}
+<figure class="image-figure image-figure-fullsize">
+  <div class="figure-content">
+    <img src="{{ site.url }}/assets/images/artikel/kogakure-de-relaunch.jpg" alt="kogakure.de v6">
+  </div>
+  <figcaption></figcaption>
+</figure>
 
 The previous version of my website was driven by [Django](https://www.djangoproject.com/) and you can still have a look on the code on [GitHub](https://github.com/kogakure/kogakure.de-django), but I don’t use Django any more. Instead I use *Ruby on Rails* and *Ruby* a lot at work and at home, which is why it was the best solution to use [Jekyll](http://jekyllrb.com/) to create my website, as I did with this website before.
 
@@ -35,33 +38,48 @@ And in the same manner, I minimize, combine, squash, revision and optimize every
 
 To give some context, kogakure.de is my oldest website, I started it in **1999**. Back then the design was dark, ugly and with an awful typography. Originally it was intended to collect all knowledge I found about Ninja and Ninjutsu, but it became quickly quite popular.
 
-{% figure image-figure "kogakure.de v1" %}
-<img src="{{ site.url }}/assets/images/artikel/kogakure-de-v1.jpg" alt="kogakure.de v1">
-{% endfigure %}
+<figure class="image-figure">
+  <div class="figure-content">
+    <img src="{{ site.url }}/assets/images/artikel/kogakure-de-v1.jpg" alt="kogakure.de v1">
+  </div>
+  <figcaption>kogakure.de v1</figcaption>
+</figure>
 
 In *January 2002* I created the 2nd version of my website with some **PHP**, a table-based layout with tiny fonts, a fancy JavaScript navigation and Flash.
 
-{% figure image-figure "kogakure.de v2" %}
-<img src="{{ site.url }}/assets/images/artikel/kogakure-de-v2.jpg" alt="kogakure.de v2">
-{% endfigure %}
+<figure class="image-figure">
+  <div class="figure-content">
+    <img src="{{ site.url }}/assets/images/artikel/kogakure-de-v2.jpg" alt="kogakure.de v2">
+  </div>
+  <figcaption>kogakure.de v2</figcaption>
+</figure>
 
 In *September 2004* I launched a new design, for the first time with a bamboo as design element and a white design. My website was mentioned in a popular science print magazine (<cite>[P.M. Magazine](http://www.pm-magazin.de/)</cite>), which increased the visits about 8 times the regular visits.
 
-{% figure image-figure "kogakure.de v3" %}
-<img src="{{ site.url }}/assets/images/artikel/kogakure-de-v3.jpg" alt="kogakure.de v3">
-{% endfigure %}
+<figure class="image-figure">
+  <div class="figure-content">
+    <img src="{{ site.url }}/assets/images/artikel/kogakure-de-v3.jpg" alt="kogakure.de v3">
+  </div>
+  <figcaption>kogakure.de v3</figcaption>
+</figure>
 
 In *April 2006* I launched the 4th edition of kogakure.de, running on **ExpressionEngine**. I created a new version of my bamboo design in Adobe Illustrator. The same year my website became even more popular, when German television broadcasters asked me to support them with information for their documentaries (<cite>Welt der Wunder</cite>, <cite>Galileo</cite>). After the broadcast of these documentaries my visitor numbers exploded.
 
-{% figure image-figure "kogakure.de v4" %}
-<img src="{{ site.url }}/assets/images/artikel/kogakure-de-v4.jpg" alt="kogakure.de v4">
-{% endfigure %}
+<figure class="image-figure">
+  <div class="figure-content">
+    <img src="{{ site.url }}/assets/images/artikel/kogakure-de-v4.jpg" alt="kogakure.de v4">
+  </div>
+  <figcaption>kogakure.de v4</figcaption>
+</figure>
 
 In *April 2008* I relaunched the 5th edition of my website with **Django** and refreshed the design a little bit.
 
-{% figure image-figure "kogakure.de v5" %}
-<img src="{{ site.url }}/assets/images/artikel/kogakure-de-v5.jpg" alt="kogakure.de v5">
-{% endfigure %}
+<figure class="image-figure">
+  <div class="figure-content">
+    <img src="{{ site.url }}/assets/images/artikel/kogakure-de-v5.jpg" alt="kogakure.de v5">
+  </div>
+  <figcaption>kogakure.de v5</figcaption>
+</figure>
 
 ## Design
 
@@ -74,9 +92,12 @@ I always start with Typography and selected a modular scale and  a typeface very
 ### Vector Graphics
 More and more displays have a high pixel density now, which is the reason I decided to use as much vector graphics as possible. I recently read and heard a lot about SVG and decided to use SVG as my vector technique on kogakure.de. SVG is more capable and future-proof compared to vector fonts.
 
-{% figure image-figure image-figure-center "My bamboo design in Affinity Designer" %}
-<img src="{{ site.url }}/assets/images/artikel/kogakure-de-bamboo-affinity-designer.jpg" alt="My bamboo design in Affinity Designer">
-{% endfigure %}
+<figure class="image-figure image-figure-center">
+  <div class="figure-content">
+    <img src="{{ site.url }}/assets/images/artikel/kogakure-de-bamboo-affinity-designer.jpg" alt="My bamboo design in Affinity Designer">
+  </div>
+  <figcaption>My bamboo design in Affinity Designer</figcaption>
+</figure>
 
 My bamboo and logo where originally created in Adobe Illustrator and I thought it would make sense to use them as SVG. Unfortunately I had used the mesh tool of Illustrator to create my bamboo design, which is not compatible with SVG. So I had to recreate the whole design with supported gradients (linear, elliptical and radial).
 
@@ -104,9 +125,12 @@ Grid-on-Demand Systems are far more flexible. They need a preprocessor to run an
 
 I used for kogakure.de [Singularity](http://singularity.gs/), which I used before for this website. I like it in particular because it’s the most flexible system I’ve ever used. You can create every Grid imaginable with it.
 
-{% figure image-figure image-figure-center "4 different grids depending on the viewport size" %}
-<img src="{{ site.url }}/assets/images/artikel/kogakure-de-grids.jpg" alt="Grids of kogakure.de">
-{% endfigure %}
+<figure class="image-figure image-figure-center">
+  <div class="figure-content">
+    <img src="{{ site.url }}/assets/images/artikel/kogakure-de-grids.jpg" alt="Grids of kogakure.de">
+  </div>
+  <figcaption>4 different grids depending on the viewport size</figcaption>
+</figure>
 
 On my website I use four different grids: One with 3 columns, one with 6, with 14 and 16 columns. Because it’s silly to use 16 columns on a small screen or 3 on a desktop screen. With Singularity it’s possible to create grids, which change depending on a Media Query.
 

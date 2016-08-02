@@ -7,7 +7,7 @@ author: "Stefan Imhoff"
 date: 2010-10-27 18:30
 updated: 2014-10-25 13:34
 categories:
-- Code
+- code
 tags:
 - terminal
 ---
@@ -26,16 +26,16 @@ Es ist möglich Auto-Complete an beliebige Befehle anzuhängen. Die Details sind
 
 Mit dem Auto-Complete für die bekannten SSH-Server fing meine Recherche an, wozu ich in einem Forum einen Codeschnipsel gefunden habe:
 
-{% figure code-figure ".bashrc oder .bash_profile" %}
-{% highlight sh linenos %}
+```sh
 SSH_COMPLETE=( $(cut -f1 -d' ' ~/.ssh/known_hosts |\
                   tr ',' '\n' |\
                   sort -u |\
                   grep -e '[:alpha:]') )
 
 complete -o default -W "${SSH_COMPLETE[*]}" ssh
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">.bashrc oder .bash_profile</p>
 
 Dieser Befehl schneidet aus der Datei mit dem bereits besuchten Hosts vom ersten Zeichen bis zum ersten Leerzeichen die Zeichenkette aus, der eigentliche Schlüssel wird also verworfen. Dann werden alle Kommata durch Zeilenumbrüche ersetzt, was dazu dient Kombinationen aus IP und Hostname zu trennen. Anschließend werden diese sortiert und Duplikate entfernt und im letzten Schritt werden alle Zeichenketten entfernt, die nur aus Zahlen oder Punkten bestehen, also die IPs. Zurück bleibt eine Liste, in der alle Hostnamen zeilenweise stehen. Der Abschließende Befehl registriert diese Zeichenkette mit dem Befehl `ssh`. Es reicht ab jetzt aus, wenn man den Befehl tippt und dann <kbd>⇥</kbd> drückt, um eine Liste aller Server zu sehen, oder einige Buchstaben um die Server zu vervollständigen.
 
@@ -45,8 +45,7 @@ Für mich reichte das als Denkanstoß, um eine Lösung für mein Problem zu erar
 
 In dieser definiert man, wer an welchem Job arbeiten darf. So ungefähr könnte eine Konfigurationsdatei von Gitosis aussehen:
 
-{% figure code-figure "gitosis.conf" %}
-{% highlight text linenos %}
+```text
 [gitosis]
 gitweb = yes
 
@@ -61,21 +60,22 @@ writeable = repo-a repo-b repo-c
 [group praktikant]
 members = max maria
 writable = repo-c
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">gitosis.conf</p>
 
 Ich zeige den Aufbau nur, damit besser verstanden werden kann, was ich später erreichen will. Es werden Gruppen angelegt, in denen steht welche Person an welchem Job arbeiten darf. Die Repositorys müssen mit Leerzeichen getrennt sein und nacheinander folgend geschrieben werden.
 
 Folgendes Skript habe ich mir für das Problem erstellt:
 
-{% highlight sh linenos %}
+```sh
 GIT_JOBS_COMPLETE=( $(grep -i "writable" ~/Projekte/Administration/**/gitosis.conf |\
                   cut -d = -f 2 |\
                   tr ' ' '\n' |\
                   sort -u) )
 
 complete -o default -W "${GIT_JOBS_COMPLETE[*]}" gcl
-{% endhighlight %}
+```
 
 
 Ich suche mir alle Zeilen aus allen gitosis.conf-Dateien, die den String "writable" enthalten. Da ich mehre Gitosis-Instanzen verwalte, kann ich nicht nur in einer Datei suchen.

@@ -7,8 +7,8 @@ author: "Stefan Imhoff"
 date: 2007-08-28 08:24
 og_image: "/assets/images/artikel/fddb-info.png"
 categories:
-- Empfehlung
-- Website
+- empfehlung
+- website
 tags:
 - lebensmittel
 - nahrung
@@ -23,9 +23,12 @@ Auf seinen Merkzettel schreibt man seine täglich verzehrten Nahrungsmittel, Gen
 
 Die Datenbank ist sehr umfangreich und enthält sogar eine große Auswahl an Markenprodukten. Falls ein verzehrtes Produkt trotzdem mal nicht in der Datenbank sein sollte, kann man dieses eintragen. Einfach die Daten von der Packung in das Formular eintragen, EAN-Nummer (Balkencode) und ein paar weitere Angaben, dann wird das Nahrunsmittel von der Redaktion aufgenommen (denke/hoffe ich).
 
-{% figure image-figure image-figure-border "Der Detail-Screen eines Nahrungsmittels "%}
-<img src="{{ site.url }}/assets/images/artikel/fddb-info.png" alt="Screenshot von fddb.info" title="Der Detail-Screen eines Nahrungsmittels." />
-{% endfigure %}
+<figure class="image-figure image-figure-border">
+  <div class="figure-content">
+    <img src="{{ site.url }}/assets/images/artikel/fddb-info.png" alt="Screenshot von fddb.info" title="Der Detail-Screen eines Nahrungsmittels." />
+  </div>
+  <figcaption>Der Detail-Screen eines Nahrungsmittels </figcaption>
+</figure>
 
 Ein Nahrungsmittel zur Liste hinzuzufügen geht denkbar einfach: Schlagwort in die Suchmaske. Die Ergebnisse sind gruppiert und häufig benutzte Nahrungsmittel findet man in seinen Favouriten wieder. In der Übersicht des Nahrungsmittels stehen alle bekannten Informationen, Foto (falls vorhanden) und ein Diagramm zu den Anteilen der Inhaltsstoffe. Über Portions- oder Gewichtsbuttons kann das Nahrungsmittel schnell zur Liste hinzugefügt werden. Das Gewicht kann danach noch genauer angepasst werden.
 

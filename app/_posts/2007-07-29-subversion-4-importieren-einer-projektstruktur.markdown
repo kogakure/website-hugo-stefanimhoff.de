@@ -7,7 +7,7 @@ author: "Stefan Imhoff"
 date: 2007-07-29 13:00
 updated: 2014-10-25 12:29
 categories:
-- Versionskontrolle
+- versionskontrolle
 tags:
 - subversion
 - tutorial
@@ -15,10 +15,10 @@ tags:
 
 Im nächsten Schritt erzeuge ich auf der Festplatte die Struktur meines Projektes. Diese Struktur ist nicht vorgegeben und kann nach beliebiger Struktur angelegt werden, wobei es ein paar Empfehlungen und Konventionen gibt.
 
-{% aside aside-hint %}
+<aside class="aside-hint" role="complementary">
 <h4>Versionkontrolle mit Git</h4>
 <p>Der Inhalt dieses Artikels ist noch aktuell, doch kann ich nur dringend dazu raten, sich die fantastische Alternative zu Subversion anzusehen: <a href="/2007/versionskontrolle-mit-git/"><strong>Git</strong></a>.</p>
-{% endaside %}
+</aside>
 
 {% include articles/subversion-toc.html %}
 
@@ -32,14 +32,14 @@ Ein Programmierer hat eine Software entwickelt. Da er eigentlich nicht mal vor h
 
 ## Anlegen der Grundstruktur
 
-{% highlight sh %}
+```sh
 $ cd ~
 $ cd Desktop
 $ mkdir Import
 $ cd Import
 $ mkdir trunk
 $ mkdir tags
-{% endhighlight %}
+```
 
 Dies erzeugt meine Grundstruktur, den Konventionen entsprechend. Der Ordner `Import` (frei gewählter Name) liegt auf dem Desktop und dient nur für den Importierungsvorgang. Danach kann er gelöscht werden. Innerhalb von `trunk` lege ich jetzt eine für mein Projekt passende Struktur an. Als Hilfe ist es wichtig zu erwähnen, dass mit Subversion nur Ordner ausgecheckt werden können, keine einzelnen Dateien. Daher ist es wichtig, die Struktur mit möglichst logischen und strukturierten Ordnern und Unterordnern anzulegen.
 
@@ -47,7 +47,7 @@ Dies erzeugt meine Grundstruktur, den Konventionen entsprechend. Der Ordner `Imp
 
 Hier ist mal eine Beispielstruktur, die ich überlicherweise verwende:
 
-{% highlight sh %}
+```sh
 .
 ├── tags
 └── trunk
@@ -64,7 +64,7 @@ Hier ist mal eine Beispielstruktur, die ich überlicherweise verwende:
         │   └── img  # Grafiken für das Design
         ├── img      # Grafiken/Fotos für den Content
         └── js       # JavaScript-Dateien
-{% endhighlight %}
+```
 
 Der Vorteil bei einer tiefen Ordnerstruktur liegt darin, dass man nur das holen muss, was man gerade braucht. Will also ein Designer am Layout etwas verändern, reicht es, wenn er sich den Ordner `Layout` aus dem Repository holt.
 
@@ -74,12 +74,12 @@ Der Vorteil bei einer tiefen Ordnerstruktur liegt darin, dass man nur das holen 
 
 Dieser Stand wird jetzt in das noch leere Repository importiert.
 
-{% highlight sh %}
+```sh
 $ cd ~
 $ cd Desktop
 $ cd Import
 $ svn import . file:///Users/XYZ/Subversion/meinewebsite/ -m "Import des Projektes"
-{% endhighlight %}
+```
 
 An der Stelle, wo `XYZ` steht muss der Name eures Benutzerordners stehen. Der Parameter `-m` ist vorgeschrieben und erwartet eine Beschreibung dessen, was man gemacht hat.
 

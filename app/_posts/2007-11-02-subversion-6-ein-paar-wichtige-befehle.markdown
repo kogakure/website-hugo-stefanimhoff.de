@@ -7,7 +7,7 @@ author: "Stefan Imhoff"
 date: 2007-11-02 19:24
 updated: 2014-10-25 12:39
 categories:
-- Versionskontrolle
+- versionskontrolle
 tags:
 - subversion
 - tutorial
@@ -15,10 +15,10 @@ tags:
 
 Es gibt in Subversion noch ein paar nützliche und notwendige Befehle, die man im täglichen Umgang brauchen wird.
 
-{% aside aside-hint %}
+<aside class="aside-hint" role="complementary">
 <h4>Versionkontrolle mit Git</h4>
 <p>Der Inhalt dieses Artikels ist noch aktuell, doch kann ich nur dringend dazu raten, sich die fantastische Alternative zu Subversion anzusehen: <a href="/2007/versionskontrolle-mit-git/"><strong>Git</strong></a>.</p>
-{% endaside %}
+</aside>
 
 {% include articles/subversion-toc.html %}
 
@@ -30,9 +30,9 @@ So kann man später beim erneuten Auschecken eines Standes einfach Bezug auf den
 
 Der einfachste Weg einen *tag* anzulegen ist den aktuellen *trunk* im Repository zu kopieren. Keine Angst, dadurch verdoppelt sich nicht der Platz, der benötigt wird.
 
-{% highlight sh %}
+```sh
 $ svn copy file:///Users/XYZ/Subversion/meinewebsite/trunk file:///Users/XYZ/Subversion/meinewebsite/tags/version_1.0 -m "Taggen der Version 1.0"
-{% endhighlight %}
+```
 
 ## Probleme beheben
 
@@ -44,9 +44,9 @@ Um solche Probleme zu lösen, benutzt man den Befehl `svn cleanup`.
 
 Eine wichtige Funktion in Subversion ist das Ignorieren von bestimmten Ordnern oder Dateien. Subversion nimmt keine Dateien von selbst mit ins Repository auf. Doch nach einiger Zeit kann sich eine Menge Dateien ansammeln, die man nicht mit ins Repository laden möchte (Cache-Ordner, Konfigurationsdateien, …). Diese werden mit einem `?` angezeigt, wenn man ein `svn status` eingibt. Um nicht mehr gefragt zu werden, ob man sie hinzufügen möchte, gibt man folgenden Befehl ein:
 
-{% highlight sh %}
+```sh
 $ svn propedit svn:ignore .
-{% endhighlight %}
+```
 
 Darauf hin sollte sich ein TextEditor öffnen, in dem man die Dateien einfügen kann, die zukünftig ignoriert werden sollen. Also angenommen man hat einen Ordner *cache* und einige Logdateien mit der Endung .log, dann gibt man in die erste Zeile `cache` und in die zweite Zeile `*.log` ein.
 
@@ -60,8 +60,8 @@ Manchmal möchte man diese jedoch nicht haben, wenn man z. B. ein fertiges Proje
 
 Für diesen Zweck exportiert man das Arbeitsverzeichnis mit diesem Befehl:
 
-{% highlight sh %}
+```sh
 $ svn export . ~/Desktop/export
-{% endhighlight %}
+```
 
 Damit wird der Inhalt des aktuellen Ordners ins Verzeichnis *export* auf dem Desktop exportiert.

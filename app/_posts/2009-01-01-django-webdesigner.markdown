@@ -6,7 +6,7 @@ description: "Einführung in Django für Webdesigner. Warum Django dank der fant
 author: "Stefan Imhoff"
 date: 2009-01-01 11:00
 categories:
-- Code
+- code
 tags:
 - django
 ---
@@ -80,8 +80,7 @@ Wenn das Datenkonzept fertig gestellt ist, wird die Datenbank in einer einfach z
 
 Das folgende Beispiel (von der Django-Website) zeigt den Code von zwei Tabellen, einer `Reporter`-Tabelle und einer `Artikel`-Tabelle:
 
-{% figure code-figure "models.py" %}
-{% highlight python linenos %}
+```python
 class Reporter(models.Model):
     full_name = models.CharField(max_length=70)
 
@@ -97,8 +96,9 @@ class Article(models.Model):
     def __unicode__(self):
         return self.headline
 
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">models.py</p>
 
 Mit einem kurzen Befehl wird Django im Anschluss daran mitgeteilt, dass die nötigen Tabellen in der Datenbank angelegt werden sollen. Django unterstützt eine Menge Datenbanken (SQLite3, MySQL, PostgreSQL, Oracle) von Haus aus. Weitere können durch Drittanbieter hinzugefügt werden.
 
@@ -118,8 +118,7 @@ Mit ein wenig Wissen um [Regular Expressions]( http://www.regular-expressions.in
 
 Dieses kurze Beispiel aus der Django-Dokumentation zeigt die Konfiguration einiger URLs:
 
-{% figure code-figure "urls.py" %}
-{% highlight python linenos %}
+```python
 from django.conf.urls.defaults import *
 
 urlpatterns = patterns('',
@@ -127,8 +126,9 @@ urlpatterns = patterns('',
     (r'^articles/(\d{4})/(\d{2})/$', 'mysite.views.month_archive'),
     (r'^articles/(\d{4})/(\d{2})/(\d+)/$', 'mysite.views.article_detail'),
 )
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">urls.py</p>
 
 Vielleicht mag dies auf den ersten Blick etwas seltsam aussehen oder nicht gleich verständlich sein, aber keine Sorge, das legt sich sehr schnell, wenn die Grundlagen von Regular Expressions verstanden sind.
 
@@ -158,8 +158,7 @@ Wem die [Grundfunktionen der Templatesprache](https://docs.djangoproject.com/en/
 
 Ein Grundtemplate sieht in der Django-Dokumentation z. B. so aus:
 
-{% figure code-figure "base.html" %}
-{% highlight html linenos %}
+```html
 {% raw %}
 <html>
 <head>
@@ -171,14 +170,14 @@ Ein Grundtemplate sieht in der Django-Dokumentation z. B. so aus:
 </body>
 </html>
 {% endraw %}
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">base.html</p>
 
 
 Das niedrigere Template, hier eine Detailseite für einen Artikel, überschreibt dann die Blöcke nach Belieben und erbt den Rest des Grundtemplates:
 
-{% figure code-figure "article.html" %}
-{% highlight html linenos %}
+```html
 {% raw %}
 {% extends "base.html" %}
 
@@ -194,8 +193,9 @@ Das niedrigere Template, hier eine Detailseite für einen Artikel, überschreibt
     {% endfor %}
 {% endblock %}
 {% endraw %}
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">article.html</p>
 
 ## Erweitern von Django
 

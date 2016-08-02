@@ -6,9 +6,9 @@ author: "Stefan Imhoff"
 date: 2014-04-12 15:00
 description: "Über die Gestaltung und Programmierung meiner neuen Website: Typographie, Design, Layout, Vektor-Icons, Logo, Icons, Off-Canvas-Menü, Styleguide, Jekyll, eingesetzte Plugins und die Asset-Pipeline."
 categories:
-- Design
-- Code
-- Website
+- design
+- code
+- website
 tags:
 - design
 - relaunch

@@ -7,8 +7,8 @@ author: "Stefan Imhoff"
 date: 2009-08-08 13:00
 og_image: "/assets/images/artikel/git-praesentation.jpg"
 categories:
-- Versionskontrolle
-- Praesentation
+- versionskontrolle
+- praesentation
 tags:
 - git
 - praesentation
@@ -16,9 +16,14 @@ tags:
 
 Auf dem 4. Treffen der Django-UserGroup Hamburg habe ich eine Präsentation über Git vorgetragen, die ich hier als PDF zum Download anbiete.
 
-{% figure image-figure "Präsentation: <cite>Sei (k)ein Blödmann und nimm Git!</cite>" %}
-<a href="http://www.slideshare.net/kogakure/sei-kein-bldmann-und-nimm-git-1830449"><img src="{{ site.url }}/assets/images/artikel/git-praesentation.jpg" alt="Sei (k)ein Blödmann und nimm Git!" /></a>
-{% endfigure %}
+<figure class="image-figure">
+  <div class="figure-content">
+    <a href="http://www.slideshare.net/kogakure/sei-kein-bldmann-und-nimm-git-1830449">
+      <img src="{{ site.url }}/assets/images/artikel/git-praesentation.jpg" alt="Sei (k)ein Blödmann und nimm Git!" />
+    </a>
+  </div>
+  <figcaption>Präsentation: <cite>Sei (k)ein Blödmann und nimm Git!</cite></figcaption>
+</figure>
 
 Seit ungefähr 2 Jahren benutze ich jetzt bereits das Versionskontrollsystem <cite>Git</cite> und bin sehr zufrieden damit. Mittlerweile konnten wir unseren Arbeitgeber ebenfalls überzeugen, Git einzusetzen und seit ca. zwei Monaten haben wir jetzt einen Git-Server.
 

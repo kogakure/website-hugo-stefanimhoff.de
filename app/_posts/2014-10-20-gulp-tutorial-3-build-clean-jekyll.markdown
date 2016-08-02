@@ -8,7 +8,7 @@ author: "Stefan Imhoff"
 og_image: "/assets/images/artikel/gulp-tutorial-3.jpg"
 description: "The ultimative tutorial and guide for Gulp.js: How to write tasks for cleaning files and folders, generating the build and the website with Jekyll."
 categories:
-- Code
+- code
 tags:
 - gulp
 - tutorial
@@ -18,24 +18,25 @@ tags:
 
 This is the 3rd part of my series *Introduction to Gulp.js*. Today I will write the build task, which will execute all other tasks needed for a build, the task to delete assets for a fresh start, and the task to create my Jekyll site.
 
-{% figure image-figure attribution %}
-<img src="{{ site.url }}/assets/images/artikel/gulp-tutorial-3.jpg" alt="Boy drinking a very big cup of water">
-<p class="attribution-text"><svg class="attribution-icon-cc"><use xlink:href="#cc"></use></svg> Rudy Eng, <a href="https://www.flickr.com/photos/mac-ash/3628500632">A Very Big Cup of Water!</a></p>
-{% endfigure %}
+<figure class="image-figure attribution">
+  <div class="figure-content">
+    <img src="{{ site.url }}/assets/images/artikel/gulp-tutorial-3.jpg" alt="Boy drinking a very big cup of water">
+    <p class="attribution-text"><svg class="attribution-icon-cc"><use xlink:href="#cc"></use></svg> Rudy Eng, <a href="https://www.flickr.com/photos/mac-ash/3628500632">A Very Big Cup of Water!</a></p>
+  </div>
+</figure>
 
 {% include articles/gulp-toc.html %}
 
 ## Build
 Now I create a `build` task. This task will run all other tasks, which are needed to create the site. By default Gulp.js runs all tasks in parallel. That’s why I will get a problem if a specific order is needed. I will need a node module which runs tasks in a sequence:
 
-{% highlight sh %}
+```sh
 $ npm install --save-dev run-sequence@1.1.4
-{% endhighlight %}
+```
 
 Next I create the task:
 
-{% figure code-figure "gulp/tasks/development/build.js" %}
-{% highlight javascript %}
+```javascript
 var gulp        = require('gulp');
 var runSequence = require('run-sequence');
 
@@ -54,8 +55,9 @@ gulp.task('build', function(callback) {
   'base64',
   callback);
 });
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">gulp/tasks/development/build.js</p>
 
 This task will first delete the assets folder (Jekyll is deleted by default), then create in parallel the Jekyll site, CSS files from SASS files, bundle the JavaScript files, copy images to the assets folder and copy vector fonts. After the `sass` task is finished I replace links to small PNG files with Base64 encoding to inline them in my CSS files.
 
@@ -64,29 +66,28 @@ You should comment out tasks, we haven’t written until now, or Gulp can not ru
 ## Delete Assets
 To wipe out all files in the asset folder I use the node module `del`.
 
-{% highlight sh %}
+```sh
 $ npm install --save-dev del@0.1.3
-{% endhighlight %}
+```
 
 I need to add a config for deleting:
 
-{% figure code-figure "gulp/config.js" %}
-{% highlight javascript %}
+```javascript
 browsersync: {
 ...
 },
 delete: {
   src: [developmentAssets]
 }
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">gulp/config.js</p>
 
 I will shorten all configuration options from now on. Every task will have a own option section. These are JavaScript objects so don’t forget the trailing comma if you add a new configuration option.
 
 The actuall task will look like this:
 
-{% figure code-figure "gulp/tasks/development/delete.js" %}
-{% highlight javascript %}
+```javascript
 var gulp   = require('gulp');
 var del    = require('del');
 var config = require('../../config').delete;
@@ -97,16 +98,16 @@ var config = require('../../config').delete;
 gulp.task('delete', function(callback) {
   del(config.src, callback);
 });
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">gulp/tasks/development/delete.js</p>
 
 If you use a newer version of `del` or run into trouble, because `del` doesn’t finish, try deleting the `callback` from the function.
 
 ## Jekyll
 Next I will write the configuration and the task to create the Jekyll site:
 
-{% figure code-figure "gulp/config.js" %}
-{% highlight javascript %}
+```javascript
 jekyll: {
   development: {
     src:    src,
@@ -114,11 +115,11 @@ jekyll: {
     config: '_config.yml'
   }
 }
-{% endhighlight %}
-{% endfigure %}
+```
 
-{% figure code-figure "gulp/config/development/jekyll.js" %}
-{% highlight javascript %}
+<p class="code-meta">gulp/config.js</p>
+
+```javascript
 var gulp        = require('gulp');
 var cp          = require('child_process');
 var browsersync = require('browser-sync');
@@ -137,8 +138,9 @@ gulp.task('jekyll', function(done) {
 gulp.task('jekyll-rebuild', ['jekyll'], function() {
   browsersync.reload();
 });
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">gulp/config/development/jekyll.js</p>
 
 There is a gulp plugin for Jekyll, but it’s alpha and was blacklisted, because it’s not needed as you can run shell tasks with node. But I have to send the `done` status, when the task is finished.
 
@@ -146,10 +148,10 @@ All this task is doing is running `jekyll build` with some options. I use `app` 
 
 I put my `_config.yml` and other configuration files always at the root of my project. If you don’t like that, you need to update the configuration to point to the location of your `_config.yml`.
 
-{% aside aside-hint %}
+<aside class="aside-hint" role="complementary">
 <h4>To bundle or not to bundle</h4>
 <p><strong>Be carefull</strong>: If you didn’t install Jekyll with a Gemfile you’ll have to change the Jekyll tasks and remove the <code>bundle exec</code> part. Instead of <code>return cp.spawn('bundle', ['exec', 'jekyll' …</code> you write <code>return cp.spawn('jekyll', ['build', '-q' …</code>. All other options stay the same.</p>
-{% endaside %}
+</aside>
 
 I have a second Jekyll build task `jekyll-rebuild`, which is only a wrapper for a rebuild. All it does is reloading the Browser when the build is completed.
 

@@ -6,8 +6,8 @@ description: "Umfangreicher Einblick in die Erstellung meiner Django-Website kog
 author: "Stefan Imhoff"
 date: 2008-04-25 18:00
 categories:
-- Code
-- Website
+- code
+- website
 tags:
 - django
 - download
@@ -106,7 +106,12 @@ Der Einstieg in Django ist (auch für Nichtprogrammierer) leicht, da es sehr gut
 
 Da mir die Community von Django durch Hilfe im #IRC (#django oder #django-de), in Groups und Foren, mit wunderbaren Screencasts und Tutorials so viel geholfen hat, will ich meinen Source-Code auch frei zu Verfügung stellen. Der Code ist frei verfügbar und darf zu Lernzwecken oder für eigene Projekte gerne benutzt werden. Das Design der Seite liegt bei, doch dies ist natürlich rechtlich geschützt und darf nur für Schulungszwecke benutzt werden. Als Ninja fallen mir natürlich zahlreiche Möglichkeiten ein einen Dieb ins Jenseits zu befördern ;)
 
-{% download https://github.com/kogakure/kogakure.de-django "Source code (GitHub)" %}
+<div class="download">
+  <a href="https://github.com/kogakure/kogakure.de-django" class="download-link">
+    <svg class="download-icon"><use xlink:href="#download"></use></svg>
+    <span class="download-text">Source code (GitHub)</span>
+  </a>
+</div>
 
 ## Django-Ressourcen
 

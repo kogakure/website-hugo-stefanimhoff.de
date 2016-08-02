@@ -7,7 +7,7 @@ author: "Stefan Imhoff"
 date: 2009-02-19 20:00
 og_image: "/assets/images/artikel/gitweb-theme-summary.png"
 categories:
-- Download
+- download
 tags:
 - gitweb
 - git
@@ -31,30 +31,53 @@ Detailed instructions for installations are included in the package on GitHub.
 
 ## Download
 
-{% download https://github.com/kogakure/gitweb-theme/ "Gitweb Theme on GitHub" %}
+<div class="download">
+  <a href="https://github.com/kogakure/gitweb-theme/" class="download-link">
+    <svg class="download-icon"><use xlink:href="#download"></use></svg>
+    <span class="download-text">Gitweb Theme on GitHub</span>
+  </a>
+</div>
 
 ## Screenshots
 
-{% figure image-figure image-figure-border "Projektübersicht/Project view" %}
-<img src="{{ site.url }}/assets/images/artikel/gitweb-theme-projects.png" alt="Projektübersicht" />
-{% endfigure %}
+<figure class="image-figure image-figure-border">
+  <div class="figure-content">
+    <img src="{{ site.url }}/assets/images/artikel/gitweb-theme-projects.png" alt="Projektübersicht" />
+  </div>
+  <figcaption>Projektübersicht/Project view</figcaption>
+</figure>
 
-{% figure image-figure image-figure-border "Zusammenfassung/Summary" %}
-<img src="{{ site.url }}/assets/images/artikel/gitweb-theme-summary.png" alt="Zusammenfassung" />
-{% endfigure %}
+<figure class="image-figure image-figure-border">
+  <div class="figure-content">
+    <img src="{{ site.url }}/assets/images/artikel/gitweb-theme-summary.png" alt="Zusammenfassung" />
+  </div>
+  <figcaption>Zusammenfassung/Summary</figcaption>
+</figure>
 
-{% figure image-figure image-figure-border "Commit" %}
-<img src="{{ site.url }}/assets/images/artikel/gitweb-theme-commit.png" alt="Commit" />
-{% endfigure %}
+<figure class="image-figure image-figure-border">
+  <div class="figure-content">
+    <img src="{{ site.url }}/assets/images/artikel/gitweb-theme-commit.png" alt="Commit" />
+  </div>
+  <figcaption>Commit</figcaption>
+</figure>
 
-{% figure image-figure image-figure-border "Commit-DIFF" %}
-<img src="{{ site.url }}/assets/images/artikel/gitweb-theme-commitdiff.png" alt="Commit-DIFF" />
-{% endfigure %}
+<figure class="image-figure image-figure-border">
+  <div class="figure-content">
+    <img src="{{ site.url }}/assets/images/artikel/gitweb-theme-commitdiff.png" alt="Commit-DIFF" />
+  </div>
+  <figcaption>Commit-DIFF</figcaption>
+</figure>
 
-{% figure image-figure image-figure-border "Historie/Log" %}
-<img src="{{ site.url }}/assets/images/artikel/gitweb-theme-log.png" alt="Historie" />
-{% endfigure %}
+<figure class="image-figure image-figure-border">
+  <div class="figure-content">
+    <img src="{{ site.url }}/assets/images/artikel/gitweb-theme-log.png" alt="Historie" />
+  </div>
+  <figcaption>Historie/Log</figcaption>
+</figure>
 
-{% figure image-figure image-figure-border "Dateiansicht/Tree view" %}
-<img src="{{ site.url }}/assets/images/artikel/gitweb-theme-tree.png" alt="Dateiansicht" />
-{% endfigure %}
+<figure class="image-figure image-figure-border">
+  <div class="figure-content">
+    <img src="{{ site.url }}/assets/images/artikel/gitweb-theme-tree.png" alt="Dateiansicht" />
+  </div>
+  <figcaption>Dateiansicht/Tree view</figcaption>
+</figure>

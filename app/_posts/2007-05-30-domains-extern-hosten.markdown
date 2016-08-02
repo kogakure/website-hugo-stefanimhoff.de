@@ -6,8 +6,8 @@ description: "Domains getrennt vom Webhosting-Paket hosten. Warum dies eine gute
 author: "Stefan Imhoff"
 date: 2007-05-30 23:55
 categories:
-- Server
-- Empfehlung
+- server
+- empfehlung
 tags:
 - hosting
 - domain

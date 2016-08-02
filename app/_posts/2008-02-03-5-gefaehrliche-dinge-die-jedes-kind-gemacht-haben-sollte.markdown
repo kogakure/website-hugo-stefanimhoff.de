@@ -6,7 +6,7 @@ description: "Zusammenfassung des TED-Vortrags '5 dangerous things you should le
 author: "Stefan Imhoff"
 date: 2008-02-03 12:34
 categories:
-- Empfehlung
+- empfehlung
 tags:
 - tedtalk
 ---

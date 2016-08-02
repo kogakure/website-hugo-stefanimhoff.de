@@ -6,8 +6,8 @@ description: "Es muss nicht immer Capistrano sein: Die Python-Welt hat Fabric al
 author: "Stefan Imhoff"
 date: 2008-11-07 12:00
 categories:
-- Server
-- Code
+- server
+- code
 tags:
 - python
 - deployment
@@ -41,8 +41,7 @@ Es gibt lediglich vier Fabric-Befehle:
 
 Variablen deklariert man einfach so:
 
-{% figure code-figure "Fabfile" %}
-{% highlight python linenos %}
+```python
 set(
     project = 'domain.de',
     project_type = 'websites',
@@ -53,15 +52,15 @@ set(
     fab_hosts = ['test1clu.admin'],
     fab_user = 'username',
 )
-{% endhighlight %}
-{% endfigure %}
+```
+
+<p class="code-meta">Fabfile</p>
 
 Lediglich `fab_hosts` und `fab_user` werden in diesem Beispiel von Fabric geliefert, die anderen sind frei gewählt.
 
 Später kann man dann auf die Variable mit der Syntax `$(varname)` zugreifen. Hier mein Beispielskript, dass den oben beschriebenen SVN-Workflow automatisiert:
 
-{% figure code-figure "Fabfile" %}
-{% highlight python linenos %}
+```python
 def create():
     """
     Erzeugt ein leeres Subversion-Repository auf dem SVN-Server,
@@ -121,9 +120,9 @@ def create():
             mkdir Vorlagen/Texte; \
             mkdir Website;'
       )
-{% endhighlight %}
-{% endfigure %}
+```
 
+<p class="code-meta">Fabfile</p>
 
 Um ein neues Repository anzulegen, muss ich einfach nur noch in den Einstellungen einige Pfade anpassen (meistens nur einen) und dann auf dem Terminal den Befehl `fab create` ausführen.
 

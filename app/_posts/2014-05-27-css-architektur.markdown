@@ -8,8 +8,8 @@ updated: 2014-10-25 13:46
 og_image: "/assets/images/artikel/css-peter-griffin-meme.jpg"
 description: "Über die auf dieser Website eingesetzte CSS-Architektur, Sass, Compass, das Grid-System Singularity, die Dateistruktur und SMACSS."
 categories:
-- Code
-- Website
+- code
+- website
 tags:
 - compass
 - sass
@@ -18,9 +18,12 @@ tags:
 
 Bei einem Webprojekt stellt insbesondere die Architektur der Stylesheets eine große Herausforderung dar. Denn CSS wird schnell unverständlich und ist schwer zu warten, wenn nicht von Anfang an eine saubere und modulare Struktur verwendet wird.
 
-{% figure image-figure "Peter Griffin CSS-Meme. Das komplette GIF (ca. 2 MB) gibt es <a href='http://imgur.com/Q3cUg29'>hier</a>." %}
-<img src="{{ site.url }}/assets/images/artikel/css-peter-griffin-meme.jpg" alt="Peter Griffin CSS-Meme">
-{% endfigure %}
+<figure class="image-figure">
+  <div class="figure-content">
+    <img src="{{ site.url }}/assets/images/artikel/css-peter-griffin-meme.jpg" alt="Peter Griffin CSS-Meme">
+  </div>
+  <figcaption>Peter Griffin CSS-Meme. Das komplette GIF (ca. 2 MB) gibt es <a href='http://imgur.com/Q3cUg29'>hier</a>.</figcaption>
+</figure>
 
 ## Preprozessoren
 Die Verwendung eines CSS-Preprozessors wie [Sass](http://sass-lang.com/) ist mittlerweile eigentlich fast selbstverständlich. Ein solcher Preprozessor ermöglicht z. B. die Verwendung von Variablen, die Verschachtelung des CSS oder die Nutzung von Funktionen und Helfern.
@@ -37,7 +40,7 @@ Ich verwende für meine Website dieses Konzept, habe es aber an meine Bedürfnis
 ## Dateistuktur des SCSS
 Meine Dateistruktur sieht wie folgt aus:
 
-{% highlight bash %}
+```bash
 ├── application.scss
 ├── base
 │   ├── _base.scss
@@ -73,7 +76,7 @@ Meine Dateistruktur sieht wie folgt aus:
 └── vendor
     ├── _solarized.scss
     └── _syntax.scss
-{% endhighlight %}
+```
 
 Die Hauptdatei ist die `application.scss`. Diese Datei lädt alle weiteren Dateien und wird von der Asset-Pipeline später minimiert.
 
