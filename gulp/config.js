@@ -1,10 +1,10 @@
-var src               = 'app';
-var build             = 'build';
-var development       = 'build/development';
-var production        = 'build/production';
-var srcAssets         = 'app/_assets';
+var src = 'app';
+var build = 'build';
+var development = 'build/development';
+var production = 'build/production';
+var srcAssets = 'app/_assets';
 var developmentAssets = 'build/assets';
-var productionAssets  = 'build/production/assets';
+var productionAssets = 'build/production/assets';
 
 module.exports = {
   base64: {
@@ -25,8 +25,8 @@ module.exports = {
     // A separate bundle will be generated for each
     // bundle config in the list below
     bundleConfigs: [{
-      entries:    './' + srcAssets + '/javascripts/application.js',
-      dest:       developmentAssets + '/js',
+      entries: './' + srcAssets + '/javascripts/application.js',
+      dest: developmentAssets + '/js',
       outputName: 'application.js'
     }]
   },
@@ -92,23 +92,26 @@ module.exports = {
     options: {}
   },
   images: {
-    src:  srcAssets + '/images/**/*',
+    src: srcAssets + '/images/**/*',
     dest: developmentAssets + '/images'
   },
   jekyll: {
     development: {
-      src:    src,
-      dest:   development,
+      src: src,
+      dest: development,
       config: '_config.yml'
     },
     production: {
-      src:    src,
-      dest:   production,
+      src: src,
+      dest: production,
       config: '_config.yml,_config.build.yml'
     }
   },
-  jshint: {
-    src: srcAssets + '/javascripts/*.js'
+  eslint: {
+    src: [
+      '!node_modules/**',
+      srcAssets + '/javascripts/*.js'
+    ]
   },
   lintStyles: {
     src: [
@@ -129,19 +132,19 @@ module.exports = {
   },
   optimize: {
     css: {
-      src:  developmentAssets + '/css/*.css',
+      src: developmentAssets + '/css/*.css',
       dest: productionAssets + '/css/',
       options: {
         keepSpecialComments: 0
       }
     },
     js: {
-      src:  developmentAssets + '/js/*.js',
+      src: developmentAssets + '/js/*.js',
       dest: productionAssets + '/js/',
       options: {}
     },
     images: {
-      src:  developmentAssets + '/images/**/*.{jpg,jpeg,png,gif,svg}',
+      src: developmentAssets + '/images/**/*.{jpg,jpeg,png,gif,svg}',
       dest: productionAssets + '/images/',
       options: {
         optimizationLevel: 3,
@@ -197,11 +200,11 @@ module.exports = {
     }
   },
   scripts: {
-    src:  srcAssets + '/javascripts/application.js',
+    src: srcAssets + '/javascripts/application.js',
     dest: developmentAssets + '/js'
   },
   styles: {
-    src:  srcAssets + '/styles/*.css',
+    src: srcAssets + '/styles/*.css',
     dest: developmentAssets + '/css',
     options: {
       precss: {},
@@ -261,10 +264,10 @@ module.exports = {
       src + '/**/*.{html,markdown,md,yml,json,txt,xml}',
       src + '/*'
     ],
-    styles:  srcAssets + '/styles/**/*.css',
+    styles: srcAssets + '/styles/**/*.css',
     scripts: srcAssets + '/javascripts/**/*.js',
-    images:  srcAssets + '/images/**/*',
-    svg:     'vectors/*.svg',
+    images: srcAssets + '/images/**/*',
+    svg: 'vectors/*.svg',
     loadcss: src + '/_bower_components/loadcss/loadCSS.js',
     criticalcss: developmentAssets + '/css/critical*.css'
   },

@@ -1,5 +1,5 @@
-var gulp   = require('gulp');
-var csso   = require('gulp-csso');
+var gulp = require('gulp');
+var csso = require('gulp-csso');
 var config = require('../../config').optimize.css;
 
 /**
@@ -8,5 +8,5 @@ var config = require('../../config').optimize.css;
 gulp.task('optimize:css', function() {
   return gulp.src(config.src)
     .pipe(csso())
-    .pipe(gulp.dest(config.dest))
+    .pipe(gulp.dest(config.dest));
 });

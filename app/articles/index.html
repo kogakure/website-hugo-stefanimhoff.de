@@ -13,7 +13,8 @@ description: "An overview of all articles available on this website with title a
   {% endif %}
 </h1>
 
-{% for post in site.posts reverse %}
+{% assign sorted = site.posts | sort:"date" | reverse %}
+{% for post in sorted %}
   <article class="archive-post">
     {% include archive_post.html %}
   </article>

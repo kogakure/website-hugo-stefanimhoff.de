@@ -120,8 +120,8 @@
     font-size: 90%;
   }
 
-  p a[href^="http://"]:after,
-  a[href^="https://"]:after {
+  p a[href^="http://"]::after,
+  a[href^="https://"]::after {
     content: " (" attr(href) ")";
   }
 
