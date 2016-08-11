@@ -4,8 +4,8 @@ language: "de"
 title: "Impressum"
 description: "Das Impressum mit Ansprechpartner, Rechtshinweisen, Datenschutzhinweisen und Quellenangaben zu verwendeten Grafiken und Fotos."
 author: "Stefan Imhoff"
-date: 2013-12-17 09:12
-updated: 2015-10-14 18:00
+date: 2013-12-17T09:12:00+02:00
+updated: 2015-10-14T18:00:00+02:00
 robots: "noindex,follow"
 sitemap:
   exclude: true

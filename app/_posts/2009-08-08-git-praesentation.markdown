@@ -4,7 +4,7 @@ language: "de"
 title: "Git-Präsentation"
 description: "Meine Git-Präsentation 'Sei (k)ein Blödmann und nimm Git!'. Meine 166 Folien lange und wunderschön gestaltete Präsentation über Git, die alle Vorteile, die Arbeitsweise und viele Tipps für die Arbeit mit Git aufzählt."
 author: "Stefan Imhoff"
-date: 2009-08-08 13:00
+date: 2009-08-08T13:00:00+02:00
 og_image: "/assets/images/artikel/git-praesentation.jpg"
 categories:
 - versionskontrolle

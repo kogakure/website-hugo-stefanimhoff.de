@@ -4,7 +4,7 @@ language: "de"
 title: "Eineinhalb Jahre GTD – Eine Billanz"
 description: "Ich arbeite seit 1,5 Jahren mit GTD (Getting Things Done): Eine Einführung in Organisation und Selbstmanagment mit GTD."
 author: "Stefan Imhoff"
-date: 2007-11-24 01:15
+date: 2007-11-24T01:15:00+02:00
 og_image: "/assets/images/artikel/gtd-vorher.jpg"
 categories:
 - produktivitaet

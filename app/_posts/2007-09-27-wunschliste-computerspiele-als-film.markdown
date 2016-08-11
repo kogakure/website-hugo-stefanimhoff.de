@@ -4,7 +4,7 @@ language: "de"
 title: "Wunschliste: Computerspiele als Film"
 description: "Meine persönliche Wunschliste für Computerspiele, die ich gerne verfilmt sehen würde: Max Payne, Half-Life, The Dig, Outcast, Far Cry und Deus Ex."
 author: "Stefan Imhoff"
-date: 2007-09-27 20:00
+date: 2007-09-27T20:00:00+02:00
 categories:
 - persoenlich
 tags:

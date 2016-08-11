@@ -4,7 +4,7 @@ language: "de"
 title: "Domains extern hosten"
 description: "Domains getrennt vom Webhosting-Paket hosten. Warum dies eine gute Idee ist und was für Vorteile es bringt."
 author: "Stefan Imhoff"
-date: 2007-05-30 23:55
+date: 2007-05-30T23:55:00+02:00
 categories:
 - server
 - empfehlung

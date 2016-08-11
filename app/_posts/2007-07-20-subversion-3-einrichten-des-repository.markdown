@@ -4,8 +4,8 @@ language: "de"
 title: "Subversion 3: Einrichten des Repository"
 description: "Ein umfangreiches Tutorial für Subversion: Wie man ein Repository mit Subversion einrichtet."
 author: "Stefan Imhoff"
-date: 2007-07-20 09:00
-updated: 2014-10-25 12:28
+date: 2007-07-20T09:00:00+02:00
+updated: 2014-10-25T12:28:00+02:00
 categories:
 - versionskontrolle
 tags:

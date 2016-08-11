@@ -4,7 +4,7 @@ language: "de"
 title: "2010 – ein Jahresrückblick"
 description: "Mein persönlicher Jahresrückblick für 2010: Django, Homebrew und Vim. Welche Plugins und Erweiterungen für Vim setze ich ein?"
 author: "Stefan Imhoff"
-date: 2010-12-23 13:00
+date: 2010-12-23T13:00:00+02:00
 categories:
 - persoenlich
 tags:

@@ -3,8 +3,8 @@ layout: post
 language: "de"
 title: "Widerlegung einer unwissenschaftlichen Dokumentation"
 author: "Stefan Imhoff"
-date: 2014-05-09 18:00
-updated: 2014-10-25 13:41
+date: 2014-05-09T18:00:00+02:00
+updated: 2014-10-25T13:41:00+02:00
 description: "Eine sehr interessante Dokumentation, die 'Ancient Aliens', eine unwissenschaftliche Dokumentationsreihe, widerlegt."
 og_image: "/assets/images/artikel/pakals-grabplatte.jpg"
 widont: false

@@ -4,7 +4,7 @@ language: "de"
 title: "Django-Relaunch von kogakure.de"
 description: "Umfangreicher Einblick in die Erstellung meiner Django-Website kogakure.de. Warum ich Django eingesetzt habe, welche Vorteile ich in Django sehe, über die technischen Details meiner Website und eine große Linkssammlung zum Thema Django."
 author: "Stefan Imhoff"
-date: 2008-04-25 18:00
+date: 2008-04-25T18:00:00+02:00
 categories:
 - code
 - website

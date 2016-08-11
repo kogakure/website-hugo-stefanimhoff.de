@@ -3,8 +3,8 @@ layout: post
 language: "de"
 title: "Die CSS-Architektur meiner Website"
 author: "Stefan Imhoff"
-date: 2014-05-27 18:00
-updated: 2014-10-25 13:46
+date: 2014-05-27T18:00:00+02:00
+updated: 2014-10-25T13:46:00+02:00
 og_image: "/assets/images/artikel/css-peter-griffin-meme.jpg"
 description: "Über die auf dieser Website eingesetzte CSS-Architektur, Sass, Compass, das Grid-System Singularity, die Dateistruktur und SMACSS."
 categories:

@@ -4,8 +4,8 @@ language: "de"
 title: "Auto-Complete im Terminal"
 description: "Wenn man im Terminal arbeite ist Autocomplete äußerst praktisch. Wie schreibt man eigene Autocomplete-Skripte?"
 author: "Stefan Imhoff"
-date: 2010-10-27 18:30
-updated: 2014-10-25 13:34
+date: 2010-10-27T18:30:00+02:00
+updated: 2014-10-25T13:34:00+02:00
 categories:
 - code
 tags:

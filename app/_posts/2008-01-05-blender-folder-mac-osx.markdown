@@ -4,7 +4,7 @@ language: "de"
 title: "Blender Folder für Mac&nbsp;OS&nbsp;X"
 description: "Wer viel unter Mac OS X mit Blender arbeitet hat sicherlich auch Ordner, in denen die eigenen Projekt-Dateien liegen. Das Blender-Ordner-Icon für Mac OS X zum KOSTENLOSEN Download."
 author: "Stefan Imhoff"
-date: 2008-01-05 13:00
+date: 2008-01-05T13:00:00+02:00
 og_image: "/assets/images/artikel/blender-osx-folders.png"
 categories:
 - download

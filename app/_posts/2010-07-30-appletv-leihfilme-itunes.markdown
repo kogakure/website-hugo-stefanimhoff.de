@@ -4,7 +4,7 @@ language: "de"
 title: "AppleTV und die Leihfilme auf iTunes"
 description: "In diesem Artikel rege ich mich über die Auswahl der Leihfilme auf iTunes auf. Warum ich keine Filme digital kaufen werde und wenn ich sie nicht leihen kann, lieber gar nichts ansehe."
 author: "Stefan Imhoff"
-date: 2010-07-30 07:00
+date: 2010-07-30T07:00:00+02:00
 categories:
 - rant
 tags:

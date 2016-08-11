@@ -4,8 +4,8 @@ language: "de"
 title: "Zeige deine am häufigsten benutzen Terminal-Befehle"
 description: "Wer viel im Terminal arbeitet, verwendet vermutlich einige Programme öfter als andere. So findest du heraus, welches deine  eigenen, am meisten verwendeten Terminal-Befehle sind."
 author: "Stefan Imhoff"
-date: 2008-04-18 07:00
-updated: 2014-10-25 13:06
+date: 2008-04-18T07:00:00+02:00
+updated: 2014-10-25T13:06:00+02:00
 categories:
 - empfehlung
 tags:

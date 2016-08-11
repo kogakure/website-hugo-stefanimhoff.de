@@ -4,7 +4,7 @@ language: "de"
 title: "Django Folder für Mac&nbsp;OS&nbsp;X"
 description: "Wer viel unter Mac OS X mit Django arbeitet hat sicherlich auch Ordner, in denen die eigenen Projekt-Dateien liegen. Das Django-Ordner-Icon für Mac OS X zum KOSTENLOSEN Download."
 author: "Stefan Imhoff"
-date: 2007-12-18 22:10
+date: 2007-12-18T22:10:00+02:00
 og_image: "/assets/images/artikel/django-osx-folders.png"
 categories:
 - download

@@ -4,7 +4,7 @@ language: "de"
 title: "Theme Kaijin für das MoinMoin-Wiki"
 description: "Für alle Freunde des MoinMoin-Wikis. Mein erstes, selbst erstelltes Theme 'Kaijin' (Asche und Staub) zum KOSTENLOSEN Download."
 author: "Stefan Imhoff"
-date: 2008-02-14 20:58
+date: 2008-02-14T20:58:00+02:00
 og_image: "/assets/images/artikel/moinmoin-kaijin.png"
 categories:
 - download

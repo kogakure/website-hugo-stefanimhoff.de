@@ -4,7 +4,7 @@ language: "de"
 title: "Lebensmittel-Datenbank"
 description: "FDDB (Food Database), ein kostenloses Ernährungstagebuch und eine sehr umfangreiche Lebensmittel-Datenbank."
 author: "Stefan Imhoff"
-date: 2007-08-28 08:24
+date: 2007-08-28T08:24:00+02:00
 og_image: "/assets/images/artikel/fddb-info.png"
 categories:
 - empfehlung

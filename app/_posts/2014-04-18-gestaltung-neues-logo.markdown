@@ -3,7 +3,7 @@ layout: post
 language: "de"
 title: "Die Gestaltung meines neuen Logos"
 author: "Stefan Imhoff"
-date: 2014-04-18 19:00
+date: 2014-04-18T19:00:00+02:00
 description: "Einblick in die Gestaltung meines neuen Logos und Rakkan: Idee, Recherche und ein kurzer Exkurs über die Chinesische Schrift."
 og_image: "/assets/images/artikel/rakkan.jpg"
 categories:

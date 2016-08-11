@@ -4,7 +4,7 @@ language: "de"
 title: "Things und Evernote: GTD mit dem Mac"
 description: "Eine Einführung in meine Arbeitsweise mit GTD (Getting Things Done) am Mac und wie ich Things und Evernote dafür verwende."
 author: "Stefan Imhoff"
-date: 2009-05-22 16:45
+date: 2009-05-22T16:45:00+02:00
 categories:
 - produktivitaet
 tags:

@@ -4,8 +4,8 @@ language: "de"
 title: "J2EE versus Ruby/Python-Frameworks"
 description: "Ein interessanter, halbstündiger Film mit interessanten Argumenten für oder gegen das eine oder andere Webframework."
 author: "Stefan Imhoff"
-date: 2007-06-13 01:34
-updated: 2014-10-25 12:27
+date: 2007-06-13T01:34:00+02:00
+updated: 2014-10-25T12:27:00+02:00
 categories:
 - code
 tags:

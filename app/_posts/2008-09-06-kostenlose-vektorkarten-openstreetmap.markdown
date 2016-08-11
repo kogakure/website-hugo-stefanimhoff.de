@@ -4,7 +4,7 @@ language: "de"
 title: "Kostenlose Vektorkarten mit OpenStreetMap"
 description: "Einführung in OpenStreetMap, eine kostenlose OpenSource-Alternative zu Google Maps. Besonders, wenn man vektorbasierte Kartendaten in einem eigenen Projekt einsetzen möchte, ist OpenStreetMap eine fantastische Möglichkeit."
 author: "Stefan Imhoff"
-date: 2008-09-06 18:59
+date: 2008-09-06T18:59:00+02:00
 og_image: "/assets/images/artikel/openstreetmap.jpg"
 categories:
 - empfehlung

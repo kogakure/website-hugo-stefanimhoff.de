@@ -3,7 +3,7 @@ layout: post
 language: "de"
 title: "Mein Setup 2013"
 author: "Stefan Imhoff"
-date: 2013-12-06 20:45
+date: 2013-12-06T20:45:00+02:00
 description: "Ein Einblick in meine Arbeitsumgebung: Wie sieht meine technische Ausstattung aus? Hardware, Software, die ich täglich einsetze, um zu programmieren, zu designen und mich zu organisieren. Außerdem Gadgets, die ich in meiner Wohnung einsetze."
 categories:
 - empfehlung

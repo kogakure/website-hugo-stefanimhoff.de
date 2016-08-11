@@ -4,7 +4,7 @@ language: "de"
 title: "Weiterleitungen in Django"
 description: "Einführung in das Modul für Weiterleitung von Django: Mit diesem Modul lassen sich Redirects direkt im Admin-Interface konfigurieren und steuern."
 author: "Stefan Imhoff"
-date: 2008-11-05 07:00
+date: 2008-11-05T07:00:00+02:00
 categories:
 - code
 tags:

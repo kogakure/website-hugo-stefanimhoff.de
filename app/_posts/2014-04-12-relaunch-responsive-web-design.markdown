@@ -3,7 +3,7 @@ layout: post
 language: "de"
 title: "Relaunch mit Responsive Web Design"
 author: "Stefan Imhoff"
-date: 2014-04-12 15:00
+date: 2014-04-12T15:00:00+02:00
 description: "Über die Gestaltung und Programmierung meiner neuen Website: Typographie, Design, Layout, Vektor-Icons, Logo, Icons, Off-Canvas-Menü, Styleguide, Jekyll, eingesetzte Plugins und die Asset-Pipeline."
 categories:
 - design

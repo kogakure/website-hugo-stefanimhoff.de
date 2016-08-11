@@ -4,8 +4,8 @@ language: "de"
 title: "Lokalisierung von Projekten mit Django"
 description: "Einführung in die Lokalisierung und Internationalisierung einer Django-Applikation. Was muss beachtet werden, wie werden die  Template-Tags eingesetzt und wie werden die Sprach-Dateien generiert. "
 author: "Stefan Imhoff"
-date: 2008-08-30 15:25
-updated: 2014-10-25 13:11
+date: 2008-08-30T15:25:00+02:00
+updated: 2014-10-25T13:11:00+02:00
 categories:
 - code
 tags:

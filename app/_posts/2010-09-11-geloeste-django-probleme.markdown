@@ -4,7 +4,7 @@ language: "de"
 title: "Gelöste Django-Probleme"
 description: "Mittlerweile gibt es gute Lösungen für alltägliche Probleme mit Django: Volltextsuche, Dokumentation schreiben, Datenbank-Migration, verzögerte und entfernte Ausführung, Deployment und Packaging."
 author: "Stefan Imhoff"
-date: 2010-09-11 16:00
+date: 2010-09-11T16:00:00+02:00
 categories:
 - code
 tags:

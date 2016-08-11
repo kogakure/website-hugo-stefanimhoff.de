@@ -4,7 +4,7 @@ language: "de"
 title: "GTD: Analog vs. Digital – 0:1"
 description: "GTD (Getting Things Done) digital vs. analog. Was ist effizienter und schneller? Der ultimative Wettkampf um Leben und Tod."
 author: "Stefan Imhoff"
-date: 2008-04-01 17:40
+date: 2008-04-01T17:40:00+02:00
 categories:
 - produktivitaet
 tags:
