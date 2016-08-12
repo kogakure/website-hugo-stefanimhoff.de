@@ -26,7 +26,6 @@ rsync -v -r --delete \
             --exclude 'app/_includes/head/mint.html' \
             --exclude 'app/_includes/head/google_analytics.html' \
             --exclude 'app/_drafts/' \
-            --exclude 'app/_bower_components' \
             --exclude 'app/_includes/post/comments.html' \
             --exclude 'sync.sh' \
             . /Users/kogakure/Code/github/kogakure/stefanimhoff.de-jekyll/

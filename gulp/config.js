@@ -126,7 +126,7 @@ module.exports = {
     }
   },
   loadcss: {
-    src: src + '/_bower_components/loadcss/loadCSS.js',
+    src: 'node_modules/fg-loadcss/src/loadCSS.js',
     dest: src + '/_includes/critical/',
     options: {}
   },
@@ -268,7 +268,7 @@ module.exports = {
     scripts: srcAssets + '/javascripts/**/*.js',
     images: srcAssets + '/images/**/*',
     svg: 'vectors/*.svg',
-    loadcss: src + '/_bower_components/loadcss/loadCSS.js',
+    loadcss: 'node_modules/fg-loadcss/src/loadCSS.js',
     criticalcss: developmentAssets + '/css/critical*.css'
   },
   webp: {
