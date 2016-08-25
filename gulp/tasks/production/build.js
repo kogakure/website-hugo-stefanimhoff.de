@@ -6,18 +6,16 @@ var runSequence = require('run-sequence');
  */
 gulp.task('production:build', function(callback) {
   runSequence('delete', 'styles', 'criticalcss', [
-    'production:jekyll',
+    'production:hugo',
     'scripts',
-    'images'
+    'base64'
+  ], [
+    'optimize:html',
+    'optimize:css',
+    'optimize:js',
+    'production:images'
   ],
-    'base64', [
-      'optimize:html',
-      'optimize:css',
-      'optimize:js',
-      'optimize:images'
-    ],
     'revision',
     'rev:collect',
-    'webp',
     callback);
 });

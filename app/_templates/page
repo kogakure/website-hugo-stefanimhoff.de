@@ -1,8 +1,0 @@
----
-layout: {{ layout }}
-language: "en"
-title: {{ title }}
-permalink: ""
-og_image: ""
-description: ""
----

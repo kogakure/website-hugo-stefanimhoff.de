@@ -2,30 +2,23 @@
 rsync -v -r --delete \
             --exclude '.DS_Store' \
             --exclude '.git/' \
-            --exclude '.bundle/' \
-            --exclude '_config.build.yml' \
-            --exclude '_config.yml' \
+            --exclude 'config.toml' \
+            --exclude 'config.production.toml' \
             --exclude 'gulp/config.js' \
             --exclude 'node_modules/' \
-            --exclude 'README.markdown' \
-            --exclude 'docs/categories.markdown' \
-            --exclude 'docs/tags.markdown' \
-            --exclude 'vendor/' \
             --exclude 'build/' \
-            --exclude 'app/htpasswd' \
-            --exclude 'app/LiveSearchSiteAuth.xml' \
-            --exclude 'app/y_key_dc6ca9ea04c4d2d2.html' \
-            --exclude 'app/googleeac4fc886a6f9f8d.html' \
-            --exclude 'app/BingSiteAuth.xml' \
-            --exclude 'app/pinterest-428b1.html' \
-            --exclude 'app/_assets/images/xing/' \
-            --exclude 'app/_assets/images/artikel/' \
-            --exclude 'app/_assets/images/css/header/' \
-            --exclude 'app/_assets/scss/theme/' \
-            --exclude 'app/_posts/' \
-            --exclude 'app/_includes/head/mint.html' \
-            --exclude 'app/_includes/head/google_analytics.html' \
-            --exclude 'app/_drafts/' \
-            --exclude 'app/_includes/post/comments.html' \
+            --exclude 'app/static/.htaccess' \
+            --exclude 'app/static/.htpasswd' \
+            --exclude 'app/static/LiveSearchSiteAuth.xml' \
+            --exclude 'app/static/y_key_dc6ca9ea04c4d2d2.html' \
+            --exclude 'app/static/googleeac4fc886a6f9f8d.html' \
+            --exclude 'app/static/BingSiteAuth.xml' \
+            --exclude 'app/static/pinterest-428b1.html' \
+            --exclude 'app/assets/images/xing/' \
+            --exclude 'app/assets/images/artikel/' \
+            --exclude 'app/content/articles/' \
+            --exclude 'app/data/articles/' \
+            --exclude 'app/layouts/partials/head/mint.html' \
+            --exclude 'app/layouts/partials/head/google_analytics.html' \
             --exclude 'sync.sh' \
-            . /Users/kogakure/Code/github/kogakure/stefanimhoff.de-jekyll/
+            . /Users/kogakure/Code/github/kogakure/stefanimhoff.de-hugo/

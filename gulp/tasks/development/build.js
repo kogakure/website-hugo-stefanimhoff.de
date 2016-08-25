@@ -6,7 +6,7 @@ var runSequence = require('run-sequence');
  */
 gulp.task('build', function(callback) {
   runSequence('delete', 'styles', 'criticalcss', [
-    'jekyll',
+    'hugo',
     'scripts',
     'images'
   ],

@@ -2,7 +2,7 @@ var src = 'app';
 var build = 'build';
 var development = 'build/development';
 var production = 'build/production';
-var srcAssets = 'app/_assets';
+var srcAssets = 'app/assets';
 var developmentAssets = 'build/assets';
 var productionAssets = 'build/production/assets';
 
@@ -28,6 +28,10 @@ module.exports = {
       entries: './' + srcAssets + '/javascripts/application.js',
       dest: developmentAssets + '/js',
       outputName: 'application.js'
+    }, {
+      entries: './' + srcAssets + '/javascripts/prism.js',
+      dest: developmentAssets + '/js',
+      outputName: 'prism.js'
     }]
   },
   browsersync: {
@@ -69,21 +73,19 @@ module.exports = {
     src: [
       productionAssets + '/manifest.json',
       production + '/**/*.{html,xml,txt,json,css,js}',
-      '!' + production + '/atom.xml'
+      '!' + production + '/index.xml'
     ],
     dest: production
   },
   criticalcss: {
     src: developmentAssets + '/css/critical*.css',
-    dest: src + '/_includes/critical/'
+    dest: src + '/layouts/partials/critical/'
   },
   deleteAssets: {
     src: [
-      developmentAssets + '/css/*',
-      developmentAssets + '/images/**/*',
-      developmentAssets + '/js/*',
-      development + '/**/*',
-      production + '/**/*'
+      developmentAssets,
+      development,
+      production
     ]
   },
   gzip: {
@@ -95,16 +97,20 @@ module.exports = {
     src: srcAssets + '/images/**/*',
     dest: developmentAssets + '/images'
   },
-  jekyll: {
+  productionImages: {
+    src: srcAssets + '/images/**/*',
+    dest: productionAssets + '/images'
+  },
+  hugo: {
     development: {
       src: src,
       dest: development,
-      config: '_config.yml'
+      config: 'config.toml'
     },
     production: {
       src: src,
       dest: production,
-      config: '_config.yml,_config.build.yml'
+      config: 'config.production.toml'
     }
   },
   eslint: {
@@ -127,7 +133,7 @@ module.exports = {
   },
   loadcss: {
     src: 'node_modules/fg-loadcss/src/loadCSS.js',
-    dest: src + '/_includes/critical/',
+    dest: src + '/layouts/partials/critical/',
     options: {}
   },
   optimize: {
@@ -144,8 +150,8 @@ module.exports = {
       options: {}
     },
     images: {
-      src: developmentAssets + '/images/**/*.{jpg,jpeg,png,gif,svg}',
-      dest: productionAssets + '/images/',
+      src: srcAssets + '/images/**/*.{jpg,jpeg,png,gif,svg}',
+      dest: srcAssets + '/images/',
       options: {
         optimizationLevel: 3,
         progressive: true,
@@ -237,7 +243,7 @@ module.exports = {
   },
   svg: {
     src: 'vectors/*.svg',
-    dest: src + '/_includes',
+    dest: src + '/layouts/partials',
     options: {
       mode: {
         symbol: {
@@ -252,15 +258,12 @@ module.exports = {
     }
   },
   watch: {
-    jekyll: [
-      '_config.yml',
-      '_config.build.yml',
-      src + '/_data/**/*.{json,yml,csv}',
-      src + '/_includes/**/*.{html,xml}',
-      src + '/_layouts/*.html',
-      src + '/_locales/*.yml',
-      src + '/_plugins/*.rb',
-      src + '/_posts/*.{markdown,md}',
+    hugo: [
+      'config.toml',
+      'config.production.toml',
+      src + '/data/**/*.{json,yml,csv}',
+      src + '/layouts/**/*.{html,xml,txt}',
+      src + '/content/**/*.{markdown,md}',
       src + '/**/*.{html,markdown,md,yml,json,txt,xml}',
       src + '/*'
     ],
@@ -272,8 +275,8 @@ module.exports = {
     criticalcss: developmentAssets + '/css/critical*.css'
   },
   webp: {
-    src: productionAssets + '/images/**/*.{jpg,jpeg,png}',
-    dest: productionAssets + '/images/',
+    src: srcAssets + '/images/**/*.{jpg,jpeg,png}',
+    dest: srcAssets + '/images/',
     options: {}
   }
 };
