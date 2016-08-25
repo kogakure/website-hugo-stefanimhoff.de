@@ -112,17 +112,19 @@ Redirect 301 /notiz/buchtipp-decodeunicode                                      
 Redirect 301 /notiz/duplikation-ist-in-ordnung                                   /2013/duplikation-ist-in-ordnung
 Redirect 301 /notiz/wichtig-website-neu                                          /2014/relaunch-responsive-web-design
 Redirect 301 /notiz/automatisierte-installation-mac-os-x                         /2014/automatisierte-installation-mac-os-x
-Redirect 301 /main/kategorie/gtd                                                 /category/produktivitaet
+Redirect 301 /main/kategorie/gtd                                                 /categories/produktivitaet
 Redirect 301 /main/kategorie/python                                              /tag/python
 Redirect 301 /main/kategorie/django                                              /tag/django
 Redirect 301 /notiz/django                                                       /tag/django
 
-Redirect 301 /information/impressum                                             /impressum
-Redirect 301 /main/kategorie/tutorial                                           /tag/tutorial
-Redirect 301 /main/kategorie/download                                           /tag/download
-Redirect 301 /notizbuch                                                         /articles
-Redirect 301 /archiv                                                            /articles
-Redirect 301 /kategorie                                                         /category
+Redirect 301 /information/impressum      /impressum
+Redirect 301 /main/kategorie/tutorial    /tag/tutorial
+Redirect 301 /main/kategorie/download    /tag/download
+Redirect 301 /notizbuch                  /articles
+Redirect 301 /archiv                     /articles
+Redirect 301 /kategorie                  /categories
+Redirect 301 /category                   /categories
+Redirect 301 /tag                        /tags
 
 # #############################################################################
 # # ERRORS                                                                    #
