@@ -27,7 +27,7 @@ Die Verwendung eines CSS-Preprozessors wie [Sass](http://sass-lang.com/) ist mit
 ## Compass
 Doch noch besser ist es ein CSS-Framework wie [Compass](http://compass-style.org/) zu verwenden. Der Vorteil liegt darin, dass diese schon mit einer großen Anzahl an fertigen Methoden kommen, und so verhindern, dass das Rad neu erfunden werden muss. Mit Compass lassen sich sehr einfach Sprites generieren und viele Methoden sorgen dafür, dass für die unterschiedlichen Browser die korrekte Implementierung verwendet wird. Außerdem werden für Compass zahlreiche Erweiterungen angeboten.
 
-Ich verwende für meine Seite z. B. ein [Gridsystem](http://singularity.gs/), Helfer für Typographie, Farben und Responsive Breakpoints.
+Ich verwende für meine Seite z. B. ein [Gridsystem](https://github.com/at-import/Singularity), Helfer für Typographie, Farben und Responsive Breakpoints.
 
 Doch auch Compass schlägt keine Strukturierung des SASS oder SCSS vor. Dafür gibt es aber einige Konzepte und Ideen, die bei der Architektur von Projekten helfen sollen. Eines dieser Konzepte ist [SMACSS](https://smacss.com/).
 

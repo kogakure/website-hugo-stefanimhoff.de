@@ -100,9 +100,9 @@ There are two kind of grids systems: Classical **CSS Frameworks** and **Grids-on
 
 I’m a big fan of Grids-on-Demand and really think CSS-Frameworks are a waste of time, money and fun. The latter one create a lot of CSS with class attributes, to use all over your markup and pollute everything with class attributes (e. g. `.col-1-of-6` or `.push-3-of-12`). With a Responsive Design this gets even messier and is quite inflexible. You mostly have to decide on major breakpoints and add class attributes to all of your containers for all your breakpoints. Examples of these kind of frameworks are [Bootstrap](http://getbootstrap.com/), [Foundation](http://foundation.zurb.com/), [Pure.CSS](http://purecss.io/), [Unsemantic](http://unsemantic.com/) and others.
 
-Grid-on-Demand Systems are far more flexible. They need a preprocessor to run and provide Mixins for your grid. You only create grid code, when needed and don’t have to ship all possible variations of grids with your CSS. Examples of these systems are [Susy](http://susy.oddbird.net/) and [Singularity](http://singularity.gs/).
+Grid-on-Demand Systems are far more flexible. They need a preprocessor to run and provide Mixins for your grid. You only create grid code, when needed and don’t have to ship all possible variations of grids with your CSS. Examples of these systems are [Susy](http://susy.oddbird.net/) and [Singularity](https://github.com/at-import/Singularity).
 
-I used for kogakure.de [Singularity](http://singularity.gs/), which I used before for this website. I like it in particular because it’s the most flexible system I’ve ever used. You can create every Grid imaginable with it.
+I used for kogakure.de [Singularity](https://github.com/at-import/Singularity), which I used before for this website. I like it in particular because it’s the most flexible system I’ve ever used. You can create every Grid imaginable with it.
 
 {{< figure class="image-figure" caption="4 different grids depending on the viewport size" >}}
 {{< image src="artikel/kogakure-de-grids.jpg" alt="Grids of kogakure.de" >}}

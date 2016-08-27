@@ -261,7 +261,7 @@ module.exports = {
     hugo: [
       'config.toml',
       'config.production.toml',
-      src + '/data/**/*.{json,yml,csv}',
+      src + '/data/**/*.{json,yml,csv,toml}',
       src + '/layouts/**/*.{html,xml,txt}',
       src + '/content/**/*.{markdown,md}',
       src + '/**/*.{html,markdown,md,yml,json,txt,xml}',

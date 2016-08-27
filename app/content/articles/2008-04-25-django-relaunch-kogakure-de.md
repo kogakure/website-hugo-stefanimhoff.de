@@ -119,13 +119,6 @@ Um den Einstieg in Django zu erleichtern, habe ich nachfolgend eine Liste von in
 * [Installation von Django](https://docs.djangoproject.com/en/dev/topics/install/) – Anleitung für die Installation von Django
 * [Einsteiger-Tutorial](https://docs.djangoproject.com/en/dev/intro/tutorial01/) – Offizielles 4-teiliges Einsteigertutorial
 
-### Screencasts
-
-* [Learn Django: Create a Wiki in 20 minutes](http://showmedo.com/videotutorials/video?name=1100000&amp;fromSeriesID=110) – Programmierung eines Wiki mit Django (1. Teil)
-* [Learn Django: Extending the wiki with wikiwords and search](http://showmedo.com/videotutorials/video?name=1100010&amp;fromSeriesID=110) – Programmierung eines Wiki mit Django (2. Teil)
-* [Learn Django: Adding tags to the wiki](http://showmedo.com/videotutorials/video?name=1100020&amp;fromSeriesID=110) – Programmierung eines Wiki mit Django (3. Teil)
-* [Django Screencast: Writing a simple todo list](http://turriate.com/media/video/tiddlylist.htm) – Programmieren einer Todo-Liste mit Django
-
 ### Video-Präsentationen
 
 * [Django: Web Development for Perfectionists with Deadlines](https://www.youtube.com/watch?v=n8KnFywpXOE) – Jacob Kaplan-Moss stellt Django bei Google TechTalks vor (sehenswert!)

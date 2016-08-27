@@ -33,7 +33,7 @@ Ich setzte fast durchgängig die Technik des **vertikalen Rhythmus** bei meiner 
 Außerdem wollte ich von Anfang an gleich mit einer **Skala** arbeiten. Dies ist eine uralte Technik, die seit Jahrhunderten im Schriftsatz eingesetzt wird. Dabei wird ein besonderes Harmonieverhältnis ausgewählt und daran dann alle Breiten und Größen festgelegt. Ich verwende den *Goldenen Schnitt* als Grundlage für meine Skala.
 
 ### Design und Layout
-Ich verwende ein **responsives, semantisches Gridsystem**, zuerst hatte ich das Gridsystem [Susy](http://susy.oddbird.net/) für [Compass](http://compass-style.org/) verwendet, doch während der Entwicklung auf [Singularity.gs](http://singularity.gs/) gewechselt, da dieses System weitaus ausgefeilter, mächtiger und zukunftsfähiger aussieht. Ausserdem wird das GitHub-Repository vom SASS-Team gepflegt.
+Ich verwende ein **responsives, semantisches Gridsystem**, zuerst hatte ich das Gridsystem [Susy](http://susy.oddbird.net/) für [Compass](http://compass-style.org/) verwendet, doch während der Entwicklung auf [Singularity](https://github.com/at-import/Singularity) gewechselt, da dieses System weitaus ausgefeilter, mächtiger und zukunftsfähiger aussieht. Ausserdem wird das GitHub-Repository vom SASS-Team gepflegt.
 
 Die Grids sind komplett mit **variablen Breiten** gebaut und mehrere **Breakpoint**s (durch Media Queries gesteuert) sorgen dafür, dass Lesebreite und Layout der Seite auf jeder Auflösung – vom Smartphone bis zum Desktop – immer optimal bleiben.
 
