@@ -63,6 +63,7 @@ themesdir     = "app/themes"
 
 [params]
   criticalcss    = true
+  tracking       = true
   disqus         = "stefanimhoff"
 
   [params.attribution]
