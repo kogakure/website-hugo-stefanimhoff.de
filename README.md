@@ -52,7 +52,7 @@ The production server will run on [http://0.0.0.0:9998/](http://0.0.0.0:9998/).
 These are just some of the tools, packages, languages and stuff I used to build my website:
 
 - [Hugo](http://gohugo.io/) to build the static website.
-- [Node.js](http://nodejs.org/) to run Gulp.js, Bower and other tools
+- [Node.js](http://nodejs.org/) to run Gulp.js.
 - [Gulp.js](http://gulpjs.com/) to run the development enviroment and create builds.
 - [JavaScript](https://developer.mozilla.org/docs/Web/JavaScript)
 - [Browserify](http://browserify.org/) to use CommonJS modules.
