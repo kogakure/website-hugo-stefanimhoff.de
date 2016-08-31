@@ -19,6 +19,6 @@ rsync -v -r --delete \
             --exclude 'app/content/articles/' \
             --exclude 'app/data/articles/' \
             --exclude 'app/layouts/partials/head/mint.html' \
-            --exclude 'app/layouts/partials/head/google_analytics.html' \
+            --exclude 'app/layouts/partials/head/tracking.html' \
             --exclude 'sync.sh' \
             . /Users/kogakure/Code/github/kogakure/stefanimhoff.de-hugo/
