@@ -263,7 +263,6 @@ AddDefaultCharset utf-8
 
 <IfModule mod_rewrite.c>
   Options +FollowSymlinks
-  # Options +SymLinksIfOwnerMatch
   RewriteEngine On
   RewriteBase /
 </IfModule>
@@ -298,8 +297,14 @@ AddDefaultCharset utf-8
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
+
+  # Enfore Domain
   RewriteCond %{HTTP_HOST} !^stefanimhoff\.de$
   RewriteRule ^(.*)$ http://stefanimhoff.de/$1 [R=301,L]
+
+  # Ensure SSL is used
+  RewriteCond %{ENV:HTTPS} !=on
+  RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
 </IfModule>
 
 # #############################################################################
