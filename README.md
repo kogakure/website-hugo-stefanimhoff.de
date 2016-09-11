@@ -1,6 +1,6 @@
 # stefanimhoff.de
 
-This is the source of my [personal website and blog](http://stefanimhoff.de/) build with [Hugo](http://gohugo.io/) and [Gulp.js](http://gulpjs.com/).
+This is the source of my [personal website and blog](https://stefanimhoff.de/) build with [Hugo](http://gohugo.io/) and [Gulp.js](http://gulpjs.com/).
 
 ## Installation
 
@@ -61,6 +61,6 @@ These are just some of the tools, packages, languages and stuff I used to build 
 - [LostGrid](https://github.com/corysimmons/lost) to build the awesome Grid of my website.
 
 ## Licence
-All content is copyrighted by [Stefan Imhoff](http://stefanimhoff.de) unless otherwise stated. Feel free to learn from the source code and reuse code for your projects. The only thing which is not allowed is the usage of my design (the unique combination of layout, fonts, images), private photos and logo.
+All content is copyrighted by [Stefan Imhoff](https://stefanimhoff.de) unless otherwise stated. Feel free to learn from the source code and reuse code for your projects. The only thing which is not allowed is the usage of my design (the unique combination of layout, fonts, images), private photos and logo.
 
 In easier words: **This is not a free theme**. Learn from it. Remix. Reuse. Build your own stuff.

@@ -285,11 +285,19 @@ AddDefaultCharset utf-8
 # -----------------------------------------------------------------------------
 
 <IfModule mod_rewrite.c>
+  RewriteEngine On
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_URI} !/$
   RewriteCond %{REQUEST_URI} !(.*)/$
   RewriteRule ^(.*)$ $1/ [L,R=301]
+</IfModule>
 
+# -----------------------------------------------------------------------------
+# | Redirect other domains to stefanimhoff.de                                 |
+# -----------------------------------------------------------------------------
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
   RewriteCond %{HTTP_HOST} !^stefanimhoff\.de$
   RewriteRule ^(.*)$ http://stefanimhoff.de/$1 [R=301,L]
 </IfModule>
@@ -317,6 +325,7 @@ AddDefaultCharset utf-8
 # This includes directories used by version control systems such as Git and SVN.
 
 <IfModule mod_rewrite.c>
+  RewriteEngine On
   RewriteCond %{SCRIPT_FILENAME} -d [OR]
   RewriteCond %{SCRIPT_FILENAME} -f
   RewriteRule "(^|/)\." - [F]
