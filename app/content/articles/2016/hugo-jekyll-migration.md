@@ -34,7 +34,7 @@ Another tool, which looked quite nice was [Roots](http://roots.cx/). But after s
 I really like the idea of [Gatsby](https://github.com/gatsbyjs/gatsby), because it uses React templates to build static sites. But currently it’s unusable, because it bundles all articles into *one* JavaScript file. Sure, this allows to browse the website offline and with instant page changes. But having a 500-800 KB JavaScript file is just not a thing I’ll ever allow. If Gatsby would allow to decide on smaller Webpack bundle packages (e. g. a bundle for a *tag* or a *year*) it would be an option.
 
 ## Choosing Hugo
-In the end the features of Hugo were just do good and after testing it for some days I decided to use it, despite having no clue of Go.
+In the end the features of Hugo were just too good and after testing it for some days I decided to use it, despite having no clue of Go.
 
 The first thing which is surprising: Hugo is a binary, which is cross platform and after installing it, that’s it. It’s as easy on a Mac as this:
 
