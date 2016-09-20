@@ -365,7 +365,7 @@ ModPagespeedDisableFilters rewrite_css,rewrite_images,rewrite_javascript,combine
 </IfModule>
 
 # -----------------------------------------------------------------------------
-# | Enable SSL Compression                                                                 |
+# | Enable SSL Compression                                                    |
 # -----------------------------------------------------------------------------
 
 <IfModule mod_ssl.c>
