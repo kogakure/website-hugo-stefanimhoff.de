@@ -368,12 +368,6 @@ ModPagespeedDisableFilters rewrite_css,rewrite_images,rewrite_javascript,combine
 # | Compression                                                               |
 # -----------------------------------------------------------------------------
 
-# <FilesMatch "\.(html|js|css|svg)$">
-#   <IfModule mod_headers.c>
-#   Header set Content-Encoding "gzip"
-#   </IfModule>
-# </FilesMatch>
-
 <IfModule mod_deflate.c>
 
   # Force compression for mangled headers.

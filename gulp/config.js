@@ -89,7 +89,7 @@ module.exports = {
     ]
   },
   gzip: {
-    src: production + '/**/*.{html,xml,json,css,js}',
+    src: production + '/**/*.{html,xml,json,css,js,svg}',
     dest: production,
     options: {}
   },
