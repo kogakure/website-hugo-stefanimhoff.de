@@ -36,6 +36,8 @@ body {
   }
 }
 
+* { box-sizing: border-box }
+
 /* Critical patterns */
 body,
 .footer-legal {

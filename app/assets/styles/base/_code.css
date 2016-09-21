@@ -23,8 +23,6 @@ pre {
     clear: both;
     display: block;
     line-height: 1.2;
-    lost-column: 10/8 0;
-    lost-move: -1/8;
     margin-bottom: $default-spacing-bottom;
     margin-right: 0;
     overflow-x: auto !important;
@@ -35,8 +33,6 @@ pre {
 
     @media screen and (width <= $content-medium) {
       clear: both;
-      lost-column: 8/8;
-      lost-move: 0;
     }
   }
 }
