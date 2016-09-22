@@ -187,7 +187,7 @@ I remove these lines from my `optimize-css.js` task, because `cssnano` already d
 
 {{% figure class="code-figure" caption="gulp/tasks/production/optimize-css.js:2" %}}
 ```diff
--var minifycss = require('gulp-minify-css');
+-var csso = require('gulp-csso');
 ```
 {{% /figure %}}
 

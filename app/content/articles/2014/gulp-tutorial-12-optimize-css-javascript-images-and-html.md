@@ -34,7 +34,7 @@ First I will write a task, which will optimize the CSS. Compass is able to minim
 I install the needed Gulp.js plugins:
 
 ```bash
-$ npm install --save-dev gulp-minify-css@1.2.1 gulp-size@2.0.0
+$ npm install --save-dev gulp-csso@2.0.0 gulp-size@2.0.0
 ```
 
 {{% figure class="code-figure" caption="gulp/config.js" %}}
@@ -43,9 +43,7 @@ optimize: {
   css: {
     src:  developmentAssets + '/css/*.css',
     dest: productionAssets + '/css/',
-    options: {
-      keepSpecialComments: 0
-    }
+    options: {}
   }
 }
 ```
@@ -53,17 +51,17 @@ optimize: {
 
 {{% figure class="code-figure" caption="gulp/tasks/production/optimize-css.js" %}}
 ```javascript
-var gulp      = require('gulp');
-var minifycss = require('gulp-minify-css');
-var size      = require('gulp-size');
-var config    = require('../../config').optimize.css;
+var gulp   = require('gulp');
+var csso   = require('gulp-csso');
+var size   = require('gulp-size');
+var config = require('../../config').optimize.css;
 
 /**
  * Copy and minimize CSS files
  */
 gulp.task('optimize:css', function() {
   return gulp.src(config.src)
-    .pipe(minifycss(config.options))
+    .pipe(csso(config.options))
     .pipe(gulp.dest(config.dest))
     .pipe(size());
 });

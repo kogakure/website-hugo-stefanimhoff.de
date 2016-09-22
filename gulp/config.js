@@ -140,9 +140,7 @@ module.exports = {
     css: {
       src: developmentAssets + '/css/*.css',
       dest: productionAssets + '/css/',
-      options: {
-        keepSpecialComments: 0
-      }
+      options: {}
     },
     js: {
       src: developmentAssets + '/js/*.js',
