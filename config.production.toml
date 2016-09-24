@@ -1,4 +1,4 @@
-baseurl         = "//stefanimhoff.de/"
+baseurl         = "https://stefanimhoff.de/"
 title           = "stefanimhoff.de"
 languageCode    = "en"
 metaDataFormat  = "yaml"
