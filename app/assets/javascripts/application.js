@@ -1,8 +1,6 @@
-/* global classie:false */
-
-require('classie');
 require('./vendor/ios-rotate-scaling-fix');
 
+var classie = require('classie');
 var fitvids = require('fitvids');
 var attachFastClick = require('fastclick');
 var navigation = require('./libs/navigation');
