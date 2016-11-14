@@ -36,7 +36,9 @@ body {
   }
 }
 
-* { box-sizing: border-box }
+* {
+  box-sizing: border-box;
+}
 
 /* Critical patterns */
 body,
@@ -47,8 +49,6 @@ body,
 .container {
   @extend pattern-light-grey;
 }
-
-
 
 .article-body p,
 .article-body blockquote,
