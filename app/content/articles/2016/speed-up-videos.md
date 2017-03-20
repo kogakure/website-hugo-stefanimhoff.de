@@ -16,7 +16,7 @@ tags:
 title: How to speed up videos
 ---
 
-Some weeks ago I was browsing my YouTube **Watch Later** lists and thinking: *There is so much good quality video, I wish I could watch it faster to see more of it*. All these Screencasts, Comedy, TechTalks, Conference Presentations … so I googled just for fun.
+Some weeks ago I was browsing my YouTube **Watch Later** lists and thinking: *There is so much good quality video, I wish I could watch it faster to see more of it*. All these screencasts, comedy, TechTalks, conference presentations … so I googled just for fun.
 
 ## Video Speed Controller
 
