@@ -27,7 +27,7 @@ It’s a story about a young girl called **Mayuko** (**Mirei Kiritani**), coming
 
 The *Atelier*, a french word for a **workshop** or **studio**, a place, where professional artists work together and produce pieces of art, has multiple rooms, separated by doors, leading from the entrance hall, where customers get served, to the inner rooms of the owner. Additionally it has a cellar with tons of fabric, accessories and documents.
 
-{{% youtube 7Rl_VGYWEqs %}}
+{{% youtube CSnj2J6aVmI %}}
 
 The **13 episodes** provide a deep insight into Japanese culture, politeness, art, craft and beauty. Every scene is choreographed with an eye to the detail. The **camera work** is really interesting and uses a variety of techniques. The **actors** are really brilliant. It is a pleasure to follow the Japanese **dialogs** (subtitled), which are able to tell so much with so few words. Japanese is really a language of *context* and *nuances*.
 
