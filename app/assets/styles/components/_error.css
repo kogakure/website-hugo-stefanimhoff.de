@@ -15,7 +15,7 @@
 
   @media screen and (width <= $error-image-new-line) {
     lost-column: 6/12;
-    lost-offset: -3/12;
+    lost-offset: 3/12;
   }
 }
 

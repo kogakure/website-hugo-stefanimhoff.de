@@ -17,7 +17,7 @@
 
 .stripe-blog-recently {
   lost-column: 4/12;
-  lost-offset: -1/12;
+  lost-offset: 1/12;
 
   @media screen and (width <= $homepage-sections-fullsize) {
     lost-column: 12/12;
