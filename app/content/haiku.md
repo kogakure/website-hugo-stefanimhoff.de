@@ -1,5 +1,4 @@
 ---
-layout: page
 title: "Haiku"
 language: "de"
 author: "Stefan Imhoff"
