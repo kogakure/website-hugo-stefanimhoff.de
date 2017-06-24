@@ -30,18 +30,12 @@ $ npm install
 The development enviroment is driven by Gulp.js. I have written these npm run tasks:
 
 ```bash
-$ npm run dev
-$ npm run preview
-$ npm run publish
-$ npm run build
-$ npm run deploy
+$ yarn run dev     # Start development enviroment
+$ yarn run preview # Build production and preview it
+$ yarn run publish # Build production and sync to server
+$ yarn run build   # Build production
+$ yarn run deploy  # Sync to server
 ```
-
-- To start the development enviroment run `npm run dev`.
-- To build and preview a production build run `npm run preview`.
-- To run a production build and sync it to the server run `npm run publish`.
-- To build a production build run `npm run build`.
-- To sync the files to a server run `npm run deploy`.
 
 The developement server will run on [http://0.0.0.0:9999/](http://0.0.0.0:9999/).
 
