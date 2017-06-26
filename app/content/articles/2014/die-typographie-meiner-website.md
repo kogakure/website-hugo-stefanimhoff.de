@@ -39,7 +39,7 @@ Es gilt das richtige Seitenlayout zu wählen, die richtige Satzbreite, den richt
 ## Skala
 Bereits vor einigen Jahren stolperte ich über zwei interessante Vorträge von Tim Brown über Typographie. Tim Brown arbeitet als *Type Manager* für [Adobe Typekit](https://typekit.com/), einer Plattform, die Webfont-Hosting anbietet. In seinen Vorträgen bietet er einen sehr interessanten Einblick in die Geschichte von Typographie und wie man gute Typographie erreicht.
 
-{{% vimeo 17079380 %}}
+{{% youtube 6s3XwSpY2vc %}}
 
 Ich entschied mich mit der Auswahl einer Skala zu beginnen. Eine typographische Skala ist die Auswahl von harmonischen Proportionen, die danach auf Schriftgröße, Satzbreite und andere Teile angewendet wird.
 
