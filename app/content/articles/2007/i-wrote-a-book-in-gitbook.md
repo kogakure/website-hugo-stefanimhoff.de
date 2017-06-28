@@ -2,7 +2,7 @@
 title: I wrote a book in Gitbook
 slug: "i-wrote-a-book-in-gitbook"
 date: 2017-06-27T16:16:34+02:00
-description: ""
+description: "I just finished writing my first book in Gitbook. I worked on it the last six month and it’s available to read online, as PDF, ePub and Mobi."
 author: "Stefan Imhoff"
 language: "en"
 draft: false
