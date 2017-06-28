@@ -1,12 +1,16 @@
 ---
-language: "en"
+title: {{ replace .TranslationBaseName "-" " " | title }}
+slug: ""
+date: {{ .Date }}
 description: ""
+author: "Stefan Imhoff"
+language: "en"
 draft: true
 og_image: ""
-author: "Stefan Imhoff"
-slug: ""
 series:
+-
 categories:
+-
 tags:
+-
 ---
-
