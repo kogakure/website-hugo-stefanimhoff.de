@@ -1,8 +1,8 @@
 ---
-title: I wrote a book in Gitbook
+title: I wrote a book in GitBook
 slug: "i-wrote-a-book-in-gitbook"
 date: 2017-06-27T16:16:34+02:00
-description: "I just finished writing my first book in Gitbook. I worked on it the last six month and it’s available to read online, as PDF, ePub and Mobi."
+description: "I just finished writing my first book in GitBook. I worked on it the last six month and it’s available to read online, as PDF, ePub and Mobi."
 author: "Stefan Imhoff"
 language: "en"
 draft: false
@@ -18,7 +18,7 @@ tags:
 
 I just finished writing my first book. I worked on it the last six month. Actually I didn’t wrote it recently, but in the period of 18 years.
 
-![Gitbook: kogakure](/assets/images/artikel/gitbook-kogakure.jpg)
+![GitBook: kogakure](/assets/images/artikel/gitbook-kogakure.jpg)
 
 It was always available for *free* for everyone on [my website](https://kogakure.de/). I started writing it 1999 with my first website, containing a collection of notes and thoughts about **Ninja** and their art, **Ninjutsu**.
 
@@ -30,7 +30,7 @@ And furthermore writing a real print book is pain, takes a lot of your lifetime 
 
 Last year I stumbled upon **GitBook**, which is an Open Source [software package](https://github.com/GitbookIO/gitbook) and a [hosting service](https://www.gitbook.com/), and decided to write a book with it.
 
-Gitbook’s hosting service has a free plan, which allows public books and a custom domain. And you can add your book from GitHub. You can use the software, without the need to host your book on the hosting service.
+GitBook’s hosting service has a free plan, which allows public books and a custom domain. And you can add your book from GitHub. You can use the software, without the need to host your book on the hosting service.
 
 ## What is Git?
 
