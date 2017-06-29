@@ -18,7 +18,7 @@ tags:
 
 I just finished writing my first book. I worked on it the last six month. Actually I didn’t wrote it recently, but in the period of 18 years.
 
-![GitBook: kogakure](/assets/images/artikel/gitbook-kogakure.jpg)
+[![GitBook: kogakure](/assets/images/artikel/gitbook-kogakure.jpg)](https://book.kogakure.de/)
 
 It was always available for *free* for everyone on [my website](https://kogakure.de/). I started writing it 1999 with my first website, containing a collection of notes and thoughts about **Ninja** and their art, **Ninjutsu**.
 
