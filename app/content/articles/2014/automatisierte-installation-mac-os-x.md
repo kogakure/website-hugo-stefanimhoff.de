@@ -22,7 +22,7 @@ Ob gepackte Archive (ZIP, TAR etc.), Disk Images, Application Bundles, Installer
 Auch fehlte es lange an einer Packet-Verwaltung, wie sie unter jeder Linux-Distributionen zu finden ist. Apple selbst hat hier niemals versucht eine Lösung anzubieten. MacPorts war eine Initiative, die dieses Problem beheben sollte. Doch installierte MacPorts seine Pakete an eine eigens dafür vorgesehene Position auf der Festplatte und machte die Paketverwaltung somit kaum besser.
 
 ## Homebrew
-Dann trat [Homebrew](http://brew.sh/) auf die Bühne, eine Software die sich selbst als <q lang="en">The missing package manager for OS X</q> bezeichnet. In kurzer Zeit wurde dieses Programm für Entwickler zum Standard unter Mac OS X. Mit einem einfachen einzeiligen Befehl wird Homebrew an eine feste Position auf dem System installiert und symbolische Links (Symlinks) an die Standardpositionen erstellt.
+Dann trat [Homebrew](https://brew.sh/) auf die Bühne, eine Software die sich selbst als <q lang="en">The missing package manager for OS X</q> bezeichnet. In kurzer Zeit wurde dieses Programm für Entwickler zum Standard unter Mac OS X. Mit einem einfachen einzeiligen Befehl wird Homebrew an eine feste Position auf dem System installiert und symbolische Links (Symlinks) an die Standardpositionen erstellt.
 
 Mit *Homebrew* lassen sich Pakete einfach über das Terminal installieren:
 
@@ -83,4 +83,4 @@ Dabei werden drei Dateien erzeugt:
 Die `.brew`-Datei wird einfach in das Homeverzeichnis kopiert, das `Brewfile` und `Caskfile` können z. B. einer Software-Distribution oder Applikation beigelegt werden, um nötige Pakete zu installieren oder auf einen neuen Rechner kopiert werden.
 
 ## Fazit
-Mit [Homebrew](http://brew.sh/), [Homebrew Cask](http://caskroom.io/) und dem [homebrew-dotfile-generator](https://github.com/seethroughtrees/homebrew-dotfile-generator) steht somit eine umfangreiche Anzahl an Hilfsprogrammen zur Verfügung, die es ermöglichen einen neuer Rechner relativ schnell und ohne viel Aufwand mit der gewünschten Software auszurüsten.
+Mit [Homebrew](https://brew.sh/), [Homebrew Cask](http://caskroom.io/) und dem [homebrew-dotfile-generator](https://github.com/seethroughtrees/homebrew-dotfile-generator) steht somit eine umfangreiche Anzahl an Hilfsprogrammen zur Verfügung, die es ermöglichen einen neuer Rechner relativ schnell und ohne viel Aufwand mit der gewünschten Software auszurüsten.

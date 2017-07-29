@@ -16,7 +16,7 @@ tags:
 - automation
 ---
 
-My website is running [Jekyll](http://jekyllrb.com/) now since the beginning of 2014. But I wasn’t quite happy with my build and development process. I started out with Rake tasks and chose later [Grunt.js](http://gruntjs.com/) as my build system, but parts of the process where left in Ruby. I used [Compass](http://compass-style.org/) a lot and [Jekyll Assets](http://ixti.net/jekyll-assets/) was handling my versioning. But Grunt.js and the Jekyll Asset Pipeline didn’t play well together. Then a new solution came along: [Gulp.js](http://gulpjs.com/).
+My website is running [Jekyll](http://jekyllrb.com/) now since the beginning of 2014. But I wasn’t quite happy with my build and development process. I started out with Rake tasks and chose later [Grunt.js](https://gruntjs.com/) as my build system, but parts of the process where left in Ruby. I used [Compass](http://compass-style.org/) a lot and [Jekyll Assets](http://ixti.net/jekyll-assets/) was handling my versioning. But Grunt.js and the Jekyll Asset Pipeline didn’t play well together. Then a new solution came along: [Gulp.js](https://gulpjs.com/).
 
 {{< figure class="image-figure" >}}
 {{< image src="artikel/gulp-tutorial-1.png" alt="Gulp.js Logo" >}}
@@ -31,7 +31,7 @@ I’ll describe everything **step-by-step** and provide **specific version numbe
 
 It’s the first series of articles I write in English, which is not my native language. So if you find some spelling mistakes or false grammar, just send me a message.
 
-When I started with Gulp.js, I fortunately stumbled upon a GitHub project called [gulp-starter](https://github.com/vigetlabs/gulp-starter), that helped me a lot to structure my code and understand Gulp.js. So my process is partly derived from this fantastic project.
+When I started with Gulp.js, I fortunately stumbled upon a GitHub project called <del>gulp-starter</del> <ins>[blendid](https://github.com/vigetlabs/blendid)</ins>, that helped me a lot to structure my code and understand Gulp.js. So my process is partly derived from this fantastic project.
 
 ## What is Gulp.js?
 Gulp.js is *the streaming build system* and its main focus is speed, efficiency and simplicity. Where Grunt.js uses a lot of configuration with the actual process hidden in plugins, Gulp.js uses a simple and minimal API. You code your own build process by yourself and use JavaScript as the language. Of course you don’t have to program everything by yourself, there are nearly 800 plugins ready for Gulp.js. But even more Node.js modules can be used to build the perfect build and development process for **your** needs.

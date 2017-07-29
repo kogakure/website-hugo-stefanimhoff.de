@@ -41,11 +41,11 @@ There is a new kid on the block: [PostCSS](https://github.com/postcss/postcss). 
 
 Why should you use a new tool, if Sass and it’s competitors do their job? Because it’s **fast** ([3-30 times faster](https://github.com/postcss/benchmark)), **modular** and **extendible**. I bet you only need a small fraction of your Preprocessors functionality.
 
-With PostCSS you can choose what you need from currently over [200 plugins](http://postcss.parts/). If you don’t find the plugin you need, you can write your own [plugin](https://github.com/postcss/postcss/blob/master/docs/guidelines/plugin.md) or [syntax](https://github.com/postcss/postcss/blob/master/docs/syntax.md).
+With PostCSS you can choose what you need from currently over [200 plugins](https://www.postcss.parts/). If you don’t find the plugin you need, you can write your own [plugin](https://github.com/postcss/postcss/blob/master/docs/guidelines/plugin.md) or [syntax](https://github.com/postcss/postcss/blob/master/docs/syntax.md).
 
 **You get it all**: Variables, Mixins, Extends, Color Helpers, Fallbacks, Optimizations, Grids … you choose. You can even start using future CSS syntax today, let PostCSS transpile it for you.
 
-I swapped out *Ruby Sass* with PostCSS and my CSS is now transformed in 2-3 seconds. Go and take a look at my [beautiful new code](https://github.com/kogakure/stefanimhoff.de-jekyll/). I use a Responsive Typography, Autoprefixer, and the awesome [LostGrid](https://github.com/peterramsing/lost).
+I swapped out *Ruby Sass* with PostCSS and my CSS is now transformed in 2-3 seconds. Go and take a look at my [beautiful new code](https://github.com/kogakure/jekyll-stefanimhoff.de). I use a Responsive Typography, Autoprefixer, and the awesome [LostGrid](https://github.com/peterramsing/lost).
 
 ## PostCSS
 
@@ -226,7 +226,7 @@ After I updated the FontCustom config file I have to run the task for creating t
 $ gulp fontcustom
 ```
 
-The syntax of the different PostCSS plugins is different. I use [PreCSS](https://github.com/jonathantneal/precss), which is a lot like Sass, but some things look a little bit different. To write down all of the changes I made to the CSS would extend the scope of this tutorial too much, as it’s a very long file. But you can have a look, how I refactored all CSS files with updated syntax in my [GitHub repository](https://github.com/kogakure/gulp-tutorial/commit/fc2398d933e2094832a00ac123b30c772269e08c). If you are interested how I replaced [Singularity](https://github.com/at-import/Singularity) (which is still the best Sass grid available) with [LostGrid](https://github.com/peterramsing/lost) and all the other things, look into [my websites source code](https://github.com/kogakure/stefanimhoff.de-jekyll/).
+The syntax of the different PostCSS plugins is different. I use [PreCSS](https://github.com/jonathantneal/precss), which is a lot like Sass, but some things look a little bit different. To write down all of the changes I made to the CSS would extend the scope of this tutorial too much, as it’s a very long file. But you can have a look, how I refactored all CSS files with updated syntax in my [GitHub repository](https://github.com/kogakure/gulp-tutorial/commit/fc2398d933e2094832a00ac123b30c772269e08c). If you are interested how I replaced [Singularity](https://github.com/at-import/Singularity) (which is still the best Sass grid available) with [LostGrid](https://github.com/peterramsing/lost) and all the other things, look into [my websites source code](https://github.com/kogakure/jekyll-stefanimhoff.de).
 
 You can run `gulp` again now, and PostCSS will process the styles.
 

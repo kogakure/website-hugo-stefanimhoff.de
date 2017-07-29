@@ -84,7 +84,7 @@ I will come back later to write the `watch` task. For now the function will be e
 ## BrowserSync
 You might have heard of [LiveReload](http://livereload.com/), a tool that is watching for changes in your files and automatically reloads the server. With Stylesheets even reloading is not needed. The page refreshes with the changes instantly.
 
-But [BrowserSync](http://www.browsersync.io/) is even better: It does all LiveReload does, but you don’t need a browser plugin and it syncs your actions like scroll, click, refresh or filling out forms to all browsers connected. This works even with mobile devices. And BrowserSync has even support for a development server. That’s why I will need nothing more than BrowserSync to get a development server with live reloading.
+But [BrowserSync](https://browsersync.io/) is even better: It does all LiveReload does, but you don’t need a browser plugin and it syncs your actions like scroll, click, refresh or filling out forms to all browsers connected. This works even with mobile devices. And BrowserSync has even support for a development server. That’s why I will need nothing more than BrowserSync to get a development server with live reloading.
 
 But first I install BrowserSync:
 

@@ -17,7 +17,7 @@ Wie jedes Jahr ist es so kurz vor dem Jahreswechsel mal wieder Zeit um zu schaue
 
 Das vergangene Jahr stand ganz im Stern von [Django](https://www.djangoproject.com/), und auch 2009 wird Django mit großer Wahrscheinlichkeit wieder dazugehören. Das kommt daher, dass mir vorher noch nie ein solches fantastisches Framework (oder CMS) begegnet ist – und ich bin *pingelig*, was das angeht.
 
-Als zweites stand dieses Jahr das Versionskontrollsystem <cite>Git</cite> hoch oben auf meinem Plan. Denn `Git = Subversion + mehr Funktionen - weniger Stress`. Und es gibt noch [viele  weitere Gründe](http://git-scm.com/about), wieso man Git ausprobieren sollte. [Hinsurfen](http://git-scm.com/), [herunterladen](http://git-scm.com/downloads), [Handbuch ansehen](http://git-scm.com/doc), [glücklich sein](https://github.com/). Das gilt auch für Designer. Quält euch doch nicht mit Subversion herum!
+Als zweites stand dieses Jahr das Versionskontrollsystem <cite>Git</cite> hoch oben auf meinem Plan. Denn `Git = Subversion + mehr Funktionen - weniger Stress`. Und es gibt noch [viele  weitere Gründe](https://git-scm.com/about), wieso man Git ausprobieren sollte. [Hinsurfen](https://git-scm.com/), [herunterladen](https://git-scm.com/downloads), [Handbuch ansehen](https://git-scm.com/doc), [glücklich sein](https://github.com/). Das gilt auch für Designer. Quält euch doch nicht mit Subversion herum!
 
 ## Januar
 
@@ -25,9 +25,9 @@ Im Januar 2008 habe ich meinen <cite>iPod touch</cite> gerade einige Wochen und 
 
 Ich schaue mir [reStructuredText](http://docutils.sourceforge.net/rst.html "reStructuredText"), die Auszeichnungssprache für Dokumente und Anleitungen an und bin ziemlich begeistert.
 
-Das Internetportal [TED](http://www.ted.com/ "TED: Ideas worth spreading") schlägt mich auch weiter in seinen Bann und nach einigen Vorträgen über Bionik recherchiere ich mehr zu diesem interessanten Thema.
+Das Internetportal [TED](https://www.ted.com/ "TED: Ideas worth spreading") schlägt mich auch weiter in seinen Bann und nach einigen Vorträgen über Bionik recherchiere ich mehr zu diesem interessanten Thema.
 
-Zeitgleich stolpere ich im Januar auch über [Git](http://git-scm.com/), was langsam bekannter wird. Ich bringe mir Git über die Grundlagen hinaus durch diverse Tutorial und Screencasts (GitCasts, PeepCode) selber bei.
+Zeitgleich stolpere ich im Januar auch über [Git](https://git-scm.com/), was langsam bekannter wird. Ich bringe mir Git über die Grundlagen hinaus durch diverse Tutorial und Screencasts (GitCasts, PeepCode) selber bei.
 
 Ich setzte meinen eigenen [Gitweb](https://git.wiki.kernel.org/index.php/Gitweb)-Server auf und schaue auch die Integration mit Subversion ([git-svn](https://www.kernel.org/pub/software/scm/git/docs/git-svn.html)) an.
 
@@ -72,7 +72,7 @@ Ich setzte mir Memcached auf, um direkt im Arbeitsspeicher des Servers zu cachen
 
 Ich automatisiere viele Prozesse mit Cronjobs und schalte mein Projekt in der letzten Aprilwoche live.
 
-Der Sourcecode dafür ist frei verfügbar und kann bei [GitHub heruntergeladen werden](https://github.com/kogakure/kogakure.de-django).
+Der Sourcecode dafür ist frei verfügbar und kann bei [GitHub heruntergeladen werden](https://github.com/kogakure/django-kogakure.de).
 
 ## Mai
 
@@ -80,7 +80,7 @@ Ich versuche meinen Arbeitgeber davon zu überzeugen, dass die Wahl eines Java-F
 
 Und der externe Dienstleister wirkt auf mich leider nicht sehr zuverlässig und professionell. Aber was weiß ich schon …
 
-[ExpressionEngine](https://ellislab.com/expressionengine) 2 lässt auf sich warten. Gähn. Wieso dauert das bloß so lange?
+[ExpressionEngine](https://expressionengine.com) 2 lässt auf sich warten. Gähn. Wieso dauert das bloß so lange?
 
 ## Juni
 
@@ -105,7 +105,7 @@ Wir recherchieren nach CMS-Systemen, die wir im großen Umfang für unsere Kunde
 
 Ich erfahre, was Django Manager sind und lerne, wie man sie benutzt.
 
-MobileMe ist ein echter Flop, trotzt erweiterter Test-Phase kündige ich meinen Account vorzeitig. So bringt mir das alles nichts, ohne ordentliche Live-Synchronisation. Da fahre ich mit [Spanning Sync](http://spanningsync.com/ "Spanning Sync - Sync iCal and Google Calendar") und Google besser.
+MobileMe ist ein echter Flop, trotzt erweiterter Test-Phase kündige ich meinen Account vorzeitig. So bringt mir das alles nichts, ohne ordentliche Live-Synchronisation. Da fahre ich mit *Spanning Sync* und Google besser.
 
 Ich wechsele von meinem Wiki zu [Evernote](https://evernote.com/intl/de/). So lässt sich all das *Zeug* wirklich komfortabel ablegen. Markieren, reinziehen, verschlagworten, synchronisieren. Evernote ist genau das fehlende Stück Software, dass ich für meinen GTD-Prozess noch brauchte. [Things](https://culturedcode.com/things/) benutze ich für die Aufgaben und Evernote für das *Zeug*.
 
@@ -117,7 +117,7 @@ Im Juli fällt mir im Einkaufsmarkt eine schwarze Tüte mit Tiefkühlbrötchen a
 
 ## August
 
-Ich testen [django-robots](http://code.google.com/p/django-robots/ "django-robots - Google Code") und [django-mobileadmin](http://code.google.com/p/django-mobileadmin/ "django-mobileadmin - Google Code"). Wahnsinn, was Jannis Leidel für [Django-Projekte](http://code.google.com/u/leidel/ "Google Code") entwickelt. Hast du eigentlich noch Freizeit? ;)
+Ich testen [django-robots](https://code.google.com/archive/p/django-robots) und [django-mobileadmin](https://code.google.com/archive/p/django-mobileadmin). Wahnsinn, was Jannis Leidel für Django-Projekte entwickelt. Hast du eigentlich noch Freizeit? ;)
 
 Microsoft sorgt für Lacher mit seinem The Mojave Experiment. In der *wissenschaftlichen* Studie versucht Microsoft einigen US-Midwest-Landeiern zu beweisen, dass sie Windows Vista eigentlich ganz toll finden. Auf perfekten Systemen, mit perfekten Treibern führt ein Microsoft-Profi diese Landeier durch Vista und erntet so lustige Kommentare wie: <q lang="en">Really, this is Vista? I **LOVE** it</q>.
 
@@ -131,11 +131,11 @@ Im August fällt mir auch auf, das kein [Sumo](http://www.sumo.or.jp/ "Nihon Sum
 
 Durch einen Vortrag auf der DjangoCon (<q lang="en">No, you can’t have a Pony</q>) und die Feststellung das Django ein Maskottchen benötigt, wird im Scherz die Idee des [Django Pony](http://www.djangopony.com/ "djangopony - Magic that can't be removed.") geboren. Jetzt **kann** Django ja nur noch erfolgreich werden ;)
 
-Google bringt seinen neuen Browser [Google Chrome](https://www.google.com/intl/de/chrome/browser/) auf den Markt. Eine nette Idee, aber noch viel zu fehlerhaft. Meine eigene Website wird nicht richtig angezeigt, dabei validiert die penibel.
+Google bringt seinen neuen Browser [Google Chrome](https://www.google.com/intl/de/chrome/browser/desktop/index.html) auf den Markt. Eine nette Idee, aber noch viel zu fehlerhaft. Meine eigene Website wird nicht richtig angezeigt, dabei validiert die penibel.
 
 Ein neuer Film erweckt meine Aufmerksamkeit: [Watchmen](http://www.imdb.com/title/tt0409459/). Ich kaufe mir die <del>Comic</del> <ins>Graphic Novell</ins>, die laut Time-Magazine zu den einflussreichsten 100 Novellen unserer Zeit gehören. Zu recht. Ich freue mich schon auf die Verfilmung die im März 2009 anlaufen wird.
 
-Ich kaufe mir auch gleich noch Allan Moores andere, bekannte Comic: *V wie Vendetta* und den dazugehörigen Film. Beängstigend wie nah die Comic an der [britischen Realität](http://www.heise.de/newsticker/meldung/Britische-Regierung-will-Internetueberwachung-ausbauen-211529.html) bald sein könnte. Und wenn es nach dem paranoiden Rollstuhlfahrer geht, hier wohl demnächst auch.
+Ich kaufe mir auch gleich noch Allan Moores andere, bekannte Comic: *V wie Vendetta* und den dazugehörigen Film. Beängstigend wie nah die Comic an der [britischen Realität](https://www.heise.de/newsticker/meldung/Britische-Regierung-will-Internetueberwachung-ausbauen-211529.html) bald sein könnte. Und wenn es nach dem paranoiden Rollstuhlfahrer geht, hier wohl demnächst auch.
 
 Ich stoße auf Typolight (jetzt [Contao](https://contao.org/de/)), das einzige CMS, dass bislang meiner Meinung nach für den breiten Einsatz bei unseren Kunden geeignet ist.
 
@@ -151,9 +151,9 @@ Ich tausche Capistrano als Deployment-Tool gegen das leichtgewichtige [Fabric](h
 
 Endlich erhältlich, die Kult-Serie aus den 80ern: [Die Rebellen vom Liang Shan Po](http://www.amazon.de/dp/B001BBEFEE/). Das ist die Serienverfilmung des chinesischen Klassikers <cite>Shuǐhǔ Zhuàn</cite> (水滸傳), auf japanisch <cite>Suikoden</cite>, im deutschen als die <cite>Wasserufergeschichte</cite> oder als <cite>Die Rebellen vom Liang Shan Po</cite> bekannt.
 
-[Dexter](http://www.sho.com/sho/dexter/home), [Californication](http://www.sho.com/sho/californication/home) und *Heroes* erfreuen mich im Feierabend. Solche Spitzenformate könnten sie öfter bringen.
+[Dexter](http://www.sho.com/dexter), [Californication](http://www.sho.com/californication) und *Heroes* erfreuen mich im Feierabend. Solche Spitzenformate könnten sie öfter bringen.
 
-Und was ist eigentlich wieder dieses [Fever](http://feedafever.com/ "Fever&deg; Red hot. Well read.") von Shauninman? Ich weiß zwar nicht, was das ist, will aber trotzdem Beta-Tester sein! :(
+Und was ist eigentlich wieder dieses [Fever](https://feedafever.com/ "Fever&deg; Red hot. Well read.") von Shauninman? Ich weiß zwar nicht, was das ist, will aber trotzdem Beta-Tester sein! :(
 
 ## November
 
@@ -170,7 +170,7 @@ Ich wechsele von [Things](https://culturedcode.com/things/) zu [Remember the mil
 
 Ich nehme an der deutschen Übersetzung der Django-Dokumentation teil, die dieses mal auf GitHub übersetzt wird. Unser Versuch von 2007 eine deutsche Übersetzung anzufertigen, wurde vorerst gestoppt, weil die komplette Dokumentation umstrukturiert wurde. Selbstredend ist jeder dazu aufgefordert sich die Dokumentation zu *forken* und mitzuhelfen.
 
-Ich suche mal nach Datenbankmigrations-Applikationen und teste [django-evolution](http://code.google.com/p/django-evolution/). Wirklich spitze, was damit möglich ist.
+Ich suche mal nach Datenbankmigrations-Applikationen und teste [django-evolution](https://code.google.com/archive/p/django-evolution). Wirklich spitze, was damit möglich ist.
 
 Es gelingt mir meine VHosts auch unter Parallels anzusprechen, was überraschend leicht geht. Man muss nur den VHost in die hosts-Datei von Windows eintragen und die IP des Parallels NAT eintragen.
 

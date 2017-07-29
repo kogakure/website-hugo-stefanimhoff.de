@@ -24,7 +24,7 @@ Als ich 1999 die erste Version live gestellt habe, waren mir Web-Programmierung 
 
 Auf meiner Website befinden sich neben einer Vielzahl von Artikeln auch ein Japanisch-Deutsches Lexikon mit Kampfkunst-Begriffen, eine Zitatensammlung und eine Reihe von Buch- und Film-Empfehlungen.
 
-Einige Jahre später waren dann große  Teile der Website in PHP geschrieben. Die aktuelle Website habe ich mit dem Python-Webframework [Django](https://www.djangoproject.com/) [programmiert](https://github.com/kogakure/kogakure.de-django) und die Daten werden aus einer Datenbank geliefert.
+Einige Jahre später waren dann große  Teile der Website in PHP geschrieben. Die aktuelle Website habe ich mit dem Python-Webframework [Django](https://www.djangoproject.com/) [programmiert](https://github.com/kogakure/django-kogakure.de) und die Daten werden aus einer Datenbank geliefert.
 
 Wie jede Webapplikation hat auch diese Website ein *nicht* unkompliziertes System für das Caching (mit [memcached](http://memcached.org/)) und einen automatisierten Deployment-Prozess. So ein Technologie-Stack läuft natürlich nicht bei jedem Hoster und  erfordert eine Menge Fachwissen und Wartungsaufwand.
 
@@ -41,7 +41,7 @@ Im November 2013 wurde der Support für YAML-Dateien hinzugefügt, später in 20
 Ich hatte schon im April 2014 meine [eigene Website](https://stefanimhoff.de) mit Jekyll (0.12) und [Octopress](http://octopress.org/) (2.5) neu erstellt und war schon damals von der Einfachheit begeistert gewesen, mit der es mir möglich war, die Website neu zu erstellen. Ich musste mich nicht um die Programmierung und Wartung einer dynamischen Website kümmern, sondern konnte meine Aufmerksamkeit ganz auf die Dinge konzentrieren, die mir Spaß machen: eine moderne, responsive Website und ein ansprechendes Design zu erstellen.
 
 ## Besonderheiten von Jekyll
-Durch [statische Seitengeneratoren](http://www.staticgen.com) habe ich meinen Spaß an Nebenprojekten wiederentdeckt. Es dauert nur wenige Minuten und schon hat man so ein Projekt aufgesetzt. Selbst jemand mit wenig Erfahrung kann so schnell einen Prototypen erstellen oder sich einen Blog selbst bauen:
+Durch [statische Seitengeneratoren](https://www.staticgen.com) habe ich meinen Spaß an Nebenprojekten wiederentdeckt. Es dauert nur wenige Minuten und schon hat man so ein Projekt aufgesetzt. Selbst jemand mit wenig Erfahrung kann so schnell einen Prototypen erstellen oder sich einen Blog selbst bauen:
 
 ```bash
 $ gem install jekyll
@@ -64,7 +64,7 @@ Besonders beim Hosting glänzen statische Seitengeneratoren. Denn sie spucken am
 Und statische Seiten sind sicher und ermöglichen eine sorgenfreie Freizeit. Es gibt nichts, was gehackt werden kann und keinen Teil der Website, der plötzlich nicht mehr läuft, weil irgendeine Software aktualisiert wurde.
 
 ## Spaß bei der Entwicklung
-In seinem Vortrag <cite>[Dynamic Static Site Strategies (and other tongue twisters)](https://speakerdeck.com/philhawksworth/dynamic-static-site-strategies-smashing-conference)</cite> auf der [Smashing Conference 2014](http://smashingconf.com/) in Freiburg, erwähnte [Phil Hawksworth](http://hawksworx.com/), dass statische Seitengeneratoren einem wieder das Gefühl geben, das man vor vielen Jahren hatte, als man zum ersten Mal eine Website erstellte: man veränderte etwas und zog eine Datei in einen Ordner auf der Festplatte und schon war sie *magisch* im Internet zu sehen.
+In seinem Vortrag <cite>[Dynamic Static Site Strategies (and other tongue twisters)](https://speakerdeck.com/philhawksworth/dynamic-static-site-strategies-smashing-conference)</cite> auf der [Smashing Conference 2014](http://smashingconf.com/) in Freiburg, erwähnte [Phil Hawksworth](https://www.hawksworx.com/), dass statische Seitengeneratoren einem wieder das Gefühl geben, das man vor vielen Jahren hatte, als man zum ersten Mal eine Website erstellte: man veränderte etwas und zog eine Datei in einen Ordner auf der Festplatte und schon war sie *magisch* im Internet zu sehen.
 
 Alle diese zusätzlichen Dinge, wie dynamische Programmierung, Datenbanken, Caching, Deployment oder Content-Managment-Systeme, die einem eigentlich das Leben erleichtern sollten, sind eine doppelseitige  Klinge: sie erleichtern zwar vieles, ermöglichen spannende, aktuelle und dynamische Seiten, fügen aber gleichzeitig viel Komplexität hinzu. Und sehr viele Websites benötigen das gar nicht.
 
@@ -75,7 +75,7 @@ Natürlich soll das nicht heißen, dass dynamische Websites keine Berechtigung m
 Und statische Seitengeneratoren werden nicht mehr bloß als Spielzeug angesehen, da sie sich für viele Einsatzgebiete eignen. Ob für kleine Spaßprojekte wie den [#Beerclub](http://beerclub.hawksworx.com/), wo Phil Hawksworth mit seinen Kollegen Bier bewertet, den eigenen Blog, zum Rapid-Prototyping oder für Dokumentationen (Google setzt Jekyll z. B. für ihre Website [Web Fundamentals](https://developers.google.com/web/fundamentals/) ein). Und die GitHub-Pages laufen ebenfalls mit Jekyll.
 
 ## Automatisierung
-Jekyll kommt zwar schon mit einem eigenen Webserver, der auch bei Änderungen automatisch die Seite und Assets neu generiert. Doch viele Webentwickler nehmen dafür [Grunt](http://gruntjs.com/) oder [Gulp](http://gulpjs.com/), um noch komfortabler zu arbeiten und neben der noch schnellen Generierung von Assets auch Livereload und andere komfortable Funktionalitäten. Darüber werde ich in einem gesonderten Artikel schreiben.
+Jekyll kommt zwar schon mit einem eigenen Webserver, der auch bei Änderungen automatisch die Seite und Assets neu generiert. Doch viele Webentwickler nehmen dafür [Grunt](https://gruntjs.com/) oder [Gulp](https://gulpjs.com/), um noch komfortabler zu arbeiten und neben der noch schnellen Generierung von Assets auch Livereload und andere komfortable Funktionalitäten. Darüber werde ich in einem gesonderten Artikel schreiben.
 
 ## Octopress und Jekyll
 Im Zuge der Arbeiten an [kogakure.de](http://kogakure.de) habe ich auch gleich diese Website komplett auf die neuste Version von Jekyll (2.4.0) umgestellt. Octopress war ein aufgemotztes Jekyll mit zusätzlichen Plugins und für einen Blog typischer Ausstattung, war aber schon stark in die Jahre gekommen. Die Entwickler hatten sich entschlossen die besonderen Eigenschaften von Octopress (3.x) in ein [Gem](https://rubygems.org/gems/octopress) zu extrahieren und dieses als Zusatz für Jekyll anzubieten.

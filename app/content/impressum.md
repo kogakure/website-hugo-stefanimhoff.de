@@ -32,7 +32,7 @@ Diese Seite verwendet ein Foto für den Kopfbereich und einige Hintergrundmuster
 
   <h3>Patterns</h3>
   <ul>
-    <li><a href="http://purtypixels.com/"><cite>Classy Fabric</cite> by Richard Tabor</a></li>
+    <li><a href="https://purtypixels.com/"><cite>Classy Fabric</cite> by Richard Tabor</a></li>
     <li><a href="https://www.facebook.com/stefanaleksic88"><cite>Dark stripes</cite> by Stefan Aleksić</a></li>
     <li><cite>Inspiration Geometry</cite> by Welsley</li>
     <li><a href="http://poisones.tumblr.com/"><cite>Light gray</cite> by Brenda Lay</a></li>
@@ -52,7 +52,7 @@ Sollten Sie einen Link finden, der auf eine Webseite verlinkt, die gegen geltend
 
 ### Lizenz
 
-Die Inhalte dieser Website von Stefan Imhoff steht unter einer [Creative Commons Lizenz](http://creativecommons.org/licenses/by-nc-sa/3.0/).
+Die Inhalte dieser Website von Stefan Imhoff steht unter einer [Creative Commons Lizenz](https://creativecommons.org/licenses/by-nc-sa/3.0/).
 
 Dies gilt **nicht** für das Design und den Stil dieser Seite. Bei Nutzungen, die über diese Lizenz hinausgehen, bitte eine Anfrage an mich richten. Ich wäre dankbar für eine E-Mail mit Link zur Veröffentlichung oder für ein Probeexemplar.
 

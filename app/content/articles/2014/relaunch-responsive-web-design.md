@@ -26,7 +26,7 @@ Selbstverständlich ist die komplette Website jetzt auch mit *Responsive Web Des
 ### Typographie
 Beim Design habe ich dieses Mal besonders viel Wert auf die Typographie gelegt. Während der Design-Phase hatte ich monatelang nichts weiter fertiggestellt, als die Typographie und den Inhalt. Diesen Ansatz, bei dem von **innen nach aussen** gestaltet wird, wollte ich unbedingt ausprobieren.
 
-Eine Menge Zeit ist in die Auswahl der richtigen Schriften geflossen, und daher setze ich auf Webfonts, die ich durch [Google Fonts](https://www.google.com/fonts) ausliefern lasse.
+Eine Menge Zeit ist in die Auswahl der richtigen Schriften geflossen, und daher setze ich auf Webfonts, die ich durch [Google Fonts](https://fonts.google.com) ausliefern lasse.
 
 Ich setzte fast durchgängig die Technik des **vertikalen Rhythmus** bei meiner Typographie ein. Dabei wird die Zeilenhöhe immer gleich gehalten, egal wie groß die Schriftart ist. Eine mathematische Formel gleicht die Abstände der verschieden großen Schriften so aus, dass sie optisch auf der gleichen Höhe stehen, was besonders harmonisch wirkt.
 

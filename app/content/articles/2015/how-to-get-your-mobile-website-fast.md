@@ -31,7 +31,7 @@ You thought you’re done, you’re cool now. The website is running the latest 
 
 But still your website sucks on mobile. And you are not the only one, even large corporations mobile websites suck at speed. Why is that? You do your homework and execute best-practices of web performance: You crunch your images, minimize and gzip your CSS and JavaScript files added a Responsive Images solution. But it’s still slow on mobile.
 
-Mobile phones and tablets are getting faster and faster, but some technical difficulties can’t be overcome easily and probably won't be solved in near future: Slow processors in phones, slow rendering in mobile browsers, bad mobile latency. Plus, [85% of mobile users expect pages to load as fast or faster than they load on the desktop](http://www.webperformancetoday.com/2013/08/06/8-mobile-performance-assumptions/). If your site doesn’t render in less than 5 seconds, 74% or mobile visitors will be gone. The may come back later at home or on the desktop, but maybe the won’t.
+Mobile phones and tablets are getting faster and faster, but some technical difficulties can’t be overcome easily and probably won't be solved in near future: Slow processors in phones, slow rendering in mobile browsers, bad mobile latency. Plus, [85% of mobile users expect pages to load as fast or faster than they load on the desktop](https://blog.radware.com/applicationdelivery/wpo/2013/08/8-mobile-performance-assumptions). If your site doesn’t render in less than 5 seconds, 74% or mobile visitors will be gone. The may come back later at home or on the desktop, but maybe the won’t.
 
 Your website may look better now on a lot of devices, but it doesn’t make your site faster. Responsive Web Design is not mobile friendly by default. But it can be.
 

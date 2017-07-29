@@ -1,6 +1,6 @@
 # stefanimhoff.de
 
-This is the source of my [personal website and blog](https://stefanimhoff.de/) build with [Hugo](http://gohugo.io/) and [Gulp.js](http://gulpjs.com/).
+This is the source of my [personal website and blog](https://stefanimhoff.de/) build with [Hugo](http://gohugo.io/) and [Gulp.js](https://gulpjs.com/).
 
 ## Installation
 
@@ -47,7 +47,7 @@ These are just some of the tools, packages, languages and stuff I used to build 
 
 - [Hugo](http://gohugo.io/) to build the static website.
 - [Node.js](http://nodejs.org/) to run Gulp.js.
-- [Gulp.js](http://gulpjs.com/) to run the development enviroment and create builds.
+- [Gulp.js](https://gulpjs.com/) to run the development enviroment and create builds.
 - [JavaScript](https://developer.mozilla.org/docs/Web/JavaScript)
 - [Browserify](http://browserify.org/) to use CommonJS modules.
 - [BrowserSync](http://www.browsersync.io/) to have live reload and syning of actions.

@@ -51,6 +51,6 @@ Ist seine Arbeit gut, und andere Personen finden sie auch gut, können diese die
 
 *Git* ist sehr einfach und effizient zu bedienen, schon nach kurzer Zeit konnte ich damit umgehen. Man kann Git z. B. auch zusätzlich zu SVN oder CVS auf seinem Rechner nutzen. Das man kein zentrales Repository <del>hat</del> <ins>haben muss</ins>, ist ein echter Vorzug.
 
-Neben dem [fantastischen Vortrag](https://www.youtube.com/watch?v=4XpnKHJAok8) von Linus Torvalds auf *Google Tech Talk* gibt es auf der [offiziellen Seite von Git](http://git-scm.com/) gute Handbücher und Tutorials.
+Neben dem [fantastischen Vortrag](https://www.youtube.com/watch?v=4XpnKHJAok8) von Linus Torvalds auf *Google Tech Talk* gibt es auf der [offiziellen Seite von Git](https://git-scm.com/) gute Handbücher und Tutorials.
 
 Ich werde Git in der nächsten Zeit in meinen Projekten testen und meine Erfahrungen hier veröffentlichen.

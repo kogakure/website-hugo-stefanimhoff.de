@@ -42,4 +42,4 @@ The movie was released in a lot different formats and length. On the Internet is
 
 On the [YouTube channel](https://www.youtube.com/channel/UCJy4nUo1D4R3hlcP8XCLX9Q) are additional videos with portraits, behind the scenes and much more.
 
-**Go, watch the film**! The [Bettencourt Schueller Foundation](http://www.fondationbs.org/), [French TV France 2](http://www.france2.fr/) and [Google](http://www.google.com/) made an exceptional effort to bring this [GoodPlanet Foundation](http://www.goodplanet.org/) film to everybody for free. And better bring some handkerchiefs.
+**Go, watch the film**! The [Bettencourt Schueller Foundation](https://www.fondationbs.org), [French TV France 2](https://www.france.tv/france-2) and [Google](http://www.google.com/) made an exceptional effort to bring this [GoodPlanet Foundation](https://www.goodplanet.org/) film to everybody for free. And better bring some handkerchiefs.

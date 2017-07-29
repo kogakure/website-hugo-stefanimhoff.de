@@ -17,7 +17,7 @@ tags:
 
 Wer einen Webserver oder VirtualHost sein eigen nennt, sollte sich unbedingt Capistrano ansehen, ein Programm, das es ermöglicht diverse Aufgaben zu automatisieren.
 
-[Capistrano](http://capistranorb.com/) ist ein sehr mächtiges [Ruby](https://www.ruby-lang.org/de/)-Programm, das dafür gedacht ist komplexe Aufgaben des Deployment zu übernehmen. Dabei können ebenso mehrere Server (Fileserver, Datenbankserver, Applikationsserver), wie auch Versionskontrollsysteme ([Subversion](http://subversion.tigris.org/), [Git](http://git-scm.com/), [Mercurial](https://www.mercurial-scm.org/), …) einbezogen werden.
+[Capistrano](http://capistranorb.com/) ist ein sehr mächtiges [Ruby](https://www.ruby-lang.org/de/)-Programm, das dafür gedacht ist komplexe Aufgaben des Deployment zu übernehmen. Dabei können ebenso mehrere Server (Fileserver, Datenbankserver, Applikationsserver), wie auch Versionskontrollsysteme ([Subversion](http://subversion.tigris.org/), [Git](https://git-scm.com/), [Mercurial](https://www.mercurial-scm.org/), …) einbezogen werden.
 
 Die Fähigkeiten von Capistrano übersteigen meine Anspüche bei weitem, da ich automatische Versionierung, Tests oder automatisches Symlinken eher nicht brauche.
 

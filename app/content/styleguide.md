@@ -901,10 +901,10 @@ article > div {
 
 ### Download-Block
 
-{{< download url="https://github.com/kogakure/stefanimhoff.de-jekyll/" text="View Source on GitHub" >}}
+{{< download url="https://github.com/kogakure/jekyll-stefanimhoff.de" text="View Source on GitHub" >}}
 
 ```html
-{{</* download url="https://github.com/kogakure/stefanimhoff.de-jekyll/" text="View Source on GitHub" */>}}
+{{</* download url="https://github.com/kogakure/jekyll-stefanimhoff.de" text="View Source on GitHub" */>}}
 ```
 
 [^1]: Ein Styleguide (oder deutsch Gestaltungsrichtlinie) beschreibt, wie bestimmte Elemente eines Druckerzeugnisses oder einer Website zu gestalten sind. Diese Richtlinien sollen ein einheitliches Erscheinungsbild verschiedener Kommunikationsmittel einer Institution oder Firma, z. B. Werbe- und Informationsmaterial, Geschäftsbriefe oder Internetauftritte, gewährleisten und so die Bildung einer Corporate Identity ermöglichen. Daneben werden Styleguides auch für die Software-Erstellung oder Produkte allgemein eingesetzt; auch hier ist das Ziel: Produkte sollen als zusammengehörig wahrgenommen werden und ggf. auch mit der verbundenen Marke assoziiert werden.

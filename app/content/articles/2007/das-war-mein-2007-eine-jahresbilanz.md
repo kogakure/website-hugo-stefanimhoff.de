@@ -23,7 +23,7 @@ Ich suche nach Scientology, aber nur um zu verstehen, an was für einen hanebüc
 
 In der Bildersuche suche ich nach einer Diskussion mit meinen Kollegen nach dem [Fiat Multipla](http://images.google.de/images?q=fiat+multipla), weil dies meiner Meinung nach das hässlichste Auto ist, das je hergestellt wurde.
 
-Außerdem suche ich viel nach [ExpressionEngine](https://ellislab.com/expressionengine), da die Umsetzung meiner eigenen [Website](https://stefanimhoff.de/) im Januar voll im Gange ist. Besonders `segment_1`, `url_segments` und `conditional_variable` bestimmen diesen Monat.
+Außerdem suche ich viel nach [ExpressionEngine](https://expressionengine.com), da die Umsetzung meiner eigenen [Website](https://stefanimhoff.de/) im Januar voll im Gange ist. Besonders `segment_1`, `url_segments` und `conditional_variable` bestimmen diesen Monat.
 
 ## Februar
 
@@ -51,7 +51,7 @@ ExpressionEngine steht immer noch auf meinem Tagesplan, dieses Mal mit `categori
 
 Der Mai ist die heiße Phase in der Entwicklung meiner neuen Website. Das RSS-Modul interessiert mich näher, Attribute, Datumsformatierungen, Conditionals, wie z. B. `elseif`, sowie `comment_count`.
 
-Außerdem suche ich nach den Lyrics meiner neuen Alben von den [Poets of the Fall](http://www.poetsofthefall.com/), einer wirklich guten, finnischen Rockband.
+Außerdem suche ich nach den Lyrics meiner neuen Alben von den [Poets of the Fall](http://poetsofthefall.com/), einer wirklich guten, finnischen Rockband.
 
 ## Juni
 
@@ -87,7 +87,7 @@ Im August erkundige ich mich nach Googles PageRank, denn mittlerweile sind schon
 
 In diesem Monat erkundige ich mich auch nach Django-Hostern und finde heraus, dass TextDrive jetzt [Joyent](https://www.joyent.com/) ist. Ich entscheide mich für [Webfaction](https://www.webfaction.com/?affiliate=kogakure) als neuen Webhoster.
 
-Im August entdecke ich [Git](http://git-scm.com/) für mich, Linus Torvalds fantastisches Versionskontrollsystem. Git ist Subversion in vielen Punkten um Längen vorraus.
+Im August entdecke ich [Git](https://git-scm.com/) für mich, Linus Torvalds fantastisches Versionskontrollsystem. Git ist Subversion in vielen Punkten um Längen vorraus.
 
 Der [Mister Wong](http://www.mister-wong.de/)-Skandal im August ist mal wieder typisch und sehr lustig. Irgendein asiatisch-amerikanischer Typ regt sich **unglaublich** über die Karikatur eines Chinesen im Logo des Bookmark-Dienstes Mister Wong auf. Faschisten, ihr alle! Hier kommt die braune Keule! Man kann sich auch künstlich aufregen … Tsssss. Jedenfalls muss ein neues Logo her. Die Community soll aushelfen.
 
@@ -95,7 +95,7 @@ Zum ersten mal in meinem Leben beschäftige ich mich im späten August mit [LaTe
 
 Auf meinem Nachttisch liegt laut Google Suche Machiavellis <cite>[Der Fürst](http://www.amazon.de/gp/product/3458344721/ref=as_li_ss_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=3458344721&linkCode=as2&tag=kogakurede-21)</cite>.
 
-In der [Autostadt Wolfsburg](http://www.autostadt.de/) eröffnet ein neues japanisches Restaurant, das *Anan*, mit extra einflogenem, japanischem Meisterkoch.
+In der [Autostadt Wolfsburg](https://www.autostadt.de/) eröffnet ein neues japanisches Restaurant, das *Anan*, mit extra einflogenem, japanischem Meisterkoch.
 
 Das Sommerloch geht langsam zu Ende, also erkundige ich mich, was meine Lieblingsserien so machen, und wann die Staffeln wieder starten: [Lost](http://www.imdb.com/title/tt0411008/), [StarGate SG-1 und StarGate Atlantis](http://stargate.mgm.com/), [Monk](http://www2.usanetwork.com/series/monk/) und [Battlestar Galactica](http://www.syfy.com/battlestargalactica).
 
@@ -127,9 +127,9 @@ Ich muss mir eingestehen, dass ohne JavaScript-Frameworks und Ajax-Erfahrung kei
 
 jQuery hat die coolste Syntax und kann alles, was der Kunde von heute so will.
 
-Ich lache herzlich über den [Eklat bei Kerner](http://www.welt.de/fernsehen/article1250311/Die-oeffentliche-Hinrichtung-der-Eva-Herman.html), und schaue mir an, wie die arme Frau Hermann von einer Horde wütender Nazi-Jäger zu Klump gehauen wird.  Hach. Die Psychologen nennen das den *Mitleidseffekt*, weshalb auch der Großteil der Stimmen in Foren und Kommentaren für Eva Hermann ist.
+Ich lache herzlich über den [Eklat bei Kerner](https://www.welt.de/fernsehen/article1250311/Die-oeffentliche-Hinrichtung-der-Eva-Herman.html), und schaue mir an, wie die arme Frau Hermann von einer Horde wütender Nazi-Jäger zu Klump gehauen wird.  Hach. Die Psychologen nennen das den *Mitleidseffekt*, weshalb auch der Großteil der Stimmen in Foren und Kommentaren für Eva Hermann ist.
 
-Da ja bald Apples neues Betriebssystem [Leopard](http://www.apple.com/de/osx/) erscheint, google ich schon mal nach passenden Space-Wallpapern.
+Da ja bald Apples neues Betriebssystem *Leopard* erscheint, google ich schon mal nach passenden Space-Wallpapern.
 
 Diverse Suchen nach <cite>Kuehne und Nagel Logistics</cite> und einem *Leopard Widget* bezeugen es – Leopard ist da. FedEx versagt in meinem Fall total, so bekomme ich Leopard erst am Samstag morgen.
 
@@ -145,7 +145,7 @@ Ich werde endlich *Django-Profi* (haha, Scherz!) und checke mir die neuste Subve
 
 Voller Freude warte ich auf die Neuverfilmung der <cite>Schatzinsel</cite> und rege mich dann maßlos auf, wie mies die Geschichte umgesetzt wurde.
 
-Ich überlege mir, ob ich zukünftig mit Markdown, Textile oder ReST als Markup-Sprache arbeiten will, und entscheide mich für [Markdown](http://daringfireball.net/projects/markdown/). Textile ist sehr Prozessoraufwendig und rendert im Test um ein riesiges Stück langsamer als Markdown. Außerdem: Bei Textile kann ich auch gleich HTML nehmen. ReST erzeugt mir zu viel Markup.
+Ich überlege mir, ob ich zukünftig mit Markdown, Textile oder ReST als Markup-Sprache arbeiten will, und entscheide mich für [Markdown](https://daringfireball.net/projects/markdown/). Textile ist sehr Prozessoraufwendig und rendert im Test um ein riesiges Stück langsamer als Markdown. Außerdem: Bei Textile kann ich auch gleich HTML nehmen. ReST erzeugt mir zu viel Markup.
 
 Ich stelle fest, dass bislang nur Safari 3 automatisch Worte trennt, doch die Alpha-Version von Firefox 3 bringt die freudige Erkenntnis: Man kann jetzt `&shy;` benutzen, um wenigstens modernen Browsern ordentliche Worttrennung zu liefern.
 
@@ -159,7 +159,7 @@ Git setze ich jetzt flächendeckend in fast jedem noch so kleinen Projekt ein.
 
 Auf meinem Nachttisch liegt jetzt das Buch <cite>[Der Dativ ist dem Genitiv sein Tod](http://www.amazon.de/gp/product/3462034480/ref=as_li_ss_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=3462034480&linkCode=as2&tag=kogakurede-21)</cite>, was ich ziemlich lustig und interessant finde.
 
-Für einen Kunden recherchiere ich bei der GEMA, was es kostet multimediale Inhalte auf er eigenen Website zu benutzen und komme zum Schluss: Die sind megadreist. Es lebe [CC](http://creativecommons.org/)!
+Für einen Kunden recherchiere ich bei der GEMA, was es kostet multimediale Inhalte auf er eigenen Website zu benutzen und komme zum Schluss: Die sind megadreist. Es lebe [CC](https://creativecommons.org/)!
 
 Ich setze jQuery jetzt in Kundenprojekten ein, und benutze es auch gleich für GoogleMaps und SPAM-Schutz von E-Mail-Adressen.
 
@@ -171,13 +171,13 @@ Ich überlege mir von einem webbasierenden GTD-Werkzeug auf eine OS X Lösung um
 
 Doch schon nach 14 Tagen steht für mich eigentlich fest: <cite>Things</cite> ist der Testsieger. Obwohl es derzeit noch weniger Funktionen als OmniFocus hat, fühlt es sich einfach *besser* an.
 
-Irgendwie kann ich es nicht lassen und kaufe mir einen [iPod touch](http://www.apple.com/de/ipod-touch/), den ich mit <cite>Jailbreak</cite> befreien will, was aber erstmal nicht klappt, weil Apple ein Update rausbringt, das die Sicherheitslücke schließt.
+Irgendwie kann ich es nicht lassen und kaufe mir einen [iPod touch](https://www.apple.com/de/ipod-touch/), den ich mit <cite>Jailbreak</cite> befreien will, was aber erstmal nicht klappt, weil Apple ein Update rausbringt, das die Sicherheitslücke schließt.
 
 Auf ARTE sehe ich einen interessanten Beitrag über die [Haddsch](https://de.wikipedia.org/wiki/Haddsch) - die Pilgerfahrt nach Mekka – und google den genauen Verlauf nach. Diese Welt will sich mir einfach nicht erschließen. Den Teufel steinigen, auf einem Hügel sitzen und heulen, um einen Steinkasten wandern. Wem’s gefällt. Ach ja: Und ich trete aus der evangelischen Kirche aus.
 
 Ich lache mich tot, weil FileMaker ihr neues Datenbank-Produkt Bentō nennt. Die dachten wohl, das heißt Box. Das heißt aber Mittagessen ;)
 
-Durch einen Artikel auf [praegnanz.de](https://praegnanz.de/weblog/ted) erfahre ich von der [TED](http://www.ted.com/) Website, die seit dem meine absolute Lieblingsseite ist. Dort kann man sich die Vorträge der TED-Konferenz ansehen, die es seit 1984 gibt. Bei TED sprechen außergewöhnliche Menschen über Forschung, Innovationen, Medien, Religion, Philosophie und vieles mehr. Eine Eintrittskarte kostet 6.000 $ und man kann sich nur für eine bewerben, ob man eingeladen wird, entscheidet TED. Jedenfalls habe ich mir alle 175 bislang veröffentlichten Beiträge schon mal heruntergeladen und eine Menge davon angesehen. Das ist wie ARTE hoch 10.
+Durch einen Artikel auf [praegnanz.de](https://praegnanz.de/weblog/ted) erfahre ich von der [TED](https://www.ted.com/) Website, die seit dem meine absolute Lieblingsseite ist. Dort kann man sich die Vorträge der TED-Konferenz ansehen, die es seit 1984 gibt. Bei TED sprechen außergewöhnliche Menschen über Forschung, Innovationen, Medien, Religion, Philosophie und vieles mehr. Eine Eintrittskarte kostet 6.000 $ und man kann sich nur für eine bewerben, ob man eingeladen wird, entscheidet TED. Jedenfalls habe ich mir alle 175 bislang veröffentlichten Beiträge schon mal heruntergeladen und eine Menge davon angesehen. Das ist wie ARTE hoch 10.
 
 Kurz vor Weihnachten setze ich mich 1-2 Stunden hin und gestalte in Photoshop ein Mac OS X Leopard-Icon für Django-Projekte. Dies führt zu einem unglaublichen Feedback aus der ganzen Django-Szene und lässt meine Besucherzahlen explodieren. Ich entdecke die deutsche Community und nehme mir vor mich im neuen Jahr an der Übersetzung der englischen Dokumentation zu beteiligen.
 

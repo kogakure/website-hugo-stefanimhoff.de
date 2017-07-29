@@ -38,7 +38,7 @@ Das Blender es lässig mit den teuren Mitbewerbern aufnehmen kann, kann man in d
 
 Die Icons sind in allen Größen von 16 Pixel bis 512 Pixel im Download vorhanden. Wer sie gebrauchen kann, kann sie gerne benutzen.
 
-**Advice:** The folder is property of [Apple](http://www.apple.com/ "Apple"), the Blender-Logo is property of [Blender Foundation](https://www.blender.org/). For private use only [(CreativeCommons)](http://creativecommons.org/licenses/by-nc-nd/3.0/deed.de "Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 Unported").
+**Advice:** The folder is property of [Apple](https://www.apple.com/ "Apple"), the Blender-Logo is property of [Blender Foundation](https://www.blender.org/). For private use only [(CreativeCommons)](https://creativecommons.org/licenses/by-nc-nd/3.0/deed.de "Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 Unported").
 
 ## Download
 

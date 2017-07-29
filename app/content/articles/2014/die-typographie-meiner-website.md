@@ -141,7 +141,7 @@ Das Erstellen einer Schriftart ist ein immenser Aufwand und daher kostet eine Li
 
 Neben dem eigenen Hosten der Schrift, gibt es noch die Möglichkeit, die Schriftart von einem Webservice einzubinden. Es gibt z. B. kostenpflichtige Lösungen wie [Adobe Typekit](https://typekit.com/), bei denen ein Betrag gezahlt wird, weshalb sehr viele professionelle Schriftarten angeboten werden können. Wer nicht bereit ist regelmäßig für die Verwendung einer Schriftart zu bezahlen, kann trotzdem aus einer immer noch großen Anzahl von Schriften auswählen, die von netten Designern frei zur Verfügung gestellt wurden.
 
-Ich schaute mich erst bei Typekit um, wählte dann aber zwei kostenlose Schriften aus, die ich über [Google Fonts](https://www.google.com/fonts) in meine Website einbinde:
+Ich schaute mich erst bei Typekit um, wählte dann aber zwei kostenlose Schriften aus, die ich über [Google Fonts](https://fonts.google.com) in meine Website einbinde:
 
 - *Gentium Basic* für lange Fließtexte
 - *Yanone Kaffeesatz* für Überschriften und für kürzere Texte, z. B. auf der Homepage
@@ -149,7 +149,7 @@ Ich schaute mich erst bei Typekit um, wählte dann aber zwei kostenlose Schrifte
 Gentium Basic ist eine sehr ansprechende Schrift mit Serifen und einem kursiven Schriftschnitt, während Yanone Kaffeesatz eine serifenlose Schrift ist. Beide Schriften in Kombination bieten ein harmonisches Bild.
 
 ## Schriftgröße
-Als am 17. November 2006 Oliver Reichenstein im Blog von Information Architects über den [100% Easy-2-Read Standard](https://ia.net/know-how/100e2r), war dieses Konzept noch völlig neu. Damals wurde die Schrift auf Websites durchgehend zu klein eingestellt. Der Browser-Standard war schon immer `16px`. Doch die meisten Seiten nutzen damals Werte zwischen 10 und 12 Pixeln.
+Als am 17. November 2006 Oliver Reichenstein im Blog von Information Architects über den [100% Easy-2-Read Standard](https://ia.net/topics/100e2r), war dieses Konzept noch völlig neu. Damals wurde die Schrift auf Websites durchgehend zu klein eingestellt. Der Browser-Standard war schon immer `16px`. Doch die meisten Seiten nutzen damals Werte zwischen 10 und 12 Pixeln.
 
 Nach diesem Blog-Artikel fingen Designer an, die Grundschriftgröße zu erhöhen. Ich verwende für meine Fließtextschrift sogar 18px.
 
@@ -168,15 +168,14 @@ Ich verwende noch einige weitere typografische Formatierungen, z. B. zentrierte 
 Für alle die jetzt neugierig auf Typographie geworden sind, habe ich eine kleine Liste von empfehlenswerten Links zu diesem Thema zusammengestellt:
 
 - [The Elements *of* Typographic Style Applied *to the* Web](http://webtypography.net/)
-- [Thinking with Type](http://www.thinkingwithtype.com/)
+- [Thinking with Type](http://thinkingwithtype.com/)
 - [Butterick’s Practical Typography](http://practicaltypography.com/)
-- [Interactive Guide to Blog Typography](http://www.kaikkonendesign.fi/typography/)
 - [type basics](http://www.typeworkshop.com/index.php?id1=type-basics)
-- [Web Design is 95% Typography](https://ia.net/know-how/the-web-is-all-about-typography-period)
+- [Web Design is 95% Typography](https://ia.net/topics/the-web-is-all-about-typography-period)
 - [Five simple steps to better typography](http://markboulton.co.uk/journal/five-simple-steps-to-better-typography)
 - [Nice Web Type](http://nicewebtype.com/)
-- [More MeaningFull Typography](http://alistapart.com/article/more-meaningful-typography)
-- [A List Apart: Typographie](http://alistapart.com/topic/design/typography/)
+- [More MeaningFull Typography](https://alistapart.com/article/more-meaningful-typography)
+- [A List Apart: Typographie](https://alistapart.com/topic/design/typography/)
 - [Kerntype](http://type.method.ac/)
 - [Modular Scale](http://www.modularscale.com/)
 - [Helvetica – A Documentary Film by Gary Hustwit](http://www.hustwit.com/category/helvetica/)

@@ -25,9 +25,9 @@ After 62 days of work, I relaunched today my martial arts website [kogakure.de](
 {{< image src="artikel/kogakure-de-relaunch.jpg" alt="kogakure.de v6" >}}
 {{< /figure >}}
 
-The previous version of my website was driven by [Django](https://www.djangoproject.com/) and you can still have a look on the code on [GitHub](https://github.com/kogakure/kogakure.de-django), but I don’t use Django any more. Instead I use *Ruby on Rails* and *Ruby* a lot at work and at home, which is why it was the best solution to use [Jekyll](http://jekyllrb.com/) to create my website, as I did with this website before.
+The previous version of my website was driven by [Django](https://www.djangoproject.com/) and you can still have a look on the code on [GitHub](https://github.com/kogakure/django-kogakure.de), but I don’t use Django any more. Instead I use *Ruby on Rails* and *Ruby* a lot at work and at home, which is why it was the best solution to use [Jekyll](http://jekyllrb.com/) to create my website, as I did with this website before.
 
-And as with this website I could reuse a lot of my automation and ideas, on how to structure the project. I use [Gulp.js](http://gulpjs.com/) to watch for changes, run a development server with BrowserSync and generate all my files.
+And as with this website I could reuse a lot of my automation and ideas, on how to structure the project. I use [Gulp.js](https://gulpjs.com/) to watch for changes, run a development server with BrowserSync and generate all my files.
 
 And in the same manner, I minimize, combine, squash, revision and optimize everything, including the Critical Render Path.
 
@@ -69,7 +69,7 @@ In *April 2008* I relaunched the 5th edition of my website with **Django** and r
 After I finished the relaunch of this website in April 2014 I started working on the new design of kogakure.de in early summer 2014. I stopped creating full-featured designs in Photoshop some years ago, but still use it to create mood boards and quickly try iterations of different ideas. Very early on I was sure I wanted to keep the bamboo and my Rakkan and decided to keep my style and don’t create something completely different.
 
 ### Typography
-I always start with Typography and selected a modular scale and  a typeface very early on. I found a typeface on [Google Fonts](https://www.google.com/fonts) (Exo), which matched perfectly my style and the topic of kogakure.de and was good to read.
+I always start with Typography and selected a modular scale and  a typeface very early on. I found a typeface on [Google Fonts](https://fonts.google.com) (Exo), which matched perfectly my style and the topic of kogakure.de and was good to read.
 
 ### Vector Graphics
 More and more displays have a high pixel density now, which is the reason I decided to use as much vector graphics as possible. I recently read and heard a lot about SVG and decided to use SVG as my vector technique on kogakure.de. SVG is more capable and future-proof compared to vector fonts.
@@ -88,17 +88,17 @@ I really hate Adobes cloud solution and pricing and had decided some month ago n
 I had decided on [Jekyll](http://jekyllrb.com/) very early on, because I had used it on this website and it was a lot of fun and very comfortable to create a website with Jekyll.
 
 ### Automation
-As with this website I used [Gulp.js](http://gulpjs.com/) again to automate everything from development to production. I wrote a [series on Gulp.js](/tag/gulp/) if you would like to know more.
+As with this website I used [Gulp.js](https://gulpjs.com/) again to automate everything from development to production. I wrote a [series on Gulp.js](/tag/gulp/) if you would like to know more.
 
 ### Search
 One problem, which is common on a static site, is that it’s hard to have dynamic content. Most of my website is quite static, why Jekyll is a good fit. But creating a search without dynamically created pages and a database is not an easy task.
 
-Fortunately with [lunr.js](http://lunrjs.com/) it’s possible to have a full-text search on your static website, running with JavaScript. I used the fantastic [Jekyll Lunr.js search](https://github.com/slashdotdash/jekyll-lunr-js-search) of [Ben Smith](https://github.com/slashdotdash), which creates a JSON file of my content, filtering out stop words. And it’s working really good!
+Fortunately with [lunr.js](https://lunrjs.com/) it’s possible to have a full-text search on your static website, running with JavaScript. I used the fantastic [Jekyll Lunr.js search](https://github.com/slashdotdash/jekyll-lunr-js-search) of [Ben Smith](https://github.com/slashdotdash), which creates a JSON file of my content, filtering out stop words. And it’s working really good!
 
 ### Grid and Responsive Design
 There are two kind of grids systems: Classical **CSS Frameworks** and **Grids-on-Demand**.
 
-I’m a big fan of Grids-on-Demand and really think CSS-Frameworks are a waste of time, money and fun. The latter one create a lot of CSS with class attributes, to use all over your markup and pollute everything with class attributes (e. g. `.col-1-of-6` or `.push-3-of-12`). With a Responsive Design this gets even messier and is quite inflexible. You mostly have to decide on major breakpoints and add class attributes to all of your containers for all your breakpoints. Examples of these kind of frameworks are [Bootstrap](http://getbootstrap.com/), [Foundation](http://foundation.zurb.com/), [Pure.CSS](http://purecss.io/), [Unsemantic](http://unsemantic.com/) and others.
+I’m a big fan of Grids-on-Demand and really think CSS-Frameworks are a waste of time, money and fun. The latter one create a lot of CSS with class attributes, to use all over your markup and pollute everything with class attributes (e. g. `.col-1-of-6` or `.push-3-of-12`). With a Responsive Design this gets even messier and is quite inflexible. You mostly have to decide on major breakpoints and add class attributes to all of your containers for all your breakpoints. Examples of these kind of frameworks are [Bootstrap](http://getbootstrap.com/), [Foundation](http://foundation.zurb.com/), [Pure.CSS](https://purecss.io/), [Unsemantic](https://unsemantic.com/) and others.
 
 Grid-on-Demand Systems are far more flexible. They need a preprocessor to run and provide Mixins for your grid. You only create grid code, when needed and don’t have to ship all possible variations of grids with your CSS. Examples of these systems are [Susy](http://susy.oddbird.net/) and [Singularity](https://github.com/at-import/Singularity).
 

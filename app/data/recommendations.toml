@@ -3,7 +3,7 @@
 
   [[recommendation.items]]
     text = "TED"
-    url = "http://www.ted.com/"
+    url = "https://www.ted.com/"
 
   [[recommendation.items]]
     text = "Brainpickings"
@@ -47,11 +47,11 @@
 
   [[recommendation.items]]
     text = "Signal vs. Noise"
-    url = "https://signalvnoise.com/"
+    url = "https://m.signalvnoise.com/"
 
   [[recommendation.items]]
     text = "Information Architects"
-    url = "https://ia.net/know-how"
+    url = "https://ia.net/topics"
 
 [[recommendation]]
   category = "Design"
@@ -74,7 +74,7 @@
 
   [[recommendation.items]]
     text = "Media Queries"
-    url = "http://mediaqueri.es/"
+    url = "https://mediaqueri.es/"
 
   [[recommendation.items]]
     text = "ColorHexa"
@@ -92,7 +92,7 @@
 
   [[recommendation.items]]
     text = "Gulp"
-    url = "http://gulpjs.com/"
+    url = "https://gulpjs.com/"
 
 [[recommendation]]
   category = "Hosting"

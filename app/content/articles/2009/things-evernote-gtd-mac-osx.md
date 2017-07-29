@@ -43,4 +43,4 @@ Eine besondere Funktion von <cite>Evernote</cite> ist die Erkennung von Schrift 
 
 Für mich ist die Erfassung meiner Aufgaben am Mac damit mittlerweile sehr komfortabel geworden und ich bin sehr zufrieden damit. Sicherlich hat jede Software noch Dinge, die ich gerne sehen würde. Bei <cite>Things</cite> würde mich noch Unterprojekte und Planung von Projektaufgaben interessieren. Bei <cite>Evernote</cite> würde es mich freuen, wenn die Eingabe von Text komfortabler wäre, und semantische Markierung, wie z. B. für Code, sowie einen ordentlichen Export der Notizen/Daten bieten würde.
 
-Wenn man das [10-Finger-Schreiben](http://www.tipp10.com/de/) beherrscht und am iPhone schnell die Tasten bedienen kann, gibt es meiner Meinung nach kein Medium, mit dem man schneller seine Ideen, Aufgaben und Gedanken erfassen kann.
+Wenn man das [10-Finger-Schreiben](https://www.tipp10.com/de/) beherrscht und am iPhone schnell die Tasten bedienen kann, gibt es meiner Meinung nach kein Medium, mit dem man schneller seine Ideen, Aufgaben und Gedanken erfassen kann.

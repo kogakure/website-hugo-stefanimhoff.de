@@ -49,14 +49,14 @@ How fast Hugo really is can be best seen in this video:
 {{< youtube CdiDYZ51a2o >}}
 
 ## Templates
-Hugo comes without a plugin system, but I didn’t miss any and could find a solution for everything I had on my Jekyll site before. The templates are written in [Go html/template](https://golang.org/pkg/html/template/), Ace or Amber. The latter look very familiar to people, who know Jade/Pug. But I choose the Go html/template. The syntax needs some time to get used to, as it’s so different from all template engines I’ve used before. But if I got stuck with a problem the [Hugo Discussion Board](https://discuss.gohugo.io/) could help out in all cases. Hugo comes with specific rules for templates, how to name them and rules in which order templates get rendered.
+Hugo comes without a plugin system, but I didn’t miss any and could find a solution for everything I had on my Jekyll site before. The templates are written in [Go html/template](https://golang.org/pkg/html/template/), Ace or Amber. The latter look very familiar to people, who know Jade/Pug. But I choose the Go html/template. The syntax needs some time to get used to, as it’s so different from all template engines I’ve used before. But if I got stuck with a problem the [Hugo Discussion Board](https://discourse.gohugo.io) could help out in all cases. Hugo comes with specific rules for templates, how to name them and rules in which order templates get rendered.
 
 ## Themes
 It also has really nice Theme system, which allows to create very modular Themes. And because creating a theme is so easy there are [a lot very good of them](http://themes.gohugo.io/) available.
 
 
 ## Shortcodes
-Instead of plugins Hugo uses [Shortcodes](http://gohugo.io/extras/shortcodes/), which is very refreshing. Writing plugins in Jekyll was *not* fun. With Shortcodes it’s possible to create the same functionality without needing to know Ruby and the [Liquid for Programmers](https://github.com/Shopify/liquid/wiki/Liquid-for-Programmers) guidelines and still getting the same result with less lines and writing mostly Markup.
+Instead of plugins Hugo uses [Shortcodes](http://gohugo.io/content-management/shortcodes), which is very refreshing. Writing plugins in Jekyll was *not* fun. With Shortcodes it’s possible to create the same functionality without needing to know Ruby and the [Liquid for Programmers](https://github.com/Shopify/liquid/wiki/Liquid-for-Programmers) guidelines and still getting the same result with less lines and writing mostly Markup.
 
 ## Content
 Another really nice thing is the organization of the content. You can create multiple sections and or types of content, serving them at your chosen URL. And you can create pages or content just out of data (Jekyll has this, too).
@@ -68,7 +68,7 @@ Hugo comes with Menu generation and a Taxonomy system, which lets you create as 
 ## Source Code
 If you’re interested, how I built it, you can have a look, I published my source code on GitHub:
 
-{{< download url="https://github.com/kogakure/stefanimhoff.de-hugo" text="View Source on GitHub" >}}
+{{< download url="https://github.com/kogakure/hugo-stefanimhoff.de" text="View Source on GitHub" >}}
 
 ## Conclusion
 Converting my site from Jekyll to Hugo just took three days. My tendency of over-engineering and perfection allocated a lot of the time. And because of that, I started simplifying my CSS and Gulp tasks and will further simplify the site. But it was fun and if you need a static site you should have a look into Hugo.

@@ -33,7 +33,7 @@ Das ZIP-Packet enthält die CSS-Dateien, Bilder und die python-Datei des Themes.
 
 Die genaue Anleitung befindet sich mit im Paket.
 
-Dieses Theme ist unter einer <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/de/">Creative Commons-Lizenz</a> lizenziert.
+Dieses Theme ist unter einer <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/2.0/de/">Creative Commons-Lizenz</a> lizenziert.
 
 ## English
 
@@ -45,7 +45,7 @@ The ZIP package containes the CSS files, images and the python file of the theme
 
 Detailed instructions are included in the package.
 
-This Theme is licenced under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.0/de/deed.en">Creative Commons Licence</a>.
+This Theme is licenced under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/2.0/de/deed.en">Creative Commons Licence</a>.
 
 ## Download
 

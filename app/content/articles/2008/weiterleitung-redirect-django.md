@@ -46,7 +46,7 @@ Für beide Fälle bietet Django standardmäßig schon Einstellungen: `PREPEND_WW
 
 Es gibt auch schon diverse Möglichkeiten, dies zu lösen, z. B. über die URL-Middleware von Stefano J. Attardi.
 
-In einer Diskussion mit [Martin Mahner](http://mahner.org/), habe ich aber die Überzeugung von ihm übernommen, dass dies vom Server geregelt werden sollte, der kann das viel effizienter und schneller.
+In einer Diskussion mit Martin Mahner, habe ich aber die Überzeugung von ihm übernommen, dass dies vom Server geregelt werden sollte, der kann das viel effizienter und schneller.
 
 Dafür richten man in seinem VHost einfach folgende Mod_Rewrite-Direktiven ein:
 
