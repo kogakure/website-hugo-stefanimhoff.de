@@ -14,6 +14,7 @@ var hexRGBA = require('postcss-hexrgba');
 var pxtorem = require('postcss-pxtorem');
 var autoprefixer = require('autoprefixer');
 var mqpacker = require('css-mqpacker');
+var atImport = require('postcss-import');
 
 var config = require('../../config');
 
@@ -29,6 +30,7 @@ function onError (err) {
  * Build sourcemaps
  */
 var processors = [
+  atImport(config.styles.options.atImport),
   precss(config.styles.options.precss),
   easings(config.styles.options.easings),
   responsiveType(config.styles.options.responsiveType),

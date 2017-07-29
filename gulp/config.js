@@ -211,6 +211,9 @@ module.exports = {
     src: srcAssets + '/styles/*.css',
     dest: developmentAssets + '/css',
     options: {
+      atImport: {
+        path: ['app/assets/styles']
+      },
       precss: {},
       autoprefixer: {
         browsers: [
