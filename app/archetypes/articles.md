@@ -1,11 +1,11 @@
 ---
+draft: true
 title: {{ replace .TranslationBaseName "-" " " | title }}
-slug: ""
+slug: "{{ .TranslationBaseName }}"
 date: {{ .Date }}
 description: ""
 author: "Stefan Imhoff"
 language: "en"
-draft: true
 og_image: ""
 series:
 -

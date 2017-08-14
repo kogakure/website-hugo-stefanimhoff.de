@@ -1,10 +1,9 @@
 ---
-title: {{ replace .TranslationBaseName "-" " " | title }}
-slug: ""
-date = {{ .Date }}
-series: ""
-categories: ""
-tags: ""
 draft: true
+title: {{ replace .TranslationBaseName "-" " " | title }}
+slug: "{{ .TranslationBaseName }}"
+date = {{ .Date }}
+description: ""
+author: "Stefan Imhoff"
 ---
 

@@ -40,9 +40,9 @@ $ yarn run build   # Build production
 $ yarn run deploy  # Sync to server
 ```
 
-The developement server will run on [http://0.0.0.0:9999/](http://0.0.0.0:9999/).
+The developement server will run on [http://localhost:9999/](http://localhost:9999/).
 
-The production server will run on [http://0.0.0.0:9998/](http://0.0.0.0:9998/).
+The production server will run on [http://localhost:9998/](http://localhost:9998/).
 
 ## Stuff I use on my website
 

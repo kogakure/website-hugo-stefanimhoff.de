@@ -1,4 +1,4 @@
-baseurl         = "http://0.0.0.0:9999/"
+baseurl         = "http://localhost:9999/"
 title           = "stefanimhoff.de"
 languageCode    = "en"
 metaDataFormat  = "yaml"
