@@ -1,5 +1,5 @@
 baseurl         = "http://localhost:9999/"
-title           = "stefanimhoff.de"
+title           = "Stefan Imhoff"
 languageCode    = "en"
 metaDataFormat  = "yaml"
 paginate        = 0

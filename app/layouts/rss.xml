@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ with .Title }}{{.}} on {{ end }}{{ .Site.Title }}</title>
+    <title>{{ .Site.Data.settings.title }}</title>
     <link>{{ .Permalink }}</link>
-    <description>Recent content {{ with .Title }}in {{.}} {{ end }}on {{ .Site.Title }}</description>
+    <description>{{ .Site.Data.settings.seo.description }}</description>
     <generator>Hugo {{ .Hugo.Version }}</generator>{{ with .Site.LanguageCode }}
     <language>{{.}}</language>{{end}}{{ with .Site.Author.email }}
     <managingEditor>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</managingEditor>{{end}}{{ with .Site.Author.email }}
