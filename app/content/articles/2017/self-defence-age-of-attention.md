@@ -44,7 +44,7 @@ The human brain is prone to a lot of cognitive biases and fallacies. It’s easy
 
 We want to connect to others, yearn after distraction from ourselves and boredom, we want attention of others.
 
-Every **pull-to-refresh**, every **push message**, every **like**, **comment**, every new item appearing in our *continuous* scrolling streams trigger the release of dopamine in our brains. They create a **habit loop**: *Trigger*, *routine*, *reward*.
+Every **pull-to-refresh**, every **push message**, every **like**, **comment**, every new item appearing in our *continuous* scrolling streams triggers the release of dopamine in our brains. They create a **habit loop**: *Trigger*, *routine*, *reward*.
 
 We are creatures of habit. A lot of our day-to-day actions are driven by subconscious habits. You don’t need to think about walking to the subway, pushing the shopping card at the supermarket or switching on the lights in a dark room. These have become habits. And so has this movement of addiction: **Grabbing for your phone**, **checking for updates**, hundreds of times each day.
 
