@@ -7,14 +7,12 @@
         <svg class="attribution-icon-cc">
           <use xlink:href="#cc"></use>
         </svg>
-        {{ else }}
-        ©
         {{ end }}
-        
+
         {{ if .Get "author" }}
           {{ .Get "author" }}{{ if and (.Get "author") (or (.Get "url") (.Get "cite")) }}, {{ end }}
         {{ end }}
-        
+
         {{ if .Get "url" }}
           <a href="{{ .Get "url" }}">
             {{ if .Get "cite" }}
@@ -27,9 +25,9 @@
           {{ if .Get "cite" }}
             {{ .Get "cite" }}
           {{ end}}
-        {{ end }}    
-      </p>      
-    {{ end }}        
+        {{ end }}
+      </p>
+    {{ end }}
   </div>
   {{ if .Get "caption" }}
   <figcaption>
