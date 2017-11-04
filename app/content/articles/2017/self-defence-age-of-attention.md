@@ -3,7 +3,7 @@ title: Self-Defence in the Age of Attention
 slug: "self-defence-age-of-attention"
 date: 2017-11-03T08:00:00+01:00
 description: "A guide on how to get your attention back in the age of constant distraction."
-excerpt: "A guide on how to get your attention back in the age of constant distraction. ❦ It’s been a while since I first started questioning my own behaviour with technology, but also of all of us in general. The Internet has given us an endless stream of information, nearly every  question answered in seconds. It has given us more music to hear, more texts to read, more images to look at, more movies to watch than one could ever consume in thousands of years."
+excerpt: "How to win back our time and minds. ❦ It’s been a while since I first started questioning my own behaviour with technology, but also of all of us in general. The Internet has given us an endless stream of information, nearly every  question answered in seconds. It has given us more music to hear, more texts to read, more images to look at, more movies to watch than one could ever consume in thousands of years."
 author: "Stefan Imhoff"
 language: "en"
 show_related: false
@@ -120,7 +120,7 @@ If you have read to this point, without being distracted, kudos! Now put down yo
 ### Videos & Podcast
 
 - [Look Up](https://www.youtube.com/watch?v=Z7dLU6fk9QY) (Garry Turk)
-- [Social Media's Dark Side: How Facebook and Snapchat Try to Steal Our Self-Worth](https://www.youtube.com/watch?v=HBRLMoL_vTQ) (Tristan Harris)
+- [Social Media’s Dark Side: How Facebook and Snapchat Try to Steal Our Self-Worth](https://www.youtube.com/watch?v=HBRLMoL_vTQ) (Tristan Harris)
 - [How a handful of tech companies control billions of minds every day](https://www.ted.com/talks/tristan_harris_the_manipulative_tricks_tech_companies_use_to_capture_your_attention) (Tristan Harris)
 - [Put social back in social media – TEDxLinz](https://www.youtube.com/watch?v=gnbLLQwZxeA) (Christian Heilmann)
 - [Hurry Slowly](http://hurryslowly.co/)
@@ -129,6 +129,6 @@ If you have read to this point, without being distracted, kudos! Now put down yo
 
 - [It’s No Accident We’re Addicted to Our Devices](http://bigthink.com/robby-berman/its-no-accident-were-addicted-to-our-devices) (Big Think)
 - [Have Smartphones Destroyed a Generation?](https://www.theatlantic.com/magazine/archive/2017/09/has-the-smartphone-destroyed-a-generation/534198/) (The Atlantic)
-- ['Our minds can be hijacked': the tech insiders who fear a smartphone dystopia](https://www.theguardian.com/technology/2017/oct/05/smartphone-addiction-silicon-valley-dystopia) (The Guardian)
+- [‘Our minds can be hijacked’: the tech insiders who fear a smartphone dystopia](https://www.theguardian.com/technology/2017/oct/05/smartphone-addiction-silicon-valley-dystopia) (The Guardian)
 - [Technology is destroying the most important asset in your life](https://qz.com/1091883/technology-is-destroying-the-most-important-asset-in-your-life/) (Quartz)
 - [Alarming Statistics That Show Just How Addicted We Are To Mobile Devices ](http://www.breakthetwitch.com/statistics-mobile-devices/)(Break the Twitch)
