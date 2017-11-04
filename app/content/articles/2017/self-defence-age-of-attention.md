@@ -107,7 +107,7 @@ These are some of the ideas I implemented or tried in the last few years to prev
 - **I put my devices upside down on the table** to not get distracted by incoming messages.
 - **I use the [Feedly mute filter](https://blog.feedly.com/mute-filters/) function to filter out content**, which drives my attention to places I don’t want it to go. *Not sorry, Trump*. 🙈 🙉 🙊 [Here are some really cool examples, on how to use the mute filters](https://blog.feedly.com/filters-examples/).
 - **I tried to leave my phone in another room**, while eating with my family.
-- **I switched of Nostalgia features**, like ‘your day one year ago’, where ever possible. These are annoying, because they just try to activate you again.
+- **I switched off Nostalgia features**, like ‘your day one year ago’, where ever possible. These are annoying, because they just try to activate you again.
 
 It’s often not easy and sometimes even not possible at all to overcome the obstacles of attention grabbing media, just with pure willpower. But by building habits of **mindful media consumption** you might be able to get your attention back. Maybe not every day, but it is a process worth working on. It’s not the device, it’s you. The device can be used to be creative, connect to other people, be inspired. Or it can be used to distract yourself mindless for hours. It’s your choice.
 
