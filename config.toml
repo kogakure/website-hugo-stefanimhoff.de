@@ -64,7 +64,6 @@ themesdir     = "app/themes"
 [params]
   criticalcss    = false
   tracking       = false
-  disqus         = "stefanimhoff"
 
   [params.attribution]
   name     = "「大宮盆栽×タムロン」大宮盆栽美術館で盆栽撮影にチャレンジ！ブロガーイベント"
