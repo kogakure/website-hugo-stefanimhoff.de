@@ -91,7 +91,7 @@ I gave more than 150 books away (I still own 763) and sold my car. I use the sub
 
 I scanned most of my documents into digital form and recycled the paper.
 
-Recently I counted all my possessions: I own **2486** items, which is a *fourth* of the amount a European person owns on average (10000 items). I counted everything, from my wardrobe to dental brushes. 356 items in my bedroom, 242 items in my corridor, 68 items in my bathroom and 1820 items in my living room and kitchen.
+Recently I counted all my possessions: I own **2486** items, which is a *fourth* of the amount an European person owns on average (10000 items). I counted everything, from my wardrobe to dental brushes. 356 items in my bedroom, 242 items in my corridor, 68 items in my bathroom and 1820 items in my living room and kitchen.
 
 ### On Consumption
 
