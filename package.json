@@ -10,7 +10,10 @@
     "build": "gulp production:build",
     "preview": "gulp preview",
     "publish": "gulp publish",
-    "deploy": "gulp deploy"
+    "deploy": "gulp deploy",
+    "lint:css": "stylelint app/**/*.css",
+    "lint:js": "eslint app/**/*.js",
+    "test": "yarn run lint:css && yarn run lint:js"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
@@ -59,6 +62,7 @@
     "require-dir": "^0.3.2",
     "run-sequence": "^2.1.0",
     "stylelint": "^8.0.0",
+    "stylelint-order": "^0.8.0",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.9.0"
   },

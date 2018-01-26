@@ -1,0 +1,2 @@
+app/layouts/partials/critical/*.js
+app/assets/javascripts/vendor/*.js
