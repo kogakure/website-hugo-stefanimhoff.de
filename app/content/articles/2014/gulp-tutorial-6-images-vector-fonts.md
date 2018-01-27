@@ -10,10 +10,6 @@ series:
 - gulp
 categories:
 - code
-tags:
-- gulp
-- tutorial
-- automation
 ---
 
 This is the 6th part of my series *Introduction to Gulp.js*. The last article was very long and complicated. This time it’s a easier one: I will show how I move my images and generate vector fonts.

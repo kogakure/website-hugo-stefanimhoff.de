@@ -6,9 +6,7 @@ author: "Stefan Imhoff"
 slug: "gtd-analog-vs-digital-0-zu-1"
 date: 2008-04-01T17:40:00+02:00
 categories:
-- produktivitaet
-tags:
-- gtd
+- productivity
 ---
 
 Der ultimative GTD-Test: Was ist denn nun schneller? Analoges oder digitales Notieren. Ich habe den Test gemacht.
@@ -17,7 +15,7 @@ Ich war mir nicht sicher, doch jetzt ist es entschieden. Digital geht schneller 
 
 ## Die Kandidaten
 
-* [Moleskine](http://www.moleskine.com/de/) mit Kugelschreiber
+* [Moleskine](https://de.moleskine.com/de) mit Kugelschreiber
 * [iPod touch](https://www.apple.com/de/ipod-touch/) mit Zeigefinger
 
 ## Ausgangsposition

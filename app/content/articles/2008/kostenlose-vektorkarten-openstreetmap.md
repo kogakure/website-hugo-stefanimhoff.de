@@ -6,14 +6,8 @@ author: "Stefan Imhoff"
 slug: "kostenlose-vektorkarten-openstreetmap"
 date: 2008-09-06T18:59:00+02:00
 og_image: "artikel/openstreetmap.jpg"
-show_related: false
 categories:
-- empfehlung
-- website
-tags:
-- karten
-- openstreetmap
-- vektor
+- recommendation
 ---
 
 Ich habe keine Ahnung, warum dieses Juwel so lange unbemerkt von mir bleiben konnte, aber gestern hat mich ein Kollege auf den Kartendienst OpenStreetMap hingewiesen. Ähnlich wie bei Wikipedia wird dort von vielen Benutzern eine für jeden kostenlos verfügbare Karte zusammengetragen.
@@ -30,9 +24,9 @@ OpenStreetMap bietet verschiedene Kartenschichten in unterschiedlichen Detailgra
 
 [Die Anmeldung](https://www.openstreetmap.org/user/new) erfordert nur wenige Klicks, dann kann man die Karten editieren und helfen alles zu verfeinern.
 
-Das [Wiki](http://wiki.openstreetmap.org/wiki/Main_Page) ist sehr umfangreich und in vielen Sprachen verfügbar.
+Das [Wiki](https://wiki.openstreetmap.org/wiki/Main_Page) ist sehr umfangreich und in vielen Sprachen verfügbar.
 
-Es gibt sogar [deutsche Screencasts](http://wiki.openstreetmap.org/wiki/WikiProject_Germany/Screencasts) im Wiki, die in die Benutzung und Bedienung des Projektes einführen.
+Es gibt sogar [deutsche Screencasts](https://wiki.openstreetmap.org/wiki/WikiProject_Germany/Screencasts) im Wiki, die in die Benutzung und Bedienung des Projektes einführen.
 
 Parallel dazu kann man den Dienst [OpenRouteService](https://openrouteservice.org/ "OpenLS Route Service with free OSM data") benutzen, der auf den Kartendaten von OpenStreetMap aufsetzt, und sich Routen berechnen lassen, sogar für Fahrräder und Fußgänger.
 

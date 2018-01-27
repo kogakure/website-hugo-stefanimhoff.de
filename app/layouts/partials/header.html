@@ -18,11 +18,11 @@
     <div class="header-info">
         {{ if .IsHome }}
         <h1 class="header-info-title">{{ .Site.Data.settings.title }}</h1>
-        <h2 class="header-info-tagline">{{ .Site.Data.settings.seo.description }}</h2>
+        <h2 class="header-info-tagline">{{ .Site.Data.settings.tagline | safeHTML }}</h2>
       {{ else }}
         <a class="header-info-title-link" href="{{ .Site.BaseURL }}">
           <div class="header-info-title">{{ .Site.Data.settings.title }}</div>
-          <div class="header-info-tagline">{{ .Site.Data.settings.seo.description }}</div>
+          <div class="header-info-tagline">{{ .Site.Data.settings.tagline }}</div>
         </a>
       {{ end }}
     </div>

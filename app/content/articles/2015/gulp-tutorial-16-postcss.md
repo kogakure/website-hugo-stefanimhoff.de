@@ -10,11 +10,6 @@ series:
 - gulp
 categories:
 - code
-tags:
-- gulp
-- tutorial
-- postcss
-- css
 ---
 
 This is the 16th part of my series *Introduction to Gulp.js*. Today I will show how to use PostCSS to process CSS files. I will replace Ruby Sass with PostCSS and additionally show how to lint stylesheets automatically in the background while developing with Stylelint.

@@ -10,13 +10,6 @@ categories:
 - design
 - code
 - website
-tags:
-- design
-- relaunch
-- typography
-- rwd
-- jekyll
-- svg
 ---
 
 After 62 days of work, I relaunched today my martial arts website [kogakure.de](http://kogakure.de/) in a brand new, mobile optimized design and with a complete rewritten code base. And I have still some time left until the end of April, when Google will start to punish websites, which are not mobile-optimized.
@@ -25,7 +18,7 @@ After 62 days of work, I relaunched today my martial arts website [kogakure.de](
 {{< image src="artikel/kogakure-de-relaunch.jpg" alt="kogakure.de v6" >}}
 {{< /figure >}}
 
-The previous version of my website was driven by [Django](https://www.djangoproject.com/) and you can still have a look on the code on [GitHub](https://github.com/kogakure/django-kogakure.de), but I don’t use Django any more. Instead I use *Ruby on Rails* and *Ruby* a lot at work and at home, which is why it was the best solution to use [Jekyll](http://jekyllrb.com/) to create my website, as I did with this website before.
+The previous version of my website was driven by [Django](https://www.djangoproject.com/) and you can still have a look on the code on [GitHub](https://github.com/kogakure/django-kogakure.de), but I don’t use Django any more. Instead I use *Ruby on Rails* and *Ruby* a lot at work and at home, which is why it was the best solution to use [Jekyll](https://jekyllrb.com/) to create my website, as I did with this website before.
 
 And as with this website I could reuse a lot of my automation and ideas, on how to structure the project. I use [Gulp.js](https://gulpjs.com/) to watch for changes, run a development server with BrowserSync and generate all my files.
 
@@ -45,7 +38,7 @@ In *January 2002* I created the 2nd version of my website with some **PHP**, a t
 {{< image src="artikel/kogakure-de-v2.jpg" alt="kogakure.de v2" >}}
 {{< /figure >}}
 
-In *September 2004* I launched a new design, for the first time with a bamboo as design element and a white design. My website was mentioned in a popular science print magazine (<cite>[P.M. Magazine](http://www.pm-magazin.de/)</cite>), which increased the visits about 8 times the regular visits.
+In *September 2004* I launched a new design, for the first time with a bamboo as design element and a white design. My website was mentioned in a popular science print magazine (<cite>[P.M. Magazine](https://www.pm-magazin.de/)</cite>), which increased the visits about 8 times the regular visits.
 
 {{< figure class="image-figure" caption="kogakure.de v3" >}}
 {{< image src="artikel/kogakure-de-v3.jpg" alt="kogakure.de v3" >}}
@@ -85,10 +78,10 @@ I really hate Adobes cloud solution and pricing and had decided some month ago n
 ## Technology
 
 ### Static site generator
-I had decided on [Jekyll](http://jekyllrb.com/) very early on, because I had used it on this website and it was a lot of fun and very comfortable to create a website with Jekyll.
+I had decided on [Jekyll](https://jekyllrb.com/) very early on, because I had used it on this website and it was a lot of fun and very comfortable to create a website with Jekyll.
 
 ### Automation
-As with this website I used [Gulp.js](https://gulpjs.com/) again to automate everything from development to production. I wrote a [series on Gulp.js](/tag/gulp/) if you would like to know more.
+As with this website I used [Gulp.js](https://gulpjs.com/) again to automate everything from development to production. I wrote a [series on Gulp.js](/series/gulp/) if you would like to know more.
 
 ### Search
 One problem, which is common on a static site, is that it’s hard to have dynamic content. Most of my website is quite static, why Jekyll is a good fit. But creating a search without dynamically created pages and a database is not an easy task.
@@ -98,7 +91,7 @@ Fortunately with [lunr.js](https://lunrjs.com/) it’s possible to have a full-t
 ### Grid and Responsive Design
 There are two kind of grids systems: Classical **CSS Frameworks** and **Grids-on-Demand**.
 
-I’m a big fan of Grids-on-Demand and really think CSS-Frameworks are a waste of time, money and fun. The latter one create a lot of CSS with class attributes, to use all over your markup and pollute everything with class attributes (e. g. `.col-1-of-6` or `.push-3-of-12`). With a Responsive Design this gets even messier and is quite inflexible. You mostly have to decide on major breakpoints and add class attributes to all of your containers for all your breakpoints. Examples of these kind of frameworks are [Bootstrap](http://getbootstrap.com/), [Foundation](http://foundation.zurb.com/), [Pure.CSS](https://purecss.io/), [Unsemantic](https://unsemantic.com/) and others.
+I’m a big fan of Grids-on-Demand and really think CSS-Frameworks are a waste of time, money and fun. The latter one create a lot of CSS with class attributes, to use all over your markup and pollute everything with class attributes (e. g. `.col-1-of-6` or `.push-3-of-12`). With a Responsive Design this gets even messier and is quite inflexible. You mostly have to decide on major breakpoints and add class attributes to all of your containers for all your breakpoints. Examples of these kind of frameworks are [Bootstrap](http://getbootstrap.com/), [Foundation](https://foundation.zurb.com/), [Pure.CSS](https://purecss.io/), [Unsemantic](https://unsemantic.com/) and others.
 
 Grid-on-Demand Systems are far more flexible. They need a preprocessor to run and provide Mixins for your grid. You only create grid code, when needed and don’t have to ship all possible variations of grids with your CSS. Examples of these systems are [Susy](http://susy.oddbird.net/) and [Singularity](https://github.com/at-import/Singularity).
 

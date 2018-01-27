@@ -7,8 +7,6 @@ slug: "geloeste-django-probleme"
 date: 2010-09-11T16:00:00+02:00
 categories:
 - code
-tags:
-- django
 ---
 
 Eric Holscher hat auf der DjangoCon 2010 einen interessanten Vortrag gehalten, in dem er die besten Lösungen für alltägliche Probleme mit Django aufzeigt.

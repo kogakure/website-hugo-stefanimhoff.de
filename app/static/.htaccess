@@ -122,9 +122,6 @@ Redirect 301 /main/kategorie/tutorial    /tag/tutorial
 Redirect 301 /main/kategorie/download    /tag/download
 Redirect 301 /notizbuch                  /articles
 Redirect 301 /archiv                     /articles
-Redirect 301 /kategorie                  /categories
-Redirect 301 /category                   /categories
-Redirect 301 /tag                        /tags
 
 # #############################################################################
 # # ERRORS                                                                    #

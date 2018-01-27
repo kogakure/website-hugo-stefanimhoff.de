@@ -10,12 +10,6 @@ series:
 - gulp
 categories:
 - code
-tags:
-- gulp
-- tutorial
-- automation
-- deployment
-- rsync
 ---
 
 This is the 14th of my series *Introduction to Gulp.js*. Today I will write a task to sync the files of my Jekyll site to my webserver.

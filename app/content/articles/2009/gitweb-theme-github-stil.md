@@ -8,14 +8,6 @@ date: 2009-02-19T20:00:00+02:00
 og_image: "artikel/gitweb-theme-summary.png"
 categories:
 - download
-tags:
-- design
-- gitweb
-- git
-- theme
-- customize
-- download
-- github
 ---
 
 Das Standard-Theme von Gitweb ist wirklich nicht sehr ansprechend und scheinbar nur auf Funktionalität ausgelegt. Daher habe ich eine Alternative erstellt, die sich von der Gestaltung an GitHub anlehnt.

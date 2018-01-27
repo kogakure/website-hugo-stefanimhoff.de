@@ -6,13 +6,8 @@ slug: "automatisierte-installation-mac-os-x"
 date: 2014-04-04T21:09:00+02:00
 description: "Wie man mit Homebrew und Homebrew Cask automatisiert Software unter Mac OS X installiert. Mit Homebrew Cask lassen sich über 1300 Anwendungen installieren, darunter viele kommerzielle Produkte."
 categories:
-- empfehlung
+- recommendation
 - software
-tags:
-- macosx
-- software
-- automatisierung
-- homebrew
 ---
 
 Die Installation von Software war unter Mac OS X schon immer wenig ausgereift. Es gibt einfach zu viele verschiedene Möglichkeiten der Installation.

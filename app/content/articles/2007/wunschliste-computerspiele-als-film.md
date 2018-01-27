@@ -6,11 +6,7 @@ author: "Stefan Imhoff"
 slug: "wunschliste-computerspiele-als-film"
 date: 2007-09-27T20:00:00+02:00
 categories:
-- persoenlich
-tags:
-- kino
-- film
-- game
+- personal
 ---
 
 Computerspiele bieten oft eine interessante und spannende Story, doch leider gelingt die Umsetzung im Film nur selten. Hier ist meine persönliche Wunschliste von Computerspielen, die ich gerne verfilmt sehen würde.

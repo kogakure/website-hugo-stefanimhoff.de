@@ -10,10 +10,6 @@ series:
 - gulp
 categories:
 - code
-tags:
-- gulp
-- tutorial
-- automation
 ---
 
 This is the 8th part of my series *Introduction to Gulp.js*. Today I will set up watch tasks for many different files with Gulp.js.

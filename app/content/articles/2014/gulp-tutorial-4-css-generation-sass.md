@@ -10,13 +10,6 @@ series:
 - gulp
 categories:
 - code
-tags:
-- gulp
-- tutorial
-- sass
-- compass
-- autoprefixer
-- sourcemaps
 ---
 
 This is the 4th part of my series *Introduction to Gulp.js*. Today I will show how to use Sass (and Compass if you want) to create CSS files. Furthermore I will add vendor prefixes with Autoprefixer and create Source Maps for easier debugging of the Sass files.

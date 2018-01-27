@@ -8,16 +8,11 @@ date: 2008-11-07T12:00:00+02:00
 categories:
 - server
 - code
-tags:
-- python
-- deployment
-- server
-- fabric
 ---
 
 Vor einiger Zeit habe ich meinen Workflow mit Capistrano beschrieben, und wie man damit einen Server fernwarten kann. Kürzlich bin ich auf das in Python geschriebene, viel schlankere Tool <cite>Fabric</cite> aufmerksam gemacht worden.
 
-Capistrano ist ein sehr mächtiges Tool, von dem ich für meine Projekte nicht mal die Grundlagen benötige. Daher bin ich jetzt auf [Fabric](http://www.nongnu.org/fab/) umgestiegen, was für normale Zwecke viel optimaler zu bedienen und schneller einzurichten ist.
+Capistrano ist ein sehr mächtiges Tool, von dem ich für meine Projekte nicht mal die Grundlagen benötige. Daher bin ich jetzt auf [Fabric](http://www.fabfile.org/) umgestiegen, was für normale Zwecke viel optimaler zu bedienen und schneller einzurichten ist.
 
 Fabric ist nicht nur für Django-/Python-Arbeitsweise, sondern für jede Server-Fernwartung geeignet. Ich selbst verwende es z. B. um meine wöchentlichen Server-Backups durchzuführen, um mit Django und Git zu arbeiten, um Kunden-Repositorys mit Subversion auf dem Server meiner Arbeitsstelle anzulegen und um lokale Skripte auszuführen.
 Der gemessene Aufwand für einen kompletten Prozess hat sich drastig veringert.
@@ -132,6 +127,6 @@ So erledigt mein Backup-Skript eine Menge Aufgaben:
 
 Es erzeugt Datenbank-Dumps aller meiner Tabellen, sowohl für MySQL, als auch für PostgreSQL, packt diese Dump-Dateien, erzeugt dann File-Backups verschiedener Orte auf dem Server, packt diese auch und kopiert sie (natürlich mit Datum im Dateinamen) auf meine lokale Festplatte und dort an die richtigen Stellen.
 
-Die Arbeit, die man sich dadurch sparen kann, macht das Lesen der sehr kurzen und [verständlichen Dokumentation](http://www.nongnu.org/fab/user_guide.html)  locker wieder wett. Und auch die Installation ist ein leichtes, man kann entweder `easy_install` benutzen oder das simple `python setup.py install`. Alle nötigen Module werden automatisch heruntergeladen und installiert.
+Die Arbeit, die man sich dadurch sparen kann, macht das Lesen der sehr kurzen und [verständlichen Dokumentation](http://docs.fabfile.org/)  locker wieder wett. Und auch die Installation ist ein leichtes, man kann entweder `easy_install` benutzen oder das simple `python setup.py install`. Alle nötigen Module werden automatisch heruntergeladen und installiert.
 
 Fabric ist nicht nur für jeden der einen SSH-Zugang und Server/VHost sein eigen nennt eine echte Empfehlung, sondern auch für alle die lokal Prozesse automatisieren wollen, aber eben nicht zeitgesteuert (Cronjob) oder als Shell-Skript.

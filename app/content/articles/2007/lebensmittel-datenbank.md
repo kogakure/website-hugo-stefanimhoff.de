@@ -6,14 +6,8 @@ author: "Stefan Imhoff"
 slug: "lebensmittel-datenbank"
 date: 2007-08-28T08:24:00+02:00
 og_image: "artikel/fddb-info.png"
-show_related: false
 categories:
-- empfehlung
-- website
-tags:
-- lebensmittel
-- nahrung
-- essen
+- recommendation
 ---
 
 Ich bin gestern über eine schöne Web 2.0 Anwendung gestolpert, mit der man die Nährwerte von Nahrungsmitteln komfortabel berechnen kann.

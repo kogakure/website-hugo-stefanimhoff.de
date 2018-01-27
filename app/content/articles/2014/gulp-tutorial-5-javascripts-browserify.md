@@ -10,13 +10,6 @@ series:
 - gulp
 categories:
 - code
-tags:
-- gulp
-- tutorial
-- automation
-- javascript
-- browserify
-- commonjs
 ---
 
 This is the 5th part of my series *Introduction to Gulp.js*. Today I will show how to use Browserify to bundle your JavaScript and use CommonJS modules to run node modules in the Browser.

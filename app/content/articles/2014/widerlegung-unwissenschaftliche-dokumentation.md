@@ -9,12 +9,7 @@ og_image: "artikel/pakals-grabplatte.jpg"
 widont: false
 categories:
 - film
-- empfehlung
-tags:
-- film
-- wissenschaft
-- aliens
-- geschichte
+- recommendation
 ---
 
 Von Zeit zu Zeit begegne ich seltsamen Zeitgenossen, die davon überzeugt sind, dass eine bestimmte Sache etwas Mysteriöses, Magisches oder Unerklärliches an sich hat.
@@ -42,7 +37,7 @@ Bei meinen Recherchen, wer den Film produziert hatte – irgendeine dubiose, fra
 
 {{% youtube j9w-i5oZqaQ %}}
 
-In dieser 3-stündigen Dokumentation beweisen die Autoren anhand von vielen, klaren und wissenschaftlichen Beispielen, dass die Serienreihe [Ancient Aliens](http://www.imdb.com/title/tt1643266/), die in den USA seit 2009 sehr erfolgreich und mit guten Bewertungen läuft, ein riesiger Beschiss ist. Ich habe selten in so kurzer Zeit so viel Geschichtliches gelernt, wie in diesem Film: Es werden verschiedenste *mystische* Bauwerke, Kunstwerke und Schriften genau beleuchtet und im Video werden zu jedem Objekt Zahlen eingeblendet, anhand denen auf der dazugehörigen [Website](http://ancientaliensdebunked.com/) alle Quellen genau überprüft werden können. Jede noch so kleine Lüge und Behauptung wird vollkommen demaskiert und die „Wissenschaftler“ von Ancient Aliens (z. B. auch Erich von Däniken) werden bloßgestellt. Sehr lustig anzuschauen und die Zeit auf jeden Fall wert, da man so das kritische Denken schulen kann.
+In dieser 3-stündigen Dokumentation beweisen die Autoren anhand von vielen, klaren und wissenschaftlichen Beispielen, dass die Serienreihe [Ancient Aliens](http://www.imdb.com/title/tt1643266/), die in den USA seit 2009 sehr erfolgreich und mit guten Bewertungen läuft, ein riesiger Beschiss ist. Ich habe selten in so kurzer Zeit so viel Geschichtliches gelernt, wie in diesem Film: Es werden verschiedenste *mystische* Bauwerke, Kunstwerke und Schriften genau beleuchtet und im Video werden zu jedem Objekt Zahlen eingeblendet. Jede noch so kleine Lüge und Behauptung wird vollkommen demaskiert und die „Wissenschaftler“ von Ancient Aliens (z. B. auch Erich von Däniken) werden bloßgestellt. Sehr lustig anzuschauen und die Zeit auf jeden Fall wert, da man so das kritische Denken schulen kann.
 
 ## Denkfehler der Kognitionspsychologie
 In dieser Dokumentation kann man gut einige psychologische Denkfehler beobachten und studieren, denen die Wissenschaftler von *Ancient Aliens* zum Opfer fallen.

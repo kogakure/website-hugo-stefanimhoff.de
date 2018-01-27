@@ -10,13 +10,9 @@ series:
 - gulp
 categories:
 - code
-tags:
-- gulp
-- tutorial
-- automation
 ---
 
-My website is running [Jekyll](http://jekyllrb.com/) now since the beginning of 2014. But I wasn’t quite happy with my build and development process. I started out with Rake tasks and chose later [Grunt.js](https://gruntjs.com/) as my build system, but parts of the process where left in Ruby. I used [Compass](http://compass-style.org/) a lot and [Jekyll Assets](http://ixti.net/jekyll-assets/) was handling my versioning. But Grunt.js and the Jekyll Asset Pipeline didn’t play well together. Then a new solution came along: [Gulp.js](https://gulpjs.com/).
+My website is running [Jekyll](https://jekyllrb.com/) now since the beginning of 2014. But I wasn’t quite happy with my build and development process. I started out with Rake tasks and chose later [Grunt.js](https://gruntjs.com/) as my build system, but parts of the process where left in Ruby. I used [Compass](http://compass-style.org/) a lot and [Jekyll Assets](http://ixti.net/jekyll-assets/) was handling my versioning. But Grunt.js and the Jekyll Asset Pipeline didn’t play well together. Then a new solution came along: [Gulp.js](https://gulpjs.com/).
 
 {{< figure class="image-figure" >}}
 {{< image src="artikel/gulp-tutorial-1.png" alt="Gulp.js Logo" >}}
@@ -107,7 +103,7 @@ My Jekyll website lives in a folder called `app`. All my tasks will be placed in
 
 ## Jekyll
 
-This tutorial uses [Jekyll](http://jekyllrb.com/) to build the HTML of the website. Creating a new Jekyll website is fast and easy:
+This tutorial uses [Jekyll](https://jekyllrb.com/) to build the HTML of the website. Creating a new Jekyll website is fast and easy:
 
 ```bash
 $ gem install jekyll

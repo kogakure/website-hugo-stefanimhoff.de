@@ -1,19 +1,14 @@
 ---
+language: en
+title: The Pursuit of Minimalism
+slug: pursuit-of-minimalism
 author: Stefan Imhoff
+date: 2017-06-07T18:30:00+02:00
+description: "As Minimalism is currently very popular, but as Minimalism is hard to understand, also a lot of misconceptions can be found. This article carries my thoughts on Minimalism and my history with it."
+og_image: "artikel/minimalism-office.jpg"
 categories:
 - personal
 - recommendation
-date: 2017-06-07T18:30:00+02:00
-description: "As Minimalism is currently very popular, but as Minimalism is hard to understand, also a lot of misconceptions can be found. This article carries my thoughts on Minimalism and my history with it."
-draft: false
-language: en
-show_related: false
-og_image: "artikel/minimalism-office.jpg"
-slug: pursuit-of-minimalism
-tags:
-- minimalism
-- philosophy
-title: The Pursuit of Minimalism
 ---
 
 Minimalism has come a long way. It recently got again a lot of traction with it’s highest search volume on [Google](https://trends.google.com/trends/explore?q=minimalism) ever recorded in January 2017. Because Minimalism is **very hard to define**, it leaves a lot of **room for interpretation** and its meaning shifted recently more from being a philosophy to being a lifestyle.
@@ -142,11 +137,11 @@ As JP Sears jokes: *It’s not about being so poor, that you have the inability 
 - [The less you own, the more you have | Angela Horn | TEDxCapeTown](https://www.youtube.com/watch?v=CyKmpyYy14k)
 - [What exactly is a 'tiny house'? | Amy Henion | TEDxNortheasternU](https://www.youtube.com/watch?v=DTPsASRO7WA)
 - [The Art of Enough](https://experiencelife.com/article/the-art-of-enough/)
-- [The Minimalists](http://www.theminimalists.com/)
+- [The Minimalists](https://www.theminimalists.com/)
 - [Aesence/](http://www.aesence.com/)
 - [Becoming Minimalist](https://www.becomingminimalist.com/)
 - [Minimalissimo](https://minimalissimo.com/)
-- [The Everyday Minimalist](http://www.everydayminimalist.com/)
+- [The Everyday Minimalist](https://www.everydayminimalist.com/)
 - [Minimlist Life](https://minimalism.life/)
 - [5 STYLE](https://5style.com/)
 

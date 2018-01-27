@@ -9,10 +9,6 @@ slug: "japanese-netflix-tv-show-atelier-underwear"
 categories:
 - recommendation
 - film
-tags:
-- japan
-- tvshow
-- film
 ---
 
 From time to time – but not very often – a TV Show gets released, which really surprises me. This happened last time in 2007 with *Pushing Daisies*, where I loved everything: the story, the actors, the sets, every dialog. And now it happened again. I have a new favorite TV Show: [Atelier](http://www.imdb.com/title/tt4790548/) aka *Underwear*.

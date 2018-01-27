@@ -1,17 +1,13 @@
 ---
 language: "de"
 title: "Domains extern hosten"
+slug: "domains-extern-hosten"
 description: "Domains getrennt vom Webhosting-Paket hosten. Warum dies eine gute Idee ist und was für Vorteile es bringt."
 author: "Stefan Imhoff"
-slug: "domains-extern-hosten"
 date: 2007-05-30T23:55:00+02:00
-show_related: false
 categories:
 - server
-- empfehlung
-tags:
-- hosting
-- domain
+- recommendation
 ---
 
 Viele Domainbesitzer in Deutschland wissen immer noch nicht, dass sie ihre Domains _nicht_ mit dem Speicherplatz zusammen kaufen müssen. Ich erkäre hier, wieso Inklusivdomains eine Mogelpackung sind und was für Vorteile das Trennen von Domain und Webspace mit sich bringen.

@@ -8,11 +8,6 @@ date: 2008-05-01T18:18:00+02:00
 categories:
 - server
 - code
-tags:
-- ruby
-- server
-- deployment
-- capistrano
 ---
 
 Wer einen Webserver oder VirtualHost sein eigen nennt, sollte sich unbedingt Capistrano ansehen, ein Programm, das es ermöglicht diverse Aufgaben zu automatisieren.

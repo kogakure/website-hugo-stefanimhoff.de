@@ -10,14 +10,6 @@ series:
 - gulp
 categories:
 - code
-tags:
-- gulp
-- tutorial
-- automation
-- lint
-- scss
-- javascript
-- syntax
 ---
 
 This is the 9th part of my series *Introduction to Gulp.js*. Today I will use Gulp.js to automatically check my SCSS and JavaScript files for syntax errors and warnings.

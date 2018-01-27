@@ -10,11 +10,6 @@ series:
 - gulp
 categories:
 - code
-tags:
-- gulp
-- tutorial
-- automation
-- sprites
 ---
 
 This is the 10th part of my series *Introduction to Gulp.js*. Today I will use Gulp.js to create CSS image sprites.

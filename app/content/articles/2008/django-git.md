@@ -6,11 +6,7 @@ author: "Stefan Imhoff"
 slug: "django-git"
 date: 2008-12-23T15:00:00+02:00
 categories:
-- persoenlich
-tags:
-- django
-- git
-- jahresrueckblick
+- personal
 ---
 
 Wie jedes Jahr ist es so kurz vor dem Jahreswechsel mal wieder Zeit um zu schauen, was in 2008 so auf dem Plan stand. Dafür habe ich, um mein Gedächtnis aufzufrischen, wieder Google History zur Hilfe herangezogen.
@@ -147,7 +143,7 @@ Unglaublich was ständig für neue Django-Applikationen veröffentlicht werden, 
 
 Keynote am 14. Oktober 2008. Neue MacBooks (Pro) von Apple. Und was für feine. Jetzt überlege ich auch wieder, ob ich meinen riesigen G5 nicht gegen so ein kleines, leichtes Notebook tausche. Mit den neuen Cinema-Displays ist das ja ein Traum.
 
-Ich tausche Capistrano als Deployment-Tool gegen das leichtgewichtige [Fabric](http://www.nongnu.org/fab/). Das versteht jeder.
+Ich tausche Capistrano als Deployment-Tool gegen das leichtgewichtige [Fabric](http://www.fabfile.org/). Das versteht jeder.
 
 Endlich erhältlich, die Kult-Serie aus den 80ern: [Die Rebellen vom Liang Shan Po](http://www.amazon.de/dp/B001BBEFEE/). Das ist die Serienverfilmung des chinesischen Klassikers <cite>Shuǐhǔ Zhuàn</cite> (水滸傳), auf japanisch <cite>Suikoden</cite>, im deutschen als die <cite>Wasserufergeschichte</cite> oder als <cite>Die Rebellen vom Liang Shan Po</cite> bekannt.
 

@@ -9,23 +9,18 @@ description: "Your responsive website is slow? How to optimize the critical rend
 categories:
 - code
 - website
-tags:
-- mobile
-- rwd
-- responsive
-- performance
 ---
 
 In 2014 I relaunched my personal website with a Responsive Web Design. But having a Responsive Web Design with a good font size, without horizontal scrolling and pinch-zooming needed, where links can be clicked easily with a finger, is just the beginning.
 
-When building a mobile website there are some best practices, which can be followed along. Google provides a lot of documentation on these topics, for example the [Webmasters Mobile Guide](https://developers.google.com/webmasters/mobile-sites/) or the [Mobile SEO](https://developers.google.com/webmasters/mobile-sites/mobile-seo/) documentation.
+When building a mobile website there are some best practices, which can be followed along. Google provides a lot of documentation on these topics, for example the [Webmasters Mobile Guide](https://developers.google.com/webmasters/mobile-sites/) or the [Mobile SEO](https://developers.google.com/search/mobile-sites) documentation.
 
 You can check your site with the [Mobile usability report](https://www.google.com/webmasters/tools/mobile-usability), in Google Webmaster Tools and with [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/).
 
 There is an easy test for your website, which can check if your website already meets the basic features a good mobile experience should provide: [Mobile-Friendly Test](https://www.google.com/webmasters/tools/mobile-friendly/).
 
 ## But I thought my website is cool now?!
-You build your website, followed [Googles Web Fundamentals Guidelines](https://developers.google.com/web/fundamentals/getting-started/), wrote semantic markup, made a Responsive Design, got rid of Flash, increased the font size and click areas for a finger, build it *Mobile First*.
+You build your website, followed [Googles Web Fundamentals Guidelines](https://developers.google.com/web/fundamentals), wrote semantic markup, made a Responsive Design, got rid of Flash, increased the font size and click areas for a finger, build it *Mobile First*.
 
 You thought you’re done, you’re cool now. The website is running the latest shit. Build a Responsive Website. Check.
 

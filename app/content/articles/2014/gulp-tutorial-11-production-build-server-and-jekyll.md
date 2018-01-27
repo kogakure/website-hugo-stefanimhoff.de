@@ -10,11 +10,6 @@ series:
 - gulp
 categories:
 - code
-tags:
-- gulp
-- tutorial
-- automation
-- sprites
 ---
 
 This is the 11th part of my series *Introduction to Gulp.js*. Today I will start writing the production build task, set up a server to view the production code and build the production site with Jekyll.

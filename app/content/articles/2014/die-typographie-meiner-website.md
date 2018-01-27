@@ -10,11 +10,7 @@ categories:
 - design
 - code
 - website
-- typographie
-tags:
-- typographie
-- schrift
-- compass
+- typography
 ---
 
 Ich bin *typophil*. Das ist aber nichts für das man eine Selbsthilfegruppe besuchen müsste, denn es bedeutet einfach die Liebe oder Affektion zu Schrift. Für mich war daher von Anfang an klar, dass ich für meine neue Website zuerst mit der Typographie beginnen werde.
@@ -169,10 +165,10 @@ Für alle die jetzt neugierig auf Typographie geworden sind, habe ich eine klein
 
 - [The Elements *of* Typographic Style Applied *to the* Web](http://webtypography.net/)
 - [Thinking with Type](http://thinkingwithtype.com/)
-- [Butterick’s Practical Typography](http://practicaltypography.com/)
+- [Butterick’s Practical Typography](https://practicaltypography.com/)
 - [type basics](http://www.typeworkshop.com/index.php?id1=type-basics)
 - [Web Design is 95% Typography](https://ia.net/topics/the-web-is-all-about-typography-period)
-- [Five simple steps to better typography](http://markboulton.co.uk/journal/five-simple-steps-to-better-typography)
+- [Five simple steps to better typography](https://markboulton.co.uk/journal/five-simple-steps-to-better-typography)
 - [Nice Web Type](http://nicewebtype.com/)
 - [More MeaningFull Typography](https://alistapart.com/article/more-meaningful-typography)
 - [A List Apart: Typographie](https://alistapart.com/topic/design/typography/)

@@ -8,10 +8,7 @@ date: 2007-05-28T18:04:00+02:00
 series:
 - subversion
 categories:
-- versionskontrolle
-tags:
-- tutorial
-- subversion
+- vcs
 ---
 
 Dieser erste Teil der Reihe *Subversion* beschäftigt sich mit der nötigen Theorie und Funktionsweise von Subversion.

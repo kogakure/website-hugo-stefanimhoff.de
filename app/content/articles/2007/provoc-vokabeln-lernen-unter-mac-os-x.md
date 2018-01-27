@@ -6,13 +6,8 @@ author: "Stefan Imhoff"
 slug: "provoc-vokabeln-lernen-unter-mac-os-x"
 date: 2007-11-16T07:00:00+02:00
 categories:
-- empfehlung
+- recommendation
 - software
-tags:
-- macosx
-- sprache
-- lernen
-- vokabel
 ---
 
 Heute möchte ich eine wirklich feine Software vorstellen, die sich für alle, die irgendetwas lernen möchten, fantastisch eignet: <cite>ProVoc</cite>.

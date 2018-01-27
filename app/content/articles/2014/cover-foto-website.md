@@ -9,10 +9,6 @@ description: "Über die Wahl meines Fotostils bei meiner neuen Website und wie i
 categories:
 - design
 - website
-tags:
-- design
-- bokeh
-- foto
 ---
 
 Ein prägnanter Teil meiner neuen Website ist das auffällige Foto im Kopfbereich. Das aktuelle Motiv zeigt einen Bonsai.

@@ -9,15 +9,11 @@ description: "Über die auf dieser Website eingesetzte CSS-Architektur, Sass, Co
 categories:
 - code
 - website
-tags:
-- compass
-- sass
-- smacss
 ---
 
 Bei einem Webprojekt stellt insbesondere die Architektur der Stylesheets eine große Herausforderung dar. Denn CSS wird schnell unverständlich und ist schwer zu warten, wenn nicht von Anfang an eine saubere und modulare Struktur verwendet wird.
 
-{{< figure class="image-figure" caption="Peter Griffin CSS-Meme. Das komplette GIF (ca. 2 MB) gibt es <a href='http://imgur.com/Q3cUg29'>hier</a>." >}}
+{{< figure class="image-figure" caption="Peter Griffin CSS-Meme. Das komplette GIF (ca. 2 MB) gibt es <a href='https://imgur.com/Q3cUg29'>hier</a>." >}}
 {{< image src="artikel/css-peter-griffin-meme.jpg" alt="Peter Griffin CSS-Meme" >}}
 {{< /figure >}}
 

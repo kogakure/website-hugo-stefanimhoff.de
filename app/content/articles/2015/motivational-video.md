@@ -10,8 +10,6 @@ widont: false
 categories:
 - film
 - quote
-tags:
-- motivation
 ---
 
 Last week I found a really inspirational film on YouTube, focusing on motivation. It’s a good example of creating something good out of the work of others. The film uses clips and quotes from a broad variaty of people and uses music from movies.

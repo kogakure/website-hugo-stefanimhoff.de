@@ -10,11 +10,6 @@ series:
 - gulp
 categories:
 - code
-tags:
-- gulp
-- tutorial
-- automation
-- revision
 ---
 
 This is the 13th part of my series *Introduction to Gulp.js*. Today I will write the task to revision my static assets.

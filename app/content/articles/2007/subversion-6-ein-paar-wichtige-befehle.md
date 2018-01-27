@@ -8,10 +8,7 @@ date: 2007-11-02T19:24:00+02:00
 series:
 - subversion
 categories:
-- versionskontrolle
-tags:
-- subversion
-- tutorial
+- vcs
 ---
 
 Es gibt in Subversion noch ein paar nützliche und notwendige Befehle, die man im täglichen Umgang brauchen wird.

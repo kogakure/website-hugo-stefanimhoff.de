@@ -8,10 +8,7 @@ date: 2007-07-20T09:00:00+02:00
 series:
 - subversion
 categories:
-- versionskontrolle
-tags:
-- subversion
-- tutorial
+- vcs
 ---
 
 Um mit Subversion zu arbeiten, muss man sich zuerst ein *Repository* (eine Ablage/Depot) erstellen, in dem das spätere Projekt liegt.

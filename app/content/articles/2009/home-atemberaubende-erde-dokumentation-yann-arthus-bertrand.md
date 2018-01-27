@@ -6,10 +6,7 @@ author: "Stefan Imhoff"
 slug: "home-atemberaubende-erde-dokumentation-yann-arthus-bertrand"
 date: 2009-06-15T17:23:00+02:00
 categories:
-- empfehlung
-- film
-tags:
-- dokumentation
+- recommendation
 - film
 ---
 

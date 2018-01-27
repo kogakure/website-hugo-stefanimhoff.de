@@ -8,12 +8,6 @@ date: 2008-01-05T13:00:00+02:00
 og_image: "artikel/blender-osx-folders.png"
 categories:
 - download
-tags:
-- design
-- blender
-- design
-- macosx
-- customize
 ---
 
 Da mein [Django Folder-Icon](/2007/django-folder-mac-osx/ "Django Folder für Mac OS X Leopard • Notizen • Stefan Imhoff"), das ich im Dezember veröffentlicht habe, ein riesiger Erfolg war und schon unzählige Male heruntergeladen wurde, habe ich einen neuen Ordner erstellt – dieses mal für Blender.
@@ -32,7 +26,7 @@ Mit Blender kann man auf professionellem Niveau arbeiten. Es ist genauso gut, wi
 
 Wer lernen möchte mit einer solchen 3D-Software zu arbeiten oder von einer der kommerziellen Lösungen wechseln möchte, dem kann ich diese Software wärmstens Empfehlen.
 
-Das Blender es lässig mit den teuren Mitbewerbern aufnehmen kann, kann man in der Sektion [Features](https://www.blender.org/features/) sehen oder auch in den bereits erstellten [Projekten](https://www.blender.org/features/projects/).
+Das Blender es lässig mit den teuren Mitbewerbern aufnehmen kann, kann man in der Sektion [Features](https://www.blender.org/features/) sehen oder auch in den bereits erstellten [Projekten](https://www.blender.org/about/projects).
 
 ## Folder-Icon
 

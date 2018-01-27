@@ -5,15 +5,10 @@ date: 2017-06-27T16:16:34+02:00
 description: "I just finished writing my first book in GitBook. I worked on it the last six month and it’s available to read online, as PDF, ePub and Mobi."
 author: "Stefan Imhoff"
 language: "en"
-draft: false
 og_image: "artikel/gitbook-kogakure.jpg"
-show_related: false
 categories:
 - personal
 - book
-tags:
-- book
-- gitbook
 ---
 
 I just finished writing my first book. I worked on it the last six month. Actually I didn’t wrote it recently, but in the period of 18 years.

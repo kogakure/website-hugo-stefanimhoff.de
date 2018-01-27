@@ -6,10 +6,7 @@ author: "Stefan Imhoff"
 slug: "terminal-most-used-commands"
 date: 2008-04-18T07:00:00+02:00
 categories:
-- empfehlung
-tags:
-- terminal
-- command
+- recommendation
 ---
 
 Weil es grad alle machen: Ich weiß, was du letztens ins Terminal getippt hast.

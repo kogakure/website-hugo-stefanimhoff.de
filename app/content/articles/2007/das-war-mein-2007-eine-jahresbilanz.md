@@ -6,9 +6,7 @@ author: "Stefan Imhoff"
 slug: "das-war-mein-2007-eine-jahresbilanz"
 date: 2007-12-24T14:00:00+02:00
 categories:
-- persoenlich
-tags:
-- jahresrueckblick
+- personal
 ---
 
 Zum Jahresende will ich dieses Mal Googles Webprotokoll als Erinnerungshilfe hinzuziehen. Dieser Dienst von Google ermöglicht es die eigenen Suchbegriffe anzusehen.
@@ -89,7 +87,7 @@ In diesem Monat erkundige ich mich auch nach Django-Hostern und finde heraus, da
 
 Im August entdecke ich [Git](https://git-scm.com/) für mich, Linus Torvalds fantastisches Versionskontrollsystem. Git ist Subversion in vielen Punkten um Längen vorraus.
 
-Der [Mister Wong](http://www.mister-wong.de/)-Skandal im August ist mal wieder typisch und sehr lustig. Irgendein asiatisch-amerikanischer Typ regt sich **unglaublich** über die Karikatur eines Chinesen im Logo des Bookmark-Dienstes Mister Wong auf. Faschisten, ihr alle! Hier kommt die braune Keule! Man kann sich auch künstlich aufregen … Tsssss. Jedenfalls muss ein neues Logo her. Die Community soll aushelfen.
+Der [Mister Wong](https://www.mister-wong.de/)-Skandal im August ist mal wieder typisch und sehr lustig. Irgendein asiatisch-amerikanischer Typ regt sich **unglaublich** über die Karikatur eines Chinesen im Logo des Bookmark-Dienstes Mister Wong auf. Faschisten, ihr alle! Hier kommt die braune Keule! Man kann sich auch künstlich aufregen … Tsssss. Jedenfalls muss ein neues Logo her. Die Community soll aushelfen.
 
 Zum ersten mal in meinem Leben beschäftige ich mich im späten August mit [LaTeX](https://de.wikipedia.org/wiki/LaTeX). Einige Studenten aus unserer Firma haben mich darauf gestoßen. Muss ich können, tu ich lernen. Mein Motto ;)
 
@@ -97,7 +95,7 @@ Auf meinem Nachttisch liegt laut Google Suche Machiavellis <cite>[Der Fürst](ht
 
 In der [Autostadt Wolfsburg](https://www.autostadt.de/) eröffnet ein neues japanisches Restaurant, das *Anan*, mit extra einflogenem, japanischem Meisterkoch.
 
-Das Sommerloch geht langsam zu Ende, also erkundige ich mich, was meine Lieblingsserien so machen, und wann die Staffeln wieder starten: [Lost](http://www.imdb.com/title/tt0411008/), [StarGate SG-1 und StarGate Atlantis](http://stargate.mgm.com/), [Monk](http://www2.usanetwork.com/series/monk/) und [Battlestar Galactica](http://www.syfy.com/battlestargalactica).
+Das Sommerloch geht langsam zu Ende, also erkundige ich mich, was meine Lieblingsserien so machen, und wann die Staffeln wieder starten: [Lost](http://www.imdb.com/title/tt0411008/), [StarGate SG-1 und StarGate Atlantis](http://stargate.mgm.com/), Monk und [Battlestar Galactica](http://www.syfy.com/battlestargalactica).
 
 ## September
 
@@ -121,7 +119,7 @@ Ich setze mir ein neues Wiki auf, DokuWiki nervt irgendwie. Das neue Wiki heißt
 
 Ich schaue mir die <cite>PostgreSQL</cite>-Datenbank an, und stelle fest, das MySQL dagegen ja fast ein Kinderspielzeug ist. So ein Glück, dass Postgres die von Django favorisierte Datenbank ist.
 
-ActiveCollab, der OpenSource Projektmanager ist jetzt kommerziell, das Projekt wird aber von einem anderen Entwickler in der OpenSource-Lizenz als [ProjectPier](http://www.projectpier.org/) weiterentwickelt. Danke!
+ActiveCollab, der OpenSource Projektmanager ist jetzt kommerziell, das Projekt wird aber von einem anderen Entwickler in der OpenSource-Lizenz als ProjectPier weiterentwickelt. Danke!
 
 Ich muss mir eingestehen, dass ohne JavaScript-Frameworks und Ajax-Erfahrung kein Arbeitgeber mehr beeindruckt ist. Naja, also such ich mir aus der langen Liste (YUI, Dojo, Mochikit, Prototype, jQuery, …) eins raus: [jQuery](http://jquery.com/).
 

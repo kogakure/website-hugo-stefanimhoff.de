@@ -31,7 +31,7 @@
 
   [[recommendation.items]]
     text = "Zen Pencils"
-    url = "http://zenpencils.com/"
+    url = "https://zenpencils.com/"
 
   [[recommendation.items]]
     text = "99U"

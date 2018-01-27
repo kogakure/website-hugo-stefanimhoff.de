@@ -6,10 +6,7 @@ author: "Stefan Imhoff"
 slug: "einstieg-in-git-als-versionskontrollsystem"
 date: 2009-02-10T20:00:00+02:00
 categories:
-- versionskontrolle
-tags:
-- git
-- subversion
+- vcs
 ---
 
 Mittlerweile habe ich das Versionskontrollsystem Git seit fast eineinhalb Jahren im Einsatz und bin jeden Tag wieder begeistert. Sogar bei meinem Arbeitgeber scheint eine Umstellung von Subversion auf Git in greifbarer Nähe.

@@ -7,10 +7,6 @@ slug: "lokalisierung-von-projekten-mit-django"
 date: 2008-08-30T15:25:00+02:00
 categories:
 - code
-tags:
-- django
-- lokalisierung
-- i18n
 ---
 
 Es gibt für Django mittlerweile schon eine große Menge nützlicher Applikationen. Leider vernachlässigen viele Entwickler immer noch die Lokalisierung und Internationalisierung ihrer Applikationen.

@@ -10,11 +10,6 @@ categories:
 - code
 - design
 - website
-tags:
-- hugo
-- relaunch
-- cssgrid
-- serviceworker
 ---
 
 4 month of work, 49 hours of coding, plus more hours for designing a new homepage, creating a new OTF font and polishing up some of my old 3D models. But now my martial arts website kogakure.de is online.
@@ -35,7 +30,7 @@ I upgraded my tech stack, while doing the migration: JavaScript is written in [E
 
 The build and development environment runs with [Gulp.js] and [Yarn].
 
-For CSS I use as with this website [PostCSS], but removed *PreCss* and a lot of plugins, instead just use [CSSnext] (with support for CSS custom properties, custom media queries, `@apply` and more).
+For CSS I use as with this website [PostCSS], but removed *PreCss* and a lot of plugins, instead just use [CSSnext] with support for CSS custom properties, custom media queries, `@apply` and more.
 
 Mozilla Firefox CSS Grid Inspector
 ----------------------------------

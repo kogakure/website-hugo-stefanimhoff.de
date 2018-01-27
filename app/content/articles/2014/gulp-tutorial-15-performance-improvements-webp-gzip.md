@@ -10,11 +10,6 @@ series:
 - gulp
 categories:
 - code
-tags:
-- gulp
-- tutorial
-- automation
-- performance
 ---
 
 This is the 15th part of my series *Introduction to Gulp.js*. Today I’ll add some tasks for performance improvement of the website with WebP for images and Gzip for text files.
@@ -114,9 +109,9 @@ AddType image/webp .webp
 ```
 {{% /figure %}}
 
-It is possible to use an `.htaccess` file and include in the [configuration file](http://jekyllrb.com/docs/configuration/) as to be included. Otherwise Jekyll will ignore hidden files and don’t copy them to the target directory.
+It is possible to use an `.htaccess` file and include in the [configuration file](https://jekyllrb.com/docs/configuration/) as to be included. Otherwise Jekyll will ignore hidden files and don’t copy them to the target directory.
 
-But I like it more to add [Yaml Front Matter](http://jekyllrb.com/docs/frontmatter/) and create the file this way. Another advantage is that the file isn’t invisible.
+But I like it more to add [Yaml Front Matter](https://jekyllrb.com/docs/frontmatter/) and create the file this way. Another advantage is that the file isn’t invisible.
 
 If you sync your production website to a server it will deliver to browsers, which support WebP the Webp format when requesting a JPEG or PNG.
 

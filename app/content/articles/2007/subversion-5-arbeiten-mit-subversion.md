@@ -8,10 +8,7 @@ date: 2007-09-04T18:45:00+02:00
 series:
 - subversion
 categories:
-- versionskontrolle
-tags:
-- subversion
-- tutorial
+- vcs
 ---
 
 Die eigentliche Arbeit mit Subversion ist relativ leicht erklärt und gelernt. Von größeren Aktionen wie `merge` mal abgesehen.

@@ -7,11 +7,6 @@ slug: "duplikation-ist-in-ordnung"
 date: 2013-11-27T12:45:00+02:00
 categories:
 - code
-tags:
-- html
-- rubyonrails
-- erb
-- dry
 ---
 
 Immer wieder wird Entwicklern das Prinzip von DRY eingetrichtert, was im Prinzip besagt, dass duplizierter Code schlecht ist. Und das stimmt auch so für Code.

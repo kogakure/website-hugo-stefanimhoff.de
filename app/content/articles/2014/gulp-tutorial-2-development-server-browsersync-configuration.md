@@ -10,10 +10,6 @@ series:
 - gulp
 categories:
 - code
-tags:
-- gulp
-- tutorial
-- automation
 ---
 
 This is the 2nd part of my series *Introduction to Gulp.js*. Today I will write the first few Gulp.js tasks and set up a development server with BrowserSync. And I will start to write a configuration file.

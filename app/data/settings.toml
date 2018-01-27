@@ -2,6 +2,7 @@ author = "Stefan Imhoff"
 email = "stefan@imhoff.name"
 homepage_title = "Stefan Imhoff - Developer/Designer from Hamburg, Germany"
 title = "Stefan Imhoff"
+tagline = "👨🏻‍💻&nbsp;Front-End Web Developer&nbsp;/ 👨🏻‍🎨&nbsp;Designer&nbsp;/ ◻️&nbsp;Minimalist&nbsp;/ 🤓&nbsp;Geek&nbsp;/ 🎧&nbsp;Introvert&nbsp;/ ⛩&nbsp;Japanophile"
 
 [geo]
   latitude = "53.596835"
@@ -13,7 +14,7 @@ title = "Stefan Imhoff"
   xrds = "http://kogakure.myopenid.com/xrds"
 
 [seo]
-  description = "Web Developer / Designer / Minimalist / Geek / Introvert / Japanophile"
+  description = "Front-End Web Developer / Designer / Minimalist / Geek / Introvert / Japanophile"
   keywords = "Stefan Imhoff, Hamburg, Frontend, Engineer"
 
 [social]

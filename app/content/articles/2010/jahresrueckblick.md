@@ -6,10 +6,7 @@ author: "Stefan Imhoff"
 slug: "jahresrueckblick"
 date: 2010-12-23T13:00:00+02:00
 categories:
-- persoenlich
-tags:
-- vim
-- jahresrueckblick
+- personal
 ---
 
 Und wieder ist ein Jahr fast vorbei, mein jährlicher Blick in Google History steht an.
@@ -35,7 +32,7 @@ Ich bin in 2010 auf [Zen Coding](https://code.google.com/archive/p/zen-coding) u
 
 Zum Ende des Jahres [habe ich mich noch überzeugen lassen](http://www.reinegger.net/50_gruende_photoshop_nicht_fuer_webdesign_zu_verwenden.html), dass Photoshop einfach das falsche Werkzeug für Webdesign ist, und mir angesehen, wie gut Fireworks dafür geeignet ist. Zwar brauche ich beruflich am Januar keine Layouts mehr zu erstellen, aber das Layout meines nächsten Relaunch werde ich mit Fireworks gestalten.
 
-2010 war auch das Jahr, in dem ich nach 7-jähiger Abstinenz wieder damit begonnen habe, das eine oder andere Computerspiel zu spielen. So habe ich mir [The Secret of Monkey Island](https://itunes.apple.com/de/app/the-secret-monkey-island-special/id324741347?mt=8) und [Monkey Island 2: LeChuck’s Revenge](https://itunes.apple.com/de/app/monkey-island-2-special-edition/id375901588?mt=8) für iOS gekauft und voller Freude meine Jugenderinnerungen an diese fantatischen Spiele wieder aufleben lassen. Und ich habe mir [StarCraft II](http://eu.battle.net/sc2/de/) für Mac OS X gekauft, das mit Abstand coolste Spiel seit langem. Selbstverständlich habe ich aber als Gelegenheits- und Wochenendspieler kaum eine Chance gegen Spieler zu gewinnen, die 1000 oder mehr Spiele hinter sich haben. Trotzdem macht StarCraft II unheimlichen Spaß und ich habe in 2010 die eine oder andere Stunde damit verbracht.
+2010 war auch das Jahr, in dem ich nach 7-jähiger Abstinenz wieder damit begonnen habe, das eine oder andere Computerspiel zu spielen. So habe ich mir *The Secret of Monkey Island* und *Monkey Island 2: LeChuck’s Revenge* für iOS gekauft und voller Freude meine Jugenderinnerungen an diese fantatischen Spiele wieder aufleben lassen. Und ich habe mir [StarCraft II](http://eu.battle.net/sc2/de/) für Mac OS X gekauft, das mit Abstand coolste Spiel seit langem. Selbstverständlich habe ich aber als Gelegenheits- und Wochenendspieler kaum eine Chance gegen Spieler zu gewinnen, die 1000 oder mehr Spiele hinter sich haben. Trotzdem macht StarCraft II unheimlichen Spaß und ich habe in 2010 die eine oder andere Stunde damit verbracht.
 
 Mein absolutes Highlight von 2010 war aber [Vim](http://www.vim.org/) (genauer [MacVim](https://github.com/macvim-dev/macvim)). Erst im September habe ich mich entschlossen, mir Vim näher anzusehen, und jetzt im Dezember vermisse ich TextMate – mit dem ich seit über 5 Jahren arbeite – nicht mehr im geringsten. Vim ist nicht nur kostenlos und schon viele Jahre alt, es ist auch unglaublich schnell, anpassungsfähig und mächtig und läuft schick in einer grafischen Oberfläche wie auch auf dem Server gleichermaßen. Und um einmal ehrlich zu sein, wirkt jeder Editor (vielleicht mit Ausnahme von Emacs) gegen Vim wie ein lächerliches Kinderspielzeug – auch TextMate.
 

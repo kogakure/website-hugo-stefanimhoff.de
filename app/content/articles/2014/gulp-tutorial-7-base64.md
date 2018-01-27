@@ -10,12 +10,6 @@ series:
 - gulp
 categories:
 - code
-tags:
-- gulp
-- tutorial
-- automation
-- css
-- base64
 ---
 
 This is the 7th part of my series *Introduction to Gulp.js*. Today I will use Gulp.js to replace a lot of my URLs to small images with Base64 encoded images.

@@ -8,10 +8,6 @@ og_image: "artikel/i-love-jekyll.jpg"
 description: "Über statische Seitengeneratoren und warum sie eine mächtige Alternative zu Systemen wie WordPress darstellen."
 categories:
 - code
-- empfehlung
-tags:
-- jekyll
-- octopress
 ---
 
 Seit kurzem arbeite ich am Redesign meiner Kampfkunst-Website [kogakure.de](http://kogakure.de). Wie die meisten Websites hat auch diese einmal als eine Sammlung von statischen HTML-Seiten begonnen.
@@ -33,7 +29,7 @@ Da ich beruflich nicht mit Python und Django arbeite, sondern mit [Ruby on Rails
 ## Jekyll und andere statische Seitengeneratoren
 Anfang des Jahres entschloss ich mich, dass es Zeit sei, an einer Aktualisierung zu arbeiten. Zum einen, weil die Website dringend für mobile Geräte optimiert werden muss (Responsive Web Design), zum anderen um die Python-Technologie zu Gunsten von Ruby zu wechseln. Ursprünglich hatte ich geplant, die Website in *Ruby in Rails* zu erstellen, was aber nur die Technologie, nicht die Komplexität des Projektes verändert hätte.
 
-Jekyll oder andere statische Seitengeneratoren haben im Moment einen ziemlich starken Zulauf, doch aufgrund der Vielzahl von Daten auf meiner Kampfkunst-Website hatte ich diesen Gedanken zunächst verworfen. Doch dann lernte ich die *[Data Files](http://jekyllrb.com/docs/datafiles/)* von [Jekyll](http://jekyllrb.com) kennen.
+Jekyll oder andere statische Seitengeneratoren haben im Moment einen ziemlich starken Zulauf, doch aufgrund der Vielzahl von Daten auf meiner Kampfkunst-Website hatte ich diesen Gedanken zunächst verworfen. Doch dann lernte ich die *[Data Files](https://jekyllrb.com/docs/datafiles)* von [Jekyll](https://jekyllrb.com) kennen.
 
 ## Daten als YAML, JSON oder CSV
 Im November 2013 wurde der Support für YAML-Dateien hinzugefügt, später in 2014 für JSON und diesen Monat für CSV. *Data Files* ermöglichen es, über Dateien dieser Formate zu iterieren und so Daten automatisch in die statischen Seiten zu laden. Ob es einfache Konfigurationsvariablen, wie z. B. ein Twitter-Benutzername sind, die Menüpunkte einer Navigation, oder wie bei mir ein Lexikon mit über 500 Einträgen, mit *Data Files* ist dies kein Problem mehr.
@@ -64,7 +60,7 @@ Besonders beim Hosting glänzen statische Seitengeneratoren. Denn sie spucken am
 Und statische Seiten sind sicher und ermöglichen eine sorgenfreie Freizeit. Es gibt nichts, was gehackt werden kann und keinen Teil der Website, der plötzlich nicht mehr läuft, weil irgendeine Software aktualisiert wurde.
 
 ## Spaß bei der Entwicklung
-In seinem Vortrag <cite>[Dynamic Static Site Strategies (and other tongue twisters)](https://speakerdeck.com/philhawksworth/dynamic-static-site-strategies-smashing-conference)</cite> auf der [Smashing Conference 2014](http://smashingconf.com/) in Freiburg, erwähnte [Phil Hawksworth](https://www.hawksworx.com/), dass statische Seitengeneratoren einem wieder das Gefühl geben, das man vor vielen Jahren hatte, als man zum ersten Mal eine Website erstellte: man veränderte etwas und zog eine Datei in einen Ordner auf der Festplatte und schon war sie *magisch* im Internet zu sehen.
+In seinem Vortrag <cite>[Dynamic Static Site Strategies (and other tongue twisters)](https://speakerdeck.com/philhawksworth/dynamic-static-site-strategies-smashing-conference)</cite> auf der [Smashing Conference 2014](https://smashingconf.com/) in Freiburg, erwähnte [Phil Hawksworth](https://www.hawksworx.com/), dass statische Seitengeneratoren einem wieder das Gefühl geben, das man vor vielen Jahren hatte, als man zum ersten Mal eine Website erstellte: man veränderte etwas und zog eine Datei in einen Ordner auf der Festplatte und schon war sie *magisch* im Internet zu sehen.
 
 Alle diese zusätzlichen Dinge, wie dynamische Programmierung, Datenbanken, Caching, Deployment oder Content-Managment-Systeme, die einem eigentlich das Leben erleichtern sollten, sind eine doppelseitige  Klinge: sie erleichtern zwar vieles, ermöglichen spannende, aktuelle und dynamische Seiten, fügen aber gleichzeitig viel Komplexität hinzu. Und sehr viele Websites benötigen das gar nicht.
 

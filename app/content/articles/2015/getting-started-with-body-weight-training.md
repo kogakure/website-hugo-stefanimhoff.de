@@ -8,13 +8,6 @@ author: "Stefan Imhoff"
 slug: "getting-started-with-body-weight-training"
 categories:
 - fitness
-tags:
-- fitness
-- calisthenics
-- body weight training
-- body
-- training
-- motivation
 ---
 
 I’m doing body weight training for almost a year now and really like it. It’s free, you can do it anywhere, all you need is something to push from and to pull to, and it’s fun.
@@ -55,7 +48,7 @@ And yes, everybody can learn Pull-Ups. Women, too! Just have a look at [Cornelia
 
 ## Building a New Habit
 
-I’ve read *James Clears* article [How to Build a New Habit: This is Your Strategy Guide](http://jamesclear.com/habit-guide) and according to his article building a new habit has five key points:
+I’ve read *James Clears* article [How to Build a New Habit: This is Your Strategy Guide](https://jamesclear.com/habit-guide) and according to his article building a new habit has five key points:
 
 1. **Start small**
 2. **Increase very small**

@@ -10,11 +10,6 @@ series:
 - gulp
 categories:
 - code
-tags:
-- gulp
-- tutorial
-- automation
-- jekyll
 ---
 
 This is the 3rd part of my series *Introduction to Gulp.js*. Today I will write the build task, which will execute all other tasks needed for a build, the task to delete assets for a fresh start, and the task to create my Jekyll site.

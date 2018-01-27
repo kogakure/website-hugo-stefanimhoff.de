@@ -8,10 +8,7 @@ date: 2010-10-29T19:00:00+02:00
 og_image: "artikel/vim-vintage.jpg"
 categories:
 - code
-- software
-- empfehlung
-tags:
-- vim
+- recommendation
 ---
 
 So ähnlich lautete der Spruch des Superhelden *He-Man* aus den 80er Jahren, kurz bevor er seine Superkräfte bekam. Und ungefähr genauso lange gibt es auch Vim: nämlich 22 Jahre. Und das ältere Vi, auf dem Vim basiert, gibt es sogar schon länger als ich lebe. Wenn also ein *simpler* Texteditor seit so langer Zeit existiert und solche *Kraft* verleiht, muss einfach etwas Besonderes daran sein.

@@ -7,8 +7,6 @@ slug: "django-webdesigner"
 date: 2009-01-01T11:00:00+02:00
 categories:
 - code
-tags:
-- django
 ---
 
 Die Arbeit mit einem Webframework ist auch für Webdesigner mit grafischem Hintergrund geeignet und vielleicht sogar stressfreier, als sich z. B. mit dem Templatesystem von WordPress herumzuschlagen. Und wieso ich Django unter den Webframeworks für besonders geeignet halte.
@@ -229,6 +227,6 @@ Selbst für die eigene Website eines Webdesigners ist Django eine gute Wahl, wei
 
 Der eigenen Kreativität sind in Django keine Grenzen gesetzt, weil Python mit seinen über 4000 Modulen von Drittanbietern, jeden noch so seltenen Wunsch erfüllen kann.
 
-Aus eigener Erfahrung kann ich nur sagen, dass das Stresslevel und der Arbeitsaufwand erheblich sinkt, wenn man seine Webportale mit Django betreibt, der Code bleibt kurz und übersichtlich, ist leicht zu warten, modular und objektorientiert. In Verbindung mit Deploymentwerkzeugen wie [Fabric](http://www.nongnu.org/fab/) oder [Capistrano](http://capistranorb.com/), Versionskontrollsystemen wie z. B. [Git](https://git-scm.com/) macht die Entwicklung von Websites wieder Spaß.
+Aus eigener Erfahrung kann ich nur sagen, dass das Stresslevel und der Arbeitsaufwand erheblich sinkt, wenn man seine Webportale mit Django betreibt, der Code bleibt kurz und übersichtlich, ist leicht zu warten, modular und objektorientiert. In Verbindung mit Deploymentwerkzeugen wie [Fabric](http://www.fabfile.org/) oder [Capistrano](http://capistranorb.com/), Versionskontrollsystemen wie z. B. [Git](https://git-scm.com/) macht die Entwicklung von Websites wieder Spaß.
 
 Also schließt euer Photoshop für ein paar Stunden und schaut einfach mal, ob Django nicht vielleicht das richtige Werkzeug für euch ist. Das vierteilige [Tutorial](https://docs.djangoproject.com/en/dev/intro/tutorial01/) bietet einen schnellen Einstieg in die Arbeitsweise mit Django. Der komplette Quellcode meines Kampfsport-Portals [kogakure.de](http://kogakure.de/) ist frei verfügbar und kann bei [Github geladen werden](https://github.com/kogakure/django-kogakure.de).

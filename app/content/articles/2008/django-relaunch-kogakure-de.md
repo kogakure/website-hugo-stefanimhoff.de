@@ -8,12 +8,6 @@ date: 2008-04-25T18:00:00+02:00
 categories:
 - code
 - website
-tags:
-- django
-- download
-- git
-- python
-- relaunch
 ---
 
 Es ist soweit! Mein erstes Django-Projekt ist online: das seit 1999 bestehende Kampfkunst-Magazin [kogakure.de](http://kogakure.de/ "kogakure.de – Ninja, Ninjutsu und Kampfkunst").
@@ -66,7 +60,7 @@ Zu allem Unglück kam es in der Vergangenheit immer wieder vor, dass Plugins nic
 
 Django benutzt Python-Module. Diese sind in Python programmiert und laufen auch außerhalb von Django. Und Python ist nebenbei bemerkt leicht zu lernen, gut zu lesen und weitaus länger als z. B. PHP am Markt. Google und Yahoo benutzen Python – um nur einige zu nennen.
 
-Ich habe schon eine Menge Content-Management-Systeme ausprobiert und jedes ist auf seine Art begrenzt und nur für einen einzigen Zweck geeignet (z. B. WordPress für einen Blog). Will man aber eine Website haben die nicht so einfach in eine Schublade gesteckt werden kann, oder die möglichst lange bestehen soll, hat man mit Content-Management-Systemen ein Problem. Zu oft hat man schon von diesen CMS-Hoppern gehört, die z. B. von [MovableType](https://movabletype.org/) zu [TextPattern](http://textpattern.com/ "Textpattern"), dann zu [WordPress](https://wordpress.org/ "WordPress › Blog Tool and Weblog Platform") und schließlich zu [ExpressionEngine](https://expressionengine.com) gewechselt sind. Die haben einfach zu viel Zeit.
+Ich habe schon eine Menge Content-Management-Systeme ausprobiert und jedes ist auf seine Art begrenzt und nur für einen einzigen Zweck geeignet (z. B. WordPress für einen Blog). Will man aber eine Website haben die nicht so einfach in eine Schublade gesteckt werden kann, oder die möglichst lange bestehen soll, hat man mit Content-Management-Systemen ein Problem. Zu oft hat man schon von diesen CMS-Hoppern gehört, die z. B. von [MovableType](https://movabletype.org/) zu [TextPattern](https://textpattern.com/ "Textpattern"), dann zu [WordPress](https://wordpress.org/ "WordPress › Blog Tool and Weblog Platform") und schließlich zu [ExpressionEngine](https://expressionengine.com) gewechselt sind. Die haben einfach zu viel Zeit.
 
 Frameworks haben mich bislang immer abgeschreckt, weil sie entweder mit PHP liefen (und ich mag PHP nicht sonderlich) oder man einfach zu viel selber Programmieren musste. Bei Django halten sich Programmierung und Design (Template) immer schön im Gleichgewicht.
 
@@ -131,7 +125,7 @@ Um den Einstieg in Django zu erleichtern, habe ich nachfolgend eine Liste von in
 
 ### Lernen und Hilfe
 
-* [Google Groups Django users](http://groups.google.com/group/django-users) – Django Google Group, für Fragen und Antworten
+* [Google Groups Django users](https://groups.google.com/forum/#!forum/django-users) – Django Google Group, für Fragen und Antworten
 * [Django snippets](https://djangosnippets.org/) – Nützliche Sammlung von Filtern, Tags und Code-Schnipseln
 * [dpaste](http://dpaste.com/) – Zwischenablage für Code-Beispiele. Direkt in den IRC posten ist eine Todsünde.
 * [Django Resources](https://code.djangoproject.com/wiki/DjangoResources) – Riesige Liste von Django-Ressourcen: Applikationen, Projekte, Anleitungen, Präsentationen …
@@ -149,7 +143,7 @@ Um den Einstieg in Django zu erleichtern, habe ich nachfolgend eine Liste von in
 * [Official Django Logos](https://www.djangoproject.com/community/logos/) – Das Django-Logo im Vektorformat
 * [Django Badges](https://www.djangoproject.com/community/badges/) – Django-Plaketten für die eigene Website
 * [Django Desktop Wallpaper](https://www.djangoproject.com/weblog/2005/nov/11/desktops/) – Desktop-Wallpaper
-* [Django Cheat Sheet](https://www.mercurytide.co.uk/news/article/django-cheat-sheet/) – Django Cheat Sheet als PDF oder Wallpaper
+* [Django Cheat Sheet](https://www.mercurytide.co.uk/blog/article/django-cheat-sheet) – Django Cheat Sheet als PDF oder Wallpaper
 
 ### Django-Websites von Designern und Entwicklern
 

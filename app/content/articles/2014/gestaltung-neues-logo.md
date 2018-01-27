@@ -8,13 +8,6 @@ description: "Einblick in die Gestaltung meines neuen Logos und Rakkan: Idee, Re
 og_image: "artikel/rakkan.jpg"
 categories:
 - design
-tags:
-- design
-- rakkan
-- hanko
-- siegel
-- stempel
-- logo
 ---
 
 Da ein Logo zu den wesentlichen Elementen gehört, an denen eine Website wiedererkannt wird, wollte ich von Anfang an ein Logo gestalten, das thematisch zum restlichen Design der Seite passt.

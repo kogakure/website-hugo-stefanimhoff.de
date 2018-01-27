@@ -7,9 +7,7 @@ slug: "eineinhalb-jahre-gtd-eine-billanz"
 date: 2007-11-24T01:15:00+02:00
 og_image: "artikel/gtd-vorher.jpg"
 categories:
-- produktivitaet
-tags:
-- gtd
+- productivity
 ---
 
 Seit genau eineinhalb Jahren benutze ich jetzt die Prinzipien des *GTD* (<em>Getting Things Done</em>®), nach dem gleichnamigen Buch von *David Allen* um meine alltäglichen Aufgaben zu organisieren.
@@ -49,9 +47,9 @@ Aufgaben kann man auch delegieren oder bestimmten Zeitpunkten zuweisen. Wenn man
 Auf den ersten Blick sieht GTD vielleicht kompliziert oder umständlich aus, doch hilft es ungemein, den Kopf von belastendem Grübeln freizuhalten.
 Schon nach kurzer Zeit der Umstellung habe ich mich an diese Arbeitsweise gewöhnt und schnell die Eigenschaft übernommen, jeden Gedanken **sofort zu notieren** und gemäß des GTD-Prinzips irgendwo einzuordnen. So vergesse ich nie wieder wichtige Dinge und selbst kleine Ideen verschwinden nicht gleich aus dem Kopf.
 
-Im Idealfall hat man dazu bestimmte **Arbeitswerkzeuge** dabei, die je nach Person und Lebensumständen variieren können. Ich selbst benutze eine Kombination aus Web-Applikation, Text-Dateien, [Moleskine®](http://www.moleskine.com/de/)-Notizbuch und Post-its® an verschiedenen Orten (z. B. auf dem Nachttisch).
+Im Idealfall hat man dazu bestimmte **Arbeitswerkzeuge** dabei, die je nach Person und Lebensumständen variieren können. Ich selbst benutze eine Kombination aus Web-Applikation, Text-Dateien, [Moleskine®](https://de.moleskine.com/de)-Notizbuch und Post-its® an verschiedenen Orten (z. B. auf dem Nachttisch).
 
-Gerade für für Computerprofis gibt es zahlreiche Systeme und Programme, die GTD digital ermöglichen. Somit sollte wohl für jeden das passende Arbeitswerkzeug zu finden sein. Ganze Websites und Weblogs beschäftigen sich nur mit GTD (z. B. [lifehack.org](http://www.lifehack.org/ "lifehack.org: Productivity, Getting Things Done and Lifehacks Blog"), [lifehacker](http://lifehacker.com/ "Lifehacker, tips and downloads for getting things done") oder [43 Folders](http://www.43folders.com/ "43 Folders")).
+Gerade für für Computerprofis gibt es zahlreiche Systeme und Programme, die GTD digital ermöglichen. Somit sollte wohl für jeden das passende Arbeitswerkzeug zu finden sein. Ganze Websites und Weblogs beschäftigen sich nur mit GTD (z. B. [lifehack.org](https://www.lifehack.org/ "lifehack.org: Productivity, Getting Things Done and Lifehacks Blog"), [lifehacker](https://lifehacker.com/ "Lifehacker, tips and downloads for getting things done") oder [43 Folders](http://www.43folders.com/ "43 Folders")).
 
 ## Die richtige GTD-Lösung?
 

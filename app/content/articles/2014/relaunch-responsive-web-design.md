@@ -9,12 +9,6 @@ categories:
 - design
 - code
 - website
-tags:
-- design
-- relaunch
-- typographie
-- rwd
-- jekyll
 ---
 
 Alles neu macht der Mai! Zwar ist es erst Mitte April, aber trotzdem erscheint diese Website ab heute in komplett neuem Design. Und nicht nur das, auch technisch ist alles neu. Keine einzige Zeile des alten Codes habe ich übernommen.
@@ -62,7 +56,7 @@ Damit auch jeder mögliche Inhalt optimal gestaltet ist, habe ich von Anfang an 
 ### Octopress und Jekyll
 Da ich den Pflegeaufwand eines Content-Management-Systems in Zukunft nicht mehr ertragen wollte, habe ich dieses Mal auf eine Lösung gesetzt, die komplett statische Seiten generiert: [Octopress](http://octopress.org/).
 
-Octopress sieht sich selbst als <q lang="en">A blogging framework for hackers</q>. Technisch basiert es auf [Jekyll](http://jekyllrb.com/), einem in Ruby geschriebenen Tool, das auch von GitHub für seine *Pages* eingesetzt wird. Da ich auch beruflich jeden Tag mit Ruby und *Ruby on Rails* zu tun habe, war dies für mich eine gute Wahl.
+Octopress sieht sich selbst als <q lang="en">A blogging framework for hackers</q>. Technisch basiert es auf [Jekyll](https://jekyllrb.com/), einem in Ruby geschriebenen Tool, das auch von GitHub für seine *Pages* eingesetzt wird. Da ich auch beruflich jeden Tag mit Ruby und *Ruby on Rails* zu tun habe, war dies für mich eine gute Wahl.
 
 Im Vergleich zu Jekyll liefert Octopress schon einige vorgefertigte Tools und Lösungen, die man für einen Blog nicht missen möchte. Darunter gibt es auch diverse Importer für bekannte Blog-Systeme wie z. B. WordPress.
 
@@ -76,7 +70,7 @@ Da Octopress (und Jekyll) neben einer einfachen Templatesprache ([Liquid](https:
 Neben einigen Plugins, die es bereits für  Jekyll und Octopress gab, habe ich auch einige eigene Erweiterungen geschrieben, z. B. ein Plugin, das [Akronyme und Akürzungen](https://github.com/kogakure/jekyll-plugin-abbr) automatisch ersetzt und ein einfaches Plugin, mit dem sich der [Ampersand](https://github.com/kogakure/jekyll-plugin-ampersand) (&amp;) gesondert stylen lässt.
 
 ### Asset-Pipeline
-Für eine optimale Performance wollte ich von Anfang an, dass alle meine Assets (Bilder, Stylesheets, JavaScript, …) gecached, minimiert und optimiert werden. Für Rails ist die [Asset-Pipeline](http://guides.rubyonrails.org/asset_pipeline.html) seit einiger Zeit der Standard. Diese kombiniert mehrere Dateien zusammen, minimiert und komprimiert JavaScript und Stylesheets und versieht Bilder mit so genannten Cache-Keys, damit diese auch wieder invalidiert werden können. Dafür gibt es mehrere Projekte, die dieses für Jekyll portieren. Ich setze hierfür [Jekyll-Assets](https://github.com/jekyll/jekyll-assets) ein.
+Für eine optimale Performance wollte ich von Anfang an, dass alle meine Assets (Bilder, Stylesheets, JavaScript, …) gecached, minimiert und optimiert werden. Für Rails ist die [Asset-Pipeline](http://guides.rubyonrails.org/asset_pipeline.html) seit einiger Zeit der Standard. Diese kombiniert mehrere Dateien zusammen, minimiert und komprimiert JavaScript und Stylesheets und versieht Bilder mit so genannten Cache-Keys, damit diese auch wieder invalidiert werden können. Dafür gibt es mehrere Projekte, die dieses für Jekyll portieren. Ich setze hierfür [Jekyll-Assets](https://github.com/envygeeks/jekyll-assets) ein.
 
 ## Fazit
 Ich hoffe das neue Design gefällt und lässt sich auch auf mobilen Geräten gut lesen. Zwar habe ich schon mit einer Vielzahl physischer Geräte (iPhone, iPad, Nexus 5, …) getestet und auch den mobilen Emulator von Google benutzt, um Geräte zu prüfen, die mir nicht zur Verfügung standen. Sollte euch etwas auffallen, könnt ihr gerne Fehler an mich schicken, dann versuche ich diese zu Beheben und die Ansicht zu optimieren.

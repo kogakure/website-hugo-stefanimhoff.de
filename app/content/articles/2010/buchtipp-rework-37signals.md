@@ -7,13 +7,8 @@ slug: "buchtipp-rework-37signals"
 date: 2010-04-27T16:30:00+02:00
 og_image: "artikel/rework.jpg"
 categories:
-- empfehlung
-- buch
-tags:
-- buch
-- 37signals
-- gtd
-- business
+- recommendation
+- book
 ---
 
 Heute empfehle ich ein Buch, das ich vor kurzem erst beendet habe, und schon ein zweites Mal lese: <cite>Rework</cite> von <cite>37signals</cite>.
@@ -24,13 +19,13 @@ Heute empfehle ich ein Buch, das ich vor kurzem erst beendet habe, und schon ein
 </a>
 {{< /figure >}}
 
-Ich bin schon seit langem ein großer Anhänger der Philosophie von Einfachheit und Schlichtheit, die <cite>37signals</cite> mit Erfolg kultivieren. Bereits ihr erstes (kostenloses) Buch [Getting Real](http://gettingreal.37signals.com/) (auch als [Paperback-Version](http://www.amazon.de/gp/product/0578012812?ie=UTF8&amp;tag=kogakurede-21&amp;linkCode=as2&amp;camp=1638&amp;creative=19454&amp;creativeASIN=0578012812) erhältlich) habe ich mit großem Interesse gelesen.
+Ich bin schon seit langem ein großer Anhänger der Philosophie von Einfachheit und Schlichtheit, die <cite>37signals</cite> mit Erfolg kultivieren. Bereits ihr erstes (kostenloses) Buch [Getting Real](https://basecamp.com/books/getting-real) (auch als [Paperback-Version](http://www.amazon.de/gp/product/0578012812?ie=UTF8&amp;tag=kogakurede-21&amp;linkCode=as2&amp;camp=1638&amp;creative=19454&amp;creativeASIN=0578012812) erhältlich) habe ich mit großem Interesse gelesen.
 
 Doch mit <cite>Rework</cite> ist Ihnen ein wahres Meisterstück gelungen. Nicht ohne Grund ist es in den USA und Großbritannien ein Bestseller. Kritiker und <abbr title="Chief Executive Officer">CEO</abbr>s loben das Buch in den höchsten Tönen (Seth Godin, John Maeda, Chris Anderson u. a.).
 
 Und im Gegensatz zum noch recht einfach gehaltenten <cite>Getting Real</cite> gibt es <cite>Rework</cite> als Hardcover-Version, in sehr ansprechender Bindung und mit fantastischen Zeichnungen von Mike Rohde.
 
-Die [offizielle Website](http://37signals.com/rework/) des Buches bietet einen Beispielauszug, drei lustige Werbevideos, Unmengen von lobenden Worten und Zitaten, Fotos von begeisterten Lesern und eine vollständige Kapitelübersicht.
+Die [offizielle Website](https://basecamp.com/books/rework) des Buches bietet einen Beispielauszug, drei lustige Werbevideos, Unmengen von lobenden Worten und Zitaten, Fotos von begeisterten Lesern und eine vollständige Kapitelübersicht.
 
 *Getting Real* war noch speziell für Programmierer gedacht, die ein Projekt erfolgreich zu Ende bringen wollen – <cite>Rework</cite> hingegen ist für jeden Arbeitnehmer und Arbeitgeber geeignet, vom Geschäftsführer bis zum Sachbearbeiter.
 
