@@ -22,7 +22,7 @@
       {{ else }}
         <a class="header-info-title-link" href="{{ .Site.BaseURL }}">
           <div class="header-info-title">{{ .Site.Data.settings.title }}</div>
-          <div class="header-info-tagline">{{ .Site.Data.settings.tagline }}</div>
+          <div class="header-info-tagline">{{ .Site.Data.settings.tagline | safeHTML }}</div>
         </a>
       {{ end }}
     </div>
