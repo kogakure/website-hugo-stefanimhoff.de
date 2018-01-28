@@ -34,18 +34,14 @@ themesdir     = "app/themes"
 [[menu.main]]
   name   = "Home"
   url    = "/"
-  weight = 0
+  weight = 10
 [[menu.main]]
   name   = "Articles"
   url    = "/articles/"
-  weight = 10
+  weight = 20
 [[menu.main]]
   name   = "Categories"
   url    = "/categories/"
-  weight = 20
-[[menu.main]]
-  name   = "Tags"
-  url    = "/tags/"
   weight = 30
 
 [[menu.misc]]
