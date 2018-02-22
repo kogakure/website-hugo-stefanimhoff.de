@@ -37,7 +37,7 @@ Im März erkundige ich mich nach den Palmeninseln und der Weltkarteninselgruppe 
 
 Bei ExpressionEngine interessieren mich u. a. `search_results` und `wegblog_name`, was wohl bedeutet, dass ich gerade die Suche auf meiner Seite programmiere.
 
-Zusätzlich will ich noch wissen, wie man eine Personal-Version von ExpressionEngine zu einer Core-Version downgraded. Ich hab jetzt nämlich zwei EspressionEngine-Projekte, aber nur eine Lizenz. Natürlich gibt es keine Ergebnisse bei <em>pmachine</em>, aber es reicht nach etwas testen aus, wenn man einige der Module löscht.
+Zusätzlich will ich noch wissen, wie man eine Personal-Version von ExpressionEngine zu einer Core-Version downgraded. Ich hab jetzt nämlich zwei EspressionEngine-Projekte, aber nur eine Lizenz. Natürlich gibt es keine Ergebnisse bei *pmachine*, aber es reicht nach etwas testen aus, wenn man einige der Module löscht.
 
 ## April
 
