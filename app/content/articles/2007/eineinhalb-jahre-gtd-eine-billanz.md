@@ -59,9 +59,7 @@ Gleich vorweg: Das perfekte System in der täglichen Umsetzung gibt es für mich
 
 Die meisten Lösungen, die ich bislang gesehen habe, waren mir entweder zu einfach oder zu komplex.
 
-{{% pullquote quote="Zu einfache Systeme haben für mich nicht funktioniert" %}}
 Zu einfache Systeme haben für mich nicht funktioniert – wie z. B. purer Text. Bestimmte Dinge blieben immer aussen vor. Ich habe die letzten Wochen mit [*TaskPaper*](http://www.hogbaysoftware.com/products/taskpaper) einen interessanten Kandidaten getestet, der leider keine Zuweisung von Terminen ermöglichte und daher im Langzeittest vorerst nicht ausreichte. Mal sehen, wie sich die Software weiter entwickelt. Leider hat den Autor mein Angebot einer Lokalisierung auch vorerst nicht interessiert (Was ich von Software-Entwicklung halte, bei der nicht gleich von Anfang an Lokalisierung/Internationalisierung gedacht wird, würde hier zu weit führen…).
-{{% /pullquote %}}
 
 Zu **komplexe Systeme**, die diverse Listen, Schlagworte, verschiedenste Daten und diverse Zuordnungen erlaubten, waren mir in der täglichen Anwendung zu zeitaufwendig.
 

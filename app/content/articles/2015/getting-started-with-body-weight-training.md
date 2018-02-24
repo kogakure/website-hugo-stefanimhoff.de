@@ -34,9 +34,11 @@ Body weight training is also called *Street Workout*, *Ghetto Fitness* or *Calis
 
 With Calisthenics you use some basic movements like *Lunges*, *Crunches*, *Push-ups*, *Pull-ups*, *Squats*, *Dips* to strengthen your body. You **gradually** improve your skills and proceed to more difficult exercises. That’s why it’s called *Progressive Calisthenics*.
 
-{{% pullquote quote="Adding 5 kg of weight to the barbell doesn’t feel as good." %}}
+<blockquote lang="en" class="pullquote">
+Adding 5 kg of weight to the barbell doesn’t feel as good.
+</blockquote>
+
 The nice thing with this kind of training is you do **small steps** and improve in a sustainable way. Your body **needs time to learn** the movements correctly and get used to them. If done correctly some will reach advanced exercises like *Muscle-ups*, *Pistol Squats*, *Human Flag* or *One-Arm Push-Ups*. Whenever you reach a goal and master a trick, this is a really good feeling of accomplishment. Adding 5 kg of weight to the barbell doesn’t feel as good.
-{{% /pullquote %}}
 
 ## Progressive Calisthenics
 
