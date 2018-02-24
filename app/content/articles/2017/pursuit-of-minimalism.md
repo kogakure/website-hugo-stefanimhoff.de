@@ -13,9 +13,7 @@ categories:
 
 Minimalism has come a long way. It recently got again a lot of traction with it’s highest search volume on [Google](https://trends.google.com/trends/explore?q=minimalism) ever recorded in January 2017. Because Minimalism is **very hard to define**, it leaves a lot of **room for interpretation** and its meaning shifted recently more from being a philosophy to being a lifestyle.
 
-{{% youtube D4bFYJ0JUMk %}}
-
-There’s a grain of truth in every joke, and JP Sears video has a point. A lot of people moved to Minimalism out of different reasons: From being overwhelmed of capitalism and the accelerating speed of life, to caring about the ecosystem, as result of balancing sick excesses like fast-fashion and constantly rising consumption of resources, to people just following a *trend* to feel unique or setting a statement on their wealth, by not having stuff as a symbol of status.
+In his video [Being a Minimalist](https://www.youtube.com/watch?v=D4bFYJ0JUMk) the creator **JP Sears** jokes about the extremes of Minimalism. A lot of people moved to Minimalism out of different reasons: From being overwhelmed of capitalism and the accelerating speed of life, to caring about the ecosystem, as result of balancing sick excesses like fast-fashion and constantly rising consumption of resources, to people just following a *trend* to feel unique or setting a statement on their wealth, by not having stuff as a symbol of status.
 
 ## The Spectrum of Minimalism
 
