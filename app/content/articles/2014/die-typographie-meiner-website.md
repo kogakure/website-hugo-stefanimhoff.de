@@ -35,8 +35,6 @@ Es gilt das richtige Seitenlayout zu wählen, die richtige Satzbreite, den richt
 ## Skala
 Bereits vor einigen Jahren stolperte ich über zwei interessante Vorträge von Tim Brown über Typographie. Tim Brown arbeitet als *Type Manager* für [Adobe Typekit](https://typekit.com/), einer Plattform, die Webfont-Hosting anbietet. In seinen Vorträgen bietet er einen sehr interessanten Einblick in die Geschichte von Typographie und wie man gute Typographie erreicht.
 
-{{% youtube 6s3XwSpY2vc %}}
-
 Ich entschied mich mit der Auswahl einer Skala zu beginnen. Eine typographische Skala ist die Auswahl von harmonischen Proportionen, die danach auf Schriftgröße, Satzbreite und andere Teile angewendet wird.
 
 Die bekannteste Proportion ist der *Goldene Schnitt*, der ein Verhältnis von `1:1,618` hat. Aber es gibt noch viele andere Proportionen, die ihren Ursprung in Geometrie, Musik, Natur oder Geschichte haben. Tim Brown hat sogar extra die Website [Modular Scale](http://www.modularscale.com/) erstellt, auf der sich eine solche Skala errechnen lässt.
@@ -174,4 +172,4 @@ Für alle die jetzt neugierig auf Typographie geworden sind, habe ich eine klein
 - [A List Apart: Typographie](https://alistapart.com/topic/design/typography/)
 - [Kerntype](http://type.method.ac/)
 - [Modular Scale](http://www.modularscale.com/)
-- [Helvetica – A Documentary Film by Gary Hustwit](http://www.hustwit.com/category/helvetica/)
+- [Helvetica – A Documentary Film by Gary Hustwit](https://www.hustwit.com/helvetica/)

@@ -105,7 +105,7 @@ MobileMe ist ein echter Flop, trotzt erweiterter Test-Phase kündige ich meinen 
 
 Ich wechsele von meinem Wiki zu [Evernote](https://evernote.com/intl/de/). So lässt sich all das *Zeug* wirklich komfortabel ablegen. Markieren, reinziehen, verschlagworten, synchronisieren. Evernote ist genau das fehlende Stück Software, dass ich für meinen GTD-Prozess noch brauchte. [Things](https://culturedcode.com/things/) benutze ich für die Aufgaben und Evernote für das *Zeug*.
 
-Ich lerne, wie man [Vim](http://www.vim.org/ "welcome home : vim online") bedient. Und zwar mal richtig und nicht nur `i`, `:wq`. Immerhin hat man [TextMate](http://macromates.com/ "TextMate — The Missing Editor for Mac OS X") ja nicht auf dem Server dabei.
+Ich lerne, wie man Vim bedient. Und zwar mal richtig und nicht nur `i`, `:wq`. Immerhin hat man [TextMate](http://macromates.com/ "TextMate — The Missing Editor for Mac OS X") ja nicht auf dem Server dabei.
 
 Der größte Branch von Django (Newforms-Admin) wird in den Trunk migriert. Jetzt ist es nicht mehr weit, bis Django die Version 1.0 erreicht.
 
