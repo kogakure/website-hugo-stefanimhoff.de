@@ -17,8 +17,6 @@ Dieser erste Teil der Reihe *Subversion* beschäftigt sich mit der nötigen Theo
 Der Inhalt dieses Artikels ist noch aktuell, doch kann ich nur dringend dazu raten, sich die fantastische Alternative zu Subversion anzusehen: [Git](/2007/versionskontrolle-mit-git/).
 {{% /hint %}}
 
-{{< toc_subversion >}}
-
 ## Was ist Versionskontrolle?
 
 Versionskontrolle ermöglicht es alle Änderungen an Dateien, die im Laufe der Zeit gemacht wurden, zurückzuverfolgen und wiederherstellen zu können.

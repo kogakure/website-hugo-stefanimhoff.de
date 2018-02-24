@@ -17,8 +17,6 @@ Die Installation von Subversion ist relativ leicht und schnell erledigt, für di
 Der Inhalt dieses Artikels ist noch aktuell, doch kann ich nur dringend dazu raten, sich die fantastische Alternative zu Subversion anzusehen: [Git](/2007/versionskontrolle-mit-git/).
 {{% /hint %}}
 
-{{< toc_subversion >}}
-
 ## Installationsarten, Programmoberflächen
 
 Subversion ist ein Programm, das in einer Befehlseingabebox bedient wird. Es gibt aber auch eine Vielzahl von grafischen Oberflächen, die Anfängern die Bedienung ermöglichen sollen. Jedes dieser Programme hat eine etwas andere Arbeitsweise, doch alle nutzen unter der Haube die gleichen Befehle.

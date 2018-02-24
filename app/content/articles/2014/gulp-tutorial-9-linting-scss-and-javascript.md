@@ -20,8 +20,6 @@ This is the 9th part of my series *Introduction to Gulp.js*. Today I will use Gu
 {{< image src="artikel/gulp-tutorial-9.jpg" alt="Girl drinking a Big Gulp" >}}
 {{< /figure >}}
 
-{{< toc_gulp >}}
-
 I decided to lint my SCSS files and not the CSS files, because it’s kind of pointless to lint generated CSS. But you can do this with [gulp-csslint](https://www.npmjs.com/package/gulp-csslint/).
 
 ```bash

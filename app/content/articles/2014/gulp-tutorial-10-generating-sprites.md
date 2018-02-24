@@ -20,8 +20,6 @@ This is the 10th part of my series *Introduction to Gulp.js*. Today I will use G
 {{< image src="artikel/gulp-tutorial-10.jpg" alt="A Double Gulp" >}}
 {{< /figure >}}
 
-{{< toc_gulp >}}
-
 Just to be sure everybody knows what I’m talking about: A CSS image sprite is a collection of images put into a single image. This way fewer requests are needed and the website will load faster. The CSS file will move the image for each sprite to the correct position.
 
 CSS images sprites are not used that often any more, because of SVG or vector fonts. But I still use them as a fallback for browsers incapable of displaying vector fonts.

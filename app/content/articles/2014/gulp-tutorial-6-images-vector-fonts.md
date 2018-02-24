@@ -20,8 +20,6 @@ This is the 6th part of my series *Introduction to Gulp.js*. The last article wa
 {{< image src="artikel/gulp-tutorial-6.jpg" alt="A Mini Gulp with water" >}}
 {{< /figure >}}
 
-{{< toc_gulp >}}
-
 ## Images
 
 The image task is a simple one again. All it does for now is copying the images to the asset directory. I will optimize my images later during the production build.

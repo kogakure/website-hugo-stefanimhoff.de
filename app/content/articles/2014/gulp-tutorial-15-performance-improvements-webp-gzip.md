@@ -20,8 +20,6 @@ This is the 15th part of my series *Introduction to Gulp.js*. Today I’ll add s
 {{< image src="artikel/gulp-tutorial-15.jpg" alt="A oversized Captain America holding a Big Gulp" >}}
 {{< /figure >}}
 
-{{< toc_gulp >}}
-
 ## Using WebP for images
 
 [WebP](https://developers.google.com/speed/webp/) is a new image format developed by Google. With WebP it’s possible to achieve a much better compression with a better quality as with JPEG or PNG. Multiple browsers like **Google Chrome**, **Opera** or **Konquerer** already support this image format.

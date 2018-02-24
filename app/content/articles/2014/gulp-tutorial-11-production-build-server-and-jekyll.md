@@ -20,8 +20,6 @@ This is the 11th part of my series *Introduction to Gulp.js*. Today I will start
 {{< image src="artikel/gulp-tutorial-11.jpg" alt="A Girl looking on a Double Gulp" >}}
 {{< /figure >}}
 
-{{< toc_gulp >}}
-
 In development I used the `default` Gulp.js tasks to run the development server, building the assets and watching for changes. For production I will need another entry point.
 
 I decided to name my task `publish`. Later I am able to get a production build with the command `gulp publish`.

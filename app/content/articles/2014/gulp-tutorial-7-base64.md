@@ -20,8 +20,6 @@ This is the 7th part of my series *Introduction to Gulp.js*. Today I will use Gu
 {{< image src="artikel/gulp-tutorial-7.jpg" alt="Big Gulp at the beach" >}}
 {{< /figure >}}
 
-{{< toc_gulp >}}
-
 ## Base64 encoded images
 The last task executed by my `build` task is one, which replaces the URLs of small images in my CSS files with Base64 encoded images. This way the images get embedded into the CSS file and don’t need an additional server request. If the images are not too large this will speed up loading my website a lot.
 

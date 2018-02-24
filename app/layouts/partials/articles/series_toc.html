@@ -1,0 +1,17 @@
+{{ if .Params.series }} 
+{{ $name := index .Params.series 0 }}
+
+<h2>{{$name | title }}</h2>
+{{ $name := $name | urlize }} {{ $series := index .Site.Taxonomies.series $name }}
+<div class="table-of-content">
+<ol>
+  {{ range $series.Pages.Reverse }}
+  <li>
+    <a href="{{.Permalink}}">
+      {{.LinkTitle}}
+    </a>
+  </li>
+  {{end}}
+</ul>
+</div>
+{{end}}

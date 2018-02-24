@@ -20,8 +20,6 @@ This is the 12th part of my series *Introduction to Gulp.js*. Today I will write
 {{< image src="artikel/gulp-tutorial-12.jpg" alt="A woman with a Double Gulp" >}}
 {{< /figure >}}
 
-{{< toc_gulp >}}
-
 Every Kilobyte, which has to be loaded will slow down the loading of my website. That’s why I will minimize all my CSS and JavaScript and run my images through an optimizer, to remove as many bytes as possible. I will also add a task for minimizing HTML, but I don’t use this task, because the reduction is minimal.
 
 ## CSS
