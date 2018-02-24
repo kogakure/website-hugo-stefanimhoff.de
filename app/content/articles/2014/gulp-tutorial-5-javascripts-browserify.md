@@ -25,7 +25,7 @@ This task is a little more complex, because I use [Browserify](http://browserify
 
 Browserify is an awesome tool, which allows you to use node modules in your browser. Over 70% of the node modules will run right away! And it will bundle up all of your dependencies. If you want to find out more about writing CommonJS modules for Browserify have a look into the documentation.
 
-This task I saw in the <del>gulp-starter</del> <ins>[blendid](https://github.com/vigetlabs/blendid)</ins>. It’s quite long but clever. It allows to create multiple files with Browserify. I create two files. One file is loaded in the head of my website containing [Modernizr](https://modernizr.com/) and one file with the rest of my JavaScript at the bottom.
+This task I saw in the <del>gulp-starter</del> <ins>[blendid](https://github.com/vigetlabs/blendid)</ins>. It’s quite long but clever. It allows to create multiple files with Browserify. I create two files. One file is loaded in the head of my website containing *Modernizr* and one file with the rest of my JavaScript at the bottom.
 
 ## Creating JavaScript files with Browserify
 Install the node modules needed for this task:
