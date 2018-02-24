@@ -70,9 +70,7 @@ And I am patient. It’s more about the journey, than about the goal. It’s sti
 
 ## Training Sites and Equipment
 
-Calisthenics are far more popular in other countries, like Russia or the United States, where you will find a lot of good outdoor training courses. In Germany this is unfortunately not the case. Most German cities don’t provide good outdoor training courses, and if they do, the height of bars is more fitted for children.
-
-{{% youtube bvLQZVnz5WM %}}
+Calisthenics are far more popular in other countries, like Russia or the United States, where you will find a lot of good outdoor training courses. Working out is every day life, as you can see in this [Street Workout video from Ukraine](https://www.youtube.com/watch?v=bvLQZVnz5WM). In Germany this is unfortunately not the case. Most German cities don’t provide good outdoor training courses, and if they do, the height of bars is more fitted for children.
 
 But with creativity you’ll always find a solution. If prisoners can train Calisthenics in their small cells, you should find ways to train without a perfect training course. You can pull up to branches of trees or fences, dip on handrails or bicycle stands. I for example found a playground nearby with decent bars. Not high enough to hang with my legs stretched, but I can train. Additionally I bought a [Doorway Pull-Up Bar](http://www.amazon.de/gp/product/B00EZ24BC2?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=3924862397) and [Dip Bars](http://www.amazon.de/gp/product/B0088I92VY?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=3924862397), because I got tired of using two chairs for Dips.
 
@@ -84,9 +82,7 @@ You can find a lot of articles on this topic on the internet, but as a general r
 
 ## Motivation and Inspiration
 
-Finding resources on how to do the movements is an easy task. YouTube is filled with videos on how to do anything. And these channels provide regular motivation. Some of these persons or groups are like superstars. [Frank Medrano](https://www.youtube.com/channel/UCP8wqLAt5qYMmOwMB7-mvTQ), a *vegan* athlete has over half a million followers.
-
-{{% youtube mvJHw64fxgQ %}}
+Finding resources on how to do the movements is an easy task. YouTube is filled with videos on how to do anything. And these channels provide regular motivation. Some of these persons or groups are like superstars. [Frank Medrano]( https://www.youtube.com/watch?v=mvJHw64fxgQ), a *vegan* athlete has over half a million followers.
 
 Other good channels to follow are [Strength Project](https://www.youtube.com/user/strengthproject), [OfficialBarstarzz](https://www.youtube.com/user/OfficialBarstarzz), [Brendan Meyers](https://www.youtube.com/user/leftyjrpro), [BaristiWorkout](https://www.youtube.com/user/baristiworkout), [Corey Hall](https://www.youtube.com/user/cth38881), [Al Kavadlo](https://www.youtube.com/user/alkavadlo), [Calisthenic Movement](https://www.youtube.com/user/Calisthenicmovement) or [Cornelia Ritzke](https://www.youtube.com/user/ConnyBerlin).
 

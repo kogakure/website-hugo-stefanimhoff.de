@@ -22,19 +22,12 @@ He collected real-life stories from more than **2000 women and men** in **60 cou
 
 The [beautiful music](https://open.spotify.com/album/3c3Rjr62DwuQdyUW2P3aZm) was created by **Armand Amar**, who also composed the music for [Home](https://open.spotify.com/album/6xqTKyFLFSdGTzhK75wSRQ).
 
-{{% youtube 0-Retnj3TsA %}}
-
 The movie was released in a lot different formats and length. On the Internet is an **extended version** available, which contains of 3 volumes with 90 minutes each.
 
+- [HUMAN by Yann Arthus-Betrand - Official Trailer](https://www.youtube.com/watch?v=0-Retnj3TsA)
 - [HUMAN Extended version VOL.1](https://www.youtube.com/watch?v=vdb4XGVTHkE)
 - [HUMAN Extended version VOL.2](https://www.youtube.com/watch?v=ShttAt5xtto)
 - [HUMAN Extended version VOL.3](https://www.youtube.com/watch?v=w0653vsLSqE)
-
-{{% youtube vdb4XGVTHkE %}}
-
-{{% youtube ShttAt5xtto %}}
-
-{{% youtube w0653vsLSqE %}}
 
 On the [YouTube channel](https://www.youtube.com/channel/UCJy4nUo1D4R3hlcP8XCLX9Q) are additional videos with portraits, behind the scenes and much more.
 

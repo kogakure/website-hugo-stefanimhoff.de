@@ -807,23 +807,6 @@ Es ist auch möglich Videos einzubetten, und zwar als natives HTML5, direkt von 
 {{%/* video width="640" height="420" poster="http://s3.imathis.com/video/zero-to-fancy-buttons.png" source="http://s3.imathis.com/video/zero-to-fancy-buttons.mp4" type="mp4" */%}}
 ```
 
-#### YouTube-Videos
-
-{{% youtube RFPsvF3UOdo %}}
-
-```html
-{{%/* youtube RFPsvF3UOdo */%}}
-```
-
-#### Vimeo-Videos
-
-{{% vimeo 45858333 %}}
-
-```html
-{{%/* vimeo 45858333 */%}}
-```
-
-
 ### Codeblöcke
 
 

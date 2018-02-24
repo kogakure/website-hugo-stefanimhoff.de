@@ -17,13 +17,11 @@ From time to time – but not very often – a TV Show gets released, which real
 {{< image src="artikel/netflix-atelier-underwear.jpg" alt="Original Netflix TV Show: Atelier aka Underwear" >}}
 {{< /figure >}}
 
-**Altelier** (or Underwear, <span lang="ja">アンダーウェア</span>) is a mini-television series produced by **Netflix** and **Fuji TV**. You can add it to your watchlist on Netflix [here](https://www.netflix.com/title/80067618).
+**Altelier** (or Underwear, <span lang="ja">アンダーウェア</span>) is a mini-television series produced by **Netflix** and **Fuji TV**. You can add it to your watchlist on Netflix [here](https://www.netflix.com/title/80067618) or [watch a Trailer on YouTube](https://www.youtube.com/watch?v=CSnj2J6aVmI).
 
 It’s a story about a young girl called **Mayuko** (**Mirei Kiritani**), coming from a small town, who finished her studies in fabric design at the university and starts her first job at an exclusive custom tailoring lingerie store called **Emotion** in Ginza, Tokyo. It’s a small shop with a few designers, some salesmen and the owner of the workshop, who is a women in her 50s (**Mao Daichi**), honorary named *Shachou* (President) by her employees.
 
 The *Atelier*, a french word for a **workshop** or **studio**, a place, where professional artists work together and produce pieces of art, has multiple rooms, separated by doors, leading from the entrance hall, where customers get served, to the inner rooms of the owner. Additionally it has a cellar with tons of fabric, accessories and documents.
-
-{{% youtube CSnj2J6aVmI %}}
 
 The **13 episodes** provide a deep insight into Japanese culture, politeness, art, craft and beauty. Every scene is choreographed with an eye to the detail. The **camera work** is really interesting and uses a variety of techniques. The **actors** are really brilliant. It is a pleasure to follow the Japanese **dialogs** (subtitled), which are able to tell so much with so few words. Japanese is really a language of *context* and *nuances*.
 

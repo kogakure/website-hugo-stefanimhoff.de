@@ -41,9 +41,7 @@ $ brew install hugo
 
 The main reason for switching was for me speed. And fast it is. Generating my whole site, with **86** articles, **125** tags, **21** categories and **2** series takes **~700 ms**. This means everything included, even moving all the assets. If I wouldn’t use my *Related Articles* section, I could cut the time in half. Since I use Gulp and minimize, optimize and do a lot to my files, my production Gulp task needs now **~30 seconds** (including syncing the files to the server), compared to **2-3 minutes** before.
 
-How fast Hugo really is can be best seen in this video:
-
-{{< youtube CdiDYZ51a2o >}}
+How fast Hugo *really* is can be best seen in this video: [Hugo benchmark - 5,000 posts in seconds](https://www.youtube.com/watch?v=CdiDYZ51a2o).
 
 ## Templates
 Hugo comes without a plugin system, but I didn’t miss any and could find a solution for everything I had on my Jekyll site before. The templates are written in [Go html/template](https://golang.org/pkg/html/template/), Ace or Amber. The latter look very familiar to people, who know Jade/Pug. But I choose the Go html/template. The syntax needs some time to get used to, as it’s so different from all template engines I’ve used before. But if I got stuck with a problem the [Hugo Discussion Board](https://discourse.gohugo.io) could help out in all cases. Hugo comes with specific rules for templates, how to name them and rules in which order templates get rendered.
