@@ -20,8 +20,6 @@ This is the 8th part of my series *Introduction to Gulp.js*. Today I will set up
 {{< image src="artikel/gulp-tutorial-8.jpg" alt="Funtime!" >}}
 {{< /figure >}}
 
-{{< toc_gulp >}}
-
 Do you remember the `watch` task from the beginning? It just started BrowserSync and the development server until now, but didn’t watch for anything. I will write these watch tasks now.
 
 `Watch` is part of the API of gulp. It will watch files for changes, addition or deletion and trigger tasks.

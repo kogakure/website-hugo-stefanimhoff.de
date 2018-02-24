@@ -20,8 +20,6 @@ This is the 14th of my series *Introduction to Gulp.js*. Today I will write a ta
 {{< image src="artikel/gulp-tutorial-14.jpg" alt="A fluffy bunny with a Big Gulp" >}}
 {{< /figure >}}
 
-{{< toc_gulp >}}
-
 ## Deploying the Website
 
 There are a lot of possibilites to get a website on the server. You may use FTP, SFTP, SCP, SCP2, Rsync or Git. I use Rsync because it’s fast and easy to use.

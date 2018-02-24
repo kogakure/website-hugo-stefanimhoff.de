@@ -20,8 +20,6 @@ This is the 16th part of my series *Introduction to Gulp.js*. Today I will show 
 {{< image src="artikel/gulp-tutorial-16.jpg" alt="Two girls pretent to hold a very big Gulp cup" >}}
 {{< /figure >}}
 
-{{< toc_gulp >}}
-
 ## Compass, Sass, LESS, Stylus … why do we need more tools?
 
 I use Sass and SCSS now for a long time, started with *Compass*, moved to *Ruby Sass* and wanted to move to *libSass*, but dependencies to some of my beloved Gems held me back.

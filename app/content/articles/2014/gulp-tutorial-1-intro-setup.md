@@ -20,8 +20,6 @@ My website is running [Jekyll](https://jekyllrb.com/) now since the beginning of
 {{< image src="artikel/gulp-tutorial-1.png" alt="Gulp.js Logo" >}}
 {{< /figure >}}
 
-{{< toc_gulp >}}
-
 ## What to expect from this Tutorial
 This is the first part in a series of articles where I describe my whole development and build process step-by-step from start to finish. I am sick of all these *Hello World* tutorials spreading around the Internet, describing just the basics and don’t show a whole process, go deeper or share things learned during the process.
 

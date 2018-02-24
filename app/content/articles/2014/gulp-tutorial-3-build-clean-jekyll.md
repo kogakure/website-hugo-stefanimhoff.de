@@ -20,7 +20,6 @@ This is the 3rd part of my series *Introduction to Gulp.js*. Today I will write 
 {{< image src="artikel/gulp-tutorial-3.jpg" alt="Boy drinking a very big cup of water" >}}
 {{< /figure >}}
 
-{{< toc_gulp >}}
 
 ## Build
 

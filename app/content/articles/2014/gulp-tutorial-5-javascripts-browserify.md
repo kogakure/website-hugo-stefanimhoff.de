@@ -20,8 +20,6 @@ This is the 5th part of my series *Introduction to Gulp.js*. Today I will show h
 {{< image src="artikel/gulp-tutorial-5.jpg" alt="Ultimate Gulp and X-Treme Gulp" >}}
 {{< /figure >}}
 
-{{< toc_gulp >}}
-
 ## Browserify
 
 This task is a little more complex, because I use [Browserify](http://browserify.org/) to bundle my JavaScript. If this is too complex for your needs you may just use [gulp-concat](https://www.npmjs.com/package/gulp-concat) to concatenate all your JavaScript files into one file.

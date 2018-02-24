@@ -17,8 +17,6 @@ Die eigentliche Arbeit mit Subversion ist relativ leicht erklärt und gelernt. V
 Der Inhalt dieses Artikels ist noch aktuell, doch kann ich nur dringend dazu raten, sich die fantastische Alternative zu Subversion anzusehen: [Git](/2007/versionskontrolle-mit-git/).
 {{% /hint %}}
 
-{{< toc_subversion >}}
-
 Zuerst lege ich mir ein Arbeitsverzeichnis an, in dem ich künftig meine Projekte bearbeiten will, z. B. einen Ordner `Arbeit` im Heimatverzeichnis.
 
 ```bash

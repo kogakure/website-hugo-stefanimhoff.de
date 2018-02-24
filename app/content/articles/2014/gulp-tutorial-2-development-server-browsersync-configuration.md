@@ -20,8 +20,6 @@ This is the 2nd part of my series *Introduction to Gulp.js*. Today I will write 
 {{< image src="artikel/gulp-tutorial-2.jpg" alt="How to create your own flavour. Gulp machine." >}}
 {{< /figure >}}
 
-{{< toc_gulp >}}
-
 ## Installing Gulp.js
 
 To run my `gulpfile.js` I need to install gulp:

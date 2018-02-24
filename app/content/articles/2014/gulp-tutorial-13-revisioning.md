@@ -20,8 +20,6 @@ This is the 13th part of my series *Introduction to Gulp.js*. Today I will write
 {{< image src="artikel/gulp-tutorial-13.jpg" alt="A woman dumping a Double Gulp on herself" >}}
 {{< /figure >}}
 
-{{< toc_gulp >}}
-
 ## Copy Vector Fonts for Production
 
 Before I can work on the fun part of revisioning my asset files I first have to write another boring and short task, which is doing just one simple thing: Copy the fonts to the production assets folder.

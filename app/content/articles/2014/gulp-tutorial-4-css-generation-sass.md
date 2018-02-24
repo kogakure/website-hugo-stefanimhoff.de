@@ -20,7 +20,6 @@ This is the 4th part of my series *Introduction to Gulp.js*. Today I will show h
 {{< image src="artikel/gulp-tutorial-4.jpg" alt="Sarah Palin holding a Big Gulp" >}}
 {{< /figure >}}
 
-{{< toc_gulp >}}
 
 ## Sass and Autoprefixer
 
