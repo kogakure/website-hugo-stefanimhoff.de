@@ -26,155 +26,103 @@ Auf dieser Seite sind einige meiner Haiku (<ruby>俳<rp>（</rp><rt>はい</rt><
 ---
 
 <blockquote class="verse">
-<pre>
-<p>
-Nebel am Abend,
+<p>Nebel am Abend,
 kühle Luft, feucht wie Suppe,
-kein goldener Herbst.
-</p>
-</pre>
+kein goldener Herbst.</p>
 </blockquote>
 
 ---
 
 <blockquote class="verse">
-<pre>
-<p>
-Wind in den Blättern,
+<p>Wind in den Blättern,
 wie das Rauschen von Regen
-hoch in den Wipfeln.
-</p>
-</pre>
+hoch in den Wipfeln.</p>
 </blockquote>
 
 ---
 
 <blockquote class="verse">
-<pre>
-<p>
-Kaum Tag, lange Nacht.
+<p>Kaum Tag, lange Nacht.
 Regenströme vom Himmel.
-Ende doch, Winter!
-</p>
-</pre>
+Ende doch, Winter!</p>
 </blockquote>
 
 ---
 
 <blockquote class="verse">
-<pre>
-<p>
-Es ist gänzlich still,
+<p>Es ist gänzlich still,
 blauer Himmel und Sonne,
-ein Sonntag im Herbst.
-</p>
-</pre>
+ein Sonntag im Herbst.</p>
 </blockquote>
 
 ---
 
 <blockquote class="verse">
-<pre>
-<p>
-Schneebedeckter Berg,
+<p>Schneebedeckter Berg,
 am Hang fährt ein Skifahrer,
-die Lawine folgt.
-</p>
-</pre>
+die Lawine folgt.</p>
 </blockquote>
 
 ---
 
 <blockquote class="verse">
-<pre>
-<p>
-Ein Windstoß, heftig,
+<p>Ein Windstoß, heftig,
 reißt an der Zeitung so stark,
-in Fetzen dahin.
-</p>
-</pre>
+in Fetzen dahin.</p>
 </blockquote>
 
 ---
 
 <blockquote class="verse">
-<pre>
-<p>
-Flackernde Kerzen,
+<p>Flackernde Kerzen,
 schon endet das Lichterfest,
-so auch der Sommer.
-</p>
-</pre>
+so auch der Sommer.</p>
 </blockquote>
 
 ---
 
 <blockquote class="verse">
-<pre>
-<p>
-Die Luft ist schon frisch,
+<p>Die Luft ist schon frisch,
 Cirruswölkchen am Himmel,
-der Sommer endet.
-</p>
-</pre>
+der Sommer endet.</p>
 </blockquote>
 
 ---
 
 <blockquote class="verse">
-<pre>
-<p>
-Flüsternde Stimmen,
+<p>Flüsternde Stimmen,
 Gespräche in dunkler Nacht,
-vom Sturm weggeweht.
-</p>
-</pre>
+vom Sturm weggeweht.</p>
 </blockquote>
 
 ---
 
 <blockquote class="verse">
-<pre>
-<p>
-Die Winterwinde,
+<p>Die Winterwinde,
 das Hausdach, es knackt und knarrt,
-eisiger Regen.
-</p>
-</pre>
+eisiger Regen.</p>
 </blockquote>
 
 ---
 
 <blockquote class="verse">
-<pre>
-<p>
-Prasselnder Regen,
+<p>Prasselnder Regen,
 eiligen Schrittes der Mann,
-dem Schirm folgt er nach.
-</p>
-</pre>
+dem Schirm folgt er nach.</p>
 </blockquote>
 
 ---
 
 <blockquote class="verse">
-<pre>
-<p>
-Sturm in dunkler Nacht,
+<p>Sturm in dunkler Nacht,
 Rascheln hoch in Baumkronen.
-Rauschende Stille.
-</p>
-</pre>
+Rauschende Stille.</p>
 </blockquote>
 
 ---
 
 <blockquote class="verse">
-<pre>
-<p>
-Wolken, unbewegt,
+<p>Wolken, unbewegt,
 ein Kind lacht laut auf im Hof,
-weit ist der Himmel.
-</p>
-</pre>
+weit ist der Himmel.</p>
 </blockquote>
