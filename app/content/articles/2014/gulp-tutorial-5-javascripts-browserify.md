@@ -10,6 +10,8 @@ series:
 - gulp
 categories:
 - code
+download_url: "https://github.com/kogakure/gulp-tutorial"
+download_text: "View Source on GitHub"
 ---
 
 This is the 5th part of my series *Introduction to Gulp.js*. Today I will show how to use Browserify to bundle your JavaScript and use CommonJS modules to run node modules in the Browser.
@@ -21,6 +23,7 @@ This is the 5th part of my series *Introduction to Gulp.js*. Today I will show h
 {{< toc_gulp >}}
 
 ## Browserify
+
 This task is a little more complex, because I use [Browserify](http://browserify.org/) to bundle my JavaScript. If this is too complex for your needs you may just use [gulp-concat](https://www.npmjs.com/package/gulp-concat) to concatenate all your JavaScript files into one file.
 
 Browserify is an awesome tool, which allows you to use node modules in your browser. Over 70% of the node modules will run right away! And it will bundle up all of your dependencies. If you want to find out more about writing CommonJS modules for Browserify have a look into the documentation.
@@ -28,6 +31,7 @@ Browserify is an awesome tool, which allows you to use node modules in your brow
 This task I saw in the <del>gulp-starter</del> <ins>[blendid](https://github.com/vigetlabs/blendid)</ins>. It’s quite long but clever. It allows to create multiple files with Browserify. I create two files. One file is loaded in the head of my website containing *Modernizr* and one file with the rest of my JavaScript at the bottom.
 
 ## Creating JavaScript files with Browserify
+
 Install the node modules needed for this task:
 
 ```bash
@@ -189,6 +193,7 @@ module.exports = function() {
 
 
 ## Using CommonJS Modules
+
 Writing CommonJS modules is quite nice. You just export your function, object, string, integer or whatever you like to export as a module or just individually:
 
 {{% figure class="code-figure" caption="math.js" %}}
@@ -237,6 +242,7 @@ document.addEventListener('DOMContentLoaded', function() {
 {{% /figure %}}
 
 ## Loading non-CommonJS files
+
 But one problem remains: How do I use JavaScript files, which aren’t written in CommonJS syntax? Like Modernizr or jQuery?
 
 I need to install `browserify-shim`:
@@ -293,9 +299,6 @@ $(function() {
 
 You have to run `npm install` once you added a new entry to your `package.json` file.
 
-### Source Code
-
-{{< download url="https://github.com/kogakure/gulp-tutorial" text="View Source on GitHub" >}}
-
 ## Conclusion
+
 This concludes the 5th part of my series *Introduction to Gulp.js*. We learned how to use Browserify to bundle JavaScript files, how to use CommonJS modules to run node in your Browser, and how to use non-CommonJS JavaScript files.

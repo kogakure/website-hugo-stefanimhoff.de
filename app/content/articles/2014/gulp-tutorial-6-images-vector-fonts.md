@@ -10,6 +10,8 @@ series:
 - gulp
 categories:
 - code
+download_url: "https://github.com/kogakure/gulp-tutorial"
+download_text: "View Source on GitHub"
 ---
 
 This is the 6th part of my series *Introduction to Gulp.js*. The last article was very long and complicated. This time it’s a easier one: I will show how I move my images and generate vector fonts.
@@ -21,6 +23,7 @@ This is the 6th part of my series *Introduction to Gulp.js*. The last article wa
 {{< toc_gulp >}}
 
 ## Images
+
 The image task is a simple one again. All it does for now is copying the images to the asset directory. I will optimize my images later during the production build.
 
 {{% figure class="code-figure" caption="gulp/config.js" %}}
@@ -52,6 +55,7 @@ gulp.task('images', function() {
 
 
 ## Vector Fonts
+
 I use vector fonts for my website. Vector fonts are one option to include high quality icons on a website. Another option is using SVG directly or to use high resolution images.
 
 I use [Font Custom](http://fontcustom.github.io/fontcustom/) to generate my vector fonts. There is a [gulp plugin](https://www.npmjs.com/package/gulp-fontcustom/) for this, but I couldn’t get it running. But I’m totally fine with running this task with a shell command (via Gulp.js). I will use Gulp.js later to watch the folder containing the SVG files and recreate the vector fonts if needed.
@@ -186,9 +190,6 @@ gem 'fontcustom', '~> 1.3.7'
 
 After you add the line for `fontcustom` you will need to run `bundle install` again.
 
-### Source Code
-
-{{< download url="https://github.com/kogakure/gulp-tutorial" text="View Source on GitHub" >}}
-
 ## Conclusion
+
 This concludes the 6th part of my series *Introduction to Gulp.js*. We learned how to move files with Gulp.js (and don’t even need a plugin for that), and how I create my vector fonts. Nothing special, but the next part will be more interesting again.

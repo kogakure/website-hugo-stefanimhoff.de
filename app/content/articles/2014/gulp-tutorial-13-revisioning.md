@@ -10,6 +10,8 @@ series:
 - gulp
 categories:
 - code
+download_url: "https://github.com/kogakure/gulp-tutorial"
+download_text: "View Source on GitHub"
 ---
 
 This is the 13th part of my series *Introduction to Gulp.js*. Today I will write the task to revision my static assets.
@@ -21,6 +23,7 @@ This is the 13th part of my series *Introduction to Gulp.js*. Today I will write
 {{< toc_gulp >}}
 
 ## Copy Vector Fonts for Production
+
 Before I can work on the fun part of revisioning my asset files I first have to write another boring and short task, which is doing just one simple thing: Copy the fonts to the production assets folder.
 
 {{% figure class="code-figure" caption="gulp/config.js" %}}
@@ -53,6 +56,7 @@ gulp.task('copy:fonts:production', function() {
 {{% /figure %}}
 
 ## Revisioning
+
 Optimizing of my assets is done. But one important thing is missing: Revisioning.
 
 For better performance one should always cache the assets for a very long time. Hard drives are huge these days but speed for requesting assets isn’t still that awesome (escpecially on mobile). But one problem occurs if you cache the assets on a hard drive of a visitor. If you update a file, the browser will still serve the old file. And if you cache it for 10 years the user will never get the new asset, unless s/he deletes the browser cache manually. But which user does this?
@@ -113,6 +117,7 @@ gulp.task('revision', function() {
 {{% /figure %}}
 
 ## Replacing Paths to Assets
+
 The last step of my production build is to replace all occurrences of assets with a revisioned file name in all files.
 
 This task will need `gulp-rev-collector` to replace the paths names to assets:
@@ -158,9 +163,6 @@ This task will look into the `manifest.json` file and replace every path to one 
 
 The production build is finished! Only one thing is missing to complete this series of tutorials about Gulp.js: Deploying the Website to my server.
 
-### Source Code
-
-{{< download url="https://github.com/kogakure/gulp-tutorial" text="View Source on GitHub" >}}
-
 ## Conclusion
+
 This concludes the 13th part of my series *Introduction to Gulp.js*. Today we learned how to revision the asset files and replace links to these files.

@@ -8,6 +8,8 @@ date: 2008-02-14T20:58:00+02:00
 og_image: "artikel/moinmoin-kaijin.png"
 categories:
 - download
+download_url: "/downloads/moinmoin-kaijin-theme.zip"
+download_text: "MoinMoin Kainjin Theme (98 KB)"
 ---
 
 Seit über einem Jahr benutze ich jetzt das [MoinMoin Wiki](https://moinmo.in/) für meine private Wissensdatenbank. MoinMoin wurde in [Python](https://www.python.org/ "Python Programming Language – Official Website") geschrieben und ist ein ziemlich gutes Wiki. Nur optisch sind so gut wie alle verfügbaren [Themes](https://moinmo.in/) für MoinMoin eine Zumutung. Daher habe ich mich in den letzten Wochen daran gesetzt, mir ein eigenes Theme zu erstellen.
@@ -39,7 +41,3 @@ The ZIP package containes the CSS files, images and the python file of the theme
 Detailed instructions are included in the package.
 
 This Theme is licenced under a <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/2.0/de/deed.en">Creative Commons Licence</a>.
-
-## Download
-
-{{< download url="/downloads/moinmoin-kaijin-theme.zip" text="MoinMoin Kainjin Theme (98 KB)" >}}

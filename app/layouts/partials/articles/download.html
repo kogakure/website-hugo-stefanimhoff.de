@@ -1,0 +1,13 @@
+{{ if isset .Params "download_url" }}
+<h2>Download</h2>
+<div class="download">
+  <a href="{{ .Params.download_url }}" class="download-link">
+    <svg class="download-icon">
+      <use xlink:href="#download"></use>
+    </svg>
+    <span class="download-text">
+      {{ if isset .Params "download_text" }}{{ .Params.download_text }}{{ else }}Download{{ end }}
+    </span>
+  </a>
+</div>
+{{ end }}

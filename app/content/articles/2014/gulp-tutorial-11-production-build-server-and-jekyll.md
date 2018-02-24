@@ -10,6 +10,8 @@ series:
 - gulp
 categories:
 - code
+download_url: "https://github.com/kogakure/gulp-tutorial"
+download_text: "View Source on GitHub"
 ---
 
 This is the 11th part of my series *Introduction to Gulp.js*. Today I will start writing the production build task, set up a server to view the production code and build the production site with Jekyll.
@@ -153,9 +155,6 @@ gulp.task('jekyll:production', function(done) {
 ```
 {{% /figure %}}
 
-### Source Code
-
-{{< download url="https://github.com/kogakure/gulp-tutorial" text="View Source on GitHub" >}}
-
 ## Conclusion
+
 This concludes the 11th part of my series *Introduction to Gulp.js*. Today I started to work on the production part of my website, including a server to view the production site, and generate a production build of my Jekyll site.

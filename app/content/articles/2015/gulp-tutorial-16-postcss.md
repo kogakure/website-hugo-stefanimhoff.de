@@ -10,6 +10,8 @@ series:
 - gulp
 categories:
 - code
+download_url: "https://github.com/kogakure/gulp-tutorial"
+download_text: "View Source on GitHub"
 ---
 
 This is the 16th part of my series *Introduction to Gulp.js*. Today I will show how to use PostCSS to process CSS files. I will replace Ruby Sass with PostCSS and additionally show how to lint stylesheets automatically in the background while developing with Stylelint.
@@ -306,10 +308,6 @@ If you run `gulp`, the task will lint your CSS files, whenever you save them and
 PostCSS will most likely have a bright future. Since it got popular quite a lot people got really exited. Companies like Google, Twitter, Alibaba, and Shopify already use PostCSS. And Bootstrap v5 will be most likely in PostCSS.
 
 I’m sure we will see more really exiting Plugins in the future.
-
-### Source Code
-
-{{< download url="https://github.com/kogakure/gulp-tutorial" text="View Source on GitHub" >}}
 
 ## Conclusion
 

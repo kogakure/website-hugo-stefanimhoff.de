@@ -10,6 +10,8 @@ series:
 - gulp
 categories:
 - code
+download_url: "https://github.com/kogakure/gulp-tutorial"
+download_text: "View Source on GitHub"
 ---
 
 My website is running [Jekyll](https://jekyllrb.com/) now since the beginning of 2014. But I wasn’t quite happy with my build and development process. I started out with Rake tasks and chose later [Grunt.js](https://gruntjs.com/) as my build system, but parts of the process where left in Ruby. I used [Compass](http://compass-style.org/) a lot and [Jekyll Assets](http://ixti.net/jekyll-assets/) was handling my versioning. But Grunt.js and the Jekyll Asset Pipeline didn’t play well together. Then a new solution came along: [Gulp.js](https://gulpjs.com/).
@@ -143,9 +145,6 @@ $ bundle exec jekyll new app
 
 Did you install it globally? Then just drop the `bundle exec` from the command.
 
-### Source Code
-
-{{< download url="https://github.com/kogakure/gulp-tutorial" text="View Source on GitHub" >}}
-
 ## Conclusion
+
 This concludes the 1st part of my series *Introduction to Gulp.js*. We learned what Gulp.js is used for and created the basic folder structure for the project.

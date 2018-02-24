@@ -8,6 +8,8 @@ date: 2007-12-18T22:10:00+02:00
 og_image: "artikel/django-osx-folders.png"
 categories:
 - download
+download_url: "/downloads/django-osx-folder.zip"
+download_text: "Django-Folder (612 KB)"
 ---
 
 Bei Wishingline gibt es zwei schöne Folder-Icons von [Rails und Lighttpd](https://scottboms.com/2007/12/railslighttpdiconsforleopard/). Diese Idee habe ich mir zum Anlass genommen einen Ordner für Django zu erstellen.
@@ -23,5 +25,3 @@ Bei Wishingline gibt es zwei schöne Folder-Icons von [Rails und Lighttpd](https
 Die Icons sind in allen Größen von 16 Pixel bis 512 Pixel im Download vorhanden. Wer sie gebrauchen kann, kann sie gerne benutzen.
 
 **Advice:** The folder is property of [Apple](https://www.apple.com/ "Apple"), the Django-Logo is property of [Lawrence Journal-World](http://www2.ljworld.com/). For private use only [(CreativeCommons)](https://creativecommons.org/licenses/by-nc-nd/3.0/deed.de "Creative Commons Attribution-Noncommercial-No Derivative Works 3.0 Unported").
-
-{{< download url="/downloads/django-osx-folder.zip" text="Django-Folder (612 KB)" >}}

@@ -8,6 +8,8 @@ date: 2009-02-19T20:00:00+02:00
 og_image: "artikel/gitweb-theme-summary.png"
 categories:
 - download
+download_url: "https://github.com/kogakure/gitweb-theme/"
+download_text: "Gitweb Theme on GitHub"
 ---
 
 Das Standard-Theme von Gitweb ist wirklich nicht sehr ansprechend und scheinbar nur auf Funktionalität ausgelegt. Daher habe ich eine Alternative erstellt, die sich von der Gestaltung an GitHub anlehnt.
@@ -21,10 +23,6 @@ Die genaue Anleitung zur Installation befindet sich mit im Paket auf GitHub.
 I couldn’t see the interface of Gitweb any longer. That’s why I created a theme which is strongly influenced by GitHub.
 
 Detailed instructions for installations are included in the package on GitHub.
-
-## Download
-
-{{< download url="https://github.com/kogakure/gitweb-theme/" text="Gitweb Theme on GitHub" >}}
 
 ## Screenshots
 
