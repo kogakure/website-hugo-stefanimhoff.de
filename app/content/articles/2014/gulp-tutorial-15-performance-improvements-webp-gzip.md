@@ -10,6 +10,8 @@ series:
 - gulp
 categories:
 - code
+download_url: "https://github.com/kogakure/gulp-tutorial"
+download_text: "View Source on GitHub"
 ---
 
 This is the 15th part of my series *Introduction to Gulp.js*. Today I’ll add some tasks for performance improvement of the website with WebP for images and Gzip for text files.
@@ -21,6 +23,7 @@ This is the 15th part of my series *Introduction to Gulp.js*. Today I’ll add s
 {{< toc_gulp >}}
 
 ## Using WebP for images
+
 [WebP](https://developers.google.com/speed/webp/) is a new image format developed by Google. With WebP it’s possible to achieve a much better compression with a better quality as with JPEG or PNG. Multiple browsers like **Google Chrome**, **Opera** or **Konquerer** already support this image format.
 
 On my website I use a header image which is in JPEG format **69 KB** in size, the same image is in WebP only **44 KB**. WebP is able to reduce the size of images by **25-34%**, which is a lot.
@@ -121,6 +124,7 @@ Don’t wonder: The `.htaccess` file won’t work with the development server. I
 
 
 ## Gzip text files
+
 Many servers compress files by default with Gzip before sending them to the browser. But it is always good to pre-gzip the files because it will be faster, as the server doesn’t need to compress the file on every request, it will need less CPU and the compression rate will be much higher with pre-gzipped files, because most servers don’t use the maximum compression rate.
 
 First I install the Gulp.js module:
@@ -184,9 +188,6 @@ gulp.task('build:production', function(callback) {
 ```
 {{% /figure %}}
 
-### Source Code
-
-{{< download url="https://github.com/kogakure/gulp-tutorial" text="View Source on GitHub" >}}
-
 ## Conclusion
+
 This concludes the 15th part of my series *Introduction to Gulp.js*. We learned how to convert images to the WebP format and how to compress text files with Gzip. Every byte we can reduce will increase the speed of the website.

@@ -10,6 +10,8 @@ series:
 - gulp
 categories:
 - code
+download_url: "https://github.com/kogakure/gulp-tutorial"
+download_text: "View Source on GitHub"
 ---
 
 This is the 7th part of my series *Introduction to Gulp.js*. Today I will use Gulp.js to replace a lot of my URLs to small images with Base64 encoded images.
@@ -104,9 +106,6 @@ gulp.task('base64', ['sass'], function() {
 
 We are now finished with the development `build` task.
 
-### Source Code
-
-{{< download url="https://github.com/kogakure/gulp-tutorial" text="View Source on GitHub" >}}
-
 ## Conclusion
+
 This concludes the 7th part of my series *Introduction to Gulp.js*. We learned how to replace URLs to PNG images with Base64 encoded images. And we are now finished with our `build` task.

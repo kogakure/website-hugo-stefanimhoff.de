@@ -10,6 +10,8 @@ series:
 - gulp
 categories:
 - code
+download_url: "https://github.com/kogakure/gulp-tutorial"
+download_text: "View Source on GitHub"
 ---
 
 This is the 2nd part of my series *Introduction to Gulp.js*. Today I will write the first few Gulp.js tasks and set up a development server with BrowserSync. And I will start to write a configuration file.
@@ -21,6 +23,7 @@ This is the 2nd part of my series *Introduction to Gulp.js*. Today I will write 
 {{< toc_gulp >}}
 
 ## Installing Gulp.js
+
 To run my `gulpfile.js` I need to install gulp:
 
 ```bash
@@ -48,6 +51,7 @@ If you execute the command `gulp`, this Gulp.js task will output <samp>Hello Gul
 I will speed up the pace a little bit from now on.
 
 ## Watch
+
 Instead of calling a function and output some text to the console I can execute tasks. I decided to execute the watch task when running `gulp`. This task will later watch for changes in files and update my files.
 
 {{% figure class="code-figure" caption="gulp/tasks/default.js" %}}
@@ -78,6 +82,7 @@ gulp.task('watch', ['browsersync'], function() {
 I will come back later to write the `watch` task. For now the function will be empty and just run another task before running the watch task: `browsersync`. All tasks within the Array will be executed *before* the task is executed.
 
 ## BrowserSync
+
 You might have heard of [LiveReload](http://livereload.com/), a tool that is watching for changes in your files and automatically reloads the server. With Stylesheets even reloading is not needed. The page refreshes with the changes instantly.
 
 But [BrowserSync](https://browsersync.io/) is even better: It does all LiveReload does, but you don’t need a browser plugin and it syncs your actions like scroll, click, refresh or filling out forms to all browsers connected. This works even with mobile devices. And BrowserSync has even support for a development server. That’s why I will need nothing more than BrowserSync to get a development server with live reloading.
@@ -110,6 +115,7 @@ This code does need some explanation: First I load Gulp.js and BrowserSync, whic
 The second thing worth mentioning is `['build']`. This does mean before starting BrowserSync it first will run the `build` Gulp.js task (which I will write later). Every Gulp.js task needs a name. As second parameter you can either add a JavaScript callback or tasks or both.
 
 ## Configuration
+
 I create a new file `config.js` in the main Gulp.js folder:
 
 {{% figure class="code-figure" caption="gulp/config.js" %}}
@@ -147,9 +153,6 @@ Jekyll wipes out all files on recreation and to speed up development I have to b
 
 BrowserSync watches only my asset files, in order that my browser won’t reload like hell, everytime Jekyll creates one file. I will later write one task, which reloads the Browser one time after the Jekyll build is complete.
 
-### Source Code
-
-{{< download url="https://github.com/kogakure/gulp-tutorial" text="View Source on GitHub" >}}
-
 ## Conclusion
+
 This concludes the 2nd part of my series *Introduction to Gulp.js*. We learned how to install Gulp.js, how to write a Gulp.js task, run other tasks and set up a development server with BrowserSync.

@@ -10,6 +10,8 @@ series:
 - gulp
 categories:
 - code
+download_url: "https://github.com/kogakure/gulp-tutorial"
+download_text: "View Source on GitHub"
 ---
 
 This is the 3rd part of my series *Introduction to Gulp.js*. Today I will write the build task, which will execute all other tasks needed for a build, the task to delete assets for a fresh start, and the task to create my Jekyll site.
@@ -21,6 +23,7 @@ This is the 3rd part of my series *Introduction to Gulp.js*. Today I will write 
 {{< toc_gulp >}}
 
 ## Build
+
 Now I create a `build` task. This task will run all other tasks, which are needed to create the site. By default Gulp.js runs all tasks in parallel. That’s why I will get a problem if a specific order is needed. I will need a node module which runs tasks in a sequence:
 
 ```bash
@@ -57,6 +60,7 @@ This task will first delete the assets folder (Jekyll is deleted by default), th
 You should comment out tasks, we haven’t written until now, or Gulp can not run. I just included them so we don’t need to come back for each task we write and add a line.
 
 ## Delete Assets
+
 To wipe out all files in the asset folder I use the node module `del`.
 
 ```bash
@@ -98,6 +102,7 @@ gulp.task('delete', function(callback) {
 If you use a newer version of `del` or run into trouble, because `del` doesn’t finish, try deleting the `callback` from the function.
 
 ## Jekyll
+
 Next I will write the configuration and the task to create the Jekyll site:
 
 {{% figure class="code-figure" caption="gulp/config.js" %}}
@@ -148,9 +153,6 @@ I put my `_config.yml` and other configuration files always at the root of my pr
 
 I have a second Jekyll build task `jekyll-rebuild`, which is only a wrapper for a rebuild. All it does is reloading the Browser when the build is completed.
 
-### Source Code
-
-{{< download url="https://github.com/kogakure/gulp-tutorial" text="View Source on GitHub" >}}
-
 ## Conclusion
+
 This concludes the 3rd part of my series *Introduction to Gulp.js*. We learned how to run files in a specified order with `run-sequence`, how to delete files and folders and how to execute a shell task like Jekyll.

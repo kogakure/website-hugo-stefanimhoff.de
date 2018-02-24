@@ -10,6 +10,8 @@ series:
 - gulp
 categories:
 - code
+download_url: "https://github.com/kogakure/gulp-tutorial"
+download_text: "View Source on GitHub"
 ---
 
 This is the 4th part of my series *Introduction to Gulp.js*. Today I will show how to use Sass (and Compass if you want) to create CSS files. Furthermore I will add vendor prefixes with Autoprefixer and create Source Maps for easier debugging of the Sass files.
@@ -21,6 +23,7 @@ This is the 4th part of my series *Introduction to Gulp.js*. Today I will show h
 {{< toc_gulp >}}
 
 ## Sass and Autoprefixer
+
 I use [Sass](http://sass-lang.com/) as preprocessor for my CSS files. If you like to use [Compass](http://compass-style.org/), you just have to set an option for this task.
 
 Go ahead and install the npm modules needed:
@@ -102,9 +105,6 @@ And I run the CSS files through Autoprefixer, which will add vendor prefixes. I 
 
 You might have guessed: If you want to use Compass, just set the option `compass` to `true`.
 
-### Source Code
-
-{{< download url="https://github.com/kogakure/gulp-tutorial" text="View Source on GitHub" >}}
-
 ## Conclusion
+
 This concludes the 4th part of my series *Introduction to Gulp.js*. We learned how to keep Gulp.js running, even when we produce errors, how to preprocess SCSS files with Sass, create Source Maps and add vendor prefixes to the CSS files.

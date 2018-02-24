@@ -10,6 +10,8 @@ series:
 - gulp
 categories:
 - code
+download_url: "https://github.com/kogakure/gulp-tutorial"
+download_text: "View Source on GitHub"
 ---
 
 This is the 9th part of my series *Introduction to Gulp.js*. Today I will use Gulp.js to automatically check my SCSS and JavaScript files for syntax errors and warnings.
@@ -102,9 +104,6 @@ You may change the rules for linting SCSS or JavaScript by adding a hidden file 
 To find out which options are available look into the documentation of [SCSS-Lint](https://github.com/brigade/scss-lint) and [JSHint](http://jshint.com/docs/).
 {{% /hint %}}
 
-### Source Code
-
-{{< download url="https://github.com/kogakure/gulp-tutorial" text="View Source on GitHub" >}}
-
 ## Conclusion
+
 This concludes the 9th part of my series *Introduction to Gulp.js*. Today we learned how to use Gulp.js to check the syntax of SCSS and JavaScript files. This task will run continuously while I write my files and print out errors to my console the moment I created them.

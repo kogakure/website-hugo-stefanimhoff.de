@@ -9,6 +9,8 @@ og_image: "artikel/japanische-farben.png"
 categories:
 - design
 - download
+download_url: "/downloads/traditional-colors-of-japan-rgb.zip"
+download_text: "Farbpalette: Traditionelle Japanische Farben (5 KB)"
 ---
 
 Bei einem Besuch in der Kunstausstellung <cite>Japan und der Westen</cite> im [Kunstmuseum Wolfsburg](https://www.kunstmuseum-wolfsburg.de/ "Kunstmuseum-Wolfsburg"), konnte ich ein wunderbares Buch über die traditionellen, japanischen Farben erstehen.
@@ -22,5 +24,3 @@ Im Museums-Shop konnte ich das Buch <cite>[The Traditional Colors of Japan](http
 Jede Seite des Buches zeigt drei Farben, die immer einem oder mehreren wunderbaren Fotos gegenübergestellt werden. Die Fotos zeigen die traditionellen Anwendung in Kimonos, Samurai-Rüstungen, Mönchskleidung oder der Natur.
 
 Ich habe mir die Mühe gemacht und die RGB-Palette mit den korrekten Farbnamen als Adobe Austauschdatei (ase) erstellt. Diese Farbpalette kann z. B. in Photoshop oder Illustrator importiert werden.
-
-{{< download url="/downloads/traditional-colors-of-japan-rgb.zip" text="Farbpalette: Traditionelle Japanische Farben (5 KB)" >}}

@@ -8,6 +8,8 @@ date: 2008-04-25T18:00:00+02:00
 categories:
 - code
 - website
+download_url: "https://github.com/kogakure/django-kogakure.de"
+download_text: "Source code (GitHub)"
 ---
 
 Es ist soweit! Mein erstes Django-Projekt ist online: das seit 1999 bestehende Kampfkunst-Magazin [kogakure.de](http://kogakure.de/ "kogakure.de – Ninja, Ninjutsu und Kampfkunst").
@@ -101,8 +103,6 @@ Das Einrichten des Django-Projektes auf dem Apache-Server ging übrigens weitaus
 Der Einstieg in Django ist (auch für Nichtprogrammierer) leicht, da es sehr gute Ressourcen kostenlos verfügbar gibt.
 
 Da mir die Community von Django durch Hilfe im #IRC (#django oder #django-de), in Groups und Foren, mit wunderbaren Screencasts und Tutorials so viel geholfen hat, will ich meinen Source-Code auch frei zu Verfügung stellen. Der Code ist frei verfügbar und darf zu Lernzwecken oder für eigene Projekte gerne benutzt werden. Das Design der Seite liegt bei, doch dies ist natürlich rechtlich geschützt und darf nur für Schulungszwecke benutzt werden. Als Ninja fallen mir natürlich zahlreiche Möglichkeiten ein einen Dieb ins Jenseits zu befördern ;)
-
-{{< download url="https://github.com/kogakure/django-kogakure.de" text="Source code (GitHub)" >}}
 
 ## Django-Ressourcen
 

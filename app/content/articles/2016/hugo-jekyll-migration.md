@@ -8,6 +8,8 @@ language: "en"
 og_image: "artikel/hugo.png"
 categories:
 - website
+download_url: "https://github.com/kogakure/hugo-stefanimhoff.de"
+download_text: "View Source on GitHub"
 ---
 
 After running over 2 years with [Jekyll](https://jekyllrb.com/) I recently replaced it with [Hugo](http://gohugo.io/), a static site generator written in Go.
@@ -19,18 +21,23 @@ I did this mainly because of two reasons: *Firstly*, Jekyll ist just **too slow*
 {{< /figure >}}
 
 ## Researching the options
+
 Before I decided for Hugo, I did a quite long research of the possible [static site generators](https://www.staticgen.com/).
 
 ### Hexo
+
 [Hexo](https://hexo.io/) was quite interesting, because it’s written in JavaScript. It’s very, very similar to Jekyll (it even supports the plugins of Jekyll). But after some tests I found out it’s not faster in generating sites as Jekyll. Additionally it comes as an out-of-the-box thing, where everything is a plugin. And I try to separate my build and development workflows (written in [Gulp](/series/gulp/)) from the generation of my site. This helps me avoiding to lock too much into a tool.
 
 ### Roots
+
 Another tool, which looked quite nice was [Roots](http://roots.cx/). But after some research I found out it’s already discontinued.
 
 ### Gatsby
+
 I really like the idea of [Gatsby](https://github.com/gatsbyjs/gatsby), because it uses React templates to build static sites. But currently it’s unusable, because it bundles all articles into *one* JavaScript file. Sure, this allows to browse the website offline and with instant page changes. But having a 500-800 KB JavaScript file is just not a thing I’ll ever allow. If Gatsby would allow to decide on smaller Webpack bundle packages (e. g. a bundle for a *tag* or a *year*) it would be an option.
 
 ## Choosing Hugo
+
 In the end the features of Hugo were just too good and after testing it for some days I decided to use it, despite having no clue of Go.
 
 The first thing which is surprising: Hugo is a binary, which is cross platform and after installing it, that’s it. It’s as easy on a Mac as this:
@@ -44,27 +51,26 @@ The main reason for switching was for me speed. And fast it is. Generating my wh
 How fast Hugo *really* is can be best seen in this video: [Hugo benchmark - 5,000 posts in seconds](https://www.youtube.com/watch?v=CdiDYZ51a2o).
 
 ## Templates
+
 Hugo comes without a plugin system, but I didn’t miss any and could find a solution for everything I had on my Jekyll site before. The templates are written in [Go html/template](https://golang.org/pkg/html/template/), Ace or Amber. The latter look very familiar to people, who know Jade/Pug. But I choose the Go html/template. The syntax needs some time to get used to, as it’s so different from all template engines I’ve used before. But if I got stuck with a problem the [Hugo Discussion Board](https://discourse.gohugo.io) could help out in all cases. Hugo comes with specific rules for templates, how to name them and rules in which order templates get rendered.
 
 ## Themes
+
 It also has really nice Theme system, which allows to create very modular Themes. And because creating a theme is so easy there are [a lot very good of them](http://themes.gohugo.io/) available.
 
 
 ## Shortcodes
+
 Instead of plugins Hugo uses [Shortcodes](http://gohugo.io/content-management/shortcodes), which is very refreshing. Writing plugins in Jekyll was *not* fun. With Shortcodes it’s possible to create the same functionality without needing to know Ruby and the [Liquid for Programmers](https://github.com/Shopify/liquid/wiki/Liquid-for-Programmers) guidelines and still getting the same result with less lines and writing mostly Markup.
 
 ## Content
+
 Another really nice thing is the organization of the content. You can create multiple sections and or types of content, serving them at your chosen URL. And you can create pages or content just out of data (Jekyll has this, too).
 
 Content is written in Markdown (or Asciidoc, reStructuredText) and can be extended with Frontmatter (in TOML, YAML or JSON).
 
 Hugo comes with Menu generation and a Taxonomy system, which lets you create as many Taxonomies (tags, categories, etc.) as you like.
 
-## Source Code
-If you’re interested, how I built it, you can have a look, I published my source code on GitHub:
-
-{{< download url="https://github.com/kogakure/hugo-stefanimhoff.de" text="View Source on GitHub" >}}
-
 ## Conclusion
-Converting my site from Jekyll to Hugo just took three days. My tendency of over-engineering and perfection allocated a lot of the time. And because of that, I started simplifying my CSS and Gulp tasks and will further simplify the site. But it was fun and if you need a static site you should have a look into Hugo.
 
+Converting my site from Jekyll to Hugo just took three days. My tendency of over-engineering and perfection allocated a lot of the time. And because of that, I started simplifying my CSS and Gulp tasks and will further simplify the site. But it was fun and if you need a static site you should have a look into Hugo.
