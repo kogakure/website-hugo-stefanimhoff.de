@@ -1,5 +1,5 @@
 ---
-language: "de"
+language: "en"
 title: "Die Gestaltung meines neuen Logos"
 author: "Stefan Imhoff"
 slug: "gestaltung-neues-logo"
@@ -42,9 +42,7 @@ Zur Zeit der *Streitenden Reiche* (475-221 v. Chr.) wurden Pinsel und Tinte erfu
 
 Doch gab es viele verschiedene Schreibweisen der Zeichen, was für Austausch und Handel nicht förderlich war. König Zhou Xuanwang versuchte dieses Problem durch die *Große Siegelschrift* zu lösen, was ihm aber nicht gelang. Erst als Kaiser Qin Shin Huang das Reich 221 v. Chr. einte, befahl er eine einheitliche Schrift. Kanzler Li Si beseitigte Zeichen und verringerte Striche und begründete damit die [Kleine Siegelschrift](https://de.wikipedia.org/wiki/Siegelschrift).
 
-{{% pullquote quote="Die kleine Siegelschrift ist zwar durch ihre geschwungenen Striche schön, aber war im täglichen Gebrauch zu umständlich zu schreiben." %}}
 Die kleine Siegelschrift ist zwar durch ihre geschwungenen Striche schön, aber war im täglichen Gebrauch zu umständlich zu schreiben. Zu Beginn der Han-Dynastie kam die [Kanzleischrift](https://de.wikipedia.org/wiki/Chinesische_Kanzleischrift) auf, die viel geradere Striche hatte und somit einfacher und schneller zu schreiben war. Viele Zeichen wurden durch diese Schrift weiter abstrahiert.
-{{% /pullquote %}}
 
 Ebenfalls zur gleichen Zeit entstand die Konzeptschrift, die auch [Grasschrift](https://de.wikipedia.org/wiki/Grasschrift) genannt wird. Sie wurde für den privaten Schriftverkehr verwendet, aber auch vom einfachen Volk geschrieben. Bei dieser Schrift sind die Striche häufig verbunden, so dass es oft aussieht, als wäre der Pinsel nicht vom Papier abgehoben worden.
 

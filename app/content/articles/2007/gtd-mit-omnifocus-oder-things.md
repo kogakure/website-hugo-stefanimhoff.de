@@ -83,9 +83,7 @@ Die Liste von zukünftigen Verbesserungen ist lang und lässt noch auf großes H
 
 Ich habe Things und OmniFocus jetzt über einen Zeitraum von vierzehn Tagen ausgiebig getestet und mein Kandidat steht fest: **Things**.
 
-{{% pullquote quote="CulturedCode ist eine deutsche Firma, und somit macht es gleich doppelt soviel Spaß innovative Ideen und Softwarelösungen aus dem eigenen Land zu unterstützen." %}}
 CulturedCode ist eine deutsche Firma, und somit macht es gleich doppelt soviel Spaß innovative Ideen und Softwarelösungen aus dem eigenen Land zu unterstützen.
-{{% /pullquote %}}
 
 CulturedCode ist eine deutsche Firma, und somit macht es gleich doppelt soviel Spaß innovative Ideen und Softwarelösungen aus dem eigenen Land zu unterstützen.
 

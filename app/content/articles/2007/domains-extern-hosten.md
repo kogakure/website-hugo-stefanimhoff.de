@@ -22,9 +22,11 @@ Meist sind auch Domains, die man über seine Inklusivdomains hinaus kaufen kann,
 
 Dabei sind es gerade die Domains, die eigentlich keinen oder nur einen minimalen Kostenfaktor beim Hosting ausmachen.
 
-{{% pullquote quote="Die wirklichen Kosten des Hostings entstehen durch Festplattenplatz, Speicher und genutzte Bandbreite" %}}
+<blockquote lang="de" class="pullquote">
+<p>Die wirklichen Kosten des Hostings entstehen durch Festplattenplatz, Speicher und genutzte Bandbreite.</p>
+</blockquote>
+
 Die wirklichen Kosten des Hostings entstehen durch Festplattenplatz, Speicher und genutzte Bandbreite. Somit sind auch alle Begrenzungen und *Paket-Features* vollkommen fiktiv und nur zur besseren Werbung abgegrenzt.
-{{% /pullquote %}}
 
 Ob ich nun eine, zwei oder hundert Datenbanken benutze, ist technisch gesehen kein Unterschied, genauso wenig, ob mir diese oder jene Programmiersprache angeboten wird.
 
@@ -36,9 +38,7 @@ Besonders schmerzhaft bemerkt man aber, dass Hosting von Domains beim Webhoster 
 
 Zumeist kommt auf den ahnungslosen eine Flut von Fachbegriffen, Faxen und Formularen zu, von Zeit zu Zeit lehnen Hoster den so genannten KK-Antrag auch einfach erstmal ab, so das ein weiterer gestartet werden muss.
 
-{{% pullquote class="left" quote="Der Hoster 1&1 hat eine wunderbare Spitzenleistung der Schikane für seine Kunden vorbereitet" %}}
 Der Hoster 1&1 hat eine wunderbare Spitzenleistung der Schikane für seine Kunden vorbereitet: Man muss im Kundencenter seine Domains kündigen und für den KK-Antrag freigeben. Daraufhin bekommt man eine Telefonnummer, die man anrufen muss. Der Telefonberater auf der anderen Seite ist wohl dazu angehalten, die Kündigung möglichst auszureden. Danach schaltet er manuell die nötigen Formulare frei, die man noch unterschreiben und an den Hoster faxen muss. Und das, obwohl man sich schon vorher durch private Fragen zweifelsfrei identifizieren musste.
-{{% /pullquote %}}
 
 ## Domains extern hosten
 

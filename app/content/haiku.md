@@ -9,113 +9,172 @@ body_class: haiku
 
 Auf dieser Seite sind einige meiner Haiku (<ruby>俳<rp>（</rp><rt>はい</rt><rp>）</rp>句<rp>（</rp><rt>く</rt><rp>）</rp></ruby>) zu finden, die ich im Laufe der Jahre geschrieben habe.
 
--------------------------------------------------------------------------------
+---
 
+<blockquote>
+  <p>Haiku (jap. <span lang="ja">俳句</span>, dt. „lustiger Vers“; Plural: Haiku, auch: Haikus) ist eine traditionelle japanische Gedichtform, die heute weltweit verbreitet ist. Das Haiku gilt als die kürzeste Gedichtform der Welt.</p>
+  <footer>
+    <strong>Wikipedia</strong>
+    <cite>
+      <a href="https://de.wikipedia.org/wiki/Haiku">
+        Haiku
+      </a>
+    </cite>
+  </footer>
+</blockquote>
 
-{{% blockquote author="Wikipedia" cite="Haiku" url="https://de.wikipedia.org/wiki/Haiku" %}}
-Haiku (jap. <span lang="ja">俳句</span>, dt. „lustiger Vers“; Plural: Haiku, auch: Haikus) ist eine traditionelle japanische Gedichtform, die heute weltweit verbreitet ist. Das Haiku gilt als die kürzeste Gedichtform der Welt.
-{{% /blockquote %}}
+---
 
--------------------------------------------------------------------------------
-
-{{< verse >}}
+<blockquote class="verse">
+<pre>
+<p>
 Nebel am Abend,
 kühle Luft, feucht wie Suppe,
 kein goldener Herbst.
-{{< /verse >}}
+</p>
+</pre>
+</blockquote>
 
--------------------------------------------------------------------------------
+---
 
-{{< verse >}}
+<blockquote class="verse">
+<pre>
+<p>
 Wind in den Blättern,
 wie das Rauschen von Regen
 hoch in den Wipfeln.
-{{< /verse >}}
+</p>
+</pre>
+</blockquote>
 
--------------------------------------------------------------------------------
+---
 
-{{< verse >}}
+<blockquote class="verse">
+<pre>
+<p>
 Kaum Tag, lange Nacht.
 Regenströme vom Himmel.
 Ende doch, Winter!
-{{< /verse >}}
+</p>
+</pre>
+</blockquote>
 
--------------------------------------------------------------------------------
+---
 
-{{< verse >}}
+<blockquote class="verse">
+<pre>
+<p>
 Es ist gänzlich still,
 blauer Himmel und Sonne,
 ein Sonntag im Herbst.
-{{< /verse >}}
+</p>
+</pre>
+</blockquote>
 
--------------------------------------------------------------------------------
+---
 
-{{< verse >}}
+<blockquote class="verse">
+<pre>
+<p>
 Schneebedeckter Berg,
 am Hang fährt ein Skifahrer,
 die Lawine folgt.
-{{< /verse >}}
+</p>
+</pre>
+</blockquote>
 
--------------------------------------------------------------------------------
+---
 
-{{< verse >}}
+<blockquote class="verse">
+<pre>
+<p>
 Ein Windstoß, heftig,
 reißt an der Zeitung so stark,
 in Fetzen dahin.
-{{< /verse >}}
+</p>
+</pre>
+</blockquote>
 
--------------------------------------------------------------------------------
+---
 
-{{< verse >}}
+<blockquote class="verse">
+<pre>
+<p>
 Flackernde Kerzen,
 schon endet das Lichterfest,
 so auch der Sommer.
-{{< /verse >}}
+</p>
+</pre>
+</blockquote>
 
--------------------------------------------------------------------------------
+---
 
-{{< verse >}}
+<blockquote class="verse">
+<pre>
+<p>
 Die Luft ist schon frisch,
 Cirruswölkchen am Himmel,
 der Sommer endet.
-{{< /verse >}}
+</p>
+</pre>
+</blockquote>
 
--------------------------------------------------------------------------------
+---
 
-{{< verse >}}
+<blockquote class="verse">
+<pre>
+<p>
 Flüsternde Stimmen,
 Gespräche in dunkler Nacht,
 vom Sturm weggeweht.
-{{< /verse >}}
+</p>
+</pre>
+</blockquote>
 
--------------------------------------------------------------------------------
+---
 
-{{< verse >}}
+<blockquote class="verse">
+<pre>
+<p>
 Die Winterwinde,
 das Hausdach, es knackt und knarrt,
 eisiger Regen.
-{{< /verse >}}
+</p>
+</pre>
+</blockquote>
 
--------------------------------------------------------------------------------
+---
 
-{{< verse >}}
+<blockquote class="verse">
+<pre>
+<p>
 Prasselnder Regen,
 eiligen Schrittes der Mann,
 dem Schirm folgt er nach.
-{{< /verse >}}
+</p>
+</pre>
+</blockquote>
 
--------------------------------------------------------------------------------
+---
 
-{{< verse >}}
+<blockquote class="verse">
+<pre>
+<p>
 Sturm in dunkler Nacht,
 Rascheln hoch in Baumkronen.
 Rauschende Stille.
-{{< /verse >}}
+</p>
+</pre>
+</blockquote>
 
--------------------------------------------------------------------------------
+---
 
-{{< verse >}}
+<blockquote class="verse">
+<pre>
+<p>
 Wolken, unbewegt,
 ein Kind lacht laut auf im Hof,
 weit ist der Himmel.
-{{< /verse >}}
+</p>
+</pre>
+</blockquote>

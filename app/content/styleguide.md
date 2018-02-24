@@ -112,108 +112,109 @@ Zusätzlich dazu kann auch das Element `cite` verwendet werden, um ein Werk zu m
 
 #### Einfaches Blockzitat
 
-Mit Markdown:
-
-{{% blockquote %}}
-Dies ist ein **Zitat**.
-{{% /blockquote %}}
+<blockquote>
+<p>Dies ist ein <strong>Zitat</strong>.</p>
+</blockquote>
 
 ```html
-{{%/* blockquote %}}
-Dies ist ein **Zitat**.
-{{% /blockquote */%}}
-```
-
-Ohne Markdown:
-
-{{< blockquote >}}
-Dies ist ein **Zitat**.
-{{< /blockquote >}}
-
-```html
-{{</* blockquote >}}
-Dies ist ein **Zitat**.
-{{< /blockquote */>}}
+<blockquote>
+<p>Dies ist ein <strong>Zitat</strong>.</p>
+</blockquote>
 ```
 
 
 
 #### Zitat aus einem gedruckten Werk
 
-{{% blockquote author="J.R.R. Tolkien" cite="Der Herr der Ringe" %}}
-Drei Ringe den Elben, hoch im Licht. Sieben den Zwergen in ihren Hallen aus Stein. Den Sterblichen, ewig dem Tode verfalln: Neun. Ein Ring sie zu knechten, sie alle zu finden, ins Dunkel zu treiben und ewig zu binden. Im Lande Mordor, wo die Schatten drohn.
-{{% /blockquote %}}
+<blockquote>
+  <p>Drei Ringe den Elben, hoch im Licht. Sieben den Zwergen in ihren Hallen aus Stein. Den Sterblichen, ewig dem Tode verfalln: Neun. Ein Ring sie zu knechten, sie alle zu finden, ins Dunkel zu treiben und ewig zu binden. Im Lande Mordor, wo die Schatten drohn.</p>
+  <footer>
+    <strong>J.R.R. Tolkien</strong>
+    <cite>Der Herr der Ringe</cite>
+  </footer>
+</blockquote>
 
-
-{{< blockquote author="Douglas Adams" cite="The Hichhikers Guide to the Galaxy" >}}
-Flying is learning how to throw yourself at the ground and miss.
-{{< /blockquote >}}
+<blockquote>
+  <p>Flying is learning how to throw yourself at the ground and miss.</p>
+  <footer>
+    <strong>Douglas Adams</strong>
+    <cite>The Hichhikers Guide to the Galaxy</cite>
+  </footer>
+</blockquote>
 
 ```html
-{{</* blockquote author="Douglas Adams" cite="The Hichhikers Guide to the Galaxy" >}}
-…
-{{< /blockquote */>}}
+<blockquote>
+  <p>Flying is learning how to throw yourself at the ground and miss.</p>
+  <footer>
+    <strong>Douglas Adams</strong>
+    <cite>The Hichhikers Guide to the Galaxy</cite>
+  </footer>
+</blockquote>
 ```
 
 #### Zitat von Twitter
 
-{{< blockquote author="@allanbranch" url="https://twitter.com/allanbranch/status/90766146063712256" >}}
-Over the past 24 hours I've been reflecting on my life & I've realized only one thing. I need a medieval battle axe.
-{{< /blockquote >}}
+<blockquote>
+  <p>Over the past 24 hours I've been reflecting on my life &amp; I've realized only one thing. I need a medieval battle axe.</p>
+  <footer>
+    <strong>@allanbranch</strong>
+    <cite>
+      <a href="https://twitter.com/allanbranch/status/90766146063712256">
+        Tweet
+      </a>
+    </cite>
+  </footer>
+</blockquote>
 
 ```html
-{{</* blockquote author="@allanbranch" url="https://twitter.com/allanbranch/status/90766146063712256" >}}
-…
-{{< /blockquote */>}}
+<blockquote>
+  <p>Over the past 24 hours I've been reflecting on my life &amp; I've realized only one thing. I need a medieval battle axe.</p>
+  <footer>
+    <strong>@allanbranch</strong>
+    <cite>
+      <a href="https://twitter.com/allanbranch/status/90766146063712256">
+        Tweet
+      </a>
+    </cite>
+  </footer>
+</blockquote>
 ```
 
 #### Zitat aus einem Artikel im Internet
 
-{{< blockquote author="Seth Godin" cite="Welcome to Island Marketing" url="http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html" >}}
-Every interaction is both precious and an opportunity to delight.
-{{< /blockquote >}}
-
-{{< blockquote author="Winston Churchill" cite="Speech to the House of Commons" url="http://hansard.millbanksystems.com/commons/1947/nov/11/parliament-bill#column_206a" >}}
-Many forms of Government have been tried, and will be tried in this world of sin and woe. No one pretends that democracy is perfect or all-wise. Indeed, it has been said that democracy is the worst form of government except all those other forms that have been tried from time to time.
-{{< /blockquote >}}
+<blockquote>
+  <p>Many forms of Government have been tried, and will be tried in this world of sin and woe. No one pretends that democracy is perfect or all-wise. Indeed, it has been said that democracy is the worst form of government except all those other forms that have been tried from time to time.</p>
+  <footer>
+    <strong>Winston Churchill</strong>
+    <cite>
+      <a href="http://hansard.millbanksystems.com/commons/1947/nov/11/parliament-bill#column_206a">
+        Speech to the House of Commons
+      </a>
+    </cite>
+  </footer>
+</blockquote>
 
 
 ### Pullquote
 
-#### Pullquote (rechts)
-
-{{% pullquote quote="Wichtig anzumerken ist, dass die Pullquotes nur visuelle Präsentation sind und nicht zweimal im Code erscheinen." %}}
-Wenn man sehr lange Absätze schreibt, ist es hilfreich ein herausgeschobenen Zitatblock zu verwenden, der einen wichtigen Teil des Abschnitts markiert. Einige benutzen vielleicht lieber viele Überschriften, was auch meistens gut funktioniert, aber weniger gut für lange Prosa geeignet ist.
-
-Wichtig anzumerken ist, dass die Pullquotes nur visuelle Präsentation sind und nicht zweimal im Code erscheinen. Deshalb werden CSS-Techniken angewandt, um das Zitat ein weiteres mal sichtbar zu machen. In Octopress kann man dieses sehr einfach mit dem Pullquote-Tag erreichen.
-{{% /pullquote %}}
-
-#### Pullquote (links)
-
-{{% pullquote class="left" quote="Wichtig anzumerken ist, dass die Pullquotes nur visuelle Präsentation sind und nicht zweimal im Code erscheinen." %}}
-Wenn man sehr lange Absätze schreibt, ist es hilfreich ein herausgeschobenen Zitatblock zu verwenden, der einen wichtigen Teil des Abschnitts markiert. Einige benutzen vielleicht lieber viele Überschriften, was auch meistens gut funktioniert, aber weniger gut für lange Prosa geeignet ist.
-
-Wichtig anzumerken ist, dass die Pullquotes nur visuelle Präsentation sind und nicht zweimal im Code erscheinen. Deshalb werden CSS-Techniken angewandt, um das Zitat ein weiteres mal sichtbar zu machen. In Octopress kann man dieses sehr einfach mit dem Pullquote-Tag erreichen.
-{{% /pullquote %}}
-
-```html
-{{%/* pullquote class="left" quote="Wichtig anzumerken ist, dass die Pullquotes nur visuelle Präsentation sind und nicht zweimal im Code erscheinen." %}}
-…
-{{% /pullquote */%}}
-```
-
-#### Pullquote (zentriert)
-
 Manchmal möchte man einen kurzen Zitatblock verwenden, der nicht im Text vorkommt, oder besonders prägnant ist und daher zentriert stehen soll. Wenn ein Attribute `lang` mitgegeben wird, werden automatisch die korrekten Zitatzeichen verwendet (für Deutsch, Englisch und Japanisch).
 
-{{% pullquote language="en" %}}
-No time for pessimism.
-{{% /pullquote %}}
+<blockquote lang="en" class="pullquote">
+<p>No time for pessimism.</p>
+</blockquote>
+
+<blockquote lang="de" class="pullquote">
+<p>Keine Zeit für Pessimismus.</p>
+</blockquote>
+
+<blockquote lang="ja" class="pullquote">
+<p>悲観の時間がない</p>
+</blockquote>
 
 ```html
-{{%/* pullquote language="en" %}}
-No time for pessimism.
-{{% /pullquote */%}}
+<blockquote lang="en" class="pullquote">
+<p>No time for pessimism.</p>
+</blockquote>
 ```
 
 ### Inline-Zitate
@@ -253,20 +254,24 @@ Luke führte weiter aus, <q>Und sie nannte ihn einen <q>total blöd-aussehenen I
 
 Gedichte und Verse sollen so geschrieben werden, wie sie vom Autor gedacht waren und außerdem in der Seite zentriert stehen. Dafür gibt es einen Stil:
 
-{{< verse author="Lewis Carroll" cite="Jabberwocky (1832-98)" >}}
+<blockquote class="verse">
+<pre>
 ‘Twas brillig, and the slithy toves
 Did gyre and gimble            in the wabe;
 All mimsy     were     the borogoves,
 And       the mome     raths            outgrabe.
-{{< /verse >}}
+</pre>
+</blockquote>
 
 ```html
-{{</* verse author="Lewis Carroll" cite="Jabberwocky (1832-98)" >}}
+<blockquote class="verse">
+<pre>
 ‘Twas brillig, and the slithy toves
 Did gyre and gimble            in the wabe;
 All mimsy     were     the borogoves,
 And       the mome     raths            outgrabe.
-{{< /verse */>}}
+</pre>
+</blockquote>
 ```
 
 
