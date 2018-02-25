@@ -5,7 +5,7 @@ description: "Traditionelle, japanische Farben als Farbpalette für Photoshop un
 author: "Stefan Imhoff"
 slug: "traditionelle-japanische-farben-photoshop-illustrator"
 date: 2007-12-08T21:05:00+02:00
-og_image: "artikel/japanische-farben.png"
+og_image: "articles/japanische-farben.png"
 categories: ["design", "download"]
 download_url: "/downloads/traditional-colors-of-japan-rgb.zip"
 download_text: "Farbpalette: Traditionelle Japanische Farben (5 KB)"
@@ -16,7 +16,7 @@ Bei einem Besuch in der Kunstausstellung <cite>Japan und der Westen</cite> im [K
 Im Museums-Shop konnte ich das Buch <cite>[The Traditional Colors of Japan](http://www.amazon.de/gp/product/4894445786/ref=as_li_ss_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=4894445786&linkCode=as2&tag=kogakurede-21)</cite> erstehen, das zwar auf Japanisch ist, aber neben einer vollständigen Farbpalette mit 250 Farben auch eine genaue Wertangabe von RGB, CMYK und anderen Informationen enthält.
 
 <figure class="image-figure image-figure-noborder">
-  <img src="/assets/images/artikel/japanische-farben.png" alt="Japanische Farben" title="Japanische Farben">
+  <img src="/assets/images/articles/japanische-farben.png" alt="Japanische Farben" title="Japanische Farben">
   <figcaption>
   Japanische Farbpalette für Adobe Illustrator und Photoshop
   </figcaption>

@@ -3,7 +3,7 @@ language: "en"
 title: "New Japanese Netflix TV Show: Atelier aka Underwear"
 date: 2016-02-12T07:00:11+02:00
 description: "Netflix released a new Japanese TV Show: Atelier aka Underwear. I highly recommend this brilliant work about a young girl starting in an exclusive custom tailoring lingerie store in Toyko."
-og_image: "artikel/netflix-atelier-underwear.jpg"
+og_image: "articles/netflix-atelier-underwear.jpg"
 author: "Stefan Imhoff"
 slug: "japanese-netflix-tv-show-atelier-underwear"
 categories: ["recommendation", "film"]
@@ -12,7 +12,7 @@ categories: ["recommendation", "film"]
 From time to time – but not very often – a TV Show gets released, which really surprises me. This happened last time in 2007 with *Pushing Daisies*, where I loved everything: the story, the actors, the sets, every dialog. And now it happened again. I have a new favorite TV Show: [Atelier](http://www.imdb.com/title/tt4790548/) aka *Underwear*.
 
 <figure class="image-figure">
-  <img src="/assets/images/artikel/netflix-atelier-underwear.jpg" alt="Original Netflix TV Show: Atelier aka Underwear">
+  <img src="/assets/images/articles/netflix-atelier-underwear.jpg" alt="Original Netflix TV Show: Atelier aka Underwear">
   <figcaption>
     <em>Mao Daichi</em> and <em>Mirei Kiritani</em> in Netflix’s <cite>Atelier</cite>
   </figcaption>

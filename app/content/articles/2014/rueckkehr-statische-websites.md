@@ -4,7 +4,7 @@ title: "Die Rückkehr der statischen Websites"
 author: "Stefan Imhoff"
 slug: "rueckkehr-statische-websites"
 date: 2014-09-23T20:15:52+02:00
-og_image: "artikel/i-love-jekyll.jpg"
+og_image: "articles/i-love-jekyll.jpg"
 description: "Über statische Seitengeneratoren und warum sie eine mächtige Alternative zu Systemen wie WordPress darstellen."
 categories: ["code"]
 ---
@@ -12,7 +12,7 @@ categories: ["code"]
 Seit kurzem arbeite ich am Redesign meiner Kampfkunst-Website [kogakure.de](http://kogakure.de). Wie die meisten Websites hat auch diese einmal als eine Sammlung von statischen HTML-Seiten begonnen.
 
 <figure class="image-figure image-figure-center">
-  <img src="/assets/images/artikel/i-love-jekyll.jpg" alt="I ♥  Jekyll">
+  <img src="/assets/images/articles/i-love-jekyll.jpg" alt="I ♥  Jekyll">
 </figure>
 
 Als ich 1999 die erste Version live gestellt habe, waren mir Web-Programmierung oder dynamische Seiten noch völlig fremd.

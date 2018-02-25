@@ -4,7 +4,7 @@ title: "Introduction to Gulp.js 7: Base64 Encoded Images"
 date: 2014-10-24T07:30:00+02:00
 author: "Stefan Imhoff"
 slug: "gulp-tutorial-7-base64"
-og_image: "artikel/gulp-tutorial-7.jpg"
+og_image: "articles/gulp-tutorial-7.jpg"
 description: "The ultimative tutorial and guide for Gulp.js: How to replace small images with base64 encoded images."
 series: ["gulp"]
 categories: ["code"]
@@ -15,7 +15,7 @@ download_text: "View Source on GitHub"
 This is the 7th part of my series *Introduction to Gulp.js*. Today I will use Gulp.js to replace a lot of my URLs to small images with Base64 encoded images.
 
 <figure class="image-figure attribution">
-  <img src="/assets/images/artikel/gulp-tutorial-7.jpg" alt="Big Gulp at the beach">
+  <img src="/assets/images/articles/gulp-tutorial-7.jpg" alt="Big Gulp at the beach">
   <figcaption>
   The HI Life w/ Lime, <a href="https://www.flickr.com/photos/bi11jon/445799182" target="_blank" rel="nofollow" rel="noopener">Big Gulp</a>
   </figcaption>

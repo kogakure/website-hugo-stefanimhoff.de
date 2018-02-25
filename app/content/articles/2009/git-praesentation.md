@@ -5,7 +5,7 @@ description: "Meine Git-Präsentation 'Sei (k)ein Blödmann und nimm Git!'. Mein
 author: "Stefan Imhoff"
 slug: "git-praesentation"
 date: 2009-08-08T13:00:00+02:00
-og_image: "artikel/git-praesentation.jpg"
+og_image: "articles/git-praesentation.jpg"
 categories: ["vcs", "presentation"]
 ---
 
@@ -13,7 +13,7 @@ Auf dem 4. Treffen der Django-UserGroup Hamburg habe ich eine Präsentation übe
 
 <figure class="image-figure">
   <a href="http://www.slideshare.net/kogakure/sei-kein-bldmann-und-nimm-git-1830449">
-    <img src="/assets/images/artikel/git-praesentation.jpg" alt="Sei (k)ein Blödmann und nimm Git!">
+    <img src="/assets/images/articles/git-praesentation.jpg" alt="Sei (k)ein Blödmann und nimm Git!">
   </a>
   <figcaption>
   Präsentation: <cite>Sei (k)ein Blödmann und nimm Git!</cite>

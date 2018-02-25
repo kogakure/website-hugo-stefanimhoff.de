@@ -5,7 +5,7 @@ author: "Stefan Imhoff"
 slug: "gestaltung-neues-logo"
 date: 2014-04-18T19:00:00+02:00
 description: "Einblick in die Gestaltung meines neuen Logos und Rakkan: Idee, Recherche und ein kurzer Exkurs über die Chinesische Schrift."
-og_image: "artikel/rakkan.jpg"
+og_image: "articles/rakkan.jpg"
 categories: ["design"]
 ---
 
@@ -20,7 +20,7 @@ Für mich stand schon relativ früh fest, dass ich ein *Rakkan* anstelle eines m
 Ein Rakkan (oder Hanko) wird in Japan ein Siegel genannt, das meist in Stein geschnitzt, die Signatur eines Künstler darstellt und von diesem unter die Werke gestempelt wird, und damit wie eine Unterschrift funktioniert.
 
 <figure class="image-figure">
-  <img src="/assets/images/artikel/rakkan.jpg" alt="Rakkan unter mit Tinte geschriebenem Schriftzeichen">
+  <img src="/assets/images/articles/rakkan.jpg" alt="Rakkan unter mit Tinte geschriebenem Schriftzeichen">
   <figcaption>
   Abdruck meines Rakkan unter einem von mir geschriebenem Symbol für 忍 (Shinobi).
   </figcaption>
@@ -67,7 +67,7 @@ Ein solches Siegel lässt sich in zwei verschiedene Varianten erstellen: **Yin**
 Zuerst fertigte ich zahlreiche Bleistiftzeichnungen an, erst von einzelnen Zeichen, die mir gefielen, später von Kombinationen. Ich überlegte mir, wie ein Künstler einen traditionellen Stempel schnitzen würde, wie die Buchstaben sich berühren und stützen, um dem Siegel die nötige Stabilität zu geben.
 
 <figure class="image-figure">
-  <img src="/assets/images/artikel/moleskine-bleistiftzeichnungen.jpg" alt="Moleskine mit Bleistiftzeichnungen von Schriftzeichen">
+  <img src="/assets/images/articles/moleskine-bleistiftzeichnungen.jpg" alt="Moleskine mit Bleistiftzeichnungen von Schriftzeichen">
   <figcaption>
   Doppelseite aus meinem Moleskine mit Bleistiftzeichnungen verschiedener Zeichen.
   </figcaption>

@@ -4,7 +4,7 @@ title: "Introduction to Gulp.js 12: Optimize CSS, JavaScript, Images and HTML"
 date: 2014-10-29T08:00:00+02:00
 author: "Stefan Imhoff"
 slug: "gulp-tutorial-12-optimize-css-javascript-images-and-html"
-og_image: "artikel/gulp-tutorial-12.jpg"
+og_image: "articles/gulp-tutorial-12.jpg"
 description: "The ultimative tutorial and guide for Gulp.js: How to optimize CSS, JavaScript, images and HTML to speed up your website."
 series: ["gulp"]
 categories: ["code"]
@@ -15,7 +15,7 @@ download_text: "View Source on GitHub"
 This is the 12th part of my series *Introduction to Gulp.js*. Today I will write tasks to optimize the assets of my website: CSS, JavaScript, Images and HTML.
 
 <figure class="image-figure attribution">
-  <img src="/assets/images/artikel/gulp-tutorial-12.jpg" alt="A woman with a Double Gulp">
+  <img src="/assets/images/articles/gulp-tutorial-12.jpg" alt="A woman with a Double Gulp">
   <figcaption>
   Reed, <a href="https://www.flickr.com/photos/ishatter/3614672744" target="_blank" rel="nofollow" rel="noopener">picnic</a>
   </figcaption>

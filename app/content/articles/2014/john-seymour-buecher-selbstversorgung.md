@@ -4,7 +4,7 @@ title: "John Seymours Bücher über Selbstversorgung"
 author: "Stefan Imhoff"
 slug: "john-seymour-buecher-selbstversorgung"
 date: 2014-08-03T16:00:00+02:00
-og_image: "artikel/john-seymour-illustration.jpg"
+og_image: "articles/john-seymour-illustration.jpg"
 description: "Über John Seymours fantastische, wunderschön illustrierte Bücher zu Selbstversorgung, Landwirtschaft und Handwerk. Die optimale Ausrüstung für eine kommende Zombie-Apokalypse."
 categories: ["book", "recommendation"]
 ---
@@ -15,7 +15,7 @@ Meine frühsten Erinnerungen an Bücher sind, dass ich auf dem Bauch im Wohnzimm
 Geboren 1914 in England, kam er dann in der Schweiz auf ein Internat und begann später Agrarwissenschaften zu studieren. Er ging mit 20 Jahren nach Afrika, um dort als Farmer zu arbeiten. Nach seinem Dienst im Zweiten Weltkrieg in Nordafrika und Asien kehrte er nach England zurück und zog 1957 mit seiner Familie in eine alte abgelegene Farm und begann ausschließlich von selbstangebauten Erzeugnissen zu leben. Nach einem Umzug auf eine Farm in Wales schrieb er in den 70er Jahren seine weltbekannten Bücher <cite><a href="http://www.amazon.de/gp/product/3831015775?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=3831015775">Das große Buch vom Leben auf dem Lande</a></cite> und <cite><a href="http://www.amazon.de/gp/product/3783161452?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=3783161452">Selbstversorgung aus dem Garten</a></cite>.
 
 <figure class="image-figure">
-  <img src="/assets/images/artikel/john-seymour-illustration.jpg" alt="Illustration von Getreidearten">
+  <img src="/assets/images/articles/john-seymour-illustration.jpg" alt="Illustration von Getreidearten">
   <figcaption>
   Illustration von Getreidearten aus einem von John Seymours’ Büchern
   </figcaption>

@@ -4,7 +4,7 @@ title: "How to get your Mobile Website fast"
 date: 2015-02-18T09:10:00+01:00
 author: "Stefan Imhoff"
 slug: "how-to-get-your-mobile-website-fast"
-og_image: "artikel/developer-tools-network.jpg"
+og_image: "articles/developer-tools-network.jpg"
 description: "Your responsive website is slow? How to optimize the critical render path and get your mobile website fast."
 categories: ["code", "website"]
 ---
@@ -40,7 +40,7 @@ I did this by inlining critical CSS and deferring all other non-critical assets 
 CSS and JavaScript assets will block the page from rendering other content (like all the nice images you are so proud of). If you have render blocking assets the page will be white and blank until these assets are loaded (the state after this is finished is called DOMContentLoaded).
 
 <figure class="image-figure">
-  <img src="/assets/images/artikel/developer-tools-network.jpg" alt="Google Chrome Developer Tools Network Monitor">
+  <img src="/assets/images/articles/developer-tools-network.jpg" alt="Google Chrome Developer Tools Network Monitor">
   <figcaption>
     The blue line indicates DOMContentLoaded. The page will be blank until this point is reached.
   </figcaption>

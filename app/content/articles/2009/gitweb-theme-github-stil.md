@@ -5,7 +5,7 @@ description: "Mein beliebtes Theme für GitWeb zum kostenlosen Download. So sieh
 author: "Stefan Imhoff"
 slug: "gitweb-theme-github-stil"
 date: 2009-02-19T20:00:00+02:00
-og_image: "artikel/gitweb-theme-summary.png"
+og_image: "articles/gitweb-theme-summary.png"
 categories: ["download"]
 download_url: "https://github.com/kogakure/gitweb-theme/"
 download_text: "Gitweb Theme on GitHub"
@@ -26,7 +26,7 @@ Detailed instructions for installations are included in the package on GitHub.
 ## Screenshots
 
 <figure class="image-figure image-figure-border">
-  <img src="/assets/images/artikel/gitweb-theme-projects.png" alt="Projektübersicht">
+  <img src="/assets/images/articles/gitweb-theme-projects.png" alt="Projektübersicht">
   <figcaption>
   Projektübersicht/Project view
   </figcaption>
@@ -34,7 +34,7 @@ Detailed instructions for installations are included in the package on GitHub.
 
 
 <figure class="image-figure image-figure-border">
-  <img src="/assets/images/artikel/gitweb-theme-summary.png" alt="Zusammenfassung">
+  <img src="/assets/images/articles/gitweb-theme-summary.png" alt="Zusammenfassung">
   <figcaption>
   Zusammenfassung/Summary
   </figcaption>
@@ -42,7 +42,7 @@ Detailed instructions for installations are included in the package on GitHub.
 
 
 <figure class="image-figure image-figure-border">
-  <img src="/assets/images/artikel/gitweb-theme-commit.png" alt="Commit">
+  <img src="/assets/images/articles/gitweb-theme-commit.png" alt="Commit">
   <figcaption>
   Commit
   </figcaption>
@@ -50,7 +50,7 @@ Detailed instructions for installations are included in the package on GitHub.
 
 
 <figure class="image-figure image-figure-border">
-  <img src="/assets/images/artikel/gitweb-theme-commitdiff.png" alt="Commit-DIFF">
+  <img src="/assets/images/articles/gitweb-theme-commitdiff.png" alt="Commit-DIFF">
   <figcaption>
   Commit-DIFF
   </figcaption>
@@ -58,7 +58,7 @@ Detailed instructions for installations are included in the package on GitHub.
 
 
 <figure class="image-figure image-figure-border">
-  <img src="/assets/images/artikel/gitweb-theme-log.png" alt="Historie">
+  <img src="/assets/images/articles/gitweb-theme-log.png" alt="Historie">
   <figcaption>
   Historie/Log
   </figcaption>
@@ -66,7 +66,7 @@ Detailed instructions for installations are included in the package on GitHub.
 
 
 <figure class="image-figure image-figure-border">
-  <img src="/assets/images/artikel/gitweb-theme-tree.png" alt="Dateiansicht">
+  <img src="/assets/images/articles/gitweb-theme-tree.png" alt="Dateiansicht">
   <figcaption>
   Dateiansicht/Tree view
   </figcaption>
