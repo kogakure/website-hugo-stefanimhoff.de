@@ -153,9 +153,10 @@ All this task is doing is running `jekyll build` with some options. I use `app` 
 I put my `_config.yml` and other configuration files always at the root of my project. If you don’t like that, you need to update the configuration to point to the location of your `_config.yml`.
 
 
-{{% hint headline="To bundle or not to bundle" %}}
-**Be carefull**: If you didn’t install Jekyll with a Gemfile you’ll have to change the Jekyll tasks and remove the `bundle exec` part. Instead of `return cp.spawn('bundle', ['exec', 'jekyll' …` you write `return cp.spawn('jekyll', ['build', '-q' …`. All other options stay the same.
-{{% /hint %}}
+<aside class="aside-hint" role="complementary">
+  <h4>To bundle or not to bundle</h4>
+  <p><strong>Be carefull:</strong> If you didn’t install Jekyll with a Gemfile you’ll have to change the Jekyll tasks and remove the <code>bundle exec</code> part. Instead of <code>return cp.spawn('bundle', ['exec', 'jekyll' …</code> you write <code>return cp.spawn('jekyll', ['build', '-q' …</code>. All other options stay the same.</p>
+</aside>
 
 I have a second Jekyll build task `jekyll-rebuild`, which is only a wrapper for a rebuild. All it does is reloading the Browser when the build is completed.
 

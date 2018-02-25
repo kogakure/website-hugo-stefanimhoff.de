@@ -121,9 +121,11 @@ The Jekyll task is quite similar except for two things: I create my site to the 
 
 My Jekyll production config just overwrites some values as the `url`, hide future posts (`future: false`) or hide drafts (`show_drafts: false`).
 
-{{% hint headline="Speed up development with Jekyll" %}}
-To speed up generation of your site in development, you may set `limit_post: 5`, which will only generate the last five posts. Additionally I set `future: true` and `show_drafts: true` to see Drafts and Posts with a future date.
-{{% /hint %}}
+<aside class="aside-hint" role="complementary">
+  <h4>Speed up development with Jekyll</h4>
+  <p>To speed up generation of your site in development, you may set <code>limit_post: 5</code>, which will only generate the last five posts.</p>
+  <p>Additionally I set <code>future: true</code> and <code>show_drafts: true</code> to see Drafts and Posts with a future date.</p>
+</aside>
 
 <p class="code-info">gulp/config.js</p>
 

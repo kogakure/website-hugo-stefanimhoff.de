@@ -288,14 +288,15 @@ And       the mome     raths            outgrabe.</p>
 
 Wenn etwas besonders wichtiges markiert werden soll, kann dafür eine spezielle Formatierung verwendet werden:
 
-{{% hint headline="Hinweis" %}}
+<aside class="aside-hint" role="complementary">
+<h4>Hinweis</h4>
 Dies ist ein wichtiger Hinweis. Und hier ist ein [Link](/). Und etwas `code`.
-{{% /hint %}}
+</aside>
 
 ```html
-{{%/* hint headline="Hinweis" %}}
+<aside class="aside-hint" role="complementary">
 Dies ist ein wichtiger Hinweis. Und hier ist ein [Link](/). Und etwas `code`.
-{{% /hint */%}}
+</aside>
 ```
 
 ## Listen
