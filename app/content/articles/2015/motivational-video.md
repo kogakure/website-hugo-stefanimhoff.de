@@ -12,6 +12,8 @@ categories: ["film", "quote"]
 
 Last week I found a really inspirational film on YouTube, focusing on motivation. It’s a good example of creating something good out of the work of others. The film uses clips and quotes from a broad variaty of people and uses music from movies.
 
+![Why Do We Fall – Motivational Video](/assets/images/articles/2015/motivational-video/motivational-video.jpg)
+
 The film <cite>[Why Do We Fall – Motivational Video](https://www.youtube.com/watch?v=mgmVOuLgFB0)</cite> by <i>Mateusz M</i> is quite successfull and was watched until now over **30 million** times.
 
 The one thing though, which I didn’t like was how the sources where quoted. Just a plain comma-seperated list of people and music out of context, missing where the quote was from or who said it foremost. This post has the aim to fix this.

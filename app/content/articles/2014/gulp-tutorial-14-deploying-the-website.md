@@ -15,7 +15,7 @@ download_text: "View Source on GitHub"
 This is the 14th of my series *Introduction to Gulp.js*. Today I will write a task to sync the files of my Jekyll site to my webserver.
 
 <figure class="image-figure attribution">
-  <img src="/assets/images/articles/gulp-tutorial-14.jpg" alt="A fluffy bunny with a Big Gulp">
+  <img src="/assets/images/articles/2014/gulp-tutorial-14-deploying-the-website/gulp-tutorial-14.jpg" alt="A fluffy bunny with a Big Gulp">
   <figcaption>
     Jayanta Debnath, <a href="https://www.flickr.com/photos/jkdsphotography/13786076413" target="_blank" rel="nofollow" rel="noopener">BIG GULP!</a>
   </figcaption>

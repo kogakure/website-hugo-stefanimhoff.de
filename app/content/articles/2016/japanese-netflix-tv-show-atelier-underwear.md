@@ -12,7 +12,7 @@ categories: ["recommendation", "film"]
 From time to time – but not very often – a TV Show gets released, which really surprises me. This happened last time in 2007 with *Pushing Daisies*, where I loved everything: the story, the actors, the sets, every dialog. And now it happened again. I have a new favorite TV Show: [Atelier](http://www.imdb.com/title/tt4790548/) aka *Underwear*.
 
 <figure class="image-figure">
-  <img src="/assets/images/articles/netflix-atelier-underwear.jpg" alt="Original Netflix TV Show: Atelier aka Underwear">
+  <img src="/assets/images/articles/2016/japanese-netflix-tv-show-atelier-underwear/netflix-atelier-underwear.jpg" alt="Original Netflix TV Show: Atelier aka Underwear">
   <figcaption>
     <em>Mao Daichi</em> and <em>Mirei Kiritani</em> in Netflix’s <cite>Atelier</cite>
   </figcaption>

@@ -15,7 +15,7 @@ Bei Wishingline gibt es zwei schöne Folder-Icons von [Rails und Lighttpd](https
 
 <figure class="image-figure image-figure-noborder">
   <a href="/downloads/django-osx-folder.zip">
-    <img src="/assets/images/articles/django-osx-folders.png" alt="Django Folder">
+    <img src="/assets/images/articles/2007/django-folder-mac-osx/django-osx-folders.png" alt="Django Folder">
   </a>
 </figure>
 

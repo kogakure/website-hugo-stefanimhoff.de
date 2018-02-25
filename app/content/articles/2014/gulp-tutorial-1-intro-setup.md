@@ -15,7 +15,7 @@ download_text: "View Source on GitHub"
 My website is running [Jekyll](https://jekyllrb.com/) now since the beginning of 2014. But I wasn’t quite happy with my build and development process. I started out with Rake tasks and chose later [Grunt.js](https://gruntjs.com/) as my build system, but parts of the process where left in Ruby. I used [Compass](http://compass-style.org/) a lot and [Jekyll Assets](http://ixti.net/jekyll-assets/) was handling my versioning. But Grunt.js and the Jekyll Asset Pipeline didn’t play well together. Then a new solution came along: [Gulp.js](https://gulpjs.com/).
 
 <figure class="image-figure">
-  <img src="/assets/images/articles/gulp-tutorial-1.png" alt="Gulp.js Logo">
+  <img src="/assets/images/articles/2014/gulp-tutorial-1-intro-setup/gulp-tutorial-1.png" alt="Gulp.js Logo">
 </figure>
 
 

@@ -15,7 +15,7 @@ Seit über einem Jahr benutze ich jetzt das [MoinMoin Wiki](https://moinmo.in/) 
 
 <figure class="image-figure">
   <a href="/downloads/moinmoin-kaijin-theme.zip">
-    <img src="/assets/images/articles/moinmoin-kaijin.png" alt="MoinMoin Theme Kaijin">
+    <img src="/assets/images/articles/2008/theme-kaijin-moinmoin-wiki/moinmoin-kaijin.png" alt="MoinMoin Theme Kaijin">
   </a>
   <figcaption>
   MoinMoin Theme <cite>Kaijin</cite>

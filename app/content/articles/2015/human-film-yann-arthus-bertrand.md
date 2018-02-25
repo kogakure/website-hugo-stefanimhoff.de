@@ -13,7 +13,7 @@ categories: ["recommendation", "film"]
 Yann Arthus-Bertrand, the filmmaker of [Home](https://www.youtube.com/watch?v=jqxENMKaeCU), artist, photographer and specialist for aerial photography worked 3 years on his new movie: [Human](http://www.human-themovie.org/).
 
 <figure class="image-figure">
-  <img src="/assets/images/articles/human.jpg" alt="Human">
+  <img src="/assets/images/articles/2015/human-film-yann-arthus-bertrand/human.jpg" alt="Human">
 </figure>
 
 He collected real-life stories from more than **2000 women and men** in **60 countries**. Stories about topics, which matter to us all: poverty, war, homophobia, the future of the planet, love and happiness. It’s a beautiful mix of moving stories, impressive aerial images and ground photography.

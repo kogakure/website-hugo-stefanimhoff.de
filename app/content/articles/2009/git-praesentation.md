@@ -13,7 +13,7 @@ Auf dem 4. Treffen der Django-UserGroup Hamburg habe ich eine Präsentation übe
 
 <figure class="image-figure">
   <a href="http://www.slideshare.net/kogakure/sei-kein-bldmann-und-nimm-git-1830449">
-    <img src="/assets/images/articles/git-praesentation.jpg" alt="Sei (k)ein Blödmann und nimm Git!">
+    <img src="/assets/images/articles/2009/git-praesentation/git-praesentation.jpg" alt="Sei (k)ein Blödmann und nimm Git!">
   </a>
   <figcaption>
   Präsentation: <cite>Sei (k)ein Blödmann und nimm Git!</cite>

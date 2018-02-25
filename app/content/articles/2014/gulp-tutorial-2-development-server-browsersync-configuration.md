@@ -15,7 +15,7 @@ download_text: "View Source on GitHub"
 This is the 2nd part of my series *Introduction to Gulp.js*. Today I will write the first few Gulp.js tasks and set up a development server with BrowserSync. And I will start to write a configuration file.
 
 <figure class="image-figure attribution attribution-caption">
-  <img src="/assets/images/articles/gulp-tutorial-2.jpg" alt="How to create your own flavour. Gulp machine.">
+  <img src="/assets/images/articles/2014/gulp-tutorial-2-development-server-browsersync-configuration/gulp-tutorial-2.jpg" alt="How to create your own flavour. Gulp machine.">
   <figcaption>
    Create your own flavor (Jordan Dawe, <a href="https://www.flickr.com/photos/freedryk/477742788">2007_04_24__20_31_27</a>)
   </figcaption>
