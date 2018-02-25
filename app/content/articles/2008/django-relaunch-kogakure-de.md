@@ -53,7 +53,7 @@ Django unterstützt eine Vielzahl an Sprachen und bietet eine sehr gute Lokalisi
 Die Seite kogakure.de lief vorher mit [ExpressionEngine](https://expressionengine.com), einem Publishing-Tool, das ich auch weiterhin sehr empfehlen kann.
 
 <blockquote lang="de" class="pullquote">
-<p>Plugins bieten für Hacker eine besonders gute Angriffsfläche.</p>
+<p>Plugins bieten für Hacker eine besonders gute&nbsp;Angriffsfläche.</p>
 </blockquote>
 
 Doch jedes CMS (Content-Management-System) hat seine Begrenzungen, mit denen man leben muss oder sich mühsam nach Möglichkeiten umsehen muss, das System zu erweitern (Plugins, Extensions, Module). Da die meisten Erweiterungen einfach oben auf das CMS draufgesetzt werden, leidet darunter auch die Performance. So kann man nach dem Installieren eines Dutzend von [WordPress](https://wordpress.org/ "WordPress › Blog Tool and Weblog Platform")-Plugins leicht unzählige parallele Datenbankanfragen haben. Bei Django passiert so etwas nicht. Dies hat auch noch andere Nachteile: Man benutzt die Plugins, weiß aber meist nicht wie sie funktionieren oder ob sie überhaupt gut programmiert sind. Plugins bieten für Hacker eine besonders gute Angriffsfläche.

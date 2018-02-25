@@ -7,13 +7,22 @@ blockquote.pullquote {
   line-height: 1;
   text-align: center;
 
-  p:first-child::before {
+  & p {
+    margin-bottom: 0;
+  }
+
+  & p:first-child::before {
     content: open-quote;
   }
 
-  p:last-child::after {
+  & p:last-child::after {
     content: close-quote;
   }
+}
+
+blockquote.pullquote::after {
+  content: attr(data-quote);
+  font-size: 16px;
 }
 
 blockquote.pullquote[lang|='de'] {

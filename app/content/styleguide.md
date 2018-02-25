@@ -200,11 +200,11 @@ Zusätzlich dazu kann auch das Element `cite` verwendet werden, um ein Werk zu m
 Manchmal möchte man einen kurzen Zitatblock verwenden, der nicht im Text vorkommt, oder besonders prägnant ist und daher zentriert stehen soll. Wenn ein Attribute `lang` mitgegeben wird, werden automatisch die korrekten Zitatzeichen verwendet (für Deutsch, Englisch und Japanisch).
 
 <blockquote lang="en" class="pullquote">
-<p>No time for pessimism.</p>
+<p>No time for&nbsp;pessimism.</p>
 </blockquote>
 
 <blockquote lang="de" class="pullquote">
-<p>Keine Zeit für Pessimismus.</p>
+<p>Keine Zeit für&nbsp;Pessimismus.</p>
 </blockquote>
 
 <blockquote lang="ja" class="pullquote">
@@ -213,7 +213,7 @@ Manchmal möchte man einen kurzen Zitatblock verwenden, der nicht im Text vorkom
 
 ```html
 <blockquote lang="en" class="pullquote">
-<p>No time for pessimism.</p>
+<p>No time for&nbsp;pessimism.</p>
 </blockquote>
 ```
 
