@@ -26,12 +26,8 @@ And this is a good thing, as it allows us to extend our own minds in directions 
 
 The most precious thing you own is not money or time. **It is attention**. We all have (more or less) the same amount of hours on this planet. But what we do with it, what we achieve is up to us. We decide  where we point our attention to. But do we really?
 
-<blockquote>
-  <p>How we spend our days is, of course, how we spend our lives.</p>
-  <footer>
-    <strong>Annie Dillard</strong>
-    <cite>The Writing Life</cite>
-  </footer>
+<blockquote lang="en" class="pullquote" data-quote="Annie Dillard – The Writing Life">
+  <p>How we spend our days is, of course, how we spend our&nbsp;lives.</p>
 </blockquote>
 
 

@@ -45,7 +45,7 @@ Zur Namensfindung von Git (engl. <em>Blödmann, Depp, Idiot</em>) erzählt Linus
 Gibt man zu wenigen Personen Zugriff auf sein Repository, gibt es auch wenig Entwicklung. Gibt man zu vielen Zugriff entsteht nur Müll.
 
 <blockquote lang="de" class="pullquote">
-<p>Die meisten da draußen sind Schwachköpfe, und ich vertraue ihnen nicht!</p>
+<p>Die meisten da draußen sind Schwachköpfe, und ich vertraue ihnen&nbsp;nicht!</p>
 </blockquote>
 
 Linus bringt es klar auf den Punkt: <q>Die meisten da draußen sind Schwachköpfe, und ich vertraue ihnen nicht!</q>. Trotzdem kann jeder sich eine Kopie seines Projektes ziehen, daran arbeiten und es verbessern.
