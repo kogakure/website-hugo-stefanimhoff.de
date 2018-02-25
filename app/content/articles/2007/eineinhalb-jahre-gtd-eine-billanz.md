@@ -5,14 +5,14 @@ description: "Ich arbeite seit 1,5 Jahren mit GTD (Getting Things Done): Eine Ei
 author: "Stefan Imhoff"
 slug: "eineinhalb-jahre-gtd-eine-billanz"
 date: 2007-11-24T01:15:00+02:00
-og_image: "artikel/gtd-vorher.jpg"
+og_image: "articles/gtd-vorher.jpg"
 categories: ["productivity"]
 ---
 
 Seit genau eineinhalb Jahren benutze ich jetzt die Prinzipien des *GTD* (<em>Getting Things Done</em>®), nach dem gleichnamigen Buch von *David Allen* um meine alltäglichen Aufgaben zu organisieren.
 
 <figure class="image-figure">
-  <img src="/assets/images/artikel/gtd-vorher.jpg" alt="Mein Schreibtisch vorher" title="So sah die Inbox aus, bevor ich alle losen Enden sortiert hatte">
+  <img src="/assets/images/articles/gtd-vorher.jpg" alt="Mein Schreibtisch vorher" title="So sah die Inbox aus, bevor ich alle losen Enden sortiert hatte">
   <figcaption>
   So sah die Inbox aus, bevor ich alle losen Enden sortiert hatte
   </figcaption>
@@ -44,7 +44,7 @@ Aufgaben kann man auch delegieren oder bestimmten Zeitpunkten zuweisen. Wenn man
 ## GTD im Alltag
 
 <figure class="image-figure">
-  <img src="/assets/images/artikel/gtd-nachher.jpg" alt="Mein Schreibtisch danach" title="So sah die Inbox aus, nachdem ich alle losen Enden sortiert hatte">
+  <img src="/assets/images/articles/gtd-nachher.jpg" alt="Mein Schreibtisch danach" title="So sah die Inbox aus, nachdem ich alle losen Enden sortiert hatte">
   <figcaption>
   So sah die Inbox aus, nachdem ich alle losen Enden sortiert hatte
   </figcaption>

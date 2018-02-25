@@ -5,14 +5,14 @@ description: "I relaunched my martial arts website kogakure.de with a responsive
 date: 2015-04-07T22:00:00+01:00
 author: "Stefan Imhoff"
 slug: "responsive-relaunch-of-my-martial-arts-website"
-og_image: "artikel/kogakure-de-relaunch.jpg"
+og_image: "articles/kogakure-de-relaunch.jpg"
 categories: ["design", "code", "website"]
 ---
 
 After 62 days of work, I relaunched today my martial arts website [kogakure.de](http://kogakure.de/) in a brand new, mobile optimized design and with a complete rewritten code base. And I have still some time left until the end of April, when Google will start to punish websites, which are not mobile-optimized.
 
 <figure class="image-figure">
-  <img src="/assets/images/artikel/kogakure-de-relaunch.jpg" alt="kogakure.de v6">
+  <img src="/assets/images/articles/kogakure-de-relaunch.jpg" alt="kogakure.de v6">
   <figcaption>
     kogakure.de v6
   </figcaption>
@@ -30,7 +30,7 @@ And in the same manner, I minimize, combine, squash, revision and optimize every
 To give some context, kogakure.de is my oldest website, I started it in **1999**. Back then the design was dark, ugly and with an awful typography. Originally it was intended to collect all knowledge I found about Ninja and Ninjutsu, but it became quickly quite popular.
 
 <figure class="image-figure">
-  <img src="/assets/images/artikel/kogakure-de-v1.jpg" alt="kogakure.de v1">
+  <img src="/assets/images/articles/kogakure-de-v1.jpg" alt="kogakure.de v1">
   <figcaption>
     kogakure.de v1
   </figcaption>
@@ -40,7 +40,7 @@ To give some context, kogakure.de is my oldest website, I started it in **1999**
 In *January 2002* I created the 2nd version of my website with some **PHP**, a table-based layout with tiny fonts, a fancy JavaScript navigation and Flash.
 
 <figure class="image-figure">
-  <img src="/assets/images/artikel/kogakure-de-v2.jpg" alt="kogakure.de v2">
+  <img src="/assets/images/articles/kogakure-de-v2.jpg" alt="kogakure.de v2">
   <figcaption>
     kogakure.de v2
   </figcaption>
@@ -50,7 +50,7 @@ In *January 2002* I created the 2nd version of my website with some **PHP**, a t
 In *September 2004* I launched a new design, for the first time with a bamboo as design element and a white design. My website was mentioned in a popular science print magazine (<cite>[P.M. Magazine](https://www.pm-magazin.de/)</cite>), which increased the visits about 8 times the regular visits.
 
 <figure class="image-figure">
-  <img src="/assets/images/artikel/kogakure-de-v3.jpg" alt="kogakure.de v3">
+  <img src="/assets/images/articles/kogakure-de-v3.jpg" alt="kogakure.de v3">
   <figcaption>
     kogakure.de v3
   </figcaption>
@@ -60,7 +60,7 @@ In *September 2004* I launched a new design, for the first time with a bamboo as
 In *April 2006* I launched the 4th edition of kogakure.de, running on **ExpressionEngine**. I created a new version of my bamboo design in Adobe Illustrator. The same year my website became even more popular, when German television broadcasters asked me to support them with information for their documentaries (<cite>Welt der Wunder</cite>, <cite>Galileo</cite>). After the broadcast of these documentaries my visitor numbers exploded.
 
 <figure class="image-figure">
-  <img src="/assets/images/artikel/kogakure-de-v4.jpg" alt="kogakure.de v4">
+  <img src="/assets/images/articles/kogakure-de-v4.jpg" alt="kogakure.de v4">
   <figcaption>
     kogakure.de v4
   </figcaption>
@@ -70,7 +70,7 @@ In *April 2006* I launched the 4th edition of kogakure.de, running on **Expressi
 In *April 2008* I relaunched the 5th edition of my website with **Django** and refreshed the design a little bit.
 
 <figure class="image-figure">
-  <img src="/assets/images/artikel/kogakure-de-v5.jpg" alt="kogakure.de v5">
+  <img src="/assets/images/articles/kogakure-de-v5.jpg" alt="kogakure.de v5">
   <figcaption>
     kogakure.de v5
   </figcaption>
@@ -89,7 +89,7 @@ I always start with Typography and selected a modular scale and  a typeface very
 More and more displays have a high pixel density now, which is the reason I decided to use as much vector graphics as possible. I recently read and heard a lot about SVG and decided to use SVG as my vector technique on kogakure.de. SVG is more capable and future-proof compared to vector fonts.
 
 <figure class="image-figure">
-  <img src="/assets/images/artikel/kogakure-de-bamboo-affinity-designer.jpg" alt="My bamboo design in Affinity Designer">
+  <img src="/assets/images/articles/kogakure-de-bamboo-affinity-designer.jpg" alt="My bamboo design in Affinity Designer">
   <figcaption>
     My bamboo design in Affinity Designer
   </figcaption>
@@ -123,7 +123,7 @@ Grid-on-Demand Systems are far more flexible. They need a preprocessor to run an
 I used for kogakure.de [Singularity](https://github.com/at-import/Singularity), which I used before for this website. I like it in particular because it’s the most flexible system I’ve ever used. You can create every Grid imaginable with it.
 
 <figure class="image-figure">
-  <img src="/assets/images/artikel/kogakure-de-grids.jpg" alt="Grids of kogakure.de">
+  <img src="/assets/images/articles/kogakure-de-grids.jpg" alt="Grids of kogakure.de">
   <figcaption>
     4 different grids depending on the viewport size
   </figcaption>

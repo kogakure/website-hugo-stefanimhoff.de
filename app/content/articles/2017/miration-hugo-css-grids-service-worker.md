@@ -5,13 +5,13 @@ date: 2017-08-14T12:00:00+02:00
 description: ""
 author: "Stefan Imhoff"
 language: "en"
-og_image: "artikel/kogakure-2017.jpg"
+og_image: "articles/kogakure-2017.jpg"
 categories: ["code", "design", "website"]
 ---
 
 4 month of work, 49 hours of coding, plus more hours for designing a new homepage, creating a new OTF font and polishing up some of my old 3D models. But now my martial arts website kogakure.de is online.
 
-[![New Website kogakure.de 2017](/assets/images/artikel/kogakure-2017.jpg)](https://kogakure.de)
+[![New Website kogakure.de 2017](/assets/images/articles/kogakure-2017.jpg)](https://kogakure.de)
 
 The old website still used Jekyll, and it took a long time to generate and deploy my website. For the same reasons I migrated this website to [Hugo] – which are speed and getting rid of Ruby – I decided to do the same for [kogakure.de].
 
@@ -34,7 +34,7 @@ Mozilla Firefox CSS Grid Inspector
 
 Special thanks to [Mozilla] for their fantastic [Firefox] browser. The FireFox *Nightly* Edition includes already a **new** *CSS Grid Inspector*, which is **awesome**. And it was really needed, my homepage uses **12 different grids**. Yes, you read correctly. 12. CSS Grid Layout *can* be used for the overall page layout, but developers are encouraged to also use it on component basis.
 
-![My grids inspected with the Mozilla Firefox CSS Grid Inspector](/assets/images/artikel/css-grid-inspector.jpg "My grids inspected with the Mozilla Firefox CSS Grid Inspector")
+![My grids inspected with the Mozilla Firefox CSS Grid Inspector](/assets/images/articles/css-grid-inspector.jpg "My grids inspected with the Mozilla Firefox CSS Grid Inspector")
 
 Hosting on Netlify
 ------------------

@@ -5,7 +5,7 @@ slug: "widerlegung-unwissenschaftliche-dokumentation"
 author: "Stefan Imhoff"
 date: 2014-05-09T18:00:00+02:00
 description: "Eine sehr interessante Dokumentation, die 'Ancient Aliens', eine unwissenschaftliche Dokumentationsreihe, widerlegt."
-og_image: "artikel/pakals-grabplatte.jpg"
+og_image: "articles/pakals-grabplatte.jpg"
 categories: ["film", "recommendation"]
 ---
 
@@ -16,7 +16,7 @@ Ob es sich dabei um historische Bauten, Kulturen, evolutionsbiologische Erkenntn
 Manche Personen, wie z. B. Erich von Däniken, haben ihr ganzes Leben solchen wirren Theorien gewidmet. Anstatt eine Sache mit wissenschaftlicher Genauigkeit zu untersuchen und zu hinterfragen, werden Theorien über völlig unglaubwürdige Vermutungen und Geschichten erdacht, Parallelen zwischen Kulturen  oder über Zeiten und Räume hinweg gezogen.
 
 <figure class="image-figure attribution">
-  <img src="/assets/images/artikel/pakals-grabplatte.jpg" alt="Pakal's Grabplatte">
+  <img src="/assets/images/articles/pakals-grabplatte.jpg" alt="Pakal's Grabplatte">
   <figcaption>
   Kein antiker Raumfahrer, sondern der Maya-König K'inich Janaab' Pakal im Augenblick seines Todes. Im Hintergrund der Weltenbaum und die Unterwelt unter ihm. (malavodao, <a href="https://www.flickr.com/photos/malavoda/518538543">Pakal's Grabplatte</a>)
   </figcaption>

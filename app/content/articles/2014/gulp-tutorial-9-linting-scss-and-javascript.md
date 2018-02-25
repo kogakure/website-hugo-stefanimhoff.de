@@ -4,7 +4,7 @@ title: "Introduction to Gulp.js 9: Checking the Syntax of SCSS and JavaScript"
 date: 2014-10-26T08:10:00+02:00
 author: "Stefan Imhoff"
 slug: "gulp-tutorial-9-linting-scss-and-javascript"
-og_image: "artikel/gulp-tutorial-9.jpg"
+og_image: "articles/gulp-tutorial-9.jpg"
 description: "The ultimative tutorial and guide for Gulp.js: How to check the syntax of SCSS and JavaScript files."
 series: ["gulp"]
 categories: ["code"]
@@ -15,7 +15,7 @@ download_text: "View Source on GitHub"
 This is the 9th part of my series *Introduction to Gulp.js*. Today I will use Gulp.js to automatically check my SCSS and JavaScript files for syntax errors and warnings.
 
 <figure class="image-figure attribution">
-  <img src="/assets/images/artikel/gulp-tutorial-9.jpg" alt="Girl drinking a Big Gulp">
+  <img src="/assets/images/articles/gulp-tutorial-9.jpg" alt="Girl drinking a Big Gulp">
   <figcaption>
   Shelly Munkberg, <a href="https://www.flickr.com/photos/zingersb/501372181" target="_blank" rel="nofollow" rel="noopener">5.16.07</a>
   </figcaption>

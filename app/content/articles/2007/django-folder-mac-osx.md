@@ -5,7 +5,7 @@ description: "Wer viel unter Mac OS X mit Django arbeitet hat sicherlich auch Or
 author: "Stefan Imhoff"
 slug: "django-folder-mac-osx"
 date: 2007-12-18T22:10:00+02:00
-og_image: "artikel/django-osx-folders.png"
+og_image: "articles/django-osx-folders.png"
 categories: ["download"]
 download_url: "/downloads/django-osx-folder.zip"
 download_text: "Django-Folder (612 KB)"
@@ -15,7 +15,7 @@ Bei Wishingline gibt es zwei schöne Folder-Icons von [Rails und Lighttpd](https
 
 <figure class="image-figure image-figure-noborder">
   <a href="/downloads/django-osx-folder.zip">
-    <img src="/assets/images/artikel/django-osx-folders.png" alt="Django Folder">
+    <img src="/assets/images/articles/django-osx-folders.png" alt="Django Folder">
   </a>
 </figure>
 

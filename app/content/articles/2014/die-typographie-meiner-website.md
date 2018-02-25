@@ -4,7 +4,7 @@ title: "Die Typographie meiner Website"
 author: "Stefan Imhoff"
 slug: "die-typographie-meiner-website"
 date: 2014-06-19T10:30:00+02:00
-og_image: "artikel/elements-of-typographic-style.jpg"
+og_image: "articles/elements-of-typographic-style.jpg"
 description: "Über die Typographie meiner neuen Website: Skala, Schriftart, vertikaler Rhythmus, Schriftstärke, Schriftgröße und Satzbreite."
 categories: ["design", "code", "website", "typography"]
 ---
@@ -18,7 +18,7 @@ Einfache Dinge wie Lesbarkeit oder Kontrast entscheiden darüber, ob die Botscha
 Die richtige Wahl von Schriftart, Schriftgröße, Gewicht, Satzspiegel, Satzbreite, Zeilendurchschuss, Sperrsatz oder vieler anderer Dinge wirken unbewusst auf die Leser und transportieren so die Aussage. Die richtige Typographie kann eine Botschaft unterstützen und verstärken, die falsche eine Aussage sogar bedeutungslos oder lächerlich werden lassen.
 
 <figure class="image-figure">
-  <img src="/assets/images/artikel/elements-of-typographic-style.jpg" alt="The Elements of Typographic Style">
+  <img src="/assets/images/articles/elements-of-typographic-style.jpg" alt="The Elements of Typographic Style">
   <figcaption>
   <cite>The Elements of Typographic Style</cite> von Robert Bringhurst
   </figcaption>

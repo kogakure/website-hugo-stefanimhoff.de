@@ -4,7 +4,7 @@ title: "Das Cover-Foto auf meiner Website"
 author: "Stefan Imhoff"
 slug: "cover-foto-website"
 date: 2014-05-30T10:00:00+02:00
-og_image: "artikel/josefina-bokeh.jpg"
+og_image: "articles/josefina-bokeh.jpg"
 description: "Über die Wahl meines Fotostils bei meiner neuen Website und wie ich herausfand, dass die Technik eines unscharfen Hintergrunds in der Fachwelt 'Bokeh' genannt wird. Außerdem zeige ich, wie ich mein Foto auf der Website technisch implementiere."
 categories: ["design", "website"]
 ---
@@ -26,7 +26,7 @@ Jetzt musste ich nur noch herausfinden, wie denn der Fachbegriff für so ein Fot
 Doch es gibt tatsächlich einen Begriff für dieses Eigenschaft: [Bokeh](https://de.wikipedia.org/wiki/Bokeh).
 
 <figure class="image-figure attribution">
-  <img src="/assets/images/artikel/josefina-bokeh.jpg" alt="Josefina with Bokeh">
+  <img src="/assets/images/articles/josefina-bokeh.jpg" alt="Josefina with Bokeh">
   <figcaption>
   Carlos Luis Camacho, <a href="https://www.flickr.com/photos/paseodelsur/51805888/" target="_blank" rel="nofollow" rel="noopener">Josefina with Bokeh</a>
   </figcaption>

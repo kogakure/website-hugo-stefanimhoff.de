@@ -5,7 +5,7 @@ slug: "webstandards-magazin-django"
 date: 2010-09-21T09:25:00+02:00
 author: "Stefan Imhoff"
 description: "Ich durfte einen mehrseitigen Artikel über Django im  Webstandards-Magazin schreiben. Wie ich darüber schreibe, was ich an Django schätze und warum ich es einsetze."
-og_image: "artikel/webstandards-magazin-django.jpg"
+og_image: "articles/webstandards-magazin-django.jpg"
 categories: ["publication"]
 ---
 
@@ -13,7 +13,7 @@ Da lag es im Briefkasten: mein Belegexemplar der aktuellen Ausgabe 07/2010 des W
 
 <figure class="image-figure">
   <a href="https://www.screengui.de/">
-    <img src="/assets/images/artikel/webstandards-magazin-django.jpg" alt="Webstandards-Magazin, Ausgabe 07/2010, Tools">
+    <img src="/assets/images/articles/webstandards-magazin-django.jpg" alt="Webstandards-Magazin, Ausgabe 07/2010, Tools">
   </a>
   <figcaption>
   Mein Artikel über Django im  <cite>Webstandards-Magazin</cite>, Ausgabe 07/2010, Tools

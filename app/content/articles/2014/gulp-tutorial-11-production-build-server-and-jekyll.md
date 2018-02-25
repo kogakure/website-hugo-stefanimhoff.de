@@ -4,7 +4,7 @@ title: "Introduction to Gulp.js 11: Production Build, Server and Jekyll"
 date: 2014-10-28T07:30:00+02:00
 author: "Stefan Imhoff"
 slug: "gulp-tutorial-11-production-build-server-and-jekyll"
-og_image: "artikel/gulp-tutorial-11.jpg"
+og_image: "articles/gulp-tutorial-11.jpg"
 description: "The ultimative tutorial and guide for Gulp.js: How to write the production task for Jekyll and BrowserSync."
 series: ["gulp"]
 categories: ["code"]
@@ -15,7 +15,7 @@ download_text: "View Source on GitHub"
 This is the 11th part of my series *Introduction to Gulp.js*. Today I will start writing the production build task, set up a server to view the production code and build the production site with Jekyll.
 
 <figure class="image-figure attribution">
-  <img src="/assets/images/artikel/gulp-tutorial-11.jpg" alt="A Girl looking on a Double Gulp">
+  <img src="/assets/images/articles/gulp-tutorial-11.jpg" alt="A Girl looking on a Double Gulp">
   <figcaption>
   Hannah, <a href="https://www.flickr.com/photos/girlaphid/4570474834" target="_blank" rel="nofollow" rel="noopener">118/365</a>
   </figcaption>

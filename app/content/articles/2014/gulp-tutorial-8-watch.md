@@ -4,7 +4,7 @@ title: "Introduction to Gulp.js 8: Watch for Changes"
 date: 2014-10-25T10:00:00+02:00
 author: "Stefan Imhoff"
 slug: "gulp-tutorial-8-watch"
-og_image: "artikel/gulp-tutorial-8.jpg"
+og_image: "articles/gulp-tutorial-8.jpg"
 description: "The ultimative tutorial and guide for Gulp.js: How to set up a watch task, which triggers other tasks on file changes."
 series: ["gulp"]
 categories: ["code"]
@@ -15,7 +15,7 @@ download_text: "View Source on GitHub"
 This is the 8th part of my series *Introduction to Gulp.js*. Today I will set up watch tasks for many different files with Gulp.js.
 
 <figure class="image-figure attribution attribution-caption">
-  <img src="/assets/images/artikel/gulp-tutorial-8.jpg" alt="Funtime!">
+  <img src="/assets/images/articles/gulp-tutorial-8.jpg" alt="Funtime!">
   <figcaption>
   Not even <strong>Double Gulp</strong> helped to have a Funtime (Erin Nekervis, <a href="https://www.flickr.com/photos/theeerin/4701912791">Funtime!</a>)
   </figcaption>

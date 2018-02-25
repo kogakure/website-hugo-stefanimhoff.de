@@ -5,7 +5,7 @@ description: "Buch-Empfehlung für alle, die an Schrift und Zeichen interessiert
 author: "Stefan Imhoff"
 slug: "buchtipp-decodeunicode"
 date: 2011-06-02T18:38:00+02:00
-og_image: "artikel/decodeunicode.jpg"
+og_image: "articles/decodeunicode.jpg"
 categories: ["recommendation", "book", "typography"]
 ---
 
@@ -13,7 +13,7 @@ Durch Zufall bin ich kürzlich auf ein Buch gestoßen, dass für alle an Typogra
 
 <figure class="image-figure">
   <a href="http://www.amazon.de/gp/product/3874398137/ref=as_li_ss_tl?ie=UTF8&amp;tag=kogakurede-21&amp;linkCode=as2&amp;camp=1638&amp;creative=19454&amp;creativeASIN=3874398137">
-    <img src="/assets/images/artikel/decodeunicode.jpg" alt="Decodeunicode: Die Schriftzeichen der Welt">
+    <img src="/assets/images/articles/decodeunicode.jpg" alt="Decodeunicode: Die Schriftzeichen der Welt">
   </a>
   <figcaption>
   <cite>decodeunicode – Die Schriftzeichen der Welt</cite>
