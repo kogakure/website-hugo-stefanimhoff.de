@@ -6,10 +6,8 @@ author: "Stefan Imhoff"
 slug: "gulp-tutorial-11-production-build-server-and-jekyll"
 og_image: "artikel/gulp-tutorial-11.jpg"
 description: "The ultimative tutorial and guide for Gulp.js: How to write the production task for Jekyll and BrowserSync."
-series:
-- gulp
-categories:
-- code
+series: ["gulp"]
+categories: ["code"]
 download_url: "https://github.com/kogakure/gulp-tutorial"
 download_text: "View Source on GitHub"
 ---

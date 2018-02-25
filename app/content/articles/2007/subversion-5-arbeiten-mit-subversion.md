@@ -5,10 +5,8 @@ description: "Ein umfangreiches Tutorial für Subversion: Grundlegende Arbeitssc
 author: "Stefan Imhoff"
 slug: "subversion-5-arbeiten-mit-subversion"
 date: 2007-09-04T18:45:00+02:00
-series:
-- subversion
-categories:
-- vcs
+series: ["subversion"]
+categories: ["vcs"]
 ---
 
 Die eigentliche Arbeit mit Subversion ist relativ leicht erklärt und gelernt. Von größeren Aktionen wie `merge` mal abgesehen.

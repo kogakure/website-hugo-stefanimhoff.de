@@ -1,14 +1,12 @@
 ---
 language: "de"
 title: "Bei der Macht von Vim – ich habe die Kraft"
-description: "Wie ich zum überzeugten Vim-Jünger wurde, warum Vim so ein genialer Editor ist und wie man am besten vorgeht, wenn man Vim lernen möchte."
-author: "Stefan Imhoff"
 slug: "vim"
 date: 2010-10-29T19:00:00+02:00
+author: "Stefan Imhoff"
+description: "Wie ich zum überzeugten Vim-Jünger wurde, warum Vim so ein genialer Editor ist und wie man am besten vorgeht, wenn man Vim lernen möchte."
 og_image: "artikel/vim-vintage.jpg"
-categories:
-- code
-- recommendation
+categories: ["code", "recommendation"]
 ---
 
 So ähnlich lautete der Spruch des Superhelden *He-Man* aus den 80er Jahren, kurz bevor er seine Superkräfte bekam. Und ungefähr genauso lange gibt es auch Vim: nämlich 22 Jahre. Und das ältere Vi, auf dem Vim basiert, gibt es sogar schon länger als ich lebe. Wenn also ein *simpler* Texteditor seit so langer Zeit existiert und solche *Kraft* verleiht, muss einfach etwas Besonderes daran sein.

@@ -6,9 +6,7 @@ author: "Stefan Imhoff"
 slug: "traditionelle-japanische-farben-photoshop-illustrator"
 date: 2007-12-08T21:05:00+02:00
 og_image: "artikel/japanische-farben.png"
-categories:
-- design
-- download
+categories: ["design", "download"]
 download_url: "/downloads/traditional-colors-of-japan-rgb.zip"
 download_text: "Farbpalette: Traditionelle Japanische Farben (5 KB)"
 ---

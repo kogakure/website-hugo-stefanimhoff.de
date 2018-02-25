@@ -5,8 +5,7 @@ description: "Mein persönlicher Jahresrückblick für 2007: ExpressionEngine, S
 author: "Stefan Imhoff"
 slug: "das-war-mein-2007-eine-jahresbilanz"
 date: 2007-12-24T14:00:00+02:00
-categories:
-- personal
+categories: ["personal"]
 ---
 
 Zum Jahresende will ich dieses Mal Googles Webprotokoll als Erinnerungshilfe hinzuziehen. Dieser Dienst von Google ermöglicht es die eigenen Suchbegriffe anzusehen.

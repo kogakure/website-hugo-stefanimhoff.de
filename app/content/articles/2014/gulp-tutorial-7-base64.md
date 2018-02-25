@@ -6,10 +6,8 @@ author: "Stefan Imhoff"
 slug: "gulp-tutorial-7-base64"
 og_image: "artikel/gulp-tutorial-7.jpg"
 description: "The ultimative tutorial and guide for Gulp.js: How to replace small images with base64 encoded images."
-series:
-- gulp
-categories:
-- code
+series: ["gulp"]
+categories: ["code"]
 download_url: "https://github.com/kogakure/gulp-tutorial"
 download_text: "View Source on GitHub"
 ---

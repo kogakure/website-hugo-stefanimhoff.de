@@ -5,10 +5,8 @@ description: "Ein umfangreiches Tutorial für Subversion: Was ist Versionskontro
 author: "Stefan Imhoff"
 slug: "subversion-1-theorie-und-funktionsweise"
 date: 2007-05-28T18:04:00+02:00
-series:
-- subversion
-categories:
-- vcs
+series: ["subversion"]
+categories: ["vcs"]
 ---
 
 Dieser erste Teil der Reihe *Subversion* beschäftigt sich mit der nötigen Theorie und Funktionsweise von Subversion.

@@ -6,8 +6,7 @@ author: "Stefan Imhoff"
 slug: "blender-folder-mac-osx"
 date: 2008-01-05T13:00:00+02:00
 og_image: "artikel/blender-osx-folders.png"
-categories:
-- download
+categories: ["download"]
 download_url: "/downloads/blender-osx-folder.zip"
 download_text: "Blender-Folder (814 KB)"
 ---

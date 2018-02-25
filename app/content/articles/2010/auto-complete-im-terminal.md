@@ -1,12 +1,11 @@
 ---
 language: "de"
 title: "Auto-Complete im Terminal"
-description: "Wenn man im Terminal arbeite ist Autocomplete äußerst praktisch. Wie schreibt man eigene Autocomplete-Skripte?"
-author: "Stefan Imhoff"
 slug: "auto-complete-im-terminal"
 date: 2010-10-27T18:30:00+02:00
-categories:
-- code
+author: "Stefan Imhoff"
+description: "Wenn man im Terminal arbeite ist Autocomplete äußerst praktisch. Wie schreibt man eigene Autocomplete-Skripte?"
+categories: ["code"]
 ---
 
 Für mich gehört ständige Verbesserung (<ruby>改善<rp>（</rp><rt>かいぜん</rt><rp>)</rp></ruby>, jap. Kaizen) zur täglichen Arbeit dazu. Was mich aber seit längerem gestört hat, ist wenn ich die Namen des zu klonenden Git-Repositorys per Hand tippen muss. Auto-Complete bietet hier eine Lösung.

@@ -6,10 +6,8 @@ author: "Stefan Imhoff"
 slug: "gulp-tutorial-14-deploying-the-website"
 og_image: "artikel/gulp-tutorial-14.jpg"
 description: "The ultimative tutorial and guide for Gulp.js: How to deploy your website with rsync to your server."
-series:
-- gulp
-categories:
-- code
+series: ["gulp"]
+categories: ["code"]
 download_url: "https://github.com/kogakure/gulp-tutorial"
 download_text: "View Source on GitHub"
 ---

@@ -2,11 +2,10 @@
 language: "de"
 title: "AppleTV und die Leihfilme auf iTunes"
 slug: "appletv-leihfilme-itunes"
-description: "In diesem Artikel rege ich mich über die Auswahl der Leihfilme auf iTunes auf. Warum ich keine Filme digital kaufen werde und wenn ich sie nicht leihen kann, lieber gar nichts ansehe."
-author: "Stefan Imhoff"
 date: 2010-07-30T07:00:00+02:00
-categories:
-- rant
+author: "Stefan Imhoff"
+description: "In diesem Artikel rege ich mich über die Auswahl der Leihfilme auf iTunes auf. Warum ich keine Filme digital kaufen werde und wenn ich sie nicht leihen kann, lieber gar nichts ansehe."
+categories: ["rant"]
 ---
 
 Ich bin seit fast zwei Jahren Besitzer eines AppleTV und finde das Gerät wirklich spitze. Was ich aber nicht verstehen kann, ist nach welchen Kriterien Studios sich entscheiden Ihre Filme dort zu veröffentlichen.

@@ -5,8 +5,7 @@ description: "Ich vergleiche zwei beliebte Tools für GTD (Getting Things Done) 
 author: "Stefan Imhoff"
 slug: "gtd-mit-omnifocus-oder-things"
 date: 2007-12-15T19:57:00+02:00
-categories:
-- productivity
+categories: ["productivity"]
 ---
 
 Seit ich mir Anfang Dezember überlegt habe, von meinem webbasierenden GTD-Tool [Tracks](http://www.getontracks.org/) zu einer OS X Software zu wechseln, teste ich zwei interessante Kandidaten.

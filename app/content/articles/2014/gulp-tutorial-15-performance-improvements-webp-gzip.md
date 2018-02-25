@@ -6,10 +6,8 @@ author: "Stefan Imhoff"
 slug: "gulp-tutorial-15-performance-improvements-webp-gzip"
 og_image: "artikel/gulp-tutorial-15.jpg"
 description: "The ultimative tutorial and guide for Gulp.js: How to improve the speed and performance of your website with WebP and Gzip."
-series:
-- gulp
-categories:
-- code
+series: ["gulp"]
+categories: ["code"]
 download_url: "https://github.com/kogakure/gulp-tutorial"
 download_text: "View Source on GitHub"
 ---

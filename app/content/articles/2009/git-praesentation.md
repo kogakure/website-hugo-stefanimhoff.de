@@ -6,9 +6,7 @@ author: "Stefan Imhoff"
 slug: "git-praesentation"
 date: 2009-08-08T13:00:00+02:00
 og_image: "artikel/git-praesentation.jpg"
-categories:
-- vcs
-- presentation
+categories: ["vcs", "presentation"]
 ---
 
 Auf dem 4. Treffen der Django-UserGroup Hamburg habe ich eine Präsentation über Git vorgetragen, die ich hier als PDF zum Download anbiete.

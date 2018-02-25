@@ -6,11 +6,7 @@ slug: "die-typographie-meiner-website"
 date: 2014-06-19T10:30:00+02:00
 og_image: "artikel/elements-of-typographic-style.jpg"
 description: "Über die Typographie meiner neuen Website: Skala, Schriftart, vertikaler Rhythmus, Schriftstärke, Schriftgröße und Satzbreite."
-categories:
-- design
-- code
-- website
-- typography
+categories: ["design", "code", "website", "typography"]
 ---
 
 Ich bin *typophil*. Das ist aber nichts für das man eine Selbsthilfegruppe besuchen müsste, denn es bedeutet einfach die Liebe oder Affektion zu Schrift. Für mich war daher von Anfang an klar, dass ich für meine neue Website zuerst mit der Typographie beginnen werde.

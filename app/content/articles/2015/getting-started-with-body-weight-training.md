@@ -6,8 +6,7 @@ description: "Learning Body Weight Training is possible for everybody. It’s fr
 og_image: "artikel/calisthenics-human-flag.jpg"
 author: "Stefan Imhoff"
 slug: "getting-started-with-body-weight-training"
-categories:
-- fitness
+categories: ["fitness"]
 ---
 
 I’m doing body weight training for almost a year now and really like it. It’s free, you can do it anywhere, all you need is something to push from and to pull to, and it’s fun.

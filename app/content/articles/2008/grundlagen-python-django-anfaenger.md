@@ -5,8 +5,7 @@ description: "Wer mit Django arbeiten möchte, muss die Grundlangen von Python k
 author: "Stefan Imhoff"
 slug: "grundlagen-python-django-anfaenger"
 date: 2008-08-01T15:00:00+02:00
-categories:
-- code
+categories: ["code"]
 ---
 
 Da in letzter Zeit anscheinend das Interesse an Django stark gestiegen ist, halte ich es für sinnvoll, die Grundlagen des Systems für Anfänger aufzuzeigen.

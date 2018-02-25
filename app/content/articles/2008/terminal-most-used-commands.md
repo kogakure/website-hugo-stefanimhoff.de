@@ -5,8 +5,7 @@ description: "Wer viel im Terminal arbeitet, verwendet vermutlich einige Program
 author: "Stefan Imhoff"
 slug: "terminal-most-used-commands"
 date: 2008-04-18T07:00:00+02:00
-categories:
-- recommendation
+categories: ["recommendation"]
 ---
 
 Weil es grad alle machen: Ich weiß, was du letztens ins Terminal getippt hast.

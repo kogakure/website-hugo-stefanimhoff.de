@@ -1,12 +1,11 @@
 ---
 language: "de"
 title: "Duplikation ist in Ordnung"
-description: "Auch wenn DRY (Don’t Repeat Yourself) in der Entwicklung ein grundlegendes Prinzip ist, so sieht es beim Templating nicht ganz so aus. Hier gilt Lesbarkeit vor Vermeidung von Duplikation."
-author: "Stefan Imhoff"
 slug: "duplikation-ist-in-ordnung"
 date: 2013-11-27T12:45:00+02:00
-categories:
-- code
+author: "Stefan Imhoff"
+description: "Auch wenn DRY (Don’t Repeat Yourself) in der Entwicklung ein grundlegendes Prinzip ist, so sieht es beim Templating nicht ganz so aus. Hier gilt Lesbarkeit vor Vermeidung von Duplikation."
+categories: ["code"]
 ---
 
 Immer wieder wird Entwicklern das Prinzip von DRY eingetrichtert, was im Prinzip besagt, dass duplizierter Code schlecht ist. Und das stimmt auch so für Code.

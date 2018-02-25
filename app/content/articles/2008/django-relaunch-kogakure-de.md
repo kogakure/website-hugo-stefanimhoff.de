@@ -5,9 +5,7 @@ description: "Umfangreicher Einblick in die Erstellung meiner Django-Website kog
 author: "Stefan Imhoff"
 slug: "django-relaunch-kogakure-de"
 date: 2008-04-25T18:00:00+02:00
-categories:
-- code
-- website
+categories: ["code", "website"]
 download_url: "https://github.com/kogakure/django-kogakure.de"
 download_text: "Source code (GitHub)"
 ---

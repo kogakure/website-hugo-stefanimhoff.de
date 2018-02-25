@@ -5,10 +5,7 @@ author: "Stefan Imhoff"
 slug: "relaunch-responsive-web-design"
 date: 2014-04-12T15:00:00+02:00
 description: "Über die Gestaltung und Programmierung meiner neuen Website: Typographie, Design, Layout, Vektor-Icons, Logo, Icons, Off-Canvas-Menü, Styleguide, Jekyll, eingesetzte Plugins und die Asset-Pipeline."
-categories:
-- design
-- code
-- website
+categories: ["design", "code", "website"]
 ---
 
 Alles neu macht der Mai! Zwar ist es erst Mitte April, aber trotzdem erscheint diese Website ab heute in komplett neuem Design. Und nicht nur das, auch technisch ist alles neu. Keine einzige Zeile des alten Codes habe ich übernommen.

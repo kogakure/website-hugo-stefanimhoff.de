@@ -6,8 +6,7 @@ author: "Stefan Imhoff"
 slug: "kostenlose-vektorkarten-openstreetmap"
 date: 2008-09-06T18:59:00+02:00
 og_image: "artikel/openstreetmap.jpg"
-categories:
-- recommendation
+categories: ["recommendation"]
 ---
 
 Ich habe keine Ahnung, warum dieses Juwel so lange unbemerkt von mir bleiben konnte, aber gestern hat mich ein Kollege auf den Kartendienst OpenStreetMap hingewiesen. Ähnlich wie bei Wikipedia wird dort von vielen Benutzern eine für jeden kostenlos verfügbare Karte zusammengetragen.

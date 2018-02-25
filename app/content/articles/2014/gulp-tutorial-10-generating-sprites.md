@@ -6,10 +6,8 @@ author: "Stefan Imhoff"
 slug: "gulp-tutorial-10-generating-sprites"
 og_image: "artikel/gulp-tutorial-10.jpg"
 description: "The ultimative tutorial and guide for Gulp.js: How to generate image sprite maps with Spritesmith."
-series:
-- gulp
-categories:
-- code
+series: ["gulp"]
+categories: ["code"]
 download_url: "https://github.com/kogakure/gulp-tutorial"
 download_text: "View Source on GitHub"
 ---

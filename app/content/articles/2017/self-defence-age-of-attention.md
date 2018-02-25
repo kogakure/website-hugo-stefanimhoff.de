@@ -7,8 +7,7 @@ description: "A guide on how to get your attention back in the age of constant d
 excerpt: "How to win back our time and minds. ❦ It’s been a while since I first started questioning my own behaviour with technology, but also of all of us in general. The Internet has given us an endless stream of information, nearly every  question answered in seconds. It has given us more music to hear, more texts to read, more images to look at, more movies to watch than one could ever consume in thousands of years."
 author: "Stefan Imhoff"
 og_image: "artikel/self-defence-age-of-attention.jpg"
-categories:
-- personal
+categories: ["personal"]
 ---
 
 {{< figure class="image-figure attribution" author="Gilles Lambert" cite="man on a smartphone" url="https://unsplash.com/photos/pb_lF8VWaPU" >}}
