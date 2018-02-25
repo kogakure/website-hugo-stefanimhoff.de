@@ -122,9 +122,10 @@ But I like it more to add [Yaml Front Matter](https://jekyllrb.com/docs/frontmat
 
 If you sync your production website to a server it will deliver to browsers, which support WebP the Webp format when requesting a JPEG or PNG.
 
-{{% hint headline="It isn’t working …" %}}
-Don’t wonder: The `.htaccess` file won’t work with the development server. It will need a server with support for `mod_rewrite` and `mod_headers` and of course support `.htaccess` files.
-{{% /hint %}}
+<aside class="aside-hint" role="complementary">
+  <h4>It isn’t working …</h4>
+  <p>Don’t wonder: The <code>.htaccess</code> file won’t work with the development server. It will need a server with support for <code>mod_rewrite</code> and <code>mod_headers</code> and of course support <code>.htaccess</code> files.</p>
+</aside>
 
 
 ## Gzip text files

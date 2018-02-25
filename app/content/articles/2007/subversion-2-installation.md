@@ -11,10 +11,6 @@ categories: ["vcs"]
 
 Die Installation von Subversion ist relativ leicht und schnell erledigt, für die Bedienung kann man eine der zahllosen grafischen Oberflächen oder das Terminal benutzten. In diesem Teil der Reihe stelle ich ein paar Programme vor und zeige wie man Subversion aus dem Quellcode selber kompiliert.
 
-{{% hint headline="Versionkontrolle mit Git" %}}
-Der Inhalt dieses Artikels ist noch aktuell, doch kann ich nur dringend dazu raten, sich die fantastische Alternative zu Subversion anzusehen: [Git](/2007/versionskontrolle-mit-git/).
-{{% /hint %}}
-
 ## Installationsarten, Programmoberflächen
 
 Subversion ist ein Programm, das in einer Befehlseingabebox bedient wird. Es gibt aber auch eine Vielzahl von grafischen Oberflächen, die Anfängern die Bedienung ermöglichen sollen. Jedes dieser Programme hat eine etwas andere Arbeitsweise, doch alle nutzen unter der Haube die gleichen Befehle.

@@ -11,10 +11,6 @@ categories: ["vcs"]
 
 Es gibt in Subversion noch ein paar nützliche und notwendige Befehle, die man im täglichen Umgang brauchen wird.
 
-{{% hint headline="Versionkontrolle mit Git" %}}
-Der Inhalt dieses Artikels ist noch aktuell, doch kann ich nur dringend dazu raten, sich die fantastische Alternative zu Subversion anzusehen: [Git](/2007/versionskontrolle-mit-git/).
-{{% /hint %}}
-
 ## Tags anlegen
 
 Tags sind Lesezeichen oder Schlagworte, mit denen man sich eine bestimmte Versionsnummer durch einen leicht zu merkenden Namen, wie z. B. *version-1.2.5* oder *Finale-Version* markieren kann.

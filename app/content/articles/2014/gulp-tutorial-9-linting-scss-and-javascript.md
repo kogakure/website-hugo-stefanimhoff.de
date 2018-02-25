@@ -102,11 +102,11 @@ gulp.task('jshint', function() {
 ```
 
 
-{{% hint headline="Configuration of Syntax Check Tools" %}}
-You may change the rules for linting SCSS or JavaScript by adding a hidden file `.scss-lint.yml` for SCSS lint and `.jshintrc` for JSHint to your project root.
-
-To find out which options are available look into the documentation of [SCSS-Lint](https://github.com/brigade/scss-lint) and [JSHint](http://jshint.com/docs/).
-{{% /hint %}}
+<aside class="aside-hint" role="complementary">
+  <h4>Configuration of Syntax Check Tools</h4>
+  <p>You may change the rules for linting SCSS or JavaScript by adding a hidden file <code>.scss-lint.yml</code> for SCSS lint and <code>.jshintrc</code> for JSHint to your project root.</p>
+  <p>To find out which options are available look into the documentation of <a href="https://github.com/brigade/scss-lint" target="_blank" rel="nofollow" rel="noopener">SCSS-Lint</a> and <a href="http://jshint.com/docs/" target="_blank" rel="nofollow" rel="noopener">JSHint</a>.</p>
+</aside>
 
 ## Conclusion
 

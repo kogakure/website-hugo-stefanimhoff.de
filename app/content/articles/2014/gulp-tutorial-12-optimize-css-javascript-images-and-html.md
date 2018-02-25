@@ -116,11 +116,11 @@ This task will take the JavaScript files, minimize and optimize them, put them t
 ## Images
 Next I will take care of the images. They need to be copied to the production assets folder and crunshed (reduce the size). This may take a while, depending on the size and amount of your images, that’s why I only optimize the images for production.
 
-{{% hint headline="Show more details" %}}
-To get a more detailed output in Gulp.js you may add a flag to your command:
-
-`gulp publish --verbose`. It will list each individual image for the optimize task and how much it was compressed.
-{{% /hint %}}
+<aside class="aside-hint" role="complementary">
+<h4>Show more details</h4>
+  <p>To get a more detailed output in Gulp.js you may add a flag to your command:</p>
+  <p><code>gulp publish --verbose</code>. It will list each individual image for the optimize task and how much it was compressed.</p>
+</aside>
 
 I’ll need `gulp-imagemin` for my task, which is able to minify PNG, JPG, GIF and SVG images:
 
