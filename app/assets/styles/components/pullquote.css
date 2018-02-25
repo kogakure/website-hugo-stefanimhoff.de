@@ -8,6 +8,10 @@ blockquote.pullquote {
   text-align: center;
 
   & p {
+    margin-bottom: 0.5em;
+  }
+
+  & p::last-child {
     margin-bottom: 0;
   }
 
