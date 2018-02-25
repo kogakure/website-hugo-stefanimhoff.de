@@ -77,7 +77,8 @@ Wenn das Datenkonzept fertig gestellt ist, wird die Datenbank in einer einfach z
 
 Das folgende Beispiel (von der Django-Website) zeigt den Code von zwei Tabellen, einer `Reporter`-Tabelle und einer `Artikel`-Tabelle:
 
-{{% figure class="code-figure" caption="models.py" %}}
+<p class="code-info">models.py</p>
+
 ```python
 class Reporter(models.Model):
     full_name = models.CharField(max_length=70)
@@ -95,7 +96,7 @@ class Article(models.Model):
         return self.headline
 
 ```
-{{% /figure %}}
+
 
 Mit einem kurzen Befehl wird Django im Anschluss daran mitgeteilt, dass die nötigen Tabellen in der Datenbank angelegt werden sollen. Django unterstützt eine Menge Datenbanken (SQLite3, MySQL, PostgreSQL, Oracle) von Haus aus. Weitere können durch Drittanbieter hinzugefügt werden.
 
@@ -115,7 +116,8 @@ Mit ein wenig Wissen um [Regular Expressions]( http://www.regular-expressions.in
 
 Dieses kurze Beispiel aus der Django-Dokumentation zeigt die Konfiguration einiger URLs:
 
-{{% figure class="code-figure" caption="urls.py" %}}
+<p class="code-info">urls.py</p>
+
 ```python
 from django.conf.urls.defaults import *
 
@@ -125,7 +127,7 @@ urlpatterns = patterns('',
     (r'^articles/(\d{4})/(\d{2})/(\d+)/$', 'mysite.views.article_detail'),
 )
 ```
-{{% /figure %}}
+
 
 Vielleicht mag dies auf den ersten Blick etwas seltsam aussehen oder nicht gleich verständlich sein, aber keine Sorge, das legt sich sehr schnell, wenn die Grundlagen von Regular Expressions verstanden sind.
 
@@ -155,7 +157,8 @@ Wem die [Grundfunktionen der Templatesprache](https://docs.djangoproject.com/en/
 
 Ein Grundtemplate sieht in der Django-Dokumentation z. B. so aus:
 
-{{% figure class="code-figure" caption="base.html" %}}
+<p class="code-info">base.html</p>
+
 ```html
 <html>
 <head>
@@ -167,12 +170,13 @@ Ein Grundtemplate sieht in der Django-Dokumentation z. B. so aus:
 </body>
 </html>
 ```
-{{% /figure %}}
+
 
 
 Das niedrigere Template, hier eine Detailseite für einen Artikel, überschreibt dann die Blöcke nach Belieben und erbt den Rest des Grundtemplates:
 
-{{% figure class="code-figure" caption="article.html" %}}
+<p class="code-info">article.html</p>
+
 ```html
 {% extends "base.html" %}
 
@@ -188,7 +192,7 @@ Das niedrigere Template, hier eine Detailseite für einen Artikel, überschreibt
     {% endfor %}
 {% endblock %}
 ```
-{{% /figure %}}
+
 
 ## Erweitern von Django
 

@@ -14,15 +14,20 @@ download_text: "View Source on GitHub"
 
 This is the 8th part of my series *Introduction to Gulp.js*. Today I will set up watch tasks for many different files with Gulp.js.
 
-{{< figure class="image-figure attribution attribution-caption" caption="Not even <strong>Double Gulp</strong> helped to have a Funtime" author="Erin Nekervis" cite="Funtime!" url="https://www.flickr.com/photos/theeerin/4701912791" cc="true" >}}
-{{< image src="artikel/gulp-tutorial-8.jpg" alt="Funtime!" >}}
-{{< /figure >}}
+<figure class="image-figure attribution attribution-caption">
+  <img src="/assets/images/artikel/gulp-tutorial-8.jpg" alt="Funtime!">
+  <figcaption>
+  Not even <strong>Double Gulp</strong> helped to have a Funtime (Erin Nekervis, <a href="https://www.flickr.com/photos/theeerin/4701912791">Funtime!</a>)
+  </figcaption>
+</figure>
+
 
 Do you remember the `watch` task from the beginning? It just started BrowserSync and the development server until now, but didn’t watch for anything. I will write these watch tasks now.
 
 `Watch` is part of the API of gulp. It will watch files for changes, addition or deletion and trigger tasks.
 
-{{% figure class="code-figure" caption="gulp/config.js" %}}
+<p class="code-info">gulp/config.js</p>
+
 ```javascript
 watch: {
   jekyll: [
@@ -43,13 +48,14 @@ watch: {
   svg:     'vectors/*.svg'
 }
 ```
-{{% /figure %}}
+
 
 I watch for a lot of different file types for Jekyll. Changes in configuration files, data files, layouts, includes, plugin, posts etc.
 
 The Sass task will watch for changes in files with the suffix `sass` or `scss`. JavaScript gets triggered if I change some JavaScript file. You get the point.
 
-{{% figure class="code-figure" caption="gulp/tasks/development/watch.js" %}}
+<p class="code-info">gulp/tasks/development/watch.js</p>
+
 ```javascript
 var gulp   = require('gulp');
 var config = require('../../config').watch;
@@ -66,7 +72,7 @@ gulp.task('watch', ['browsersync'], function() {
   gulp.watch(config.sprites, ['sprites']);
 });
 ```
-{{% /figure %}}
+
 
 I set up six watch tasks. Whenever a file of the Jekyll watch gets changed, deleted or added, the `jekyll-rebuild` task gets executed. This task will run the Jekyll build and after it’s finished reload the page.
 

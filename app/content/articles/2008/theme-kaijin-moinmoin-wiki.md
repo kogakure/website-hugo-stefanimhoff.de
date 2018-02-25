@@ -13,11 +13,15 @@ download_text: "MoinMoin Kainjin Theme (98 KB)"
 
 Seit über einem Jahr benutze ich jetzt das [MoinMoin Wiki](https://moinmo.in/) für meine private Wissensdatenbank. MoinMoin wurde in [Python](https://www.python.org/ "Python Programming Language – Official Website") geschrieben und ist ein ziemlich gutes Wiki. Nur optisch sind so gut wie alle verfügbaren [Themes](https://moinmo.in/) für MoinMoin eine Zumutung. Daher habe ich mich in den letzten Wochen daran gesetzt, mir ein eigenes Theme zu erstellen.
 
-{{< figure class="image-figure" caption="MoinMoin Theme <cite>Kaijin</cite>" >}}
-<a href="/downloads/moinmoin-kaijin-theme.zip">
-  {{< image src="artikel/moinmoin-kaijin.png" alt="MoinMoin Theme Kaijin" >}}
-</a>
-{{< /figure >}}
+<figure class="image-figure">
+  <a href="/downloads/moinmoin-kaijin-theme.zip">
+    <img src="/assets/images/artikel/moinmoin-kaijin.png" alt="MoinMoin Theme Kaijin">
+  </a>
+  <figcaption>
+  MoinMoin Theme <cite>Kaijin</cite>
+  </figcaption>
+</figure>
+
 
 Dieses Theme heißt *Kaijin* (<ruby>灰塵<rp>（</rp><rt>かいじん</rt><rp>）</rp></ruby>), japanisch für *Asche und Staub* und basiert auf dem MoinMoin Theme <cite>modern</cite>. Die orginale Python-Datei habe ich (bis auf die nötigen Stellen) nicht verändert.
 

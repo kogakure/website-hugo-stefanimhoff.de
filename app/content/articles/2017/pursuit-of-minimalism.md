@@ -25,7 +25,12 @@ Real Minimalism is **not glamorous**, it’s **humble** and a result of **deep m
 
 Critics of Minimalism describe it as cold, empty, without personality. People following Minimalism would deny their past or prove their inability for connection to other people. It would be a hopeless attempt to control the life, as Linda Tutmann described Minimalism in her ZEIT article [Alles mein](http://www.zeit.de/2017/06/besitz-minimalismus-dinge-erinnerungen-besitztum).
 
-![My Minimalist home office](/assets/images/artikel/minimalism-office.jpg "Sorry, it doesn’t look cold, empty and without personality. I failed as a Minimalist.")
+<figure class="image-figure">
+  <img src="/assets/images/artikel/minimalism-office.jpg" alt="My Minimalist home office" title="Sorry, it doesn’t look cold, empty and without personality. I failed as a Minimalist.">
+  <figcaption>
+    Sorry, it doesn’t look cold, empty and without personality. I failed as a Minimalist.
+  </figcaption>
+</figure>
 
 This misconception of Minimalism is result of its shift to a lifestyle and of extreme Minimalist, who live in sterile homes. Minimalism is not about having as few as possible, but about *not* having stuff, which doesn’t bring joy or getting rid of stuff, which was acquired as a result of other reasons than a real *need* or *love* for an object.
 

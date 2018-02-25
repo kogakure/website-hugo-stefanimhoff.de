@@ -39,9 +39,13 @@ I did this by inlining critical CSS and deferring all other non-critical assets 
 
 CSS and JavaScript assets will block the page from rendering other content (like all the nice images you are so proud of). If you have render blocking assets the page will be white and blank until these assets are loaded (the state after this is finished is called DOMContentLoaded).
 
-{{< figure class="image-figure" caption="The blue line indicates DOMContentLoaded. The page will be blank until this point is reached." >}}
-{{< image src="artikel/developer-tools-network.jpg" alt="Google Chrome Developer Tools Network Monitor" >}}
-{{< /figure >}}
+<figure class="image-figure">
+  <img src="/assets/images/artikel/developer-tools-network.jpg" alt="Google Chrome Developer Tools Network Monitor">
+  <figcaption>
+    The blue line indicates DOMContentLoaded. The page will be blank until this point is reached.
+  </figcaption>
+</figure>
+
 
 The trick is to figure out what styles are needed to display the upper part of your website as it’s seen on a Smartphone or Tablet. There are automatic solutions to find the needed styles like [Grunt Critial CSS](https://github.com/filamentgroup/grunt-criticalcss) or [Critical](https://github.com/addyosmani/critical) by Addy Osmani. But for me, automatic tools didn’t work out. So I did this work manually with the help of a [bookmarklet](https://gist.github.com/PaulKinlan/6284142).
 

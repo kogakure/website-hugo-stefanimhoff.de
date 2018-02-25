@@ -14,9 +14,10 @@ download_text: "View Source on GitHub"
 
 My website is running [Jekyll](https://jekyllrb.com/) now since the beginning of 2014. But I wasn’t quite happy with my build and development process. I started out with Rake tasks and chose later [Grunt.js](https://gruntjs.com/) as my build system, but parts of the process where left in Ruby. I used [Compass](http://compass-style.org/) a lot and [Jekyll Assets](http://ixti.net/jekyll-assets/) was handling my versioning. But Grunt.js and the Jekyll Asset Pipeline didn’t play well together. Then a new solution came along: [Gulp.js](https://gulpjs.com/).
 
-{{< figure class="image-figure" >}}
-{{< image src="artikel/gulp-tutorial-1.png" alt="Gulp.js Logo" >}}
-{{< /figure >}}
+<figure class="image-figure">
+  <img src="/assets/images/artikel/gulp-tutorial-1.png" alt="Gulp.js Logo">
+</figure>
+
 
 ## What to expect from this Tutorial
 This is the first part in a series of articles where I describe my whole development and build process step-by-step from start to finish. I am sick of all these *Hello World* tutorials spreading around the Internet, describing just the basics and don’t show a whole process, go deeper or share things learned during the process.
@@ -43,14 +44,15 @@ As with Grunt.js, all you need to start is a main file. In Gulp.js this file is 
 
 So my base `gulpfile.js` is very short:
 
-{{% figure class="code-figure" caption="gulpfile.js" %}}
+<p class="code-info">gulpfile.js</p>
+
 ```javascript
 var requireDir = require('require-dir');
 
 // Require all tasks in gulp/tasks, including subfolders
 requireDir('./gulp/tasks', { recurse: true });
 ```
-{{% /figure %}}
+
 
 All this task is doing is loading all tasks that live in `./gulp/tasks` or in any subfolder.
 
@@ -59,7 +61,8 @@ The first thing to do is installing the required Node module `require-dir`. To r
 
 You may use the installation helper by typing the command `npm init`. But I find it faster to create a new file `package.json` and fill it with these values:
 
-{{% figure class="code-figure" caption="package.json" %}}
+<p class="code-info">package.json</p>
+
 ```json
 {
   "name": "gulp-build",
@@ -68,7 +71,7 @@ You may use the installation helper by typing the command `npm init`. But I find
   "private": true
 }
 ```
-{{% /figure %}}
+
 
 Now I am able to install Node modules and save them to this file for later reinstallation. Go ahead and install `require-dir`:
 

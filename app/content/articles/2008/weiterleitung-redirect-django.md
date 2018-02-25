@@ -24,12 +24,13 @@ Um diese Funktion zu aktivieren muss man in der `settings.py` die Einstellung `D
 
 Es ist zusätzlich noch möglich Anfänge und Endungen mitzugeben, die ignoriert werden sollen: `IGNORABLE_404_ENDS`, `IGNORABLE_404_STARTS`. In einem Array folgen dann einfach die gewünschten Endungen:
 
-{{% figure class="code-figure" caption="settings.py" %}}
+<p class="code-info">settings.py</p>
+
 ```python
 IGNORABLE_404_ENDS = ('favicon.ico','.php')
 IGNORABLE_404_STARTS = ('/cgi-bin/','/css/','/scripts/','/images/')
 ```
-{{% /figure %}}
+
 
 Benachrichtigt werden alle Empfänger, die unter der Einstellung `ADMINS` eingetragen sind.
 

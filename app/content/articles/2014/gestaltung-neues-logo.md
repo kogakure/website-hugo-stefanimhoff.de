@@ -19,9 +19,13 @@ Für mich stand schon relativ früh fest, dass ich ein *Rakkan* anstelle eines m
 
 Ein Rakkan (oder Hanko) wird in Japan ein Siegel genannt, das meist in Stein geschnitzt, die Signatur eines Künstler darstellt und von diesem unter die Werke gestempelt wird, und damit wie eine Unterschrift funktioniert.
 
-{{< figure class="image-figure" caption="Abdruck meines Rakkan unter einem von mir geschriebenem Symbol für 忍 (Shinobi)." >}}
-{{< image src="artikel/rakkan.jpg" alt="Rakkan unter mit Tinte geschriebenem Schriftzeichen" >}}
-{{< /figure >}}
+<figure class="image-figure">
+  <img src="/assets/images/artikel/rakkan.jpg" alt="Rakkan unter mit Tinte geschriebenem Schriftzeichen">
+  <figcaption>
+  Abdruck meines Rakkan unter einem von mir geschriebenem Symbol für 忍 (Shinobi).
+  </figcaption>
+</figure>
+
 
 Auch schon bei meinem [Kampfkunst-Portal](http://kogakure.de/) verwende ich als Logo ein solches Siegel, nur dort war die Vorlage für dieses Logo damals mein wirkliches Siegel, das ich bei einem Künstler in Auftrag gegeben hatte.
 
@@ -62,9 +66,13 @@ Ein solches Siegel lässt sich in zwei verschiedene Varianten erstellen: **Yin**
 
 Zuerst fertigte ich zahlreiche Bleistiftzeichnungen an, erst von einzelnen Zeichen, die mir gefielen, später von Kombinationen. Ich überlegte mir, wie ein Künstler einen traditionellen Stempel schnitzen würde, wie die Buchstaben sich berühren und stützen, um dem Siegel die nötige Stabilität zu geben.
 
-{{< figure class="image-figure" caption="Doppelseite aus meinem Moleskine mit Bleistiftzeichnungen verschiedener Zeichen." >}}
-{{< image src="artikel/moleskine-bleistiftzeichnungen.jpg" alt="Moleskine mit Bleistiftzeichnungen von Schriftzeichen" >}}
-{{< /figure >}}
+<figure class="image-figure">
+  <img src="/assets/images/artikel/moleskine-bleistiftzeichnungen.jpg" alt="Moleskine mit Bleistiftzeichnungen von Schriftzeichen">
+  <figcaption>
+  Doppelseite aus meinem Moleskine mit Bleistiftzeichnungen verschiedener Zeichen.
+  </figcaption>
+</figure>
+
 
 Nachdem ich meine finale Variante entwickelt hatte, zeichnete ich die Bleistiftlinien mit einem sehr dicken Textmarker nach (nicht ohne dabei fast meinen Bambustisch zu ruinieren, da ich *natürlich* aus Faulheit auf eine Unterlage verzichtete). Die Struktur, die entsteht, wenn Tinte sich im Papier ausbreitet sah einer in Stein geschnitzten Kante sehr ähnlich.
 

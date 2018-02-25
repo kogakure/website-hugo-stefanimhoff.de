@@ -25,9 +25,13 @@ Jetzt musste ich nur noch herausfinden, wie denn der Fachbegriff für so ein Fot
 
 Doch es gibt tatsächlich einen Begriff für dieses Eigenschaft: [Bokeh](https://de.wikipedia.org/wiki/Bokeh).
 
-{{< figure class="image-figure attribution" author="Carlos Luis Camacho" cite="Josefina with Bokeh" url="https://www.flickr.com/photos/paseodelsur/51805888/" cc="true" >}}
-{{< image src="artikel/josefina-bokeh.jpg" alt="Josefina with Bokeh" >}}
-{{< /figure >}}
+<figure class="image-figure attribution">
+  <img src="/assets/images/artikel/josefina-bokeh.jpg" alt="Josefina with Bokeh">
+  <figcaption>
+  Carlos Luis Camacho, <a href="https://www.flickr.com/photos/paseodelsur/51805888/" target="_blank" rel="nofollow" rel="noopener">Josefina with Bokeh</a>
+  </figcaption>
+</figure>
+
 
 Bokeh ist vom japanischen Wort *boke* (暈け oder ボケ) abgeleitet, und bedeutet *Unschärfe* oder *Nebel*. Es gibt eine ganze Fangemeinde von Liebhabern und eine  recht genaue Definitionen, was eine gute Bokeh ausmacht. Fotografen diskutieren hitzig darüber mit welchem Objektiv denn das bessere Bokeh gemacht werden könne.
 

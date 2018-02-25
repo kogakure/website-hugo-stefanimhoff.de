@@ -11,11 +11,15 @@ categories: ["publication"]
 
 Da lag es im Briefkasten: mein Belegexemplar der aktuellen Ausgabe 07/2010 des Webstandards-Magazin. Für mich ist dies eine Premiere, denn ich habe meinen ersten Artikel für das Webstandards-Magazin geschrieben.
 
-{{< figure class="image-figure" caption="Mein Artikel über Django im  <cite>Webstandards-Magazin</cite>, Ausgabe 07/2010, Tools" >}}
-<a href="https://www.screengui.de/">
-  {{< image src="artikel/webstandards-magazin-django.jpg" alt="Webstandards-Magazin, Ausgabe 07/2010, Tools" >}}
-</a>
-{{< /figure >}}
+<figure class="image-figure">
+  <a href="https://www.screengui.de/">
+    <img src="/assets/images/artikel/webstandards-magazin-django.jpg" alt="Webstandards-Magazin, Ausgabe 07/2010, Tools">
+  </a>
+  <figcaption>
+  Mein Artikel über Django im  <cite>Webstandards-Magazin</cite>, Ausgabe 07/2010, Tools
+  </figcaption>
+</figure>
+
 
 Drei Seiten sollte er einmal lang werden, jetzt sind es fast fünf geworden. Es war einfach nicht möglich, die ganze Faszination für Django, Codebeispiele und Grafiken auf so wenig Platz unterzubringen. Doch die Chefredakteure des [Webstandards-Magazin](https://www.screengui.de/) Ansgar Hein und Jörg Morsbach waren sehr entgegenkommend und räumten mir mehr Platz ein. Vielen Dank noch einmal dafür! Ich bedanke mich auch recht herzlich bei den fleißigen Helfern, die meinen Artikel auf inhaltliche oder orthographische Fehler hin geprüft haben.
 

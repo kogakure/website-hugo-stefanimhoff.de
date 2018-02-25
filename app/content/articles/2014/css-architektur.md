@@ -11,9 +11,13 @@ categories: ["code", "website"]
 
 Bei einem Webprojekt stellt insbesondere die Architektur der Stylesheets eine große Herausforderung dar. Denn CSS wird schnell unverständlich und ist schwer zu warten, wenn nicht von Anfang an eine saubere und modulare Struktur verwendet wird.
 
-{{< figure class="image-figure" caption="Peter Griffin CSS-Meme. Das komplette GIF (ca. 2 MB) gibt es <a href='https://imgur.com/Q3cUg29'>hier</a>." >}}
-{{< image src="artikel/css-peter-griffin-meme.jpg" alt="Peter Griffin CSS-Meme" >}}
-{{< /figure >}}
+<figure class="image-figure">
+  <img src="/assets/images/artikel/css-peter-griffin-meme.jpg" alt="Peter Griffin CSS-Meme">
+  <figcaption>
+  Peter Griffin CSS-Meme. Das komplette GIF (ca. 2 MB) gibt es <a href='https://imgur.com/Q3cUg29'>hier</a>.
+  </figcaption>
+</figure>
+
 
 ## Preprozessoren
 Die Verwendung eines CSS-Preprozessors wie [Sass](http://sass-lang.com/) ist mittlerweile eigentlich fast selbstverständlich. Ein solcher Preprozessor ermöglicht z. B. die Verwendung von Variablen, die Verschachtelung des CSS oder die Nutzung von Funktionen und Helfern.

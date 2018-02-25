@@ -14,9 +14,13 @@ download_text: "View Source on GitHub"
 
 This is the 15th part of my series *Introduction to Gulp.js*. Today I’ll add some tasks for performance improvement of the website with WebP for images and Gzip for text files.
 
-{{< figure class="image-figure attribution" author="Jess" cite="CAPTAIN AMERCIA" cc="true" >}}
-{{< image src="artikel/gulp-tutorial-15.jpg" alt="A oversized Captain America holding a Big Gulp" >}}
-{{< /figure >}}
+<figure class="image-figure attribution">
+  <img src="/assets/images/artikel/gulp-tutorial-15.jpg" alt="A oversized Captain America holding a Big Gulp">
+  <figcaption>
+    Jess, CAPTAIN AMERCIA
+  </figcaption>
+</figure>
+
 
 ## Using WebP for images
 
@@ -34,7 +38,8 @@ $ npm install --save-dev gulp-webp@2.1.1
 
 I add an entry to the configuration file:
 
-{{% figure class="code-figure" caption="gulp/config.js" %}}
+<p class="code-info">gulp/config.js</p>
+
 ```javascript
 webp: {
   src: productionAssets + '/images/**/*.{jpg,jpeg,png}',
@@ -42,11 +47,12 @@ webp: {
   options: {}
 },
 ```
-{{% /figure %}}
+
 
 The task is short and straight forward:
 
-{{% figure class="code-figure" caption="gulp/tasks/production/webp.js" %}}
+<p class="code-info">gulp/tasks/production/webp.js</p>
+
 ```javascript
 var gulp   = require('gulp');
 var webp   = require('gulp-webp');
@@ -61,11 +67,12 @@ gulp.task('webp', function() {
     .pipe(gulp.dest(config.dest));
 });
 ```
-{{% /figure %}}
+
 
 This task needs to be run only for production and has to be executed after the revisioning of the images is finished, because the server will just deliver a WebP image of the same name to the browser.
 
-{{% figure class="code-figure" caption="gulp/tasks/production/build.js" %}}
+<p class="code-info">gulp/tasks/production/build.js</p>
+
 ```javascript
 var gulp        = require('gulp');
 var runSequence = require('run-sequence');
@@ -82,11 +89,12 @@ gulp.task('build:production', function(callback) {
   callback);
 });
 ```
-{{% /figure %}}
+
 
 It’s neccessary to tell the server to rewrite the URLs of our images. There are multiple techniques for this, but I’ll use a `.htaccess` file:
 
-{{% figure class="code-figure" caption="app/htaccess" %}}
+<p class="code-info">app/htaccess</p>
+
 ```apacheconf
 ---
 layout: null
@@ -106,7 +114,7 @@ permalink: .htaccess
 
 AddType image/webp .webp
 ```
-{{% /figure %}}
+
 
 It is possible to use an `.htaccess` file and include in the [configuration file](https://jekyllrb.com/docs/configuration/) as to be included. Otherwise Jekyll will ignore hidden files and don’t copy them to the target directory.
 
@@ -131,7 +139,8 @@ $ npm install --save-dev gulp-gzip@1.2.0
 
 I add an entry to the configuration file:
 
-{{% figure class="code-figure" caption="gulp/config.js" %}}
+<p class="code-info">gulp/config.js</p>
+
 ```javascript
 gzip: {
   src: production + '/**/*.{html,xml,json,css,js}',
@@ -139,11 +148,12 @@ gzip: {
   options: {}
 },
 ```
-{{% /figure %}}
+
 
 Next I create the task, which is short:
 
-{{% figure class="code-figure" caption="gulp/tasks/production/gzip.js" %}}
+<p class="code-info">gulp/tasks/production/gzip.js</p>
+
 ```javascript
 var gulp   = require('gulp');
 var gzip   = require('gulp-gzip');
@@ -158,11 +168,12 @@ gulp.task('gzip', function() {
     .pipe(gulp.dest(config.dest));
 });
 ```
-{{% /figure %}}
+
 
 I add the task in my production build file to an JavaScript Array together with the `webp` task, because this task and the Gzip task may run in parallel; WebP works only with images and Gzip only with text files.
 
-{{% figure class="code-figure" caption="gulp/tasks/production/build.js" %}}
+<p class="code-info">gulp/tasks/production/build.js</p>
+
 ```javascript
 var gulp        = require('gulp');
 var runSequence = require('run-sequence');
@@ -182,7 +193,7 @@ gulp.task('build:production', function(callback) {
   callback);
 });
 ```
-{{% /figure %}}
+
 
 ## Conclusion
 

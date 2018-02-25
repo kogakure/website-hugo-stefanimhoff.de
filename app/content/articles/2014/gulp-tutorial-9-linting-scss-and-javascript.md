@@ -14,9 +14,13 @@ download_text: "View Source on GitHub"
 
 This is the 9th part of my series *Introduction to Gulp.js*. Today I will use Gulp.js to automatically check my SCSS and JavaScript files for syntax errors and warnings.
 
-{{< figure class="image-figure attribution" author="Shelly Munkberg" cite="5.16.07" url="https://www.flickr.com/photos/zingersb/501372181" cc="true" >}}
-{{< image src="artikel/gulp-tutorial-9.jpg" alt="Girl drinking a Big Gulp" >}}
-{{< /figure >}}
+<figure class="image-figure attribution">
+  <img src="/assets/images/artikel/gulp-tutorial-9.jpg" alt="Girl drinking a Big Gulp">
+  <figcaption>
+  Shelly Munkberg, <a href="https://www.flickr.com/photos/zingersb/501372181" target="_blank" rel="nofollow" rel="noopener">5.16.07</a>
+  </figcaption>
+</figure>
+
 
 I decided to lint my SCSS files and not the CSS files, because it’s kind of pointless to lint generated CSS. But you can do this with [gulp-csslint](https://www.npmjs.com/package/gulp-csslint/).
 
@@ -26,7 +30,8 @@ $ npm install --save-dev gulp-scss-lint@0.3.6 gulp-jshint@1.8.5 jshint-stylish@2
 
 Additionally you’ll need to install the `scss-lint` Gem and run `bundle install`:
 
-{{% figure class="code-figure" caption="Gemfile" %}}
+<p class="code-info">Gemfile</p>
+
 ```ruby
 source "https://rubygems.org"
 
@@ -35,11 +40,12 @@ gem 'sass', '>= 3.3'
 gem 'scss-lint', '~> 0.31.0'
 gem 'fontcustom', '~> 1.3.7'
 ```
-{{% /figure %}}
+
 
 Add some options for `jshint` and `scss-lint`:
 
-{{% figure class="code-figure" caption="gulp/config.js" %}}
+<p class="code-info">gulp/config.js</p>
+
 ```javascript
 scsslint: {
   src: [
@@ -55,11 +61,12 @@ jshint: {
   src: srcAssets + '/javascripts/*.js'
 }
 ```
-{{% /figure %}}
+
 
 I ignore some files from checking (by adding a `!` in front of the path), because I didn’t write them or don’t have control over the syntax.
 
-{{% figure class="code-figure" caption="gulp/tasks/development/scss-lint.js" %}}
+<p class="code-info">gulp/tasks/development/scss-lint.js</p>
+
 ```javascript
 var gulp     = require('gulp');
 var scsslint = require('gulp-scss-lint');
@@ -74,9 +81,10 @@ gulp.task('scsslint', function() {
     .pipe(scsslint(config.options));
 });
 ```
-{{% /figure %}}
 
-{{% figure class="code-figure" caption="gulp/tasks/development/jshint.js" %}}
+
+<p class="code-info">gulp/tasks/development/jshint.js</p>
+
 ```javascript
 var gulp    = require('gulp');
 var jshint  = require('gulp-jshint');
@@ -92,7 +100,7 @@ gulp.task('jshint', function() {
     .pipe(jshint.reporter(stylish));
 });
 ```
-{{% /figure %}}
+
 
 {{% hint headline="Configuration of Syntax Check Tools" %}}
 You may change the rules for linting SCSS or JavaScript by adding a hidden file `.scss-lint.yml` for SCSS lint and `.jshintrc` for JSHint to your project root.

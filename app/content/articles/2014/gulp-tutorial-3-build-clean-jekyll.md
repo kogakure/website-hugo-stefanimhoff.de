@@ -14,9 +14,13 @@ download_text: "View Source on GitHub"
 
 This is the 3rd part of my series *Introduction to Gulp.js*. Today I will write the build task, which will execute all other tasks needed for a build, the task to delete assets for a fresh start, and the task to create my Jekyll site.
 
-{{< figure class="image-figure attribution" author="Rudy Eng" cite="A Very Big Cup of Water!" url="https://www.flickr.com/photos/mac-ash/3628500632" cc="true" >}}
-{{< image src="artikel/gulp-tutorial-3.jpg" alt="Boy drinking a very big cup of water" >}}
-{{< /figure >}}
+<figure class="image-figure attribution">
+  <img src="/assets/images/artikel/gulp-tutorial-3.jpg" alt="Boy drinking a very big cup of water">
+  <figcaption>
+    Rudy Eng, <a href="https://www.flickr.com/photos/mac-ash/3628500632" target="_blank" rel="nofollow" rel="noopener">A Very Big Cup of Water!</a>
+  </figcaption>
+</figure>
+
 
 
 ## Build
@@ -29,7 +33,8 @@ $ npm install --save-dev run-sequence@1.1.4
 
 Next I create the task:
 
-{{% figure class="code-figure" caption="gulp/tasks/development/build.js" %}}
+<p class="code-info">gulp/tasks/development/build.js</p>
+
 ```javascript
 var gulp        = require('gulp');
 var runSequence = require('run-sequence');
@@ -50,7 +55,7 @@ gulp.task('build', function(callback) {
   callback);
 });
 ```
-{{% /figure %}}
+
 
 This task will first delete the assets folder (Jekyll is deleted by default), then create in parallel the Jekyll site, CSS files from SASS files, bundle the JavaScript files, copy images to the assets folder and copy vector fonts. After the `sass` task is finished I replace links to small PNG files with Base64 encoding to inline them in my CSS files.
 
@@ -66,7 +71,8 @@ $ npm install --save-dev del@0.1.3
 
 I need to add a config for deleting:
 
-{{% figure class="code-figure" caption="gulp/config.js" %}}
+<p class="code-info">gulp/config.js</p>
+
 ```javascript
 browsersync: {
 ...
@@ -75,13 +81,14 @@ delete: {
   src: [developmentAssets]
 }
 ```
-{{% /figure %}}
+
 
 I will shorten all configuration options from now on. Every task will have a own option section. These are JavaScript objects so don’t forget the trailing comma if you add a new configuration option.
 
 The actuall task will look like this:
 
-{{% figure class="code-figure" caption="gulp/tasks/development/delete.js" %}}
+<p class="code-info">gulp/tasks/development/delete.js</p>
+
 ```javascript
 var gulp   = require('gulp');
 var del    = require('del');
@@ -94,7 +101,7 @@ gulp.task('delete', function(callback) {
   del(config.src, callback);
 });
 ```
-{{% /figure %}}
+
 
 If you use a newer version of `del` or run into trouble, because `del` doesn’t finish, try deleting the `callback` from the function.
 
@@ -102,7 +109,8 @@ If you use a newer version of `del` or run into trouble, because `del` doesn’t
 
 Next I will write the configuration and the task to create the Jekyll site:
 
-{{% figure class="code-figure" caption="gulp/config.js" %}}
+<p class="code-info">gulp/config.js</p>
+
 ```javascript
 jekyll: {
   development: {
@@ -112,9 +120,10 @@ jekyll: {
   }
 }
 ```
-{{% /figure %}}
 
-{{% figure class="code-figure" caption="gulp/config/development/jekyll.js" %}}
+
+<p class="code-info">gulp/config/development/jekyll.js</p>
+
 ```javascript
 var gulp        = require('gulp');
 var cp          = require('child_process');
@@ -135,7 +144,7 @@ gulp.task('jekyll-rebuild', ['jekyll'], function() {
   browsersync.reload();
 });
 ```
-{{% /figure %}}
+
 
 There is a gulp plugin for Jekyll, but it’s alpha and was blacklisted, because it’s not needed as you can run shell tasks with node. But I have to send the `done` status, when the task is finished.
 

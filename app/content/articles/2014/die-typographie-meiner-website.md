@@ -17,9 +17,13 @@ Einfache Dinge wie Lesbarkeit oder Kontrast entscheiden darüber, ob die Botscha
 
 Die richtige Wahl von Schriftart, Schriftgröße, Gewicht, Satzspiegel, Satzbreite, Zeilendurchschuss, Sperrsatz oder vieler anderer Dinge wirken unbewusst auf die Leser und transportieren so die Aussage. Die richtige Typographie kann eine Botschaft unterstützen und verstärken, die falsche eine Aussage sogar bedeutungslos oder lächerlich werden lassen.
 
-{{< figure class="image-figure" caption="<cite>The Elements of Typographic Style</cite> von Robert Bringhurst" >}}
-{{< image src="artikel/elements-of-typographic-style.jpg" alt="The Elements of Typographic Style" >}}
-{{< /figure >}}
+<figure class="image-figure">
+  <img src="/assets/images/artikel/elements-of-typographic-style.jpg" alt="The Elements of Typographic Style">
+  <figcaption>
+  <cite>The Elements of Typographic Style</cite> von Robert Bringhurst
+  </figcaption>
+</figure>
+
 
 Ich fand Typographie schon immer faszinierend, doch erst nachdem ich das Buch <cite>[The Elements *of* Typographic Style](http://www.amazon.de/gp/product/0881792128?ie=UTF8&camp=1638&creative=19454&creativeASIN=0881792128&linkCode=as2&tag=kogakurede-21)</cite> von *Robert Bringhurst* gelesen hatte beschäftigte ich mich tiefer mit der Materie. Es gibt eine auf das Web abgestimmte Version seines Buches auf der Website [The Elements *of* Typographic Style Applied *to the* Web](http://webtypography.net/).
 
@@ -39,7 +43,8 @@ Doch dies ist bei meinem Projekt gar nicht nötig gewesen, denn das Team-Sass bi
 
 Ich füge also zuerst das Gem zu meinem Gemfile hinzu:
 
-{{% figure class="code-figure" caption="Gemfile" %}}
+<p class="code-info">Gemfile</p>
+
 ```ruby
 source "https://rubygems.org"
 
@@ -47,26 +52,28 @@ group :development do
   gem 'modular-scale'
 end
 ```
-{{% /figure %}}
+
 
 Dann lade ich das Compass-Plugin in der `config.rb`:
 
-{{% figure class="code-figure" caption="config.rb" %}}
+<p class="code-info">config.rb</p>
+
 ```ruby
 # Require any additional compass plugins here.
 require 'modular-scale'
 ```
-{{% /figure %}}
+
 
 Im AnschlusL muss nur noch das Modul von Compass geladen werden, bei mir in einem Partial:
 
-{{% figure class="code-figure" caption="helpers/_imports.scss" %}}
+<p class="code-info">helpers/_imports.scss</p>
+
 ```scss
 @import "compass";
 @import "compass/reset";
 @import "modular-scale";
 ```
-{{% /figure %}}
+
 
 Ich habe mich entschlossen den *Goldenen Schnitt* zu verwenden und wähle dann die *ideale Textgröße* und eine *wichtige Zahl* aus:
 

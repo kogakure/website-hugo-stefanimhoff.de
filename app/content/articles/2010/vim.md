@@ -11,9 +11,13 @@ categories: ["code", "recommendation"]
 
 So ähnlich lautete der Spruch des Superhelden *He-Man* aus den 80er Jahren, kurz bevor er seine Superkräfte bekam. Und ungefähr genauso lange gibt es auch Vim: nämlich 22 Jahre. Und das ältere Vi, auf dem Vim basiert, gibt es sogar schon länger als ich lebe. Wenn also ein *simpler* Texteditor seit so langer Zeit existiert und solche *Kraft* verleiht, muss einfach etwas Besonderes daran sein.
 
-{{< figure class="image-figure" caption="Vim - Scheuermittel und Poliermittel. Erhellt das Heim und das Alter." >}}
-{{< image src="artikel/vim-vintage.jpg" alt="Vim, Reinigungs- und Poliermittel." >}}
-{{< /figure >}}
+<figure class="image-figure">
+  <img src="/assets/images/artikel/vim-vintage.jpg" alt="Vim, Reinigungs- und Poliermittel.">
+  <figcaption>
+  Vim - Scheuermittel und Poliermittel. Erhellt das Heim und das Alter.
+  </figcaption>
+</figure>
+
 
 Das erste Mal bin ich vor einigen Jahren über Vim (oder Vi) gestolpert, als ich zum ersten Mal irgendeine Datei auf einem Server bearbeiten musste und dort keiner meiner schicken Editoren funktionierte. Das erste Mal, als ich mit Vi(m) arbeitete, war meine natürliche Reaktion: <q>WTF, was soll der Scheiß, ich kann erst tippen, wenn ich i gedrückt habe? Wer denkt sich denn so einen Mist aus?</q>.
 
@@ -64,12 +68,13 @@ Doch damit ist seit einiger Zeit Schluß. Tim Pope hat ein fantastisches Plugin 
 
 Pathogen ermöglicht es, Plugins als Bundles abzulegen, einzeln und als nettes Paket zusammengefasst. Alles was du dazu tun muss, ist [pathogen.vim](http://www.vim.org/scripts/script.php?script_id=2332) herunterzuladen und in den Vim-Ordner in einen Unterordner `autoload` (falls nicht vorhanden erstellen) abzulegen. Als nächsten Schritt legst du einen Ordner `bundle` im Vim-Ordner an und öffnest deine Datei `.vimrc`. Dort schreibst du ganz an den Anfang:
 
-{{% figure class="code-figure" caption=".vimrc" %}}
+<p class="code-info">.vimrc</p>
+
 ```vim
 silent! call pathogen#runtime_append_all_bundles()
 silent! call pathogen#helptags()
 ```
-{{% /figure %}}
+
 
 Plugins werden ab jetzt nicht entpackt und kompliziert in die richtigen Unterordner verschoben, sondern einfach pro Plugin in einen eigenen Ordner unter `bundle` gestellt. Für Vim gibt es nämlich leider einige, verschiedene Möglichkeiten Erweiterungen zu installieren, einfache Skripte, automatische Installer und seit kurzem gottseidank auch Git-Checkouts.
 

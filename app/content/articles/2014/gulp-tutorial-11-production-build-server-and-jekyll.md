@@ -14,15 +14,20 @@ download_text: "View Source on GitHub"
 
 This is the 11th part of my series *Introduction to Gulp.js*. Today I will start writing the production build task, set up a server to view the production code and build the production site with Jekyll.
 
-{{< figure class="image-figure attribution" author="Hannah" cite="118/365" url="https://www.flickr.com/photos/girlaphid/4570474834" cc="true" >}}
-{{< image src="artikel/gulp-tutorial-11.jpg" alt="A Girl looking on a Double Gulp" >}}
-{{< /figure >}}
+<figure class="image-figure attribution">
+  <img src="/assets/images/artikel/gulp-tutorial-11.jpg" alt="A Girl looking on a Double Gulp">
+  <figcaption>
+  Hannah, <a href="https://www.flickr.com/photos/girlaphid/4570474834" target="_blank" rel="nofollow" rel="noopener">118/365</a>
+  </figcaption>
+</figure>
+
 
 In development I used the `default` Gulp.js tasks to run the development server, building the assets and watching for changes. For production I will need another entry point.
 
 I decided to name my task `publish`. Later I am able to get a production build with the command `gulp publish`.
 
-{{% figure class="code-figure" caption="gulp/tasks/publish.js" %}}
+<p class="code-info">gulp/tasks/publish.js</p>
+
 ```javascript
 var gulp = require('gulp');
 
@@ -31,14 +36,15 @@ var gulp = require('gulp');
  */
 gulp.task('publish', ['browsersync:production']);
 ```
-{{% /figure %}}
+
 
 I put this file on same level as the `default.js` file. This task is short and sweet: It does only one thing. Start a BrowserSync tasks for production. This way I can have a look on the production site before deploying it to my server.
 
 ## BrowserSync for Production
 All production tasks will live in a folder `production/` inside of `gulp/tasks/`. I name the tasks of development and production the same but put them in different folders.
 
-{{% figure class="code-figure" caption="gulp/config.js" %}}
+<p class="code-info">gulp/config.js</p>
+
 ```javascript
 browsersync: {
   development: {
@@ -52,11 +58,12 @@ browsersync: {
   }
 }
 ```
-{{% /figure %}}
+
 
 The only differences to the `browsersync` of `development` are these: I serve only the production folder and use a different port for the server. This way I can run `development` and `production` in parallel.
 
-{{% figure class="code-figure" caption="gulp/tasks/production/browser-sync.js" %}}
+<p class="code-info">gulp/tasks/production/browser-sync.js</p>
+
 ```javascript
 var gulp        = require('gulp');
 var browsersync = require('browser-sync');
@@ -69,13 +76,14 @@ gulp.task('browsersync:production', ['build:production'], function() {
   browsersync(config);
 });
 ```
-{{% /figure %}}
+
 
 This task is boring. It just starts the production build.
 
 ## Build Task for Production
 
-{{% figure class="code-figure" caption="gulp/tasks/production/build.js" %}}
+<p class="code-info">gulp/tasks/production/build.js</p>
+
 ```javascript
 var gulp        = require('gulp');
 var runSequence = require('run-sequence');
@@ -104,7 +112,7 @@ gulp.task('build:production', function(callback) {
   callback);
 });
 ```
-{{% /figure %}}
+
 
 A lot is going on in this task: I run tasks in a specific order with `run-sequence`. First I delete the assets folder for a fresh creation. Then I run the Jekyll build for production, create the development assets like I did in development. And after this is finished I start with optimizing my assets and revisioning of the files.
 
@@ -117,7 +125,8 @@ My Jekyll production config just overwrites some values as the `url`, hide futur
 To speed up generation of your site in development, you may set `limit_post: 5`, which will only generate the last five posts. Additionally I set `future: true` and `show_drafts: true` to see Drafts and Posts with a future date.
 {{% /hint %}}
 
-{{% figure class="code-figure" caption="gulp/config.js" %}}
+<p class="code-info">gulp/config.js</p>
+
 ```javascript
 jekyll: {
   development: {
@@ -130,9 +139,10 @@ jekyll: {
   }
 }
 ```
-{{% /figure %}}
 
-{{% figure class="code-figure" caption="gulp/tasks/production/jekyll.js" %}}
+
+<p class="code-info">gulp/tasks/production/jekyll.js</p>
+
 ```javascript
 var gulp        = require('gulp');
 var cp          = require('child_process');
@@ -149,7 +159,7 @@ gulp.task('jekyll:production', function(done) {
   .on('close', done);
 });
 ```
-{{% /figure %}}
+
 
 ## Conclusion
 

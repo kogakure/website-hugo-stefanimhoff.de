@@ -14,9 +14,13 @@ download_text: "View Source on GitHub"
 
 This is the 10th part of my series *Introduction to Gulp.js*. Today I will use Gulp.js to create CSS image sprites.
 
-{{< figure class="image-figure attribution" caption="" author="Fabienne Wassermann" cite="double gulp" url="https://www.flickr.com/photos/fabi_k/5119690026" cc="true" >}}
-{{< image src="artikel/gulp-tutorial-10.jpg" alt="A Double Gulp" >}}
-{{< /figure >}}
+<figure class="image-figure attribution">
+  <img src="/assets/images/artikel/gulp-tutorial-10.jpg" alt="A Double Gulp">
+  <figcaption>
+    Fabienne Wassermann, <a href="https://www.flickr.com/photos/fabi_k/5119690026" target="_blank" rel="nofollow" rel="noopener">double gulp<a/>
+  </figcaption>
+</figure>
+
 
 Just to be sure everybody knows what I’m talking about: A CSS image sprite is a collection of images put into a single image. This way fewer requests are needed and the website will load faster. The CSS file will move the image for each sprite to the correct position.
 
@@ -28,7 +32,8 @@ I will need a Spritesmith plugin for Gulp.js:
 $ npm install --save-dev gulp.spritesmith@4.1.1
 ```
 
-{{% figure class="code-figure" caption="gulp/config.js" %}}
+<p class="code-info">gulp/config.js</p>
+
 ```javascript
 sprites: {
   src: srcAssets + '/images/sprites/icon/*.png',
@@ -55,11 +60,12 @@ sprites: {
   }
 }
 ```
-{{% /figure %}}
+
 
 I split my config into three subsections: The source files (individual icons for the sprite), the destination for the sprite and the css partial and the options for the image sprite. I use a custom `cssClass` which will generate `:hover` states by naming the hover sprites with `-hover`.
 
-{{% figure class="code-figure" caption="gulp/tasks/development/sprites.js" %}}
+<p class="code-info">gulp/tasks/development/sprites.js</p>
+
 ```javascript
 var gulp        = require('gulp');
 var spritesmith = require('gulp.spritesmith');
@@ -79,7 +85,7 @@ gulp.task('sprites', function() {
     .pipe(gulp.dest(config.dest.css));
 });
 ```
-{{% /figure %}}
+
 
 In the end I get two files: a partial `_sprites.scss` containing the class attributes and a sprite `icon-sprite.png` containing all images.
 
