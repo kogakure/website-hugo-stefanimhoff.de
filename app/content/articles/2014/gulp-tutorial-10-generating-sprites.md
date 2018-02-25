@@ -14,7 +14,7 @@ download_text: "View Source on GitHub"
 
 This is the 10th part of my series *Introduction to Gulp.js*. Today I will use Gulp.js to create CSS image sprites.
 
-<figure class="image-figure attribution">
+<figure class="image-figure">
   <img src="/assets/images/articles/2014/gulp-tutorial-10-generating-sprites/gulp-tutorial-10.jpg" alt="A Double Gulp">
   <figcaption>
     Fabienne Wassermann, <a href="https://www.flickr.com/photos/fabi_k/5119690026" target="_blank" rel="nofollow" rel="noopener">double gulp</a>

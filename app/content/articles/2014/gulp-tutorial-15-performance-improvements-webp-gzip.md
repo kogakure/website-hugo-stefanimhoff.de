@@ -14,7 +14,7 @@ download_text: "View Source on GitHub"
 
 This is the 15th part of my series *Introduction to Gulp.js*. Today I’ll add some tasks for performance improvement of the website with WebP for images and Gzip for text files.
 
-<figure class="image-figure attribution">
+<figure class="image-figure">
   <img src="/assets/images/articles/2014/gulp-tutorial-15-performance-improvements-webp-gzip/gulp-tutorial-15.jpg" alt="A oversized Captain America holding a Big Gulp">
   <figcaption>
     Jess, CAPTAIN AMERCIA

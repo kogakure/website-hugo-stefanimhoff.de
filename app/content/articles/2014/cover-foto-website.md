@@ -25,7 +25,7 @@ Jetzt musste ich nur noch herausfinden, wie denn der Fachbegriff für so ein Fot
 
 Doch es gibt tatsächlich einen Begriff für dieses Eigenschaft: [Bokeh](https://de.wikipedia.org/wiki/Bokeh).
 
-<figure class="image-figure attribution">
+<figure class="image-figure">
   <img src="/assets/images/articles/2014/cover-foto-website/josefina-bokeh.jpg" alt="Josefina with Bokeh">
   <figcaption>
   Carlos Luis Camacho, <a href="https://www.flickr.com/photos/paseodelsur/51805888/" target="_blank" rel="nofollow" rel="noopener">Josefina with Bokeh</a>

@@ -14,7 +14,7 @@ download_text: "View Source on GitHub"
 
 This is the 3rd part of my series *Introduction to Gulp.js*. Today I will write the build task, which will execute all other tasks needed for a build, the task to delete assets for a fresh start, and the task to create my Jekyll site.
 
-<figure class="image-figure attribution">
+<figure class="image-figure">
   <img src="/assets/images/articles/2014/gulp-tutorial-3-build-clean-jekyll/gulp-tutorial-3.jpg" alt="Boy drinking a very big cup of water">
   <figcaption>
     Rudy Eng, <a href="https://www.flickr.com/photos/mac-ash/3628500632" target="_blank" rel="nofollow" rel="noopener">A Very Big Cup of Water!</a>

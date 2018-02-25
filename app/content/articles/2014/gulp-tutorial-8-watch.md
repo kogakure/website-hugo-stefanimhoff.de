@@ -14,7 +14,7 @@ download_text: "View Source on GitHub"
 
 This is the 8th part of my series *Introduction to Gulp.js*. Today I will set up watch tasks for many different files with Gulp.js.
 
-<figure class="image-figure attribution attribution-caption">
+<figure class="image-figure">
   <img src="/assets/images/articles/2014/gulp-tutorial-8-watch/gulp-tutorial-8.jpg" alt="Funtime!">
   <figcaption>
   Not even <strong>Double Gulp</strong> helped to have a Funtime (Erin Nekervis, <a href="https://www.flickr.com/photos/theeerin/4701912791">Funtime!</a>)

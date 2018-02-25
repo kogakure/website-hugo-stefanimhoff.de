@@ -14,7 +14,7 @@ download_text: "View Source on GitHub"
 
 This is the 7th part of my series *Introduction to Gulp.js*. Today I will use Gulp.js to replace a lot of my URLs to small images with Base64 encoded images.
 
-<figure class="image-figure attribution">
+<figure class="image-figure">
   <img src="/assets/images/articles/2014/gulp-tutorial-7-base64/gulp-tutorial-7.jpg" alt="Big Gulp at the beach">
   <figcaption>
   The HI Life w/ Lime, <a href="https://www.flickr.com/photos/bi11jon/445799182" target="_blank" rel="nofollow" rel="noopener">Big Gulp</a>

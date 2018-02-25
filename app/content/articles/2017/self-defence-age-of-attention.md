@@ -10,7 +10,7 @@ og_image: "articles/self-defence-age-of-attention.jpg"
 categories: ["personal"]
 ---
 
-<figure class="image-figure attribution">
+<figure class="image-figure">
   <img src="/assets/images/articles/2017/self-defence-age-of-attention/self-defence-age-of-attention.jpg" alt="man on a smartphone">
   <figcaption>
     This story was also published on <a href="https://medium.com/on-advertising/self-defence-age-of-attention-c4c0e86e1b9d" target="_blank" rel="nofollow" rel="noopener">On Advertising</a> and featured by Medium.
