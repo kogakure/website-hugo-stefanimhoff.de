@@ -21,7 +21,7 @@ Meist sind auch Domains, die man über seine Inklusivdomains hinaus kaufen kann,
 Dabei sind es gerade die Domains, die eigentlich keinen oder nur einen minimalen Kostenfaktor beim Hosting ausmachen.
 
 <blockquote lang="de" class="pullquote">
-<p>Die wirklichen Kosten des Hostings entstehen durch Festplattenplatz, Speicher und genutzte&nbsp;Bandbreite.</p>
+  <p>Die wirklichen Kosten des Hostings entstehen durch Festplattenplatz, Speicher und genutzte&nbsp;Bandbreite.</p>
 </blockquote>
 
 Die wirklichen Kosten des Hostings entstehen durch Festplattenplatz, Speicher und genutzte Bandbreite. Somit sind auch alle Begrenzungen und *Paket-Features* vollkommen fiktiv und nur zur besseren Werbung abgegrenzt.

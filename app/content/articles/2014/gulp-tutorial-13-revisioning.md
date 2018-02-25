@@ -15,7 +15,7 @@ download_text: "View Source on GitHub"
 This is the 13th part of my series *Introduction to Gulp.js*. Today I will write the task to revision my static assets.
 
 <figure class="image-figure attribution">
-  <img src="/assets/images/articles/gulp-tutorial-13.jpg" alt="A woman dumping a Double Gulp on herself">
+  <img src="/assets/images/articles/2014/gulp-tutorial-13-revisioning/gulp-tutorial-13.jpg" alt="A woman dumping a Double Gulp on herself">
   <figcaption>
   Reed, <a href="https://www.flickr.com/photos/ishatter/3614680378" target="_blank" rel="nofollow" rel="noopener">dump it</a>
   </figcaption>

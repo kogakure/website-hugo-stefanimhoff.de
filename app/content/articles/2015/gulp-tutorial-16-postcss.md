@@ -15,7 +15,7 @@ download_text: "View Source on GitHub"
 This is the 16th part of my series *Introduction to Gulp.js*. Today I will show how to use PostCSS to process CSS files. I will replace Ruby Sass with PostCSS and additionally show how to lint stylesheets automatically in the background while developing with Stylelint.
 
 <figure class="image-figure attribution">
-  <img src="/assets/images/articles/gulp-tutorial-16.jpg" alt="Two girls pretent to hold a very big Gulp cup">
+  <img src="/assets/images/articles/2015/gulp-tutorial-16-postcss/gulp-tutorial-16.jpg" alt="Two girls pretent to hold a very big Gulp cup">
   <figcaption>
   al del barrio, <a href="https://www.flickr.com/photos/chaos/385142766/" target="_blank" rel="nofollow" rel="noopener">gulp!</a>
   </figcaption>
@@ -33,7 +33,7 @@ There are a lot of Preprocessors, Libraries, Frameworks, which extend CSS. And a
 There is a new kid on the block: [PostCSS](https://github.com/postcss/postcss). I don’t care, if it’s Preprocessor, a Postprocessor or just a Processor. You write something, it will process your stuff and it will put out CSS.
 
 <figure class="image-figure image-figure-noborder attribution">
-  <img src="/assets/images/articles/postcss-logo.svg" alt="Philosopher’s stone, logo of PostCSS">
+  <img src="/assets/images/articles/2015/gulp-tutorial-16-postcss/postcss-logo.svg" alt="Philosopher’s stone, logo of PostCSS">
   <figcaption>
   Philosopher’s stone, logo of PostCSS
   </figcaption>

@@ -13,7 +13,7 @@ Da lag es im Briefkasten: mein Belegexemplar der aktuellen Ausgabe 07/2010 des W
 
 <figure class="image-figure">
   <a href="https://www.screengui.de/">
-    <img src="/assets/images/articles/webstandards-magazin-django.jpg" alt="Webstandards-Magazin, Ausgabe 07/2010, Tools">
+    <img src="/assets/images/articles/2010/webstandards-magazin-django/webstandards-magazin-django.jpg" alt="Webstandards-Magazin, Ausgabe 07/2010, Tools">
   </a>
   <figcaption>
   Mein Artikel über Django im  <cite>Webstandards-Magazin</cite>, Ausgabe 07/2010, Tools

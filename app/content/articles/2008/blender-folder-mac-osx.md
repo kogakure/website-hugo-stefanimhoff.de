@@ -15,7 +15,7 @@ Da mein [Django Folder-Icon](/2007/django-folder-mac-osx/ "Django Folder für Ma
 
 <figure class="image-figure image-figure-noborder">
   <a href="/downloads/blender-osx-folder.zip">
-    <img src="/assets/images/articles/blender-osx-folders.png" alt="Blender Folder">
+    <img src="/assets/images/articles/2008/blender-folder-mac-osx/blender-osx-folders.png" alt="Blender Folder">
   </a>
 </figure>
 

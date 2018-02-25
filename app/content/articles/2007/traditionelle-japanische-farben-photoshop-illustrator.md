@@ -16,7 +16,7 @@ Bei einem Besuch in der Kunstausstellung <cite>Japan und der Westen</cite> im [K
 Im Museums-Shop konnte ich das Buch <cite>[The Traditional Colors of Japan](http://www.amazon.de/gp/product/4894445786/ref=as_li_ss_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=4894445786&linkCode=as2&tag=kogakurede-21)</cite> erstehen, das zwar auf Japanisch ist, aber neben einer vollständigen Farbpalette mit 250 Farben auch eine genaue Wertangabe von RGB, CMYK und anderen Informationen enthält.
 
 <figure class="image-figure image-figure-noborder">
-  <img src="/assets/images/articles/japanische-farben.png" alt="Japanische Farben" title="Japanische Farben">
+  <img src="/assets/images/articles/2007/traditionelle-japanische-farben-photoshop-illustrator/japanische-farben.png" alt="Japanische Farben" title="Japanische Farben">
   <figcaption>
   Japanische Farbpalette für Adobe Illustrator und Photoshop
   </figcaption>

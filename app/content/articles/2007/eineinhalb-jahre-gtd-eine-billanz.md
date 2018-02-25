@@ -12,7 +12,7 @@ categories: ["productivity"]
 Seit genau eineinhalb Jahren benutze ich jetzt die Prinzipien des *GTD* (<em>Getting Things Done</em>®), nach dem gleichnamigen Buch von *David Allen* um meine alltäglichen Aufgaben zu organisieren.
 
 <figure class="image-figure">
-  <img src="/assets/images/articles/gtd-vorher.jpg" alt="Mein Schreibtisch vorher" title="So sah die Inbox aus, bevor ich alle losen Enden sortiert hatte">
+  <img src="/assets/images/articles/2007/eineinhalb-jahre-gtd-eine-billanz/gtd-vorher.jpg" alt="Mein Schreibtisch vorher" title="So sah die Inbox aus, bevor ich alle losen Enden sortiert hatte">
   <figcaption>
   So sah die Inbox aus, bevor ich alle losen Enden sortiert hatte
   </figcaption>
@@ -44,7 +44,7 @@ Aufgaben kann man auch delegieren oder bestimmten Zeitpunkten zuweisen. Wenn man
 ## GTD im Alltag
 
 <figure class="image-figure">
-  <img src="/assets/images/articles/gtd-nachher.jpg" alt="Mein Schreibtisch danach" title="So sah die Inbox aus, nachdem ich alle losen Enden sortiert hatte">
+  <img src="/assets/images/articles/2007/eineinhalb-jahre-gtd-eine-billanz/gtd-nachher.jpg" alt="Mein Schreibtisch danach" title="So sah die Inbox aus, nachdem ich alle losen Enden sortiert hatte">
   <figcaption>
   So sah die Inbox aus, nachdem ich alle losen Enden sortiert hatte
   </figcaption>

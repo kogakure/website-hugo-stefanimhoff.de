@@ -12,7 +12,7 @@ categories: ["code"]
 Seit kurzem arbeite ich am Redesign meiner Kampfkunst-Website [kogakure.de](http://kogakure.de). Wie die meisten Websites hat auch diese einmal als eine Sammlung von statischen HTML-Seiten begonnen.
 
 <figure class="image-figure image-figure-center">
-  <img src="/assets/images/articles/i-love-jekyll.jpg" alt="I ♥  Jekyll">
+  <img src="/assets/images/articles/2014/rueckkehr-statische-websites/i-love-jekyll.jpg" alt="I ♥  Jekyll">
 </figure>
 
 Als ich 1999 die erste Version live gestellt habe, waren mir Web-Programmierung oder dynamische Seiten noch völlig fremd.

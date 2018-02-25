@@ -40,7 +40,7 @@ I did this by inlining critical CSS and deferring all other non-critical assets 
 CSS and JavaScript assets will block the page from rendering other content (like all the nice images you are so proud of). If you have render blocking assets the page will be white and blank until these assets are loaded (the state after this is finished is called DOMContentLoaded).
 
 <figure class="image-figure">
-  <img src="/assets/images/articles/developer-tools-network.jpg" alt="Google Chrome Developer Tools Network Monitor">
+  <img src="/assets/images/articles/2015/how-to-get-your-mobile-website-fast/developer-tools-network.jpg" alt="Google Chrome Developer Tools Network Monitor">
   <figcaption>
     The blue line indicates DOMContentLoaded. The page will be blank until this point is reached.
   </figcaption>
