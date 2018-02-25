@@ -7,9 +7,7 @@ description: "Human, the new movie of Yann Arthus-Bertrand is a moving film made
 og_image: "artikel/human.jpg"
 author: "Stefan Imhoff"
 slug: "human-film-yann-arthus-bertrand"
-categories:
-- recommendation
-- film
+categories: ["recommendation", "film"]
 ---
 
 Yann Arthus-Bertrand, the filmmaker of [Home](https://www.youtube.com/watch?v=jqxENMKaeCU), artist, photographer and specialist for aerial photography worked 3 years on his new movie: [Human](http://www.human-themovie.org/).

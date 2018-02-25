@@ -5,9 +5,7 @@ description: "Es muss nicht immer Capistrano sein: Die Python-Welt hat Fabric al
 author: "Stefan Imhoff"
 slug: "server-verwaltung-fabric"
 date: 2008-11-07T12:00:00+02:00
-categories:
-- server
-- code
+categories: ["server", "code"]
 ---
 
 Vor einiger Zeit habe ich meinen Workflow mit Capistrano beschrieben, und wie man damit einen Server fernwarten kann. Kürzlich bin ich auf das in Python geschriebene, viel schlankere Tool <cite>Fabric</cite> aufmerksam gemacht worden.

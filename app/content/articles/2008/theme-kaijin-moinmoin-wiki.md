@@ -6,8 +6,7 @@ author: "Stefan Imhoff"
 slug: "theme-kaijin-moinmoin-wiki"
 date: 2008-02-14T20:58:00+02:00
 og_image: "artikel/moinmoin-kaijin.png"
-categories:
-- download
+categories: ["download"]
 download_url: "/downloads/moinmoin-kaijin-theme.zip"
 download_text: "MoinMoin Kainjin Theme (98 KB)"
 ---

@@ -5,8 +5,7 @@ description: "Ein interessanter, halbstündiger Film mit interessanten Argumente
 author: "Stefan Imhoff"
 slug: "j2ee-vs-ruby-python-frameworks"
 date: 2007-06-13T01:34:00+02:00
-categories:
-- code
+categories: ["code"]
 ---
 
 Der NASA-Mitarbeiter Sean Kelly lässt Web-Frameworks in einem halbstündigen Match gegeneinander antreten. Ein sehr sehenswerter und inspirierender Film für alle, denen sonst die überzeugenden Argumente für moderne Web-Frameworks fehlen.

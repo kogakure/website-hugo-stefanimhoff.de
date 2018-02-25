@@ -6,10 +6,8 @@ author: "Stefan Imhoff"
 slug: "gulp-tutorial-4-css-generation-sass"
 og_image: "artikel/gulp-tutorial-4.jpg"
 description: "The ultimative tutorial and guide for Gulp.js: How to create CSS and Source Maps with Sass and Compass."
-series:
-- gulp
-categories:
-- code
+series: ["gulp"]
+categories: ["code"]
 download_url: "https://github.com/kogakure/gulp-tutorial"
 download_text: "View Source on GitHub"
 ---

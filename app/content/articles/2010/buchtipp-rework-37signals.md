@@ -1,14 +1,12 @@
 ---
 language: "de"
 title: "Buchtipp: Rework von 37signals"
-description: "Leseempfehlung für das neue Buch von 37signals: Rework. Ein kurzes, schön illustriertes Buch über Produktentwicklung und wie man ein Unternehmen leitet, dass nicht zu Unrecht für lange Zeit auf der Bestsellerliste stand und in höchsten Tönen gelobt wurde."
-author: "Stefan Imhoff"
 slug: "buchtipp-rework-37signals"
 date: 2010-04-27T16:30:00+02:00
+author: "Stefan Imhoff"
+description: "Leseempfehlung für das neue Buch von 37signals: Rework. Ein kurzes, schön illustriertes Buch über Produktentwicklung und wie man ein Unternehmen leitet, dass nicht zu Unrecht für lange Zeit auf der Bestsellerliste stand und in höchsten Tönen gelobt wurde."
 og_image: "artikel/rework.jpg"
-categories:
-- recommendation
-- book
+categories: ["recommendation", "book"]
 ---
 
 Heute empfehle ich ein Buch, das ich vor kurzem erst beendet habe, und schon ein zweites Mal lese: <cite>Rework</cite> von <cite>37signals</cite>.

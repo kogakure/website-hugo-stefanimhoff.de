@@ -5,8 +5,7 @@ description: "GTD (Getting Things Done) digital vs. analog. Was ist effizienter 
 author: "Stefan Imhoff"
 slug: "gtd-analog-vs-digital-0-zu-1"
 date: 2008-04-01T17:40:00+02:00
-categories:
-- productivity
+categories: ["productivity"]
 ---
 
 Der ultimative GTD-Test: Was ist denn nun schneller? Analoges oder digitales Notieren. Ich habe den Test gemacht.

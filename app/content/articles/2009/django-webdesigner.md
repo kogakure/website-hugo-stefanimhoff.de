@@ -5,8 +5,7 @@ description: "Einführung in Django für Webdesigner. Warum Django dank der fant
 author: "Stefan Imhoff"
 slug: "django-webdesigner"
 date: 2009-01-01T11:00:00+02:00
-categories:
-- code
+categories: ["code"]
 ---
 
 Die Arbeit mit einem Webframework ist auch für Webdesigner mit grafischem Hintergrund geeignet und vielleicht sogar stressfreier, als sich z. B. mit dem Templatesystem von WordPress herumzuschlagen. Und wieso ich Django unter den Webframeworks für besonders geeignet halte.

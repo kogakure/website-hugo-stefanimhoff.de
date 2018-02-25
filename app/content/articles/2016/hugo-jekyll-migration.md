@@ -6,8 +6,7 @@ date: 2016-08-27T13:05:57+02:00
 description: "A blog post about the migration from Jekyll to Hugo and why it’s worth to try out Hugo."
 language: "en"
 og_image: "artikel/hugo.png"
-categories:
-- website
+categories: ["website"]
 download_url: "https://github.com/kogakure/hugo-stefanimhoff.de"
 download_text: "View Source on GitHub"
 ---

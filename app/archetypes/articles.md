@@ -7,8 +7,6 @@ description: ""
 author: "Stefan Imhoff"
 language: "en"
 og_image: ""
-series:
--
-categories:
--
+series: [""]
+categories: [""]
 ---

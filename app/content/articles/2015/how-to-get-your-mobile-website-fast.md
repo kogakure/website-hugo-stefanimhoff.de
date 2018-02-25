@@ -6,9 +6,7 @@ author: "Stefan Imhoff"
 slug: "how-to-get-your-mobile-website-fast"
 og_image: "artikel/developer-tools-network.jpg"
 description: "Your responsive website is slow? How to optimize the critical render path and get your mobile website fast."
-categories:
-- code
-- website
+categories: ["code", "website"]
 ---
 
 In 2014 I relaunched my personal website with a Responsive Web Design. But having a Responsive Web Design with a good font size, without horizontal scrolling and pinch-zooming needed, where links can be clicked easily with a finger, is just the beginning.

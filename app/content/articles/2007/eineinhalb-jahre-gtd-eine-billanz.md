@@ -6,8 +6,7 @@ author: "Stefan Imhoff"
 slug: "eineinhalb-jahre-gtd-eine-billanz"
 date: 2007-11-24T01:15:00+02:00
 og_image: "artikel/gtd-vorher.jpg"
-categories:
-- productivity
+categories: ["productivity"]
 ---
 
 Seit genau eineinhalb Jahren benutze ich jetzt die Prinzipien des *GTD* (<em>Getting Things Done</em>®), nach dem gleichnamigen Buch von *David Allen* um meine alltäglichen Aufgaben zu organisieren.

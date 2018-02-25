@@ -6,10 +6,7 @@ description: ""
 author: "Stefan Imhoff"
 language: "en"
 og_image: "artikel/kogakure-2017.jpg"
-categories:
-- code
-- design
-- website
+categories: ["code", "design", "website"]
 ---
 
 4 month of work, 49 hours of coding, plus more hours for designing a new homepage, creating a new OTF font and polishing up some of my old 3D models. But now my martial arts website kogakure.de is online.

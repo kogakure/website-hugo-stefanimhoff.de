@@ -6,8 +6,7 @@ author: "Stefan Imhoff"
 slug: "koi-design"
 date: 2007-06-02T02:00:00+02:00
 og_image: "artikel/design-koi.jpg"
-categories:
-- design
+categories: ["design"]
 ---
 
 Die Idee für das Design dieser neuen Website schwirrte schon länger in meinem Kopf herum. Nur wollte sie irgendwie nicht in die physische Welt überwechseln. Als Inspiration habe ich die Kunst der japanischen Tätowierung verwendet – Irezumi.

@@ -5,8 +5,7 @@ description: "Warum Git eine Menge Vorzüge gegenüber anderen Versionskontrolls
 author: "Stefan Imhoff"
 slug: "versionskontrolle-mit-git"
 date: 2007-08-02T17:53:00+02:00
-categories:
-- vcs
+categories: ["vcs"]
 ---
 
 Vor ein paar Wochen bin ich über *Git* gestolpert, das Versionskontrollsystem von [Linus Torvalds](https://en.wikipedia.org/wiki/Linus_Torvalds "Linus Torvalds - Wikipedia, the free encyclopedia"). Git wird zur Zeit von Junio Hamano entwickelt.

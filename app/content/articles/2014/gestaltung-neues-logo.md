@@ -6,8 +6,7 @@ slug: "gestaltung-neues-logo"
 date: 2014-04-18T19:00:00+02:00
 description: "Einblick in die Gestaltung meines neuen Logos und Rakkan: Idee, Recherche und ein kurzer Exkurs über die Chinesische Schrift."
 og_image: "artikel/rakkan.jpg"
-categories:
-- design
+categories: ["design"]
 ---
 
 Da ein Logo zu den wesentlichen Elementen gehört, an denen eine Website wiedererkannt wird, wollte ich von Anfang an ein Logo gestalten, das thematisch zum restlichen Design der Seite passt.

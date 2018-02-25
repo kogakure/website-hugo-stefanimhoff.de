@@ -6,8 +6,7 @@ author: "Stefan Imhoff"
 slug: "gitweb-theme-github-stil"
 date: 2009-02-19T20:00:00+02:00
 og_image: "artikel/gitweb-theme-summary.png"
-categories:
-- download
+categories: ["download"]
 download_url: "https://github.com/kogakure/gitweb-theme/"
 download_text: "Gitweb Theme on GitHub"
 ---

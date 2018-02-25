@@ -6,10 +6,8 @@ description: "The ultimative tutorial and guide for Gulp.js: How to use PostCSS 
 og_image: "artikel/gulp-tutorial-16.jpg"
 author: "Stefan Imhoff"
 slug: "gulp-tutorial-16-postcss"
-series:
-- gulp
-categories:
-- code
+series: ["gulp"]
+categories: ["code"]
 download_url: "https://github.com/kogakure/gulp-tutorial"
 download_text: "View Source on GitHub"
 ---

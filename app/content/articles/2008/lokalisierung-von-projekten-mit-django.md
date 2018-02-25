@@ -5,8 +5,7 @@ description: "Einführung in die Lokalisierung und Internationalisierung einer D
 author: "Stefan Imhoff"
 slug: "lokalisierung-von-projekten-mit-django"
 date: 2008-08-30T15:25:00+02:00
-categories:
-- code
+categories: ["code"]
 ---
 
 Es gibt für Django mittlerweile schon eine große Menge nützlicher Applikationen. Leider vernachlässigen viele Entwickler immer noch die Lokalisierung und Internationalisierung ihrer Applikationen.

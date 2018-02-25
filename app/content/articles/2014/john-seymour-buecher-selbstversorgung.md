@@ -6,9 +6,7 @@ slug: "john-seymour-buecher-selbstversorgung"
 date: 2014-08-03T16:00:00+02:00
 og_image: "artikel/john-seymour-illustration.jpg"
 description: "Über John Seymours fantastische, wunderschön illustrierte Bücher zu Selbstversorgung, Landwirtschaft und Handwerk. Die optimale Ausrüstung für eine kommende Zombie-Apokalypse."
-categories:
-- book
-- recommendation
+categories: ["book", "recommendation"]
 ---
 
 Meine frühsten Erinnerungen an Bücher sind, dass ich auf dem Bauch im Wohnzimmer auf dem weichen Teppich meiner Eltern liege und im <cite>Atlas der Weltgeschichte</cite> oder in den Büchern von *John Seymour* lese. Wer war John Seymour und warum sind mir seine Bücher so in Erinnerung geblieben?

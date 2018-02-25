@@ -7,9 +7,7 @@ og_image: "artikel/motivational-video.jpg"
 author: "Stefan Imhoff"
 slug: "motivational-video"
 widont: false
-categories:
-- film
-- quote
+categories: ["film", "quote"]
 ---
 
 Last week I found a really inspirational film on YouTube, focusing on motivation. It’s a good example of creating something good out of the work of others. The film uses clips and quotes from a broad variaty of people and uses music from movies.

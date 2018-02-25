@@ -5,10 +5,8 @@ description: "Ein umfangreiches Tutorial für Subversion: Wie wird Subversion in
 author: "Stefan Imhoff"
 slug: "subversion-2-installation"
 date: 2007-06-08T01:00:00+02:00
-series:
-- subversion
-categories:
-- vcs
+series: ["subversion"]
+categories: ["vcs"]
 ---
 
 Die Installation von Subversion ist relativ leicht und schnell erledigt, für die Bedienung kann man eine der zahllosen grafischen Oberflächen oder das Terminal benutzten. In diesem Teil der Reihe stelle ich ein paar Programme vor und zeige wie man Subversion aus dem Quellcode selber kompiliert.

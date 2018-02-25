@@ -6,9 +6,7 @@ description: "I just finished writing my first book in GitBook. I worked on it t
 author: "Stefan Imhoff"
 language: "en"
 og_image: "artikel/gitbook-kogakure.jpg"
-categories:
-- personal
-- book
+categories: ["personal", "book"]
 ---
 
 I just finished writing my first book. I worked on it the last six month. Actually I didn’t wrote it recently, but in the period of 18 years.

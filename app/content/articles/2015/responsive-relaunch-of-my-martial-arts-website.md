@@ -6,10 +6,7 @@ date: 2015-04-07T22:00:00+01:00
 author: "Stefan Imhoff"
 slug: "responsive-relaunch-of-my-martial-arts-website"
 og_image: "artikel/kogakure-de-relaunch.jpg"
-categories:
-- design
-- code
-- website
+categories: ["design", "code", "website"]
 ---
 
 After 62 days of work, I relaunched today my martial arts website [kogakure.de](http://kogakure.de/) in a brand new, mobile optimized design and with a complete rewritten code base. And I have still some time left until the end of April, when Google will start to punish websites, which are not mobile-optimized.

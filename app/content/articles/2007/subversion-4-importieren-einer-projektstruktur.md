@@ -5,10 +5,8 @@ description: "Ein umfangreiches Tutorial für Subversion: Mit Subversion eine Pr
 author: "Stefan Imhoff"
 slug: "subversion-4-importieren-einer-projektstruktur"
 date: 2007-07-29T13:00:00+02:00
-series:
-- subversion
-categories:
-- vcs
+series: ["subversion"]
+categories: ["vcs"]
 ---
 
 Im nächsten Schritt erzeuge ich auf der Festplatte die Struktur meines Projektes. Diese Struktur ist nicht vorgegeben und kann nach beliebiger Struktur angelegt werden, wobei es ein paar Empfehlungen und Konventionen gibt.

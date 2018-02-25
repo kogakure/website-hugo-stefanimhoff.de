@@ -6,10 +6,7 @@ author: "Stefan Imhoff"
 slug: "buchtipp-decodeunicode"
 date: 2011-06-02T18:38:00+02:00
 og_image: "artikel/decodeunicode.jpg"
-categories:
-- recommendation
-- book
-- typography
+categories: ["recommendation", "book", "typography"]
 ---
 
 Durch Zufall bin ich kürzlich auf ein Buch gestoßen, dass für alle an Typographie und Zeichen interessierten ein Kauftipp ist. Das Buch ist 656 Seiten stark, enthält alle derzeitigen 109.242 digitalen Schriftzeichen des Unicode-Zeichensatzes und wiegt fast 2 Kilogramm.

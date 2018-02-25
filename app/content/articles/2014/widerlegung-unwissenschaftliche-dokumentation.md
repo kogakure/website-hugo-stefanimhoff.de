@@ -6,10 +6,7 @@ author: "Stefan Imhoff"
 date: 2014-05-09T18:00:00+02:00
 description: "Eine sehr interessante Dokumentation, die 'Ancient Aliens', eine unwissenschaftliche Dokumentationsreihe, widerlegt."
 og_image: "artikel/pakals-grabplatte.jpg"
-widont: false
-categories:
-- film
-- recommendation
+categories: ["film", "recommendation"]
 ---
 
 Von Zeit zu Zeit begegne ich seltsamen Zeitgenossen, die davon überzeugt sind, dass eine bestimmte Sache etwas Mysteriöses, Magisches oder Unerklärliches an sich hat.

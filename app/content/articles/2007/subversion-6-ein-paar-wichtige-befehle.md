@@ -5,10 +5,8 @@ description: "Ein umfangreiches Tutorial für Subversion: Nützliche und Notwend
 author: "Stefan Imhoff"
 slug: "subversion-6-ein-paar-wichtige-befehle"
 date: 2007-11-02T19:24:00+02:00
-series:
-- subversion
-categories:
-- vcs
+series: ["subversion"]
+categories: ["vcs"]
 ---
 
 Es gibt in Subversion noch ein paar nützliche und notwendige Befehle, die man im täglichen Umgang brauchen wird.

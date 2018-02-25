@@ -6,10 +6,8 @@ author: "Stefan Imhoff"
 slug: "gulp-tutorial-1-intro-setup"
 og_image: "artikel/gulp-tutorial-1.png"
 description: "The ultimative tutorial and guide for Gulp.js: The first part of my series on Gulp.js. What is Gulp.js? Why to use it? And how to install Gulp and Jekyll."
-series:
-- gulp
-categories:
-- code
+series: ["gulp"]
+categories: ["code"]
 download_url: "https://github.com/kogakure/gulp-tutorial"
 download_text: "View Source on GitHub"
 ---

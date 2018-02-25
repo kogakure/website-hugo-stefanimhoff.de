@@ -1,12 +1,11 @@
 ---
 language: "de"
 title: "Gelöste Django-Probleme"
-description: "Mittlerweile gibt es gute Lösungen für alltägliche Probleme mit Django: Volltextsuche, Dokumentation schreiben, Datenbank-Migration, verzögerte und entfernte Ausführung, Deployment und Packaging."
-author: "Stefan Imhoff"
 slug: "geloeste-django-probleme"
 date: 2010-09-11T16:00:00+02:00
-categories:
-- code
+author: "Stefan Imhoff"
+description: "Mittlerweile gibt es gute Lösungen für alltägliche Probleme mit Django: Volltextsuche, Dokumentation schreiben, Datenbank-Migration, verzögerte und entfernte Ausführung, Deployment und Packaging."
+categories: ["code"]
 ---
 
 Eric Holscher hat auf der DjangoCon 2010 einen interessanten Vortrag gehalten, in dem er die besten Lösungen für alltägliche Probleme mit Django aufzeigt.
