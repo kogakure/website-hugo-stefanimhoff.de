@@ -25,26 +25,50 @@ Detailed instructions for installations are included in the package on GitHub.
 
 ## Screenshots
 
-{{< figure class="image-figure image-figure-border" caption="Projektübersicht/Project view" >}}
-{{< image src="artikel/gitweb-theme-projects.png" alt="Projektübersicht" >}}
-{{< /figure >}}
+<figure class="image-figure image-figure-border">
+  <img src="/assets/images/artikel/gitweb-theme-projects.png" alt="Projektübersicht">
+  <figcaption>
+  Projektübersicht/Project view
+  </figcaption>
+</figure>
 
-{{< figure class="image-figure image-figure-border" caption="Zusammenfassung/Summary" >}}
-{{< image src="artikel/gitweb-theme-summary.png" alt="Zusammenfassung" >}}
-{{< /figure >}}
 
-{{< figure class="image-figure image-figure-border" caption="Commit" >}}
-{{< image src="artikel/gitweb-theme-commit.png" alt="Commit" >}}
-{{< /figure >}}
+<figure class="image-figure image-figure-border">
+  <img src="/assets/images/artikel/gitweb-theme-summary.png" alt="Zusammenfassung">
+  <figcaption>
+  Zusammenfassung/Summary
+  </figcaption>
+</figure>
 
-{{< figure class="image-figure image-figure-border" caption="Commit-DIFF" >}}
-{{< image src="artikel/gitweb-theme-commitdiff.png" alt="Commit-DIFF" >}}
-{{< /figure >}}
 
-{{< figure class="image-figure image-figure-border" caption="Historie/Log" >}}
-{{< image src="artikel/gitweb-theme-log.png" alt="Historie" >}}
-{{< /figure >}}
+<figure class="image-figure image-figure-border">
+  <img src="/assets/images/artikel/gitweb-theme-commit.png" alt="Commit">
+  <figcaption>
+  Commit
+  </figcaption>
+</figure>
 
-{{< figure class="image-figure image-figure-border" caption="Dateiansicht/Tree view" >}}
-{{< image src="artikel/gitweb-theme-tree.png" alt="Dateiansicht" >}}
-{{< /figure >}}
+
+<figure class="image-figure image-figure-border">
+  <img src="/assets/images/artikel/gitweb-theme-commitdiff.png" alt="Commit-DIFF">
+  <figcaption>
+  Commit-DIFF
+  </figcaption>
+</figure>
+
+
+<figure class="image-figure image-figure-border">
+  <img src="/assets/images/artikel/gitweb-theme-log.png" alt="Historie">
+  <figcaption>
+  Historie/Log
+  </figcaption>
+</figure>
+
+
+<figure class="image-figure image-figure-border">
+  <img src="/assets/images/artikel/gitweb-theme-tree.png" alt="Dateiansicht">
+  <figcaption>
+  Dateiansicht/Tree view
+  </figcaption>
+</figure>
+

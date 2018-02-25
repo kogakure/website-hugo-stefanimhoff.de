@@ -11,11 +11,15 @@ categories: ["recommendation", "book"]
 
 Heute empfehle ich ein Buch, das ich vor kurzem erst beendet habe, und schon ein zweites Mal lese: <cite>Rework</cite> von <cite>37signals</cite>.
 
-{{< figure class="image-figure image-figure-border" caption="37signals: <cite>Rework</cite> von Jason Fried & David Heinemeier Hansson" >}}
-<a href="http://www.amazon.de/gp/product/0307463745?ie=UTF8&amp;tag=kogakurede-21&amp;linkCode=as2&amp;camp=1638&amp;creative=19454&amp;creativeASIN=0307463745">
-  {{< image src="artikel/rework.jpg" alt="37signals: Rework" >}}
-</a>
-{{< /figure >}}
+<figure class="image-figure image-figure-border">
+  <a href="http://www.amazon.de/gp/product/0307463745?ie=UTF8&amp;tag=kogakurede-21&amp;linkCode=as2&amp;camp=1638&amp;creative=19454&amp;creativeASIN=0307463745">
+    <img src="/assets/images/artikel/rework.jpg" alt="37signals: Rework">
+  </a>
+  <figcaption>
+  37signals: <cite>Rework</cite> von Jason Fried & David Heinemeier Hansson
+  </figcaption>
+</figure>
+
 
 Ich bin schon seit langem ein großer Anhänger der Philosophie von Einfachheit und Schlichtheit, die <cite>37signals</cite> mit Erfolg kultivieren. Bereits ihr erstes (kostenloses) Buch [Getting Real](https://basecamp.com/books/getting-real) (auch als [Paperback-Version](http://www.amazon.de/gp/product/0578012812?ie=UTF8&amp;tag=kogakurede-21&amp;linkCode=as2&amp;camp=1638&amp;creative=19454&amp;creativeASIN=0578012812) erhältlich) habe ich mit großem Interesse gelesen.
 

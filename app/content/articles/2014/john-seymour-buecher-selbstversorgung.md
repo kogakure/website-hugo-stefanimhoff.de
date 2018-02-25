@@ -14,9 +14,13 @@ Meine frühsten Erinnerungen an Bücher sind, dass ich auf dem Bauch im Wohnzimm
 ## John Seymour
 Geboren 1914 in England, kam er dann in der Schweiz auf ein Internat und begann später Agrarwissenschaften zu studieren. Er ging mit 20 Jahren nach Afrika, um dort als Farmer zu arbeiten. Nach seinem Dienst im Zweiten Weltkrieg in Nordafrika und Asien kehrte er nach England zurück und zog 1957 mit seiner Familie in eine alte abgelegene Farm und begann ausschließlich von selbstangebauten Erzeugnissen zu leben. Nach einem Umzug auf eine Farm in Wales schrieb er in den 70er Jahren seine weltbekannten Bücher <cite><a href="http://www.amazon.de/gp/product/3831015775?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=3831015775">Das große Buch vom Leben auf dem Lande</a></cite> und <cite><a href="http://www.amazon.de/gp/product/3783161452?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=3783161452">Selbstversorgung aus dem Garten</a></cite>.
 
-{{< figure class="image-figure" caption="Illustration von Getreidearten aus einem von John Seymours’ Büchern" >}}
-{{< image src="artikel/john-seymour-illustration.jpg" alt="Illustration von Getreidearten" >}}
-{{< /figure >}}
+<figure class="image-figure">
+  <img src="/assets/images/artikel/john-seymour-illustration.jpg" alt="Illustration von Getreidearten">
+  <figcaption>
+  Illustration von Getreidearten aus einem von John Seymours’ Büchern
+  </figcaption>
+</figure>
+
 
 ## Die Bücher
 In seinen Büchern schreibt er für Laien verständlich, ergänzt durch wunderschöne, sehr detailierte Zeichnungen und Illustrationen. Ob man nur einem kleinen Garten oder einem großen Bauernhof betreibt, seine Bücher beschreiben sehr genau, was getan werden muss, damit ein geschlossener und gesunder Kreislauf entsteht.

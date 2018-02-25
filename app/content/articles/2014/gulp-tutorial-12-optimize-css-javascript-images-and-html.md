@@ -14,9 +14,13 @@ download_text: "View Source on GitHub"
 
 This is the 12th part of my series *Introduction to Gulp.js*. Today I will write tasks to optimize the assets of my website: CSS, JavaScript, Images and HTML.
 
-{{< figure class="image-figure attribution" author="Reed" cite="picnic" url="https://www.flickr.com/photos/ishatter/3614672744" cc="true" >}}
-{{< image src="artikel/gulp-tutorial-12.jpg" alt="A woman with a Double Gulp" >}}
-{{< /figure >}}
+<figure class="image-figure attribution">
+  <img src="/assets/images/artikel/gulp-tutorial-12.jpg" alt="A woman with a Double Gulp">
+  <figcaption>
+  Reed, <a href="https://www.flickr.com/photos/ishatter/3614672744" target="_blank" rel="nofollow" rel="noopener">picnic</a>
+  </figcaption>
+</figure>
+
 
 Every Kilobyte, which has to be loaded will slow down the loading of my website. That’s why I will minimize all my CSS and JavaScript and run my images through an optimizer, to remove as many bytes as possible. I will also add a task for minimizing HTML, but I don’t use this task, because the reduction is minimal.
 
@@ -29,7 +33,8 @@ I install the needed Gulp.js plugins:
 $ npm install --save-dev gulp-csso@2.0.0 gulp-size@2.0.0
 ```
 
-{{% figure class="code-figure" caption="gulp/config.js" %}}
+<p class="code-info">gulp/config.js</p>
+
 ```javascript
 optimize: {
   css: {
@@ -39,9 +44,10 @@ optimize: {
   }
 }
 ```
-{{% /figure %}}
 
-{{% figure class="code-figure" caption="gulp/tasks/production/optimize-css.js" %}}
+
+<p class="code-info">gulp/tasks/production/optimize-css.js</p>
+
 ```javascript
 var gulp   = require('gulp');
 var csso   = require('gulp-csso');
@@ -58,7 +64,7 @@ gulp.task('optimize:css', function() {
     .pipe(size());
 });
 ```
-{{% /figure %}}
+
 
 This task will copy the CSS files from the assets folder, minimize them, remove comments, output the size of the file and copy them to the production assets folder.
 
@@ -69,7 +75,8 @@ Now the CSS is minimized and the same has to be done to the JavaScript files. I 
 $ npm install --save-dev gulp-uglify@1.0.1
 ```
 
-{{% figure class="code-figure" caption="gulp/config.js" %}}
+<p class="code-info">gulp/config.js</p>
+
 ```javascript
 optimize: {
   css: {
@@ -82,9 +89,10 @@ optimize: {
   }
 }
 ```
-{{% /figure %}}
 
-{{% figure class="code-figure" caption="gulp/tasks/production/optimize-js.js" %}}
+
+<p class="code-info">gulp/tasks/production/optimize-js.js</p>
+
 ```javascript
 var gulp   = require('gulp');
 var uglify = require('gulp-uglify');
@@ -101,7 +109,7 @@ gulp.task('optimize:js', function() {
     .pipe(size());
 });
 ```
-{{% /figure %}}
+
 
 This task will take the JavaScript files, minimize and optimize them, put them to my production assets folder and output the size.
 
@@ -120,7 +128,8 @@ I’ll need `gulp-imagemin` for my task, which is able to minify PNG, JPG, GIF a
 $ npm install --save-dev gulp-imagemin@2.3.0
 ```
 
-{{% figure class="code-figure" caption="gulp/config.js" %}}
+<p class="code-info">gulp/config.js</p>
+
 ```javascript
 optimize: {
   css: {
@@ -140,9 +149,10 @@ optimize: {
   }
 }
 ```
-{{% /figure %}}
 
-{{% figure class="code-figure" caption="gulp/tasks/production/optimize-images.js" %}}
+
+<p class="code-info">gulp/tasks/production/optimize-images.js</p>
+
 ```javascript
 var gulp     = require('gulp');
 var imagemin = require('gulp-imagemin');
@@ -159,7 +169,7 @@ gulp.task('optimize:images', function() {
     .pipe(size());
 });
 ```
-{{% /figure %}}
+
 
 This task will take my images, optimize them, copy them to the assets folder and output the size.
 
@@ -170,7 +180,8 @@ As said before I wrote this task, so you can see how to do it, but I don’t use
 $ npm install --save-dev gulp-htmlmin@1.2.0
 ```
 
-{{% figure class="code-figure" caption="gulp/config.js" %}}
+<p class="code-info">gulp/config.js</p>
+
 ```javascript
 optimize: {
   css: {
@@ -191,9 +202,10 @@ optimize: {
   }
 }
 ```
-{{% /figure %}}
 
-{{% figure class="code-figure" caption="gulp/tasks/production/optimize-html.js" %}}
+
+<p class="code-info">gulp/tasks/production/optimize-html.js</p>
+
 ```javascript
 var gulp    = require('gulp');
 var htmlmin = require('gulp-htmlmin');
@@ -208,7 +220,7 @@ gulp.task('optimize:html', function() {
     .pipe(gulp.dest(config.dest));
 });
 ```
-{{% /figure %}}
+
 
 ## Conclusion
 

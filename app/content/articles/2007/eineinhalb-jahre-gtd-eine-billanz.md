@@ -11,9 +11,13 @@ categories: ["productivity"]
 
 Seit genau eineinhalb Jahren benutze ich jetzt die Prinzipien des *GTD* (<em>Getting Things Done</em>®), nach dem gleichnamigen Buch von *David Allen* um meine alltäglichen Aufgaben zu organisieren.
 
-{{< figure class="image-figure" caption="So sah die Inbox aus, bevor ich alle losen Enden sortiert hatte" >}}
-{{< image src="artikel/gtd-vorher.jpg" alt="Mein Schreibtisch vorher" title="So sah die Inbox aus, bevor ich alle losen Enden sortiert hatte" >}}
-{{< /figure >}}
+<figure class="image-figure">
+  <img src="/assets/images/artikel/gtd-vorher.jpg" alt="Mein Schreibtisch vorher" title="So sah die Inbox aus, bevor ich alle losen Enden sortiert hatte">
+  <figcaption>
+  So sah die Inbox aus, bevor ich alle losen Enden sortiert hatte
+  </figcaption>
+</figure>
+
 
 David Allen stellt in seinem Buch ein interessantes System vor, mit dem man seine täglichen Aufgaben effektiv und effizient erledigen kann.
 
@@ -39,9 +43,13 @@ Aufgaben kann man auch delegieren oder bestimmten Zeitpunkten zuweisen. Wenn man
 
 ## GTD im Alltag
 
-{{< figure class="image-figure" caption="So sah die Inbox aus, nachdem ich alle losen Enden sortiert hatte" >}}
-{{< image src="artikel/gtd-nachher.jpg" alt="Mein Schreibtisch danach" title="So sah die Inbox aus, nachdem ich alle losen Enden sortiert hatte" >}}
-{{< /figure >}}
+<figure class="image-figure">
+  <img src="/assets/images/artikel/gtd-nachher.jpg" alt="Mein Schreibtisch danach" title="So sah die Inbox aus, nachdem ich alle losen Enden sortiert hatte">
+  <figcaption>
+  So sah die Inbox aus, nachdem ich alle losen Enden sortiert hatte
+  </figcaption>
+</figure>
+
 
 Auf den ersten Blick sieht GTD vielleicht kompliziert oder umständlich aus, doch hilft es ungemein, den Kopf von belastendem Grübeln freizuhalten.
 Schon nach kurzer Zeit der Umstellung habe ich mich an diese Arbeitsweise gewöhnt und schnell die Eigenschaft übernommen, jeden Gedanken **sofort zu notieren** und gemäß des GTD-Prinzips irgendwo einzuordnen. So vergesse ich nie wieder wichtige Dinge und selbst kleine Ideen verschwinden nicht gleich aus dem Kopf.

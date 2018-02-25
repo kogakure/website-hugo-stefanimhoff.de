@@ -14,9 +14,13 @@ download_text: "View Source on GitHub"
 
 This is the 14th of my series *Introduction to Gulp.js*. Today I will write a task to sync the files of my Jekyll site to my webserver.
 
-{{< figure class="image-figure attribution" caption="" author="Jayanta Debnath" cite="BIG GULP!" url="https://www.flickr.com/photos/jkdsphotography/13786076413" cc="true" >}}
-{{< image src="artikel/gulp-tutorial-14.jpg" alt="A fluffy bunny with a Big Gulp" >}}
-{{< /figure >}}
+<figure class="image-figure attribution">
+  <img src="/assets/images/artikel/gulp-tutorial-14.jpg" alt="A fluffy bunny with a Big Gulp">
+  <figcaption>
+    Jayanta Debnath, <a href="https://www.flickr.com/photos/jkdsphotography/13786076413" target="_blank" rel="nofollow" rel="noopener">BIG GULP!</a>
+  </figcaption>
+</figure>
+
 
 ## Deploying the Website
 
@@ -24,7 +28,8 @@ There are a lot of possibilites to get a website on the server. You may use FTP,
 
 I write another tasks as entry point: `deploy`
 
-{{% figure class="code-figure" caption="gulp/tasks/deploy.js" %}}
+<p class="code-info">gulp/tasks/deploy.js</p>
+
 ```javascript
 var gulp = require('gulp');
 
@@ -33,7 +38,7 @@ var gulp = require('gulp');
  */
 gulp.task('deploy', ['rsync']);
 ```
-{{% /figure %}}
+
 
 This will just start the `rsync` task. But I could add more tasks, for example a task, which creates a zip archive of the build and copies it to a backup on my harddrive.
 
@@ -41,7 +46,8 @@ This will just start the `rsync` task. But I could add more tasks, for example a
 $ npm install --save-dev gulp-rsync@0.0.5
 ```
 
-{{% figure class="code-figure" caption="gulp/config.js" %}}
+<p class="code-info">gulp/config.js</p>
+
 ```javascript
 rsync: {
   src: production + '/**',
@@ -61,11 +67,12 @@ rsync: {
   }
 }
 ```
-{{% /figure %}}
+
 
 This task will grab all files in my production folder, connect to my server and copy all files recursively to my website root. It will delete old files and just add changes to the server.
 
-{{% figure class="code-figure" caption="gulp/tasks/production/rsync.js" %}}
+<p class="code-info">gulp/tasks/production/rsync.js</p>
+
 ```javascript
 var gulp   = require('gulp');
 var rsync  = require('gulp-rsync');
@@ -80,7 +87,7 @@ gulp.task('rsync', function() {
     .pipe(rsync(config.options));
 });
 ```
-{{% /figure %}}
+
 
 ## Conclusion
 

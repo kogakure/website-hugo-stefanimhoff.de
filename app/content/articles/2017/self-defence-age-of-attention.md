@@ -10,9 +10,13 @@ og_image: "artikel/self-defence-age-of-attention.jpg"
 categories: ["personal"]
 ---
 
-{{< figure class="image-figure attribution" author="Gilles Lambert" cite="man on a smartphone" url="https://unsplash.com/photos/pb_lF8VWaPU" >}}
-{{< image src="artikel/self-defence-age-of-attention.jpg" alt="man on a smartphone" >}}
-{{< /figure >}}
+<figure class="image-figure attribution">
+  <img src="/assets/images/artikel/self-defence-age-of-attention.jpg" alt="man on a smartphone">
+  <figcaption>
+    This story was also published on <a href="https://medium.com/on-advertising/self-defence-age-of-attention-c4c0e86e1b9d" target="_blank" rel="nofollow" rel="noopener">On Advertising</a> and featured by Medium.
+  </figcaption>
+</figure>
+
 
 It’s been a while since I first started questioning my own behaviour with technology, but also of all of us in general.
 

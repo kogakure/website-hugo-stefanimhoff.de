@@ -7,6 +7,8 @@ author: "Stefan Imhoff"
 language: "en"
 og_image: "artikel/gitbook-kogakure.jpg"
 categories: ["personal", "book"]
+download_url: "https://www.gitbook.com/book/kogakure/book-kogakure/details"
+download_text: "Read online or download (PDF, ePub, Mobi) version of the book"
 ---
 
 I just finished writing my first book. I worked on it the last six month. Actually I didn’t wrote it recently, but in the period of 18 years.

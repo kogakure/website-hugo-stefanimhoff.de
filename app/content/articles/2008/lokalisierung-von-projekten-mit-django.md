@@ -22,7 +22,8 @@ Dieses Beispiel setzt auf dem Code für das offizielle Django-Tutorial auf und f
 
 Der Einfachheit halber lokalisiere ich nur vier dieser Dateien:
 
-{{% figure class="code-figure" caption="admin.py" %}}
+<p class="code-info">admin.py</p>
+
 ```python
 from django.contrib import admin
 
@@ -46,9 +47,9 @@ class PollAdmin(admin.ModelAdmin):
 admin.site.register(Poll, PollAdmin)
 admin.site.register(Choice)
 ```
-{{% /figure %}}
 
-{{% figure class="code-figure" caption="models.py" %}}
+<p class="code-info">models.py</p>
+
 ```python
 import datetime
 from django.db import models
@@ -76,9 +77,10 @@ class Choice(models.Model):
         return self.choice
 
 ```
-{{% /figure %}}
 
-{{% figure class="code-figure" caption="polls/poll_list.html" %}}
+
+<p class="code-info">polls/poll_list.html</p>
+
 ```html
 {% if object_list %}
     <ul>
@@ -90,9 +92,10 @@ class Choice(models.Model):
     <p>No polls are available.</p>
 {% endif %}
 ```
-{{% /figure %}}
 
-{{% figure class="code-figure" caption="polls/results.html" %}}
+
+<p class="code-info">polls/results.html</p>
+
 ```html
 <h1>{{ object.question }}</h1>
 
@@ -102,7 +105,7 @@ class Choice(models.Model):
 {% endfor %}
 </ul>
 ```
-{{% /figure %}}
+
 
 
 ## Lokalisierung der Python-Dateien
@@ -111,7 +114,8 @@ In jeder Python-Datei, die lokalisierte Zeichenketten enthalten soll, muss zuers
 
 In der `admin.py` wird am Anfang das erwähnte Submodul importiert. Jetzt werden alle Zeichenketten wie unten zu sehen geändert. Dabei ist es am besten, wenn alle Zeichenketten als Unicode mit dem kleinen `u` davor markiert werden. Die Zeichenketten müssen in Klammern eingefasst werden, da `ugetttext` eine Funktion ist.
 
-{{% figure class="code-figure" caption="admin.py" %}}
+<p class="code-info">admin.py</p>
+
 ```python
 ...
 from django.utils.translation import ugettext_lazy as _
@@ -124,11 +128,12 @@ fieldsets = [
 ]
 ...
 ```
-{{% /figure %}}
+
 
 Django nimmt für die Felder im Admin-Backend automatisch den Datenmodellnamen mit einem Großbuchstaben als Label. Um diesen zu lokalisieren muss man ihn ausdrücklich angeben. Bei `ForeignKey`-Feldern ist es nötig den Namen mit `verbose_name` anzugeben.
 
-{{% figure class="code-figure" caption="models.py" %}}
+<p class="code-info">models.py</p>
+
 ```python
 ...
 from django.utils.translation import ugettext_lazy as _
@@ -151,7 +156,7 @@ votes = models.IntegerField(\_(u'Votes'))
 
 ...
 ```
-{{% /figure %}}
+
 
 ## Lokalisierung der HTML-Templates
 
@@ -159,7 +164,8 @@ In den HTML-Templates wird eine etwas andere Syntax benutzt. Zuerst muss am Anfa
 
 Um eine einfache Zeichenkette zu markieren, benutzt man `{% trans "" %}`. Es gibt auch Möglichkeiten Variablen oder lange Blöcke zu übersetzten. Hier verweise ich der Einfachheit halber auf die Dokumentation.
 
-{{% figure class="code-figure" caption="polls/poll_list.html" %}}
+<p class="code-info">polls/poll_list.html</p>
+
 ```html
 {% load i18n %}
 
@@ -169,11 +175,12 @@ Um eine einfache Zeichenkette zu markieren, benutzt man `{% trans "" %}`. Es gib
     <p>{% trans "No polls are available." %}</p>
 {% endif %}
 ```
-{{% /figure %}}
+
 
 Die Pluralisierung funktioniert (leider) nicht mehr wie gewohnt, wenn man sie lokalisiert. Dafür muss man eine Abfrage im `{% if %}`-ähnlichen Stil einbauen und die Menge eines Objektes abfragen.
 
-{{% figure class="code-figure" caption="polls/result.html" %}}
+<p class="code-info">polls/result.html</p>
+
 ```html
 {% load i18n %}
 
@@ -185,7 +192,7 @@ Die Pluralisierung funktioniert (leider) nicht mehr wie gewohnt, wenn man sie lo
 {% endfor %}
 </ul>
 ```
-{{% /figure %}}
+
 
 ## Erzeugen der Sprachdateien
 

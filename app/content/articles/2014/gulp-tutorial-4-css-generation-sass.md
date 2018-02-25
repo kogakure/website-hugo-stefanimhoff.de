@@ -14,9 +14,12 @@ download_text: "View Source on GitHub"
 
 This is the 4th part of my series *Introduction to Gulp.js*. Today I will show how to use Sass (and Compass if you want) to create CSS files. Furthermore I will add vendor prefixes with Autoprefixer and create Source Maps for easier debugging of the Sass files.
 
-{{< figure class="image-figure attribution" author="Gage Skidmore" cite="Sarah Palin" url="https://www.flickr.com/photos/gageskidmore/8571336210" cc="true" >}}
-{{< image src="artikel/gulp-tutorial-4.jpg" alt="Sarah Palin holding a Big Gulp" >}}
-{{< /figure >}}
+<figure class="image-figure attribution">
+  <img src="/assets/images/artikel/gulp-tutorial-4.jpg" alt="Sarah Palin holding a Big Gulp">
+  <figcaption>
+  Gage Skidmore, <a href="https://www.flickr.com/photos/gageskidmore/8571336210" target="_blank" rel="nofollow" rel="noopener">Sarah Palin</a>
+  </figcaption>
+</figure>
 
 
 ## Sass and Autoprefixer
@@ -32,7 +35,8 @@ $ npm install --save-dev gulp-plumber@1.0.1 gulp-ruby-sass@2.0.4 gulp-filter@3.0
 
 That’s a lot, but this task will do a lot.
 
-{{% figure class="code-figure" caption="gulp/config.js" %}}
+<p class="code-info">gulp/config.js</p>
+
 ```javascript
 sass: {
   src:  srcAssets + '/scss/**/*.{sass,scss}',
@@ -57,9 +61,10 @@ autoprefixer: {
   cascade: true
 }
 ```
-{{% /figure %}}
 
-{{% figure class="code-figure" caption="gulp/task/development/sass.js" %}}
+
+<p class="code-info">gulp/task/development/sass.js</p>
+
 ```javascript
 var gulp         = require('gulp');
 var plumber      = require('gulp-plumber');
@@ -94,7 +99,7 @@ gulp.task('sass', function() {
     .pipe(gulp.dest(config.sass.dest));
 });
 ```
-{{% /figure %}}
+
 
 I load all my files with the suffix of `*.sass` or `*.scss`. First I pipe the files through *Plumber*. It will keep Gulp.js running if I create a syntax error in one of my files. It would normally just crash with an error. The next step creates the CSS files, running the `sass` command. I create source maps and finally put the CSS files to it’s destination.
 

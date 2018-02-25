@@ -14,9 +14,13 @@ download_text: "View Source on GitHub"
 
 This is the 16th part of my series *Introduction to Gulp.js*. Today I will show how to use PostCSS to process CSS files. I will replace Ruby Sass with PostCSS and additionally show how to lint stylesheets automatically in the background while developing with Stylelint.
 
-{{< figure class="image-figure attribution" author="al del barrio" cite="gulp!" url="https://www.flickr.com/photos/chaos/385142766/" cc="true" >}}
-{{< image src="artikel/gulp-tutorial-16.jpg" alt="Two girls pretent to hold a very big Gulp cup" >}}
-{{< /figure >}}
+<figure class="image-figure attribution">
+  <img src="/assets/images/artikel/gulp-tutorial-16.jpg" alt="Two girls pretent to hold a very big Gulp cup">
+  <figcaption>
+  al del barrio, <a href="https://www.flickr.com/photos/chaos/385142766/" target="_blank" rel="nofollow" rel="noopener">gulp!</a>
+  </figcaption>
+</figure>
+
 
 ## Compass, Sass, LESS, Stylus … why do we need more tools?
 
@@ -28,9 +32,13 @@ There are a lot of Preprocessors, Libraries, Frameworks, which extend CSS. And a
 
 There is a new kid on the block: [PostCSS](https://github.com/postcss/postcss). I don’t care, if it’s Preprocessor, a Postprocessor or just a Processor. You write something, it will process your stuff and it will put out CSS.
 
-{{< figure class="image-figure image-figure-noborder attribution" cite="Philosopher’s stone, logo of PostCSS" cc="true" >}}
-{{< image src="artikel/postcss-logo.svg" alt="Philosopher’s stone, logo of PostCSS" >}}
-{{< /figure >}}
+<figure class="image-figure image-figure-noborder attribution">
+  <img src="/assets/images/artikel/postcss-logo.svg" alt="Philosopher’s stone, logo of PostCSS">
+  <figcaption>
+  Philosopher’s stone, logo of PostCSS
+  </figcaption>
+</figure>
+
 
 Why should you use a new tool, if Sass and it’s competitors do their job? Because it’s **fast** ([3-30 times faster](https://github.com/postcss/benchmark)), **modular** and **extendible**. I bet you only need a small fraction of your Preprocessors functionality.
 
@@ -54,7 +62,8 @@ I only add some basic plugins, but you can add more if you like later. I add [gu
 
 Next I will add the configuration for the new task:
 
-{{% figure class="code-figure" caption="gulp/config.js" %}}
+<p class="code-info">gulp/config.js</p>
+
 ```javascript
 styles: {
     src:  srcAssets + '/styles/*.css',
@@ -77,11 +86,12 @@ styles: {
     }
   },
 ```
-{{% /figure %}}
+
 
 I add the new task to my `development` folder:
 
-{{% figure class="code-figure" caption="ulp/tasks/development/styles.js" %}}
+<p class="code-info">ulp/tasks/development/styles.js</p>
+
 ```javascript
 var gulp           = require('gulp');
 var postcss        = require('gulp-postcss');
@@ -125,7 +135,7 @@ gulp.task('styles', function() {
     .pipe(gulp.dest(config.styles.dest));
 });
 ```
-{{% /figure %}}
+
 
 ### Rename SCSS files and folders
 I rename the `scss` folder to `styles` and create inside of this folder a new folder `partials`. I rename all `.scss` files to `.css` and move them into the partials folder (except the `main.css`). I recommend to comment out all lines in this file for now and bring them back later. Otherwise it will not run properly, because some of the syntax is different.
@@ -134,84 +144,95 @@ I rename the `scss` folder to `styles` and create inside of this folder a new fo
 
 Next, I will need to replace some lines of the old `sass` task with my new `styles` task. If you have never seen a **DIFF** file: a `-` (and red line) in front of a line has to be removed and a `+` (and green line) in front of a line has to be added:
 
-{{% figure class="code-figure" caption="gulp/config.js:132" %}}
+<p class="code-info">gulp/config.js:132</p>
+
 ```diff
 -    sass:    srcAssets + '/scss/**/*.{sass,scss}',
 +    styles:  srcAssets + '/styles/**/*.css',
 ```
-{{% /figure %}}
 
-{{% figure class="code-figure" caption="gulp/config.js:154" %}}
+
+<p class="code-info">gulp/config.js:154</p>
+
 ```diff
 -      css: srcAssets + '/scss/base/',
 +      css: srcAssets + '/styles/partials/base/',
 ```
-{{% /figure %}}
 
-{{% figure class="code-figure" caption="gulp/tasks/development/watch.js:9" %}}
+
+<p class="code-info">gulp/tasks/development/watch.js:9</p>
+
 ```diff
 -  gulp.watch(config.sass,    ['sass', 'scsslint']);
 +  gulp.watch(config.styles,  ['styles', 'scsslint']);
 ```
-{{% /figure %}}
 
-{{% figure class="code-figure" caption="gulp/tasks/development/build.js:11" %}}
+
+<p class="code-info">gulp/tasks/development/build.js:11</p>
+
 ```diff
 -    'sass',
 +    'styles',
 ```
-{{% /figure %}}
 
-{{% figure class="code-figure" caption="gulp/tasks/production/build.js:10" %}}
+
+<p class="code-info">gulp/tasks/production/build.js:10</p>
+
 ```diff
 -    'sass',
 +    'styles',
 ```
-{{% /figure %}}
 
-{{% figure class="code-figure" caption="gulp/tasks/development/base64.js:8" %}}
+
+<p class="code-info">gulp/tasks/development/base64.js:8</p>
+
 ```diff
 -gulp.task('base64', ['sass'], function() {
 +gulp.task('base64', ['styles'], function() {
 ```
-{{% /figure %}}
+
 
 I remove these lines from my `optimize-css.js` task, because `cssnano` already does the job:
 
-{{% figure class="code-figure" caption="gulp/tasks/production/optimize-css.js:2" %}}
+<p class="code-info">gulp/tasks/production/optimize-css.js:2</p>
+
 ```diff
 -var csso = require('gulp-csso');
 ```
-{{% /figure %}}
 
-{{% figure class="code-figure" caption="gulp/tasks/production/optimize-css.js:7" %}}
+
+<p class="code-info">gulp/tasks/production/optimize-css.js:7</p>
+
 ```diff
 - * Copy and minimize CSS files
 + * Copy CSS files
 ```
-{{% /figure %}}
 
-{{% figure class="code-figure" caption="gulp/tasks/production/optimize-css.js:11" %}}
+
+<p class="code-info">gulp/tasks/production/optimize-css.js:11</p>
+
 ```diff
 -    .pipe(minifycss(config.options))
 ```
-{{% /figure %}}
+
 
 FontCustom has to be changed to copy the Vector fonts CSS to the new location and provide CSS instead of SCSS:
 
-{{% figure class="code-figure" caption="fontcustom.yml:34" %}}
+<p class="code-info">fontcustom.yml:34</p>
+
 ```diff
 -  css: app/_assets/scss
 +  css: app/_assets/styles
 ```
-{{% /figure %}}
 
-{{% figure class="code-figure" caption="fontcustom.yml:48" %}}
+
+<p class="code-info">fontcustom.yml:48</p>
+
 ```diff
 -templates: [ scss, preview ]
 +templates: [ css, preview ]
 ```
-{{% /figure %}}
+
 
 After I updated the FontCustom config file I have to run the task for creating the Vector Fonts again:
 
@@ -237,7 +258,8 @@ $ npm install stylelint@1.2.1 postcss-reporter@1.3.0 --save-dev
 
 Now I’ll add the configuration for Linting to my Gulp config:
 
-{{% figure class="code-figure" caption="gulp/config.js" %}}
+<p class="code-info">gulp/config.js</p>
+
 ```javascript
 lintStyles: {
     src: [
@@ -264,7 +286,7 @@ lintStyles: {
     }
   },
 ```
-{{% /figure %}}
+
 
 I watch all CSS files, except the generated (FontCustom and Sprites) and the syntax highlighting file (which I don’t touch).
 
@@ -272,7 +294,8 @@ You can define linting rules for [stylelint](https://github.com/stylelint). Thes
 
 Next I will add the Gulp task:
 
-{{% figure class="code-figure" caption="gulp/tasks/development/lint-styles.js" %}}
+<p class="code-info">gulp/tasks/development/lint-styles.js</p>
+
 ```javascript
 var gulp      = require('gulp');
 var postcss   = require('gulp-postcss');
@@ -288,16 +311,17 @@ gulp.task('lint-styles', function() {
   ]));
 });
 ```
-{{% /figure %}}
+
 
 All I need to do now is replacing the linting task in my watch task:
 
-{{% figure class="code-figure" caption="gulp/tasks/development/watch.js:9" %}}
+<p class="code-info">gulp/tasks/development/watch.js:9</p>
+
 ```diff
 -  gulp.watch(config.styles,  ['styles', 'scsslint']);
 +  gulp.watch(config.styles,  ['styles', 'lint-styles']);
 ```
-{{% /figure %}}
+
 
 If you run `gulp`, the task will lint your CSS files, whenever you save them and show errors with filename, line number and broken rule in the Terminal. PostCSS provides even a [plugin](https://github.com/postcss/postcss-browser-reporter) to bring the errors to your browser.
 

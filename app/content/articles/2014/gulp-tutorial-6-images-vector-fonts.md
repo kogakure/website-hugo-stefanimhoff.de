@@ -14,24 +14,30 @@ download_text: "View Source on GitHub"
 
 This is the 6th part of my series *Introduction to Gulp.js*. The last article was very long and complicated. This time it’s a easier one: I will show how I move my images and generate vector fonts.
 
-{{< figure class="image-figure attribution attribution-caption" caption="Today we will only take a <strong>Mini Gulp</strong>" author="世書 名付" cite="Mini Gulp" url="https://www.flickr.com/photos/nseika/9477122568" cc="true" >}}
-{{< image src="artikel/gulp-tutorial-6.jpg" alt="A Mini Gulp with water" >}}
-{{< /figure >}}
+<figure class="image-figure attribution attribution-caption">
+  <img src="/assets/images/artikel/gulp-tutorial-6.jpg" alt="A Mini Gulp with water">
+  <figcaption>
+    Today we will only take a <strong>Mini Gulp</strong> (世書 名付, <a href="https://www.flickr.com/photos/nseika/9477122568">Mini Gulp</a>)
+  </figcaption>
+</figure>
+
 
 ## Images
 
 The image task is a simple one again. All it does for now is copying the images to the asset directory. I will optimize my images later during the production build.
 
-{{% figure class="code-figure" caption="gulp/config.js" %}}
+<p class="code-info">gulp/config.js</p>
+
 ```javascript
 images: {
   src:  srcAssets + '/images/**/*',
   dest: developmentAssets + '/images'
 }
 ```
-{{% /figure %}}
 
-{{% figure class="code-figure" caption="gulp/tasks/development/images.js" %}}
+
+<p class="code-info">gulp/tasks/development/images.js</p>
+
 ```javascript
 var gulp        = require('gulp');
 var changed     = require('gulp-changed');
@@ -47,7 +53,7 @@ gulp.task('images', function() {
     .pipe(gulp.dest(config.dest));
 });
 ```
-{{% /figure %}}
+
 
 
 ## Vector Fonts
@@ -65,7 +71,8 @@ $ brew install eot-utils
 
 Next I run the command `bundle exec fontcustom config` inside my main projects directory, which will create a file `fontcustom.yml`. I adjust my file until it looks like this:
 
-{{% figure class="code-figure" caption="fontcustom.yml" %}}
+<p class="code-info">fontcustom.yml</p>
+
 ```yaml
 # --------------------------------------------------------------------------- #
 # Project Info
@@ -116,11 +123,12 @@ output:
 
 templates: [ scss, preview ]
 ```
-{{% /figure %}}
+
 
 Next I add configuration and the task to copy the fonts to their location:
 
-{{% figure class="code-figure" caption="gulp/config.js" %}}
+<p class="code-info">gulp/config.js</p>
+
 ```javascript
 copyfonts: {
   development: {
@@ -129,9 +137,10 @@ copyfonts: {
   }
 }
 ```
-{{% /figure %}}
 
-{{% figure class="code-figure" caption="gulp/tasks/development/copy-fonts.js" %}}
+
+<p class="code-info">gulp/tasks/development/copy-fonts.js</p>
+
 ```javascript
 var gulp   = require('gulp');
 var config = require('../../config').copyfonts.development;
@@ -144,7 +153,7 @@ gulp.task('copy:fonts', ['fontcustom'], function() {
     .pipe(gulp.dest(config.dest));
 });
 ```
-{{% /figure %}}
+
 
 As you may have seen, before copying the fonts to the asset folder another task gets executed: `fontcustom`.
 
@@ -156,7 +165,8 @@ To execute a shell command I use the Gulp.js plugin `gulp-shell`:
 $ npm install --save-dev gulp-shell@0.5.0
 ```
 
-{{% figure class="code-figure" caption="gulp/tasks/development/fontcustom.js" %}}
+<p class="code-info">gulp/tasks/development/fontcustom.js</p>
+
 ```javascript
 var gulp  = require('gulp');
 var shell = require('gulp-shell');
@@ -170,11 +180,12 @@ gulp.task('fontcustom', shell.task([
   'bundle exec fontcustom compile'
 ]));
 ```
-{{% /figure %}}
+
 
 Fontcustom is a Ruby Gem and you’ll need to install the Gem either globally or in your Gemfile (if you install it globally you need to drop the `bundle exec` from your command). I choose to install it with my Gemfile:
 
-{{% figure class="code-figure" caption="Gemfile" %}}
+<p class="code-info">Gemfile</p>
+
 ```ruby
 source "https://rubygems.org"
 
@@ -182,7 +193,7 @@ gem 'jekyll', '~> 2.5.2'
 gem 'sass', '>= 3.3'
 gem 'fontcustom', '~> 1.3.7'
 ```
-{{% /figure %}}
+
 
 After you add the line for `fontcustom` you will need to run `bundle install` again.
 

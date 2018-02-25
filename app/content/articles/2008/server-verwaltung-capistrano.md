@@ -68,7 +68,8 @@ Der Einfachheit halber stehen alle meine Befehle direkt in der `Capfile`-Datei, 
 
 Ich habe in meiner Datei (`Capfile`) folgende Funktionen erstellt, die diverse Aufgaben für mich vereinfachen, wie z. B. das Neustarten des Webservers,  Caching-Servers oder das Aktualisieren eines Django-Projektes aus dem Repository.
 
-{{% figure class="code-figure" caption="Capfile" %}}
+<p class="code-info">Capfile</p>
+
 ```ruby
 set :hosts, "user@server.com"
 set :server_path, "/home/user/apps/apache2/bin/"
@@ -104,7 +105,7 @@ task :restart_memcached, :hosts => "#{hosts}" do
 end
 after "restart_memcached", "restart_server"
 ```
-{{% /figure %}}
+
 
 Variablen können beliebig zugewiesen werden (mit `set :variable, "Wert"`) und dann später mit `#{variable}` wieder verwendet werden. Es sind auch alle anderen Befehle von Ruby bei Capistrano möglich, wie Schleifen, Abfragen, etc.
 
