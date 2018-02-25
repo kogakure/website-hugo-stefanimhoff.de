@@ -4,7 +4,7 @@ title: "Introduction to Gulp.js 2: Server with BrowserSync and Configuration"
 date: 2014-10-19T10:17:00+02:00
 author: "Stefan Imhoff"
 slug: "gulp-tutorial-2-development-server-browsersync-configuration"
-og_image: "articles/gulp-tutorial-2.jpg"
+og_image: "assets/images/articles/2014/gulp-tutorial-2-development-server-browsersync-configuration/gulp-tutorial-2.jpg"
 description: "The ultimative tutorial and guide for Gulp.js: How to set up a development server with BrowserSync."
 series: ["gulp"]
 categories: ["code"]

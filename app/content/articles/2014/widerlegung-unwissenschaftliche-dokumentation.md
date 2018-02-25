@@ -5,7 +5,7 @@ slug: "widerlegung-unwissenschaftliche-dokumentation"
 author: "Stefan Imhoff"
 date: 2014-05-09T18:00:00+02:00
 description: "Eine sehr interessante Dokumentation, die 'Ancient Aliens', eine unwissenschaftliche Dokumentationsreihe, widerlegt."
-og_image: "articles/pakals-grabplatte.jpg"
+og_image: "assets/images/articles/2014/widerlegung-unwissenschaftliche-dokumentation/pakals-grabplatte.jpg"
 categories: ["film", "recommendation"]
 ---
 

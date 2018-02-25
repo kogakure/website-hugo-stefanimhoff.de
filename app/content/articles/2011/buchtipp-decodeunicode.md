@@ -5,7 +5,7 @@ description: "Buch-Empfehlung für alle, die an Schrift und Zeichen interessiert
 author: "Stefan Imhoff"
 slug: "buchtipp-decodeunicode"
 date: 2011-06-02T18:38:00+02:00
-og_image: "articles/decodeunicode.jpg"
+og_image: "assets/images/articles/2011/buchtipp-decodeunicode/decodeunicode.jpg"
 categories: ["recommendation", "book", "typography"]
 ---
 

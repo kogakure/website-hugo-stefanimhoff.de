@@ -4,7 +4,7 @@ title: "Die Typographie meiner Website"
 author: "Stefan Imhoff"
 slug: "die-typographie-meiner-website"
 date: 2014-06-19T10:30:00+02:00
-og_image: "articles/elements-of-typographic-style.jpg"
+og_image: "assets/images/articles/2014/die-typographie-meiner-website/elements-of-typographic-style.jpg"
 description: "Über die Typographie meiner neuen Website: Skala, Schriftart, vertikaler Rhythmus, Schriftstärke, Schriftgröße und Satzbreite."
 categories: ["design", "code", "website", "typography"]
 ---

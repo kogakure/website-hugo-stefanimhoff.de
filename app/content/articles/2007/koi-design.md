@@ -5,7 +5,7 @@ description: "Irezumi (Japanische Tätorwierung) als Inspiration für meine Webs
 author: "Stefan Imhoff"
 slug: "koi-design"
 date: 2007-06-02T02:00:00+02:00
-og_image: "articles/design-koi.jpg"
+og_image: "assets/images/articles/2007/koi-design/design-koi.jpg"
 categories: ["design"]
 ---
 

@@ -5,7 +5,7 @@ description: "Einführung in OpenStreetMap, eine kostenlose OpenSource-Alternati
 author: "Stefan Imhoff"
 slug: "kostenlose-vektorkarten-openstreetmap"
 date: 2008-09-06T18:59:00+02:00
-og_image: "articles/openstreetmap.jpg"
+og_image: "assets/images/articles/2008/kostenlose-vektorkarten-openstreetmap/openstreetmap.jpg"
 categories: ["recommendation"]
 ---
 

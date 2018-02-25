@@ -5,7 +5,7 @@ description: "FDDB (Food Database), ein kostenloses Ernährungstagebuch und eine
 author: "Stefan Imhoff"
 slug: "lebensmittel-datenbank"
 date: 2007-08-28T08:24:00+02:00
-og_image: "articles/fddb-info.png"
+og_image: "assets/images/articles/2007/lebensmittel-datenbank/fddb-info.png"
 categories: ["recommendation"]
 ---
 

@@ -5,7 +5,7 @@ description: "Ich arbeite seit 1,5 Jahren mit GTD (Getting Things Done): Eine Ei
 author: "Stefan Imhoff"
 slug: "eineinhalb-jahre-gtd-eine-billanz"
 date: 2007-11-24T01:15:00+02:00
-og_image: "articles/gtd-vorher.jpg"
+og_image: "assets/images/articles/2007/eineinhalb-jahre-gtd-eine-billanz/gtd-vorher.jpg"
 categories: ["productivity"]
 ---
 

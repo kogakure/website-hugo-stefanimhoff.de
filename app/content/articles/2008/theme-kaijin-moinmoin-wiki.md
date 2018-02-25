@@ -5,7 +5,7 @@ description: "Für alle Freunde des MoinMoin-Wikis. Mein erstes, selbst erstellt
 author: "Stefan Imhoff"
 slug: "theme-kaijin-moinmoin-wiki"
 date: 2008-02-14T20:58:00+02:00
-og_image: "articles/moinmoin-kaijin.png"
+og_image: "assets/images/articles/2008/theme-kaijin-moinmoin-wiki/moinmoin-kaijin.png"
 categories: ["download"]
 download_url: "/downloads/moinmoin-kaijin-theme.zip"
 download_text: "MoinMoin Kainjin Theme (98 KB)"

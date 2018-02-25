@@ -4,7 +4,7 @@ title: "Introduction to Gulp.js 3: Build, Clean and Jekyll"
 date: 2014-10-20T10:00:00+02:00
 author: "Stefan Imhoff"
 slug: "gulp-tutorial-3-build-clean-jekyll"
-og_image: "articles/gulp-tutorial-3.jpg"
+og_image: "assets/images/articles/2014/gulp-tutorial-3-build-clean-jekyll/gulp-tutorial-3.jpg"
 description: "The ultimative tutorial and guide for Gulp.js: How to write tasks for cleaning files and folders, generating the build and the website with Jekyll."
 series: ["gulp"]
 categories: ["code"]

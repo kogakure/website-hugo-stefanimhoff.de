@@ -5,7 +5,7 @@ description: "I relaunched my martial arts website kogakure.de with a responsive
 date: 2015-04-07T22:00:00+01:00
 author: "Stefan Imhoff"
 slug: "responsive-relaunch-of-my-martial-arts-website"
-og_image: "articles/kogakure-de-relaunch.jpg"
+og_image: "assets/images/articles/2015/responsive-relaunch-of-my-martial-arts-website/kogakure-de-relaunch.jpg"
 categories: ["design", "code", "website"]
 ---
 

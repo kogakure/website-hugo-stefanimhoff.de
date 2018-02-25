@@ -5,7 +5,7 @@ slug: "vim"
 date: 2010-10-29T19:00:00+02:00
 author: "Stefan Imhoff"
 description: "Wie ich zum überzeugten Vim-Jünger wurde, warum Vim so ein genialer Editor ist und wie man am besten vorgeht, wenn man Vim lernen möchte."
-og_image: "articles/vim-vintage.jpg"
+og_image: "assets/images/articles/2010/vim/vim-vintage.jpg"
 categories: ["code", "recommendation"]
 ---
 

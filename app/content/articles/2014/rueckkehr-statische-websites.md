@@ -4,7 +4,7 @@ title: "Die Rückkehr der statischen Websites"
 author: "Stefan Imhoff"
 slug: "rueckkehr-statische-websites"
 date: 2014-09-23T20:15:52+02:00
-og_image: "articles/i-love-jekyll.jpg"
+og_image: "assets/images/articles/2014/rueckkehr-statische-websites/i-love-jekyll.jpg"
 description: "Über statische Seitengeneratoren und warum sie eine mächtige Alternative zu Systemen wie WordPress darstellen."
 categories: ["code"]
 ---

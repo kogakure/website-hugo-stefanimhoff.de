@@ -4,7 +4,7 @@ title: "How to get your Mobile Website fast"
 date: 2015-02-18T09:10:00+01:00
 author: "Stefan Imhoff"
 slug: "how-to-get-your-mobile-website-fast"
-og_image: "articles/developer-tools-network.jpg"
+og_image: "assets/images/articles/2015/how-to-get-your-mobile-website-fast/developer-tools-network.jpg"
 description: "Your responsive website is slow? How to optimize the critical render path and get your mobile website fast."
 categories: ["code", "website"]
 ---

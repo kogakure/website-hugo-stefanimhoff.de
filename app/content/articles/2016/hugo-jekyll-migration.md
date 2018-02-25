@@ -5,7 +5,7 @@ author: Stefan Imhoff
 date: 2016-08-27T13:05:57+02:00
 description: "A blog post about the migration from Jekyll to Hugo and why it’s worth to try out Hugo."
 language: "en"
-og_image: "articles/hugo.png"
+og_image: "assets/images/articles/2016/hugo-jekyll-migration/hugo.png"
 categories: ["website"]
 download_url: "https://github.com/kogakure/hugo-stefanimhoff.de"
 download_text: "View Source on GitHub"

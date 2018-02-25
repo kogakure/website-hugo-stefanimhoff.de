@@ -4,7 +4,7 @@ title: "Introduction to Gulp.js 6: Images and Vector Fonts"
 date: 2014-10-23T08:00:00+02:00
 author: "Stefan Imhoff"
 slug: "gulp-tutorial-6-images-vector-fonts"
-og_image: "articles/gulp-tutorial-6.jpg"
+og_image: "assets/images/articles/2014/gulp-tutorial-6-images-vector-fonts/gulp-tutorial-6.jpg"
 description: "The ultimative tutorial and guide for Gulp.js: How to move images and generate vector fonts from SVG."
 series: ["gulp"]
 categories: ["code"]

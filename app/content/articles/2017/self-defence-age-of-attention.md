@@ -6,7 +6,7 @@ date: 2017-11-03T08:00:00+01:00
 description: "A guide on how to get your attention back in the age of constant distraction."
 excerpt: "How to win back our time and minds. ❦ It’s been a while since I first started questioning my own behaviour with technology, but also of all of us in general. The Internet has given us an endless stream of information, nearly every  question answered in seconds. It has given us more music to hear, more texts to read, more images to look at, more movies to watch than one could ever consume in thousands of years."
 author: "Stefan Imhoff"
-og_image: "articles/self-defence-age-of-attention.jpg"
+og_image: "assets/images/articles/2017/self-defence-age-of-attention/self-defence-age-of-attention.jpg"
 categories: ["personal"]
 ---
 
@@ -16,7 +16,6 @@ categories: ["personal"]
     This story was also published on <a href="https://medium.com/on-advertising/self-defence-age-of-attention-c4c0e86e1b9d" target="_blank" rel="nofollow" rel="noopener">On Advertising</a> and featured by Medium.
   </figcaption>
 </figure>
-
 
 It’s been a while since I first started questioning my own behaviour with technology, but also of all of us in general.
 

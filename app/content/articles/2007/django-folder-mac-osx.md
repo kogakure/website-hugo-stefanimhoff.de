@@ -5,7 +5,7 @@ description: "Wer viel unter Mac OS X mit Django arbeitet hat sicherlich auch Or
 author: "Stefan Imhoff"
 slug: "django-folder-mac-osx"
 date: 2007-12-18T22:10:00+02:00
-og_image: "articles/django-osx-folders.png"
+og_image: "assets/images/articles/2007/django-folder-mac-osx/django-osx-folders.png"
 categories: ["download"]
 download_url: "/downloads/django-osx-folder.zip"
 download_text: "Django-Folder (612 KB)"

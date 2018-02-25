@@ -5,7 +5,7 @@ description: "Mein beliebtes Theme für GitWeb zum kostenlosen Download. So sieh
 author: "Stefan Imhoff"
 slug: "gitweb-theme-github-stil"
 date: 2009-02-19T20:00:00+02:00
-og_image: "articles/gitweb-theme-summary.png"
+og_image: "assets/images/articles/2009/gitweb-theme-github-stil/gitweb-theme-summary.png"
 categories: ["download"]
 download_url: "https://github.com/kogakure/gitweb-theme/"
 download_text: "Gitweb Theme on GitHub"

@@ -4,7 +4,7 @@ title: "Introduction to Gulp.js 14: Deploying the Website with Rsync"
 date: 2014-10-31T08:00:00+02:00
 author: "Stefan Imhoff"
 slug: "gulp-tutorial-14-deploying-the-website"
-og_image: "articles/gulp-tutorial-14.jpg"
+og_image: "assets/images/articles/2014/gulp-tutorial-14-deploying-the-website/gulp-tutorial-14.jpg"
 description: "The ultimative tutorial and guide for Gulp.js: How to deploy your website with rsync to your server."
 series: ["gulp"]
 categories: ["code"]

@@ -5,7 +5,7 @@ description: "Meine Git-Präsentation 'Sei (k)ein Blödmann und nimm Git!'. Mein
 author: "Stefan Imhoff"
 slug: "git-praesentation"
 date: 2009-08-08T13:00:00+02:00
-og_image: "articles/git-praesentation.jpg"
+og_image: "assets/images/articles/2009/git-praesentation/git-praesentation.jpg"
 categories: ["vcs", "presentation"]
 ---
 

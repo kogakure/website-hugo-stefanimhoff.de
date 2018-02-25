@@ -4,7 +4,7 @@ title: "Die CSS-Architektur meiner Website"
 author: "Stefan Imhoff"
 slug: "css-architektur"
 date: 2014-05-27T18:00:00+02:00
-og_image: "articles/css-peter-griffin-meme.jpg"
+og_image: "assets/images/articles/2014/css-architektur/css-peter-griffin-meme.jpg"
 description: "Über die auf dieser Website eingesetzte CSS-Architektur, Sass, Compass, das Grid-System Singularity, die Dateistruktur und SMACSS."
 categories: ["code", "website"]
 ---

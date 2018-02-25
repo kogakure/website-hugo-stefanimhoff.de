@@ -5,7 +5,7 @@ author: "Stefan Imhoff"
 slug: "gestaltung-neues-logo"
 date: 2014-04-18T19:00:00+02:00
 description: "Einblick in die Gestaltung meines neuen Logos und Rakkan: Idee, Recherche und ein kurzer Exkurs über die Chinesische Schrift."
-og_image: "articles/rakkan.jpg"
+og_image: "assets/images/articles/2014/gestaltung-neues-logo/rakkan.jpg"
 categories: ["design"]
 ---
 

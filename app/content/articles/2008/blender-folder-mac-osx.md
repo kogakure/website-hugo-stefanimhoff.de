@@ -5,7 +5,7 @@ description: "Wer viel unter Mac OS X mit Blender arbeitet hat sicherlich auch O
 author: "Stefan Imhoff"
 slug: "blender-folder-mac-osx"
 date: 2008-01-05T13:00:00+02:00
-og_image: "articles/blender-osx-folders.png"
+og_image: "assets/images/articles/2008/blender-folder-mac-osx/blender-osx-folders.png"
 categories: ["download"]
 download_url: "/downloads/blender-osx-folder.zip"
 download_text: "Blender-Folder (814 KB)"

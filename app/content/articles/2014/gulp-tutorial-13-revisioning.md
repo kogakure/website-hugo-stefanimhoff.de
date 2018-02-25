@@ -4,7 +4,7 @@ title: "Introduction to Gulp.js 13: Revisioning"
 date: 2014-10-30T07:45:00+02:00
 author: "Stefan Imhoff"
 slug: "gulp-tutorial-13-revisioning"
-og_image: "articles/gulp-tutorial-13.jpg"
+og_image: "assets/images/articles/2014/gulp-tutorial-13-revisioning/gulp-tutorial-13.jpg"
 description: "The ultimative tutorial and guide for Gulp.js: How to use revisioning to allow long caching of your assets and replace them  with hashed file names, that can be cache busted."
 series: ["gulp"]
 categories: ["code"]

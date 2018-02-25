@@ -3,7 +3,7 @@ language: "en"
 title: "New Japanese Netflix TV Show: Atelier aka Underwear"
 date: 2016-02-12T07:00:11+02:00
 description: "Netflix released a new Japanese TV Show: Atelier aka Underwear. I highly recommend this brilliant work about a young girl starting in an exclusive custom tailoring lingerie store in Toyko."
-og_image: "articles/netflix-atelier-underwear.jpg"
+og_image: "assets/images/articles/2016/japanese-netflix-tv-show-atelier-underwear/netflix-atelier-underwear.jpg"
 author: "Stefan Imhoff"
 slug: "japanese-netflix-tv-show-atelier-underwear"
 categories: ["recommendation", "film"]

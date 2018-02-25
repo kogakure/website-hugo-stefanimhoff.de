@@ -4,7 +4,7 @@ title: "Introduction to Gulp.js 7: Base64 Encoded Images"
 date: 2014-10-24T07:30:00+02:00
 author: "Stefan Imhoff"
 slug: "gulp-tutorial-7-base64"
-og_image: "articles/gulp-tutorial-7.jpg"
+og_image: "assets/images/articles/2014/gulp-tutorial-7-base64/gulp-tutorial-7.jpg"
 description: "The ultimative tutorial and guide for Gulp.js: How to replace small images with base64 encoded images."
 series: ["gulp"]
 categories: ["code"]

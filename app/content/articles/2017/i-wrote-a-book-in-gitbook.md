@@ -5,7 +5,7 @@ date: 2017-06-27T16:16:34+02:00
 description: "I just finished writing my first book in GitBook. I worked on it the last six month and it’s available to read online, as PDF, ePub and Mobi."
 author: "Stefan Imhoff"
 language: "en"
-og_image: "articles/gitbook-kogakure.jpg"
+og_image: "assets/images/articles/2017/i-wrote-a-book-in-gitbook/gitbook-kogakure.jpg"
 categories: ["personal", "book"]
 download_url: "https://www.gitbook.com/book/kogakure/book-kogakure/details"
 download_text: "Read online or download (PDF, ePub, Mobi) version of the book"
