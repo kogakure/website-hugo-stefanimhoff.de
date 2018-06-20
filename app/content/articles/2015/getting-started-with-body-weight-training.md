@@ -21,7 +21,7 @@ Human Flag
 
 Two years ago I stumbled upon a new training concept founded by some guys in Munich: [Freeletics]. They only trained with body weight and had a quite impressive physique.
 
-  [Freeletics]: https://www.freeletics.com/
+[freeletics]: https://www.freeletics.com/
 
 ## Freeletics and Crossfit
 
@@ -29,29 +29,25 @@ I also had heard of [Crossfit], which is quite popular in the USA. I bought the 
 
 And reading more about these extreme sports I found out they come with the danger of getting [Rhabdomyolysis], which is a very dangerous degenerative muscle injury. It destroys the muscles and can even lead to death. The body of beginners may be not capable to do high intensive training sessions that long or hard, as they are done in Crossfit or Freeletics.
 
-  [Crossfit]: https://www.crossfit.com/
-  [Rhabdomyolysis]: https://medium.com/@ericrobertson/crossfits-dirty-little-secret-97bcce70356d
+[crossfit]: https://www.crossfit.com/
+[rhabdomyolysis]: https://medium.com/@ericrobertson/crossfits-dirty-little-secret-97bcce70356d
 
 ## Calisthenics
 
-Body weight training is also called *Street Workout*, *Ghetto Fitness* or *Calisthenics*. The word **Calisthenics** comes from the greek words καλός (kalos), which means *beautiful* and σθένος (sthenos), which means *strength*.
+Body weight training is also called **Street Workout**, **Ghetto Fitness** or **Calisthenics**. The word **Calisthenics** comes from the greek words καλός (kalos), which means **beautiful** and σθένος (sthenos), which means **strength**.
 
 <figure class="image-figure">
 <img src="/assets/images/articles/2015/getting-started-with-body-weight-training/calisthenics-arm-elbow-lever.jpg" alt="Arm Elbow Lever on Beer Bottles">
-<figcaption>
-Arm Elbow Lever on Beer Bottles
-</figcaption>
+<figcaption>Arm Elbow Lever on Beer Bottles</figcaption>
 </figure>
 
-With Calisthenics you use some basic movements like *Lunges*, *Crunches*, *Push-ups*, *Pull-ups*, *Squats*, *Dips* to strengthen your body. You **gradually** improve your skills and proceed to more difficult exercises. That’s why it’s called *Progressive Calisthenics*.
+With Calisthenics you use some basic movements like **Lunges**, **Crunches**, **Push-ups**, **Pull-ups**, **Squats**, **Dips** to strengthen your body. You **gradually** improve your skills and proceed to more difficult exercises. That’s why it’s called **Progressive Calisthenics**.
 
 <blockquote lang="en" class="pullquote">
-<p>
-Adding 5 kg of weight to the barbell doesn’t feel as good.
-</p>
+<p>Adding 5 kg of weight to the barbell doesn’t feel as good.</p>
 </blockquote>
 
-The nice thing with this kind of training is you do **small steps** and improve in a sustainable way. Your body **needs time to learn** the movements correctly and get used to them. If done correctly some will reach advanced exercises like *Muscle-ups*, *Pistol Squats*, *Human Flag* or *One-Arm Push-Ups*. Whenever you reach a goal and master a trick, this is a really good feeling of accomplishment. Adding 5 kg of weight to the barbell doesn’t feel as good.
+The nice thing with this kind of training is you do **small steps** and improve in a sustainable way. Your body **needs time to learn** the movements correctly and get used to them. If done correctly some will reach advanced exercises like **Muscle-ups**, **Pistol Squats**, **Human Flag** or **One-Arm Push-Ups**. Whenever you reach a goal and master a trick, this is a really good feeling of accomplishment. Adding 5 kg of weight to the barbell doesn’t feel as good.
 
 ## Progressive Calisthenics
 
@@ -59,19 +55,19 @@ Calisthenics is suitable for **everybody**, you can start with the simple exerci
 
 When I started with Pull-Ups two years ago I could do barely 1 or 2 Pull-Ups, now I’m at 20 in a row. To find out, how advanced an exercise is, you can have a look at this [Periodic Table of Body Weight Exercises]. The website [Body Weight Training Area] provides multiple [progression guides] and even a poster to print out and put on your fridge. Calisthenics 101 provides [a complete list of Calisthenics exercises].
 
-And yes, everybody can learn Pull-Ups. Women, too! Just have a look at [Cornelia Rizkes Workout with some girls] or see the professional StarCraft 2 player [Madeleine Leaner] ([@MaddeLisk](https://twitter.com/maddelisk)) doing [Human Flags, Muscle-Ups or Lever].
+And yes, everybody can learn Pull-Ups. Women, too! Just have a look at [Cornelia Rizkes Workout with some girls] or see the professional StarCraft 2 player [Madeleine Leaner] doing [Human Flags, Muscle-Ups or Lever].
 
-  [Periodic Table of Body Weight Exercises]: http://strength.stack52.com/periodic-table-of-bodyweight-exercises/
-  [Body Weight Training Area]: http://bodyweighttrainingarena.com/
-  [progression guides]: http://bodyweighttrainingarena.com/progressive-calisthenics/
-  [a complete list of Calisthenics exercises]: https://www.calisthenics-101.co.uk/blogs/a-complete-list-of-calisthenics-exercises
-  [Cornelia Rizkes Workout with some girls]: https://www.youtube.com/watch?v=FfClYaCzx5U
-  [Madeleine Leaner]: https://www.youtube.com/user/MaddeLisk
-  [Human Flags, Muscle-Ups or Lever]: https://www.youtube.com/watch?v=-ag2gAcbp9M
+[periodic table of body weight exercises]: http://strength.stack52.com/periodic-table-of-bodyweight-exercises/
+[body weight training area]: http://bodyweighttrainingarena.com/
+[progression guides]: http://bodyweighttrainingarena.com/progressive-calisthenics/
+[a complete list of calisthenics exercises]: https://www.calisthenics-101.co.uk/blogs/a-complete-list-of-calisthenics-exercises
+[cornelia rizkes workout with some girls]: https://www.youtube.com/watch?v=FfClYaCzx5U
+[madeleine leaner]: https://www.youtube.com/user/MaddeLisk
+[human flags, muscle-ups or lever]: https://www.youtube.com/watch?v=-ag2gAcbp9M
 
 ## Building a New Habit
 
-I’ve read *James Clears* article [How to Build a New Habit: This is Your Strategy Guide] and according to his article building a new habit has five key points:
+I’ve read **James Clears** article [How to Build a New Habit: This is Your Strategy Guide] and according to his article building a new habit has five key points:
 
 1.  **Start small**
 2.  **Increase very small**
@@ -81,7 +77,7 @@ I’ve read *James Clears* article [How to Build a New Habit: This is Your Strat
 
 I followed his advice and **started small**, just with a few repetitions and a few sets, but **increased** the repetitions, sets and difficulty **constantly**.
 
-To reach a big goal like doing a *Human Flag* (which I haven’t reached jet) needs to be broken into parts: Build core strength, back strength and arm strength.
+To reach a big goal like doing a **Human Flag** (which I haven’t reached jet) needs to be broken into parts: Build core strength, back strength and arm strength.
 
 I keep track of my workouts in a diary and can easily see the training days in a calendar, to see if I missed too often.
 
@@ -94,8 +90,8 @@ Best dad ever. What is your excuse for not working out?
 
 And I am patient. It’s more about the journey, than about the goal. It’s still an effort to train every day, to convince me to do my workout, even if the day isn’t a good one. Personally I decided to **train early in the morning**, a few minutes after I got up. This way I don’t need as much willpower as I would in the evening. Unfortunately we are all victims to [Ego Depletion], and later in the day it may be completely gone.
 
-  [How to Build a New Habit: This is Your Strategy Guide]: https://jamesclear.com/habit-guide
-  [Ego Depletion]: https://en.wikipedia.org/wiki/Ego_depletion
+[how to build a new habit: this is your strategy guide]: https://jamesclear.com/habit-guide
+[ego depletion]: https://en.wikipedia.org/wiki/Ego_depletion
 
 ## Training Sites and Equipment
 
@@ -103,30 +99,30 @@ Calisthenics are far more popular in other countries, like Russia or the United 
 
 But with creativity you’ll always find a solution. If prisoners can train Calisthenics in their small cells, you should find ways to train without a perfect training course. You can pull up to branches of trees or fences, dip on handrails or bicycle stands. I for example found a playground nearby with decent bars. Not high enough to hang with my legs stretched, but I can train. Additionally I bought a [Doorway Pull-Up Bar] and [Dip Bars], because I got tired of using two chairs for Dips.
 
-  [Street Workout video from Ukraine]: https://www.youtube.com/watch?v=bvLQZVnz5WM
-  [Doorway Pull-Up Bar]: http://www.amazon.de/gp/product/B00EZ24BC2?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=3924862397
-  [Dip Bars]: http://www.amazon.de/gp/product/B0088I92VY?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=3924862397
+[street workout video from ukraine]: https://www.youtube.com/watch?v=bvLQZVnz5WM
+[doorway pull-up bar]: http://www.amazon.de/gp/product/B00EZ24BC2?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=3924862397
+[dip bars]: http://www.amazon.de/gp/product/B0088I92VY?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=3924862397
 
 ## Build Muscle, Endurance and Strength
 
-One thing you read all over the internet is the question if it is possible to gain muscles with Calisthenics. The answer is **yes**. It may be harder as with weight training, but your physique will be more balanced and you will be a lot stronger. There is no value in training arms like *Popeye* or focus just on a Sixpack. With Calisthenics you can improve your strength, endurance and build muscles.
+One thing you read all over the internet is the question if it is possible to gain muscles with Calisthenics. The answer is **yes**. It may be harder as with weight training, but your physique will be more balanced and you will be a lot stronger. There is no value in training arms like **Popeye** or focus just on a Sixpack. With Calisthenics you can improve your strength, endurance and build muscles.
 
 You can find a lot of articles on this topic on the internet, but as a general rule you need to do **low repetitions**, **multiple sets**, do them **slow** and **reduce rest time**.
 
 ## Motivation and Inspiration
 
-Finding resources on how to do the movements is an easy task. YouTube is filled with videos on how to do anything. And these channels provide regular motivation. Some of these persons or groups are like superstars. [Frank Medrano], a *vegan* athlete has over half a million followers.
+Finding resources on how to do the movements is an easy task. YouTube is filled with videos on how to do anything. And these channels provide regular motivation. Some of these persons or groups are like superstars. [Frank Medrano], a **vegan** athlete has over half a million followers.
 
 Other good channels to follow are [Strength Project], [OfficialBarstarzz], [Brendan Meyers], [BaristiWorkout], [Corey Hall], [Al Kavadlo], [Calisthenic Movement] or [Cornelia Ritzke].
 
 So, and now get started with Body Weight Training.
 
-  [Frank Medrano]: https://www.youtube.com/watch?v=mvJHw64fxgQ
-  [Strength Project]: https://www.youtube.com/user/strengthproject
-  [OfficialBarstarzz]: https://www.youtube.com/user/OfficialBarstarzz
-  [Brendan Meyers]: https://www.youtube.com/user/leftyjrpro
-  [BaristiWorkout]: https://www.youtube.com/user/baristiworkout
-  [Corey Hall]: https://www.youtube.com/user/cth38881
-  [Al Kavadlo]: https://www.youtube.com/user/alkavadlo
-  [Calisthenic Movement]: https://www.youtube.com/user/Calisthenicmovement
-  [Cornelia Ritzke]: https://www.youtube.com/user/ConnyBerlin
+[frank medrano]: https://www.youtube.com/watch?v=mvJHw64fxgQ
+[strength project]: https://www.youtube.com/user/strengthproject
+[officialbarstarzz]: https://www.youtube.com/user/OfficialBarstarzz
+[brendan meyers]: https://www.youtube.com/user/leftyjrpro
+[baristiworkout]: https://www.youtube.com/user/baristiworkout
+[corey hall]: https://www.youtube.com/user/cth38881
+[al kavadlo]: https://www.youtube.com/user/alkavadlo
+[calisthenic movement]: https://www.youtube.com/user/Calisthenicmovement
+[cornelia ritzke]: https://www.youtube.com/user/ConnyBerlin
