@@ -202,7 +202,7 @@ Redirect 301  /2016/hugo-jekyll-migration/                                      
 Redirect 301  /2016/speed-up-videos/                                               /speed-up-videos/
 Redirect 301  /2017/pursuit-of-minimalism/                                         /minimalism/
 Redirect 301  /2017/i-wrote-a-book-in-gitbook/                                     /gitbook/
-Redirect 301  /2017/migration-hugo-css-grids-service-worker/                       /migration-hugo-css-grids-service-worker/
+Redirect 301  /2017/migration-hugo-css-grids-service-worker/                       /website-relaunch-css-grid-layout/
 Redirect 301  /2017/self-defence-age-of-attention/                                 /attention/
 
 Redirect 301 /information/impressum      /impressum

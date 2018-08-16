@@ -1,11 +1,11 @@
 ---
-title: Migration to Hugo, CSS Grid Layout, and Service Worker
-slug: migration-hugo-css-grids-service-worker
+title: Website Relaunch with CSS Grid Layout
+slug: website-relaunch-css-grid-layout
 date: 2017-08-14T12:00:00+02:00
 description: ''
 author: Stefan Imhoff
 language: en
-og_image: 'assets/images/articles/2017/migration-hugo-css-grids-service-worker/kogakure-2017.jpg'
+og_image: 'assets/images/articles/2017/website-relaunch-css-grid-layout/kogakure-2017.jpg'
 categories: ['code', 'design', 'website']
 download_url: 'https://github.com/kogakure/website-hugo-kogakure.de'
 download_text: 'Source Code'
@@ -13,7 +13,7 @@ download_text: 'Source Code'
 
 4 month of work, 49 hours of coding, plus more hours for designing a new homepage, creating a new OTF font and polishing up some of my old 3D models. But now my martial arts website kogakure.de is online.
 
-[![New Website kogakure.de 2017](/assets/images/articles/2017/migration-hugo-css-grids-service-worker/kogakure-2017.jpg)](https://kogakure.de)
+[![New Website kogakure.de 2017](/assets/images/articles/2017/website-relaunch-css-grid-layout/kogakure-2017.jpg)](https://kogakure.de)
 
 The old website still used Jekyll, and it took a long time to generate and deploy my website. For the same reasons I migrated this website to [Hugo] – which are speed and getting rid of Ruby – I decided to do the same for [kogakure.de].
 
@@ -33,7 +33,7 @@ For CSS I use as with this website [PostCSS], but removed _PreCss_ and a lot of 
 
 Special thanks to [Mozilla] for their fantastic [Firefox] browser. The FireFox _Nightly_ Edition includes already a **new** _CSS Grid Inspector_, which is **awesome**. And it was really needed, my homepage uses **12 different grids**. Yes, you read correctly. 12. CSS Grid Layout _can_ be used for the overall page layout, but developers are encouraged to also use it on component basis.
 
-![My grids inspected with the Mozilla Firefox CSS Grid Inspector](/assets/images/articles/2017/migration-hugo-css-grids-service-worker/css-grid-inspector.jpg)
+![My grids inspected with the Mozilla Firefox CSS Grid Inspector](/assets/images/articles/2017/website-relaunch-css-grid-layout/css-grid-inspector.jpg)
 
 ## Hosting on Netlify
 

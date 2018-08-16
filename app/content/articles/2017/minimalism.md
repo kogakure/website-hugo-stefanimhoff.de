@@ -38,7 +38,7 @@ The wrong reasons might be diverse: Boredom, inner emptiness, desire of status, 
 
 ## The Origins of Minimalism and Simplicity
 
-As everything in this world is connected, Minimalism has its roots in a lot of different schools of thinking. One very closely related is **Simplicity**. I found this definition[^1] about the difference of Simplicity and Minimalism:
+As everything in this world is connected, Minimalism has its roots in a lot of different schools of thinking. One very closely related is **Simplicity**. I found this definition (source unknown) about the difference of Simplicity and Minimalism:
 
 <blockquote lang="en" class="pullquote">
   <p>Minimalism is the reduction of&nbsp;quantity.</p>
@@ -147,7 +147,3 @@ As JP Sears jokes: _It’s not about being so poor, that you have the inability 
 - [The Everyday Minimalist](https://www.everydayminimalist.com/)
 - [Minimlist Life](https://minimalism.life/)
 - [5 STYLE](https://5style.com/)
-
-[^1]:
-
-  I am not sure, who wrote this definition, as it can be found all over the internet. If somebody knows the original author, I gladly update the source.
