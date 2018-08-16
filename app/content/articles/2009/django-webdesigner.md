@@ -1,11 +1,12 @@
 ---
-language: "de"
-title: "Django für Webdesigner"
-description: "Einführung in Django für Webdesigner. Warum Django dank der fantastischen Template-Sprache besonders für Webdesigner gut geeignet ist."
-author: "Stefan Imhoff"
-slug: "django-webdesigner"
+draft: true
+language: de
+title: 'Django für Webdesigner'
+description: 'Einführung in Django für Webdesigner. Warum Django dank der fantastischen Template-Sprache besonders für Webdesigner gut geeignet ist.'
+author: Stefan Imhoff
+slug: django-webdesigner
 date: 2009-01-01T11:00:00+02:00
-categories: ["code"]
+categories: ['code']
 ---
 
 Die Arbeit mit einem Webframework ist auch für Webdesigner mit grafischem Hintergrund geeignet und vielleicht sogar stressfreier, als sich z. B. mit dem Templatesystem von WordPress herumzuschlagen. Und wieso ich Django unter den Webframeworks für besonders geeignet halte.
@@ -24,12 +25,12 @@ Die üblichen CMS werden je nach Kundenwunsch bis an ihre Grenzen (oder darüber
 
 Das dieses Suchen nach den geeigneten Erweiterungen und deren Anpassung nicht optimal ist, hat viele Gründe:
 
-* die wenigsten CMS bieten eine ordentliche API, auf der Webentwickler aufsetzen können
-* viele Entwickler überschwemmen den Markt mit mehr oder weniger gut programmierten Erweiterungen, was zu Performance-Einbußen oder Sicherheitsrisiken führen kann. Bei der Vielzahl der möglichen Erweiterungen ist es oft gar nicht möglich, die Qualität festzustellen, ohne tief in den Quellcode einzusteigen
-* die Suche nach geeigneten Lösungen für ein spezifisches Problem erfordert eine lange und mühsame Recherche im Internet
-* Erweiterungen und Plugins sind z. T. nach einem Update des Programms nicht mehr zu nutzen, wenn der Entwickler nicht mehr mit der Entwicklung des Kernsystems Schritt halten kann, oder das Interesse verliert
-* ein Webdesigner muss eine Vielzahl von CMS und deren Begrenzungen kennen, um bei spezifischen Kundenwünschen zu wissen, welches am besten mit den Wünschen des Kunden übereinstimmt, dies kann sehr anstrengend sein, weil ständig neue Systeme auf den Markt kommen
-* daher werden Kunden oft auch nach dem Motto <q lang="en">one fits all</q> mit nicht optimalen Lösungen abgespeist
+- die wenigsten CMS bieten eine ordentliche API, auf der Webentwickler aufsetzen können
+- viele Entwickler überschwemmen den Markt mit mehr oder weniger gut programmierten Erweiterungen, was zu Performance-Einbußen oder Sicherheitsrisiken führen kann. Bei der Vielzahl der möglichen Erweiterungen ist es oft gar nicht möglich, die Qualität festzustellen, ohne tief in den Quellcode einzusteigen
+- die Suche nach geeigneten Lösungen für ein spezifisches Problem erfordert eine lange und mühsame Recherche im Internet
+- Erweiterungen und Plugins sind z. T. nach einem Update des Programms nicht mehr zu nutzen, wenn der Entwickler nicht mehr mit der Entwicklung des Kernsystems Schritt halten kann, oder das Interesse verliert
+- ein Webdesigner muss eine Vielzahl von CMS und deren Begrenzungen kennen, um bei spezifischen Kundenwünschen zu wissen, welches am besten mit den Wünschen des Kunden übereinstimmt, dies kann sehr anstrengend sein, weil ständig neue Systeme auf den Markt kommen
+- daher werden Kunden oft auch nach dem Motto <q lang="en">one fits all</q> mit nicht optimalen Lösungen abgespeist
 
 ## Webframeworks
 
@@ -55,13 +56,13 @@ Es wurde von Anfang an so konzipiert, dass es eine komfortable Eingabe der Daten
 
 Ich selber zähle mich zur Gruppe der durchschnittlichen Webdesigner, auch wenn mir Serverkonfiguration und Programmierung nicht fremd sind. Meine Arbeitsverteilung im Tagesgeschäft sieht ungefähr so aus:
 
-* 41 % HTML/CSS
-* 12 % Design/Grafik/Foto
-* 11 % Ideenfindung/Konzeption
-* 8 % Screendesign
-* 7 % Programmierung
-* 4 % Textbearbeitung
-* 17 % Rest
+- 41 % HTML/CSS
+- 12 % Design/Grafik/Foto
+- 11 % Ideenfindung/Konzeption
+- 8 % Screendesign
+- 7 % Programmierung
+- 4 % Textbearbeitung
+- 17 % Rest
 
 Aus eigener Erfahrung kann ich sagen, dass ich als Webdesigner mit 90 % der auftretenden Wünsche gut zurechtkam.
 
@@ -94,9 +95,7 @@ class Article(models.Model):
 
     def __unicode__(self):
         return self.headline
-
 ```
-
 
 Mit einem kurzen Befehl wird Django im Anschluss daran mitgeteilt, dass die nötigen Tabellen in der Datenbank angelegt werden sollen. Django unterstützt eine Menge Datenbanken (SQLite3, MySQL, PostgreSQL, Oracle) von Haus aus. Weitere können durch Drittanbieter hinzugefügt werden.
 
@@ -112,7 +111,7 @@ Schick ist es auch noch. Das Interface anzupassen ist später kein Problem und f
 
 Das URL-Design ist bei Django ein integraler Bestandteil. Es ist sogar **nötig**, sich damit zu beschäftigen. Es gibt keine Vorgaben, wie die URLs aussehen soll, kein CMS was hier Endungen erzwingt, IDs anhängt oder Teile der URL obligatorisch macht.
 
-Mit ein wenig Wissen um [Regular Expressions]( http://www.regular-expressions.info/) können alle nur erdenklichen URLs konstruiert werden. Und das freut nicht nur die Suchmaschine sondern auch penible Webdesigner, die sprechende und menschlich-logische URLs lieben.
+Mit ein wenig Wissen um [Regular Expressions](http://www.regular-expressions.info/) können alle nur erdenklichen URLs konstruiert werden. Und das freut nicht nur die Suchmaschine sondern auch penible Webdesigner, die sprechende und menschlich-logische URLs lieben.
 
 Dieses kurze Beispiel aus der Django-Dokumentation zeigt die Konfiguration einiger URLs:
 
@@ -128,7 +127,6 @@ urlpatterns = patterns('',
 )
 ```
 
-
 Vielleicht mag dies auf den ersten Blick etwas seltsam aussehen oder nicht gleich verständlich sein, aber keine Sorge, das legt sich sehr schnell, wenn die Grundlagen von Regular Expressions verstanden sind.
 
 ## Views
@@ -139,7 +137,7 @@ Alle Abfragen und Überprüfungen finden hier statt. Django bietet standardmäß
 
 ## Templates
 
-Die View verpackt die verarbeiteten Daten in Container (*Context*) und gibt diese an die Templates weiter. Dort werden die Daten dann nach gewünschter Logik ausgegeben.
+Die View verpackt die verarbeiteten Daten in Container (_Context_) und gibt diese an die Templates weiter. Dort werden die Daten dann nach gewünschter Logik ausgegeben.
 
 Django bietet eine fantastische Templatesprache, die für Webdesigner kaum Wünsche offen lässt.
 
@@ -151,7 +149,7 @@ Django arbeitet umgekehrt, unterstützt aber auch das Einbinden von Schnipseln. 
 
 Die übliche Arbeitsweise ist das Erstellen eine Grundtemplates, was Grundstruktur, die wichtigsten Container und den Head-Bereich enthält. Dann werden Spezialvarianten davon erstellt, z. B. für einen Blog oder eine Homepage. Und schließlich werden die Templates für individuelle Artikel oder eine Liste erstellt. Dazu werden Bereiche definiert, die beim Vererben an andere Templates überschrieben werden können.
 
-Django-Templates lassen keine Programmierung (Python) oder Datenbankabfragen (SQL)  innerhalb von Templates zu. So bleibt der Code sauber und sieht nicht so furchtbar wie manches WordPress-Template aus, wo sich PHP, HTML, SQL-Abfragen und WordPress-Tags wirr ineinander verschachteln.
+Django-Templates lassen keine Programmierung (Python) oder Datenbankabfragen (SQL) innerhalb von Templates zu. So bleibt der Code sauber und sieht nicht so furchtbar wie manches WordPress-Template aus, wo sich PHP, HTML, SQL-Abfragen und WordPress-Tags wirr ineinander verschachteln.
 
 Wem die [Grundfunktionen der Templatesprache](https://docs.djangoproject.com/en/dev/ref/templates/builtins/) nicht ausreichen, der kann [eigene Filter oder Tags](https://docs.djangoproject.com/en/dev/howto/custom-template-tags/) scheiben, was oft nur wenige Zeilen Code erfordert.
 
@@ -170,8 +168,6 @@ Ein Grundtemplate sieht in der Django-Dokumentation z. B. so aus:
 </body>
 </html>
 ```
-
-
 
 Das niedrigere Template, hier eine Detailseite für einen Artikel, überschreibt dann die Blöcke nach Belieben und erbt den Rest des Grundtemplates:
 
@@ -193,20 +189,19 @@ Das niedrigere Template, hier eine Detailseite für einen Artikel, überschreibt
 {% endblock %}
 ```
 
-
 ## Erweitern von Django
 
 Eine Besonderheit von Django ist die Möglichkeit, das eigene Projekt mit Applikationen zu erweitern. Diese Applikationen sind mehr als nur Plugins oder Extensions, sondern Module (wie z. B. Module in ExpressionEngine). Fast alles, was in Django benutzt wird, ist eine eigene Applikation. Sogar das Admin-Interface ist ein eigenes Modul, was nach belieben benutzt oder nicht benutzt werden kann.
 
 Eine typische Seite eines Webdesigners könnte z. B. aus diesen Applikationen bestehen:
 
-* Blog
-* Kommentare
-* Projektportfolio
-* Fotogalerie
-* Registrierung/Login
-* Kontaktformular
-* einige "statische" Seiten (Impressum, Über mich, etc.)
+- Blog
+- Kommentare
+- Projektportfolio
+- Fotogalerie
+- Registrierung/Login
+- Kontaktformular
+- einige "statische" Seiten (Impressum, Über mich, etc.)
 
 Für vieles gibt es schon fertige Applikationen, einige sind sogar Teil von Django (in diesem Beispiel Kommentare, Kontaktformular und statische Seiten). Die Auswahl von Modulen lässt keine Wünsche offen: von Blog-Systemen, über Foren bis hin zu Shops ist fast alles bereits von eifrigen Programmierern erstellt worden. Und es kommen täglich neue hinzu.
 
@@ -216,7 +211,7 @@ Außerdem ist es möglich, mehrere Webseiten mit einer Applikation zu betreiben,
 
 Eines darf natürlich nicht verschwiegen werden: Systeme die nicht PHP benutzen, erfordern mehr Aufwand bei der Einrichtung auf dem Server. Das gilt für Ruby on Rails genauso wie für Django.
 
-Der Aufwand hält sich aber in Grenzen, schon das Modul *mod_python* reicht für Apache aus, um Django zum Laufen zu bringen, auch wenn es noch schnellere Möglichkeiten gibt. Es gibt mittlerweile gute [Dokumentationen](http://django-hosting.de/wiki/WikiIndex/) für die möglichen Arten der Produktionsumgebung.
+Der Aufwand hält sich aber in Grenzen, schon das Modul _mod_python_ reicht für Apache aus, um Django zum Laufen zu bringen, auch wenn es noch schnellere Möglichkeiten gibt. Es gibt mittlerweile gute [Dokumentationen](http://django-hosting.de/wiki/WikiIndex/) für die möglichen Arten der Produktionsumgebung.
 
 Daher ist es derzeit nicht denkbar, solche Systeme für den Fliesenleger von nebenan zu benutzen, denn ein eigener Server oder mindestens ein eigener VHost mit SSH-Zugang, und der Möglichkeit den Server selber zu konfigurieren, sollte schon vorliegen. Auf den üblichen Webhostingpaketen der Massenhoster läuft dies derzeit noch nicht. In den USA gibt es aber schon erste Angebote im sehr günstigen Bereich (z. B. [Webfaction](https://www.webfaction.com/?affiliate=kogakure), Slicehost, [Mediatemple](https://mediatemple.net/webhosting/shared/) oder [Dreamhost](https://www.dreamhost.com/)), die den Einsatz von Django ermöglichen, ohne den Server selber konfigurieren zu müssen. Die Website [Djangofriendly](http://djangofriendly.com/hosts/) bietet eine große Liste mit Hostern, die Django schon unterstützten. Auf einem eigenen Server kann man es natürlich immer installieren.
 

@@ -1,23 +1,24 @@
 ---
-language: "de"
-title: "Subversion 6: Ein paar wichtige Befehle"
-description: "Ein umfangreiches Tutorial für Subversion: Nützliche und Notwendige Befehle für den täglichen Gebrauch in Subversion."
-author: "Stefan Imhoff"
-slug: "subversion-6-ein-paar-wichtige-befehle"
+draft: true
+language: de
+title: 'Subversion 6: Ein paar wichtige Befehle'
+description: 'Ein umfangreiches Tutorial für Subversion: Nützliche und Notwendige Befehle für den täglichen Gebrauch in Subversion.'
+author: Stefan Imhoff
+slug: subversion-6-ein-paar-wichtige-befehle
 date: 2007-11-02T19:24:00+02:00
-series: ["subversion"]
-categories: ["vcs"]
+series: ['subversion']
+categories: ['vcs']
 ---
 
 Es gibt in Subversion noch ein paar nützliche und notwendige Befehle, die man im täglichen Umgang brauchen wird.
 
 ## Tags anlegen
 
-Tags sind Lesezeichen oder Schlagworte, mit denen man sich eine bestimmte Versionsnummer durch einen leicht zu merkenden Namen, wie z. B. *version-1.2.5* oder *Finale-Version* markieren kann.
+Tags sind Lesezeichen oder Schlagworte, mit denen man sich eine bestimmte Versionsnummer durch einen leicht zu merkenden Namen, wie z. B. _version-1.2.5_ oder _Finale-Version_ markieren kann.
 
-So kann man später beim erneuten Auschecken eines Standes einfach Bezug auf den *tag* nehmen, anstatt auf die Versionsnummer.
+So kann man später beim erneuten Auschecken eines Standes einfach Bezug auf den _tag_ nehmen, anstatt auf die Versionsnummer.
 
-Der einfachste Weg einen *tag* anzulegen ist den aktuellen *trunk* im Repository zu kopieren. Keine Angst, dadurch verdoppelt sich nicht der Platz, der benötigt wird.
+Der einfachste Weg einen _tag_ anzulegen ist den aktuellen _trunk_ im Repository zu kopieren. Keine Angst, dadurch verdoppelt sich nicht der Platz, der benötigt wird.
 
 ```bash
 $ svn copy file:///Users/XYZ/Subversion/meinewebsite/trunk file:///Users/XYZ/Subversion/meinewebsite/tags/version_1.0 -m "Taggen der Version 1.0"
@@ -37,7 +38,7 @@ Eine wichtige Funktion in Subversion ist das Ignorieren von bestimmten Ordnern o
 $ svn propedit svn:ignore .
 ```
 
-Darauf hin sollte sich ein TextEditor öffnen, in dem man die Dateien einfügen kann, die zukünftig ignoriert werden sollen. Also angenommen man hat einen Ordner *cache* und einige Logdateien mit der Endung .log, dann gibt man in die erste Zeile `cache` und in die zweite Zeile `*.log` ein.
+Darauf hin sollte sich ein TextEditor öffnen, in dem man die Dateien einfügen kann, die zukünftig ignoriert werden sollen. Also angenommen man hat einen Ordner _cache_ und einige Logdateien mit der Endung .log, dann gibt man in die erste Zeile `cache` und in die zweite Zeile `*.log` ein.
 
 Nun muss nur noch die Änderung an den Eigenschaften des Ordners ins Repository gespielt werden und man wird künftig nicht mehr nach den Dateien/Ordnern gefragt.
 
@@ -53,4 +54,4 @@ Für diesen Zweck exportiert man das Arbeitsverzeichnis mit diesem Befehl:
 $ svn export . ~/Desktop/export
 ```
 
-Damit wird der Inhalt des aktuellen Ordners ins Verzeichnis *export* auf dem Desktop exportiert.
+Damit wird der Inhalt des aktuellen Ordners ins Verzeichnis _export_ auf dem Desktop exportiert.

@@ -1,12 +1,13 @@
 ---
-language: "de"
-title: "Lebensmittel-Datenbank"
-description: "FDDB (Food Database), ein kostenloses Ernährungstagebuch und eine sehr umfangreiche Lebensmittel-Datenbank."
-author: "Stefan Imhoff"
-slug: "lebensmittel-datenbank"
+draft: true
+language: de
+title: 'Lebensmittel-Datenbank'
+description: 'FDDB (Food Database), ein kostenloses Ernährungstagebuch und eine sehr umfangreiche Lebensmittel-Datenbank.'
+author: Stefan Imhoff
+slug: lebensmittel-datenbank
 date: 2007-08-28T08:24:00+02:00
-og_image: "assets/images/articles/2007/lebensmittel-datenbank/fddb-info.png"
-categories: ["recommendation"]
+og_image: 'assets/images/articles/2007/lebensmittel-datenbank/fddb-info.png'
+categories: ['recommendation']
 ---
 
 Ich bin gestern über eine schöne Web 2.0 Anwendung gestolpert, mit der man die Nährwerte von Nahrungsmitteln komfortabel berechnen kann.
@@ -23,7 +24,6 @@ Die Datenbank ist sehr umfangreich und enthält sogar eine große Auswahl an Mar
   Der Detail-Screen eines Nahrungsmittels
   </figcaption>
 </figure>
-
 
 Ein Nahrungsmittel zur Liste hinzuzufügen geht denkbar einfach: Schlagwort in die Suchmaske. Die Ergebnisse sind gruppiert und häufig benutzte Nahrungsmittel findet man in seinen Favouriten wieder. In der Übersicht des Nahrungsmittels stehen alle bekannten Informationen, Foto (falls vorhanden) und ein Diagramm zu den Anteilen der Inhaltsstoffe. Über Portions- oder Gewichtsbuttons kann das Nahrungsmittel schnell zur Liste hinzugefügt werden. Das Gewicht kann danach noch genauer angepasst werden.
 

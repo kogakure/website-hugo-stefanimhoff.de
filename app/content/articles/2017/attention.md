@@ -1,13 +1,13 @@
 ---
-language: "en"
+language: en
 title: Self-Defence in the Age of Attention
-slug: "self-defence-age-of-attention"
+slug: attention
 date: 2017-11-03T08:00:00+01:00
-description: "A guide on how to get your attention back in the age of constant distraction."
-excerpt: "How to win back our time and minds. ❦ It’s been a while since I first started questioning my own behaviour with technology, but also of all of us in general. The Internet has given us an endless stream of information, nearly every  question answered in seconds. It has given us more music to hear, more texts to read, more images to look at, more movies to watch than one could ever consume in thousands of years."
-author: "Stefan Imhoff"
-og_image: "assets/images/articles/2017/self-defence-age-of-attention/self-defence-age-of-attention.jpg"
-categories: ["personal"]
+description: 'A guide on how to get your attention back in the age of constant distraction.'
+excerpt: 'How to win back our time and minds. ❦ It’s been a while since I first started questioning my own behaviour with technology, but also of all of us in general. The Internet has given us an endless stream of information, nearly every  question answered in seconds. It has given us more music to hear, more texts to read, more images to look at, more movies to watch than one could ever consume in thousands of years.'
+author: Stefan Imhoff
+og_image: 'assets/images/articles/2017/self-defence-age-of-attention/self-defence-age-of-attention.jpg'
+categories: ['personal']
 ---
 
 <figure class="image-figure">
@@ -19,16 +19,15 @@ categories: ["personal"]
 
 It’s been a while since I first started questioning my own behaviour with technology, but also of all of us in general.
 
-The Internet has given us an **endless stream of information**, nearly every  question answered in seconds. It has given us more music to hear, more texts to read, more images to look at, more movies to watch than one could ever consume in thousands of years.
+The Internet has given us an **endless stream of information**, nearly every question answered in seconds. It has given us more music to hear, more texts to read, more images to look at, more movies to watch than one could ever consume in thousands of years.
 
 And this is a good thing, as it allows us to extend our own minds in directions our parents and grandparents never could imagine. But with every benefit come always downsides.
 
-The most precious thing you own is not money or time. **It is attention**. We all have (more or less) the same amount of hours on this planet. But what we do with it, what we achieve is up to us. We decide  where we point our attention to. But do we really?
+The most precious thing you own is not money or time. **It is attention**. We all have (more or less) the same amount of hours on this planet. But what we do with it, what we achieve is up to us. We decide where we point our attention to. But do we really?
 
 <blockquote lang="en" class="pullquote" data-quote="Annie Dillard – The Writing Life">
   <p>How we spend our days is, of course, how we spend our&nbsp;lives.</p>
 </blockquote>
-
 
 ## Feeding the Monster
 
@@ -36,13 +35,13 @@ Pointing our attention in the right direction has become harder in the last year
 
 Everything is about activating people, make them register, click, scroll, like, use, consume, stay. We test every part of our interfaces to find out which color, which font, which text is the most effective. And still, compared to the big players like Google, Facebook, or Twitter, we look like amateurs.
 
-Every item you interact with gets analysed, computed, stored. Algorithms   calculate your next step, your direction. This is how the companies know what you want and when you want it. It enables them to provide you with a never-ending stream of things you crave.
+Every item you interact with gets analysed, computed, stored. Algorithms calculate your next step, your direction. This is how the companies know what you want and when you want it. It enables them to provide you with a never-ending stream of things you crave.
 
-The human brain is prone to a lot of cognitive biases and fallacies. It’s easy to manipulate, because it’s still the same brain of our ancestors living in the wild, looking for food, shelter or enemies. 
+The human brain is prone to a lot of cognitive biases and fallacies. It’s easy to manipulate, because it’s still the same brain of our ancestors living in the wild, looking for food, shelter or enemies.
 
 We want to connect to others, yearn after distraction from ourselves and boredom, we want attention of others.
 
-Every **pull-to-refresh**, every **push message**, every **like**, **comment**, every new item appearing in our *continuous* scrolling streams triggers the release of dopamine in our brains. They create a **habit loop**: *Trigger*, *routine*, *reward*.
+Every **pull-to-refresh**, every **push message**, every **like**, **comment**, every new item appearing in our _continuous_ scrolling streams triggers the release of dopamine in our brains. They create a **habit loop**: _Trigger_, _routine_, _reward_.
 
 We are creatures of habit. A lot of our day-to-day actions are driven by subconscious habits. You don’t need to think about walking to the subway, pushing the shopping card at the supermarket or switching on the lights in a dark room. These have become habits. And so has this movement of addiction: **Grabbing for your phone**, **checking for updates**, hundreds of times each day.
 
@@ -50,7 +49,7 @@ This behaviour changes our brain, makes it increasingly harder to follow longer 
 
 And **this will not get better anytime soon**, but will probably get worse, as big data, machine learning and artificial intelligence get better everyday. So you need to learn a new skill and also teach it to your kids: **Fighting back on attacks to your attention**.
 
-As this is *metaphorical* an attack on your attention, you should deal with it as one. The key aspects of successful self-defence are: **Avoidance**, **Awareness** and **Prevention**.
+As this is _metaphorical_ an attack on your attention, you should deal with it as one. The key aspects of successful self-defence are: **Avoidance**, **Awareness** and **Prevention**.
 
 ## Avoidance
 
@@ -62,7 +61,7 @@ These are some of the countermeasures I took in the last few years or things I e
 - **I deleted my bookmarks to social media sites** from my browser and visit them once a week deliberately. I stay usually less than a few minutes, just to get the most important things I missed during the week.
 - **I deleted all messengers**, except the ones my family is using.
 - **I stopped reading or watching the daily news** (already 7 years ago). I’m usually the last hearing about the newest terrorist attack or the newest threats by Trump to the world. And I avoid the water cooler talks and coffee machine chats as hell. You can’t avoid news completely, but not actively searching for news filters out a lot of the noise.
-- **I use RSS/Atom feeds** as my major information source, because I can choose where and when to get my content from. I pull the content, when I want it (*Pull vs. Push Principle*).
+- **I use RSS/Atom feeds** as my major information source, because I can choose where and when to get my content from. I pull the content, when I want it (_Pull vs. Push Principle_).
 - **I use a lot analog**. I still use Evernote to save content for later access, but I started writing a lot on paper. I always have a pen and a notebook with me. I use [sketchnotes](http://sketchnotes.stefanimhoff.de/) to extract the key aspects of an idea. The combination of writing with hand and drawing helps me remembering things. And when I save content in Evernote, I make sure to mark the key aspects and write a short summary at the top.
 - **I rarely post links to social media** sites these days. I don’t want to attack the attention of other people. People interested in what I write or like can still go to [my website](https://stefanimhoff.de/), [YouTube playlists](https://www.youtube.com/user/kogakure/playlists) etc.
 - **I don’t check in** or brag about the places I am at on social media.
@@ -75,7 +74,7 @@ One of the key aspects of successful self-defence is awareness. You need to be a
 
 The first step is to recognise, that the own behaviour is problematic and harms the well-being. We tend to think we still have everything under control, are well-trained in media usage. Or we search for excuses like not having an option or needing to be informed.
 
-My journey started 2 years ago, when I began doing mindfulness meditation every morning for 20 minutes. Meditation is the opposite to distraction, it’s focused attention. It doesn’t matter if you point the attention to your breath, body parts, some idea, or anything else. Meditation forces you to just *be*. Distractions will try to lead your attention away while you meditate. The Buddhists call this **Mind Monkey**, as uncontrolled, restless, confused thoughts will flood the brain during a meditation session. But with time you will get better and are able to focus longer periods and silence the monkeys.
+My journey started 2 years ago, when I began doing mindfulness meditation every morning for 20 minutes. Meditation is the opposite to distraction, it’s focused attention. It doesn’t matter if you point the attention to your breath, body parts, some idea, or anything else. Meditation forces you to just _be_. Distractions will try to lead your attention away while you meditate. The Buddhists call this **Mind Monkey**, as uncontrolled, restless, confused thoughts will flood the brain during a meditation session. But with time you will get better and are able to focus longer periods and silence the monkeys.
 
 I think my meditation practice was the main trigger in questioning my own behaviour with technology and I believe it is a key factor for a well-balanced person for the future. As we (should) train our body, to strengthen it, we should do the same with our mind.
 
@@ -95,15 +94,15 @@ While avoidance is about trying not to be exposed to the dangerous things, preve
 
 These are some of the ideas I implemented or tried in the last few years to prevent my attention is taken away:
 
-- **I deactivated most push messages**, keeping only a few exceptions. Usually I disabled push messages completely on an app the moment it first pushed some irrelevant, triggering, needy information to me. I allow some relevant apps like weather warnings, family messages, etc. real-time updates. When an app has useful messages but also annoying messages and doesn’t allow selecting which ones, I switch them off completely. I love *Google Inbox*, because it allows me to select which type of message is allowed to use push messages.
+- **I deactivated most push messages**, keeping only a few exceptions. Usually I disabled push messages completely on an app the moment it first pushed some irrelevant, triggering, needy information to me. I allow some relevant apps like weather warnings, family messages, etc. real-time updates. When an app has useful messages but also annoying messages and doesn’t allow selecting which ones, I switch them off completely. I love _Google Inbox_, because it allows me to select which type of message is allowed to use push messages.
 - **I switched off all notification icons** (the red annoying counters on app icons).
 - **I use ‘Do not disturb’ on every device**, including phone, tablet, computer and landline phone during off hours (21:00-8:00). Only my inner family is able to bypass this wall.
 - **My phone is silenced** during work hours (just vibrations), and often even beyond.
 - **I switched off auto-play of videos** where ever possible (YouTube, Netflix, Twitter). And if not possible, I intentionally quit the process of loading the next video, after each video. I go grab something to drink, or do some push-ups, before I continue watching.
 - When in doubt, if I will be able to be aware of the time (like when browsing on Pinterest), I **set a timer** to 15 or 20 minutes, to be reminded of the passing time.
-- **I put all my devices on my work table**, when relaxing on the sofa. It prevents the quick *Let’s answer this question* habit and adds an additional barrier. Plus, it will give you more movement.
+- **I put all my devices on my work table**, when relaxing on the sofa. It prevents the quick _Let’s answer this question_ habit and adds an additional barrier. Plus, it will give you more movement.
 - **I put my devices upside down on the table** to not get distracted by incoming messages.
-- **I use the [Feedly mute filter](https://blog.feedly.com/mute-filters/) function to filter out content**, which drives my attention to places I don’t want it to go. *Not sorry, Trump*. 🙈 🙉 🙊 [Here are some really cool examples, on how to use the mute filters](https://blog.feedly.com/filters-examples/).
+- **I use the [Feedly mute filter](https://blog.feedly.com/mute-filters/) function to filter out content**, which drives my attention to places I don’t want it to go. _Not sorry, Trump_. 🙈 🙉 🙊 [Here are some really cool examples, on how to use the mute filters](https://blog.feedly.com/filters-examples/).
 - **I tried to leave my phone in another room**, while eating with my family.
 - **I switched off Nostalgia features**, like ‘your day one year ago’, where ever possible. These are annoying, because they just try to activate you again.
 

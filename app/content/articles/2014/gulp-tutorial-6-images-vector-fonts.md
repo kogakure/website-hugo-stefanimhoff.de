@@ -1,18 +1,18 @@
 ---
-language: "en"
-title: "Introduction to Gulp.js 6: Images and Vector Fonts"
+language: en
+title: 'Introduction to Gulp.js 6: Images and Vector Fonts'
 date: 2014-10-23T08:00:00+02:00
-author: "Stefan Imhoff"
-slug: "gulp-tutorial-6-images-vector-fonts"
-og_image: "assets/images/articles/2014/gulp-tutorial-6-images-vector-fonts/gulp-tutorial-6.jpg"
-description: "The ultimative tutorial and guide for Gulp.js: How to move images and generate vector fonts from SVG."
-series: ["gulp"]
-categories: ["code"]
-download_url: "https://github.com/kogakure/gulp-tutorial"
-download_text: "View Source on GitHub"
+author: Stefan Imhoff
+slug: gulp-tutorial-6-images-vector-fonts
+og_image: 'assets/images/articles/2014/gulp-tutorial-6-images-vector-fonts/gulp-tutorial-6.jpg'
+description: 'The ultimative tutorial and guide for Gulp.js: How to move images and generate vector fonts from SVG.'
+series: ['gulp']
+categories: ['code']
+download_url: 'https://github.com/kogakure/gulp-tutorial'
+download_text: 'View Source on GitHub'
 ---
 
-This is the 6th part of my series *Introduction to Gulp.js*. The last article was very long and complicated. This time it’s a easier one: I will show how I move my images and generate vector fonts.
+This is the 6th part of my series _Introduction to Gulp.js_. The last article was very long and complicated. This time it’s a easier one: I will show how I move my images and generate vector fonts.
 
 <figure class="image-figure">
   <img src="/assets/images/articles/2014/gulp-tutorial-6-images-vector-fonts/gulp-tutorial-6.jpg" alt="A Mini Gulp with water">
@@ -20,7 +20,6 @@ This is the 6th part of my series *Introduction to Gulp.js*. The last article wa
     Today we will only take a <strong>Mini Gulp</strong> (世書 名付, <a href="https://www.flickr.com/photos/nseika/9477122568">Mini Gulp</a>)
   </figcaption>
 </figure>
-
 
 ## Images
 
@@ -35,26 +34,24 @@ images: {
 }
 ```
 
-
 <p class="code-info">gulp/tasks/development/images.js</p>
 
 ```javascript
-var gulp        = require('gulp');
-var changed     = require('gulp-changed');
-var config      = require('../../config').images;
+var gulp = require('gulp');
+var changed = require('gulp-changed');
+var config = require('../../config').images;
 
 /**
  * Copy images to build folder
  * if not changed
  */
 gulp.task('images', function() {
-  return gulp.src(config.src)
+  return gulp
+    .src(config.src)
     .pipe(changed(config.dest)) // Ignore unchanged files
     .pipe(gulp.dest(config.dest));
 });
 ```
-
-
 
 ## Vector Fonts
 
@@ -83,13 +80,12 @@ Next I run the command `bundle exec fontcustom config` inside my main projects d
 font_name: fontcustom
 css_selector: .icon-{{glyph}}
 css_prefix: icon-
-preprocessor_path: "/assets/fonts"
+preprocessor_path: '/assets/fonts'
 autowidth: false
 no_hash: false
 force: false
 debug: false
 quiet: false
-
 
 # --------------------------------------------------------------------------- #
 # Project Paths
@@ -111,7 +107,6 @@ output:
   preview: docs
 #  my-custom-template.yml: config
 
-
 # --------------------------------------------------------------------------- #
 # Templates
 #   Included in Font Custom:
@@ -121,9 +116,8 @@ output:
 #   referenced by their base file name.
 # --------------------------------------------------------------------------- #
 
-templates: [ scss, preview ]
+templates: [scss, preview]
 ```
-
 
 Next I add configuration and the task to copy the fonts to their location:
 
@@ -138,22 +132,19 @@ copyfonts: {
 }
 ```
 
-
 <p class="code-info">gulp/tasks/development/copy-fonts.js</p>
 
 ```javascript
-var gulp   = require('gulp');
+var gulp = require('gulp');
 var config = require('../../config').copyfonts.development;
 
 /**
  * Copy fonts to folder
  */
 gulp.task('copy:fonts', ['fontcustom'], function() {
-  return gulp.src(config.src)
-    .pipe(gulp.dest(config.dest));
+  return gulp.src(config.src).pipe(gulp.dest(config.dest));
 });
 ```
-
 
 As you may have seen, before copying the fonts to the asset folder another task gets executed: `fontcustom`.
 
@@ -168,7 +159,7 @@ $ npm install --save-dev gulp-shell@0.5.0
 <p class="code-info">gulp/tasks/development/fontcustom.js</p>
 
 ```javascript
-var gulp  = require('gulp');
+var gulp = require('gulp');
 var shell = require('gulp-shell');
 
 /**
@@ -176,11 +167,8 @@ var shell = require('gulp-shell');
  * `brew install fontforge --with-python`
  * `brew install eot-utils`
  */
-gulp.task('fontcustom', shell.task([
-  'bundle exec fontcustom compile'
-]));
+gulp.task('fontcustom', shell.task(['bundle exec fontcustom compile']));
 ```
-
 
 Fontcustom is a Ruby Gem and you’ll need to install the Gem either globally or in your Gemfile (if you install it globally you need to drop the `bundle exec` from your command). I choose to install it with my Gemfile:
 
@@ -194,9 +182,8 @@ gem 'sass', '>= 3.3'
 gem 'fontcustom', '~> 1.3.7'
 ```
 
-
 After you add the line for `fontcustom` you will need to run `bundle install` again.
 
 ## Conclusion
 
-This concludes the 6th part of my series *Introduction to Gulp.js*. We learned how to move files with Gulp.js (and don’t even need a plugin for that), and how I create my vector fonts. Nothing special, but the next part will be more interesting again.
+This concludes the 6th part of my series _Introduction to Gulp.js_. We learned how to move files with Gulp.js (and don’t even need a plugin for that), and how I create my vector fonts. Nothing special, but the next part will be more interesting again.

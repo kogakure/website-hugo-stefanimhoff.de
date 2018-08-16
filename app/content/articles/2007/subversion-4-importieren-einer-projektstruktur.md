@@ -1,12 +1,13 @@
 ---
-language: "de"
-title: "Subversion 4: Importieren einer Projektstruktur"
-description: "Ein umfangreiches Tutorial für Subversion: Mit Subversion eine Projektstruktur einrichten und ein bestehendes Projekt importieren."
-author: "Stefan Imhoff"
-slug: "subversion-4-importieren-einer-projektstruktur"
+draft: true
+language: de
+title: 'Subversion 4: Importieren einer Projektstruktur'
+description: 'Ein umfangreiches Tutorial für Subversion: Mit Subversion eine Projektstruktur einrichten und ein bestehendes Projekt importieren.'
+author: Stefan Imhoff
+slug: subversion-4-importieren-einer-projektstruktur
 date: 2007-07-29T13:00:00+02:00
-series: ["subversion"]
-categories: ["vcs"]
+series: ['subversion']
+categories: ['vcs']
 ---
 
 Im nächsten Schritt erzeuge ich auf der Festplatte die Struktur meines Projektes. Diese Struktur ist nicht vorgegeben und kann nach beliebiger Struktur angelegt werden, wobei es ein paar Empfehlungen und Konventionen gibt.
@@ -17,7 +18,7 @@ Zum Verständnis von `branches` eine kurze Erklärung (<em>Wen das nicht interes
 
 Ein Programmierer hat eine Software entwickelt. Da er eigentlich nicht mal vor hatte diese richtig zu veröffentlichen, hat der (englischsprechende) Programmierer gar nicht daran gedacht, Mehrsprachigkeit in seine Software einzubauen. Eine andere Programmiererin bietet sich nun an, eine Mehrsprachigkeit für die Software zu programmieren. Also erzeugt sie einen Zweig (branch) der Hauptentwicklungslinie. Sie arbeitet an der Mehrsprachigkeit, bis diese fehlerfrei ist. Später werden Ihre Änderungen zurück in die Hauptentwicklungslinie (trunk) geführt. Das hört sich kompliziert an – und das ist es wohl auch.
 
-**Update**: Einen Branch wieder zu *mergen* ist kompliziert, aber nur unter Subversion. Unter neueren Versionskontrollsystemen, wie z. B. Git, Mercurial oder Bazaar ist es im Bruchteil einer Sekunde (auch für absolute Laien) erledigt.
+**Update**: Einen Branch wieder zu _mergen_ ist kompliziert, aber nur unter Subversion. Unter neueren Versionskontrollsystemen, wie z. B. Git, Mercurial oder Bazaar ist es im Bruchteil einer Sekunde (auch für absolute Laien) erledigt.
 
 ## Anlegen der Grundstruktur
 

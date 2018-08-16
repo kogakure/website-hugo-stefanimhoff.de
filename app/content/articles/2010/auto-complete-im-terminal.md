@@ -1,11 +1,12 @@
 ---
-language: "de"
-title: "Auto-Complete im Terminal"
-slug: "auto-complete-im-terminal"
+draft: true
+language: de
+title: 'Auto-Complete im Terminal'
+slug: auto-complete-im-terminal
 date: 2010-10-27T18:30:00+02:00
-author: "Stefan Imhoff"
-description: "Wenn man im Terminal arbeite ist Autocomplete äußerst praktisch. Wie schreibt man eigene Autocomplete-Skripte?"
-categories: ["code"]
+author: Stefan Imhoff
+description: 'Wenn man im Terminal arbeite ist Autocomplete äußerst praktisch. Wie schreibt man eigene Autocomplete-Skripte?'
+categories: ['code']
 ---
 
 Für mich gehört ständige Verbesserung (<ruby>改善<rp>（</rp><rt>かいぜん</rt><rp>)</rp></ruby>, jap. Kaizen) zur täglichen Arbeit dazu. Was mich aber seit längerem gestört hat, ist wenn ich die Namen des zu klonenden Git-Repositorys per Hand tippen muss. Auto-Complete bietet hier eine Lösung.
@@ -32,7 +33,6 @@ SSH_COMPLETE=( $(cut -f1 -d' ' ~/.ssh/known_hosts |\
 
 complete -o default -W "${SSH_COMPLETE[*]}" ssh
 ```
-
 
 Dieser Befehl schneidet aus der Datei mit dem bereits besuchten Hosts vom ersten Zeichen bis zum ersten Leerzeichen die Zeichenkette aus, der eigentliche Schlüssel wird also verworfen. Dann werden alle Kommata durch Zeilenumbrüche ersetzt, was dazu dient Kombinationen aus IP und Hostname zu trennen. Anschließend werden diese sortiert und Duplikate entfernt und im letzten Schritt werden alle Zeichenketten entfernt, die nur aus Zahlen oder Punkten bestehen, also die IPs. Zurück bleibt eine Liste, in der alle Hostnamen zeilenweise stehen. Der Abschließende Befehl registriert diese Zeichenkette mit dem Befehl `ssh`. Es reicht ab jetzt aus, wenn man den Befehl tippt und dann <kbd>⇥</kbd> drückt, um eine Liste aller Server zu sehen, oder einige Buchstaben um die Server zu vervollständigen.
 
@@ -61,7 +61,6 @@ members = max maria
 writable = repo-c
 ```
 
-
 Ich zeige den Aufbau nur, damit besser verstanden werden kann, was ich später erreichen will. Es werden Gruppen angelegt, in denen steht welche Person an welchem Job arbeiten darf. Die Repositorys müssen mit Leerzeichen getrennt sein und nacheinander folgend geschrieben werden.
 
 Folgendes Skript habe ich mir für das Problem erstellt:
@@ -74,7 +73,6 @@ GIT_JOBS_COMPLETE=( $(grep -i "writable" ~/Projekte/Administration/**/gitosis.co
 
 complete -o default -W "${GIT_JOBS_COMPLETE[*]}" gcl
 ```
-
 
 Ich suche mir alle Zeilen aus allen gitosis.conf-Dateien, die den String "writable" enthalten. Da ich mehre Gitosis-Instanzen verwalte, kann ich nicht nur in einer Datei suchen.
 

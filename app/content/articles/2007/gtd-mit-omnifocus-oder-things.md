@@ -1,16 +1,17 @@
 ---
-language: "de"
-title: "GTD mit OmniFocus oder Things?"
-description: "Ich vergleiche zwei beliebte Tools für GTD (Getting Things Done) für Mac OS X: OmniFocus und Things."
-author: "Stefan Imhoff"
-slug: "gtd-mit-omnifocus-oder-things"
+draft: true
+language: de
+title: 'GTD mit OmniFocus oder Things?'
+description: 'Ich vergleiche zwei beliebte Tools für GTD (Getting Things Done) für Mac OS X: OmniFocus und Things.'
+author: Stefan Imhoff
+slug: gtd-mit-omnifocus-oder-things
 date: 2007-12-15T19:57:00+02:00
-categories: ["productivity"]
+categories: ['productivity']
 ---
 
 Seit ich mir Anfang Dezember überlegt habe, von meinem webbasierenden GTD-Tool [Tracks](http://www.getontracks.org/) zu einer OS X Software zu wechseln, teste ich zwei interessante Kandidaten.
 
-Ich hatte bis heute  [OmniFocus](https://www.omnigroup.com/omnifocus/) 1.0 von *The OmniGroup* und [Things](https://culturedcode.com/things/) 0.8.1 von *CulturedCode* im Test.
+Ich hatte bis heute [OmniFocus](https://www.omnigroup.com/omnifocus/) 1.0 von _The OmniGroup_ und [Things](https://culturedcode.com/things/) 0.8.1 von _CulturedCode_ im Test.
 
 Ein direkter Vergleichstest wäre aber ungerecht, da OmniFocus kurz vor der Veröffentlichung steht, Things aber erst in Alpha-Version vorliegt.
 
@@ -20,7 +21,7 @@ Da man 50 % Ermäßigung bekommt, wenn man OmniFocus schon jetzt bestellt, wollt
 
 OmniFocus kommt im typischen Design daher, das man schon von OmniGraffle oder OmniOutliner gewohnt ist.
 
-An der oberen Leiste klebt noch ein gestreiftes Banner, was wohl auf eine  Beta-Version hinweisen soll.
+An der oberen Leiste klebt noch ein gestreiftes Banner, was wohl auf eine Beta-Version hinweisen soll.
 
 Die Einführung in die Software ist ziemlich gut gestaltet, man bekommt alle notwendigen Schritte als OmniFocus-Projekt vorgesetzt. Dazu zählt auch ein 15-minütiger Screencast in High-Definiton.
 
@@ -56,13 +57,13 @@ Wie bei der meisten GTD-Software sammelt man seine Aufgaben in der Inbox, dies f
 
 Man organisiert seine Aufgaben in zwei verschiedenen Bereichen, zum einen in Projekte, die aber loser sortiert sind, als bei OmniFocus, man kann die Aufgaben innerhalb eines Projektes mit der Maus an eine beliebige Stelle ziehen, eine Unterscheidung in parallele oder sequentielle Bearbeitung gibt es nicht.
 
-Die Bearbeitung der Aufgaben und Projekte erfolgt im Bereich *Focus*, wo es  *Today*, *Next*, *Someday* und *Postponed* gibt. In *Today* erscheinen derzeit die Aufgaben, die man aktiv für den heutigen Tag zur Bearbeitung markiert. In näherer Zukunft sollen dort auch Termine erscheinen, die ein Datum des heutigen Tages haben.
+Die Bearbeitung der Aufgaben und Projekte erfolgt im Bereich _Focus_, wo es _Today_, _Next_, _Someday_ und _Postponed_ gibt. In _Today_ erscheinen derzeit die Aufgaben, die man aktiv für den heutigen Tag zur Bearbeitung markiert. In näherer Zukunft sollen dort auch Termine erscheinen, die ein Datum des heutigen Tages haben.
 
-In *Next* sind die nächsten Aufgaben zu finden, sowohl die der verschiedenen Projekte, als auch die ohne Projekt. Wie viele man hier sehen will, kann man im Menü einstellen.
+In _Next_ sind die nächsten Aufgaben zu finden, sowohl die der verschiedenen Projekte, als auch die ohne Projekt. Wie viele man hier sehen will, kann man im Menü einstellen.
 
-In *Someday* zieht man alle Aufgaben oder Projekte, die derzeit nicht anstehen und daher nicht von der täglichen Arbeit ablenken sollen.
+In _Someday_ zieht man alle Aufgaben oder Projekte, die derzeit nicht anstehen und daher nicht von der täglichen Arbeit ablenken sollen.
 
-Aufgaben, die zu einem speziellen Datum eine erneute Ansicht oder Erinnerung erfordern kann man in *Postponed* ziehen.
+Aufgaben, die zu einem speziellen Datum eine erneute Ansicht oder Erinnerung erfordern kann man in _Postponed_ ziehen.
 
 Die Verschlagwortung in Things ist sehr ausgefeilt und erlaubt Unterkategorien in beliebiger Tiefe. Zusätzlich ist es möglich Unicode-Zeichen oder Symbole zu verwenden, um Platz zu sparen.
 
@@ -70,9 +71,9 @@ Im Gegensatz zu OmniFocus können Projekten und Aufgaben auch mehrere Schlagwort
 
 Über eine Schlagwort-Filterleiste kann man später leicht die richtigen Aufgaben finden.
 
-Im Gegensatz zu anderen GTD-Werkzeugen hat Things eine interessante Neuerung für ein Problem gefunden, was in üblichen Werkzeugen immer lästig ist: Projekte die nie Enden. Diese kann man in so genannten *Areas* gruppieren. Sowohl Projekte als auch einzelnen Aufgaben können hier gruppiert werden. Ein mögliches Beispiel wäre z. B. *Wohnung verschönern*.
+Im Gegensatz zu anderen GTD-Werkzeugen hat Things eine interessante Neuerung für ein Problem gefunden, was in üblichen Werkzeugen immer lästig ist: Projekte die nie Enden. Diese kann man in so genannten _Areas_ gruppieren. Sowohl Projekte als auch einzelnen Aufgaben können hier gruppiert werden. Ein mögliches Beispiel wäre z. B. _Wohnung verschönern_.
 
-Im Bereich *People* kann man Personen seines Adressbuches auswählen und sie bestimmten Projekten zuordnen, was derzeit aber noch nicht über ein Netzwerk verbunden ist.
+Im Bereich _People_ kann man Personen seines Adressbuches auswählen und sie bestimmten Projekten zuordnen, was derzeit aber noch nicht über ein Netzwerk verbunden ist.
 
 Erledigte Aufgaben und Projekte werden, sofern gewünscht in bestimmten Abständen archiviert. Dies kann man aber auch gleich manuell erledigen.
 
@@ -88,7 +89,7 @@ CulturedCode ist eine deutsche Firma, und somit macht es gleich doppelt soviel S
 
 Obwohl es derzeit noch weniger Funktionen hat und auch ein Preis noch nicht feststeht, habe ich mich aus verschiedenen Gründen für Things entschieden.
 
-Die Arbeit mit Things fühlt sich einfach *besser* an und macht mehr Spaß, die Oberfläche ist aufgeräumt und übersichtlich. Kleine Dinge, wie Animationen ähnlich auf dem iPhone sorgen für ein gutes Gefühl.
+Die Arbeit mit Things fühlt sich einfach _besser_ an und macht mehr Spaß, die Oberfläche ist aufgeräumt und übersichtlich. Kleine Dinge, wie Animationen ähnlich auf dem iPhone sorgen für ein gutes Gefühl.
 
 OmniFocus kommt mit dem typischen Pillendesign daher, was ich persönlich weder schön, noch nützlich finde. Vieles ist viel zu klein, oder es muss an bestimmten Punkte gezogen werden, um etwas zu bewegen. Things nutzt die Möglichkeiten von Leopard um ein Vielfaches besser. Die Programmierer/Designer von CulturedCode haben meiner Meinung nach ein besseres Verständnis für Interface-Design.
 

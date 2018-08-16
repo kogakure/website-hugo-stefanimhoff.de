@@ -1,9 +1,9 @@
 ---
 title: "Styleguide"
 description: "Der Styleguide dieser Website: Ein umfangreicher Überblick in das Design von Überschriften, Absätze, Sektionen-Trenner, preformatierter Text, Zitate, Randbemerkungen, Listen, Textgestaltung, Tabellen, Bilder und Abbildungen, Codeblöcke und Fußnoten auf dieser Website."
-author: "Stefan Imhoff"
+author: Stefan Imhoff
 date: 2012-01-01T12:00:00+02:00
-language: "de"
+language: de
 widont: false
 header: false
 ---
@@ -880,23 +880,22 @@ article {
 }
 
 article > div {
-  display: -webkit-flex;
   display: flex;
-  background: red;
+  background: #ff0000;
 }
 
 .trigger {
-  background: red;
+  background: #ff0000;
   display: block;
 }
 
 .opportunity {
-  background: green;
+  background: #008000;
   flex: 1;
 }
 
 .match {
-  background: blue;
+  background: #0000ff;
   flex: 1;
 }
 ```

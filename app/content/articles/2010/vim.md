@@ -1,15 +1,15 @@
 ---
-language: "de"
-title: "Bei der Macht von Vim – ich habe die Kraft"
-slug: "vim"
+language: de
+title: 'Bei der Macht von Vim – ich habe die Kraft'
+slug: vim
 date: 2010-10-29T19:00:00+02:00
-author: "Stefan Imhoff"
-description: "Wie ich zum überzeugten Vim-Jünger wurde, warum Vim so ein genialer Editor ist und wie man am besten vorgeht, wenn man Vim lernen möchte."
-og_image: "assets/images/articles/2010/vim/vim-vintage.jpg"
-categories: ["code", "recommendation"]
+author: Stefan Imhoff
+description: 'Wie ich zum überzeugten Vim-Jünger wurde, warum Vim so ein genialer Editor ist und wie man am besten vorgeht, wenn man Vim lernen möchte.'
+og_image: 'assets/images/articles/2010/vim/vim-vintage.jpg'
+categories: ['code', 'recommendation']
 ---
 
-So ähnlich lautete der Spruch des Superhelden *He-Man* aus den 80er Jahren, kurz bevor er seine Superkräfte bekam. Und ungefähr genauso lange gibt es auch Vim: nämlich 22 Jahre. Und das ältere Vi, auf dem Vim basiert, gibt es sogar schon länger als ich lebe. Wenn also ein *simpler* Texteditor seit so langer Zeit existiert und solche *Kraft* verleiht, muss einfach etwas Besonderes daran sein.
+So ähnlich lautete der Spruch des Superhelden _He-Man_ aus den 80er Jahren, kurz bevor er seine Superkräfte bekam. Und ungefähr genauso lange gibt es auch Vim: nämlich 22 Jahre. Und das ältere Vi, auf dem Vim basiert, gibt es sogar schon länger als ich lebe. Wenn also ein _simpler_ Texteditor seit so langer Zeit existiert und solche _Kraft_ verleiht, muss einfach etwas Besonderes daran sein.
 
 <figure class="image-figure">
   <img src="/assets/images/articles/2010/vim/vim-vintage.jpg" alt="Vim, Reinigungs- und Poliermittel.">
@@ -17,7 +17,6 @@ So ähnlich lautete der Spruch des Superhelden *He-Man* aus den 80er Jahren, kur
   Vim - Scheuermittel und Poliermittel. Erhellt das Heim und das Alter.
   </figcaption>
 </figure>
-
 
 Das erste Mal bin ich vor einigen Jahren über Vim (oder Vi) gestolpert, als ich zum ersten Mal irgendeine Datei auf einem Server bearbeiten musste und dort keiner meiner schicken Editoren funktionierte. Das erste Mal, als ich mit Vi(m) arbeitete, war meine natürliche Reaktion: <q>WTF, was soll der Scheiß, ich kann erst tippen, wenn ich i gedrückt habe? Wer denkt sich denn so einen Mist aus?</q>.
 
@@ -29,7 +28,7 @@ Vor drei Jahren hatte ich es schon einmal versucht Vim zu lernen und war klägli
 
 Es gibt Entwickler, die seit 20 Jahren mit Vim arbeiten und immer noch nicht glauben, sie würden Vim beherrschen.
 
-Das ich damals scheiterte lag einzig und allein daran, dass ich nicht richtig begonnen hatte. Bei Vim ist es *unbedingt* nötig, langsam und schrittweise zu beginnen. Wie bei fast jeder anderen Kunst müssen zuerst die Grundlagen erlernt und gemeistert werden, ehe zur nächsten Stufe aufgestiegen werden kann. Ich hatte damals einfach eine Vim-Konfigurationsdatei kopiert und war völlig überfordert.
+Das ich damals scheiterte lag einzig und allein daran, dass ich nicht richtig begonnen hatte. Bei Vim ist es _unbedingt_ nötig, langsam und schrittweise zu beginnen. Wie bei fast jeder anderen Kunst müssen zuerst die Grundlagen erlernt und gemeistert werden, ehe zur nächsten Stufe aufgestiegen werden kann. Ich hatte damals einfach eine Vim-Konfigurationsdatei kopiert und war völlig überfordert.
 
 Wenn du also Vim lernen möchtest, ist es wichtig zuerst zu verlernen, was alle anderen Editoren falsch beigebracht haben. Mit einem Texteditor – ganz gleich ob Word, Notepad, TextMate oder ein anderer Editor – möchtest du Text bearbeiten. Auch wenn du vielleicht glaubst, der wichtigste Teil wäre die Eingabe von Text, stimmt dies nicht, noch nicht einmal bei einem Buchautor, und erst recht nicht bei einem Programmierer.
 
@@ -74,7 +73,6 @@ Pathogen ermöglicht es, Plugins als Bundles abzulegen, einzeln und als nettes P
 silent! call pathogen#runtime_append_all_bundles()
 silent! call pathogen#helptags()
 ```
-
 
 Plugins werden ab jetzt nicht entpackt und kompliziert in die richtigen Unterordner verschoben, sondern einfach pro Plugin in einen eigenen Ordner unter `bundle` gestellt. Für Vim gibt es nämlich leider einige, verschiedene Möglichkeiten Erweiterungen zu installieren, einfache Skripte, automatische Installer und seit kurzem gottseidank auch Git-Checkouts.
 

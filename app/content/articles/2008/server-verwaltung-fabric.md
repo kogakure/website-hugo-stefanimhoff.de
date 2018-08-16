@@ -1,11 +1,12 @@
 ---
-language: "de"
-title: "Server-Verwaltung mit Fabric"
-description: "Es muss nicht immer Capistrano sein: Die Python-Welt hat Fabric als Tools zur Serververwaltung und für das Deployment. Aber Fabric kann noch für viele mehr verwendet werden."
-author: "Stefan Imhoff"
-slug: "server-verwaltung-fabric"
+draft: true
+language: de
+title: 'Server-Verwaltung mit Fabric'
+description: 'Es muss nicht immer Capistrano sein: Die Python-Welt hat Fabric als Tools zur Serververwaltung und für das Deployment. Aber Fabric kann noch für viele mehr verwendet werden.'
+author: Stefan Imhoff
+slug: server-verwaltung-fabric
 date: 2008-11-07T12:00:00+02:00
-categories: ["server", "code"]
+categories: ['server', 'code']
 ---
 
 Vor einiger Zeit habe ich meinen Workflow mit Capistrano beschrieben, und wie man damit einen Server fernwarten kann. Kürzlich bin ich auf das in Python geschriebene, viel schlankere Tool <cite>Fabric</cite> aufmerksam gemacht worden.
@@ -27,10 +28,10 @@ Es gibt einen `set()`-Bereich, in dem man Variablen definiert, die dann später 
 
 Es gibt lediglich vier Fabric-Befehle:
 
-* **local()** Führt lokale Terminalbefehle auf dem Computer aus
-* **put()** Kopiert Dateien auf den Server
-* **run()** Führt entfernte Befehle auf dem Server mit normalen Rechten aus
-* **sudo()** Führt entfernte Befehle auf dem Server mit Superuserrechten aus (wenn man die Rechte hat)
+- **local()** Führt lokale Terminalbefehle auf dem Computer aus
+- **put()** Kopiert Dateien auf den Server
+- **run()** Führt entfernte Befehle auf dem Server mit normalen Rechten aus
+- **sudo()** Führt entfernte Befehle auf dem Server mit Superuserrechten aus (wenn man die Rechte hat)
 
 Variablen deklariert man einfach so:
 
@@ -48,7 +49,6 @@ set(
     fab_user = 'username',
 )
 ```
-
 
 Lediglich `fab_hosts` und `fab_user` werden in diesem Beispiel von Fabric geliefert, die anderen sind frei gewählt.
 
@@ -118,7 +118,6 @@ def create():
       )
 ```
 
-
 Um ein neues Repository anzulegen, muss ich einfach nur noch in den Einstellungen einige Pfade anpassen (meistens nur einen) und dann auf dem Terminal den Befehl `fab create` ausführen.
 
 Es ist möglich in einer Datei unzählige Funktionen anzulegen, die verschiedene Aufgaben, wie z. B. `Server starten`, `Server stoppen`, `Datenbankdump erstellen`, `tar.gz erstellen` o. ä. erledigen. Eine Funktion kann auch andere Funktionen aufrufen.
@@ -127,6 +126,6 @@ So erledigt mein Backup-Skript eine Menge Aufgaben:
 
 Es erzeugt Datenbank-Dumps aller meiner Tabellen, sowohl für MySQL, als auch für PostgreSQL, packt diese Dump-Dateien, erzeugt dann File-Backups verschiedener Orte auf dem Server, packt diese auch und kopiert sie (natürlich mit Datum im Dateinamen) auf meine lokale Festplatte und dort an die richtigen Stellen.
 
-Die Arbeit, die man sich dadurch sparen kann, macht das Lesen der sehr kurzen und [verständlichen Dokumentation](http://docs.fabfile.org/)  locker wieder wett. Und auch die Installation ist ein leichtes, man kann entweder `easy_install` benutzen oder das simple `python setup.py install`. Alle nötigen Module werden automatisch heruntergeladen und installiert.
+Die Arbeit, die man sich dadurch sparen kann, macht das Lesen der sehr kurzen und [verständlichen Dokumentation](http://docs.fabfile.org/) locker wieder wett. Und auch die Installation ist ein leichtes, man kann entweder `easy_install` benutzen oder das simple `python setup.py install`. Alle nötigen Module werden automatisch heruntergeladen und installiert.
 
 Fabric ist nicht nur für jeden der einen SSH-Zugang und Server/VHost sein eigen nennt eine echte Empfehlung, sondern auch für alle die lokal Prozesse automatisieren wollen, aber eben nicht zeitgesteuert (Cronjob) oder als Shell-Skript.

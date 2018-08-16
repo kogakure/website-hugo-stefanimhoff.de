@@ -1,11 +1,12 @@
 ---
-language: "de"
-title: "GTD: Analog vs. Digital – 0:1"
-description: "GTD (Getting Things Done) digital vs. analog. Was ist effizienter und schneller? Der ultimative Wettkampf um Leben und Tod."
-author: "Stefan Imhoff"
-slug: "gtd-analog-vs-digital-0-zu-1"
+draft: true
+language: de
+title: 'GTD: Analog vs. Digital – 0:1'
+description: 'GTD (Getting Things Done) digital vs. analog. Was ist effizienter und schneller? Der ultimative Wettkampf um Leben und Tod.'
+author: Stefan Imhoff
+slug: gtd-analog-vs-digital-0-zu-1
 date: 2008-04-01T17:40:00+02:00
-categories: ["productivity"]
+categories: ['productivity']
 ---
 
 Der ultimative GTD-Test: Was ist denn nun schneller? Analoges oder digitales Notieren. Ich habe den Test gemacht.
@@ -14,30 +15,30 @@ Ich war mir nicht sicher, doch jetzt ist es entschieden. Digital geht schneller 
 
 ## Die Kandidaten
 
-* [Moleskine](https://de.moleskine.com/de) mit Kugelschreiber
-* [iPod touch](https://www.apple.com/de/ipod-touch/) mit Zeigefinger
+- [Moleskine](https://de.moleskine.com/de) mit Kugelschreiber
+- [iPod touch](https://www.apple.com/de/ipod-touch/) mit Zeigefinger
 
 ## Ausgangsposition
 
-* **Moleskine**: Brusttasche Jacke links (Reisverschluss von oben nach unten)
-* **iPod touch**: linke Hosentasche (noch darin: Handy, Papiere, altes Taschentuch)
+- **Moleskine**: Brusttasche Jacke links (Reisverschluss von oben nach unten)
+- **iPod touch**: linke Hosentasche (noch darin: Handy, Papiere, altes Taschentuch)
 
 ## Aufgabe
 
-**Notiz tippen**: *Auto Reifenwechsel*
+**Notiz tippen**: _Auto Reifenwechsel_
 
 ## Ergebnisse
 
-* **Moleskine**: 39.25 Sekunden
-* **iPod touch**: 32.45 Sekunden
+- **Moleskine**: 39.25 Sekunden
+- **iPod touch**: 32.45 Sekunden
 
 ## Erwähnenswertes
 
-* Die Rechtschreibung wurde bei beiden eingehalten, inklusive Groß- und Kleinschreibung. Ohne wäre es beim iPod touch noch schneller gewesen
-* iPod touch startete im Menü
-* Moleskene war geschlossen und mit Gummiband gesichert. Das Lesezeichen lag aber schon an richtiger Stelle
-* Beim iPod touch waren 3 Vertipper in der Zeit enthalten (die Feinmotorik der Patscher war halt nur mäßig)
-* Der iPod touch wurde im Einfingersystem bedient, nicht im Profi-Zweifingermodus
+- Die Rechtschreibung wurde bei beiden eingehalten, inklusive Groß- und Kleinschreibung. Ohne wäre es beim iPod touch noch schneller gewesen
+- iPod touch startete im Menü
+- Moleskene war geschlossen und mit Gummiband gesichert. Das Lesezeichen lag aber schon an richtiger Stelle
+- Beim iPod touch waren 3 Vertipper in der Zeit enthalten (die Feinmotorik der Patscher war halt nur mäßig)
+- Der iPod touch wurde im Einfingersystem bedient, nicht im Profi-Zweifingermodus
 
 ## Fazit
 
@@ -47,6 +48,6 @@ Sicher: Ein Moleskine kostet nur 10 €, ein iPod touch mindestens 279 €. Aber
 
 Wenn im Juni die iPod touch-Version von [Things](https://culturedcode.com/things/) herauskommt, wird der Abstand zum guten alten Notizbuch noch größer.
 
-Auf das Notizbuch werde ich zukünftig also nur noch zugreifen, wenn ich was skizzieren möchte oder die Gedanken mehr *Wert* haben und nicht bloße Notizen sind. Denn für längerfristige Notizen bleibe ich weiterhin beim Papier. Das ist ja bekanntlich geduldig.
+Auf das Notizbuch werde ich zukünftig also nur noch zugreifen, wenn ich was skizzieren möchte oder die Gedanken mehr _Wert_ haben und nicht bloße Notizen sind. Denn für längerfristige Notizen bleibe ich weiterhin beim Papier. Das ist ja bekanntlich geduldig.
 
 **P. S.** Auch wenn heute der 1. April ist: dieser Test ist ernst gemeint und wurde unter Aufsicht eines Notars in einem extra dafür ausgestatteten Labor durchgeführt.

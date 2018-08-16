@@ -1,18 +1,18 @@
 ---
-language: "en"
-title: "Introduction to Gulp.js 2: Server with BrowserSync and Configuration"
+language: en
+title: 'Introduction to Gulp.js 2: Server with BrowserSync and Configuration'
 date: 2014-10-19T10:17:00+02:00
-author: "Stefan Imhoff"
-slug: "gulp-tutorial-2-development-server-browsersync-configuration"
-og_image: "assets/images/articles/2014/gulp-tutorial-2-development-server-browsersync-configuration/gulp-tutorial-2.jpg"
-description: "The ultimative tutorial and guide for Gulp.js: How to set up a development server with BrowserSync."
-series: ["gulp"]
-categories: ["code"]
-download_url: "https://github.com/kogakure/gulp-tutorial"
-download_text: "View Source on GitHub"
+author: Stefan Imhoff
+slug: gulp-tutorial-2-development-server-browsersync-configuration
+og_image: 'assets/images/articles/2014/gulp-tutorial-2-development-server-browsersync-configuration/gulp-tutorial-2.jpg'
+description: 'The ultimative tutorial and guide for Gulp.js: How to set up a development server with BrowserSync.'
+series: ['gulp']
+categories: ['code']
+download_url: 'https://github.com/kogakure/gulp-tutorial'
+download_text: 'View Source on GitHub'
 ---
 
-This is the 2nd part of my series *Introduction to Gulp.js*. Today I will write the first few Gulp.js tasks and set up a development server with BrowserSync. And I will start to write a configuration file.
+This is the 2nd part of my series _Introduction to Gulp.js_. Today I will write the first few Gulp.js tasks and set up a development server with BrowserSync. And I will start to write a configuration file.
 
 <figure class="image-figure">
   <img src="/assets/images/articles/2014/gulp-tutorial-2-development-server-browsersync-configuration/gulp-tutorial-2.jpg" alt="How to create your own flavour. Gulp machine.">
@@ -20,7 +20,6 @@ This is the 2nd part of my series *Introduction to Gulp.js*. Today I will write 
    Create your own flavor (Jordan Dawe, <a href="https://www.flickr.com/photos/freedryk/477742788">2007_04_24__20_31_27</a>)
   </figcaption>
 </figure>
-
 
 ## Installing Gulp.js
 
@@ -44,8 +43,7 @@ gulp.task('default', function() {
 });
 ```
 
-
-I know … I said I’m sick of *Hello World* tutorials, but this won’t last very long. I’ll soon replace it with some valuable code. So stay with me.
+I know … I said I’m sick of _Hello World_ tutorials, but this won’t last very long. I’ll soon replace it with some valuable code. So stay with me.
 
 If you execute the command `gulp`, this Gulp.js task will output <samp>Hello Gulp.js!</samp> to the console.
 
@@ -63,7 +61,6 @@ var gulp = require('gulp');
 gulp.task('default', ['watch']);
 ```
 
-
 It’s possible to run multiple tasks at once, which is why I write my `watch` task in an Array. Be careful: These tasks will run in parallel, not in a sequential order. Later I will show how to run tasks in a predefined order.
 
 I will create another folder within my `tasks` folder with the name `development` and put all tasks needed for development in this folder. This is not necessary, but I did so:
@@ -76,13 +73,10 @@ var gulp = require('gulp');
 /**
  * Start browsersync task and then watch files for changes
  */
-gulp.task('watch', ['browsersync'], function() {
-
-});
+gulp.task('watch', ['browsersync'], function() {});
 ```
 
-
-I will come back later to write the `watch` task. For now the function will be empty and just run another task before running the watch task: `browsersync`. All tasks within the Array will be executed *before* the task is executed.
+I will come back later to write the `watch` task. For now the function will be empty and just run another task before running the watch task: `browsersync`. All tasks within the Array will be executed _before_ the task is executed.
 
 ## BrowserSync
 
@@ -101,9 +95,9 @@ I create a new file `browser-sync.js` in `gulp/tasks/development/`. This file wi
 <p class="code-info">gulp/tasks/development/browser-sync.js</p>
 
 ```javascript
-var gulp        = require('gulp');
+var gulp = require('gulp');
 var browsersync = require('browser-sync');
-var config      = require('../../config').browsersync.development;
+var config = require('../../config').browsersync.development;
 
 /**
  * Run the build task and start a server with BrowserSync
@@ -112,7 +106,6 @@ gulp.task('browsersync', ['build'], function() {
   browsersync(config);
 });
 ```
-
 
 This code does need some explanation: First I load Gulp.js and BrowserSync, which are needed in this task. Then I load the configuration for BrowserSync. I will create this configuration file in a moment. Keeping all configuration out of the tasks will make them more usable and they can be easily shared between different projects.
 
@@ -125,13 +118,13 @@ I create a new file `config.js` in the main Gulp.js folder:
 <p class="code-info">gulp/config.js</p>
 
 ```javascript
-var src               = 'app';
-var build             = 'build';
-var development       = 'build/development';
-var production        = 'build/production';
-var srcAssets         = 'app/_assets';
+var src = 'app';
+var build = 'build';
+var development = 'build/development';
+var production = 'build/production';
+var srcAssets = 'app/_assets';
 var developmentAssets = 'build/assets';
-var productionAssets  = 'build/production/assets';
+var productionAssets = 'build/production/assets';
 
 module.exports = {
   browsersync: {
@@ -151,7 +144,6 @@ module.exports = {
 };
 ```
 
-
 First I extract some paths needed over and over again later to variables and then I create a CommonJS module and add a entry for BrowserSync. BrowserSync runs with default options, but I want to override the port and I tell BrowserSync which folders should be served.
 
 Jekyll wipes out all files on recreation and to speed up development I have to be creative, because I don’t want to recreate all assets on every Jekyll build. That’s why I serve more than one folder. I serve the folder `build/development`, which will hold the files created by Jekyll. My assets I will generate into a different folder `build/assets` so Jekyll doesn’t wiped them out. And additionally the folder `app/_assets` to link source maps later.
@@ -160,4 +152,4 @@ BrowserSync watches only my asset files, in order that my browser won’t reload
 
 ## Conclusion
 
-This concludes the 2nd part of my series *Introduction to Gulp.js*. We learned how to install Gulp.js, how to write a Gulp.js task, run other tasks and set up a development server with BrowserSync.
+This concludes the 2nd part of my series _Introduction to Gulp.js_. We learned how to install Gulp.js, how to write a Gulp.js task, run other tasks and set up a development server with BrowserSync.

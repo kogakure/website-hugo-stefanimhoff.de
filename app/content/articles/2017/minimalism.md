@@ -1,25 +1,25 @@
 ---
 language: en
 title: The Pursuit of Minimalism
-slug: pursuit-of-minimalism
+slug: minimalism
 author: Stefan Imhoff
 date: 2017-06-07T18:30:00+02:00
-description: "As Minimalism is currently very popular, but as Minimalism is hard to understand, also a lot of misconceptions can be found. This article carries my thoughts on Minimalism and my history with it."
-og_image: "assets/images/articles/2017/pursuit-of-minimalism/minimalism-office.jpg"
-categories: ["personal", "recommendation"]
+description: 'As Minimalism is currently very popular, but as Minimalism is hard to understand, also a lot of misconceptions can be found. This article carries my thoughts on Minimalism and my history with it.'
+og_image: 'assets/images/articles/2017/pursuit-of-minimalism/minimalism-office.jpg'
+categories: ['personal', 'recommendation']
 ---
 
 Minimalism has come a long way. It recently got again a lot of traction with it’s highest search volume on [Google](https://trends.google.com/trends/explore?q=minimalism) ever recorded in January 2017. Because Minimalism is **very hard to define**, it leaves a lot of **room for interpretation** and its meaning shifted recently more from being a philosophy to being a lifestyle.
 
-In his video [Being a Minimalist](https://www.youtube.com/watch?v=D4bFYJ0JUMk) the creator **JP Sears** jokes about the extremes of Minimalism. A lot of people moved to Minimalism out of different reasons: From being overwhelmed of capitalism and the accelerating speed of life, to caring about the ecosystem, as result of balancing sick excesses like fast-fashion and constantly rising consumption of resources, to people just following a *trend* to feel unique or setting a statement on their wealth, by not having stuff as a symbol of status.
+In his video [Being a Minimalist](https://www.youtube.com/watch?v=D4bFYJ0JUMk) the creator **JP Sears** jokes about the extremes of Minimalism. A lot of people moved to Minimalism out of different reasons: From being overwhelmed of capitalism and the accelerating speed of life, to caring about the ecosystem, as result of balancing sick excesses like fast-fashion and constantly rising consumption of resources, to people just following a _trend_ to feel unique or setting a statement on their wealth, by not having stuff as a symbol of status.
 
 ## The Spectrum of Minimalism
 
-A lot of people misunderstand Minimalism as some form of search for highly expensive design objects to fill their houses with, which is not Minimalism but just a form of **hyper-capitalism**. It’s not inherently wrong to surf on sites with Minimalist items to buy or be inspired by simple design, as long as it doesn’t result into buying stuff to try to *become* a Minimalist.
+A lot of people misunderstand Minimalism as some form of search for highly expensive design objects to fill their houses with, which is not Minimalism but just a form of **hyper-capitalism**. It’s not inherently wrong to surf on sites with Minimalist items to buy or be inspired by simple design, as long as it doesn’t result into buying stuff to try to _become_ a Minimalist.
 
-On the other side of the spectrum, you can see the **extreme** Minimalists, living out of a box, owning 19 items, racing to be the most minimal Minimalists, sitting in empty rooms on the floor. And of course you are only allowed to use white and some black colors for everything as a extreme Minimalist. This form of Minimalism is only suitable for a few people. It *deters* a lot of people to try out Minimalism. But it’s definitely helpful for being interviewed in media, selling your book or being invited to conferences.
+On the other side of the spectrum, you can see the **extreme** Minimalists, living out of a box, owning 19 items, racing to be the most minimal Minimalists, sitting in empty rooms on the floor. And of course you are only allowed to use white and some black colors for everything as a extreme Minimalist. This form of Minimalism is only suitable for a few people. It _deters_ a lot of people to try out Minimalism. But it’s definitely helpful for being interviewed in media, selling your book or being invited to conferences.
 
-Real Minimalism is **not glamorous**, it’s **humble** and a result of **deep mindful thinking**. It is a mind-set or philosophy, not a method. And *the reduction of physical possessions is often a result of Minimalism, not Minimalism itself*, as Colin Wright explains in his article [Minimalism Explained](http://exilelifestyle.com/minimalism-explained/).
+Real Minimalism is **not glamorous**, it’s **humble** and a result of **deep mindful thinking**. It is a mind-set or philosophy, not a method. And _the reduction of physical possessions is often a result of Minimalism, not Minimalism itself_, as Colin Wright explains in his article [Minimalism Explained](http://exilelifestyle.com/minimalism-explained/).
 
 ## Criticism of Minimalism
 
@@ -32,7 +32,7 @@ Critics of Minimalism describe it as cold, empty, without personality. People fo
   </figcaption>
 </figure>
 
-This misconception of Minimalism is result of its shift to a lifestyle and of extreme Minimalist, who live in sterile homes. Minimalism is not about having as few as possible, but about *not* having stuff, which doesn’t bring joy or getting rid of stuff, which was acquired as a result of other reasons than a real *need* or *love* for an object.
+This misconception of Minimalism is result of its shift to a lifestyle and of extreme Minimalist, who live in sterile homes. Minimalism is not about having as few as possible, but about _not_ having stuff, which doesn’t bring joy or getting rid of stuff, which was acquired as a result of other reasons than a real _need_ or _love_ for an object.
 
 The wrong reasons might be diverse: Boredom, inner emptiness, desire of status, procrastination, the uncomfortable feeling of thinking of oneself, the attempt of freezing time for nostalgic reasons and many more.
 
@@ -45,13 +45,13 @@ As everything in this world is connected, Minimalism has its roots in a lot of d
   <p>Simplicity is the reduction of&nbsp;complexity.</p>
 </blockquote>
 
-As Minimalism is also defined as *Simple Living*, Simplicity will inevitably be part of a Minimalists life. The reason is deep thinking often results in love for simple forms. Objects, which are resistent against temporary fashion, which endure times and follow the concept of *form follows function*.
+As Minimalism is also defined as _Simple Living_, Simplicity will inevitably be part of a Minimalists life. The reason is deep thinking often results in love for simple forms. Objects, which are resistent against temporary fashion, which endure times and follow the concept of _form follows function_.
 
-As Kenya Hara writes in [Wa: The Essence of Japanese Design](http://www.amazon.de/gp/product/0714866962?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=0714866962), the origin of Simplicity can be found in the European *modernism* as a result of the society getting free of sole rulers (who where defined by objects of decoration and excess of material objects). Rationality was the basis of this concept, resulting in *Bauhaus* in 1909 or the founding of *Domus* in 1928.
+As Kenya Hara writes in [Wa: The Essence of Japanese Design](http://www.amazon.de/gp/product/0714866962?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=0714866962), the origin of Simplicity can be found in the European _modernism_ as a result of the society getting free of sole rulers (who where defined by objects of decoration and excess of material objects). Rationality was the basis of this concept, resulting in _Bauhaus_ in 1909 or the founding of _Domus_ in 1928.
 
-The Japanese Simplicity is described as *Emptiness* by Kenya Hara and has a complex background: Japan was positioned at the end of many routes of cultural influence. From Rome along the Silk Road to Central Asia, China, Korea, and south from Turkey over India, South Asia and north along Russia. But after a civil war from 1467-1477 (*ōnin no ran*), which resulted in the destruction of a lot of objects of art (temples, statues, paintings, kimonos, etc.), maybe out of necessity, a new form of simple and quiet design emerged.
+The Japanese Simplicity is described as _Emptiness_ by Kenya Hara and has a complex background: Japan was positioned at the end of many routes of cultural influence. From Rome along the Silk Road to Central Asia, China, Korea, and south from Turkey over India, South Asia and north along Russia. But after a civil war from 1467-1477 (_ōnin no ran_), which resulted in the destruction of a lot of objects of art (temples, statues, paintings, kimonos, etc.), maybe out of necessity, a new form of simple and quiet design emerged.
 
-Different ideas like *shintō*, *zen* buddhism and Daoism influenced this form of Simplicity (and Minimalism) in every aspect of life. In *shintō* the concept of emptiness is result of the creation of a space for the *kami* (deities) to fill it. *Zen* buddhism brought aspects like *Upādāna* (sanskr. the attachment, clinging or grasping on ephemeral things). As a result many new ideas based on *Emptiness*, Simplicity and Minimalism emerged: [*wabi-sabi*](https://www.youtube.com/watch?v=QmHLYhxYVjA), [*kintsugi*](http://www.thebookoflife.org/kintsugi/),  [japanese gardens](https://www.youtube.com/watch?v=7kaKYer6x5A), [*bonsai*](https://www.youtube.com/watch?v=NfdGGTb5_Ts), [*ikebana*](https://www.youtube.com/watch?v=QLBjh7GcVyA), [*chadō*](http://www.thebookoflife.org/the-great-eastern-philosophers-sen-no-rikyu/) or [*haiku*](http://www.thebookoflife.org/the-great-eastern-philosophers-matsuo-basho/).
+Different ideas like _shintō_, _zen_ buddhism and Daoism influenced this form of Simplicity (and Minimalism) in every aspect of life. In _shintō_ the concept of emptiness is result of the creation of a space for the _kami_ (deities) to fill it. _Zen_ buddhism brought aspects like _Upādāna_ (sanskr. the attachment, clinging or grasping on ephemeral things). As a result many new ideas based on _Emptiness_, Simplicity and Minimalism emerged: [_wabi-sabi_](https://www.youtube.com/watch?v=QmHLYhxYVjA), [_kintsugi_](http://www.thebookoflife.org/kintsugi/), [japanese gardens](https://www.youtube.com/watch?v=7kaKYer6x5A), [_bonsai_](https://www.youtube.com/watch?v=NfdGGTb5_Ts), [_ikebana_](https://www.youtube.com/watch?v=QLBjh7GcVyA), [_chadō_](http://www.thebookoflife.org/the-great-eastern-philosophers-sen-no-rikyu/) or [_haiku_](http://www.thebookoflife.org/the-great-eastern-philosophers-matsuo-basho/).
 
 ## Why to become a Minimalist?
 
@@ -89,7 +89,7 @@ I gave more than 150 books away (I still own 763) and sold my car. I use the sub
 
 I scanned most of my documents into digital form and recycled the paper.
 
-Recently I counted all my possessions: I own **2486** items, which is a *fourth* of the amount an European person owns on average (10000 items). I counted everything, from my wardrobe to dental brushes. 356 items in my bedroom, 242 items in my corridor, 68 items in my bathroom and 1820 items in my living room and kitchen.
+Recently I counted all my possessions: I own **2486** items, which is a _fourth_ of the amount an European person owns on average (10000 items). I counted everything, from my wardrobe to dental brushes. 356 items in my bedroom, 242 items in my corridor, 68 items in my bathroom and 1820 items in my living room and kitchen.
 
 ### On Consumption
 
@@ -125,7 +125,7 @@ And a last word on multitasking: It simply doesn’t work for humans, this was p
 
 Minimalism is not a goal to reach, it’s a **steady process**, which you have to decide for moment to moment. This is only possible if you are **mindful** and think about your relationship to material objects.
 
-As JP Sears jokes: *It’s not about being so poor, that you have the inability to have things. That’s poverty. It’s about being so rich, that you can afford to live like a poor person*. Following the Minimalist philosophy will definitely be a benefit to your wealth. You will not be rich in things, but use your saved money to invest wisely, or spend it on intangible things, make experiences, follow your passions and live a life worth remembering.
+As JP Sears jokes: _It’s not about being so poor, that you have the inability to have things. That’s poverty. It’s about being so rich, that you can afford to live like a poor person_. Following the Minimalist philosophy will definitely be a benefit to your wealth. You will not be rich in things, but use your saved money to invest wisely, or spend it on intangible things, make experiences, follow your passions and live a life worth remembering.
 
 ## Recommended Videos, Articles and Blogs
 
@@ -148,4 +148,6 @@ As JP Sears jokes: *It’s not about being so poor, that you have the inability 
 - [Minimlist Life](https://minimalism.life/)
 - [5 STYLE](https://5style.com/)
 
-[^1]: I am not sure, who wrote this definition, as it can be found all over the internet. If somebody knows the original author, I gladly update the source.
+[^1]:
+
+  I am not sure, who wrote this definition, as it can be found all over the internet. If somebody knows the original author, I gladly update the source.

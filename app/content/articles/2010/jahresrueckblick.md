@@ -1,11 +1,12 @@
 ---
-language: "de"
-title: "2010 – ein Jahresrückblick"
-slug: "jahresrueckblick"
+draft: true
+language: de
+title: '2010 – ein Jahresrückblick'
+slug: jahresrueckblick
 date: 2010-12-23T13:00:00+02:00
-author: "Stefan Imhoff"
-description: "Mein persönlicher Jahresrückblick für 2010: Django, Homebrew und Vim. Welche Plugins und Erweiterungen für Vim setze ich ein?"
-categories: ["personal"]
+author: Stefan Imhoff
+description: 'Mein persönlicher Jahresrückblick für 2010: Django, Homebrew und Vim. Welche Plugins und Erweiterungen für Vim setze ich ein?'
+categories: ['personal']
 ---
 
 Und wieder ist ein Jahr fast vorbei, mein jährlicher Blick in Google History steht an.
@@ -31,7 +32,7 @@ Ich bin in 2010 auf [Zen Coding](https://code.google.com/archive/p/zen-coding) u
 
 Zum Ende des Jahres [habe ich mich noch überzeugen lassen](http://www.reinegger.net/50_gruende_photoshop_nicht_fuer_webdesign_zu_verwenden.html), dass Photoshop einfach das falsche Werkzeug für Webdesign ist, und mir angesehen, wie gut Fireworks dafür geeignet ist. Zwar brauche ich beruflich am Januar keine Layouts mehr zu erstellen, aber das Layout meines nächsten Relaunch werde ich mit Fireworks gestalten.
 
-2010 war auch das Jahr, in dem ich nach 7-jähiger Abstinenz wieder damit begonnen habe, das eine oder andere Computerspiel zu spielen. So habe ich mir *The Secret of Monkey Island* und *Monkey Island 2: LeChuck’s Revenge* für iOS gekauft und voller Freude meine Jugenderinnerungen an diese fantatischen Spiele wieder aufleben lassen. Und ich habe mir [StarCraft II](http://eu.battle.net/sc2/de/) für Mac OS X gekauft, das mit Abstand coolste Spiel seit langem. Selbstverständlich habe ich aber als Gelegenheits- und Wochenendspieler kaum eine Chance gegen Spieler zu gewinnen, die 1000 oder mehr Spiele hinter sich haben. Trotzdem macht StarCraft II unheimlichen Spaß und ich habe in 2010 die eine oder andere Stunde damit verbracht.
+2010 war auch das Jahr, in dem ich nach 7-jähiger Abstinenz wieder damit begonnen habe, das eine oder andere Computerspiel zu spielen. So habe ich mir _The Secret of Monkey Island_ und _Monkey Island 2: LeChuck’s Revenge_ für iOS gekauft und voller Freude meine Jugenderinnerungen an diese fantatischen Spiele wieder aufleben lassen. Und ich habe mir [StarCraft II](http://eu.battle.net/sc2/de/) für Mac OS X gekauft, das mit Abstand coolste Spiel seit langem. Selbstverständlich habe ich aber als Gelegenheits- und Wochenendspieler kaum eine Chance gegen Spieler zu gewinnen, die 1000 oder mehr Spiele hinter sich haben. Trotzdem macht StarCraft II unheimlichen Spaß und ich habe in 2010 die eine oder andere Stunde damit verbracht.
 
 Mein absolutes Highlight von 2010 war aber Vim (genauer MacVim). Erst im September habe ich mich entschlossen, mir Vim näher anzusehen, und jetzt im Dezember vermisse ich TextMate – mit dem ich seit über 5 Jahren arbeite – nicht mehr im geringsten. Vim ist nicht nur kostenlos und schon viele Jahre alt, es ist auch unglaublich schnell, anpassungsfähig und mächtig und läuft schick in einer grafischen Oberfläche wie auch auf dem Server gleichermaßen. Und um einmal ehrlich zu sein, wirkt jeder Editor (vielleicht mit Ausnahme von Emacs) gegen Vim wie ein lächerliches Kinderspielzeug – auch TextMate.
 
@@ -47,16 +48,16 @@ Natürlich lässt sich mit Vim fast jede Sprache oder Syntax hinzufügen, so hab
 
 Zusätzlich kann ich die folgenden Erweiterungen besonders empfehlen:
 
-* **[AutoClose](https://github.com/vim-scripts/AutoClose):** Fügt die passenden Klammern, Gänsefüßchen und andere Zeichen ein. Viele Editoren bieten diese Funktion natürlich schon von Anfang an, aber ich schalte in Vim je nach Bedarf um.
-* **[EasyGrep](https://github.com/vim-scripts/EasyGrep):** Ermöglicht es auf einfache Weise über viele Dateien zu suchen und zu ersetzen.
-* **[VisIncr](https://github.com/vim-scripts/VisIncr):** Mit VisIncr lassen sich Spalten mit Zahlen, Daten oder Tagesnamen erhöhen und verringern. Das einfache Rechnen geht übrigens schon von Haus aus mit Vim. Es lassen sich ohne Probleme Zahlen in beliebiger Anzahl von Zeilen um beliebige Werte erhöhen oder verringern.
-* **[Command-T](https://github.com/vim-scripts/command-t):** Wincent Colaiuta vermisste nach seinem Wechsel von TextMate zu Vim die Funktion `Go to File`, mit der durch die Eingabe weniger Buchstaben aus vielen Dateien gefiltert werden kann und ein direkter Sprung zu einer Datei möglich ist. Also programmierte er Command-T, das diese Funktionalität zu Vim bringt.
-* **[Gundo](https://github.com/vim-scripts/gundo):** Gundo ermöglicht einen leichten Zugriff auf die History von Vim. So kann schnell und sogar ohne Versionskontrolle ein Baum der letzten Änderungen angesehen und wiederhergestellt werden.
-* **[hexHighlight.vim](https://github.com/vim-scripts/hexHighlight.vim):** Praktisch für die CSS-Entwicklung ist diese Erweiterung, die alle Hex-Farben durch eine Farbfläche ersetzt. So kann schnell visuell nach Farben gesucht werden.
-* **[jslint.vim](https://github.com/vim-scripts/jslint.vim):** Ein praktisches Plugin, das JSLint verwendet, um Fehler und Verbesserungen im JavaScript anzuzeigen. Dies geschiet automatisch während des Tippens. Die Vorschläge werden unten in der Vim-Kommandozeile angezeigt.
-* **[mru.vim](https://github.com/vim-scripts/mru.vim):** Dieses Plugin hält eine Liste der Most Recently Used (MRU) Dateien, um schnell die letzten Dateien wieder öffnen zu können.
-* **[The NERD tree](https://github.com/vim-scripts/The-NERD-tree):** Ein Datei-Explorer, wie man ihn von TextMate kennt, um durch Dateien und Ordner zu navigieren. Er hat sehr viele praktische Funktionen. Doch seit ich die Buffer und Splits von Vim kenne benötige ich eine Seitenleiste eigentlich so gut wie gar nicht mehr.
-* **[snipMate](https://github.com/vim-scripts/snipMate):** Eine von ca. drei Erweiterungen, die die Snippet-Funktionalität, wie man sie von TextMate kennt zu Vim portiert. Funktioniert fast genauso und ist sehr zu empfehlen, besonders für TextMate-Umsteiger (wie mich), die ohne Snippets nicht mehr arbeiten möchten.
-* **[sparkup](https://github.com/rstacruz/sparkup):** Dieses Plugin ist eine Portierung von Zen Coding für Vim. So lässt sich komplexes Markup in kurzer Zeit erzeugen.
-* **[tComment](https://github.com/vim-scripts/tComment):** Mit tCommend lassen sich Worte, Zeilen oder Wortblöcke schnell ein- oder auskommentieren.
-* **[surround](https://github.com/vim-scripts/surround.vim):** Dieses äußerst nützliche Plugin ermöglicht es, Klammern, Tags, Satzzeichen und viele Dinge mehr um Worte, Zeilen, Abstätze, Blöcke etc. hinzuzufügen, zu ändern oder zu löschen – und das mit wenigen Befehlen. Äußerst praktisch!
+- **[AutoClose](https://github.com/vim-scripts/AutoClose):** Fügt die passenden Klammern, Gänsefüßchen und andere Zeichen ein. Viele Editoren bieten diese Funktion natürlich schon von Anfang an, aber ich schalte in Vim je nach Bedarf um.
+- **[EasyGrep](https://github.com/vim-scripts/EasyGrep):** Ermöglicht es auf einfache Weise über viele Dateien zu suchen und zu ersetzen.
+- **[VisIncr](https://github.com/vim-scripts/VisIncr):** Mit VisIncr lassen sich Spalten mit Zahlen, Daten oder Tagesnamen erhöhen und verringern. Das einfache Rechnen geht übrigens schon von Haus aus mit Vim. Es lassen sich ohne Probleme Zahlen in beliebiger Anzahl von Zeilen um beliebige Werte erhöhen oder verringern.
+- **[Command-T](https://github.com/vim-scripts/command-t):** Wincent Colaiuta vermisste nach seinem Wechsel von TextMate zu Vim die Funktion `Go to File`, mit der durch die Eingabe weniger Buchstaben aus vielen Dateien gefiltert werden kann und ein direkter Sprung zu einer Datei möglich ist. Also programmierte er Command-T, das diese Funktionalität zu Vim bringt.
+- **[Gundo](https://github.com/vim-scripts/gundo):** Gundo ermöglicht einen leichten Zugriff auf die History von Vim. So kann schnell und sogar ohne Versionskontrolle ein Baum der letzten Änderungen angesehen und wiederhergestellt werden.
+- **[hexHighlight.vim](https://github.com/vim-scripts/hexHighlight.vim):** Praktisch für die CSS-Entwicklung ist diese Erweiterung, die alle Hex-Farben durch eine Farbfläche ersetzt. So kann schnell visuell nach Farben gesucht werden.
+- **[jslint.vim](https://github.com/vim-scripts/jslint.vim):** Ein praktisches Plugin, das JSLint verwendet, um Fehler und Verbesserungen im JavaScript anzuzeigen. Dies geschiet automatisch während des Tippens. Die Vorschläge werden unten in der Vim-Kommandozeile angezeigt.
+- **[mru.vim](https://github.com/vim-scripts/mru.vim):** Dieses Plugin hält eine Liste der Most Recently Used (MRU) Dateien, um schnell die letzten Dateien wieder öffnen zu können.
+- **[The NERD tree](https://github.com/vim-scripts/The-NERD-tree):** Ein Datei-Explorer, wie man ihn von TextMate kennt, um durch Dateien und Ordner zu navigieren. Er hat sehr viele praktische Funktionen. Doch seit ich die Buffer und Splits von Vim kenne benötige ich eine Seitenleiste eigentlich so gut wie gar nicht mehr.
+- **[snipMate](https://github.com/vim-scripts/snipMate):** Eine von ca. drei Erweiterungen, die die Snippet-Funktionalität, wie man sie von TextMate kennt zu Vim portiert. Funktioniert fast genauso und ist sehr zu empfehlen, besonders für TextMate-Umsteiger (wie mich), die ohne Snippets nicht mehr arbeiten möchten.
+- **[sparkup](https://github.com/rstacruz/sparkup):** Dieses Plugin ist eine Portierung von Zen Coding für Vim. So lässt sich komplexes Markup in kurzer Zeit erzeugen.
+- **[tComment](https://github.com/vim-scripts/tComment):** Mit tCommend lassen sich Worte, Zeilen oder Wortblöcke schnell ein- oder auskommentieren.
+- **[surround](https://github.com/vim-scripts/surround.vim):** Dieses äußerst nützliche Plugin ermöglicht es, Klammern, Tags, Satzzeichen und viele Dinge mehr um Worte, Zeilen, Abstätze, Blöcke etc. hinzuzufügen, zu ändern oder zu löschen – und das mit wenigen Befehlen. Äußerst praktisch!

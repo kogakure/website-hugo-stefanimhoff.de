@@ -1,16 +1,17 @@
 ---
-language: "de"
-title: "Lokalisierung von Projekten mit Django"
-description: "Einführung in die Lokalisierung und Internationalisierung einer Django-Applikation. Was muss beachtet werden, wie werden die  Template-Tags eingesetzt und wie werden die Sprach-Dateien generiert. "
-author: "Stefan Imhoff"
-slug: "lokalisierung-von-projekten-mit-django"
+draft: true
+language: de
+title: 'Lokalisierung von Projekten mit Django'
+description: 'Einführung in die Lokalisierung und Internationalisierung einer Django-Applikation. Was muss beachtet werden, wie werden die  Template-Tags eingesetzt und wie werden die Sprach-Dateien generiert. '
+author: Stefan Imhoff
+slug: lokalisierung-von-projekten-mit-django
 date: 2008-08-30T15:25:00+02:00
-categories: ["code"]
+categories: ['code']
 ---
 
 Es gibt für Django mittlerweile schon eine große Menge nützlicher Applikationen. Leider vernachlässigen viele Entwickler immer noch die Lokalisierung und Internationalisierung ihrer Applikationen.
 
-Viele Entwickler kommen aus den U.S.A. und sprechen meist nur eine Sprache: Englisch. Trotzdem sollte jeder Entwickler die Internationalisierung von Anfang an gleich mit einbauen, es sei denn er ist sich *sicher*, dass die Anwendung nie veröffentlicht wird.
+Viele Entwickler kommen aus den U.S.A. und sprechen meist nur eine Sprache: Englisch. Trotzdem sollte jeder Entwickler die Internationalisierung von Anfang an gleich mit einbauen, es sei denn er ist sich _sicher_, dass die Anwendung nie veröffentlicht wird.
 
 Die Arbeit, die dafür ausgeführt werden muss, ist auch nicht wirklich ein großer Mehraufwand. Dies ist übrigens alles sehr gut in der [Django-Dokumentation](https://docs.djangoproject.com/en/dev/topics/i18n/) dokumentiert.
 
@@ -75,9 +76,7 @@ class Choice(models.Model):
 
     def __unicode__(self):
         return self.choice
-
 ```
-
 
 <p class="code-info">polls/poll_list.html</p>
 
@@ -93,7 +92,6 @@ class Choice(models.Model):
 {% endif %}
 ```
 
-
 <p class="code-info">polls/results.html</p>
 
 ```html
@@ -105,8 +103,6 @@ class Choice(models.Model):
 {% endfor %}
 </ul>
 ```
-
-
 
 ## Lokalisierung der Python-Dateien
 
@@ -128,7 +124,6 @@ fieldsets = [
 ]
 ...
 ```
-
 
 Django nimmt für die Felder im Admin-Backend automatisch den Datenmodellnamen mit einem Großbuchstaben als Label. Um diesen zu lokalisieren muss man ihn ausdrücklich angeben. Bei `ForeignKey`-Feldern ist es nötig den Namen mit `verbose_name` anzugeben.
 
@@ -157,7 +152,6 @@ votes = models.IntegerField(\_(u'Votes'))
 ...
 ```
 
-
 ## Lokalisierung der HTML-Templates
 
 In den HTML-Templates wird eine etwas andere Syntax benutzt. Zuerst muss am Anfang der Datei das Templatetag für die Internationalisierung geladen werden.
@@ -176,7 +170,6 @@ Um eine einfache Zeichenkette zu markieren, benutzt man `{% trans "" %}`. Es gib
 {% endif %}
 ```
 
-
 Die Pluralisierung funktioniert (leider) nicht mehr wie gewohnt, wenn man sie lokalisiert. Dafür muss man eine Abfrage im `{% if %}`-ähnlichen Stil einbauen und die Menge eines Objektes abfragen.
 
 <p class="code-info">polls/result.html</p>
@@ -192,7 +185,6 @@ Die Pluralisierung funktioniert (leider) nicht mehr wie gewohnt, wenn man sie lo
 {% endfor %}
 </ul>
 ```
-
 
 ## Erzeugen der Sprachdateien
 

@@ -1,11 +1,12 @@
 ---
-language: "de"
-title: "Server-Verwaltung mit Capistrano"
-description: "Einführung in Serververwaltung mit Capistrano: Wie Capistrano installiert und eingesetzt wird und man damit ein Web-Projekt deployt."
-author: "Stefan Imhoff"
-slug: "server-verwaltung-capistrano"
+draft: true
+language: de
+title: 'Server-Verwaltung mit Capistrano'
+description: 'Einführung in Serververwaltung mit Capistrano: Wie Capistrano installiert und eingesetzt wird und man damit ein Web-Projekt deployt.'
+author: Stefan Imhoff
+slug: server-verwaltung-capistrano
 date: 2008-05-01T18:18:00+02:00
-categories: ["server", "code"]
+categories: ['server', 'code']
 ---
 
 Wer einen Webserver oder VirtualHost sein eigen nennt, sollte sich unbedingt Capistrano ansehen, ein Programm, das es ermöglicht diverse Aufgaben zu automatisieren.
@@ -22,7 +23,7 @@ Die übliche Arbeitsweise einer modernen Webentwicklung beinhaltet heute Version
 
 Man hat auf einem Server ein Repository seines Projektes liegen, von dem aus man sowohl auf seinen lokalen Computer, als auch in den Webroot eine Kopie auscheckt (z. B. mit `git clone` oder `svn co`).
 
-Danach arbeitet man lokal an seinen Änderungen, erzeugt *branches* und testet seine Anwendung. Wenn man eine Änderung auf den Live-Server bringen möchte, muss man zuerst die Änderungen ins Repository einspielen (z. B. mit `git push`). Danach checkt man die Änderungen auf seinem Webserver aus (z. B. mit `git pull`).
+Danach arbeitet man lokal an seinen Änderungen, erzeugt _branches_ und testet seine Anwendung. Wenn man eine Änderung auf den Live-Server bringen möchte, muss man zuerst die Änderungen ins Repository einspielen (z. B. mit `git push`). Danach checkt man die Änderungen auf seinem Webserver aus (z. B. mit `git pull`).
 
 Die meisten Webapplikationen benötigen danach Arbeiten am Server, wie das Neustarten von Prozessen, Servern oder Datenbanken. Alles in allem ist der Arbeitsprozess zwar immer noch unendlich komfortabler als mit FTP rumzuhantieren, aber auf Dauer kann das ewige einloggen per SSH auf dem Webserver schon nerven.
 
@@ -66,7 +67,7 @@ Der Einfachheit halber stehen alle meine Befehle direkt in der `Capfile`-Datei, 
 
 ## Beispiel-Datei
 
-Ich habe in meiner Datei (`Capfile`) folgende Funktionen erstellt, die diverse Aufgaben für mich vereinfachen, wie z. B. das Neustarten des Webservers,  Caching-Servers oder das Aktualisieren eines Django-Projektes aus dem Repository.
+Ich habe in meiner Datei (`Capfile`) folgende Funktionen erstellt, die diverse Aufgaben für mich vereinfachen, wie z. B. das Neustarten des Webservers, Caching-Servers oder das Aktualisieren eines Django-Projektes aus dem Repository.
 
 <p class="code-info">Capfile</p>
 
@@ -105,7 +106,6 @@ task :restart_memcached, :hosts => "#{hosts}" do
 end
 after "restart_memcached", "restart_server"
 ```
-
 
 Variablen können beliebig zugewiesen werden (mit `set :variable, "Wert"`) und dann später mit `#{variable}` wieder verwendet werden. Es sind auch alle anderen Befehle von Ruby bei Capistrano möglich, wie Schleifen, Abfragen, etc.
 

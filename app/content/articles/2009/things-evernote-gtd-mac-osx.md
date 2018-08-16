@@ -1,11 +1,12 @@
 ---
-language: "de"
-title: "Things und Evernote: GTD mit dem Mac"
-slug: "things-evernote-gtd-mac-osx"
+draft: true
+language: de
+title: 'Things und Evernote: GTD mit dem Mac'
+slug: things-evernote-gtd-mac-osx
 date: 2009-05-22T16:45:00+02:00
-author: "Stefan Imhoff"
-description: "Eine Einführung in meine Arbeitsweise mit GTD (Getting Things Done) am Mac und wie ich Things und Evernote dafür verwende."
-categories: ["productivity"]
+author: Stefan Imhoff
+description: 'Eine Einführung in meine Arbeitsweise mit GTD (Getting Things Done) am Mac und wie ich Things und Evernote dafür verwende.'
+categories: ['productivity']
 ---
 
 David Allen hat mit seinem Organisationsbuch <cite>[Getting Things Done](http://www.amazon.de/gp/product/0142000280/ref=as_li_ss_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=0142000280&linkCode=as2&tag=kogakurede-21)</cite> (Deutsche Version: <cite>[Wie ich die Dinge geregelt kriege](http://www.amazon.de/gp/product/3492240607/ref=as_li_ss_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=3492240607&linkCode=as2&tag=kogakurede-21)</cite>) eine wahre Flut an Blogs, Software und Lösungen in Gang gebracht. Während Allen selbst in seinem Buch mit sehr handfesten Ablagesystemen arbeitet, ist es mittlerweile selbstredend sinnvoller digital mit GTD zu arbeiten, da man den digitalen Content leichter weiterverwenden, synchronisieren und bearbeiten kann.
@@ -14,13 +15,13 @@ Die Vielzahl von Software für die verschiedenen Betriebssysteme und für mobile
 
 ## Aufgaben
 
-Ich habe am Mac schon einiges an Software ausprobiert, neben zahllosen kostenlosen Systemen auch [OmniFocus](https://www.omnigroup.com/omnifocus/), [The Hit List](http://www.karelia.com/products/the-hit-list/mac.html), [Things](https://culturedcode.com/things/ "Things - task management on the Mac") und [Remeber the Milk](https://www.rememberthemilk.com/ "Remember The Milk: Online to do list and task management"). Alle Produkte haben ihre Stärken und Schwächen. Ich habe jedes davon schon über einen längeren Zeitraum genutzt. Doch nach einer Testphase bin ich am Ende immer wieder zu <cite>Things</cite> zurückgekommen. Die eine oder andere Software hatte zwar Funktionen, die ich auch gerne in <cite>Things</cite> sehen würde, doch schlägt dieses seine Konkurrenz mit dem einfach zu bedienenden Interface und der geringen Komplexität.
+Ich habe am Mac schon einiges an Software ausprobiert, neben zahllosen kostenlosen Systemen auch [OmniFocus](https://www.omnigroup.com/omnifocus/), [The Hit List](http://www.karelia.com/products/the-hit-list/mac.html), [Things](https://culturedcode.com/things/ 'Things - task management on the Mac') und [Remeber the Milk](https://www.rememberthemilk.com/ 'Remember The Milk: Online to do list and task management'). Alle Produkte haben ihre Stärken und Schwächen. Ich habe jedes davon schon über einen längeren Zeitraum genutzt. Doch nach einer Testphase bin ich am Ende immer wieder zu <cite>Things</cite> zurückgekommen. Die eine oder andere Software hatte zwar Funktionen, die ich auch gerne in <cite>Things</cite> sehen würde, doch schlägt dieses seine Konkurrenz mit dem einfach zu bedienenden Interface und der geringen Komplexität.
 
-*Things* bietet verschiedene Listen, wie einen *Eingang*, die Listen *Heute*, *Als Nächstes*, *Geplant* sowie *Irgendwann*, und bietet damit alles, was für GTD benötigt wird. Aktive Projekte werden in einer Liste *Projekte* gesammelt. CulturedCode hat noch eine Lösung für lange, nie endende Projekte entwickelt: Diese werden in *Verantwortungsbereichen* gesammeln. Sowohl Projekte, als auch einzelne Aufgaben können diesen Bereichen zugeordnet werden. Praktischerweise ist es auch möglich, Bereiche zeitweise zu deaktiviert, wodurch auch alle Aufgaben darin für diesen Zeitraum unsichtbar werden.
+_Things_ bietet verschiedene Listen, wie einen _Eingang_, die Listen _Heute_, _Als Nächstes_, _Geplant_ sowie _Irgendwann_, und bietet damit alles, was für GTD benötigt wird. Aktive Projekte werden in einer Liste _Projekte_ gesammelt. CulturedCode hat noch eine Lösung für lange, nie endende Projekte entwickelt: Diese werden in _Verantwortungsbereichen_ gesammeln. Sowohl Projekte, als auch einzelne Aufgaben können diesen Bereichen zugeordnet werden. Praktischerweise ist es auch möglich, Bereiche zeitweise zu deaktiviert, wodurch auch alle Aufgaben darin für diesen Zeitraum unsichtbar werden.
 
 Termingebundene Aufgaben lassen sich mit <cite>Things</cite> ebenfalls sehr gut verwalten. Zum einen ist es möglich für jedes Projekt und jede Aufgabe ein Fälligkeitsdatum zu vergeben. Dies sollte aber nur vergeben werden, um wirkliche Deadlines zu setzen. Es ist möglich sich auch vor diesem Datum schon Benachrichtigen zu lassen. Sinnvoller ist aber das Planungsdatum. So ist es möglich eine Aufgabe bis zu einem bestimmten Datum aufzuschieben. Tritt dieses Datum ein, wird die Aufgabe automatisch wieder aktiv.
 
-*Things* bietet außerdem noch Schlagworte und eine Synchronisation mit dem Kalenderprogramm iCal. Das beste ist aber die komfortable Synchronisation mit <cite>Things touch</cite> (der Version für iPhone und iPod touch). So ist es möglich auch unterwegs schnell Aufgaben und Ideen zu verfassen und diese später mit dem eigenen Mac zu synchronisieren.
+_Things_ bietet außerdem noch Schlagworte und eine Synchronisation mit dem Kalenderprogramm iCal. Das beste ist aber die komfortable Synchronisation mit <cite>Things touch</cite> (der Version für iPhone und iPod touch). So ist es möglich auch unterwegs schnell Aufgaben und Ideen zu verfassen und diese später mit dem eigenen Mac zu synchronisieren.
 
 ## Referenzmaterial
 

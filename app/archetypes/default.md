@@ -1,9 +1,9 @@
 ---
 draft: true
 title: {{ replace .TranslationBaseName "-" " " | title }}
-slug: "{{ .TranslationBaseName }}"
+slug: {{ .TranslationBaseName }}
 date = {{ .Date }}
 description: ""
-author: "Stefan Imhoff"
+author: Stefan Imhoff
 ---
 

@@ -1,18 +1,18 @@
 ---
-language: "en"
-title: "Introduction to Gulp.js 16: PostCSS"
+language: en
+title: 'Introduction to Gulp.js 16: PostCSS'
 date: 2015-10-16T07:50:29+00:00
-description: "The ultimative tutorial and guide for Gulp.js: How to use PostCSS with Gulp to process CSS and how to lint your CSS files with Stylelint."
-og_image: "assets/images/articles/2015/gulp-tutorial-16-postcss/gulp-tutorial-16.jpg"
-author: "Stefan Imhoff"
-slug: "gulp-tutorial-16-postcss"
-series: ["gulp"]
-categories: ["code"]
-download_url: "https://github.com/kogakure/gulp-tutorial"
-download_text: "View Source on GitHub"
+description: 'The ultimative tutorial and guide for Gulp.js: How to use PostCSS with Gulp to process CSS and how to lint your CSS files with Stylelint.'
+og_image: 'assets/images/articles/2015/gulp-tutorial-16-postcss/gulp-tutorial-16.jpg'
+author: Stefan Imhoff
+slug: gulp-tutorial-16-postcss
+series: ['gulp']
+categories: ['code']
+download_url: 'https://github.com/kogakure/gulp-tutorial'
+download_text: 'View Source on GitHub'
 ---
 
-This is the 16th part of my series *Introduction to Gulp.js*. Today I will show how to use PostCSS to process CSS files. I will replace Ruby Sass with PostCSS and additionally show how to lint stylesheets automatically in the background while developing with Stylelint.
+This is the 16th part of my series _Introduction to Gulp.js_. Today I will show how to use PostCSS to process CSS files. I will replace Ruby Sass with PostCSS and additionally show how to lint stylesheets automatically in the background while developing with Stylelint.
 
 <figure class="image-figure">
   <img src="/assets/images/articles/2015/gulp-tutorial-16-postcss/gulp-tutorial-16.jpg" alt="Two girls pretent to hold a very big Gulp cup">
@@ -21,10 +21,9 @@ This is the 16th part of my series *Introduction to Gulp.js*. Today I will show 
   </figcaption>
 </figure>
 
-
 ## Compass, Sass, LESS, Stylus … why do we need more tools?
 
-I use Sass and SCSS now for a long time, started with *Compass*, moved to *Ruby Sass* and wanted to move to *libSass*, but dependencies to some of my beloved Gems held me back.
+I use Sass and SCSS now for a long time, started with _Compass_, moved to _Ruby Sass_ and wanted to move to _libSass_, but dependencies to some of my beloved Gems held me back.
 
 There are a lot of Preprocessors, Libraries, Frameworks, which extend CSS. And a lot of them do good work and I didn’t want to miss Variables, Nesting or Mixins. But Ruby Sass and Compass in particular are **slooooooooow**, because Ruby is slow. Compiling my websites styles took 7-8 seconds, but I know of projects where one change will trigger a recompile, which takes **more than a minute**!
 
@@ -39,14 +38,13 @@ There is a new kid on the block: [PostCSS](https://github.com/postcss/postcss). 
   </figcaption>
 </figure>
 
-
 Why should you use a new tool, if Sass and it’s competitors do their job? Because it’s **fast** ([3-30 times faster](https://github.com/postcss/benchmark)), **modular** and **extendible**. I bet you only need a small fraction of your Preprocessors functionality.
 
 With PostCSS you can choose what you need from currently over [200 plugins](https://www.postcss.parts/). If you don’t find the plugin you need, you can write your own [plugin](https://github.com/postcss/postcss/blob/master/docs/guidelines/plugin.md) or [syntax](https://github.com/postcss/postcss/blob/master/docs/syntax.md).
 
 **You get it all**: Variables, Mixins, Extends, Color Helpers, Fallbacks, Optimizations, Grids … you choose. You can even start using future CSS syntax today, let PostCSS transpile it for you.
 
-I swapped out *Ruby Sass* with PostCSS and my CSS is now transformed in 2-3 seconds. Go and take a look at my [beautiful new code](https://github.com/kogakure/jekyll-stefanimhoff.de). I use a Responsive Typography, Autoprefixer, and the awesome [LostGrid](https://github.com/peterramsing/lost).
+I swapped out _Ruby Sass_ with PostCSS and my CSS is now transformed in 2-3 seconds. Go and take a look at my [beautiful new code](https://github.com/kogakure/jekyll-stefanimhoff.de). I use a Responsive Typography, Autoprefixer, and the awesome [LostGrid](https://github.com/peterramsing/lost).
 
 ## PostCSS
 
@@ -87,25 +85,24 @@ styles: {
   },
 ```
 
-
 I add the new task to my `development` folder:
 
 <p class="code-info">ulp/tasks/development/styles.js</p>
 
 ```javascript
-var gulp           = require('gulp');
-var postcss        = require('gulp-postcss');
-var precss         = require('precss');
-var nano           = require('gulp-cssnano');
-var plumber        = require('gulp-plumber');
-var sourcemaps     = require('gulp-sourcemaps');
-var gutil          = require('gulp-util');
-var browsersync    = require('browser-sync');
-var autoprefixer   = require('autoprefixer');
-var mqpacker       = require('css-mqpacker');
-var config         = require('../../config');
+var gulp = require('gulp');
+var postcss = require('gulp-postcss');
+var precss = require('precss');
+var nano = require('gulp-cssnano');
+var plumber = require('gulp-plumber');
+var sourcemaps = require('gulp-sourcemaps');
+var gutil = require('gulp-util');
+var browsersync = require('browser-sync');
+var autoprefixer = require('autoprefixer');
+var mqpacker = require('css-mqpacker');
+var config = require('../../config');
 
-function onError (err) {
+function onError(err) {
   gutil.beep();
   console.log(err);
   this.emit('end');
@@ -124,10 +121,13 @@ var processors = [
 gulp.task('styles', function() {
   browsersync.notify('Transforming CSS with PostCSS');
 
-  return gulp.src(config.styles.src)
-    .pipe(plumber({
-      errorHandler: onError
-    }))
+  return gulp
+    .src(config.styles.src)
+    .pipe(
+      plumber({
+        errorHandler: onError
+      })
+    )
     .pipe(sourcemaps.init())
     .pipe(postcss(processors))
     .pipe(nano())
@@ -136,8 +136,8 @@ gulp.task('styles', function() {
 });
 ```
 
-
 ### Rename SCSS files and folders
+
 I rename the `scss` folder to `styles` and create inside of this folder a new folder `partials`. I rename all `.scss` files to `.css` and move them into the partials folder (except the `main.css`). I recommend to comment out all lines in this file for now and bring them back later. Otherwise it will not run properly, because some of the syntax is different.
 
 ### Update the Code
@@ -151,14 +151,12 @@ Next, I will need to replace some lines of the old `sass` task with my new `styl
 +    styles:  srcAssets + '/styles/**/*.css',
 ```
 
-
 <p class="code-info">gulp/config.js:154</p>
 
 ```diff
 -      css: srcAssets + '/scss/base/',
 +      css: srcAssets + '/styles/partials/base/',
 ```
-
 
 <p class="code-info">gulp/tasks/development/watch.js:9</p>
 
@@ -167,14 +165,12 @@ Next, I will need to replace some lines of the old `sass` task with my new `styl
 +  gulp.watch(config.styles,  ['styles', 'scsslint']);
 ```
 
-
 <p class="code-info">gulp/tasks/development/build.js:11</p>
 
 ```diff
 -    'sass',
 +    'styles',
 ```
-
 
 <p class="code-info">gulp/tasks/production/build.js:10</p>
 
@@ -183,14 +179,12 @@ Next, I will need to replace some lines of the old `sass` task with my new `styl
 +    'styles',
 ```
 
-
 <p class="code-info">gulp/tasks/development/base64.js:8</p>
 
 ```diff
 -gulp.task('base64', ['sass'], function() {
 +gulp.task('base64', ['styles'], function() {
 ```
-
 
 I remove these lines from my `optimize-css.js` task, because `cssnano` already does the job:
 
@@ -200,7 +194,6 @@ I remove these lines from my `optimize-css.js` task, because `cssnano` already d
 -var csso = require('gulp-csso');
 ```
 
-
 <p class="code-info">gulp/tasks/production/optimize-css.js:7</p>
 
 ```diff
@@ -208,13 +201,11 @@ I remove these lines from my `optimize-css.js` task, because `cssnano` already d
 + * Copy CSS files
 ```
 
-
 <p class="code-info">gulp/tasks/production/optimize-css.js:11</p>
 
 ```diff
 -    .pipe(minifycss(config.options))
 ```
-
 
 FontCustom has to be changed to copy the Vector fonts CSS to the new location and provide CSS instead of SCSS:
 
@@ -225,14 +216,12 @@ FontCustom has to be changed to copy the Vector fonts CSS to the new location an
 +  css: app/_assets/styles
 ```
 
-
 <p class="code-info">fontcustom.yml:48</p>
 
 ```diff
 -templates: [ scss, preview ]
 +templates: [ css, preview ]
 ```
-
 
 After I updated the FontCustom config file I have to run the task for creating the Vector Fonts again:
 
@@ -287,7 +276,6 @@ lintStyles: {
   },
 ```
 
-
 I watch all CSS files, except the generated (FontCustom and Sprites) and the syntax highlighting file (which I don’t touch).
 
 You can define linting rules for [stylelint](https://github.com/stylelint). These 5 rules are just an example, there are a [lot more](https://github.com/stylelint/stylelint/blob/master/docs/user-guide/rules.md). As CSS style is totally taste, you should pick the rules you like. `0` means ignore (default), `1` is warning and `2` is error. Some rules need additional options.
@@ -297,21 +285,23 @@ Next I will add the Gulp task:
 <p class="code-info">gulp/tasks/development/lint-styles.js</p>
 
 ```javascript
-var gulp      = require('gulp');
-var postcss   = require('gulp-postcss');
+var gulp = require('gulp');
+var postcss = require('gulp-postcss');
 var stylelint = require('stylelint');
-var reporter  = require('postcss-reporter');
-var config    = require('../../config');
+var reporter = require('postcss-reporter');
+var config = require('../../config');
 
 gulp.task('lint-styles', function() {
-  return gulp.src(config.lintStyles.src)
-  .pipe(postcss([
-    stylelint(config.lintStyles.options.stylelint),
-    reporter(config.lintStyles.options.reporter)
-  ]));
+  return gulp
+    .src(config.lintStyles.src)
+    .pipe(
+      postcss([
+        stylelint(config.lintStyles.options.stylelint),
+        reporter(config.lintStyles.options.reporter)
+      ])
+    );
 });
 ```
-
 
 All I need to do now is replacing the linting task in my watch task:
 
@@ -322,7 +312,6 @@ All I need to do now is replacing the linting task in my watch task:
 +  gulp.watch(config.styles,  ['styles', 'lint-styles']);
 ```
 
-
 If you run `gulp`, the task will lint your CSS files, whenever you save them and show errors with filename, line number and broken rule in the Terminal. PostCSS provides even a [plugin](https://github.com/postcss/postcss-browser-reporter) to bring the errors to your browser.
 
 PostCSS will most likely have a bright future. Since it got popular quite a lot people got really exited. Companies like Google, Twitter, Alibaba, and Shopify already use PostCSS. And Bootstrap v5 will be most likely in PostCSS.
@@ -331,4 +320,4 @@ I’m sure we will see more really exiting Plugins in the future.
 
 ## Conclusion
 
-This concludes the 16th part of my series *Introduction to Gulp.js*. We learned how to use PostCSS to process our CSS files and how to use Stylelint to lint the CSS files for errors.
+This concludes the 16th part of my series _Introduction to Gulp.js_. We learned how to use PostCSS to process our CSS files and how to use Stylelint to lint the CSS files for errors.

@@ -117,6 +117,94 @@ Redirect 301 /main/kategorie/python                                             
 Redirect 301 /main/kategorie/django                                              /tag/django
 Redirect 301 /notiz/django                                                       /tag/django
 
+# Redirect after url changes
+Redirect Gone /2007/volume-reparieren-unter-mac-osx/
+Redirect Gone /2007/subversion-1-theorie-und-funktionsweise/
+Redirect 301  /2007/domains-extern-hosten/                                         /extern-domain-hosting/
+Redirect 301  /2007/koi-design/                                                    /koi-design/
+Redirect Gone /2007/subversion-2-installation/️
+Redirect Gone /2007/j2ee-vs-ruby-python-frameworks/️
+Redirect Gone /2007/subversion-3-einrichten-des-repository/️
+Redirect Gone /2007/subversion-4-importieren-einer-projektstruktur/️
+Redirect Gone /2007/versionskontrolle-mit-git/️
+Redirect Gone /2007/lebensmittel-datenbank/️
+Redirect Gone /2007/subversion-5-arbeiten-mit-subversion/️
+Redirect Gone /2007/wunschliste-computerspiele-als-film/️
+Redirect Gone /2007/subversion-6-ein-paar-wichtige-befehle/️
+Redirect Gone /2007/provoc-vokabeln-lernen-unter-mac-os-x/
+Redirect 301  /2007/eineinhalb-jahre-gtd-eine-billanz/                             /gtd/
+Redirect 301  /2007/traditionelle-japanische-farben-photoshop-illustrator/         /japanese-colors/
+Redirect Gone /2007/gtd-mit-omnifocus-oder-things/
+Redirect Gone /2007/django-folder-mac-osx/
+Redirect Gone /2007/das-war-mein-2007-eine-jahresbilanz/
+Redirect Gone /2008/blender-folder-mac-osx/
+Redirect Gone /2008/5-gefaehrliche-dinge-die-jedes-kind-gemacht-haben-sollte/
+Redirect Gone /2008/theme-kaijin-moinmoin-wiki/
+Redirect Gone /2008/gtd-analog-vs-digital-0-zu-1/
+Redirect Gone /2008/terminal-most-used-commands/
+Redirect Gone /2008/django-relaunch-kogakure-de/
+Redirect Gone /2008/server-verwaltung-capistrano/
+Redirect Gone /2008/grundlagen-python-django-anfaenger/
+Redirect Gone /2008/lokalisierung-von-projekten-mit-django/
+Redirect 301  /2008/kostenlose-vektorkarten-openstreetmap/                         /openstreetmap/
+Redirect Gone /2008/weiterleitung-redirect-django/
+Redirect Gone /2008/server-verwaltung-fabric/
+Redirect Gone /2008/django-git/
+Redirect Gone /2009/django-webdesigner/
+Redirect 301  /2009/einstieg-in-git-als-versionskontrollsystem/                    /git/
+Redirect 301  /2009/gitweb-theme-github-stil/                                      /gitweb-theme/
+Redirect Gone /2009/things-evernote-gtd-mac-osx/
+Redirect 301  /2009/home-atemberaubende-erde-dokumentation-yann-arthus-bertrand/   /home-documentary/
+Redirect Gone /2009/git-praesentation/
+Redirect 301  /2010/buchtipp-rework-37signals/                                     /rework/
+Redirect Gone /2010/appletv-leihfilme-itunes/
+Redirect Gone /2010/geloeste-django-probleme/
+Redirect 301  /2010/webstandards-magazin-django/                                   /webstandards-magazin-django/
+Redirect Gone /2010/auto-complete-im-terminal/
+Redirect 301  /2010/vim/                                                           /vim/
+Redirect Gone /2010/jahresrueckblick/
+Redirect Gone /2011/automatisierung-mit-keyboard-maestro/
+Redirect 301  /2011/buchtipp-decodeunicode/                                        /decodeunicode/
+Redirect Gone /2013/duplikation-ist-in-ordnung/
+Redirect Gone /2013/mein-setup/
+Redirect 301  /2014/automatisierte-installation-mac-os-x/                          /brew-automatic-installation/
+Redirect Gone /2014/relaunch-responsive-web-design/
+Redirect 301  /2014/gestaltung-neues-logo/                                         /logo-design/
+Redirect Gone /2014/widerlegung-unwissenschaftliche-dokumentation/
+Redirect Gone /2014/css-architektur/
+Redirect Gone /2014/cover-foto-website/
+Redirect 301  /2014/die-typographie-meiner-website/                                /website-typography/
+Redirect 301  /2014/john-seymour-buecher-selbstversorgung/                         /john-seymour-books/
+Redirect Gone /2014/rueckkehr-statische-websites/
+Redirect 301  /2014/gulp-tutorial-1-intro-setup/                                   /gulp-tutorial-1-intro-setup/
+Redirect 301  /2014/gulp-tutorial-2-development-server-browsersync-configuration/  /gulp-tutorial-2-development-server-browsersync-configuration/
+Redirect 301  /2014/gulp-tutorial-3-build-clean-jekyll/                            /gulp-tutorial-3-build-clean-jekyll/
+Redirect 301  /2014/gulp-tutorial-4-css-generation-sass/                           /gulp-tutorial-4-css-generation-sass/
+Redirect 301  /2014/gulp-tutorial-5-javascripts-browserify/                        /gulp-tutorial-5-javascripts-browserify/
+Redirect 301  /2014/gulp-tutorial-6-images-vector-fonts/                           /gulp-tutorial-6-images-vector-fonts/
+Redirect 301  /2014/gulp-tutorial-7-base64/                                        /gulp-tutorial-7-base64/
+Redirect 301  /2014/gulp-tutorial-8-watch/                                         /gulp-tutorial-8-watch/
+Redirect 301  /2014/gulp-tutorial-9-linting-scss-and-javascript/                   /gulp-tutorial-9-linting-scss-and-javascript/
+Redirect 301  /2014/gulp-tutorial-10-generating-sprites/                           /gulp-tutorial-10-generating-sprites/
+Redirect 301  /2014/gulp-tutorial-11-production-build-server-and-jekyll/           /gulp-tutorial-11-production-build-server-and-jekyll/
+Redirect 301  /2014/gulp-tutorial-12-optimize-css-javascript-images-and-html/      /gulp-tutorial-12-optimize-css-javascript-images-and-html/
+Redirect 301  /2014/gulp-tutorial-13-revisioning/                                  /gulp-tutorial-13-revisioning/
+Redirect 301  /2014/gulp-tutorial-14-deploying-the-website/                        /gulp-tutorial-14-deploying-the-website/
+Redirect 301  /2014/gulp-tutorial-15-performance-improvements-webp-gzip/           /gulp-tutorial-15-performance-improvements-webp-gzip/
+Redirect Gone /2015/how-to-get-your-mobile-website-fast/
+Redirect 301  /2015/responsive-relaunch-of-my-martial-arts-website/                /responsive-relaunch-martial-arts-website/
+Redirect 301  /2015/getting-started-with-body-weight-training/                     /calisthenics/
+Redirect 301  /2015/motivational-video/                                            /motivational-video/
+Redirect 301  /2015/human-film-yann-arthus-bertrand/                               /human-documentary/
+Redirect 301  /2015/gulp-tutorial-16-postcss/                                      /gulp-tutorial-16-postcss/
+Redirect 301  /2016/japanese-netflix-tv-show-atelier-underwear/                    /japanese-netflix-tv-show-underwear/
+Redirect 301  /2016/hugo-jekyll-migration/                                         /jekyll-hugo-migration/
+Redirect 301  /2016/speed-up-videos/                                               /speed-up-videos/
+Redirect 301  /2017/pursuit-of-minimalism/                                         /minimalism/
+Redirect 301  /2017/i-wrote-a-book-in-gitbook/                                     /gitbook/
+Redirect 301  /2017/migration-hugo-css-grids-service-worker/                       /migration-hugo-css-grids-service-worker/
+Redirect 301  /2017/self-defence-age-of-attention/                                 /attention/
+
 Redirect 301 /information/impressum      /impressum
 Redirect 301 /main/kategorie/tutorial    /tag/tutorial
 Redirect 301 /main/kategorie/download    /tag/download

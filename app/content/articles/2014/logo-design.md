@@ -1,19 +1,19 @@
 ---
-language: "en"
-title: "Die Gestaltung meines neuen Logos"
-author: "Stefan Imhoff"
-slug: "gestaltung-neues-logo"
+language: en
+title: 'Die Gestaltung meines neuen Logos'
+author: Stefan Imhoff
+slug: logo-design
 date: 2014-04-18T19:00:00+02:00
-description: "Einblick in die Gestaltung meines neuen Logos und Rakkan: Idee, Recherche und ein kurzer Exkurs über die Chinesische Schrift."
-og_image: "assets/images/articles/2014/gestaltung-neues-logo/rakkan.jpg"
-categories: ["design"]
+description: 'Einblick in die Gestaltung meines neuen Logos und Rakkan: Idee, Recherche und ein kurzer Exkurs über die Chinesische Schrift.'
+og_image: 'assets/images/articles/2014/gestaltung-neues-logo/rakkan.jpg'
+categories: ['design']
 ---
 
 Da ein Logo zu den wesentlichen Elementen gehört, an denen eine Website wiedererkannt wird, wollte ich von Anfang an ein Logo gestalten, das thematisch zum restlichen Design der Seite passt.
 
 Zwar bin ich der Meinung, dass eine Privatperson kein Logo benötigt, aber ohne ein Logo fehlt ein schönes visuelles Element, das später an allen möglichen Stellen, z. B. beim Favicon benötigt wird.
 
-Für mich stand schon relativ früh fest, dass ich ein *Rakkan* anstelle eines modernen Logos verwenden wollte.
+Für mich stand schon relativ früh fest, dass ich ein _Rakkan_ anstelle eines modernen Logos verwenden wollte.
 
 ## Rakkan
 
@@ -26,24 +26,25 @@ Ein Rakkan (oder Hanko) wird in Japan ein Siegel genannt, das meist in Stein ges
   </figcaption>
 </figure>
 
-
 Auch schon bei meinem [Kampfkunst-Portal](http://kogakure.de/) verwende ich als Logo ein solches Siegel, nur dort war die Vorlage für dieses Logo damals mein wirkliches Siegel, das ich bei einem Künstler in Auftrag gegeben hatte.
 
 ## Recherche
+
 Bevor ich mit der Gestaltung meines neuen Siegel beginnen konnte, musste ich zuerst Recherche betreiben. Dafür habe ich mir bei einer großen Anzahl von Werken historische Stempelabdrücke angesehen und deren Stil und Merkmale studiert.
 
 Die meisten Stempel benutzen mehrere Zeichen, oft vier oder sogar mehr. Es gibt sie in allen Formen, wobei die eckige Form die häufigste zu sein scheint.
 
-Als nächstes galt es, die passende Schriftart auszuwählen. Als Schrift wählen die meisten Künstler die *Kleine Siegelschrift*, die vom chinesischen Kaiser Qin Shi Huang vor ca. 2200 Jahren eingeführt wurde.
+Als nächstes galt es, die passende Schriftart auszuwählen. Als Schrift wählen die meisten Künstler die _Kleine Siegelschrift_, die vom chinesischen Kaiser Qin Shi Huang vor ca. 2200 Jahren eingeführt wurde.
 
 ## Exkurs in Chinesische Schriften
+
 Erste chinesischen Schriftzeichen wurden vor 6000 Jahren auf Tonscherben gekratzt. Die so genannte [Orakelschrift](https://de.wikipedia.org/wiki/Orakelknochen) wurde vor 3400 Jahren während der Shang-Dynastie entwickelt und diente zur Weissagung mit Tierknochen-Orakel.
 
 Als die Bronzegusstechnik um das 11. Jahrhundert v. Chr. entwickelt wurde entstand die [Bronzeschrift](https://de.wikipedia.org/wiki/Bronzeinschrift), die benutzt wurde, um damit Texte für Politik, Handel, Militär, Verwaltung und Orakel zu schreiben.
 
-Zur Zeit der *Streitenden Reiche* (475-221 v. Chr.) wurden Pinsel und Tinte erfunden und damit auf Bambus, Holz und Seide geschrieben.
+Zur Zeit der _Streitenden Reiche_ (475-221 v. Chr.) wurden Pinsel und Tinte erfunden und damit auf Bambus, Holz und Seide geschrieben.
 
-Doch gab es viele verschiedene Schreibweisen der Zeichen, was für Austausch und Handel nicht förderlich war. König Zhou Xuanwang versuchte dieses Problem durch die *Große Siegelschrift* zu lösen, was ihm aber nicht gelang. Erst als Kaiser Qin Shin Huang das Reich 221 v. Chr. einte, befahl er eine einheitliche Schrift. Kanzler Li Si beseitigte Zeichen und verringerte Striche und begründete damit die [Kleine Siegelschrift](https://de.wikipedia.org/wiki/Siegelschrift).
+Doch gab es viele verschiedene Schreibweisen der Zeichen, was für Austausch und Handel nicht förderlich war. König Zhou Xuanwang versuchte dieses Problem durch die _Große Siegelschrift_ zu lösen, was ihm aber nicht gelang. Erst als Kaiser Qin Shin Huang das Reich 221 v. Chr. einte, befahl er eine einheitliche Schrift. Kanzler Li Si beseitigte Zeichen und verringerte Striche und begründete damit die [Kleine Siegelschrift](https://de.wikipedia.org/wiki/Siegelschrift).
 
 Die kleine Siegelschrift ist zwar durch ihre geschwungenen Striche schön, aber war im täglichen Gebrauch zu umständlich zu schreiben. Zu Beginn der Han-Dynastie kam die [Kanzleischrift](https://de.wikipedia.org/wiki/Chinesische_Kanzleischrift) auf, die viel geradere Striche hatte und somit einfacher und schneller zu schreiben war. Viele Zeichen wurden durch diese Schrift weiter abstrahiert.
 
@@ -56,6 +57,7 @@ Zum Ende der Han-Dynastie entwickelte sich neben der Grasschrift auch noch ein w
 Die nächste signifikante Änderung fand erst 1956 statt, als die Regierung die Schrift vereinfachte. Es wurden dabei über 1000 Zeichen gestrichen und bei rund 2200 Zeichen die Strichzahl verringert. Dies sollte zu einer besseren Alphabetisierung der Bevölkerung führen.
 
 ## Die Bedeutung der Schriftzeichen auf meinem Rakkan
+
 Für mein neues Rakkan habe ich die Schriftzeichen meines alten Rakkan übernommen und dann noch zwei weitere Schriftzeichen hinzugefügt. Das alte Zeichen enthält die Schriftzeichen 木隠 (kogakure), was nicht nur der Name meines Kampfkunst-Portals ist, sondern auch seit vielen Jahren mein Pseudonym im Internet. Übersetzt bedeutet es <q>Versteckt hinter Bäumen und Blättern</q>.
 
 Die zwei neuen Zeichen links daneben bedeuten 草 (Grass) und 刀 (Klinge) in der kleinen Siegelschrift. Die Zeichen ermöglichen zahlreiche Deutungs- und Interpretationsmöglichkeiten, auf die ich hier nicht näher eingehe, um niemanden zu langweilen.
@@ -73,8 +75,7 @@ Zuerst fertigte ich zahlreiche Bleistiftzeichnungen an, erst von einzelnen Zeich
   </figcaption>
 </figure>
 
-
-Nachdem ich meine finale Variante entwickelt hatte, zeichnete ich die Bleistiftlinien mit einem sehr dicken Textmarker nach (nicht ohne dabei fast meinen Bambustisch zu ruinieren, da ich *natürlich* aus Faulheit auf eine Unterlage verzichtete). Die Struktur, die entsteht, wenn Tinte sich im Papier ausbreitet sah einer in Stein geschnitzten Kante sehr ähnlich.
+Nachdem ich meine finale Variante entwickelt hatte, zeichnete ich die Bleistiftlinien mit einem sehr dicken Textmarker nach (nicht ohne dabei fast meinen Bambustisch zu ruinieren, da ich _natürlich_ aus Faulheit auf eine Unterlage verzichtete). Die Struktur, die entsteht, wenn Tinte sich im Papier ausbreitet sah einer in Stein geschnitzten Kante sehr ähnlich.
 
 Im nächsten Schritt habe ich das Rakkan dann digitalisiert und in Adobe Photoshop leicht korrigiert, um unschöne Teile zu entfernen oder die Linienführung etwas zu verbessern.
 

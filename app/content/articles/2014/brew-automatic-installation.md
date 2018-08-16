@@ -1,11 +1,11 @@
 ---
-language: "de"
-title: "Automatisierte Installation für Mac OS X"
-author: "Stefan Imhoff"
-slug: "automatisierte-installation-mac-os-x"
+language: de
+title: 'Automatisierte Installation für macOS'
+author: Stefan Imhoff
+slug: brew-automatic-installation
 date: 2014-04-04T21:09:00+02:00
-description: "Wie man mit Homebrew und Homebrew Cask automatisiert Software unter Mac OS X installiert. Mit Homebrew Cask lassen sich über 1300 Anwendungen installieren, darunter viele kommerzielle Produkte."
-categories: ["recommendation", "software"]
+description: 'Wie man mit Homebrew und Homebrew Cask automatisiert Software unter Mac OS X installiert. Mit Homebrew Cask lassen sich über 1300 Anwendungen installieren, darunter viele kommerzielle Produkte.'
+categories: ['recommendation', 'software']
 ---
 
 Die Installation von Software war unter Mac OS X schon immer wenig ausgereift. Es gibt einfach zu viele verschiedene Möglichkeiten der Installation.
@@ -75,9 +75,9 @@ $ node app
 
 Dabei werden drei Dateien erzeugt:
 
-* **.brew**: Ein Skript durch das zuerst _Homebrew_ upgedatet werden kann, danach alle Programme upgegradet werden und danach alte Programme entfernt werden.
-* **Brewfile**: Die Installationsdatei für _Homebrew_.
-* **Caskfile**: Die Installationsdatei für _Homebrew Cask_.
+- **.brew**: Ein Skript durch das zuerst _Homebrew_ upgedatet werden kann, danach alle Programme upgegradet werden und danach alte Programme entfernt werden.
+- **Brewfile**: Die Installationsdatei für _Homebrew_.
+- **Caskfile**: Die Installationsdatei für _Homebrew Cask_.
 
 Die `.brew`-Datei wird einfach in das Homeverzeichnis kopiert, das `Brewfile` und `Caskfile` können z. B. einer Software-Distribution oder Applikation beigelegt werden, um nötige Pakete zu installieren oder auf einen neuen Rechner kopiert werden.
 

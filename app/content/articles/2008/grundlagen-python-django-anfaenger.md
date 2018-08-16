@@ -1,11 +1,12 @@
 ---
-language: "de"
-title: "Grundlagen von Python und Django für Anfänger"
-description: "Wer mit Django arbeiten möchte, muss die Grundlangen von Python kennen. Eine Einführung in Python & Django für Anfänger."
-author: "Stefan Imhoff"
-slug: "grundlagen-python-django-anfaenger"
+draft: true
+language: de
+title: 'Grundlagen von Python und Django für Anfänger'
+description: 'Wer mit Django arbeiten möchte, muss die Grundlangen von Python kennen. Eine Einführung in Python & Django für Anfänger.'
+author: Stefan Imhoff
+slug: grundlagen-python-django-anfaenger
 date: 2008-08-01T15:00:00+02:00
-categories: ["code"]
+categories: ['code']
 ---
 
 Da in letzter Zeit anscheinend das Interesse an Django stark gestiegen ist, halte ich es für sinnvoll, die Grundlagen des Systems für Anfänger aufzuzeigen.
@@ -24,7 +25,7 @@ Ein Modul ist im Grunde genommen jede Datei mit der Dateiendung .py, in der Klas
 
 Es ist möglich Module in Unterordnern zu strukturieren. Damit Python einen Ordner als Modul erkennt muss eine Textdatei mit dem Namen `__init__.py` darin liegen. Diese ist in den meisten Fällen ohne Inhalt.
 
-Um ein Modul eines Drittanbieters (wie z. B. Django) zu benutzen, muss es dem System bekannt sein. Dafür gibt es die Pfad-Variable `$PYTHONPATH`. Die meisten Betriebssysteme halten für solche Module einen zentralen Ort vor, an dem sie  abgelegt werden (unter meiner Mac OS X 10.5-Installation ist dies z. B. `/Library/Python/2.5/site-packages`).
+Um ein Modul eines Drittanbieters (wie z. B. Django) zu benutzen, muss es dem System bekannt sein. Dafür gibt es die Pfad-Variable `$PYTHONPATH`. Die meisten Betriebssysteme halten für solche Module einen zentralen Ort vor, an dem sie abgelegt werden (unter meiner Mac OS X 10.5-Installation ist dies z. B. `/Library/Python/2.5/site-packages`).
 
 ## Python-Pfad
 
@@ -46,9 +47,9 @@ Dort gibt man einfach den Befehl `import django` ein. Wird der Befehl ohne Fehle
 
 Da dieser Pfad meistens in den Tiefen des Systems verborgen liegt, wählen viele Entwickler eine komfortablere Methode: Symlinks (symbolische Links). Dieses funktioniert aber nur bei Unix-Systemen, also Linux und Mac OS X. Windows-Benutzer schauen hier (mal wieder) in die Röhre. Ein Grund mehr ein Unix-System zu verwenden.
 
-Ein symbolischer Link ist ein Zeiger auf einen anderen Ordner des Computers, ähnlich einer Verknüpfung, nur mit dem Unterschied, das der Rechner wirklich *denkt*, der Ordner würde an diesem Platz im System liegen – in Wirklichkeit zeigt der Ordner lediglich auf das Original.
+Ein symbolischer Link ist ein Zeiger auf einen anderen Ordner des Computers, ähnlich einer Verknüpfung, nur mit dem Unterschied, das der Rechner wirklich _denkt_, der Ordner würde an diesem Platz im System liegen – in Wirklichkeit zeigt der Ordner lediglich auf das Original.
 
-Üblich ist es, dass man sich den Quellcode von Django mit dem Versionskontrollsystem *Subversion* in einen Ordner seiner Wahl holt:
+Üblich ist es, dass man sich den Quellcode von Django mit dem Versionskontrollsystem _Subversion_ in einen Ordner seiner Wahl holt:
 
 ```bash
 $ svn co http://code.djangoproject.com/svn/django/trunk/ django-trunk

@@ -1,16 +1,17 @@
 ---
-language: "de"
-title: "Wunschliste: Computerspiele als Film"
-description: "Meine persönliche Wunschliste für Computerspiele, die ich gerne verfilmt sehen würde: Max Payne, Half-Life, The Dig, Outcast, Far Cry und Deus Ex."
-author: "Stefan Imhoff"
-slug: "wunschliste-computerspiele-als-film"
+draft: true
+language: de
+title: 'Wunschliste: Computerspiele als Film'
+description: 'Meine persönliche Wunschliste für Computerspiele, die ich gerne verfilmt sehen würde: Max Payne, Half-Life, The Dig, Outcast, Far Cry und Deus Ex.'
+author: Stefan Imhoff
+slug: wunschliste-computerspiele-als-film
 date: 2007-09-27T20:00:00+02:00
-categories: ["personal"]
+categories: ['personal']
 ---
 
 Computerspiele bieten oft eine interessante und spannende Story, doch leider gelingt die Umsetzung im Film nur selten. Hier ist meine persönliche Wunschliste von Computerspielen, die ich gerne verfilmt sehen würde.
 
-Da am 13. Dezember 2007 mit <cite>[Hitman](https://de.wikipedia.org/wiki/Hitman_(Computerspiel))</cite> ein Computerspiel aus meinen Gamer-Zeiten [ins Kino kommt](http://www.imdb.com/title/tt0465494/), will ich in diesem Artikel meine Lieblings-Computerspiele, die eine gute Filmvorlage liefern könnten,  aufzählen.
+Da am 13. Dezember 2007 mit <cite>[Hitman](<https://de.wikipedia.org/wiki/Hitman_(Computerspiel)>)</cite> ein Computerspiel aus meinen Gamer-Zeiten [ins Kino kommt](http://www.imdb.com/title/tt0465494/), will ich in diesem Artikel meine Lieblings-Computerspiele, die eine gute Filmvorlage liefern könnten, aufzählen.
 
 <cite>Hitman</cite> stand auf meiner Liste, und ich hoffe, dass der Film gut wird; der Trailer sieht jedenfalls sehr vielversprechend aus.
 
@@ -24,7 +25,7 @@ Erfreulicherweise scheint es ein unabhängiges Filmprojekt zu geben, das sich de
 
 Der Film soll zum Download angeboten werden und laut Planung sogar schon 2007 fertig sein.
 
-Ich persönlich finde aber, dass wir gerade eine wunderbare Max Payne Adaption im Kino hatten, und zwar <cite>[Death Sentence](http://www.imdb.com/title/tt0804461/)</cite> mit Kevin Bacon. Die Story ist ziemlich ähnlich, das Design bezieht sich definitiv auf Max Payne und es gibt sogar eine Szene, in der sich Kevin Bacon *Painkiller* einwirft und seine Wunden verbindet. Nur die Bewaffnung fand ich etwas dürftig, Payne bedient sich da eines etwas größeren Kalibers.
+Ich persönlich finde aber, dass wir gerade eine wunderbare Max Payne Adaption im Kino hatten, und zwar <cite>[Death Sentence](http://www.imdb.com/title/tt0804461/)</cite> mit Kevin Bacon. Die Story ist ziemlich ähnlich, das Design bezieht sich definitiv auf Max Payne und es gibt sogar eine Szene, in der sich Kevin Bacon _Painkiller_ einwirft und seine Wunden verbindet. Nur die Bewaffnung fand ich etwas dürftig, Payne bedient sich da eines etwas größeren Kalibers.
 
 ## Half-Life
 
@@ -50,8 +51,7 @@ Die Story von <cite>Outcast</cite> ist sicherlich nicht leicht zu verfilmen, bie
 
 Auch <cite>[Far Cry](http://far-cry.ubi.com/fc-portal/de-DE/home/)</cite> bietet als Spiel eine tolle Atmosphäre. Eine Mischung aus Urlaub und Safari, dazu noch ein verrückter Wissenschaftler und Mutanten. Besonders packend fand ich den Wechsel zwischen engen, japanischen Bunkerschächten und weiten Stränden und Dschungeln.
 
-
-Und meinen Recherchen zufolge ist ein Film zu <cite>[Far Cry](http://www.imdb.com/title/tt0400426/)</cite> abgedreht und kommt 2008 in die Kinos. Ich befürchte jedoch der wird nix, da die Regie Uwe Boll übernommen hat, der auch für die <cite>[Alone in the Dark](http://www.imdb.com/title/tt0369226/)</cite> Umsetzung verantwortlich ist. Till Schweiger ist Jack Carver, Emmanuelle Vaugier spielt Valerie Cardinal und Udo Kier spielt Dr. Krieger. Kier halte ich ungesehen für eine Superbesetzung, aber Til Schweiger als Jack? Ralf Möller hat auch eine Rolle, ich tippe mal auf einen bösen Söldner. <ins datetime="2012-08-16T18:00">Nachtrag: Wie zu erwarten ist der Film gefloppt und hat *sagenhafte* 3,2 Sterne auf IMDb bekommen.</ins>
+Und meinen Recherchen zufolge ist ein Film zu <cite>[Far Cry](http://www.imdb.com/title/tt0400426/)</cite> abgedreht und kommt 2008 in die Kinos. Ich befürchte jedoch der wird nix, da die Regie Uwe Boll übernommen hat, der auch für die <cite>[Alone in the Dark](http://www.imdb.com/title/tt0369226/)</cite> Umsetzung verantwortlich ist. Till Schweiger ist Jack Carver, Emmanuelle Vaugier spielt Valerie Cardinal und Udo Kier spielt Dr. Krieger. Kier halte ich ungesehen für eine Superbesetzung, aber Til Schweiger als Jack? Ralf Möller hat auch eine Rolle, ich tippe mal auf einen bösen Söldner. <ins datetime="2012-08-16T18:00">Nachtrag: Wie zu erwarten ist der Film gefloppt und hat _sagenhafte_ 3,2 Sterne auf IMDb bekommen.</ins>
 
 ## Deus Ex
 

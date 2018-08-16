@@ -3,16 +3,16 @@ title: How to speed up videos
 slug: speed-up-videos
 author: Stefan Imhoff
 date: 2016-09-03T14:15:19+02:00
-description: "Watching HTML5 video with increased speed is possible. Fortunately there is an extension for that. And speeding up reading is also possible."
+description: 'Watching HTML5 video with increased speed is possible. Fortunately there is an extension for that. And speeding up reading is also possible.'
 language: en
-categories: ["recommendation", "software"]
+categories: ['recommendation', 'software']
 ---
 
-Some weeks ago I was browsing my YouTube **Watch Later** lists and thinking: *There is so much good quality video, I wish I could watch it faster to see more of it*. All these screencasts, comedy, TechTalks, conference presentations … so I googled just for fun.
+Some weeks ago I was browsing my YouTube **Watch Later** lists and thinking: _There is so much good quality video, I wish I could watch it faster to see more of it_. All these screencasts, comedy, TechTalks, conference presentations … so I googled just for fun.
 
 ## Video Speed Controller
 
-I found out this is an issue, I’m not alone with. Fortunately the developer *Ilya Grigorik*, working at Google, has created a [Google Chrome extension], which does exactly this: **Speeding up HTML5 videos**.
+I found out this is an issue, I’m not alone with. Fortunately the developer _Ilya Grigorik_, working at Google, has created a [Google Chrome extension], which does exactly this: **Speeding up HTML5 videos**.
 
 And with Flash being nearly dead and most services using HTML5 video, this is really a blessing. The extension allows to **increase** or **decrease** the speed of any video, jump **back** and **forth** or back to regular speed. This even works on Netflix and Amazon Prime Video.
 
@@ -24,6 +24,6 @@ At first it feels strange, and I started with 1.2 times speed, but soon increase
 
 And for those, who prefer to read articles, there is a solution, too: [Squirt] is a bookmarklet (also available as [extension]), which allows to speed up the reading of text on websites. There is a nice demo on Squirts website, that shows how it works. Average readers read between 120 and 200 words, but with Squirt its possible to increase to 350 or even more words without any problem.
 
-  [Google Chrome extension]: https://github.com/igrigorik/videospeed
-  [Squirt]: https://www.squirt.io/
-  [extension]: https://chrome.google.com/webstore/detail/squirt/bhahfnbdgffkcobfgkamlajfkflakfdb
+[google chrome extension]: https://github.com/igrigorik/videospeed
+[squirt]: https://www.squirt.io/
+[extension]: https://chrome.google.com/webstore/detail/squirt/bhahfnbdgffkcobfgkamlajfkflakfdb

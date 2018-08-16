@@ -1,18 +1,18 @@
 ---
-language: "en"
-title: "Introduction to Gulp.js 15: Performance Improvements with WebP and Gzip"
+language: en
+title: 'Introduction to Gulp.js 15: Performance Improvements with WebP and Gzip'
 date: 2014-12-21T11:15:00+01:00
-author: "Stefan Imhoff"
-slug: "gulp-tutorial-15-performance-improvements-webp-gzip"
-og_image: "assets/images/articles/2014/gulp-tutorial-15-performance-improvements-webp-gzip/gulp-tutorial-15.jpg"
-description: "The ultimative tutorial and guide for Gulp.js: How to improve the speed and performance of your website with WebP and Gzip."
-series: ["gulp"]
-categories: ["code"]
-download_url: "https://github.com/kogakure/gulp-tutorial"
-download_text: "View Source on GitHub"
+author: Stefan Imhoff
+slug: gulp-tutorial-15-performance-improvements-webp-gzip
+og_image: 'assets/images/articles/2014/gulp-tutorial-15-performance-improvements-webp-gzip/gulp-tutorial-15.jpg'
+description: 'The ultimative tutorial and guide for Gulp.js: How to improve the speed and performance of your website with WebP and Gzip.'
+series: ['gulp']
+categories: ['code']
+download_url: 'https://github.com/kogakure/gulp-tutorial'
+download_text: 'View Source on GitHub'
 ---
 
-This is the 15th part of my series *Introduction to Gulp.js*. Today I’ll add some tasks for performance improvement of the website with WebP for images and Gzip for text files.
+This is the 15th part of my series _Introduction to Gulp.js_. Today I’ll add some tasks for performance improvement of the website with WebP for images and Gzip for text files.
 
 <figure class="image-figure">
   <img src="/assets/images/articles/2014/gulp-tutorial-15-performance-improvements-webp-gzip/gulp-tutorial-15.jpg" alt="A oversized Captain America holding a Big Gulp">
@@ -20,7 +20,6 @@ This is the 15th part of my series *Introduction to Gulp.js*. Today I’ll add s
     Jess, CAPTAIN AMERCIA
   </figcaption>
 </figure>
-
 
 ## Using WebP for images
 
@@ -48,48 +47,49 @@ webp: {
 },
 ```
 
-
 The task is short and straight forward:
 
 <p class="code-info">gulp/tasks/production/webp.js</p>
 
 ```javascript
-var gulp   = require('gulp');
-var webp   = require('gulp-webp');
+var gulp = require('gulp');
+var webp = require('gulp-webp');
 var config = require('../../config').webp;
 
 /**
  * Convert images to WebP
  */
 gulp.task('webp', function() {
-  return gulp.src(config.src)
+  return gulp
+    .src(config.src)
     .pipe(webp(config.options))
     .pipe(gulp.dest(config.dest));
 });
 ```
-
 
 This task needs to be run only for production and has to be executed after the revisioning of the images is finished, because the server will just deliver a WebP image of the same name to the browser.
 
 <p class="code-info">gulp/tasks/production/build.js</p>
 
 ```javascript
-var gulp        = require('gulp');
+var gulp = require('gulp');
 var runSequence = require('run-sequence');
 
 /**
  * Run all tasks needed for a build in defined order
  */
 gulp.task('build:production', function(callback) {
-  runSequence('delete', 'jekyll:production',
-  // ...,
-  'revision',
-  'rev:collect',
-  'webp',
-  callback);
+  runSequence(
+    'delete',
+    'jekyll:production',
+    // ...,
+    'revision',
+    'rev:collect',
+    'webp',
+    callback
+  );
 });
 ```
-
 
 It’s neccessary to tell the server to rewrite the URLs of our images. There are multiple techniques for this, but I’ll use a `.htaccess` file:
 
@@ -115,7 +115,6 @@ permalink: .htaccess
 AddType image/webp .webp
 ```
 
-
 It is possible to use an `.htaccess` file and include in the [configuration file](https://jekyllrb.com/docs/configuration/) as to be included. Otherwise Jekyll will ignore hidden files and don’t copy them to the target directory.
 
 But I like it more to add [Yaml Front Matter](https://jekyllrb.com/docs/frontmatter/) and create the file this way. Another advantage is that the file isn’t invisible.
@@ -126,7 +125,6 @@ If you sync your production website to a server it will deliver to browsers, whi
   <h4>It isn’t working …</h4>
   <p>Don’t wonder: The <code>.htaccess</code> file won’t work with the development server. It will need a server with support for <code>mod_rewrite</code> and <code>mod_headers</code> and of course support <code>.htaccess</code> files.</p>
 </aside>
-
 
 ## Gzip text files
 
@@ -150,52 +148,50 @@ gzip: {
 },
 ```
 
-
 Next I create the task, which is short:
 
 <p class="code-info">gulp/tasks/production/gzip.js</p>
 
 ```javascript
-var gulp   = require('gulp');
-var gzip   = require('gulp-gzip');
+var gulp = require('gulp');
+var gzip = require('gulp-gzip');
 var config = require('../../config').gzip;
 
 /**
  * Gzip text files
  */
 gulp.task('gzip', function() {
-  return gulp.src(config.src)
+  return gulp
+    .src(config.src)
     .pipe(gzip(config.options))
     .pipe(gulp.dest(config.dest));
 });
 ```
-
 
 I add the task in my production build file to an JavaScript Array together with the `webp` task, because this task and the Gzip task may run in parallel; WebP works only with images and Gzip only with text files.
 
 <p class="code-info">gulp/tasks/production/build.js</p>
 
 ```javascript
-var gulp        = require('gulp');
+var gulp = require('gulp');
 var runSequence = require('run-sequence');
 
 /**
  * Run all tasks needed for a build in defined order
  */
 gulp.task('build:production', function(callback) {
-  runSequence('delete', 'jekyll:production',
-  // ...,
-  'revision',
-  'rev:collect',
-  [
-    'webp',
-    'gzip'
-  ],
-  callback);
+  runSequence(
+    'delete',
+    'jekyll:production',
+    // ...,
+    'revision',
+    'rev:collect',
+    ['webp', 'gzip'],
+    callback
+  );
 });
 ```
 
-
 ## Conclusion
 
-This concludes the 15th part of my series *Introduction to Gulp.js*. We learned how to convert images to the WebP format and how to compress text files with Gzip. Every byte we can reduce will increase the speed of the website.
+This concludes the 15th part of my series _Introduction to Gulp.js_. We learned how to convert images to the WebP format and how to compress text files with Gzip. Every byte we can reduce will increase the speed of the website.

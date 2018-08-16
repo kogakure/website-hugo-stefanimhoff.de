@@ -1,12 +1,13 @@
 ---
-language: "de"
-title: "Die CSS-Architektur meiner Website"
-author: "Stefan Imhoff"
-slug: "css-architektur"
+draft: true
+language: de
+title: 'Die CSS-Architektur meiner Website'
+author: Stefan Imhoff
+slug: css-architektur
 date: 2014-05-27T18:00:00+02:00
-og_image: "assets/images/articles/2014/css-architektur/css-peter-griffin-meme.jpg"
-description: "Über die auf dieser Website eingesetzte CSS-Architektur, Sass, Compass, das Grid-System Singularity, die Dateistruktur und SMACSS."
-categories: ["code", "website"]
+og_image: 'assets/images/articles/2014/css-architektur/css-peter-griffin-meme.jpg'
+description: 'Über die auf dieser Website eingesetzte CSS-Architektur, Sass, Compass, das Grid-System Singularity, die Dateistruktur und SMACSS.'
+categories: ['code', 'website']
 ---
 
 Bei einem Webprojekt stellt insbesondere die Architektur der Stylesheets eine große Herausforderung dar. Denn CSS wird schnell unverständlich und ist schwer zu warten, wenn nicht von Anfang an eine saubere und modulare Struktur verwendet wird.
@@ -18,11 +19,12 @@ Bei einem Webprojekt stellt insbesondere die Architektur der Stylesheets eine gr
   </figcaption>
 </figure>
 
-
 ## Preprozessoren
+
 Die Verwendung eines CSS-Preprozessors wie [Sass](http://sass-lang.com/) ist mittlerweile eigentlich fast selbstverständlich. Ein solcher Preprozessor ermöglicht z. B. die Verwendung von Variablen, die Verschachtelung des CSS oder die Nutzung von Funktionen und Helfern.
 
 ## Compass
+
 Doch noch besser ist es ein CSS-Framework wie [Compass](http://compass-style.org/) zu verwenden. Der Vorteil liegt darin, dass diese schon mit einer großen Anzahl an fertigen Methoden kommen, und so verhindern, dass das Rad neu erfunden werden muss. Mit Compass lassen sich sehr einfach Sprites generieren und viele Methoden sorgen dafür, dass für die unterschiedlichen Browser die korrekte Implementierung verwendet wird. Außerdem werden für Compass zahlreiche Erweiterungen angeboten.
 
 Ich verwende für meine Seite z. B. ein [Gridsystem](https://github.com/at-import/Singularity), Helfer für Typographie, Farben und Responsive Breakpoints.
@@ -32,6 +34,7 @@ Doch auch Compass schlägt keine Strukturierung des SASS oder SCSS vor. Dafür g
 Ich verwende für meine Website dieses Konzept, habe es aber an meine Bedürfnisse angepasst.
 
 ## Dateistuktur des SCSS
+
 Meine Dateistruktur sieht wie folgt aus:
 
 ```bash

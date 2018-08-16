@@ -1,20 +1,20 @@
 ---
-language: "de"
-title: "Domains extern hosten"
-slug: "domains-extern-hosten"
-description: "Domains getrennt vom Webhosting-Paket hosten. Warum dies eine gute Idee ist und was für Vorteile es bringt."
-author: "Stefan Imhoff"
+language: de
+title: 'Domains extern hosten'
+slug: extern-domain-hosting
+description: 'Domains getrennt vom Webhosting-Paket hosten. Warum dies eine gute Idee ist und was für Vorteile es bringt.'
+author: Stefan Imhoff
 date: 2007-05-30T23:55:00+02:00
-categories: ["server", "recommendation"]
+categories: ['server', 'recommendation']
 ---
 
 Viele Domainbesitzer in Deutschland wissen immer noch nicht, dass sie ihre Domains _nicht_ mit dem Speicherplatz zusammen kaufen müssen. Ich erkäre hier, wieso Inklusivdomains eine Mogelpackung sind und was für Vorteile das Trennen von Domain und Webspace mit sich bringen.
 
 Überlicherweise kauft man sich einen Webhosting-Paket bei irgendeinem Anbieter, der dann meist Inklusivdomains mitliefert.
 
-Für viele kleinere Domainbesitzer mag dies auf den ersten Blick wie ein Schnäppchen aussehen, doch der Schein trügt zumeist. Denn mit diesen *spottbilligen* Angeboten sind Mindestvertragslaufzeiten von **1-2 Jahren** verbunden. Gerade im Internet ändern sich die Angebote aber fast schon wöchentlich.
+Für viele kleinere Domainbesitzer mag dies auf den ersten Blick wie ein Schnäppchen aussehen, doch der Schein trügt zumeist. Denn mit diesen _spottbilligen_ Angeboten sind Mindestvertragslaufzeiten von **1-2 Jahren** verbunden. Gerade im Internet ändern sich die Angebote aber fast schon wöchentlich.
 
-Meist sind auch Domains, die man über seine Inklusivdomains hinaus kaufen kann, über die Maßen zu teuer. Die Preise reichen von *günstigen* 0,99 € bis hin zu 4,– € (pro Monat).
+Meist sind auch Domains, die man über seine Inklusivdomains hinaus kaufen kann, über die Maßen zu teuer. Die Preise reichen von _günstigen_ 0,99 € bis hin zu 4,– € (pro Monat).
 
 ## Die Kosten im Webhosting
 
@@ -24,7 +24,7 @@ Dabei sind es gerade die Domains, die eigentlich keinen oder nur einen minimalen
   <p>Die wirklichen Kosten des Hostings entstehen durch Festplattenplatz, Speicher und genutzte&nbsp;Bandbreite.</p>
 </blockquote>
 
-Die wirklichen Kosten des Hostings entstehen durch Festplattenplatz, Speicher und genutzte Bandbreite. Somit sind auch alle Begrenzungen und *Paket-Features* vollkommen fiktiv und nur zur besseren Werbung abgegrenzt.
+Die wirklichen Kosten des Hostings entstehen durch Festplattenplatz, Speicher und genutzte Bandbreite. Somit sind auch alle Begrenzungen und _Paket-Features_ vollkommen fiktiv und nur zur besseren Werbung abgegrenzt.
 
 Ob ich nun eine, zwei oder hundert Datenbanken benutze, ist technisch gesehen kein Unterschied, genauso wenig, ob mir diese oder jene Programmiersprache angeboten wird.
 
@@ -40,13 +40,13 @@ Der Hoster 1&1 hat eine wunderbare Spitzenleistung der Schikane für seine Kunde
 
 ## Domains extern hosten
 
-**Daher mein Tipp:** Hosted eure Domains extern. Es gibt Webhoster, die diesen Dienst anbieten (googlen nach *Domainhosting* oder *DomainRobot*).
+**Daher mein Tipp:** Hosted eure Domains extern. Es gibt Webhoster, die diesen Dienst anbieten (googlen nach _Domainhosting_ oder _DomainRobot_).
 
-* Dies kostet in den meisten Fällen keine Grundgebühr.
-* Man kann so viele Domains für Freunde, Verwandte oder Kunden kaufen, wie man möchte.
-* Man verwaltet seine *Handles* selber und ist somit Admin-C, Tech-C und Zone-C.
-* Der Preis ist spottbillig: Eine .de-Domain gibt es schon ab ca. 0,30 €/Monat.
-* Man muss nie wieder irgendein Fax schicken: KK-Anträge, Neubestellungen, Kündigungen von Domains – alles per Klick im Browser.
+- Dies kostet in den meisten Fällen keine Grundgebühr.
+- Man kann so viele Domains für Freunde, Verwandte oder Kunden kaufen, wie man möchte.
+- Man verwaltet seine _Handles_ selber und ist somit Admin-C, Tech-C und Zone-C.
+- Der Preis ist spottbillig: Eine .de-Domain gibt es schon ab ca. 0,30 €/Monat.
+- Man muss nie wieder irgendein Fax schicken: KK-Anträge, Neubestellungen, Kündigungen von Domains – alles per Klick im Browser.
 
 Das beste ist allerdings, das der Umzug einer Domain durch ein simples Wechseln des DNS-Servers innerhalb von wenigen Minuten vollzogen ist.
 

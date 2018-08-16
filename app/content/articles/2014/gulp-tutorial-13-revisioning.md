@@ -1,18 +1,18 @@
 ---
-language: "en"
-title: "Introduction to Gulp.js 13: Revisioning"
+language: en
+title: 'Introduction to Gulp.js 13: Revisioning'
 date: 2014-10-30T07:45:00+02:00
-author: "Stefan Imhoff"
-slug: "gulp-tutorial-13-revisioning"
-og_image: "assets/images/articles/2014/gulp-tutorial-13-revisioning/gulp-tutorial-13.jpg"
-description: "The ultimative tutorial and guide for Gulp.js: How to use revisioning to allow long caching of your assets and replace them  with hashed file names, that can be cache busted."
-series: ["gulp"]
-categories: ["code"]
-download_url: "https://github.com/kogakure/gulp-tutorial"
-download_text: "View Source on GitHub"
+author: Stefan Imhoff
+slug: gulp-tutorial-13-revisioning
+og_image: 'assets/images/articles/2014/gulp-tutorial-13-revisioning/gulp-tutorial-13.jpg'
+description: 'The ultimative tutorial and guide for Gulp.js: How to use revisioning to allow long caching of your assets and replace them  with hashed file names, that can be cache busted.'
+series: ['gulp']
+categories: ['code']
+download_url: 'https://github.com/kogakure/gulp-tutorial'
+download_text: 'View Source on GitHub'
 ---
 
-This is the 13th part of my series *Introduction to Gulp.js*. Today I will write the task to revision my static assets.
+This is the 13th part of my series _Introduction to Gulp.js_. Today I will write the task to revision my static assets.
 
 <figure class="image-figure">
   <img src="/assets/images/articles/2014/gulp-tutorial-13-revisioning/gulp-tutorial-13.jpg" alt="A woman dumping a Double Gulp on herself">
@@ -20,7 +20,6 @@ This is the 13th part of my series *Introduction to Gulp.js*. Today I will write
   Reed, <a href="https://www.flickr.com/photos/ishatter/3614680378" target="_blank" rel="nofollow" rel="noopener">dump it</a>
   </figcaption>
 </figure>
-
 
 ## Copy Vector Fonts for Production
 
@@ -40,22 +39,19 @@ copyfonts: {
 }
 ```
 
-
 <p class="code-info">gulp/tasks/production/copy-fonts.js</p>
 
 ```javascript
-var gulp   = require('gulp');
+var gulp = require('gulp');
 var config = require('../../config').copyfonts.production;
 
 /**
  * Copy fonts to folder
  */
 gulp.task('copy:fonts:production', function() {
-  return gulp.src(config.src)
-    .pipe(gulp.dest(config.dest));
+  return gulp.src(config.src).pipe(gulp.dest(config.dest));
 });
 ```
-
 
 ## Revisioning
 
@@ -95,14 +91,13 @@ revision: {
 }
 ```
 
-
 This task will rename all assets and create a JSON file containing all files, which where renamed and their old and new file names.
 
 <p class="code-info">gulp/tasks/production/revision.js</p>
 
 ```javascript
-var gulp   = require('gulp');
-var rev    = require('gulp-rev');
+var gulp = require('gulp');
+var rev = require('gulp-rev');
 var config = require('../../config').revision;
 
 /**
@@ -110,7 +105,8 @@ var config = require('../../config').revision;
  * write a manifest file
  */
 gulp.task('revision', function() {
-  return gulp.src(config.src.assets, { base: config.src.base })
+  return gulp
+    .src(config.src.assets, { base: config.src.base })
     .pipe(gulp.dest(config.dest.assets))
     .pipe(rev())
     .pipe(gulp.dest(config.dest.assets))
@@ -118,7 +114,6 @@ gulp.task('revision', function() {
     .pipe(gulp.dest(config.dest.manifest.path));
 });
 ```
-
 
 ## Replacing Paths to Assets
 
@@ -143,27 +138,26 @@ collect: {
 }
 ```
 
-
 I replace these paths only in files I know they could contain paths to assets. Don’t include any images or binary files. Revision collector will try to open them and destroy most binary files.
 
 <p class="code-info">gulp/tasks/production/rev-collector.js</p>
 
 ```javascript
-var gulp    = require('gulp');
+var gulp = require('gulp');
 var collect = require('gulp-rev-collector');
-var config  = require('../../config').collect;
+var config = require('../../config').collect;
 
 /**
  * Replace all links to assets in files
  * from a manifest file
  */
 gulp.task('rev:collect', function() {
-  return gulp.src(config.src)
-  .pipe(collect())
-  .pipe(gulp.dest(config.dest));
+  return gulp
+    .src(config.src)
+    .pipe(collect())
+    .pipe(gulp.dest(config.dest));
 });
 ```
-
 
 This task will look into the `manifest.json` file and replace every path to one of the assets in every HTML, CSS, JavaScript, and Text etc.
 
@@ -171,4 +165,4 @@ The production build is finished! Only one thing is missing to complete this ser
 
 ## Conclusion
 
-This concludes the 13th part of my series *Introduction to Gulp.js*. Today we learned how to revision the asset files and replace links to these files.
+This concludes the 13th part of my series _Introduction to Gulp.js_. Today we learned how to revision the asset files and replace links to these files.

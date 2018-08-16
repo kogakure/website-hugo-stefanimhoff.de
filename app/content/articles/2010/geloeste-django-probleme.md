@@ -1,24 +1,25 @@
 ---
-language: "de"
-title: "Gelöste Django-Probleme"
-slug: "geloeste-django-probleme"
+draft: true
+language: de
+title: 'Gelöste Django-Probleme'
+slug: geloeste-django-probleme
 date: 2010-09-11T16:00:00+02:00
-author: "Stefan Imhoff"
-description: "Mittlerweile gibt es gute Lösungen für alltägliche Probleme mit Django: Volltextsuche, Dokumentation schreiben, Datenbank-Migration, verzögerte und entfernte Ausführung, Deployment und Packaging."
-categories: ["code"]
+author: Stefan Imhoff
+description: 'Mittlerweile gibt es gute Lösungen für alltägliche Probleme mit Django: Volltextsuche, Dokumentation schreiben, Datenbank-Migration, verzögerte und entfernte Ausführung, Deployment und Packaging.'
+categories: ['code']
 ---
 
 Eric Holscher hat auf der DjangoCon 2010 einen interessanten Vortrag gehalten, in dem er die besten Lösungen für alltägliche Probleme mit Django aufzeigt.
 
 Die Liste von Applikationen, die Eric vorstellt ist sehr interessant, und sollte jedem, der beginnt sich mit Django zu beschäftigen bekannt sein. Eric Holscher spricht in seinem Talk – seinen [Blog-Artikel und die Folien](http://ericholscher.com/blog/2010/sep/10/djangocon-talk/) gibt es hier – sieben allgemein bekannte Lösungen für bekannte Probleme an:
 
-* Suche: [Haystack](http://haystacksearch.org/)
-* Dokumentation: [Sphinx](http://sphinx-doc.org/)
-* Datenbank-Migration: [South](http://south.aeracode.org/)
-* Verzögerte Ausführung: [Celery](http://www.celeryproject.org/)
-* Entfernte Ausführung: [Fabric](http://docs.fabfile.org/en/1.5/)
-* Deployment: [Gunicorn](http://gunicorn.org/) mit Nginx
-* Packaging: [Pip](https://pip.pypa.io/en/latest/) und [Virtualenv](https://virtualenv.pypa.io/en/latest/)
+- Suche: [Haystack](http://haystacksearch.org/)
+- Dokumentation: [Sphinx](http://sphinx-doc.org/)
+- Datenbank-Migration: [South](http://south.aeracode.org/)
+- Verzögerte Ausführung: [Celery](http://www.celeryproject.org/)
+- Entfernte Ausführung: [Fabric](http://docs.fabfile.org/en/1.5/)
+- Deployment: [Gunicorn](http://gunicorn.org/) mit Nginx
+- Packaging: [Pip](https://pip.pypa.io/en/latest/) und [Virtualenv](https://virtualenv.pypa.io/en/latest/)
 
 ## Volltextsuche mit Haystack
 
@@ -46,7 +47,7 @@ Deployment mit Gunicorn war mir auch neu, im Moment ist das für mich aber auch 
 
 ## Packaging mit Pip, Virtualenv (und Virtualenvwrapper)
 
-Packaging mit Pip und Virtualenv sind wirklich sehr arbeitserleichternd. So wie Homebrew der perfekte Installer für Mac OS X ist, ist Pip der perfekte Installer für Python-Packages. Auch die Tatsache, dass man eine bestimmte Arbeitsumgebung *einfrieren* kann und sie genau in der gleichen Weise auf einem anderen Computer oder Server wieder einrichten kann, ist wirklich ein starkes Argument für Pip.
+Packaging mit Pip und Virtualenv sind wirklich sehr arbeitserleichternd. So wie Homebrew der perfekte Installer für Mac OS X ist, ist Pip der perfekte Installer für Python-Packages. Auch die Tatsache, dass man eine bestimmte Arbeitsumgebung _einfrieren_ kann und sie genau in der gleichen Weise auf einem anderen Computer oder Server wieder einrichten kann, ist wirklich ein starkes Argument für Pip.
 
 Virtualenv ist eine fantastische Lösung, um seine Projekte unabhängig von einander zu bearbeiten. Es gibt keine Konflikte mehr zwischen unterschiedlichen Versionen von Python-Packeten. Ich persönlich setze auch noch den Virtualenvwrapper ein, ein kleines Tool, das den Wechsel zwischen den Projekten noch leichter macht, und außerdem noch Hooks bietet. So kann ich meine komplette Django-Arbeitsumgebung für ein Projekt mit nur einem Befehl wieder herstellen: vom Wechseln in die richtige virtuelle Umgebung, über das Öffnen der Dateien im Mac OS X-Finder und in TextMate, bis zum Starten des Servers und Aufrufen der Website und Django-Administrationsumgebung im Browser. Und das in wenigen Sekunden.
 
@@ -56,6 +57,6 @@ Die [Django Debug Toolbar](https://github.com/robhudson/django-debug-toolbar) is
 
 Das Filtern im Frontend mit [django-filter](https://github.com/carltongibson/django-filter) war mir noch nicht bekannt, hört sich aber sehr interessant aus und wird mit hoher Wahrscheinlichkeit in die neue Website integriert.
 
-Auch für das Problem, die beste Applikation für ein Problem zu finden gab es bislang nur weniger gute Lösungen: eine Suche auf Google Code nach Projekten mit *django-* oder eine Suche auf Github. Das Projekt Django Pluggables, das Bryan Veloso gestartet hat wurde beendet und leitet jetzt direkt auf das von Eric Holscher erwähnt [Django Packages](https://www.djangopackages.com/) weiter.
+Auch für das Problem, die beste Applikation für ein Problem zu finden gab es bislang nur weniger gute Lösungen: eine Suche auf Google Code nach Projekten mit _django-_ oder eine Suche auf Github. Das Projekt Django Pluggables, das Bryan Veloso gestartet hat wurde beendet und leitet jetzt direkt auf das von Eric Holscher erwähnt [Django Packages](https://www.djangopackages.com/) weiter.
 
-Am Ende seines Vortrags geht Eric Holscher noch auf einige ungelöste Probleme ein: Template Tags, Logging, Model Introspection, Class Based Views, Source code arragements, Notifications/Email, Debugging in Production, OpenID/OAuth und VSC Abstaction. Mich persönlich würden davon höchstens Template Tags, Logging, Notifications/Email und Debugging in Production interessieren – auch wenn ich für meine Anforderungen mit den aktuellen Lösungen super leben kann. 
+Am Ende seines Vortrags geht Eric Holscher noch auf einige ungelöste Probleme ein: Template Tags, Logging, Model Introspection, Class Based Views, Source code arragements, Notifications/Email, Debugging in Production, OpenID/OAuth und VSC Abstaction. Mich persönlich würden davon höchstens Template Tags, Logging, Notifications/Email und Debugging in Production interessieren – auch wenn ich für meine Anforderungen mit den aktuellen Lösungen super leben kann.

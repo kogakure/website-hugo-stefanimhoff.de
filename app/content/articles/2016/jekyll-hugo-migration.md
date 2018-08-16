@@ -1,19 +1,19 @@
 ---
-title: "Migrating to Hugo from Jekyll"
-slug: "/hugo-jekyll-migration/"
+title: 'Migrating to Hugo from Jekyll'
+slug: jekyll-hugo-migration
 author: Stefan Imhoff
 date: 2016-08-27T13:05:57+02:00
-description: "A blog post about the migration from Jekyll to Hugo and why it’s worth to try out Hugo."
-language: "en"
-og_image: "assets/images/articles/2016/hugo-jekyll-migration/hugo.png"
-categories: ["website"]
-download_url: "https://github.com/kogakure/hugo-stefanimhoff.de"
-download_text: "View Source on GitHub"
+description: 'A blog post about the migration from Jekyll to Hugo and why it’s worth to try out Hugo.'
+language: en
+og_image: 'assets/images/articles/2016/hugo-jekyll-migration/hugo.png'
+categories: ['website']
+download_url: 'https://github.com/kogakure/hugo-stefanimhoff.de'
+download_text: 'View Source on GitHub'
 ---
 
 After running over 2 years with [Jekyll](https://jekyllrb.com/) I recently replaced it with [Hugo](http://gohugo.io/), a static site generator written in Go.
 
-I did this mainly because of two reasons: *Firstly*, Jekyll ist just **too slow** (because Ruby is slow). The site generation takes forever, with tags and category generation it gets even worse. I had to limit the amount of generated pages to 5 during development, to have a nearly instant update of the stuff I write. And my blog has just around 80 articles. I’ve read stories of large sites, where the generation takes hours. *Secondly* I wanted  to stop updating Node packages *and* Gems (one ecosystem is enough).
+I did this mainly because of two reasons: _Firstly_, Jekyll ist just **too slow** (because Ruby is slow). The site generation takes forever, with tags and category generation it gets even worse. I had to limit the amount of generated pages to 5 during development, to have a nearly instant update of the stuff I write. And my blog has just around 80 articles. I’ve read stories of large sites, where the generation takes hours. _Secondly_ I wanted to stop updating Node packages _and_ Gems (one ecosystem is enough).
 
 <figure class="image-figure image-figure-noborder">
   <img src="/assets/images/articles/2016/hugo-jekyll-migration/hugo.png" alt="Hugo Logo">
@@ -33,7 +33,7 @@ Another tool, which looked quite nice was [Roots](http://roots.cx/). But after s
 
 ### Gatsby
 
-I really like the idea of [Gatsby](https://github.com/gatsbyjs/gatsby), because it uses React templates to build static sites. But currently it’s unusable, because it bundles all articles into *one* JavaScript file. Sure, this allows to browse the website offline and with instant page changes. But having a 500-800 KB JavaScript file is just not a thing I’ll ever allow. If Gatsby would allow to decide on smaller Webpack bundle packages (e. g. a bundle for a *tag* or a *year*) it would be an option.
+I really like the idea of [Gatsby](https://github.com/gatsbyjs/gatsby), because it uses React templates to build static sites. But currently it’s unusable, because it bundles all articles into _one_ JavaScript file. Sure, this allows to browse the website offline and with instant page changes. But having a 500-800 KB JavaScript file is just not a thing I’ll ever allow. If Gatsby would allow to decide on smaller Webpack bundle packages (e. g. a bundle for a _tag_ or a _year_) it would be an option.
 
 ## Choosing Hugo
 
@@ -45,9 +45,9 @@ The first thing which is surprising: Hugo is a binary, which is cross platform a
 $ brew install hugo
 ```
 
-The main reason for switching was for me speed. And fast it is. Generating my whole site, with **86** articles, **125** tags, **21** categories and **2** series takes **~700 ms**. This means everything included, even moving all the assets. If I wouldn’t use my *Related Articles* section, I could cut the time in half. Since I use Gulp and minimize, optimize and do a lot to my files, my production Gulp task needs now **~30 seconds** (including syncing the files to the server), compared to **2-3 minutes** before.
+The main reason for switching was for me speed. And fast it is. Generating my whole site, with **86** articles, **125** tags, **21** categories and **2** series takes **~700 ms**. This means everything included, even moving all the assets. If I wouldn’t use my _Related Articles_ section, I could cut the time in half. Since I use Gulp and minimize, optimize and do a lot to my files, my production Gulp task needs now **~30 seconds** (including syncing the files to the server), compared to **2-3 minutes** before.
 
-How fast Hugo *really* is can be best seen in this video: [Hugo benchmark - 5,000 posts in seconds](https://www.youtube.com/watch?v=CdiDYZ51a2o).
+How fast Hugo _really_ is can be best seen in this video: [Hugo benchmark - 5,000 posts in seconds](https://www.youtube.com/watch?v=CdiDYZ51a2o).
 
 ## Templates
 
@@ -57,10 +57,9 @@ Hugo comes without a plugin system, but I didn’t miss any and could find a sol
 
 It also has really nice Theme system, which allows to create very modular Themes. And because creating a theme is so easy there are [a lot very good of them](http://themes.gohugo.io/) available.
 
-
 ## Shortcodes
 
-Instead of plugins Hugo uses [Shortcodes](http://gohugo.io/content-management/shortcodes), which is very refreshing. Writing plugins in Jekyll was *not* fun. With Shortcodes it’s possible to create the same functionality without needing to know Ruby and the [Liquid for Programmers](https://github.com/Shopify/liquid/wiki/Liquid-for-Programmers) guidelines and still getting the same result with less lines and writing mostly Markup.
+Instead of plugins Hugo uses [Shortcodes](http://gohugo.io/content-management/shortcodes), which is very refreshing. Writing plugins in Jekyll was _not_ fun. With Shortcodes it’s possible to create the same functionality without needing to know Ruby and the [Liquid for Programmers](https://github.com/Shopify/liquid/wiki/Liquid-for-Programmers) guidelines and still getting the same result with less lines and writing mostly Markup.
 
 ## Content
 

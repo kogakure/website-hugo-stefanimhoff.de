@@ -1,12 +1,13 @@
 ---
-language: "de"
-title: "Subversion 5: Arbeiten mit Subversion"
-description: "Ein umfangreiches Tutorial für Subversion: Grundlegende Arbeitsschritte mit Subversion. Dateien anlegen, löschen und in das Repository einchecken."
-author: "Stefan Imhoff"
-slug: "subversion-5-arbeiten-mit-subversion"
+draft: true
+language: de
+title: 'Subversion 5: Arbeiten mit Subversion'
+description: 'Ein umfangreiches Tutorial für Subversion: Grundlegende Arbeitsschritte mit Subversion. Dateien anlegen, löschen und in das Repository einchecken.'
+author: Stefan Imhoff
+slug: subversion-5-arbeiten-mit-subversion
 date: 2007-09-04T18:45:00+02:00
-series: ["subversion"]
-categories: ["vcs"]
+series: ['subversion']
+categories: ['vcs']
 ---
 
 Die eigentliche Arbeit mit Subversion ist relativ leicht erklärt und gelernt. Von größeren Aktionen wie `merge` mal abgesehen.
@@ -19,7 +20,7 @@ $ mkdir Arbeit
 $ cd Arbeit
 ```
 
-Um jetzt an einem Projekt aus dem Repository arbeiten zu können, muss man es sich in einen Arbeitsordner *auschecken*, also eine Kopie der Dateien auf seine Festplatte holen.
+Um jetzt an einem Projekt aus dem Repository arbeiten zu können, muss man es sich in einen Arbeitsordner _auschecken_, also eine Kopie der Dateien auf seine Festplatte holen.
 
 Im Artikel <cite>[Subversion (4) – Importieren einer Projektstruktur](/2007/subversion-4-importieren-einer-projektstruktur/)</cite> hatte ich mir eine Beispielstruktur angelegt. Ich entscheide mich jetzt an der Website zu arbeiten und nur diesen Ordner und seine Unterordner auszuchecken. Natürlich könnte man genauso gut den kompletten `trunk` (die Hauptentwicklungslinie) in seinen Arbeitsordner holen.
 
@@ -41,7 +42,7 @@ Im ersten Schritt lege ich jetzt eine Datei in meinem Hauptverzeichnis (index.ht
 $ svn add index.html img/test.jpg
 ```
 
-Wie gesehen kann man hier mehrere Dateien in einem Befehl hinzufügen, es funktioniert auch UNIX-Syntax, wie z. B. der *Asterisk* (Stern) für alle Dateien. In der Ausgabe dieses Befehls sieht man jetzt ein `A` neben der jeweiligen Datei, das steht für `Added` (hinzugefügt).
+Wie gesehen kann man hier mehrere Dateien in einem Befehl hinzufügen, es funktioniert auch UNIX-Syntax, wie z. B. der _Asterisk_ (Stern) für alle Dateien. In der Ausgabe dieses Befehls sieht man jetzt ein `A` neben der jeweiligen Datei, das steht für `Added` (hinzugefügt).
 
 ## Änderungen ins Repository zurückspielen
 
@@ -55,7 +56,7 @@ Die Zeichenkette nach dem Parameter `-m` ist für die Log-Datei gedacht. Hier so
 
 ## Datei löschen
 
-In der täglichen Arbeit mit Subversion kommt es auch öfter vor, dass man eine Datei löschen möchte. Dabei muss man aber beachten, dass sie nur veschwindet, aber nicht aus dem Repository entfernt wird. Man kann sie also immer wieder herstellen. Auch die Dateigröße verbleibt im Repository, daher unbedingt *vorher* überlegen, welche Dateien man ins Repository spielt. Was drin ist, bleibt drin. Ein Entfernen von Dateien (und ist der Inhalt auch noch so peinlich) ist so gut wie unmöglich. Eine manuelle Manipulation mag für Profis möglich sein, doch damit wird die Historie zerstört und inkonsistent. Das Versionskontrollsystem Git ermöglicht es z. B. dank eines Hash-Schlüssels solche Veränderungen oder Fehler zu entdecken. Bei Subversion gibt es so etwas leider nicht.
+In der täglichen Arbeit mit Subversion kommt es auch öfter vor, dass man eine Datei löschen möchte. Dabei muss man aber beachten, dass sie nur veschwindet, aber nicht aus dem Repository entfernt wird. Man kann sie also immer wieder herstellen. Auch die Dateigröße verbleibt im Repository, daher unbedingt _vorher_ überlegen, welche Dateien man ins Repository spielt. Was drin ist, bleibt drin. Ein Entfernen von Dateien (und ist der Inhalt auch noch so peinlich) ist so gut wie unmöglich. Eine manuelle Manipulation mag für Profis möglich sein, doch damit wird die Historie zerstört und inkonsistent. Das Versionskontrollsystem Git ermöglicht es z. B. dank eines Hash-Schlüssels solche Veränderungen oder Fehler zu entdecken. Bei Subversion gibt es so etwas leider nicht.
 
 Wenn man Dateien über die normale Löschfunktion des Computers entfernt, erfährt Subversion davon nichts. Beim nächsten `svn status` erscheint neben der Datei ein `!`. Dies bedeutet, dass eine Datei fehlt, die eigentlich da sein müsste. Diese muss nun manuell zum Löschen markiert werden oder wieder hergestellt werden.
 

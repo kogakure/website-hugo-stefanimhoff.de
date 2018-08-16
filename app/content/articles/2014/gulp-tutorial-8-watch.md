@@ -1,18 +1,18 @@
 ---
-language: "en"
-title: "Introduction to Gulp.js 8: Watch for Changes"
+language: en
+title: 'Introduction to Gulp.js 8: Watch for Changes'
 date: 2014-10-25T10:00:00+02:00
-author: "Stefan Imhoff"
-slug: "gulp-tutorial-8-watch"
-og_image: "assets/images/articles/2014/gulp-tutorial-8-watch/gulp-tutorial-8.jpg"
-description: "The ultimative tutorial and guide for Gulp.js: How to set up a watch task, which triggers other tasks on file changes."
-series: ["gulp"]
-categories: ["code"]
-download_url: "https://github.com/kogakure/gulp-tutorial"
-download_text: "View Source on GitHub"
+author: Stefan Imhoff
+slug: gulp-tutorial-8-watch
+og_image: 'assets/images/articles/2014/gulp-tutorial-8-watch/gulp-tutorial-8.jpg'
+description: 'The ultimative tutorial and guide for Gulp.js: How to set up a watch task, which triggers other tasks on file changes.'
+series: ['gulp']
+categories: ['code']
+download_url: 'https://github.com/kogakure/gulp-tutorial'
+download_text: 'View Source on GitHub'
 ---
 
-This is the 8th part of my series *Introduction to Gulp.js*. Today I will set up watch tasks for many different files with Gulp.js.
+This is the 8th part of my series _Introduction to Gulp.js_. Today I will set up watch tasks for many different files with Gulp.js.
 
 <figure class="image-figure">
   <img src="/assets/images/articles/2014/gulp-tutorial-8-watch/gulp-tutorial-8.jpg" alt="Funtime!">
@@ -20,7 +20,6 @@ This is the 8th part of my series *Introduction to Gulp.js*. Today I will set up
   Not even <strong>Double Gulp</strong> helped to have a Funtime (Erin Nekervis, <a href="https://www.flickr.com/photos/theeerin/4701912791">Funtime!</a>)
   </figcaption>
 </figure>
-
 
 Do you remember the `watch` task from the beginning? It just started BrowserSync and the development server until now, but didn’t watch for anything. I will write these watch tasks now.
 
@@ -49,7 +48,6 @@ watch: {
 }
 ```
 
-
 I watch for a lot of different file types for Jekyll. Changes in configuration files, data files, layouts, includes, plugin, posts etc.
 
 The Sass task will watch for changes in files with the suffix `sass` or `scss`. JavaScript gets triggered if I change some JavaScript file. You get the point.
@@ -57,22 +55,21 @@ The Sass task will watch for changes in files with the suffix `sass` or `scss`. 
 <p class="code-info">gulp/tasks/development/watch.js</p>
 
 ```javascript
-var gulp   = require('gulp');
+var gulp = require('gulp');
 var config = require('../../config').watch;
 
 /**
  * Start browsersync task and then watch files for changes
  */
 gulp.task('watch', ['browsersync'], function() {
-  gulp.watch(config.jekyll,  ['jekyll-rebuild']);
-  gulp.watch(config.sass,    ['sass', 'scsslint']);
+  gulp.watch(config.jekyll, ['jekyll-rebuild']);
+  gulp.watch(config.sass, ['sass', 'scsslint']);
   gulp.watch(config.scripts, ['scripts', 'jshint']);
-  gulp.watch(config.images,  ['images']);
-  gulp.watch(config.svg,     ['copy:fonts']);
+  gulp.watch(config.images, ['images']);
+  gulp.watch(config.svg, ['copy:fonts']);
   gulp.watch(config.sprites, ['sprites']);
 });
 ```
-
 
 I set up six watch tasks. Whenever a file of the Jekyll watch gets changed, deleted or added, the `jekyll-rebuild` task gets executed. This task will run the Jekyll build and after it’s finished reload the page.
 
@@ -86,4 +83,4 @@ I miss now three tasks: `scsslint`, `jshint` and `sprites`.
 
 ## Conclusion
 
-This concludes the 8th part of my series *Introduction to Gulp.js*. We learned how to use Gulp.js to watch for changes, deletion or creation of files and how to trigger tasks. And the best part: This is part of the Gulp.js API. We don’t need any plugin.
+This concludes the 8th part of my series _Introduction to Gulp.js_. We learned how to use Gulp.js to watch for changes, deletion or creation of files and how to trigger tasks. And the best part: This is part of the Gulp.js API. We don’t need any plugin.

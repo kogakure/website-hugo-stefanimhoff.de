@@ -1,11 +1,12 @@
 ---
-language: "de"
-title: "Das war mein 2007 – eine Jahresbilanz"
-description: "Mein persönlicher Jahresrückblick für 2007: ExpressionEngine, Subversion, Django, Python, LaTeX. Und ich entdecke die TED-Talks."
-author: "Stefan Imhoff"
-slug: "das-war-mein-2007-eine-jahresbilanz"
+draft: true
+language: de
+title: 'Das war mein 2007 – eine Jahresbilanz'
+description: 'Mein persönlicher Jahresrückblick für 2007: ExpressionEngine, Subversion, Django, Python, LaTeX. Und ich entdecke die TED-Talks.'
+author: Stefan Imhoff
+slug: das-war-mein-2007-eine-jahresbilanz
 date: 2007-12-24T14:00:00+02:00
-categories: ["personal"]
+categories: ['personal']
 ---
 
 Zum Jahresende will ich dieses Mal Googles Webprotokoll als Erinnerungshilfe hinzuziehen. Dieser Dienst von Google ermöglicht es die eigenen Suchbegriffe anzusehen.
@@ -28,7 +29,7 @@ Hier war nicht so viel los, vor allem liegt das aber wohl daran, dass ich das We
 
 Die @media in London zieht mein Interesse an, obwohl ich – mal wieder – nicht hin <del>kann</del> <ins>darf</ins>.
 
-Ich fange an alle unsere Jobs auf der Arbeit in [Subversion](http://subversion.tigris.org/)-Repositorys zu verschieben. Daher benötige ich eine Installationsanleitung für das gottverdammte *Linux SuSE 10*, weil nur dieses von unserer IT-Abteilung für uns installiert wird. Kompilieren macht jedenfalls unter diesem System keinen Spaß, weil auch wirklich kein Standard-UNIX-Pfad stimmt.
+Ich fange an alle unsere Jobs auf der Arbeit in [Subversion](http://subversion.tigris.org/)-Repositorys zu verschieben. Daher benötige ich eine Installationsanleitung für das gottverdammte _Linux SuSE 10_, weil nur dieses von unserer IT-Abteilung für uns installiert wird. Kompilieren macht jedenfalls unter diesem System keinen Spaß, weil auch wirklich kein Standard-UNIX-Pfad stimmt.
 
 ## März
 
@@ -36,11 +37,11 @@ Im März erkundige ich mich nach den Palmeninseln und der Weltkarteninselgruppe 
 
 Bei ExpressionEngine interessieren mich u. a. `search_results` und `wegblog_name`, was wohl bedeutet, dass ich gerade die Suche auf meiner Seite programmiere.
 
-Zusätzlich will ich noch wissen, wie man eine Personal-Version von ExpressionEngine zu einer Core-Version downgraded. Ich hab jetzt nämlich zwei EspressionEngine-Projekte, aber nur eine Lizenz. Natürlich gibt es keine Ergebnisse bei *pmachine*, aber es reicht nach etwas testen aus, wenn man einige der Module löscht.
+Zusätzlich will ich noch wissen, wie man eine Personal-Version von ExpressionEngine zu einer Core-Version downgraded. Ich hab jetzt nämlich zwei EspressionEngine-Projekte, aber nur eine Lizenz. Natürlich gibt es keine Ergebnisse bei _pmachine_, aber es reicht nach etwas testen aus, wenn man einige der Module löscht.
 
 ## April
 
-Dieser Monat ist der Kompilierungsmonat, jedenfalls installiere ich die *Apple Developer Tools*, Subversion unter Mac OS X, und suche nach verschiedenen Linux-Paketen.
+Dieser Monat ist der Kompilierungsmonat, jedenfalls installiere ich die _Apple Developer Tools_, Subversion unter Mac OS X, und suche nach verschiedenen Linux-Paketen.
 
 ExpressionEngine steht immer noch auf meinem Tagesplan, dieses Mal mit `categories`, `conditionals`, Debugging-, Geschwindigkeitsmessungs- und Statistik-Fragen.
 
@@ -56,11 +57,11 @@ Im Juni lese ich das Buch <cite>[Robinson Crusoe](https://de.wikipedia.org/wiki/
 
 Sonst kommt mir in diesem Monat [Django](https://www.djangoproject.com/) erneut in meine Gedanken, ich hatte mich schon mal im Herbst des Vorjahres damit beschäftigt, war aber an der Installation gescheitert.
 
-Ich schaue den Film <cite>[Snakes and  Rubies](https://www.djangoproject.com/snakesandrubies/)</cite> an, in dem *Adrian Holovaty* und *David Heinermeier Hannson* die Vorteile und Unterschiede von Django und [Ruby on Rails](http://rubyonrails.org/) diskutieren.
+Ich schaue den Film <cite>[Snakes and Rubies](https://www.djangoproject.com/snakesandrubies/)</cite> an, in dem _Adrian Holovaty_ und _David Heinermeier Hannson_ die Vorteile und Unterschiede von Django und [Ruby on Rails](http://rubyonrails.org/) diskutieren.
 
 Ein TextMate-Bundle für Django muss her, und auch [ReST](http://docutils.sourceforge.net/rst.html) als Markupsprache der Djangoseite zieht mein Interesse an.
 
-Logischerweise interessiere ich mich jetzt auch für  [Python](https://www.python.org/), die Programmiersprache, auf der Django basiert. Das Buch <cite>[Dive Into Python](http://www.diveintopython.net/)</cite>, das im Internet kostenlos verfügbar ist, lese ich in den nächsten Wochen komplett durch.
+Logischerweise interessiere ich mich jetzt auch für [Python](https://www.python.org/), die Programmiersprache, auf der Django basiert. Das Buch <cite>[Dive Into Python](http://www.diveintopython.net/)</cite>, das im Internet kostenlos verfügbar ist, lese ich in den nächsten Wochen komplett durch.
 
 ## Juli
 
@@ -68,9 +69,9 @@ Im Juli beschäftigen mich wieder stark Django und Python: Django Filter, Statis
 
 Ich schaue mir die [SQLite3](http://www.sqlite.org/)-Datenbank und ihre Syntax an, da sie für eine lokale Entwicklung geradezu optimal ist.
 
-Irgendetwas treibt mich in diesem Monat dazu, mich nach den Glanzlichtern der Internet-Goldgräberzeit zu erkundigen. Was wurde aus *Balthaser Studios*, *Egomedia*, *Alien Arts* oder *All Media Studios*. Oder auch dem *The Horus Project*. Hach, irgendwie war die Flash-Ära lustig. Ein pures <q>wer hat die besseren Animationen</q>. Content? Null.
+Irgendetwas treibt mich in diesem Monat dazu, mich nach den Glanzlichtern der Internet-Goldgräberzeit zu erkundigen. Was wurde aus _Balthaser Studios_, _Egomedia_, _Alien Arts_ oder _All Media Studios_. Oder auch dem _The Horus Project_. Hach, irgendwie war die Flash-Ära lustig. Ein pures <q>wer hat die besseren Animationen</q>. Content? Null.
 
-An Musik suche ich im Juli nach dem *Halo 3* Soundtrack und nach den Lyrics von <cite>Sound Of Silence</cite>.
+An Musik suche ich im Juli nach dem _Halo 3_ Soundtrack und nach den Lyrics von <cite>Sound Of Silence</cite>.
 
 Ich erkundige mich, ob Jean-Yves Mitton, ein französischer Zeichner, mal wieder einen Band meiner Lieblings-Comicreihe <cite>[Quetzalcoatl](http://mitton.free.fr/docs/QUETZALCOATL.htm)</cite> fertiggestellt hat. Er arbeitet leider sehr langsam, dafür mit sehr hoher Qualität, im Durchschnitt schafft er nicht mal einen Band pro Jahr. Der letzte Band erscheint dann nach zehn Jahren seit dem Start der Reihe 2008.
 
@@ -92,7 +93,7 @@ Zum ersten mal in meinem Leben beschäftige ich mich im späten August mit [LaTe
 
 Auf meinem Nachttisch liegt laut Google Suche Machiavellis <cite>[Der Fürst](http://www.amazon.de/gp/product/3458344721/ref=as_li_ss_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=3458344721&linkCode=as2&tag=kogakurede-21)</cite>.
 
-In der [Autostadt Wolfsburg](https://www.autostadt.de/) eröffnet ein neues japanisches Restaurant, das *Anan*, mit extra einflogenem, japanischem Meisterkoch.
+In der [Autostadt Wolfsburg](https://www.autostadt.de/) eröffnet ein neues japanisches Restaurant, das _Anan_, mit extra einflogenem, japanischem Meisterkoch.
 
 Das Sommerloch geht langsam zu Ende, also erkundige ich mich, was meine Lieblingsserien so machen, und wann die Staffeln wieder starten: [Lost](http://www.imdb.com/title/tt0411008/), [StarGate SG-1 und StarGate Atlantis](http://stargate.mgm.com/), Monk und [Battlestar Galactica](http://www.syfy.com/battlestargalactica).
 
@@ -102,13 +103,13 @@ Diesen Monat beschäftige ich mich vor allem LaTeX, Bibtex und Alphadin. Ich sch
 
 Auch mit SQLite3 schaue ich mir noch näher an. Eine wirklich feine, kleine und mächtige Datenbank.
 
-Mitte September will ich von Google wissen, wo eigentlich der Experimentalfilm [A Scanner Darkly](http://www.imdb.com/title/tt0405296/) bleibt. In den U.S.A. lief er schon vor über einem Jahr. Naja, lohnt wohl wieder nicht, so was in Deutsche Kinos zu bringen. Also muss *man* sich ja wieder woanders seinen Kinoeintritt holen. Selber schuld, die Filmstudios.
+Mitte September will ich von Google wissen, wo eigentlich der Experimentalfilm [A Scanner Darkly](http://www.imdb.com/title/tt0405296/) bleibt. In den U.S.A. lief er schon vor über einem Jahr. Naja, lohnt wohl wieder nicht, so was in Deutsche Kinos zu bringen. Also muss _man_ sich ja wieder woanders seinen Kinoeintritt holen. Selber schuld, die Filmstudios.
 
 Eine ISO-Prüfung im Haus führt mich zu <cite>Dilbert</cite> und Dogbert, und ich kann den Bürokratiewahn mit einem lachenden Auge in der Comic lesend überstehen.
 
-*Host Europe* prahlt laut damit, jetzt auch Python und Ruby anzubieten. Nach meiner Nachfrage, was mit Ruby on Rails oder Django sei, bekomme ich ein kleinlautes <q>Derzeit nicht</q>. Was soll ich dann mit den beiden Programmiersprachen?
+_Host Europe_ prahlt laut damit, jetzt auch Python und Ruby anzubieten. Nach meiner Nachfrage, was mit Ruby on Rails oder Django sei, bekomme ich ein kleinlautes <q>Derzeit nicht</q>. Was soll ich dann mit den beiden Programmiersprachen?
 
-Im September arbeite ich mich im Detail in die Befehlssyntax von git ein, was aber schnell und unkompliziert geht. Sogar ein Laie wie ich, kann ohne Probleme *branches* erstellen und *mergen*.
+Im September arbeite ich mich im Detail in die Befehlssyntax von git ein, was aber schnell und unkompliziert geht. Sogar ein Laie wie ich, kann ohne Probleme _branches_ erstellen und _mergen_.
 
 ## Oktober
 
@@ -124,11 +125,11 @@ Ich muss mir eingestehen, dass ohne JavaScript-Frameworks und Ajax-Erfahrung kei
 
 jQuery hat die coolste Syntax und kann alles, was der Kunde von heute so will.
 
-Ich lache herzlich über den [Eklat bei Kerner](https://www.welt.de/fernsehen/article1250311/Die-oeffentliche-Hinrichtung-der-Eva-Herman.html), und schaue mir an, wie die arme Frau Hermann von einer Horde wütender Nazi-Jäger zu Klump gehauen wird.  Hach. Die Psychologen nennen das den *Mitleidseffekt*, weshalb auch der Großteil der Stimmen in Foren und Kommentaren für Eva Hermann ist.
+Ich lache herzlich über den [Eklat bei Kerner](https://www.welt.de/fernsehen/article1250311/Die-oeffentliche-Hinrichtung-der-Eva-Herman.html), und schaue mir an, wie die arme Frau Hermann von einer Horde wütender Nazi-Jäger zu Klump gehauen wird. Hach. Die Psychologen nennen das den _Mitleidseffekt_, weshalb auch der Großteil der Stimmen in Foren und Kommentaren für Eva Hermann ist.
 
-Da ja bald Apples neues Betriebssystem *Leopard* erscheint, google ich schon mal nach passenden Space-Wallpapern.
+Da ja bald Apples neues Betriebssystem _Leopard_ erscheint, google ich schon mal nach passenden Space-Wallpapern.
 
-Diverse Suchen nach <cite>Kuehne und Nagel Logistics</cite> und einem *Leopard Widget* bezeugen es – Leopard ist da. FedEx versagt in meinem Fall total, so bekomme ich Leopard erst am Samstag morgen.
+Diverse Suchen nach <cite>Kuehne und Nagel Logistics</cite> und einem _Leopard Widget_ bezeugen es – Leopard ist da. FedEx versagt in meinem Fall total, so bekomme ich Leopard erst am Samstag morgen.
 
 MySQL und PostgreSQL muss ich mir selber kompilieren, aber Apache 2 und PHP sind schon bei Leopard dabei. Außerdem stelle ich fest, dass mein G5 zu langsam für die neuen iChat-Videohintergründe ist. Schade.
 
@@ -138,7 +139,7 @@ MySQL und PostgreSQL muss ich mir selber kompilieren, aber Apache 2 und PHP sind
 
 Im November rege ich mich über Alias/Autodesk auf, und darüber, dass ich meine arschteure Maya-Lizenz unter Leopard nicht mehr weiterbenutzen kann. Ich schaue mir das geniale [Blender 3D](https://www.blender.org/) an und bereue es, Maya überhaupt gekauft zu haben.
 
-Ich werde endlich *Django-Profi* (haha, Scherz!) und checke mir die neuste Subversion-Version aus. Mein Projekt passe ich an die neue Unicode-Syntax an.
+Ich werde endlich _Django-Profi_ (haha, Scherz!) und checke mir die neuste Subversion-Version aus. Mein Projekt passe ich an die neue Unicode-Syntax an.
 
 Voller Freude warte ich auf die Neuverfilmung der <cite>Schatzinsel</cite> und rege mich dann maßlos auf, wie mies die Geschichte umgesetzt wurde.
 
@@ -166,7 +167,7 @@ Die neue Version von CandyBar kommt raus, und hat jetzt gleich Pixadex integrier
 
 Ich überlege mir von einem webbasierenden GTD-Werkzeug auf eine OS X Lösung umzusteigen und teste drei Wochen lang [Things](https://culturedcode.com/things/) und [OmniFocus](https://www.omnigroup.com/omnifocus/) zugleich.
 
-Doch schon nach 14 Tagen steht für mich eigentlich fest: <cite>Things</cite> ist der Testsieger. Obwohl es derzeit noch weniger Funktionen als OmniFocus hat, fühlt es sich einfach *besser* an.
+Doch schon nach 14 Tagen steht für mich eigentlich fest: <cite>Things</cite> ist der Testsieger. Obwohl es derzeit noch weniger Funktionen als OmniFocus hat, fühlt es sich einfach _besser_ an.
 
 Irgendwie kann ich es nicht lassen und kaufe mir einen [iPod touch](https://www.apple.com/de/ipod-touch/), den ich mit <cite>Jailbreak</cite> befreien will, was aber erstmal nicht klappt, weil Apple ein Update rausbringt, das die Sicherheitslücke schließt.
 

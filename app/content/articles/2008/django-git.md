@@ -1,12 +1,12 @@
 ---
-language: "de"
-title: "2008 war Django (und Git)"
-description: "Mein persönlicher Jahresrückblick für 2008: Ich kaufe mir einen iPod Touch, beschäftige mich intensiv mit Django, Kündige bei Media Temple, bringe meine Martial Arts Website kogakure.de mit Django online."
-author: "Stefan Imhoff"
-slug: "django-git"
+draft: true
+language: de
+title: '2008 war Django (und Git)'
+description: 'Mein persönlicher Jahresrückblick für 2008: Ich kaufe mir einen iPod Touch, beschäftige mich intensiv mit Django, Kündige bei Media Temple, bringe meine Martial Arts Website kogakure.de mit Django online.'
+author: Stefan Imhoff
+slug: django-git
 date: 2008-12-23T15:00:00+02:00
-categories:
-- personal
+categories: ['personal']
 ---
 
 Wie jedes Jahr ist es so kurz vor dem Jahreswechsel mal wieder Zeit um zu schauen, was in 2008 so auf dem Plan stand. Dafür habe ich, um mein Gedächtnis aufzufrischen, wieder Google History zur Hilfe herangezogen.
@@ -118,8 +118,8 @@ Im Juni installiere ich mir auch [Ubuntu] in einer Parallels-Partition, um mal m
 
 Ich versuche einige Abteilungen im Hause mal dazu zu bewegen, [CVS] vielleicht langsam einzumotten. Natürlich erfolglos.
 
-* **Die**: <q>Wir können nicht wechseln, wir dürfen unsere History nicht verlieren</q>.
-* **Ich**: <q>Schon mal was von Git-CVS gehört?</q>
+- **Die**: <q>Wir können nicht wechseln, wir dürfen unsere History nicht verlieren</q>.
+- **Ich**: <q>Schon mal was von Git-CVS gehört?</q>
 
 Wir setzten ja in unserer Abteilung immerhin schon [Subversion] ein.
 

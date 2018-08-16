@@ -1,11 +1,11 @@
 ---
-language: "de"
-title: "Impressum"
-description: "Das Impressum mit Ansprechpartner, Rechtshinweisen, Datenschutzhinweisen und Quellenangaben zu verwendeten Grafiken und Fotos."
-author: "Stefan Imhoff"
+language: de
+title: 'Impressum'
+description: 'Das Impressum mit Ansprechpartner, Rechtshinweisen, Datenschutzhinweisen und Quellenangaben zu verwendeten Grafiken und Fotos.'
+author: Stefan Imhoff
 date: 2013-12-17T09:12:00+02:00
 updated: 2015-10-14T18:00:00+02:00
-robots: "noindex,follow"
+robots: 'noindex,follow'
 sitemap_exclude: true
 ---
 
@@ -66,12 +66,12 @@ Die nachfolgende Erklärung gibt Ihnen einen Überblick darüber, wie ich diesen
 
 stefanimhoff.de erhebt und speichert automatisch in ihren Server Log Files Informationen, die Ihr Browser an mich übermittelt. Dies sind unter anderem:
 
-* Browsertyp/-version
-* verwendetes Betriebssystem
-* Referrer URL (die zuvor besuchte Seite)
-* Hostname des zugreifenden Rechners (IP-Adresse)
-* Uhrzeit der Serveranfrage.
-* Diese Daten sind für mich nicht bestimmten Personen zuordenbar. Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen.
+- Browsertyp/-version
+- verwendetes Betriebssystem
+- Referrer URL (die zuvor besuchte Seite)
+- Hostname des zugreifenden Rechners (IP-Adresse)
+- Uhrzeit der Serveranfrage.
+- Diese Daten sind für mich nicht bestimmten Personen zuordenbar. Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen.
 
 Diese Website benutzt Google Analytics, einen Webanalysedienst der Google Inc. („Google“). Google Analytics verwendet sogenannte „Cookies“, Textdateien, die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung der Website durch Benutzer ermöglicht. Die durch den Cookie erfassten Informationen über die Benutzung dieser Website wird an einen Server von Google in den USA übertragen und dort gespeichert. Google wird diese Informationen nutzen, um die Nutzung der Website auszuwerten und Berichte über die Website-Aktivitäten für den Website-Betreiber zusammenzustellen. Auch wird Google diese Informationen gegebenenfalls an Dritte übertragen, sofern dies gesetzlich vorgeschrieben oder soweit Dritte diese Daten im Auftrag von Google verarbeiten. Google wird in keinem Fall Ihre IP-Adresse mit anderen Daten von Google in Verbindung bringen. Sie können die Installation der Cookies durch eine entsprechende Einstellung Ihrer Browser-Software verhindern. Durch die Nutzung dieser Website erklären Sie sich mit der Bearbeitung der über Sie erhobenen Daten durch Google in der zuvor beschriebenen Art und Weise und zu dem zuvor benannten Zweck einverstanden.
 

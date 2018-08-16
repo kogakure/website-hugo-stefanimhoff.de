@@ -1,21 +1,21 @@
 ---
 title: I wrote a book in GitBook
-slug: "i-wrote-a-book-in-gitbook"
+slug: gitbook
 date: 2017-06-27T16:16:34+02:00
-description: "I just finished writing my first book in GitBook. I worked on it the last six month and it’s available to read online, as PDF, ePub and Mobi."
-author: "Stefan Imhoff"
-language: "en"
-og_image: "assets/images/articles/2017/i-wrote-a-book-in-gitbook/gitbook-kogakure.jpg"
-categories: ["personal", "book"]
-download_url: "https://www.gitbook.com/book/kogakure/book-kogakure/details"
-download_text: "Read online or download (PDF, ePub, Mobi) version of the book"
+description: 'I just finished writing my first book in GitBook. I worked on it the last six month and it’s available to read online, as PDF, ePub and Mobi.'
+author: Stefan Imhoff
+language: en
+og_image: 'assets/images/articles/2017/i-wrote-a-book-in-gitbook/gitbook-kogakure.jpg'
+categories: ['personal', 'book']
+download_url: 'https://www.gitbook.com/book/kogakure/book-kogakure/details'
+download_text: 'Read online or download (PDF, ePub, Mobi) version of the book'
 ---
 
 I just finished writing my first book. I worked on it the last six month. Actually I didn’t wrote it recently, but in the period of 18 years.
 
 [![GitBook: kogakure](/assets/images/articles/2017/i-wrote-a-book-in-gitbook/gitbook-kogakure.jpg)](https://book.kogakure.de/)
 
-It was always available for *free* for everyone on [my website](https://kogakure.de/). I started writing it 1999 with my first website, containing a collection of notes and thoughts about **Ninja** and their art, **Ninjutsu**.
+It was always available for _free_ for everyone on [my website](https://kogakure.de/). I started writing it 1999 with my first website, containing a collection of notes and thoughts about **Ninja** and their art, **Ninjutsu**.
 
 I never indented writing a book, but was asked regularly by visitors of my website, why I didn’t write a book. It was out of question to write some commercial book, because some of the articles on my website are translations of Peter Carlsson, who gave me permission to use the translated version on my website (unfortunately the original is gone).
 
@@ -33,7 +33,7 @@ If you’re a software developer, you can probably skip this section. Git is a v
 
 ## Git and Markdown
 
-A book is in it’s basic form just text with some basic formatting (*italics*, **bold**, quotes, …). I could write my book in Word or some other proprietary software. But then I need to buy a software, which allows editing the format.
+A book is in it’s basic form just text with some basic formatting (_italics_, **bold**, quotes, …). I could write my book in Word or some other proprietary software. But then I need to buy a software, which allows editing the format.
 
 The files would be most likely saved in some binary format, some local database or a mixture of text and binary format. This makes it hard to track changes over time (unless the tool provides some history functionality). And even then creating alternative versions would mean to duplicate the Word file. Integration of my changes back would be hard or even impossible.
 
@@ -47,7 +47,7 @@ GitBook provides even it’s own editor: [GitBook Editor](https://www.gitbook.co
 
 ## What I’ve learned
 
-It was really fun writing the book in my favorite text editor and *push* (send on a server) my changes to my GitHub *repository* (project container). GitBook supports Markdown or AsciiDoc to write text in, supports multiple languages, covers, plugins, a glossary, a nice theme and much more. It provides a search out of the box. I ran the local GitBook server and while writing the book could always see the end result in my browser.
+It was really fun writing the book in my favorite text editor and _push_ (send on a server) my changes to my GitHub _repository_ (project container). GitBook supports Markdown or AsciiDoc to write text in, supports multiple languages, covers, plugins, a glossary, a nice theme and much more. It provides a search out of the box. I ran the local GitBook server and while writing the book could always see the end result in my browser.
 
 There are over [600 plugins for GitBook](https://plugins.gitbook.com/) available, but I use only a few (e. g. hint boxes, BibTex support).
 
@@ -57,7 +57,7 @@ Firstly, because it doesn’t support any special characters, so non-english lan
 
 Secondly, the page rendering gets so slow, you can’t work any more. This is a known [issue](https://github.com/GitbookIO/gitbook/issues/1497) and might be fixed in the future. The more often the term occures on a page, the slower the rendering gets.
 
-And it’s visually not appealing, because every occurrence of a word gets underlined, not just the first mention in a text. And I used the word *Ninja* a lot.
+And it’s visually not appealing, because every occurrence of a word gets underlined, not just the first mention in a text. And I used the word _Ninja_ a lot.
 
 GitBook provides a discussion feature and change requests, which make collaborative working probably quite nice (didn’t use it yet). As the book owner you have access to some statistics, can decide if you want to provide E-Books (PDF, MOBI, EPUB), allow discussions and inline comments (a nice feature to mark typos or grammar errors). You can add collaborators to work with multiple authors at the same book.
 
@@ -65,7 +65,7 @@ GitBook is not only good for books, but also to write documentation for anything
 
 ## What’s in my book?
 
-First thing: The book is *only* in **German** available 😒 (I’m really sorry and always open to translation offers). I reviewed every sentence of the website for the book and changed some parts of it.
+First thing: The book is _only_ in **German** available 😒 (I’m really sorry and always open to translation offers). I reviewed every sentence of the website for the book and changed some parts of it.
 
 I reordered sections and replaced some of the images with better versions (when possible vector images) and added some new images. I would have liked to replace all images of weapons, tools and techniques, but I couldn’t find the original colored versions of all images or the 3D data on my hard disc. Any skilled illustrator around wanting to contribute to the Open Source project?
 

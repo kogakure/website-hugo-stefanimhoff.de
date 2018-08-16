@@ -1,11 +1,12 @@
 ---
-language: "de"
-title: "ProVoc – Vokabeln lernen unter Mac OS X"
+draft: true
+language: de
+title: 'ProVoc – Vokabeln lernen unter Mac OS X'
 description: "Wer Fremdsprachen lernen möchte, muss Vokabeln lernen. Aber womit lernt man am besten? Mit der kostenlosen Software 'ProVoc' lernt es sich unter Mac OS X ziemlich gut."
-author: "Stefan Imhoff"
-slug: "provoc-vokabeln-lernen-unter-mac-os-x"
+author: Stefan Imhoff
+slug: provoc-vokabeln-lernen-unter-mac-os-x
 date: 2007-11-16T07:00:00+02:00
-categories: ["recommendation", "software"]
+categories: ['recommendation', 'software']
 ---
 
 Heute möchte ich eine wirklich feine Software vorstellen, die sich für alle, die irgendetwas lernen möchten, fantastisch eignet: <cite>ProVoc</cite>.
@@ -18,7 +19,7 @@ Die Oberfläche von ProVoc ist in verschiedenen Sprachen verfügbar, darunter au
 
 Die Vokabeln können komfortabel in Kapiteln und Lektionen abgelegt werden, mit Synonymen und Kommentaren, sowie verschiedenen Medientypen aufgebessert.
 
-So kann man auch Bild, Ton und Video in seine Vokabeln einbinden, und so z. B. die korrekte Aussprache eines Wortes gleich mit einbinden, Gebärdensprache vorführen oder Bilder verschiedener Wolkenarten hinterlegen. Aus den Beispielen der Hersteller kann man schon entnehmen, dass diese Software über das Nutzen *bloßer Vokabeln* weit hinausgeht.
+So kann man auch Bild, Ton und Video in seine Vokabeln einbinden, und so z. B. die korrekte Aussprache eines Wortes gleich mit einbinden, Gebärdensprache vorführen oder Bilder verschiedener Wolkenarten hinterlegen. Aus den Beispielen der Hersteller kann man schon entnehmen, dass diese Software über das Nutzen _bloßer Vokabeln_ weit hinausgeht.
 
 Doppelte Vokabeln lassen sich durch einen Menüpunkt leicht finden und löschen.
 

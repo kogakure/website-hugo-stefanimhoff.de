@@ -3,7 +3,7 @@ title           = "Stefan Imhoff"
 languageCode    = "en"
 metaDataFormat  = "yaml"
 paginate        = 0
-buildDrafts     = true
+buildDrafts     = false
 buildFuture     = true
 disableKinds    = ["404"]
 enableRobotsTXT = true
@@ -24,7 +24,7 @@ themesdir     = "app/themes"
   extensions      = [""]
 
 [permalinks]
-  articles = "/:year/:slug/"
+  articles = "/:slug/"
 
 [taxonomies]
   category = "categories"

@@ -24,7 +24,7 @@ themesdir     = "app/themes"
   extensions      = [""]
 
 [permalinks]
-  articles = "/:year/:slug/"
+  articles = "/:slug/"
 
 [taxonomies]
   tag      = "tags"

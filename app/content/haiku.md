@@ -1,9 +1,9 @@
 ---
-title: "Haiku"
-language: "de"
-author: "Stefan Imhoff"
+title: 'Haiku'
+language: de
+author: Stefan Imhoff
 date: 2014-02-09T09:01:00+02:00
-description: "Haiku ist eine traditionelle japanische Gedichtsform. Diese Seite bietet eine Sammlung meiner eigenen Haiku."
+description: 'Haiku ist eine traditionelle japanische Gedichtsform. Diese Seite bietet eine Sammlung meiner eigenen Haiku.'
 body_class: haiku
 ---
 

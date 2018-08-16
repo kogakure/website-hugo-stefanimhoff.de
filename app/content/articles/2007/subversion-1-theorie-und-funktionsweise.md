@@ -1,15 +1,16 @@
 ---
-language: "de"
-title: "Subversion 1: Theorie und Funktionsweise"
-description: "Ein umfangreiches Tutorial für Subversion: Was ist Versionskontrolle? Theorie und Funktionsweise von Subversion."
-author: "Stefan Imhoff"
-slug: "subversion-1-theorie-und-funktionsweise"
+draft: true
+language: de
+title: 'Subversion 1: Theorie und Funktionsweise'
+description: 'Ein umfangreiches Tutorial für Subversion: Was ist Versionskontrolle? Theorie und Funktionsweise von Subversion.'
+author: Stefan Imhoff
+slug: subversion-1-theorie-und-funktionsweise
 date: 2007-05-28T18:04:00+02:00
-series: ["subversion"]
-categories: ["vcs"]
+series: ['subversion']
+categories: ['vcs']
 ---
 
-Dieser erste Teil der Reihe *Subversion* beschäftigt sich mit der nötigen Theorie und Funktionsweise von Subversion.
+Dieser erste Teil der Reihe _Subversion_ beschäftigt sich mit der nötigen Theorie und Funktionsweise von Subversion.
 
 ## Was ist Versionskontrolle?
 
@@ -41,7 +42,7 @@ Dabei kann folgendes passieren:
 
 1. **Die Änderungen der anderen Person betrafen eine andere Stelle in der Datei:**
 
-   Dann merkt man nicht einmal etwas, Subversion fügt die Änderungen in die  eigene Datei ein.
+   Dann merkt man nicht einmal etwas, Subversion fügt die Änderungen in die eigene Datei ein.
 
 2. **Die Änderungen überschneiden sich:**
 

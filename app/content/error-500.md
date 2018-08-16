@@ -1,8 +1,8 @@
 ---
 layout: error
 title: Server Error!
-url: "/error/500/"
-robots: "noindex,follow"
+url: '/error/500/'
+robots: 'noindex,follow'
 body_class: error
 sitemap_exclude: true
 ---
