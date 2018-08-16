@@ -5,7 +5,7 @@ date: 2017-06-27T16:16:34+02:00
 description: 'I just finished writing my first book in GitBook. I worked on it the last six month and it’s available to read online, as PDF, ePub and Mobi.'
 author: Stefan Imhoff
 language: en
-og_image: 'assets/images/articles/2017/i-wrote-a-book-in-gitbook/gitbook-kogakure.jpg'
+og_image: 'assets/images/articles/2017/gitbook/gitbook-kogakure.jpg'
 categories: ['personal', 'book']
 download_url: 'https://www.gitbook.com/book/kogakure/book-kogakure/details'
 download_text: 'Read online or download (PDF, ePub, Mobi) version of the book'
@@ -13,7 +13,7 @@ download_text: 'Read online or download (PDF, ePub, Mobi) version of the book'
 
 I just finished writing my first book. I worked on it the last six month. Actually I didn’t wrote it recently, but in the period of 18 years.
 
-[![GitBook: kogakure](/assets/images/articles/2017/i-wrote-a-book-in-gitbook/gitbook-kogakure.jpg)](https://book.kogakure.de/)
+[![GitBook: kogakure](/assets/images/articles/2017/gitbook/gitbook-kogakure.jpg)](https://book.kogakure.de/)
 
 It was always available for _free_ for everyone on [my website](https://kogakure.de/). I started writing it 1999 with my first website, containing a collection of notes and thoughts about **Ninja** and their art, **Ninjutsu**.
 

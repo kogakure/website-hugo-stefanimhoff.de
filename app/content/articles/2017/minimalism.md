@@ -5,7 +5,7 @@ slug: minimalism
 author: Stefan Imhoff
 date: 2017-06-07T18:30:00+02:00
 description: 'As Minimalism is currently very popular, but as Minimalism is hard to understand, also a lot of misconceptions can be found. This article carries my thoughts on Minimalism and my history with it.'
-og_image: 'assets/images/articles/2017/pursuit-of-minimalism/minimalism-office.jpg'
+og_image: 'assets/images/articles/2017/minimalism/minimalism-office.jpg'
 categories: ['personal', 'recommendation']
 ---
 
@@ -26,7 +26,7 @@ Real Minimalism is **not glamorous**, it’s **humble** and a result of **deep m
 Critics of Minimalism describe it as cold, empty, without personality. People following Minimalism would deny their past or prove their inability for connection to other people. It would be a hopeless attempt to control the life, as Linda Tutmann described Minimalism in her ZEIT article [Alles mein](http://www.zeit.de/2017/06/besitz-minimalismus-dinge-erinnerungen-besitztum).
 
 <figure class="image-figure">
-  <img src="/assets/images/articles/2017/pursuit-of-minimalism/minimalism-office.jpg" alt="My Minimalist home office" title="Sorry, it doesn’t look cold, empty and without personality. I failed as a Minimalist.">
+  <img src="/assets/images/articles/2017/minimalism/minimalism-office.jpg" alt="My Minimalist home office" title="Sorry, it doesn’t look cold, empty and without personality. I failed as a Minimalist.">
   <figcaption>
     Sorry, it doesn’t look cold, empty and without personality. I failed as a Minimalist.
   </figcaption>
@@ -71,7 +71,7 @@ The next thing which influenced me was surely the book and movie [Fight Club](ht
 
 The next step was probably reading David Allens book [Gettings Things Done (GTD)](http://www.amazon.de/gp/product/0143126563?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=0143126563), which is a productivity system, but at it’s beginning is some inventory of your stuff. This way I got rid of a lot of stuff for the first time.
 
-![My office stuff before cleaning up](/assets/images/articles/2017/pursuit-of-minimalism/gtd-vorher.jpg)
+![My office stuff before cleaning up](/assets/images/articles/2017/minimalism/gtd-vorher.jpg)
 
 The exhibition [LEVEL GREEN](https://www.autostadt.de/en/explore-the-autostadt/groupforum/level-green) in Autostadt Wolfsburg introduced me first in a differently drastic way into the concept of sustainability. People could learn, by answering some questions about how they lived, how big their own impact on the earth was. To maintain my lifestyle from back then, it would need 1.8 planets Earth. This changed my idea on how to live responsibly a lot.
 
@@ -83,7 +83,7 @@ In the last years I changed my ideas of how to life in many ways:
 
 I cleaned my whole flat of things I didn’t like or needed any more. It took me three days to clean my basement from packages, cables and technical waste, which I acquired over the period of 10 years.
 
-![Cleanup of my cellar](/assets/images/articles/2017/pursuit-of-minimalism/minimalism-cleanup-cellar.jpg)
+![Cleanup of my cellar](/assets/images/articles/2017/minimalism/minimalism-cleanup-cellar.jpg)
 
 I gave more than 150 books away (I still own 763) and sold my car. I use the subway, bus, car sharing and train to commute or travel.
 
@@ -107,7 +107,7 @@ I switched to green energy some years ago, buy whenever possible organic food an
 
 When I was young I always wanted a big, big house (preferably on some remote private island). But living in a small space is quite helpful for a Minimalist. It forces you to make decisions in your own interest. I live on 51 m², and this is enough space for 1-2 people. That’s why I think twice if I really need to buy something. I like the concepts of small space living, but I’m happy to have a separate bedroom. This is much more relaxing, because of different temperatures in living and sleeping area. And I do not keep electronics in my bedroom.
 
-![My Minimalist living room](/assets/images/articles/2017/pursuit-of-minimalism/minimalism-living.jpg)
+![My Minimalist living room](/assets/images/articles/2017/minimalism/minimalism-living.jpg)
 
 ### On Digital Minimalism
 

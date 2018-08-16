@@ -5,14 +5,14 @@ description: 'Ich arbeite seit 1,5 Jahren mit GTD (Getting Things Done): Eine Ei
 author: Stefan Imhoff
 slug: gtd
 date: 2007-11-24T01:15:00+02:00
-og_image: 'assets/images/articles/2007/eineinhalb-jahre-gtd-eine-billanz/gtd-vorher.jpg'
+og_image: 'assets/images/articles/2007/gtd/gtd-before.jpg'
 categories: ['productivity']
 ---
 
 Seit genau eineinhalb Jahren benutze ich jetzt die Prinzipien des _GTD_ (<em>Getting Things Done</em>®), nach dem gleichnamigen Buch von _David Allen_ um meine alltäglichen Aufgaben zu organisieren.
 
 <figure class="image-figure">
-  <img src="/assets/images/articles/2007/eineinhalb-jahre-gtd-eine-billanz/gtd-vorher.jpg" alt="Mein Schreibtisch vorher" title="So sah die Inbox aus, bevor ich alle losen Enden sortiert hatte">
+  <img src="/assets/images/articles/2007/gtd/gtd-before.jpg" alt="Mein Schreibtisch vorher" title="So sah die Inbox aus, bevor ich alle losen Enden sortiert hatte">
   <figcaption>
   So sah die Inbox aus, bevor ich alle losen Enden sortiert hatte
   </figcaption>
@@ -43,7 +43,7 @@ Aufgaben kann man auch delegieren oder bestimmten Zeitpunkten zuweisen. Wenn man
 ## GTD im Alltag
 
 <figure class="image-figure">
-  <img src="/assets/images/articles/2007/eineinhalb-jahre-gtd-eine-billanz/gtd-nachher.jpg" alt="Mein Schreibtisch danach" title="So sah die Inbox aus, nachdem ich alle losen Enden sortiert hatte">
+  <img src="/assets/images/articles/2007/gtd/gtd-after.jpg" alt="Mein Schreibtisch danach" title="So sah die Inbox aus, nachdem ich alle losen Enden sortiert hatte">
   <figcaption>
   So sah die Inbox aus, nachdem ich alle losen Enden sortiert hatte
   </figcaption>

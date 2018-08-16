@@ -6,14 +6,14 @@ date: 2017-11-03T08:00:00+01:00
 description: 'A guide on how to get your attention back in the age of constant distraction.'
 excerpt: 'How to win back our time and minds. ❦ It’s been a while since I first started questioning my own behaviour with technology, but also of all of us in general. The Internet has given us an endless stream of information, nearly every  question answered in seconds. It has given us more music to hear, more texts to read, more images to look at, more movies to watch than one could ever consume in thousands of years.'
 author: Stefan Imhoff
-og_image: 'assets/images/articles/2017/self-defence-age-of-attention/self-defence-age-of-attention.jpg'
+og_image: 'assets/images/articles/2017/attention/attention.jpg'
 categories: ['personal']
 ---
 
 <figure class="image-figure">
-  <img src="/assets/images/articles/2017/self-defence-age-of-attention/self-defence-age-of-attention.jpg" alt="man on a smartphone">
+  <img src="/assets/images/articles/2017/attention/attention.jpg" alt="man on a smartphone">
   <figcaption>
-    This story was also published on <a href="https://medium.com/on-advertising/self-defence-age-of-attention-c4c0e86e1b9d" target="_blank" rel="nofollow" rel="noopener">On Advertising</a> and featured by Medium.
+    This story was also published on <a href="https://medium.com/on-advertising/attention-c4c0e86e1b9d" target="_blank" rel="nofollow" rel="noopener">On Advertising</a> and featured by Medium.
   </figcaption>
 </figure>
 
@@ -85,7 +85,7 @@ These are some of the things I did in the last few years to strengthen my awaren
 - **I try to not use my headphones in the subway**. When I’m reading I can practise to focus on the book and not on my surrounding. Sometimes I intentionally do nothing but just focus on the people in the subway.
 - **I read a lot about the brain and it’s weaknesses**. If you know all the biases and fallacies you are less likely to be a victim of them.
 - **I read a lot about habit forming, addiction and multitasking** (which is not possible in humans). I try to do as often as possible intentional single-tasking: Just reading, just eating, just watching a TV show, without the distraction of multiple other things at the same time.
-- **I started living a [Minimalist](https://stefanimhoff.de/2017/pursuit-of-minimalism/) life**. Less stuff means less distraction and more attention to the things, which matter to you.
+- **I started living a [Minimalist](https://stefanimhoff.de/2017/minimalism/) life**. Less stuff means less distraction and more attention to the things, which matter to you.
 - **I watch and consume intentionally positive, inspiring, creative and uprising** videos or texts (e. g. [TED Talks](https://www.ted.com/)), to change the ratio of positive to negative messages I hear about.
 
 ## Prevention

@@ -159,7 +159,7 @@ Redirect Gone /2009/git-praesentation/
 Redirect 301  /2010/buchtipp-rework-37signals/                                     /rework/
 Redirect Gone /2010/appletv-leihfilme-itunes/
 Redirect Gone /2010/geloeste-django-probleme/
-Redirect 301  /2010/webstandards-magazin-django/                                   /webstandards-magazin-django/
+Redirect 301  /2010/webstandards-magazin-django/                                   /webstandards-magazine-django/
 Redirect Gone /2010/auto-complete-im-terminal/
 Redirect 301  /2010/vim/                                                           /vim/
 Redirect Gone /2010/jahresrueckblick/

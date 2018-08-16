@@ -5,7 +5,7 @@ categories:
 date: '2015-05-19T21:45:00+00:00'
 description: 'Learning Body Weight Training is possible for everybody. It’s free, you can do it anywhere, you need no gym or expensive equipment to train and you can improve constantly.'
 language: en
-og_image: 'assets/images/articles/2015/getting-started-with-body-weight-training/calisthenics-human-flag.jpg'
+og_image: 'assets/images/articles/2015/calisthenics/calisthenics-human-flag.jpg'
 slug: calisthenics
 title: Getting Started with Body Weight Training
 ---
@@ -13,7 +13,7 @@ title: Getting Started with Body Weight Training
 I’m doing body weight training for almost a year now and really like it. It’s free, you can do it anywhere, all you need is something to push from and to pull to, and it’s fun.
 
 <figure class="image-figure">
-<img src="/assets/images/articles/2015/getting-started-with-body-weight-training/calisthenics-human-flag.jpg" alt="Human Flag">
+<img src="/assets/images/articles/2015/calisthenics/calisthenics-human-flag.jpg" alt="Human Flag">
 <figcaption>
 Human Flag
 </figcaption>
@@ -37,7 +37,7 @@ And reading more about these extreme sports I found out they come with the dange
 Body weight training is also called **Street Workout**, **Ghetto Fitness** or **Calisthenics**. The word **Calisthenics** comes from the greek words καλός (kalos), which means **beautiful** and σθένος (sthenos), which means **strength**.
 
 <figure class="image-figure">
-<img src="/assets/images/articles/2015/getting-started-with-body-weight-training/calisthenics-arm-elbow-lever.jpg" alt="Arm Elbow Lever on Beer Bottles">
+<img src="/assets/images/articles/2015/calisthenics/calisthenics-arm-elbow-lever.jpg" alt="Arm Elbow Lever on Beer Bottles">
 <figcaption>Arm Elbow Lever on Beer Bottles</figcaption>
 </figure>
 
@@ -82,7 +82,7 @@ To reach a big goal like doing a **Human Flag** (which I haven’t reached jet) 
 I keep track of my workouts in a diary and can easily see the training days in a calendar, to see if I missed too often.
 
 <figure class="image-figure">
-<img src="/assets/images/articles/2015/getting-started-with-body-weight-training/calisthenics-best-dad-ever.jpg" alt="Man doing a Pull-Up with 3 children as additional weight">
+<img src="/assets/images/articles/2015/calisthenics/calisthenics-best-dad-ever.jpg" alt="Man doing a Pull-Up with 3 children as additional weight">
 <figcaption>
 Best dad ever. What is your excuse for not working out?
 </figcaption>

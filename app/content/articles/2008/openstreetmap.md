@@ -5,14 +5,14 @@ description: 'Einführung in OpenStreetMap, eine kostenlose OpenSource-Alternati
 author: Stefan Imhoff
 slug: openstreetmap
 date: 2008-09-06T18:59:00+02:00
-og_image: 'assets/images/articles/2008/kostenlose-vektorkarten-openstreetmap/openstreetmap.jpg'
+og_image: 'assets/images/articles/2008/openstreetmap/openstreetmap.jpg'
 categories: ['recommendation']
 ---
 
 Ich habe keine Ahnung, warum dieses Juwel so lange unbemerkt von mir bleiben konnte, aber gestern hat mich ein Kollege auf den Kartendienst OpenStreetMap hingewiesen. Ähnlich wie bei Wikipedia wird dort von vielen Benutzern eine für jeden kostenlos verfügbare Karte zusammengetragen.
 
 <figure class="image-figure image-figure-border">
-  <img src="/assets/images/articles/2008/kostenlose-vektorkarten-openstreetmap/openstreetmap.jpg" alt="Die Autostadt Wolfsburg mit OpenStreetMap">
+  <img src="/assets/images/articles/2008/openstreetmap/openstreetmap.jpg" alt="Die Autostadt Wolfsburg mit OpenStreetMap">
   <figcaption>
   Die Autostadt Wolfsburg mit OpenStreetMap
   </figcaption>

@@ -16,7 +16,7 @@ After running over 2 years with [Jekyll](https://jekyllrb.com/) I recently repla
 I did this mainly because of two reasons: _Firstly_, Jekyll ist just **too slow** (because Ruby is slow). The site generation takes forever, with tags and category generation it gets even worse. I had to limit the amount of generated pages to 5 during development, to have a nearly instant update of the stuff I write. And my blog has just around 80 articles. I’ve read stories of large sites, where the generation takes hours. _Secondly_ I wanted to stop updating Node packages _and_ Gems (one ecosystem is enough).
 
 <figure class="image-figure image-figure-noborder">
-  <img src="/assets/images/articles/2016/hugo-jekyll-migration/hugo.png" alt="Hugo Logo">
+  <img src="/assets/images/articles/2016/jekyll-hugo-migration/hugo.png" alt="Hugo Logo">
 </figure>
 
 ## Researching the options
