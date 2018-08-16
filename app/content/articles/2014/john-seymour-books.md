@@ -9,7 +9,7 @@ description: 'On John Seymour’s fantastic, beautifully illustrated books on se
 categories: ['book', 'recommendation']
 ---
 
-My earliest memories of books are that I lie on my parents’ soft carpet on my stomach in the living room and read in the <cite> Atlas of World History </cite> or in the books of _John Seymour_. Who was John Seymour and why did his books remain so in my memory?
+My earliest memories of books are that I lie on my parents’ soft carpet on my stomach in the living room and read in the <cite>Atlas of World History</cite> or in the books of _John Seymour_. Who was John Seymour and why did his books remain so in my memory?
 
 ## John Seymour
 
@@ -18,7 +18,7 @@ Geboren 1914 in England, kam er dann in der Schweiz auf ein Internat und begann 
 <figure class="image-figure">
   <img src="/assets/images/articles/2014/john-seymour-books/john-seymour-illustration.jpg" alt="Illustration of cereals">
   <figcaption>
-    Illustration of cereals from one of John Seymour’s books
+  Illustration of cereals from one of John Seymour’s books
   </figcaption>
 </figure>
 
