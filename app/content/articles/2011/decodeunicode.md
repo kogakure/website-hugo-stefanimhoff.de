@@ -9,7 +9,7 @@ og_image: 'assets/images/articles/2011/decodeunicode/decodeunicode.jpg'
 categories: ['recommendation', 'book', 'typography']
 ---
 
-By chance, I recently came across a book that is a buy tip for anyone interested in typography and characters. The book is 656 pages thick, contains all of the current 109,242 digital characters of the Unicode character set and weighs almost 2 kilograms.
+By chance, I recently came across a book that is a buy recommendation for anyone interested in typography and characters. The book is 656 pages thick, contains all of the current 109,242 digital characters of the Unicode character set and weighs almost 2 kilograms.
 
 <figure class="image-figure">
   <a href="http://www.amazon.de/gp/product/3874398137/ref=as_li_ss_tl?ie=UTF8&amp;tag=kogakurede-21&amp;linkCode=as2&amp;camp=1638&amp;creative=19454&amp;creativeASIN=3874398137">
