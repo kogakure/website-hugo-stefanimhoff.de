@@ -1,35 +1,41 @@
 ---
-language: de
-title: 'Buchtipp: Decodeunicode *'
-description: "Buch-Empfehlung für alle, die an Schrift und Zeichen interessiert sind: 'decodeunicode – Die Schriftzeichen der Welt'. 656 Seiten dick, fast 2 kg schwer und mit allen 109.242 aktuellen Zeichen des Unicode-Zeichensatzes."
-author: Stefan Imhoff
+language: en
+title: 'Recommended Reading: Decodeunicode'
 slug: decodeunicode
+description: "Book recommendation for those who are interested in writing and characters: 'decodeunicode - Die Schriftzeichen der Welt'. 656 pages thick, almost 2 kg heavy and with all 109,242 current characters of the Unicode character set."
+author: Stefan Imhoff
 date: 2011-06-02T18:38:00+02:00
 og_image: 'assets/images/articles/2011/decodeunicode/decodeunicode.jpg'
 categories: ['recommendation', 'book', 'typography']
 ---
 
-Durch Zufall bin ich kürzlich auf ein Buch gestoßen, dass für alle an Typographie und Zeichen interessierten ein Kauftipp ist. Das Buch ist 656 Seiten stark, enthält alle derzeitigen 109.242 digitalen Schriftzeichen des Unicode-Zeichensatzes und wiegt fast 2 Kilogramm.
+By chance, I recently came across a book that is a buy tip for anyone interested in typography and characters. The book is 656 pages thick, contains all of the current 109,242 digital characters of the Unicode character set and weighs almost 2 kilograms.
 
 <figure class="image-figure">
   <a href="http://www.amazon.de/gp/product/3874398137/ref=as_li_ss_tl?ie=UTF8&amp;tag=kogakurede-21&amp;linkCode=as2&amp;camp=1638&amp;creative=19454&amp;creativeASIN=3874398137">
-    <img src="/assets/images/articles/2011/decodeunicode/decodeunicode.jpg" alt="Decodeunicode: Die Schriftzeichen der Welt">
+    <img src="/assets/images/articles/2011/decodeunicode/decodeunicode.jpg" alt="decodeunicode: Die Schriftzeichen der Welt">
   </a>
   <figcaption>
-  <cite>decodeunicode – Die Schriftzeichen der Welt</cite>
+  <cite>decodeunicode: Die Schriftzeichen der Welt</cite>
   </figcaption>
 </figure>
 
-Mit Unicode bin ich sehr früh in Kontakt gekommen, da ich die japanische Sprache überaus liebe. Als ich meine Kampfkunst-Website [kogakure.de](http://kogakure.de/) 2000 zum zweiten Mal neu gestaltete, hatte ich ein Lexikon mit japanischen Kampfkunst-Begriffen eingeführt und noch auf Grafiken für die japanischen Zeichen gesetzt. Dies war aber nicht zu warten und so habe ich bereits 2002 eine neue Version meines Lexikons mit Unicode veröffentlicht. Zu dieser Zeit war die Verbreitung von Unicode zwar noch irgendwo zwischen 0 und 1 %, doch ich bin trotzt einiger Proteste meiner Besucher dabei geblieben. Jeder der die Zeichen sehen wollte war gezwungen, sich von der Windows-CD den optionalen Zeichensatz zu installieren. Heute sind nach einer Auswertung von Google fast 50 % aller Websites in Unicode codiert.
+I came into contact with Unicode very early, because I love the Japanese language very much. When I redesigned my martial arts website [kogakure.de](http://kogakure.de/) for the second time in 2000, I introduced a lexicon of Japanese martial arts terms with a set of graphics for Japanese characters. But this was not to maintain and so I already published a new version of my lexicon with Unicode in 2002. At that time, the spread of Unicode was still somewhere between 0 and 1%, but I’ve been defying some of my visitors’ protests. Anyone who wanted to see the characters was forced to install the optional character set from the Windows CD. Today, according to an evaluation by Google almost 50% of all websites are encoded in Unicode.
 
-Die derzeitige Unicode-Version 2.0 unterstützt theoretische 1.114.112 Zeichen, wovon aber nur 109.242 bislang enthalten sind. Das vorliegende, sehr dicke Buch bietet Interessierten einen fantastischen Einblick in die Schriften dieser Welt. Das erste Kapitel befasst sich mit Unicode, seiner Entstehung, Struktur und Aufbau der Code-Tabellen, dem Aufnahmeverfahren für neue Zeichen, den verschiedenen Arten von Worten und Lauten, Typographie in der Politik, Keyboard-Layouts, Minderheiten-Schriften bis hin zu moderner Eingabe z. B. über das iPhone.
+The current Unicode version 2.0 supports theoretical 1,114,112 characters, of which only 109,242 are currently included. The present, very thick book offers those interested a fantastic insight into the writings of this world. The first chapter deals with Unicode, its creation, structure and structure of the code tables, the recording method for new characters, the different types of words and sounds, typography in politics, keyboard layouts, minority fonts and modern input e. g. via the iPhone.
 
-Auf den folgenden vielen hundert Seiten sind alle Zeichen aufgelistet, jeweils mit ihrem Code, ihrem Sprachnamen und der verwendeten Schriftart. Im Anhang finden sich zu jeder Schrift ausführliche Statistiken über Entstehung, Quellen, Zeitraum der Entstehung, Status, Region, Sprachen, Schriftrichtung, Schrifttyp und Anzahl der Menschen, die diese verwenden. Dort befinden sich auch die Sprachen, die noch nicht enthalten sind, denen aber Platz eingeräumt wurde, z. B. die Aztekischen Piktogramme, diverse afrikanische Sprachen, einige bislang nicht entzifferte, historische Sprachen oder auch Fantasiesprachen, wie die von J. R. R. Tolkien entwickelte Cirth. Das Buch ist mit zwei farbigen Lesezeichen (blau/grün) ausgestattet, so dass man immer zwischen den Zeichen und der ausführlichen Erklärung im Anhang wechseln kann.
+On the following hundreds of pages, all characters are listed, each with their code, language name, and font used. The appendix contains detailed statistics on the genesis, sources, period of creation, status, region, languages, type of writing, typeface and number of people who use them. There are also the languages that are not yet included, but where space was given, eg. For example, the Aztec pictograms, various African languages, some previously undeciphered, historical languages or even fantasy languages, such as the developed by J. R. R. Tolkien Cirth. The book is equipped with two colored bookmarks (blue / green), so you can always switch between the characters and the detailed explanation in the appendix.
 
-Besonders schön ist, dass ca. alle 5-10 Seiten eine farbige Doppelseite eingefügt ist, auf der die Autoren besonders schöne oder interessante Schriftzeichen vorstellen. Dieses Buch zeigt die Kreativität und Schönheit der Schriften vieler, verschiedener Völker und ist wunderbar geeignet, einfach hin- und wieder darin zu blättern.
+Especially nice is that about every 5-10 pages a colored double page is inserted, on which the authors introduce particularly beautiful or interesting characters. This book shows the creativity and beauty of the writings of many, diverse peoples, and is wonderfully suited to simply leafing through them again and again.
 
-- <a href="http://www.amazon.de/gp/product/3874398137/ref=as_li_ss_tl?ie=UTF8&amp;tag=kogakurede-21&amp;linkCode=as2&amp;camp=1638&amp;creative=19454&amp;creativeASIN=3874398137">Decodeunicode: Die Schriftzeichen der Welt</a>
-- **656** Seiten
-- **Verlag**: Schmidt (Hermann), Mainz; Auflage: 1 (15. Mai 2011)
-- **Sprache**: Deutsch
-- **Preis**: 68,00 €
+## The Website
+
+On the [official website](http://www.decodeunicode.org/) you can find a digital version in English language, which allows searching, browsing and exploring the world of Unicode, <q>even if you haven’t the matching font on your computer</q>. There is also a 2½ hour long movie showing all characters.
+
+## The Book
+
+- <a href="http://www.amazon.de/gp/product/3874398137/ref=as_li_ss_tl?ie=UTF8&amp;tag=kogakurede-21&amp;linkCode=as2&amp;camp=1638&amp;creative=19454&amp;creativeASIN=3874398137">decodeunicode: Die Schriftzeichen der Welt</a>
+- **656** pages
+- **Publisher**: Schmidt (Hermann), Mainz; Edition: 1 (15. Mai 2011)
+- **Language**: German
+- **Price**: 68.00 €
