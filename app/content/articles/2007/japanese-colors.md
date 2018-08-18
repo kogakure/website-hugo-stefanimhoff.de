@@ -1,6 +1,6 @@
 ---
 language: de
-title: 'Traditionelle, japanische Farben für Photoshop und Illustrator'
+title: 'Traditionelle, japanische Farben für Photoshop und Illustrator *'
 description: 'Traditionelle, japanische Farben als Farbpalette für Photoshop und Illustrator zum KOSTENLOSEN Download.'
 author: Stefan Imhoff
 slug: japanese-colors

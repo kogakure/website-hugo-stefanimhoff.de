@@ -1,6 +1,6 @@
 ---
 language: de
-title: 'HOME – Atemberaubende Dokumentation über unsere Erde'
+title: 'HOME – Atemberaubende Dokumentation über unsere Erde *'
 slug: home-documentary
 date: 2009-06-15T17:23:00+02:00
 author: Stefan Imhoff

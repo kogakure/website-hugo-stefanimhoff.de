@@ -1,6 +1,6 @@
 ---
 language: de
-title: 'Einstieg in Git als Versionskontrollsystem'
+title: 'Einstieg in Git als Versionskontrollsystem *'
 description: 'Eine umfangreiche Sammlung von Links zu Anleitungen, Tutorials, Screencasts und Dokumentationen zu Git.'
 author: Stefan Imhoff
 slug: git

@@ -1,6 +1,6 @@
 ---
 language: de
-title: 'Die Typographie meiner Website'
+title: 'Die Typographie meiner Website *'
 author: Stefan Imhoff
 slug: website-typography
 date: 2014-06-19T10:30:00+02:00

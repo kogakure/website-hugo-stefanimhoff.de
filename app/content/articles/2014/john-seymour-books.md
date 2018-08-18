@@ -1,5 +1,5 @@
 ---
-language: de
+language: en
 title: 'John Seymours Books on Self-Sufficiency'
 author: Stefan Imhoff
 slug: john-seymour-books

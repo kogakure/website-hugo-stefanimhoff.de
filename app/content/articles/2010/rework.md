@@ -1,6 +1,6 @@
 ---
 language: de
-title: 'Buchtipp: Rework von 37signals'
+title: 'Buchtipp: Rework von 37signals *'
 slug: rework
 date: 2010-04-27T16:30:00+02:00
 author: Stefan Imhoff

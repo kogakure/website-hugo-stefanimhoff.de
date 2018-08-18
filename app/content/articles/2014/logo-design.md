@@ -1,6 +1,6 @@
 ---
 language: en
-title: 'Die Gestaltung meines neuen Logos'
+title: 'Die Gestaltung meines neuen Logos *'
 author: Stefan Imhoff
 slug: logo-design
 date: 2014-04-18T19:00:00+02:00

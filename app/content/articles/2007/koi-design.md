@@ -1,6 +1,6 @@
 ---
 language: de
-title: 'Das Koi-Design: Inspiration und Idee'
+title: 'Das Koi-Design: Inspiration und Idee *'
 description: 'Irezumi (Japanische Tätorwierung) als Inspiration für meine Website und über die Entstehung meines Designs.'
 author: Stefan Imhoff
 slug: koi-design

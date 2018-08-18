@@ -1,6 +1,6 @@
 ---
 language: de
-title: 'Gitweb-Theme im GitHub-Stil'
+title: 'Gitweb-Theme im GitHub-Stil *'
 description: 'Mein beliebtes Theme für GitWeb zum kostenlosen Download. So sieht GitWeb GitHub etwas ähnlicher und ist nicht mehr so hässlich.'
 author: Stefan Imhoff
 slug: gitweb-theme

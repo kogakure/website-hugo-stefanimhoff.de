@@ -1,5 +1,5 @@
 ---
-title: How to speed up videos
+title: How to Speed Up Videos
 slug: speed-up-videos
 author: Stefan Imhoff
 date: 2016-09-03T14:15:19+02:00

@@ -1,6 +1,6 @@
 ---
 language: de
-title: 'Buchtipp: Decodeunicode'
+title: 'Buchtipp: Decodeunicode *'
 description: "Buch-Empfehlung für alle, die an Schrift und Zeichen interessiert sind: 'decodeunicode – Die Schriftzeichen der Welt'. 656 Seiten dick, fast 2 kg schwer und mit allen 109.242 aktuellen Zeichen des Unicode-Zeichensatzes."
 author: Stefan Imhoff
 slug: decodeunicode

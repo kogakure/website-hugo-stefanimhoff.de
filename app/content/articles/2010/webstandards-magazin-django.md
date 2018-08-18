@@ -1,6 +1,6 @@
 ---
 language: de
-title: 'Webstandards-Magazin: Artikel über Django'
+title: 'Webstandards-Magazin: Artikel über Django *'
 slug: webstandards-magazine-django
 date: 2010-09-21T09:25:00+02:00
 author: Stefan Imhoff

@@ -1,6 +1,6 @@
 ---
 language: de
-title: 'Automatisierte Installation für macOS'
+title: 'Automatisierte Installation für macOS *'
 author: Stefan Imhoff
 slug: brew-automatic-installation
 date: 2014-04-04T21:09:00+02:00

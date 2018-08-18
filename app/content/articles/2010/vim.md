@@ -1,6 +1,6 @@
 ---
 language: de
-title: 'Bei der Macht von Vim – ich habe die Kraft'
+title: 'Bei der Macht von Vim – ich habe die Kraft *'
 slug: vim
 date: 2010-10-29T19:00:00+02:00
 author: Stefan Imhoff
