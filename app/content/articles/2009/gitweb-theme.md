@@ -1,7 +1,7 @@
 ---
-language: de
-title: 'Gitweb-Theme im GitHub-Stil *'
-description: 'Mein beliebtes Theme für GitWeb zum kostenlosen Download. So sieht GitWeb GitHub etwas ähnlicher und ist nicht mehr so hässlich.'
+language: en
+title: 'Gitweb Theme in GitHub Style'
+description: 'My popular theme for GitWeb to download for free. Now GitWeb looks a bit more similar to GitHub and is not so ugly anymore.'
 author: Stefan Imhoff
 slug: gitweb-theme
 date: 2009-02-19T20:00:00+02:00
@@ -11,31 +11,25 @@ download_url: 'https://github.com/kogakure/gitweb-theme/'
 download_text: 'Gitweb Theme on GitHub'
 ---
 
-Das Standard-Theme von Gitweb ist wirklich nicht sehr ansprechend und scheinbar nur auf Funktionalität ausgelegt. Daher habe ich eine Alternative erstellt, die sich von der Gestaltung an GitHub anlehnt.
+The standard theme of Gitweb is really not very appealing and apparently designed only for functionality.
 
-Ich konnte die Oberfläche von Gitweb nicht mehr sehen. Daher habe ich mir einen Theme erstellt, der von der Gestaltung an GitHub erinnert.
+I could not stand it anymore. Therefore, I have created an alternative, which is based on the design of GitHub.
 
-Die genaue Anleitung zur Installation befindet sich mit im Paket auf GitHub.
-
-## English
-
-I couldn’t see the interface of Gitweb any longer. That’s why I created a theme which is strongly influenced by GitHub.
-
-Detailed instructions for installations are included in the package on GitHub.
+The exact installation instructions are included in the package on GitHub.
 
 ## Screenshots
 
 <figure class="image-figure image-figure-border">
-  <img src="/assets/images/articles/2009/gitweb-theme/gitweb-theme-projects.png" alt="Projektübersicht">
+  <img src="/assets/images/articles/2009/gitweb-theme/gitweb-theme-projects.png" alt="Project View">
   <figcaption>
-  Projektübersicht/Project view
+  Project View
   </figcaption>
 </figure>
 
 <figure class="image-figure image-figure-border">
-  <img src="/assets/images/articles/2009/gitweb-theme/gitweb-theme-summary.png" alt="Zusammenfassung">
+  <img src="/assets/images/articles/2009/gitweb-theme/gitweb-theme-summary.png" alt="Summary">
   <figcaption>
-  Zusammenfassung/Summary
+  Summary
   </figcaption>
 </figure>
 
@@ -47,22 +41,22 @@ Detailed instructions for installations are included in the package on GitHub.
 </figure>
 
 <figure class="image-figure image-figure-border">
-  <img src="/assets/images/articles/2009/gitweb-theme/gitweb-theme-commitdiff.png" alt="Commit-DIFF">
+  <img src="/assets/images/articles/2009/gitweb-theme/gitweb-theme-commitdiff.png" alt="Commit DIFF">
   <figcaption>
-  Commit-DIFF
+  Commit DIFF
   </figcaption>
 </figure>
 
 <figure class="image-figure image-figure-border">
-  <img src="/assets/images/articles/2009/gitweb-theme/gitweb-theme-log.png" alt="Historie">
+  <img src="/assets/images/articles/2009/gitweb-theme/gitweb-theme-log.png" alt="Log">
   <figcaption>
-  Historie/Log
+  Log
   </figcaption>
 </figure>
 
 <figure class="image-figure image-figure-border">
-  <img src="/assets/images/articles/2009/gitweb-theme/gitweb-theme-tree.png" alt="Dateiansicht">
+  <img src="/assets/images/articles/2009/gitweb-theme/gitweb-theme-tree.png" alt="Tree View">
   <figcaption>
-  Dateiansicht/Tree view
+  Tree View
   </figcaption>
 </figure>
