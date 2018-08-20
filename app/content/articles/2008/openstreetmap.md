@@ -1,7 +1,7 @@
 ---
-language: de
-title: 'Kostenlose Vektorkarten mit OpenStreetMap *'
-description: 'Einführung in OpenStreetMap, eine kostenlose OpenSource-Alternative zu Google Maps. Besonders, wenn man vektorbasierte Kartendaten in einem eigenen Projekt einsetzen möchte, ist OpenStreetMap eine fantastische Möglichkeit.'
+language: en
+title: 'Free Vector Maps with OpenStreetMap'
+description: 'Introducing OpenStreetMap, a free open source alternative to Google Maps. Especially if you want to use vector-based map data in your own project, OpenStreetMap is a fantastic option.'
 author: Stefan Imhoff
 slug: openstreetmap
 date: 2008-09-06T18:59:00+02:00
@@ -9,27 +9,27 @@ og_image: 'assets/images/articles/2008/openstreetmap/openstreetmap.jpg'
 categories: ['recommendation']
 ---
 
-Ich habe keine Ahnung, warum dieses Juwel so lange unbemerkt von mir bleiben konnte, aber gestern hat mich ein Kollege auf den Kartendienst OpenStreetMap hingewiesen. Ähnlich wie bei Wikipedia wird dort von vielen Benutzern eine für jeden kostenlos verfügbare Karte zusammengetragen.
+I have no idea why this gem could go unnoticed by me for so long, but yesterday a colleague pointed out to me the map service OpenStreetMap. Similar to Wikipedia, many users compile a free map for everyone.
 
 <figure class="image-figure image-figure-border">
-  <img src="/assets/images/articles/2008/openstreetmap/openstreetmap.jpg" alt="Die Autostadt Wolfsburg mit OpenStreetMap">
+  <img src="/assets/images/articles/2008/openstreetmap/openstreetmap.jpg" alt="The Autostadt Wolfsburg on OpenStreetMap">
   <figcaption>
-  Die Autostadt Wolfsburg mit OpenStreetMap
+  The Autostadt Wolfsburg on OpenStreetMap
   </figcaption>
 </figure>
 
-Der Leistungsumfang von [OpenStreetMap](http://www.openstreetmap.org/ 'OpenStreetMap') ist atemberaubend. Es stehen Vektordaten für große Teile der Erde zu Verfügung, die in einigen Bereichen derart detailliert sind, dass nicht einmal [Google Maps](https://maps.google.de/ 'Google Maps') da mithalten könnte. Fußwege, Trampelpfade, Ampeln, Stromleitungen. Auf OpenStreetMap ist geradezu alles eingezeichnet.
+The scope of [OpenStreetMap](http://www.openstreetmap.org/) is breathtaking. Vector data are available for large parts of the world, which in some areas are so detailed that not even [Google Maps](https://maps.google.com/) could keep up. Footpaths, beaten tracks, traffic lights, power lines. Everything is drawn in on OpenStreetMap.
 
-Und jeder ist dazu aufgerufen, Orte, Plätze oder Namen hinzuzufügen – oder wenn man ein GPS-Gerät sein Eigen nennt, auch Strecken abzufahren oder abzugehen und dann online zu stellen.
+And everyone is invited to add places, places or names - or, if you own a GPS device, also to drive off or go down distances and then put online.
 
-OpenStreetMap bietet verschiedene Kartenschichten in unterschiedlichen Detailgraden, Möglichkeiten zum Export in unzählige Formate, auch Vektorformate und alle Kartendaten sind unter einer [CreativeCommons-Lizenz](https://creativecommons.org/licenses/by-sa/2.0/ 'Creative Commons Attribution-Share Alike 2.0 Generic') verfügbar. Ein vorbildliches Projekt, dass eine Menge Nutzen für alle bringt!
+OpenStreetMap offers different layers of maps in different degrees of detail, export capabilities to countless formats, including vector formats, and all map data is under a [Creative Commons license](https://creativecommons.org/licenses/by-sa/2.0/) available. A model project that brings a lot of benefits for everyone!
 
-[Die Anmeldung](https://www.openstreetmap.org/user/new) erfordert nur wenige Klicks, dann kann man die Karten editieren und helfen alles zu verfeinern.
+[Registration](https://www.openstreetmap.org/user/new) requires only a few clicks, then you can edit the maps and help refine everything.
 
-Das [Wiki](https://wiki.openstreetmap.org/wiki/Main_Page) ist sehr umfangreich und in vielen Sprachen verfügbar.
+The [Wiki](https://wiki.openstreetmap.org/wiki/Main_Page) is very comprehensive and available in many languages.
 
-Es gibt sogar [deutsche Screencasts](https://wiki.openstreetmap.org/wiki/WikiProject_Germany/Screencasts) im Wiki, die in die Benutzung und Bedienung des Projektes einführen.
+There are even [Screencasts](https://wiki.openstreetmap.org/wiki/Video_tutorials) in the wiki, which introduce into the use and operation of the project.
 
-Parallel dazu kann man den Dienst [OpenRouteService](https://openrouteservice.org/ 'OpenLS Route Service with free OSM data') benutzen, der auf den Kartendaten von OpenStreetMap aufsetzt, und sich Routen berechnen lassen, sogar für Fahrräder und Fußgänger.
+In parallel, one can use the service [OpenRouteService](https://openrouteservice.org/), which is based on map data from OpenStreetMap, and can be used to calculate routes, even for bicycles and pedestrians.
 
-Bei diesen fantastischen Karten wird Google Maps mich in der Zukunft wohl seltener als Kunde haben, vor allem wenn man die Daten weiterverarbeiten möchte, was Googles Lizenzbedingungen ja bekanntlich untersagen.
+With these fantastic maps Google Maps will probably used less by me in the future, especially if you want to process the data, what Google’s license terms prohibit.
