@@ -1,7 +1,7 @@
 ---
-language: de
-title: 'Das Koi-Design: Inspiration und Idee *'
-description: 'Irezumi (Japanische Tätorwierung) als Inspiration für meine Website und über die Entstehung meines Designs.'
+language: en
+title: 'The Koi Design: Inspiration and Idea'
+description: 'Irezumi (Japanese tattooing) as inspiration for my website and the origin of my design.'
 author: Stefan Imhoff
 slug: koi-design
 date: 2007-06-02T02:00:00+02:00
@@ -9,54 +9,54 @@ og_image: 'assets/images/articles/2007/koi-design/design-koi.jpg'
 categories: ['design']
 ---
 
-Die Idee für das Design dieser neuen Website schwirrte schon länger in meinem Kopf herum. Nur wollte sie irgendwie nicht in die physische Welt überwechseln. Als Inspiration habe ich die Kunst der japanischen Tätowierung verwendet – Irezumi.
+The idea for the design of <del>this new website</del> <ins>a previous version of this website</ins> has been buzzing around in my head for some time. But somehow she did not want to move into the physical world. As an inspiration, I used the art of Japanese tattoo - Irezumi.
 
-## Irezumi – Die japanische Tätowierung
+## Irezumi - The Japanese Tattoo
 
-Tätowierungen sind eine Kunst, die im wahrsten Sinne des Wortes vergänglich sind, da mit dem Träger auch das Kunstwerk verschwindet, sobald er stirbt. Dies passt aber auch gut zum Begriff der _fließenden Welt_, einem Zeichen für die Vergänglichkeit im Buddhismus. Auch im Sinnbild der Samurai, in der Kirschblüte, kann man die Vergänglichkeit des Seins nach kurzer Dauer eines perfekten Lebens sehen.
+Tattoos are an art that is transient in the truest sense of the word, since with the wearer the artwork also disappears as soon as he dies. But this fits in well with the concept of the _flowing world_, a concept of transience in Buddhism. In the symbol of the samurai, the cherry blossom, one can also see the transience of being after a short duration of a perfect life.
 
-Diese Kunstwerke sind extrem schmerzhaft (dutzende Bambusnadeln werden [mehrmals pro Sekunde in die Haut gestochen](https://www.youtube.com/watch?v=NddXHY2QUV0)), langwierig (Von einigen Monaten bis zu mehreren Jahren) und teuer (ab 20.000 €). Das ist auch der Grund, wieso ich sie zwar gerne ansehe, aber selber wohl nie eines tragen werde.
+These works of art are extremely painful (dozens of bamboo needles are [stung several times a second](https://www.youtube.com/watch?v=NddXHY2QUV0)), tedious (from a few months to several years) and expensive (starting at 20,000 €). That is also the reason why I like to look at them, but definitly never will wear one myself.
 
-Einer der besten, lebenden Künstler des Irezumi ist Horiyoshi III, dessen Werke man in einigen Bildbänden betrachten kann ([Tattoos from the Floating World: Ukiyo-e Motifs in Japanese Tattoo](http://www.amazon.de/gp/product/9074822452?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=9074822452 'Amazon.de: Tattoos from the Floating World: Ukiyo-e Motifs in Japanese Tattoo, Takahiro Kitamura, Katie M. Kitamura') und [Bushido: Legacies of the Japanese Tattoo](http://www.amazon.de/gp/product/0764312014?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=0764312014 'Amazon.de: Bushido: Legacies of the Japanese Tattoo, Takahiro Kitamura, Katie M. Kitamura')).
+One of the best living artists of the Irezumi is Horiyoshi III, whose works can be seen in some illustrated books: [Tattoos from the Floating World: Ukiyo-e Motif's in Japanese Tattoo](http://www.amazon.de/gp/product/9074822452?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=9074822452) and [Bushido: Legacies of the Japanese Tattoo](http://www.amazon.de/gp/product/0764312014?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=0764312014).
 
-Im Irezumi werden nicht wahllos irgendwelche Dinge auf den Körper tätowiert, die Bilder haben eine tiefe Bedeutung für den Träger und erfordern Fachwissen über Religion, Geschichte und Mythen aus China und Japan. Das ist auch der Grund, weshalb man oft schlechte Kopien und pseudo-japanische Tätowierungen in westlichen Tätowierstudios angeboten bekommt. Diesen Tätowierern fehlt meist dieses Hintergrundwissen.
+Irezumi does not at random tattoo any things on the body, the images have a deep meaning to the wearer, and require expertise on religion, history, and myths from China and Japan. That is also the reason why bad copies and pseudo-Japanese tattoos are often offered in Western tattoo studios. These tattooists usually lack this background knowledge.
 
 ## Yakuza
 
-Am bekanntesten ist die Tätowierung durch ihre bedeutensten Träger – die Mitglieder der japanischen Verbrecherorganisation [Yakuza](https://de.wikipedia.org/wiki/Yakuza 'Yakuza - Wikipedia') – geworden, doch werden Irezumi heute auch von Geschäftsmännern und sogar Hausfrauen getragen.
+Most famous is the tattoo by their most significant carriers - the members of the Japanese criminal organization [Yakuza](https://en.wikipedia.org/wiki/Yakuza) - but today Irezumi is also known by businessmen and even Housewives worn.
 
-Die Verbindungen zur japanischen Kunst des [Ukiyo-e](https://de.wikipedia.org/wiki/Ukiyo-e 'Ukiyo-e - Wikipedia') (Holzschnitt) sind fließend und die Motive sind oft die gleichen.
+The links to the Japanese art of [ukiyo-e](https://en.wikipedia.org/wiki/Ukiyo-e) (woodcut) are fluid and the motives are often the same.
 
-## Motive
+## Motives
 
-Neben Göttern, Fabelwesen und Dämonen ist die wichtigste Quelle für Motive die alte chinesische Novelle <cite>[Shuǐhǔ Zhuàn](https://de.wikipedia.org/wiki/Die_R%C3%A4uber_vom_Liang-Schan-Moor)</cite> (Wasserufergeschichte), in Japan als <cite>Suikoden</cite> bekannt. Sie gehört zu einem der vier klassischen Bücher der chinesischen Literatur. Die deutsche Übersetzung dieses sehr unterhaltsamen Buches heißt <cite>[Die Räuber vom Liang Schan Moor](http://www.amazon.de/gp/product/3458318917?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=3458318917 'Amazon.de: Die Räuber vom Liang Schan Moor, Franz Kuhn')</cite>.
+In addition to gods, mythical creatures and demons, the most important source of motifs is the ancient Chinese novella <cite>[Shuǐhǔ Zhuàn](https://en.wikipedia.org/wiki/Water_Margin)</cite> (Water Margin), known in Japan as <cite>Suikoden</cite>. It belongs to one of the four classical books of Chinese literature. The German translation of this very entertaining book is called <cite>[Die Räuber vom Liang Schan Moor ](http://www.amazon.de/gp/product/3458318917?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=3458318917)</cite>.
 
-## Die Räuber vom Liang-Shan Moor
+## Water Margin
 
 <figure class="image-figure">
-  <img src="/assets/images/articles/2007/koi-design/suikoden-luta.jpg" alt="Hauptmann Lu-Ta, der Blumenmönch" title="Motiv aus dem Suikoden von Kunyoshi: Hauptmann Lu-Ta, der Blumenmönch, zerschlägt einen Baum mit einem Hieb, um eine Bande von Taugenichtsen zu beeindrucken.">
+  <img src="/assets/images/articles/2007/koi-design/suikoden-luta.jpg" alt="Captain Lu-Ta, the flowery monk" title="Motif from Suikoden by Kunyoshi: Captain Lu-Ta, the flowery monk, smashes a tree with a blow to impress a gang of good-for-nothings.">
   <figcaption>
-  Motiv aus dem <cite>Suikoden</cite> von Kunyoshi: Hauptmann Lu-Ta, der Blumenmönch, zerschlägt einen Baum mit einem Hieb, um eine Bande von Taugenichtsen zu beeindrucken.
+  Motif from <cite>Suikoden</cite> by Kunyoshi: Captain Lu-Ta, , the flowery monk, smashes a tree with a blow to impress a gang of good-for-nothings.
   </figcaption>
 </figure>
 
-Kurz zusammengefasst geht es um eine Räuberbande von 108 heldenhaften Männern und Frauen, die jeder durch widrige Umstände zum gesetzlosen Leben gezwungen werden, und sich im Liang-Shan Moor auf einer befestigten Insel verschanzen, von wo aus sie jahrelang im großen Stil auf Raubzug gehen. Dabei kämpfen sie gegen korrupte Beamte des Kaisers und zahlreiche Schurken. Die Geschichte ist zu Teilen wahr und soll in der Song Dynastie stattgefunden haben.
+In short, it is about a band of robbers of 108 heroic men and women, each of whom is forced into lawless life by adverse circumstances, and entrenching themselves on a fortified island in Liang-Shan marsh, where they go on a rampant raid for years. They fight against corrupt officials of the emperor and numerous villains. The story is true in parts and should have taken place in the Song Dynasty.
 
-Das Abenteuer ist im Taschenbuchformat erhältlich und sehr unterhaltsam – auch für Kinder – obwohl die eine oder andere Stelle vielleicht ein bisschen böser und grausamer als beim Räuber Hotzenplotz ist.
+The adventure is available in paperback format and very entertaining - even for children - although one or the other site is perhaps a little bit more evil and cruel than the regular childrens book.
 
-## Bedeutung des Motivs
+## Meaning of the Motif
 
-Das Motiv, das ich für mein Design gewählt habe zeigt einen Koi (Karpfen), der versucht die schweren Stromschnellen der Longmen Wasserfälle hinaufzuschwimmen.
+The motif I chose for my design shows a koi (carp) trying to swim up the heavy rapids of Longmen Falls.
 
-Der Legende nach verwandelt sich ein Koi, dem es gelingt die magischen Wasserfälle hinaufzuschwimmen, in einen Drachen. Nach weiteren 500 Jahren verwandelt er sich dann in einen gehörnten Drachen und nach 1000 Jahren in einen geflügelten. Somit müsste das nächste Design wohl einen Drachen zeigen. Naja, mal sehen…
+Legend has it that a koi, who manages to swim up the magical waterfalls, transforms into a dragon. After another 500 years he turns into a horned dragon and after 1000 years into a winged dragon. Thus, the next design should probably show a dragon.
 
 <figure class="image-figure">
-  <img src="/assets/images/articles/2007/koi-design/design-koi.jpg" alt="Design: Digitales Irezumi" title="Koi beim Hinaufschwimmen der Longmen Wassefälle. Es enthält typische Elemente wie Blätter, Blüten und Wellenkämme.">
+  <img src="/assets/images/articles/2007/koi-design/design-koi.jpg" alt="Design: Digital Irezumi" title="Koi floating up the Longmen Waterfalls. It contains typical elements such as leaves, flowers and wave crests.">
   <figcaption>
-  Koi beim Hinaufschwimmen der Longmen Wassefälle. Es enthält typische Elemente wie Blätter, Blüten und Wellenkämme.
+  Koi floating up the Longmen Waterfalls. It contains typical elements such as leaves, flowers and wave crests.
   </figcaption>
 </figure>
 
-Die schwierigste Entscheidung bei meinem Design war, wie viel Tätowierung auf der Seite zu sehen sein soll. Während die echte japanische Tätowierung von der Fläche lebt, und bis auf Füße, Hände und einen kleinen Bereich vorne nichts frei lässt, hätte eine derart große Fläche die Seite zu unruhig gemacht und zu sehr vom Inhalt abgelenkt. Dazu kam noch erschwerend hinzu, dass es eigentlich kein wirkliches Ende bei einem solchen Werk gibt. Im Internet muss man seine Fläche aber irgendwie begrenzen.
+The hardest part of my design was how much tattooing to see on the page. While the real Japanese tattoo lives on the surface, leaving nothing to feet, hands and a small front area, such a large area would have made the page too restless and too distracted from the content. To make matters worse, there is actually no real end to such a work. But on the internet you’re space is limited by the edges of the browser.
 
-Ich hoffe trotzdem, dass es mir gelungen ist die Anmutung eines Irezumi digital festzuhalten.
+Nevertheless, I hope that I have managed to capture the appearance of an Irezumi digitally.
