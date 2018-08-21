@@ -1,91 +1,55 @@
 ---
-language: de
-title: 'Automatisierte Installation für macOS *'
+language: en
+title: 'Automated Installation for MacOS'
 author: Stefan Imhoff
 slug: brew-automatic-installation
 date: 2014-04-04T21:09:00+02:00
-description: 'Wie man mit Homebrew und Homebrew Cask automatisiert Software unter Mac OS X installiert. Mit Homebrew Cask lassen sich über 1300 Anwendungen installieren, darunter viele kommerzielle Produkte.'
+description: 'How to automatically install software on MacOS using Homebrew and Homebrew Cask. Homebrew Cask can install over 1300 applications, including many commercial products.'
 categories: ['recommendation', 'software']
 ---
 
-Die Installation von Software war unter Mac OS X schon immer wenig ausgereift. Es gibt einfach zu viele verschiedene Möglichkeiten der Installation.
+The installation of software has always been poor on MacOS. There are just too many different ways of installation.
 
-Ob gepackte Archive (ZIP, TAR etc.), Disk Images, Application Bundles, Installer und jetzt auch noch der AppStore. Was als einfache Installation für Anfänger gedacht war, hat sich gerade für diese zum Albtraum entwickelt.
+Whether packed archives (ZIP, TAR etc.), disk images, application bundles, installers and now also the AppStore. What was meant to be a simple installation for beginners has become a nightmare for them.
 
-Auch fehlte es lange an einer Packet-Verwaltung, wie sie unter jeder Linux-Distributionen zu finden ist. Apple selbst hat hier niemals versucht eine Lösung anzubieten. MacPorts war eine Initiative, die dieses Problem beheben sollte. Doch installierte MacPorts seine Pakete an eine eigens dafür vorgesehene Position auf der Festplatte und machte die Paketverwaltung somit kaum besser.
+Also, there was a long lack of a package management, as it can be found under any Linux distributions. Apple itself has never tried to offer a solution here. MacPorts was an initiative that should fix this problem. However, MacPorts installed its packages in a dedicated location on the hard drive, making the package management barely better.
 
 ## Homebrew
 
-Dann trat [Homebrew] auf die Bühne, eine Software die sich selbst als <q lang="en">The missing package manager for OS X</q> bezeichnet. In kurzer Zeit wurde dieses Programm für Entwickler zum Standard unter Mac OS X. Mit einem einfachen einzeiligen Befehl wird Homebrew an eine feste Position auf dem System installiert und symbolische Links (Symlinks) an die Standardpositionen erstellt.
+Then [Homebrew] came on stage, a software that calls itself <q lang = "en">The missing package manager for macOS</q>. In a short time, this program became the default for macOS developers. With a simple one-line command, Homebrew is installed in a fixed location on the system and symbolic links (symlinks) are created to the default locations.
 
-Mit _Homebrew_ lassen sich Pakete einfach über das Terminal installieren:
+With _Homebrew_, packages can be easily installed via the terminal:
 
 ```bash
 $ brew install vim
 ```
 
-Doch neben Software-Packages verwendet man auch noch eine Vielzahl von _Programmen_, die sich nicht über _Homebrew_ installieren lassen (z. B. Browser, Grafik-, Sound- oder Videobearbeitungsprogramme, Hilfsprogramme etc.).
+But in addition to software packages, you also use a large number of programs that can not be installed via _Homebrew_ (browsers, graphics, sound or video editing programs, utilities, etc.).
 
 ## Homebrew Cask
 
-Hierzu wurde [Homebrew Cask] entwickelt. Diese Software lässt sich eben so einfach wie _Homebrew_ installieren und funktioniert sehr ähnlich, nur mit dem Unterschied, dass Programme damit installiert werden können, die dann in den Anwendungsordner von Mac OS X verlinkt werden.
+For this purpose [Homebrew Cask] was developed. This software is just as easy to install as _Homebrew_ and works very much the same, except that programs can be installed with it, which will then be linked to the macOS application folder.
 
 ```bash
 $ brew cask install google-chrome
 ```
 
-Unter den mittlerweile 1375 Software-Paketen, die sich mit _Cask_ installieren lassen ist so gut wie jede bekannte Software dabei, auch viele kommerzielle Produkte.
+Among the meanwhile 1375 software packages that can be installed with _Cask_ is just about every known software, including many commercial products.
 
-## Automatisierung
+## Automation
 
-Solange man nur wenige Programme hat und vielleicht nur alle 5-6 Jahre einen neuen Rechner kauft, ist es kein Problem auf die Seiten der Hersteller zu gehen und dort die neuste Software herunter zu laden. Doch wenn man eine große Anzahl von Software-Produkten verwendet, oft oder viele Rechner installieren muss, ist dies eine zeitaufreibende Tätigkeit, die gerne 1-2 Tage in Anspruch nehmen kann.
+As long as you have only a few programs and maybe only buy a new computer every 5-6 years, it is no problem to go to the manufacturers’ websites and download the latest software there. However, if you use a large number of software products, often or have to install many computers, this is a time-consuming activity that can take 1-2 days to complete.
 
-_Homebrew_ und auch _Homebrew Cask_ bieten seit kurzem die Möglichkeit einer Automatisierung an. Wie auch in der Entwicklung mit _Ruby_ oder _Ruby on Rails_, bei denen es ein `Gemfile` gibt, in dem alle Abhängigkeiten definiert sind oder bei _Node.js_, wo eine `package.json` diese Aufgabe erledigt, gibt es die Möglichkeit ein `Brewfile` und `Caskfile` anzulegen und mit einem neuen Befehl automatisiert eine große Anzahl von Software zu installieren.
+_Homebrew_ and also _Homebrew Cask_ have recently been offering the possibility of automation. As in the development with _Ruby_ or _Ruby on Rails_, where there is a `Gemfile` in which all dependencies are defined or in _Node.js_, where a `package.json` does this task, there is the possibility to create a `Brewfile` and `Caskfile` and automatically install a large number of software with a new command.
 
 ```bash
 $ brew bundle Brewfile
 $ brew bundle Caskfile
 ```
 
-## Automatische Generierung einer Installationsdatei
+## Conclusion
 
-Als besonderes Extra gibt es seit kurzem einen Generator, der diese Dateien automatisch erzeugt. Das Programm erzeugt von allen auf dem Rechner installierten _Brews_ und Anwendungen die nötigen Dateien, so dass diese auf einem frischen Rechner sofort wieder installiert werden können.
-
-Die [Software] ist einfach zu installieren:
-
-```bash
-$ git clone https://github.com/seethroughtrees/homebrew-dotfile-generator.git
-$ cd homebrew-dotfile-generator
-$ npm install
-```
-
-Vor dem Erzeugen des Abbilds sollten natürlich alle Pakete auf dem neusten Stand gebracht werden:
-
-```bash
-$ brew update
-```
-
-Die in Node.js (`brew install node`) geschriebene App wird dann einfach so gestartet:
-
-```bash
-$ node app
-```
-
----
-
-Dabei werden drei Dateien erzeugt:
-
-- **.brew**: Ein Skript durch das zuerst _Homebrew_ upgedatet werden kann, danach alle Programme upgegradet werden und danach alte Programme entfernt werden.
-- **Brewfile**: Die Installationsdatei für _Homebrew_.
-- **Caskfile**: Die Installationsdatei für _Homebrew Cask_.
-
-Die `.brew`-Datei wird einfach in das Homeverzeichnis kopiert, das `Brewfile` und `Caskfile` können z. B. einer Software-Distribution oder Applikation beigelegt werden, um nötige Pakete zu installieren oder auf einen neuen Rechner kopiert werden.
-
-## Fazit
-
-Mit [Homebrew], [Homebrew Cask] und dem [homebrew-dotfile-generator] steht somit eine umfangreiche Anzahl an Hilfsprogrammen zur Verfügung, die es ermöglichen einen neuer Rechner relativ schnell und ohne viel Aufwand mit der gewünschten Software auszurüsten.
+With [Homebrew] and [Homebrew Cask] there are finally a number of utilities available which make it possible to equip a new computer relatively quickly and without much effort with the desired software.
 
 [homebrew cask]: https://github.com/caskroom
 [homebrew]: https://brew.sh/
-[software]: https://github.com/seethroughtrees/homebrew-dotfile-generator
-[homebrew-dotfile-generator]: https://github.com/seethroughtrees/homebrew-dotfile-generator
