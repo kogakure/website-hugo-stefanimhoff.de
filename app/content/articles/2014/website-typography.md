@@ -1,48 +1,48 @@
 ---
-language: de
-title: 'Die Typographie meiner Website *'
+language: en
+title: 'The Typography of My Website'
 author: Stefan Imhoff
 slug: website-typography
 date: 2014-06-19T10:30:00+02:00
 og_image: 'assets/images/articles/2014/website-typography/elements-of-typographic-style.jpg'
-description: 'Über die Typographie meiner neuen Website: Skala, Schriftart, vertikaler Rhythmus, Schriftstärke, Schriftgröße und Satzbreite.'
+description: 'About the typography of my new website: scale, font, vertical rhythm, font size, font size and sentence width.'
 categories: ['design', 'code', 'website', 'typography']
 ---
 
-Ich bin _typophil_. Das ist aber nichts für das man eine Selbsthilfegruppe besuchen müsste, denn es bedeutet einfach die Liebe oder Affektion zu Schrift. Für mich war daher von Anfang an klar, dass ich für meine neue Website zuerst mit der Typographie beginnen werde.
+I’m _typophil_. But this is nothing for a self-help group, because it simply means love or affection to typography. It was clear to me from the start that I would start with typography for my new website.
 
-Normalerweise achten nur Designer auf Typographie, dem Rest aller Menschen ist das Ganze meistens relativ egal. Dabei beeinflusst Typographie jeden von uns, und zwar bewusst und unterbewusst.
+Normally, only designers pay attention to typography, the rest of the people is usually relatively unimportant. But typography influences each of us, consciously and subconsciously.
 
-Einfache Dinge wie Lesbarkeit oder Kontrast entscheiden darüber, ob die Botschaft eines Textes beim Leser überhaupt ankommt. Und da Worte eine unglaubliche Macht haben, wird Typographie gerne unterschätzt.
+Simple things like readability or contrast decide whether the message of a text reaches the reader at all. And since words have incredible power, typography is often underestimated.
 
-Die richtige Wahl von Schriftart, Schriftgröße, Gewicht, Satzspiegel, Satzbreite, Zeilendurchschuss, Sperrsatz oder vieler anderer Dinge wirken unbewusst auf die Leser und transportieren so die Aussage. Die richtige Typographie kann eine Botschaft unterstützen und verstärken, die falsche eine Aussage sogar bedeutungslos oder lächerlich werden lassen.
+The right choice of font, font size, weight, layout, sentence width, lead, letter-spacing or many other things unconsciously affect the reader and thus transport the statement. Proper typography can support and reinforce a message that makes the wrong message even meaningless or ridiculous.
 
 <figure class="image-figure">
   <img src="/assets/images/articles/2014/website-typography/elements-of-typographic-style.jpg" alt="The Elements of Typographic Style">
   <figcaption>
-  <cite>The Elements of Typographic Style</cite> von Robert Bringhurst
+  <cite>The Elements of Typographic Style</cite> by Robert Bringhurst
   </figcaption>
 </figure>
 
-Ich fand Typographie schon immer faszinierend, doch erst nachdem ich das Buch <cite>[The Elements _of_ Typographic Style](http://www.amazon.de/gp/product/0881792128?ie=UTF8&camp=1638&creative=19454&creativeASIN=0881792128&linkCode=as2&tag=kogakurede-21)</cite> von _Robert Bringhurst_ gelesen hatte beschäftigte ich mich tiefer mit der Materie. Es gibt eine auf das Web abgestimmte Version seines Buches auf der Website [The Elements _of_ Typographic Style Applied _to the_ Web](http://webtypography.net/).
+I’ve always found typography fascinating, but only after reading the book <cite>[The Elements _of_ Typographic Style](http://www.amazon.de/gp/product/0881792128?ie=UTF8&camp=1638&creative=19454&creativeASIN=0881792128&linkCode=as2&tag=kogakurede-21)</cite> by _Robert Bringhurst_ I studied the matter more deeply. There is a Web-adapted version of his book on the website [The Elements _of_ Typographic Style Applied _to the_ Web](http://webtypography.net/).
 
-## Typographie
+## Typography
 
-Gute Typographie bedeutet nicht bloß eine Schrift auszusuchen, sondern ist eine Kunstform, von deren Beherrschung ich noch weit entfernt bin.
+Good typography does not just mean selecting a scripture, but is an art form that I am still far from mastering.
 
-Es gilt das richtige Seitenlayout zu wählen, die richtige Satzbreite, den richtigen Zeilendurchschuss, die richtige Kombination von Schriften, die richtige Skala, die richtige Schriftstärke und eine Vielzahl weiterer Richtlinien.
+It is important to choose the right page layout, the right sentence width, the correct lead, the right combination of fonts, the right scale, the correct font size and a variety of other guidelines.
 
-## Skala
+## Scale
 
-Bereits vor einigen Jahren stolperte ich über zwei interessante Vorträge von Tim Brown über Typographie. Tim Brown arbeitet als _Type Manager_ für [Adobe Typekit](https://typekit.com/), einer Plattform, die Webfont-Hosting anbietet. In seinen Vorträgen bietet er einen sehr interessanten Einblick in die Geschichte von Typographie und wie man gute Typographie erreicht.
+Several years ago I stumbled on two interesting lectures by Tim Brown on typography. Tim Brown works as _Type Manager_ for [Adobe Typekit](https://typekit.com/), a platform that offers Webfont hosting. In his lectures, he offers a very interesting insight into the history of typography and how to achieve good typography.
 
-Ich entschied mich mit der Auswahl einer Skala zu beginnen. Eine typographische Skala ist die Auswahl von harmonischen Proportionen, die danach auf Schriftgröße, Satzbreite und andere Teile angewendet wird.
+I decided to start with the selection of a scale. A typographic scale is the selection of harmonic proportions, which are then applied to font size, sentence width and other parts.
 
-Die bekannteste Proportion ist der _Goldene Schnitt_, der ein Verhältnis von `1:1,618` hat. Aber es gibt noch viele andere Proportionen, die ihren Ursprung in Geometrie, Musik, Natur oder Geschichte haben. Tim Brown hat sogar extra die Website [Modular Scale](http://www.modularscale.com/) erstellt, auf der sich eine solche Skala errechnen lässt.
+The most famous proportion is the _golden ratio_, which has a ratio of `1:1.618`. But there are many other proportions that have their origins in geometry, music, nature or history. Tim Brown has even created the website [Modular Scale](http://www.modularscale.com/), on which such a scale can be calculated.
 
-Doch dies ist bei meinem Projekt gar nicht nötig gewesen, denn das Team-Sass bietet dafür eine [SASS-Erweiterung](https://github.com/modularscale/modularscale-sass) an.
+But this was not necessary for my project, because Team-Sass offers a [SASS extension](https://github.com/modularscale/modularscale-sass).
 
-Ich füge also zuerst das Gem zu meinem Gemfile hinzu:
+So I add the gem to my Gemfile first:
 
 <p class="code-info">Gemfile</p>
 
@@ -54,7 +54,7 @@ group :development do
 end
 ```
 
-Dann lade ich das Compass-Plugin in der `config.rb`:
+Then I load the Compass plugin in `config.rb`:
 
 <p class="code-info">config.rb</p>
 
@@ -63,7 +63,7 @@ Dann lade ich das Compass-Plugin in der `config.rb`:
 require 'modular-scale'
 ```
 
-Im AnschlusL muss nur noch das Modul von Compass geladen werden, bei mir in einem Partial:
+Afterwards only the module of Compass has to be loaded in a partial:
 
 <p class="code-info">helpers/_imports.scss</p>
 
@@ -73,54 +73,54 @@ Im AnschlusL muss nur noch das Modul von Compass geladen werden, bei mir in eine
 @import 'modular-scale';
 ```
 
-Ich habe mich entschlossen den _Goldenen Schnitt_ zu verwenden und wähle dann die _ideale Textgröße_ und eine _wichtige Zahl_ aus:
+I've decided to use the _golden ratio_ and then select the ideal text size and an important number:
 
 ```scss
 $ms-base: 16px 18px;
 $ms-ratio: $golden;
 ```
 
-Jetzt lassen sich überall im SCSS die Helfer des Gems verwenden. Anstatt also jetzt irgendwo manuell `42px` (`41.887px`) oder `2.618em` zu schreiben, schreibe ich einfach `modular-scale(4)` um den vierten Wert der Skala zu wählen:
+Now the helpers of Gems can be used everywhere in the SCSS. So instead of writing somewhere manually `42px` (`41.887px`) or `2.618em`, I just write `modular-scale(4)` to choose the fourth value of the scale:
 
 ```scss
 $font-scale-h1: modular-scale(4);
 ```
 
-## Satzbreite
+## Sentence Width
 
-Natürlich hätte ich auch mit der Wahl der Satzbreite (Zeilenlänge) beginnen können, und dann das Grid passend auswählen. Doch kann man, jetzt wo eine Skala ausgewählt wurde, diese auch für die richtige Satzbreite verwenden.
+Of course, I could have started to choose the sentence width (line length), and then choose the grid appropriately. However, now that a scale has been selected, you can use it for the correct sentence width.
 
-Eine Responsive Website mit fluider Zeilenlänge ist natürlich keine optimale Vorraussetzung für eine feste Satzbreite. Es kursieren allerlei Werte im Internet, was denn jetzt eine optimale Zeilenlänge ist. Allerlei Binsenweisheiten wie nicht weniger als 45 Zeichen, maximal 85 Zeichen oder ähnliche Werte lassen sich dort finden. Davon ist aber nichts wissenschaftlich belegt, und man sollte eher in Worten als in Zeichen messen, da wir Wortbilder und keine Buchstaben sehen.
+Of course, a responsive website with fluid line length is not an optimal prerequisite for a fixed sentence width. There are all sorts of values circulating on the Internet, what is an optimal line length. All sorts of truisms such as no less than 45 characters, no more than 85 characters or similar values can be found there. But nothing is scientifically proven, and one should measure in words rather than in characters, because we see word images and not letters.
 
-Ist die Zeile zu lang, ermüden die Augen und die Leser können den Anschluss an die nächste Zeile verlieren, ist die Zeile zu kurz strengt der ständige Abbruch des Lesefluss ebenso an. Es lässt sich nur eines sagen: _Die_ richtige Zeilenlänge gibt es nicht, es kommt auf Schriftart, Schriftsatz und Zeilenabstand an.
+If the line is too long, the eyes are tired and the readers may lose the connection to the next line, if the line is too short, the constant interruption of the reading flow will be equally severe. There is only one thing to say: The correct line length does not exist, it depends on font, typesetting and line spacing.
 
-Ich habe also versucht die optimale Zeilenlänge meiner Website bei ca. 66 Zeichen oder ca. 10 Worten zu ermitteln. Je nach Browsergröße schrumpft die Zeilenlänge dann, aber nur bis zu einem von mir ausgewählten Schwellenwert. Wenn dieser unterschritten wird, wähle ich eine andere Spaltenanzahl des Grids aus.
+So I tried to determine the optimal line length of my website with about 66 characters or about 10 words. Depending on the browser size, the line length then shrinks, but only up to a threshold that I have selected. If this falls below, I select a different number of columns of the grid.
 
-Ich stelle aber sicher, dass die Zeilenlänge nicht breiter wird, als von mir als optimal festgelegt, denn sobald auch der Kopf bewegt werden muss, ist die Zeile eindeutig zu lang.
+But I make sure that the line length is not wider than I determined to be optimal, because as soon as the head has to be moved, the line is clearly too long.
 
-## Vertikaler Rhythmus
+## Vertical Rhythm
 
-Als nächstes legte ich den Zeilenabstand fest und entschied mich zusätzlich für die Technik des _vertikalen Rhythmus_. Dabei wird bei Schriften unterschiedlicher Größe mathematisch der Zeilenabstand so verändert, dass zwei unterschiedlich große Schriften dennoch optisch nebeneinander stehen würden.
+Next I set the line spacing and decided in addition to the technique of _vertical rhythm_. In the case of fonts of different sizes, the line spacing is mathematically changed in such a way that two different sized fonts would still be visually adjacent to each other.
 
-Sehr praktisch ist, dass die relativ lästige Mathematik hinter der Formel (die meistens krumme Werte mit vielen Nachkommastellen ausspuckt) nicht selbst berechnet werden muss. Compass kommt bereits mit einem [Modul](http://compass-style.org/reference/compass/typography/vertical_rhythm/) dafür.
+Very handy is that the relatively annoying mathematics behind the formula (which spits out mostly crooked values with many decimal places) does not have to be calculated by yourself. Compass already comes with a [module](http://compass-style.org/reference/compass/typography/vertical_rhythm/) for it.
 
-Es werden einige Variablen konfiguriert:
+There are some variables to be set:
 
 ```scss
 $base-font-size: modular-scale(1); // 18px
 $base-line-height-count: 1.5;
 $base-line-height: $base-font-size * $base-line-height-count; // 27px
-$relative-font-sizing: true; // Verwendet em und nicht px
-$round-to-nearest-half-line: true; // Verhindert zu große Lücken zwischen den Zeilen
+$relative-font-sizing: true; // use em and not px
+$round-to-nearest-half-line: true; // prevent too big gaps between lines
 ```
 
-Mit einem einfachen Aufruf dieses Mixins wird der vertikale Rhythmus aktiviert:
+A simple call to this mixin activates the vertical rhythm:
 
 ```scss
 @include establish-baseline();
 ```
 
-Um eine Schriftgröße anzupassen verwendet man jetzt keine absoluten Werte mehr, sondern ein Mixin. Dieses lässt sich natürlich auch in Kombination mit dem Mixin von _Modular Scale_ verwenden:
+To adjust a font size you do not use absolute values anymore, but a mixin. This can of course also be used in combination with the Mixin of _Modular Scale_:
 
 ```scss
 h1 {
@@ -129,46 +129,46 @@ h1 {
 }
 ```
 
-Es werden auch nicht mehr direkt die Abstände über oder unter einem Element definiert, sondern Mixins verwendet, wie hier im Beispiel `trailer`.
+You also no longer directly define the distances above or below an element, but use mixins, as in the example `trailer`.
 
-## Schriftarten
+## Fonts
 
-Bei der Auswahl der Schrift hatte ich am meisten Probleme, da dies eine schwierige Aufgabe ist. Es gibt Unmengen von Schriften, aber die richtige für den gegebenen Anlass zu finden ist ein großer Aufwand. Erschwerend dazu gibt es im Internet weitaus mehr schlechte Schriften als gute Schriften.
+I had the most problems choosing the font, as this is a difficult task. There are tons of fonts, but finding the right one for the occasion is a big hassle. To make matters worse, there are far more bad fonts on the Internet than good fonts.
 
-Das Erstellen einer Schriftart ist ein immenser Aufwand und daher kostet eine Lizenz für einen Schriftschritt auch sehr viel Geld. Um aber Webtypographie zu verwenden, muss der Designer einer Schrift diese natürlich für das Einbetten in eine Website freigeben. Wunderschöne, kostenfreie Schriften gibt es z. B. bei [The League of Movable Type](https://www.theleagueofmoveabletype.com/).
+Creating a font is an immense effort and therefore a license for a font step also costs a lot of money. But to use web typography, the designer of a font must of course release it for embedding in a web site. Beautiful, free fonts are available for example on [The League of Movable Type](https://www.theleagueofmoveabletype.com/).
 
-Neben dem eigenen Hosten der Schrift, gibt es noch die Möglichkeit, die Schriftart von einem Webservice einzubinden. Es gibt z. B. kostenpflichtige Lösungen wie [Adobe Typekit](https://typekit.com/), bei denen ein Betrag gezahlt wird, weshalb sehr viele professionelle Schriftarten angeboten werden können. Wer nicht bereit ist regelmäßig für die Verwendung einer Schriftart zu bezahlen, kann trotzdem aus einer immer noch großen Anzahl von Schriften auswählen, die von netten Designern frei zur Verfügung gestellt wurden.
+In addition to owning the font, there is still the possibility to integrate the font of a web service. There are for example pay-as-you-go solutions such as [Adobe Typekit](https://typekit.com/), which offer many professional fonts. Anyone who is unwilling to regularly pay to use a font can still choose from a large number of fonts that have been freely made available by nice designers.
 
-Ich schaute mich erst bei Typekit um, wählte dann aber zwei kostenlose Schriften aus, die ich über [Google Fonts](https://fonts.google.com) in meine Website einbinde:
+I first looked at Typekit, but then chose two free fonts that I integrate into my website via [Google Fonts](https://fonts.google.com):
 
-- _Gentium Basic_ für lange Fließtexte
-- _Yanone Kaffeesatz_ für Überschriften und für kürzere Texte, z. B. auf der Homepage
+- _Gentium Basic_ for long running texts
+- _Yanone Kaffeesatz_ for headlines and shorter texts, as on the homepage
 
-Gentium Basic ist eine sehr ansprechende Schrift mit Serifen und einem kursiven Schriftschnitt, während Yanone Kaffeesatz eine serifenlose Schrift ist. Beide Schriften in Kombination bieten ein harmonisches Bild.
+Gentian Basic is a very appealing typeface with serifs and an italic typeface, while Yanone Kaffeesatz is a sans serif typeface. Both fonts in combination offer a harmonious picture.
 
-## Schriftgröße
+## Font Size
 
-Als am 17. November 2006 Oliver Reichenstein im Blog von Information Architects über den [100% Easy-2-Read Standard](https://ia.net/topics/100e2r), war dieses Konzept noch völlig neu. Damals wurde die Schrift auf Websites durchgehend zu klein eingestellt. Der Browser-Standard war schon immer `16px`. Doch die meisten Seiten nutzen damals Werte zwischen 10 und 12 Pixeln.
+On November 17, 2006, Oliver Reichenstein wrote on the Blog of Information Architects about the [100% Easy-2-Read Standard](https://ia.net/topics/100e2r), this concept was completely new to me. At that time, the font on websites was consistently set too small. The browser standard has always been `16px`. But most pages use values between 10 and 12 pixels.
 
-Nach diesem Blog-Artikel fingen Designer an, die Grundschriftgröße zu erhöhen. Ich verwende für meine Fließtextschrift sogar 18px.
+After this blog article, designers started to increase the base font size. I even use `18px` for my floating text font.
 
-## Schriftstärke
+## Font Weight
 
-Ich lade _Gentium Basic_ in 400 und 700 und _Yanone Kaffeesatz_ in 200 und 400. So kann ich fette Teile vom Fließtext in 700 setzen und den Rest in 400. Auf der Homepage setzte ich nur _Yanone Kaffeesatz_ ein und benutze für hochauflösende Displays (Retina) eine Schriftstärke von 200, für alle anderen Displays 400.
+I load _Gentium Basic_ in 400 and 700 and _Yanone Kaffeesatz_ in 200 and 400. So I can put bold parts of the body text in 700 and the rest in 400. On the homepage I only use _Yanone Kaffeesatz_ and use for high resolution displays (Retina) one Font size of 200, for all other displays 400.
 
-## Sperrsatz, Unterschneidungen und Hurenkinder
+## Tracking, Widows and Orphans
 
-Sperrsatz (Tracking), also das Einfügen von Abständen zwischen einzelnen Buchstaben, verwende ich auf meiner Website nur an einigen wenigen Stellen und Unterschneiden (Kerning), das Reduzieren von Abständen zwischen einzelnen Buchstaben, gar nicht. Manuelles Kerning im Internet ist eine Aufgabe die einfach viel zu aufwändig ist. Es gibt zwar einige JavaScript-Lösungen, aber das ganze ist im Web einfach nicht den Aufwand oder die Ladegröße wert.
+_Tracking_, the inserting of spaces between individual letters, I use on my website only in a few places and _Kerning_, reducing the spacing between individual letters, not at all. Manual kerning on the Internet is a task that is simply too time-consuming. There are some JavaScript solutions, but the whole thing is simply not worth the effort or load size on the web.
 
-Um zu verhindern, dass ein einzelnes Wort alleine auf einer neuen Zeile steht, habe ich eine Weile ein JavaScript eingesetzt. Da dieses jQuery-Plugin aber in einigen Fällen nicht zuverlässig gearbeitet hat und ausserdem eine recht große Dateigröße hatte, habe ich dieses nach ein paar Wochen wieder entfernt.
+To prevent a single word from being alone on a new line, I’ve been using JavaScript for a while. Since this jQuery plugin did not work reliably in some cases and also had a rather large file size, I removed it after a few weeks.
 
-## Sonstige typografische Formatierungen
+## Other Typographic Formatting
 
-Ich verwende noch einige weitere typografische Formatierungen, z. B. zentrierte Versblöcke, korrekte Zitatzeichen für Inline-Zitate je nach Landessprache und habe mir selbst ein Jekyll-Plugin geschrieben das dafür sorgt, dass Dinge wie i. d. R., z. B., 1000 € oder 5 + 3 mit unsichtbaren Leerzeichen versehen werden, damit alles als Block in eine neue Zeile rutscht und nicht Zeichen für Zeichen.
+I use some more typographic formatting, such as centered verse blocks, correct quotation marks for inline citations depending on the language and I’ve written myself a Jekyll plugin that ensures that things like `e. g.`, `1000 €` or `5 + 3` are provided with invisible spaces so that everything slips as a block in a new line and not character by character.
 
-## Interessante Links zum Thema Typographie
+## Interesting Links About Typography
 
-Für alle die jetzt neugierig auf Typographie geworden sind, habe ich eine kleine Liste von empfehlenswerten Links zu diesem Thema zusammengestellt:
+For those who have become curious about typography, I have put together a small list of recommended links to this topic:
 
 - [The Elements _of_ Typographic Style Applied _to the_ Web](http://webtypography.net/)
 - [Thinking with Type](http://thinkingwithtype.com/)
