@@ -1,88 +1,90 @@
 ---
 language: en
-title: 'Die Gestaltung meines neuen Logos *'
+title: 'The Design of My New Logo'
 author: Stefan Imhoff
 slug: logo-design
 date: 2014-04-18T19:00:00+02:00
-description: 'Einblick in die Gestaltung meines neuen Logos und Rakkan: Idee, Recherche und ein kurzer Exkurs über die Chinesische Schrift.'
+description: 'Insight into the design of my new logo and Rakkan: idea, research and a short digression on the Chinese script.'
 og_image: 'assets/images/articles/2014/logo-design/rakkan.jpg'
 categories: ['design']
 ---
 
-Da ein Logo zu den wesentlichen Elementen gehört, an denen eine Website wiedererkannt wird, wollte ich von Anfang an ein Logo gestalten, das thematisch zum restlichen Design der Seite passt.
+Since a logo is one of the essential elements that recognize a website, I wanted from the beginning to design a logo that fits the theme of the rest of the design of the site.
 
-Zwar bin ich der Meinung, dass eine Privatperson kein Logo benötigt, aber ohne ein Logo fehlt ein schönes visuelles Element, das später an allen möglichen Stellen, z. B. beim Favicon benötigt wird.
+Although I am of the opinion that a private person does not need a logo, but without a logo is a nice visual element missing that can be used later in all sorts of places, for example as the favicon.
 
-Für mich stand schon relativ früh fest, dass ich ein _Rakkan_ anstelle eines modernen Logos verwenden wollte.
+It was already clear to me quite early that I wanted to use a _Rakkan_ instead of a modern logo.
 
 ## Rakkan
 
-Ein Rakkan (oder Hanko) wird in Japan ein Siegel genannt, das meist in Stein geschnitzt, die Signatur eines Künstler darstellt und von diesem unter die Werke gestempelt wird, und damit wie eine Unterschrift funktioniert.
+A Rakkan (or Hanko) is called in Japan a seal, which is usually carved in stone, representing the signature of an artist and is stamped under the artwork, and thus works like a signature.
 
 <figure class="image-figure">
-  <img src="/assets/images/articles/2014/logo-design/rakkan.jpg" alt="Rakkan unter mit Tinte geschriebenem Schriftzeichen">
+  <img src="/assets/images/articles/2014/logo-design/rakkan.jpg" alt="Rakkan written ink below symbol">
   <figcaption>
-  Abdruck meines Rakkan unter einem von mir geschriebenem Symbol für 忍 (Shinobi).
+  Imprint of my Rakkan below a symbol for 忍 (Shinobi) written by me.
   </figcaption>
 </figure>
 
-Auch schon bei meinem [Kampfkunst-Portal](http://kogakure.de/) verwende ich als Logo ein solches Siegel, nur dort war die Vorlage für dieses Logo damals mein wirkliches Siegel, das ich bei einem Künstler in Auftrag gegeben hatte.
+Even with my [martial arts portal](http://kogakure.de/) I use such a seal as a logo, only there was the template for this logo at that time my real seal, which I had commissioned from an artist.
 
-## Recherche
+## Research
 
-Bevor ich mit der Gestaltung meines neuen Siegel beginnen konnte, musste ich zuerst Recherche betreiben. Dafür habe ich mir bei einer großen Anzahl von Werken historische Stempelabdrücke angesehen und deren Stil und Merkmale studiert.
+Before I could start designing my new seal, I first had to conduct research. For this I have looked at historical stamps in a large number of works and studied their style and characteristics.
 
-Die meisten Stempel benutzen mehrere Zeichen, oft vier oder sogar mehr. Es gibt sie in allen Formen, wobei die eckige Form die häufigste zu sein scheint.
+Most stamps use multiple characters, often four or even more. They exist in all forms, with the angular shape seeming to be the most common.
 
-Als nächstes galt es, die passende Schriftart auszuwählen. Als Schrift wählen die meisten Künstler die _Kleine Siegelschrift_, die vom chinesischen Kaiser Qin Shi Huang vor ca. 2200 Jahren eingeführt wurde.
+The next step was to choose the right font. As a typeface most artists choose the _small seal script_, which was introduced by the Chinese Emperor Qin Shi Huang about 2200 years ago.
 
-## Exkurs in Chinesische Schriften
+## Tour in Chinese Writing Styles
 
-Erste chinesischen Schriftzeichen wurden vor 6000 Jahren auf Tonscherben gekratzt. Die so genannte [Orakelschrift](https://de.wikipedia.org/wiki/Orakelknochen) wurde vor 3400 Jahren während der Shang-Dynastie entwickelt und diente zur Weissagung mit Tierknochen-Orakel.
+First Chinese characters were scratched on potsherds 6000 years ago. The so-called [oracle bone script](https://en.wikipedia.org/wiki/Oracle_bone_script) was developed 3400 years ago during the Shang Dynasty and was used for prophecy with animal bone oracles.
 
-Als die Bronzegusstechnik um das 11. Jahrhundert v. Chr. entwickelt wurde entstand die [Bronzeschrift](https://de.wikipedia.org/wiki/Bronzeinschrift), die benutzt wurde, um damit Texte für Politik, Handel, Militär, Verwaltung und Orakel zu schreiben.
+As the bronze casting technique around the 11th century BC the [bronze inscriptions](https://en.wikipedia.org/wiki/Chinese_bronze_inscriptions) was developed, which was used to write texts for politics, trade, military, administration and oracles.
 
-Zur Zeit der _Streitenden Reiche_ (475-221 v. Chr.) wurden Pinsel und Tinte erfunden und damit auf Bambus, Holz und Seide geschrieben.
+At the time of the Seven Kingdoms (475-221 BC) brush and ink were invented and written on bamboo, wood and silk.
 
-Doch gab es viele verschiedene Schreibweisen der Zeichen, was für Austausch und Handel nicht förderlich war. König Zhou Xuanwang versuchte dieses Problem durch die _Große Siegelschrift_ zu lösen, was ihm aber nicht gelang. Erst als Kaiser Qin Shin Huang das Reich 221 v. Chr. einte, befahl er eine einheitliche Schrift. Kanzler Li Si beseitigte Zeichen und verringerte Striche und begründete damit die [Kleine Siegelschrift](https://de.wikipedia.org/wiki/Siegelschrift).
+However, there were many different spellings of the characters, which was not conducive to exchange and trading. King Zhou Xuanwang tried to solve this problem through the [large seal script](https://en.wikipedia.org/wiki/Large_seal_script), which he did not succeed. Only as Emperor Qin Shin Huang unified the empire at 221 BC, he ordered a uniform font. Chancellor Li Si eliminated characters and reduced strokes, thus founded the [small seal script](https://en.wikipedia.org/wiki/Small_seal_script).
 
-Die kleine Siegelschrift ist zwar durch ihre geschwungenen Striche schön, aber war im täglichen Gebrauch zu umständlich zu schreiben. Zu Beginn der Han-Dynastie kam die [Kanzleischrift](https://de.wikipedia.org/wiki/Chinesische_Kanzleischrift) auf, die viel geradere Striche hatte und somit einfacher und schneller zu schreiben war. Viele Zeichen wurden durch diese Schrift weiter abstrahiert.
+The small seal is indeed beautiful by its curved lines, but was too cumbersome to write in everyday use. At the beginning of the Han Dynasty, the [clerical script](https://en.wikipedia.org/wiki/Clerical_script), which had much straighter lines and was easier and faster to write. Many characters were further abstracted by this font.
 
-Ebenfalls zur gleichen Zeit entstand die Konzeptschrift, die auch [Grasschrift](https://de.wikipedia.org/wiki/Grasschrift) genannt wird. Sie wurde für den privaten Schriftverkehr verwendet, aber auch vom einfachen Volk geschrieben. Bei dieser Schrift sind die Striche häufig verbunden, so dass es oft aussieht, als wäre der Pinsel nicht vom Papier abgehoben worden.
+Also at the same time the _cursive script_ was invented, which is also called [grass font]. It was used for private correspondence but also written by the common people. In this font, the strokes are often connected, so it often looks like the brush has not been lifted off the paper.
 
-Im 2. Jahrhundert n. Chr. entwickelten Schreiber, die weder die Konzept- oder Kanzleischrift mochten, die [Regelschrift](https://de.wikipedia.org/wiki/Regelschrift).
+[grass font]: https://en.wikipedia.org/wiki/Cursive_script_(East_Asia)
 
-Zum Ende der Han-Dynastie entwickelte sich neben der Grasschrift auch noch ein weiterer Stil für den privaten Gebrauch: die [Kursivschrift](https://de.wikipedia.org/wiki/Kursivschrift_(Chinesisch\)).
+In the 2nd century AD, scribes who did not like the concept or chancery script developed the [regular script](https://en.wikipedia.org/wiki/Regular_script).
 
-Die nächste signifikante Änderung fand erst 1956 statt, als die Regierung die Schrift vereinfachte. Es wurden dabei über 1000 Zeichen gestrichen und bei rund 2200 Zeichen die Strichzahl verringert. Dies sollte zu einer besseren Alphabetisierung der Bevölkerung führen.
+At the end of the Han Dynasty, there was another style for private use besides the grass script: the [Semi-cursive script](https://en.wikipedia.org/wiki/Semi-cursive_script).
 
-## Die Bedeutung der Schriftzeichen auf meinem Rakkan
+The next significant change took place in 1956, when the government simplified the text. More than 1000 characters were deleted and with 2200 characters the number of lines was reduced. This should lead to a better literacy of the population.
 
-Für mein neues Rakkan habe ich die Schriftzeichen meines alten Rakkan übernommen und dann noch zwei weitere Schriftzeichen hinzugefügt. Das alte Zeichen enthält die Schriftzeichen 木隠 (kogakure), was nicht nur der Name meines Kampfkunst-Portals ist, sondern auch seit vielen Jahren mein Pseudonym im Internet. Übersetzt bedeutet es <q>Versteckt hinter Bäumen und Blättern</q>.
+## The Meaning of the Characters on My Rakkan
 
-Die zwei neuen Zeichen links daneben bedeuten 草 (Grass) und 刀 (Klinge) in der kleinen Siegelschrift. Die Zeichen ermöglichen zahlreiche Deutungs- und Interpretationsmöglichkeiten, auf die ich hier nicht näher eingehe, um niemanden zu langweilen.
+For my new Rakkan I have taken over the characters of my old Rakkan and then added two more characters. The old character contains the characters 木隠 (kogakure), which is not only the name of my martial arts portal, but also my pseudonym on the Internet for many years. Translated it means <q>hidden behind trees and leaves</q>.
 
-Ein solches Siegel lässt sich in zwei verschiedene Varianten erstellen: **Yin** oder **Yang** (☯). Bei der Yin-Variante (wie ich es auf [kogakure.de](http://kogakure.de/) habe), werden nur die Buchstaben aus dem Stein geschnitzt, die Fläche bleibt bestehen. Dieses Mal wollte ich ein Rakkan in der Yang-Variante erstellen, bei der alles weggeschnitten wird, bis auf die Buchstaben (und einen Rand).
+The two new characters to the left of it mean 草 (grass) and 刀 (blade) in the small seal script. The signs allow numerous possibilities of interpretation and interpretation, which I will not go into here to keep anyone bored.
 
-## Die Erstellung des Rakkan
+Such a seal can be created in two different variants: **Yin** or **Yang** (☯). In the Yin variant (as I have it on [kogakure.de](http://kogakure.de/)), only the letters are carved out of the stone, the surface remains. This time, I wanted to create a rakkan in the yang variant where everything is cut away except for the letters (and an edge).
 
-Zuerst fertigte ich zahlreiche Bleistiftzeichnungen an, erst von einzelnen Zeichen, die mir gefielen, später von Kombinationen. Ich überlegte mir, wie ein Künstler einen traditionellen Stempel schnitzen würde, wie die Buchstaben sich berühren und stützen, um dem Siegel die nötige Stabilität zu geben.
+## The Creation of the Rakkan
+
+First, I made numerous pencil drawings, first of individual characters that I liked, later of combinations. I wondered how an artist would carve a traditional stamp, how the letters touch and support to give the seal the necessary stability.
 
 <figure class="image-figure">
   <img src="/assets/images/articles/2014/logo-design/moleskine-pencil-drawings.jpg" alt="Moleskine mit Bleistiftzeichnungen von Schriftzeichen">
   <figcaption>
-  Doppelseite aus meinem Moleskine mit Bleistiftzeichnungen verschiedener Zeichen.
+  Double page from my Moleskine with pencil drawings of various characters.
   </figcaption>
 </figure>
 
-Nachdem ich meine finale Variante entwickelt hatte, zeichnete ich die Bleistiftlinien mit einem sehr dicken Textmarker nach (nicht ohne dabei fast meinen Bambustisch zu ruinieren, da ich _natürlich_ aus Faulheit auf eine Unterlage verzichtete). Die Struktur, die entsteht, wenn Tinte sich im Papier ausbreitet sah einer in Stein geschnitzten Kante sehr ähnlich.
+After I had developed my final variant, I drew the pencil lines with a very thick highlighter (not without almost ruining my bamboo table, since I _of course_ omitted out of laziness to use a pad). The texture that emerges when ink spreads through the paper looks very much like a stone-carved edge.
 
-Im nächsten Schritt habe ich das Rakkan dann digitalisiert und in Adobe Photoshop leicht korrigiert, um unschöne Teile zu entfernen oder die Linienführung etwas zu verbessern.
+In the next step, I then digitized the Rakkan and slightly corrected it in Adobe Photoshop to remove unsightly parts or improve the lines a little.
 
-Um aus diesem Pixelbild eine Vektorform zu erstellen, importierte ich das Bild in Adobe Illustrator und wandelte es in eine Vektorform um, reduzierte danach die Anzahl der Vektorpunkte und exportierte das ganze als SVG-Datei.
+To create a vector shape from this pixel image, I imported the image into Adobe Illustrator and converted it to a vector shape, then reduced the number of vector points and exported it as an SVG file.
 
-Um mein Logo als Vektorfont auf der Seite zu verwendet, habe ich [Font Custom](http://fontcustom.com/) verwendet, mit dem sich SVG-Grafiken in Webfonts umwandeln lassen. So werden mehrere Vektor-Grafiken als einzelne Schriftzeichen in einer Font-Datei zusammengefasst. Sobald die Schriftart geladen ist, können die Icons dann in jeder beliebigen Größe angezeigt werden und mit CSS beliebig gestylt werden.
+To use my logo as a vector font on the page, I used [Font Custom](http://fontcustom.com/) to convert SVG graphics into web fonts. Thus, several vector graphics are combined as a single character in a font file. Once the font is loaded, the icons can then be displayed in any size and styled with CSS.
 
-## Die Schrift
+## The Font
 
-Jetzt lässt sich das Rakkan als Schriftzeichen verwenden und einfach über ein CSS-Klassen-Attribut an einem beliebigen Element erzeugen. Dann kann das Zeichen nach Belieben eingefärbt werden und eine gewünschte Schriftgröße oder Texteffekte (wie z. B. eine Schattenkante) bekommen.
+Now the Rakkan can be used as a character and can easily be generated by a CSS class attribute on any element. Then, the character can be colored at will and get a desired font size or text effects (such as a shadow edge).
