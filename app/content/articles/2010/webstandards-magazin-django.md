@@ -1,31 +1,31 @@
 ---
-language: de
-title: 'Webstandards-Magazin: Artikel über Django'
+language: en
+title: 'Webstandards-Magazin: Article about Django'
 slug: webstandards-magazine-django
 date: 2010-09-21T09:25:00+02:00
 author: Stefan Imhoff
-description: 'Ich durfte einen mehrseitigen Artikel über Django im  Webstandards-Magazin schreiben. Wie ich darüber schreibe, was ich an Django schätze und warum ich es einsetze.'
+description: 'I was allowed to write a multi-page article about Django in Webstandards-Magazin. I wrote about what I appreciate about Django and why I use it.'
 og_image: 'assets/images/articles/2010/webstandards-magazine-django/webstandards-magazine-django.jpg'
 categories: ['publication']
 ---
 
-Da lag es im Briefkasten: mein Belegexemplar der aktuellen Ausgabe 07/2010 des Webstandards-Magazin. Für mich ist dies eine Premiere, denn ich habe meinen ersten Artikel für das Webstandards-Magazin geschrieben.
+There it lay in my mailbox: My voucher copy of the current issue 07/2010 of the Webstandards-Magazin. This is a premiere for me because I wrote my first article for the Webstandards-Magazin.
 
 <figure class="image-figure">
   <a href="https://www.screengui.de/">
     <img src="/assets/images/articles/2010/webstandards-magazine-django/webstandards-magazine-django.jpg" alt="Webstandards-Magazin, Ausgabe 07/2010, Tools">
   </a>
   <figcaption>
-  Mein Artikel über Django im  <cite>Webstandards-Magazin</cite>, Ausgabe 07/2010, Tools
+  My article about Django in <cite>Webstandards-Magazin</cite>, Issue 07/2010, Tools
   </figcaption>
 </figure>
 
-Drei Seiten sollte er einmal lang werden, jetzt sind es fast fünf geworden. Es war einfach nicht möglich, die ganze Faszination für Django, Codebeispiele und Grafiken auf so wenig Platz unterzubringen. Doch die Chefredakteure des [Webstandards-Magazin](https://www.screengui.de/) Ansgar Hein und Jörg Morsbach waren sehr entgegenkommend und räumten mir mehr Platz ein. Vielen Dank noch einmal dafür! Ich bedanke mich auch recht herzlich bei den fleißigen Helfern, die meinen Artikel auf inhaltliche oder orthographische Fehler hin geprüft haben.
+It should be three pages long, now it has almost become five. It simply was not possible to put all the fascination for Django, code samples and graphics into so little space. But the editors-in-chief of [Webstandards-Magazine](https://www.screengui.de/) Ansgar Hein and Jörg Morsbach were very accommodating and gave me more space. Thank you again for that! I would also like to thank the diligent helpers who have checked my article for content or spelling errors.
 
-Der Artikel ist eins nicht geworden: ein Tutorial mit Schritt-für-Schritt-Anleitung, dafür gibt es genügend gute andere Plätze im Internet. Ich wollte mit meinem Artikel eher verdeutlichen, warum ich Django so schätze und seit mehr als vier Jahren diesem Webframework treu geblieben bin, was nicht selbstverständlich ist, da ich schwer zufrieden zustellen bin. Ich habe schon <cite>TextPattern</cite>, <cite>WordPress</cite>, <cite>CodeIgniter</cite>, <cite>ExpressionEngine</cite>, <cite>ModX</cite>, <cite>Symphony</cite> und noch einige Webframeworks und CMS getestet und auch eingesetzt, doch erst seit ich Django benutze, habe ich auch wirklich das Gefühl, dass ich alles an meiner Website kontrolliere, verstehe und wieder finde.
+The article did not become this: a tutorial with step-by-step instructions. But there are plenty of other good places on the internet for that. I wanted to clarify with my article, why I like Django so much and have stayed true to this web framework for more than four years, which is not self-evident, because I am hard to please. I have used <cite>TextPattern</cite>, <cite>WordPress</cite>, <cite>CodeIgniter</cite>, <cite>ExpressionEngine</cite>, <cite>ModX</cite>, <cite> Symphony</cite> and some web frameworks and CMS, but only since I use Django, I really have the feeling that I control and understand everything on my website.
 
-Django bietet mir sauberen, leicht zu lesender Python-Code, den sogar vollkommende Programmieranfänger lesen können. Seit ich mein Kampfkunst-Magazin [kogakure.de](http://kogakure.de/) im Mai 2008 auf Django umgestellt habe, bin ich Djangonaut. Ich würde gerne viel mehr Projekte mit Django umsetzen, nur leider ist die Verbreitung von Django noch nicht so groß wie von Ruby on Rails oder diversen Java-Frameworks – **völlig zu unrecht**.
+Django gives me clean, easy-to-read Python code that even full-fledged beginner programmers can read. Since I changed my martial arts magazine [kogakure.de](https://kogakure.de/) to Django in May 2008, I am Djangonaut. I would like to implement many more projects with Django, but unfortunately the distribution of Django is still not as big as Ruby on Rails or various Java frameworks - **completely unjustly**.
 
-Unglücklicherweise bin ich mit meiner Umstellung dieser Website auf Django nicht zur Veröffentlichung des Artikels fertig geworden, denn die Zeit, die Zeit … Aber ich arbeite ohne Druck daran :D In der Zwischenzeit leistet hier noch ExpressionEngine seinen Dienst, was ebenfalls ein sehr empfehlenswertes System ist. Ich hoffe, dass euch mein Artikel gefällt und der Django-Community weiteren Zulauf bringt.
+Unfortunately, I did not manage to publish the article at the same time of switching to Django, because of missing time … But I work without pressure. In the meantime, ExpressionEngine is still doing its job, which is also a highly recommended system, I hope you like my article and bring more to the Django community.
 
-Das <cite>Webstandards-Magazin</cite>, _Ausgabe 07/2010_ mit dem Thema _Tools_ erscheint am **24.09.2010** im Bahnhofs- und Flughafen-Buchhandel zum Preis von **7,80 €** oder im Abo für vier Ausgaben pro Jahr für 28 €. Mein Artikel findet ihr auf den Seiten 83-87: <cite>Einstieg in Django. Vielseitig und leistungsstark: Vorstellung des Python-Frameworks für anspruchsvolle Webanwendungen</cite>.
+The <cite>Webstandards-Magazin</cite>, _Issue 07/2010_ with the topic _Tools_ will be published on **24.09.2010** in the station and airport bookstores for the price of **7,80 €** or by subscription for four issues per year for 28 €. You can find my article on pages 83-87: <cite>Einstieg in Django. Vielseitig und leistungsstark: Vorstellung des Python-Frameworks für anspruchsvolle Webanwendungen</cite>.

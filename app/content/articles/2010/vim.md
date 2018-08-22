@@ -1,50 +1,50 @@
 ---
-language: de
-title: 'Bei der Macht von Vim – ich habe die Kraft'
+language: en
+title: 'By the Power of Vim … I Have the Power!'
 slug: vim
 date: 2010-10-29T19:00:00+02:00
 author: Stefan Imhoff
-description: 'Wie ich zum überzeugten Vim-Jünger wurde, warum Vim so ein genialer Editor ist und wie man am besten vorgeht, wenn man Vim lernen möchte.'
+description: 'How I became a convinced Vim disciple, why Vim is such an ingenious editor, and how to best practice if you want to learn Vim.'
 og_image: 'assets/images/articles/2010/vim/vim-vintage.jpg'
 categories: ['code', 'recommendation']
 ---
 
-So ähnlich lautete der Spruch des Superhelden _He-Man_ aus den 80er Jahren, kurz bevor er seine Superkräfte bekam. Und ungefähr genauso lange gibt es auch Vim: nämlich 22 Jahre. Und das ältere Vi, auf dem Vim basiert, gibt es sogar schon länger als ich lebe. Wenn also ein _simpler_ Texteditor seit so langer Zeit existiert und solche _Kraft_ verleiht, muss einfach etwas Besonderes daran sein.
+Something similar was the said of the superhero _He-Man_ from the 80s tv show _Masters of the Universe_, just before he got his superpowers. And Vim exists about as long as the tv show: 22 years. And the older Vi, on which Vim is based, has been around even longer than I live. So if a _simple_ text editor exists for such a long time and gives such _power_, it just has to be something special about it.
 
 <figure class="image-figure">
   <img src="/assets/images/articles/2010/vim/vim-vintage.jpg" alt="Vim, Reinigungs- und Poliermittel.">
   <figcaption>
-  Vim - Scheuermittel und Poliermittel. Erhellt das Heim und das Alter.
+  Vim - cleanser and polisher. Brightens the home and the age.
   </figcaption>
 </figure>
 
-Das erste Mal bin ich vor einigen Jahren über Vim (oder Vi) gestolpert, als ich zum ersten Mal irgendeine Datei auf einem Server bearbeiten musste und dort keiner meiner schicken Editoren funktionierte. Das erste Mal, als ich mit Vi(m) arbeitete, war meine natürliche Reaktion: <q>WTF, was soll der Scheiß, ich kann erst tippen, wenn ich i gedrückt habe? Wer denkt sich denn so einen Mist aus?</q>.
+The first time I stumbled upon Vim (or Vi) a couple of years ago, when I first had to edit any file on a server and none of my fancy editors worked there. The first time I worked with Vi(m) was my natural reaction: <q>WTF, I can not tap until I press `i`? Who invents such a crap? </q>.
 
-Aber weil ich als Webworker zwangsläufig immer wieder etwas auf dem Server bearbeiten muss, kam ich nicht darum herum entweder Vim oder Nano zu lernen. Und so bin ich auch jahrelang ganz gut mit vier oder fünf Vim-Tasten zurechtgekommen. Aber ich lag ja **so** falsch. Falsch. Falsch. Falsch.
+But because I as a web worker inevitably have to work on the server again and again, I could not avoid learning either Vim or Nano. And so, for years, I coped quite well with four or five Vim keys. But I was **so** wrong. Wrong. Wrong. Realy wrong.
 
-Vor drei Jahren hatte ich es schon einmal versucht Vim zu lernen und war kläglich gescheitert. Warum?
+Three years ago I had already tried to learn Vim and had failed miserably. Why?
 
-## Vim ist unglaublich, unglaublich komplex (aber auch ebenso mächtig)
+## Vim is Incredible, Incredibly Complex (but Equally Powerful)
 
-Es gibt Entwickler, die seit 20 Jahren mit Vim arbeiten und immer noch nicht glauben, sie würden Vim beherrschen.
+There are developers who have been working with Vim for 20 years and still do not think that they have mastered Vim.
 
-Das ich damals scheiterte lag einzig und allein daran, dass ich nicht richtig begonnen hatte. Bei Vim ist es _unbedingt_ nötig, langsam und schrittweise zu beginnen. Wie bei fast jeder anderen Kunst müssen zuerst die Grundlagen erlernt und gemeistert werden, ehe zur nächsten Stufe aufgestiegen werden kann. Ich hatte damals einfach eine Vim-Konfigurationsdatei kopiert und war völlig überfordert.
+That I failed then was solely because I had not started properly. With Vim it is absolutely necessary to start slowly and gradually. As with almost any other art, the basics must first be learned and mastered before moving on to the next level. I simply copied a Vim configuration file and was completely overwhelmed.
 
-Wenn du also Vim lernen möchtest, ist es wichtig zuerst zu verlernen, was alle anderen Editoren falsch beigebracht haben. Mit einem Texteditor – ganz gleich ob Word, Notepad, TextMate oder ein anderer Editor – möchtest du Text bearbeiten. Auch wenn du vielleicht glaubst, der wichtigste Teil wäre die Eingabe von Text, stimmt dies nicht, noch nicht einmal bei einem Buchautor, und erst recht nicht bei einem Programmierer.
+So if you want to learn Vim, it’s important to first unlearn what all other editors have taught you wrong. With a text editor - whether Word, Notepad, TextMate or another editor - you want to edit text. Even if you may think the most important part is typing, that’s not true, not even with a book author, let alone a programmer.
 
-Daher ist die komplette Philosophie von Vim anders als bei allen Konkurrenten. Die anderen Editoren kann man eigentlich noch nicht einmal mit Vim vergleichen.
+Therefore, the whole philosophy of Vim is different than with any other competitor. You can not even compare the other editors with Vim.
 
-Wenn du Vim benutzt, fühlst du dich, als ob du den Text beherrscht, wie ein Arzt mit dem Skalpell den Text sezieren kannst. Du navigierst und editierst deinen Text auf die beste und effizienteste Methode, die ich jemals gesehen habe.
+When you use Vim, you feel as if you master the text, as a doctor can dissect the text with a scalpel. You navigate and edit your text in the best and most efficient way I’ve ever seen.
 
-## Dies ist kein Tutorial
+## This is Not a Tutorial
 
-Ich werde hier kein Tutorial für Anfänger schreiben, das wäre eine überflüssige Arbeit, da es unzählige Quellen dazu im Internet gibt, und die Vim-Hilfe zu einer der besten überhaupt gehört. Ich will beschreiben, wie ich die ersten Schritte richtig gesetzt habe.
+I will not write a beginner’s tutorial here, it would be a waste of work, as there are countless sources on the Internet, and Vim Help is one of the best ever. And you can also just type `vimtutor` on your terminal to start an interactive Vim tutorial. Instead I want to describe how I got the first steps right.
 
-## Die ersten Schritte
+## The First Steps
 
-Zuerst solltest du unbedingt deine kompletten Vim-Dateien und Plugins unter Versionskontrolle stellen, so kannst du die gleiche Arbeitsumgebung in wenigen Sekunden an jedem beliebigen Rechner wieder herstellen. Es ist übrigens eine gute Idee auch alle Bash-Dateien und Unix-Konfigurationsdateien zu versionieren.
+First, be sure to put all your Vim files and plugins under version control, so you can restore the same workspace to any computer in seconds. Incidentally, it’s also a good idea to version all Bash files and Unix configuration files.
 
-Ich habe mir dazu ein Repository `dotfile` mit Git angelegt, in dem sich Unterordner für `bash`, `bin`, `git`, `vim` und einige andere Programme befinden. In meinem Vim-Unterordner befinden sich eine Datei `vimrc.vim` und `gvimrc.vim`, sowie verschiedene Vim-Ordner. Dieses simple Bash-Installationsskript installiert mir auf Wunsch meine Umgebung auf einem Rechner:
+I have created a repository `dotfile` with Git, which contains subfolders for `bash`, `bin`,`git`, `vim` and some other programs. My Vim subfolder contains a file `vimrc.vim` and `gvimrc.vim`, as well as various Vim folders. This simple bash installation script installs my environment on a computer if desired:
 
 ```bash
 #!/bin/bash
@@ -57,15 +57,15 @@ ln -nfs $VIM_SRC/vimrc.vim .vimrc
 ln -nfs $VIM_SRC/gvimrc.vim .gvimrc
 ```
 
-Dieses Skript verlinkt meine Konfigurationsdateien als symbolischen Link in das Home-Verzeichnis, wo Vim sie erwartet.
+This script links my configuration files as a symbolic link to the home directory where Vim expects them.
 
-## Der zweite, und wichtigste Schritt
+## The Second and Most Important Step
 
-Vim hat die unangenehme Eigenschaft, Dateien zerstreut über diverse Ordner abzulegen, die aus der Unix-Philosophie übernommen wurde und den Überblick, was schon installiert wurde, nicht gerade erleichtert.
+Vim has the nasty feature of scattering files across folders taken from the Unix philosophy, and does not exactly facilitate the overview of what has already been installed.
 
-Doch damit ist seit einiger Zeit Schluß. Tim Pope hat ein fantastisches Plugin programmiert, dass das letzte Plugin ist, welches auf traditionelle Weise installiert werden muß: **Pathogen**.
+But that’s been over for some time now. Tim Pope has programmed a fantastic plugin that is the last plugin to be installed in the traditional way: **Pathogen**.
 
-Pathogen ermöglicht es, Plugins als Bundles abzulegen, einzeln und als nettes Paket zusammengefasst. Alles was du dazu tun muss, ist [pathogen.vim](http://www.vim.org/scripts/script.php?script_id=2332) herunterzuladen und in den Vim-Ordner in einen Unterordner `autoload` (falls nicht vorhanden erstellen) abzulegen. Als nächsten Schritt legst du einen Ordner `bundle` im Vim-Ordner an und öffnest deine Datei `.vimrc`. Dort schreibst du ganz an den Anfang:
+Pathogen makes it possible to store plugins as bundles, individually and bundled together as a nice package. All you have to do is download [pathogen.vim](https://github.com/tpope/vim-pathogen) and place it in the Vim folder in a subfolder `autoload` (if not already created, create it). The next step is to create a `bundle` folder in the Vim folder and open your `.vimrc` file. There you write at the very beginning:
 
 <p class="code-info">.vimrc</p>
 
@@ -74,11 +74,13 @@ silent! call pathogen#runtime_append_all_bundles()
 silent! call pathogen#helptags()
 ```
 
-Plugins werden ab jetzt nicht entpackt und kompliziert in die richtigen Unterordner verschoben, sondern einfach pro Plugin in einen eigenen Ordner unter `bundle` gestellt. Für Vim gibt es nämlich leider einige, verschiedene Möglichkeiten Erweiterungen zu installieren, einfache Skripte, automatische Installer und seit kurzem gottseidank auch Git-Checkouts.
+Plugins are now not unpacked and moved complicated into the correct subfolders, but simply put per plugin in a separate folder under `bundle`. For Vim, there are unfortunately some, various ways to install extensions, simple scripts, automatic installer and, thank God, also Git checkouts.
 
-Meine Empfehlung ist, komplett auf Git-Checkouts umzusteigen. Das geht seit kurzem sehr leicht, denn irgend ein fleißiger Wichtel hat einen Mirror der meisten Skripte unter [vim-scripts](https://github.com/vim-scripts) auf Github eingestellt und ermöglicht so das automatische Update der Plugins über Git.
+**Update:** A few years ago I switched to [vim-plug](https://github.com/junegunn/vim-plug), a minimalist Vim Plugin Manager. It has a lot of nice features.
 
-Einige Personen klonen sich die gewünschten Plugins als Submodule, ich verwende ein kleines Ruby-Skript von [Tammer Saleh](http://tammersaleh.com/posts/the-modern-vim-config-with-pathogen/), mit dem ich meine Git-Repositorys aktualisiere:
+My recommendation is to switch completely to git checkouts. This has recently become very easy, because some diligent gnome has set a mirror of most scripts under [vim-scripts](https://github.com/vim-scripts) on Github and thus allows the automatic update of the plugins via Git.
+
+Some people clone the plugins they want as submodules, I use a small Ruby script from [Tammer Saleh](http://tammersaleh.com/posts/the-modern-vim-config-with-pathogen/), which I use Update my git repositories:
 
 ```ruby
 #!/usr/bin/env ruby
@@ -96,62 +98,62 @@ bundle_dir = File.expand_path('../bundle/', __FILE__)
 
 git_bundles.each do |url|
   dirname = File.basename(url)
-  puts "* Entpacke #{url} → #{dirname}"
+  puts "* Extract #{url} → #{dirname}"
   dir = File.join(bundle_dir, dirname)
   `cd #{dir} 2>/dev/null && git pull || git clone #{url} #{dir}
 end
 ```
 
-Dieses tolle Skript klont von verschiedenen Stellen (Github, meine eigener Server) meine Bundles oder aktualisiert sie. Der Vorteil ist, dass ich so in meinem Repository immer alles dabei habe und nicht erst durch einen Submodule-Befehl holen muss.
+This great script clones my bundles or updates them from different places (Github, my own server). The advantage is that in my repository I always have everything with me and I have not gotten it with a submodule command.
 
-## Grundlegende Konfiguration
+## Basic Configuration
 
-Als nächstes solltest du die `.vimrc` öffnen und einige grundlegende Einstellungen eintragen. Welche das genau sind schaust du dir am besten in den unten erwähnten Blogs und Screencasts an. Ich empfehle aber unbedingt, dass du dir immer Kommentare zu jedem Befehl schreibst, die genau erklären, was er bewirkt.
+Next you should open the `.vimrc` and enter some basic settings. To find out which ones are the best, you can have a look at the blogs and screencasts mentioned below. I strongly recommend that you always write comments next to each command that explain exactly what it does.
 
-Meine Datei ist in einige Bereiche geteilt: Zuerst kommen die grundlegenden Einstellungen zu Zeilenbreite, Umbruch, Farben, Backups, Zeilennummerierung etc. Danach folgt ein Bereich für Abkürzungen, dann der Bereich für die Tastaturbelegungen (Mappings), im Anschluß daran dateitypische Einstellungen und am Ende Funktionen.
+My file is divided into several areas: First, the basic settings are line width, wrapping, colors, backups, line numbering, etc. Then follows an area for abbreviations, then the area for the mappings, then file-type settings and at the end functions.
 
-## Tastaturkürzel
+## Keyboard Shortcuts
 
-Mein größtes Problem war irgendwann, dass meine Tastatur keine Tasten mehr übrig hatte, so gut wie alle Funktionstasten und fast alle anderen Tasten waren irgendwie belegt. Die Folge davon war, dass ich ständig herausfinden musste, welche Funktion, welches Plugin oder Mapping jetzt einen Konflikt erzeugt. Doch es gibt Gott sei Dank den ominösen `Leader`, eine Taste die du drücken kannst und danach eine beliebige Tastenkombination drücken kannst. Standardmäßig liegt diese Taste auf dem <kbd>\\</kbd> und ist somit nicht gut zu erreichen, weshalb die meisten Personen sie auf das Komma legen:
+My biggest problem at some point was that my keyboard had no keys left, just about all the function keys and almost all the other keys were used. The consequence of this was that I constantly had to find out which function, which plugin or mapping now creates a conflict. But thank God, the ominous `Leader`, a key that you can press and then press any key combination. By default, this key is located on the <kbd>\\</kbd> and is therefore not easy to reach, which is why most people put it on the comma:
 
 ```vim
 let mapleader=','
 ```
 
-Durch drücken des Komma im NORMAL-Modus, gefolgt von meinen Tastaturkürzeln kann ich beliebige Befehle leicht ausführen.
+By pressing the comma in NORMAL mode followed by my keyboard shortcuts, I can easily execute arbitrary commands.
 
-## Liebgewonnene Funktionen durch Plugins wiederbekommen
+## Get Back Cherished Functions Through Plugins
 
-Wenn du von TextMate zu Vim wechselt (oder von einem anderen Editor) wirst du natürlich mit Sicherheit einige liebgewonnene Möglichkeiten deines Editors vermissen. Wenn die vermisste Funktion nicht schon von Haus aus in Vim funkioniert, so funktioniert es mit sehr hoher Wahrscheinlichkeit durch eines der tausende Plugins.
+Of course, if you switch from TextMate to Vim (or another editor), you’re bound to miss some of your editor’s favorite opportunities. If the missing feature does not work in Vim by itself, it will most likely work with one of the thousands of plugins.
 
-Eine Seitenleiste, in der alle Dateien in Baumstruktur zu sehen sind, kann z. B. durch [NERD tree](https://github.com/scrooloose/nerdtree) aktiviert werden. Ich dachte zuerst, diese Funktion benötige ich **ungedingt**, doch seit ich die Buffer und Splits von Vim kenne, benutze ich den NERD tree eigentlich nur noch selten.
+A sidebar, in which all files are to be seen in tree structure, can for example added with [NERD tree](https://github.com/scrooloose/nerdtree). At first I thought, I’ll need this functionality **undoubtedly**, but since I know the buffers and splits of Vim, I use the NERD tree actually only very rarely.
 
-Wincent Colaiuta hat mit [Command-T](https://wincent.com/products/command-t) ein geniales Plugin programmiert, das die Funktion von TextMate reproduziert, durch wenige Tastenanschläge beliebige Dateien im Projekt zu öffnen.
+Wincent Colaiuta has written [Command-T](https://wincent.com/products/command-t) an ingenious plugin that reproduces TextMate’s ability to open any file in the project with a few keystrokes.
 
-Einfach unabdingbar ist auch das Plugin [surround.vim](https://github.com/tpope/vim-surround), mit dem du Umfassungen wie Klammern, Tags, Hochkommata verändern, manipulieren oder löschen kannst.
+Just as essential is the plugin [surround.vim](https://github.com/tpope/vim-surround) that lets you manipulate, add or delete enclosures such as parentheses, tags, single quotes.
 
-TextMate war wahrscheinlich das erste Programm, das Snippets im Großen Umfang eingeführt hat. Ich arbeite seit Jahren mit TextMate und könnte ohne Snippets nicht mehr vernünftig arbeiten. Vim bietet sogar mehrere Implementationen für Snippets. Ich persönlich nutze [snipmate](https://github.com/msanders/snipmate.vim) auch wenn es für Poweruser noch ein mächtigeres (aber auch komplizierteres Plugin) gibt. Snipmate bietet fast alle Funktionen, die auch TextMate hatte, die Snippets können fast kopiert werden und mit wenigen Änderungen angepasst werden.
+TextMate was probably the first program that introduced snippets on a large scale. I’ve been working with TextMate for years and could not work properly without snippets. Vim even offers several implementations for snippets. Personally, I use [snipmate](https://github.com/msanders/snipmate.vim) even though there is a more powerful (but also more complicated plugin) for Powerusers. Snipmate offers almost all the functions that TextMate had, the snippets can almost be copied and modified with just a few changes.
 
-Peteris Krumin stellt auf seinem Blog [sieben Vim-Plugins](http://www.catonmat.net/blog/vim-plugins-surround-vim/) vor, die du unbedingt kennen solltest.
+Peteris Krumin introduces on his blog [Vim Plugins You Should Know About](http://www.catonmat.net/blog/vim-plugins-surround-vim/).
 
-## Omnicomplete-Power
+## Omnicomplete Power
 
-Vim bietet seit Version 7 mit Omnicomplete ein unschlagbares Werkzeug. Omnicomplete ergänzt einfach so gut wie alles: ob einfache Worte, Einträge aus Wörterbüchern, Funktionen, Klassen, Dateinamen. Das ist genial. Ich habe kurzerhand einfach ein 7 MB großes Dictionary mit der deutschen Rechtschreibung angebunden, und jetzt ergänzt mir Vim jedes noch so komplizierte Wort.
+Vim offers an unbeatable tool since version 7 with Omnicomplete. Omnicomplete complements just about everything: simple words, dictionaries, functions, classes, file names. This is genius. I’ve just hooked up a 7 MB dictionary with German spelling, and now Vim complements any word that complicated.
 
-## Und es werde bunt
+## There Will Be Color
 
-Der eine mag es grell, der andere hell, einer mag es dunkel und einer beige. Für Vim gibt es nahezu unzählige Farbschema, die leicht heruntergeladen werden können und in Sekundenschnelle gewechselt sind. Es besteht sogar die Möglichkeit TextMate-Themes in Vim-Colorschemes umzuwandeln. Die Farbdateien können leicht angepasst werden, bis auch der letzte zufrieden ist.
+One likes it bright, one likes it dark and one beige. For Vim there are almost countless color schemes that can be easily downloaded and changed in seconds. There is even the possibility to convert TextMate themes into Vim color schemes. The color files can be easily adjusted until the last one is satisfied.
 
-## Und wo fange ich jetzt an?
+## And Where Do I Start Now?
 
-Wenn du eineeinhalb Stunden Zeit hast, schau dir doch das Video vom GoogleTechTalk an, in dem der Entwickler von Vim, der Niederländer Bram Moolenaar zeigt in [7 Habits For Effective Text Editing 2.0](https://www.youtube.com/watch?v=p6K4iIMlouI) was an Vim so beeindruckend ist.
+If you have an hour and a half, check out the video from GoogleTechTalk, in which the developer of Vim, the Dutchman Bram Moolenaar, shows in [7 Habits For Effective Text Editing 2.0](https://www.youtube.com/watch?v=p6K4iIMlouI) which is so impressive on Vim.
 
-Es gibt außerdem zwei fantastische Artikel, die ich unbedingt empfehlen kann: [Coming Home to Vim](http://stevelosh.com/blog/2010/09/coming-home-to-vim/) von Steve Losh und [How I boosted my Vim](http://nvie.com/posts/how-i-boosted-my-vim/) von Vincent Driessen.
+There are also two fantastic articles I can recommend: [Coming Home to Vim](http://stevelosh.com/blog/2010/09/coming-home-to-vim/) by Steve Losh and [How I boosted my vim](http://nvie.com/posts/how-i-boosted-my-vim/) by Vincent Driessen.
 
-## Das Beste kommt zum Schluß
+## The Best Comes Last
 
-Den wirklich besten Einstieg bieten aber zwei fantastische Screencast-Reihen. [Derek Wyatts Vim Tutorial Videos](http://derekwyatt.org/vim/tutorials/) und die [Screencasts auf vimcasts.org](http://vimcasts.org/). Wenn du wenig Zeit hast, dich durch die ganzen Blogs zu lesen, nimm dir aber unbedingt die Zeit und schau seine Screencasts an. Die sind zwischen 5 und 30 Minuten lang und er hat eine ganze Reihe davon gemacht. Ich habe selten so gelacht, denn Derek zeigt nicht nur, wie ein Profi mit Vim arbeitet, sondern hat auch noch einen fantastischen Humor. Am besten fängst du mit den Einsteiger-Videos an, und genauer solltest du mit dem Einstiegs-Video [Welcome to Vim](http://derekwyatt.org/vim/tutorials/novice/) starten. Die Screencasts auf vimcasts.org sind ebenfalls sehr zu empfehlen.
+But the best way to get started is with two fantastic screencast series. [Derek Wyatt’s Vim Tutorial Videos](http://derekwyatt.org/vim/tutorials/) and the [Screencasts at vimcasts.org](http://vimcasts.org/). If you have little time to read through the blogs, take the time to watch his screencasts. They are between 5 and 30 minutes long and he has made quite a number of them. I’ve rarely laughed that way because Derek not only shows how a professional works with Vim, but also has a fantastic sense of humor. It’s best to start with the beginner videos, and more specifically you should start with the introductory video [Welcome to Vim](http://derekwyatt.org/vim/tutorials/novice/). The screencasts on vimcasts.org are also highly recommended.
 
-Versuch nicht zu viel auf einmal, lerne die Grundlagen, insbesondere die Bewegungsbefehle, Suchebefehle und Zeichenkettenmanipulationen. Und verwende sie auch, selbst wenn du glaubst der alte Weg würde schneller gehen! Am Anfang wirst du sehr langsam sein und das Gefühl haben, du würdest weniger produktiv mit Vim sein. Aber das täuscht, da du schnell besser werden wirst und dann jeden anderen Editor abhängen wirst. Die Umstellung ist nicht leicht, ich versuche es seit einem Monat und es ist schwierig sich all die furchtbaren Angewohnheiten abzugewöhnen: Der ständige Griff zur Maus oder die blödsinnigen Pfeiltasten zu bedienen.
+Do not try too much at once, learn the basics, especially the motion commands, search commands, and string manipulations. And use them too, even if you think the old way would go faster! In the beginning you will be very slow and feel that you are less productive with Vim. But that’s misleading, since you’ll get better quickly and then depend on every other editor. The transition is not easy, I’ve been trying it for a month and it’s difficult to get rid of all those awful habits: the constant grasp of the mouse or the nonsensical arrow keys to operate.
 
-Wenn du Vim verwendest, wirst du weitaus weniger tippen müssen, wirst weitaus schneller deinen Text bearbeiten können, aber vor allem wirst du ständig neu begeistert sein, wenn du wieder einen Weg entdeckt hast, einen besseren, schnelleren und effizienteren Weg für alte Gewohnheiten zu entdecken.
+If you use Vim, you will have to type far less, you will be able to edit your text much faster, but above all, you will be constantly excited again when you have discovered a new way to write a better, faster, and be more efficient.

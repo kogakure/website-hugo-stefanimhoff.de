@@ -1,37 +1,37 @@
 ---
-language: de
-title: 'HOME – Atemberaubende Dokumentation über unsere Erde'
+language: en
+title: 'HOME - Stunning Documentary About our Earth'
 slug: home-documentary
 date: 2009-06-15T17:23:00+02:00
 author: Stefan Imhoff
-description: "Filmempfehlung: Die Naturdokumentation 'Home' von Yann Arthus-Bertrand KOSTENLOS ansehen. Wunderschöne Luftaufnahmen von der Welt. Die Entstehung der Erde, das Leben, die Zerstörung durch den Menschen und Hoffnung und Auswege."
+description: 'Recommended Film: View the nature documentation HOME by Yann Arthus-Bertrand for FREE. Beautiful aerial photographs of the world. The creation of the earth, life, destruction by man and hope and ways out.'
 categories: ['recommendation', 'film']
 ---
 
-Am 5. Juni 2009 startete der Dokumentationsfilm [HOME](https://www.youtube.com/watch?v=jqxENMKaeCU) von Yann Arthus-Bertrand gleichzeitig und kostenlos in allen Ländern und in allen nur erdenklichen Medien: im Internet, Fernsehen und Kinos, wobei der Film den Kinos sogar kostenlos zur Verfügung gestellt wurde. Außerdem ist der Film schon auf DVD erhältlich, und ein Teil des Verkaufspreises wird der Organisation <cite>Good Planet</cite> gespendet.
+On June 5, 2009 Yann Arthus-Bertrand’s documentary film [HOME](https://www.youtube.com/watch?v=jqxENMKaeCU) started simultaneously and free of charge in all countries and all manner of media: on the Internet, on television and cinemas, where the film was even made available to the cinemas for free. In addition, the film is already available on DVD, and part of the sale price will be donated to the organization <cite>Good Planet</cite>.
 
 ![HOME](/assets/images/articles/2009/home-documentary/home.jpg)
 
-Mit einem Budget von ca. 10-15 Millionen Dollar, gesponsert von [EuropaCorp](http://www.europacorp.com/ 'EuropaCorp') und PPR, wollte der Regisseur einen bewegenden Film über unsere Erde erstellen, was ihm durchweg gelungen ist.
+With a budget of approximately $10-15 million, sponsored by [EuropaCorp](http://www.europacorp.com/) and PPR, the director wanted to create a moving film about our planet, in which he consistently succeeded.
 
 <blockquote lang="en" class="pullquote">
   <p>No time for&nbsp;pessimism.</p>
 </blockquote>
 
-Der Film hat eine Spieldauer von 1 Stunde und 33 Minuten und ist grob in drei Teile aufgeteilt:
+The film has a playing time of 1 hour and 33 minutes and is roughly divided into three parts:
 
-1. Die Entstehung der Erde, des Lebens und der Arten
-2. Die Zerstörungen und Spuren des Homo Sapiens
-3. Hoffnung und Auswege
+1. The origin of the earth, life and species
+2. The destruction and traces of Homo Sapiens
+3. Hope and ways out
 
-Die Aufnahmen sind durchweg in atemberaubenden (oder erschreckenden) Landschaften aus der Luft gedreht und werden von einer Sprecherin besprochen. Dazu wurde wunderschöne Musik von Armand Amar komponiert. Der Komponist hat viele verschiedene Musiker aus verschiedenen Nationen eingesetzt, unter anderem die wunderbare Sängerin Gombodorj Byambajarga, den mongolischen Sänger Enkhajargal Dandarvaanchig, sowie Trommler aus Schanghai und das Budapest Symphony Orchester aus Ungarn.
+The shots are shot in stunning (or terrifying) landscapes throughout the air and are commented by a narrator. In addition beautiful music was composed by Armand Amar. The composer has used many different musicians from different nations, including the wonderful singer Gombodorj Byambajarga, the Mongolian singer Enkhajargal Dandarvaanchig, as well as drummers from Shanghai and the Budapest Symphony Orchestra from Hungary.
 
 <blockquote lang="en" class="pullquote">
   <p>Dubai has endless sun, but no solar&nbsp;panels.</p>
 </blockquote>
 
-Der Film soll die Zuschauer bewegen, damit sie darüber schreiben, ihre Regierungen zum Umkehren bewegen und das Bewusstsein für das Thema am Leben fördern. Selbst mit anderen Filmen zu diesem Thema verglichen, ist <cite>HOME</cite> bislang der beeindruckendste Film den ich gesehen habe.
+The film is designed to get viewers to write about it, make their governments turn around, and raise awareness of the topic. Even compared to other films on this topic, <cite>HOME</cite> is the most impressive movie I’ve seen so far.
 
-Der Film fährt mit harten Fakten und erschreckenden Bildern auf, die selbst gebildete und gut informierte Personen noch erschrecken werden, zeitweise kam ich mir wie im Film Matrix vor, nachdem Neo die rote Pille genommen hatte.
+The film provides hard facts and frightening images that will scare even educated and well-informed people, and at times I felt like I was in Matrix, after Neo took the red pill. But there are also images of stunning beauty, which give reason to preserve our earth.
 
-Den Film kann man in HD auf [YouTube](https://www.youtube.com/watch?v=jqxENMKaeCU) ansehen.
+You can watch the movie in HD on [YouTube](https://www.youtube.com/watch?v=jqxENMKaeCU).

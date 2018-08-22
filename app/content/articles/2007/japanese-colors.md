@@ -1,7 +1,7 @@
 ---
-language: de
-title: 'Traditionelle, japanische Farben für Photoshop und Illustrator'
-description: 'Traditionelle, japanische Farben als Farbpalette für Photoshop und Illustrator zum KOSTENLOSEN Download.'
+language: en
+title: 'Traditional, Japanese Colors for Photoshop and Illustrator'
+description: 'Traditional, Japanese colors as a color palette for Photoshop and Illustrator to download (FREE).'
 author: Stefan Imhoff
 slug: japanese-colors
 date: 2007-12-08T21:05:00+02:00
@@ -11,17 +11,17 @@ download_url: '/downloads/traditional-colors-of-japan-rgb.zip'
 download_text: 'Farbpalette: Traditionelle Japanische Farben (5 KB)'
 ---
 
-Bei einem Besuch in der Kunstausstellung <cite>Japan und der Westen</cite> im [Kunstmuseum Wolfsburg](https://www.kunstmuseum-wolfsburg.de/ 'Kunstmuseum-Wolfsburg'), konnte ich ein wunderbares Buch über die traditionellen, japanischen Farben erstehen.
+During a visit to the art exhibition <cite>Japan and the West</cite> in the [Art Museum Wolfsburg](https://www.kunstmuseum-wolfsburg.de/), I was able to get my hands on a wonderful book about the traditional, Japanese colors.
 
-Im Museums-Shop konnte ich das Buch <cite>[The Traditional Colors of Japan](http://www.amazon.de/gp/product/4894445786/ref=as_li_ss_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=4894445786&linkCode=as2&tag=kogakurede-21)</cite> erstehen, das zwar auf Japanisch ist, aber neben einer vollständigen Farbpalette mit 250 Farben auch eine genaue Wertangabe von RGB, CMYK und anderen Informationen enthält.
+In the museum shop I was able to buy the book <cite>[The Traditional Colors of Japan](http://www.amazon.de/gp/product/4894445786/ref=as_li_ss_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=4894445786&linkCode=as2&tag=kogakurede-21)</cite>, which is in Japanese. In addition to a full color palette of 250 colors, it also contains an exact indication of RGB, CMYK and other information.
 
 <figure class="image-figure image-figure-noborder">
-  <img src="/assets/images/articles/2007/japanese-colors/japanese-colors.png" alt="Japanische Farben" title="Japanische Farben">
+  <img src="/assets/images/articles/2007/japanese-colors/japanese-colors.png" alt="Japanese Colors" title="Japanese Colors">
   <figcaption>
-  Japanische Farbpalette für Adobe Illustrator und Photoshop
+  Japanese color palette for Adobe Illustrator and Photoshop
   </figcaption>
 </figure>
 
-Jede Seite des Buches zeigt drei Farben, die immer einem oder mehreren wunderbaren Fotos gegenübergestellt werden. Die Fotos zeigen die traditionellen Anwendung in Kimonos, Samurai-Rüstungen, Mönchskleidung oder der Natur.
+Each page of the book shows three colors that are always juxtaposed with one or more wonderful photos. The photos show the traditional use in kimono, samurai armor, monk clothing or nature.
 
-Ich habe mir die Mühe gemacht und die RGB-Palette mit den korrekten Farbnamen als Adobe Austauschdatei (ase) erstellt. Diese Farbpalette kann z. B. in Photoshop oder Illustrator importiert werden.
+I took the time to create the RGB palette with the correct color names as Adobe Exchange file (ase). This color palette can be used in Photoshop or Illustrator.

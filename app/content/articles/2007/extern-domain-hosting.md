@@ -1,67 +1,67 @@
 ---
 language: de
-title: 'Domains extern hosten'
+title: 'Why You Should Separate Your Domains from Your Webhosting'
 slug: extern-domain-hosting
-description: 'Domains getrennt vom Webhosting-Paket hosten. Warum dies eine gute Idee ist und was für Vorteile es bringt.'
+description: 'Host domains separately from the web hosting package. Why this is a good idea and what are the benefits?'
 author: Stefan Imhoff
 date: 2007-05-30T23:55:00+02:00
 categories: ['server', 'recommendation']
 ---
 
-Viele Domainbesitzer in Deutschland wissen immer noch nicht, dass sie ihre Domains _nicht_ mit dem Speicherplatz zusammen kaufen müssen. Ich erkäre hier, wieso Inklusivdomains eine Mogelpackung sind und was für Vorteile das Trennen von Domain und Webspace mit sich bringen.
+Many domain owners in Germany still do not know that they do not have to buy their domains together with the storage space. I explain why inclusive domains are a sham and what are the benefits of separating domain and webspace.
 
-Überlicherweise kauft man sich einen Webhosting-Paket bei irgendeinem Anbieter, der dann meist Inklusivdomains mitliefert.
+Usually one buys a web hosting package from any provider, which then usually includes inclusive domains.
 
-Für viele kleinere Domainbesitzer mag dies auf den ersten Blick wie ein Schnäppchen aussehen, doch der Schein trügt zumeist. Denn mit diesen _spottbilligen_ Angeboten sind Mindestvertragslaufzeiten von **1-2 Jahren** verbunden. Gerade im Internet ändern sich die Angebote aber fast schon wöchentlich.
+For many smaller domain owners this may at first glance look like a bargain, but appearances are usually deceptive. Because with these _dirt cheap_ offers are minimum contract terms of **1-2 years** connected. Especially on the Internet, the offers change but almost weekly.
 
-Meist sind auch Domains, die man über seine Inklusivdomains hinaus kaufen kann, über die Maßen zu teuer. Die Preise reichen von _günstigen_ 0,99 € bis hin zu 4,– € (pro Monat).
+In most cases, domains that you can buy beyond its inclusive domains are too expensive. Prices range from _low_ € 0.99 to € 4.00 per month.
 
-## Die Kosten im Webhosting
+## The Costs in Webhosting
 
-Dabei sind es gerade die Domains, die eigentlich keinen oder nur einen minimalen Kostenfaktor beim Hosting ausmachen.
+It is just the domains that actually make no or only a minimal cost factor in hosting.
 
-<blockquote lang="de" class="pullquote">
-  <p>Die wirklichen Kosten des Hostings entstehen durch Festplattenplatz, Speicher und genutzte&nbsp;Bandbreite.</p>
+It is precisely these domains that make little or no cost in hosting. The real cost of hosting is disk space, memory and bandwidth used. Thus, all limitations and _package features_ are completely fictitious and limited only for better advertising.
+
+<blockquote lang="en" class="pullquote">
+  <p>The real cost of hosting is disk space, memory and bandwidth&nbsp;used.</p>
 </blockquote>
 
-Die wirklichen Kosten des Hostings entstehen durch Festplattenplatz, Speicher und genutzte Bandbreite. Somit sind auch alle Begrenzungen und _Paket-Features_ vollkommen fiktiv und nur zur besseren Werbung abgegrenzt.
+Whether I use one, two or a hundred databases, is technically speaking, no difference, and it also doesn’t matter whether I am offered this or that programming language.
 
-Ob ich nun eine, zwei oder hundert Datenbanken benutze, ist technisch gesehen kein Unterschied, genauso wenig, ob mir diese oder jene Programmiersprache angeboten wird.
+But this is much more profitable for the webhosters: If the customer wants something more because the demands are growing, he usually has to switch to the next higher package. There are web hosts who actually charge 4.99 € / month for a second database (100MB).
 
-Doch so ist es für die Webhoster viel profitabler: Möchte der Kunde etwas mehr haben, weil die Ansprüche wachsen, so muss er meist in das nächsthöhere Paket wechseln. Es gibt Webhoster, die tatsächlich für eine zweite Datenbank (100MB) 4,99 €/Monat zusätzlich verlangen…
+## Switching to a New Webhoster
 
-## Zu einem neuen Hoster wechseln
+However, it is particularly painful to notice that hosting domains at the webhost is not such a good idea if you want to change.
 
-Besonders schmerzhaft bemerkt man aber, dass Hosting von Domains beim Webhoster keine so gute Idee ist, wenn man wechseln will.
+You get usually confronted with an unsuspecting flood of technical terms, faxes and forms, from time to time, hosters reject the so-called _ChProv_ first, so that another must be started.
 
-Zumeist kommt auf den ahnungslosen eine Flut von Fachbegriffen, Faxen und Formularen zu, von Zeit zu Zeit lehnen Hoster den so genannten KK-Antrag auch einfach erstmal ab, so das ein weiterer gestartet werden muss.
+The hoster 1&1 has prepared a wonderful top performance of the chicane for its customers: One must cancel his domains in the customer center and prepare for the _ChProv_. Then you get a phone number, which you have to call. The telephone counselor on the other hand is probably encouraged to dissuade the termination when possible. Then he manually unlocks the necessary forms, which must be signed and faxed to the hoster. And that, even though you had to identify yourself before by private questions doubtlessly.
 
-Der Hoster 1&1 hat eine wunderbare Spitzenleistung der Schikane für seine Kunden vorbereitet: Man muss im Kundencenter seine Domains kündigen und für den KK-Antrag freigeben. Daraufhin bekommt man eine Telefonnummer, die man anrufen muss. Der Telefonberater auf der anderen Seite ist wohl dazu angehalten, die Kündigung möglichst auszureden. Danach schaltet er manuell die nötigen Formulare frei, die man noch unterschreiben und an den Hoster faxen muss. Und das, obwohl man sich schon vorher durch private Fragen zweifelsfrei identifizieren musste.
+## Host Domains Externally
 
-## Domains extern hosten
+Host your domains externally. There are web hosts offering this service (google for _Domainhosting_ or _DomainRobot_).
 
-**Daher mein Tipp:** Hosted eure Domains extern. Es gibt Webhoster, die diesen Dienst anbieten (googlen nach _Domainhosting_ oder _DomainRobot_).
+- This costs in most cases no basic fee.
+- You can buy as many domains for friends, relatives or customers as you like.
+- Manage your _Handles_ yourself and are thus Admin-C, Tech-C and Zone-C.
+- The price is dirt cheap: A .de domain is available from about 0.30 € / month.
+- You never have to send any faxes again: ChProv, new orders, terminations of domains - all in one click in the browser.
 
-- Dies kostet in den meisten Fällen keine Grundgebühr.
-- Man kann so viele Domains für Freunde, Verwandte oder Kunden kaufen, wie man möchte.
-- Man verwaltet seine _Handles_ selber und ist somit Admin-C, Tech-C und Zone-C.
-- Der Preis ist spottbillig: Eine .de-Domain gibt es schon ab ca. 0,30 €/Monat.
-- Man muss nie wieder irgendein Fax schicken: KK-Anträge, Neubestellungen, Kündigungen von Domains – alles per Klick im Browser.
+The best thing, however, is that the move of a domain by simply changing the DNS server is completed within a few minutes.
 
-Das beste ist allerdings, das der Umzug einer Domain durch ein simples Wechseln des DNS-Servers innerhalb von wenigen Minuten vollzogen ist.
+**But beware:** You need your own IP address, or the host must internally give the possibility to forward external requests to the right webhosting package.
 
-**Doch Achtung:** Man benötigt bei seinem Hoster eine eigene IP-Adresse, oder der Hoster muss intern die Möglichkeit geben, externe Anfragen auf das richtige Webhosting-Paket weiterzuleiten.
+Meanwhile, hosters such as 1&1 allow externally hosted domains, too.
 
-Mittlerweile lassen aber auch Hoster wie z.B. 1&1 extern gehostete Domains zu.
+This is easier to move away, but with tying contracts over two years this is irrelevant.
 
-Damit hat man zwar auch dort leichter die Möglichkeit wieder wegzuziehen, doch bei Knebelverträgen über zwei Jahre ist das nebensächlich.
+## Look at Offers Abroad
 
-## Ruhig mal Angebote im Ausland ansehen
+There are many good hosters in other countries whose support and service are often ahead the competition by light years.
 
-**Daher mein Tipp:** Es gibt viele gute Hoster in anderen Ländern, deren Support und Service dem deutschen oft um Lichtjahre vorraus sind.
+Monthly contracts, abundant traffic and storage space, state-of-the-art technology and brand new programming languages. Outside of Germany webhosting is taken very loose, you are usually friendly with customers and let them move, if they have found better deals. And **just** now profits as a German from the good US dollar, AU dollar to Euro rate.
 
-Monatsverträge, üppige Traffic- und Speicherplatzangebote, modernste Technik und nagelneue Programmiersprachen. Außerhalb Deutschlands wird Webhosting sehr locker genommen, man geht meistens freundlich mit Kunden um und lässt sie ziehen, wenn sie bessere Angebote gefunden haben. Und **gerade** jetzt profitiert man als Deutscher vom guten US-Dollar, AU-Dollar zu Euro-Kurs.
+Germany’s webhosts will also learn it, but it’s well known that everything takes a bit longer here.
 
-Deutschlands Webhoster werden es auch noch lernen, doch das dauert hier bekanntlich ja alles etwas länger.
-
-Es gibt einen guten [Screencast](https://css-tricks.com/video-screencasts/46-domains-dns-hosting-and-google-apps/) auf CSS-Tricks, wie man mit externen Domains, DNS-Servern und ähnlichen Dingen arbeitet.
+There is a good [Screencast](https://css-tricks.com/video-screencasts/46-domains-dns-hosting-and-google-apps/) on CSS-Tricks on how to deal with external domains, DNS Servers and similar things.

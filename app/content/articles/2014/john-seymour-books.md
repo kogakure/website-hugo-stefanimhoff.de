@@ -1,41 +1,41 @@
 ---
-language: de
-title: 'John Seymours Bücher über Selbstversorgung'
+language: en
+title: 'John Seymours Books on Self-Sufficiency'
 author: Stefan Imhoff
 slug: john-seymour-books
 date: 2014-08-03T16:00:00+02:00
 og_image: 'assets/images/articles/2014/john-seymour-buecher-selbstversorgung/john-seymour-illustration.jpg'
-description: 'Über John Seymours fantastische, wunderschön illustrierte Bücher zu Selbstversorgung, Landwirtschaft und Handwerk. Die optimale Ausrüstung für eine kommende Zombie-Apokalypse.'
+description: 'On John Seymour’s fantastic, beautifully illustrated books on self-sufficiency, agriculture and crafts. The optimal equipment for an upcoming zombie apocalypse.'
 categories: ['book', 'recommendation']
 ---
 
-Meine frühsten Erinnerungen an Bücher sind, dass ich auf dem Bauch im Wohnzimmer auf dem weichen Teppich meiner Eltern liege und im <cite>Atlas der Weltgeschichte</cite> oder in den Büchern von _John Seymour_ lese. Wer war John Seymour und warum sind mir seine Bücher so in Erinnerung geblieben?
+My earliest memories of books are that I lie on my parents’ soft carpet on my stomach in the living room and read in the <cite>Atlas of World History</cite> or in the books of _John Seymour_. Who was John Seymour and why did his books remain so in my memory?
 
 ## John Seymour
 
 Geboren 1914 in England, kam er dann in der Schweiz auf ein Internat und begann später Agrarwissenschaften zu studieren. Er ging mit 20 Jahren nach Afrika, um dort als Farmer zu arbeiten. Nach seinem Dienst im Zweiten Weltkrieg in Nordafrika und Asien kehrte er nach England zurück und zog 1957 mit seiner Familie in eine alte abgelegene Farm und begann ausschließlich von selbstangebauten Erzeugnissen zu leben. Nach einem Umzug auf eine Farm in Wales schrieb er in den 70er Jahren seine weltbekannten Bücher <cite><a href="http://www.amazon.de/gp/product/3831015775?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=3831015775">Das große Buch vom Leben auf dem Lande</a></cite> und <cite><a href="http://www.amazon.de/gp/product/3783161452?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=3783161452">Selbstversorgung aus dem Garten</a></cite>.
 
 <figure class="image-figure">
-  <img src="/assets/images/articles/2014/john-seymour-books/john-seymour-illustration.jpg" alt="Illustration von Getreidearten">
+  <img src="/assets/images/articles/2014/john-seymour-books/john-seymour-illustration.jpg" alt="Illustration of cereals">
   <figcaption>
-  Illustration von Getreidearten aus einem von John Seymours’ Büchern
+  Illustration of cereals from one of John Seymour’s books
   </figcaption>
 </figure>
 
-## Die Bücher
+## The Books
 
-In seinen Büchern schreibt er für Laien verständlich, ergänzt durch wunderschöne, sehr detailierte Zeichnungen und Illustrationen. Ob man nur einem kleinen Garten oder einem großen Bauernhof betreibt, seine Bücher beschreiben sehr genau, was getan werden muss, damit ein geschlossener und gesunder Kreislauf entsteht.
+In his books, he writes comprehensible for laymen, enriched by beautiful, very detailed drawings and illustrations. Whether you only run a small garden or a large farm, his books describe very well what needs to be done to create a closed and healthy cycle.
 
-In _Das große Buch vom Leben auf dem Lande_ erklärt er z. B. die Nahrungskette, Bodenarten, die Jahreszeiten, verschiedenste Arten von Gärten, geht auf alle möglichen Arten von Obst und Gemüse ein, beschreibt die Haltung von Tieren, die Bearbeitung und Nutzbarmachung von Land, Haltbarkeit von Lebensmitteln und eine weitere riesige Anzahl von Dingen. Sein zweites Buch _Selbstversorgung aus dem Garten_ geht mehr und detaillierter auf die Arbeit mit einem Garten ein.
+In _The New Complete Book of Self-Sufficiency_ he explains the food chain, soil types, the seasons, various types of gardens, addresses all kinds of fruits and vegetables, describes the keeping of animals, the cultivation and utilization of land, long-lastingness of food and a huge number of things. His second book _The New Self-Sufficient Gardener_ goes into more detail and detailing the work with a garden.
 
-## Teil meiner Überlebensausrüstung
+## Part of my Survival Kit
 
-Ich scherze manchmal, dass wenn die Zombie-Apocalypse kommen würde oder die Zivilisation aus anderen Gründen zusammenbricht, ich als erstes mein [Kukri](https://de.wikipedia.org/wiki/Khukuri), meinen Bogen mit Pfeilen und die Bücher von John Seymour einpacken würde. Denn alles Wissen, was wir täglich anwenden, sei es Programmierung, Gestaltung, Management, Tabellenkalkulation oder irgendeine andere Tätigkeit der Moderne sind dann nichts mehr wert. Das Wissen in seinen Büchern ist jedoch fast zeitlos und wird auch noch in ferner Zukunft aktuell sein.
+I sometimes joke that if the zombie apocalypse arrives or civilization collapsed for other reasons, I first get my [Kukri](https://en.wikipedia.org/wiki/Khukuri), my bow with arrows and the books of John Seymour. Because all the knowledge that we use every day, be it programming, design, management, spreadsheets or any other activity of the modern age is then worth nothing. However, the knowledge in his books is almost timeless and will be up to date even in the distant future.
 
-John Seymour hat im Laufe seines Lebens noch viele weitere Bücher geschrieben, z. B. das sehr empfehlenswerte Buch <cite><a href="http://www.amazon.de/gp/product/3783162033?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=3783162033">Vergessene Künste</a></cite>, in dem reichlich illustriert zahlreiche Künste, wie Holzhandwerk, Bauhandwerk, Werkstattarbeiten oder Hausarbeiten gezeigt werden, die eingesetzten Werkzeuge und die damit erstellten Produkte.
+John Seymour wrote many more books during his life, such as for example, the highly commendable book <cite><a href="http://www.amazon.de/gp/product/0863181740?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=0863181740">The National Trust Book of Forgotten Household Crafts</a></cite>, which displays various arts well illustrated, such as woodcrafts, construction, workshop or chores, the tools used and the products they create.
 
-## Fazit
+## Conclusion
 
-Auch wenn man aktuell vielleicht in der Stadt lebt oder keinen Garten oder ein Grundstück besitzt, ist es trotzdem immer wieder ein Genuss in den Büchern zu blättern. Daher sollten die Bücher in keiner guten Bibliothek fehlen.
+Even if you live in the city at the moment or do not have a garden or a plot of land, it is always a pleasure to page through the books. Therefore, the books should not be missing in any good library.
 
-John Seymour wäre im letzten Monat 100 Jahre alt geworden. Seine Bücher enthalten wertvolles Wissen über die Selbstversorgung und wurden im Laufe der Jahre auch erweitert. So enthält die aktuelle Version seines Bestsellers <cite><a href="http://www.amazon.de/gp/product/3831015775?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=3831015775">Das neue Buch vom Leben auf dem Lande</a></cite> auch Informationen zu Windenergie und Solarenergie. Und selbstverständlich lernt man auch, wie Bier gebraut wird oder Wein gekeltert wird.
+John Seymour would have turned 100 last month. His books contain valuable knowledge about self-sufficiency and have been expanded over the years. So the current version of his bestseller <cite><a href="http://www.amazon.de/gp/product/1405345101?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=1405345101">The New Complete Book of Self-Sufficiency</a></cite> also information on wind energy and solar energy. And of course you also learn how beer is brewed or wine is pressed.

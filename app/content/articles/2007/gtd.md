@@ -1,7 +1,7 @@
 ---
-language: de
-title: 'Eineinhalb Jahre GTD – Eine Billanz'
-description: 'Ich arbeite seit 1,5 Jahren mit GTD (Getting Things Done): Eine Einführung in Organisation und Selbstmanagment mit GTD.'
+language: en
+title: 'One and a half years with GTD'
+description: 'I’ve been working with GTD (Getting Things Done) for 1.5 years: An Introduction to Organization and Self-Management with GTD.'
 author: Stefan Imhoff
 slug: gtd
 date: 2007-11-24T01:15:00+02:00
@@ -9,90 +9,73 @@ og_image: 'assets/images/articles/2007/gtd/gtd-before.jpg'
 categories: ['productivity']
 ---
 
-Seit genau eineinhalb Jahren benutze ich jetzt die Prinzipien des _GTD_ (<em>Getting Things Done</em>®), nach dem gleichnamigen Buch von _David Allen_ um meine alltäglichen Aufgaben zu organisieren.
+Since exactly one and a half years I use now the principles of _GTD_ (<em>Getting Things Done</em>®), from the book by _David Allen_ to organize my daily tasks.
 
 <figure class="image-figure">
-  <img src="/assets/images/articles/2007/gtd/gtd-before.jpg" alt="Mein Schreibtisch vorher" title="So sah die Inbox aus, bevor ich alle losen Enden sortiert hatte">
+  <img src="/assets/images/articles/2007/gtd/gtd-before.jpg" alt="My desk before" title="This is what the inbox looked like before I sorted all loose ends">
   <figcaption>
-  So sah die Inbox aus, bevor ich alle losen Enden sortiert hatte
+  This is what the inbox looked like before I sorted all loose ends
   </figcaption>
 </figure>
 
-David Allen stellt in seinem Buch ein interessantes System vor, mit dem man seine täglichen Aufgaben effektiv und effizient erledigen kann.
+In his book <cite>[Getting Things Done: The Art of Stress-Free Productivity](http://www.amazon.de/gp/product/ 0143126563/ref=as_li_ss_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=0143126563&linkCode=as2&tag=kogakurede-21)</cite>, David Allen introduces an interesting system that allows you to do your daily tasks effectively and efficiently.
 
-Das Buch ist auch in **Deutsch** erhältlich unter dem Titel <cite>[Wie ich die Dinge geregelt kriege](http://www.amazon.de/gp/product/3492240607/ref=as_li_ss_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=3492240607&linkCode=as2&tag=kogakurede-21)</cite>.
+In any case, I am of the opinion that one really _gets_ the everyday madness governed by Allen’s system.
 
-Ich bin jedenfalls der Meinung, man _bekommt_ mit Allens System wirklich den alltäglichen Wahnsinn geregelt.
+## The GTD Basics
 
-## Die GTD-Grundlagen
+GTD uses so-called _contexts_, which are certain situations / places to which a task is assigned (telephone, home, care or similar). In addition, there can be an allocation to a _project_.
 
-GTD nutzt so genannte _Kontexte_, also bestimmten Situationen/Orte, denen eine Aufgabe zugewiesen wird (Telefon, Zuhause, Besorgung o. ä.). Daneben gibt es noch die Zuteilung zu _Projekten_.
+Tasks are done within your context, which means you do several calls at once, if you’re already on the phone.
 
-Aufgaben werden in Ihrem Kontext erledigt, also z. B. gleich mehrere Anrufe auf einmal, wenn man schon am Telefon ist.
+In GTD everything that comes as _stuff_ on the table, is moved to an Inbox. This _stuff_ can be varied and consist of e-mails, mail, voice memos, notes, scribbles, etc. The Inbox will be emptied at some point in time (for example, Friday afternoon) with each task being processed, leaving nothing unprocessed in the Inbox.
 
-Bei GTD wird alles, was an _Zeug_ täglich auf den Tisch kommt, in einen Posteingang (Inbox) bewegt. Dieses _Zeug_ kann vielfältig sein und aus E-Mails, Post, Sprachmemos, Notizzetteln, Scribbles etc. bestehen. Der Posteingang wird zu einem bestimmten Zeitpunkt (z. B. Freitag Nachmittag) geleert, wobei jede Aufgabe bearbeitet wird, und nichts unbearbeitet im Posteingang zurückbleibt.
+Depending on the estimated effort, the tasks are either completed immediately (if the duration is of about 2 minutes), or moved to another location. If the task is part of a multi-part process, a project is created to which the task is assigned.
 
-Je nach geschätztem Aufwand werden die Aufgaben entweder sofort erledigt (bei einer Dauer von ca. 2 Minuten), oder an eine andere Stelle verschoben. Ist die Aufgabe Teil eines mehrteiligen Prozesses, wird ein Projekt erstellt, dem die Aufgabe zugeordnet wird.
+_Stuff_ can also be removed as reference material for later (like a brochure).
 
-_Zeug_ kann auch als Referenzmaterial für später aufgehoben werden (z. B. eine Broschüre).
+If a task is not done for the time being, because you have no time or no active interest in it - but you think it is so interesting that you do not want to destroy it right away, you move it to a list of things to do _Someday / Maybe_. This list can be reviewed every now and then. Thus, the ideas are not lost, but also do not burden the head.
 
-Wird eine Aufgabe vorerst nicht erledigt, weil man keine Zeit oder noch kein aktives Interesse daran hat – sie aber für so interessant hält, dass man sie nicht gleich vernichten will, so verschiebt man sie auf eine Liste von Dingen, die man _Irgendwann/Vielleicht_ erledigt. Diese Liste kann man hin- und wieder durchsehen. Somit sind die Ideen nicht verloren, belasten aber auch nicht den Kopf.
+Tasks can also be delegated or assigned to certain times. If you have to wait for someone else to do a task, you assign it to the context of _Waiting for_.
 
-Aufgaben kann man auch delegieren oder bestimmten Zeitpunkten zuweisen. Wenn man bei einer Aufgabe auf jemand anderen warten muss, weißt man sie dem Kontext _Warten auf_ zu.
-
-## GTD im Alltag
+## GTD in Everyday Life
 
 <figure class="image-figure">
-  <img src="/assets/images/articles/2007/gtd/gtd-after.jpg" alt="Mein Schreibtisch danach" title="So sah die Inbox aus, nachdem ich alle losen Enden sortiert hatte">
+  <img src="/assets/images/articles/2007/gtd/gtd-after.jpg" alt="My desk afterwards" title="This is what the inbox looked like after sorting all loose ends">
   <figcaption>
-  So sah die Inbox aus, nachdem ich alle losen Enden sortiert hatte
+  This is what the inbox looked like after sorting all loose ends
   </figcaption>
 </figure>
 
-Auf den ersten Blick sieht GTD vielleicht kompliziert oder umständlich aus, doch hilft es ungemein, den Kopf von belastendem Grübeln freizuhalten.
-Schon nach kurzer Zeit der Umstellung habe ich mich an diese Arbeitsweise gewöhnt und schnell die Eigenschaft übernommen, jeden Gedanken **sofort zu notieren** und gemäß des GTD-Prinzips irgendwo einzuordnen. So vergesse ich nie wieder wichtige Dinge und selbst kleine Ideen verschwinden nicht gleich aus dem Kopf.
+At first glance, GTD may look complicated or awkward, but it helps immensely to keep the head off pondering.
 
-Im Idealfall hat man dazu bestimmte **Arbeitswerkzeuge** dabei, die je nach Person und Lebensumständen variieren können. Ich selbst benutze eine Kombination aus Web-Applikation, Text-Dateien, [Moleskine®](https://de.moleskine.com/de)-Notizbuch und Post-its® an verschiedenen Orten (z. B. auf dem Nachttisch).
+After a short time of adjustment, I got used to this way of working and quickly took over the property to write down every thought **immediately** and according to the GTD principle somewhere to classify. So I never forget important things again and even small ideas do not immediately disappear from the head.
 
-Gerade für für Computerprofis gibt es zahlreiche Systeme und Programme, die GTD digital ermöglichen. Somit sollte wohl für jeden das passende Arbeitswerkzeug zu finden sein. Ganze Websites und Weblogs beschäftigen sich nur mit GTD (z. B. [lifehack.org](https://www.lifehack.org/ 'lifehack.org: Productivity, Getting Things Done and Lifehacks Blog'), [lifehacker](https://lifehacker.com/ 'Lifehacker, tips and downloads for getting things done') oder [43 Folders](http://www.43folders.com/ '43 Folders')).
+Ideally, you have certain **work tools** that can vary depending on the person and circumstances. I myself use a combination of web application, text files, [Moleskine®](https://moleskine.com) notebook and post-its® in different places (on the bedside table).
 
-## Die richtige GTD-Lösung?
+Especially for computer professionals, there are numerous systems and programs that allow GTD digital. Thus, the right work tool should probably be found for everyone. Whole sites and weblogs only deal with GTD (for example [lifehack.org](https://www.lifehack.org/), [lifehacker](https://lifehacker.com/) or [43 Folders](http://www.43folders.com/)).
 
-Seit ich zum ersten Mal auf GTD getroffen bin, suche ich und teste (wenn gleich auch immer seltener) alternative Lösungen für Allens System.
+## The Right GTD Solution?
 
-Gleich vorweg: Das perfekte System in der täglichen Umsetzung gibt es für mich **nicht**, bei **allen** Lösungen muss man Kompromisse eingehen. Erst wenn eine neurale Schnittstelle entwickelt wurde, in die man seine Gedanken gleich in Textform einspeisen kann und direkt und überall über die Netzhaut abrufen kann, bin ich wohl zufrieden.
+Since I met GTD for the first time, I’m looking for and testing alternative solutions for Allen’s system (albeit less frequently).
 
-Die meisten Lösungen, die ich bislang gesehen habe, waren mir entweder zu einfach oder zu komplex.
+Right away: The perfect system in the daily implementation doesn’t exist for me, with **all** solutions you have to compromise. Only when a neural interface has been developed, in which one can feed his thoughts immediately in text form and can retrieve directly and anywhere on the retina, I am probably satisfied.
 
-Zu einfache Systeme haben für mich nicht funktioniert – wie z. B. purer Text. Bestimmte Dinge blieben immer aussen vor. Ich habe die letzten Wochen mit [_TaskPaper_](http://www.hogbaysoftware.com/products/taskpaper) einen interessanten Kandidaten getestet, der leider keine Zuweisung von Terminen ermöglichte und daher im Langzeittest vorerst nicht ausreichte. Mal sehen, wie sich die Software weiter entwickelt. Leider hat den Autor mein Angebot einer Lokalisierung auch vorerst nicht interessiert (Was ich von Software-Entwicklung halte, bei der nicht gleich von Anfang an Lokalisierung/Internationalisierung gedacht wird, würde hier zu weit führen…).
+Most of the solutions I’ve seen so far have been either too simple or too complex for me.
 
-Zu **komplexe Systeme**, die diverse Listen, Schlagworte, verschiedenste Daten und diverse Zuordnungen erlaubten, waren mir in der täglichen Anwendung zu zeitaufwendig.
+Too simple systems did not work for me - such as: pure text. Certain things always remained outside. I’ve been testing an interesting candidate with [TaskPaper](http://www.hogbaysoftware.com/products/taskpaper) over the last few weeks, which unfortunately did not allow me to schedule appointments and therefore was not sufficient in the long-term test. Let's see how the software evolves.
 
-Für mich zählen:
+To **complex systems**, which allowed various lists, keywords, various data and mappings, were too time-consuming in my daily use.
 
-1. **Ortsunabhängigkeit**, – da ich Angestellter bin, möchte ich von verschiedensten Orten aus meine Gedanken erfassen.
-2. **Systemunabhängigkeit** – Mittlerweile nicht mehr so wichtig, aber ich will nicht auf bestimmte Betriebsysteme angewiesen sein.
-3. Zuweisen von **Terminen** – Für mich kommt eine Trennung in Terminkalender und _Next Actions_ nicht in Frage.
-4. **Schnell und einfach** – Es muss einfach gehen, am besten ohne Maus oder mit wenigen Klicks.
+Key features for me are:
 
-In der ganzen Zeit bin ich zeitweise auch mal zweigleisig gefahren, um ein neues System zu testen, mein primäres Tool nutze ich aber immer noch.
+1. **Location independence**, - since I am an employee, I want to capture my thoughts from different places.
+2. **System independence** - Not so important anymore, but I do not want to depend on certain operating systems.
+3. Assign **Appointments** - For me a separation in diary and _Next Actions_ is out of the question.
+4. **Fast and easy** - It has to be easy, ideally without a mouse or just a few clicks.
 
-## Tracks
+At the same time, I've occasionally gone double-tracked to test a new system, but I still use my primary tool.
 
-[Tracks](http://www.getontracks.org/) ist eine mit [Ruby on Rails](http://rubyonrails.org/ 'Ruby on Rails') programmierte Web-Applikation, die die Prinzipien von David Allens GTD auf einfache und effiziente Weise nutzt.
+## Update
 
-Die Anwendung basiert zwar auf Ruby on Rails, erfordert aber keine Programmierkenntnisse in Ruby und läuft relativ schnell und leicht mit sqlite3. Alternativ können auch mächtigere Datenbanken benutzt werden.
-
-Tracks unterstützt _Kontexte_, _Projekte_ und _Notizen_. Das ganze Interface ist zweigeteilt, auf der linken Seite hat man eine Liste seiner Kontexte und der _Next Actions_ darin. Auf der rechten Seite befindet sich ein Link zum schnellen erstellen einer neuen Aufgabe, ein Überblick über die aktiven Projekte, die erledigten Projekte, aktive Kontexte und verborgene Kontexte (diese sind nicht auf der Startseite zu sehen).
-
-Eine Aufgabe benötigt einen **Titel**, optionale **Notizen** (<em>Textile</em> wird unterstützt), muss einem **Kontext** zugewiesen werden (bei mir standardmäßig _Eingang_). Sie kann einem **Projekt** zugeordnet werden und kann ein **Datum** bekommen (nur Tage).
-
-Die Web-Applikation benutzt Ajax, weshalb die Bedienung sehr schnell und effizient ist.
-
-Eine Besonderheit von Tracks ist, dass mit Terminen versehene Aufgaben einen Farbcode durchlaufen, von Grün über Orangetöne bis zu dunklem Rot. So kann man gleich sehen, wann eine Aufgabe erledigt werden muss.
-
-In den Einstellungen kann festgelegt werden, nach wie vielen Tagen unangetastete Aufgaben beginnen auffällig zu werden (sie werden langsam Gelb hinterlegt). Dies ist nützlich, um Punkte im Kontext _Vielleicht-Irgendann_ zu erkennen, die gelöscht werden können.
-
-Tracks bietet Feeds für RSS, iCal und puren Text an. Die puren Text-Feeds sind sehr nützlich, um eine Liste auf ein mobiles Gerät, wie ein z. B. ein Mobiltelefon zu übertragen.
-
-Gerade diese Einfachheit ist es, die Tracks so nützlich macht. Mit kleinen Tricks kann man sich bei fehlenden Features behelfen. Orte, Personen oder ähnliche Dinge schreibe ich in eckigen Klammern neben die Aufgabe. Die Integration von Textile ermöglicht es schnell Links oder Listen in den Kommentar einer Aufgabe zu schreiben.
+After it’s release in 2009 I started using [Things](https://culturedcode.com/things/) by Cultured Code. After using it for a few years updates became scarce and the next version was late for a _few_ years. I tried in the meantime a few different solutions but a few month after the release of **Things 3** I switched back, because of it’s easy to use interface and instant synchronization speed.
