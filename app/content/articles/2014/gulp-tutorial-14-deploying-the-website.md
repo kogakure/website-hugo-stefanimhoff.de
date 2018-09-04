@@ -1,15 +1,14 @@
 ---
-language: en
 title: 'Introduction to Gulp.js 14: Deploying the Website with Rsync'
-date: 2014-10-31T08:00:00+02:00
-author: Stefan Imhoff
 slug: gulp-tutorial-14-deploying-the-website
-og_image: 'assets/images/articles/2014/gulp-tutorial-14-deploying-the-website/gulp-tutorial-14.jpg'
+author: Stefan Imhoff
+date: 2014-10-31T08:00:00+02:00
 description: 'The ultimative tutorial and guide for Gulp.js: How to deploy your website with rsync to your server.'
-series: ['gulp']
-categories: ['code']
+og_image: 'assets/images/articles/2014/gulp-tutorial-14-deploying-the-website/gulp-tutorial-14.jpg'
 download_url: 'https://github.com/kogakure/gulp-tutorial'
 download_text: 'View Source on GitHub'
+categories: ['code']
+series: ['gulp']
 ---
 
 This is the 14th of my series _Introduction to Gulp.js_. Today I will write a task to sync the files of my Jekyll site to my webserver.

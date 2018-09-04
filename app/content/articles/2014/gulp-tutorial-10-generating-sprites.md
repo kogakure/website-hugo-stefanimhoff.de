@@ -1,15 +1,14 @@
 ---
-language: en
 title: 'Introduction to Gulp.js 10: Generating CSS Image Sprites'
-date: 2014-10-27T07:40:00+02:00
-author: Stefan Imhoff
 slug: gulp-tutorial-10-generating-sprites
-og_image: 'assets/images/articles/2014/gulp-tutorial-10-generating-sprites/gulp-tutorial-10.jpg'
+author: Stefan Imhoff
+date: 2014-10-27T07:40:00+02:00
 description: 'The ultimative tutorial and guide for Gulp.js: How to generate image sprite maps with Spritesmith.'
-series: ['gulp']
-categories: ['code']
+og_image: 'assets/images/articles/2014/gulp-tutorial-10-generating-sprites/gulp-tutorial-10.jpg'
 download_url: 'https://github.com/kogakure/gulp-tutorial'
 download_text: 'View Source on GitHub'
+categories: ['code']
+series: ['gulp']
 ---
 
 This is the 10th part of my series _Introduction to Gulp.js_. Today I will use Gulp.js to create CSS image sprites.

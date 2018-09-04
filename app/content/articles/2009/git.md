@@ -1,11 +1,10 @@
 ---
-language: en
 title: 'Introduction to Git as a Version Control System'
-description: 'An extensive collection of links to tutorials, tutorials, screencasts and documentations on Git.'
-author: Stefan Imhoff
 slug: git
+author: Stefan Imhoff
 date: 2009-02-10T20:00:00+02:00
-categories: ['vcs']
+description: 'An extensive collection of links to tutorials, tutorials, screencasts and documentations on Git.'
+categories: ['git', 'code']
 ---
 
 I have been using the Git version control system for almost one and a half years and am thrilled every day. Even at my employer, switching from Subversion to Git seems close at hand.

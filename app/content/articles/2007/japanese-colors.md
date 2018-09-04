@@ -1,14 +1,13 @@
 ---
-language: en
 title: 'Traditional, Japanese Colors for Photoshop and Illustrator'
-description: 'Traditional, Japanese colors as a color palette for Photoshop and Illustrator to download (FREE).'
-author: Stefan Imhoff
 slug: japanese-colors
+author: Stefan Imhoff
 date: 2007-12-08T21:05:00+02:00
+description: 'Traditional, Japanese colors as a color palette for Photoshop and Illustrator to download (FREE).'
 og_image: 'assets/images/articles/2007/japanese-colors/japanese-colors.png'
-categories: ['design', 'download']
 download_url: '/downloads/traditional-colors-of-japan-rgb.zip'
-download_text: 'Farbpalette: Traditionelle Japanische Farben (5 KB)'
+download_text: 'Color Palette: Traditionel Japanese Colors (5 KB)'
+categories: ['design', 'download']
 ---
 
 During a visit to the art exhibition <cite>Japan and the West</cite> in the [Art Museum Wolfsburg](https://www.kunstmuseum-wolfsburg.de/), I was able to get my hands on a wonderful book about the traditional, Japanese colors.

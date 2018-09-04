@@ -1,12 +1,11 @@
 ---
-language: en
 title: 'Recommended Reading: Rework'
 slug: rework
-date: 2010-04-27T16:30:00+02:00
 author: Stefan Imhoff
+date: 2010-04-27T16:30:00+02:00
 description: 'Reading recommendation for the new book from Basecamp: Rework. A short, well-illustrated book on product development and how to run a company that has not been wrongly put on the bestseller list for a long time and has been praised to the highest standards.'
 og_image: 'assets/images/articles/2010/rework/rework.jpg'
-categories: ['recommendation', 'book']
+categories: ['book']
 ---
 
 Today, I recommend a book that I just finished recently and read a second time: <cite>Rework</cite> by _Jason Fried_ and _David Heinemeier Hansson_.

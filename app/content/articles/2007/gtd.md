@@ -1,12 +1,11 @@
 ---
-language: en
 title: 'One and a half years with GTD'
-description: 'I’ve been working with GTD (Getting Things Done) for 1.5 years: An Introduction to Organization and Self-Management with GTD.'
-author: Stefan Imhoff
 slug: gtd
+author: Stefan Imhoff
 date: 2007-11-24T01:15:00+02:00
+description: 'I’ve been working with GTD (Getting Things Done) for 1.5 years: An Introduction to Organization and Self-Management with GTD.'
 og_image: 'assets/images/articles/2007/gtd/gtd-before.jpg'
-categories: ['productivity']
+categories: ['productivity', 'self-improvement', 'life']
 ---
 
 Since exactly one and a half years I use now the principles of _GTD_ (<em>Getting Things Done</em>®), from the book by _David Allen_ to organize my daily tasks.

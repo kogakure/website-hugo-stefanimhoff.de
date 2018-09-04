@@ -1,12 +1,11 @@
 ---
-language: en
 title: 'By the Power of Vim … I Have the Power!'
 slug: vim
-date: 2010-10-29T19:00:00+02:00
 author: Stefan Imhoff
+date: 2010-10-29T19:00:00+02:00
 description: 'How I became a convinced Vim disciple, why Vim is such an ingenious editor, and how to best practice if you want to learn Vim.'
 og_image: 'assets/images/articles/2010/vim/vim-vintage.jpg'
-categories: ['code', 'recommendation']
+categories: ['code']
 ---
 
 Something similar was the said of the superhero _He-Man_ from the 80s tv show _Masters of the Universe_, just before he got his superpowers. And Vim exists about as long as the tv show: 22 years. And the older Vi, on which Vim is based, has been around even longer than I live. So if a _simple_ text editor exists for such a long time and gives such _power_, it just has to be something special about it.

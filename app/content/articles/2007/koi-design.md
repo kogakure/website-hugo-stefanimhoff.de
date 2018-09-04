@@ -1,10 +1,9 @@
 ---
-language: en
 title: 'The Koi Design: Inspiration and Idea'
-description: 'Irezumi (Japanese tattooing) as inspiration for my website and the origin of my design.'
-author: Stefan Imhoff
 slug: koi-design
+author: Stefan Imhoff
 date: 2007-06-02T02:00:00+02:00
+description: 'Irezumi (Japanese tattooing) as inspiration for my website and the origin of my design.'
 og_image: 'assets/images/articles/2007/koi-design/design-koi.jpg'
 categories: ['design']
 ---

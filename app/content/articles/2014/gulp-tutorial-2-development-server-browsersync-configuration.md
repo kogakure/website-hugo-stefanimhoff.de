@@ -1,15 +1,14 @@
 ---
-language: en
 title: 'Introduction to Gulp.js 2: Server with BrowserSync and Configuration'
-date: 2014-10-19T10:17:00+02:00
-author: Stefan Imhoff
 slug: gulp-tutorial-2-development-server-browsersync-configuration
-og_image: 'assets/images/articles/2014/gulp-tutorial-2-development-server-browsersync-configuration/gulp-tutorial-2.jpg'
+author: Stefan Imhoff
+date: 2014-10-19T10:17:00+02:00
 description: 'The ultimative tutorial and guide for Gulp.js: How to set up a development server with BrowserSync.'
-series: ['gulp']
-categories: ['code']
+og_image: 'assets/images/articles/2014/gulp-tutorial-2-development-server-browsersync-configuration/gulp-tutorial-2.jpg'
 download_url: 'https://github.com/kogakure/gulp-tutorial'
 download_text: 'View Source on GitHub'
+categories: ['code']
+series: ['gulp']
 ---
 
 This is the 2nd part of my series _Introduction to Gulp.js_. Today I will write the first few Gulp.js tasks and set up a development server with BrowserSync. And I will start to write a configuration file.

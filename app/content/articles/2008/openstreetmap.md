@@ -1,12 +1,11 @@
 ---
-language: en
 title: 'Free Vector Maps with OpenStreetMap'
-description: 'Introducing OpenStreetMap, a free open source alternative to Google Maps. Especially if you want to use vector-based map data in your own project, OpenStreetMap is a fantastic option.'
-author: Stefan Imhoff
 slug: openstreetmap
+author: Stefan Imhoff
 date: 2008-09-06T18:59:00+02:00
+description: 'Introducing OpenStreetMap, a free open source alternative to Google Maps. Especially if you want to use vector-based map data in your own project, OpenStreetMap is a fantastic option.'
 og_image: 'assets/images/articles/2008/openstreetmap/openstreetmap.jpg'
-categories: ['recommendation']
+categories: ['link']
 ---
 
 I have no idea why this gem could go unnoticed by me for so long, but yesterday a colleague pointed out to me the map service OpenStreetMap. Similar to Wikipedia, many users compile a free map for everyone.

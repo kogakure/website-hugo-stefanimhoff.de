@@ -1,15 +1,14 @@
 ---
-language: en
 title: 'Introduction to Gulp.js 13: Revisioning'
-date: 2014-10-30T07:45:00+02:00
-author: Stefan Imhoff
 slug: gulp-tutorial-13-revisioning
-og_image: 'assets/images/articles/2014/gulp-tutorial-13-revisioning/gulp-tutorial-13.jpg'
+author: Stefan Imhoff
+date: 2014-10-30T07:45:00+02:00
 description: 'The ultimative tutorial and guide for Gulp.js: How to use revisioning to allow long caching of your assets and replace them  with hashed file names, that can be cache busted.'
-series: ['gulp']
-categories: ['code']
+og_image: 'assets/images/articles/2014/gulp-tutorial-13-revisioning/gulp-tutorial-13.jpg'
 download_url: 'https://github.com/kogakure/gulp-tutorial'
 download_text: 'View Source on GitHub'
+categories: ['code']
+series: ['gulp']
 ---
 
 This is the 13th part of my series _Introduction to Gulp.js_. Today I will write the task to revision my static assets.

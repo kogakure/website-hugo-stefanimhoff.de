@@ -1,15 +1,14 @@
 ---
-language: en
 title: 'Introduction to Gulp.js 6: Images and Vector Fonts'
-date: 2014-10-23T08:00:00+02:00
-author: Stefan Imhoff
 slug: gulp-tutorial-6-images-vector-fonts
-og_image: 'assets/images/articles/2014/gulp-tutorial-6-images-vector-fonts/gulp-tutorial-6.jpg'
+author: Stefan Imhoff
+date: 2014-10-23T08:00:00+02:00
 description: 'The ultimative tutorial and guide for Gulp.js: How to move images and generate vector fonts from SVG.'
-series: ['gulp']
-categories: ['code']
+og_image: 'assets/images/articles/2014/gulp-tutorial-6-images-vector-fonts/gulp-tutorial-6.jpg'
 download_url: 'https://github.com/kogakure/gulp-tutorial'
 download_text: 'View Source on GitHub'
+categories: ['code']
+series: ['gulp']
 ---
 
 This is the 6th part of my series _Introduction to Gulp.js_. The last article was very long and complicated. This time it’s a easier one: I will show how I move my images and generate vector fonts.

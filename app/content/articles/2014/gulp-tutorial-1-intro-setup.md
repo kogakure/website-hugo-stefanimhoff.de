@@ -1,15 +1,14 @@
 ---
-language: en
 title: 'Introduction to Gulp.js 1: Intro and Setup'
-date: 2014-10-18T08:35:47+02:00
-author: Stefan Imhoff
 slug: gulp-tutorial-1-intro-setup
-og_image: 'assets/images/articles/2014/gulp-tutorial-1-intro-setup/gulp-tutorial-1.png'
+author: Stefan Imhoff
+date: 2014-10-18T08:35:47+02:00
 description: 'The ultimative tutorial and guide for Gulp.js: The first part of my series on Gulp.js. What is Gulp.js? Why to use it? And how to install Gulp and Jekyll.'
-series: ['gulp']
-categories: ['code']
+og_image: 'assets/images/articles/2014/gulp-tutorial-1-intro-setup/gulp-tutorial-1.png'
 download_url: 'https://github.com/kogakure/gulp-tutorial'
 download_text: 'View Source on GitHub'
+categories: ['code']
+series: ['gulp']
 ---
 
 My website is running [Jekyll](https://jekyllrb.com/) now since the beginning of 2014. But I wasn’t quite happy with my build and development process. I started out with Rake tasks and chose later [Grunt.js](https://gruntjs.com/) as my build system, but parts of the process where left in Ruby. I used [Compass](http://compass-style.org/) a lot and [Jekyll Assets](http://ixti.net/jekyll-assets/) was handling my versioning. But Grunt.js and the Jekyll Asset Pipeline didn’t play well together. Then a new solution came along: [Gulp.js](https://gulpjs.com/).

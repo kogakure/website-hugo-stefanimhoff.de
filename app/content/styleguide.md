@@ -4,7 +4,6 @@ description: "Der Styleguide dieser Website: Ein umfangreicher Überblick in das
 author: Stefan Imhoff
 date: 2012-01-01T12:00:00+02:00
 language: de
-widont: false
 header: false
 ---
 

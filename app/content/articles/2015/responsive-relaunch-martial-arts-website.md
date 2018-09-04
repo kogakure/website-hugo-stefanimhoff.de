@@ -1,12 +1,11 @@
 ---
-language: en
 title: 'Responsive Relaunch of my Martial Arts Website'
-description: 'I relaunched my martial arts website kogakure.de with a responsive design. This article gives an overview on the process of creating my website: Design, Typography, Vector Graphics, Jekyll, Grids, Responsive Design and BEM.'
-date: 2015-04-07T22:00:00+01:00
-author: Stefan Imhoff
 slug: responsive-relaunch-martial-arts-website
+author: Stefan Imhoff
+date: 2015-04-07T22:00:00+01:00
+description: 'I relaunched my martial arts website kogakure.de with a responsive design. This article gives an overview on the process of creating my website: Design, Typography, Vector Graphics, Jekyll, Grids, Responsive Design and BEM.'
 og_image: 'assets/images/articles/2015/responsive-relaunch-of-my-martial-arts-website/kogakure-de-relaunch.jpg'
-categories: ['design', 'code', 'website']
+categories: ['design', 'code', 'personal']
 ---
 
 After 62 days of work, I relaunched today my martial arts website [kogakure.de](http://kogakure.de/) in a brand new, mobile optimized design and with a complete rewritten code base. And I have still some time left until the end of April, when Google will start to punish websites, which are not mobile-optimized.

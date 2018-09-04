@@ -1,12 +1,11 @@
 ---
-language: en
 title: 'The Typography of My Website'
-author: Stefan Imhoff
 slug: website-typography
+author: Stefan Imhoff
 date: 2014-06-19T10:30:00+02:00
-og_image: 'assets/images/articles/2014/website-typography/elements-of-typographic-style.jpg'
 description: 'About the typography of my new website: scale, font, vertical rhythm, font size, font size and sentence width.'
-categories: ['design', 'code', 'website', 'typography']
+og_image: 'assets/images/articles/2014/website-typography/elements-of-typographic-style.jpg'
+categories: ['design', 'code', 'typography']
 ---
 
 I’m _typophil_. But this is nothing for a self-help group, because it simply means love or affection to typography. It was clear to me from the start that I would start with typography for my new website.
