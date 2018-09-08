@@ -140,4 +140,4 @@ Depending on the weather and season, I’ll take the subway to work or my bicycl
 
 ## Conclusion
 
-I’m quite happy with my routine for now and hope you also see the benefits of building some routines in your life. The morning routine seems to be the one with the most benefits. Because if you start your day successful, the chances are high you end the day successful. And as Jordan Peterson said: <q>You cannot be mentally healthy without a routine</q>. So I recommend, build yourself a morning routine.
+I’m quite happy with my routine for now and hope you also see the benefits of building some routines in your life. The morning routine seems to be the one with the most benefits. Because if you start your day successful, the chances are high you end the day successful. And as Jordan Peterson said: <q>You cannot be mentally healthy without a routine.</q> So I recommend, build yourself a morning routine.
