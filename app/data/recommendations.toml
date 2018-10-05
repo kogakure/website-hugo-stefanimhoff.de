@@ -93,10 +93,3 @@
   [[recommendation.items]]
     text = "Gulp"
     url = "https://gulpjs.com/"
-
-[[recommendation]]
-  category = "Hosting"
-
-  [[recommendation.items]]
-    text = "Webfaction"
-    url = "https://www.webfaction.com/?affiliate=kogakure"
