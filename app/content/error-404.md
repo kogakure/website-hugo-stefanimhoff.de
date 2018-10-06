@@ -2,7 +2,7 @@
 layout: error
 title: Not found!
 robots: 'noindex,follow'
-url: '/error/404/'
+url: '404.html'
 body_class: error
 sitemap_exclude: true
 ---
