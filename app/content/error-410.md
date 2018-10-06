@@ -1,7 +1,7 @@
 ---
 layout: error
 title: Page missing!
-url: '/error/410/'
+url: '410.html'
 robots: 'noindex,follow'
 body_class: error
 sitemap_exclude: true
