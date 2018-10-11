@@ -14,7 +14,26 @@
 [context.branch-deploy.environment]
   HUGO_VERSION = "0.31.1"
 
+# Redirect domain aliases to primary domain
+[[redirects]]
+from = "https://www.imhoff.name/*"
+to = "https://www.stefanimhoff.de/:splat"
+status = 301
+force = true
 
+[[redirects]]
+from = "https://stefan.imhoff.name/*"
+to = "https://www.stefanimhoff.de/:splat"
+status = 301
+force = true
+
+[[redirects]]
+from = "https://imhoff.name/*"
+to = "https://www.stefanimhoff.de/:splat"
+status = 301
+force = true
+
+# Redirects
 [[redirects]]
 from = "/+/"
 to = "https://plus.google.com/104687479698350625994/"
