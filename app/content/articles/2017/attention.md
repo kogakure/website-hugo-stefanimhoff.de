@@ -61,7 +61,7 @@ These are some of the countermeasures I took in the last few years or things I e
 - **I stopped reading or watching the daily news** (already 7 years ago). I’m usually the last hearing about the newest terrorist attack or the newest threats by Trump to the world. And I avoid the water cooler talks and coffee machine chats as hell. You can’t avoid news completely, but not actively searching for news filters out a lot of the noise.
 - **I use RSS/Atom feeds** as my major information source, because I can choose where and when to get my content from. I pull the content, when I want it (_Pull vs. Push Principle_).
 - **I use a lot analog**. I still use Evernote to save content for later access, but I started writing a lot on paper. I always have a pen and a notebook with me. I use [sketchnotes](http://sketchnotes.stefanimhoff.de/) to extract the key aspects of an idea. The combination of writing with hand and drawing helps me remembering things. And when I save content in Evernote, I make sure to mark the key aspects and write a short summary at the top.
-- **I rarely post links to social media** sites these days. I don’t want to attack the attention of other people. People interested in what I write or like can still go to [my website](https://stefanimhoff.de/), [YouTube playlists](https://www.youtube.com/user/kogakure/playlists) etc.
+- **I rarely post links to social media** sites these days. I don’t want to attack the attention of other people. People interested in what I write or like can still go to [my website](https://www.stefanimhoff.de/), [YouTube playlists](https://www.youtube.com/user/kogakure/playlists) etc.
 - **I don’t check in** or brag about the places I am at on social media.
 - **I share my photos** most of the time just with family.
 - **I block the shit** out of advertising sites, these creepy ads following you around the internet. Pages using ad-block countermeasures, I just leave and never come back (or just grab the text for later reading). But I started supporting selected sources with some money every month on platforms like [Patreon](https://www.patreon.com/). Pages should start producing more content of quality instead of masses of low-quality content. Maybe people would start to care and pay for good content.
@@ -83,7 +83,7 @@ These are some of the things I did in the last few years to strengthen my awaren
 - **I try to not use my headphones in the subway**. When I’m reading I can practise to focus on the book and not on my surrounding. Sometimes I intentionally do nothing but just focus on the people in the subway.
 - **I read a lot about the brain and it’s weaknesses**. If you know all the biases and fallacies you are less likely to be a victim of them.
 - **I read a lot about habit forming, addiction and multitasking** (which is not possible in humans). I try to do as often as possible intentional single-tasking: Just reading, just eating, just watching a TV show, without the distraction of multiple other things at the same time.
-- **I started living a [Minimalist](https://stefanimhoff.de/2017/minimalism/) life**. Less stuff means less distraction and more attention to the things, which matter to you.
+- **I started living a [Minimalist](https://www.stefanimhoff.de/2017/minimalism/) life**. Less stuff means less distraction and more attention to the things, which matter to you.
 - **I watch and consume intentionally positive, inspiring, creative and uprising** videos or texts (e. g. [TED Talks](https://www.ted.com/)), to change the ratio of positive to negative messages I hear about.
 
 ## Prevention
@@ -106,7 +106,7 @@ These are some of the ideas I implemented or tried in the last few years to prev
 
 It’s often not easy and sometimes even not possible at all to overcome the obstacles of attention grabbing media, just with pure willpower. But by building habits of **mindful media consumption** you might be able to get your attention back. Maybe not every day, but it is a process worth working on. It’s not the device, it’s you. The device can be used to be creative, connect to other people, be inspired. Or it can be used to distract yourself mindless for hours. It’s your choice.
 
-By following my own advices I was able to finish redesigning [two](https://kogakure.de/) [websites](https://hamburg.stefanimhoff.de/) and [wrote a book](https://book.kogakure.de/) this year.
+By following my own advices I was able to finish redesigning [two](https://www.kogakure.de/) [websites](https://hamburg.stefanimhoff.de/) and [wrote a book](https://book.kogakure.de/) this year.
 
 If you have read to this point, without being distracted, kudos! Now put down your phone and look out the window for some minutes.
 
@@ -118,12 +118,12 @@ If you have read to this point, without being distracted, kudos! Now put down yo
 - [Social Media’s Dark Side: How Facebook and Snapchat Try to Steal Our Self-Worth](https://www.youtube.com/watch?v=HBRLMoL_vTQ) (Tristan Harris)
 - [How a handful of tech companies control billions of minds every day](https://www.ted.com/talks/tristan_harris_the_manipulative_tricks_tech_companies_use_to_capture_your_attention) (Tristan Harris)
 - [Put social back in social media – TEDxLinz](https://www.youtube.com/watch?v=gnbLLQwZxeA) (Christian Heilmann)
-- [Hurry Slowly](http://hurryslowly.co/)
+- [Hurry Slowly](https://hurryslowly.co/)
 
 ### Articles
 
-- [It’s No Accident We’re Addicted to Our Devices](http://bigthink.com/robby-berman/its-no-accident-were-addicted-to-our-devices) (Big Think)
+- [It’s No Accident We’re Addicted to Our Devices](https://bigthink.com/robby-berman/its-no-accident-were-addicted-to-our-devices) (Big Think)
 - [Have Smartphones Destroyed a Generation?](https://www.theatlantic.com/magazine/archive/2017/09/has-the-smartphone-destroyed-a-generation/534198/) (The Atlantic)
 - [‘Our minds can be hijacked’: the tech insiders who fear a smartphone dystopia](https://www.theguardian.com/technology/2017/oct/05/smartphone-addiction-silicon-valley-dystopia) (The Guardian)
 - [Technology is destroying the most important asset in your life](https://qz.com/1091883/technology-is-destroying-the-most-important-asset-in-your-life/) (Quartz)
-- [Alarming Statistics That Show Just How Addicted We Are To Mobile Devices ](http://www.breakthetwitch.com/statistics-mobile-devices/)(Break the Twitch)
+- [Alarming Statistics That Show Just How Addicted We Are To Mobile Devices ](https://www.breakthetwitch.com/statistics-mobile-devices/)(Break the Twitch)

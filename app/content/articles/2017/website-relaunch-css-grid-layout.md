@@ -12,7 +12,7 @@ categories: ['code', 'design', 'personal']
 
 4 month of work, 49 hours of coding, plus more hours for designing a new homepage, creating a new OTF font and polishing up some of my old 3D models. But now my martial arts website kogakure.de is online.
 
-[![New Website kogakure.de 2017](/assets/images/articles/2017/website-relaunch-css-grid-layout/kogakure-2017.jpg)](https://kogakure.de)
+[![New Website kogakure.de 2017](/assets/images/articles/2017/website-relaunch-css-grid-layout/kogakure-2017.jpg)](https://www.kogakure.de)
 
 The old website still used Jekyll, and it took a long time to generate and deploy my website. For the same reasons I migrated this website to [Hugo] – which are speed and getting rid of Ruby – I decided to do the same for [kogakure.de].
 
@@ -45,14 +45,14 @@ You can create unlimited sites, add unlimited collaborators and even use it for 
 The [source code] for my website is completely open, the content is as always provided with a [Creative Commons license]. The unique design is not free, but everybody is encouraged to learn from the code, and reuse code of the website.
 
 [hugo]: https://gohugo.io/
-[kogakure.de]: https://kogakure.de/
+[kogakure.de]: https://www.kogakure.de/
 [css grid layout module level 1]: https://www.w3.org/TR/css-grid-1/
 [es6]: http://es6-features.org/
 [babel]: https://babeljs.io/
 [webpack]: https://webpack.js.org/
 [gulp.js]: https://gulpjs.com/
 [yarn]: https://yarnpkg.com/
-[postcss]: http://postcss.org/
+[postcss]: https://postcss.org/
 [cssnext]: http://cssnext.io/
 [mozilla]: https://www.mozilla.org/
 [firefox]: https://www.mozilla.org/firefox/

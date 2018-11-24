@@ -17,7 +17,7 @@ I have no idea why this gem could go unnoticed by me for so long, but yesterday 
   </figcaption>
 </figure>
 
-The scope of [OpenStreetMap](http://www.openstreetmap.org/) is breathtaking. Vector data are available for large parts of the world, which in some areas are so detailed that not even [Google Maps](https://maps.google.com/) could keep up. Footpaths, beaten tracks, traffic lights, power lines. Everything is drawn in on OpenStreetMap.
+The scope of [OpenStreetMap](https://www.openstreetmap.org/) is breathtaking. Vector data are available for large parts of the world, which in some areas are so detailed that not even [Google Maps](https://www.google.com/maps) could keep up. Footpaths, beaten tracks, traffic lights, power lines. Everything is drawn in on OpenStreetMap.
 
 And everyone is invited to add places, places or names - or, if you own a GPS device, also to drive off or go down distances and then put online.
 

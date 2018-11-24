@@ -8,7 +8,7 @@ og_image: 'assets/images/articles/2015/responsive-relaunch-of-my-martial-arts-we
 categories: ['design', 'code', 'personal']
 ---
 
-After 62 days of work, I relaunched today my martial arts website [kogakure.de](http://kogakure.de/) in a brand new, mobile optimized design and with a complete rewritten code base. And I have still some time left until the end of April, when Google will start to punish websites, which are not mobile-optimized.
+After 62 days of work, I relaunched today my martial arts website [kogakure.de](https://www.kogakure.de/) in a brand new, mobile optimized design and with a complete rewritten code base. And I have still some time left until the end of April, when Google will start to punish websites, which are not mobile-optimized.
 
 <figure class="image-figure">
   <img src="/assets/images/articles/2015/responsive-relaunch-of-my-martial-arts-website/kogakure-de-relaunch.jpg" alt="kogakure.de v6">

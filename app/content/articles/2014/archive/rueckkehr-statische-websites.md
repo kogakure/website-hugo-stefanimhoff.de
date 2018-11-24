@@ -10,7 +10,7 @@ description: 'Über statische Seitengeneratoren und warum sie eine mächtige Alt
 categories: ['code']
 ---
 
-Seit kurzem arbeite ich am Redesign meiner Kampfkunst-Website [kogakure.de](http://kogakure.de). Wie die meisten Websites hat auch diese einmal als eine Sammlung von statischen HTML-Seiten begonnen.
+Seit kurzem arbeite ich am Redesign meiner Kampfkunst-Website [kogakure.de](https://www.kogakure.de). Wie die meisten Websites hat auch diese einmal als eine Sammlung von statischen HTML-Seiten begonnen.
 
 <figure class="image-figure image-figure-center">
   <img src="/assets/images/articles/2014/rueckkehr-statische-websites/i-love-jekyll.jpg" alt="I ♥  Jekyll">
@@ -81,7 +81,7 @@ Jekyll kommt zwar schon mit einem eigenen Webserver, der auch bei Änderungen au
 
 ## Octopress und Jekyll
 
-Im Zuge der Arbeiten an [kogakure.de](http://kogakure.de) habe ich auch gleich diese Website komplett auf die neuste Version von Jekyll (2.4.0) umgestellt. Octopress war ein aufgemotztes Jekyll mit zusätzlichen Plugins und für einen Blog typischer Ausstattung, war aber schon stark in die Jahre gekommen. Die Entwickler hatten sich entschlossen die besonderen Eigenschaften von Octopress (3.x) in ein [Gem](https://rubygems.org/gems/octopress) zu extrahieren und dieses als Zusatz für Jekyll anzubieten.
+Im Zuge der Arbeiten an [kogakure.de](https://www.kogakure.de) habe ich auch gleich diese Website komplett auf die neuste Version von Jekyll (2.4.0) umgestellt. Octopress war ein aufgemotztes Jekyll mit zusätzlichen Plugins und für einen Blog typischer Ausstattung, war aber schon stark in die Jahre gekommen. Die Entwickler hatten sich entschlossen die besonderen Eigenschaften von Octopress (3.x) in ein [Gem](https://rubygems.org/gems/octopress) zu extrahieren und dieses als Zusatz für Jekyll anzubieten.
 
 ## Fazit
 

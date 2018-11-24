@@ -35,15 +35,15 @@
 
   [[recommendation.items]]
     text = "99U"
-    url = "http://99u.com/"
+    url = "https://99u.adobe.com"
 
   [[recommendation.items]]
     text = "Big Think"
-    url = "http://bigthink.com/"
+    url = "https://bigthink.com/"
 
   [[recommendation.items]]
     text = "ChangeThis"
-    url = "http://changethis.com/"
+    url = "https://changethis.com/"
 
   [[recommendation.items]]
     text = "Signal vs. Noise"
@@ -78,14 +78,14 @@
 
   [[recommendation.items]]
     text = "ColorHexa"
-    url = "http://www.colorhexa.com/"
+    url = "https://www.colorhexa.com/"
 
 [[recommendation]]
   category = "Code"
 
   [[recommendation.items]]
     text = "Hugo"
-    url = "http://gohugo.io/"
+    url = "https://gohugo.io/"
 
 [[recommendation]]
   category = "Automation"

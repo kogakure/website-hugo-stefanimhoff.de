@@ -11,7 +11,7 @@ download_url: 'https://github.com/kogakure/django-kogakure.de'
 download_text: 'Source code (GitHub)'
 ---
 
-Es ist soweit! Mein erstes Django-Projekt ist online: das seit 1999 bestehende Kampfkunst-Magazin [kogakure.de](http://kogakure.de/ 'kogakure.de – Ninja, Ninjutsu und Kampfkunst').
+Es ist soweit! Mein erstes Django-Projekt ist online: das seit 1999 bestehende Kampfkunst-Magazin [kogakure.de](https://www.kogakure.de/ 'kogakure.de – Ninja, Ninjutsu und Kampfkunst').
 
 ## Web-Entwicklung für Perfektionisten
 

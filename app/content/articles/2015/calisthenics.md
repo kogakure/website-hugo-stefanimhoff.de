@@ -56,8 +56,8 @@ When I started with Pull-Ups two years ago I could do barely 1 or 2 Pull-Ups, no
 And yes, everybody can learn Pull-Ups. Women, too! Just have a look at [Cornelia Rizkes Workout with some girls] or see the professional StarCraft 2 player [Madeleine Leaner] doing [Human Flags, Muscle-Ups or Lever].
 
 [periodic table of body weight exercises]: http://strength.stack52.com/periodic-table-of-bodyweight-exercises/
-[body weight training area]: http://bodyweighttrainingarena.com/
-[progression guides]: http://bodyweighttrainingarena.com/progressive-calisthenics/
+[body weight training area]: https://bodyweighttrainingarena.com/
+[progression guides]: https://bodyweighttrainingarena.com/progressive-calisthenics/
 [a complete list of calisthenics exercises]: https://www.calisthenics-101.co.uk/blogs/a-complete-list-of-calisthenics-exercises
 [cornelia rizkes workout with some girls]: https://www.youtube.com/watch?v=FfClYaCzx5U
 [madeleine leaner]: https://www.youtube.com/user/MaddeLisk

@@ -1,13 +1,13 @@
-[![Live](https://img.shields.io/badge/live-stefanimhoff.de-green.svg)](https://stefanimhoff.de/)
+[![Live](https://img.shields.io/badge/live-stefanimhoff.de-green.svg)](https://www.stefanimhoff.de/)
 ![Maintenance](https://img.shields.io/maintenance/yes/2018.svg)
 
 # stefanimhoff.de
 
-This is the source of my [personal website and blog](https://stefanimhoff.de/) build with [Hugo](http://gohugo.io/) and [Gulp.js](https://gulpjs.com/).
+This is the source of my [personal website and blog](https://www.stefanimhoff.de/) build with [Hugo](https://gohugo.io/) and [Gulp.js](https://gulpjs.com/).
 
 ## Installation
 
-You will need [Hugo](http://gohugo.io/) to run this website (e. g. with Homebrew):
+You will need [Hugo](https://gohugo.io/) to run this website (e. g. with Homebrew):
 
 ```bash
 $ brew install hugo
@@ -48,7 +48,7 @@ The production server will run on [http://localhost:9998/](http://localhost:9998
 
 These are just some of the tools, packages, languages and stuff I used to build my website:
 
-- [Hugo](http://gohugo.io/) to build the static website.
+- [Hugo](https://gohugo.io/) to build the static website.
 - [Node.js](http://nodejs.org/) to run Gulp.js.
 - [Gulp.js](https://gulpjs.com/) to run the development enviroment and create builds.
 - [JavaScript](https://developer.mozilla.org/docs/Web/JavaScript)
@@ -58,6 +58,7 @@ These are just some of the tools, packages, languages and stuff I used to build 
 - [LostGrid](https://github.com/corysimmons/lost) to build the awesome Grid of my website.
 
 ## Licence
+
 All content is copyrighted by [Stefan Imhoff](https://stefanimhoff.de) unless otherwise stated. Feel free to learn from the source code and reuse code for your projects. The only thing which is not allowed is the usage of my design (the unique combination of layout, fonts, images), private photos and logo.
 
 In easier words: **This is not a free theme**. Learn from it. Remix. Reuse. Build your own stuff.

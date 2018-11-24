@@ -16,7 +16,7 @@ This is the 2nd part of my series _Introduction to Gulp.js_. Today I will write 
 <figure class="image-figure">
   <img src="/assets/images/articles/2014/gulp-tutorial-2-development-server-browsersync-configuration/gulp-tutorial-2.jpg" alt="How to create your own flavour. Gulp machine.">
   <figcaption>
-   Create your own flavor (Jordan Dawe, <a href="https://www.flickr.com/photos/freedryk/477742788">2007_04_24__20_31_27</a>)
+   Create your own flavor (Jordan Dawe)
   </figcaption>
 </figure>
 

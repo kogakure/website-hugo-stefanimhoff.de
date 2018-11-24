@@ -60,7 +60,7 @@ Ich schaue mir nochmal eine Alternative zu Git an: [Mercurial]. Aber Git hat ein
 
 Ich frage bei Media Temple an, ob mein Django-Projekt auf einem [Dedicated Virtual Server] **(dv) BASE** laufen würde. Leider ist der Support frech und teilt mir mit, ich bräuchte mindestens einen **(dv) EXTREME**, vielleicht sogar zwei davon. WTF?! So verliert mich Media Temple als Kunden, ich sage _farewell_ zum Grid und wechsele zu [Webfaction]. Dort bekommt man wenigstens was für sein Geld.
 
-[kogakure.de]: http://kogakure.de/
+[kogakure.de]: https://www.kogakure.de/
 [regularexpressions]: http://www.regular-expressions.info/
 [python]: http://www.diveintopython.net/
 [moinmoinwiki]: https://moinmo.in/

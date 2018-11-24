@@ -10,7 +10,7 @@ download_text: 'View Source on GitHub'
 categories: ['personal', 'code']
 ---
 
-After running over 2 years with [Jekyll](https://jekyllrb.com/) I recently replaced it with [Hugo](http://gohugo.io/), a static site generator written in Go.
+After running over 2 years with [Jekyll](https://jekyllrb.com/) I recently replaced it with [Hugo](https://gohugo.io/), a static site generator written in Go.
 
 I did this mainly because of two reasons: _Firstly_, Jekyll ist just **too slow** (because Ruby is slow). The site generation takes forever, with tags and category generation it gets even worse. I had to limit the amount of generated pages to 5 during development, to have a nearly instant update of the stuff I write. And my blog has just around 80 articles. I’ve read stories of large sites, where the generation takes hours. _Secondly_ I wanted to stop updating Node packages _and_ Gems (one ecosystem is enough).
 
@@ -28,7 +28,7 @@ Before I decided for Hugo, I did a quite long research of the possible [static s
 
 ### Roots
 
-Another tool, which looked quite nice was [Roots](http://roots.cx/). But after some research I found out it’s already discontinued.
+Another tool, which looked quite nice was [Roots](http://ww25.roots.cx). But after some research I found out it’s already discontinued.
 
 ### Gatsby
 
@@ -54,11 +54,11 @@ Hugo comes without a plugin system, but I didn’t miss any and could find a sol
 
 ## Themes
 
-It also has really nice Theme system, which allows to create very modular Themes. And because creating a theme is so easy there are [a lot very good of them](http://themes.gohugo.io/) available.
+It also has really nice Theme system, which allows to create very modular Themes. And because creating a theme is so easy there are [a lot very good of them](https://themes.gohugo.io/) available.
 
 ## Shortcodes
 
-Instead of plugins Hugo uses [Shortcodes](http://gohugo.io/content-management/shortcodes), which is very refreshing. Writing plugins in Jekyll was _not_ fun. With Shortcodes it’s possible to create the same functionality without needing to know Ruby and the [Liquid for Programmers](https://github.com/Shopify/liquid/wiki/Liquid-for-Programmers) guidelines and still getting the same result with less lines and writing mostly Markup.
+Instead of plugins Hugo uses [Shortcodes](https://gohugo.io/content-management/shortcodes), which is very refreshing. Writing plugins in Jekyll was _not_ fun. With Shortcodes it’s possible to create the same functionality without needing to know Ruby and the [Liquid for Programmers](https://github.com/Shopify/liquid/wiki/Liquid-for-Programmers) guidelines and still getting the same result with less lines and writing mostly Markup.
 
 ## Content
 

@@ -21,7 +21,7 @@ Ich suche nach Scientology, aber nur um zu verstehen, an was für einen hanebüc
 
 In der Bildersuche suche ich nach einer Diskussion mit meinen Kollegen nach dem [Fiat Multipla](http://images.google.de/images?q=fiat+multipla), weil dies meiner Meinung nach das hässlichste Auto ist, das je hergestellt wurde.
 
-Außerdem suche ich viel nach [ExpressionEngine](https://expressionengine.com), da die Umsetzung meiner eigenen [Website](https://stefanimhoff.de/) im Januar voll im Gange ist. Besonders `segment_1`, `url_segments` und `conditional_variable` bestimmen diesen Monat.
+Außerdem suche ich viel nach [ExpressionEngine](https://expressionengine.com), da die Umsetzung meiner eigenen [Website](https://www.stefanimhoff.de/) im Januar voll im Gange ist. Besonders `segment_1`, `url_segments` und `conditional_variable` bestimmen diesen Monat.
 
 ## Februar
 
@@ -175,7 +175,7 @@ Auf ARTE sehe ich einen interessanten Beitrag über die [Haddsch](https://de.wik
 
 Ich lache mich tot, weil FileMaker ihr neues Datenbank-Produkt Bentō nennt. Die dachten wohl, das heißt Box. Das heißt aber Mittagessen ;)
 
-Durch einen Artikel auf [praegnanz.de](https://praegnanz.de/weblog/ted) erfahre ich von der [TED](https://www.ted.com/) Website, die seit dem meine absolute Lieblingsseite ist. Dort kann man sich die Vorträge der TED-Konferenz ansehen, die es seit 1984 gibt. Bei TED sprechen außergewöhnliche Menschen über Forschung, Innovationen, Medien, Religion, Philosophie und vieles mehr. Eine Eintrittskarte kostet 6.000 $ und man kann sich nur für eine bewerben, ob man eingeladen wird, entscheidet TED. Jedenfalls habe ich mir alle 175 bislang veröffentlichten Beiträge schon mal heruntergeladen und eine Menge davon angesehen. Das ist wie ARTE hoch 10.
+Durch einen Artikel auf [praegnanz.de](https://praegnanz.de/weblog/ted) erfahre ich von der [TED](https://www.ted.com/) Website, die seit dem meine absolute Lieblingsseite ist. Dort kann man sich die Vorträge der TED-Konferenz ansehen, die es seit 1984 gibt. Bei TED sprechen außergewöhnliche Menschen über Forschung, Innovationen, Medien, Religion, Philosophie und vieles mehr. Eine Eintrittskarte kostet 6.000 \$ und man kann sich nur für eine bewerben, ob man eingeladen wird, entscheidet TED. Jedenfalls habe ich mir alle 175 bislang veröffentlichten Beiträge schon mal heruntergeladen und eine Menge davon angesehen. Das ist wie ARTE hoch 10.
 
 Kurz vor Weihnachten setze ich mich 1-2 Stunden hin und gestalte in Photoshop ein Mac OS X Leopard-Icon für Django-Projekte. Dies führt zu einem unglaublichen Feedback aus der ganzen Django-Szene und lässt meine Besucherzahlen explodieren. Ich entdecke die deutsche Community und nehme mir vor mich im neuen Jahr an der Übersetzung der englischen Dokumentation zu beteiligen.
 
