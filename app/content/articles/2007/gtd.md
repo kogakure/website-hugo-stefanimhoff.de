@@ -50,7 +50,7 @@ At first glance, GTD may look complicated or awkward, but it helps immensely to 
 
 After a short time of adjustment, I got used to this way of working and quickly took over the property to write down every thought **immediately** and according to the GTD principle somewhere to classify. So I never forget important things again and even small ideas do not immediately disappear from the head.
 
-Ideally, you have certain **work tools** that can vary depending on the person and circumstances. I myself use a combination of web application, text files, [Moleskine®](https://moleskine.com) notebook and post-its® in different places (on the bedside table).
+Ideally, you have certain **work tools** that can vary depending on the person and circumstances. I myself use a combination of web application, text files, [Moleskine®](http://moleskine.com) notebook and post-its® in different places (on the bedside table).
 
 Especially for computer professionals, there are numerous systems and programs that allow GTD digital. Thus, the right work tool should probably be found for everyone. Whole sites and weblogs only deal with GTD (for example [lifehack.org](https://www.lifehack.org/), [lifehacker](https://lifehacker.com/) or [43 Folders](http://www.43folders.com/)).
 
