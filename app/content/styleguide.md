@@ -746,11 +746,11 @@ Tabellen sollten verwendet werden, um tabellarische Daten anzuzeigen. Die Elemen
 
 Ein einfaches Bild:
 
-![Example image](http://lorempixel.com/680/408/nightlife/)
+![Example image](https://lorempixel.com/680/408/nightlife/)
 
 
 ```html
-![Example image](http://lorempixel.com/680/408/nightlife/)
+![Example image](https://lorempixel.com/680/408/nightlife/)
 ```
 
 
@@ -761,12 +761,12 @@ Das Element `figure` wird verwendet um mehrere Objekte in einer Abbildung mit ei
 #### Abbildung ohne Untertitel
 
 <figure class="image-figure">
-  <img src="http://lorempixel.com/680/408/fashion/" alt="Example image">
+  <img src="https://lorempixel.com/680/408/fashion/" alt="Example image">
 </figure>
 
 ```html
 <figure class="image-figure">
-  <img src="http://lorempixel.com/680/408/fashion/" alt="Example image">
+  <img src="https://lorempixel.com/680/408/fashion/" alt="Example image">
 </figure>
 ```
 
@@ -775,7 +775,7 @@ Das Element `figure` wird verwendet um mehrere Objekte in einer Abbildung mit ei
 Normalerweise sind die Untertitel zentriert ausgerichtet. Es gibt aber fälle, in denen der Untertitel zu lang ist und mehrzeiliger Text sieht zentriert nicht gut aus. Dafür gibt es das Klassen-Attribut `image-figure-longcaption`.
 
 <figure class="image-figure image-figure-longcaption">
-  <img src="http://lorempixel.com/680/408/sports/" alt="Example image">
+  <img src="https://lorempixel.com/680/408/sports/" alt="Example image">
   <figcaption>
     Dies ist die Caption des Fotos, die ich etwas länger schreibe, nur damit ich testen kann, wie sie aussieht, wenn sie sich über mehrere Zeilen erstreckt. Diese verwendet <b>.image-figure-longcaption</b> als Klassen-Attribut.
   </figcaption>
@@ -784,7 +784,7 @@ Normalerweise sind die Untertitel zentriert ausgerichtet. Es gibt aber fälle, i
 Im aktuellen Design haben zwar sowieso alle Abbildungen einen Rand, dies mag sich aber in Zukunft ändern. Bei Abbildungen, die also auf jeden Fall einen Rand benötigen, weil sie sonst nicht wirken oder schlecht aussehen, fügt man daher das Klassen-Attribut `image-figure-border` hinzu.
 
 <figure class="image-figure image-figure-border">
-  <img src="http://lorempixel.com/680/408/sports/" alt="Example image">
+  <img src="https://lorempixel.com/680/408/sports/" alt="Example image">
   <figcaption>
     Dies ist ein normales Foto in einer figure mit dem Klassen-Attribut <b>.image-figure-border</b>.
   </figcaption>
@@ -793,7 +793,7 @@ Im aktuellen Design haben zwar sowieso alle Abbildungen einen Rand, dies mag sic
 Abbildungen, die einen Schatten haben sollen, können das Klassen-Attribut `image-figure-shadow` bekommen.
 
 <figure class="image-figure image-figure-shadow">
-  <img src="http://lorempixel.com/680/408/sports/" alt="Example image">
+  <img src="https://lorempixel.com/680/408/sports/" alt="Example image">
   <figcaption>
     Dies ist ein normales Foto in einer figure mit dem Klassen-Attribut <b>.image-figure-shadow</b>.
   </figcaption>
@@ -801,27 +801,11 @@ Abbildungen, die einen Schatten haben sollen, können das Klassen-Attribut `imag
 
 ```html
 <figure class="image-figure image-figure-shadow">
-  <img src="http://lorempixel.com/680/408/sports/" alt="Example image">
+  <img src="https://lorempixel.com/680/408/sports/" alt="Example image">
   <figcaption>
     Dies ist ein normales Foto in einer figure mit dem Klassen-Attribut <b>.image-figure-shadow</b>.
   </figcaption>
 </figure>
-```
-
-## Videos
-
-Es ist auch möglich Videos einzubetten, und zwar als natives HTML5, direkt von YouTube oder Vimeo.
-
-#### Native HTML5-Videos
-
-<video width="640" height="420" preload="none" controls poster="http://s3.imathis.com/video/zero-to-fancy-buttons.png">
-  <source src="http://s3.imathis.com/video/zero-to-fancy-buttons.mp4" type="video/mp4">
-</video>
-
-```html
-<video width="640" height="420" preload="none" controls poster="http://s3.imathis.com/video/zero-to-fancy-buttons.png">
-  <source src="http://s3.imathis.com/video/zero-to-fancy-buttons.mp4" type="video/mp4">
-</video>
 ```
 
 ### Codeblöcke
