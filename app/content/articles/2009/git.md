@@ -23,14 +23,14 @@ I replace the now obsolete article of 2007 with a large list of helpful links to
 
 ### Short Instructions
 
-- [tryGit](https://try.github.io/levels/1/challenges/1) - Learn Git interactive in the browser
+- [tryGit](http://try.github.io/levels/1/challenges/1) - Learn Git interactive in the browser
 - [Git Immersion](http://gitimmersion.com/) - Beautifully designed Guided Tour through the basics of Git
 - [git - the simple guide](http://rogerdudler.github.io/git-guide/) - Git in a nutshell (on a long page)
 - [Official Git Tutorial](https://www.kernel.org/pub/software/scm/git/docs/gittutorial.html)
 - [SVN Crash Course](https://git-scm.com/course/svn.html) - A crash course for people who already know SVN
 - [Effectively Using Git With Subversion](https://www.viget.com/articles/effectively-using-git-with-subversion) - A good introduction on how to use Subversion (SVN) with Git
 - [Git Ready](http://gitready.com/) - Short git tips for beginners, advanced and professionals
-- [Sei (k)ein Blödmann und nimm Git: Einführung in Versionskontrolle mit Git](http://goo.gl/Aea52) – my German presentation about Git
+- [Sei (k)ein Blödmann und nimm Git: Einführung in Versionskontrolle mit Git](https://www.slideshare.net/kogakure/sei-kein-bldmann-und-nimm-git-1830449/) – my German presentation about Git
 
 ### Instructions with More Detail
 
@@ -45,7 +45,7 @@ I replace the now obsolete article of 2007 with a large list of helpful links to
 ## References
 
 - [Reference Manual](https://www.kernel.org/pub/software/scm/git/docs/) - Detailed reference of all commands
-- [Git Cheat Sheet](http://zrusin.blogspot.de/2007/09/git-cheat-sheet.html) - A useful cheat sheet
+- [Git Cheat Sheet](http://zrusin.blogspot.com/2007/09/git-cheat-sheet.html) - A useful cheat sheet
 
 ## Videos and Screencasts
 
@@ -73,7 +73,7 @@ I replace the now obsolete article of 2007 with a large list of helpful links to
 - [Git for Windows](https://gitforwindows.org/) - A Windows Git GUI
 - [Git Extensions](http://gitextensions.github.io/) - A sleek Windows Git GUI, with 5 screencasts to use
 - [TortoiseGit](https://tortoisegit.org) - Git as a Windows Explorer shell extension
-- [SmartGit](http://www.syntevo.com/smartgit/) - Commercial solution for Windows, Mac OS X and Linux
+- [SmartGit](https://www.syntevo.com/smartgit/) - Commercial solution for Windows, Mac OS X and Linux
 
 ## Conclusion
 

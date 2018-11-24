@@ -55,7 +55,7 @@ First I will install all needed Node modules:
 $ npm install gulp-postcss@6.0.1 precss@1.2.3 gulp-cssnano@2.0.0 gulp-util@3.0.6 autoprefixer@6.0.3 css-mqpacker@4.0.0 --save-dev
 ```
 
-I only add some basic plugins, but you can add more if you like later. I add [gulp-postcss](https://github.com/postcss/gulp-postcss), [precss](https://github.com/jonathantneal/precss) (which will allow Sass-like syntax), [gulp-cssnano](http://cssnano.co/) (which will compress and optimize the CSS), [autoprexifer](https://github.com/postcss/autoprefixer) for automatic vendor prefixes and [css-mqpacker](https://github.com/hail2u/node-css-mqpacker) for combining media queries.
+I only add some basic plugins, but you can add more if you like later. I add [gulp-postcss](https://github.com/postcss/gulp-postcss), [precss](https://github.com/jonathantneal/precss) (which will allow Sass-like syntax), [gulp-cssnano](https://cssnano.co/) (which will compress and optimize the CSS), [autoprexifer](https://github.com/postcss/autoprefixer) for automatic vendor prefixes and [css-mqpacker](https://github.com/hail2u/node-css-mqpacker) for combining media queries.
 
 Next I will add the configuration for the new task:
 

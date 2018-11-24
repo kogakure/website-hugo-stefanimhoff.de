@@ -159,13 +159,12 @@ Ein Grundtemplate sieht in der Django-Dokumentation z. B. so aus:
 
 ```html
 <html>
-<head>
+  <head>
     <title>{% block title %}{% endblock %}</title>
-</head>
-<body>
-    <img src="sitelogo.gif" alt="Logo" />
-    {% block content %}{% endblock %}
-</body>
+  </head>
+  <body>
+    <img src="sitelogo.gif" alt="Logo" /> {% block content %}{% endblock %}
+  </body>
 </html>
 ```
 
@@ -174,19 +173,15 @@ Das niedrigere Template, hier eine Detailseite für einen Artikel, überschreibt
 <p class="code-info">article.html</p>
 
 ```html
-{% extends "base.html" %}
-
-{% block title %}Articles for {{ year }}{% endblock %}
-
+{% extends "base.html" %} {% block title %}Articles for {{ year }}{% endblock %}
 {% block content %}
-    <h1>Articles for {{ year }}</h1>
+<h1>Articles for {{ year }}</h1>
 
-    {% for article in article_list %}
-        <p>{{ article.headline }}</p>
-        <p>By {{ article.reporter.full_name }}</p>
-        <p>Published {{ article.pub_date|date:"F j, Y" }}</p>
-    {% endfor %}
-{% endblock %}
+{% for article in article_list %}
+<p>{{ article.headline }}</p>
+<p>By {{ article.reporter.full_name }}</p>
+<p>Published {{ article.pub_date|date:"F j, Y" }}</p>
+{% endfor %} {% endblock %}
 ```
 
 ## Erweitern von Django
@@ -227,4 +222,4 @@ Der eigenen Kreativität sind in Django keine Grenzen gesetzt, weil Python mit s
 
 Aus eigener Erfahrung kann ich nur sagen, dass das Stresslevel und der Arbeitsaufwand erheblich sinkt, wenn man seine Webportale mit Django betreibt, der Code bleibt kurz und übersichtlich, ist leicht zu warten, modular und objektorientiert. In Verbindung mit Deploymentwerkzeugen wie [Fabric](http://www.fabfile.org/) oder [Capistrano](http://capistranorb.com/), Versionskontrollsystemen wie z. B. [Git](https://git-scm.com/) macht die Entwicklung von Websites wieder Spaß.
 
-Also schließt euer Photoshop für ein paar Stunden und schaut einfach mal, ob Django nicht vielleicht das richtige Werkzeug für euch ist. Das vierteilige [Tutorial](https://docs.djangoproject.com/en/dev/intro/tutorial01/) bietet einen schnellen Einstieg in die Arbeitsweise mit Django. Der komplette Quellcode meines Kampfsport-Portals [kogakure.de](http://kogakure.de/) ist frei verfügbar und kann bei [Github geladen werden](https://github.com/kogakure/django-kogakure.de).
+Also schließt euer Photoshop für ein paar Stunden und schaut einfach mal, ob Django nicht vielleicht das richtige Werkzeug für euch ist. Das vierteilige [Tutorial](https://docs.djangoproject.com/en/dev/intro/tutorial01/) bietet einen schnellen Einstieg in die Arbeitsweise mit Django. Der komplette Quellcode meines Kampfsport-Portals [kogakure.de](https://www.kogakure.de/) ist frei verfügbar und kann bei [Github geladen werden](https://github.com/kogakure/django-kogakure.de).

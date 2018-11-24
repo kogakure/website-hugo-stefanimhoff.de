@@ -82,7 +82,7 @@ I open the windows to all other rooms to let in fresh air. My bedroom has always
 
 ### Record Weight
 
-I step on my [Nokia Body Cardio](https://health.nokia.com/body-cardio) scale to measure weight, fat, muscle, bone, and water. It’s important to always do this every day at the same time. It’s the only way to see health trends early.
+I step on my [Nokia Body Cardio](https://www.withings.com/de/de/body-cardio) scale to measure weight, fat, muscle, bone, and water. It’s important to always do this every day at the same time. It’s the only way to see health trends early.
 
 ### Drink
 

@@ -5,7 +5,7 @@ author: Stefan Imhoff
 date: 2017-06-27T16:16:34+02:00
 description: 'I just finished writing my first book in GitBook. I worked on it the last six month and it’s available to read online, as PDF, ePub and Mobi.'
 og_image: 'assets/images/articles/2017/gitbook/gitbook-kogakure.jpg'
-download_url: 'https://www.gitbook.com/book/kogakure/book-kogakure/details'
+download_url: 'https://github.com/kogakure/book-kogakure/releases'
 download_text: 'Read online or download (PDF, ePub, Mobi) version of the book'
 categories: ['personal', 'book']
 ---
@@ -14,7 +14,7 @@ I just finished writing my first book. I worked on it the last six month. Actual
 
 [![GitBook: kogakure](/assets/images/articles/2017/gitbook/gitbook-kogakure.jpg)](https://book.kogakure.de/)
 
-It was always available for _free_ for everyone on [my website](https://kogakure.de/). I started writing it 1999 with my first website, containing a collection of notes and thoughts about **Ninja** and their art, **Ninjutsu**.
+It was always available for _free_ for everyone on [my website](https://www.kogakure.de/). I started writing it 1999 with my first website, containing a collection of notes and thoughts about **Ninja** and their art, **Ninjutsu**.
 
 I never indented writing a book, but was asked regularly by visitors of my website, why I didn’t write a book. It was out of question to write some commercial book, because some of the articles on my website are translations of Peter Carlsson, who gave me permission to use the translated version on my website (unfortunately the original is gone).
 
@@ -39,10 +39,6 @@ The files would be most likely saved in some binary format, some local database 
 This is one of the reasons, why the combination of [Markdown](https://daringfireball.net/projects/markdown/) and [Git](https://git-scm.com/) is optimal for writing text. Even this blog post is written in Markdown.
 
 You can write your text in any editor you like (even Word would be possible), but optimally it should support Markdown (for a preview). Markdown can be learned in a few minutes. Usually most Markdown editors allow exporting the text into Word, RTF or PDF.
-
-## GitBook Editor
-
-GitBook provides even it’s own editor: [GitBook Editor](https://www.gitbook.com/editor), specifically suited for writing books. And it takes away the barrier of Git from beginners.
 
 ## What I’ve learned
 
@@ -76,8 +72,8 @@ And I needed to design a cover in two sizes for the book.
 
 ## Resources
 
-- Download **PDF**, **ePub**, **Mobi** versions on [GitBook](https://www.gitbook.com/book/kogakure/book-kogakure/details)
+- Download **PDF**, **ePub**, **Mobi** versions on [GitBook](https://github.com/kogakure/book-kogakure/releases)
 - Read the [online version](https://book.kogakure.de/) of the book
 - [Source code](https://github.com/kogakure/book-kogakure) of the book
 - Found an error, typo, mistake? Report it [here](https://github.com/kogakure/book-kogakure/issues) or add a comment on the section of the book (opens a discussion)
-- The [website](https://kogakure.de/), which is basis to the book
+- The [website](https://www.kogakure.de/), which is basis to the book

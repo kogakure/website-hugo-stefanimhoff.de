@@ -36,10 +36,10 @@ Diese Seite verwendet ein Foto für den Kopfbereich und einige Hintergrundmuster
     <li><a href="https://www.facebook.com/stefanaleksic88"><cite>Dark stripes</cite> by Stefan Aleksić</a></li>
     <li><cite>Inspiration Geometry</cite> by Welsley</li>
     <li><a href="http://poisones.tumblr.com/"><cite>Light gray</cite> by Brenda Lay</a></li>
-    <li><a href="https://www.30.nl/"><cite>Nami</cite> by Dertig Media</a></li>
+    <li><cite>Nami</cite> by Dertig Media</li>
     <li><a href="http://www.peax-webdesign.com/"><cite>Maze black</cite> by Peax</a></li>
-    <li><a href="http://gre3g.livejournal.com/"><cite>3px tile</cite> by Gre3g</a></li>
-    <li><a href="http://atlemo.com/"><cite>Type</cite> by Atle Mo</a></li>
+    <li><a href="https://gre3g.livejournal.com/"><cite>3px tile</cite> by Gre3g</a></li>
+    <li><cite>Type</cite> by Atle Mo</li>
     <li><cite>Wave Grind</cite> by DomainsInfo</li>
   </ul>
 </div>
@@ -58,30 +58,7 @@ Dies gilt **nicht** für das Design und den Stil dieser Seite. Bei Nutzungen, di
 
 ### Datenschutz
 
-Ich, der Betreiber dieser Website, Stefan Imhoff, Walter-Heitmann-Str. 2, 22159 Hamburg, nehme den Schutz Ihrer persönlichen Daten sehr ernst und halte mich strikt an die Regeln der Datenschutzgesetze. Personenbezogene Daten werden auf dieser Webseite nur im technisch notwendigen Umfang erhoben. In keinem Fall werden die erhobenen Daten verkauft oder aus anderen Gründen an Dritte weitergegeben.
-
-Die nachfolgende Erklärung gibt Ihnen einen Überblick darüber, wie ich diesen Schutz gewährleiste und welche Art von Daten zu welchem Zweck erhoben werden.
-
-### Datenverarbeitung auf dieser Internetseite
-
-stefanimhoff.de erhebt und speichert automatisch in ihren Server Log Files Informationen, die Ihr Browser an mich übermittelt. Dies sind unter anderem:
-
-- Browsertyp/-version
-- verwendetes Betriebssystem
-- Referrer URL (die zuvor besuchte Seite)
-- Hostname des zugreifenden Rechners (IP-Adresse)
-- Uhrzeit der Serveranfrage.
-- Diese Daten sind für mich nicht bestimmten Personen zuordenbar. Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen.
-
-Diese Website benutzt Google Analytics, einen Webanalysedienst der Google Inc. („Google“). Google Analytics verwendet sogenannte „Cookies“, Textdateien, die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung der Website durch Benutzer ermöglicht. Die durch den Cookie erfassten Informationen über die Benutzung dieser Website wird an einen Server von Google in den USA übertragen und dort gespeichert. Google wird diese Informationen nutzen, um die Nutzung der Website auszuwerten und Berichte über die Website-Aktivitäten für den Website-Betreiber zusammenzustellen. Auch wird Google diese Informationen gegebenenfalls an Dritte übertragen, sofern dies gesetzlich vorgeschrieben oder soweit Dritte diese Daten im Auftrag von Google verarbeiten. Google wird in keinem Fall Ihre IP-Adresse mit anderen Daten von Google in Verbindung bringen. Sie können die Installation der Cookies durch eine entsprechende Einstellung Ihrer Browser-Software verhindern. Durch die Nutzung dieser Website erklären Sie sich mit der Bearbeitung der über Sie erhobenen Daten durch Google in der zuvor beschriebenen Art und Weise und zu dem zuvor benannten Zweck einverstanden.
-
-### Cookies
-
-Die Internetseiten verwenden an mehreren Stellen so genannte Cookies. Sie dienen dazu, das Angebot nutzerfreundlicher, effektiver und sicherer zu machen. Cookies sind kleine Textdateien, die auf Ihrem Rechner abgelegt werden und die Ihr Browser speichert. Die meisten der von mir verwendeten Cookies sind so genannte „Session-Cookies“. Sie werden nach Ende Ihres Besuchs automatisch gelöscht. Cookies richten auf Ihrem Rechner keinen Schaden an und enthalten keine Viren.
-
-### Daten zur Webanalyse
-
-Diese Website benutzt [Google Analytics](http://www.google.com/analytics/), einen Webanalysedienst der Google Inc. (Google). Google Analytics verwendet sog. Cookies, Textdateien, die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung der Website durch Sie ermöglicht. Die durch den Cookie erzeugten Informationen über Ihre Benutzung diese Website (einschließlich Ihrer IP-Adresse) wird an einen Server der Google in den USA übertragen und dort gespeichert. Google wird diese Informationen benutzen, um Ihre Nutzung der Website auszuwerten, um Reports über die Websiteaktivitäten für die Websitebetreiber zusammenzustellen und um weitere mit der Websitenutzung und der Internetnutzung verbundene Dienstleistungen zu erbringen. Auch wird Google diese Informationen gegebenenfalls an Dritte übertragen, sofern dies gesetzlich vorgeschrieben oder soweit Dritte diese Daten im Auftrag von Google verarbeiten. Google wird in keinem Fall Ihre IP-Adresse mit anderen Daten der Google in Verbindung bringen. Sie können die Installation der Cookies durch eine entsprechende Einstellung Ihrer Browser Software verhindern; wir weisen Sie jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Website voll umfänglich nutzen können. Durch die Nutzung dieser Website erklären Sie sich mit der Bearbeitung der über Sie erhobenen Daten durch Google in der zuvor beschriebenen Art und Weise und zu dem zuvor benannten Zweck einverstanden. Bitte informieren Sie sich diesbezüglich unter den [Allgemeinen Geschäftsbedingungen für Google Analytics](http://www.google.com/analytics/terms/de.html). Bitte berücksichtigen Sie zusätzlich [Googles Datenschutzerklärung](http://www.google.com/intl/de/policies/privacy/).
+Ich, der Betreiber dieser Website, Stefan Imhoff, nehme den Schutz Ihrer persönlichen Daten sehr ernst und halte mich strikt an die Regeln der Datenschutzgesetze.
 
 ### Auskunftsrecht
 

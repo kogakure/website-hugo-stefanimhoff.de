@@ -25,7 +25,7 @@ A Rakkan (or Hanko) is called in Japan a seal, which is usually carved in stone,
   </figcaption>
 </figure>
 
-Even with my [martial arts portal](http://kogakure.de/) I use such a seal as a logo, only there was the template for this logo at that time my real seal, which I had commissioned from an artist.
+Even with my [martial arts portal](https://www.kogakure.de/) I use such a seal as a logo, only there was the template for this logo at that time my real seal, which I had commissioned from an artist.
 
 ## Research
 
@@ -63,7 +63,7 @@ For my new Rakkan I have taken over the characters of my old Rakkan and then add
 
 The two new characters to the left of it mean 草 (grass) and 刀 (blade) in the small seal script. The signs allow numerous possibilities of interpretation and interpretation, which I will not go into here to keep anyone bored.
 
-Such a seal can be created in two different variants: **Yin** or **Yang** (☯). In the Yin variant (as I have it on [kogakure.de](http://kogakure.de/)), only the letters are carved out of the stone, the surface remains. This time, I wanted to create a rakkan in the yang variant where everything is cut away except for the letters (and an edge).
+Such a seal can be created in two different variants: **Yin** or **Yang** (☯). In the Yin variant (as I have it on [kogakure.de](https://www.kogakure.de/)), only the letters are carved out of the stone, the surface remains. This time, I wanted to create a rakkan in the yang variant where everything is cut away except for the letters (and an edge).
 
 ## The Creation of the Rakkan
 

@@ -18,11 +18,11 @@ A lot of people misunderstand Minimalism as some form of search for highly expen
 
 On the other side of the spectrum, you can see the **extreme** Minimalists, living out of a box, owning 19 items, racing to be the most minimal Minimalists, sitting in empty rooms on the floor. And of course you are only allowed to use white and some black colors for everything as a extreme Minimalist. This form of Minimalism is only suitable for a few people. It _deters_ a lot of people to try out Minimalism. But it’s definitely helpful for being interviewed in media, selling your book or being invited to conferences.
 
-Real Minimalism is **not glamorous**, it’s **humble** and a result of **deep mindful thinking**. It is a mind-set or philosophy, not a method. And _the reduction of physical possessions is often a result of Minimalism, not Minimalism itself_, as Colin Wright explains in his article [Minimalism Explained](http://exilelifestyle.com/minimalism-explained/).
+Real Minimalism is **not glamorous**, it’s **humble** and a result of **deep mindful thinking**. It is a mind-set or philosophy, not a method. And _the reduction of physical possessions is often a result of Minimalism, not Minimalism itself_, as Colin Wright explains in his article [Minimalism Explained](https://exilelifestyle.com/minimalism-explained/).
 
 ## Criticism of Minimalism
 
-Critics of Minimalism describe it as cold, empty, without personality. People following Minimalism would deny their past or prove their inability for connection to other people. It would be a hopeless attempt to control the life, as Linda Tutmann described Minimalism in her ZEIT article [Alles mein](http://www.zeit.de/2017/06/besitz-minimalismus-dinge-erinnerungen-besitztum).
+Critics of Minimalism describe it as cold, empty, without personality. People following Minimalism would deny their past or prove their inability for connection to other people. It would be a hopeless attempt to control the life, as Linda Tutmann described Minimalism in her ZEIT article [Alles mein](https://www.zeit.de/2017/06/besitz-minimalismus-dinge-erinnerungen-besitztum).
 
 <figure class="image-figure">
   <img src="/assets/images/articles/2017/minimalism/minimalism-office.jpg" alt="My Minimalist home office" title="Sorry, it doesn’t look cold, empty and without personality. I failed as a Minimalist.">
@@ -50,7 +50,7 @@ As Kenya Hara writes in [Wa: The Essence of Japanese Design](http://www.amazon.d
 
 The Japanese Simplicity is described as _Emptiness_ by Kenya Hara and has a complex background: Japan was positioned at the end of many routes of cultural influence. From Rome along the Silk Road to Central Asia, China, Korea, and south from Turkey over India, South Asia and north along Russia. But after a civil war from 1467-1477 (_ōnin no ran_), which resulted in the destruction of a lot of objects of art (temples, statues, paintings, kimonos, etc.), maybe out of necessity, a new form of simple and quiet design emerged.
 
-Different ideas like _shintō_, _zen_ buddhism and Daoism influenced this form of Simplicity (and Minimalism) in every aspect of life. In _shintō_ the concept of emptiness is result of the creation of a space for the _kami_ (deities) to fill it. _Zen_ buddhism brought aspects like _Upādāna_ (sanskr. the attachment, clinging or grasping on ephemeral things). As a result many new ideas based on _Emptiness_, Simplicity and Minimalism emerged: [_wabi-sabi_](https://www.youtube.com/watch?v=QmHLYhxYVjA), [_kintsugi_](http://www.thebookoflife.org/kintsugi/), [japanese gardens](https://www.youtube.com/watch?v=7kaKYer6x5A), [_bonsai_](https://www.youtube.com/watch?v=NfdGGTb5_Ts), [_ikebana_](https://www.youtube.com/watch?v=QLBjh7GcVyA), [_chadō_](http://www.thebookoflife.org/the-great-eastern-philosophers-sen-no-rikyu/) or [_haiku_](http://www.thebookoflife.org/the-great-eastern-philosophers-matsuo-basho/).
+Different ideas like _shintō_, _zen_ buddhism and Daoism influenced this form of Simplicity (and Minimalism) in every aspect of life. In _shintō_ the concept of emptiness is result of the creation of a space for the _kami_ (deities) to fill it. _Zen_ buddhism brought aspects like _Upādāna_ (sanskr. the attachment, clinging or grasping on ephemeral things). As a result many new ideas based on _Emptiness_, Simplicity and Minimalism emerged: [_wabi-sabi_](https://www.youtube.com/watch?v=QmHLYhxYVjA), [_kintsugi_](https://www.theschooloflife.com/thebookoflife/kintsugi), [japanese gardens](https://www.youtube.com/watch?v=7kaKYer6x5A), [_bonsai_](https://www.youtube.com/watch?v=NfdGGTb5_Ts), [_ikebana_](https://www.youtube.com/watch?v=QLBjh7GcVyA), [_chadō_](https://www.theschooloflife.com/thebookoflife/the-great-eastern-philosophers-sen-no-rikyu) or [_haiku_](https://www.theschooloflife.com/thebookoflife/the-great-eastern-philosophers-matsuo-basho).
 
 ## Why to become a Minimalist?
 
@@ -92,7 +92,7 @@ Recently I counted all my possessions: I own **2486** items, which is a _fourth_
 
 ### On Consumption
 
-I changed my relationship to consumption. Quality over quantity. I buy mostly natural things, made out of natural materials. I learned to find passion in nice and crafty things (I bought a [Traveler’s Notebook](http://www.travelers-company.com/products/trnote/about) and a [Laguiole en Aubrac](http://www.laguiole-en-aubrac.com/) knife). I try to buy less physical books, though I still love them. My rule for books is: They need to be designed with love and care or I’ll buy them as ebooks.
+I changed my relationship to consumption. Quality over quantity. I buy mostly natural things, made out of natural materials. I learned to find passion in nice and crafty things (I bought a [Traveler’s Notebook](https://www.travelers-company.com/products/trnote/about) and a [Laguiole en Aubrac](http://www.laguiole-en-aubrac.fr) knife). I try to buy less physical books, though I still love them. My rule for books is: They need to be designed with love and care or I’ll buy them as ebooks.
 
 ### On Fashion
 

@@ -186,7 +186,7 @@ Zusätzlich dazu kann auch das Element `cite` verwendet werden, um ein Werk zu m
   <footer>
     <strong>Winston Churchill</strong>
     <cite>
-      <a href="http://hansard.millbanksystems.com/commons/1947/nov/11/parliament-bill#column_206a">
+      <a href="https://api.parliament.uk/historic-hansard/commons/1947/nov/11/parliament-bill">
         Speech to the House of Commons
       </a>
     </cite>
@@ -390,12 +390,12 @@ Es gibt eine Vielzahl von Inline-HTML-Elementen, die überall in anderen Element
 
 Das Element `a` wird verwendet um Text zu verlinken, ob auf eine andere Seite, ein benanntes Fragment der aktuellen Seite oder auf einen anderen Ort im Internet:
 
-[Gehe zur Startseite zurück]({{ site.url }}/),  [Springe zum Anfang der Seite](#top) oder besuche eine [fantastische Website im Internet](http://kogakure.de).
+[Gehe zur Startseite zurück]({{ site.url }}/),  [Springe zum Anfang der Seite](#top) oder besuche eine [fantastische Website im Internet](https://www.kogakure.de).
 
 Dies ist ein Link mit einem <a href="http://www.google.de/" data-tooltip="Dies ist der Text des Tooltips">Tooltip</a>.
 
 ```html
-[Dies ist ein Link](http://kogakure.de)
+[Dies ist ein Link](https://www.kogakure.de)
 ```
 
 ### Betonte Texte
