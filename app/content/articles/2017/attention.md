@@ -83,7 +83,7 @@ These are some of the things I did in the last few years to strengthen my awaren
 - **I try to not use my headphones in the subway**. When I’m reading I can practise to focus on the book and not on my surrounding. Sometimes I intentionally do nothing but just focus on the people in the subway.
 - **I read a lot about the brain and it’s weaknesses**. If you know all the biases and fallacies you are less likely to be a victim of them.
 - **I read a lot about habit forming, addiction and multitasking** (which is not possible in humans). I try to do as often as possible intentional single-tasking: Just reading, just eating, just watching a TV show, without the distraction of multiple other things at the same time.
-- **I started living a [Minimalist](https://www.stefanimhoff.de/2017/minimalism/) life**. Less stuff means less distraction and more attention to the things, which matter to you.
+- **I started living a [Minimalist](/minimalism/) life**. Less stuff means less distraction and more attention to the things, which matter to you.
 - **I watch and consume intentionally positive, inspiring, creative and uprising** videos or texts (e. g. [TED Talks](https://www.ted.com/)), to change the ratio of positive to negative messages I hear about.
 
 ## Prevention

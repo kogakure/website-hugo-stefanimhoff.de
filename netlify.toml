@@ -659,6 +659,12 @@ status = 301
 force = false
 
 [[redirects]]
+from = "/2017/minimalism/"
+to = "/minimalism/"
+status = 301
+force = false
+
+[[redirects]]
 from = "/2017/i-wrote-a-book-in-gitbook/"
 to = "/gitbook/"
 status = 301

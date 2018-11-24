@@ -15,7 +15,7 @@ Ich war mir nicht sicher, doch jetzt ist es entschieden. Digital geht schneller 
 
 ## Die Kandidaten
 
-- [Moleskine](https://de.moleskine.com/de) mit Kugelschreiber
+- [Moleskine](http://moleskine.com) mit Kugelschreiber
 - [iPod touch](https://www.apple.com/de/ipod-touch/) mit Zeigefinger
 
 ## Ausgangsposition
