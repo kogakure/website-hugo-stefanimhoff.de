@@ -61,4 +61,4 @@ These are just some of the tools, packages, languages and stuff I used to build 
 
 All content is copyrighted by [Stefan Imhoff](https://stefanimhoff.de) unless otherwise stated. Feel free to learn from the source code and reuse code for your projects. The only thing which is not allowed is the usage of my design (the unique combination of layout, fonts, images), private photos and logo.
 
-In easier words: **This is not a free theme**. Learn from it. Remix. Reuse. Build your own stuff.
+In easier words: **This is not a free theme**. Learn from it. Remix. Reuse. Build your own stuff!
