@@ -52,7 +52,7 @@ My first rule crosses out a lot of services. I don’t care how cool or awesome 
 
 Evernote had always a very friendly _you can export everything_ policy, why I still use them. But because of my rule number two, I can’t only rely on Evernote.
 
-That’s why I bought last year [DEVONthink](https://www.devontechnologies.com/products/devonthink/overview.html) Pro Office. The software is around since the early 2000s. It’s not the _prettiest_ contender around, and the mobile app is still in its infancy. But it is extremely powerful, thanks to its artificial intelligence and text-analysis. It’s mostly used by professionals, like scientists, teachers, authors, journalists, or lawyers. It has countless features of importing, exporting, converting, sharing. You can index external files from all kinds of devices and store the information in databases, that you can save wherever you like.
+That’s why I bought last year [DEVONthink](https://www.devontechnologies.com/apps/devonthink) Pro Office. The software is around since the early 2000s. It’s not the _prettiest_ contender around, and the mobile app is still in its infancy. But it is extremely powerful, thanks to its artificial intelligence and text-analysis. It’s mostly used by professionals, like scientists, teachers, authors, journalists, or lawyers. It has countless features of importing, exporting, converting, sharing. You can index external files from all kinds of devices and store the information in databases, that you can save wherever you like.
 
 ## Sources of Information
 
@@ -96,7 +96,7 @@ After I archived an item in Pocket, the next automation starts: The link to the 
 
 ## Evernote to DEVONthink
 
-Once a week I import the most valuable information of the week from Evernote to DEVONthink. I move it to the correct database and use the automatic sorting feature to move the content to the right folders. Everything is also automatically synchronised to Dropbox, from where I can use it on my mobile devices (with [DEVONthink To Go](https://www.devontechnologies.com/products/devonthink/devonthink-to-go.html)). I also index external sources like my Feedly Vault, my iA Writer texts, photos, or external drives with movies to DEVONthink.
+Once a week I import the most valuable information of the week from Evernote to DEVONthink. I move it to the correct database and use the automatic sorting feature to move the content to the right folders. Everything is also automatically synchronised to Dropbox, from where I can use it on my mobile devices (with _DEVONthink To Go_). I also index external sources like my Feedly Vault, my iA Writer texts, photos, or external drives with movies to DEVONthink.
 
 ## Processing Books
 

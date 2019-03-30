@@ -28,7 +28,7 @@ Before I decided for Hugo, I did a quite long research of the possible [static s
 
 ### Roots
 
-Another tool, which looked quite nice was [Roots](http://ww25.roots.cx). But after some research I found out it’s already discontinued.
+Another tool, which looked quite nice was _Roots_. But after some research I found out it’s already discontinued.
 
 ### Gatsby
 
