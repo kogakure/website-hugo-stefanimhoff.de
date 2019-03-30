@@ -174,7 +174,7 @@ For those who have become curious about typography, I have put together a small 
 - [Butterick’s Practical Typography](https://practicaltypography.com/)
 - [type basics](http://www.typeworkshop.com/index.php?id1=type-basics)
 - [Web Design is 95% Typography](https://ia.net/topics/the-web-is-all-about-typography-period)
-- [Five simple steps to better typography](https://markboulton.co.uk/journal/five-simple-steps-to-better-typography)
+- [Five simple steps to better typography](https://markboulton.co.uk/journal/2005-04-13.five-simple-steps-to-better-typography/)
 - [Nice Web Type](http://nicewebtype.com/)
 - [More MeaningFull Typography](https://alistapart.com/article/more-meaningful-typography)
 - [A List Apart: Typographie](https://alistapart.com/topic/design/typography/)
