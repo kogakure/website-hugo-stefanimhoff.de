@@ -91,7 +91,7 @@ Der [Mister Wong](https://www.mister-wong.de/)-Skandal im August ist mal wieder 
 
 Zum ersten mal in meinem Leben beschäftige ich mich im späten August mit [LaTeX](https://de.wikipedia.org/wiki/LaTeX). Einige Studenten aus unserer Firma haben mich darauf gestoßen. Muss ich können, tu ich lernen. Mein Motto ;)
 
-Auf meinem Nachttisch liegt laut Google Suche Machiavellis <cite>[Der Fürst](http://www.amazon.de/gp/product/3458344721/ref=as_li_ss_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=3458344721&linkCode=as2&tag=kogakurede-21)</cite>.
+Auf meinem Nachttisch liegt laut Google Suche Machiavellis <cite>[Der Fürst](http://www.amazon.de/gp/product/3458344721/ref=as_li_ss_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=3458344721&linkCode=as2&tag=stefanimhoffde-21)</cite>.
 
 In der [Autostadt Wolfsburg](https://www.autostadt.de/) eröffnet ein neues japanisches Restaurant, das _Anan_, mit extra einflogenem, japanischem Meisterkoch.
 
@@ -155,7 +155,7 @@ Die Idee von Amazons <cite>Kindle</cite> finde ich nach einigem Überlegen gar n
 
 Git setze ich jetzt flächendeckend in fast jedem noch so kleinen Projekt ein.
 
-Auf meinem Nachttisch liegt jetzt das Buch <cite>[Der Dativ ist dem Genitiv sein Tod](http://www.amazon.de/gp/product/3462034480/ref=as_li_ss_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=3462034480&linkCode=as2&tag=kogakurede-21)</cite>, was ich ziemlich lustig und interessant finde.
+Auf meinem Nachttisch liegt jetzt das Buch <cite>[Der Dativ ist dem Genitiv sein Tod](http://www.amazon.de/gp/product/3462034480/ref=as_li_ss_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=3462034480&linkCode=as2&tag=stefanimhoffde-21)</cite>, was ich ziemlich lustig und interessant finde.
 
 Für einen Kunden recherchiere ich bei der GEMA, was es kostet multimediale Inhalte auf er eigenen Website zu benutzen und komme zum Schluss: Die sind megadreist. Es lebe [CC](https://creativecommons.org/)!
 

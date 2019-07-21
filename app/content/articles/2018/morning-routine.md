@@ -64,9 +64,9 @@ I really like waking up that early because it is quiet outside and I have more t
 
 Reading is _honestly_ the **most** satisfying thing I do in the morning. I never did it before and read usually mostly on the commuting or in the evening. But reading in the morning is different. My mind is much clearer and I’m able to read much harder books.
 
-I have a [Traveler’s Notebook Passport Size](https://www.travelers-company.com/products/trnote/starter-kit-passport) with a ball pen and my [Kindle Paperwhite](http://www.amazon.de/gp/product/B00QJDO0QC/ref=as_li_ss_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=B00QJDO0QC&linkCode=as2&tag=kogakurede-21) (or some paper books) on my nightstand. The first thing I do after waking up is turn on my belly and read in this position for a hour. It’s a good exercise for the back and stretches the opposite of the usually C-bend shape most people sit in during the day.
+I have a [Traveler’s Notebook Passport Size](https://www.travelers-company.com/products/trnote/starter-kit-passport) with a ball pen and my [Kindle Paperwhite](http://www.amazon.de/gp/product/B00QJDO0QC/ref=as_li_ss_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=B00QJDO0QC&linkCode=as2&tag=stefanimhoffde-21) (or some paper books) on my nightstand. The first thing I do after waking up is turn on my belly and read in this position for a hour. It’s a good exercise for the back and stretches the opposite of the usually C-bend shape most people sit in during the day.
 
-I start by reading the daily chapter of the fantastic book [The Daily Stoic](http://www.amazon.de/gp/product/1781257655/ref=as_li_ss_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=1781257655&linkCode=as2&tag=kogakurede-21). The stoic practice is the best start in a day you can have. After that I read in 1-2 books, usually not novels, but harder stuff (philosophy, science, psychology etc.). Whenever I want to remember a quote or part of a book, I mark it and extract it later into my Commonplace book or write it down in my pocket size notebook.
+I start by reading the daily chapter of the fantastic book [The Daily Stoic](http://www.amazon.de/gp/product/1781257655/ref=as_li_ss_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=1781257655&linkCode=as2&tag=stefanimhoffde-21). The stoic practice is the best start in a day you can have. After that I read in 1-2 books, usually not novels, but harder stuff (philosophy, science, psychology etc.). Whenever I want to remember a quote or part of a book, I mark it and extract it later into my Commonplace book or write it down in my pocket size notebook.
 
 ### Get Up
 
@@ -104,17 +104,17 @@ I reflect the previous day and think about upcoming challenges of the current da
 - **Journal** – for recording my daily reflection and affirmation
 - **Sketchnotes** – for doing sketchnotes on ideas and thoughts
 
-This is also a good time for daily affirmation, gratefulness, and positive outlook. Even **Marcus Aurelius**, the famous Stoic and Emperor of the Roman Empire, wrote in his [Journal](http://www.amazon.de/gp/product/0812968255/ref=as_li_ss_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=0812968255&linkCode=as2&tag=kogakurede-21) while being at the border to Germania and preparing for battle with the Germanic tribes. A lot of people did it and it’s a good practice to get yourself into the right mindset.
+This is also a good time for daily affirmation, gratefulness, and positive outlook. Even **Marcus Aurelius**, the famous Stoic and Emperor of the Roman Empire, wrote in his [Journal](http://www.amazon.de/gp/product/0812968255/ref=as_li_ss_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=0812968255&linkCode=as2&tag=stefanimhoffde-21) while being at the border to Germania and preparing for battle with the Germanic tribes. A lot of people did it and it’s a good practice to get yourself into the right mindset.
 
 ### Learn
 
 Then I learn for 30 minutes. I pick up to three tasks and practice them. These 10-15 minutes add up to 5-7 hours at the end of the month.
 
-Currently, I start with some writing practice in [Spencerian Penmanship](http://www.amazon.de/gp/product/088062096X/ref=as_li_ss_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=088062096X&linkCode=as2&tag=kogakurede-21), because I love this writing style and want to learn it. Then I practice some Sketchnote vocabulary from [Bikablo®](https://bikablo.com/). At the end I learn a few minutes Japanese with [Duolingo](https://en.duolingo.com/course/ja/en/Learn-Japanese-Online).
+Currently, I start with some writing practice in [Spencerian Penmanship](http://www.amazon.de/gp/product/088062096X/ref=as_li_ss_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=088062096X&linkCode=as2&tag=stefanimhoffde-21), because I love this writing style and want to learn it. Then I practice some Sketchnote vocabulary from [Bikablo®](https://bikablo.com/). At the end I learn a few minutes Japanese with [Duolingo](https://en.duolingo.com/course/ja/en/Learn-Japanese-Online).
 
 ### Meditate
 
-After that I sit down on a [meditation mattress](http://www.amazon.de/gp/product/B002JJ6UA4/ref=as_li_ss_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=B002JJ6UA4&linkCode=as2&tag=kogakurede-21) and on a [meditation pillow](http://www.amazon.de/gp/product/B01MRX5V3J/ref=as_li_ss_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=B01MRX5V3J&linkCode=as2&tag=kogakurede-21). I use the [Headspace](https://www.headspace.com/) app to meditate for 20 minutes. In cold seasons I wrap myself in a big blanket to stay warm.
+After that I sit down on a [meditation mattress](http://www.amazon.de/gp/product/B002JJ6UA4/ref=as_li_ss_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=B002JJ6UA4&linkCode=as2&tag=stefanimhoffde-21) and on a [meditation pillow](http://www.amazon.de/gp/product/B01MRX5V3J/ref=as_li_ss_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=B01MRX5V3J&linkCode=as2&tag=stefanimhoffde-21). I use the [Headspace](https://www.headspace.com/) app to meditate for 20 minutes. In cold seasons I wrap myself in a big blanket to stay warm.
 
 ### Workout
 

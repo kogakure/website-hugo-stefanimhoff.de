@@ -17,7 +17,7 @@ Since exactly one and a half years I use now the principles of _GTD_ (<em>Gettin
   </figcaption>
 </figure>
 
-In his book <cite>[Getting Things Done: The Art of Stress-Free Productivity](http://www.amazon.de/gp/product/ 0143126563/ref=as_li_ss_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=0143126563&linkCode=as2&tag=kogakurede-21)</cite>, David Allen introduces an interesting system that allows you to do your daily tasks effectively and efficiently.
+In his book <cite>[Getting Things Done: The Art of Stress-Free Productivity](http://www.amazon.de/gp/product/0143126563/ref=as_li_ss_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=0143126563&linkCode=as2&tag=stefanimhoffde-21)</cite>, David Allen introduces an interesting system that allows you to do your daily tasks effectively and efficiently.
 
 In any case, I am of the opinion that one really _gets_ the everyday madness governed by Allen’s system.
 

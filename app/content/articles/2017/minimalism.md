@@ -46,7 +46,7 @@ As everything in this world is connected, Minimalism has its roots in a lot of d
 
 As Minimalism is also defined as _Simple Living_, Simplicity will inevitably be part of a Minimalists life. The reason is deep thinking often results in love for simple forms. Objects, which are resistent against temporary fashion, which endure times and follow the concept of _form follows function_.
 
-As Kenya Hara writes in [Wa: The Essence of Japanese Design](http://www.amazon.de/gp/product/0714866962?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=0714866962), the origin of Simplicity can be found in the European _modernism_ as a result of the society getting free of sole rulers (who where defined by objects of decoration and excess of material objects). Rationality was the basis of this concept, resulting in _Bauhaus_ in 1909 or the founding of _Domus_ in 1928.
+As Kenya Hara writes in [Wa: The Essence of Japanese Design](http://www.amazon.de/gp/product/0714866962?ie=UTF8&tag=stefanimhoffde-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=0714866962), the origin of Simplicity can be found in the European _modernism_ as a result of the society getting free of sole rulers (who where defined by objects of decoration and excess of material objects). Rationality was the basis of this concept, resulting in _Bauhaus_ in 1909 or the founding of _Domus_ in 1928.
 
 The Japanese Simplicity is described as _Emptiness_ by Kenya Hara and has a complex background: Japan was positioned at the end of many routes of cultural influence. From Rome along the Silk Road to Central Asia, China, Korea, and south from Turkey over India, South Asia and north along Russia. But after a civil war from 1467-1477 (_ōnin no ran_), which resulted in the destruction of a lot of objects of art (temples, statues, paintings, kimonos, etc.), maybe out of necessity, a new form of simple and quiet design emerged.
 
@@ -60,7 +60,7 @@ That’s why I think extreme forms of Minimalism can easily result in less freed
 
 ## My history as a Minimalist
 
-I think I was always a Minimalist, even when the term didn’t exist. My first contact with the idea was in high school, where we had to read [To Have or to Be?](http://www.amazon.de/gp/product/178093680X?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=178093680X) by Erich Fromm.
+I think I was always a Minimalist, even when the term didn’t exist. My first contact with the idea was in high school, where we had to read [To Have or to Be?](http://www.amazon.de/gp/product/178093680X?ie=UTF8&tag=stefanimhoffde-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=178093680X) by Erich Fromm.
 
 The next thing which influenced me was surely the book and movie [Fight Club](http://www.imdb.com/title/tt0137523/). It’s filled with quotes against consumerism, capitalism and property. It has a lot of anarchic ideas, which is probably the main reason it was rated PG 18.
 
@@ -68,7 +68,7 @@ The next thing which influenced me was surely the book and movie [Fight Club](ht
   <p>The things you own end up owning you.</p>
 </blockquote>
 
-The next step was probably reading David Allens book [Gettings Things Done (GTD)](http://www.amazon.de/gp/product/0143126563?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=0143126563), which is a productivity system, but at it’s beginning is some inventory of your stuff. This way I got rid of a lot of stuff for the first time.
+The next step was probably reading David Allens book [Gettings Things Done (GTD)](http://www.amazon.de/gp/product/0143126563?ie=UTF8&tag=stefanimhoffde-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=0143126563), which is a productivity system, but at it’s beginning is some inventory of your stuff. This way I got rid of a lot of stuff for the first time.
 
 ![My office stuff before cleaning up](/assets/images/articles/2017/minimalism/gtd-vorher.jpg)
 

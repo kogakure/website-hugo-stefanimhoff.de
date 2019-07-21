@@ -11,7 +11,7 @@ categories: ['book']
 Today, I recommend a book that I just finished recently and read a second time: <cite>Rework</cite> by _Jason Fried_ and _David Heinemeier Hansson_.
 
 <figure class="image-figure image-figure-border">
-  <a href="http://www.amazon.de/gp/product/0307463745?ie=UTF8&amp;tag=kogakurede-21&amp;linkCode=as2&amp;camp=1638&amp;creative=19454&amp;creativeASIN=0307463745">
+  <a href="http://www.amazon.de/gp/product/0307463745?ie=UTF8&amp;tag=stefanimhoffde-21&amp;linkCode=as2&amp;camp=1638&amp;creative=19454&amp;creativeASIN=0307463745">
     <img src="/assets/images/articles/2010/rework/rework.jpg" alt="37signals: Rework">
   </a>
   <figcaption>
@@ -19,7 +19,7 @@ Today, I recommend a book that I just finished recently and read a second time: 
   </figcaption>
 </figure>
 
-I have long been a great believer in the philosophy of simplicity which is cultivated by <cite><del>37signals</del> <ins>Basecamp</ins></cite> so successfully. Already their first (free) book [Getting Real](https://basecamp.com/books/getting-real) (also as [paperback version](http://www.amazon.de/gp/product/0578012812?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=19454&creativeASIN=0578012812)) I read with great interest.
+I have long been a great believer in the philosophy of simplicity which is cultivated by <cite><del>37signals</del> <ins>Basecamp</ins></cite> so successfully. Already their first (free) book [Getting Real](https://basecamp.com/books/getting-real) (also as [paperback version](http://www.amazon.de/gp/product/0578012812?ie=UTF8&tag=stefanimhoffde-21&linkCode=as2&camp=1638&creative=19454&creativeASIN=0578012812)) I read with great interest.
 
 But with <cite>Rework</cite> they have achieved a true masterpiece. Not without reason it is a bestseller in the US and the UK. Critics and CEO praise the book in the highest terms (Seth Godin, John Maeda, Chris Anderson, and others).
 

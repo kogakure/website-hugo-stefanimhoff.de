@@ -16,7 +16,7 @@ Tattoos are an art that is transient in the truest sense of the word, since with
 
 These works of art are extremely painful (dozens of bamboo needles are [stung several times a second](https://www.youtube.com/watch?v=NddXHY2QUV0)), tedious (from a few months to several years) and expensive (starting at 20,000 €). That is also the reason why I like to look at them, but definitly never will wear one myself.
 
-One of the best living artists of the Irezumi is Horiyoshi III, whose works can be seen in some illustrated books: [Tattoos from the Floating World: Ukiyo-e Motif's in Japanese Tattoo](http://www.amazon.de/gp/product/9074822452?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=9074822452) and [Bushido: Legacies of the Japanese Tattoo](http://www.amazon.de/gp/product/0764312014?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=0764312014).
+One of the best living artists of the Irezumi is Horiyoshi III, whose works can be seen in some illustrated books: [Tattoos from the Floating World: Ukiyo-e Motif's in Japanese Tattoo](http://www.amazon.de/gp/product/9074822452?ie=UTF8&tag=stefanimhoffde-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=9074822452) and [Bushido: Legacies of the Japanese Tattoo](http://www.amazon.de/gp/product/0764312014?ie=UTF8&tag=stefanimhoffde-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=0764312014).
 
 Irezumi does not at random tattoo any things on the body, the images have a deep meaning to the wearer, and require expertise on religion, history, and myths from China and Japan. That is also the reason why bad copies and pseudo-Japanese tattoos are often offered in Western tattoo studios. These tattooists usually lack this background knowledge.
 
@@ -28,7 +28,7 @@ The links to the Japanese art of [ukiyo-e](https://en.wikipedia.org/wiki/Ukiyo-e
 
 ## Motives
 
-In addition to gods, mythical creatures and demons, the most important source of motifs is the ancient Chinese novella <cite>[Shuǐhǔ Zhuàn](https://en.wikipedia.org/wiki/Water_Margin)</cite> (Water Margin), known in Japan as <cite>Suikoden</cite>. It belongs to one of the four classical books of Chinese literature. The German translation of this very entertaining book is called <cite>[Die Räuber vom Liang Schan Moor ](http://www.amazon.de/gp/product/3458318917?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=3458318917)</cite>.
+In addition to gods, mythical creatures and demons, the most important source of motifs is the ancient Chinese novella <cite>[Shuǐhǔ Zhuàn](https://en.wikipedia.org/wiki/Water_Margin)</cite> (Water Margin), known in Japan as <cite>Suikoden</cite>. It belongs to one of the four classical books of Chinese literature. The German translation of this very entertaining book is called <cite>[Die Räuber vom Liang Schan Moor ](http://www.amazon.de/gp/product/3458318917?ie=UTF8&tag=stefanimhoffde-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=3458318917)</cite>.
 
 ## Water Margin
 
