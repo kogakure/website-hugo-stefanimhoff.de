@@ -98,8 +98,8 @@ Calisthenics are far more popular in other countries, like Russia or the United 
 But with creativity you’ll always find a solution. If prisoners can train Calisthenics in their small cells, you should find ways to train without a perfect training course. You can pull up to branches of trees or fences, dip on handrails or bicycle stands. I for example found a playground nearby with decent bars. Not high enough to hang with my legs stretched, but I can train. Additionally I bought a [Doorway Pull-Up Bar] and [Dip Bars], because I got tired of using two chairs for Dips.
 
 [street workout video from ukraine]: https://www.youtube.com/watch?v=bvLQZVnz5WM
-[doorway pull-up bar]: http://www.amazon.de/gp/product/B00EZ24BC2?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=3924862397
-[dip bars]: http://www.amazon.de/gp/product/B0088I92VY?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=3924862397
+[doorway pull-up bar]: http://www.amazon.de/gp/product/B00EZ24BC2?ie=UTF8&tag=stefanimhoffde-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=3924862397
+[dip bars]: http://www.amazon.de/gp/product/B0088I92VY?ie=UTF8&tag=stefanimhoffde-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=3924862397
 
 ## Build Muscle, Endurance and Strength
 

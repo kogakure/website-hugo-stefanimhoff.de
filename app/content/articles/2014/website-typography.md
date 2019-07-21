@@ -23,7 +23,7 @@ The right choice of font, font size, weight, layout, sentence width, lead, lette
   </figcaption>
 </figure>
 
-I’ve always found typography fascinating, but only after reading the book <cite>[The Elements _of_ Typographic Style](http://www.amazon.de/gp/product/0881792128?ie=UTF8&camp=1638&creative=19454&creativeASIN=0881792128&linkCode=as2&tag=kogakurede-21)</cite> by _Robert Bringhurst_ I studied the matter more deeply. There is a Web-adapted version of his book on the website [The Elements _of_ Typographic Style Applied _to the_ Web](http://webtypography.net/).
+I’ve always found typography fascinating, but only after reading the book <cite>[The Elements _of_ Typographic Style](http://www.amazon.de/gp/product/0881792128?ie=UTF8&camp=1638&creative=19454&creativeASIN=0881792128&linkCode=as2&tag=stefanimhoffde-21)</cite> by _Robert Bringhurst_ I studied the matter more deeply. There is a Web-adapted version of his book on the website [The Elements _of_ Typographic Style Applied _to the_ Web](http://webtypography.net/).
 
 ## Typography
 

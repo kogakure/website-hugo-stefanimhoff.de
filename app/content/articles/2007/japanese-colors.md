@@ -12,7 +12,7 @@ categories: ['design', 'download']
 
 During a visit to the art exhibition <cite>Japan and the West</cite> in the [Art Museum Wolfsburg](https://www.kunstmuseum-wolfsburg.de/), I was able to get my hands on a wonderful book about the traditional, Japanese colors.
 
-In the museum shop I was able to buy the book <cite>[The Traditional Colors of Japan](http://www.amazon.de/gp/product/4894445786/ref=as_li_ss_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=4894445786&linkCode=as2&tag=kogakurede-21)</cite>, which is in Japanese. In addition to a full color palette of 250 colors, it also contains an exact indication of RGB, CMYK and other information.
+In the museum shop I was able to buy the book <cite>[The Traditional Colors of Japan](http://www.amazon.de/gp/product/4894445786/ref=as_li_ss_tl?ie=UTF8&camp=1638&creative=19454&creativeASIN=4894445786&linkCode=as2&tag=stefanimhoffde-21)</cite>, which is in Japanese. In addition to a full color palette of 250 colors, it also contains an exact indication of RGB, CMYK and other information.
 
 <figure class="image-figure image-figure-noborder">
   <img src="/assets/images/articles/2007/japanese-colors/japanese-colors.png" alt="Japanese Colors" title="Japanese Colors">
