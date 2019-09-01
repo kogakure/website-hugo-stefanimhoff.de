@@ -40,11 +40,11 @@ Photo by <a href="https://www.stefanimhoff.de/">Stefan Imhoff</a>
 
 ## TV Shows
 
-- [Annihilation](https://www.netflix.com/title/80206300) (Netflix) – I rewatched the Netflix movie, because after reading Lovecraft’s _The Colour out of Space_, I realised that the writers have written in parts—without intention—a nice adaptation of the story.
-- [Mad Men](https://www.netflix.com/title/70136135) (Netflix) – I started rewatching this fantastic tv show. It won 5 Golden Globes and 132 other awards. It’s story spans over multiple years and is so deep and stacked with so many layers of interpretation.
-- [Mindhunter](https://www.netflix.com/title/80114855), Season 2 (Netflix) – I started watching the second season of this Netflix tv show about the FBI unit that started interviewing serial killers in the 1970s to understand and prevent these crimes.
-- [Glow](https://www.netflix.com/title/80114988) (Netflix) – A colleague recommended this funny TV show to me. It’s about a group of women who become wrestlers in Los Angeles during the 1980s.
-- [Dave Chappelle: Sticks & Stones](https://www.netflix.com/title/81140577) (Netflix) – Very funny, political incorrect, and right to the heart of every virtue signaller and social justice warrior.
+- [Annihilation](https://www.imdb.com/title/tt2798920/) ([Netflix](https://www.netflix.com/title/80206300)) – I rewatched the Netflix movie, because after reading Lovecraft’s _The Colour out of Space_, I realised that the writers have written in parts—without intention—a nice adaptation of the story.
+- [Mad Men](https://www.imdb.com/title/tt0804503/) ([Netflix](https://www.netflix.com/title/70136135)) – I started rewatching this fantastic tv show. It won 5 Golden Globes and 132 other awards. It’s story spans over multiple years and is so deep and stacked with so many layers of interpretation.
+- [Mindhunter](https://www.imdb.com/title/tt5290382/), Season 2 ([Netflix](https://www.netflix.com/title/80114855)) – I started watching the second season of this Netflix tv show about the FBI unit that started interviewing serial killers in the 1970s to understand and prevent these crimes.
+- [Glow](https://www.imdb.com/title/tt5770786/) ([Netflix](https://www.netflix.com/title/80114988)) – A colleague recommended this funny TV show to me. It’s about a group of women who become wrestlers in Los Angeles during the 1980s.
+- [Dave Chappelle: Sticks & Stones](https://www.imdb.com/title/tt10810424/s) ([Netflix](https://www.netflix.com/title/81140577)) – Very funny, political incorrect, and right to the heart of every virtue signaller and social justice warrior.
 
 ## Music
 
@@ -53,7 +53,7 @@ Photo by <a href="https://www.stefanimhoff.de/">Stefan Imhoff</a>
 
 ## Books
 
-- [The Complete Fiction of H. P. Lovecraft](http://www.amazon.de/gp/product/1631060015?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=1631060015) – I’m currently halfway through this book and really love Lovecraft Horror.
+- [The Complete Fiction of H. P. Lovecraft](https://www.goodreads.com/book/show/44065867-the-complete-fiction-of-h-p-lovecraft) ([Amazon](http://www.amazon.de/gp/product/B07NWN6KD6?ie=UTF8&tag=kogakurede-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=B07NWN6KD6)) – I’m currently halfway through this book and really love Lovecraft Horror.
 
 ## Articles
 
