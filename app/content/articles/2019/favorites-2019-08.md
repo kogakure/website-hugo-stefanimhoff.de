@@ -25,7 +25,7 @@ Photo by <a href="https://www.stefanimhoff.de/">Stefan Imhoff</a>
 ## Videos
 
 - [Timelapse of the Future](https://www.youtube.com/watch?v=uD4izuDMUQA) – A half hour long movie of the future of our universe to its end. Stunning visuals and fantastic music.
-- [Hikari](https://www.youtube.com/watch?v=__xVbrDvunY) – Fantastic visual epitaph for Japanese poet _Hikaru-San_, who took her own life after struggling with depression.
+- [Hikari](https://www.youtube.com/watch?v=__xVbrDvunY) – Fantastic visual epitaph for Japanese poet _Hikaru-San_, who took her own life after struggling with depression. The poem used in the video is [Epitaph for “Poets’s Tomb”](https://www.poetryinternational.org/pi/poem/23081/auto/0/0/Shuntaro-Tanikawa/EPITAPH-FOR-POETS-TOMB/) by Shuntarō Tanikawa.
 - [Bookstores: How to Read More Books in the Golden Age of Content](https://www.youtube.com/watch?v=lIW5jBrrsS0) – Documentary about books, libraries and reading.
 - [What’s the Best Position to Sleep in? Do we even need a Pillow?](https://www.youtube.com/watch?v=O8UoAASCUsQ&t=10s) – Interesting video summary on the science of sleeping.
 - [The Expanse Season 4 Comic-Con Trailer](https://www.youtube.com/watch?v=mOcTECzQVdM) – The trailer for the upcoming season is fantastic. As a reader of all Expanse books I can’t wait for the next season.
