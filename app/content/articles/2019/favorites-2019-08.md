@@ -22,6 +22,14 @@ Photo by <a href="https://www.stefanimhoff.de/">Stefan Imhoff</a>
 </figcaption>
 </figure>
 
+<blockquote>
+  <p>“If wisdom were offered me on the one condition that I should keep it shut away and not divulge it to anyone, I should reject it. There is no enjoying the possession of anything valuable unless one has someone to share it with.”</p>
+  <footer>
+    <strong>Seneca</strong>
+    <cite>Letters from a Stoic</cite>, Letter VI
+  </footer>
+</blockquote>
+
 ## Videos
 
 - [Timelapse of the Future](https://www.youtube.com/watch?v=uD4izuDMUQA) – A half hour long movie of the future of our universe to its end. Stunning visuals and fantastic music.
