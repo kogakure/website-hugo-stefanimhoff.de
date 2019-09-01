@@ -58,7 +58,7 @@ Photo by <a href="https://www.stefanimhoff.de/">Stefan Imhoff</a>
 ## Articles
 
 - [IndieWeb Link Sharing](https://mxb.dev/blog/indieweb-link-sharing/) (Max Böck) – How to use a bookmarklet and Lambda functions to post links to your own website.
-- [I Didn’t Say That](https://www.jordanbpeterson.com/blog-posts/i-didnt-say-that/) (Jordan B Peterson) – An article about deep fakes and their problematic, when used for more than fun and art. We need urgently laws to regulate the usage of voice or face of other people. Impersonators can and will use this technology to accuse people of crimes, use it for propaganda and for other bad causes.
+- [I Didn’t Say That](https://www.jordanbpeterson.com/blog-posts/i-didnt-say-that/) (Jordan B Peterson) – An article about deep fakes and their problem, when used for more than fun and art. We need urgently laws to regulate the usage of voice or face of other people. Impersonators can and will use this technology to accuse people of crimes, use it for propaganda and for other bad causes.
 - [Two Unusual Japanese Home Designs With Unique Zoning Techniques](http://www.home-designing.com/two-unusual-japanese-home-designs-with-unique-zoning-techniques) – Nice minimal house design with a lot of photos and some videos.
 - [Native lazy-loading for the web](https://web.dev/native-lazy-loading) – Native lazy-loading is here!
 - [NetNewsWire 5.0 Relaunches as an Open-Source RSS Reader for the Mac](https://thesweetsetup.com/netnewswire-5-0-relaunches-as-an-open-source-rss-reader-for-the-mac/) – RSS is not dead!
