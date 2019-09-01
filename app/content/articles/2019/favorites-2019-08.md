@@ -46,6 +46,12 @@ Photo by <a href="https://www.stefanimhoff.de/">Stefan Imhoff</a>
 - [Glow](https://www.imdb.com/title/tt5770786/) ([Netflix](https://www.netflix.com/title/80114988)) – A colleague recommended this funny TV show to me. It’s about a group of women who become wrestlers in Los Angeles during the 1980s.
 - [Dave Chappelle: Sticks & Stones](https://www.imdb.com/title/tt10810424/s) ([Netflix](https://www.netflix.com/title/81140577)) – Very funny, political incorrect, and right to the heart of every virtue signaller and social justice warrior.
 
+## Movies
+
+- [Thor: Ragnarok](https://www.imdb.com/title/tt3501632/) ([Netflix](https://www.netflix.com/title/80186608)) – A lot of super-heroes movies are bad these days … but this one was fun.
+- [Dunkirk](https://www.imdb.com/title/tt5013056/) ([Netflix](https://www.netflix.com/title/80170278)) – A very silent movie about the evacuation of 400,000 from Dunkirk in May 1940.
+- [Baby Driver](https://www.imdb.com/title/tt3890160/) ([Netflix](https://www.netflix.com/title/80142090)) – After seen the video essay of _Like Stories of Old_ about [Introversion in Baby Driver](https://www.youtube.com/watch?v=0Zr_4z00hrw), I decided to watch this movie I had never heard about before. A really nice movie!
+
 ## Music
 
 - [The Arrow of Time Soundtrack](https://open.spotify.com/album/2ipnQkuUk9J8tUfuXxzutK?si=Ip-fZzUPTR6PZe1sBc-GJw) – Music from _Time-lapse of the Future_. Especially [Sun Mother](https://open.spotify.com/track/2zfZ27Aukg5hUlhsd0gOnC?si=PRkYHWsWQ_2KpGbUuMfjzA) I hear quite often.
