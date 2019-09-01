@@ -48,8 +48,8 @@ Photo by <a href="https://www.stefanimhoff.de/">Stefan Imhoff</a>
 
 ## TV Shows
 
-- [Mad Men](https://www.imdb.com/title/tt0804503/) ([Netflix](https://www.netflix.com/title/70136135)) – I started rewatching this fantastic tv show. It won 5 Golden Globes and 132 other awards. It’s story spans over multiple years and is so deep and stacked with so many layers of interpretation.
-- [Mindhunter](https://www.imdb.com/title/tt5290382/), Season 2 ([Netflix](https://www.netflix.com/title/80114855)) – I started watching the second season of this Netflix tv show about the FBI unit that started interviewing serial killers in the 1970s to understand and prevent these crimes.
+- [Mad Men](https://www.imdb.com/title/tt0804503/) ([Netflix](https://www.netflix.com/title/70136135)) – I started rewatching this fantastic TV show. It won 5 Golden Globes and 132 other awards. It’s story spans over multiple years and is so deep and stacked with so many layers of interpretation.
+- [Mindhunter](https://www.imdb.com/title/tt5290382/), Season 2 ([Netflix](https://www.netflix.com/title/80114855)) – I started watching the second season of this Netflix TV show about the FBI unit that started interviewing serial killers in the 1970s to understand and prevent these crimes.
 - [Glow](https://www.imdb.com/title/tt5770786/) ([Netflix](https://www.netflix.com/title/80114988)) – A colleague recommended this funny TV show to me. It’s about a group of women who become wrestlers in Los Angeles during the 1980s.
 - [Dave Chappelle: Sticks & Stones](https://www.imdb.com/title/tt10810424/s) ([Netflix](https://www.netflix.com/title/81140577)) – Very funny, political incorrect, and right to the heart of every virtue signaller and social justice warrior.
 
@@ -57,8 +57,8 @@ Photo by <a href="https://www.stefanimhoff.de/">Stefan Imhoff</a>
 
 - [Annihilation](https://www.imdb.com/title/tt2798920/) ([Netflix](https://www.netflix.com/title/80206300)) – I rewatched the Netflix movie, because after reading Lovecraft’s _The Colour out of Space_, I realised that the writers have written in parts—without intention—a nice adaptation of the story.
 - [Thor: Ragnarok](https://www.imdb.com/title/tt3501632/) ([Netflix](https://www.netflix.com/title/80186608)) – A lot of super-heroes movies are bad these days … but this one was fun.
-- [Dunkirk](https://www.imdb.com/title/tt5013056/) ([Netflix](https://www.netflix.com/title/80170278)) – A very silent movie about the evacuation of 400,000 from Dunkirk in May 1940.
-- [Baby Driver](https://www.imdb.com/title/tt3890160/) ([Netflix](https://www.netflix.com/title/80142090)) – After seen the video essay of _Like Stories of Old_ about [Introversion in Baby Driver](https://www.youtube.com/watch?v=0Zr_4z00hrw), I decided to watch this movie I had never heard about before. A really nice movie!
+- [Dunkirk](https://www.imdb.com/title/tt5013056/) ([Netflix](https://www.netflix.com/title/80170278)) – A very silent movie about the evacuation of 400,000 soldiers from Dunkirk in May 1940.
+- [Baby Driver](https://www.imdb.com/title/tt3890160/) ([Netflix](https://www.netflix.com/title/80142090)) – After seeing the video essay of _Like Stories of Old_ about [Introversion in Baby Driver](https://www.youtube.com/watch?v=0Zr_4z00hrw), I decided to watch this movie, I had never heard about before. A really nice movie!
 
 ## Music
 
