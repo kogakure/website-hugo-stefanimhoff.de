@@ -49,7 +49,7 @@ Photo by <a href="https://www.stefanimhoff.de/">Stefan Imhoff</a>
 ## TV Shows
 
 - [Mad Men](https://www.imdb.com/title/tt0804503/) ([Netflix](https://www.netflix.com/title/70136135)) – I started rewatching this fantastic TV show. It won 5 Golden Globes and 132 other awards. It’s story spans over multiple years and is so deep and stacked with so many layers of interpretation.
-- [Mindhunter](https://www.imdb.com/title/tt5290382/), Season 2 ([Netflix](https://www.netflix.com/title/80114855)) – I started watching the second season of this Netflix TV show about the FBI unit that started interviewing serial killers in the 1970s to understand and prevent these crimes.
+- [Mindhunter](https://www.imdb.com/title/tt5290382/), Season 2 ([Netflix](https://www.netflix.com/title/80114855)) – I started watching the second season of this Netflix TV show about the FBI unit that started interviewing serial killers in the 1970s to understand and solve these crimes.
 - [Glow](https://www.imdb.com/title/tt5770786/) ([Netflix](https://www.netflix.com/title/80114988)) – A colleague recommended this funny TV show to me. It’s about a group of women who become wrestlers in Los Angeles during the 1980s.
 
 ## Movies
