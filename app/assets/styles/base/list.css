@@ -1,6 +1,10 @@
 /* List
  *******/
 
+li {
+  margin-bottom: 0.5em;
+}
+
 ol {
   list-style: decimal;
   margin-bottom: $default-spacing-bottom;
