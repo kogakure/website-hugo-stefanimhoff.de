@@ -59,9 +59,9 @@ Photo by <a href="https://www.stefanimhoff.de/">Stefan Imhoff</a>
 
 ## Movies
 
-- [Colin Quinn: Red State Blue State](https://www.netflix.com/title/81156592?s=i&trkid=14170286) – A really thoughtful standup comedy special, deconstructing the current political problems of the left and right in USA.
-- [Bill Burr: Paper Tiger](https://www.netflix.com/title/81060174?s=i&trkid=13747225) – Bill Burr’s new comedy special is very funny and political incorrect.
-- [The Crystal Calls Making the Dark Crystal: Age of Resistance](https://www.netflix.com/title/80238013) – A fascinating insight into the production of the Netflix TV show _The Dark Crystal: Age of Resistance_. Unbelievable the amount of art, craft, and dedication put into this TV show.
+- [Colin Quinn: Red State Blue State](https://www.imdb.com/title/tt10403090/) ([Netflix](https://www.netflix.com/title/81156592)) – A really thoughtful standup comedy special, deconstructing the current political problems of the left and right in USA.
+- [Bill Burr: Paper Tiger](https://www.imdb.com/title/tt10847306/) ([Netflix](https://www.netflix.com/title/81060174)) – Bill Burr’s new comedy special is very funny and political incorrect.
+- [The Crystal Calls Making the Dark Crystal: Age of Resistance](https://www.imdb.com/title/tt10924716/) ([Netflix](https://www.netflix.com/title/80238013)) – A fascinating insight into the production of the Netflix TV show _The Dark Crystal: Age of Resistance_. Unbelievable the amount of art, craft, and dedication put into this TV show.
 - [Fantastic Mr. Fox](https://www.imdb.com/title/tt0432283/) ([Amazon](https://www.amazon.de/Fantastische-Mr-Fox-Bill-Murray/dp/B00IFHG69O)) – Finally I watched another great movie from _Wes Anderson_ based on _Roald Dahl’s_ novel. The whole movie is stop motion animated.
 
 ## Music
