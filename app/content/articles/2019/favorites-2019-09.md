@@ -47,6 +47,7 @@ Photo by <a href="https://www.stefanimhoff.de/">Stefan Imhoff</a>
 - [React & Infinite Scroll - IntersectionObserver](https://www.youtube.com/watch?v=GVDiw3lAyp0) – The third video by _Leigh Halliday_, building on top of the other two creating an infinite scrolling.
 - [Composing Behavior in React or Why React Hooks are Awesome](https://www.youtube.com/watch?v=nUzLlHFVXx0) – _Michael Jackson_ shows why how to do composition with React hooks.
 - [Silence the Doubters](https://www.youtube.com/watch?v=JgaokQPGMLs) – Motivational video using quotes from the interview [Why You’ll Never Be Able to Silence Your Haters](https://www.youtube.com/watch?v=Mj8kr-wZqlM) with _Patrick Bet David_.
+- [Deichkind - Dinge (Official Video)](https://www.youtube.com/watch?v=XLhQvgdXbgo) – The music video to the new consumption critical song by the Hamburg Hip-Hop band _Deichkind_.
 - [Mind the gap, user centered design in large organizations with Luke Wroblewski](https://www.youtube.com/watch?v=mAiNdU1go1A)
 
 ## TV Shows
