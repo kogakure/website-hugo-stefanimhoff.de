@@ -7,11 +7,8 @@
   margin: 0;
   padding: 0;
   text-align: center;
-  text-align: center;
 
   & p {
-    white-space: pre;
-
     @media screen and (width <= $content-medium) {
       overflow-x: visible;
     }
