@@ -1,5 +1,6 @@
 ---
-title: My Crazy, Paranoid, Overly Complicated, but Functioning Way of Storing Information
+title: How to Store Information
+subtitle: My Crazy, Paranoid, Overly Complicated, but Functioning Way of Storing Information
 slug: storing-information
 date: 2018-10-03T18:00:00+02:00
 author: Stefan Imhoff

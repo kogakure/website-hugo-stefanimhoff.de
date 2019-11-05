@@ -1,4 +1,4 @@
-{{ if .Params.series }} 
+{{ if .Params.series }}
 {{ $name := index .Params.series 0 }}
 
 <h2>{{$name | title }}</h2>
@@ -8,7 +8,7 @@
   {{ range $series.Pages.Reverse }}
   <li>
     <a href="{{.Permalink}}">
-      {{.LinkTitle}}
+      {{ .LinkTitle }} – {{ .Params.Subtitle }}
     </a>
   </li>
   {{end}}

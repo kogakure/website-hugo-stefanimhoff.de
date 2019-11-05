@@ -1,6 +1,7 @@
 ---
-title: 'Why You Should Separate Your Domains from Your Webhosting'
-slug: extern-domain-hosting
+title: Host Your Domains Elsewhere
+subtitle: 'Why You Shouldn’t Host Your Domains With Your Webhoster'
+slug: domain-hosting
 author: Stefan Imhoff
 date: 2007-05-30T23:55:00+02:00
 description: 'Host domains separately from the web hosting package. Why this is a good idea and what are the benefits?'

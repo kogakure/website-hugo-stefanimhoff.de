@@ -1,5 +1,6 @@
 ---
-title: 'Introduction to Gulp.js 1: Intro and Setup'
+title: Introduction to Gulp.js 1
+subtitle: Intro and Setup
 slug: gulp-tutorial-1-intro-setup
 author: Stefan Imhoff
 date: 2014-10-18T08:35:47+02:00

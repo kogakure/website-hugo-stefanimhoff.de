@@ -1,5 +1,6 @@
 ---
 title: Self-Defence in the Age of Attention
+subtitle: How to win back our time and minds
 slug: attention
 author: Stefan Imhoff
 date: 2017-11-03T08:00:00+01:00

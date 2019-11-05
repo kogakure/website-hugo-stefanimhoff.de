@@ -8,17 +8,25 @@ h4,
 h5,
 h6 {
   clear: both;
-  font-feature-settings: "liga", "dlig";
+  font-feature-settings: 'liga', 'dlig';
   hyphens: manual;
   line-height: 1;
   margin-bottom: 0.5em;
 }
 
-h1 {
+h1,
+h1.title {
   font-range: 650px 920px;
   font-size: responsive 40px 68px;
 
   .article & {
+    text-align: center;
+  }
+}
+
+h2.subtitle {
+  .article & {
+    font-weight: 300;
     text-align: center;
   }
 }

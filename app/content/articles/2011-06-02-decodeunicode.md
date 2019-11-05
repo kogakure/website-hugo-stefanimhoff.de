@@ -1,5 +1,6 @@
 ---
-title: 'Recommended Reading: Decodeunicode'
+title: Decodeunicode
+subtitle: 'A Book with All Unicode Characters'
 slug: decodeunicode
 author: Stefan Imhoff
 date: 2011-06-02T18:38:00+02:00

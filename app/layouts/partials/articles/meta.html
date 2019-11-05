@@ -1,4 +1,8 @@
-<h1>{{ .Title }}</h1>
+<h1 class="title">{{ .Title }}</h1>
+
+{{ if isset .Params "subtitle" }}
+<h2 class="subtitle">{{ .Params.Subtitle }}</h2>
+{{ end }}
 
 {{ if not (eq .Params.header false) }}
   <header class="article-header">

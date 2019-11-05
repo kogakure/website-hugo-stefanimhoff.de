@@ -1,6 +1,7 @@
 ---
 language: en
-title: 'New Japanese Netflix TV Show: Underwear (Atelier)'
+title: Underwear
+subtitle: A Fantastic, New Japanese Netflix TV Show
 slug: japanese-netflix-tv-show-underwear
 author: Stefan Imhoff
 date: 2016-02-12T07:00:11+02:00

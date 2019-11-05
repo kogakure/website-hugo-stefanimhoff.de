@@ -1,5 +1,6 @@
 ---
-title: 'Webstandards-Magazin: Article About Django'
+title: Webstandards-Magazin, Issue 07/2010, Tools
+subtitle: My Article About Django
 slug: webstandards-magazine-django
 author: Stefan Imhoff
 date: 2010-09-21T09:25:00+02:00

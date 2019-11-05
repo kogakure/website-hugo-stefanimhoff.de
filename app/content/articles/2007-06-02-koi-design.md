@@ -1,5 +1,6 @@
 ---
-title: 'The Koi Design: Inspiration and Idea'
+title: The Koi Design
+subtitle: Inspiration and Idea For My Website Header
 slug: koi-design
 author: Stefan Imhoff
 date: 2007-06-02T02:00:00+02:00

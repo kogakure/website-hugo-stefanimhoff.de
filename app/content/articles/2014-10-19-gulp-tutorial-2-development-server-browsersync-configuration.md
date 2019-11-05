@@ -1,5 +1,6 @@
 ---
-title: 'Introduction to Gulp.js 2: Server with BrowserSync and Configuration'
+title: Introduction to Gulp.js 2
+subtitle: Server with BrowserSync and Configuration
 slug: gulp-tutorial-2-development-server-browsersync-configuration
 author: Stefan Imhoff
 date: 2014-10-19T10:17:00+02:00
