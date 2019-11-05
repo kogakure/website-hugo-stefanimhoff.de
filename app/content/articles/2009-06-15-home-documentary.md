@@ -1,5 +1,6 @@
 ---
-title: 'HOME - Stunning Documentary About our Earth'
+title: HOME
+subtitle: Stunning Documentary About Our Earth
 slug: home-documentary
 author: Stefan Imhoff
 date: 2009-06-15T17:23:00+02:00
@@ -11,7 +12,7 @@ On June 5, 2009 Yann Arthus-Bertrand’s documentary film [HOME](https://www.you
 
 ![HOME](/assets/images/articles/2009/home-documentary/home.jpg)
 
-With a budget of approximately $10-15 million, sponsored by [EuropaCorp](http://www.europacorp.com/) and PPR, the director wanted to create a moving film about our planet, in which he consistently succeeded.
+With a budget of approximately \$10-15 million, sponsored by [EuropaCorp](http://www.europacorp.com/) and PPR, the director wanted to create a moving film about our planet, in which he consistently succeeded.
 
 <blockquote lang="en" class="pullquote">
   <p>No time for&nbsp;pessimism.</p>

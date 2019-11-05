@@ -1,5 +1,6 @@
 ---
-title: 'Introduction to Gulp.js 16: PostCSS'
+title: Introduction to Gulp.js 16
+subtitle: PostCSS
 slug: gulp-tutorial-16-postcss
 author: Stefan Imhoff
 date: 2015-10-16T07:50:29+00:00

@@ -1,5 +1,6 @@
 ---
-title: 'Traditional, Japanese Colors for Photoshop and Illustrator'
+title: Traditional, Japanese Colors
+subtitle: Color Palettes for Photoshop and Illustrator
 slug: japanese-colors
 author: Stefan Imhoff
 date: 2007-12-08T21:05:00+02:00

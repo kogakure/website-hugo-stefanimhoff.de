@@ -1,5 +1,6 @@
 ---
-title: 'Introduction to Gulp.js 9: Checking the Syntax of SCSS and JavaScript'
+title: Introduction to Gulp.js 9
+subtitle: Checking the Syntax of SCSS and JavaScript
 slug: gulp-tutorial-9-linting-scss-and-javascript
 author: Stefan Imhoff
 date: 2014-10-26T08:10:00+02:00
