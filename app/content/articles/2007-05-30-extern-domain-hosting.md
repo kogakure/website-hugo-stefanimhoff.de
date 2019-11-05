@@ -4,7 +4,7 @@ slug: extern-domain-hosting
 author: Stefan Imhoff
 date: 2007-05-30T23:55:00+02:00
 description: 'Host domains separately from the web hosting package. Why this is a good idea and what are the benefits?'
-categories: ['hosting']
+categories: ['tip']
 ---
 
 Many domain owners in Germany still do not know that they do not have to buy their domains together with the storage space. I explain why inclusive domains are a sham and what are the benefits of separating domain and webspace.

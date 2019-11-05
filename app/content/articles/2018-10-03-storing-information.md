@@ -8,7 +8,7 @@ excerpt: 'We live in the age of never-ending information. How should anyone poss
 og_image: 'assets/images/articles/2018/storing-information/book-store.jpg'
 credit_name: 'Brandon Lopez'
 credit_link: 'https://unsplash.com/photos/3E_8XgqRSps'
-categories: ['life', 'self-improvement', 'personal']
+categories: ['self-improvement', 'personal']
 ---
 
 We live in the age of never-ending information. How should anyone possibly remember anything with so much information bombarding us every day?

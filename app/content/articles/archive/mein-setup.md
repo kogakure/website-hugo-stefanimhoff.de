@@ -6,7 +6,7 @@ author: Stefan Imhoff
 slug: mein-setup
 date: 2013-12-06T20:45:00+02:00
 description: 'Ein Einblick in meine Arbeitsumgebung: Wie sieht meine technische Ausstattung aus? Hardware, Software, die ich täglich einsetze, um zu programmieren, zu designen und mich zu organisieren. Außerdem Gadgets, die ich in meiner Wohnung einsetze.'
-categories: ['recommendation', 'technology']
+categories: ['tip', 'technology']
 ---
 
 Das Jahr neigt ist fast zu Ende und damit scheint es mir der richtige Zeitpunkt zu sein in diesem Blog-Artikel auf meine aktuelle Arbeitsumgebung einzugehen.

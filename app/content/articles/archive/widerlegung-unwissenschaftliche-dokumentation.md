@@ -7,7 +7,7 @@ author: Stefan Imhoff
 date: 2014-05-09T18:00:00+02:00
 description: "Eine sehr interessante Dokumentation, die 'Ancient Aliens', eine unwissenschaftliche Dokumentationsreihe, widerlegt."
 og_image: 'assets/images/articles/2014/widerlegung-unwissenschaftliche-dokumentation/pakals-grabplatte.jpg'
-categories: ['film', 'recommendation']
+categories: ['film', 'tip']
 ---
 
 Von Zeit zu Zeit begegne ich seltsamen Zeitgenossen, die davon überzeugt sind, dass eine bestimmte Sache etwas Mysteriöses, Magisches oder Unerklärliches an sich hat.

@@ -8,7 +8,7 @@ excerpt: 'Lately I have been thinking a lot about habits and routines. I’ve ha
 og_image: 'assets/images/articles/2018/morning-routine/bed-book-journal.jpg'
 credit_name: 'Annie Spratt'
 credit_link: 'https://unsplash.com/photos/C8C020JnsjM'
-categories: ['life', 'self-improvement', 'personal']
+categories: ['self-improvement', 'personal']
 ---
 
 Lately I have been thinking a lot about habits and routines. I’ve had always some routines in my life, but I wanted to build a better morning routine, because I’ve come along so many sources, that emphasised the importance of routines for success in life.

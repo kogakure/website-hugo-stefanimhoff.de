@@ -5,7 +5,7 @@ author: Stefan Imhoff
 date: 2017-06-07T18:30:00+02:00
 description: 'As Minimalism is currently very popular, but as Minimalism is hard to understand, also a lot of misconceptions can be found. This article carries my thoughts on Minimalism and my history with it.'
 og_image: 'assets/images/articles/2017/minimalism/minimalism-office.jpg'
-categories: ['minimalism', 'life', 'self-improvement']
+categories: ['minimalism', 'self-improvement']
 ---
 
 Minimalism has come a long way. It recently got again a lot of traction with it’s highest search volume on [Google](https://trends.google.com/trends/explore?q=minimalism) ever recorded in January 2017. Because Minimalism is **very hard to define**, it leaves a lot of **room for interpretation** and its meaning shifted recently more from being a philosophy to being a lifestyle.
