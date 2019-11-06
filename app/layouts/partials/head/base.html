@@ -8,7 +8,8 @@
     {{ if .IsHome }}
       {{ .Site.Data.settings.homepage_title }}
     {{ else }}
-      {{ .Title | plainify }} - {{ .Site.Data.settings.title }}
+      {{ .Title | plainify }}{{ if isset .Params "subtitle" }}: {{ .Params.Subtitle }}{{ end }} – {{ .Site.Data.settings.title }}
+
     {{ end}}
   </title>
 
