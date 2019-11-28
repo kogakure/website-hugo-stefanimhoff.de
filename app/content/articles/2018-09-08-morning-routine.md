@@ -3,12 +3,12 @@ title: My Morning Routine
 slug: morning-routine
 date: 2018-09-08T18:00:00+02:00
 author: Stefan Imhoff
-description: 'On the advantages of building yourself a morning routine and the details of my morning routine.'
-excerpt: 'Lately I have been thinking a lot about habits and routines. I’ve had always some routines in my life, but I wanted to build a better morning routine, because I’ve come along so many sources, that emphasised the importance of routines for success in life.'
-og_image: 'assets/images/articles/2018/morning-routine/bed-book-journal.jpg'
-credit_name: 'Annie Spratt'
-credit_link: 'https://unsplash.com/photos/C8C020JnsjM'
-categories: ['self-improvement', 'personal']
+description: "On the advantages of building yourself a morning routine and the details of my morning routine."
+excerpt: "Lately I have been thinking a lot about habits and routines. I’ve had always some routines in my life, but I wanted to build a better morning routine, because I’ve come along so many sources, that emphasised the importance of routines for success in life."
+og_image: "assets/images/articles/2018/morning-routine/bed-book-journal.jpg"
+credit_name: "Annie Spratt"
+credit_link: "https://unsplash.com/photos/C8C020JnsjM"
+categories: ["self-improvement", "personal"]
 ---
 
 Lately I have been thinking a lot about habits and routines. I’ve had always some routines in my life, but I wanted to build a better morning routine, because I’ve come along so many sources, that emphasised the importance of routines for success in life.
@@ -20,7 +20,7 @@ Photo by <a href="https://unsplash.com/photos/C8C020JnsjM">Anni Spratt</a>
 </figcaption>
 </figure>
 
-Of course you are not automatically successful with routines, but it’s very unlikely to be successful or happy without one. **Jordan Peterson**, a clinical psychologist, author and speaker, mentioned in his talk [2017 Personality 02/03: Historical & Mythological Context](https://youtu.be/HbAZ6cFxCeY?t=1h35m2s) the importance of a schedule and routine:
+Of course you are not automatically successful with routines, but it’s very unlikely to be successful or happy without one. **Jordan Peterson**, a clinical psychologist, author and speaker, mentioned in his talk [2017 Personality 02/03: Historical & Mythological Context](https://youtu.be/HbAZ6cFxCeY?t=1h36m32s) the importance of a schedule and routine:
 
 > You need to pick a time to get up, whatever time you want, but pick one and stick to it, because otherwise you dysregulate your circadian rhythms and they regulate your mood.
 
