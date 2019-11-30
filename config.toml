@@ -23,11 +23,6 @@ themesdir     = "app/themes"
   hrefTargetBlank = true
   extensions      = [""]
 
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-     unsafe = true
-
 [permalinks]
   articles = "/:slug/"
 
