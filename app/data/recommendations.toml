@@ -1,0 +1,95 @@
+[[recommendation]]
+  category = "Inspiration"
+
+  [[recommendation.items]]
+    text = "TED"
+    url = "https://www.ted.com/"
+
+  [[recommendation.items]]
+    text = "Brainpickings"
+    url = "https://www.brainpickings.org/"
+
+  [[recommendation.items]]
+    text = "Explore"
+    url = "http://explore.brainpickings.org/"
+
+  [[recommendation.items]]
+    text = "The School of Life"
+    url = "https://www.youtube.com/user/schooloflifechannel"
+
+  [[recommendation.items]]
+    text = "AsapSCIENCE"
+    url = "https://www.youtube.com/user/AsapSCIENCE"
+
+  [[recommendation.items]]
+    text = "WellCast"
+    url = "https://www.youtube.com/user/watchwellcast"
+
+  [[recommendation.items]]
+    text = "Kurzgesagt"
+    url = "https://www.youtube.com/user/Kurzgesagt"
+
+  [[recommendation.items]]
+    text = "Zen Pencils"
+    url = "https://zenpencils.com/"
+
+  [[recommendation.items]]
+    text = "99U"
+    url = "https://99u.adobe.com"
+
+  [[recommendation.items]]
+    text = "Big Think"
+    url = "https://bigthink.com/"
+
+  [[recommendation.items]]
+    text = "ChangeThis"
+    url = "https://changethis.com/"
+
+  [[recommendation.items]]
+    text = "Signal vs. Noise"
+    url = "https://m.signalvnoise.com/"
+
+  [[recommendation.items]]
+    text = "Information Architects"
+    url = "https://ia.net/topics"
+
+[[recommendation]]
+  category = "Design"
+
+  [[recommendation.items]]
+    text = "The Elements *of* Typographic Style Applied to the Web"
+    url = "http://webtypography.net/"
+
+  [[recommendation.items]]
+    text = "Modular Scale"
+    url = "http://www.modularscale.com/"
+
+  [[recommendation.items]]
+    text = "LostGrid"
+    url = "https://github.com/peterramsing/lost"
+
+  [[recommendation.items]]
+    text = "Responsive Resources"
+    url = "http://bradfrost.github.io/this-is-responsive/resources.html"
+
+  [[recommendation.items]]
+    text = "Media Queries"
+    url = "https://mediaqueri.es/"
+
+  [[recommendation.items]]
+    text = "ColorHexa"
+    url = "https://www.colorhexa.com/"
+
+[[recommendation]]
+  category = "Code"
+
+  [[recommendation.items]]
+    text = "Hugo"
+    url = "https://gohugo.io/"
+
+[[recommendation]]
+  category = "Automation"
+
+  [[recommendation.items]]
+    text = "Gulp"
+    url = "https://gulpjs.com/"

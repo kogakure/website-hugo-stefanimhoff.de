@@ -1,0 +1,62 @@
+<footer class="footer" role="contentinfo">
+  <div class="wrap">
+    <div class="footer-about">
+      <h3 class="footer-about-headline">About me</h3>
+      <div class="footer-about-table">
+        <div class="footer-about-image-table-cell">
+          <div class="footer-about-image-shadow">
+            <img class="footer-about-image" src="/assets/images/css/footer/stefan-imhoff.jpg" alt="Stefan Imhoff">
+          </div>
+        </div>
+      <div class="footer-about-text">
+        <p>
+          <em>Stefan Imhoff</em>, Web Developer, Designer, Minimalist, Introvert, Japanophile.
+          Works as Front-End Engineer at <a href="https://www.xing.com/profile/Stefan_Imhoff">XING</a>.
+          Lives in <a href="https://hamburg.stefanimhoff.de/">Hamburg</a>.
+          Loves <a href="https://www.kogakure.de">Ninja &amp; Ninjutsu</a>,
+          <a href="/calisthenics/">Calisthenics</a>,
+          <a href="http://www.imdb.com/user/ur15936207/ratings">Movies</a>,
+          <a href="https://www.goodreads.com/user/show/28460819-stefan">Books</a>,
+          Architecture, Interior Design, Art &amp; Design,
+          <a href="https://sketchnotes.stefanimhoff.de/">Sketchnotes</a>,
+          Typography, Philosophy, Stoicism, <a href="/minimalism/">Minimalism</a>, Japan, Japanese Tattoos, Thunderstorm &amp; Rain, Sun, the Sea, Beaches, Trees, Bamboo, Time Lapse &amp; Slow Motion, Kanji, Wabi Sabi,
+          <a href="https://en.wikipedia.org/wiki/Hochzeitssuppe">Niedersächsiche Hochzeitssuppe</a>, and
+          <a href="/haiku/">Haiku</a>.
+        </p>
+      </div>
+      </div>
+    </div>
+    <div class="footer-social">
+      <h3 class="footer-social-headline">Elsewhere</h3>
+      <ul class="footer-social-list">
+        {{ range .Site.Data.sociallinks.link }}
+        <li class="footer-social-list-item">
+          <a href="{{ .url }}" class="footer-social-link">
+            <svg class="footer-social-icon"><use xlink:href="#{{ .class }}"></use></svg><span class="footer-social-link-text">{{ .name }}</span>
+          </a>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+
+  {{ partial "navigation" . }}
+
+  <small class="footer-legal">
+    <div class="wrap">
+      <div class="footer-legal-copyright">
+        <b class="footer-legal-copyright-sign">©</b>
+        <span class="nobr">2006-{{ now.Format "2006" }}</span>,
+        <span class="nobr">Stefan Imhoff</span>.
+        The content of this page is published under a
+        <span class="nobr">
+          <a class="footer-legal-link" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <svg class="footer-legal-icon-cc"><use xlink:href="#cc"></use></svg> Creative Commons
+          </a>
+          Licence.
+        </span>
+      </div>
+    </div>
+  </small>
+
+</footer>

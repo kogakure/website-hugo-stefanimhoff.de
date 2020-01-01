@@ -1,0 +1,18 @@
+author = "Stefan Imhoff"
+email = "stefan@imhoff.name"
+homepage_title = "Stefan Imhoff - Developer/Designer from Hamburg, Germany"
+title = "Stefan Imhoff"
+tagline = "👨🏻‍💻&nbsp;Front-End Web Developer • 👨🏻‍🎨&nbsp;Designer • ⬜️&nbsp;Minimalist • 🎧&nbsp;Introvert • ⛩&nbsp;Japanophile"
+
+[geo]
+  latitude = "53.596835"
+  longitude = "10.102015"
+
+[seo]
+  description = "Front-End Web Developer / Designer / Minimalist / Introvert / Japanophile"
+  keywords = "Stefan Imhoff, Hamburg, Frontend, Engineer"
+
+[social]
+  feedburner_url = "https://feeds.feedburner.com/stefanimhoff"
+  googleplus = "104687479698350625994"
+  twitter = "@kogakure"

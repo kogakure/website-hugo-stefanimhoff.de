@@ -1,0 +1,23 @@
+<section class="stripe stripe-work">
+  <div class="wrap">
+    <h2>Front-End Web Developer &amp; Designer</h2>
+    <div class="stripe-content">
+      <p>I work as <strong>Front-End Engineer</strong> at <strong>XING</strong> and contributed to a variety of
+        products like <strong>Jobs</strong>, <strong>Mobile</strong>, <strong>Groups</strong>, <strong>Profile</strong>,
+        <strong>SEO</strong> and <strong>Onboarding</strong>.</p>
+      <p>I love new ideas and helping innovate. I won the XING internal innovation award during the yearly <strong>Prototyping
+          Days</strong> three times and took part in over 30 HackWeeks. One of my HackWeek projects got into a final
+        product on the XING platform.</p>
+    </div>
+    <div class="inline-container">
+      {{ range .Site.Data.work.item }}
+      <h3 class="inline-container-headline">{{ .name }}</h3>
+      <ul class="inline-container-list">
+        {{ range .skills }}
+        <li class="inline-container-item">{{ . }}</li>
+        {{ end }}
+      </ul>
+      {{ end}}
+    </div>
+  </div>
+</section>
