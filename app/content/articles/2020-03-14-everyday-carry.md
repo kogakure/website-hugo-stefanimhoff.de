@@ -13,9 +13,9 @@ credit_link: "https://www.stefanimhoff.de"
 categories: ["personal"]
 ---
 
-A few days ago _Ryan Holiday_ posted the article [Here’s Some Stuff Worth Carrying With You Everywhere](https://ryanholiday.net/heres-some-stuff-worth-carrying-with-you-everywhere/) with an accompanying [video](https://www.youtube.com/watch?v=oaXMijw241c) on his blog.
+A few days ago _Ryan Holiday_ posted the article “[Here’s Some Stuff Worth Carrying With You Everywhere](https://ryanholiday.net/heres-some-stuff-worth-carrying-with-you-everywhere/)” with an accompanying [video](https://www.youtube.com/watch?v=oaXMijw241c) on his blog.
 
-Ever since I read the article [Meet the men obsessed with carrying all the right stuff](https://www.vox.com/the-goods/2019/7/24/20696487/everyday-carry-reddit-knife-wallet-gun) on Vox, I had the plan to write a similar article, but never had the time to actually do it.
+Ever since I read the article “[Meet the men obsessed with carrying all the right stuff](https://www.vox.com/the-goods/2019/7/24/20696487/everyday-carry-reddit-knife-wallet-gun)” on Vox, I had the plan to write a similar article, but never had the time to actually do it.
 
 But due to Coronavirus there isn’t much else to do, so I finally shot a photo of my **Every Day Carries**.
 
@@ -26,7 +26,7 @@ But due to Coronavirus there isn’t much else to do, so I finally shot a photo 
 
 ## Apple iPhone
 
-In my left pocket I carry my [iPhone 11](https://www.apple.com/iphone-11/), 64 GB in black. It’s super fast and the best phone I had ever. I also didn’t pay one cent for it thanks to my employer. I use a transparent [Torras Crystal Clear iPhone](http://www.amazon.de/gp/product/http://www.amazon.de/gp/product/B07VW6QM33?ie=UTF8&tag=stefanimhoffde-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=B07VW6QM33?ie=UTF8&tag=stefanimhoffde-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=http://www.amazon.de/gp/product/B07VW6QM33?ie=UTF8&tag=stefanimhoffde-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=B07VW6QM33) case to protect it.
+In my left pocket I carry my [iPhone 11](https://www.apple.com/iphone-11/), 64 GB in black. It’s super fast and the best phone I ever had. I also didn’t pay one cent for it thanks to my employer. I use a transparent [Torras Crystal Clear iPhone](http://www.amazon.de/gp/product/http://www.amazon.de/gp/product/B07VW6QM33?ie=UTF8&tag=stefanimhoffde-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=B07VW6QM33?ie=UTF8&tag=stefanimhoffde-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=http://www.amazon.de/gp/product/B07VW6QM33?ie=UTF8&tag=stefanimhoffde-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=B07VW6QM33) case to protect it.
 
 When I’m at home I usually put my iPhone into a drawer, to not be constantly distracted by it.
 
@@ -38,7 +38,7 @@ I also bought an accompanying [leather cover in Ink blue](http://www.amazon.de/g
 
 ## Apple Watch
 
-On my left arm I wear an [Apple Watch](https://www.apple.com/watch/), _Series 0_ 🤘. _Not_ waterproof, _no_ always-on diplay, most apps _don’t run_ any more, but the battery **still** holds a whole day, including a 40 minutes trainings session.
+On my left arm I wear an [Apple Watch](https://www.apple.com/watch/), _Series 0_ 🤘. _Not_ waterproof, _no_ always-on diplay, most apps _don’t run_ any more, but the battery **still** holds a whole day, including a 40 minute training session.
 
 And the best thing: I didn’t pay for it, I won it in a prototyping competition from my employer. But I think I might replace the Apple Watch this year with a new model, because I miss my Apps like [Things](https://culturedcode.com/things/) on my watch.
 
@@ -56,7 +56,7 @@ My favorite pen is the [MUJI Gel Ink Ballpoint Pen 0.38mm](https://www.muji.eu/p
 
 ## Laguiole en Aubrac Pocket Knife
 
-I bought this [Laguiole en Aubrac](http://www.laguiole-en-aubrac.fr/) pocket knife a few years ago and it is always in my right pocket. It’s a traditional french knife handmade by artists from Aubrac. Every knife is a unique piece and the artist carves a special pattern on the back of the knife. It’s available in all price ranges. Mine is made from juniper wood.
+I bought my [Laguiole en Aubrac](http://www.laguiole-en-aubrac.fr/) pocket knife a few years ago and it is always in my right pocket. It’s a traditional french knife handmade by artists from Aubrac. Every knife is a unique piece and the artist carves a special pattern on the back of the knife. It’s available in all price ranges. Mine is made from juniper wood.
 
 I always carry one, because [Every Man Should Carry a Pocket Knife](https://www.artofmanliness.com/articles/every-man-should-carry-a-pocket-knife/).
 
@@ -70,7 +70,7 @@ It is made from leather covering an Aluminium case, preventing unwanted **RFID**
 
 I have all my keys attached to a 75 cm (30 inch) long steel chain, that is attached to my belt loop. I do this since 25 years and I never lost a key.
 
-I like to spin and rotate my keys for fun, it’s also a good martial arts practise. The chain is a fantastic (legal) Ninja weapon – [Kusari-fundo, (鎖分銅)](https://www.wikiwand.com/en/Kusari-fundo). You can also just drop your keys when you carry heavy shopping bags and still don’t loose them.
+I like to spin and rotate my keys for fun, it’s also a good martial arts practise. The chain is a fantastic (legal) Ninja weapon – [Kusari-fundo, (鎖分銅)](https://en.wikipedia.org/wiki/Kusari-fundo). You can also just drop your keys when you carry heavy shopping bags and still don’t loose them.
 
 I try to limit my keys to the absolute minimum amount: House door, flat door, company door, letter box, and roll container. I also have a [Transcent 64 GB USB 3.0](http://www.amazon.de/gp/product/B016QAH2N0?ie=UTF8&tag=stefanimhoffde-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=B016QAH2N0) stick attached to the key ring.
 
