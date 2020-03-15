@@ -17,7 +17,7 @@ A few days ago _Ryan Holiday_ posted the article “[Here’s Some Stuff Worth C
 
 Ever since I read the article “[Meet the men obsessed with carrying all the right stuff](https://www.vox.com/the-goods/2019/7/24/20696487/everyday-carry-reddit-knife-wallet-gun)” on Vox, I had the plan to write a similar article, but never had the time to actually do it.
 
-But due to Coronavirus there isn’t much else to do, so I finally shot a photo of my **Every Day Carries**.
+But due to Coronavirus there isn’t much else to do, so I finally shot a photo of my **Everyday Carries**.
 
 <figure class="image-figure">
   <img src="/assets/images/articles/2020/everyday-carry/everyday-carry.jpg" alt="My everyday carries">
@@ -26,19 +26,19 @@ But due to Coronavirus there isn’t much else to do, so I finally shot a photo 
 
 ## Apple iPhone
 
-In my left pocket I carry my [iPhone 11](https://www.apple.com/iphone-11/), 64 GB in black. It’s super fast and the best phone I ever had. I also didn’t pay one cent for it thanks to my employer. I use a transparent [Torras Crystal Clear iPhone](http://www.amazon.de/gp/product/http://www.amazon.de/gp/product/B07VW6QM33?ie=UTF8&tag=stefanimhoffde-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=B07VW6QM33?ie=UTF8&tag=stefanimhoffde-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=http://www.amazon.de/gp/product/B07VW6QM33?ie=UTF8&tag=stefanimhoffde-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=B07VW6QM33) case to protect it.
+In my left pocket I carry my [iPhone 11](https://www.apple.com/iphone-11/), 64 GB in black. It’s super fast and the best phone I ever had. I also didn’t pay one cent for it thanks to my employer. I use a transparent [Torras Crystal Clear iPhone Case](http://www.amazon.de/gp/product/http://www.amazon.de/gp/product/B07VW6QM33?ie=UTF8&tag=stefanimhoffde-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=B07VW6QM33?ie=UTF8&tag=stefanimhoffde-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=http://www.amazon.de/gp/product/B07VW6QM33?ie=UTF8&tag=stefanimhoffde-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=B07VW6QM33) to protect it.
 
 When I’m at home I usually put my iPhone into a drawer, to not be constantly distracted by it.
 
 ## Amazon Kindle Paperwhite
 
-I always carry my [Kindle Paperwhite](http://www.amazon.de/gp/product/B00QJDU3KY?ie=UTF8&tag=stefanimhoffde-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=B00QJDU3KY), _7. Generation_ with me. It’s either in my backpack or in the pocket of my jacket. Whenever I have a few minutes of spare time I read some of [my books](https://www.goodreads.com/review/list/28460819-stefan?shelf=currently-reading).
+I always carry my [Kindle Paperwhite](http://www.amazon.de/gp/product/B00QJDU3KY?ie=UTF8&tag=stefanimhoffde-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=B00QJDU3KY) (_7. Generation_) with me. It’s either in my backpack or in the pocket of my jacket. Whenever I have a few minutes of spare time I read some of [my books](https://www.goodreads.com/review/list/28460819-stefan?shelf=currently-reading).
 
 I also bought an accompanying [leather cover in Ink blue](http://www.amazon.de/gp/product/B008BQH1NO?ie=UTF8&tag=stefanimhoffde-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=B008BQH1NO). It’s soft and nice to hold. Closing the magnetic cover will shut off the Kindle.
 
 ## Apple Watch
 
-On my left arm I wear an [Apple Watch](https://www.apple.com/watch/), _Series 0_ 🤘. _Not_ waterproof, _no_ always-on diplay, most apps _don’t run_ any more, but the battery **still** holds a whole day, including a 40 minute training session.
+On my left arm I wear an [Apple Watch](https://www.apple.com/watch/) (_Series 0_ 🤘). _Not_ waterproof, _no_ always-on diplay, most apps _don’t run_ any more, but the battery **still** holds a whole day, including a 40 minute training session.
 
 And the best thing: I didn’t pay for it, I won it in a prototyping competition from my employer. But I think I might replace the Apple Watch this year with a new model, because I miss my Apps like [Things](https://culturedcode.com/things/) on my watch.
 
@@ -56,7 +56,7 @@ My favorite pen is the [MUJI Gel Ink Ballpoint Pen 0.38mm](https://www.muji.eu/p
 
 ## Laguiole en Aubrac Pocket Knife
 
-I bought my [Laguiole en Aubrac](http://www.laguiole-en-aubrac.fr/) pocket knife a few years ago and it is always in my right pocket. It’s a traditional french knife handmade by artists from Aubrac. Every knife is a unique piece and the artist carves a special pattern on the back of the knife. It’s available in all price ranges. Mine is made from juniper wood.
+I bought my [Laguiole en Aubrac](http://www.laguiole-en-aubrac.fr/) pocket knife a few years ago and it is always in my right pocket. It’s a traditional french knife handmade by artists from Aubrac. Every knife is a unique piece and the artist carves a special pattern on the back of the knife. It’s available in all price ranges. The handle of my knife is made from juniper wood.
 
 I always carry one, because [Every Man Should Carry a Pocket Knife](https://www.artofmanliness.com/articles/every-man-should-carry-a-pocket-knife/).
 
@@ -83,6 +83,8 @@ The glasses cleaning cloth I use – you guessed it – to clean my glasses, but
 ---
 
 That’s it, feel free to share your **Everyday Carries** in a blog post or photo: Hashtag [\#edc](https://www.instagram.com/explore/tags/edc/) and [#everydaycarry](https://www.instagram.com/explore/tags/everydaycarry/). I’m curious what other people carry around.
+
+---
 
 ## Recommended Links
 
