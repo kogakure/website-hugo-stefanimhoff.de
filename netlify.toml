@@ -276,8 +276,14 @@ force = true
 
 [[redirects]]
 from = "/notiz/gtd-analog-vs-digital-0-zu-1"
-to = "/2008/gtd-analog-vs-digital-0-zu-1"
-status = 301
+to = "/"
+status = 410
+force = true
+
+[[redirects]]
+from = "/2008/gtd-analog-vs-digital-0-zu-1"
+to = "/"
+status = 410
 force = true
 
 [[redirects]]
