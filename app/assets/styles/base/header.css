@@ -9,6 +9,8 @@
   border-top: 3px solid $header-border-top-color;
   padding-bottom: 60px;
   padding-top: 40px;
+  padding-right: 10px;
+  padding-left: 10px;
   z-index: 100;
 
   @media screen and (width <= 600px) {
@@ -47,29 +49,43 @@
 
 .header-logo-image {
   border: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-bottom-left-radius: 25%;
+  border-bottom-right-radius: 25%;
+  border-top-left-radius: 25%;
+  border-top-right-radius: 30%;
+  padding-bottom: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 3px;
 
   @media screen and (width <= $header-centered) {
     lost-column: 4/12;
     lost-move: 4/12;
     margin-bottom: 10px;
+    padding-bottom: 1px;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 1px;
   }
 }
 
 .header-info {
   color: $header-headline;
-  font-feature-settings: 'liga', 'dlig';
+  font-feature-settings: "liga", "dlig";
   font-size: $font-scale-h1;
   line-height: 1;
-  lost-column: 9/12;
+  lost-column: 7/12;
   padding-top: 10px;
   text-shadow: 0 0 6px $black;
 
   @media screen and (width <= 700px) {
+    lost-column: 9/12;
     padding-top: 5px;
   }
 
   @media screen and (width > $header-centered) and (width <= 480px) {
-    lost-column: 7/12;
+    lost-column: 9/12;
   }
 
   @media screen and (width <= $header-centered) {
