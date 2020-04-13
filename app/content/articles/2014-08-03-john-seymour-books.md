@@ -1,18 +1,18 @@
 ---
-title: 'John Seymours Books on Self-Sufficiency'
+title: "John Seymours Books on Self-Sufficiency"
 slug: john-seymour-books
 author: Stefan Imhoff
 date: 2014-08-03T16:00:00+02:00
-description: 'On John Seymour’s fantastic, beautifully illustrated books on self-sufficiency, agriculture and crafts. The optimal equipment for an upcoming zombie apocalypse.'
-og_image: 'assets/images/articles/2014/john-seymour-buecher-selbstversorgung/john-seymour-illustration.jpg'
-categories: ['book']
+description: "On John Seymour’s fantastic, beautifully illustrated books on self-sufficiency, agriculture and crafts. The optimal equipment for an upcoming zombie apocalypse."
+og_image: "assets/images/articles/2014/john-seymour-buecher-selbstversorgung/john-seymour-illustration.jpg"
+categories: ["book"]
 ---
 
 My earliest memories of books are that I lie on my parents’ soft carpet on my stomach in the living room and read in the <cite>Atlas of World History</cite> or in the books of _John Seymour_. Who was John Seymour and why did his books remain so in my memory?
 
 ## John Seymour
 
-Geboren 1914 in England, kam er dann in der Schweiz auf ein Internat und begann später Agrarwissenschaften zu studieren. Er ging mit 20 Jahren nach Afrika, um dort als Farmer zu arbeiten. Nach seinem Dienst im Zweiten Weltkrieg in Nordafrika und Asien kehrte er nach England zurück und zog 1957 mit seiner Familie in eine alte abgelegene Farm und begann ausschließlich von selbstangebauten Erzeugnissen zu leben. Nach einem Umzug auf eine Farm in Wales schrieb er in den 70er Jahren seine weltbekannten Bücher <cite><a href="http://www.amazon.de/gp/product/3831015775?ie=UTF8&tag=stefanimhoffde-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=3831015775">Das große Buch vom Leben auf dem Lande</a></cite> und <cite><a href="http://www.amazon.de/gp/product/3783161452?ie=UTF8&tag=stefanimhoffde-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=3783161452">Selbstversorgung aus dem Garten</a></cite>.
+Born in England in 1914, he went to boarding school in Switzerland and later began studying agricultural sciences. He went to Africa at the age of 20 to work as a farmer. After serving in World War II in North Africa and Asia, he returned to England and moved to an old remote farm with his family in 1957 and started living solely on home-grown produce. After moving to a farm in Wales in the 1970s, he wrote his world-famous books <cite>The Complete Book of Self-Sufficiency</cite> (<cite><a href="http://www.amazon.de/gp/product/3831015775?ie=UTF8&tag=stefanimhoffde-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=3831015775">Das große Buch vom Leben auf dem Lande</a></cite>) and <cite>The Self-Sufficient Gardener</cite> (<cite><a href="http://www.amazon.de/gp/product/3783161452?ie=UTF8&tag=stefanimhoffde-21&linkCode=as2&camp=1638&creative=6742&creativeASIN=3783161452">Selbstversorgung aus dem Garten</a></cite>).
 
 <figure class="image-figure">
   <img src="/assets/images/articles/2014/john-seymour-books/john-seymour-illustration.jpg" alt="Illustration of cereals">
