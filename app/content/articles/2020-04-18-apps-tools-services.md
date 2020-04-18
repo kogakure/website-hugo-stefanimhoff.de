@@ -135,7 +135,7 @@ It has support for RAW, PSD, 360° photo editing, HDR, batch automation, smart o
 
 ### Typeface 🖥
 
-[Typeface](https://typefaceapp.com/) is my favourite font app. It’s simple and beautiful, the price is fair and does all I need.
+[Typeface](https://typefaceapp.com/) is my favourite font app. It’s simple and beautiful, the price is fair and it does all I need.
 
 ### Blender 🖥
 
@@ -143,15 +143,15 @@ I don’t use [Blender](https://www.blender.org/) very often, because it’s jus
 
 ### Pinterest 📱🌐
 
-Pinterest is my preferred tool for inspiration, usually on the iPad. I have nearly [250 public boards](https://www.pinterest.com/kogakure/boards/) for everything that inspires me. The browsing experience is fantastic and the collection and curation of content are as easy as it gets. Pinterest has powerful tools to recognise parts of an image and search for photos showing that thing. This way it’s possible to identify nearly everything (brand, landmark, person).
+[Pinterest](https://www.pinterest.com/) is my preferred tool for inspiration, usually on the iPad. I have nearly [250 public boards](https://www.pinterest.com/kogakure/boards/) for everything that inspires me. The browsing experience is fantastic and the collection and curation of content are as easy as it gets. Pinterest has powerful tools to recognise parts of an image and search for photos showing that thing. This way it’s possible to identify nearly everything (brand, landmark, person).
 
 ### Bēhance📱🌐
 
-Bēhance is the second platform I regularly browse for inspiration. The portfolios of artists and designers are of very high quality and it’s possible to remember interesting pieces on boards. You can also follow your favourite artists.
+[Bēhance](https://www.behance.net/) is the second platform I regularly browse for inspiration. The portfolios of artists and designers are of very high quality and it’s possible to remember interesting pieces on boards. You can also follow your favourite artists.
 
 ### Instagram 📱
 
-I don’t like Instagram very much, because the browsing experience is crappy and you can only use it on the phone. No iPad app, only a limited web app. But it’s still a nice app to publish some photos from time to time and follow friends and family.
+I don’t like [Instagram](https://www.behance.net/) too much, because the browsing experience is crappy and you can only use it on the phone. No iPad app, only a limited web app. But it’s still a nice app to publish some photos from time to time and follow friends and family.
 
 ## Development
 
@@ -203,7 +203,7 @@ They have useful features like muting specific words or phrases (for new contrac
 
 ### Pinboard 🌐
 
-[Pinboard](https://pinboard.in/) I use mostly as a backup for all the links I save. They get automatically transferred from Pocket to Pinboard with IFTTT. I joined Pinboard when the price was a one-time payment of \$9.
+[Pinboard](https://pinboard.in/) I use mostly as a backup for all the links I save. They get automatically transferred from Pocket to Pinboard with IFTTT. I joined Pinboard when the price was a one-time payment of 9 USD.
 
 ### Wikipedia 📱🌐
 
@@ -215,7 +215,9 @@ I use [Tweetbot for iOS](https://tapbots.com/tweetbot/) and [Tweetbot for Mac](h
 
 ### Mastodon 📱🌐
 
-I wish more people would use [Mastodon](https://joinmastodon.org/) because it’s much nicer, friendlier and _decentralised_. Nobody owns it, nobody can control it or cash it and nobody can silence people. There are hundreds of instances talking to each other. Currently, I’m using [Tootle for Mastodon](https://apps.apple.com/us/app/tootle-for-mastodon/id1236013466) on iOS and mirror my Twitter tweets via a [bridge](https://crossposter.masto.donte.com.br/). If you want to follow me: [@kogakure@mastodon.social](https://mastodon.social/@kogakure).
+I wish more people would use [Mastodon](https://joinmastodon.org/) because it’s much nicer, friendlier and _decentralised_. Nobody owns it, nobody can control it or cash it and nobody can silence people. There are hundreds of instances talking to each other.
+
+Currently, I’m using [Tootle for Mastodon](https://apps.apple.com/us/app/tootle-for-mastodon/id1236013466) on iOS and mirror my Twitter tweets via a [bridge](https://crossposter.masto.donte.com.br/). If you want to follow me: [@kogakure@mastodon.social](https://mastodon.social/@kogakure).
 
 ## Communication
 
@@ -245,11 +247,21 @@ I use Apple Mail on Desktop to connect to my work email on an Exchange server an
 
 ### Keybase 📱🖥
 
-[Keybase](https://keybase.io/) is a nice and free end-to-end encrypted messenger, file-sharing, group chat and profile tool. Everything is end-to-end encrypted by default. You can share files between users or groups, or the [public](https://keybase.pub/kogakure/), or even host a [website](https://kogakure.keybase.pub/). You can use encrypted Git repositories and link and validate your [profile](https://keybase.io/kogakure) with a bunch of external services. You can send messages that auto-delete and even send messages to users not yet on Keybase.
+[Keybase](https://keybase.io/) is a nice and free end-to-end encrypted messenger, file-sharing, group chat and profile tool. Everything is end-to-end encrypted by default. You can share files between users or groups, or the [public](https://keybase.pub/kogakure/), or even host a [website](https://kogakure.keybase.pub/).
+
+You can use encrypted Git repositories and link and validate your [profile](https://keybase.io/kogakure) with a bunch of external services. You can send messages that auto-delete and even send messages to users not yet on Keybase.
 
 ### Riot 📱🖥
 
-[Riot](https://about.riot.im/) is the official messenger of [Matrix](https://matrix.org/). It’s an open network for secure, decentralised communication. It has grown over the last years and I hope it will win the messenger wars one day. With corporations trying to control the ecosystem or governments to weaken encryption, free internet and free communication must move to a decentralised messenger. The messenger is as powerful and feature-rich as Slack, but completely free. A lot of big companies (as a recent example Mozilla) move there communication to a self-hosted instance of Matrix. And every instance can communicate with all other instances. Matrix even allows bridges, to communicate with a user of Slack, Apple Messenger, Facebook Messenger, Telegram or similar. The bridges are still early development but the future for Matrix looks good. You can contact me on [@kogakure:matrix.org](https://matrix.to/#/@kogakure:matrix.org).
+[Riot](https://about.riot.im/) is the official messenger of [Matrix](https://matrix.org/). It’s an open network for secure, decentralised communication.
+
+It has grown over the last years and I hope it will win the messenger wars one day. With corporations trying to control the ecosystem or governments to weaken encryption, free internet and free communication must move to a decentralised messenger. The messenger is as powerful and feature-rich as Slack, but completely free.
+
+A lot of big companies (as a recent example Mozilla) move there communication to a self-hosted instance of Matrix. And every instance can communicate with all other instances.
+
+Matrix even allows bridges, to communicate with a user of Slack, Apple Messenger, Facebook Messenger, Telegram or similar. The bridges are still early development but the future for Matrix looks good.
+
+You can contact me on [@kogakure:matrix.org](https://matrix.to/#/@kogakure:matrix.org).
 
 ### Jitsi Meet 📱🌐
 
@@ -259,7 +271,9 @@ Another nice open-source tool for video chat is [Jitsi](https://meet.jit.si/). I
 
 ### Firefox (Developer Edition) 📱🖥
 
-My default browser is [Firefox Developer Edition](https://www.mozilla.org/firefox/developer/). I simply love the features of Firefox. The developer experience is fantastic and I like in particular the bookmarking system (this sucks with other browsers). Firefox supports tags and has a nice bookmark bar to quickly filter and search bookmarks. Also, Mozilla has privacy as a much higher priority than Google Chrome. Google works actively on ways to prevent ad-blocking or tracking of users while Mozilla blocks that shit by default and also allows and provides all kinds of additional privacy tools (like container tabs). I also use [Firefox Mobile](https://www.mozilla.org/de/firefox/mobile/) as my browser on mobile.
+My default browser is [Firefox Developer Edition](https://www.mozilla.org/firefox/developer/). I simply love the features of Firefox. The developer experience is fantastic and I like in particular the bookmarking system (this sucks with other browsers). Firefox supports tags and has a nice bookmark bar to quickly filter and search bookmarks.
+
+Also, Mozilla has privacy as a much higher priority than Google Chrome. Google works actively on ways to prevent ad-blocking or tracking of users while Mozilla blocks trackers by default and also allows and provides all kinds of additional privacy tools (like container tabs). I also use [Firefox Mobile](https://www.mozilla.org/de/firefox/mobile/) as my browser on mobile.
 
 ### Brave Browser 📱🖥
 
