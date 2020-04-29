@@ -95,7 +95,7 @@ I use [Productive](http://productiveapp.io/) to track my habits. You can decide 
 
 ### IFTTT 📱🌐
 
-I use [IFTTT](https://ifttt.com/) (If This Then That) to automate a bunch of tasks across multiple services and tools on the internet or at home. There are hundreds of services, home appliances that can be connected.
+I use [IFTTT](https://ifttt.com/) (If This Then That) to automate a bunch of tasks across multiple services and tools on the internet or at home. There are hundreds of services and home appliances that can be connected.
 
 You can create powerful workflows to handover of data between two of these services without programming: Automatically publish a new blog post to Twitter, save a new Instagram photo to Dropbox, save liked videos or tweets to Pocket, record your weight into a spreadsheet, send out an email when you enter or leave a specific geographical area, just to name a few.
 
@@ -199,7 +199,7 @@ They have useful features like muting specific words or phrases (for new contrac
 
 ### Pocket 📱🌐
 
-[Pocket](https://getpocket.com/) (Premium) is my tool to read save and read my content. Every article, video or content I want to remember I save into Pocket. Mozilla bought Pocket and the Firefox browser has the feature built-in. I use tags to organise the content. Pocket allows reading articles without all the clutter and noise in a font, with line-height and width of your choice. I automatically save my favourite articles with IFTTT to Feedly and Pinboard – it’s always a good idea to have your content not just in one service.
+[Pocket](https://getpocket.com/) (Premium) is my tool to save and read my content. Every article, video or content I want to remember I save into Pocket. Mozilla bought Pocket and the Firefox browser has the feature built-in. I use tags to organise the content. Pocket allows reading articles without all the clutter and noise in a font, with line-height and width of your choice. I automatically save my favourite articles with IFTTT to Feedly and Pinboard – it’s always a good idea to have your content not just in one service.
 
 ### Pinboard 🌐
 
@@ -257,7 +257,7 @@ You can use encrypted Git repositories and link and validate your [profile](http
 
 It has grown over the last years and I hope it will win the messenger wars one day. With corporations trying to control the ecosystem or governments to weaken encryption, free internet and free communication must move to a decentralised messenger. The messenger is as powerful and feature-rich as Slack, but completely free.
 
-A lot of big companies (as a recent example Mozilla) move there communication to a self-hosted instance of Matrix. And every instance can communicate with all other instances.
+A lot of big companies (as a recent example Mozilla) move their communication to a self-hosted instance of Matrix. And every instance can communicate with all other instances.
 
 Matrix even allows bridges, to communicate with a user of Slack, Apple Messenger, Facebook Messenger, Telegram or similar. The bridges are still early development but the future for Matrix looks good.
 
@@ -265,7 +265,7 @@ You can contact me on [@kogakure:matrix.org](https://matrix.to/#/@kogakure:matri
 
 ### Jitsi Meet 📱🌐
 
-Another nice open-source tool for video chat is [Jitsi](https://meet.jit.si/). It supports a lot of users (currently 75) at the same time. To create a room is as easy as to click a button. No extra software needed, it runs in the browser. There are also mobile versions available. It’s also the default video conferencing system of [riot](https://jitsi.riot.im/).
+Another nice open-source tool for video chat is [Jitsi](https://meet.jit.si/). It supports a lot of users (currently 75) at the same time. To create a room is as easy as to click a button. No extra software needed, it runs in the browser. There are also mobile versions available. It’s also the default video conferencing system of [Riot](https://jitsi.riot.im/).
 
 ## Browser
 
@@ -273,7 +273,7 @@ Another nice open-source tool for video chat is [Jitsi](https://meet.jit.si/). I
 
 My default browser is [Firefox Developer Edition](https://www.mozilla.org/firefox/developer/). I simply love the features of Firefox. The developer experience is fantastic and I like in particular the bookmarking system (this sucks with other browsers). Firefox supports tags and has a nice bookmark bar to quickly filter and search bookmarks.
 
-Also, Mozilla has privacy as a much higher priority than Google Chrome. Google works actively on ways to prevent ad-blocking or tracking of users while Mozilla blocks trackers by default and also allows and provides all kinds of additional privacy tools (like container tabs). I also use [Firefox Mobile](https://www.mozilla.org/de/firefox/mobile/) as my browser on mobile.
+Also, Mozilla has privacy as a much higher priority than Google. Google works actively on ways to prevent ad-blocking while Mozilla blocks trackers by default and also allows and provides all kinds of additional privacy tools (like container tabs). I also use [Firefox Mobile](https://www.mozilla.org/de/firefox/mobile/) as my browser on mobile.
 
 ### Brave Browser 📱🖥
 
@@ -363,7 +363,7 @@ I love [Duolingo](https://adguard.com/)! I learn on Duolingo without missing one
 
 ### TinyCards 📱🌐
 
-[TinyCards](https://tinycards.duolingo.com/) is another cool, free app by Duolingo. It’s fun and easy to create flashcards. You can select out of hundreds or thousands of free decks or create your cards (private or public). I created this deck to learn the [seven basics of Japanese aesthetics](https://tinycards.duolingo.com/decks/8UTP9VRK/shibui-seven).
+[TinyCards](https://tinycards.duolingo.com/) is another cool, free app by Duolingo. It’s fun and easy to create flashcards. You can select out of hundreds or thousands of free decks or create your cards (private or public). I created this deck to learn the [Seven Principles of Japanese Aesthetics](https://tinycards.duolingo.com/decks/8UTP9VRK/shibui-seven).
 
 ### Drops 📱
 
