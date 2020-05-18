@@ -21,11 +21,11 @@ The way we write notes determines how we think and learn. Many studies have show
 
 ## The Illusion of Competence and the Collectors Fallacy
 
-A lot of people avoid taking notes and search on the Internet instead. This is a grave error because it looks convenient to have all knowledge <q>at the tips of my fingers</q>. And worse, it produces the **Illusion of Competence**[^schroder2018aa] in a person. <q>I don’t need to know this, I can always look it up is a common sentence you hear today. I can ask Siri or Alexa</q>.
+A lot of people avoid taking notes and search on the Internet instead. This is a grave error because it looks convenient to have all knowledge <q>at the tips of my fingers</q>. And worse, it produces the **Illusion of Competence**[^schroder2018aa] in a person. <q>I don’t need to know this, I can always look it up</q> is a common sentence you hear today. <q>I can ask Siri or Alexa</q>.
 
 But knowledge-building doesn’t work that way. And saving content into some archive doesn’t either. I’m guilty of this myself. Having used Evernote for a decade I was used to saving everything I _wanted to remember_ into the tool. I sorted and curated, tagged and sometimes even highlighted content. But I fell victim to the **Collectors Fallacy**[^tietze2014aa]. Because you collected something doesn’t mean you learned it or are able to explain it.
 
-A few months ago a co-worker pointed me to the **Zettelkasten method**. At first, I discarded it as too complicated. The founder _Niklas Luhmann_ seemed rather eccentric to me. His physical Zettelkasten (a huge shelve) with 90,000 notes was an abomination to me as a Minimalist.
+A few months ago a co-worker pointed me to the **Zettelkasten method**. At first, I discarded it as too complicated. The founder _Niklas Luhmann_ seemed rather eccentric to me. His physical Zettelkasten—a huge shelve with 90,000 notes—was an abomination to me as a [Minimalist](/minimalism/).
 
 But a few weeks ago I found some time reading into the links my colleague had sent me about the method. I learned that [Ryan Holiday] and [Robert Greene] use similar methods for note-taking.
 
@@ -37,11 +37,11 @@ But I’ll shortly introduce the concept for better understanding: **Zettelkaste
 
 The basic idea is that a **notebook** is too static and linear. It might be good to quickly capture ideas, but it’s a bad way to store ideas. But information simply put on **index cards** or **notes** would be too loose and disorganised.
 
-Putting notes into **folders** is the beginners' approach—I’m guilty myself—but you run into problems with notes belonging thematic into different folders.
+Putting notes into **folders** is the beginners’ approach—I’m guilty myself—but you run into problems with notes belonging thematic into different folders.
 
 **Tags** are the next improvement to a note-taking system. Tags allow notes to be grouped without the limitation of physical categories or folders.
 
-But the Zettelkasten Method went one step further: Individual notes get connected by **linking them together**. This is a manual but necessary step that connects ideas and creates real knowledge about topics. Over time you add outline notes, connecting similar ideas or even complete hub pages connecting notes and outline notes of broader topics.
+But the Zettelkasten Method went one step further: Individual notes get connected by **linking them together**. This is a manual but necessary step that connects ideas and creates real knowledge about topics. Over time you add outline notes, connect similar ideas or even complete hub pages connecting notes and outline notes of broader topics.
 
 ## Principles of a Good Zettel
 
@@ -49,15 +49,15 @@ A good Zettel should be **atomic**, just one idea should be on a note. It should
 
 ## Reference Material
 
-Regarding the references, I found different ideas. Some recommend always keeping the reference to ensure no plagiarism, others process a reference and immediately delete the reference. I think the best way I somewhere in between, keeping some really good reference and deleting the ones of lesser quality and just extracting the ideas worth saving on separate notes.
+Regarding reference material, I found different ideas. Some recommend always keeping the reference to ensure no plagiarism, others process a reference and immediately delete the reference. I think the best way I somewhere in between, keeping some really good reference and deleting the ones of lesser quality and just extracting the ideas worth saving on separate notes.
 
-I, for example, have already a rather huge reference database with 30,000 items. And I don’t plan to delete a lot of the reference material. The major part is of inspirational kind (images, logos, photos) which can’t be captured in a note.
+I, for example, have already a rather huge reference database with 30,000 items. And I don’t plan to delete any of the reference material. The major part is of inspirational kind (images, logos, photos) which can’t be captured in a note.
 
 But I started using [BibDesk](https://bibdesk.sourceforge.io/) to create references to books, articles and videos worth remembering. It’s also easy to create custom export templates for BibDesk as explained in [Manage Citations for a Zettelkasten](https://zettelkasten.de/posts/bibliography-zettelkasten/).
 
 ## Tools
 
-When I tried to introduce the Zettelkasten methods, I reviewed a bunch of tools. Tools I already owned and tools that were recommended. The good thing with this method is there is no right tool, everything from paper index cards too highly sophisticated software can do the job. It’s a matter of taste and convenience. A paper-based system I discarded categorically. I tried a good bunch of tools recommended in the [Software & Gadgets](https://forum.zettelkasten.de/categories/tools) section of the Zettelkasten website. I even tried their tool [The Archive](https://zettelkasten.de/the-archive/). But after looking into the capabilities of my favourite document management system [DEVONthink](https://devontechnologies.com/apps/devonthink) I decided to stay with it.
+When I tried to introduce the Zettelkasten methods, I reviewed a bunch of tools. Tools I already owned and tools that were recommended. The good thing with this method is there is no right tool, everything from paper index cards too highly sophisticated software can do the job. It’s a matter of taste and convenience. A paper-based system I discarded categorically—I don’t have the time or space to maintain such a system. I tried a good bunch of tools recommended in the [Software & Gadgets](https://forum.zettelkasten.de/categories/tools) section of the Zettelkasten website. I even tried their tool [The Archive](https://zettelkasten.de/the-archive/). But after looking into the capabilities of my favourite document management system [DEVONthink](https://devontechnologies.com/apps/devonthink) I decided to stay with it.
 
 ## Selecting the Right Tool
 
@@ -67,19 +67,19 @@ After years of working with different software products, I came up with my rules
 - **Never** store valuable information **only on an external server** which might disappear or be inaccessible.
 - **Never** use a **proprietary format** that is depending on a specific company or tool or is **hard or impossible to convert** into another format.
 - If possible don’t use a service or software that doesn’t support **encrypting my data**.
-- If possible don’t use a service or software that has **a monthly fee**. Monthly fees make it easy for developers to not deliver good software while not being able to stop paying without losing access to the software.
+- If possible don’t use a service or software that has **a monthly fee**. Monthly fees make it easy for developers to not deliver good software while the user is not being able to stop paying without losing access to the software.
 
 ### Exporting Data
 
-A lot of tools already fail my first rule: Apple Notes, [Google Keep](https://keep.google.com/), [Microsoft OneNote](https://www.onenote.com/). These tools don’t allow exporting or just exporting a single, individual note to something static like a PDF. That’s a big no and I would never use these tools. DEVONthink allows exporting and importing every file with all its metadata.
+A lot of tools already fail my first rule: Apple Notes, [Google Keep](https://keep.google.com/), [Microsoft OneNote](https://www.onenote.com/). These tools don’t allow exporting or just exporting a single, individual note to something static like a PDF. That’s a big **NO** and I would never use tools of that kind. DEVONthink allows exporting and importing every file with all its metadata.
 
 ### Locally Stored Data
 
-The second rule crosses out a lot of the famous new star apps like [Notion](https://www.notion.so/) or [Roam Research](https://roamresearch.com/). As cool and innovative these tools are, they are not for me. I know both tools allow exporting your notes as Markdown, but being locked out of Notion for 3 days (because they had problems with their mail server) is proof of the importance of my second rule. DEVONthink is local first, but cloud provider and synchronising files are possible. You can backup your data and always access it, even without an internet connection.
+The second rule crosses out a lot of the famous new star apps like [Notion](https://www.notion.so/) or [Roam Research](https://roamresearch.com/). As cool and innovative these tools are, they are not for me. I know both tools allow exporting your notes as Markdown, but being locked out of Notion for 3 days—they had problems with their mail server—is proof of the importance of my second rule. DEVONthink is local first, but cloud provider and synchronising files are possible. You can backup your data and always access it, even without an internet connection.
 
 ### Data in Open Formats
 
-The next rule crosses out all kind of software, that has some internal database format which lets you loose your metadata when exporting a note (if this is possible at all). Also, tools which need you to run a specific server, plugin, extension that might not be available any more ten years later. I also consider [Evernote](https://evernote.com/) in this category. While it is possible currently to export the notes as HTML, this might not be the case in the future. They additionally bake in styles in the HTML which leads to a lot of my notes being hard to read today (black on black or tiny fonts). DEVONthink allows every format. It has really good support for Markdown, but you can store everything you like. It also allows converting files into a huge amount of different formats.
+The next rule crosses out all kind of software, that has some internal database format or virtual file format which lets you loose your metadata when exporting a note—if this is possible at all. Also, tools which need you to run a specific server, plugin, extension that might not be available any more ten years later. I also consider [Evernote](https://evernote.com/) to be in this category. While it is possible currently to export the notes as HTML, this might not be the case in the future. They additionally bake in styles in the HTML which leads to a lot of my notes being hard to read today—black foreground on black background or tiny fonts. DEVONthink allows every format. It has really good support for Markdown, but you can store everything you like. It also allows converting files into a huge amount of different formats.
 
 ### Encryped Data
 
@@ -96,7 +96,7 @@ I didn’t like the old model either when software companies pushed out a new re
 
 I can approve software like [Sketch](https://www.sketch.com/) where you pay every year but you won’t get any further updates or improvements when you stop paying, but your software still runs!
 
-DEVONthink has a one-time price and a new version gets released every few years. They are just six developers which keep the cost of development low. But they work on that app for over a decade and have always released fantastic new features. They even release [useful software for free](https://devontechnologies.com/apps/freeware).
+DEVONthink has a one-time price and a new version gets released every few years. They are just six developers which keep the cost of development low. And they work on the app for over a decade and always release fantastic new features. They even release [useful software for free](https://devontechnologies.com/apps/freeware).
 
 ## DEVONthink Pro for the Zettelkasten Method
 
@@ -169,7 +169,7 @@ DEVONthink comes with built-in support for text recognition in a huge variety of
 
 ### Powerful Inspector
 
-One really powerful feature is the inspector. It allows working and viewing metadata, mark (colours, flags), rate (stars) or lock items. It can analyse text and show a wordlist, similar words, links in documents, a table of content, a word cloud, just to name a few.
+One really powerful feature is the inspector. It allows editing and viewing metadata, mark (colours, flags), rate (stars) or lock items. It can analyse text and show a wordlist, similar words, links in documents, a table of content, a word cloud, just to name a few.
 
 And a document shows also statistics like paragraph, word or character count.
 
