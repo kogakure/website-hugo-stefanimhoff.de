@@ -57,7 +57,7 @@ But I started using [BibDesk](https://bibdesk.sourceforge.io/) to create referen
 
 ## Tools
 
-When I tried to introduce the Zettelkasten methods, I reviewed a bunch of tools. Tools I already owned and tools that were recommended. The good thing with this method is there is no right tool, everything from paper index cards too highly sophisticated software can do the job. It’s a matter of taste and convenience. A paper-based system I discarded categorically—I don’t have the time or space to maintain such a system. I tried a good bunch of tools recommended in the [Software & Gadgets](https://forum.zettelkasten.de/categories/tools) section of the Zettelkasten website. I even tried their tool [The Archive](https://zettelkasten.de/the-archive/). But after looking into the capabilities of my favourite document management system [DEVONthink](https://devontechnologies.com/apps/devonthink) I decided to stay with it.
+When I tried to introduce the Zettelkasten method, I reviewed a bunch of tools. Tools I already owned and tools that were recommended. The good thing with this method is there is no right tool, everything from paper index cards too highly sophisticated software can do the job. It’s a matter of taste and convenience. A paper-based system I discarded categorically—I don’t have the time or space to maintain such a system. I tried a good bunch of tools recommended in the [Software & Gadgets](https://forum.zettelkasten.de/categories/tools) section of the Zettelkasten website. I even tried their tool [The Archive](https://zettelkasten.de/the-archive/). But after looking into the capabilities of my favourite document management system [DEVONthink](https://devontechnologies.com/apps/devonthink) I decided to stay with it.
 
 ## Selecting the Right Tool
 
@@ -206,7 +206,7 @@ A quick shortcut allows changing the metadata of a note without opening the insp
 
 ## Conclusion
 
-I’m happy I was pointed to the Zettelkasten methods by my colleague. It’s a really good and future-proof way of writing notes. Even after a few weeks and ~150 newly created notes I can already see the first connections between the notes. I also started creating some connection notes and I’m having ideas for outline notes.
+I’m happy I was pointed to the Zettelkasten method by my colleague. It’s a really good and future-proof way of writing notes. Even after a few weeks and ~150 newly created notes I can already see the first connections between the notes. I also started creating some connection notes and I’m having ideas for outline notes.
 
 [DEVONthink](https://devontechnologies.com/apps/devonthink) is after a week of testing various tools the right tool for me. It allows me to use the Zettelkasten method with a bunch of really useful workflows and features next to having an incredibly powerful document management system.
 
