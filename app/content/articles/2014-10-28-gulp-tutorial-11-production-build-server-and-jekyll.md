@@ -4,12 +4,14 @@ subtitle: Production Build, Server and Jekyll
 slug: gulp-tutorial-11-production-build-server-and-jekyll
 author: Stefan Imhoff
 date: 2014-10-28T07:30:00+02:00
-description: 'The ultimative tutorial and guide for Gulp.js: How to write the production task for Jekyll and BrowserSync.'
-og_image: 'assets/images/articles/2014/gulp-tutorial-11-production-build-server-and-jekyll/gulp-tutorial-11.jpg'
-download_url: 'https://github.com/kogakure/gulp-tutorial'
-download_text: 'View Source on GitHub'
-categories: ['code']
-series: ['gulp']
+description: "The ultimative tutorial and guide for Gulp.js: How to write the production task for Jekyll and BrowserSync."
+og: "assets/images/articles/2014/gulp-tutorial-11-production-build-server-and-jekyll/gulp-tutorial-11.jpg"
+download_url: "https://github.com/kogakure/gulp-tutorial"
+download_text: "View Source on GitHub"
+categories:
+  - "code"
+series:
+  - "gulp"
 ---
 
 This is the 11th part of my series _Introduction to Gulp.js_. Today I will start writing the production build task, set up a server to view the production code and build the production site with Jekyll.
@@ -28,12 +30,12 @@ I decided to name my task `publish`. Later I am able to get a production build w
 <p class="code-info">gulp/tasks/publish.js</p>
 
 ```javascript
-var gulp = require('gulp');
+var gulp = require("gulp");
 
 /**
  * Run task browsersync:production
  */
-gulp.task('publish', ['browsersync:production']);
+gulp.task("publish", ["browsersync:production"]);
 ```
 
 I put this file on same level as the `default.js` file. This task is short and sweet: It does only one thing. Start a BrowserSync tasks for production. This way I can have a look on the production site before deploying it to my server.
@@ -63,14 +65,14 @@ The only differences to the `browsersync` of `development` are these: I serve on
 <p class="code-info">gulp/tasks/production/browser-sync.js</p>
 
 ```javascript
-var gulp = require('gulp');
-var browsersync = require('browser-sync');
-var config = require('../../config').browsersync.production;
+var gulp = require("gulp");
+var browsersync = require("browser-sync");
+var config = require("../../config").browsersync.production;
 
 /**
  * Start a server and watch changes with BrowserSync
  */
-gulp.task('browsersync:production', ['build:production'], function() {
+gulp.task("browsersync:production", ["build:production"], function () {
   browsersync(config);
 });
 ```
@@ -82,27 +84,27 @@ This task is boring. It just starts the production build.
 <p class="code-info">gulp/tasks/production/build.js</p>
 
 ```javascript
-var gulp = require('gulp');
-var runSequence = require('run-sequence');
+var gulp = require("gulp");
+var runSequence = require("run-sequence");
 
 /**
  * Run all tasks needed for a build in defined order
  */
-gulp.task('build:production', function(callback) {
+gulp.task("build:production", function (callback) {
   runSequence(
-    'delete',
-    'jekyll:production',
-    ['sass', 'scripts', 'images', 'copy:fonts'],
-    'base64',
+    "delete",
+    "jekyll:production",
+    ["sass", "scripts", "images", "copy:fonts"],
+    "base64",
     [
-      'optimize:css',
-      'optimize:js',
-      'optimize:images',
-      'optimize:html',
-      'copy:fonts:production'
+      "optimize:css",
+      "optimize:js",
+      "optimize:images",
+      "optimize:html",
+      "copy:fonts:production",
     ],
-    'revision',
-    'rev:collect',
+    "revision",
+    "rev:collect",
     callback
   );
 });
@@ -140,32 +142,32 @@ jekyll: {
 <p class="code-info">gulp/tasks/production/jekyll.js</p>
 
 ```javascript
-var gulp = require('gulp');
-var cp = require('child_process');
-var browsersync = require('browser-sync');
-var config = require('../../config').jekyll.production;
+var gulp = require("gulp");
+var cp = require("child_process");
+var browsersync = require("browser-sync");
+var config = require("../../config").jekyll.production;
 
 /**
  * Build the Jekyll Site
  */
-gulp.task('jekyll:production', function(done) {
-  browsersync.notify('Compiling Jekyll (Production)');
+gulp.task("jekyll:production", function (done) {
+  browsersync.notify("Compiling Jekyll (Production)");
 
   return cp
     .spawn(
-      'bundle',
+      "bundle",
       [
-        'exec',
-        'jekyll',
-        'build',
-        '-q',
-        '--source=' + config.src,
-        '--destination=' + config.dest,
-        '--config=' + config.config
+        "exec",
+        "jekyll",
+        "build",
+        "-q",
+        "--source=" + config.src,
+        "--destination=" + config.dest,
+        "--config=" + config.config,
       ],
-      { stdio: 'inherit' }
+      { stdio: "inherit" }
     )
-    .on('close', done);
+    .on("close", done);
 });
 ```
 

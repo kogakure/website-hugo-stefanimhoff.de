@@ -6,11 +6,13 @@ date: 2020-03-14T15:30:00+02:00
 author: Stefan Imhoff
 description: "In this article I show my Everyday Carries and explain why I carry them."
 excerpt: "In this article I share my Everyday Carries, the essential things I carry around every day: Apple iPhone, Kindle Paperwhite, Apple Watch, Apple AirPods Pro, Traveler’s Notebook, Laguiole en Aubrac, Secrid Miniwallet, Keys, and Handkerchief."
-og_image: "assets/images/articles/2020/everyday-carry/everyday-carry.jpg"
-credit_name: "Stefan Imhoff"
-credit_title: "My Everyday Carries"
-credit_link: "https://www.stefanimhoff.de"
-categories: ["personal"]
+og: "assets/images/articles/2020/everyday-carry/everyday-carry.jpg"
+attribution:
+  - author: "Stefan Imhoff"
+    title: "My Everyday Carries"
+    url: "https://www.stefanimhoff.de"
+categories:
+  - "self-improvement"
 ---
 
 A few days ago _Ryan Holiday_ posted the article “[Here’s Some Stuff Worth Carrying With You Everywhere](https://ryanholiday.net/heres-some-stuff-worth-carrying-with-you-everywhere/)” with an accompanying [video](https://www.youtube.com/watch?v=oaXMijw241c) on his blog.

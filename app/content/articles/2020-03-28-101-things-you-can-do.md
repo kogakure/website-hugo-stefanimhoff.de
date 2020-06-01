@@ -5,11 +5,14 @@ date: 2020-03-28T17:00:00+02:00
 author: Stefan Imhoff
 description: "The novel Coronavirus SARS-CoV-2 which can lead to the sickness COVID-19 brought many countries on partial or total lockdown. Many people are not used to staying inside for a long time. As an introvert I like it inside. To help and make it easier to stay inside I created a list of 101 things you can do until this crisis is over."
 excerpt: "The novel Coronavirus SARS-CoV-2 which can lead to the sickness COVID-19 brought many countries on partial or total lockdown. Many people are not used to staying inside for a long time. As an introvert I like it inside. To help and make it easier to stay inside I created a list of 101 things you can do until this crisis is over."
-og_image: "assets/images/articles/2020/101-things-you-can-do/kauai-united-states.jpg"
-credit_name: "Remi Yuan"
-credit_title: "Kauai, United States"
-credit_link: "https://unsplash.com/photos/glrBDgQMAsY"
-categories: ["tip"]
+og: "assets/images/articles/2020/101-things-you-can-do/kauai-united-states.jpg"
+attribution:
+  - author: "Remi Yuan"
+    title: "Kauai, United States"
+    url: "https://unsplash.com/photos/glrBDgQMAsY"
+categories:
+  - "tip"
+  - "self-improvement"
 ---
 
 The novel Coronavirus _SARS-CoV-2_ which can lead to the sickness _COVID-19_ brought many countries on partial or total lockdown. Many people are not used to staying inside for a long time. As an introvert I like it inside.

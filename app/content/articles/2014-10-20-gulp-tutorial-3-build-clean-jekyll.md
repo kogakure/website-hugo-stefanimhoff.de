@@ -4,12 +4,14 @@ subtitle: Build, Clean and Jekyll
 slug: gulp-tutorial-3-build-clean-jekyll
 author: Stefan Imhoff
 date: 2014-10-20T10:00:00+02:00
-description: 'The ultimative tutorial and guide for Gulp.js: How to write tasks for cleaning files and folders, generating the build and the website with Jekyll.'
-og_image: 'assets/images/articles/2014/gulp-tutorial-3-build-clean-jekyll/gulp-tutorial-3.jpg'
-download_url: 'https://github.com/kogakure/gulp-tutorial'
-download_text: 'View Source on GitHub'
-categories: ['code']
-series: ['gulp']
+description: "The ultimative tutorial and guide for Gulp.js: How to write tasks for cleaning files and folders, generating the build and the website with Jekyll."
+og: "assets/images/articles/2014/gulp-tutorial-3-build-clean-jekyll/gulp-tutorial-3.jpg"
+download_url: "https://github.com/kogakure/gulp-tutorial"
+download_text: "View Source on GitHub"
+categories:
+  - "code"
+series:
+  - "gulp"
 ---
 
 This is the 3rd part of my series _Introduction to Gulp.js_. Today I will write the build task, which will execute all other tasks needed for a build, the task to delete assets for a fresh start, and the task to create my Jekyll site.
@@ -34,17 +36,17 @@ Next I create the task:
 <p class="code-info">gulp/tasks/development/build.js</p>
 
 ```javascript
-var gulp = require('gulp');
-var runSequence = require('run-sequence');
+var gulp = require("gulp");
+var runSequence = require("run-sequence");
 
 /**
  * Run all tasks needed for a build in defined order
  */
-gulp.task('build', function(callback) {
+gulp.task("build", function (callback) {
   runSequence(
-    'delete',
-    ['jekyll', 'sass', 'scripts', 'images', 'copy:fonts'],
-    'base64',
+    "delete",
+    ["jekyll", "sass", "scripts", "images", "copy:fonts"],
+    "base64",
     callback
   );
 });
@@ -82,14 +84,14 @@ The actuall task will look like this:
 <p class="code-info">gulp/tasks/development/delete.js</p>
 
 ```javascript
-var gulp = require('gulp');
-var del = require('del');
-var config = require('../../config').delete;
+var gulp = require("gulp");
+var del = require("del");
+var config = require("../../config").delete;
 
 /**
  * Delete folders and files
  */
-gulp.task('delete', function(callback) {
+gulp.task("delete", function (callback) {
   del(config.src, callback);
 });
 ```
@@ -115,35 +117,35 @@ jekyll: {
 <p class="code-info">gulp/config/development/jekyll.js</p>
 
 ```javascript
-var gulp = require('gulp');
-var cp = require('child_process');
-var browsersync = require('browser-sync');
-var config = require('../../config').jekyll.development;
+var gulp = require("gulp");
+var cp = require("child_process");
+var browsersync = require("browser-sync");
+var config = require("../../config").jekyll.development;
 
 /**
  * Build the Jekyll Site
  */
-gulp.task('jekyll', function(done) {
-  browsersync.notify('Compiling Jekyll');
+gulp.task("jekyll", function (done) {
+  browsersync.notify("Compiling Jekyll");
 
   return cp
     .spawn(
-      'bundle',
+      "bundle",
       [
-        'exec',
-        'jekyll',
-        'build',
-        '-q',
-        '--source=' + config.src,
-        '--destination=' + config.dest,
-        '--config=' + config.config
+        "exec",
+        "jekyll",
+        "build",
+        "-q",
+        "--source=" + config.src,
+        "--destination=" + config.dest,
+        "--config=" + config.config,
       ],
-      { stdio: 'inherit' }
+      { stdio: "inherit" }
     )
-    .on('close', done);
+    .on("close", done);
 });
 
-gulp.task('jekyll-rebuild', ['jekyll'], function() {
+gulp.task("jekyll-rebuild", ["jekyll"], function () {
   browsersync.reload();
 });
 ```

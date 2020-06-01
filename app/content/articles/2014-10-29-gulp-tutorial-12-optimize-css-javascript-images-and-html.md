@@ -4,12 +4,14 @@ subtitle: Optimize CSS, JavaScript, Images and HTML
 slug: gulp-tutorial-12-optimize-css-javascript-images-and-html
 author: Stefan Imhoff
 date: 2014-10-29T08:00:00+02:00
-description: 'The ultimative tutorial and guide for Gulp.js: How to optimize CSS, JavaScript, images and HTML to speed up your website.'
-og_image: 'assets/images/articles/2014/gulp-tutorial-12-optimize-css-javascript-images-and-html/gulp-tutorial-12.jpg'
-download_url: 'https://github.com/kogakure/gulp-tutorial'
-download_text: 'View Source on GitHub'
-categories: ['code']
-series: ['gulp']
+description: "The ultimative tutorial and guide for Gulp.js: How to optimize CSS, JavaScript, images and HTML to speed up your website."
+og: "assets/images/articles/2014/gulp-tutorial-12-optimize-css-javascript-images-and-html/gulp-tutorial-12.jpg"
+download_url: "https://github.com/kogakure/gulp-tutorial"
+download_text: "View Source on GitHub"
+categories:
+  - "code"
+series:
+  - "gulp"
 ---
 
 This is the 12th part of my series _Introduction to Gulp.js_. Today I will write tasks to optimize the assets of my website: CSS, JavaScript, Images and HTML.
@@ -48,15 +50,15 @@ optimize: {
 <p class="code-info">gulp/tasks/production/optimize-css.js</p>
 
 ```javascript
-var gulp = require('gulp');
-var csso = require('gulp-csso');
-var size = require('gulp-size');
-var config = require('../../config').optimize.css;
+var gulp = require("gulp");
+var csso = require("gulp-csso");
+var size = require("gulp-size");
+var config = require("../../config").optimize.css;
 
 /**
  * Copy and minimize CSS files
  */
-gulp.task('optimize:css', function() {
+gulp.task("optimize:css", function () {
   return gulp
     .src(config.src)
     .pipe(csso(config.options))
@@ -93,15 +95,15 @@ optimize: {
 <p class="code-info">gulp/tasks/production/optimize-js.js</p>
 
 ```javascript
-var gulp = require('gulp');
-var uglify = require('gulp-uglify');
-var size = require('gulp-size');
-var config = require('../../config').optimize.js;
+var gulp = require("gulp");
+var uglify = require("gulp-uglify");
+var size = require("gulp-size");
+var config = require("../../config").optimize.js;
 
 /**
  * Copy and minimize JS files
  */
-gulp.task('optimize:js', function() {
+gulp.task("optimize:js", function () {
   return gulp
     .src(config.src)
     .pipe(uglify(config.options))
@@ -153,15 +155,15 @@ optimize: {
 <p class="code-info">gulp/tasks/production/optimize-images.js</p>
 
 ```javascript
-var gulp = require('gulp');
-var imagemin = require('gulp-imagemin');
-var size = require('gulp-size');
-var config = require('../../config').optimize.images;
+var gulp = require("gulp");
+var imagemin = require("gulp-imagemin");
+var size = require("gulp-size");
+var config = require("../../config").optimize.images;
 
 /**
  * Copy and minimize image files
  */
-gulp.task('optimize:images', function() {
+gulp.task("optimize:images", function () {
   return gulp
     .src(config.src)
     .pipe(imagemin(config.options))
@@ -206,14 +208,14 @@ optimize: {
 <p class="code-info">gulp/tasks/production/optimize-html.js</p>
 
 ```javascript
-var gulp = require('gulp');
-var htmlmin = require('gulp-htmlmin');
-var config = require('../../config').optimize.html;
+var gulp = require("gulp");
+var htmlmin = require("gulp-htmlmin");
+var config = require("../../config").optimize.html;
 
 /**
  * Minimize HTML
  */
-gulp.task('optimize:html', function() {
+gulp.task("optimize:html", function () {
   return gulp
     .src(config.src)
     .pipe(htmlmin(config.options))

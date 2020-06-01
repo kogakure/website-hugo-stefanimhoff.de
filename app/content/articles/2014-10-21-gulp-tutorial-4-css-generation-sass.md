@@ -4,12 +4,14 @@ subtitle: Creating CSS with Sass (and Compass)
 slug: gulp-tutorial-4-css-generation-sass
 author: Stefan Imhoff
 date: 2014-10-21T10:30:00+02:00
-description: 'The ultimative tutorial and guide for Gulp.js: How to create CSS and Source Maps with Sass and Compass.'
-og_image: 'assets/images/articles/2014/gulp-tutorial-4-css-generation-sass/gulp-tutorial-4.jpg'
-download_url: 'https://github.com/kogakure/gulp-tutorial'
-download_text: 'View Source on GitHub'
-categories: ['code']
-series: ['gulp']
+description: "The ultimative tutorial and guide for Gulp.js: How to create CSS and Source Maps with Sass and Compass."
+og: "assets/images/articles/2014/gulp-tutorial-4-css-generation-sass/gulp-tutorial-4.jpg"
+download_url: "https://github.com/kogakure/gulp-tutorial"
+download_text: "View Source on GitHub"
+categories:
+  - "code"
+series:
+  - "gulp"
 ---
 
 This is the 4th part of my series _Introduction to Gulp.js_. Today I will show how to use Sass (and Compass if you want) to create CSS files. Furthermore I will add vendor prefixes with Autoprefixer and create Source Maps for easier debugging of the Sass files.
@@ -63,28 +65,28 @@ autoprefixer: {
 <p class="code-info">gulp/task/development/sass.js</p>
 
 ```javascript
-var gulp = require('gulp');
-var plumber = require('gulp-plumber');
-var browsersync = require('browser-sync');
-var sass = require('gulp-ruby-sass');
-var gulpFilter = require('gulp-filter');
-var autoprefixer = require('gulp-autoprefixer');
-var sourcemaps = require('gulp-sourcemaps');
-var config = require('../../config');
+var gulp = require("gulp");
+var plumber = require("gulp-plumber");
+var browsersync = require("browser-sync");
+var sass = require("gulp-ruby-sass");
+var gulpFilter = require("gulp-filter");
+var autoprefixer = require("gulp-autoprefixer");
+var sourcemaps = require("gulp-sourcemaps");
+var config = require("../../config");
 
 /**
  * Generate CSS from SCSS
  * Build sourcemaps
  */
-gulp.task('sass', function() {
+gulp.task("sass", function () {
   var sassConfig = config.sass.options;
 
   sassConfig.onError = browsersync.notify;
 
   // Don’t write sourcemaps of sourcemaps
-  var filter = gulpFilter(['*.css', '!*.map'], { restore: true });
+  var filter = gulpFilter(["*.css", "!*.map"], { restore: true });
 
-  browsersync.notify('Compiling Sass');
+  browsersync.notify("Compiling Sass");
 
   return sass(config.sass.src, sassConfig)
     .pipe(plumber())
@@ -92,9 +94,9 @@ gulp.task('sass', function() {
     .pipe(autoprefixer(config.autoprefixer))
     .pipe(filter) // Don’t write sourcemaps of sourcemaps
     .pipe(
-      sourcemaps.write('.', {
+      sourcemaps.write(".", {
         includeContent: false,
-        sourceRoot: 'app/_assets/scss'
+        sourceRoot: "app/_assets/scss",
       })
     )
     .pipe(filter.restore) // Restore original files

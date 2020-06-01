@@ -1,12 +1,15 @@
 ---
 title: Decodeunicode
-subtitle: 'A Book with All Unicode Characters'
+subtitle: "A Book with All Unicode Characters"
 slug: decodeunicode
 author: Stefan Imhoff
 date: 2011-06-02T18:38:00+02:00
 description: "Book recommendation for those who are interested in writing and characters: 'decodeunicode - Die Schriftzeichen der Welt'. 656 pages thick, almost 2 kg heavy and with all 109,242 current characters of the Unicode character set."
-og_image: 'assets/images/articles/2011/decodeunicode/decodeunicode.jpg'
-categories: ['book', 'design', 'typography']
+og: "assets/images/articles/2011/decodeunicode/decodeunicode.jpg"
+categories:
+  - "book"
+  - "design"
+  - "typography"
 ---
 
 By chance, I recently came across a book that is a buy recommendation for anyone interested in typography and characters. The book is 656 pages thick, contains all of the current 109,242 digital characters of the Unicode character set and weighs almost 2 kilograms.

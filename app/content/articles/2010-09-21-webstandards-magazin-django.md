@@ -4,9 +4,10 @@ subtitle: My Article About Django
 slug: webstandards-magazine-django
 author: Stefan Imhoff
 date: 2010-09-21T09:25:00+02:00
-description: 'I was allowed to write a multi-page article about Django in Webstandards-Magazin. I wrote about what I appreciate about Django and why I use it.'
-og_image: 'assets/images/articles/2010/webstandards-magazine-django/webstandards-magazine-django.jpg'
-categories: ['personal', 'publication']
+description: "I was allowed to write a multi-page article about Django in Webstandards-Magazin. I wrote about what I appreciate about Django and why I use it."
+og: "assets/images/articles/2010/webstandards-magazine-django/webstandards-magazine-django.jpg"
+categories:
+  - "publication"
 ---
 
 There it lay in my mailbox: My voucher copy of the current issue 07/2010 of the Webstandards-Magazin. This is a premiere for me because I wrote my first article for the Webstandards-Magazin.

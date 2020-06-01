@@ -4,12 +4,14 @@ subtitle: Checking the Syntax of SCSS and JavaScript
 slug: gulp-tutorial-9-linting-scss-and-javascript
 author: Stefan Imhoff
 date: 2014-10-26T08:10:00+02:00
-description: 'The ultimative tutorial and guide for Gulp.js: How to check the syntax of SCSS and JavaScript files.'
-og_image: 'assets/images/articles/2014/gulp-tutorial-9-linting-scss-and-javascript/gulp-tutorial-9.jpg'
-download_url: 'https://github.com/kogakure/gulp-tutorial'
-download_text: 'View Source on GitHub'
-categories: ['code']
-series: ['gulp']
+description: "The ultimative tutorial and guide for Gulp.js: How to check the syntax of SCSS and JavaScript files."
+og: "assets/images/articles/2014/gulp-tutorial-9-linting-scss-and-javascript/gulp-tutorial-9.jpg"
+download_url: "https://github.com/kogakure/gulp-tutorial"
+download_text: "View Source on GitHub"
+categories:
+  - "code"
+series:
+  - "gulp"
 ---
 
 This is the 9th part of my series _Introduction to Gulp.js_. Today I will use Gulp.js to automatically check my SCSS and JavaScript files for syntax errors and warnings.
@@ -65,15 +67,15 @@ I ignore some files from checking (by adding a `!` in front of the path), becaus
 <p class="code-info">gulp/tasks/development/scss-lint.js</p>
 
 ```javascript
-var gulp = require('gulp');
-var scsslint = require('gulp-scss-lint');
-var config = require('../../config').scsslint;
+var gulp = require("gulp");
+var scsslint = require("gulp-scss-lint");
+var config = require("../../config").scsslint;
 
 /**
  * Lint SCSS files
  * `gem install scss-lint` needed
  */
-gulp.task('scsslint', function() {
+gulp.task("scsslint", function () {
   return gulp.src(config.src).pipe(scsslint(config.options));
 });
 ```
@@ -81,19 +83,16 @@ gulp.task('scsslint', function() {
 <p class="code-info">gulp/tasks/development/jshint.js</p>
 
 ```javascript
-var gulp = require('gulp');
-var jshint = require('gulp-jshint');
-var stylish = require('jshint-stylish');
-var config = require('../../config').jshint;
+var gulp = require("gulp");
+var jshint = require("gulp-jshint");
+var stylish = require("jshint-stylish");
+var config = require("../../config").jshint;
 
 /**
  * Check JavaScript sytax with JSHint
  */
-gulp.task('jshint', function() {
-  return gulp
-    .src(config.src)
-    .pipe(jshint())
-    .pipe(jshint.reporter(stylish));
+gulp.task("jshint", function () {
+  return gulp.src(config.src).pipe(jshint()).pipe(jshint.reporter(stylish));
 });
 ```
 

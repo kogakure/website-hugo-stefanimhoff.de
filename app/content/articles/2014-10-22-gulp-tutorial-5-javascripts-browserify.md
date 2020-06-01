@@ -4,12 +4,14 @@ subtitle: Bundling JavaScript with Browserify
 slug: gulp-tutorial-5-javascripts-browserify
 author: Stefan Imhoff
 date: 2014-10-22T08:00:00+02:00
-description: 'The ultimative tutorial and guide for Gulp.js: How to bundle JavaScript files with Browserify and use CommonJS modules to structure and organize your code.'
-og_image: 'assets/images/articles/2014/gulp-tutorial-5-javascripts-browserify/gulp-tutorial-5.jpg'
-download_url: 'https://github.com/kogakure/gulp-tutorial'
-download_text: 'View Source on GitHub'
-categories: ['code']
-series: ['gulp']
+description: "The ultimative tutorial and guide for Gulp.js: How to bundle JavaScript files with Browserify and use CommonJS modules to structure and organize your code."
+og: "assets/images/articles/2014/gulp-tutorial-5-javascripts-browserify/gulp-tutorial-5.jpg"
+download_url: "https://github.com/kogakure/gulp-tutorial"
+download_text: "View Source on GitHub"
+categories:
+  - "code"
+series:
+  - "gulp"
 ---
 
 This is the 5th part of my series _Introduction to Gulp.js_. Today I will show how to use Browserify to bundle your JavaScript and use CommonJS modules to run node modules in the Browser.
@@ -64,24 +66,24 @@ browserify: {
 <p class="code-info">gulp/tasks/development/scripts.js</p>
 
 ```javascript
-var gulp = require('gulp');
-var browsersync = require('browser-sync');
-var browserify = require('browserify');
-var source = require('vinyl-source-stream');
-var watchify = require('watchify');
-var bundleLogger = require('../../util/bundleLogger');
-var handleErrors = require('../../util/handleErrors');
-var config = require('../../config').browserify;
+var gulp = require("gulp");
+var browsersync = require("browser-sync");
+var browserify = require("browserify");
+var source = require("vinyl-source-stream");
+var watchify = require("watchify");
+var bundleLogger = require("../../util/bundleLogger");
+var handleErrors = require("../../util/handleErrors");
+var config = require("../../config").browserify;
 
 /**
  * Run JavaScript through Browserify
  */
-gulp.task('scripts', function(callback) {
-  browsersync.notify('Compiling JavaScript');
+gulp.task("scripts", function (callback) {
+  browsersync.notify("Compiling JavaScript");
 
   var bundleQueue = config.bundleConfigs.length;
 
-  var browserifyThis = function(bundleConfig) {
+  var browserifyThis = function (bundleConfig) {
     var bundler = browserify({
       // Required watchify args
       cache: {},
@@ -92,10 +94,10 @@ gulp.task('scripts', function(callback) {
       // Add file extentions to make optional in your requires
       extensions: config.extensions,
       // Enable source maps!
-      debug: config.debug
+      debug: config.debug,
     });
 
-    var bundle = function() {
+    var bundle = function () {
       // Log when bundling starts
       bundleLogger.start(bundleConfig.outputName);
 
@@ -103,14 +105,14 @@ gulp.task('scripts', function(callback) {
         bundler
           .bundle()
           // Report compile errors
-          .on('error', handleErrors)
+          .on("error", handleErrors)
           // Use vinyl-source-stream to make the
           // stream gulp compatible. Specifiy the
           // desired output filename here.
           .pipe(source(bundleConfig.outputName))
           // Specify the output destination
           .pipe(gulp.dest(bundleConfig.dest))
-          .on('end', reportFinished)
+          .on("end", reportFinished)
       );
     };
 
@@ -118,10 +120,10 @@ gulp.task('scripts', function(callback) {
       // Wrap with watchify and rebundle on changes
       bundler = watchify(bundler);
       // Rebundle on update
-      bundler.on('update', bundle);
+      bundler.on("update", bundle);
     }
 
-    var reportFinished = function() {
+    var reportFinished = function () {
       // Log when bundling completes
       bundleLogger.end(bundleConfig.outputName);
 
@@ -153,47 +155,47 @@ This task has some additional utilities for handling errors and logging the bund
    Provides gulp style logs to the bundle method in browserify.js
 */
 
-var gutil = require('gulp-util');
-var prettyHrtime = require('pretty-hrtime');
+var gutil = require("gulp-util");
+var prettyHrtime = require("pretty-hrtime");
 var startTime;
 
 module.exports = {
-  start: function(filepath) {
+  start: function (filepath) {
     startTime = process.hrtime();
-    gutil.log('Bundling', gutil.colors.green(filepath));
+    gutil.log("Bundling", gutil.colors.green(filepath));
   },
 
-  end: function(filepath) {
+  end: function (filepath) {
     var taskTime = process.hrtime(startTime);
     var prettyTime = prettyHrtime(taskTime);
     gutil.log(
-      'Bundled',
+      "Bundled",
       gutil.colors.green(filepath),
-      'in',
+      "in",
       gutil.colors.magenta(prettyTime)
     );
-  }
+  },
 };
 ```
 
 <p class="code-info">gulp/util/handleErrors.js</p>
 
 ```javascript
-var notify = require('gulp-notify');
+var notify = require("gulp-notify");
 
-module.exports = function() {
+module.exports = function () {
   var args = Array.prototype.slice.call(arguments);
 
   // Send error to notification center with gulp-notify
   notify
     .onError({
-      title: 'Compile Error',
-      message: '<%= error.message %>'
+      title: "Compile Error",
+      message: "<%= error.message %>",
     })
     .apply(this, args);
 
   // Keep gulp from hanging on this task
-  this.emit('end');
+  this.emit("end");
 };
 ```
 
@@ -228,9 +230,9 @@ Later you import your modules and use them:
 <p class="code-info">increment.js</p>
 
 ```javascript
-var add = require('./math').add;
+var add = require("./math").add;
 
-exports.increment = function(val) {
+exports.increment = function (val) {
   return add(val, 1);
 };
 ```
@@ -238,11 +240,11 @@ exports.increment = function(val) {
 <p class="code-info">application.js</p>
 
 ```javascript
-var navigation = require('./navigation');
-var triggerNavigation = document.querySelector('.toggle-navigation');
+var navigation = require("./navigation");
+var triggerNavigation = document.querySelector(".toggle-navigation");
 
-document.addEventListener('DOMContentLoaded', function() {
-  triggerNavigation.addEventListener('click', navigation.toggleNavigation);
+document.addEventListener("DOMContentLoaded", function () {
+  triggerNavigation.addEventListener("click", navigation.toggleNavigation);
 });
 ```
 
@@ -287,16 +289,16 @@ Within `"browerify-shim"` you decide where to map this require to. To include jQ
 <p class="code-info">app/assets/javascripts/head.js</p>
 
 ```javascript
-require('modernizr');
+require("modernizr");
 ```
 
 <p class="code-info">app/_assets/javascripts/application.js</p>
 
 ```javascript
-require('jquery');
+require("jquery");
 
-$(function() {
-  console.log('jQuery and Modernizr loaded');
+$(function () {
+  console.log("jQuery and Modernizr loaded");
 });
 ```
 

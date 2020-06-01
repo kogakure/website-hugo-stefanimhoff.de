@@ -4,12 +4,14 @@ subtitle: PostCSS
 slug: gulp-tutorial-16-postcss
 author: Stefan Imhoff
 date: 2015-10-16T07:50:29+00:00
-description: 'The ultimative tutorial and guide for Gulp.js: How to use PostCSS with Gulp to process CSS and how to lint your CSS files with Stylelint.'
-og_image: 'assets/images/articles/2015/gulp-tutorial-16-postcss/gulp-tutorial-16.jpg'
-download_url: 'https://github.com/kogakure/gulp-tutorial'
-download_text: 'View Source on GitHub'
-categories: ['code']
-series: ['gulp']
+description: "The ultimative tutorial and guide for Gulp.js: How to use PostCSS with Gulp to process CSS and how to lint your CSS files with Stylelint."
+og: "assets/images/articles/2015/gulp-tutorial-16-postcss/gulp-tutorial-16.jpg"
+download_url: "https://github.com/kogakure/gulp-tutorial"
+download_text: "View Source on GitHub"
+categories:
+  - "code"
+series:
+  - "gulp"
 ---
 
 This is the 16th part of my series _Introduction to Gulp.js_. Today I will show how to use PostCSS to process CSS files. I will replace Ruby Sass with PostCSS and additionally show how to lint stylesheets automatically in the background while developing with Stylelint.
@@ -90,22 +92,22 @@ I add the new task to my `development` folder:
 <p class="code-info">ulp/tasks/development/styles.js</p>
 
 ```javascript
-var gulp = require('gulp');
-var postcss = require('gulp-postcss');
-var precss = require('precss');
-var nano = require('gulp-cssnano');
-var plumber = require('gulp-plumber');
-var sourcemaps = require('gulp-sourcemaps');
-var gutil = require('gulp-util');
-var browsersync = require('browser-sync');
-var autoprefixer = require('autoprefixer');
-var mqpacker = require('css-mqpacker');
-var config = require('../../config');
+var gulp = require("gulp");
+var postcss = require("gulp-postcss");
+var precss = require("precss");
+var nano = require("gulp-cssnano");
+var plumber = require("gulp-plumber");
+var sourcemaps = require("gulp-sourcemaps");
+var gutil = require("gulp-util");
+var browsersync = require("browser-sync");
+var autoprefixer = require("autoprefixer");
+var mqpacker = require("css-mqpacker");
+var config = require("../../config");
 
 function onError(err) {
   gutil.beep();
   console.log(err);
-  this.emit('end');
+  this.emit("end");
 }
 
 /**
@@ -115,23 +117,23 @@ function onError(err) {
 var processors = [
   precss(config.styles.options.precss),
   autoprefixer(config.styles.options.autoprefixer),
-  mqpacker(config.styles.options.mqpacker)
+  mqpacker(config.styles.options.mqpacker),
 ];
 
-gulp.task('styles', function() {
-  browsersync.notify('Transforming CSS with PostCSS');
+gulp.task("styles", function () {
+  browsersync.notify("Transforming CSS with PostCSS");
 
   return gulp
     .src(config.styles.src)
     .pipe(
       plumber({
-        errorHandler: onError
+        errorHandler: onError,
       })
     )
     .pipe(sourcemaps.init())
     .pipe(postcss(processors))
     .pipe(nano())
-    .pipe(sourcemaps.write('.'))
+    .pipe(sourcemaps.write("."))
     .pipe(gulp.dest(config.styles.dest));
 });
 ```
@@ -285,19 +287,19 @@ Next I will add the Gulp task:
 <p class="code-info">gulp/tasks/development/lint-styles.js</p>
 
 ```javascript
-var gulp = require('gulp');
-var postcss = require('gulp-postcss');
-var stylelint = require('stylelint');
-var reporter = require('postcss-reporter');
-var config = require('../../config');
+var gulp = require("gulp");
+var postcss = require("gulp-postcss");
+var stylelint = require("stylelint");
+var reporter = require("postcss-reporter");
+var config = require("../../config");
 
-gulp.task('lint-styles', function() {
+gulp.task("lint-styles", function () {
   return gulp
     .src(config.lintStyles.src)
     .pipe(
       postcss([
         stylelint(config.lintStyles.options.stylelint),
-        reporter(config.lintStyles.options.reporter)
+        reporter(config.lintStyles.options.reporter),
       ])
     );
 });

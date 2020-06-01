@@ -4,12 +4,14 @@ subtitle: Server with BrowserSync and Configuration
 slug: gulp-tutorial-2-development-server-browsersync-configuration
 author: Stefan Imhoff
 date: 2014-10-19T10:17:00+02:00
-description: 'The ultimative tutorial and guide for Gulp.js: How to set up a development server with BrowserSync.'
-og_image: 'assets/images/articles/2014/gulp-tutorial-2-development-server-browsersync-configuration/gulp-tutorial-2.jpg'
-download_url: 'https://github.com/kogakure/gulp-tutorial'
-download_text: 'View Source on GitHub'
-categories: ['code']
-series: ['gulp']
+description: "The ultimative tutorial and guide for Gulp.js: How to set up a development server with BrowserSync."
+og: "assets/images/articles/2014/gulp-tutorial-2-development-server-browsersync-configuration/gulp-tutorial-2.jpg"
+download_url: "https://github.com/kogakure/gulp-tutorial"
+download_text: "View Source on GitHub"
+categories:
+  - "code"
+series:
+  - "gulp"
 ---
 
 This is the 2nd part of my series _Introduction to Gulp.js_. Today I will write the first few Gulp.js tasks and set up a development server with BrowserSync. And I will start to write a configuration file.
@@ -36,10 +38,10 @@ I create inside the `gulp/tasks` folder a file `default.js` and write this code:
 <p class="code-info">gulp/tasks/default.js</p>
 
 ```javascript
-var gulp = require('gulp');
+var gulp = require("gulp");
 
-gulp.task('default', function() {
-  console.log('Hello Gulp.js!');
+gulp.task("default", function () {
+  console.log("Hello Gulp.js!");
 });
 ```
 
@@ -56,9 +58,9 @@ Instead of calling a function and output some text to the console I can execute 
 <p class="code-info">gulp/tasks/default.js</p>
 
 ```javascript
-var gulp = require('gulp');
+var gulp = require("gulp");
 
-gulp.task('default', ['watch']);
+gulp.task("default", ["watch"]);
 ```
 
 It’s possible to run multiple tasks at once, which is why I write my `watch` task in an Array. Be careful: These tasks will run in parallel, not in a sequential order. Later I will show how to run tasks in a predefined order.
@@ -68,12 +70,12 @@ I will create another folder within my `tasks` folder with the name `development
 <p class="code-info">gulp/tasks/development/watch.js</p>
 
 ```javascript
-var gulp = require('gulp');
+var gulp = require("gulp");
 
 /**
  * Start browsersync task and then watch files for changes
  */
-gulp.task('watch', ['browsersync'], function() {});
+gulp.task("watch", ["browsersync"], function () {});
 ```
 
 I will come back later to write the `watch` task. For now the function will be empty and just run another task before running the watch task: `browsersync`. All tasks within the Array will be executed _before_ the task is executed.
@@ -95,14 +97,14 @@ I create a new file `browser-sync.js` in `gulp/tasks/development/`. This file wi
 <p class="code-info">gulp/tasks/development/browser-sync.js</p>
 
 ```javascript
-var gulp = require('gulp');
-var browsersync = require('browser-sync');
-var config = require('../../config').browsersync.development;
+var gulp = require("gulp");
+var browsersync = require("browser-sync");
+var config = require("../../config").browsersync.development;
 
 /**
  * Run the build task and start a server with BrowserSync
  */
-gulp.task('browsersync', ['build'], function() {
+gulp.task("browsersync", ["build"], function () {
   browsersync(config);
 });
 ```
@@ -118,29 +120,29 @@ I create a new file `config.js` in the main Gulp.js folder:
 <p class="code-info">gulp/config.js</p>
 
 ```javascript
-var src = 'app';
-var build = 'build';
-var development = 'build/development';
-var production = 'build/production';
-var srcAssets = 'app/_assets';
-var developmentAssets = 'build/assets';
-var productionAssets = 'build/production/assets';
+var src = "app";
+var build = "build";
+var development = "build/development";
+var production = "build/production";
+var srcAssets = "app/_assets";
+var developmentAssets = "build/assets";
+var productionAssets = "build/production/assets";
 
 module.exports = {
   browsersync: {
     development: {
       server: {
-        baseDir: [development, build, src]
+        baseDir: [development, build, src],
       },
       port: 9999,
       files: [
-        developmentAssets + '/css/*.css',
-        developmentAssets + '/js/*.js',
-        developmentAssets + '/images/**',
-        developmentAssets + '/fonts/*'
-      ]
-    }
-  }
+        developmentAssets + "/css/*.css",
+        developmentAssets + "/js/*.js",
+        developmentAssets + "/images/**",
+        developmentAssets + "/fonts/*",
+      ],
+    },
+  },
 };
 ```
 

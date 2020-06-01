@@ -6,7 +6,9 @@ date: {{ .Date }}
 description: ""
 author: Stefan Imhoff
 language: en
-og_image: "assets/images/YYYY/SLUG/image.jpg"
-series: [""]
-categories: [""]
+og: "assets/images/YYYY/SLUG/image.jpg"
+series: 
+  - 
+categories:
+- 
 ---

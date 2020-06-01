@@ -1,13 +1,14 @@
 ---
-title: 'Migrating to Hugo from Jekyll'
+title: "Migrating to Hugo from Jekyll"
 slug: jekyll-hugo-migration
 author: Stefan Imhoff
 date: 2016-08-27T13:05:57+02:00
-description: 'A blog post about the migration from Jekyll to Hugo and why it’s worth to try out Hugo.'
-og_image: 'assets/images/articles/2016/hugo-jekyll-migration/hugo.png'
-download_url: 'https://github.com/kogakure/hugo-stefanimhoff.de'
-download_text: 'View Source on GitHub'
-categories: ['personal', 'code']
+description: "A blog post about the migration from Jekyll to Hugo and why it’s worth to try out Hugo."
+og: "assets/images/articles/2016/hugo-jekyll-migration/hugo.png"
+download_url: "https://github.com/kogakure/hugo-stefanimhoff.de"
+download_text: "View Source on GitHub"
+categories:
+  - "code"
 ---
 
 After running over 2 years with [Jekyll](https://jekyllrb.com/) I recently replaced it with [Hugo](https://gohugo.io/), a static site generator written in Go.

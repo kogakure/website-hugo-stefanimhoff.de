@@ -1,13 +1,14 @@
 ---
-title: 'Gitweb Theme in GitHub Style'
+title: "Gitweb Theme in GitHub Style"
 slug: gitweb-theme
 author: Stefan Imhoff
 date: 2009-02-19T20:00:00+02:00
-description: 'My popular theme for GitWeb to download for free. Now GitWeb looks a bit more similar to GitHub and is not so ugly anymore.'
-og_image: 'assets/images/articles/2009/gitweb-theme/gitweb-theme-summary.png'
-download_url: 'https://github.com/kogakure/gitweb-theme/'
-download_text: 'Gitweb Theme on GitHub'
-categories: ['download']
+description: "My popular theme for GitWeb to download for free. Now GitWeb looks a bit more similar to GitHub and is not so ugly anymore."
+og: "assets/images/articles/2009/gitweb-theme/gitweb-theme-summary.png"
+download_url: "https://github.com/kogakure/gitweb-theme/"
+download_text: "Gitweb Theme on GitHub"
+categories:
+  - "download"
 ---
 
 The standard theme of Gitweb is really not very appealing and apparently designed only for functionality.

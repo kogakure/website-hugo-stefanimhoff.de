@@ -3,9 +3,11 @@ title: Getting Started with Body Weight Training
 slug: calisthenics
 author: Stefan Imhoff
 date: 2015-05-19T21:45:00+00:00
-description: 'Learning Body Weight Training is possible for everybody. It’s free, you can do it anywhere, you need no gym or expensive equipment to train and you can improve constantly.'
-og_image: 'assets/images/articles/2015/calisthenics/calisthenics-human-flag.jpg'
-categories: ['health', 'self-improvement']
+description: "Learning Body Weight Training is possible for everybody. It’s free, you can do it anywhere, you need no gym or expensive equipment to train and you can improve constantly."
+og: "assets/images/articles/2015/calisthenics/calisthenics-human-flag.jpg"
+categories:
+  - "health"
+  - "self-improvement"
 ---
 
 I’m doing body weight training for almost a year now and really like it. It’s free, you can do it anywhere, all you need is something to push from and to pull to, and it’s fun.

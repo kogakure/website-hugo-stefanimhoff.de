@@ -1,13 +1,13 @@
 ---
 draft: true
 language: de
-title: 'Lebensmittel-Datenbank'
-description: 'FDDB (Food Database), ein kostenloses Ernährungstagebuch und eine sehr umfangreiche Lebensmittel-Datenbank.'
+title: "Lebensmittel-Datenbank"
+description: "FDDB (Food Database), ein kostenloses Ernährungstagebuch und eine sehr umfangreiche Lebensmittel-Datenbank."
 author: Stefan Imhoff
 slug: lebensmittel-datenbank
 date: 2007-08-28T08:24:00+02:00
-og_image: 'assets/images/articles/2007/lebensmittel-datenbank/fddb-info.png'
-categories: ['tip']
+og: "assets/images/articles/2007/lebensmittel-datenbank/fddb-info.png"
+categories: ["tip"]
 ---
 
 Ich bin gestern über eine schöne Web 2.0 Anwendung gestolpert, mit der man die Nährwerte von Nahrungsmitteln komfortabel berechnen kann.

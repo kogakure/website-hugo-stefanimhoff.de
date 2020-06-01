@@ -4,12 +4,14 @@ subtitle: Generating CSS Image Sprites
 slug: gulp-tutorial-10-generating-sprites
 author: Stefan Imhoff
 date: 2014-10-27T07:40:00+02:00
-description: 'The ultimative tutorial and guide for Gulp.js: How to generate image sprite maps with Spritesmith.'
-og_image: 'assets/images/articles/2014/gulp-tutorial-10-generating-sprites/gulp-tutorial-10.jpg'
-download_url: 'https://github.com/kogakure/gulp-tutorial'
-download_text: 'View Source on GitHub'
-categories: ['code']
-series: ['gulp']
+description: "The ultimative tutorial and guide for Gulp.js: How to generate image sprite maps with Spritesmith."
+og: "assets/images/articles/2014/gulp-tutorial-10-generating-sprites/gulp-tutorial-10.jpg"
+download_url: "https://github.com/kogakure/gulp-tutorial"
+download_text: "View Source on GitHub"
+categories:
+  - "code"
+series:
+  - "gulp"
 ---
 
 This is the 10th part of my series _Introduction to Gulp.js_. Today I will use Gulp.js to create CSS image sprites.
@@ -65,14 +67,14 @@ I split my config into three subsections: The source files (individual icons for
 <p class="code-info">gulp/tasks/development/sprites.js</p>
 
 ```javascript
-var gulp = require('gulp');
-var spritesmith = require('gulp.spritesmith');
-var config = require('../../config').sprites;
+var gulp = require("gulp");
+var spritesmith = require("gulp.spritesmith");
+var config = require("../../config").sprites;
 
 /**
  * Generate sprite and css file from PNGs
  */
-gulp.task('sprites', function() {
+gulp.task("sprites", function () {
   var spriteData = gulp.src(config.src).pipe(spritesmith(config.options));
 
   spriteData.img.pipe(gulp.dest(config.dest.image));

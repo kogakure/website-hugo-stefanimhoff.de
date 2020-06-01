@@ -5,10 +5,12 @@ date: 2018-09-08T18:00:00+02:00
 author: Stefan Imhoff
 description: "On the advantages of building yourself a morning routine and the details of my morning routine."
 excerpt: "Lately I have been thinking a lot about habits and routines. I’ve had always some routines in my life, but I wanted to build a better morning routine, because I’ve come along so many sources, that emphasised the importance of routines for success in life."
-og_image: "assets/images/articles/2018/morning-routine/bed-book-journal.jpg"
-credit_name: "Annie Spratt"
-credit_link: "https://unsplash.com/photos/C8C020JnsjM"
-categories: ["self-improvement", "personal"]
+og: "assets/images/articles/2018/morning-routine/bed-book-journal.jpg"
+attribution:
+  - author: "Annie Spratt"
+    url: "https://unsplash.com/photos/C8C020JnsjM"
+categories:
+  - "self-improvement"
 ---
 
 Lately I have been thinking a lot about habits and routines. I’ve had always some routines in my life, but I wanted to build a better morning routine, because I’ve come along so many sources, that emphasised the importance of routines for success in life.
