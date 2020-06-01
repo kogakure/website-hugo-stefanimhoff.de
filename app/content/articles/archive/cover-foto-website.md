@@ -1,13 +1,13 @@
 ---
 draft: true
 language: de
-title: 'Das Cover-Foto auf meiner Website'
+title: "Das Cover-Foto auf meiner Website"
 author: Stefan Imhoff
 slug: cover-foto-website
 date: 2014-05-30T10:00:00+02:00
-og_image: 'assets/images/articles/2014/cover-foto-website/josefina-bokeh.jpg'
+og: "assets/images/articles/2014/cover-foto-website/josefina-bokeh.jpg"
 description: "Über die Wahl meines Fotostils bei meiner neuen Website und wie ich herausfand, dass die Technik eines unscharfen Hintergrunds in der Fachwelt 'Bokeh' genannt wird. Außerdem zeige ich, wie ich mein Foto auf der Website technisch implementiere."
-categories: ['design', 'website']
+categories: ["design", "website"]
 ---
 
 Ein prägnanter Teil meiner neuen Website ist das auffällige Foto im Kopfbereich. Das aktuelle Motiv zeigt einen Bonsai.

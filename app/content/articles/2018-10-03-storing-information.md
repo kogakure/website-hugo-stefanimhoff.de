@@ -4,12 +4,14 @@ subtitle: My Crazy, Paranoid, Overly Complicated, but Functioning Way of Storing
 slug: storing-information
 date: 2018-10-03T18:00:00+02:00
 author: Stefan Imhoff
-description: 'How I save and process information, so I can find it again quickly and store it so I can’t loose it again.'
-excerpt: 'We live in the age of never-ending information. How should anyone possibly remember anything with so much information bombarding us every day?'
-og_image: 'assets/images/articles/2018/storing-information/book-store.jpg'
-credit_name: 'Brandon Lopez'
-credit_link: 'https://unsplash.com/photos/3E_8XgqRSps'
-categories: ['self-improvement', 'personal']
+description: "How I save and process information, so I can find it again quickly and store it so I can’t loose it again."
+excerpt: "We live in the age of never-ending information. How should anyone possibly remember anything with so much information bombarding us every day?"
+og: "assets/images/articles/2018/storing-information/book-store.jpg"
+attribution:
+  - author: "Brandon Lopez"
+    url: "https://unsplash.com/photos/3E_8XgqRSps"
+categories:
+  - "self-improvement"
 ---
 
 We live in the age of never-ending information. How should anyone possibly remember anything with so much information bombarding us every day?

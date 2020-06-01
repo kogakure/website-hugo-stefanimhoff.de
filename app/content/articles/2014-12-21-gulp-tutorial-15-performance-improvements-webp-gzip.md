@@ -4,12 +4,14 @@ subtitle: Performance Improvements with WebP and Gzip
 slug: gulp-tutorial-15-performance-improvements-webp-gzip
 author: Stefan Imhoff
 date: 2014-12-21T11:15:00+01:00
-description: 'The ultimative tutorial and guide for Gulp.js: How to improve the speed and performance of your website with WebP and Gzip.'
-og_image: 'assets/images/articles/2014/gulp-tutorial-15-performance-improvements-webp-gzip/gulp-tutorial-15.jpg'
-download_url: 'https://github.com/kogakure/gulp-tutorial'
-download_text: 'View Source on GitHub'
-categories: ['code']
-series: ['gulp']
+description: "The ultimative tutorial and guide for Gulp.js: How to improve the speed and performance of your website with WebP and Gzip."
+og: "assets/images/articles/2014/gulp-tutorial-15-performance-improvements-webp-gzip/gulp-tutorial-15.jpg"
+download_url: "https://github.com/kogakure/gulp-tutorial"
+download_text: "View Source on GitHub"
+categories:
+  - "code"
+series:
+  - "gulp"
 ---
 
 This is the 15th part of my series _Introduction to Gulp.js_. Today I’ll add some tasks for performance improvement of the website with WebP for images and Gzip for text files.
@@ -52,14 +54,14 @@ The task is short and straight forward:
 <p class="code-info">gulp/tasks/production/webp.js</p>
 
 ```javascript
-var gulp = require('gulp');
-var webp = require('gulp-webp');
-var config = require('../../config').webp;
+var gulp = require("gulp");
+var webp = require("gulp-webp");
+var config = require("../../config").webp;
 
 /**
  * Convert images to WebP
  */
-gulp.task('webp', function() {
+gulp.task("webp", function () {
   return gulp
     .src(config.src)
     .pipe(webp(config.options))
@@ -72,20 +74,20 @@ This task needs to be run only for production and has to be executed after the r
 <p class="code-info">gulp/tasks/production/build.js</p>
 
 ```javascript
-var gulp = require('gulp');
-var runSequence = require('run-sequence');
+var gulp = require("gulp");
+var runSequence = require("run-sequence");
 
 /**
  * Run all tasks needed for a build in defined order
  */
-gulp.task('build:production', function(callback) {
+gulp.task("build:production", function (callback) {
   runSequence(
-    'delete',
-    'jekyll:production',
+    "delete",
+    "jekyll:production",
     // ...,
-    'revision',
-    'rev:collect',
-    'webp',
+    "revision",
+    "rev:collect",
+    "webp",
     callback
   );
 });
@@ -153,14 +155,14 @@ Next I create the task, which is short:
 <p class="code-info">gulp/tasks/production/gzip.js</p>
 
 ```javascript
-var gulp = require('gulp');
-var gzip = require('gulp-gzip');
-var config = require('../../config').gzip;
+var gulp = require("gulp");
+var gzip = require("gulp-gzip");
+var config = require("../../config").gzip;
 
 /**
  * Gzip text files
  */
-gulp.task('gzip', function() {
+gulp.task("gzip", function () {
   return gulp
     .src(config.src)
     .pipe(gzip(config.options))
@@ -173,20 +175,20 @@ I add the task in my production build file to an JavaScript Array together with 
 <p class="code-info">gulp/tasks/production/build.js</p>
 
 ```javascript
-var gulp = require('gulp');
-var runSequence = require('run-sequence');
+var gulp = require("gulp");
+var runSequence = require("run-sequence");
 
 /**
  * Run all tasks needed for a build in defined order
  */
-gulp.task('build:production', function(callback) {
+gulp.task("build:production", function (callback) {
   runSequence(
-    'delete',
-    'jekyll:production',
+    "delete",
+    "jekyll:production",
     // ...,
-    'revision',
-    'rev:collect',
-    ['webp', 'gzip'],
+    "revision",
+    "rev:collect",
+    ["webp", "gzip"],
     callback
   );
 });

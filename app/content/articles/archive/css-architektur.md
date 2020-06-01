@@ -1,13 +1,13 @@
 ---
 draft: true
 language: de
-title: 'Die CSS-Architektur meiner Website'
+title: "Die CSS-Architektur meiner Website"
 author: Stefan Imhoff
 slug: css-architektur
 date: 2014-05-27T18:00:00+02:00
-og_image: 'assets/images/articles/2014/css-architektur/css-peter-griffin-meme.jpg'
-description: 'Über die auf dieser Website eingesetzte CSS-Architektur, Sass, Compass, das Grid-System Singularity, die Dateistruktur und SMACSS.'
-categories: ['code', 'website']
+og: "assets/images/articles/2014/css-architektur/css-peter-griffin-meme.jpg"
+description: "Über die auf dieser Website eingesetzte CSS-Architektur, Sass, Compass, das Grid-System Singularity, die Dateistruktur und SMACSS."
+categories: ["code", "website"]
 ---
 
 Bei einem Webprojekt stellt insbesondere die Architektur der Stylesheets eine große Herausforderung dar. Denn CSS wird schnell unverständlich und ist schwer zu warten, wenn nicht von Anfang an eine saubere und modulare Struktur verwendet wird.

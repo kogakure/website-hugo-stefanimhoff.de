@@ -4,9 +4,10 @@ subtitle: Inspiration and Idea For My Website Header
 slug: koi-design
 author: Stefan Imhoff
 date: 2007-06-02T02:00:00+02:00
-description: 'Irezumi (Japanese tattooing) as inspiration for my website and the origin of my design.'
-og_image: 'assets/images/articles/2007/koi-design/design-koi.jpg'
-categories: ['design']
+description: "Irezumi (Japanese tattooing) as inspiration for my website and the origin of my design."
+og: "assets/images/articles/2007/koi-design/design-koi.jpg"
+categories:
+  - "design"
 ---
 
 The idea for the design of <del>this new website</del> <ins>a previous version of this website</ins> has been buzzing around in my head for some time. But somehow she did not want to move into the physical world. As an inspiration, I used the art of Japanese tattoo - Irezumi.

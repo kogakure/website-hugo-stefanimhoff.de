@@ -5,11 +5,13 @@ date: 2020-05-18T10:00:00+02:00
 author: Stefan Imhoff
 description: "The way we write notes determines how we think and learn. I was introduced recently to a quite old method of writing notes: The Zettelkasten method. This article describes how I implemented the method into my workflow with DEVONthink."
 excerpt: "The way we write notes determines how we think and learn. I was introduced recently to a quite old method of writing notes: The Zettelkasten method. This article describes how I implemented the method into my workflow with DEVONthink."
-og_image: "assets/images/articles/2020/zettelkasten-note-taking-devonthink/og.jpg"
-credit_name: "Maksym Kaharlytskyi"
-credit_title: "The Files"
-credit_link: "https://unsplash.com/photos/Q9y3LRuuxmg"
-categories: ["personal", "productivity"]
+og: "assets/images/articles/2020/zettelkasten-note-taking-devonthink/og.jpg"
+attribution:
+  - author: "Maksym Kaharlytskyi"
+    title: "The Files"
+    url: "https://unsplash.com/photos/Q9y3LRuuxmg"
+categories:
+  - "productivity"
 ---
 
 The way we write notes determines how we think and learn. Many studies have shown how useful writing notes is. The best retention comes with writing, reading and listening combined. Repeated reading and connecting ideas is another important part.

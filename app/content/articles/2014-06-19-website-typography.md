@@ -1,11 +1,14 @@
 ---
-title: 'The Typography of My Website'
+title: "The Typography of My Website"
 slug: website-typography
 author: Stefan Imhoff
 date: 2014-06-19T10:30:00+02:00
-description: 'About the typography of my new website: scale, font, vertical rhythm, font size, font size and sentence width.'
-og_image: 'assets/images/articles/2014/website-typography/elements-of-typographic-style.jpg'
-categories: ['design', 'code', 'typography']
+description: "About the typography of my new website: scale, font, vertical rhythm, font size, font size and sentence width."
+og: "assets/images/articles/2014/website-typography/elements-of-typographic-style.jpg"
+categories:
+  - "design"
+  - "code"
+  - "typography"
 ---
 
 I’m _typophil_. But this is nothing for a self-help group, because it simply means love or affection to typography. It was clear to me from the start that I would start with typography for my new website.
@@ -67,9 +70,9 @@ Afterwards only the module of Compass has to be loaded in a partial:
 <p class="code-info">helpers/_imports.scss</p>
 
 ```scss
-@import 'compass';
-@import 'compass/reset';
-@import 'modular-scale';
+@import "compass";
+@import "compass/reset";
+@import "modular-scale";
 ```
 
 I've decided to use the _golden ratio_ and then select the ideal text size and an important number:

@@ -4,12 +4,14 @@ subtitle: Revisioning
 slug: gulp-tutorial-13-revisioning
 author: Stefan Imhoff
 date: 2014-10-30T07:45:00+02:00
-description: 'The ultimative tutorial and guide for Gulp.js: How to use revisioning to allow long caching of your assets and replace them  with hashed file names, that can be cache busted.'
-og_image: 'assets/images/articles/2014/gulp-tutorial-13-revisioning/gulp-tutorial-13.jpg'
-download_url: 'https://github.com/kogakure/gulp-tutorial'
-download_text: 'View Source on GitHub'
-categories: ['code']
-series: ['gulp']
+description: "The ultimative tutorial and guide for Gulp.js: How to use revisioning to allow long caching of your assets and replace them  with hashed file names, that can be cache busted."
+og: "assets/images/articles/2014/gulp-tutorial-13-revisioning/gulp-tutorial-13.jpg"
+download_url: "https://github.com/kogakure/gulp-tutorial"
+download_text: "View Source on GitHub"
+categories:
+  - "code"
+series:
+  - "gulp"
 ---
 
 This is the 13th part of my series _Introduction to Gulp.js_. Today I will write the task to revision my static assets.
@@ -42,13 +44,13 @@ copyfonts: {
 <p class="code-info">gulp/tasks/production/copy-fonts.js</p>
 
 ```javascript
-var gulp = require('gulp');
-var config = require('../../config').copyfonts.production;
+var gulp = require("gulp");
+var config = require("../../config").copyfonts.production;
 
 /**
  * Copy fonts to folder
  */
-gulp.task('copy:fonts:production', function() {
+gulp.task("copy:fonts:production", function () {
   return gulp.src(config.src).pipe(gulp.dest(config.dest));
 });
 ```
@@ -96,15 +98,15 @@ This task will rename all assets and create a JSON file containing all files, wh
 <p class="code-info">gulp/tasks/production/revision.js</p>
 
 ```javascript
-var gulp = require('gulp');
-var rev = require('gulp-rev');
-var config = require('../../config').revision;
+var gulp = require("gulp");
+var rev = require("gulp-rev");
+var config = require("../../config").revision;
 
 /**
  * Revision all asset files and
  * write a manifest file
  */
-gulp.task('revision', function() {
+gulp.task("revision", function () {
   return gulp
     .src(config.src.assets, { base: config.src.base })
     .pipe(gulp.dest(config.dest.assets))
@@ -143,19 +145,16 @@ I replace these paths only in files I know they could contain paths to assets. D
 <p class="code-info">gulp/tasks/production/rev-collector.js</p>
 
 ```javascript
-var gulp = require('gulp');
-var collect = require('gulp-rev-collector');
-var config = require('../../config').collect;
+var gulp = require("gulp");
+var collect = require("gulp-rev-collector");
+var config = require("../../config").collect;
 
 /**
  * Replace all links to assets in files
  * from a manifest file
  */
-gulp.task('rev:collect', function() {
-  return gulp
-    .src(config.src)
-    .pipe(collect())
-    .pipe(gulp.dest(config.dest));
+gulp.task("rev:collect", function () {
+  return gulp.src(config.src).pipe(collect()).pipe(gulp.dest(config.dest));
 });
 ```
 

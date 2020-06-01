@@ -4,12 +4,14 @@ subtitle: Deploying the Website with Rsync
 slug: gulp-tutorial-14-deploying-the-website
 author: Stefan Imhoff
 date: 2014-10-31T08:00:00+02:00
-description: 'The ultimative tutorial and guide for Gulp.js: How to deploy your website with rsync to your server.'
-og_image: 'assets/images/articles/2014/gulp-tutorial-14-deploying-the-website/gulp-tutorial-14.jpg'
-download_url: 'https://github.com/kogakure/gulp-tutorial'
-download_text: 'View Source on GitHub'
-categories: ['code']
-series: ['gulp']
+description: "The ultimative tutorial and guide for Gulp.js: How to deploy your website with rsync to your server."
+og: "assets/images/articles/2014/gulp-tutorial-14-deploying-the-website/gulp-tutorial-14.jpg"
+download_url: "https://github.com/kogakure/gulp-tutorial"
+download_text: "View Source on GitHub"
+categories:
+  - "code"
+series:
+  - "gulp"
 ---
 
 This is the 14th of my series _Introduction to Gulp.js_. Today I will write a task to sync the files of my Jekyll site to my webserver.
@@ -30,12 +32,12 @@ I write another tasks as entry point: `deploy`
 <p class="code-info">gulp/tasks/deploy.js</p>
 
 ```javascript
-var gulp = require('gulp');
+var gulp = require("gulp");
 
 /**
  * Start rsync task
  */
-gulp.task('deploy', ['rsync']);
+gulp.task("deploy", ["rsync"]);
 ```
 
 This will just start the `rsync` task. But I could add more tasks, for example a task, which creates a zip archive of the build and copies it to a backup on my harddrive.
@@ -71,15 +73,15 @@ This task will grab all files in my production folder, connect to my server and 
 <p class="code-info">gulp/tasks/production/rsync.js</p>
 
 ```javascript
-var gulp = require('gulp');
-var rsync = require('gulp-rsync');
-var config = require('../../config').rsync;
+var gulp = require("gulp");
+var rsync = require("gulp-rsync");
+var config = require("../../config").rsync;
 
 /**
  * Copy files and folder to server
  * via rsync
  */
-gulp.task('rsync', function() {
+gulp.task("rsync", function () {
   return gulp.src(config.src).pipe(rsync(config.options));
 });
 ```

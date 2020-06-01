@@ -4,12 +4,14 @@ subtitle: Watch for Changes
 slug: gulp-tutorial-8-watch
 author: Stefan Imhoff
 date: 2014-10-25T10:00:00+02:00
-description: 'The ultimative tutorial and guide for Gulp.js: How to set up a watch task, which triggers other tasks on file changes.'
-og_image: 'assets/images/articles/2014/gulp-tutorial-8-watch/gulp-tutorial-8.jpg'
-download_url: 'https://github.com/kogakure/gulp-tutorial'
-download_text: 'View Source on GitHub'
-categories: ['code']
-series: ['gulp']
+description: "The ultimative tutorial and guide for Gulp.js: How to set up a watch task, which triggers other tasks on file changes."
+og: "assets/images/articles/2014/gulp-tutorial-8-watch/gulp-tutorial-8.jpg"
+download_url: "https://github.com/kogakure/gulp-tutorial"
+download_text: "View Source on GitHub"
+categories:
+  - "code"
+series:
+  - "gulp"
 ---
 
 This is the 8th part of my series _Introduction to Gulp.js_. Today I will set up watch tasks for many different files with Gulp.js.
@@ -55,19 +57,19 @@ The Sass task will watch for changes in files with the suffix `sass` or `scss`. 
 <p class="code-info">gulp/tasks/development/watch.js</p>
 
 ```javascript
-var gulp = require('gulp');
-var config = require('../../config').watch;
+var gulp = require("gulp");
+var config = require("../../config").watch;
 
 /**
  * Start browsersync task and then watch files for changes
  */
-gulp.task('watch', ['browsersync'], function() {
-  gulp.watch(config.jekyll, ['jekyll-rebuild']);
-  gulp.watch(config.sass, ['sass', 'scsslint']);
-  gulp.watch(config.scripts, ['scripts', 'jshint']);
-  gulp.watch(config.images, ['images']);
-  gulp.watch(config.svg, ['copy:fonts']);
-  gulp.watch(config.sprites, ['sprites']);
+gulp.task("watch", ["browsersync"], function () {
+  gulp.watch(config.jekyll, ["jekyll-rebuild"]);
+  gulp.watch(config.sass, ["sass", "scsslint"]);
+  gulp.watch(config.scripts, ["scripts", "jshint"]);
+  gulp.watch(config.images, ["images"]);
+  gulp.watch(config.svg, ["copy:fonts"]);
+  gulp.watch(config.sprites, ["sprites"]);
 });
 ```
 

@@ -4,12 +4,14 @@ subtitle: Base64 Encoded Images
 slug: gulp-tutorial-7-base64
 author: Stefan Imhoff
 date: 2014-10-24T07:30:00+02:00
-description: 'The ultimative tutorial and guide for Gulp.js: How to replace small images with base64 encoded images.'
-og_image: 'assets/images/articles/2014/gulp-tutorial-7-base64/gulp-tutorial-7.jpg'
-download_url: 'https://github.com/kogakure/gulp-tutorial'
-download_text: 'View Source on GitHub'
-categories: ['code']
-series: ['gulp']
+description: "The ultimative tutorial and guide for Gulp.js: How to replace small images with base64 encoded images."
+og: "assets/images/articles/2014/gulp-tutorial-7-base64/gulp-tutorial-7.jpg"
+download_url: "https://github.com/kogakure/gulp-tutorial"
+download_text: "View Source on GitHub"
+categories:
+  - "code"
+series:
+  - "gulp"
 ---
 
 This is the 7th part of my series _Introduction to Gulp.js_. Today I will use Gulp.js to replace a lot of my URLs to small images with Base64 encoded images.
@@ -89,14 +91,14 @@ I only replace images with the ending PNG and only if maximal 20 KB of size. Thi
 <p class="code-info">gulp/tasks/development/base64.js</p>
 
 ```javascript
-var gulp = require('gulp');
-var base64 = require('gulp-base64');
-var config = require('../../config').base64;
+var gulp = require("gulp");
+var base64 = require("gulp-base64");
+var config = require("../../config").base64;
 
 /**
  * Replace urls in CSS fies with base64 encoded data
  */
-gulp.task('base64', ['sass'], function() {
+gulp.task("base64", ["sass"], function () {
   return gulp
     .src(config.src)
     .pipe(base64(config.options))
