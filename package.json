@@ -72,6 +72,6 @@
   "dependencies": {
     "classie": "^1.0.0",
     "fitvids": "^2.0.0",
-    "prismjs": "^1.6.0"
+    "prismjs": "^1.21.0"
   }
 }
